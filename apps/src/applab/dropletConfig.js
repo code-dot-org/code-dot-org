@@ -78,6 +78,7 @@ module.exports.blocks = [
   {'func': 'penDown', 'parent': api, 'category': 'Turtle' },
   {'func': 'penWidth', 'parent': api, 'category': 'Turtle', 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
   {'func': 'penColor', 'parent': api, 'category': 'Turtle', 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'penRGB', 'parent': api, 'category': 'Turtle', 'params': ["120", "180", "200"] },
   {'func': 'show', 'parent': api, 'category': 'Turtle' },
   {'func': 'hide', 'parent': api, 'category': 'Turtle' },
   {'func': 'speed', 'parent': api, 'category': 'Turtle', 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },

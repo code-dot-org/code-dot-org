@@ -13,7 +13,7 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./netsimConstants').NodeType;
@@ -105,6 +105,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
+    assetUrl: netsimGlobals.getAssetUrlFunction(),
     showAddRouterButton: netsimGlobals.getLevelConfig().showAddRouterButton,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,

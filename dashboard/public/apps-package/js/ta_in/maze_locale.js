@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "தேன்கூட்டில்"},
 "atFlower":function(d){return "மலரில்"},
 "avoidCowAndRemove":function(d){return "மாட்டை தவிர்த்து ஒன்றை நீக்கு"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "செய்க"},
 "elseCode":function(d){return "அல்லது"},
 "fill":function(d){return "1 நிரப்பு"},
-"fillN":function(d){return appLocale.v(d,"shovelfuls")+" நிரப்பு"},
-"fillStack":function(d){return appLocale.v(d,"shovelfuls")+" தொடர் ஓட்டைகளை நிரப்பு"},
+"fillN":function(d){return maze_locale.v(d,"shovelfuls")+" நிரப்பு"},
+"fillStack":function(d){return maze_locale.v(d,"shovelfuls")+" தொடர் ஓட்டைகளை நிரப்பு"},
 "fillSquare":function(d){return "சதுரத்தை நிரப்பு"},
 "fillTooltip":function(d){return "ஓர் அலகு அழுக்கை வை"},
 "finalLevel":function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "அங்கே ஒரு குவியல் இருக்கிறது"},
 "putdownTower":function(d){return "கோபுரத்தை கீழே வை"},
 "removeAndAvoidTheCow":function(d){return "ஒன்றை நீக்கி, மாட்டை தவிர்"},
-"removeN":function(d){return "நீக்கு "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "நீக்கு "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "குவியலை நீக்கு"},
-"removeStack":function(d){return appLocale.v(d,"shovelfuls")+" குவியல் அடுக்கை  நீக்கு"},
+"removeStack":function(d){return maze_locale.v(d,"shovelfuls")+" குவியல் அடுக்கை  நீக்கு"},
 "removeSquare":function(d){return "சதுரத்தை நீக்கு"},
 "repeatCarefullyError":function(d){return "இதை தீர்ப்பதற்கு, இரண்டு நகர்வுகள், \"மீள் தொகுதியில்\" போட ஒரு திருப்பம்  பற்றி கவனமாக சிந்தியுங்கள். இறுதியில் ஒரு கூடுதல் திருப்பம் செய்தால்  தவறில்லை."},
 "repeatUntil":function(d){return "மெய்படும் வரை மீண்டும் செய்"},

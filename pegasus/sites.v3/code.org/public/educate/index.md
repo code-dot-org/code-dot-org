@@ -22,22 +22,22 @@ Whether you're a school teacher, an administrator, an after-school teacher, or a
 
 ## Professional Development for Teachers
 
-### Workshops for elementary school teachers
+### Elementary school teachers
 
-Sign up now for computer science professional development for K-5 educators
+To introduce your students to our popular introductory courses, attend one of our high quality local workshops, free of charge.
 
 [<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a workshop</button>](/professional-development-workshops)
 
 
-### Workshops for middle and high school teachers
+### Middle and high school teachers
 
-Our [workshops](/educate/professional-development) for teachers in grades 6-12 are available as part of a [district-wide partnership](/district-partner).
+Our [workshops](/educate/professional-development) for teachers in grades 6-12 are only available as part of a [district-wide partnership](/districts).
 
 [<button class="teacher-button">Learn more</button>](/educate/professional-development)
 
 <br/>
 
-## Partnerships for Districts
+## Partnerships for School Districts
 
 ### Elementary schools 
 
@@ -47,9 +47,9 @@ Our [workshops](/educate/professional-development) for teachers in grades 6-12 a
 
 ### Middle and High schools 
 
-If you're near an [existing Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
+If you're an administrator at a large district, or situated near an [existing Code.org partner](/educate/partner-districts), apply for a district partnership to bring computer science to your entire district.  
 
-[<button class="district-button">Learn more</button>](/district-partner)
+[<button class="district-button">Learn more</button>](/districts)
 
 <br/>
 

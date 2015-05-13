@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/applab');
+var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
@@ -105,6 +105,7 @@ levels.custom = {
     "penDown": null,
     "penWidth": null,
     "penColor": null,
+    "penRGB": null,
     "show": null,
     "hide": null,
     "speed" : null,

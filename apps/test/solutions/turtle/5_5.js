@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var constants = require(testUtils.buildPath('constants.js'));
+var constants = require('@cdo/apps/constants.js');
 var TestResults = constants.TestResults;
 
 module.exports = {

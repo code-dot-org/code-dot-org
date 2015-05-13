@@ -500,3 +500,12 @@ exports.penColor = function (blockId, color) {
                           {'color': color });
 };
 
+exports.penRGB = function (blockId, r, g, b, a) {
+  return Applab.executeCmd(blockId,
+                          'penRGB',
+                          {'r': r,
+                           'g': g,
+                           'b': b,
+                           'a': a });
+};
+

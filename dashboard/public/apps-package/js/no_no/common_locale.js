@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "og"},
 "backToPreviousLevel":function(d){return "Tilbake til forrige nivå"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Du har ubrukte klosser. Vil du feste dem til \"start\"-klossen?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Gratulerer! Du har fullført siste nivå."},
-"finalStageTrophies":function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+locale.p(d,"numTrophies",0,"no",{"one":"en pokal","other":locale.n(d,"numTrophies")+" pokaler"})+"."},
+"finalStageTrophies":function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+common_locale.p(d,"numTrophies",0,"no",{"one":"en pokal","other":common_locale.n(d,"numTrophies")+" pokaler"})+"."},
 "finish":function(d){return "Fullfør"},
-"generatedCodeInfo":function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"},
+"generatedCodeInfo":function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"},
 "genericFeedback":function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."},
 "hashError":function(d){return "Beklager, '%1' samsvarer ikke med noe lagret program."},
 "help":function(d){return "Hjelp"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "liste"},
 "makeYourOwnFlappy":function(d){return "Lag ditt eget \"Sprette-Spill\""},
 "missingBlocksErrorMsg":function(d){return "Forsøk en eller flere av blokkene under for å løse denne oppgaven."},
-"nextLevel":function(d){return "Gratulerer! Du har fullført oppgave "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Gratulerer! Du har fullført oppgave "+locale.v(d,"puzzleNumber")+" og vunnet "+locale.p(d,"numTrophies",0,"no",{"one":"en pokal","other":locale.n(d,"numTrophies")+" pokaler"})+"."},
+"nextLevel":function(d){return "Gratulerer! Du har fullført oppgave "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Gratulerer! Du har fullført oppgave "+common_locale.v(d,"puzzleNumber")+" og vunnet "+common_locale.p(d,"numTrophies",0,"no",{"one":"en pokal","other":common_locale.n(d,"numTrophies")+" pokaler"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Gratulerer! Du fullførte "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Gratulerer! Du har fullført "+locale.v(d,"stageName")+" og vunnet "+locale.p(d,"numTrophies",0,"no",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Gratulerer! Du har fullført oppgave "+locale.v(d,"puzzleNumber")+". (Men, du kunne ha brukt kun "+locale.p(d,"numBlocks",0,"no",{"one":"1 blokk","other":locale.n(d,"numBlocks")+" blokker"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Du har akkurat skrevet "+locale.p(d,"numLines",0,"no",{"one":"1 linje","other":locale.n(d,"numLines")+" linjer"})+" med kode!"},
+"nextStage":function(d){return "Gratulerer! Du fullførte "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Gratulerer! Du har fullført "+common_locale.v(d,"stageName")+" og vunnet "+common_locale.p(d,"numTrophies",0,"no",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Gratulerer! Du har fullført oppgave "+common_locale.v(d,"puzzleNumber")+". (Men, du kunne ha brukt kun "+common_locale.p(d,"numBlocks",0,"no",{"one":"1 blokk","other":common_locale.n(d,"numBlocks")+" blokker"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Du har akkurat skrevet "+common_locale.p(d,"numLines",0,"no",{"one":"1 linje","other":common_locale.n(d,"numLines")+" linjer"})+" med kode!"},
 "openWorkspace":function(d){return "Slik fungerer det"},
 "orientationLock":function(d){return "Skru av roteringslåsen på enheten din."},
 "play":function(d){return "spill"},
 "print":function(d){return "Skriv ut"},
-"puzzleTitle":function(d){return "Oppgave "+locale.v(d,"puzzle_number")+" av "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Oppgave "+common_locale.v(d,"puzzle_number")+" av "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "gjenta"},
 "resetProgram":function(d){return "Nullstill"},
 "rotateText":function(d){return "Roter enheten din."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Du fikk meg til å gjøre masse arbeid! Kan du forsøke med mindre repetisjon?"},
 "toolboxHeader":function(d){return "blokker"},
 "toolboxHeaderDroplet":function(d){return "Verktøykasse"},
-"totalNumLinesOfCodeWritten":function(d){return "Totalt: "+locale.p(d,"numLines",0,"no",{"one":"1 linje","other":locale.n(d,"numLines")+" linjer"})+" med kode."},
+"totalNumLinesOfCodeWritten":function(d){return "Totalt: "+common_locale.p(d,"numLines",0,"no",{"one":"1 linje","other":common_locale.n(d,"numLines")+" linjer"})+" med kode."},
 "tryAgain":function(d){return "Forsøk igjen"},
 "tryHOC":function(d){return "Prøv Kodetimen"},
 "wantToLearn":function(d){return "Vil du lære å kode?"},

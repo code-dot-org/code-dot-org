@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var flappy_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){flappy_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:(k=flappy_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).flappy_locale = {
 "continue":function(d){return "Pokračovat"},
 "doCode":function(d){return "dělej"},
 "elseCode":function(d){return "jinak"},
@@ -189,7 +189,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundLaser":function(d){return "přehrát zvuk laseru"},
 "playSoundTooltip":function(d){return "Přehraj vybraný zvuk."},
 "reinfFeedbackMsg":function(d){return "Můžeš stisknout tlačítko \"Zkusit znovu\" a vrátit se zpět ke své hře."},
-"scoreText":function(d){return "Body: "+appLocale.v(d,"playerScore")},
+"scoreText":function(d){return "Body: "+flappy_locale.v(d,"playerScore")},
 "setBackground":function(d){return "nastavit scénu"},
 "setBackgroundRandom":function(d){return "nastavit scénu Náhodná"},
 "setBackgroundFlappy":function(d){return "nastavit scénu Město (ve dne)"},

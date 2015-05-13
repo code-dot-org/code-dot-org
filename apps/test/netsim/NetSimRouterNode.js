@@ -12,22 +12,23 @@ var assertWithinRange = testUtils.assertWithinRange;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
-var _ = require(testUtils.buildPath('lodash'));
+var _ = require('lodash');
 
-var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
-var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
-var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
-var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
-var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
-var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
-var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
-var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
-var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+var Packet = require('@cdo/apps/netsim/Packet');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
+var dataConverters = require('@cdo/apps/netsim/dataConverters');
+
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimGlobals');
+var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard;

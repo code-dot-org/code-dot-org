@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "в улье"},
 "atFlower":function(d){return "на цветок"},
 "avoidCowAndRemove":function(d){return "избежать корову и раскидать 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "выполнить"},
 "elseCode":function(d){return "иначе"},
 "fill":function(d){return "засыпать 1"},
-"fillN":function(d){return "засыпать "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "засыпать "+appLocale.v(d,"shovelfuls")+" ям"},
+"fillN":function(d){return "засыпать "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "засыпать "+maze_locale.v(d,"shovelfuls")+" ям"},
 "fillSquare":function(d){return "засыпать квадрат"},
 "fillTooltip":function(d){return "насыпать 1 кучу земли"},
 "finalLevel":function(d){return "Поздравляю! Последняя головоломка решена."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "здесь есть куча"},
 "putdownTower":function(d){return "поставить башню"},
 "removeAndAvoidTheCow":function(d){return "разбросать 1, избегая корову"},
-"removeN":function(d){return "разбросать "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "разбросать "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "разбросать кучу"},
-"removeStack":function(d){return "раскидать "+appLocale.v(d,"shovelfuls")+" кучи в ряду"},
+"removeStack":function(d){return "раскидать "+maze_locale.v(d,"shovelfuls")+" кучи в ряду"},
 "removeSquare":function(d){return "убрать квадрат"},
 "repeatCarefullyError":function(d){return "Чтобы пройти это, подумай о комбинациях двух перемещений и одного поворота, которые можно поместить в блок \"повторять\". Ничего страшного, если в конце будет сделан лишний поворот."},
 "repeatUntil":function(d){return "повторять до"},

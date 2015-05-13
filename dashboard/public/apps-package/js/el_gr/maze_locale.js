@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "στην κυψέλη"},
 "atFlower":function(d){return "στο λουλούδι"},
 "avoidCowAndRemove":function(d){return "απόφυγε την αγελάδα και αφαίρεσε 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "κάνε"},
 "elseCode":function(d){return "αλλιώς"},
 "fill":function(d){return "γέμισε 1"},
-"fillN":function(d){return "γέμισε "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "γέμισε τη στοίβα των φτυαριές"+appLocale.v(d,"shovelfuls")+" τρυπών"},
+"fillN":function(d){return "γέμισε "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "γέμισε τη στοίβα των φτυαριές"+maze_locale.v(d,"shovelfuls")+" τρυπών"},
 "fillSquare":function(d){return "γέμισε το τετράγωνο"},
 "fillTooltip":function(d){return "βάλε 1 μονάδα χώματος"},
 "finalLevel":function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "υπάρχει ένας σωρός"},
 "putdownTower":function(d){return "άφησε κάτω τον πύργο"},
 "removeAndAvoidTheCow":function(d){return "αφαίρεσε ένα και απέφυγε την αγελάδα"},
-"removeN":function(d){return "αφαίρεσε "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "αφαίρεσε "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "αφαίρεσε το σωρό"},
-"removeStack":function(d){return "αφαίρεσε τη στοίβα από "+appLocale.v(d,"shovelfuls")+" σωρούς"},
+"removeStack":function(d){return "αφαίρεσε τη στοίβα από "+maze_locale.v(d,"shovelfuls")+" σωρούς"},
 "removeSquare":function(d){return "αφαίρεσε το τετράγωνο"},
 "repeatCarefullyError":function(d){return "Για να το λύσεις αυτό, σκέψου προσεκτικά σχετικά με το μοτίβο των δύο κινήσεων και της μιας στροφής που θα βάλεις στο πλακίδιο «επανάληψη».  Δεν υπάρχει πρόβλημα αν έχεις μία επιπλέον στροφή στο τέλος."},
 "repeatUntil":function(d){return "επανάλαβε μέχρις ότου"},

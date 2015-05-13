@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "at honeycomb"},
 "atFlower":function(d){return "at flower"},
 "avoidCowAndRemove":function(d){return "inəyə toxunma və birini yiğişdır"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "et"},
 "elseCode":function(d){return "əks halda"},
 "fill":function(d){return "birini doldur"},
-"fillN":function(d){return appLocale.v(d,"shovelfuls")+" doldur"},
-"fillStack":function(d){return "fill stack of "+appLocale.v(d,"shovelfuls")+" holes"},
+"fillN":function(d){return maze_locale.v(d,"shovelfuls")+" doldur"},
+"fillStack":function(d){return "fill stack of "+maze_locale.v(d,"shovelfuls")+" holes"},
 "fillSquare":function(d){return "kvadrat doldur"},
 "fillTooltip":function(d){return "bir parça torpaq qoy"},
 "finalLevel":function(d){return "Təbriklər! Axırıncı tapmacanı da tapdınız."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "təpəcik var"},
 "putdownTower":function(d){return "qülləni yerə qoy"},
 "removeAndAvoidTheCow":function(d){return "Birini yığışdır və inəyə toxunma"},
-"removeN":function(d){return appLocale.v(d,"shovelfuls")+" yığışdır"},
+"removeN":function(d){return maze_locale.v(d,"shovelfuls")+" yığışdır"},
 "removePile":function(d){return "təpəciyi yiğışdır"},
-"removeStack":function(d){return "dalbadal "+appLocale.v(d,"shovelfuls")+" təpəciyi yığışdır"},
+"removeStack":function(d){return "dalbadal "+maze_locale.v(d,"shovelfuls")+" təpəciyi yığışdır"},
 "removeSquare":function(d){return "kvadratı yığışdır"},
 "repeatCarefullyError":function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."},
 "repeatUntil":function(d){return "təkrar et, ta ki"},

@@ -1,7 +1,7 @@
 var testUtils = require('../../util/testUtils');
-var _ = require(testUtils.buildPath('lodash'));
+var _ = require('@cdo/apps/lodash');
 
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 module.exports = {
   app: "studio",

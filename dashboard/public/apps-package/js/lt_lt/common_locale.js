@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "ir"},
 "backToPreviousLevel":function(d){return "Grįžti į ankstesnį lygį"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos prijungti prie bloko „paleidus“?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Sveikinu! Tu baigei paskutinį etapą."},
-"finalStageTrophies":function(d){return "Sveikinu! Tu užbaigei paskutinį lygį ir laimėjai "+locale.p(d,"numTrophies",0,"lt",{"one":"a trofėjų","other":locale.n(d,"numTrophies")+" trofėjus"})+"."},
+"finalStageTrophies":function(d){return "Sveikinu! Tu užbaigei paskutinį lygį ir laimėjai "+common_locale.p(d,"numTrophies",0,"lt",{"one":"a trofėjų","other":common_locale.n(d,"numTrophies")+" trofėjus"})+"."},
 "finish":function(d){return "Finišas"},
-"generatedCodeInfo":function(d){return "Net ir aukščiausiai įvertinti universitetai Pasaulyje moko programavimo naudojant blokelius (pvz., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Tačiau tavo sudėlioti blokeliai gali būti atvaizduojami ir JavaScript - populiariausia programavimo kalba Pasaulyje:"},
+"generatedCodeInfo":function(d){return "Net ir aukščiausiai įvertinti universitetai Pasaulyje moko programavimo naudojant blokelius (pvz., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Tačiau tavo sudėlioti blokeliai gali būti atvaizduojami ir JavaScript - populiariausia programavimo kalba Pasaulyje:"},
 "genericFeedback":function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."},
 "hashError":function(d){return "Atsiprašome, '%1' nesutampa su jokia įrašyta programa."},
 "help":function(d){return "pagalba"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "sąrašas"},
 "makeYourOwnFlappy":function(d){return "Sukurk savo Flappy žaidimą"},
 "missingBlocksErrorMsg":function(d){return "Išmėgink vieną ar daugiau blokelių, esančių žemiau, kad išspręstum šią užduotį."},
-"nextLevel":function(d){return "Sveikinu! Tu išsprendei galvosūkį "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Sveikinu! Užbaigėte galvosūkį "+locale.v(d,"puzzleNumber")+" ir laimėjote "+locale.p(d,"numTrophies",0,"lt",{"one":"trofėju","other":locale.n(d,"numTrophies")+" trofėjų"})+"."},
+"nextLevel":function(d){return "Sveikinu! Tu išsprendei galvosūkį "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Sveikinu! Užbaigėte galvosūkį "+common_locale.v(d,"puzzleNumber")+" ir laimėjote "+common_locale.p(d,"numTrophies",0,"lt",{"one":"trofėju","other":common_locale.n(d,"numTrophies")+" trofėjų"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Sveikinu! Tu užbaigei "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Sveikinu! Tu užbaigei lygį "+locale.v(d,"stageName")+" ir laimėjai "+locale.p(d,"numTrophies",0,"lt",{"one":"trofėjų","other":locale.n(d,"numTrophies")+" trofėjus"})+"."},
-"numBlocksNeeded":function(d){return "Sveikinu! Tu išsprendei "+locale.v(d,"puzzleNumber")+" užduotį. (Beje, galėjai panaudoti tik "+locale.p(d,"numBlocks",0,"lt",{"vieną":"1 blokelį","other":locale.n(d,"numBlocks")+" blokelių"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Tu sukūrei "+locale.p(d,"numLines",0,"lt",{"one":"1 eilutę","other":locale.n(d,"numLines")+" eilučių"})+" programą!"},
+"nextStage":function(d){return "Sveikinu! Tu užbaigei "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Sveikinu! Tu užbaigei lygį "+common_locale.v(d,"stageName")+" ir laimėjai "+common_locale.p(d,"numTrophies",0,"lt",{"one":"trofėjų","other":common_locale.n(d,"numTrophies")+" trofėjus"})+"."},
+"numBlocksNeeded":function(d){return "Sveikinu! Tu išsprendei "+common_locale.v(d,"puzzleNumber")+" užduotį. (Beje, galėjai panaudoti tik "+common_locale.p(d,"numBlocks",0,"lt",{"vieną":"1 blokelį","other":common_locale.n(d,"numBlocks")+" blokelių"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Tu sukūrei "+common_locale.p(d,"numLines",0,"lt",{"one":"1 eilutę","other":common_locale.n(d,"numLines")+" eilučių"})+" programą!"},
 "openWorkspace":function(d){return "Kaip tai veikia"},
 "orientationLock":function(d){return "Išjunk savo įrenginio ekrano pasukimą."},
 "play":function(d){return "žaisti"},
 "print":function(d){return "Spausdinti"},
-"puzzleTitle":function(d){return "Užduotis "+locale.v(d,"puzzle_number")+" iš "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Užduotis "+common_locale.v(d,"puzzle_number")+" iš "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "kartok"},
 "resetProgram":function(d){return "Iš naujo"},
 "rotateText":function(d){return "Pasuk savo įrenginį."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Tu privertei mane tiek daug dirbti! Ar galėtum atlikti užduotį su mažiau kartojimų?"},
 "toolboxHeader":function(d){return "Blokeliai"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Iš viso: "+locale.p(d,"numLines",0,"lt",{"one":"1 eilutė","other":locale.n(d,"numLines")+" eilučių"})+" kodo."},
+"totalNumLinesOfCodeWritten":function(d){return "Iš viso: "+common_locale.p(d,"numLines",0,"lt",{"one":"1 eilutė","other":common_locale.n(d,"numLines")+" eilučių"})+" kodo."},
 "tryAgain":function(d){return "Pabandyk dar kartą"},
 "tryHOC":function(d){return "Išmėgink „Programavimo valandą“"},
 "wantToLearn":function(d){return "Nori išmokti programuoti?"},

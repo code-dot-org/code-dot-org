@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "ve"},
 "backToPreviousLevel":function(d){return "Önceki seviyeye dön"},
 "blocklyMessage":function(d){return "Parçalı"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Son aşamayı bitirdiniz. Tebrikler!"},
-"finalStageTrophies":function(d){return "Tebrikler! Son aşamayı bitirerek "+locale.p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":locale.n(d,"numTrophies")+" ganimet"})+" kazandınız."},
+"finalStageTrophies":function(d){return "Tebrikler! Son aşamayı bitirerek "+common_locale.p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":common_locale.n(d,"numTrophies")+" ganimet"})+" kazandınız."},
 "finish":function(d){return "Bitiş"},
-"generatedCodeInfo":function(d){return "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:"},
+"generatedCodeInfo":function(d){return "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:"},
 "genericFeedback":function(d){return "Sonucunu gör ve programını düzeltmeyi dene."},
 "hashError":function(d){return "Üzgünüz, '%1' kayıtlı herhangi bir programa karşılık gelmez."},
 "help":function(d){return "Yardım"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "liste"},
 "makeYourOwnFlappy":function(d){return "Kendi Flappy Oyununu Yap"},
 "missingBlocksErrorMsg":function(d){return "Aşağıdaki bloklardan bir ya da birden fazlasını kullanarak bulmacayı çözmeye çalışın."},
-"nextLevel":function(d){return "Tebrikler! Bulmaca "+locale.v(d,"puzzleNumber")+" tamamlandı."},
-"nextLevelTrophies":function(d){return "Tebrikler! Bulmaca "+locale.v(d,"puzzleNumber")+" tamamlandı ve "+locale.p(d,"numTrophies",0,"tr",{"one":"bir kupa","other":locale.n(d,"numTrophies")+"  kupa"})+" kazandınız."},
+"nextLevel":function(d){return "Tebrikler! Bulmaca "+common_locale.v(d,"puzzleNumber")+" tamamlandı."},
+"nextLevelTrophies":function(d){return "Tebrikler! Bulmaca "+common_locale.v(d,"puzzleNumber")+" tamamlandı ve "+common_locale.p(d,"numTrophies",0,"tr",{"one":"bir kupa","other":common_locale.n(d,"numTrophies")+"  kupa"})+" kazandınız."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Tebrikler! "+locale.v(d,"stageName")+" tamamlandı."},
-"nextStageTrophies":function(d){return "Tebrikler! Kademe "+locale.v(d,"stageNumber")+" tamamlandı ve "+locale.p(d,"numTrophies",0,"tr",{"one":"bir kupa","other":locale.n(d,"numTrophies")+" kupalar"})+" kazandınız."},
-"numBlocksNeeded":function(d){return "Tebrikler! Bulmaca "+locale.v(d,"puzzleNumber")+" tamamlandı. (Ancak, sadece "+locale.p(d,"numBlocks",0,"tr",{"one":"1 blok","other":locale.n(d,"numBlocks")+" blok"})+" kullanmış olabilirdiniz.)"},
-"numLinesOfCodeWritten":function(d){return "Tam olarak "+locale.p(d,"numLines",0,"tr",{"one":"1 satır","other":locale.n(d,"numLines")+" satır"})+" kod yazdınız!"},
+"nextStage":function(d){return "Tebrikler! "+common_locale.v(d,"stageName")+" tamamlandı."},
+"nextStageTrophies":function(d){return "Tebrikler! Kademe "+common_locale.v(d,"stageNumber")+" tamamlandı ve "+common_locale.p(d,"numTrophies",0,"tr",{"one":"bir kupa","other":common_locale.n(d,"numTrophies")+" kupalar"})+" kazandınız."},
+"numBlocksNeeded":function(d){return "Tebrikler! Bulmaca "+common_locale.v(d,"puzzleNumber")+" tamamlandı. (Ancak, sadece "+common_locale.p(d,"numBlocks",0,"tr",{"one":"1 blok","other":common_locale.n(d,"numBlocks")+" blok"})+" kullanmış olabilirdiniz.)"},
+"numLinesOfCodeWritten":function(d){return "Tam olarak "+common_locale.p(d,"numLines",0,"tr",{"one":"1 satır","other":common_locale.n(d,"numLines")+" satır"})+" kod yazdınız!"},
 "openWorkspace":function(d){return "Nasıl Çalışır"},
 "orientationLock":function(d){return "Yönlendirme kilidini aygıt ayarlarından devre dışı bırakın."},
 "play":function(d){return "oynat"},
 "print":function(d){return "Yazdır"},
-"puzzleTitle":function(d){return "Bulmaca "+locale.v(d,"puzzle_number")+" / "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Bulmaca "+common_locale.v(d,"puzzle_number")+" / "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "bu işlemleri"},
 "resetProgram":function(d){return "Yeniden başla"},
 "rotateText":function(d){return "Cihazınızı döndürün."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Bana çok fazla iş yaptırdın!Daha az tekrar etmeyi deneyebilir misin ?"},
 "toolboxHeader":function(d){return "bloklar"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Toplam: "+locale.p(d,"numLines",0,"tr",{"one":"1 satır","other":locale.n(d,"numLines")+" satır"})+" kod."},
+"totalNumLinesOfCodeWritten":function(d){return "Toplam: "+common_locale.p(d,"numLines",0,"tr",{"one":"1 satır","other":common_locale.n(d,"numLines")+" satır"})+" kod."},
 "tryAgain":function(d){return "Tekrar dene"},
 "tryHOC":function(d){return "Kodlama Saati'ni Deneyin"},
 "wantToLearn":function(d){return "Kod yazmayı öğrenmek ister misiniz?"},

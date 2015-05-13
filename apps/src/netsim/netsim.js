@@ -18,7 +18,7 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -186,7 +186,7 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootController(this);
+  netsimGlobals.setRootControllers(this.studioApp_, this);
 
   /**
    * Skin for the loaded level
@@ -403,6 +403,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * @private
  */
 NetSim.prototype.onBeforeUnload_ = function (event) {
+  if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+    return;
+  }
+
   // No need to warn about navigating away if the student is not connected,
   // or is still in the lobby.
   if (this.isConnectedToRemote()) {

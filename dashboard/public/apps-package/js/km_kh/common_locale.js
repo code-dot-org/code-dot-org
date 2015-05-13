@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "និង"},
 "backToPreviousLevel":function(d){return "ត្រឡប់​ទៅ​កម្រិត​មុន"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ដំណាក់កាល​ចុងក្រោយ​ហើយ។"},
-"finalStageTrophies":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ដំណាក់កាល​ចុងក្រោយ ហើយ​បាន​ឈ្នះ​"+locale.p(d,"numTrophies",0,"en",{"one":"ពាន​មួយ","other":"ពាន "+locale.n(d,"numTrophies")})+"។"},
+"finalStageTrophies":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ដំណាក់កាល​ចុងក្រោយ ហើយ​បាន​ឈ្នះ​"+common_locale.p(d,"numTrophies",0,"en",{"one":"ពាន​មួយ","other":"ពាន "+common_locale.n(d,"numTrophies")})+"។"},
 "finish":function(d){return "បញ្ចប់"},
-"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
+"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
 "genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
 "hashError":function(d){return "Sorry, '%1' doesn't correspond with any saved program."},
 "help":function(d){return "ជំនួយ"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "បញ្ជី"},
 "makeYourOwnFlappy":function(d){return "បង្កើត​ហ្គេម Flappy របស់​អ្នក"},
 "missingBlocksErrorMsg":function(d){return "Try one or more of the blocks below to solve this puzzle."},
-"nextLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា "+locale.v(d,"puzzleNumber")+" ហើយ។"},
-"nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+" and won "+locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា "+common_locale.v(d,"puzzleNumber")+" ហើយ។"},
+"nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+" and won "+common_locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+" and won "+locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+". (However, you could have used only "+locale.p(d,"numBlocks",0,"en",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "You just wrote "+locale.p(d,"numLines",0,"en",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" of code!"},
+"nextStage":function(d){return "Congratulations! You completed "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Congratulations! You completed "+common_locale.v(d,"stageName")+" and won "+common_locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (However, you could have used only "+common_locale.p(d,"numBlocks",0,"en",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "You just wrote "+common_locale.p(d,"numLines",0,"en",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" of code!"},
 "openWorkspace":function(d){return "របៀប​វា​ដំណើរការ"},
 "orientationLock":function(d){return "Turn off orientation lock in device settings."},
 "play":function(d){return "play"},
 "print":function(d){return "បោះពុម្ព"},
-"puzzleTitle":function(d){return "ល្បែង​ប្រាជ្ញា​ទី "+locale.v(d,"puzzle_number")+" នៃ "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "ល្បែង​ប្រាជ្ញា​ទី "+common_locale.v(d,"puzzle_number")+" នៃ "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "ធ្វើ​ឡើង​វិញ"},
 "resetProgram":function(d){return "កំណត់​ឡើង​វិញ"},
 "rotateText":function(d){return "បង្វិល​ឧបករណ៍​របស់​អ្នក។"},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "អ្នក​ឲ្យ​ខ្ញុំ​ធ្វើ​ការងារ​ច្រើន​ណាស់! តើ​អ្នក​អាច​ឲ្យ​ធ្វើ​ឡើង​វិញ​តិច​ជាង​មុន​បាន​ទេ?"},
 "toolboxHeader":function(d){return "ប្លុក"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "សរុប​គ្រប់​ពេល៖ "+locale.p(d,"numLines",0,"en",{"one":"1 បន្ទាត់","other":locale.n(d,"numLines")+" បន្ទាត់"})+"​នៃ​កូដ។"},
+"totalNumLinesOfCodeWritten":function(d){return "សរុប​គ្រប់​ពេល៖ "+common_locale.p(d,"numLines",0,"en",{"one":"1 បន្ទាត់","other":common_locale.n(d,"numLines")+" បន្ទាត់"})+"​នៃ​កូដ។"},
 "tryAgain":function(d){return "ព្យាយាម​ម្ដង​ទៀត"},
 "tryHOC":function(d){return "សាក​ល្បង \"ពេល​វេលា​នៃ​កូដ\""},
 "wantToLearn":function(d){return "ចង់​រៀន​សរសេរ​កូដ​ទេ?"},

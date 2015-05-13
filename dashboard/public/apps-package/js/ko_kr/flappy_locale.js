@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var flappy_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){flappy_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:(k=flappy_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).flappy_locale = {
 "continue":function(d){return "계속하기"},
 "doCode":function(d){return "do"},
 "elseCode":function(d){return "else"},
@@ -189,7 +189,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundLaser":function(d){return "레이저 소리 출력"},
 "playSoundTooltip":function(d){return "선택 소리 출력"},
 "reinfFeedbackMsg":function(d){return "다시 시도하기 버튼을 눌러 게임을 다시 시작할 수 있습니다."},
-"scoreText":function(d){return "점수 : "+appLocale.v(d,"playerScore")},
+"scoreText":function(d){return "점수 : "+flappy_locale.v(d,"playerScore")},
 "setBackground":function(d){return "배경 설정"},
 "setBackgroundRandom":function(d){return "랜덤 배경 설정"},
 "setBackgroundFlappy":function(d){return "도시(낮) 배경 설정"},

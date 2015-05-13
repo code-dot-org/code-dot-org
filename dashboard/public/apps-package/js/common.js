@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({103:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({109:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -58,7 +58,7 @@ exports.define = function(name) {
 };
 
 
-},{}],60:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -282,7 +282,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 }
 
 
-},{}],59:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -573,7 +573,7 @@ function RGBColor(color_string)
 
 
 
-},{}],58:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3542,7 +3542,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 }
 
 
-},{}],57:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4155,13 +4155,13 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],213:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
 var utils = require('./utils');
 var _ = utils.getLodash();
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
 
@@ -4706,7 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"../locale/current/common":265,"./utils":260}],245:[function(require,module,exports){
+},{"./locale":110,"./utils":271}],255:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -4770,8 +4770,7 @@ exports.clearInterval = function (id) {
 };
 
 
-
-},{}],239:[function(require,module,exports){
+},{}],249:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4784,7 +4783,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-  var msg = require('../../locale/current/common');
+  var msg = require('../locale');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n\n    ');38; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((40,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((43,  msg.codeMode() )), '\n      </button>\n    ');45; } ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');59; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');66; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (68,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (69,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');71; } ; buf.push('\n        </table>\n      </div>\n      ');74; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((87,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((90,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((91,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((93,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((94,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((95,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((97,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((99,  data.blockCounterClass )), '>\n            ', escape((100,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((103,  data.idealBlockNumber )), '</span>\n          <span> ', escape((104,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');108; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((111,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');114; } ; buf.push('\n  </div>\n  ');116; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');118; } ; buf.push('\n  ');119; if (data.hasDesignMode) { ; buf.push('\n    ', (120,  data.designModeBox ), '\n  ');121; } ; buf.push('\n  ');122; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (123,  data.extraControlRows ), '\n  ');124; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
@@ -4794,7 +4793,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],215:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],224:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5060,7 +5059,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":65}],214:[function(require,module,exports){
+},{"./dom":68}],223:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5151,7 +5150,9 @@ window.__TestInterface = {
   },
   getDroplet: function () {
     return studioApp.editor;
-  }
+  },
+  // Set to true to ignore onBeforeUnload events
+  ignoreOnBeforeUnload: false
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -5217,13 +5218,13 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":4,"./blocksCommon":35,"./dom":65,"./required_block_utils":212,"./utils":260}],212:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":36,"./dom":68,"./required_block_utils":221,"./utils":271}],221:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var _ = utils.getLodash();
 
 /**
@@ -5540,13 +5541,13 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"../locale/current/common":265,"./block_utils":34,"./utils":260,"./xml":261}],35:[function(require,module,exports){
+},{"./block_utils":35,"./locale":110,"./utils":271,"./xml":272}],36:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
 'use strict';
 
-var commonMsg = require('../locale/current/common');
+var commonMsg = require('./locale');
 
 /**
  * Install extensions to Blockly's language and JavaScript generator
@@ -5709,7 +5710,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 
-},{"../locale/current/common":265}],4:[function(require,module,exports){
+},{"./locale":110}],4:[function(require,module,exports){
 /* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
@@ -5718,7 +5719,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -6079,10 +6080,18 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    vizResizeBar.addEventListener('mousedown',
-                                  _.bind(this.onMouseDownVizResizeBar, this));
+    dom.addMouseDownTouchEvent(vizResizeBar,
+                               _.bind(this.onMouseDownVizResizeBar, this));
+
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
     document.body.addEventListener('mouseup',
                                    _.bind(this.onMouseUpVizResizeBar, this));
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     _.bind(this.onMouseUpVizResizeBar, this));
+    }
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -6514,6 +6523,11 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (this.mouseMoveTouchEventName) {
+      document.body.addEventListener(this.mouseMoveTouchEventName,
+                                     this.onMouseMoveBoundHandler);
+    }
 
     event.preventDefault();
   }
@@ -6581,6 +6595,10 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    if (this.mouseMoveTouchEventName) {
+      document.body.removeEventListener(this.mouseMoveTouchEventName,
+                                        this.onMouseMoveBoundHandler);
+    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -6987,7 +7005,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
-  
+
     /* jshint ignore:start */
     ace = window.ace;
     /* jshint ignore:end */
@@ -7256,7 +7274,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"../locale/current/common":265,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":32,"./block_utils":34,"./constants.js":64,"./dom":65,"./dropletUtils":66,"./feedback":85,"./templates/builder.html.ejs":233,"./templates/buttons.html.ejs":234,"./templates/instructions.html.ejs":236,"./templates/learn.html.ejs":237,"./templates/makeYourOwn.html.ejs":238,"./utils":260,"./xml":261,"url":280}],280:[function(require,module,exports){
+},{"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":33,"./block_utils":35,"./constants.js":67,"./dom":68,"./dropletUtils":69,"./feedback":89,"./locale":110,"./templates/builder.html.ejs":243,"./templates/buttons.html.ejs":244,"./templates/instructions.html.ejs":246,"./templates/learn.html.ejs":247,"./templates/makeYourOwn.html.ejs":248,"./utils":271,"./xml":272,"url":280}],280:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8655,7 +8673,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],238:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8667,7 +8685,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="make-your-own">\n\n  <h1><a href=', escape((5,  data.makeUrl )), '>', escape((5,  data.makeString )), '</a></h1>\n  <a href=', escape((6,  data.makeUrl )), '><img src=', escape((6,  data.makeImage )), '></a>\n\n</div>\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n<div id="make-your-own">\n\n  <h1><a href=', escape((5,  data.makeUrl )), '>', escape((5,  data.makeString )), '</a></h1>\n  <a href=', escape((6,  data.makeUrl )), '><img src=', escape((6,  data.makeImage )), '></a>\n\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -8675,7 +8693,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],237:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],247:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8687,7 +8705,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
 ; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
 )), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
 } 
@@ -8697,7 +8715,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],236:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],246:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8709,7 +8727,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n<p class=\'dialog-title\'>', escape((3,  msg.puzzleTitle(locals) )), '</p>\n');4; if (locals.instructions) {; buf.push('  <p>', escape((4,  locals.instructions )), '</p>\n');5; };; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; };; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n<p class=\'dialog-title\'>', escape((3,  msg.puzzleTitle(locals) )), '</p>\n');4; if (locals.instructions) {; buf.push('  <p>', escape((4,  locals.instructions )), '</p>\n');5; };; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; };; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8717,7 +8735,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],233:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],243:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8737,7 +8755,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],85:[function(require,module,exports){
+},{"ejs":281}],89:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -8766,7 +8784,7 @@ var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = utils.getLodash();
 var codegen = require('./codegen');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -9959,7 +9977,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"../locale/current/common":265,"./codegen":62,"./constants":64,"./dom":65,"./feedbackBlocks":86,"./templates/buttons.html.ejs":234,"./templates/code.html.ejs":235,"./templates/shareFailure.html.ejs":241,"./templates/sharing.html.ejs":242,"./templates/showCode.html.ejs":243,"./templates/trophy.html.ejs":244,"./utils":260,"./xml":261}],244:[function(require,module,exports){
+},{"./codegen":65,"./constants":67,"./dom":68,"./feedbackBlocks":90,"./locale":110,"./templates/buttons.html.ejs":244,"./templates/code.html.ejs":245,"./templates/shareFailure.html.ejs":251,"./templates/sharing.html.ejs":252,"./templates/showCode.html.ejs":253,"./templates/trophy.html.ejs":254,"./utils":271,"./xml":272}],254:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9979,7 +9997,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],243:[function(require,module,exports){
+},{"ejs":281}],253:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9991,7 +10009,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -9999,7 +10017,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],242:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],252:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10011,7 +10029,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -10019,7 +10037,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],241:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],251:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10039,7 +10057,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],235:[function(require,module,exports){
+},{"ejs":281}],245:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10059,7 +10077,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],234:[function(require,module,exports){
+},{"ejs":281}],244:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10071,7 +10089,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  data.continueText )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  data.continueText )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  data.continueText )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  data.continueText )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -10079,7 +10097,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],86:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],90:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10209,7 +10227,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":64,"./templates/readonly.html.ejs":240}],240:[function(require,module,exports){
+},{"./constants":67,"./templates/readonly.html.ejs":250}],250:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10230,7 +10248,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],62:[function(require,module,exports){
+},{"ejs":281}],65:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -10775,7 +10793,7 @@ exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
 };
 
 
-},{"./dropletUtils":66}],66:[function(require,module,exports){
+},{"./dropletUtils":69}],69:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -11157,7 +11175,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":260}],65:[function(require,module,exports){
+},{"./utils":271}],68:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -11178,10 +11196,7 @@ exports.setText = function(node, string) {
   }
 };
 
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
+exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -11194,8 +11209,16 @@ var addEvent = function(element, eventName, handler) {
   } else if (isStandardTouch) {
     key = "standard";
   }
-  if (key) {
-    var touchEvent = TOUCH_MAP[eventName][key];
+  if (key && TOUCH_MAP[eventName]) {
+    return TOUCH_MAP[eventName][key];
+  }
+};
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var touchEvent = exports.getTouchEventName(eventName);
+  if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
       handler(e);
@@ -11265,7 +11288,7 @@ exports.isIOS = function() {
 };
 
 
-},{}],64:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -11344,7 +11367,7 @@ exports.KeyCodes = {
 };
 
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -11643,7 +11666,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":261}],32:[function(require,module,exports){
+},{"./xml":272}],33:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -11732,7 +11755,7 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 module.exports = DropletTooltipManager;
 
 
-},{"./DropletAutocompleteParameterTooltipManager":26,"./DropletAutocompletePopupTooltipManager":27,"./DropletBlockTooltipManager":28,"./DropletFunctionTooltip":30}],28:[function(require,module,exports){
+},{"./DropletAutocompleteParameterTooltipManager":27,"./DropletAutocompletePopupTooltipManager":28,"./DropletBlockTooltipManager":29,"./DropletFunctionTooltip":31}],29:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -11841,8 +11864,8 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
 module.exports = DropletBlockTooltipManager;
 
 
-},{"./DropletFunctionTooltip":30,"./DropletFunctionTooltip.html.ejs":29}],30:[function(require,module,exports){
-var msg = require('../../locale/current/common');
+},{"./DropletFunctionTooltip":31,"./DropletFunctionTooltip.html.ejs":30}],31:[function(require,module,exports){
+var msg = require('../locale');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -11967,10 +11990,13 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
 module.exports = DropletFunctionTooltip;
 
 
-},{"../../locale/current/common":265}],265:[function(require,module,exports){
-/*common*/ module.exports = window.blockly.locale;
+},{"../locale":110}],110:[function(require,module,exports){
+// base locale
 
-},{}],27:[function(require,module,exports){
+module.exports = window.blockly.common_locale;
+
+
+},{}],28:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
@@ -12101,7 +12127,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
 module.exports = DropletAutocompletePopupTooltipManager;
 
 
-},{"./DropletFunctionTooltip.html.ejs":29}],29:[function(require,module,exports){
+},{"./DropletFunctionTooltip.html.ejs":30}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12126,7 +12152,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],26:[function(require,module,exports){
+},{"ejs":281}],27:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -12242,7 +12268,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
 module.exports = DropletAutocompleteParameterTooltipManager;
 
 
-},{"./DropletParameterTooltip.html.ejs":31,"./tooltipUtils.js":33}],33:[function(require,module,exports){
+},{"./DropletParameterTooltip.html.ejs":32,"./tooltipUtils.js":34}],34:[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -12386,7 +12412,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":260}],260:[function(require,module,exports){
+},{"../utils":271}],271:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -12649,7 +12675,7 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 
-},{"./hammer":96,"./lodash":104,"./xml":261}],261:[function(require,module,exports){
+},{"./hammer":101,"./lodash":111,"./xml":272}],272:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12678,7 +12704,7 @@ exports.parseElement = function(text) {
 };
 
 
-},{}],104:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -16048,7 +16074,7 @@ exports.parseElement = function(text) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],96:[function(require,module,exports){
+},{}],101:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -18213,7 +18239,7 @@ if(typeof define == 'function' && define.amd) {
 
 })(window);
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

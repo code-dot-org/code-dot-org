@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "vid honungskakan"},
 "atFlower":function(d){return "vid blomman"},
 "avoidCowAndRemove":function(d){return "undvik kon och ta bort 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "utför"},
 "elseCode":function(d){return "annars"},
 "fill":function(d){return "Fyll 1"},
-"fillN":function(d){return "fyll "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "fyll stapel med "+appLocale.v(d,"shovelfuls")+" högar"},
+"fillN":function(d){return "fyll "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "fyll stapel med "+maze_locale.v(d,"shovelfuls")+" högar"},
 "fillSquare":function(d){return "fyll kvadrat"},
 "fillTooltip":function(d){return "Placera 1 lera"},
 "finalLevel":function(d){return "Grattis! Du har löst det sista pusslet."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "Det finns en hög"},
 "putdownTower":function(d){return "lägg ner tornet"},
 "removeAndAvoidTheCow":function(d){return "ta bort 1 och undvik kon"},
-"removeN":function(d){return "ta bort "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "ta bort "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "ta bort hög"},
-"removeStack":function(d){return "ta bort stapel med "+appLocale.v(d,"shovelfuls")+" högar"},
+"removeStack":function(d){return "ta bort stapel med "+maze_locale.v(d,"shovelfuls")+" högar"},
 "removeSquare":function(d){return "ta bort ruta"},
 "repeatCarefullyError":function(d){return "För att lösa detta, tänka noga på mönstret av två flytt och en sväng  i \"upprepa\"blocket.  Det är okej att ha en extra sväng i slutet."},
 "repeatUntil":function(d){return "upprepa tills"},

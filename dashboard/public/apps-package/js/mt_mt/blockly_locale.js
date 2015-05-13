@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.mt_mt');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "sejħa";
 Blockly.Msg.ADD = "Żid";
 Blockly.Msg.ADD_COMMENT = "Żid kumment";

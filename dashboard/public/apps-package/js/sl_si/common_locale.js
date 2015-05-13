@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "in"},
 "backToPreviousLevel":function(d){return "Nazaj na prejšnjo raven"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Imaš nedodeljene bloke. Si jih želel dodeliti bloku \"ob zagonu\"?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Čestitke! Zaključil si zadnjo stopnjo."},
-"finalStageTrophies":function(d){return "Čestitke! Zaključil/a si stopnjo "+locale.v(d,"stageNumber")+" in osvojil/a "+locale.p(d,"numTrophies",0,"sl",{"one":"trofejo","other":locale.n(d,"numTrophies")+" trofej"})+"."},
+"finalStageTrophies":function(d){return "Čestitke! Zaključil/a si stopnjo "+common_locale.v(d,"stageNumber")+" in osvojil/a "+common_locale.p(d,"numTrophies",0,"sl",{"one":"trofejo","other":common_locale.n(d,"numTrophies")+" trofej"})+"."},
 "finish":function(d){return "Končaj"},
-"generatedCodeInfo":function(d){return "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:"},
+"generatedCodeInfo":function(d){return "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:"},
 "genericFeedback":function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."},
 "hashError":function(d){return "Žal, '%1' ne ustreza nobenemu shranjenemu programu."},
 "help":function(d){return "Pomoč"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "seznam"},
 "makeYourOwnFlappy":function(d){return "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)"},
 "missingBlocksErrorMsg":function(d){return "Če boš uporabil/a vsaj en blok, ki ga najdeš spodaj, ali več, boš rešil/a uganko."},
-"nextLevel":function(d){return "Čestitke! Rešil/a si uganko "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Čestitke! Rešil/a si uganko "+locale.v(d,"puzzleNumber")+" in osvojil/a "+locale.p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":locale.n(d,"numTrophies")+" lovorik"})+"."},
+"nextLevel":function(d){return "Čestitke! Rešil/a si uganko "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Čestitke! Rešil/a si uganko "+common_locale.v(d,"puzzleNumber")+" in osvojil/a "+common_locale.p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":common_locale.n(d,"numTrophies")+" lovorik"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Čestitke! Dokončal/a si "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Čestitke! Zaključil/a si stopnjo "+locale.v(d,"stageName")+" in osvojil/a "+locale.p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":locale.n(d,"numTrophies")+" lovorik"})+"."},
-"numBlocksNeeded":function(d){return "Čestitke! Zaključil/a si uganko "+locale.v(d,"puzzleNumber")+". (Vendar bi lahko uporabil samo  "+locale.p(d,"numBlocks",0,"sl",{"one":"1 blok","other":locale.n(d,"numBlocks")+" blokov"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Ravnokar si napisal/a "+locale.p(d,"numLines",0,"sl",{"one":"1 vrstico","other":locale.n(d,"numLines")+" vrstic"})+" kode!"},
+"nextStage":function(d){return "Čestitke! Dokončal/a si "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Čestitke! Zaključil/a si stopnjo "+common_locale.v(d,"stageName")+" in osvojil/a "+common_locale.p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":common_locale.n(d,"numTrophies")+" lovorik"})+"."},
+"numBlocksNeeded":function(d){return "Čestitke! Zaključil/a si uganko "+common_locale.v(d,"puzzleNumber")+". (Vendar bi lahko uporabil samo  "+common_locale.p(d,"numBlocks",0,"sl",{"one":"1 blok","other":common_locale.n(d,"numBlocks")+" blokov"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Ravnokar si napisal/a "+common_locale.p(d,"numLines",0,"sl",{"one":"1 vrstico","other":common_locale.n(d,"numLines")+" vrstic"})+" kode!"},
 "openWorkspace":function(d){return "Kako deluje"},
 "orientationLock":function(d){return "Izključi zaklepanje orientacije v nastavitvah naprave."},
 "play":function(d){return "igraj"},
 "print":function(d){return "Natisni"},
-"puzzleTitle":function(d){return "Uganka "+locale.v(d,"puzzle_number")+" od "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Uganka "+common_locale.v(d,"puzzle_number")+" od "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "ponovi"},
 "resetProgram":function(d){return "resetiraj"},
 "rotateText":function(d){return "Zasukaj tvojo napravo."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Si me pa utrudil/a! Bi se lahko poskusil/a manjkrat ponavljati?"},
 "toolboxHeader":function(d){return "Bloki"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Seštevek vseh skupaj:  "+locale.p(d,"numLines",0,"sl",{"one":"1 vrstica","other":locale.n(d,"numLines")+" vrstic"})+" kode."},
+"totalNumLinesOfCodeWritten":function(d){return "Seštevek vseh skupaj:  "+common_locale.p(d,"numLines",0,"sl",{"one":"1 vrstica","other":common_locale.n(d,"numLines")+" vrstic"})+" kode."},
 "tryAgain":function(d){return "Poskusi ponovno"},
 "tryHOC":function(d){return "Poizkusi Uro za programiranje (Hour to Code)"},
 "wantToLearn":function(d){return "Se želiš naučiti programirati?"},

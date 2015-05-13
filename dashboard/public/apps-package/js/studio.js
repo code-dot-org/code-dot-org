@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({226:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({236:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":218,"./levels":225,"./skins":230,"./studio":231}],231:[function(require,module,exports){
+},{"../appMain":5,"./blocks":227,"./levels":234,"./skins":240,"./studio":241}],241:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -28,8 +28,8 @@ window.studioMain = function(options) {
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var studioMsg = require('../../locale/current/studio');
+var commonMsg = require('../locale');
+var studioMsg = require('./locale');
 var skins = require('../skins');
 var constants = require('./constants');
 var sharedConstants = require('../constants');
@@ -1067,6 +1067,10 @@ var arrangeStartBlocks = function (config) {
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.reset = this.reset.bind(this);
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1242,7 +1246,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
     Studio.perExecutionTimeouts.forEach(function (timeout) {
       clearInterval(timeout);
     });
-   }
+  }
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1262,7 +1266,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
@@ -1386,7 +1390,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Studio.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -3015,7 +3019,7 @@ var checkFinished = function () {
 };
 
 
-},{"../../locale/current/common":265,"../../locale/current/studio":271,"../StudioApp":4,"../canvg/StackBlur.js":57,"../canvg/canvg.js":58,"../canvg/rgbcolor.js":59,"../canvg/svg_todataurl":60,"../codegen":62,"../constants":64,"../dom":65,"../dropletUtils":66,"../skins":214,"../templates/page.html.ejs":239,"../utils":260,"../xml":261,"./api":216,"./bigGameLogic":217,"./blocks":218,"./collidable":219,"./constants":220,"./controls.html.ejs":221,"./dropletConfig":223,"./extraControlRows.html.ejs":224,"./projectile":227,"./rocketHeightLogic":228,"./samBatLogic":229,"./visualization.html.ejs":232}],232:[function(require,module,exports){
+},{"../StudioApp":4,"../canvg/StackBlur.js":60,"../canvg/canvg.js":61,"../canvg/rgbcolor.js":62,"../canvg/svg_todataurl":63,"../codegen":65,"../constants":67,"../dom":68,"../dropletUtils":69,"../locale":110,"../skins":223,"../templates/page.html.ejs":249,"../utils":271,"../xml":272,"./api":225,"./bigGameLogic":226,"./blocks":227,"./collidable":228,"./constants":229,"./controls.html.ejs":230,"./dropletConfig":232,"./extraControlRows.html.ejs":233,"./locale":235,"./projectile":237,"./rocketHeightLogic":238,"./samBatLogic":239,"./visualization.html.ejs":242}],242:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3035,7 +3039,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],229:[function(require,module,exports){
+},{"ejs":281}],239:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3160,7 +3164,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":62,"../constants":64,"./api":216,"./constants":220,"./customGameLogic":222}],228:[function(require,module,exports){
+},{"../codegen":65,"../constants":67,"./api":225,"./constants":229,"./customGameLogic":231}],238:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3223,7 +3227,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":62,"./api":216,"./constants":220,"./customGameLogic":222}],227:[function(require,module,exports){
+},{"../codegen":65,"./api":225,"./constants":229,"./customGameLogic":231}],237:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3316,6 +3320,13 @@ Projectile.prototype = new Collidable();
 module.exports = Projectile;
 
 /**
+ * Test only function so that we can start our id count over.
+ */
+Projectile.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {
@@ -3398,7 +3409,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":219,"./constants":220}],230:[function(require,module,exports){
+},{"./collidable":228,"./constants":229}],240:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3407,7 +3418,7 @@ Projectile.prototype.moveToNextPosition = function () {
 // specified, otherwise, use background.png.
 
 var skinsBase = require('../skins');
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 var constants = require('./constants');
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
@@ -3768,10 +3779,10 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../../locale/current/studio":271,"../skins":214,"./constants":220}],225:[function(require,module,exports){
+},{"../skins":223,"./constants":229,"./locale":235}],234:[function(require,module,exports){
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var constants = require('./constants');
@@ -5269,7 +5280,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 });
 
 
-},{"../../locale/current/studio":271,"../block_utils":34,"../utils":260,"./constants":220}],224:[function(require,module,exports){
+},{"../block_utils":35,"../utils":271,"./constants":229,"./locale":235}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5281,7 +5292,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -5289,8 +5300,8 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],223:[function(require,module,exports){
-var msg = require('../../locale/current/studio');
+},{"../locale":110,"ejs":281}],232:[function(require,module,exports){
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },
@@ -5314,7 +5325,7 @@ module.exports.categories = {
 };
 
 
-},{"../../locale/current/studio":271}],221:[function(require,module,exports){
+},{"./locale":235}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5326,7 +5337,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -5334,7 +5345,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"ejs":281}],219:[function(require,module,exports){
+},{"../locale":110,"ejs":281}],228:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5441,7 +5452,7 @@ Collidable.prototype.outOfBounds = function () {
 };
 
 
-},{"../StudioApp":4,"./constants":220}],218:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":229}],227:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5452,9 +5463,9 @@ Collidable.prototype.outOfBounds = function () {
 /* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('../../locale/current/common');
+var commonMsg = require('../locale');
 var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -7469,10 +7480,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../../locale/current/common":265,"../../locale/current/studio":271,"../StudioApp":4,"../codegen":62,"../sharedFunctionalBlocks":213,"../utils":260,"./constants":220}],271:[function(require,module,exports){
-/*studio*/ module.exports = window.blockly.appLocale;
+},{"../StudioApp":4,"../codegen":65,"../locale":110,"../sharedFunctionalBlocks":222,"../utils":271,"./constants":229,"./locale":235}],235:[function(require,module,exports){
+// locale for studio
 
-},{}],217:[function(require,module,exports){
+module.exports = window.blockly.studio_locale;
+
+
+},{}],226:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7706,7 +7720,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":62,"./api":216,"./constants":220,"./customGameLogic":222}],222:[function(require,module,exports){
+},{"../codegen":65,"./api":225,"./constants":229,"./customGameLogic":231}],231:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7776,7 +7790,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":62,"./api":216,"./constants":220}],216:[function(require,module,exports){
+},{"../codegen":65,"./api":225,"./constants":229}],225:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7941,7 +7955,7 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":220}],220:[function(require,module,exports){
+},{"./constants":229}],229:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8119,4 +8133,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[226]);
+},{}]},{},[236]);

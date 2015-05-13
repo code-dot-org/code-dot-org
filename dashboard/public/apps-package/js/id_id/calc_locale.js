@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Program Anda menghasilkan pembagian dengan nol."},
 "emptyComputeBlock":function(d){return "Anda harus memasang blok ke \"evaluasi\" block."},
 "equivalentExpression":function(d){return "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Fungsi Kamu tidak memberikan hasil yang tepat bagi semua nilai."},
 "goal":function(d){return "Tujuan:"},
 "levelIncompleteError":function(d){return "Ekspresi Kamu tidak cocok dengan tujuan."},
-"missingFunctionError":function(d){return "Anda harus mendefinisikan fungsi bernama "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Ekspresi Anda kehilangan variabel "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Anda harus mendefinisikan fungsi bernama "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Ekspresi Anda kehilangan variabel "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Berikut adalah hasil perhitungan Anda! Terus bekerja, atau beralih ke masalah berikutnya!"},
 "yourExpression":function(d){return "Ekspresimu:"},
 "wrongInput":function(d){return "Anda memanggil fungsi milik sendiri dengan nilai yang salah."},
-"wrongOtherValuesX":function(d){return "Ekspresi Anda menghasilkan nilai yang salah jika kami menvariasikan "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Ekspresi Anda menghasilkan nilai yang salah jika kami menvariasikan "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Ekspresi Anda tidak mengembalikan hasil yang benar."}};

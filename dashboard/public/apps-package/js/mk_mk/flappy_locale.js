@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var flappy_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){flappy_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:(k=flappy_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).flappy_locale = {
 "continue":function(d){return "Продолжи"},
 "doCode":function(d){return "изврши"},
 "elseCode":function(d){return "инаку"},
@@ -189,7 +189,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundLaser":function(d){return "пушти го ласерскиот звук"},
 "playSoundTooltip":function(d){return "Пушти го избраниот звук."},
 "reinfFeedbackMsg":function(d){return "Можете да го притиснете \"Обиди се повторно\" копчето за да се врати во игра на својата игра."},
-"scoreText":function(d){return "Резулта: "+appLocale.v(d,"playerScore")},
+"scoreText":function(d){return "Резулта: "+flappy_locale.v(d,"playerScore")},
 "setBackground":function(d){return "постави сцена"},
 "setBackgroundRandom":function(d){return "постави ја сцената по случајност"},
 "setBackgroundFlappy":function(d){return "поставија сцената на градот(ден)"},
