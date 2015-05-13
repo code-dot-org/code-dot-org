@@ -1296,8 +1296,14 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {boolean} showMetronome - Whether the metronome (and its related
- *           speed control) should show up on the "My Device" tab.
+ * @property {boolean} showPulseRateSlider - Whether the pulse rate slider
+ *           is visible on the "My Device" tab.  This control is a different
+ *           view on the bitrate, given in seconds-per-pulse; in fact, if both
+ *           this and the bitrate slider are visible, dragging one will change
+ *           the other.
+ *
+ * @property {boolean} showMetronome - Whether the metronome should show up on
+ *           the "My Device" tab.
  *
  * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
  *           binary, etc.) should have visible controls on the "My Device" tab.
@@ -1390,6 +1396,7 @@ levels.custom = {
   //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
+  showPulseRateSlider: false,
   showMetronome: false,
   showEncodingControls: [],
   defaultEnabledEncodings: [],
@@ -6801,7 +6808,9 @@ NetSimMyDeviceTab.prototype.render = function () {
         this.rootDiv_.find('.metronome'),
         this.runLoop_);
     this.metronome_.setFrequency(this.bitsPerSecond_);
+  }
 
+  if (levelConfig.showPulseRateSlider) {
     this.pulseRateControl_ = new NetSimPulseRateControl(
         this.rootDiv_.find('.pulse-rate'),
         1 / this.bitsPerSecond_,
@@ -6964,7 +6973,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim-my-device-tab">\n  ');2; if (level.showMetronome) { ; buf.push('\n    <h1>Pulse rate</h1>\n    <div class="pulse-rate"></div>\n    <div class="metronome"></div>\n  ');6; } ; buf.push('\n\n  ');8; if (level.showEncodingControls.length > 0) { ; buf.push('\n    <div class="encoding"></div>\n  ');10; } ; buf.push('\n\n  ');12; if (level.showBitRateControl) { ; buf.push('\n    <h1>Bitrate</h1>\n    <div class="bitrate"></div>\n  ');15; } ; buf.push('\n\n  ');17; if (level.showChunkSizeControl) { ; buf.push('\n    <h1>Chunk size</h1>\n    <div class="chunk-size"></div>\n  ');20; } ; buf.push('\n</div>\n'); })();
+ buf.push('<div class="netsim-my-device-tab">\n\n  ');3; if (level.showMetronome) { ; buf.push('\n    <div class="metronome"></div>\n  ');5; } ; buf.push('\n\n  ');7; if (level.showPulseRateSlider) { ; buf.push('\n    <h1>Pulse rate</h1>\n    <div class="pulse-rate"></div>\n  ');10; } ; buf.push('\n\n  ');12; if (level.showBitRateControl) { ; buf.push('\n    <h1>Bitrate</h1>\n    <div class="bitrate"></div>\n  ');15; } ; buf.push('\n\n  ');17; if (level.showChunkSizeControl) { ; buf.push('\n    <h1>Chunk size</h1>\n    <div class="chunk-size"></div>\n  ');20; } ; buf.push('\n\n  ');22; if (level.showEncodingControls.length > 0) { ; buf.push('\n    <div class="encoding"></div>\n  ');24; } ; buf.push('\n\n</div>\n'); })();
 } 
 return buf.join('');
 };
