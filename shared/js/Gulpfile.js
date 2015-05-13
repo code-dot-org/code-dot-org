@@ -1,7 +1,3 @@
-// Some interesting questions
-// (1) Where does built js live? Same as apps?
-// (2) Is built code checked in?
-
 // There's also a set of code that lives in dashbaord/app/assets/javascript
 // that should really be going through our browserify type pipeline
 
