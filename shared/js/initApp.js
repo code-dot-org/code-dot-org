@@ -1,4 +1,5 @@
 // TODO (brent) - way too many globals
+// TODO (brent) - I wonder if we should sub-namespace dashboard
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
 
 // Attempt to save projects every 30 seconds

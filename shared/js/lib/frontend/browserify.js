@@ -1,3 +1,6 @@
+// TODO (brent) - eventually this file may belong elsewhere, and get shared
+// between various packages
+
 var browserify = require('browserify');
 var watchify = require('watchify');
 var path = require('path');
@@ -33,9 +36,6 @@ module.exports = function(options) {
       console.log(options.dest + ': ' + log);
     });
 
-    // if (options.factorBundleDest) {
-    //   bundler.plugin('factor-bundle', { outputs: options.factorBundleDest });
-    // }
     return bundler;
   }
 
