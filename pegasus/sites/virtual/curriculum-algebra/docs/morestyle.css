@@ -258,5 +258,5 @@ li p {
     tr, td, th {page-break-inside:avoid}
     thead {display:table-header-group}
     a, p, li {color:#000000 !important}
-    a:link:after, a:visited:after { content:" [" attr(href) "] "; }
+    /*a:link:after, a:visited:after { content:" [" attr(href) "] "; }*/
 }
