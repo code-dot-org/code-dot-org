@@ -12,7 +12,7 @@
 /* global window */
 'use strict';
 
-var SharedTable = require('../clientApi').SharedTable;
+var SharedTableApi = require('../clientApi').SharedTableApi;
 var NetSimTable = require('./NetSimTable');
 
 /**
@@ -46,25 +46,25 @@ var NetSimShard = module.exports = function (shardID) {
 
   /** @type {NetSimTable} */
   this.nodeTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_n'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_n'));
 
   /** @type {NetSimTable} */
   this.wireTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_w'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_w'));
 
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_m'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_m'));
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_l'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_l'));
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_h'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_h'));
 };
 
 /**
