@@ -1,3 +1,185 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/* global $, WebKitMutationObserver */
+
+/**
+ * Workaround for Chrome 34 SVG bug #349701
+ *
+ * Bug details: https://code.google.com/p/chromium/issues/detail?id=349701
+ *   tl;dr: only the first clippath in a given svg element renders
+ *
+ * Workaround: wrap all clippath/image pairs into their own svg elements
+ *
+ * 1. Wrap any existing clippath/image pairs in empty svg elements
+ * 2. Wrap new clippath/image pairs once added, remove empty wrappers once removed
+ * 3. Farmer special case: give the farmer's wrapper svg the "pegman-location" attribute
+ */
+
+var PEGMAN_ORDERING_CLASS = 'pegman-location';
+
+module.exports = {
+  fixup: function () {
+    wrapExistingClipPaths();
+    handleClipPathChanges();
+  }
+};
+
+function clipPathIDForImage(image) {
+  var clipPath = $(image).attr('clip-path');
+  return clipPath ? clipPath.match(/\(\#(.*)\)/)[1] : undefined;
+}
+
+function wrapImageAndClipPathWithSVG(image, wrapperClass) {
+  var svgWrapper = $('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" />');
+  if (wrapperClass) {
+    svgWrapper.attr('class', wrapperClass);
+  }
+
+  var clipPathID = clipPathIDForImage(image);
+  var clipPath = $('#' + clipPathID);
+  clipPath.insertAfter(image).add(image).wrapAll(svgWrapper);
+}
+
+// Find pairs of new images and clip paths, wrapping them in SVG tags when a pair is found
+function handleClipPathChanges() {
+  var i;
+  var canvas = $('#visualization>svg')[0];
+  if (!canvas) {
+    return;
+  }
+
+  var newImages = {};
+  var newClipPaths = {};
+
+  var observer = new WebKitMutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      for (i = 0; i < mutation.addedNodes.length; i++) {
+        var newNode = mutation.addedNodes[i];
+        if (newNode.nodeName == 'image') { newImages[$(newNode).attr('id')] = newNode; }
+        if (newNode.nodeName == 'clipPath') { newClipPaths[$(newNode).attr('id')] = newNode; }
+      }
+      for (i = 0; i < mutation.removedNodes.length; i++) {
+        var removedNode = mutation.removedNodes[i];
+        if (removedNode.nodeName == 'image' || removedNode.nodeName == 'clipPath') {
+          $('svg > svg:empty').remove();
+        }
+      }
+    });
+
+    $.each(newImages, function(key, image) {
+      var clipPathID = clipPathIDForImage(image);
+      if (newClipPaths.hasOwnProperty(clipPathID)) {
+        wrapImageAndClipPathWithSVG(image);
+        delete newImages[key];
+        delete newClipPaths[clipPathID];
+      }
+    });
+  });
+
+  observer.observe(canvas, { childList: true });
+}
+
+function wrapExistingClipPaths() {
+  $('[clip-path]').each(function(i, image){
+    if ($(image).attr('class') === PEGMAN_ORDERING_CLASS) {
+      // Special case for Farmer, whose class is used for element ordering
+      $(image).attr('class', '');
+      wrapImageAndClipPathWithSVG(image, PEGMAN_ORDERING_CLASS);
+    } else {
+      wrapImageAndClipPathWithSVG(image);
+    }
+  });
+}
+
+},{}],2:[function(require,module,exports){
+/* global $ */
+
+module.exports = {
+  api_base_url: "/v3/channels",
+
+  all: function(callback) {
+    $.ajax({
+      url: this.api_base_url,
+      type: "get",
+      dataType: "json",
+    }).done(function(data, text) {
+      callback(data);
+    }).fail(function(request, status, error) {
+      callback(null);
+    });
+  },
+
+  create: function(value, callback) {
+    $.ajax({
+      url: this.api_base_url,
+      type: "post",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(value)
+    }).done(function(data, text) {
+      callback(data);
+    }).fail(function(request, status, error) {
+      callback(undefined);
+    });
+  },
+
+  delete: function(id, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/delete",
+      type: "post",
+      dataType: "json",
+    }).done(function(data, text) {
+      callback(true);
+    }).fail(function(request, status, error) {
+      callback(false);
+    });
+  },
+
+  fetch: function(id, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id,
+      type: "get",
+      dataType: "json",
+    }).done(function(data, text) {
+      callback(data);
+    }).fail(function(request, status, error) {
+      callback(undefined);
+    });
+  },
+
+  update: function(id, value, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id,
+      type: "post",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(value)
+    }).done(function(data, text) {
+      callback(data);
+    }).fail(function(request, status, error) {
+      callback(false);
+    });
+  }
+};
+
+},{}],3:[function(require,module,exports){
+/* global ga */
+
+var userTimings = {};
+
+module.exports = {
+  startTiming: function (category, variable, label) {
+    var key = category + variable + label;
+    userTimings[key] = new Date().getTime();
+  },
+
+  stopTiming: function (category, variable, label) {
+    var key = category + variable + label;
+    var endTime = new Date().getTime();
+    var startTime = userTimings[key];
+    var timeElapsed = endTime - startTime;
+    ga('send', 'timing', category, variable, timeElapsed, label);
+  }
+};
+
+},{}],4:[function(require,module,exports){
 // TODO (brent) - way too many globals
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
 
@@ -385,3 +567,5 @@ promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))
   .then(initApp);
+
+},{"./chrome34Fix":1,"./client_api/channels":2,"./timing":3}]},{},[4]);

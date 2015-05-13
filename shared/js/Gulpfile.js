@@ -22,8 +22,7 @@ gulp.task('lint', function () {
   // TODO - more complete list
   // TODO - share jshint config between different packages
   return gulp.src([
-      'initApp.js',
-      'angularProjects.js',
+      '*.js',
       'client_api/*.js'
     ])
     .pipe(jshint({

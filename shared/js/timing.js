@@ -6,7 +6,7 @@ module.exports = {
   startTiming: function (category, variable, label) {
     var key = category + variable + label;
     userTimings[key] = new Date().getTime();
-  }
+  },
 
   stopTiming: function (category, variable, label) {
     var key = category + variable + label;
