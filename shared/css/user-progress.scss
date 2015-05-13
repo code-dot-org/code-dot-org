@@ -131,3 +131,25 @@ a.level_link.submitted:hover
   padding-left: 6px;
   padding-right: 6px;
 }
+
+.user-stats-block .key {
+  margin: 10px 0 0 0;
+  float: left;
+  padding: 10px;
+  background-color: $lightest_gray;
+  dl {
+    margin: 0;
+    float: left;
+    white-space: nowrap;
+  }
+  dd, dt {
+    float: left;
+    height: 36px;
+  }
+  dt { margin-right: 5px; }
+  dd {
+    line-height: 36px;
+    margin-left: 0;
+    margin-right: 25px;
+  }
+}

@@ -215,8 +215,8 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
-  get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
-  get '/dashboardapi/student_progress/:section_id/:id', to: 'api#student_progress'
+  get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
   get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'

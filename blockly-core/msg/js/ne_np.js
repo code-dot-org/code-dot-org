@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ne_np');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "actual";
 Blockly.Msg.ADD = "जोड्नुहोस्";
 Blockly.Msg.ADD_COMMENT = "कोन्टेक्स्ट मेनु- छनिएको ब्लक मा व्याख्या गर्न योग्य प्रतिकृया लेख्नु होस्";

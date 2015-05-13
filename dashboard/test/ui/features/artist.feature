@@ -5,7 +5,7 @@ Background:
   And I rotate to landscape
   And I wait to see "#x-close"
   Then element ".dialog-title" has text "Puzzle 1 of 10"
-  And I press "x-close"
+  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 

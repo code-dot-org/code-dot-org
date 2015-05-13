@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ku_iq');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "بانگ کردن";
 Blockly.Msg.ADD = "زیادکردن";
 Blockly.Msg.ADD_COMMENT = "زیادکردنی بۆچوون";

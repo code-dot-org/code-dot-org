@@ -17,7 +17,7 @@ Feature: Droplet levels work as expected
     And I press keys "utto"
     And the Droplet ACE text is "butto"
 
-    And no ACE tooltip is visible
+    And ACE tooltip is visible
 
     And I press keys ":down"
 
@@ -31,8 +31,6 @@ Feature: Droplet levels work as expected
     And I press keys ":enter"
 
     And the Droplet ACE text is "radioButton"
-
-    And no ACE tooltip is visible
 
     And I press keys "("
 

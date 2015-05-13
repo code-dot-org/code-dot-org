@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.sk_sk');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "zavolaj";
 Blockly.Msg.ADD = "Pridaj";
 Blockly.Msg.ADD_COMMENT = "Pridať komentár";

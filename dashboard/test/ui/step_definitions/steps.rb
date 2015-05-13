@@ -380,3 +380,7 @@ When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
 end
+
+When /^I disable onBeforeUnload$/ do
+  @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
