@@ -52,6 +52,13 @@ module.exports = {
    */
   getAssetUrlFunction: function () {
     return studioApp_.assetUrl;
+  },
+
+  /**
+   * Trigger a layout update of the right column, received/sent/send panels.
+   */
+  updateLayout: function () {
+    netsim_.updateLayout();
   }
 
 };
