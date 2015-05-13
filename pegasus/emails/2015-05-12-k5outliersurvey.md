@@ -1,11 +1,11 @@
 ---
-from: '"Hadi Partovi" <hadi_partovi@code.org>'
-subject:"How are you using Code Studio?"
+from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
+subject: "How are you using Code Studio?"
 ---
 
 Dear Elementary Teacher:
 
-Code.org needs your help in understanding how you are using the K-5 Code.org courses. As you know, you are among the first to use these courses. Your input will help us make them better for you and other teachers in the future. 
+Code.org needs your help understanding how you are using the K-5 Code.org courses. As you know, you are among the first to use these courses. Your input will help us make them better for you and other teachers in the future. 
 
 We encourage you to be honest; this questionnaire is being administered by our external evaluators, so Code.org will not know how you, as an individual, responded.
 
