@@ -1,14 +1,22 @@
 <%
   def canonical_hostname(domain)
     return "console.#{domain}" if node.name == 'production-console'
-    return "daemon.#{domain}" if node.name == 'production-daemon'
-    return "levelbuilder.#{domain}" if node.name == 'levelbuilder-staging'
-    return "levelbuilder-dev.#{domain}" if node.name == 'levelbuilder-development'
-    return "react.#{domain}" if node.name == 'react'
-    return "translate.#{domain}" if node.name == 'crowdin'
+    return "daemon#.#{domain}" if node.name == 'production-daemon'
     return "#{node.name}.#{domain}" if ['hoc-levels'].include?(node.name)
     return domain if rack_env?(:production)
-    "#{node.chef_environment}.#{domain}"
+
+    # our HTTPS wildcard certificate only supports *.code.org
+    # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
+    sep = domain.include?('.code.org') ? '-' : '.'
+    {
+      react: react,
+      translate: 'crowdin',
+      levelbuilder: 'levelbuilder-staging',
+      'levelbuilder-dev' => 'levelbuilder-development'
+    }.each do |subdomain, node_name|
+      return "#{subdomain}#{sep}#{domain}" if node.name == node_name
+    end
+    "#{node.chef_environment}#{sep}#{domain}"
   end
 
   def rack_env?(env)
@@ -328,6 +336,9 @@ sub vcl_recv
       'csedweek.net'        => 'csedweek.org',
       'cseducationweek.com' => 'csedweek.org',
       'cseducationweek.org' => 'csedweek.org',
+    }.tap { |x|
+      # Redirect e.g. [env].studio.code.org to [env]-studio.code.org
+      x["#{node.chef_environment}.studio.code.org"] = "#{node.chef_environment}-studio.code.org" unless rack_env?(:production)
     }.each_pair do |domain,site|
   %>else if(req.http.Host == "<%= domain %>")
   {
