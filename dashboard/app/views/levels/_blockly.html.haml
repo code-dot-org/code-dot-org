@@ -1,6 +1,7 @@
 -# TODO(JL): conditionally load on client
 - if browser.chrome? && browser.version.to_s.to_i == 34
-  %script{src: '/shared/js/chrome34Fix.js'}
+  :javascript
+    window.dashboard.isChrome34 = true;
 
 %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
