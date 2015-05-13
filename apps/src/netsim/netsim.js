@@ -18,6 +18,7 @@
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
@@ -381,6 +382,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
+  window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
 };
 
 /**
@@ -663,6 +665,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
   this.visualization_.setEncodings(newEncodings);
+  this.updateLayout();
 };
 
 /**
@@ -984,6 +987,8 @@ NetSim.prototype.render = function () {
     // Render lobby
     this.lobby_.render();
   }
+
+  this.updateLayout();
 };
 
 /**
@@ -1172,4 +1177,50 @@ NetSim.prototype.animateSetWireState = function (newState) {
  */
 NetSim.prototype.animateReadWireState = function (newState) {
   this.visualization_.animateReadWireState(newState);
+};
+
+/**
+ * Specifically, update the layout of the right column when connected,
+ * and change how the three panels there (received log, sent log, send controls)
+ * share the current vertical space in the viewport.
+ *
+ * We're trying to use the following rules:
+ *
+ * 1. The send controls panel is fixed to the bottom of the viewport, and will
+ *    size upwards to fit its contents up to a maximum height.
+ * 2. The log widgets use the remaining vertical space
+ *    a) If only one log widget is open, it fills the vertical space (except
+ *       leaves enough room to see the other header)
+ *    b) If both log widgets are open, they share the vertical space 50/50
+ *    c) If both log widgets are closed, they float at the top of the space.
+ */
+NetSim.prototype.updateLayout = function () {
+  var rightColumn = $('#netsim-rightcol');
+  var sendPanel = $('#netsim-send');
+  var logWrap = $('#netsim-logs');
+  if (!rightColumn.is(':visible')) {
+    return;
+  }
+
+  // Right column wrapper and the send panel are both sized by CSS
+  var rightColumnHeight = rightColumn.height();
+  var sendPanelHeight = sendPanel.height();
+  var logsSharedVerticalSpace = rightColumnHeight - sendPanelHeight;
+
+  var showingSent = !this.sentMessageLog_.isMinimized();
+  var showingReceived = !this.receivedMessageLog_.isMinimized();
+  if (showingReceived && showingSent) {
+    var halfHeight = Math.floor(logsSharedVerticalSpace / 2);
+    this.receivedMessageLog_.setHeight(halfHeight);
+    this.sentMessageLog_.setHeight(halfHeight);
+  } else if (showingReceived) {
+    this.receivedMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.sentMessageLog_.getHeight()));
+  } else if (showingSent) {
+    this.sentMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.receivedMessageLog_.getHeight()));
+  }
+
+  // Manually adjust the logwrap to the remaining height
+  logWrap.css('height', rightColumnHeight - sendPanelHeight);
 };

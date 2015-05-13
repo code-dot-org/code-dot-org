@@ -10,6 +10,11 @@ theme: none
 
 %h3 {{progress.script.name}}
 
+%div
+  View progress in:
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeProgress(course_id)'}
+%br
+
 %table#progress{style: "width: 970px; table-layout: fixed"}
   %colgroup
     %col{width: "{{950 - progress.table_width - 5}}"}/
@@ -26,7 +31,7 @@ theme: none
         {{stage.title}}
   %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
     %td.studentname
-      %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}", title: '{{student.name}}'} {{student.name}}
+      %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}/course/{{course_id}}", title: '{{student.name}}'} {{student.name}}
     %td.studentzone
       .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (progress.bar_width * stage.length) + 'px'}"}
         &nbsp;
