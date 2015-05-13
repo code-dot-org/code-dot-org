@@ -191,7 +191,17 @@ Chicago, IL 60601
 <br />
 **Option 2:**
 <br />
-TBD
+Microsoft Technology Center
+<br />
+AON Center, Suite 200
+<br />
+Room: MPR 2
+<br />
+200 East Randolph Street
+<br />
+Chicago, IL 60601
+<br />
+<br />
 
 #### What do I bring to Phase 2? ####
 Water Bottle
@@ -245,7 +255,7 @@ Microsoft Technology Center
 <br />
 AON Center, Suite 200
 <br />
-Room: MPR 3
+Room: MPR 2
 <br />
 200 East Randolph Street
 <br />
@@ -254,7 +264,17 @@ Chicago, IL 60601
 <br />
 **Option 2:**
 <br />
-TBD
+Microsoft Technology Center
+<br />
+AON Center, Suite 200
+<br />
+Room: MPR 3
+<br />
+200 East Randolph Street
+<br />
+Chicago, IL 60601
+<br />
+<br />
 
 #### What do I bring to Phase 2? ####
 Water Bottle
