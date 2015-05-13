@@ -8,17 +8,6 @@ solr_query = ARGV[0]
 
 SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
 
-def csv_contacts(path, params={})
-  fields = params[:fields] if params[:fields]
-
-  [].tap do |results|
-    CSV.foreach(path, headers:true) do |i|
-      i = yield(i) if block_given?
-      results << {email:i['email'].downcase.strip, name:i['name']}.merge(i.to_hash.slice(*fields)) if i
-    end
-  end
-end
-
 def export_contacts_to_csv(contacts, path)
   columns = nil
 
@@ -34,10 +23,11 @@ def export_contacts_to_csv(contacts, path)
 end
 
 def query_contacts(params)
+  fields = []
   fields = params[:fields] if params[:fields]
 
   [].tap do |results|
-    SOLR.query(params.merge(rows:10000)).each do |i|
+    SOLR.query(params.merge(rows:10000, fields: ['email_s', 'name_s'] + fields)).each do |i|
       i = yield(i) if block_given?
       results << {email:i['email_s'].downcase.strip, name:i['name_s']}.merge(i.slice(*fields)) if i
     end
@@ -52,16 +42,8 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-#DONORS = {}.tap do |results|
-#  csv_contacts('donors.csv').each do |i|
-#    email = i[:email].downcase.strip
-#    results[email] = i unless UNSUBSCRIBERS[email]
-#  end
-#end
-#puts "#{DONORS.count} donors loaded."
-
 recipients = {}.tap do |results|
-  query_contacts(q: solr_query, fields:['email_s']).each do |i|
+  query_contacts(q: solr_query).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
   end
