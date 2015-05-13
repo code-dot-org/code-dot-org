@@ -1,6 +1,6 @@
 ---
-from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: 'Some subject'
+from: '"Hadi Partovi" <hadi_partovi@code.org>'
+subject:"How are you using Code Studio?"
 ---
 
 Dear Elementary Teacher:
@@ -9,7 +9,9 @@ Code.org needs your help in understanding how you are using the K-5 Code.org cou
 
 We encourage you to be honest; this questionnaire is being administered by our external evaluators, so Code.org will not know how you, as an individual, responded.
 
-**How you can help: Take [this survey](http://tinyurl.com/CodeOrgElementary2015) about your Code Studio experience: http://tinyurl.com/CodeOrgElementary2015**
+**How you can help:** 
+
+**Take [this survey](http://tinyurl.com/CodeOrgElementary2015) about your Code Studio experience. [http://tinyurl.com/CodeOrgElementary2015](http://tinyurl.com/CodeOrgElementary2015)**
 
 If you complete the survey, you will be entered into a drawing to win one of 25 gift cards, worth $20 each!
  
