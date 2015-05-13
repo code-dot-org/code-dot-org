@@ -5,10 +5,18 @@
 var which = require('npm-which')(__dirname + '/../..').sync;
 var mochify = require('mochify');
 var http = require('http');
-var fs = require('fs');
 
+// TODO (brent) When we move to npm/gulp, we will want to take care of this
+// logic in our gulpfile instead
+// Right now we manually create a symbolic link to @cdo/apps
+var fs = require('fs');
 var exec = require('child_process').exec;
-command = which('linklocal');
+var target = __dirname + '/../../src/';
+var nodePath = __dirname + '/../../node_modules/@cdo';
+var command = '';
+if (!fs.existsSync(nodePath)) {
+  command = 'mkdir -p ' + nodePath + ' && ln -s ' + target + ' ' + nodePath + '/apps';
+}
 
 /**
  * Mochify uses phantomic to run a server that it connects to, which serves up
