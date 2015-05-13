@@ -47,7 +47,7 @@ Our [workshops](/educate/professional-development) for teachers in grades 6-12 a
 
 ### Middle and High schools 
 
-If you're an administrator at a large district, or situated near an [existing Code.org partner](/educate/partner-districts), apply for a partnership grant to bring computer science to your entire district.  
+If you're an administrator at a large district, or situated near an [existing Code.org partner](/educate/partner-districts), apply for a district partnership to bring computer science to your entire district.  
 
 [<button class="district-button">Learn more</button>](/districts)
 

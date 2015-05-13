@@ -117,7 +117,9 @@ NetSimMyDeviceTab.prototype.render = function () {
         this.rootDiv_.find('.metronome'),
         this.runLoop_);
     this.metronome_.setFrequency(this.bitsPerSecond_);
+  }
 
+  if (levelConfig.showPulseRateSlider) {
     this.pulseRateControl_ = new NetSimPulseRateControl(
         this.rootDiv_.find('.pulse-rate'),
         1 / this.bitsPerSecond_,

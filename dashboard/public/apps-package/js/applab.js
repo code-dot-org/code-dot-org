@@ -335,8 +335,7 @@ var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
-// Prevent mochaTest from choking on JSX.
-var DesignProperties = window.dashboard ? require('./designProperties.jsx') : null;
+var DesignProperties = require('./designProperties.jsx');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
