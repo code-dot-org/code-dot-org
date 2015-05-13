@@ -1,4 +1,4 @@
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },

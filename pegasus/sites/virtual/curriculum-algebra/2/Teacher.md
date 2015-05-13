@@ -31,6 +31,9 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources, and Prep
 
+### For the Student
+- [Evaluation Blocks Worksheet](../docs/worksheets/evaluation_blocks.pdf) (in the student workbook)
+
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1_0OPjfAQUfp0NIOHOnHqIegnw96trR-GUT1qg-rpcjw/)
 
@@ -71,6 +74,8 @@ All Evaluation Blocks follow three rules:
 - Rule 1: Each block must have one function, which is displayed at the top of the block.
 - Rule 2: The values for that function are placed below, in order from left to right.
 - Rule 3: If a block contains another block as a value, that inner block must be evaluated before the outer block.
+
+Before students get started on the computers, you can have them work through the [evaluation blocks worksheet](../docs/worksheets/evaluation_blocks.pdf) in the student workbook.
 
 [/together]
 

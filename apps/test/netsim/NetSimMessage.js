@@ -6,8 +6,8 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
-var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 
 describe("NetSimMessage", function () {
   var testShard, messageTable;

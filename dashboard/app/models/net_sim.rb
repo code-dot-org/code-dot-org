@@ -15,6 +15,7 @@ class NetSim < Blockly
     default_packet_size_limit
     show_tabs
     default_tab_index
+    show_pulse_rate_slider
     show_metronome
     show_encoding_controls
     default_enabled_encodings
