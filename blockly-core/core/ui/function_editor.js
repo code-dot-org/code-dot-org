@@ -548,8 +548,6 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
 
-  this.modalBlockSpace.trashcan.setYOffset(currentY);
-
   currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
 };

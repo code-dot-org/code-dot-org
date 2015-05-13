@@ -78,7 +78,7 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   goog.dom.insertSiblingBefore(this.HtmlDiv, svg);
 
   // Add a trashcan inside a holder svg element.
-  var trashCanHolder = Blockly.createSvgElement('svg', {
+  this.trashcanHolder = Blockly.createSvgElement('svg', {
     id: 'trashcanHolder',
     width: 90,
     height: 90,
@@ -87,7 +87,7 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   var trashcan = new Blockly.Trashcan(this);
   var svgTrashcan = trashcan.createDom();
   svgTrashcan.setAttribute('transform', 'translate(20, 10)');
-  trashCanHolder.appendChild(svgTrashcan);
+  this.trashcanHolder.appendChild(svgTrashcan);
   this.trashcan = trashcan;
 
   /**
