@@ -437,9 +437,9 @@ end
   }
   else if (req.url ~ "^/dashboardapi/")
   {
-    # Map /dashboardapi to learn.code.org/api
+    # Map /dashboardapi to studio.code.org/api
     set req.backend = dashboard;
-    set req.http.host = "<%= canonical_hostname('learn.code.org') %>";
+    set req.http.host = "<%= canonical_hostname('studio.code.org') %>";
     set req.url = regsub(req.url, "^/dashboardapi/", "/api/");
     return(pass);
   }
