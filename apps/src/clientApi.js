@@ -50,6 +50,11 @@ require('./utils');
  *        method being invoked.
  */
 
+/**
+ * Base class for API request helpers.
+ * @param {string} baseUrl
+ * @constructor
+ */
 var ClientApiRequest = function (baseUrl) {
   this.apiBaseUrl_ = baseUrl;
 };
@@ -142,7 +147,7 @@ ClientApiRequest.prototype.create = function (value, callback) {
 };
 
 /**
- * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!string} id
  * @param {!NodeStyleCallback} callback
  */
 ClientApiRequest.prototype.delete = function (id, callback) {
@@ -175,9 +180,8 @@ ClientApiRequest.prototype.update = function (id, value, callback) {
  */
 ClientApiRequest.prototype.synchronousDelete = function (id) {
   var error = null;
-  var localUrl = (id === undefined ? '' : '/' + id);
   $.ajax({
-    url: this.apiBaseUrl_ + localUrl,
+    url: this.apiBaseUrl_ + '/' + id,
     type: 'delete',
     async: false,
     error: function (jqXHR, textStatus, errorThrown) {
