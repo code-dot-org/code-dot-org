@@ -4299,7 +4299,7 @@ CleanLogs.prototype.onBegin_ = function () {
 /* global window */
 'use strict';
 
-var SharedTable = require('../clientApi').SharedTable;
+var SharedTableApi = require('../clientApi').SharedTableApi;
 var NetSimTable = require('./NetSimTable');
 
 /**
@@ -4333,25 +4333,25 @@ var NetSimShard = module.exports = function (shardID) {
 
   /** @type {NetSimTable} */
   this.nodeTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_n'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_n'));
 
   /** @type {NetSimTable} */
   this.wireTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_w'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_w'));
 
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_m'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_m'));
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_l'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_l'));
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
-      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_h'));
+      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_h'));
 };
 
 /**
@@ -4396,13 +4396,13 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
- * @param {!SharedTable} storageTable - The remote storage table to wrap.
+ * @param {!SharedTableApi} storageTable - The remote storage table to wrap.
  * @constructor
  */
 var NetSimTable = module.exports = function (storageTable) {
   /**
    * Actual API to the remote shared table.
-   * @type {SharedTable}
+   * @type {SharedTableApi}
    * @private
    */
   this.remoteTable_ = storageTable;
@@ -15816,6 +15816,7 @@ CommandSequence.prototype.tick = function (clock) {
 /* global JSON */
 'use strict';
 
+// need for Function.prototype.inherits
 require('./utils');
 
 /**
@@ -15829,12 +15830,12 @@ require('./utils');
  *        method being invoked.
  */
 
-/** 
- * Namespace for the client API for accessing channels, tables and properties.
+/**
+ * Base class for API request helpers.
+ * @param {string} baseUrl
+ * @constructor
  */
-var clientApi = module.exports;
-
-var ApiRequestHelper = function (baseUrl) {
+var ClientApiRequest = function (baseUrl) {
   this.apiBaseUrl_ = baseUrl;
 };
 
@@ -15842,7 +15843,7 @@ var ApiRequestHelper = function (baseUrl) {
  * @param {!string} localUrl - API endpoint relative to API base URL.
  * @param {!NodeStyleCallback} callback
  */
-ApiRequestHelper.prototype.get = function (localUrl, callback) {
+ClientApiRequest.prototype.get = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
@@ -15859,11 +15860,26 @@ ApiRequestHelper.prototype.get = function (localUrl, callback) {
 };
 
 /**
+ * @param {!NodeStyleCallback} callback
+ */
+ClientApiRequest.prototype.readAll = function (callback) {
+  this.get('', callback);
+};
+
+/**
+ * @param {!string} id - unique app GUID
+ * @param {!NodeStyleCallback} callback
+ */
+ClientApiRequest.prototype.read = function (id, callback) {
+  this.get('/' + id, callback);
+};
+
+/**
  * @param {!string} localUrl - API endpoint relative to API base URL.
  * @param {Object} data
  * @param {!NodeStyleCallback} callback
  */
-ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
+ClientApiRequest.prototype.post = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
@@ -15885,7 +15901,7 @@ ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
  * @param {Object} data
  * @param {!NodeStyleCallback} callback
  */
-ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
+ClientApiRequest.prototype.postToGet = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
@@ -15903,12 +15919,20 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
 };
 
 /**
- * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!Object} value
  * @param {!NodeStyleCallback} callback
  */
-ApiRequestHelper.prototype.delete = function (localUrl, callback) {
+ClientApiRequest.prototype.create = function (value, callback) {
+  this.postToGet('', value, callback);
+};
+
+/**
+ * @param {!string} id
+ * @param {!NodeStyleCallback} callback
+ */
+ClientApiRequest.prototype.delete = function (id, callback) {
   $.ajax({
-    url: this.apiBaseUrl_ + localUrl,
+    url: this.apiBaseUrl_ + '/' + id,
     type: 'delete',
     success: function () {
       callback(null, null);
@@ -15922,13 +15946,22 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
 };
 
 /**
- * @param {!string} localUrl
+ * @param {!string} id
+ * @param {!Object} value
+ * @param {!NodeStyleCallback} callback
+ */
+ClientApiRequest.prototype.update = function (id, value, callback) {
+  this.post('/' + id, value, callback);
+};
+
+/**
+ * @param {!string|number} id Id to delete
  * @returns {Error|null} an error if the request fails
  */
-ApiRequestHelper.prototype.synchronousDelete = function (localUrl) {
+ClientApiRequest.prototype.synchronousDelete = function (id) {
   var error = null;
   $.ajax({
-    url: this.apiBaseUrl_ + localUrl,
+    url: this.apiBaseUrl_ + '/' + id,
     type: 'delete',
     async: false,
     error: function (jqXHR, textStatus, errorThrown) {
@@ -15939,60 +15972,22 @@ ApiRequestHelper.prototype.synchronousDelete = function (localUrl) {
 };
 
 /**
+ * @param {string} key
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
+ClientApiRequest.prototype.set = function (key, value, callback) {
+  this.post('/' + key, value, callback);
+};
+
+/**
  * API for accessing channel resources on the server.
  * @constructor
  */
-clientApi.Channel = function () {
-  this.requestHelper_ = new ApiRequestHelper('/v3/channels');
+var ChannelsApi = function () {
+  ClientApiRequest.call(this, '/v3/channels');
 };
-
-/**
- * @param {!NodeStyleCallback} callback
- */
-clientApi.Channel.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback);
-};
-
-/**
- * @param {!string} id - unique app GUID
- * @param {!NodeStyleCallback} callback
- */
-clientApi.Channel.prototype.read = function (id, callback) {
-  this.requestHelper_.get('/' + id, callback);
-};
-
-/**
- * @param {!Object} value
- * @param {!NodeStyleCallback} callback
- */
-clientApi.Channel.prototype.create = function (value, callback) {
-  this.requestHelper_.postToGet('', value, callback);
-};
-
-/**
- * @param {!string} id
- * @param {!Object} value
- * @param {!NodeStyleCallback} callback
- */
-clientApi.Channel.prototype.update = function (id, value, callback) {
-  this.requestHelper_.post('/' + id, value, callback);
-};
-
-/**
- * @param {!string} id
- * @param {!NodeStyleCallback} callback
- */
-clientApi.Channel.prototype.delete = function (id, callback) {
-  this.requestHelper_.delete('/' + id, callback);
-};
-
-/**
- * @param {!string} id
- * @returns {Error|null} error if delete fails
- */
-clientApi.Channel.prototype.synchronousDelete = function (id) {
-  return this.requestHelper_.synchronousDelete('/' + id);
-};
+ChannelsApi.inherits(ClientApiRequest);
 
 /**
  * Channel-specific Shared Storage Table
@@ -16002,30 +15997,28 @@ clientApi.Channel.prototype.synchronousDelete = function (id) {
  * tables deal in numeric row IDs, not string GUIDs.  Implementation
  * shouldn't care though.
  * @constructor
- * @augments clientApi.Channel
+ * @augments Channel
  */
-clientApi.SharedTable = function (channel_publickey, table_name) {
-  clientApi.Channel.call(this);
+var SharedTableApi = function (channel_publickey, table_name) {
   /** Shared tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/shared-tables/' +
-      channel_publickey + '/' + table_name);
+  ClientApiRequest.call(this, '/v3/shared-tables/' + channel_publickey + '/' +
+    table_name);
 };
-clientApi.SharedTable.inherits(clientApi.Channel);
+SharedTableApi.inherits(ClientApiRequest);
 
 /**
  * Channel-specific User Storage Table
  * Data stored in this table can only be modified and retrieved by a particular
  * user of a channel.
  * @constructor
- * @augments clientApi.Channel
+ * @augments ClientApiRequest
  */
-clientApi.UserTable = function (channel_publickey, table_name) {
-  clientApi.Channel.call(this);
+var UserTableApi = function (channel_publickey, table_name) {
   /** User tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/user-tables/' +
-      channel_publickey + '/' + table_name);
+  ClientApiRequest.call('/v3/user-tables/' + channel_publickey + '/' +
+    table_name);
 };
-clientApi.UserTable.inherits(clientApi.Channel);
+UserTableApi.inherits(ClientApiRequest);
 
 /**
  * API for interacting with app property bags on the server.
@@ -16033,58 +16026,33 @@ clientApi.UserTable.inherits(clientApi.Channel);
  *
  * @param {!string} channel_publickey
  * @constructor
+ * @augments ClientApiRequest
  */
-clientApi.PropertyBag = function (channel_publickey) {
-  this.requestHelper_ = new ApiRequestHelper('/v3/shared-properties/' +
-      channel_publickey);
+var PropertyBagApi = function (channel_publickey) {
+  ClientApiRequest.call('/v3/shared-properties/' + channel_publickey);
 };
-
-/**
- * @param {!NodeStyleCallback} callback
- */
-clientApi.PropertyBag.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback);
-};
-
-/**
- * @param {string} key
- * @param {!NodeStyleCallback} callback
- */
-clientApi.PropertyBag.prototype.read = function (key, callback) {
-  this.requestHelper_.get('/' + key, callback);
-};
-
-/**
- * @param {string} key
- * @param {Object} value
- * @param {!NodeStyleCallback} callback
- */
-clientApi.PropertyBag.prototype.set = function (key, value, callback) {
-  this.requestHelper_.post('/' + key, value, callback);
-};
-
-/**
- * @param {string} key
- * @param {!NodeStyleCallback} callback
- */
-clientApi.PropertyBag.prototype.delete = function (key, callback) {
-  this.requestHelper_.delete('/' + key, callback);
-};
+PropertyBagApi.inherits(ClientApiRequest);
 
 /**
  * App-specific User-specific property bag
  * Only accessible to the current user of the particular app.
  * @param channel_publickey
  * @constructor
- * @augments clientApi.PropertyBag
+ * @augments ClientApiRequest
  */
-clientApi.UserPropertyBag = function (channel_publickey) {
-  clientApi.PropertyBag.call(this, channel_publickey);
+var UserPropertyBagApi = function (channel_publickey) {
   /** User property bags just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/user-properties/' +
-      channel_publickey);
+  ClientApiRequest.call('/v3/user-properties/' + channel_publickey);
 };
-clientApi.UserPropertyBag.inherits(clientApi.PropertyBag);
+UserPropertyBagApi.inherits(ClientApiRequest);
+
+module.exports = {
+  ChannelsApi: ChannelsApi,
+  SharedTableApi: SharedTableApi,
+  UserTableApi: UserTableApi,
+  PropertyBagApi: PropertyBagApi,
+  UserPropertyBagApi: UserPropertyBagApi
+};
 
 
 },{"./utils":271}],3:[function(require,module,exports){
