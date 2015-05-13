@@ -29,16 +29,19 @@ module Rack
     end
 
     def site_from_host()
-      parts = host.split('.')
+      host_parts = host
+      # staging-studio.code.org -> ['staging', 'studio', 'code', 'org']
+      host_parts.sub!('-', '.') unless rack_env?(:production)
+      parts = host_parts.split('.')
+
       if parts.count >= 3
+        domains = %w(studio learn i18n al ar br italia ro eu uk za).map{|x|x + '.code.org'} + %w(translate.hourofcode.com)
         domain = parts.last(3).join('.').split(':').first
-        return domain if ['studio.code.org', 'learn.code.org', 'translate.hourofcode.com', 'i18n.code.org',
-                          'al.code.org', 'ar.code.org', 'br.code.org', 'italia.code.org', 'ro.code.org',
-                          'eu.code.org', 'uk.code.org', 'za.code.org'].include?(domain)
+        return domain if domains.include? domain
       end
 
       domain = parts.last(2).join('.').split(':').first
-      return domain if ['csedweek.org','hourofcode.com'].include?(domain)
+      return domain if %w(csedweek.org hourofcode.com).include?(domain)
 
       'code.org'
     end
