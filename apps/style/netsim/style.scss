@@ -78,7 +78,24 @@ $wide-column-width: 121px;
     bottom: 0;
     left: 330px;
     right: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
+  }
+
+  #netsim-send {
+    position: absolute;
+    bottom: 0;
+    // "top" determined dynamically from content
+    left: 0;
+    right: 0;
+  }
+
+  #netsim-logs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    // "height" set in Javascript
+    overflow-y: hidden;
   }
 
   h1 {
