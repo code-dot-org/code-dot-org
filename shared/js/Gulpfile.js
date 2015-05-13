@@ -5,8 +5,8 @@
 // There's also a set of code that lives in dashbaord/app/assets/javascript
 // that should really be going through our browserify type pipeline
 
-// TODO - figure out story for sharing code between different packages
-// TODO - framework for writing tests
+// TODO (brent) - figure out story for sharing code between different packages. (linklocal)
+// TODO (brent) - framework for writing tests
 
 
 var gulp = require('gulp');
@@ -18,9 +18,10 @@ var browserify = require('./lib/frontend/browserify');
 
 var watchEnabled = false;
 
+var BUILD_TARGET = './build/package/js';
+
 gulp.task('lint', function () {
-  // TODO - more complete list
-  // TODO - share jshint config between different packages
+  // TODO (brent) - should we share jshint config between different packages
   return gulp.src([
       '*.js',
       'client_api/*.js'
@@ -40,15 +41,14 @@ gulp.task('enable-watch', function () {
 });
 
 gulp.task('bundle-js', function () {
-  // TODO - check dependencies?
+  // May want some sort of step to check dependencies here in the future
 
-  // TODO - more complete list
   var files = [
     'initApp.js'
   ];
   var config = {
     src: files,
-    dest: 'build/shared.js',
+    dest: BUILD_TARGET + '/initApp.js',
     watch: watchEnabled
   };
 
@@ -57,11 +57,11 @@ gulp.task('bundle-js', function () {
 
 gulp.task('compress', ['bundle-js'], function () {
   var files = [
-    'build/shared.js'
+    BUILD_TARGET + '/shared.js'
   ];
   return gulp.src(files)
     .pipe(uglify())
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest(BUILD_TARGET));
 });
 
 gulp.task('watch', ['enable-watch', 'bundle-js']);
