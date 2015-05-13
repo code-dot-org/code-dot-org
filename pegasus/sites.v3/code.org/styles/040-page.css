@@ -28,8 +28,8 @@ h2 {
 
 h3 {
   color: #5b6770;
-  font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-size: 18px;
+  font-family: 'Gotham 4r', sans-serif;
   margin-top:25px;
   margin-bottom:12px;
   line-height: 1.2em;
@@ -357,8 +357,6 @@ th a:link, th a:visited, th a:hover, th a:active {
 }
 
 .mainbar h3 {
-  font-family: 'Gotham 4r', sans-serif;
-  font-size: 18px;
   margin-left: 10px;
 }
 

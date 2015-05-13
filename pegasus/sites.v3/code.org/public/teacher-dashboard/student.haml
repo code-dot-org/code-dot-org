@@ -2,7 +2,7 @@
 layout: none
 theme: none
 ---
- 
+
 %div
   %br/
   #goback{style: "float:left"}
@@ -10,8 +10,15 @@ theme: none
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
   %a{href: '/teacher-dashboard#/sections'}= I18n.t('dashboard_navigation_all_sections')
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-  %a{href: '/teacher-dashboard#/sections/{{section.id}}'}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}') 
+  %a{href: '/teacher-dashboard#/sections/{{section.id}}'}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}')
   %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-  %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_student', student_name: '{{student.name}}') 
+  %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_student', student_name: '{{progress.student.name}}')
 
-  %div{"ng-include"=>"", src: "studentProgressUrl"}
+%h1 Progress information for {{progress.student.name}} in {{progress.script.name}}
+
+%div
+  View progress in:
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeProgress(course_id)'}
+%br
+
+%div{'ng-bind-html' => 'progress.progressHtml | htmlSafe'}

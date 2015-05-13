@@ -2,6 +2,11 @@
 
 @import 'color';
 
+h1, h2, h3, h4, h5, h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 th.manage-th {
   height: 45px;
   padding-top: 5px;
@@ -187,6 +192,7 @@ table#progress {
     float: left;
   }
   dd, dt {
+    padding: 0;
     height: 20px;
     line-height: 20px;
     float: left;
