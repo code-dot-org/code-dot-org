@@ -7,6 +7,7 @@
 
 var gulp = require('gulp');
 var glob = require('glob');
+var del = require('del');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 
@@ -58,6 +59,10 @@ gulp.task('compress', ['bundle-js'], function () {
   return gulp.src(files)
     .pipe(uglify())
     .pipe(gulp.dest(BUILD_TARGET));
+});
+
+gulp.task('clean', function (cb) {
+  del(BUILD_TARGET, cb);
 });
 
 gulp.task('watch', ['enable-watch', 'bundle-js']);
