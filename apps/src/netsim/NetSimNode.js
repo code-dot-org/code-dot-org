@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils');
+var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
@@ -61,7 +62,7 @@ NetSimNode.prototype.buildRow_ = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getDisplayName = function () {
-  return this.displayName_ ? this.displayName_ : '[New Node]'; // TODO: Localize?
+  return this.displayName_ ? this.displayName_ : i18n.defaultNodeName();
 };
 
 /**
