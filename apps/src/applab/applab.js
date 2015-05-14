@@ -867,10 +867,7 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html.ejs')({tagName:null});
-  var designModeBox = require('./designModeBox.html.ejs')({
-    designProperties: designProperties
-  });
+  var designModeBox = require('./designModeBox.html.ejs')({});
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
