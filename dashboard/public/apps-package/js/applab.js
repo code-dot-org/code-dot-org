@@ -69,6 +69,8 @@ levels.simple = {
 
 levels.custom = {
   'sliderSpeed': 0.95,
+  'appWidth': 320,
+  'appHeight': 480,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -199,8 +201,6 @@ levels.custom = {
 levels.ec_simple = utils.extend(levels.custom, {
   'freePlay': true,
   'editCode': true,
-  'appWidth': 320,
-  'appHeight': 480,
 });
 
 // Functions in Advanced category currently disabled in all levels:
@@ -2982,7 +2982,7 @@ Applab.textLabel = function (opts) {
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
   apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
   if (typeof opts.forId !== 'undefined') {
-    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, false);
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, true);
   }
 
   var newLabel = document.createElement("label");
@@ -3388,14 +3388,15 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
-  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
-  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
     opts.elementId = 'divApplab';
+  } else {
+    apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
   }
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
