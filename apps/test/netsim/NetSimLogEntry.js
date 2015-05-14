@@ -19,7 +19,7 @@ describe("NetSimLogEntry", function () {
 
   it ("uses the logEntry table", function () {
     var logEntry = new NetSimLogEntry(testShard);
-    assert(logEntry.getTable_() === testShard.logTable, "Using wrong table");
+    assert(logEntry.getTable() === testShard.logTable, "Using wrong table");
   });
 
   it ("has expected row structure and default values", function () {

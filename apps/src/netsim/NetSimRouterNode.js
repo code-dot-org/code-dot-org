@@ -189,7 +189,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {NetSimHeartbeat}
    * @private
    */
-  this.heartbeat_ = null;
+  this.heartbeat = null;
 
   /**
    * Local cache of our remote row, used to decide whether our state has
@@ -313,8 +313,8 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Set router heartbeat to double normal interval, since we expect
       // at least two clients to help keep it alive.
-      router.heartbeat_ = heartbeat;
-      router.heartbeat_.setBeatInterval(12000);
+      router.heartbeat = heartbeat;
+      router.heartbeat.setBeatInterval(12000);
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
@@ -347,8 +347,8 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 
       // Set router heartbeat to double normal interval, since we expect
       // at least two clients to help keep it alive.
-      router.heartbeat_ = heartbeat;
-      router.heartbeat_.setBeatInterval(12000);
+      router.heartbeat = heartbeat;
+      router.heartbeat.setBeatInterval(12000);
 
       onComplete(null, router);
     });
@@ -406,7 +406,7 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
  */
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
-  this.heartbeat_.tick(clock);
+  this.heartbeat.tick(clock);
   this.routeOverdueMessages_(clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);

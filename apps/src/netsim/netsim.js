@@ -1152,11 +1152,11 @@ NetSim.prototype.cleanShardNow = function () {
  * cleaned up.
  */
 NetSim.prototype.expireHeartbeat = function () {
-  if (!(this.myNode && this.myNode.heartbeat_)) {
+  if (!(this.myNode && this.myNode.heartbeat)) {
     return;
   }
 
-  this.myNode.heartbeat_.spoofExpired();
+  this.myNode.heartbeat.spoofExpired();
   logger.info("Local node heartbeat is now expired.");
 };
 

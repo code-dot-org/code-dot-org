@@ -92,7 +92,7 @@ NetSimLogEntry.LogStatus = {
  * Helper that gets the log table for the configured instance.
  * @returns {NetSimTable}
  */
-NetSimLogEntry.prototype.getTable_ = function () {
+NetSimLogEntry.prototype.getTable = function () {
   return this.shard_.logTable;
 };
 
@@ -124,7 +124,7 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
   entity.binary = binary;
   entity.status = status;
   entity.timestamp = Date.now();
-  entity.getTable_().create(entity.buildRow_(), function (err, result) {
+  entity.getTable().create(entity.buildRow_(), function (err, result) {
     if (err) {
       onComplete(err, null);
       return;

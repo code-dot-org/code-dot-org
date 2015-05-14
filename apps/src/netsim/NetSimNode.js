@@ -45,7 +45,7 @@ NetSimNode.inherits(NetSimEntity);
  * @returns {SharedTable}
  * @private
  */
-NetSimNode.prototype.getTable_= function () {
+NetSimNode.prototype.getTable= function () {
   return this.shard_.nodeTable;
 };
 

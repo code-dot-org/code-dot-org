@@ -70,7 +70,7 @@ NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
   var entity = new NetSimWire(shard);
   entity.localNodeID = localNodeID;
   entity.remoteNodeID = remoteNodeID;
-  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+  entity.getTable().create(entity.buildRow_(), function (err, row) {
     if (err) {
       onComplete(err, null);
       return;
@@ -83,7 +83,7 @@ NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
  * Helper that gets the wires table for the configured shard.
  * @returns {NetSimTable}
  */
-NetSimWire.prototype.getTable_ = function () {
+NetSimWire.prototype.getTable = function () {
   return this.shard_.wireTable;
 };
 
