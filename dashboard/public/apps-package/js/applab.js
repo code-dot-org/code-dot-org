@@ -3734,6 +3734,12 @@ var getPegasusHost = function() {
         case 'test':
         case 'levelbuilder':
           return name + '.code.org';
+        case 'staging-studio':
+          return 'staging.code.org';
+        case 'test-studio':
+          return 'test.code.org';
+        case 'levelbuilder-studio':
+          return 'levelbuilder.code.org';
         default:
           return null;
       }
