@@ -10,19 +10,6 @@ This repository contains the source code for the apps [Blockly](https://code.goo
 
 ## Quick Start
 
-### Install prerequisite: Cairo
-
-One of the node modules, node-canvas, depends on Cairo being installed.
-
-Instructions for MacOSX using [brew](http://brew.sh/) (instructions for other platforms [can be found here](https://github.com/LearnBoost/node-canvas/wiki)):
-
-1. Make sure XCode Command-line Tools are installed and up-to-date: `xcode-select --install`
-1. Install [XQuartz from here](http://xquartz.macosforge.org/landing/)
-1. `export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"`
-1. `brew update`
-1. `brew install cairo`
-1. In blockly, `npm install`
-
 ### Installing Blockly
 
 ```
@@ -31,8 +18,6 @@ cd blockly
 # Machine setup (OSX with Homebrew)
 brew install node
 npm install -g grunt-cli
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"
-npm install -g canvas
 
 # Perform first full build
 npm install
