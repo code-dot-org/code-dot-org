@@ -29,7 +29,8 @@ var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
-var Hammer = utils.getHammer();
+// var Hammer = utils.getHammer();
+var keyEvent = require('./keyEvent');
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
@@ -3008,11 +3009,64 @@ Applab.getYPosition = function (opts) {
 
 Applab.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
+    var div = document.getElementById('divApplab');
+    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+    var xOffset = 0;
+    var yOffset = 0;
+    while (div) {
+      xOffset += div.offsetLeft;
+      yOffset += div.offsetTop;
+      div = div.offsetParent;
+    }
+
+    var applabEvent = {};
+    // Pass these properties through to applabEvent:
+    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
+      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = e[prop];
+        }
+      });
+    // Convert x coordinates and then pass through to applabEvent:
+    ['clientX', 'pageX', 'x'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - xOffset) / xScale;
+        }
+      });
+    // Convert y coordinates and then pass through to applabEvent:
+    ['clientY', 'pageY', 'y'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - yOffset) / yScale;
+        }
+      });
+    // Replace DOM elements with IDs and then add them to applabEvent:
+    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
+      'toElement'].forEach(
+      function (prop) {
+        if (e[prop]) {
+          applabEvent[prop + "Id"] = e[prop].id;
+        }
+      });
+    // Attempt to populate key property (not yet supported in Chrome/Safari):
+    //
+    // keyup/down has no charCode and can be translated with the keyEvent[] map
+    // keypress can use charCode
+    //
+    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
+    if (typeof keyProp !== 'undefined') {
+      applabEvent.key = keyProp;
+    }
+
     // Push a function call on the queue with an array of arguments consisting
-    // of just the 'e' parameter
+    // of the applabEvent parameter (and any extraArgs originally supplied)
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e].concat(opts.extraArgs)
+      'arguments': [applabEvent].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -3065,7 +3119,6 @@ Applab.onEvent = function (opts) {
       case 'rotate':
       case 'release':
       case 'gesture':
-      */
       case 'pinch':
       case 'pinchin':
       case 'pinchout':
@@ -3073,13 +3126,28 @@ Applab.onEvent = function (opts) {
         hammerElement.on(opts.eventName,
                          Applab.onEventFired.bind(this, opts));
         break;
-      default:
+      */
+      case 'click':
+      case 'change':
+      case 'keyup':
+      case 'mousemove':
+      case 'dblclick':
+      case 'mousedown':
+      case 'mouseup':
+      case 'mouseover':
+      case 'mouseout':
+      case 'keydown':
+      case 'keypress':
+      case 'input':
         // For now, we're not tracking how many of these we add and we don't allow
         // the user to detach the handler. We detach all listeners by cloning the
         // divApplab DOM node inside of reset()
         domElement.addEventListener(
             opts.eventName,
             Applab.onEventFired.bind(this, opts));
+        break;
+      default:
+        return false;
     }
     return true;
   }
