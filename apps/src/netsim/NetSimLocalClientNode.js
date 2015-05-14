@@ -294,10 +294,8 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
         return;
       }
 
-      this.myRouter = router;
       this.remoteChange.notifyObservers(this.myWire, this.myRouter);
-      // TODO: Can I remove this update call?
-      this.update(onComplete);
+      onComplete(null);
     }.bind(this));
   }.bind(this));
 };
