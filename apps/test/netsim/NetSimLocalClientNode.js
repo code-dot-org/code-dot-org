@@ -26,7 +26,7 @@ describe("NetSimLocalClientNode", function () {
 
     testShard = fakeShard();
 
-    NetSimLocalClientNode.create(testShard, function (err, node) {
+    NetSimLocalClientNode.create(testShard, "testLocalNode", function (err, node) {
       testLocalNode = node;
     });
     assert(undefined !== testLocalNode, "Made a local node");

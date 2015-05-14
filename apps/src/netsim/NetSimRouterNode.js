@@ -356,17 +356,6 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 };
 
 /**
- * @readonly
- * @enum {string}
- */
-NetSimRouterNode.RouterStatus = {
-  INITIALIZING: 'Initializing',
-  READY: 'Ready',
-  FULL: 'Full'
-};
-var RouterStatus = NetSimRouterNode.RouterStatus;
-
-/**
  * @typedef {Object} routerRow
  * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
@@ -615,23 +604,6 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
   this.processAutoDnsRequests_(localSimDnsRequests, function () {
     this.isAutoDnsProcessing_ = false;
   }.bind(this));
-};
-
-/**
- * Updates router status and lastPing time in lobby table - both keepAlive
- * and making sure router's connection count is valid.
- * @param {NodeStyleCallback} [onComplete] - Optional success/failure callback
- */
-NetSimRouterNode.prototype.update = function (onComplete) {
-  onComplete = onComplete || function () {};
-
-  var self = this;
-  this.countConnections(function (err, count) {
-    self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
-        RouterStatus.FULL : RouterStatus.READY;
-    self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
-    NetSimRouterNode.superPrototype.update.call(self, onComplete);
-  });
 };
 
 /** @inheritdoc */

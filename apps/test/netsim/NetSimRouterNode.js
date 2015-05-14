@@ -271,11 +271,11 @@ describe("NetSimRouterNode", function () {
       });
 
       // Make clients
-      NetSimLocalClientNode.create(testShard, function (e, n) {
+      NetSimLocalClientNode.create(testShard, "localClient", function (e, n) {
         localClient = n;
       });
 
-      NetSimLocalClientNode.create(testShard, function (e, n) {
+      NetSimLocalClientNode.create(testShard, "remoteA", function (e, n) {
         remoteA = n;
       });
 

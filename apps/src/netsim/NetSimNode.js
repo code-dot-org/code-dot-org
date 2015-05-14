@@ -61,7 +61,7 @@ NetSimNode.prototype.buildRow_ = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getDisplayName = function () {
-  return this.displayName_ ? this.displayName_ : '[New Node]';
+  return this.displayName_ ? this.displayName_ : '[New Node]'; // TODO: Localize?
 };
 
 /**
