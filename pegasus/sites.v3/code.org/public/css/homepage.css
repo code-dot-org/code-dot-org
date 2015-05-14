@@ -34,7 +34,7 @@ body.modal-open .supreme-container{
 
 @media screen and (min-width: 971px) {
   .homepage-caption-bottom {
-    top: 200px;
+    top: 190px;
   }
 }
 
@@ -57,6 +57,16 @@ body.modal-open .supreme-container{
 
 #homepage #hero #fullwidth {
   width: 100%;
+}
+
+#homepage #newsbanner {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: #696969;
+  background-color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 5px
 }
 
 #homepage #caption_container {
