@@ -45,6 +45,13 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blo
   group node[:current_user]
 end
 
+link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/shared" do
+  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/shared-package"
+  action :create
+  user node[:current_user]
+  group node[:current_user]
+end
+
 execute "bundle-install-dashboard" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
