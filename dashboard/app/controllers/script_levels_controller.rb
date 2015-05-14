@@ -54,7 +54,7 @@ class ScriptLevelsController < ApplicationController
          script_level_id: @script_level.id,
          level_id: @script_level.level.id,
          user_agent: request.user_agent,
-         locale: locale) unless @script_level.level.unplugged?
+         locale: locale) if @script_level.level.finishable?
   end
 
   private
