@@ -68,4 +68,8 @@ class NetSim < Blockly
               level_num: 'custom'
             ))
   end
+
+  def finishable?
+    false
+  end
 end
