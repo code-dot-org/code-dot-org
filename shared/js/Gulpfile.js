@@ -45,7 +45,7 @@ gulp.task('bundle-js', function () {
   ];
   var config = {
     src: files,
-    dest: BUILD_TARGET + '/initApp.js',
+    dest: BUILD_TARGET + '/shared.js',
     watch: watchEnabled
   };
 
