@@ -174,6 +174,7 @@ namespace :build do
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
+  tasks << :shared if CDO.build_shared_js
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
@@ -260,6 +261,7 @@ namespace :install do
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
+  tasks << :shared if CDO.build_shared_js
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
