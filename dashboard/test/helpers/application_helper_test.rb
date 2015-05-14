@@ -7,7 +7,7 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "canonical_hostname in test" do
-    assert_equal 'test.studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'test-studio.code.org', CDO.canonical_hostname('studio.code.org')
     assert_equal 'test.code.org', CDO.canonical_hostname('code.org')
   end
 
@@ -19,13 +19,13 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "canonical_hostname in staging" do
     set_env :staging
-    assert_equal 'staging.studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'staging-studio.code.org', CDO.canonical_hostname('studio.code.org')
     assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in development" do
     set_env :development
-    assert_equal 'localhost.studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
     assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
   end
 
