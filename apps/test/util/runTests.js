@@ -8,7 +8,7 @@ var http = require('http');
 var fs = require('fs');
 
 var exec = require('child_process').exec;
-command = which('linklocal');
+var command = which('linklocal');
 
 /**
  * Mochify uses phantomic to run a server that it connects to, which serves up
