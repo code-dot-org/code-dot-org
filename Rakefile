@@ -78,6 +78,16 @@ namespace :build do
     end
   end
 
+  task :shared do
+    Dir.chdir(shared_js_dir) do
+      HipChat.log 'Installing <b>shared js</b> dependencies...'
+      RakeUtils.npm_install
+
+      HipChat.log 'Building <b>shared js</b>...'
+      RakeUtils.system 'npm run gulp'
+    end
+  end
+
   task :stop_varnish do
     Dir.chdir(aws_dir) do
       unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
@@ -204,6 +214,26 @@ namespace :install do
       end
     end
   end
+
+  task :shared do
+    if rack_env?(:development) && !CDO.chef_managed
+      Dir.chdir(shared_js_dir) do
+        shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
+        RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
+      end
+
+      if OS.linux?
+        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
+        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
+        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+      elsif OS.mac?
+        RakeUtils.system 'brew install node'
+        RakeUtils.system 'npm', 'update', '-g', 'npm'
+        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      end
+    end
+  end
+
 
   task :dashboard do
     if rack_env?(:development) && !CDO.chef_managed

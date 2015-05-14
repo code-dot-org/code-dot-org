@@ -294,7 +294,7 @@ sub vcl_recv
   if (req.request == "GET" && req.url ~ "^/health_check.php$") {
     error 200 "Varnish is healthy.";
   }
-  
+
   if(req.http.host ~ "\.$")
   {
     /* Don't allow domain names that end in "." */
@@ -312,7 +312,7 @@ sub vcl_recv
   }
   <%
     # Alias the following domains to one of our primary ones.
-    {
+    redirects = {
       'aws.code.org'      => 'code.org',
       'blockly.com'       => 'studio.code.org',
       'learn.code.org'    => 'studio.code.org',
@@ -336,16 +336,25 @@ sub vcl_recv
       'csedweek.net'        => 'csedweek.org',
       'cseducationweek.com' => 'csedweek.org',
       'cseducationweek.org' => 'csedweek.org',
-    }.tap { |x|
+    }
+    unless rack_env?(:production)
       # Redirect e.g. [env].studio.code.org to [env]-studio.code.org
-      x["#{node.chef_environment}.studio.code.org"] = "#{node.chef_environment}-studio.code.org" unless rack_env?(:production)
-    }.each_pair do |domain,site|
+      redirects.merge!(Hash[*%w(studio learn i18n al ar br italia ro eu uk za).map{|x|["#{node.chef_environment}.#{x}.code.org", "#{node.chef_environment}-#{x}.code.org"]}.flatten])
+    end
+    redirects.each_pair do |domain,site|
   %>else if(req.http.Host == "<%= domain %>")
   {
     /* <%= domain %> redirects to <%= site %> */
-    error 751 "http://<%= site %>" + req.url;
+    error 751 "<%= rack_env?(:production) ? 'http' : 'https' %>://<%= site %>" + req.url;
   }
   <% end%>
+  <% unless rack_env?(:production) %>
+  else if(req.http.X-Forwarded-Proto !~ "(?i)https")
+  {
+  /* Redirect http to https */
+  error 751 "https://" + req.http.host + req.url;
+  }
+  <% end %>
 
   C{
       vcl_rewrite_accept_language(sp);
