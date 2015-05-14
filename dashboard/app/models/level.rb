@@ -54,6 +54,10 @@ class Level < ActiveRecord::Base
     game && game.unplugged?
   end
 
+  def finishable?
+    !unplugged?
+  end
+
   # Overriden by different level types.
   def self.start_directions
   end
