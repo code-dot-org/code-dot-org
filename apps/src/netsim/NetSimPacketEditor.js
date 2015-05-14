@@ -36,7 +36,6 @@ var binaryToHex = dataConverters.binaryToHex;
 var binaryToInt = dataConverters.binaryToInt;
 var binaryToDecimal = dataConverters.binaryToDecimal;
 var binaryToAscii = dataConverters.binaryToAscii;
-var hexToInt = dataConverters.hexToInt;
 var hexToBinary = dataConverters.hexToBinary;
 var intToAB = dataConverters.intToAB;
 var intToBinary = dataConverters.intToBinary;
@@ -421,21 +420,50 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
  *           the message value in this row when the binary is updated.
  */
 
-function truncatedBinaryToInt(binaryString, maxWidth) {
+/**
+ * Convert binary to an integer, intentionally limiting the binary width so
+ * that overflow can occur.
+ * @param {string} binaryString (interpreted as unsigned)
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedBinaryToInt = function (binaryString, maxWidth) {
   return binaryToInt(binaryString.substr(-maxWidth));
-}
+};
 
-function truncatedABToInt(abString, maxWidth) {
+/**
+ * Convert ABs to an integer, intentionally limiting the width so that overflow
+ * can occur (analagous to truncatedBinaryToInt).  A is treated as zero, B as
+ * one.
+ * @param {string} abString
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedABToInt = function (abString, maxWidth) {
   return abToInt(abString.substr(-maxWidth));
-}
+};
 
-function truncatedHexToInt(hexString, maxWidth) {
+/**
+ * Convert a hexadecimal string to a single integer, intentionally limiting
+ * the bit-width to so that overflow can occur.
+ * @param {string} hexString
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedHexToInt = function (hexString, maxWidth) {
   return truncatedBinaryToInt(hexToBinary(hexString), maxWidth);
-}
+};
 
-function truncatedDecimalToInt(decimalString, maxWidth) {
+/**
+ * Convert a decimal string to an integer, intentionally limiting the bit-width
+ * so that overflow can occur.
+ * @param {string} decimalString
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedDecimalToInt = function (decimalString, maxWidth) {
   return truncatedBinaryToInt(intToBinary(parseInt(decimalString, 10)), maxWidth);
-}
+};
 
 /**
  * Get relevant elements from the page and bind them to local variables.
@@ -502,6 +530,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     this.packetSpec_.forEach(function (fieldSpec) {
       /** @type {Packet.HeaderType} */
       var fieldName = fieldSpec.key;
+      /** @type {number} */
       var fieldWidth = fieldSpec.bits;
 
       rowFields[fieldName] = tr.find('input.' + fieldName);
@@ -539,37 +568,37 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
-  [
-    Packet.HeaderType.TO_ADDRESS,
-    Packet.HeaderType.FROM_ADDRESS,
-    Packet.HeaderType.PACKET_INDEX,
-    Packet.HeaderType.PACKET_COUNT
-  ].forEach(function (fieldName) {
-        liveFields.push({
-          inputElement: this.a_and_bUI[fieldName],
-          newValue: intToAB(this[fieldName], 4)
-        });
+  this.packetSpec_.forEach(function (fieldSpec) {
+    /** @type {Packet.HeaderType} */
+    var fieldName = fieldSpec.key;
+    /** @type {number} */
+    var fieldWidth = fieldSpec.bits;
 
-        liveFields.push({
-          inputElement: this.binaryUI[fieldName],
-          newValue: intToBinary(this[fieldName], 4)
-        });
+    liveFields.push({
+      inputElement: this.a_and_bUI[fieldName],
+      newValue: intToAB(this[fieldName], fieldWidth)
+    });
 
-        liveFields.push({
-          inputElement: this.hexadecimalUI[fieldName],
-          newValue: intToHex(this[fieldName], 1)
-        });
+    liveFields.push({
+      inputElement: this.binaryUI[fieldName],
+      newValue: intToBinary(this[fieldName], fieldWidth)
+    });
 
-        liveFields.push({
-          inputElement: this.decimalUI[fieldName],
-          newValue: this[fieldName].toString(10)
-        });
+    liveFields.push({
+      inputElement: this.hexadecimalUI[fieldName],
+      newValue: intToHex(this[fieldName], Math.ceil(fieldWidth / 4))
+    });
 
-        liveFields.push({
-          inputElement: this.asciiUI[fieldName],
-          newValue: this[fieldName].toString(10)
-        });
-      }, this);
+    liveFields.push({
+      inputElement: this.decimalUI[fieldName],
+      newValue: this[fieldName].toString(10)
+    });
+
+    liveFields.push({
+      inputElement: this.asciiUI[fieldName],
+      newValue: this[fieldName].toString(10)
+    });
+  }, this);
 
   liveFields.push({
     inputElement: this.a_and_bUI.message,
