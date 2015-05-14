@@ -18,7 +18,7 @@ describe("NetSimHeartbeat", function () {
 
   it ("has expected row structure and default values", function () {
     var heartbeat = new NetSimHeartbeat(testShard);
-    var row = heartbeat.buildRow_();
+    var row = heartbeat.buildRow();
 
     assertOwnProperty(row, 'nodeID');
     assertEqual(row.fromNodeID, undefined);

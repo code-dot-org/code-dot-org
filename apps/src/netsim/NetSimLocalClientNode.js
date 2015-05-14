@@ -117,7 +117,7 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
 NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
-  templateNode.getTable().create(templateNode.buildRow_(), function (err, row) {
+  templateNode.getTable().create(templateNode.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
       return;

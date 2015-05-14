@@ -50,7 +50,7 @@ NetSimNode.prototype.getTable= function () {
 };
 
 /** Build table row for this node */
-NetSimNode.prototype.buildRow_ = function () {
+NetSimNode.prototype.buildRow = function () {
   return {
     type: this.getNodeType(),
     name: this.getDisplayName()

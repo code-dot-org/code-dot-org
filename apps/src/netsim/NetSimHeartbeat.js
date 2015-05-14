@@ -139,7 +139,7 @@ NetSimHeartbeat.prototype.getTable = function () {
  * Build own row for the wire table
  * @override
  */
-NetSimHeartbeat.prototype.buildRow_ = function () {
+NetSimHeartbeat.prototype.buildRow = function () {
   return {
     nodeID: this.nodeID,
     time: (this.time_ - this.falseAgeMS_)

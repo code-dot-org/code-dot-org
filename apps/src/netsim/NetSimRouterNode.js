@@ -372,9 +372,9 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
  * @private
  * @override
  */
-NetSimRouterNode.prototype.buildRow_ = function () {
+NetSimRouterNode.prototype.buildRow = function () {
   return utils.extend(
-      NetSimRouterNode.superPrototype.buildRow_.call(this),
+      NetSimRouterNode.superPrototype.buildRow.call(this),
       {
         creationTime: this.creationTime,
         bandwidth: serializeNumber(this.bandwidth),

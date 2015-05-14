@@ -49,7 +49,7 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable().create(entity.buildRow_(), function (err, row) {
+  entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
     } else {
@@ -87,7 +87,7 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable().update(this.entityID, this.buildRow_(), onComplete);
+  this.getTable().update(this.entityID, this.buildRow(), onComplete);
 };
 
 /**
@@ -117,7 +117,7 @@ NetSimEntity.prototype.getTable = function () {
 };
 
 /** Construct table row for this entity. */
-NetSimEntity.prototype.buildRow_ = function () {
+NetSimEntity.prototype.buildRow = function () {
   return {};
 };
 
