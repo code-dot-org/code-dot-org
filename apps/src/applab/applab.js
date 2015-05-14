@@ -1572,7 +1572,7 @@ Applab.reset = function(first) {
     }
     var debugOutput = document.getElementById('debug-output');
     if (debugOutput) {
-      debugOutput.value = '';
+      debugOutput.textContent = '';
     }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
