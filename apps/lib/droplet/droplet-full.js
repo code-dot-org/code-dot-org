@@ -11238,23 +11238,35 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.discourageDropTimeout = null;
     });
     hook('mouseup', 1, function(point, event, state) {
-      var head, leadingWhitespace, line, pos, position, prefix, text;
+      var currentIndentation, head, indentation, leadingWhitespaceRegex, line, nextLine, pos, position, prefix, suffix, text;
       if (this.draggingBlock != null) {
         if (!this.currentlyUsingBlocks) {
           position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
           if (this.trackerPointIsInAce(position)) {
+            leadingWhitespaceRegex = /^(\s*)/;
             pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
             line = this.aceEditor.session.getLine(pos.row);
-            leadingWhitespace = /^(\s*)/.exec(line)[0];
+            currentIndentation = leadingWhitespaceRegex.exec(line)[0];
             prefix = '';
-            if (pos.column === line.length && leadingWhitespace.length !== line.length) {
-              prefix = '\n' + leadingWhitespace;
+            indentation = currentIndentation;
+            suffix = '';
+            if (currentIndentation.length === line.length) {
+              suffix = '\n' + indentation;
+            } else if (pos.column === line.length) {
+              prefix = '\n';
+              nextLine = this.aceEditor.session.getLine(pos.row + 1);
+              indentation = leadingWhitespaceRegex.exec(nextLine)[0];
+            } else {
+
             }
             this.prepareNode(this.draggingBlock, null);
-            text = prefix + this.draggingBlock.stringify(this.mode);
-            if (!prefix && text[text.length - 1] === ';') {
-              text += '\n' + leadingWhitespace;
-            }
+            text = this.draggingBlock.stringify(this.mode);
+            text = text.split('\n').map((function(_this) {
+              return function(line, index) {
+                return (index === 0 && prefix === '' ? '' : indentation) + line;
+              };
+            })(this)).join('\n');
+            text = prefix + text + suffix;
             return this.aceEditor.onTextInput(text);
           }
         } else if (this.lastHighlight != null) {
