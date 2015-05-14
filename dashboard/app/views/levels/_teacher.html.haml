@@ -1,5 +1,5 @@
 - if current_user.try(:admin?) && @script_level # TODO: this should change to :teacher? when we want to ship this
-  .teacher-panel
+  .teacher-panel{class: @user ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
