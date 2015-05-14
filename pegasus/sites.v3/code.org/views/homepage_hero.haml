@@ -13,6 +13,15 @@
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
 
+  - if request.language == "en"
+    #newsbanner{style: "position:absolute; bottom: 0px; width: 100%;  color: ##696969; background-color:rgba(255,255,255,0.8); text-align:center; padding:5px"}
+      .container_responsive
+        %span{  style: "font-family: 'Gotham 7r', sans-serif;"}
+          May 14:
+        Code.org announces partnership with the College Board to expand diversity in computer science.
+        %a{href: "http://www.usatoday.com", target: "_blank"}
+          Learn more
+
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
@@ -71,7 +80,6 @@
               = I18n.t(entry[:text1_s])
           .actiongap
             &nbsp;
-
 
 :javascript
   var petition;
