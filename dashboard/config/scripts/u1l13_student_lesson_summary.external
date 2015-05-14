@@ -1,11 +1,10 @@
-name 'U1L13 Student Lesson Introduction'
+name 'U1L13 Student Lesson Summary'
 title 'title'
 description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 13 - Text
- Compression
+## Unit 1: Lesson 13 - Text Compression
 # Background
 
 Compression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression is one of the "hard problems" for computers because it is difficult to verify a good solution in a reasonable amount of time.

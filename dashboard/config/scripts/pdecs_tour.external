@@ -17,7 +17,7 @@ The main PD page is broken up into several __stages__, which each represent a di
 <br>
 <div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
-<img src ="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/eae8gOBHTnrjEBv/pd--stage_overview.gif" />
+<img src ="/script_assets/pd/pd_stage_overview.gif" />
 </details></h4>
 
 <br>
@@ -26,7 +26,7 @@ Each stage is made up of __levels__, which hold individual videos, readings, or 
 
 The colors of the level circle will change based on your progress. In this PD you'll see the following types of circles:
 
-![https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/O852xo6rOH7QrCG/Screen%20Shot%202015-04-27%20at%204.07.28%20PM.png](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/O852xo6rOH7QrCG/Screen%20Shot%202015-04-27%20at%204.07.28%20PM.png)
+![/script_assets/pd/stage_states.png](/script_assets/pd/stage_states.png)
 
 
 
@@ -36,7 +36,7 @@ The colors of the level circle will change based on your progress. In this PD yo
 
 <div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
-<img src ="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/HmiIDlpPlNirSy7/pd--level_overview.gif" />
+<img src ="/script_assets/pd/pd_level_overview.gif" />
 </details></h4>
 
 <br>
@@ -50,7 +50,7 @@ __Accessing levels__ can be done four ways:
 <br>
 <div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
-<img src ="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/YDzMeH5kzbKvBIq/pd--level-click.gif" />
+<img src ="/script_assets/pd/pd-level-click.gif" />
 </details></h4>
 
 <br>
@@ -62,13 +62,11 @@ __Resizing text boxes__ can be done by clicking and dragging the bottom-right co
 <br>
 <div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
-<img src ="https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/Glg54XH2VOXbihk/pd--resizing-box.gif" />
+<img src ="/script_assets/pd/pd-resizing-box.gif" />
 </details></h4>
 
 <br>
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN

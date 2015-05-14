@@ -1,0 +1,35 @@
+name 'App Lab Feedback'
+title 'App Lab Feedback'
+description 'description here'
+
+markdown <<MARKDOWN
+## Welcome to the team!
+
+You may have noticed that sometimes when you go to use App Lab, it's a little bit different from the last time you used it. You're not just imagining things! It's because App Lab is a tool that is actively being developed by engineers at Code.org right now. We're getting it ready to be used by over a hundred classrooms starting in the Fall of 2015. Part of the process of getting it ready to be used by a lot more students is to test it out with a smaller group of students first. That's where you come in!
+
+So when you have a piece of feedback to make App Lab better, or encounter a bug, we *really* want to know so that we can make App Lab better. You're a really important member of the team, and we're counting on you!
+
+# Feedback
+You can think of **feedback** as your _opinion_ of what you think of App Lab. It's your feelings on what you personally like and don't like about App Lab, or what you would like to see us add to help make your programming experience better. For example: "I love the documentation that I can open from any tooltip! I wish though that it didn't open up in a new tab."  
+
+**Give us your feedback now by filling out this [3 minute survey](https://www.surveymonkey.com/r/csp-applab)**
+
+You can also give feedback at any time by clicking the "Give feedback" link in the upper right hand corner, above your name.
+<br>
+     ![Give Feedback](http://code.org/applab/assets/givefeedback.png)
+
+# Bugs
+A software **bug** is less about an opinion, and more when something is just plain broken, or not working the way it was supposed to. For example: "When I click the dropdown menu for a block and then click 'Show Code', the dropdown doesn't go away, and I can't dismiss it." 
+
+At any time that you're in App Lab and encounter a bug, click the "Report a bug" link in the upper right hand corner, above your name. You'll be asked to describe in detail the bug you encountered, and that's it!   
+<br>
+     ![Report a bug](http://code.org/applab/assets/reportbug.png)
+
+
+<br>
+</br>
+Thank you again for helping us make App Lab better for future students!  
+The Code.org team
+
+
+MARKDOWN

@@ -11,7 +11,7 @@
         "text": "Triggers once, the instant mouse hovers over the button"
       },
       {
-        "text": "Triggers when mouse button is released"
+        "text": "Triggers when mouse button is clicked once"
       },
       {
         "text": "Triggers when mouse button is released"
