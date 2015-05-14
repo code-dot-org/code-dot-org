@@ -48,7 +48,9 @@
     "default_bit_rate_bits_per_second": "Infinity",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
-    "default_chunk_size_bits": "8"
+    "default_chunk_size_bits": "8",
+    "show_hostname_in_graph": "false",
+    "show_pulse_rate_slider": "true"
   },
   "md5": "e9f562e16d9487b1f02353ac05fde04c"
 }]]></config>
