@@ -151,6 +151,14 @@
               </block>
             </value>
           </block>
+          <block type="jump" inline="true">
+            <title name="DIR">jumpForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">150</title>
+              </block>
+            </value>
+          </block>
           <block type="draw_turn" inline="true">
             <title name="DIR">turnRight</title>
             <value name="VALUE">

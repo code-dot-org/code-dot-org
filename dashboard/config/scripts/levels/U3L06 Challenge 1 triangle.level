@@ -44,10 +44,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "app_width": "320",
-    "app_height": "480"
-  }
+    "app_height": "480",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge1.png"
+  },
+  "md5": "6186df35701d0e131072f29a197c7d41"
 }]]></config>
   <blocks/>
 </Applab>
