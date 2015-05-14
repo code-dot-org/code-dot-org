@@ -187,7 +187,6 @@ module.exports = {
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
-console.log('aboo!');
 
 var channels = require('./client_api/channels');
 var timing = require('./timing');
