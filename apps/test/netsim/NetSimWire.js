@@ -23,7 +23,7 @@ describe("NetSimWire", function () {
 
   it ("has expected row structure and default values", function () {
     var wire = new NetSimWire(testShard);
-    var row = wire.buildRow_();
+    var row = wire.buildRow();
 
     assertOwnProperty(row, 'localNodeID');
     assertEqual(row.localNodeID, undefined);

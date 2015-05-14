@@ -28,9 +28,9 @@ describe("NetSimEntity", function () {
     });
   });
 
-  it ("buildRow_ method produces empty object", function () {
+  it ("buildRow method produces empty object", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assertEqual(entity.buildRow_(), {});
+    assertEqual(entity.buildRow(), {});
   });
 
   it ("disallows static creation on base type", function () {

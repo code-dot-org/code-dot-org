@@ -24,7 +24,7 @@ describe("NetSimMessage", function () {
 
   it ("has expected row structure and default values", function () {
     var message = new NetSimMessage(testShard);
-    var row = message.buildRow_();
+    var row = message.buildRow();
 
     assertOwnProperty(row, 'fromNodeID');
     assertEqual(row.fromNodeID, undefined);

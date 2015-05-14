@@ -42,7 +42,7 @@ describe("NetSimRouterNode", function () {
 
   it("has expected row structure and default values", function () {
     var router = new NetSimRouterNode(testShard);
-    var row = router.buildRow_();
+    var row = router.buildRow();
 
     assertOwnProperty(row, 'creationTime');
     assertWithinRange(row.creationTime, Date.now(), 10);

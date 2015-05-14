@@ -100,7 +100,7 @@ NetSimLogEntry.prototype.getTable = function () {
  * Build own row for the log table
  * @returns {logEntryRow}
  */
-NetSimLogEntry.prototype.buildRow_ = function () {
+NetSimLogEntry.prototype.buildRow = function () {
   return {
     nodeID: this.nodeID,
     binary: this.binary,
@@ -124,7 +124,7 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
   entity.binary = binary;
   entity.status = status;
   entity.timestamp = Date.now();
-  entity.getTable().create(entity.buildRow_(), function (err, result) {
+  entity.getTable().create(entity.buildRow(), function (err, result) {
     if (err) {
       onComplete(err, null);
       return;

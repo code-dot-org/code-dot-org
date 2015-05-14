@@ -24,7 +24,7 @@ describe("NetSimLogEntry", function () {
 
   it ("has expected row structure and default values", function () {
     var logEntry = new NetSimLogEntry(testShard);
-    var row = logEntry.buildRow_();
+    var row = logEntry.buildRow();
 
     assertOwnProperty(row, 'nodeID');
     assertEqual(row.nodeID, undefined);

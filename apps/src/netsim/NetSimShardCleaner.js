@@ -111,9 +111,9 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
  * @private
  * @override
  */
-CleaningHeartbeat.prototype.buildRow_ = function () {
+CleaningHeartbeat.prototype.buildRow = function () {
   return utils.extend(
-      CleaningHeartbeat.superPrototype.buildRow_.call(this),
+      CleaningHeartbeat.superPrototype.buildRow.call(this),
       { cleaner: true }
   );
 };
