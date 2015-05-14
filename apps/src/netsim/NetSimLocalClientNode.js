@@ -133,7 +133,7 @@ NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
       // detect and respond to a disconnect.
       var newNode = new NetSimLocalClientNode(shard, row);
       newNode.heartbeat = heartbeat;
-      newNode.heartbeat.setFailureCallback(newNode.onFailedHeartbeat_.bind(newNode));
+      newNode.heartbeat.setFailureCallback(newNode.onFailedHeartbeat.bind(newNode));
       onComplete(null, newNode);
     });
   });
@@ -194,7 +194,7 @@ NetSimLocalClientNode.prototype.tick = function (clock) {
  * our own "lost connection" callback.
  * @private
  */
-NetSimLocalClientNode.prototype.onFailedHeartbeat_ = function () {
+NetSimLocalClientNode.prototype.onFailedHeartbeat = function () {
   logger.error("Heartbeat failed.");
   if (this.onNodeLostConnection_ !== undefined) {
     this.onNodeLostConnection_();

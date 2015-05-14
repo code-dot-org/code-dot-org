@@ -61,7 +61,7 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @type {function}
    * @private
    */
-  this.onFailedHeartbeat_ = undefined;
+  this.onFailedHeartbeat = undefined;
 
   /**
    * Fake age to apply to this heartbeat's remote row, allowing us to manually
@@ -161,14 +161,14 @@ NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
  * Set a handler to call if this heartbeat is unable to update its remote
  * storage representation.  Can be used to go into a recovery mode,
  * acknowledge disconnect, and/or attempt an auto-reconnect.
- * @param {function} onFailedHeartbeat
+ * @param {function} failedHeartbeatCallback
  * @throws if set would clobber a previously-set callback
  */
-NetSimHeartbeat.prototype.setFailureCallback = function (onFailedHeartbeat) {
-  if (this.onFailedHeartbeat_ !== undefined && onFailedHeartbeat !== undefined) {
+NetSimHeartbeat.prototype.setFailureCallback = function (failedHeartbeatCallback) {
+  if (this.onFailedHeartbeat !== undefined && failedHeartbeatCallback !== undefined) {
     throw new Error("Heartbeat already has a failure callback.");
   }
-  this.onFailedHeartbeat_ = onFailedHeartbeat;
+  this.onFailedHeartbeat = failedHeartbeatCallback;
 };
 
 /**
@@ -182,8 +182,8 @@ NetSimHeartbeat.prototype.tick = function () {
       if (err) {
         // A failed heartbeat update may indicate that we've been disconnected
         // or kicked from the shard.  We may want to take action.
-        if (this.onFailedHeartbeat_ !== undefined) {
-          this.onFailedHeartbeat_();
+        if (this.onFailedHeartbeat !== undefined) {
+          this.onFailedHeartbeat();
         }
       }
     }.bind(this));
