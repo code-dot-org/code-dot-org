@@ -1572,7 +1572,7 @@ Applab.reset = function(first) {
     }
     var debugOutput = document.getElementById('debug-output');
     if (debugOutput) {
-      debugOutput.value = '';
+      debugOutput.textContent = '';
     }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
@@ -3433,6 +3433,12 @@ var getPegasusHost = function() {
         case 'test':
         case 'levelbuilder':
           return name + '.code.org';
+        case 'staging-studio':
+          return 'staging.code.org';
+        case 'test-studio':
+          return 'test.code.org';
+        case 'levelbuilder-studio':
+          return 'levelbuilder.code.org';
         default:
           return null;
       }

@@ -340,6 +340,8 @@ sub vcl_recv
     unless rack_env?(:production)
       # Redirect e.g. [env].studio.code.org to [env]-studio.code.org
       redirects.merge!(Hash[*%w(studio learn i18n al ar br italia ro eu uk za).map{|x|["#{node.chef_environment}.#{x}.code.org", "#{node.chef_environment}-#{x}.code.org"]}.flatten])
+      redirects.merge!({ 'translate.studio.code.org' => 'translate-studio.code.org'}) if rack_env?(:staging)
+      redirects.merge!({ 'staging.translate.hourofcode.com' => 'staging-translate.hourofcode.com'}) if rack_env?(:staging)
     end
     redirects.each_pair do |domain,site|
   %>else if(req.http.Host == "<%= domain %>")
