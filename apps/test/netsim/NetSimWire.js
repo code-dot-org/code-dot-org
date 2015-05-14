@@ -18,7 +18,7 @@ describe("NetSimWire", function () {
 
   it ("uses the wire table", function () {
     var wire = new NetSimWire(testShard);
-    assert(wire.getTable_() === testShard.wireTable);
+    assert(wire.getTable() === testShard.wireTable);
   });
 
   it ("has expected row structure and default values", function () {

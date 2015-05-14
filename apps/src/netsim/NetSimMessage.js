@@ -77,14 +77,14 @@ NetSimMessage.send = function (shard, fromNodeID, toNodeID, simulatedBy,
   entity.toNodeID = toNodeID;
   entity.simulatedBy = simulatedBy;
   entity.payload = payload;
-  entity.getTable_().create(entity.buildRow_(), onComplete);
+  entity.getTable().create(entity.buildRow_(), onComplete);
 };
 
 /**
  * Helper that gets the wires table for the configured instance.
  * @returns {NetSimTable}
  */
-NetSimMessage.prototype.getTable_ = function () {
+NetSimMessage.prototype.getTable = function () {
   return this.shard_.messageTable;
 };
 

@@ -131,7 +131,7 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
  * @returns {NetSimTable}
  * @override
  */
-NetSimHeartbeat.prototype.getTable_ = function () {
+NetSimHeartbeat.prototype.getTable = function () {
   return this.shard_.heartbeatTable;
 };
 

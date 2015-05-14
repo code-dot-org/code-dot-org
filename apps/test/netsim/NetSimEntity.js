@@ -21,10 +21,10 @@ describe("NetSimEntity", function () {
     assertEqual(entity.entityID, undefined);
   });
 
-  it ("doesn't implement getTable_", function () {
+  it ("doesn't implement getTable", function () {
     var entity = new NetSimEntity(undefined, undefined);
     assertThrows(Error, function () {
-      entity.getTable_();
+      entity.getTable();
     });
   });
 

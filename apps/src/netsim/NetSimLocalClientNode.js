@@ -82,7 +82,7 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {NetSimHeartbeat}
    * @private
    */
-  this.heartbeat_ = null;
+  this.heartbeat = null;
 
   /**
    * Change event others can observe, which we will fire when we
@@ -117,7 +117,7 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
 NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
-  templateNode.getTable_().create(templateNode.buildRow_(), function (err, row) {
+  templateNode.getTable().create(templateNode.buildRow_(), function (err, row) {
     if (err) {
       onComplete(err, null);
       return;
@@ -132,8 +132,8 @@ NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
       // Attach a heartbeat failure (heart attack?) callback to
       // detect and respond to a disconnect.
       var newNode = new NetSimLocalClientNode(shard, row);
-      newNode.heartbeat_ = heartbeat;
-      newNode.heartbeat_.setFailureCallback(newNode.onFailedHeartbeat_.bind(newNode));
+      newNode.heartbeat = heartbeat;
+      newNode.heartbeat.setFailureCallback(newNode.onFailedHeartbeat_.bind(newNode));
       onComplete(null, newNode);
     });
   });
@@ -183,7 +183,7 @@ NetSimLocalClientNode.prototype.stopSimulation = function () {
  * @param {!RunLoop.Clock} clock
  */
 NetSimLocalClientNode.prototype.tick = function (clock) {
-  this.heartbeat_.tick(clock);
+  this.heartbeat.tick(clock);
   if (this.myRouter) {
     this.myRouter.tick(clock);
   }
@@ -319,8 +319,8 @@ NetSimLocalClientNode.prototype.synchronousDestroy = function () {
   }, this);
 
   // Remove my heartbeat row(s)
-  this.heartbeat_.synchronousDestroy();
-  this.heartbeat_ = null;
+  this.heartbeat.synchronousDestroy();
+  this.heartbeat = null;
 
   // Finally, call super-method
   NetSimLocalClientNode.superPrototype.synchronousDestroy.call(this);
@@ -362,7 +362,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   }
 
   // Remove heartbeat row, then self
-  this.heartbeat_.destroy(function (err) {
+  this.heartbeat.destroy(function (err) {
     if (err) {
       onComplete(err);
       return;
