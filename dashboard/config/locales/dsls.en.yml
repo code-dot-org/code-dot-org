@@ -80,6 +80,9 @@ en:
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
+      App Lab Feedback:
+        App Lab Feedback: App Lab Feedback
+        description here: description here
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -347,7 +350,7 @@ en:
       U1L12 Student Lesson Introduction:
         description here: description here
         title: title
-      U1L13 Student Lesson Introduction:
+      U1L13 Student Lesson Summary:
         description here: description here
         title: title
       U1L13 Text Compression:
@@ -389,6 +392,8 @@ en:
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Events Unplugged
       U3L13 - Explanation of Ids:
         description here: description here
         title: title
@@ -398,9 +403,13 @@ en:
       U3L13 Add Button Instructions:
         description here: description here
         title: title
+      U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Buttons on the Screen
       U3L14 - Student Intro Page:
         description here: description here
         title: title
+      U3L16 Student Lesson Introduction:
+        Beyond Buttons: Beyond Buttons
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -488,6 +497,25 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      U3L13 Assessment Matching:
+        Calls an embedded function: Calls an embedded function
+        'Matching: Buttons on the Screen': 'Matching: Buttons on the Screen'
+        Official program name of an element: Official program name of an element
+        Places a button on the screen: Places a button on the screen
+        Responses from the computer to events: Responses from the computer to events
+        Things on the screen that the user interacts with: Things on the screen that the user interacts with
+        User interactions with an application: User interactions with an application
+        Words appearing on an element: Words appearing on an element
+        actions: actions
+        button("id","text"): button("id","text")
+        element text: element text
+        elements: elements
+        events: events
+        id: id
+        mouseover: mouseover
+        'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
+        trigger: trigger
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -734,9 +762,27 @@ en:
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '
+      U3L12 Free Response Getting Started:
+        'Getting Started: Events Unplugged': 'Getting Started: Events Unplugged'
+        Respond to the following prompt: Respond to the following prompt
+      U3L12 Free Response Reflection:
+        'Reflection: Mission Unsortable': 'Reflection: Mission Unsortable'
+      U3L13 Free Response Getting Started:
+        Buttons on the Screen: Buttons on the Screen
+        Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
+        Enter prompt here: Enter prompt here
+      U3L13 Free Response Reflection:
+        Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
+        Enter prompt here: Enter prompt here
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
+      U3L16 Assessment Free Response:
+        'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
+      U3L16 Free Response Getting Started:
+        Beyond Buttons Getting Started: Beyond Buttons Getting Started
+      U3L16 Free Response Wrap Up:
+        Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7
