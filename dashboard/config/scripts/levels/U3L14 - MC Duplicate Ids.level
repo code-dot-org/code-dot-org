@@ -26,7 +26,7 @@
         "correct": false
       },
       {
-        "text": "Two buttons with same id are linked during the running of the program.  Clicking on is just like clicking the other",
+        "text": "Two buttons with same id are linked during the running of the program.  Clicking one is just like clicking the other",
         "correct": false
       }
     ],

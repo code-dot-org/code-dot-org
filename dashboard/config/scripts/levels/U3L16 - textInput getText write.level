@@ -58,7 +58,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing textInput, getText and write.  First run the starter code several times.  Try to change what's written to the screen when the button is clicked. Then use getText to write to the screen what the user entered in the text box. GIF: U3L16 - useGetText.gif",
+    "instructions": "Introducing textInput, getText and write.  First run the starter code several times.  Try to change what's written to the screen when the button is clicked. Then use getText to write to the screen what the user entered in the text box.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -77,7 +77,8 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - useGetText.gif"
   },
   "md5": "5b1b88db941b15bd8105e35271f10b3a"
 }]]></config>
