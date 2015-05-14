@@ -110,18 +110,20 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
+ * @param {string} displayName
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimLocalClientNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimLocalClientNode, shard, function (err, node) {
+NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
+  var templateNode = new NetSimLocalClientNode(shard);
+  templateNode.displayName_ = displayName;
+  templateNode.getTable_().create(templateNode.buildRow_(), function (err, row) {
     if (err) {
-      onComplete(err, node);
+      onComplete(err, null);
       return;
     }
 
-    // Give our newly-created local node a heartbeat
-    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (err, heartbeat) {
+    NetSimHeartbeat.getOrCreate(shard, row.id, function (err, heartbeat) {
       if (err) {
         onComplete(err, null);
         return;
@@ -129,17 +131,12 @@ NetSimLocalClientNode.create = function (shard, onComplete) {
 
       // Attach a heartbeat failure (heart attack?) callback to
       // detect and respond to a disconnect.
-      node.heartbeat_ = heartbeat;
-      node.heartbeat_.setFailureCallback(node.onFailedHeartbeat_.bind(node));
-
-      onComplete(null, node);
+      var newNode = new NetSimLocalClientNode(shard, row);
+      newNode.heartbeat_ = heartbeat;
+      newNode.heartbeat_.setFailureCallback(newNode.onFailedHeartbeat_.bind(newNode));
+      onComplete(null, newNode);
     });
   });
-};
-
-/** @inheritdoc */
-NetSimLocalClientNode.prototype.getStatus = function () {
-  return this.status_ ? this.status_ : 'Online';
 };
 
 /** Set node's display name.  Does not trigger an update! */
@@ -299,9 +296,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
       this.myRouter = router;
       this.remoteChange.notifyObservers(this.myWire, this.myRouter);
-
-      this.status_ = "Connected to " + router.getDisplayName() +
-          " with address " + wire.localAddress;
+      // TODO: Can I remove this update call?
       this.update(onComplete);
     }.bind(this));
   }.bind(this));
