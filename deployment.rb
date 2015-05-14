@@ -220,3 +220,7 @@ end
 def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
+
+def shared_js_dir(*dirs)
+  deploy_dir('shared/js', *dirs)
+end

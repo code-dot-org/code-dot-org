@@ -98,6 +98,19 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   end
 
   #
+  # Define the SHARED BUILD task
+  #
+  SHARED_NODE_MODULES = Dir.glob(shared_js_dir('node_modules', '**/*'))
+  SHARED_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| shared_js_dir(i)} + Dir.glob(shared_js_dir('build', '**/*'))
+  SHARED_SOURCE_FILES = Dir.glob(shared_js_dir('**/*')) - SHARED_NODE_MODULES - SHARED_BUILD_PRODUCTS
+  SHARED_TASK = build_task('shared', SHARED_SOURCE_FILES) do
+    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-shared')
+    RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:shared'
+    RakeUtils.system 'rm', '-rf', dashboard_dir('public/shared-package')
+    RakeUtils.system 'cp', '-R', shared_js_dir('build/package'), dashboard_dir('public/shared-package')
+  end
+
+  #
   # Define the APPS COMMIT task. If APPS_TASK produces new output, that output needs to be
   #   committed because it's input for the DASHBOARD task.
   #
@@ -131,8 +144,41 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
     end
   end
+
+  #
+  # Define the SHARED COMMIT task. If SHARED_TASK produces new output, that output needs to be
+  #   committed because it's input for the DASHBOARD task.
+  #
+  SHARED_COMMIT_TASK = build_task('shared-commit', [deploy_dir('rebuild'), SHARED_TASK]) do
+    shared_changed = false
+    Dir.chdir(dashboard_dir('public/shared-package')) do
+      shared_changed = !`git status --porcelain .`.strip.empty?
+    end
+
+    if shared_changed
+      if RakeUtils.git_updates_available?
+        # NOTE: If we have local changes as a result of building SHARED_TASK, but there are new
+        # commits pending in the repository, it is better to pull the repository first and commit
+        # these changes after we're caught up with the repository because, if we committed the changes
+        # before pulling we would need to manually handle a "merge commit" even though it's impossible
+        # for there to be file conflicts (because nobody changes the files SHARED_TASK builds manually).
+        HipChat.log '<b>Shared</b> package updated but git changes are pending; commmiting after next build.', color:'yellow'
+      else
+        HipChat.log 'Committing updated <b>shared</b> package...', color:'purple'
+        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/shared-package')
+        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-shared'))}"
+        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
+        RakeUtils.git_push
+        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
+      end
+    else
+      HipChat.log '<b>shared</b> package unmodified, nothing to commit.'
+      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
+    end
+  end
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
+  SHARED_COMMIT_TASK = build_task('shared-commit') {}
 end
 
 file deploy_dir('rebuild') do
@@ -186,7 +232,7 @@ end
 #
 # The main build task (calls the top-level Rakefile)
 #
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK]) do
   Dir.chdir(deploy_dir) do
     # Lint
     RakeUtils.system 'rake', 'lint' if CDO.lint
