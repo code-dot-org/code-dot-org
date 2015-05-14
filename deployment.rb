@@ -38,7 +38,7 @@ def load_configuration()
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'build_shared_js'             => true,
+    'build_shared_js'             => [:development, :staging].include?(rack_env),
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',

@@ -550,7 +550,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
-  test 'loads state from last attempt when you are a teacher viewing your student' do
+  test 'loads state from students last attempt when you are a teacher viewing your student' do
     sign_in @teacher
     # Ensure that activity data from the last attempt is present in the @last_attempt instance variable
     # Used by TextMatch view partial
@@ -558,9 +558,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, user_id: @student.id
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
 
     assert_equal last_attempt_data, assigns(:last_attempt)
+  end
+
+  test 'shows expanded teacher panel when student is chosen' do
+    @teacher.update admin: true # TODO don't need this when feature is shipped
+
+    sign_in @teacher
+
+    last_attempt_data = 'test'
+    level = @custom_s1_l1.level
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '.teacher-panel'
+    assert_select '.teacher-panel.hidden', 0
+  end
+
+  test 'shows collapsed teacher panel when student not chosen' do
+    @teacher.update admin: true # TODO don't need this when feature is shipped
+
+    sign_in @teacher
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
+
+    assert_select '.teacher-panel.hidden'
   end
 
 end
