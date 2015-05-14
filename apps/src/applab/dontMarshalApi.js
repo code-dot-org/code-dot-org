@@ -5,6 +5,53 @@ var Applab = require('./applab');
 //
 // dropletConfig for each of these APIs should be marked with dontMarshal:true
 
+// Array functions
+
+var getInt = function(obj, def) {
+  // Return an integer, or the default.
+  var n = obj ? Math.floor(obj.toNumber()) : def;
+  if (isNaN(n)) {
+    n = def;
+  }
+  return n;
+};
+
+exports.insertItem = function (array, index, item) {
+  index = getInt(index, 0);
+  if (index < 0) {
+    index = Math.max(array.length + index, 0);
+  } else {
+    index = Math.min(index, array.length);
+  }
+  // Insert item.
+  for (var i = array.length - 1; i >= index; i--) {
+    array.properties[i + 1] = array.properties[i];
+  }
+  array.length += 1;
+  array.properties[index] = item;
+};
+
+exports.removeItem = function (array, index) {
+  index = getInt(index, 0);
+  if (index < 0) {
+    index = Math.max(array.length + index, 0);
+  } else {
+    index = Math.min(index, array.length);
+  }
+  // Remove by shifting items after index downward.
+  for (var i = index; i < array.length - 1; i++) {
+    array.properties[i] = array.properties[i + 1];
+    delete array.properties[i + 1];
+  }
+  array.length -= 1;
+};
+
+exports.appendItem = function (array, item) {
+  array.properties[array.length] = item;
+  array.length++;
+  return Applab.interpreter.createPrimitive(array.length);
+};
+
 // ImageData RGB helper functions
 
 // TODO: more parameter validation (data array type, length), error output
