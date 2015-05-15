@@ -35,6 +35,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+  test 'should not log an activity monitor start for netsim' do
+    @controller.expects(:slog).never # don't log activity monitor start
+
+    netsim_script = Script.find_by_name('netsim')
+    netsim_script_level = netsim_script.script_levels.first
+    get :show, script_id: netsim_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
+    assert_response :success
+
+    assert_equal netsim_script_level, assigns(:script_level)
+  end
+
   test "should show script level of ECSPD if signed in" do
     sign_in @student
     get :show, script_id: 'ECSPD', stage_id: 1, id: 1

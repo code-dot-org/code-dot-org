@@ -49,7 +49,7 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+  entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
     } else {
@@ -71,7 +71,7 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
  */
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().read(entityID, function (err, row) {
+  entity.getTable().read(entityID, function (err, row) {
     if (err) {
       onComplete(err, null);
     } else {
@@ -87,7 +87,7 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
+  this.getTable().update(this.entityID, this.buildRow(), onComplete);
 };
 
 /**
@@ -97,7 +97,7 @@ NetSimEntity.prototype.update = function (onComplete) {
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable_().delete(this.entityID, onComplete);
+  this.getTable().delete(this.entityID, onComplete);
 };
 
 /**
@@ -107,17 +107,17 @@ NetSimEntity.prototype.destroy = function (onComplete) {
  * @returns {Error|null} error if entity delete fails
  */
 NetSimEntity.prototype.synchronousDestroy = function () {
-  return this.getTable_().synchronousDelete(this.entityID);
+  return this.getTable().synchronousDelete(this.entityID);
 };
 
 /** Get storage table for this entity type. */
-NetSimEntity.prototype.getTable_ = function () {
+NetSimEntity.prototype.getTable = function () {
   // This method should be implemented by a child class.
-  throw new Error('Method getTable_ is not implemented.');
+  throw new Error('Method getTable is not implemented.');
 };
 
 /** Construct table row for this entity. */
-NetSimEntity.prototype.buildRow_ = function () {
+NetSimEntity.prototype.buildRow = function () {
   return {};
 };
 
