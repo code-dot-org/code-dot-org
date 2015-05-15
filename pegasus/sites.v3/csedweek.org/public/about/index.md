@@ -15,10 +15,6 @@ Originally conceived by the Computing in the Core coalition, Code.org&reg; is pr
 <p><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fcode.org&amp;width=450&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=500177453358606" style="border:none; overflow:hidden; width:450px; height:80px;"></iframe></p>
 
 
-## Computing in the Core
-
-[Computing in the Core](http://computinginthecore.org/) is a non-partisan advocacy coalition of associations, corporations, scientific societies, and other non-profits seeking to elevate the national profile of computer science education in K-12 within the US and work toward ensuring that computer science is one of the core academic subjects in K-12 education.
-
 ## Founding Partners
 
 CSEdWeek is sponsored by the Computing in the Core coalition, whose members include the following organization. [See all our partners](/about/partners)

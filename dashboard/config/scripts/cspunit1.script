@@ -8,6 +8,7 @@ level 'U1L1 Student Lesson Introduction'
 
 stage "Sending Binary Messages"
 level 'U1L2 Student Lesson Introduction'
+level 'U1L2 Multiple Choice Assessment Question'
 level 'U1L2 Free response assessment question'
 level 'U1L2 Free response reflection question'
 
@@ -67,7 +68,8 @@ level 'U1L12 Student Lesson Introduction'
 level 'U1L12 Reflection Free Response'
 
 stage 'Text Compression'
-level 'U1L13 Student Lesson Introduction'
+level 'U1L13 Student Lesson Summary'
+video_key_for_next_level 'csp_textcompression'
 level 'U1L13 Text Compression'
 level 'U1L13 Assessment 1'
 level 'U1L13 Assessment 2'

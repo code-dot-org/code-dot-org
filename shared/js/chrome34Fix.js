@@ -1,3 +1,5 @@
+/* global $, WebKitMutationObserver */
+
 /**
  * Workaround for Chrome 34 SVG bug #349701
  *
@@ -11,11 +13,17 @@
  * 3. Farmer special case: give the farmer's wrapper svg the "pegman-location" attribute
  */
 
-PEGMAN_ID = 'pegman';
-PEGMAN_ORDERING_CLASS = 'pegman-location';
+var PEGMAN_ORDERING_CLASS = 'pegman-location';
+
+module.exports = {
+  fixup: function () {
+    wrapExistingClipPaths();
+    handleClipPathChanges();
+  }
+};
 
 function clipPathIDForImage(image) {
-  var clipPath = jQuery(image).attr('clip-path');
+  var clipPath = $(image).attr('clip-path');
   return clipPath ? clipPath.match(/\(\#(.*)\)/)[1] : undefined;
 }
 
@@ -32,20 +40,23 @@ function wrapImageAndClipPathWithSVG(image, wrapperClass) {
 
 // Find pairs of new images and clip paths, wrapping them in SVG tags when a pair is found
 function handleClipPathChanges() {
+  var i;
   var canvas = $('#visualization>svg')[0];
-  if (!canvas) { return; }
+  if (!canvas) {
+    return;
+  }
 
   var newImages = {};
   var newClipPaths = {};
 
   var observer = new WebKitMutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      for (var i = 0; i < mutation.addedNodes.length; i++) {
+      for (i = 0; i < mutation.addedNodes.length; i++) {
         var newNode = mutation.addedNodes[i];
         if (newNode.nodeName == 'image') { newImages[$(newNode).attr('id')] = newNode; }
         if (newNode.nodeName == 'clipPath') { newClipPaths[$(newNode).attr('id')] = newNode; }
       }
-      for (var i = 0; i < mutation.removedNodes.length; i++) {
+      for (i = 0; i < mutation.removedNodes.length; i++) {
         var removedNode = mutation.removedNodes[i];
         if (removedNode.nodeName == 'image' || removedNode.nodeName == 'clipPath') {
           $('svg > svg:empty').remove();

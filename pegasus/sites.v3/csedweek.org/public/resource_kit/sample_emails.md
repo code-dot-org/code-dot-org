@@ -62,7 +62,7 @@ Beyond that, there are some really important reasons why I think we should host 
 
 Plus, it’s going to be a lot of fun.
 
-The Hour of Code is part of Computer Science Education Week (Dec. 8-14) -- timed to coincide with the birthday of the computer pioneer Admiral Grace Murray Hopper -- and is sponsored by Computing in the Core and Code.org.
+The Hour of Code is part of Computer Science Education Week (Dec. 8-14) -- timed to coincide with the birthday of the computer pioneer Admiral Grace Murray Hopper -- and is sponsored by Code.org.
 
 Schools across the country are getting on board. How about us?
 
@@ -82,7 +82,7 @@ Dear [NAME],
 
 I’m writing to ask your support in helping kids at [SCHOOL NAME] start to take charge of the wired world at our Hour of Code event in December.
 
-Sponsored by Code.org and Computing in the Core, the Hour of Code is a first step in addressing the need for computer science education in the nation’s schools. The event is part of Computer Science Education Week and aims to give students their first taste of coding via a series of engaging tutorials.
+Sponsored by Code.org, the Hour of Code is a first step in addressing the need for computer science education in the nation’s schools. The event is part of Computer Science Education Week and aims to give students their first taste of coding via a series of engaging tutorials.
 
 Most of us have a vague idea that a knowledge of computer science will help you get a job, but the actual numbers are pretty shocking:
 

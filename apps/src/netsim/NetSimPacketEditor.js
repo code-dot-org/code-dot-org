@@ -36,7 +36,6 @@ var binaryToHex = dataConverters.binaryToHex;
 var binaryToInt = dataConverters.binaryToInt;
 var binaryToDecimal = dataConverters.binaryToDecimal;
 var binaryToAscii = dataConverters.binaryToAscii;
-var hexToInt = dataConverters.hexToInt;
 var hexToBinary = dataConverters.hexToBinary;
 var intToAB = dataConverters.intToAB;
 var intToBinary = dataConverters.intToBinary;
@@ -360,11 +359,14 @@ var makeKeypressHandlerWithWhitelist = function (whitelistRegex) {
  *        field should update.
  * @param {function} converterFunction - Takes the text field's value and
  *        converts it to a format appropriate to the internal state field.
+ * @param {number} [fieldWidth] - maximum number of bits for field, passed
+ *        through as second argument to converter function.
  * @returns {function} that can be passed to $.keyup()
  */
-NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
+NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName,
+    converterFunction, fieldWidth) {
   return function (jqueryEvent) {
-    var newValue = converterFunction(jqueryEvent.target.value);
+    var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
     if (!isNaN(newValue)) {
       this[fieldName] = newValue;
       this.updateFields_(jqueryEvent.target);
@@ -386,11 +388,14 @@ NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName, converterFu
  *        field should update.
  * @param {function} converterFunction - Takes the text field's value and
  *        converts it to a format appropriate to the internal state field.
+ * @param {number} [fieldWidth] - maximum number of bits for field, passed
+ *        through as second argument to converter function.
  * @returns {function} that can be passed to $.blur()
  */
-NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName, converterFunction) {
+NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
+    converterFunction, fieldWidth) {
   return function (jqueryEvent) {
-    var newValue = converterFunction(jqueryEvent.target.value);
+    var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
     if (isNaN(newValue)) {
       newValue = converterFunction('0');
     }
@@ -416,46 +421,84 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName, converterFun
  */
 
 /**
+ * Convert binary to an integer, intentionally limiting the binary width so
+ * that overflow can occur.
+ * @param {string} binaryString (interpreted as unsigned)
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedBinaryToInt = function (binaryString, maxWidth) {
+  return binaryToInt(binaryString.substr(-maxWidth));
+};
+
+/**
+ * Convert ABs to an integer, intentionally limiting the width so that overflow
+ * can occur (analagous to truncatedBinaryToInt).  A is treated as zero, B as
+ * one.
+ * @param {string} abString
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedABToInt = function (abString, maxWidth) {
+  return abToInt(abString.substr(-maxWidth));
+};
+
+/**
+ * Convert a hexadecimal string to a single integer, intentionally limiting
+ * the bit-width to so that overflow can occur.
+ * @param {string} hexString
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedHexToInt = function (hexString, maxWidth) {
+  return truncatedBinaryToInt(hexToBinary(hexString), maxWidth);
+};
+
+/**
+ * Convert a decimal string to an integer, intentionally limiting the bit-width
+ * so that overflow can occur.
+ * @param {string} decimalString
+ * @param {number} maxWidth in bits
+ * @returns {number}
+ */
+var truncatedDecimalToInt = function (decimalString, maxWidth) {
+  return truncatedBinaryToInt(intToBinary(parseInt(decimalString, 10)), maxWidth);
+};
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
   var rootDiv = this.rootDiv_;
 
-  var shortNumberFields = [
-    Packet.HeaderType.TO_ADDRESS,
-    Packet.HeaderType.FROM_ADDRESS,
-    Packet.HeaderType.PACKET_INDEX,
-    Packet.HeaderType.PACKET_COUNT
-  ];
-
   /** @type {rowType[]} */
   var rowTypes = [
     {
       typeName: EncodingType.A_AND_B,
       shortNumberAllowedCharacters: /[AB]/i,
-      shortNumberConversion: abToInt,
+      shortNumberConversion: truncatedABToInt,
       messageAllowedCharacters: /[AB\s]/i,
       messageConversion: abToBinary
     },
     {
       typeName: EncodingType.BINARY,
       shortNumberAllowedCharacters: /[01]/,
-      shortNumberConversion: binaryToInt,
+      shortNumberConversion: truncatedBinaryToInt,
       messageAllowedCharacters: /[01\s]/,
       messageConversion: minifyBinary
     },
     {
       typeName: EncodingType.HEXADECIMAL,
       shortNumberAllowedCharacters: /[0-9a-f]/i,
-      shortNumberConversion: hexToInt,
+      shortNumberConversion: truncatedHexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
       messageConversion: hexToBinary
     },
     {
       typeName: EncodingType.DECIMAL,
       shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: parseInt,
+      shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /[0-9\s]/,
       messageConversion: function (decimalString) {
         return decimalToBinary(decimalString, this.currentChunkSize_);
@@ -464,7 +507,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     {
       typeName: EncodingType.ASCII,
       shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: parseInt,
+      shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /./,
       messageConversion: function (asciiString) {
         return asciiToBinary(asciiString, this.currentChunkSize_);
@@ -484,14 +527,19 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
 
-    shortNumberFields.forEach(function (fieldName) {
+    this.packetSpec_.forEach(function (fieldSpec) {
+      /** @type {Packet.HeaderType} */
+      var fieldName = fieldSpec.key;
+      /** @type {number} */
+      var fieldWidth = fieldSpec.bits;
+
       rowFields[fieldName] = tr.find('input.' + fieldName);
       rowFields[fieldName].keypress(
           makeKeypressHandlerWithWhitelist(rowType.shortNumberAllowedCharacters));
       rowFields[fieldName].keyup(
-          this.makeKeyupHandler(fieldName, rowType.shortNumberConversion));
+          this.makeKeyupHandler(fieldName, rowType.shortNumberConversion, fieldWidth));
       rowFields[fieldName].blur(
-          this.makeBlurHandler(fieldName, rowType.shortNumberConversion));
+          this.makeBlurHandler(fieldName, rowType.shortNumberConversion, fieldWidth));
     }, this);
 
     rowFields.message = tr.find('textarea.message');
@@ -520,37 +568,37 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
-  [
-    Packet.HeaderType.TO_ADDRESS,
-    Packet.HeaderType.FROM_ADDRESS,
-    Packet.HeaderType.PACKET_INDEX,
-    Packet.HeaderType.PACKET_COUNT
-  ].forEach(function (fieldName) {
-        liveFields.push({
-          inputElement: this.a_and_bUI[fieldName],
-          newValue: intToAB(this[fieldName], 4)
-        });
+  this.packetSpec_.forEach(function (fieldSpec) {
+    /** @type {Packet.HeaderType} */
+    var fieldName = fieldSpec.key;
+    /** @type {number} */
+    var fieldWidth = fieldSpec.bits;
 
-        liveFields.push({
-          inputElement: this.binaryUI[fieldName],
-          newValue: intToBinary(this[fieldName], 4)
-        });
+    liveFields.push({
+      inputElement: this.a_and_bUI[fieldName],
+      newValue: intToAB(this[fieldName], fieldWidth)
+    });
 
-        liveFields.push({
-          inputElement: this.hexadecimalUI[fieldName],
-          newValue: intToHex(this[fieldName], 1)
-        });
+    liveFields.push({
+      inputElement: this.binaryUI[fieldName],
+      newValue: intToBinary(this[fieldName], fieldWidth)
+    });
 
-        liveFields.push({
-          inputElement: this.decimalUI[fieldName],
-          newValue: this[fieldName].toString(10)
-        });
+    liveFields.push({
+      inputElement: this.hexadecimalUI[fieldName],
+      newValue: intToHex(this[fieldName], Math.ceil(fieldWidth / 4))
+    });
 
-        liveFields.push({
-          inputElement: this.asciiUI[fieldName],
-          newValue: this[fieldName].toString(10)
-        });
-      }, this);
+    liveFields.push({
+      inputElement: this.decimalUI[fieldName],
+      newValue: this[fieldName].toString(10)
+    });
+
+    liveFields.push({
+      inputElement: this.asciiUI[fieldName],
+      newValue: this[fieldName].toString(10)
+    });
+  }, this);
 
   liveFields.push({
     inputElement: this.a_and_bUI.message,

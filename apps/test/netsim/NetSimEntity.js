@@ -21,16 +21,16 @@ describe("NetSimEntity", function () {
     assertEqual(entity.entityID, undefined);
   });
 
-  it ("doesn't implement getTable_", function () {
+  it ("doesn't implement getTable", function () {
     var entity = new NetSimEntity(undefined, undefined);
     assertThrows(Error, function () {
-      entity.getTable_();
+      entity.getTable();
     });
   });
 
-  it ("buildRow_ method produces empty object", function () {
+  it ("buildRow method produces empty object", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assertEqual(entity.buildRow_(), {});
+    assertEqual(entity.buildRow(), {});
   });
 
   it ("disallows static creation on base type", function () {
