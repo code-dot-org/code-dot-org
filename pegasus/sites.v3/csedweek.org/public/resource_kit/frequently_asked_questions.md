@@ -5,7 +5,7 @@ nav: resource_kit_nav
 # Frequently Asked Questions
 
 ## What is CSEdWeek?
-Computer Science Education Week (CSEdWeek) is an annual program dedicated to showing K-12 students the importance of computer science education. Organized each year by the [Computing in the Core](http://computinginthecore.org/) coalition and [Code.org](http://www.code.org), CSEdWeek is held in recognition of the birthday of computing pioneer [Admiral Grace Murray Hopper](http://en.wikipedia.org/wiki/Grace_Hopper) (December 9, 1906).
+Computer Science Education Week (CSEdWeek) is an annual program dedicated to showing K-12 students the importance of computer science education. CSEdWeek is held in recognition of the birthday of computing pioneer [Admiral Grace Murray Hopper](http://en.wikipedia.org/wiki/Grace_Hopper) (December 9, 1906).
 
 ---
 

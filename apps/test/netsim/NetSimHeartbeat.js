@@ -18,7 +18,7 @@ describe("NetSimHeartbeat", function () {
 
   it ("has expected row structure and default values", function () {
     var heartbeat = new NetSimHeartbeat(testShard);
-    var row = heartbeat.buildRow_();
+    var row = heartbeat.buildRow();
 
     assertOwnProperty(row, 'nodeID');
     assertEqual(row.fromNodeID, undefined);
@@ -27,9 +27,9 @@ describe("NetSimHeartbeat", function () {
     assertWithinRange(row.time, Date.now(), 10);
   });
 
-  it ("Implements getTable_ pointing to the heartbeat table", function () {
+  it ("Implements getTable pointing to the heartbeat table", function () {
     var heartbeat = new NetSimHeartbeat(testShard, undefined);
-    assert(heartbeat.getTable_() === testShard.heartbeatTable);
+    assert(heartbeat.getTable() === testShard.heartbeatTable);
   });
 
   describe("static method getOrCreate", function () {

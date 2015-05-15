@@ -10,4 +10,3 @@ Commands can be run via npm, i.e. `npm run <command>`
 `gulp` Do everything. Can also run arbirary gulp tasks using `npm run gulp -- task`
 
 By default, dashboard will use in the version of the generated bundle that is checked in. In order to use your local version, you'll need to add `use_my_shared_js: true` to your cdo/locals.yml file and run `rake install:shared` from the root directory. 
-

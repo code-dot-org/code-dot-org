@@ -18,12 +18,12 @@ describe("NetSimWire", function () {
 
   it ("uses the wire table", function () {
     var wire = new NetSimWire(testShard);
-    assert(wire.getTable_() === testShard.wireTable);
+    assert(wire.getTable() === testShard.wireTable);
   });
 
   it ("has expected row structure and default values", function () {
     var wire = new NetSimWire(testShard);
-    var row = wire.buildRow_();
+    var row = wire.buildRow();
 
     assertOwnProperty(row, 'localNodeID');
     assertEqual(row.localNodeID, undefined);
