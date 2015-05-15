@@ -497,25 +497,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    match:
-      U3L13 Assessment Matching:
-        Calls an embedded function: Calls an embedded function
-        'Matching: Buttons on the Screen': 'Matching: Buttons on the Screen'
-        Official program name of an element: Official program name of an element
-        Places a button on the screen: Places a button on the screen
-        Responses from the computer to events: Responses from the computer to events
-        Things on the screen that the user interacts with: Things on the screen that the user interacts with
-        User interactions with an application: User interactions with an application
-        Words appearing on an element: Words appearing on an element
-        actions: actions
-        button("id","text"): button("id","text")
-        element text: element text
-        elements: elements
-        events: events
-        id: id
-        mouseover: mouseover
-        'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
-        trigger: trigger
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -768,12 +749,9 @@ en:
       U3L12 Free Response Reflection:
         'Reflection: Mission Unsortable': 'Reflection: Mission Unsortable'
       U3L13 Free Response Getting Started:
-        Buttons on the Screen: Buttons on the Screen
         Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
-        Enter prompt here: Enter prompt here
       U3L13 Free Response Reflection:
         Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
-        Enter prompt here: Enter prompt here
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
