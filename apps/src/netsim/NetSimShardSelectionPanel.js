@@ -12,8 +12,8 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
-var markup = require('./NetSimShardSelectionPanel.html');
+var i18n = require('./locale');
+var markup = require('./NetSimShardSelectionPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 
 var KeyCodes = require('../constants').KeyCodes;

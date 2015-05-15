@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "A rocket blasts off, traveling at 15 meters per second... press \"run\" to see how this word problem looks as an animation.",
+    "instructions": "A rocket blasts off, traveling at 15 meters per second... press \"Run\" to see how this word problem looks as an animation.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,8 +24,20 @@
     "free_play": "false",
     "embed": "true",
     "first_sprite_index": "23",
-    "protaganist_sprite_index": "0"
-  }
+    "protaganist_sprite_index": "0",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
+  },
+  "md5": "582097cedce47a423ee263903a0ed10d"
 }]]></config>
   <blocks>
     <start_blocks>

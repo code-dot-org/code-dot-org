@@ -1,7 +1,9 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
-var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
+var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
+var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var levels = require('@cdo/apps/netsim/levels');
 
 /**
  * Checks whether the given table has the specified number of rows.
@@ -148,4 +150,13 @@ exports.fakeShard = function () {
     remoteHeartbeatTable: heartbeatTable_,
     heartbeatTable: new NetSimTable(heartbeatTable_)
   };
+};
+
+/**
+ * Set up global singleton with default level configuration
+ */
+exports.initializeGlobalsToDefaultValues = function () {
+  netsimGlobals.setRootControllers({}, {
+    level: levels.custom
+  });
 };

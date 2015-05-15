@@ -64,10 +64,10 @@ theme: none
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.course.id", "ng-options"=>"k*1 as v for (k, v) in course_list"}
             %option{value: ''}
-      %td {{section.students.length}}       
+      %td {{section.students.length}}
       %td
         {{section.code}}
-      %td 
+      %td
         %span{"ng-show" => "section.confirmDelete"}
           = I18n.t('dashboard_action_confirm')
           %br
@@ -87,10 +87,10 @@ theme: none
   %br/
 
   %p{style: "font-size:18px; color: #7665a0;"}= I18n.t('dashboard_sections_table_secret')
-  %p= I18n.t('dashboard_sections_login_type_explanation')  
+  %p= I18n.t('dashboard_sections_login_type_explanation')
 
   %br/
-  
+
   %div
     %table{style: "width:100%; table-layout:fixed;"}
       %tr

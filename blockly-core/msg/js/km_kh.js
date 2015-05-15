@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.km_kh');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "ហៅ";
 Blockly.Msg.ADD = "បន្ថែម";
 Blockly.Msg.ADD_COMMENT = "បន្ថែម​មតិ";

@@ -18,10 +18,11 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
+var _ = utils.getLodash();
+var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
-var page = require('./page.html');
+var page = require('./page.html.ejs');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
@@ -42,6 +43,14 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
+var netsimGlobals = require('./netsimGlobals');
+
+/**
+ * Initial time between connecting to the shard and starting
+ * the first cleaning cycle.
+ * @type {number}
+ */
+var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
 
 /**
  * The top-level Internet Simulator controller.
@@ -118,6 +127,13 @@ var NetSim = module.exports = function () {
   this.myDeviceBitRate_ = Infinity;
 
   /**
+   * Currently enabled encoding types.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.enabledEncodings_ = [];
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -170,6 +186,9 @@ NetSim.prototype.init = function(config) {
     throw new Error("NetSim requires a StudioApp");
   }
 
+  // Set up global singleton for easy access to simulator-wide settings
+  netsimGlobals.setRootControllers(this.studioApp_, this);
+
   /**
    * Skin for the loaded level
    * @type {Object}
@@ -187,7 +206,7 @@ NetSim.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl})
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
     },
     hideRunButton: true
   });
@@ -299,24 +318,31 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
-      receiveButtonCallback: this.receiveBit_.bind(this)
+      netsim: this,
+      showReadWireButton: true
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
-      isMinimized: false
+      isMinimized: false,
+      netsim: this
     });
   }
 
-  this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
-      this.disconnectFromRemote.bind(this, function () {}));
+  this.statusPanel_ = new NetSimStatusPanel(
+      $('#netsim-status'),
+      {
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
+        cleanShardNow: this.cleanShardNow.bind(this),
+        expireHeartbeat: this.expireHeartbeat.bind(this)
+      });
+
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
       $('.lobby-panel'),
-      this.level,
       this, {
         user: user,
         levelKey: this.getUniqueLevelKey(),
@@ -327,7 +353,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   if (this.shouldShowAnyTabs()) {
     this.tabs_ = new NetSimTabsComponent(
         $('#netsim-tabs'),
-        this.level,
         this.runLoop_,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
@@ -357,6 +382,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
+  window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
 };
 
 /**
@@ -364,7 +390,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * are abandoning if they navigate away from the page.
  *
  * This event has some weird special properties and inconsistent behavior
- * across browsers.
+ * across browsers
  *
  * See:
  * https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
@@ -379,6 +405,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * @private
  */
 NetSim.prototype.onBeforeUnload_ = function (event) {
+  if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+    return;
+  }
+
   // No need to warn about navigating away if the student is not connected,
   // or is still in the lobby.
   if (this.isConnectedToRemote()) {
@@ -434,7 +464,8 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
 
   this.shard_ = new NetSimShard(shardID);
   if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
+        INITIAL_CLEANING_DELAY_MS);
   }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
@@ -450,19 +481,16 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  * @private
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
-  NetSimLocalClientNode.create(this.shard_, function (err, node) {
+  NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
+      onComplete(err, null);
       return;
     }
 
-    node.setDisplayName(displayName);
     node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
-    node.initializeSimulation(this.level, this.sentMessageLog_,
-        this.receivedMessageLog_);
-    node.update(function (err) {
-      onComplete(err, node);
-    });
+    node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
+    onComplete(err, node);
   }.bind(this));
 };
 
@@ -474,7 +502,8 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
-  this.shardChange.notifyObservers(null, null);
+  // Don't notify observers, this should only be used when navigating away
+  // from the page.
 };
 
 /**
@@ -499,8 +528,10 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
   this.myNode.stopSimulation();
   this.myNode.destroy(function (err, result) {
     if (err) {
-      onComplete(err, result);
-      return;
+      logger.warn('Error destroying node:' + err.message);
+      // Don't stop disconnecting on an error here; we make a good-faith
+      // effort to clean up after ourselves, and let the cleaning system take
+      // care of the rest.
     }
 
     this.myNode = null;
@@ -610,9 +641,8 @@ NetSim.prototype.disconnectFromRemote = function (onComplete) {
  * node and its connected remote.
  * Used only in simplex & bit-granular mode.
  * @param {!NodeStyleCallback} onComplete
- * @private
  */
-NetSim.prototype.receiveBit_ = function (onComplete) {
+NetSim.prototype.receiveBit = function (onComplete) {
   this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
@@ -626,12 +656,23 @@ NetSim.prototype.receiveBit_ = function (onComplete) {
  * @param {EncodingType[]} newEncodings
  */
 NetSim.prototype.changeEncodings = function (newEncodings) {
+  this.enabledEncodings_ = newEncodings;
   if (this.tabs_) {
     this.tabs_.setEncodings(newEncodings);
   }
   this.receivedMessageLog_.setEncodings(newEncodings);
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
+  this.visualization_.setEncodings(newEncodings);
+  this.updateLayout();
+};
+
+/**
+ * Get the currently enabled encoding types.
+ * @returns {EncodingType[]}
+ */
+NetSim.prototype.getEncodings = function () {
+  return this.enabledEncodings_;
 };
 
 /**
@@ -741,6 +782,14 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
     this.tabs_.setDnsMode(newDnsMode);
   }
   this.visualization_.setDnsMode(newDnsMode);
+};
+
+/**
+ * Get current DNS mode.
+ * @returns {DnsMode}
+ */
+NetSim.prototype.getDnsMode = function () {
+  return this.dnsMode_;
 };
 
 /**
@@ -910,28 +959,35 @@ NetSim.prototype.render = function () {
 
   shareLink = this.lobby_.getShareLink();
 
-  // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.rightcol-disconnected').hide();
-    this.mainContainer_.find('.rightcol-connected').show();
+    // Swap in 'connected' div
+    this.mainContainer_.find('#netsim-disconnected').hide();
+    this.mainContainer_.find('#netsim-connected').show();
+
+    // Render right column
     this.sendPanel_.setFromAddress(myAddress);
+
+    // Render left column
+    if (this.statusPanel_) {
+      this.statusPanel_.render({
+        isConnected: isConnected,
+        statusString: clientStatus,
+        myHostname: myHostname,
+        myAddress: myAddress,
+        remoteNodeName: remoteNodeName,
+        shareLink: shareLink
+      });
+    }
   } else {
-    this.mainContainer_.find('.rightcol-disconnected').show();
-    this.mainContainer_.find('.rightcol-connected').hide();
+    // Swap in 'disconnected' div
+    this.mainContainer_.find('#netsim-disconnected').show();
+    this.mainContainer_.find('#netsim-connected').hide();
+
+    // Render lobby
     this.lobby_.render();
   }
 
-  // Render right column
-  if (this.statusPanel_) {
-    this.statusPanel_.render({
-      isConnected: isConnected,
-      statusString: clientStatus,
-      myHostname: myHostname,
-      myAddress: myAddress,
-      remoteNodeName: remoteNodeName,
-      shareLink: shareLink
-    });
-  }
+  this.updateLayout();
 };
 
 /**
@@ -1080,4 +1136,90 @@ NetSim.prototype.onRouterLogChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setRouterLogData(this.getConnectedRouter().getLog());
   }
+};
+
+/**
+ * Immediately start a shard-cleaning process from this client
+ */
+NetSim.prototype.cleanShardNow = function () {
+  if (this.shardCleaner_) {
+    this.shardCleaner_.cleanShard();
+  }
+};
+
+/**
+ * Make the local node's heartbeat pretend to be expired, so it can be
+ * cleaned up.
+ */
+NetSim.prototype.expireHeartbeat = function () {
+  if (!(this.myNode && this.myNode.heartbeat)) {
+    return;
+  }
+
+  this.myNode.heartbeat.spoofExpired();
+  logger.info("Local node heartbeat is now expired.");
+};
+
+/**
+ * Kick off an animation that shows the local node setting the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateSetWireState = function (newState) {
+  this.visualization_.animateSetWireState(newState);
+};
+
+/**
+ * Kick off an animation that shows the local node reading the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateReadWireState = function (newState) {
+  this.visualization_.animateReadWireState(newState);
+};
+
+/**
+ * Specifically, update the layout of the right column when connected,
+ * and change how the three panels there (received log, sent log, send controls)
+ * share the current vertical space in the viewport.
+ *
+ * We're trying to use the following rules:
+ *
+ * 1. The send controls panel is fixed to the bottom of the viewport, and will
+ *    size upwards to fit its contents up to a maximum height.
+ * 2. The log widgets use the remaining vertical space
+ *    a) If only one log widget is open, it fills the vertical space (except
+ *       leaves enough room to see the other header)
+ *    b) If both log widgets are open, they share the vertical space 50/50
+ *    c) If both log widgets are closed, they float at the top of the space.
+ */
+NetSim.prototype.updateLayout = function () {
+  var rightColumn = $('#netsim-rightcol');
+  var sendPanel = $('#netsim-send');
+  var logWrap = $('#netsim-logs');
+  if (!rightColumn.is(':visible')) {
+    return;
+  }
+
+  // Right column wrapper and the send panel are both sized by CSS
+  var rightColumnHeight = rightColumn.height();
+  var sendPanelHeight = sendPanel.height();
+  var logsSharedVerticalSpace = rightColumnHeight - sendPanelHeight;
+
+  var showingSent = !this.sentMessageLog_.isMinimized();
+  var showingReceived = !this.receivedMessageLog_.isMinimized();
+  if (showingReceived && showingSent) {
+    var halfHeight = Math.floor(logsSharedVerticalSpace / 2);
+    this.receivedMessageLog_.setHeight(halfHeight);
+    this.sentMessageLog_.setHeight(halfHeight);
+  } else if (showingReceived) {
+    this.receivedMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.sentMessageLog_.getHeight()));
+  } else if (showingSent) {
+    this.sentMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.receivedMessageLog_.getHeight()));
+  }
+
+  // Manually adjust the logwrap to the remaining height
+  logWrap.css('height', rightColumnHeight - sendPanelHeight);
 };

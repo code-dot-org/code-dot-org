@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
@@ -40,6 +40,7 @@ var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 
 var logger = NetSimLogger.getSingleton();
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * @type {number}
@@ -109,6 +110,8 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   row = row !== undefined ? row : {};
   NetSimNode.call(this, shard, row);
 
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   /**
    * Unix timestamp (local) of router creation time.
    * @type {number}
@@ -121,7 +124,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode = utils.valueOr(row.dnsMode, DnsMode.NONE);
+  this.dnsMode = utils.valueOr(row.dnsMode, levelConfig.defaultDnsMode);
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -135,14 +138,16 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Speed (in bits per second) at which messages are processed.
    * @type {number}
    */
-  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth), Infinity);
+  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth),
+      levelConfig.defaultRouterBandwidth);
 
   /**
    * Amount of data (in bits) that the router queue can hold before it starts
    * dropping packets.
    * @type {number}
    */
-  this.memory = utils.valueOr(deserializeNumber(row.memory), Infinity);
+  this.memory = utils.valueOr(deserializeNumber(row.memory),
+      levelConfig.defaultRouterMemory);
 
   /**
    * Determines a subset of connection and message events that this
@@ -184,7 +189,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {NetSimHeartbeat}
    * @private
    */
-  this.heartbeat_ = null;
+  this.heartbeat = null;
 
   /**
    * Local cache of our remote row, used to decide whether our state has
@@ -308,8 +313,8 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Set router heartbeat to double normal interval, since we expect
       // at least two clients to help keep it alive.
-      router.heartbeat_ = heartbeat;
-      router.heartbeat_.setBeatInterval(12000);
+      router.heartbeat = heartbeat;
+      router.heartbeat.setBeatInterval(12000);
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
@@ -342,24 +347,13 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 
       // Set router heartbeat to double normal interval, since we expect
       // at least two clients to help keep it alive.
-      router.heartbeat_ = heartbeat;
-      router.heartbeat_.setBeatInterval(12000);
+      router.heartbeat = heartbeat;
+      router.heartbeat.setBeatInterval(12000);
 
       onComplete(null, router);
     });
   });
 };
-
-/**
- * @readonly
- * @enum {string}
- */
-NetSimRouterNode.RouterStatus = {
-  INITIALIZING: 'Initializing',
-  READY: 'Ready',
-  FULL: 'Full'
-};
-var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
  * @typedef {Object} routerRow
@@ -378,9 +372,9 @@ var RouterStatus = NetSimRouterNode.RouterStatus;
  * @private
  * @override
  */
-NetSimRouterNode.prototype.buildRow_ = function () {
+NetSimRouterNode.prototype.buildRow = function () {
   return utils.extend(
-      NetSimRouterNode.superPrototype.buildRow_.call(this),
+      NetSimRouterNode.superPrototype.buildRow.call(this),
       {
         creationTime: this.creationTime,
         bandwidth: serializeNumber(this.bandwidth),
@@ -412,7 +406,7 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
  */
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
-  this.heartbeat_.tick(clock);
+  this.heartbeat.tick(clock);
   this.routeOverdueMessages_(clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
@@ -612,23 +606,6 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
   }.bind(this));
 };
 
-/**
- * Updates router status and lastPing time in lobby table - both keepAlive
- * and making sure router's connection count is valid.
- * @param {NodeStyleCallback} [onComplete] - Optional success/failure callback
- */
-NetSimRouterNode.prototype.update = function (onComplete) {
-  onComplete = onComplete || function () {};
-
-  var self = this;
-  this.countConnections(function (err, count) {
-    self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
-        RouterStatus.FULL : RouterStatus.READY;
-    self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
-    NetSimRouterNode.superPrototype.update.call(self, onComplete);
-  });
-};
-
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
   return i18n.routerX({
@@ -651,6 +628,43 @@ NetSimRouterNode.prototype.getHostname = function () {
 /** @inheritdoc */
 NetSimRouterNode.prototype.getNodeType = function () {
   return NodeType.ROUTER;
+};
+
+/** @inheritdoc */
+NetSimRouterNode.prototype.getStatus = function () {
+  // Determine status based on cached wire data
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.entityID;
+  }, this);
+
+  if (incomingWireRows.length === 0) {
+    return i18n.routerStatusNoConnections({
+      maximumClients: MAX_CLIENT_CONNECTIONS
+    });
+  }
+
+  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var connectedNodeNames = incomingWireRows.map(function (wireRow) {
+    var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
+      return nodeRow.id === wireRow.localNodeID;
+    });
+    if (nodeRow) {
+      return nodeRow.name;
+    }
+    return i18n.unknownNode();
+  }).join(', ');
+
+  if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+    return i18n.routerStatusFull({
+      connectedClients: connectedNodeNames
+    });
+  }
+
+  return i18n.routerStatus({
+    connectedClients: connectedNodeNames,
+    remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
+  });
 };
 
 /**
@@ -679,12 +693,11 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
- * @param {packetHeaderSpec} packetSpec
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
-  this.packetSpec_ = packetSpec;
-  this.validatePacketSpec_(packetSpec);
+  this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  this.validatePacketSpec_(this.packetSpec_);
 
   if (nodeID !== undefined) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;

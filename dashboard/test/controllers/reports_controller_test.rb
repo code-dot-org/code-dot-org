@@ -192,7 +192,38 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "should get header_stats" do
+    sign_out @admin
+
     get :header_stats
+    assert_response :success
+  end
+
+  test "should get header_stats with user_id" do
+    follower = create :follower
+
+    sign_in follower.user
+
+    get :header_stats, user_id: follower.student_user
+    assert_response :success
+  end
+
+  test "should not get header_stats with unauthorized user_id" do
+    sign_in @not_admin
+
+    get :header_stats, user_id: @admin.id
+    assert_response :forbidden
+  end
+
+
+  test "should not get header_stats with user_id when not signed in" do
+    sign_out @admin
+
+    get :header_stats, user_id: @admin.id
+    assert_redirected_to_sign_in
+  end
+
+  test "should get header_stats with empty user_id" do
+    get :header_stats, user_id: ''
     assert_response :success
   end
 

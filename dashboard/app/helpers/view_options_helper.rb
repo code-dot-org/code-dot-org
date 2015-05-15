@@ -7,6 +7,8 @@ module ViewOptionsHelper
     white_background
     callouts
     autoplay_video
+    channel
+    readonly_workspace
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

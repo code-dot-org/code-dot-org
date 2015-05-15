@@ -12,34 +12,37 @@ var assertWithinRange = testUtils.assertWithinRange;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
-var _ = require(testUtils.buildPath('lodash'));
+var _ = require('lodash');
 
-var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
-var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
-var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
-var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
-var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
-var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
-var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
-var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
-var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+var Packet = require('@cdo/apps/netsim/Packet');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
+var dataConverters = require('@cdo/apps/netsim/dataConverters');
+
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard;
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
+    netsimTestUtils.initializeGlobalsToDefaultValues();
 
     testShard = fakeShard();
   });
 
   it("has expected row structure and default values", function () {
     var router = new NetSimRouterNode(testShard);
-    var row = router.buildRow_();
+    var row = router.buildRow();
 
     assertOwnProperty(row, 'creationTime');
     assertWithinRange(row.creationTime, Date.now(), 10);
@@ -259,6 +262,7 @@ describe("NetSimRouterNode", function () {
         {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
         {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
       ];
+      netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
       encoder = new Packet.Encoder(packetHeaderSpec);
 
       // Make router
@@ -267,16 +271,16 @@ describe("NetSimRouterNode", function () {
       });
 
       // Make clients
-      NetSimLocalClientNode.create(testShard, function (e, n) {
+      NetSimLocalClientNode.create(testShard, "localClient", function (e, n) {
         localClient = n;
       });
 
-      NetSimLocalClientNode.create(testShard, function (e, n) {
+      NetSimLocalClientNode.create(testShard, "remoteA", function (e, n) {
         remoteA = n;
       });
 
       // Tell router to simulate for local node
-      router.initializeSimulation(localClient.entityID, packetHeaderSpec);
+      router.initializeSimulation(localClient.entityID);
 
       // Manually connect nodes
       var wire;

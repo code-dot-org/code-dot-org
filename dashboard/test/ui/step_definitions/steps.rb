@@ -2,12 +2,17 @@ require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
-    url = url.gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
+    url = url.
+      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
+      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
-  url
+  # Convert http to https, and x.y.code.org to x-y.code.org
+  url.
+    gsub(/^http:\/\//,'https://').
+    gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
@@ -19,6 +24,14 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until { @browser.find_element(selection_criteria) }
+end
+
+When /^I close the dialog$/ do
+  # Add a wait to closing dialog because it's sometimes animated, now.
+  steps %q{
+    When I press "x-close"
+    And I wait for 0.75 seconds
+  }
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -39,6 +52,11 @@ end
 Then /^check that I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.current_url.should eq url
+end
+
+Then /^check that the URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  @browser.current_url.should include url
 end
 
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
@@ -67,7 +85,13 @@ end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
   @element = @browser.find_element(:css, selector)
-  @element.click
+  begin
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
+  end
 end
 
 When /^I press the "([^"]*)" button$/ do |buttonText|
@@ -289,7 +313,7 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
   @parent_item.should eq @actual_parent_item
 end
 
-def encrypted_cookie(user_id)
+def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
       iterations:1000
@@ -300,7 +324,7 @@ def encrypted_cookie(user_id)
     key_generator.generate_key('signed encrypted cookie')
   )
 
-  cookie = {'warden.user.user.key' => [[user_id]]}
+  cookie = {'warden.user.user.key' => [[user.id], user.authenticatable_salt]}
 
   encrypted_data = encryptor.encrypt_and_sign(cookie)
 
@@ -309,7 +333,7 @@ end
 
 def log_in_as(user)
   params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user.id)}
+            value: encrypted_cookie(user)}
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
@@ -320,7 +344,7 @@ def log_in_as(user)
 end
 
 Given(/^I am a teacher$/) do
-  @teacher = User.find_or_create_by!(email: 'teacher@testing.xx') do |teacher|
+  @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}@testing.xx") do |teacher|
     teacher.name = "Test teacher"
     teacher.password = SecureRandom.base64
     teacher.user_type = 'teacher'
@@ -329,15 +353,37 @@ Given(/^I am a teacher$/) do
   log_in_as(@teacher)
 end
 
+Given(/^I am a student$/) do
+  @student = User.find_or_create_by!(email: "student#{Time.now.to_i}@testing.xx") do |user|
+    user.name = "Test student"
+    user.password = SecureRandom.base64
+    user.user_type = 'student'
+    user.age = 16
+  end
+  log_in_as(@student)
+end
+
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
 end
 
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
-  if key.start_with?(':')
-    key = key[1..-1].to_sym
-  end
   element = @browser.find_element(:css, selector)
-  element.send_keys(key)
+  element.send_keys(make_symbol_if_colon(key))
+end
+
+def make_symbol_if_colon(key)
+  # Available symbol keys:
+  # https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/keys.rb?name=selenium-2.26.0
+  key.start_with?(':') ? key[1..-1].to_sym : key
+end
+
+When /^I press keys "([^"]*)"$/ do |keys|
+  # Note: Safari webdriver does not support actions API
+  @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+When /^I disable onBeforeUnload$/ do
+  @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end

@@ -1,25 +1,19 @@
-var jsdom = require('jsdom').jsdom;
 var testUtils = require('./util/testUtils');
 
 testUtils.setupLocales();
 
 function setGlobals() {
-  var html = '<html><head></head><body><div id="svgMaze"><div class="pegman-location"></div></div></body></html>';
-  global.document = jsdom(html);
-  global.window = global.document.parentWindow;
-  global.Blockly = {
-    SVG_NS: "http://www.w3.org/2000/svg"
-  };
+  document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
 
   assert(document, 'have a document');
   assert(document.getElementById('svgMaze'), 'document has an svgMaze');
   assert(document.getElementsByClassName('pegman-location').length, 1);
 }
 
-var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
-var BeeItemDrawer = testUtils.requireWithGlobalsCheckBuildFolder('maze/beeItemDrawer');
-var DirtDrawer = testUtils.requireWithGlobalsCheckBuildFolder('maze/dirtDrawer');
-var cellId = testUtils.requireWithGlobalsCheckBuildFolder('maze/mazeUtils').cellId;
+var Bee = require('@cdo/apps/maze/bee');
+var BeeItemDrawer = require('@cdo/apps/maze/beeItemDrawer');
+var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
+var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
 var assert = testUtils.assert;
 
 function createFakeSkin() {

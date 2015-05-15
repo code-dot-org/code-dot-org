@@ -29,7 +29,12 @@ Breakfast and lunch will be served.
 
 ### Location
 
-More details coming soon!
+Applications and Research Laboratory (ARL)
+<br />
+10920 Clarksville Pike
+<br />
+Ellicott City, MD 21042
+<br />
 
 ### What do I bring to Phase 2?
 

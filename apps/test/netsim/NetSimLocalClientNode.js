@@ -4,27 +4,29 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
-var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
-var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimClientNode');
-var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
-var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
+    netsimTestUtils.initializeGlobalsToDefaultValues();
 
     testShard = fakeShard();
 
-    NetSimLocalClientNode.create(testShard, function (err, node) {
+    NetSimLocalClientNode.create(testShard, "testLocalNode", function (err, node) {
       testLocalNode = node;
     });
     assert(undefined !== testLocalNode, "Made a local node");
@@ -115,6 +117,67 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessages(payloads, function () {});
       assertTableSize(testShard, 'messageTable', payloads.length);
+    });
+  });
+
+  describe("getShortDisplayName", function () {
+    it ("reflects no change for names below 10 characters", function () {
+      testLocalNode.displayName_ = 'Sam';
+      assertEqual('Sam', testLocalNode.getShortDisplayName());
+
+      testLocalNode.displayName_ = 'Sam Well';
+      assertEqual('Sam Well', testLocalNode.getShortDisplayName());
+
+      // Note: spaces preserved for short names
+      testLocalNode.displayName_ = 'Samuel 999';
+      assertEqual('Samuel 999', testLocalNode.getShortDisplayName());
+    });
+
+    it ("uses first word for names longer than 10 characters", function () {
+      // Even short first names used, as long as whole name is > 10
+      testLocalNode.displayName_ = 'A Modest Proposal';
+      assertEqual('A', testLocalNode.getShortDisplayName());
+
+      // Ordinary case
+      testLocalNode.displayName_ = 'Jonathan Swift';
+      assertEqual('Jonathan', testLocalNode.getShortDisplayName());
+
+      // First name longer than 10 characters
+      testLocalNode.displayName_ = 'Constantine Rey';
+      assertEqual('Constantine', testLocalNode.getShortDisplayName());
+    });
+  });
+
+  describe("getHostname", function () {
+    it ("is a transformation of the short display name and node ID", function () {
+      assertEqual(1, testLocalNode.entityID);
+      testLocalNode.displayName_ = 'Sam';
+      assertEqual('sam1', testLocalNode.getHostname());
+    });
+
+    it ("strips spaces, preserves digits", function () {
+      assertEqual(1, testLocalNode.entityID);
+      testLocalNode.displayName_ = 'Sam Well';
+      assertEqual('samwell1', testLocalNode.getHostname());
+
+      // Note: spaces preserved for short names
+      testLocalNode.displayName_ = 'Samuel 999';
+      assertEqual('samuel9991', testLocalNode.getHostname());
+    });
+
+    it ("abbreviates with short-name rules", function () {
+      assertEqual(1, testLocalNode.entityID);
+      // Even short first names used, as long as whole name is > 10
+      testLocalNode.displayName_ = 'A Modest Proposal';
+      assertEqual('a1', testLocalNode.getHostname());
+
+      // Ordinary case
+      testLocalNode.displayName_ = 'Jonathan Swift';
+      assertEqual('jonathan1', testLocalNode.getHostname());
+
+      // First name longer than 10 characters
+      testLocalNode.displayName_ = 'Constantine Rey';
+      assertEqual('constantine1', testLocalNode.getHostname());
     });
   });
 });

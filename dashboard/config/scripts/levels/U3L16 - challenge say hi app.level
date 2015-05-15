@@ -1,0 +1,85 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-10T15:24:25.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "hideElement": null,
+      "showElement": null,
+      "addOperator": null,
+      "image": null,
+      "textInput": null,
+      "write": null,
+      "getText": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "In this challenge we give you starter code that lays all the elements out on the screen.  Here’s what you need to do:\r\nAdd event handler to textInput with the event type ‘input’ that shows the “Say hi” button when that event occurs.\r\nAdd event handler to button so that on click, it writes a hello message to the screen and hides the textInput and button. GIF: U3L16 - sayHiApp.gif",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "start_blocks": "textLabel(\"instructions\", \"Enter Your Name\");\r\ntextInput(\"name\", \"\");\r\nbutton(\"hiBtn\", \"Say Hi\");\r\nhideElement(\"hiBtn\");\r\n\r\n",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "app_width": "320",
+    "app_height": "480"
+  },
+  "md5": "5b1b88db941b15bd8105e35271f10b3a"
+}]]></config>
+  <blocks/>
+</Applab>

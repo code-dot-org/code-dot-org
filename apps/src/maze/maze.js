@@ -24,11 +24,11 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
+var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -64,7 +64,7 @@ var skin;
 /**
  * Milliseconds between each animation frame.
  */
-var stepSpeed;
+var stepSpeed = 100;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -507,6 +507,10 @@ function resetDirtImages(running) {
  * Initialize Blockly and the maze.  Called on page load.
  */
 Maze.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  studioApp.reset = this.reset.bind(this);
+
   var extraControlRows = null;
 
   skin = config.skin;
@@ -522,7 +526,7 @@ Maze.init = function(config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html')({
+    extraControlRows = require('./extraControlRows.html.ejs')({
       assetUrl: studioApp.assetUrl,
       searchWord: level.searchWord
     });
@@ -536,8 +540,8 @@ Maze.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl,
         showStepButton: level.step && !level.edit_blocks
       }),
@@ -744,7 +748,7 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Maze.reset = function(first) {
   if (Maze.bee) {
     // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
@@ -873,7 +877,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Maze.runButtonClick = function() {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');
@@ -1298,7 +1302,7 @@ function animatedMove (direction, timeForMove) {
 /**
  * Schedule a movement animating using a spritesheet.
  */
-function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
@@ -1315,7 +1319,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
       });
     }, timePerFrame * frame);
   });
-}
+};
 
 /**
  * Schedule the animations for a move from the current position
@@ -1340,7 +1344,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+    Maze.scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
       numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
@@ -1471,7 +1475,7 @@ Maze.scheduleFail = function(forward) {
         }
         // animate our sprite sheet
         var timePerFrame = 100;
-        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+        Maze.scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
           {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
         setTimeout(function () {
@@ -1601,8 +1605,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin()) {
-    scrat.scheduleDance(victoryDance, timeAlloted);
+  if (mazeUtils.isScratSkin(skin.id)) {
+    scrat.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 

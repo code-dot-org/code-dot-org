@@ -12,7 +12,9 @@
 .col-25 { width: 25%; float:left; }
 .col-33 { width: 33%; float:left; }
 .col-36 { width: 36% }  
+.col-40 { width: 40%; float:left; } 
 .col-50 { width: 50%; float:left; }
+.col-60 { width: 60%; float:left; }
 .col-63 { width: 63%; float:left;}
 .col-66 { width: 66% }
 

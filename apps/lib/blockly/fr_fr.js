@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.fr_fr');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "appel";
 Blockly.Msg.ADD = "Ajouter";
 Blockly.Msg.ADD_COMMENT = "Ajouter un commentaire";

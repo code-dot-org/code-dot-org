@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var markup = require('./NetSimPanel.html');
+var markup = require('./NetSimPanel.html.ejs');
 
 /**
  * Generator and controller for a NetSim Panel, a single section on the
@@ -112,6 +112,13 @@ NetSimPanel.prototype.render = function () {
 };
 
 /**
+ * @returns {jQuery} a handle on the root element for this panel
+ */
+NetSimPanel.prototype.getRoot = function () {
+  return this.rootDiv_;
+};
+
+/**
  * Set panel title.
  * @param {string} newTitle - Localized panel title.
  */
@@ -146,6 +153,14 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
         .removeClass('fa-plus-square');
   }
   this.isMinimized_ = becomeMinimized;
+};
+
+/**
+ * Whether this panel is currently minimized (showing only its header) or not.
+ * @returns {boolean}
+ */
+NetSimPanel.prototype.isMinimized = function () {
+  return this.isMinimized_;
 };
 
 /**

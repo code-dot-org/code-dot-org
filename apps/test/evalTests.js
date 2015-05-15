@@ -1,20 +1,19 @@
 var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
-var jsdom = require('jsdom').jsdom;
+//var jsdom = require('jsdom').jsdom;
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales('eval');
-var Eval = require(testUtils.buildPath('/eval/eval'));
-var EvalText = require(testUtils.buildPath('/eval/evalText'));
-var EvalMulti = require(testUtils.buildPath('/eval/evalMulti'));
-var EvalTriangle = require(testUtils.buildPath('/eval/evalTriangle'));
+var Eval = require('@cdo/apps/eval/eval');
+var EvalText = require('@cdo/apps/eval/evalText');
+var EvalMulti = require('@cdo/apps/eval/evalMulti');
+var EvalTriangle = require('@cdo/apps/eval/evalTriangle');
 
 
 describe('getTextStringsFromObject_', function () {
   before(function () {
-    // For some reason, this wasn't working properly if done at the top of the file.
-    global.document = jsdom('<html><head></head><body><svg id="svg"></svg></body></html>');
+    document.body.innerHTML = '<svg id="svg"></svg>';
   });
 
   it('from simple text object', function () {
@@ -52,8 +51,7 @@ describe('getTextStringsFromObject_', function () {
 
 describe('haveCaseMismatch_', function () {
   before(function () {
-    // For some reason, this wasn't working properly if done at the top of the file.
-    global.document = jsdom('<html><head></head><body><svg id="svg"></svg></body></html>');
+    document.body.innerHTML = '<svg id="svg"></svg>';
   });
 
   it('reports false for different text', function () {
@@ -99,8 +97,7 @@ describe('haveCaseMismatch_', function () {
 
 describe('haveBooleanMismatch_', function () {
   before(function () {
-    // For some reason, this wasn't working properly if done at the top of the file.
-    global.document = jsdom('<html><head></head><body><svg id="svg"></svg></body></html>');
+    document.body.innerHTML = '<svg id="svg"></svg>';
   });
 
   it('reports false if both bools are true', function () {

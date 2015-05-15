@@ -1,0 +1,15 @@
+name 'PDAlg first forum'
+title 'Starting the Conversation'
+css 'unplugged'
+markdown <<MARKDOWN
+## Starting the Conversation
+
+Through this PD you'll have an opportunity to share your thoughts and experiences with other teachers through our forums. At the bottom of this page you'll see a forum that you can reply to.
+
+### What do you love about teaching CS in your Algebra classes?
+What was your favorite thing about integrating Computer Science into your Algebra classes? Post your thoughts here, and then come back later to read the posts of others and further the conversation.
+
+<div id="discourse-comments" />
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

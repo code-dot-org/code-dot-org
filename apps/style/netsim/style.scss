@@ -24,6 +24,13 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
+@mixin transition($val...) {
+  -moz-transition: $val;
+  -o-transition: $val;
+  -webkit-transition: $val;
+  transition: $val;
+}
+
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
@@ -42,6 +49,15 @@ $wide-column-width: 121px;
   bottom: 0;
   left: 0;
   right: 0;
+
+  #netsim-disconnected {
+    display: block;
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    overflow-y: auto;
+  }
 
   #netsim-leftcol {
     position: absolute;
@@ -62,7 +78,24 @@ $wide-column-width: 121px;
     bottom: 0;
     left: 330px;
     right: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
+  }
+
+  #netsim-send {
+    position: absolute;
+    bottom: 0;
+    // "top" determined dynamically from content
+    left: 0;
+    right: 0;
+  }
+
+  #netsim-logs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    // "height" set in Javascript
+    overflow-y: hidden;
   }
 
   h1 {
@@ -82,7 +115,7 @@ $wide-column-width: 121px;
     }
 
     th {
-      border: none;
+      border: solid $charcoal 1px;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt;
     }
@@ -163,35 +196,113 @@ $wide-column-width: 121px;
 
       .viz-node {
         text {
+          fill: $black;
           text-anchor: middle;
+
+          &.address-box {
+            font-weight: bold;
+          }
         }
 
         circle {
-          stroke: $black;
+          stroke: $light_cyan;
           stroke-width: 2;
-          fill: $own-node-background-color;
+          fill: $light_cyan;
         }
 
-        rect.address-box {
-          stroke: $black;
+        rect {
+          stroke: $light_cyan;
           stroke-width: 2px;
           fill: $white;
         }
-
-        text.address-box {
-          font-weight: bold;
-        }
       }
 
+      .local-node {
+        circle {
+          stroke: $light_teal;
+          fill: $light_teal;
+        }
+
+        rect {
+          stroke: $light_teal;
+        }
+      }
       .router-node {
         circle {
-          fill: $orange;
+          stroke: $light_purple;
+          fill: $light_purple;
+        }
+
+        rect {
+          stroke: $light_purple;
         }
       }
 
       .viz-wire {
-        stroke: $black;
+        stroke: $charcoal;
         stroke-width: 2;
+        @include transition(
+                stroke 1s,
+                stroke-width 1s); // Fade back to normal stroke color
+
+        &.hidden-wire {
+          display: none;
+        }
+
+        text {
+          stroke: none;
+          fill: transparent;
+          font-family: monospace;
+          font-size: 26pt;
+          text-anchor: middle;
+          @include transition(fill 1s);
+
+          &.question-mark {
+            @include transition(fill 1.2s);
+          }
+        }
+
+        &.state-unknown {
+          stroke: $lighter_gray;
+
+          .state-label {
+            fill: transparent;
+          }
+
+          .question-mark {
+            fill: $lighter-gray;
+          }
+        }
+
+        &.state-on, &.state-off {
+          stroke-width: 4;
+          @include transition(none); // Snap to this state
+
+          .state-label {
+            @include transition(none);
+          }
+
+          .question-mark {
+            fill: transparent;
+            @include transition(none); // Snap to this state
+          }
+        }
+
+        &.state-off {
+          stroke: $black;
+
+          .state-label {
+            fill: $black;
+          }
+        }
+
+        &.state-on {
+          stroke: $orange;
+
+          .state-label {
+            fill: $orange;
+          }
+        }
       }
     }
   }
@@ -210,9 +321,37 @@ $wide-column-width: 121px;
   }
 
   .netsim-lobby-panel {
+    .instructions {
+      float: left;
+      width: 30%;
+    }
 
-    ul {
-      margin: 0 0 10px 0;
+    .controls {
+      margin-left: calc(30% + 1em);
+    }
+
+    table {
+      margin-bottom: 1em;
+
+      img {
+        height: 14px;
+        vertical-align: text-top;
+      }
+    }
+
+    td {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    .empty-row {
+      text-align: center;
+      border: none;
+    }
+
+    .button-column {
+      width: 1px;
+      text-align: right;
     }
   }
 
@@ -239,13 +378,6 @@ $wide-column-width: 121px;
       font-style: italic;
     }
 
-    .selectable-row {
-      cursor: pointer;
-      &:hover {
-        border-left: solid $orange 3px;
-      }
-    }
-
     .own-row {
       background-color: $own-node-background-color;
       font-style: italic;
@@ -263,13 +395,6 @@ $wide-column-width: 121px;
         background-color: $router-row-hover-color;
         color: $black;
       }
-    }
-
-
-    .selected-row {
-      background-color: $orange !important;
-      color: white !important;
-      font-weight: bold;
     }
   }
 
@@ -388,6 +513,7 @@ $wide-column-width: 121px;
 
     table {
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }
@@ -466,6 +592,7 @@ $wide-column-width: 121px;
       }
 
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }
@@ -750,6 +877,21 @@ $wide-column-width: 121px;
       }
       padding-right: 14px;
     }
+  }
+
+  // Really garish terrible style for debug buttons that we should not ship.
+  input.debug-button {
+    background: #f9f968;
+    background: -moz-linear-gradient(top,  #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f968), color-stop(82%,#ffa73d), color-stop(100%,#ff7f04));
+    background: -webkit-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: -o-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: -ms-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: linear-gradient(to bottom,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f968', endColorstr='#ff7f04',GradientType=0 );
+    border: outset #ff7f04 3px;
+    color: black;
+    font-weight:bold;
   }
 }
 

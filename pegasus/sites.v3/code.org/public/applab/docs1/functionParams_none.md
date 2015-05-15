@@ -19,7 +19,7 @@ Category: Functions
 
 [short_description]
 
-Declares a named block of code that performs some computation and optionally returns a value.
+Declares a named block of code that performs some computation and optionally returns a value.  Once you have defined a function with a name you can "call" the function to get the lines of code inside to run.  Writing a function is a good idea if you have pieces of code you want to reuse.
 
 [/short_description]
 
@@ -29,6 +29,29 @@ Declares a named block of code that performs some computation and optionally ret
 
 ### Examples
 ____________________________________________________
+[example]
+**Turtle Example**
+
+In this example with turtles we show the main part of the program at the top.  It shows that you can provide the definition of the function, in this case the square() function, anywhere in the code regardless of where you "call it" or use it from.
+
+<pre>
+square();
+turnRight();
+square();
+
+function square(){
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+}
+</pre>
+[/example]
+
 
 [example]
 

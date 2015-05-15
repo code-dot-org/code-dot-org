@@ -2,11 +2,49 @@
   = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
   = javascript_include_tag 'editor/blockly_editor'
 %h1 Level Completions
-%h2 From #{@start_date} to #{@end_date}
+%h2
+  From
+  %input#dateFrom{style: 'position: relative; z-index: 102;'}
+  To
+  %input#dateTo{style: 'position: relative; z-index: 102;'}
+  Filter
+  %input#filter
+%a#dateUpdate{style: 'display: none'} Update
 #completionTable
 :css
   .htNumeric { font-family: monospace; }
 :javascript
+  var basePage = '#{ level_completions_path }';
+  var baseFilter = '#{ params[:filter]}';
+  $(function() {
+    var filter = $('#filter');
+    var from = $('#dateFrom');
+    var to = $('#dateTo');
+    filter.val(baseFilter);
+    from.datepicker({ dateFormat: 'yy-mm-dd' });
+    to.datepicker({ dateFormat: 'yy-mm-dd' });
+    from.datepicker('setDate', '#{ @start_date }');
+    to.datepicker('setDate', '#{ @end_date }');
+    filter.change(function() {
+      updateDate();
+    });
+    from.change(function() {
+      updateDate();
+    });
+    to.change(function() {
+      updateDate();
+    });
+  });
+  function updateDate() {
+    var href = basePage + '/' + $('#dateFrom').val() + '/' + $('#dateTo').val();
+    var filter = $('#filter');
+    if(filter.val()) {
+      href = href + '/filter/' + filter.val().replace('/','_');
+    }
+    console.log('new href=' + href);
+    $('#dateUpdate').attr('href', href);
+    $('#dateUpdate').show();
+  }
   var data = eval(#{@data_array.try(:to_json)});
   function successRateRenderer(instance, td, row, col, prop, value, cellProperties) {
   var conditions = [
@@ -52,6 +90,20 @@
       }
     }
   }
+  function timeOnSiteRenderer(instance, td, row, col, prop, value, cellProperties) {
+  if(value) {
+    var val = parseFloat(value);
+    var minutes = Math.floor(val / 60);
+    var seconds = val - minutes*60;
+    value = ('0' + minutes).substr(-2) + ':' + ('0' + seconds).substr(-2);
+    var percent = Math.min(1, val / 600);
+  } else {
+    var percent = 0;
+  }
+  Handsontable.renderers.TextRenderer.apply(this, arguments);
+    td.style['font-family'] = 'monospace';
+    td.style['background'] = 'linear-gradient(90deg, silver ' + percent*100 + '%, white 0%)';
+  }
   $("#completionTable").handsontable({
     data: data, startRows: 10, startCols: 9,
     colHeaders: [
@@ -64,8 +116,9 @@
       'Unique Successful\nAttempts',
       'Perceived Dropout',
       'Avg. Unique\nSuccess Rate',
+      'Avg. Time\non Page',
     ],
-    colWidths: [200, 100, 100, 100, 100, 100, 100, 100, 100],
+    colWidths: [200, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     stretchH: 'none',
     columnSorting: true,
     manualColumnResize: true,
@@ -108,12 +161,17 @@
         type: 'numeric',
         format: '0.00%',
       },
+      {
+        data: "timeOnSite"
+      },
     ],
     cells: function(row, col, prop) {
       if(col == 3) {
         return {renderer: successRateRenderer};
       } else if (col == 8) {
         return {renderer: uniqueSuccessRateRenderer};
+      } else if (col == 9) {
+        return {renderer: timeOnSiteRenderer};
       }
       return {};
     }

@@ -84,6 +84,7 @@ Dashboard::Application.routes.draw do
       get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
       get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
       get '/applab', to: 'levels#show', key: 'New App Lab Project', as: 'applab'
+      get '/algebra_game', to: 'levels#show', key: 'New Algebra Project', as: 'algebra_game'
       get '/:template', to: 'projects#template'
     end
   end
@@ -152,6 +153,7 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
   get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
   get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
@@ -162,6 +164,8 @@ Dashboard::Application.routes.draw do
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
   get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'reports#lookup_section'
+  get '/admin/:action', controller: 'reports', as: 'reports'
+
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
   get '/stats/students', to: redirect_to_teacher_dashboard
   get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
@@ -211,12 +215,12 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
-  get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
-  get '/dashboardapi/student_progress/:section_id/:id', to: 'api#student_progress'
+  get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
-  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
-  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/:action', controller: 'api'
 
   # The priority is based upon order of creation: first created -> highest priority.

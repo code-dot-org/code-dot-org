@@ -9,11 +9,13 @@ class NetSim < Blockly
     automatic_receive
     router_expects_packet_header
     client_initial_packet_header
+    show_hostname_in_graph
     show_add_packet_button
     show_packet_size_control
     default_packet_size_limit
     show_tabs
     default_tab_index
+    show_pulse_rate_slider
     show_metronome
     show_encoding_controls
     default_enabled_encodings
@@ -65,5 +67,9 @@ class NetSim < Blockly
               game: Game.netsim,
               level_num: 'custom'
             ))
+  end
+
+  def finishable?
+    false
   end
 end

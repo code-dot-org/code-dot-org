@@ -13,8 +13,8 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
-var markup = require('./NetSimSendPanel.html');
+var i18n = require('./locale');
+var markup = require('./NetSimSendPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
@@ -34,7 +34,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSim} connection
+ * @param {NetSim} netsim
  * @constructor
  * @augments NetSimPanel
  */
@@ -264,8 +264,9 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   });
 
   // Attach the new packet to this SendPanel
+  var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast');
+  newPacket.getRoot().hide().slideDown('fast', updateLayout);
   this.packets_.push(newPacket);
 };
 
@@ -277,8 +278,12 @@ NetSimSendPanel.prototype.addPacket_ = function () {
  */
 NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
+  var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() { $(this).remove(); });
+      .slideUp('fast', function() {
+        $(this).remove();
+        updateLayout();
+      });
 
   // Remove from internal collection
   this.packets_ = this.packets_.filter(function (packetEditor) {
@@ -404,6 +409,7 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
   this.disableEverything();
+  this.netsim_.animateSetWireState(this.getNextBit_());
   myNode.setSimplexWireState(this.getNextBit_(), function (err) {
     if (err) {
       logger.warn(err.message);
@@ -503,4 +509,15 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
   this.packets_.forEach(function (packetEditor){
     packetEditor.setMaxPacketSize(newPacketSize);
   });
+};
+
+/**
+ * After toggling panel visibility, trigger a layout update so send/log panel
+ * space is shared correctly.
+ * @private
+ * @override
+ */
+NetSimSendPanel.prototype.onMinimizerClick_ = function () {
+  NetSimSendPanel.superPrototype.onMinimizerClick_.call(this);
+  this.netsim_.updateLayout();
 };

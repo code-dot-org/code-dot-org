@@ -12,8 +12,8 @@
 'use strict';
 
 var utils = require('../utils');
-var markup = require('./NetSimSlider.html');
-var i18n = require('../../locale/current/netsim');
+var markup = require('./NetSimSlider.html.ejs');
+var i18n = require('./locale');
 
 /**
  * @type {number}

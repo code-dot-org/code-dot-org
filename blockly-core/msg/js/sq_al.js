@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.sq_al');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "therrit";
 Blockly.Msg.ADD = "Shto";
 Blockly.Msg.ADD_COMMENT = "Shto një Koment";
@@ -29,7 +27,7 @@ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockl
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "dil nga një fazë përsëritëse";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "vazhdo me elementin tjetër të një faze përsëritëse";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "Dil nga faza përsëritëse.";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "Kalo pjesën e mbetur të fazës dhe vazhdo me ripërsëritjen tjetër.";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "Kalo pjesën e mbetur të iteracionit dhe vazhdo me iteracionin tjetër.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "Paralajmërim: Ky bllok mund të përdoret vetëm brenda fazës përsëritëse.";
 Blockly.Msg.CONTROLS_FOREACH_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#for_each";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST = "në listë";

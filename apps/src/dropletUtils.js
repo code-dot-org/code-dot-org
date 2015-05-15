@@ -129,13 +129,19 @@ standardConfig.categories = {
 /**
  * @param codeFunctions
  * @param {DropletConfig} dropletConfig
+ * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
+ *  object which is not app specific. It will be used first, then overriden
+ *  by the primary dropletConfig if there is overlap between the two.
  * @returns {Array}
  */
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
+    var blockSets = [ dropletConfig.blocks ];
+    if (otherConfig) {
+      blockSets.splice(0, 0, otherConfig.blocks);
+    }
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults
@@ -191,9 +197,6 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
     var cf = aliasFunctions[i];
-    if (cf.dontAlias) {
-      continue;
-    }
     code += "var " + cf.func + " = function() { ";
     if (cf.idArgNone) {
       code += "return " + parentObjName + "." + cf.func + ".apply(" +
@@ -213,7 +216,9 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
+                                                 dropletConfig,
+                                                 standardConfig);
   var i, j;
 
   for (i = 0; i < mergedFunctions.length; i++) {
@@ -268,13 +273,21 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
+ *
+ * If functionFilter is non-null, use it to filter the dropletConfig APIs to
+ * be set in autocomplete and create no other autocomplete entries
  */
-exports.generateAceApiCompleter = function (dropletConfig) {
+exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
 
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+  if (functionFilter) {
+    var mergedBlocks = mergeFunctionsWithConfig(functionFilter, dropletConfig);
+    populateCompleterApisFromConfigBlocks(apis, mergedBlocks);
+  } else {
+    populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+  }
 
   return {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -305,6 +318,8 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
     if (category) {
       newFunc.color = category.rgb || category.color;
     }
+
+    newFunc.dropdown = config.blocks[i].dropdown;
 
     modeOptions.functions[config.blocks[i].func] = newFunc;
   }

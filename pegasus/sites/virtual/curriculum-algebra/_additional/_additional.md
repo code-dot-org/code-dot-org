@@ -8,7 +8,7 @@ CS in Algebra is aligned to Common Core Standards for Mathematics, making it pos
 
 ## A New Take on Math Programming!
 
-Code.org CS in Algebra is a a block-based adaptation of the Bootstrap curriculum, designed to provide scaffolded support to both students and teachers who are new to computer science. You can play through the entire curriculum in [Code Studio](http://studio.code.org/s/algebra) before you use it in the classroom.
+Code.org CS in Algebra is a block-based adaptation of the Bootstrap curriculum, designed to provide scaffolded support to both students and teachers who are new to computer science. You can play through the entire curriculum in [Code Studio](http://studio.code.org/s/algebra) before you use it in the classroom.
 
 ## Videos 
 

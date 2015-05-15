@@ -3,6 +3,11 @@
   "game_id": 29,
   "created_at": "2015-02-24T21:34:24.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true
+    },
     "questions": [
       {
         "text": "The grey rectangle to the left of the workspace is called the"
