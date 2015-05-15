@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the simulator, you can send numbers or ASCII characters to one another, one bit at a time.",
+    "instructions": "In this version of the simulator, you can view the decimal representations of the binary you are sending.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",
@@ -46,7 +46,8 @@
     "lock_bit_rate_control": "false",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
-    "default_bit_rate_bits_per_second": "5"
+    "default_bit_rate_bits_per_second": "5",
+    "show_pulse_rate_slider": "false"
   },
   "md5": "fd73422fc914c269c1aa4240a1c4647e"
 }]]></config>
