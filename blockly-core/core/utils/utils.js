@@ -388,10 +388,22 @@ Blockly.convertCoordinates = function(x, y, svg, toSvg) {
  * @return {!Object} Object with .x and .y properties.
  */
 Blockly.mouseToSvg = function(e, opt_svgParent) {
+  return Blockly.mouseCoordinatesToSvg(e.clientX, e.clientY, opt_svgParent || Blockly.topMostSVGParent(e.target));
+};
+
+/**
+ * Return the converted coordinates of the given mouse coordinates.
+ * The origin (0,0) is the top-left corner of the Blockly svg.
+ * @param {number} x Mouse client X.
+ * @param {number} y Mouse client Y.
+ * @param {Element=} Target element.
+ * @return {!Object} Object with .x and .y properties.
+ */
+Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
   return Blockly.convertCoordinates(
-      e.clientX + window.pageXOffset,
-      e.clientY + window.pageYOffset,
-      opt_svgParent || Blockly.topMostSVGParent(e.target), true);
+      clientX + window.pageXOffset,
+      clientY + window.pageYOffset,
+      target, true);
 };
 
 /**
