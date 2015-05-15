@@ -23,13 +23,7 @@ action_codevideo_noten,action,dashboard_landing_video,video,nKIu9yen5nc,,,,,code
 action_teachervideo_noten,action,dashboard_landing_video,video,rH7AjDMz_dc,,,,,csedweek.org,show,not en
 action_learn_noten,action,learn_now,learn,,,,,,both,show,not en
 action_signpetition_noten,action,hoc2014_support,petition,,,,,,both,show,not en
-slot_hoc,slot,homepage_slot_text_hoc,http://code.org/learn,,,,,/shared/images/courses/logo_tall_elementary.jpg,both,show,all
-slot_frozen,slot,homepage_slot_text_frozen,http://studio.code.org/s/frozen/reset,,,,codestudio,/shared/images/courses/logo_tall_frozen.jpg,both,show,all
-slot_teacher,slot,homepage_slot_text_teacher,http://code.org/educate/k5,,,,,/shared/images/courses/logo_tall_teacher.jpg,both,show,all
-slot_studio,slot,homepage_slot_text_studio,http://studio.code.org,,,,codestudio,/shared/images/courses/logo_tall_elementary.jpg,both,nah,all
-slot_course4,slot,homepage_slot_text_course4,http://studio.code.org/s/course4/reset,,,,codestudio,/shared/images/courses/logo_tall_course4.jpg,both,nah,all
-slot_shop,slot,homepage_slot_text_shop,http://code.org/shop,,,,,/shared/images/courses/logo_tall_shop_borderless.jpg,code.org,show,all
-slot_flappy,slot,homepage_slot_text_flappy,http://studio.code.org/s/flappy,,,,codestudio,/shared/images/courses/logo_tall_flappy.jpg,csedweek.org,show,all
+banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/,,,,,code.org,nah,en
 block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_hoc.jpg,code.org,show,en
 block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
