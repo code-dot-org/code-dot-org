@@ -481,18 +481,16 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  * @private
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
-  NetSimLocalClientNode.create(this.shard_, function (err, node) {
+  NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
+      onComplete(err, null);
       return;
     }
 
-    node.setDisplayName(displayName);
     node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
     node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
-    node.update(function (err) {
-      onComplete(err, node);
-    });
+    onComplete(err, node);
   }.bind(this));
 };
 
@@ -504,7 +502,8 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
-  this.shardChange.notifyObservers(null, null);
+  // Don't notify observers, this should only be used when navigating away
+  // from the page.
 };
 
 /**
@@ -1153,11 +1152,11 @@ NetSim.prototype.cleanShardNow = function () {
  * cleaned up.
  */
 NetSim.prototype.expireHeartbeat = function () {
-  if (!(this.myNode && this.myNode.heartbeat_)) {
+  if (!(this.myNode && this.myNode.heartbeat)) {
     return;
   }
 
-  this.myNode.heartbeat_.spoofExpired();
+  this.myNode.heartbeat.spoofExpired();
   logger.info("Local node heartbeat is now expired.");
 };
 

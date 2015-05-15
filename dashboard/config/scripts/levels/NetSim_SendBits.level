@@ -38,9 +38,17 @@
     "show_encoding_controls": "[\"a_and_b\"]",
     "can_connect_to_clients": "true",
     "can_connect_to_routers": "false",
-    "message_granularity": "bits",
+    "message_granularity": "packets",
     "automatic_receive": "false",
-    "show_metronome": "true"
+    "show_metronome": "true",
+    "show_hostname_in_graph": "false",
+    "show_pulse_rate_slider": "false",
+    "show_bit_rate_control": "true",
+    "lock_bit_rate_control": "false",
+    "default_bit_rate_bits_per_second": "2",
+    "show_chunk_size_control": "true",
+    "lock_chunk_size_control": "false",
+    "default_chunk_size_bits": "4"
   },
   "md5": "9f6f0cde0bc6cc27930e6eb9d81016f2"
 }]]></config>
