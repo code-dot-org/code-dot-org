@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils');
+var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
@@ -44,12 +45,12 @@ NetSimNode.inherits(NetSimEntity);
  * @returns {SharedTable}
  * @private
  */
-NetSimNode.prototype.getTable_= function () {
+NetSimNode.prototype.getTable= function () {
   return this.shard_.nodeTable;
 };
 
 /** Build table row for this node */
-NetSimNode.prototype.buildRow_ = function () {
+NetSimNode.prototype.buildRow = function () {
   return {
     type: this.getNodeType(),
     name: this.getDisplayName()
@@ -61,7 +62,7 @@ NetSimNode.prototype.buildRow_ = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getDisplayName = function () {
-  return this.displayName_ ? this.displayName_ : '[New Node]';
+  return this.displayName_ ? this.displayName_ : i18n.defaultNodeName();
 };
 
 /**

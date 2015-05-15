@@ -41,7 +41,7 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD - More information coming soon!
+UCLA - More on exact building and room info coming soon!
 
 
 

@@ -29,12 +29,15 @@ var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
-var Hammer = utils.getHammer();
+// var Hammer = utils.getHammer();
+var keyEvent = require('./keyEvent');
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
 var DesignProperties = require('./designProperties.jsx');
+
+var vsprintf = require('./sprintf').vsprintf;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -273,7 +276,6 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
-  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -848,7 +850,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -1061,9 +1063,12 @@ Applab.init = function(config) {
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
 
-          var scale = Applab.getVizScaleFactor();
-          var left = ui.position.left / scale;
-          var top = ui.position.top / scale;
+          var div = document.getElementById('divApplab');
+          var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+          var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+          var left = ui.position.left / xScale;
+          var top = ui.position.top / yScale;
 
           // snap top-left corner to nearest location in the grid
           left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -1227,11 +1232,13 @@ Applab.makeDraggable = function (jq) {
       // so adjust the position in various ways here.
 
       // dragging
-      var scale = Applab.getVizScaleFactor();
+      var div = document.getElementById('divApplab');
+      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
       var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
       var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / scale;
+      var newTop = (ui.originalPosition.top + changeTop) / yScale;
 
       // snap top-left corner to nearest location in the grid
       newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -1253,21 +1260,6 @@ Applab.makeDraggable = function (jq) {
       Applab.levelHtml = Applab.serializeToLevelHtml();
     }
   });
-};
-
-Applab.getVizScaleFactor = function () {
-  var width = $('body').width();
-  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
-  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
-    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
-        Applab.vizScaleFactors;
-  }
-  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
-    if (width > vizScaleBreakpoints[i]) {
-      return Applab.vizScaleFactors[i];
-    }
-  }
-  throw 'Unexpected body width: ' + width;
 };
 
 /**
@@ -1571,7 +1563,7 @@ Applab.reset = function(first) {
     }
     var debugOutput = document.getElementById('debug-output');
     if (debugOutput) {
-      debugOutput.value = '';
+      debugOutput.textContent = '';
     }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
@@ -2680,7 +2672,7 @@ Applab.textLabel = function (opts) {
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
   apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
   if (typeof opts.forId !== 'undefined') {
-    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, false);
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, true);
   }
 
   var newLabel = document.createElement("label");
@@ -3008,11 +3000,64 @@ Applab.getYPosition = function (opts) {
 
 Applab.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
+    var div = document.getElementById('divApplab');
+    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+    var xOffset = 0;
+    var yOffset = 0;
+    while (div) {
+      xOffset += div.offsetLeft;
+      yOffset += div.offsetTop;
+      div = div.offsetParent;
+    }
+
+    var applabEvent = {};
+    // Pass these properties through to applabEvent:
+    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
+      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = e[prop];
+        }
+      });
+    // Convert x coordinates and then pass through to applabEvent:
+    ['clientX', 'pageX', 'x'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - xOffset) / xScale;
+        }
+      });
+    // Convert y coordinates and then pass through to applabEvent:
+    ['clientY', 'pageY', 'y'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - yOffset) / yScale;
+        }
+      });
+    // Replace DOM elements with IDs and then add them to applabEvent:
+    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
+      'toElement'].forEach(
+      function (prop) {
+        if (e[prop]) {
+          applabEvent[prop + "Id"] = e[prop].id;
+        }
+      });
+    // Attempt to populate key property (not yet supported in Chrome/Safari):
+    //
+    // keyup/down has no charCode and can be translated with the keyEvent[] map
+    // keypress can use charCode
+    //
+    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
+    if (typeof keyProp !== 'undefined') {
+      applabEvent.key = keyProp;
+    }
+
     // Push a function call on the queue with an array of arguments consisting
-    // of just the 'e' parameter
+    // of the applabEvent parameter (and any extraArgs originally supplied)
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e].concat(opts.extraArgs)
+      'arguments': [applabEvent].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -3033,14 +3078,15 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
-  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
-  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
     opts.elementId = 'divApplab';
+  } else {
+    apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
   }
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
@@ -3065,7 +3111,6 @@ Applab.onEvent = function (opts) {
       case 'rotate':
       case 'release':
       case 'gesture':
-      */
       case 'pinch':
       case 'pinchin':
       case 'pinchout':
@@ -3073,13 +3118,28 @@ Applab.onEvent = function (opts) {
         hammerElement.on(opts.eventName,
                          Applab.onEventFired.bind(this, opts));
         break;
-      default:
+      */
+      case 'click':
+      case 'change':
+      case 'keyup':
+      case 'mousemove':
+      case 'dblclick':
+      case 'mousedown':
+      case 'mouseup':
+      case 'mouseover':
+      case 'mouseout':
+      case 'keydown':
+      case 'keypress':
+      case 'input':
         // For now, we're not tracking how many of these we add and we don't allow
         // the user to detach the handler. We detach all listeners by cloning the
         // divApplab DOM node inside of reset()
         domElement.addEventListener(
             opts.eventName,
             Applab.onEventFired.bind(this, opts));
+        break;
+      default:
+        return false;
     }
     return true;
   }
@@ -3364,194 +3424,14 @@ var getPegasusHost = function() {
         case 'test':
         case 'levelbuilder':
           return name + '.code.org';
+        case 'staging-studio':
+          return 'staging.code.org';
+        case 'test-studio':
+          return 'test.code.org';
+        case 'levelbuilder-studio':
+          return 'levelbuilder.code.org';
         default:
           return null;
       }
   }
 };
-
-/*jshint asi:true */
-/*jshint -W064 */
-
-//
-// Extracted from https://github.com/alexei/sprintf.js
-//
-// Copyright (c) 2007-2014, Alexandru Marasteanu <hello [at) alexei (dot] ro>
-// All rights reserved.
-//
-// Current as of 10/30/14
-// commit c3ac006aff511dda804589af8f5b3c0d5da5afb1
-//
-
-    var re = {
-        not_string: /[^s]/,
-        number: /[dief]/,
-        text: /^[^\x25]+/,
-        modulo: /^\x25{2}/,
-        placeholder: /^\x25(?:([1-9]\d*)\$|\(([^\)]+)\))?(\+)?(0|'[^$])?(-)?(\d+)?(?:\.(\d+))?([b-fiosuxX])/,
-        key: /^([a-z_][a-z_\d]*)/i,
-        key_access: /^\.([a-z_][a-z_\d]*)/i,
-        index_access: /^\[(\d+)\]/,
-        sign: /^[\+\-]/
-    }
-
-    function sprintf() {
-        var key = arguments[0], cache = sprintf.cache
-        if (!(cache[key] && cache.hasOwnProperty(key))) {
-            cache[key] = sprintf.parse(key)
-        }
-        return sprintf.format.call(null, cache[key], arguments)
-    }
-
-    sprintf.format = function(parse_tree, argv) {
-        var cursor = 1, tree_length = parse_tree.length, node_type = "", arg, output = [], i, k, match, pad, pad_character, pad_length, is_positive = true, sign = ""
-        for (i = 0; i < tree_length; i++) {
-            node_type = get_type(parse_tree[i])
-            if (node_type === "string") {
-                output[output.length] = parse_tree[i]
-            }
-            else if (node_type === "array") {
-                match = parse_tree[i] // convenience purposes only
-                if (match[2]) { // keyword argument
-                    arg = argv[cursor]
-                    for (k = 0; k < match[2].length; k++) {
-                        if (!arg.hasOwnProperty(match[2][k])) {
-                            throw new Error(sprintf("[sprintf] property '%s' does not exist", match[2][k]))
-                        }
-                        arg = arg[match[2][k]]
-                    }
-                }
-                else if (match[1]) { // positional argument (explicit)
-                    arg = argv[match[1]]
-                }
-                else { // positional argument (implicit)
-                    arg = argv[cursor++]
-                }
-
-                if (get_type(arg) == "function") {
-                    arg = arg()
-                }
-
-                if (re.not_string.test(match[8]) && (get_type(arg) != "number" && isNaN(arg))) {
-                    throw new TypeError(sprintf("[sprintf] expecting number but found %s", get_type(arg)))
-                }
-
-                if (re.number.test(match[8])) {
-                    is_positive = arg >= 0
-                }
-
-                switch (match[8]) {
-                    case "b":
-                        arg = arg.toString(2)
-                    break
-                    case "c":
-                        arg = String.fromCharCode(arg)
-                    break
-                    case "d":
-                    case "i":
-                        arg = parseInt(arg, 10)
-                    break
-                    case "e":
-                        arg = match[7] ? arg.toExponential(match[7]) : arg.toExponential()
-                    break
-                    case "f":
-                        arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg)
-                    break
-                    case "o":
-                        arg = arg.toString(8)
-                    break
-                    case "s":
-                        arg = ((arg = String(arg)) && match[7] ? arg.substring(0, match[7]) : arg)
-                    break
-                    case "u":
-                        arg = arg >>> 0
-                    break
-                    case "x":
-                        arg = arg.toString(16)
-                    break
-                    case "X":
-                        arg = arg.toString(16).toUpperCase()
-                    break
-                }
-                if (re.number.test(match[8]) && (!is_positive || match[3])) {
-                    sign = is_positive ? "+" : "-"
-                    arg = arg.toString().replace(re.sign, "")
-                }
-                else {
-                    sign = ""
-                }
-                pad_character = match[4] ? match[4] === "0" ? "0" : match[4].charAt(1) : " "
-                pad_length = match[6] - (sign + arg).length
-                pad = match[6] ? (pad_length > 0 ? str_repeat(pad_character, pad_length) : "") : ""
-                output[output.length] = match[5] ? sign + arg + pad : (pad_character === "0" ? sign + pad + arg : pad + sign + arg)
-            }
-        }
-        return output.join("")
-    }
-
-    sprintf.cache = {}
-
-    sprintf.parse = function(fmt) {
-        var _fmt = fmt, match = [], parse_tree = [], arg_names = 0
-        while (_fmt) {
-            if ((match = re.text.exec(_fmt)) !== null) {
-                parse_tree[parse_tree.length] = match[0]
-            }
-            else if ((match = re.modulo.exec(_fmt)) !== null) {
-                parse_tree[parse_tree.length] = "%"
-            }
-            else if ((match = re.placeholder.exec(_fmt)) !== null) {
-                if (match[2]) {
-                    arg_names |= 1
-                    var field_list = [], replacement_field = match[2], field_match = []
-                    if ((field_match = re.key.exec(replacement_field)) !== null) {
-                        field_list[field_list.length] = field_match[1]
-                        while ((replacement_field = replacement_field.substring(field_match[0].length)) !== "") {
-                            if ((field_match = re.key_access.exec(replacement_field)) !== null) {
-                                field_list[field_list.length] = field_match[1]
-                            }
-                            else if ((field_match = re.index_access.exec(replacement_field)) !== null) {
-                                field_list[field_list.length] = field_match[1]
-                            }
-                            else {
-                                throw new SyntaxError("[sprintf] failed to parse named argument key")
-                            }
-                        }
-                    }
-                    else {
-                        throw new SyntaxError("[sprintf] failed to parse named argument key")
-                    }
-                    match[2] = field_list
-                }
-                else {
-                    arg_names |= 2
-                }
-                if (arg_names === 3) {
-                    throw new Error("[sprintf] mixing positional and named placeholders is not (yet) supported")
-                }
-                parse_tree[parse_tree.length] = match
-            }
-            else {
-                throw new SyntaxError("[sprintf] unexpected placeholder")
-            }
-            _fmt = _fmt.substring(match[0].length)
-        }
-        return parse_tree
-    }
-
-    var vsprintf = function(fmt, argv, _argv) {
-        _argv = (argv || []).slice(0)
-        _argv.splice(0, 0, fmt)
-        return sprintf.apply(null, _argv)
-    }
-
-    /**
-     * helpers
-     */
-    function get_type(variable) {
-        return Object.prototype.toString.call(variable).slice(8, -1).toLowerCase()
-    }
-
-    function str_repeat(input, multiplier) {
-        return Array(multiplier + 1).join(input)
-    }

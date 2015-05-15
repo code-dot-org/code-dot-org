@@ -1,5 +1,6 @@
 name 'PDAlg functional'
 title 'Functional Programming'
+answer_line true
 question 'Have you ever programmed before?'
 right "Yes, and I'm familiar with functional programming"
 right "Yes, but I don't know if it would be considered functional"

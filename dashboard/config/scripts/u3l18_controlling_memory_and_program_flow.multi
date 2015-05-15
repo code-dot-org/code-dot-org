@@ -1,0 +1,13 @@
+name 'U3L18 Controlling Memory and Program Flow'
+title 'Controlling Memory and Control Quiz'
+description 'Select the programming technique that best fits the described game feature.'
+
+question '1. You want to see additional random images displayed that are worth different points when clicked.'
+wrong 'conditional'
+right 'variable'
+wrong 'both'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

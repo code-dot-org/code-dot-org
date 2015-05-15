@@ -19,12 +19,12 @@ describe("NetSimMessage", function () {
 
   it ("uses the message table", function () {
     var message = new NetSimMessage(testShard);
-    assert(message.getTable_() === testShard.messageTable);
+    assert(message.getTable() === testShard.messageTable);
   });
 
   it ("has expected row structure and default values", function () {
     var message = new NetSimMessage(testShard);
-    var row = message.buildRow_();
+    var row = message.buildRow();
 
     assertOwnProperty(row, 'fromNodeID');
     assertEqual(row.fromNodeID, undefined);

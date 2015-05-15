@@ -1,0 +1,12 @@
+name 'U3L18 Controlling Memory and Program Flow 5'
+title 'Controlling Memory and Control Quiz'
+description 'Select the programming technique that best fits the described game feature.'
+
+question '5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).'
+right 'conditional'
+wrong 'variable'
+wrong 'both'
+
+markdown <<MARKDOWN
+
+MARKDOWN
