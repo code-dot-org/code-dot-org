@@ -10,7 +10,7 @@
   "placeImageBlockTitle": "lugar-imagem (x, y, imagem)",
   "offsetBlockTitle": "offset (x, y, imagem)",
   "rectangleBlockTitle": "retângulo (largura, altura, estilo, cor)",
-  "reinfFeedbackMsg": "Você pode clicar no botão \"Continuar\" para editar seu desenho.",
+  "reinfFeedbackMsg": "Você pode apertar o botão \"Continuar\" para editar seu programa.",
   "rotateImageBlockTitle": "rotacionar (graus, imagem)",
   "scaleImageBlockTitle": "escala (fator, imagem)",
   "squareBlockTitle": "quadrado (tamanho, estilo, cor)",

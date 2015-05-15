@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var eval_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,16 +150,16 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
+v:function(d,k){eval_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).eval_locale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "circle (radius, style, color)"},
-"displayBlockTitle":function(d){return "display"},
+"displayBlockTitle":function(d){return "নির্ণয় করা"},
 "ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
-"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
+"extraTopBlocks":function(d){return "তোমার অসংযুক্ত কিছু ব্লক আছে। তুমি কি এগুলোকে \"evaluate\" ব্লকে যুক্ত করার ব্যাপারটি বোঝাচ্ছো?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bottom)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},

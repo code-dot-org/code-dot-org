@@ -74,7 +74,10 @@ The first phase of professional development is a two-hour introduction that focu
 **Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
 ### Save the dates
-**Session 1:**
+You will only need to attend one of the following options.
+<br />
+<br />
+**Option 1:**
 <br />
 Monday, July 6, 2015 - Friday, July 10, 2015
 <br />
@@ -83,7 +86,7 @@ Mon - Thurs: 8:30am - 3:30pm
 Friday: 8:30am - 1:30pm
 <br />
 <br />
-**Session 2:**
+**Option 2:**
 <br />
 Monday, August 3, 2015 - Friday, August 7, 2015
 <br />
@@ -95,7 +98,8 @@ Friday: 8:30am - 1:30pm
 Breakfast and lunch will be served. 
 
 ### Location
-**Session 1:**
+**Option 1:**
+<br />
 DePaul University 
 <br />
 College of Computing and Digital Media (CDM)
@@ -106,7 +110,8 @@ Room 924
 <br />
 Chicago, IL 60604
 
-**session 2:**
+**Option 2:**
+<br />
 DePaul University 
 <br />
 College of Computing and Digital Media (CDM)
@@ -151,14 +156,17 @@ The first phase of professional development is a two-hour online introduction th
 **Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
-**Session 1:**
+You will only need to attend one of the following options.
+<br />
+<br />
+**Option 1:**
 <br />
 Wednesday, July 8, 2015 - Friday, July 10, 2015
 <br/>
 8:00am - 4:30pm
 <br />
 <br />
-**Session 2:**
+**Option 2:**
 <br />
 Monday, August 3, 2015 - Tuesday, August 4, 2015
 <br />
@@ -168,7 +176,7 @@ Monday, August 3, 2015 - Tuesday, August 4, 2015
 Breakfast and lunch will be served. 
 
 ### Location
-**Session 1:**
+**Option 1:**
 <br />
 Microsoft Technology Center
 <br />
@@ -181,9 +189,19 @@ Room: MPR 2
 Chicago, IL 60601
 <br />
 <br />
-**Session 2:**
+**Option 2:**
 <br />
-TBD
+Microsoft Technology Center
+<br />
+AON Center, Suite 200
+<br />
+Room: MPR 2
+<br />
+200 East Randolph Street
+<br />
+Chicago, IL 60601
+<br />
+<br />
 
 #### What do I bring to Phase 2? ####
 Water Bottle
@@ -212,15 +230,17 @@ The first phase of professional development is a two-hour online introduction th
 **Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
-
-**Session 1:**
+You will only need to attend one of the following options.
+<br />
+<br />
+**Option 1:**
 <br />
 Wednesday, July 8, 2015 - Friday, July 10, 2015
 <br/>
 8:00am - 4:30pm
 <br />
 <br />
-**Session 2:**
+**Option 2:**
 <br />
 Wednesday, August 5, 2015 - Friday, August 7, 2015
 <br />
@@ -229,7 +249,20 @@ Wednesday, August 5, 2015 - Friday, August 7, 2015
 Breakfast and lunch will be served. 
 
 ### Location
-**Session 1:**
+**Option 1:**
+<br />
+Microsoft Technology Center
+<br />
+AON Center, Suite 200
+<br />
+Room: MPR 2
+<br />
+200 East Randolph Street
+<br />
+Chicago, IL 60601
+<br />
+<br />
+**Option 2:**
 <br />
 Microsoft Technology Center
 <br />
@@ -242,9 +275,6 @@ Room: MPR 3
 Chicago, IL 60601
 <br />
 <br />
-**Session 2:**
-<br />
-TBD
 
 #### What do I bring to Phase 2? ####
 Water Bottle

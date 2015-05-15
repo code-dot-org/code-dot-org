@@ -88,6 +88,15 @@
           великий, як це високий.'
         wide-rect|Image|Number|String: wide-rect|Image|Number|String
     external:
+      AlgPD Break:
+        Before you move on...: Before you move on...
+      CSP Journal Entry Placeholder:
+        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
+        Eventually replace this with a free-response journal entry level: Eventually
+          replace this with a free-response journal entry level
+      CSP Journal Entry Placeholder2:
+        description here: опис тут
+        title: назва
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -100,28 +109,89 @@
       Code Logo v3:
         Create images with bits and bytes.: Створити зображення з бітів та байтів.
         title: назва
+      ECSPD PD Phases:
+        ECSPD PD Phases: ECSPD PD Phases
+      ECSPD PD details:
+        ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
         ECS PD Overview: ECS PD Overview
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
+      ECSPD end of p1:
+        ECSPD end of p1: ECSPD end of p1
+      ECSPD forum introduction:
+        ECS Forum Introductions: ECS Forum Introductions
+        Forum Introductions: Forum Introductions
       ECSPD growth mindset strategies:
         Growth Mindset Strategies: Growth Mindset Strategies
+      ECSPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: опис тут
+      ECSPD impact vid1:
+        ECSPD impact vid1: ECSPD impact vid1
+      ECSPD impact vid2:
+        ECSPD impact vid2: ECSPD impact vid2
       ECSPD meet facilitator:
         Meet your Facilitator!: Meet your Facilitator!
+      ECSPD pause:
+        ECSPD pause: ECSPD pause
+      ECSPD postsurvey: []
+      ECSPD presurvey: []
       ECSPD program overview:
         ECS Program Overview: ECS Program Overview
         Overview of ECS Program: Overview of ECS Program
+      ECSPD teaching strategies video:
+        ECSPD teaching strategies video: ECSPD teaching strategies video
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: []
+      Intro to CodeStudio:
+        An Introduction to Code Studio: An Introduction to Code Studio
       Mixing Colors:
         description here: опис тут
         title: назва
+      Odometer:
+        Odometer: Odometer
+      PDAlg Attitude Survey:
+        CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Curriculum Overview:
+        Curriculum Overview: Curriculum Overview
+        Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+      PDAlg Details:
+        CS in Algebra PD Details: CS in Algebra PD Details
+      PDAlg End of P1:
+        End of Phase 1: End of Phase 1
+      PDAlg Facilitator Test:
+        description here: опис тут
+        title: назва
+      PDAlg Facilitators:
+        Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: []
+      PDAlg Post Survey:
+        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Scope:
+        Scope and Sequence: Scope and Sequence
+      PDAlg Teacher Dashboard:
+        Course Progress: Course Progress
+      PDAlg Teacher Introduction:
+        Introduce yourself: Introduce yourself
+      PDAlg big game:
+        Introduction to the Big Game: Introduction to the Big Game
+      PDAlg bootstrap:
+        From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
+      PDAlg circles to blocks:
+        From Circles to Blocks: From Circles to Blocks
+      PDAlg commitment:
+        CS in Algebra PD commitments: CS in Algebra PD commitments
+        overview of program commitments: overview of program commitments
+      PDAlg functions:
+        The Concept of Function: The Concept of Function
+      PDAlg hard video:
+        Why is Algebra so Hard?: Why is Algebra so Hard?
       PDCSP Intro: []
       PDECS Intro:
         PD Intro: PD Intro
@@ -137,12 +207,18 @@
         tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
+      PDK5 CS Video:
+        Computer Science: Інформатика
       PDK5 CS overview:
         Overview of programming concepts: Overview of programming concepts
       PDK5 Classroom Culture C:
         Classroom Culture: Класі культури
+      PDK5 Connections:
+        Connections: Connections
       PDK5 Course Maps C: []
       PDK5 Course Overview C: []
+      PDK5 Foundations F:
+        foundational skill: foundational skill
       PDK5 Glossary C:
         Vocabulary: Vocabulary
       PDK5 Intro C: []
@@ -151,6 +227,10 @@
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer
           Science
+      PDK5 Strategies 1:
+        Classroom Strategies: Classroom Strategies
+      PDK5 Strategies F:
+        Strategies Discussion: Strategies Discussion
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Dashboard 1
       PDK5 Teacher Dashboard 2:
@@ -293,6 +373,10 @@
       U1L13 Student Lesson Introduction:
         description here: опис тут
         title: назва
+      U1L13 Text Compression:
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+        U1L13 Text Compression: U1L13 Text Compression
       U1L16 Student Lesson Introduction:
         description here: опис тут
         title: назва
@@ -314,9 +398,6 @@
       U1L5 Student Lesson Introduction:
         description here: опис тут
         title: назва
-      U1L6 Odometer Widget:
-        Odometer Widget: Odometer Widget
-        description here: опис тут
       U1L6 Student Lesson Introduction:
         description here: опис тут
         title: назва
@@ -329,9 +410,91 @@
       U1L9 Student Lesson Introduction:
         description here: опис тут
         title: назва
+      facilitator test: []
+      sciPD Course Overview: []
+      sciPD Intro: []
+      sciPD StarLogo intro 1:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided
+          Introduction to StarLogo Nova
+      sciPD StarLogo intro 2:
+        Guided Intro to StarLogo Nova: Guided Intro to StarLogo Nova
+      sciPD StarLogo intro 3:
+        Guided Tour of StarLogo Nova pt 3: Guided Tour of StarLogo Nova pt 3
+      sciPD StarLogo intro 4:
+        Guided Intro to StarLogo Nova part 4: Guided Intro to StarLogo Nova part 4
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: Introduction to StarLogo Nova
+      sciPD StarLogo tutorial 1:
+        StarLogo Tutorial part 1: StarLogo Tutorial part 1
+      sciPD StarLogo tutorial 2:
+        StarLogo Tutorial part 2: StarLogo Tutorial part 2
+      sciPD StarLogo tutorial 3:
+        StarLogo Tutorial part 3: StarLogo Tutorial part 3
+      sciPD StarLogo tutorial 4:
+        StarLogo Nova Tutorial Part 4: StarLogo Nova Tutorial Part 4
+      sciPD StarLogo tutorial 5:
+        StarLogo Nova Tutorial Part 5: StarLogo Nova Tutorial Part 5
+      sciPD StarLogo tutorial 6:
+        StarLogo Nova Tutorial Part 6: StarLogo Nova Tutorial Part 6
+      sciPD StarLogo tutorial 7:
+        StarLogo Nova Tutorial Part 7: StarLogo Nova Tutorial Part 7
+      sciPD StarLogo tutorial 8:
+        StarLogo Nova Tutorial Part 8: StarLogo Nova Tutorial Part 8
+      sciPD agent based forum:
+        Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive
+          Systems Forum
+      sciPD agent based video:
+        Agent Based Modeling: Agent Based Modeling
+      sciPD class models forum:
+        Models in the Classroom: Models in the Classroom
+      sciPD class models video:
+        Using Models in the Classroom: Using Models in the Classroom
+      sciPD complex adaptive forum:
+        Complex Adaptive Forum: Complex Adaptive Forum
+      sciPD complex adaptive video:
+        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+      sciPD computer models forum:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD computer models video:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Dispositions and Classroom Culture
+      sciPD culture video:
+        Dispositions And Classroom Culture: Dispositions And Classroom Culture
+      sciPD expectations: []
+      sciPD finish:
+        Code.org Post Survey: Code.org Post Survey
+      sciPD framework forum:
+        Computational Thinking and the Framework for K-12: Computational Thinking
+          and the Framework for K-12
+      sciPD framework video:
+        Framework: Програма
+      sciPD intro finale: []
+      sciPD intro to CS forum: []
+      sciPD intro to CS video:
+        Intro to Computational Science: Intro to Computational Science
+      sciPD intro video:
+        Welcome to CS in Science: Welcome to CS in Science
+      sciPD logistics 1:
+        Details and Logistics: Details and Logistics
+      sciPD materials:
+        Workshop Materials: Workshop Materials
+      sciPD meet and greet: []
+      sciPD p2 intro:
+        Welcome to Phase 2: Welcome to Phase 2
+      sciPD p3 intro:
+        CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase
+          3 PD
+      sciPD preQ:
+        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD what to expect:
+        What to Expect: What to Expect
       test demo level:
         demo description: demo description
         demo title: demo title
+      test discourse level type:
+        this is a discourse forum: this is a discourse forum
+        title: назва
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
@@ -462,6 +625,15 @@
         Type out the arithmetic expression that matches this code: Запишіть арифметичний
           вираз, котрий відповідає поданому коду
         Type the arithmetic expression here: Запишіть арифметичний вираз тут
+      ECSPD PD goals:
+        Documenting Your PD Goals: Documenting Your PD Goals
+      ECSPD course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
+      ECSPD impact in program:
+        Impact of Computing: Impact of Computing
+      ECSPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and
+          PD
       ECSPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
@@ -469,6 +641,8 @@
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
+      PDAlg course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
         Biggest Challenges: Biggest Challenges
       PDK5 Classroom Culture 2:
@@ -510,6 +684,9 @@
           computer science connect to other topics or subjects your students are learning
           about? Explain why or why not.
         Your thoughts here: Your thoughts here
+      PDK5 Impact 3:
+        Real-world applications for Students: Real-world applications for Students
+        Your thoughts here: Your thoughts here
       PDK5 Loops 2:
         The Importance of Loops: The Importance of Loops
       PDK5 Problem Solving:
@@ -520,8 +697,8 @@
         'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
           approved'
       PDK5 Promo Video 2:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
-          approved'
+        'Code Studio: Kid Tested, Teacher Approved!': 'Code Studio: Kid Tested, Teacher
+          Approved!'
         My first impressions of Code Studio are...: My first impressions of Code Studio
           are...
       PDK5 Strategies O:

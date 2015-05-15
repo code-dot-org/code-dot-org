@@ -79,7 +79,7 @@
   "FUNCTION_CREATE":"Criar uma função",
   "FUNCTION_EDIT":"editar",
   "FUNCTION_NAME_LABEL":"Dá um nome à tua função:",
-  "FUNCTION_DESCRIPTION_LABEL":"O que é que a sua função faz?",
+  "FUNCTION_DESCRIPTION_LABEL":"O que é suposto a sua função fazer?",
   "FUNCTION_PARAMETERS_LABEL":"Quais são os parâmetros da sua função?",
   "FUNCTION_HEADER":"Função",
   "FUNCTIONAL_CREATE":"Novo bloco",

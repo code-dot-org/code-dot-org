@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Seu programa resulta em uma divisão por zero."},
 "emptyComputeBlock":function(d){return "Você precisa anexar um bloco ao bloco \"calcular\"."},
 "equivalentExpression":function(d){return "Tente reorganizar seus argumentos para obter exatamente a mesma expressão."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Sua função não retorna o resultado correto para todos os valores."},
 "goal":function(d){return "Objetivo:"},
 "levelIncompleteError":function(d){return "Sua expressão não corresponde ao objetivo."},
-"missingFunctionError":function(d){return "Você deve definir uma função chamada "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Está faltando a variável "+appLocale.v(d,"var")+" na sua expressão."},
+"missingFunctionError":function(d){return "Você deve definir uma função chamada "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Está faltando a variável "+calc_locale.v(d,"var")+" na sua expressão."},
 "reinfFeedbackMsg":function(d){return "Aqui está seu cálculo! Continue trabalhando nele, ou vá para o próximo desafio!"},
 "yourExpression":function(d){return "Sua expressão:"},
 "wrongInput":function(d){return "Você está chamando sua função com o valor errado."},
-"wrongOtherValuesX":function(d){return "Sua expressão resulta no valor errado se variarmos "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Sua expressão resulta no valor errado se variarmos "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Sua expressão não retorna o resultado correto."}};

@@ -64,6 +64,8 @@ az:
     need_confirmation: Təsdiq göstərişlərini almamisiniz?
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Siz <a target="_blank" href="http://learn.code.org">müxtəlif mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.'
@@ -316,6 +318,7 @@ az:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Kurs 1, 2 və 3-ün icmalı
     lesson_plans: Dərs planları
     signin_message: 'Artıq qeydiyyatdan keçmisiniz? %{link}'
@@ -481,6 +484,8 @@ az:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Cavabınızı buraya daxil edin
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Oldu
   time:
@@ -494,7 +499,7 @@ az:
           title: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
           description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
         Hour of Code:
-          title: Hour of Code 2013
+          title: Kod Saatı 2013
           description: ""
         edit-code:
           title: Koda düzəliş et
@@ -524,12 +529,12 @@ az:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: başlanmayıb
+    in_progress: tamamlanmayıb
     completed_too_many_blocks: tamamlanıb, artıq bloklar var
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
-    assessment: assessment
+    assessment: qiymətləndirilir
   studio:
     courses_working_on: Üzərində işlədiyiniz kurslar
     completed_courses: Tamamlanmış kurslar

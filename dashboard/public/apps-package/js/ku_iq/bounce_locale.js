@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var bounce_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,12 +150,12 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
-"bounceBall":function(d){return "bounce ball"},
-"bounceBallTooltip":function(d){return "Bounce a ball off of an object."},
+v:function(d,k){bounce_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).bounce_locale = {
+"bounceBall":function(d){return "تۆپی هەڵبەز"},
+"bounceBallTooltip":function(d){return "تۆپەکە لە دەرەوەی شتێک هەڵبەزێنە."},
 "continue":function(d){return "Continue"},
 "dirE":function(d){return "E"},
 "dirN":function(d){return "N"},
@@ -165,18 +165,18 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "elseCode":function(d){return "else"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "heightParameter":function(d){return "height"},
-"ifCode":function(d){return "if"},
+"ifCode":function(d){return "ئەگەر"},
 "ifPathAhead":function(d){return "if path ahead"},
 "ifTooltip":function(d){return "If there is a path in the specified direction, then do some actions."},
 "ifelseTooltip":function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."},
-"incrementOpponentScore":function(d){return "score opponent point"},
-"incrementOpponentScoreTooltip":function(d){return "Add one to the current opponent score."},
-"incrementPlayerScore":function(d){return "score point"},
-"incrementPlayerScoreTooltip":function(d){return "Add one to the current player score."},
-"isWall":function(d){return "is this a wall"},
-"isWallTooltip":function(d){return "Returns true if there is a wall here"},
-"launchBall":function(d){return "launch new ball"},
-"launchBallTooltip":function(d){return "Launch a ball into play."},
+"incrementOpponentScore":function(d){return "خاڵی رکابەر بەدەست بهێنە"},
+"incrementOpponentScoreTooltip":function(d){return "خاڵێک بۆ رکابەری ئێستا زیاد بکە."},
+"incrementPlayerScore":function(d){return "خاڵی ئەنجام"},
+"incrementPlayerScoreTooltip":function(d){return "خالێک بۆ خاڵەکانی یاریزانی ئێستا زیاد بکە."},
+"isWall":function(d){return "ئایا ئەمە دیوارە"},
+"isWallTooltip":function(d){return "راست دەگەڕێنتەوە ئەگەر تۆپێک لێرە هەبێت"},
+"launchBall":function(d){return "تۆپێکی نوێ بهێنە"},
+"launchBallTooltip":function(d){return "تۆپێک بۆ ناو یارییەکە بهێنە."},
 "makeYourOwn":function(d){return "Make Your Own Bounce Game"},
 "moveDown":function(d){return "move down"},
 "moveDownTooltip":function(d){return "Move the paddle down."},
@@ -217,7 +217,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "repeat until"},
 "repeatUntilBlocked":function(d){return "while path ahead"},
 "repeatUntilFinish":function(d){return "repeat until finish"},
-"scoreText":function(d){return "Score: "+appLocale.v(d,"playerScore")+" : "+appLocale.v(d,"opponentScore")},
+"scoreText":function(d){return "Score: "+bounce_locale.v(d,"playerScore")+" : "+bounce_locale.v(d,"opponentScore")},
 "setBackgroundRandom":function(d){return "set random scene"},
 "setBackgroundHardcourt":function(d){return "set hardcourt scene"},
 "setBackgroundRetro":function(d){return "set retro scene"},

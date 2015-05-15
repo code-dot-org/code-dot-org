@@ -323,21 +323,21 @@ fa-AF:
         maze_wordsearch_k_3: حرکتم بده تا کلمه غرب را هجی کنم
         maze_wordsearch_k_4: حرکتم بده تا کلمه شمال را هجی کنم
         maze_wordsearch_k_6: مرا به شرق و سپس جنوب حرکت بده تا کلمه پرش را هجی کنم
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
+        maze_wordsearch_k_9: مرا به یک جهت حرکت بده، سپس به جهت دیگر تا کلمه کد را هجی کنم
+        maze_wordsearch_k_13: مرا به یک جهت حرکت بده، سپس جهت دیگر تا کلمه ی عیب یابی را هجی کنم
+        maze_wordsearch_k_15: مرا به یک جهت حرکت بده، سپس به جهت دیگر تا کلمه بالا را هجی کنم
+        maze_wordsearch_k_16: مرا به یک جهت حرکت بده، سپس به جهت دیگر تا کلمه زیر را هجی کنم
+        maze_wordsearch_k_20: این یک امتحان است! مرا به یک جهت حرکت بده، سپس به جهت دیگر تا کلمه داستان را هجی کنم
+        applab_ec_simple: برنامه خودتان را با استفاده از بلوک های موجود در جعبه ابزار بسازید.
+        turtle_ec_1_2: 'حالا، یک مربع بکشید. توجه:رنگ مورد علاقه تان را با برداشتنش از داخل بلوک جدید "pencColor" استفاده کنید.'
+        turtle_ec_1_10: 'انجامش دادید! حالا، هرچه می خواهید بکشید. چند ایده ی جالب: یک شکل چوب، دانه ی برف، یا گردباد. همچنین بلوک جدید "penWidth" را امتحان کنید. تفریح کنید!'
         studio_ec_sandbox: بازی خودتان را بسازید. وقتی کارتان تمام شد، روی پایان کلیک کنید تا به دوستانتان اجازه دهید داستان شما را روی موبایلشان امتحان کنند.
     video:
       name:
         maze_intro: معرفی پیچ و خم
         artist_intro: معرفی هنرمند
         farmer_intro: معرفی کشاورز
-        flappy_intro: Flappy Intro
+        flappy_intro: مقدمه فلپی
         loop_times: بلوک تکرار زمان
         loop_until: 'بلوک "Repeat Until"'
         if: 'بلوک "if"'
@@ -348,32 +348,32 @@ fa-AF:
         loop_for: بلوک شمارشگر
         parameters: معادله با پارامترها
         hoc_wrapup: جمع بندی ساعتی با کد
-        Unplug1: What is CS?
+        Unplug1: CS چیست?
         Unplug2: تفکر محاسباتی
         Unplug3: 'برنامه نویسی روی کاغذ شطرنجی '
         Unplug4: الگوریتم
         Unplug5: توابع
         Unplug6: مشروط
-        Unplug7: Songwriting
+        Unplug7: ترانه سرایی
         Unplug8: انتزاع
         Unplug9: برنامه نویسی رله
         Unplug10: اینترنت
         Unplug11: خلاصه
         C1_happy_maps_unplugged: نقشه های شاد
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: حرکت کن، حرکت کن
         C1_bigevent_unplugged: رویداد بزرگ
         C1_getting_loopy: سر گیجه گرفتن
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_pair_programming: برنامه نویسی دوتایی
+        C1_maze_intro_sequencing: مراحل ماز مقدماتی
+        C1_maze_debugging: عیب یابی ماز
+        C1_bee_level_intro: 'مرحله ی زنبور - مقدماتی'
         C1_artist_intro: معرفی هنرمند
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: مقدمه زنبور هجی کننده
         C1_zuck_repeat_loop: حلقه های هزارتو
         C1_bee_loops: حلقه های زنبور عسل
         C1_maze_loops: حلقه های هزارتو
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
+        C1_playlab_storytelling: 'آزمایشگاه بازی - یک بازی بسازید'
+        C1_planting_seed: کاشتن یک بذر
         C1_building_foundation: ساختن یک بنیان
         C1_going_places_safely: با امنیت رفتن
         C2_maze_intro: معرفی پیچ و خم
@@ -384,12 +384,12 @@ fa-AF:
         C2_bee_loops: حلقه های زنبور عسل
         C2_bee_debugging: اشکال زدایی زنبور عسل
         C2_bee_conditionals: شرطی های زنبور عسل
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_playlab_createstory: 'آزمایشگاه بازی - یک بازی بسازید'
         C2_graph_paper: 'برنامه نویسی روی کاغذ شطرنجی '
         C2_conditionals_with_cards: مشروط
         C2_binary_bracelets: دستبند دودویی
         C2_relay_programming: برنامه نویسی رله
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: هواپیماهای کاغذی
         C2_digital_footprint: ردپای دیجیتالی شما
         C2_digital_footprint_v2: ردپای دیجیتالی شما
         C3_maze_level_4: حلقه های هزارتو
@@ -398,68 +398,68 @@ fa-AF:
         C3_bee_functions: توابع زنبور عسل
         C3_bee_conditionals: شرطی های زنبور عسل
         C3_maze_conditionals: شرطی های هزارتو
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
+        C3_artist_nested_loops: حلقه های تو در تو
+        C3_farmer_while: حلقه ها ی While
+        C3_bee_nested_loops: حلقه های تو در تو
         C3_bee_debugging: اشکال زدایی زنبور عسل
         C3_bounce: پریدن
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: 'آزمایشگاه بازی - یک بازی بسازید'
         C3_computational_thinking: تفکر محاسباتی
         C3_dice_race: مسابقۀ تاس انداختن
         C3_internet: اینترنت
         C3_crowdsourcing: کمک گیری جمعی
         C3_functional_suncatchers: نورگیرهای کاربردی
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C3_songwriting_with_parameters: ترانه سرایی با متغیر ها
+        C4_intro: مقدمه
         C4_bee_conditional: شرطی های زنبور عسل
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'متغیرها - هنرمند'
+        C4_variables_playlab: 'متغیرها - آزمایشگاه بازی'
         C4_for_loops: 'حلقه های "برای"'
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: برنامه نویسی هنرمند با ریاضی
+        C4_function_edit: ویرایش تابع ها
+        C4_function_create: ساختن تابع ها
         C4_function_parameters: معادله با پارامترها
         C4_conditionals: مشروط
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_algorithms: الگوریتم با معمای تنگرم
+        C4_unplugged_madlibs: بازی آزادی دیوانه
+        C4_unplugged_variables: متغیر ها در پاکت نامه ها
         C4_unplugged_forloops: 'حلقه های "برای"'
         C4_unplugged_parameters: ترانه نویسی با پارامترها
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
-        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
-        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
-        csp_textcompression: Text compression widget
-        alg_1_intro: 'CS in Algebra - Introduction'
-        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
-        alg_3_pemdas: 'CS in Algebra - Order of Operations'
-        alg_4_data_types: 'CS in Algebra - Data Types'
-        alg_5_contracts: 'CS in Algebra - Contracts'
-        alg_6_variables: 'CS in Algebra - Variables'
-        alg_7_function: 'CS in Algebra - Functions'
-        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
-        alg_9_booleans: 'CS in Algebra - Booleans'
-        alg_10_conditionals: 'CS in Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        C4_unplugged_binary: دو دویی
+        frozen_intro: معرفی ساعت کدزنی
+        frozen_loops: معرفی حلقه ها
+        frozen_functions: معرفی تابع ها
+        playlab_intro: معرفی آزمایشگاه بازی
+        playlab_events: رویداد های آزمایشگاه بازی
+        playlab_repeat_forever: حلق ی تکرار برای همیشه ی آزمایشگاه بازی
+        tutorial_puzzle_challenge: چالش معمای آموزش
+        infinity_playlab_intro: 'آزمایشگاه بازی - معرفی'
+        infinity_playlab_events: 'آزمایشگته بازی - رویداد ها'
+        infinity_playlab_repeat_forever: 'آزمایشگاه بازی - حلقه ی تکرار برای همیشه'
+        csp_concept_rgb: کمی راجع به پیکسل ها
+        csp_pixelation_color_1: 'نرم افزار پیکسل کردن رنگ - قسمت 1'
+        csp_pixelation_color_2: 'نرم افزار پیکسل کردن رنگ - قسمت 2'
+        csp_pixelation_color_3: 'نرم افزار پیکسل کردن رنگ - قسمت 3'
+        csp_pixelation_bw: نرم افزار پیکسل کردن سیاه و سفید
+        csp_U1L14_tipstricks: توصیه ها و ترفند های معلم واحد 1 درس 14
+        csp_textcompression: نرم افزار فشرده سازی متن
+        alg_1_intro: 'CS در جبر - مقدمه'
+        alg_2_eval_block: 'CS در جبر - بلوک های ارزیابی'
+        alg_3_pemdas: 'CS در جبر - ترتیب عملیات'
+        alg_4_data_types: 'CS در جبر - نوع های داده'
+        alg_5_contracts: 'CS در جبر - قراردادها'
+        alg_6_variables: 'CS در جبر - متغیرها'
+        alg_7_function: 'CS در جبر - تابع ها'
+        alg_8_design_recipe: 'CS در جبر - دستور طراحی تابع'
+        alg_9_booleans: 'CS در جبر - دودویی ها'
+        alg_10_conditionals: 'CS در جبر - جملات شرطی'
+        alg_11_coordinate_plane: 'CS در جبر - صفحه ی مختصات'
+        alg_12_biggame_variables: 'CS در جبر - متغیر های بازی بزرگ'
+        alg_13_biggame_animation: 'CS در جبر - انیمیشن بازی بزرگ'
+        alg_14_biggame_booleans: 'CS در جبر - دودویی های بازی بزرگ'
+        alg_15_biggame_update_player: 'CS در جبر - به روز رسانی بازیکن بازی بزرگ'
+        alg_16_biggame_collision_detection: 'CS در جبر - تشخیص برخورد بازی بزرگ'
+        alg_17_sambat_compound_booleans: 'CS در جبر - دودویی های ترکیبی'
     callout:
       text:
         drag_blocks: 'یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان'

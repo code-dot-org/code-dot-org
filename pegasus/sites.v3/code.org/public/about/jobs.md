@@ -11,7 +11,7 @@ nav: about_nav
 - [Hour of Code Campaign Coordinator](#HOC-Temp)
 - [Head of Engineering](#head-engineering)
 - [High School Program Manager](#HS-PM)
-- [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
+- [Regional Program Manager (New York City, Ft. Lauderdale/Miami area)](#reg-PM)
 - [Data Engineer](#data-engineer)
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
@@ -236,11 +236,11 @@ Ideally the position is in Seattle, but for an exceptional candidate working rem
 Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
+## <a name="reg-PM" href="#reg-PM">Regional Program Manager (New York City, Ft. Lauderdale/Miami area)</a>
 
 **Job Summary:** 
 
-Code.org is recruiting for Regional Program Managers in Los Angeles, New York City, and Ft. Lauderdale/Miami areas to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
+Code.org is recruiting for Regional Program Managers in New York City and Ft. Lauderdale/Miami areas to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
 
 **Qualifications:**
 
@@ -253,6 +253,7 @@ Code.org is recruiting for Regional Program Managers in Los Angeles, New York Ci
 Additional desired strengths include:
 
 - Experience working with school districts in a project implementation capacity
+- For New York applicants, established relationship or prior experience with the Department of Education    
 - Recent computer science teaching experience in a K-12 school setting
 - Strong existing connections to the computer science community 
 

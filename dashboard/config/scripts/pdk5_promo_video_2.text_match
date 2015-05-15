@@ -5,7 +5,14 @@ success_title "Awesome!"
 success_body "Thanks for your response"
 height '200'
 markdown <<MARKDOWN
-<iframe width="640" height="390" src="https://www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="390" src="https://youtubeeducation.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/q85v0y83rws4yd1/k5-affiliate-video-09032014.mp4?dl=0)**
+
+<br>
+
 
 #### What are your first impressions of Code Studio?
 MARKDOWN

@@ -1,10 +1,16 @@
-var msg = require('../../locale/current/common');
+var msg = require('../locale');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
  */
 
 var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
+
+/**
+ * @typedef {Object} parameterInfo
+ * @property {String} name
+ * @property {?String} description
+ */
 
 /**
  * Stores a block's tooltip information and helps render it
@@ -55,12 +61,17 @@ var DropletFunctionTooltip = function (functionName) {
     this.signatureOverride = msg[this.signatureOverrideKey()]();
   }
 
-  /** @type {Array.<String>} */
-  this.paramNames = [];
+  /** @type {Array.<parameterInfo>} */
+  this.parameterInfos = [];
 
   var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterKey(paramId))) {
-    this.paramNames.push(msg[this.parameterKey(paramId)]());
+  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+    var paramInfo = {};
+    paramInfo.name = msg[this.parameterNameKey(paramId)]();
+    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
+      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    }
+    this.parameterInfos.push(paramInfo);
     paramId++;
   }
 };
@@ -83,8 +94,16 @@ DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
  * @param {Number} paramIndex
  * @returns {string}
  */
-DropletFunctionTooltip.prototype.parameterKey = function (paramIndex) {
+DropletFunctionTooltip.prototype.parameterNameKey = function (paramIndex) {
   return this.i18nPrefix() + "_param" + paramIndex;
+};
+
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.parameterDescriptionKey = function (paramIndex) {
+  return this.i18nPrefix() + "_param" + paramIndex + '_description';
 };
 
 /**

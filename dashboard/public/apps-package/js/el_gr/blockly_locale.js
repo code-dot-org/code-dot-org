@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.el_gr');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "κλήση";
 Blockly.Msg.ADD = "Πρόσθεσε";
 Blockly.Msg.ADD_COMMENT = "Πρόσθεσε σχόλιο";
@@ -86,7 +84,7 @@ Blockly.Msg.FUNCTION_HEADER = "Συνάρτηση";
 Blockly.Msg.FUNCTIONAL_CREATE = "Νέο μπλοκ";
 Blockly.Msg.FUNCTIONAL_EDIT = "επεξεργάσου";
 Blockly.Msg.FUNCTIONAL_NAME_LABEL = "Όνομα";
-Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Επίλεξε τύπο...";
+Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Επιλέξτε τύπο...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Περιγραφή";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Τομέας";
 Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Όρισε μια λειτουργική µέθοδο";

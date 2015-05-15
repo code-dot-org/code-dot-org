@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var applab_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -26,10 +26,10 @@ var appLocale = {lc:{"ar":function(n){
 },"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){applab_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:(k=applab_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).applab_locale = {
 "catActions":function(d){return "Tegevused"},
 "catControl":function(d){return "Tsüklid"},
 "catEvents":function(d){return "Sündmused"},
@@ -40,7 +40,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "Muutujad"},
 "continue":function(d){return "Jätka"},
 "container":function(d){return "Loo konteiner"},
-"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"containerTooltip":function(d){return "Loob jagamise konteineri ja määrab selle sisemise HTML-i."},
 "finalLevel":function(d){return "Tubli! Sa lahendasid viimase mõistatuse."},
 "nextLevel":function(d){return "Palju õnne! See ülesanne on lahendatud."},
 "no":function(d){return "Ei"},
@@ -49,11 +49,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi oma rakenduse juurde."},
 "repeatForever":function(d){return "korda igavesti"},
 "repeatDo":function(d){return "täida"},
-"repeatForeverTooltip":function(d){return "Teostab ülesandeid selles plokis korduvalt kui rakendus käib."},
+"repeatForeverTooltip":function(d){return "Teostab ülesandeid korduvalt selles plokis, kui rakendus töötab."},
 "shareApplabTwitter":function(d){return "Vaata seda rakendust, mis ma tegin. Kirjutasin selle ise @codeorg-is"},
 "shareGame":function(d){return "Jaga oma rakendust:"},
 "stepIn":function(d){return "Astu sisse"},
 "stepOver":function(d){return "Astu üle"},
 "stepOut":function(d){return "Astu välja"},
-"viewData":function(d){return "Näita infot"},
+"viewData":function(d){return "Vaata infot"},
 "yes":function(d){return "Jah"}};

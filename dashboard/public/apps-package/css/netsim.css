@@ -32,7 +32,18 @@
     bottom: 0;
     left: 330px;
     right: 0;
-    overflow-y: auto; }
+    overflow-y: hidden; }
+  #netsim #netsim-send {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  #netsim #netsim-logs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden; }
   #netsim h1 {
     font-family: "Gotham 5r", sans-serif; }
   #netsim p, #netsim label {

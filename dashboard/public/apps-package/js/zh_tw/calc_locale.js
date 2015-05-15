@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "你的程式造成除數為0。"},
 "emptyComputeBlock":function(d){return "您必須將一塊積木連接到\"計算\"積木。"},
 "equivalentExpression":function(d){return "請嘗試重新排序你的參數，得到完全相同結果。"},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "你的程式回傳的結果不完全正確。"},
 "goal":function(d){return "目標："},
 "levelIncompleteError":function(d){return "你的運算式不符合目標。"},
-"missingFunctionError":function(d){return "你必須定義名為 "+appLocale.v(d,"functionName")+" 的函式。"},
-"missingVariableX":function(d){return "你的運算式少了變數"+appLocale.v(d,"var")+"。"},
+"missingFunctionError":function(d){return "你必須定義名為 "+calc_locale.v(d,"functionName")+" 的函式。"},
+"missingVariableX":function(d){return "你的運算式少了變數"+calc_locale.v(d,"var")+"。"},
 "reinfFeedbackMsg":function(d){return "這裡是你的計算結果！繼續做下去，或移動到下一個謎 ！"},
 "yourExpression":function(d){return "您的運算式："},
 "wrongInput":function(d){return "你用了錯誤的值呼叫你的函數。"},
-"wrongOtherValuesX":function(d){return "如果我們改變"+appLocale.v(d,"var")+"，你的運算式會造成錯誤的值。"},
+"wrongOtherValuesX":function(d){return "如果我們改變"+calc_locale.v(d,"var")+"，你的運算式會造成錯誤的值。"},
 "wrongResult":function(d){return "你的運算式沒有回傳正確的結果。"}};

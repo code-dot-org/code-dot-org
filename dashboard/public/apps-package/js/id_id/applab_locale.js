@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var applab_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -39,10 +39,10 @@ var appLocale = {lc:{"ar":function(n){
 },"hu":function(n){return "other"},"id":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){applab_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:(k=applab_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).applab_locale = {
 "catActions":function(d){return "Aksi"},
 "catControl":function(d){return "Loop"},
 "catEvents":function(d){return "kegiatan"},
@@ -52,7 +52,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Teks"},
 "catVariables":function(d){return "variabel"},
 "continue":function(d){return "Lanjutkan"},
-"container":function(d){return "membuat kontener"},
+"container":function(d){return "membuat wadah"},
 "containerTooltip":function(d){return "Membuat sebagian kontainer dan mengatur di dalam HTML."},
 "finalLevel":function(d){return "Horee! Anda telah memecahkan teka-teki akhir."},
 "nextLevel":function(d){return "Horee! Anda telah menyelesaikan teka-teki ini."},

@@ -64,6 +64,8 @@ ca:
     need_confirmation: No has rebut les instruccions de confirmació?
     need_unlock: No has rebut les instruccions de desbloqueig?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: |-
       Registreu-vos per fer el seguiment del vostre progrés. El correu s'utilitza principalment per a l'inici de sessió i la recuperació de la contrasenya. Per a més informació, mireu la nostra <a href="http://code.org/privacy">Política de privacitat</a>.
     overview_teacher: 'Ensenyeu Informàtica a la vostra classe registrant-vos.<p/> Podreu afegir els vostres estudiants i fer un seguiment dels seus progressos.'
@@ -321,6 +323,7 @@ ca:
     classroom_activity: Activitat sense connexió
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Informació general dels cursos 1, 2 i 3
     lesson_plans: Unitats didàctiques
     signin_message: 'Ja estàs registrat? %{link}'
@@ -488,6 +491,8 @@ ca:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Introdueix la teva resposta aquí
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

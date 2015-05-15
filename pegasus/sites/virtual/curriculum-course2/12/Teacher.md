@@ -113,8 +113,8 @@ Statements that only run under certain conditions
      - If you were, the condition would be true, and you would get the reward.
      - If you weren't, the condition would be false, so the reward woud not apply.
   - Can we come up with another conditional?
-     - If I say "question," you raise your hand
-     - If I sneeze, you say "Gesundheit."
+     - If you can guess my age correctly, the class can give you applause.
+     - If I know an answer, I can raise my hand.
      - What examples can you come up with?
 - Sometimes, we want to have an extra condition, in case the "IF" statement is not true.
   - This extra condition is called an "ELSE" statement

@@ -3,89 +3,89 @@
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Stage 10
-          Artist3: Stage 11
-          Unplug7: Stage 12
-          Farmer2: Stage 13
-          Unplug8: Stage 14
-          Artist4: Stage 15
-          Unplug9: Stage 16
-          Farmer3: Stage 17
-          Unplug10: Stage 18
-          Artist5: Stage 19
-          Unplug11: Stage 20
+          desc: K-8 sissejuhatus arvutiteaduse kursusesse
+          Unplug1: Etapp 1
+          Maze: Etapp 2
+          Unplug2: Etapp 3
+          Unplug3: Etapp 4
+          Artist: Etapp 5
+          Unplug4: Etapp 6
+          Artist2: Etapp 7
+          Unplug5: Etapp 8
+          Farmer: Etapp 9
+          Unplug6: Etapp 10
+          Artist3: Etapp 11
+          Unplug7: Etapp 12
+          Farmer2: Etapp 13
+          Unplug8: Etapp 14
+          Artist4: Etapp 15
+          Unplug9: Etapp 16
+          Farmer3: Etapp 17
+          Unplug10: Etapp 18
+          Artist5: Etapp 19
+          Unplug11: Etapp 20
         Hour of Code:
           desc: Koodi Tund
-          Maze: Stage 1
+          Maze: Etapp 1
         Edit Code:
           desc: Muuda koodi (beeta)
-          MazeEC: Stage 1
+          MazeEC: Etapp 1
         2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Stage 1
+          desc: Bounce (beetaversioon)
+          Bounce: Etapp 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          desc: Kasutaja loodud mõistatused (beetaversioon)
+          Custom: Etapp 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: Etapp 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          desc: Jigsaw (beetaversioon)
+          Jigsaw: Etapp 1
         Step Levels:
           desc: Labürint (beeta)
           MazeStep: Stage Step
         edit-code:
           desc: Muuda koodi (beeta)
-          MazeEC: Stage 1
-          Applab: Stage 2
-          ArtistEC: Stage 3
-          StudioEC: Stage 4
+          MazeEC: Etapp 1
+          Applab: Etapp 2
+          ArtistEC: Etapp 3
+          StudioEC: Etapp 4
         events:
-          desc: Bounce (beta)
-          Bounce: Stage 1
-          Studio: Stage 2
+          desc: Bounce (beetaversioon)
+          Bounce: Etapp 1
+          Studio: Etapp 2
         builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          desc: Kasutaja loodud mõistatused (beetaversioon)
+          Custom: Etapp 1
         flappy:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: Etapp 1
         jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          desc: Jigsaw (beetaversioon)
+          Jigsaw: Etapp 1
         step:
           desc: Labürint (beeta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: Stage 1
+          WordSearch: Etapp 1
     game:
       name:
         Unplug1: Sissejuhatus arvutiõpetusse
         Maze: Labürint
         Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
+        Unplug2: Arvutuslik mõtlemine
         Unplug3: Graph Paper Programming
-        Artist: The Artist
+        Artist: Kunstnik
         Unplug4: Algoritmid
-        Artist2: The Artist 2
+        Artist2: Kunstnik tase 2
         Unplug5: Funktsioonid
-        Farmer: The Farmer
+        Farmer: Talunik
         Unplug6: Tingimuslaused
-        Artist3: The Artist 3
+        Artist3: Kunstnik tase 3
         Unplug7: Laulu kirjutamine
-        Farmer2: The Farmer 2
+        Farmer2: Talunik tase 2
         Unplug8: Abstraction
         Artist4: The Artist 4
         Unplug9: Relay Programming
@@ -99,21 +99,21 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
-        ArtistEC: The Artist
+        Webapp: Rakenduste labor
+        ArtistEC: Kunstnik
         TextMatch: Text Match
         StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Rakenduste labor
+        NetSim: Interneti simulaator
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Pronks
+        Silver: Hõbe
+        Gold: Kuld
     concept:
       description:
         sequence: Sequence
-        if: If block
+        if: '"kui" plokk'
         if_else: If-else block
         loop_times: Repeat times block
         loop_until: Repeat until block
@@ -184,15 +184,15 @@
           The colors will be different every time.
         turtle_1_9: Can you figure out what number to replace the question marks with
           to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a
-          stick figure, snowflake, or spiral. Also try the new "set width" block.
-          Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only
-          3 blocks? Hint: use a "repeat" block.'
+        turtle_1_10: 'Sa said sellega hakkama. Nüüd võid joonistada mida ise tahad.
+          Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada
+          uut "määra laius" plokki. Lõbutsege!'
+        turtle_4_1: 'Kas sa saad joonistada kolmnurga, (külgedega 100 pikslit) kasutades
+          ainult kolme plokki? Vihje: kasuta "korda" plokki.'
         turtle_4_2: Add a "turn right by 90 degrees" block somewhere in the middle
           of the program already out on the workspace to draw these triangles.
-        turtle_4_3: Ok, here's the code you wrote to draw a single triangle. Can you
-          add a "repeat" and "turn" block to make a pretty flower?
+        turtle_4_3: Okei, siin on kood mille sa kirjutasid ühe kolmnurga joonistamiseks.
+          Kas sa saad ilusa lille joonistamiseks lisada "korda" ja "pööra" ploki?
         turtle_4_4: 'Here''s the same code from the previous puzzle, but turning only
           36 degrees after drawing each triangle. How many times does this need to
           repeat? (Hint: after 360 degrees of turning the drawing will come full circle)'
@@ -316,19 +316,19 @@
           Use this modified function to draw three houses.
         turtle_3_9: Can you re-create the "draw a house" function without help? Try
           it, and then draw a row of houses.
-        turtle_3_10: You've learned a lot! Now use it to draw whatever you want. Try
-          to draw a star, or a spiral, or a fancy snowflake.
-        maze_karel_debug_seq_1: Welcome to debugging! My code doesn't work right.
-          Can you spot the problem and fix it so that I can get my field flat and
-          ready for planting?
-        maze_karel_debug_seq_2: What's wrong with this program? How should you fix
-          it so I can remove that pile?
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice
-          and flat.
-        maze_karel_debug_while: How should you change this program to help me fill
-          the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely
-          flat.
+        turtle_3_10: Oled palju õppinud! Kasuta õpitut millegi huvitava joonistamiseks.
+          Proovi joonistada täht, spiraal või lumehelves.
+        maze_karel_debug_seq_1: Tere tulemast koodi silumisse! Minu kood ei tööta
+          õigesti. Kas sa leiaksid probleemi ja parandaksid selle, nii et ma saaksin
+          oma põllu siledaks ning istutamiseks valmis?
+        maze_karel_debug_seq_2: MIs sellel programmil viga on? Kuidas sa peaksid seda
+          parandama, et see eemaldaks selle kuhja?
+        maze_karel_debug_repeat: Paranda seda programmi nii et minu põld oleks kena
+          ja sile.
+        maze_karel_debug_while: Kuidas peaksid sa seda programmi muutma et aidata
+          mul täita see auk?
+        maze_karel_debug_if: Appi! Paranda seda programm nii, et minu põld oleks täiesti
+          sile.
         maze_karel_debug_if_else: De-bug this program so I can fill in the holes and
           remove all the piles.
         maze_karel_debug_function_1: What should you change about this program to
@@ -402,10 +402,10 @@
         flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
           obstacles. Add to the "when pass an obstacle" block, and then score a point
           by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
+        flappy_6: Vaata kas sa ikka suudad punkte saada, kui paned Flappy vähemal
+          või rohkemal määral tiibu lehvitama.
+        flappy_7: Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki "kui
+          käib" plokile.
         flappy_8: You can set visuals anytime, not just when the game starts. Try
           setting a RANDOM scene when other events happen, for example, when passing
           an obstacle.
@@ -428,23 +428,23 @@
           past obstacles. Add to the "when pass an obstacle" block, and then score
           a point by flying Flappy through the first set of pipes.
         flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
+        flappy_k1_8: Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki
+          "kui käib" plokile.
         flappy_k1_9: Try changing the player by attaching a "set player" block to
           the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
+        jigsaw_1: Kliki plokil
+        jigsaw_2: Lohista plokk sihtmärgile
+        jigsaw_3: Korrasta plokke, et tekiks pilt
+        jigsaw_4: Korrasta plokke, et tekiks pilt
+        jigsaw_5: Korrasta plokke, et tekiks pilt
+        jigsaw_6: Korrasta plokke, et tekiks pilt
+        jigsaw_7: Korrasta plokke, et tekiks pilt
+        jigsaw_8: Korrasta plokke, et tekiks pilt
+        jigsaw_9: Korrasta plokke, et tekiks pilt
+        jigsaw_10: Korrasta plokke, et tekiks pilt
+        jigsaw_11: Korrasta plokke, et tekiks pilt
+        jigsaw_12: Korrasta plokke, et tekiks pilt
+        jigsaw_13: Paranda pusle!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
@@ -562,7 +562,7 @@
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: Computational Thinking
+        Unplug2: Arvutuslik mõtlemine
         Unplug3: Graph Paper Programming
         Unplug4: Algoritmid
         Unplug5: Funktsioonid
@@ -617,7 +617,7 @@
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Computational Thinking
+        C3_computational_thinking: Arvutuslik mõtlemine
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing

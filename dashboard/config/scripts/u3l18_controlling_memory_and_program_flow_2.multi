@@ -1,0 +1,12 @@
+name 'U3L18 Controlling Memory and Program Flow 2'
+title 'Controlling Memory and Control Quiz'
+description 'Select the programming technique that best fits the described game feature.'
+question '2. You want to see various motivational messages based upon the score.'
+wrong 'conditional'
+wrong 'variable'
+right 'both'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

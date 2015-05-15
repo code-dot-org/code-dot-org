@@ -66,6 +66,8 @@
     need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
     need_unlock: আনলক করার নির্দেশাবলী পাওনি?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: আপনার উন্নতি সম্পর্কে জানার জন্য সাইন আপ করার মাধ্যমে একটি একাউন্ট
       তৈরি করুন। প্রাথমিকভাবে আপনাকে লগ ইন করতে দেয়া এবং পাসওয়ার্ড উদ্ধার করার জন্য
       আপনার ইমেইল ঠিকানাটি ব্যবহৃত হবে। বিস্তারিত তথ্যের জন্য <a href="http://code.org/privacy">গোপনীয়তা
@@ -367,6 +369,7 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
@@ -564,6 +567,8 @@
       in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: ঠিক আছে
   time:

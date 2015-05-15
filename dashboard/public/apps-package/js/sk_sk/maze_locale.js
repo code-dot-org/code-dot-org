@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "pri uli"},
 "atFlower":function(d){return "pri kvetine"},
 "avoidCowAndRemove":function(d){return "Vyhnite sa krave a odstráňte 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "vykonaj"},
 "elseCode":function(d){return "ináč"},
 "fill":function(d){return "vyplniť 1"},
-"fillN":function(d){return "vyplniť "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "vyplniť naraz "+appLocale.v(d,"shovelfuls")+" jamy"},
+"fillN":function(d){return "vyplniť "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "vyplniť naraz "+maze_locale.v(d,"shovelfuls")+" jamy"},
 "fillSquare":function(d){return "vyplniť štvorec"},
 "fillTooltip":function(d){return "Polož jednu jednotku špiny"},
 "finalLevel":function(d){return "Gratulujem! Vyriešil si poslednú úlohu."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "tu je hromada"},
 "putdownTower":function(d){return "polož vežu"},
 "removeAndAvoidTheCow":function(d){return "odstráň 1 a vyhni sa krave"},
-"removeN":function(d){return "odstránte "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "odstránte "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "odstránte hromadu"},
-"removeStack":function(d){return "odstránte naraz "+appLocale.v(d,"shovelfuls")+" hromady"},
+"removeStack":function(d){return "odstránte naraz "+maze_locale.v(d,"shovelfuls")+" hromady"},
 "removeSquare":function(d){return "odstrániť štvorec"},
 "repeatCarefullyError":function(d){return "Aby ste toto vyriešeili, starostlivo popremyšlajte o dalšich dvoch ťahoch a odbočke ktoré pridáte do bloku \"opakovať\".  To je v poriadku ak máte na konci odbočku navyše."},
 "repeatUntil":function(d){return "opakovať dokiaľ"},

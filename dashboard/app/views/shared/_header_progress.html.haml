@@ -14,7 +14,11 @@
 .header_popup
   .header_popup_scrollable
     .header_popup_header
-      %span= t('nav.popup.progress')
+      %span
+        - if @user
+          = t('nav.popup.progress_for_user', name: @user.name)
+        - else
+          = t('nav.popup.progress')
       .header_text{style: 'float: right;'}
     .header_popup_body
       .loading

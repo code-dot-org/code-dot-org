@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({113:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({128:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Maze = require('./maze');
@@ -16,8 +16,9 @@ window.mazeMain = function(options) {
   appMain(window.Maze, levels, options);
 };
 
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":104,"./levels":112,"./maze":114,"./skins":118}],118:[function(require,module,exports){
+},{"../appMain":5,"./blocks":118,"./levels":126,"./maze":129,"./skins":133}],133:[function(require,module,exports){
 /**
  * Load Skin for Maze.
  */
@@ -229,7 +230,8 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":209,"../utils":255}],114:[function(require,module,exports){
+
+},{"../skins":225,"../utils":273}],129:[function(require,module,exports){
 /**
  * Blockly Apps: Maze
  *
@@ -256,7 +258,7 @@ exports.load = function(assetUrl, id) {
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
+var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -739,6 +741,10 @@ function resetDirtImages(running) {
  * Initialize Blockly and the maze.  Called on page load.
  */
 Maze.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  studioApp.reset = this.reset.bind(this);
+
   var extraControlRows = null;
 
   skin = config.skin;
@@ -976,7 +982,7 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Maze.reset = function(first) {
   if (Maze.bee) {
     // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
@@ -1105,7 +1111,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Maze.runButtonClick = function() {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');
@@ -2040,7 +2046,8 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/current/common":260,"../StudioApp":4,"../codegen":57,"../dom":60,"../dropletUtils":61,"../templates/page.html.ejs":234,"../timeoutList":240,"../utils":255,"./api":100,"./bee":101,"./beeItemDrawer":103,"./controls.html.ejs":105,"./dirtDrawer":106,"./dropletConfig":107,"./executionInfo":108,"./extraControlRows.html.ejs":109,"./mazeUtils":115,"./scrat":117,"./tiles":120,"./visualization.html.ejs":125,"./wordsearch":126}],126:[function(require,module,exports){
+
+},{"../StudioApp":4,"../codegen":67,"../dom":70,"../dropletUtils":71,"../locale":112,"../templates/page.html.ejs":251,"../timeoutList":257,"../utils":273,"./api":114,"./bee":115,"./beeItemDrawer":117,"./controls.html.ejs":119,"./dirtDrawer":120,"./dropletConfig":121,"./executionInfo":122,"./extraControlRows.html.ejs":123,"./mazeUtils":130,"./scrat":132,"./tiles":135,"./visualization.html.ejs":140,"./wordsearch":141}],141:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -2293,7 +2300,8 @@ WordSearch.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":255,"./mazeUtils":115,"./tiles":120}],125:[function(require,module,exports){
+
+},{"../utils":273,"./mazeUtils":130,"./tiles":135}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2313,7 +2321,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],117:[function(require,module,exports){
+},{"ejs":283}],132:[function(require,module,exports){
 var SquareType = require('./tiles').SquareType;
 var Direction = require('./tiles').Direction;
 var utils = require('../utils');
@@ -2426,14 +2434,15 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };
 
-},{"../utils":255,"./tiles":120}],112:[function(require,module,exports){
+
+},{"../utils":273,"./tiles":135}],126:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var mazeMsg = require('../../locale/current/maze');
+var mazeMsg = require('./locale');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
@@ -3060,7 +3069,8 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/current/maze":264,"../block_utils":29,"../utils":255,"./karelLevels":110,"./requiredBlocks":116,"./startBlocks.xml.ejs":119,"./tiles":120,"./toolboxes/maze.xml.ejs":124,"./wordsearchLevels":127}],127:[function(require,module,exports){
+
+},{"../block_utils":37,"../utils":273,"./karelLevels":124,"./locale":127,"./requiredBlocks":131,"./startBlocks.xml.ejs":134,"./tiles":135,"./toolboxes/maze.xml.ejs":139,"./wordsearchLevels":142}],142:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3300,7 +3310,8 @@ module.exports = {
 
 };
 
-},{"../block_utils":29,"./requiredBlocks":116,"./tiles":120}],124:[function(require,module,exports){
+
+},{"../block_utils":37,"./requiredBlocks":131,"./tiles":135}],139:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3320,7 +3331,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],119:[function(require,module,exports){
+},{"ejs":283}],134:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3340,7 +3351,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],116:[function(require,module,exports){
+},{"ejs":283}],131:[function(require,module,exports){
 var requiredBlockUtils = require('../required_block_utils');
 
 var MOVE_FORWARD = {'test': 'moveForward', 'type': 'maze_moveForward'};
@@ -3368,12 +3379,13 @@ module.exports = {
   FOR_LOOP: FOR_LOOP
 };
 
-},{"../required_block_utils":207}],110:[function(require,module,exports){
+
+},{"../required_block_utils":223}],124:[function(require,module,exports){
 /*jshint multistr: true */
 
 var levelBase = require('../level_base');
 var Direction = require('./tiles').Direction;
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
 //TODO: Fix hacky level-number-dependent toolbox.
@@ -4618,7 +4630,8 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/maze":264,"../block_utils":29,"../level_base":98,"./karelStartBlocks.xml.ejs":111,"./tiles":120,"./toolboxes/karel1.xml.ejs":121,"./toolboxes/karel2.xml.ejs":122,"./toolboxes/karel3.xml.ejs":123}],123:[function(require,module,exports){
+
+},{"../block_utils":37,"../level_base":111,"./karelStartBlocks.xml.ejs":125,"./locale":127,"./tiles":135,"./toolboxes/karel1.xml.ejs":136,"./toolboxes/karel2.xml.ejs":137,"./toolboxes/karel3.xml.ejs":138}],138:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4632,7 +4645,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var msg = require('../../../locale/current/common');
+var msg = require('../../locale');
 
 /**
  * Add the procedures category to the toolbox.
@@ -4651,7 +4664,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/current/common":260,"ejs":276}],122:[function(require,module,exports){
+},{"../../locale":112,"ejs":283}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4665,8 +4678,8 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var commonMsg = require('../../../locale/current/common');
-var mazeMsg = require('../../../locale/current/maze');
+var commonMsg = require('../../locale');
+var mazeMsg = require('.././locale');
 
 var addProcedures = function() {; buf.push('  ');6; if (level > 3) {; buf.push('    <category name="', escape((6,  commonMsg.catProcedures() )), '" custom="PROCEDURE"></category>\n  ');7; } else if (level == 2 || level == 3) {; buf.push('    <category name="', escape((7,  commonMsg.catProcedures() )), '">\n      <block type="procedures_callnoreturn">\n        <mutation name="', escape((9,  mazeMsg.fillN({shovelfuls: 5}) )), '"></mutation>\n      </block>\n    </category>\n  ');12; }; buf.push('  ');12; if (level < 9) {; buf.push('    <category name="', escape((12,  commonMsg.catLogic() )), '">\n      <block type="karel_if"></block>\n    </category>\n  ');15; } else if (level > 8) {; buf.push('    <category name="', escape((15,  commonMsg.catLogic() )), '">\n      <block type="karel_if"></block>\n      <block type="karel_ifElse"></block>\n    </category>\n  ');19; }; buf.push('');19; };; buf.push('\n<xml id="toolbox" style="display: none;">\n  <category name="', escape((21,  commonMsg.catActions() )), '">\n    <block type="maze_moveForward"></block>\n    <block type="maze_turn"><title name="DIR">turnLeft</title></block>\n    <block type="maze_turn"><title name="DIR">turnRight</title></block>\n    <block type="maze_dig"></block>\n    <block type="maze_fill"></block>\n  </category>\n  ');28; addProcedures(); buf.push('  <category name="', escape((28,  commonMsg.catLoops() )), '">\n    <block type="maze_untilBlocked"></block>\n    <block type="controls_repeat"></block>\n  </category>\n</xml>\n'); })();
 } 
@@ -4676,7 +4689,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/current/common":260,"../../../locale/current/maze":264,"ejs":276}],121:[function(require,module,exports){
+},{"../../locale":112,".././locale":127,"ejs":283}],136:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4696,7 +4709,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],111:[function(require,module,exports){
+},{"ejs":283}],125:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4710,7 +4723,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 
 /**
  * Template to create function for filling in shovels.
@@ -4727,7 +4740,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":264,"ejs":276}],109:[function(require,module,exports){
+},{"./locale":127,"ejs":283}],123:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4739,7 +4752,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/maze') ; buf.push('\n<div id="spelling-table-wrapper">\n  <table id="spelling-table" class="float-right">\n    <tr>\n      <td class="spellingTextCell">', escape((5,  msg.word() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="searchWord" class="spellingButton" disabled>\n          ');8; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+ buf.push('');1; var msg = require('./locale') ; buf.push('\n<div id="spelling-table-wrapper">\n  <table id="spelling-table" class="float-right">\n    <tr>\n      <td class="spellingTextCell">', escape((5,  msg.word() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="searchWord" class="spellingButton" disabled>\n          ');8; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
 ; buf.push('\n          <img src="', escape((9,  assetUrl('media/1x1.gif') )), '"/>', escape((9,  searchWord )), '\n        </button>\n      </td>\n    </tr>\n    <tr>\n      <td class="spellingTextCell">', escape((14,  msg.youSpelled() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="currentWord" class="spellingButton" disabled>\n          ');17; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
 ; buf.push('\n          <img src="', escape((18,  assetUrl('media/1x1.gif') )), '"><span id="currentWordContents"></span>\n        </button>\n      </td>\n    </tr>\n  </table>\n</div>\n'); })();
 } 
@@ -4749,7 +4762,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":264,"ejs":276}],108:[function(require,module,exports){
+},{"./locale":127,"ejs":283}],122:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -4875,8 +4888,9 @@ ExecutionInfo.prototype.checkTimeout = function() {
   }
 };
 
-},{"../utils":255}],107:[function(require,module,exports){
-var msg = require('../../locale/current/maze');
+
+},{"../utils":273}],121:[function(require,module,exports){
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Movement' },
@@ -4891,7 +4905,8 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/maze":264}],105:[function(require,module,exports){
+
+},{"./locale":127}],119:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4903,7 +4918,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/maze') ; buf.push('\n\n<button id="stepButton" class="launch ', escape((3,  showStepButton ? '' : 'hide' )), ' float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+ buf.push('');1; var msg = require('./locale') ; buf.push('\n\n<button id="stepButton" class="launch ', escape((3,  showStepButton ? '' : 'hide' )), ' float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
 ; buf.push('\n  <img src="', escape((5,  assetUrl('media/1x1.gif') )), '">', escape((5,  msg.step() )), '\n</button>\n\n'); })();
 } 
 return buf.join('');
@@ -4912,7 +4927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":264,"ejs":276}],104:[function(require,module,exports){
+},{"./locale":127,"ejs":283}],118:[function(require,module,exports){
 /**
  * Blockly Demo: Maze
  *
@@ -4938,8 +4953,8 @@ return buf.join('');
  */
 'use strict';
 
-var msg = require('../../locale/current/maze');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 var mazeUtils = require('./mazeUtils');
@@ -5322,7 +5337,8 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/current/common":260,"../../locale/current/maze":264,"../block_utils":29,"../codegen":57,"./beeBlocks":102,"./mazeUtils":115}],103:[function(require,module,exports){
+
+},{"../block_utils":37,"../codegen":67,"../locale":112,"./beeBlocks":116,"./locale":127,"./mazeUtils":130}],117:[function(require,module,exports){
 /*jshint -W086 */
 
 var DirtDrawer = require('./dirtDrawer');
@@ -5609,7 +5625,8 @@ BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
   }
 };
 
-},{"../utils":255,"./dirtDrawer":106,"./mazeUtils":115}],106:[function(require,module,exports){
+
+},{"../utils":273,"./dirtDrawer":120,"./mazeUtils":130}],120:[function(require,module,exports){
 var cellId = require('./mazeUtils').cellId;
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
@@ -5722,7 +5739,8 @@ DirtDrawer.__testonly__ = {
 };
 /* end-test-block */
 
-},{"./mazeUtils":115}],115:[function(require,module,exports){
+
+},{"./mazeUtils":130}],130:[function(require,module,exports){
 /**
  * Generalized function for generating ids for cells in a table
  */
@@ -5744,12 +5762,13 @@ exports.isScratSkin = function (skinId) {
   return (/scrat/).test(skinId);
 };
 
-},{}],102:[function(require,module,exports){
+
+},{}],116:[function(require,module,exports){
 /**
  * Blocks specific to Bee
  */
 
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
@@ -5977,7 +5996,8 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 }
 
-},{"../../locale/current/maze":264,"../block_utils":29,"../codegen":57}],100:[function(require,module,exports){
+
+},{"../block_utils":37,"../codegen":67,"./locale":127}],114:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var MoveDirection = tiles.MoveDirection;
@@ -6282,7 +6302,8 @@ exports.honeyCreated = API_FUNCTION(function (id) {
   return Maze.bee.honey_;
 });
 
-},{"../utils":255,"./bee":101,"./tiles":120}],120:[function(require,module,exports){
+
+},{"../utils":273,"./bee":115,"./tiles":135}],135:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -6345,9 +6366,10 @@ Tiles.constrainDirection4 = function(d) {
   return utils.mod(d, 4);
 };
 
-},{"../utils":255}],101:[function(require,module,exports){
+
+},{"../utils":273}],115:[function(require,module,exports){
 var utils = require('../utils');
-var mazeMsg = require('../../locale/current/maze');
+var mazeMsg = require('./locale');
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 
@@ -6760,6 +6782,10 @@ Bee.prototype.animateMakeHoney = function () {
   this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
 };
 
-},{"../../locale/current/maze":264,"../constants.js":59,"../utils":255}],264:[function(require,module,exports){
-/*maze*/ module.exports = window.blockly.appLocale;
-},{}]},{},[113]);
+
+},{"../constants.js":69,"../utils":273,"./locale":127}],127:[function(require,module,exports){
+// locale for maze
+module.exports = window.blockly.maze_locale;
+
+
+},{}]},{},[128]);

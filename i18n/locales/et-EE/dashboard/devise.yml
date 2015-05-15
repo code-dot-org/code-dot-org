@@ -1,29 +1,29 @@
 et:
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
+      confirmed: Teie e-posti aadress kinnitati edukalt.
       send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
       send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
       already_authenticated: Sa oled juba sisse logitud.
       inactive: Sinu konto ei ole veel aktiveeritud.
       invalid: Invalid email or password.
-      invalid_token: Invalid authentication token.
+      invalid_token: Sobimatu autentimisluba.
       locked: Sinu konto on suletud.
       not_found_in_database: Invalid email or password.
-      timeout: Your session expired, please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      timeout: Teie seanss on lõppenud, logige uuesti sisse et jätkata.
+      unauthenticated: Enne jätkamist pead sisse logima või registreeruma.
+      unconfirmed: Enne jätkamist pead oma kasutajakonto kinnitama.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: Code.org-i kinnitamise juhised
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: Code.org-i parooli lähtestus juhised
       unlock_instructions:
         subject: Unlock Instructions
     omniauth_callbacks:
       failure: 'Could not authenticate you from %{kind} because "%{reason}".'
-      success: 'Successfully authenticated from %{kind} account.'
+      success: 'Edukalt kinnitatud %{kind} konto.'
     passwords:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
       send_instructions: You will receive an email with instructions about how to reset your password in a few minutes.
@@ -53,24 +53,24 @@ et:
       not_found: not found
       not_locked: was not locked
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        one: '1 viga keelas %{resource} salvestamast:'
+        other: '%{count} viga ei lasknud seda %{resource} salvestada:'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
+      send_instructions: 'Kutse on saadetud %{email}.'
       invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
+      updated: Parool on edukalt seatud. Nüüd olete sisse logitud.
       no_invitations_remaining: No invitations remaining
       invitation_removed: Your invitation was removed.
       new:
         header: Send invitation
-        submit_button: Send an invitation
+        submit_button: Saada kutse
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Määra oma parool
+        submit_button: Määra minu parool
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Kutse juhised
+        hello: 'Tere %{email}'
+        someone_invited_you: 'Keegi on teid kutsunud %{url}-i, saate kinnitada selle alloleva lingi kaudu.'
+        accept: Nõustu kutsega
+        ignore: 'Kui sa ei taha selle kutsega nõustuda siis võid seda e-posti ignoreerida.<br />Sulle ei looda kontot kuni pöördude allolevale lingile ja seate enda parooli.'

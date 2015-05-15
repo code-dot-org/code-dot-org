@@ -64,6 +64,8 @@
     need_confirmation: 沒有收到確認說明嗎？
     need_unlock: 沒有收到解鎖說明嗎？
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 報名參加一個帳戶來跟蹤您的進度。您的電子郵件是主要用來讓您登錄和密碼恢復。更多的資訊，請參閱我們的 <a href="HTTP://code.org/privacy">
       隱私政策</a>。
     overview_teacher: 通過註冊帳號開始在您的教室裡教資訊科學。 <p/>您將能夠將學生加入，並追蹤他們的學習進度。
@@ -329,6 +331,7 @@
     classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: 課程 1, 2, 及 3 導論
     lesson_plans: 課程計畫
     signin_message: 已經註冊了? %{link}
@@ -517,6 +520,8 @@
       in the wrong order.
   text_match:
     placeholder: 在這裡輸入你的答案
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: 確定
   time:

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var applab_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -26,10 +26,10 @@ var appLocale = {lc:{"ar":function(n){
 }},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){applab_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:(k=applab_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).applab_locale = {
 "catActions":function(d){return "Akce"},
 "catControl":function(d){return "Smyčky"},
 "catEvents":function(d){return "Události"},
@@ -39,8 +39,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Proměnné"},
 "continue":function(d){return "Pokračovat"},
-"container":function(d){return "create container"},
-"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"container":function(d){return "vytvořit kontejner"},
+"containerTooltip":function(d){return "Vytvoří oddělený kontejner a nastaví jeho vnitřní HTML kód."},
 "finalLevel":function(d){return "Dobrá práce! Vyřešil si poslední hádanku."},
 "nextLevel":function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."},
 "no":function(d){return "Ne"},
@@ -51,7 +51,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatDo":function(d){return "dělej"},
 "repeatForeverTooltip":function(d){return "Provést akce v tomto bloku opakovaně za běhu aplikace."},
 "shareApplabTwitter":function(d){return "Podívejte se na aplikaci, kterou jsem udělal. Napsal jsem to sám s @codeorg"},
-"shareGame":function(d){return "Sdílejte své aplikace:"},
+"shareGame":function(d){return "Sdílejte svoji aplikaci:"},
 "stepIn":function(d){return "Krok"},
 "stepOver":function(d){return "Krok přes"},
 "stepOut":function(d){return "Krok ven"},

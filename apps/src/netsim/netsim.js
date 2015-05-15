@@ -18,7 +18,8 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
+var _ = utils.getLodash();
+var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -186,7 +187,7 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootController(this);
+  netsimGlobals.setRootControllers(this.studioApp_, this);
 
   /**
    * Skin for the loaded level
@@ -381,6 +382,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
+  window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
 };
 
 /**
@@ -388,7 +390,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * are abandoning if they navigate away from the page.
  *
  * This event has some weird special properties and inconsistent behavior
- * across browsers.
+ * across browsers
  *
  * See:
  * https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
@@ -403,6 +405,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * @private
  */
 NetSim.prototype.onBeforeUnload_ = function (event) {
+  if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+    return;
+  }
+
   // No need to warn about navigating away if the student is not connected,
   // or is still in the lobby.
   if (this.isConnectedToRemote()) {
@@ -475,18 +481,16 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  * @private
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
-  NetSimLocalClientNode.create(this.shard_, function (err, node) {
+  NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
+      onComplete(err, null);
       return;
     }
 
-    node.setDisplayName(displayName);
     node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
     node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
-    node.update(function (err) {
-      onComplete(err, node);
-    });
+    onComplete(err, node);
   }.bind(this));
 };
 
@@ -498,7 +502,8 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
-  this.shardChange.notifyObservers(null, null);
+  // Don't notify observers, this should only be used when navigating away
+  // from the page.
 };
 
 /**
@@ -659,6 +664,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
   this.visualization_.setEncodings(newEncodings);
+  this.updateLayout();
 };
 
 /**
@@ -980,6 +986,8 @@ NetSim.prototype.render = function () {
     // Render lobby
     this.lobby_.render();
   }
+
+  this.updateLayout();
 };
 
 /**
@@ -1144,11 +1152,11 @@ NetSim.prototype.cleanShardNow = function () {
  * cleaned up.
  */
 NetSim.prototype.expireHeartbeat = function () {
-  if (!(this.myNode && this.myNode.heartbeat_)) {
+  if (!(this.myNode && this.myNode.heartbeat)) {
     return;
   }
 
-  this.myNode.heartbeat_.spoofExpired();
+  this.myNode.heartbeat.spoofExpired();
   logger.info("Local node heartbeat is now expired.");
 };
 
@@ -1168,4 +1176,50 @@ NetSim.prototype.animateSetWireState = function (newState) {
  */
 NetSim.prototype.animateReadWireState = function (newState) {
   this.visualization_.animateReadWireState(newState);
+};
+
+/**
+ * Specifically, update the layout of the right column when connected,
+ * and change how the three panels there (received log, sent log, send controls)
+ * share the current vertical space in the viewport.
+ *
+ * We're trying to use the following rules:
+ *
+ * 1. The send controls panel is fixed to the bottom of the viewport, and will
+ *    size upwards to fit its contents up to a maximum height.
+ * 2. The log widgets use the remaining vertical space
+ *    a) If only one log widget is open, it fills the vertical space (except
+ *       leaves enough room to see the other header)
+ *    b) If both log widgets are open, they share the vertical space 50/50
+ *    c) If both log widgets are closed, they float at the top of the space.
+ */
+NetSim.prototype.updateLayout = function () {
+  var rightColumn = $('#netsim-rightcol');
+  var sendPanel = $('#netsim-send');
+  var logWrap = $('#netsim-logs');
+  if (!rightColumn.is(':visible')) {
+    return;
+  }
+
+  // Right column wrapper and the send panel are both sized by CSS
+  var rightColumnHeight = rightColumn.height();
+  var sendPanelHeight = sendPanel.height();
+  var logsSharedVerticalSpace = rightColumnHeight - sendPanelHeight;
+
+  var showingSent = !this.sentMessageLog_.isMinimized();
+  var showingReceived = !this.receivedMessageLog_.isMinimized();
+  if (showingReceived && showingSent) {
+    var halfHeight = Math.floor(logsSharedVerticalSpace / 2);
+    this.receivedMessageLog_.setHeight(halfHeight);
+    this.sentMessageLog_.setHeight(halfHeight);
+  } else if (showingReceived) {
+    this.receivedMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.sentMessageLog_.getHeight()));
+  } else if (showingSent) {
+    this.sentMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.receivedMessageLog_.getHeight()));
+  }
+
+  // Manually adjust the logwrap to the remaining height
+  logWrap.css('height', rightColumnHeight - sendPanelHeight);
 };

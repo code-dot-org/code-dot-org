@@ -6,7 +6,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -337,15 +337,17 @@ StudioApp.prototype.init = function(config) {
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    aniGifPreview.onclick = _.bind(function() {
-      this.showInstructions_(config.level, false);
-    }, this);
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
   } else {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'none';
   }
+
+  var bubble = document.getElementById('bubble');
+  dom.addClickTouchEvent(bubble, _.bind(function() {
+    this.showInstructions_(config.level, false);
+  }, this));
 
   if (this.editCode) {
     this.handleEditCode_({
@@ -354,7 +356,8 @@ StudioApp.prototype.init = function(config) {
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject
+      afterInject: config.afterInject,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
 
@@ -364,10 +367,18 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    vizResizeBar.addEventListener('mousedown',
-                                  _.bind(this.onMouseDownVizResizeBar, this));
+    dom.addMouseDownTouchEvent(vizResizeBar,
+                               _.bind(this.onMouseDownVizResizeBar, this));
+
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
     document.body.addEventListener('mouseup',
                                    _.bind(this.onMouseUpVizResizeBar, this));
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     _.bind(this.onMouseUpVizResizeBar, this));
+    }
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -799,6 +810,11 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (this.mouseMoveTouchEventName) {
+      document.body.addEventListener(this.mouseMoveTouchEventName,
+                                     this.onMouseMoveBoundHandler);
+    }
 
     event.preventDefault();
   }
@@ -866,6 +882,10 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    if (this.mouseMoveTouchEventName) {
+      document.body.removeEventListener(this.mouseMoveTouchEventName,
+                                        this.onMouseMoveBoundHandler);
+    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -1272,7 +1292,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
-  
+
     /* jshint ignore:start */
     ace = window.ace;
     /* jshint ignore:end */
@@ -1291,9 +1311,13 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
+      var functionsFilter = null;
+      if (options.autocompletePaletteApisOnly) {
+         functionsFilter = options.codeFunctions;
+      }
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({

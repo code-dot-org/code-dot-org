@@ -193,7 +193,6 @@ en:
       4-5 Artist 9_instruction: crwdns34073:0crwdne34073:0
       4-5 Artist Assessment 1_instruction: crwdns34074:0crwdne34074:0
       4-5 Artist For Loops 1_instruction: crwdns34075:0crwdne34075:0
-      4-5 Artist For Loops 10_instruction: crwdns34076:0crwdne34076:0
       4-5 Artist For Loops 11_instruction: crwdns34077:0crwdne34077:0
       4-5 Artist For Loops 12_instruction: crwdns34078:0crwdne34078:0
       4-5 Artist For Loops 13_instruction: crwdns34079:0crwdne34079:0
@@ -207,7 +206,6 @@ en:
       4-5 Artist For Loops 7_instruction: crwdns34087:0crwdne34087:0
       4-5 Artist For Loops 8_instruction: crwdns34088:0crwdne34088:0
       4-5 Artist For Loops 9_instruction: crwdns34089:0crwdne34089:0
-      4-5 Artist For Loops Assessment 1_instruction: crwdns34090:0crwdne34090:0
       4-5 Artist Free Draw 1_instruction: crwdns34091:0crwdne34091:0
       4-5 Artist Functions 1_instruction: crwdns30440:0crwdne30440:0
       4-5 Artist Functions 10_instruction: crwdns34092:0crwdne34092:0
@@ -242,7 +240,7 @@ en:
       4-5 Artist Patterns 7_instruction: crwdns34122:0crwdne34122:0
       4-5 Artist Patterns 8_instruction: crwdns34123:0crwdne34123:0
       4-5 Artist Patterns 9.5_instruction: crwdns34124:0crwdne34124:0
-      4-5 Artist Patterns 9_instruction: crwdns34125:0crwdne34125:0
+      4-5 Artist Patterns 9_instruction: crwdns37639:0crwdne37639:0
       4-5 Artist Patterns Free Play_instruction: crwdns34126:0crwdne34126:0
       4-5 Bee Conditionals 1 (copy 1)_instruction: crwdns34127:0crwdne34127:0
       4-5 Bee Conditionals 1_instruction: crwdns34128:0crwdne34128:0
@@ -315,6 +313,7 @@ en:
       A test level ArtistArtist_instruction: crwdns30550:0crwdne30550:0
       add 2_instruction: crwdns34171:0crwdne34171:0
       Alice Test_instruction: crwdns36233:0crwdne36233:0
+      All green everything_instruction: crwdns37640:0crwdne37640:0
       Alpha 2-3 Artist Loops New 3_instruction: crwdns34172:0crwdne34172:0
       Alpha Course 3 Artist Functions 5_instruction: crwdns34173:0crwdne34173:0
       Alpha Course 3 Artist Functions 6_instruction: crwdns34174:0crwdne34174:0
@@ -323,6 +322,7 @@ en:
       Alpha Course 3 Artist Nested Loops 4_instruction: crwdns34177:0crwdne34177:0
       Alpha Course 3 Bee Conditionals 10_instruction: crwdns34178:0crwdne34178:0
       Alpha Course 3 Bee Conditionals 9_instruction: crwdns34179:0crwdne34179:0
+      applab_test2_sarah_instruction: crwdns37641:0crwdne37641:0
       Arbitrary_instruction: crwdns30560:0crwdne30560:0
       Artist - Nested Loops 1_instruction: crwdns34181:0crwdne34181:0
       Artist - Nested Loops 10_instruction: crwdns34182:0crwdne34182:0
@@ -374,7 +374,7 @@ en:
       Bee procedures demo_instruction: crwdns30611:0crwdne30611:0
       bee-test-1_instruction: crwdns30612:0crwdne30612:0
       Big Game Animation 1 (copy 1)_instruction: crwdns34923:0crwdne34923:0
-      Big Game Animation 1_instruction: crwdns34924:0crwdne34924:0
+      Big Game Animation 1_instruction: crwdns37642:0crwdne37642:0
       Big Game Animation 2 (copy 1)_instruction: crwdns34925:0crwdne34925:0
       Big Game Animation 2_instruction: crwdns36434:0crwdne36434:0
       Big Game Animation 3_instruction: crwdns34928:0crwdne34928:0
@@ -382,7 +382,7 @@ en:
       Big Game Booleans 1_instruction: crwdns35131:0crwdne35131:0
       Big Game Booleans 2_instruction: crwdns36435:0crwdne36435:0
       Big Game Booleans 3_instruction: crwdns36436:0crwdne36436:0
-      Big Game Booleans 4_instruction: crwdns36437:0crwdne36437:0
+      Big Game Booleans 4_instruction: crwdns37643:0crwdne37643:0
       Big Game Booleans 5_instruction: crwdns36438:0crwdne36438:0
       Big Game Collision 1 (copy 1)_instruction: crwdns34939:0crwdne34939:0
       Big Game Collision 1_instruction: crwdns35677:0crwdne35677:0
@@ -520,6 +520,7 @@ en:
       Course 4 Artist Binary 4_instruction: crwdns34302:0crwdne34302:0
       Course 4 Artist Binary 5_instruction: crwdns34303:0crwdne34303:0
       Course 4 Artist Binary 6_instruction: crwdns34304:0crwdne34304:0
+      Course 4 Artist Binary 7 (copy 1)_instruction: crwdns37644:0crwdne37644:0
       Course 4 Artist Binary 7_instruction: crwdns30698:0crwdne30698:0
       Course 4 Artist Binary Free Play (copy 1)_instruction: crwdns34305:0crwdne34305:0
       Course 4 Artist Binary Free Play 2_instruction: crwdns34306:0crwdne34306:0
@@ -531,6 +532,7 @@ en:
       Course 4 Artist For Loops 11_instruction: crwdns34312:0crwdne34312:0
       Course 4 Artist For Loops 12_instruction: crwdns34313:0crwdne34313:0
       Course 4 Artist For Loops 13_instruction: crwdns34314:0crwdne34314:0
+      Course 4 Artist For Loops 14 _instruction: crwdns37645:0crwdne37645:0
       Course 4 Artist For Loops 14_instruction: crwdns34315:0crwdne34315:0
       Course 4 Artist For Loops 15_instruction: crwdns34316:0crwdne34316:0
       Course 4 Artist For Loops 2_instruction: crwdns34317:0crwdne34317:0
@@ -642,7 +644,6 @@ en:
       Course 4 Play Lab Params 7_instruction: crwdns34418:0crwdne34418:0
       Course 4 Play Lab Params 8_instruction: crwdns34419:0crwdne34419:0
       Course 4 Play Lab Params 9_instruction: crwdns34420:0crwdne34420:0
-      Course 4 Play Lab Vars 1 (copy 1)_instruction: crwdns34421:0crwdne34421:0
       Course 4 Play Lab Vars 1_instruction: crwdns34422:0crwdne34422:0
       Course 4 Play Lab Vars 2_instruction: crwdns34423:0crwdne34423:0
       Course 4 Play Lab Vars 3 (copy 1)_instruction: crwdns34424:0crwdne34424:0
@@ -705,7 +706,7 @@ en:
       Eval Contracts 8A_instruction: crwdns34998:0crwdne34998:0
       Eval Contracts A_instruction: crwdns35663:0crwdne35663:0
       Eval Contracts C_instruction: crwdns35000:0crwdne35000:0
-      Eval Contracts E_instruction: crwdns36238:0crwdne36238:0
+      Eval Contracts E_instruction: crwdns37646:0crwdne37646:0
       Eval Contracts shrink_instruction: crwdns35002:0crwdne35002:0
       Eval Define Funcs 1_instruction: crwdns34473:0crwdne34473:0
       Eval Define Funcs 2_instruction: crwdns34474:0crwdne34474:0
@@ -713,7 +714,7 @@ en:
       Eval Define Funcs 4_instruction: crwdns34477:0crwdne34477:0
       Eval Define Funcs 5_instruction: crwdns34478:0crwdne34478:0
       Eval Defining Vars Free Play 1_instruction: crwdns35746:0crwdne35746:0
-      Eval Design Recipe .1_instruction: crwdns36007:0crwdne36007:0
+      Eval Design Recipe .1_instruction: crwdns37647:0crwdne37647:0
       Eval Design Recipe 1 (copy 1)_instruction: crwdns34481:0crwdne34481:0
       Eval Design Recipe 1_instruction: crwdns34482:0crwdne34482:0
       Eval Design Recipe 2 (copy 1)_instruction: crwdns34483:0crwdne34483:0
@@ -915,9 +916,7 @@ en:
       MSM Play Lab Butterfly 1_instruction: crwdns34585:0crwdne34585:0
       MSM Play Lab Butterfly 2_instruction: crwdns34586:0crwdne34586:0
       MSM Play Lab Butterfly 3_instruction: crwdns34587:0crwdne34587:0
-      MSM Play Lab Game 1_instruction: crwdns34588:0crwdne34588:0
       MSM Play Lab Game 2_instruction: crwdns34589:0crwdne34589:0
-      MSM Play Lab Game 3_instruction: crwdns34590:0crwdne34590:0
       Neat Eval Functions_instruction: crwdns31087:0crwdne31087:0
       NetSim_AddressingMessages_instruction: crwdns35176:0crwdne35176:0
       NetSim_AutomaticDNS_instruction: 'crwdns36447:0[hostname]crwdne36447:0'
@@ -993,7 +992,10 @@ en:
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       PDK5 Conditionals 1_instruction: crwdns36454:0crwdne36454:0
+      PDK5 Conditionals 2_instruction: crwdns37648:0crwdne37648:0
       PDK5 Events 1_instruction: crwdns36455:0crwdne36455:0
+      PDK5 Functions 1_instruction: crwdns37649:0crwdne37649:0
+      PDK5 Functions 2_instruction: crwdns37650:0crwdne37650:0
       PDK5 Loops 1_instruction: crwdns36456:0crwdne36456:0
       PDK5 Loops 3_instruction: crwdns36457:0crwdne36457:0
       perpendicular_instruction: crwdns34649:0crwdne34649:0
@@ -1024,13 +1026,12 @@ en:
       Puzzle One_instruction: crwdns31165:0crwdne31165:0
       RossAniGifLevel1_instruction: crwdns31166:0crwdne31166:0
       Sam the Butterfly 1 (copy 1)_instruction: crwdns34665:0crwdne34665:0
-      Sam the Butterfly 1_instruction: crwdns34666:0crwdne34666:0
+      Sam the Butterfly 1_instruction: crwdns37651:0crwdne37651:0
       Sam the Butterfly 2_instruction: crwdns35192:0crwdne35192:0
       Sam the Butterfly 3_instruction: crwdns36012:0crwdne36012:0
       Sam the Butterfly 4_instruction: crwdns36013:0crwdne36013:0
       Sam the Butterfly 5_instruction: crwdns36014:0crwdne36014:0
       Sam the Butterfly 6_instruction: crwdns34671:0crwdne34671:0
-      Sam the Butterfly 7 (copy 1)_instruction: crwdns35011:0crwdne35011:0
       Sam the Butterfly 7_instruction: crwdns34672:0crwdne34672:0
       Sam the Butterfly Complete_instruction: crwdns35012:0crwdne35012:0
       scrat 16 (copy 1)_instruction: crwdns34673:0crwdne34673:0
@@ -1048,6 +1049,7 @@ en:
       snowflake full_instruction: crwdns34683:0crwdne34683:0
       snowflower pattern_instruction: crwdns34684:0crwdne34684:0
       snowflower_instruction: crwdns34685:0crwdne34685:0
+      SpecialFrozenLevel_instruction: crwdns37652:0crwdne37652:0
       square iterative_instruction: crwdns34686:0crwdne34686:0
       square loop_instruction: crwdns34687:0crwdne34687:0
       square snowflake_instruction: crwdns34688:0crwdne34688:0
@@ -1075,6 +1077,37 @@ en:
       testing_instruction: crwdns31215:0crwdne31215:0
       TestK1-1_instruction: crwdns34703:0crwdne34703:0
       Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
+      the terps_instruction: crwdns37653:0crwdne37653:0
+      the yolo maze_instruction: crwdns37654:0crwdne37654:0
       toby-test5-16-1_instruction: crwdns31217:0crwdne31217:0
       U1L4 NetSim SendAB_instruction: crwdns36458:0crwdne36458:0
+      U3L03 choose your own drawing_instruction: crwdns37655:0crwdne37655:0
+      U3L03 Creating Procedures 1_instruction: crwdns37656:0crwdne37656:0
+      U3L03 Define and use turnAround_instruction: crwdns37657:0crwdne37657:0
+      U3L03 define turnRight and draw a rectangle_instruction: crwdns37658:0crwdne37658:0
+      U3L03 Draw a T using turnAround_instruction: crwdns37659:0crwdne37659:0
+      U3L03 draw diamond_instruction: crwdns37660:0crwdne37660:0
+      U3L03 Three Steps_instruction: crwdns37661:0crwdne37661:0
+      U3L04 choose your own drawing_instruction: crwdns37662:0crwdne37662:0
+      U3L04 diamond solution_instruction: crwdns37663:0crwdne37663:0
+      U3L05_3x3GridEfficiencyChallenge_instruction: crwdns37664:0crwdne37664:0
+      U3L05_draw3x3GridEfficiently_instruction: crwdns37665:0crwdne37665:0
+      U3L06 Challenge 1 triangle_instruction: crwdns37666:0crwdne37666:0
+      U3L06 Challenge 2 purple square_instruction: crwdns37667:0crwdne37667:0
+      U3L06 Challenge 3 fill pink_instruction: crwdns37668:0crwdne37668:0
+      U3L06 Challenge 4 bullseye_instruction: crwdns37669:0crwdne37669:0
+      U3L06 Challenge 5 overlapping circles_instruction: crwdns37670:0crwdne37670:0
+      U3L06 Challenge 6 squiggles_instruction: crwdns37671:0crwdne37671:0
+      U3L06 Challenge 7 smiley face_instruction: crwdns37672:0crwdne37672:0
+      U3L06 Challenge 8 make your own_instruction: crwdns37673:0crwdne37673:0
+      U3L07 - Free Play Loops and Random_instruction: crwdns37674:0crwdne37674:0
+      U3L07 - Starry Night Starter Code_instruction: crwdns37675:0crwdne37675:0
+      U3L13 - Button with ID_instruction: crwdns37676:0crwdne37676:0
+      U3L13 - Debug Id plus logic problem_instruction: crwdns37677:0crwdne37677:0
+      U3L13 - Debug Id Problem_instruction: crwdns37678:0crwdne37678:0
+      U3L13 - Turtle Driver Project_instruction: crwdns37679:0crwdne37679:0
+      U3L13 - Turtle move with button_instruction: crwdns37680:0crwdne37680:0
+      U3L2 Using Simple Commands_instruction: crwdns37681:0crwdne37681:0
+      U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
+      U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Forritið þitt leiðir til deilingar með núlli."},
 "emptyComputeBlock":function(d){return "Þú verður að tengja kubb við \"meta\" kubbinn."},
 "equivalentExpression":function(d){return "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Fallið þitt gefur stundum ekki rétta útkomu."},
 "goal":function(d){return "Markmið:"},
 "levelIncompleteError":function(d){return "Formúlan þín samsvarar ekki markmiðinu."},
-"missingFunctionError":function(d){return "Þú verður að skilgreina fall með heitinu "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Það vantar breytuna "+appLocale.v(d,"var")+" í formúluna þína."},
+"missingFunctionError":function(d){return "Þú verður að skilgreina fall með heitinu "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Það vantar breytuna "+calc_locale.v(d,"var")+" í formúluna þína."},
 "reinfFeedbackMsg":function(d){return "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!"},
 "yourExpression":function(d){return "Formúlan þín:"},
 "wrongInput":function(d){return "Þú ert að kalla á fallið þitt með röngu gildi."},
-"wrongOtherValuesX":function(d){return "Formúlan þín gefur rangt gildi ef breytunni "+appLocale.v(d,"var")+" er breytt."},
+"wrongOtherValuesX":function(d){return "Formúlan þín gefur rangt gildi ef breytunni "+calc_locale.v(d,"var")+" er breytt."},
 "wrongResult":function(d){return "Formúlan þín gefur ekki rétta niðurstöðu."}};

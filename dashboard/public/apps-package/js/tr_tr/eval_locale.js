@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var eval_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,12 +150,12 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Geçersiz bir renk dizisi kullandınız:"+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Geçersiz bir stil dizini kullandınız:"+appLocale.v(d,"val")},
+v:function(d,k){eval_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).eval_locale = {
+"badColorStringError":function(d){return "Geçersiz bir renk dizisi kullandınız:"+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "Geçersiz bir stil dizini kullandınız:"+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "çember (yarıçap,stil,renk)"},
 "displayBlockTitle":function(d){return "değerlendirme"},
 "ellipseBlockTitle":function(d){return "Elips (genişlik, yükseklik, stil, renk)"},
@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "Görüntü Yerleştir (x, y, resim)"},
 "offsetBlockTitle":function(d){return "uzaklık (x, y, resim)"},
 "rectangleBlockTitle":function(d){return "dikdörtgen (genişlik, yükseklik, Stil, renk)"},
-"reinfFeedbackMsg":function(d){return "Çiziminizi düzenlemek için \"Oynamayı Sürdür\" butonuna basın."},
+"reinfFeedbackMsg":function(d){return "Programınızı düzenlemek için \"Oynamaya Devam Et\" düğmesine basabilirsiniz."},
 "rotateImageBlockTitle":function(d){return "döndürme (derece, resim)"},
 "scaleImageBlockTitle":function(d){return "ölçek(faktör, resim)"},
 "squareBlockTitle":function(d){return "kare (boyut, Stil, renk)"},
@@ -180,6 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "outline":function(d){return "anahat"},
 "solid":function(d){return "katı"},
 "string":function(d){return "dize"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"stringMismatchError":function(d){return "Yanlış büyük harf içeren bir yazın var."},
+"userCodeException":function(d){return "Kodunuz yürütülürken bir sorun oluştu."},
+"wrongBooleanError":function(d){return "Bloklarınız yanlı boolean değerini yürüttü."}};

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "벌집에서"},
 "atFlower":function(d){return "꽃에서"},
 "avoidCowAndRemove":function(d){return "젖소 피해 치우기 1번"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "실행"},
 "elseCode":function(d){return "아니면"},
 "fill":function(d){return "메우기1번"},
-"fillN":function(d){return "메우기"+appLocale.v(d,"shovelfuls")+"번"},
-"fillStack":function(d){return "메우기"+appLocale.v(d,"shovelfuls")+"번 구덩이들 채우기"},
+"fillN":function(d){return "메우기"+maze_locale.v(d,"shovelfuls")+"번"},
+"fillStack":function(d){return "메우기"+maze_locale.v(d,"shovelfuls")+"번 구덩이들 채우기"},
 "fillSquare":function(d){return "사각형 메우기"},
 "fillTooltip":function(d){return "메우기1번"},
 "finalLevel":function(d){return "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "흙더미가 있으면"},
 "putdownTower":function(d){return "탑 놓기"},
 "removeAndAvoidTheCow":function(d){return "치우기1번하고 젖소 피하기"},
-"removeN":function(d){return "치우기"+appLocale.v(d,"shovelfuls")+"번"},
+"removeN":function(d){return "치우기"+maze_locale.v(d,"shovelfuls")+"번"},
 "removePile":function(d){return "치우기1번"},
-"removeStack":function(d){return "치우기"+appLocale.v(d,"shovelfuls")+"번"},
+"removeStack":function(d){return "치우기"+maze_locale.v(d,"shovelfuls")+"번"},
 "removeSquare":function(d){return "사각형 치우기"},
 "repeatCarefullyError":function(d){return "이 퍼즐을 해결하기 위해서는 \"반복\" 블럭 안에 이동하기와 방향바꾸기의 방법을 주의깊게 생각해야합니다. 마지막에 방향을 바꾸는 것은 괜찮습니다."},
 "repeatUntil":function(d){return "~할 때까지 반복"},

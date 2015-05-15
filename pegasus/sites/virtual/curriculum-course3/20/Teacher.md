@@ -262,6 +262,12 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
+<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+
+<a href="http://thinkersmith.org/"><img src="http://www.thinkersmith.org/images/thinker.png" border="0"></a><br/>
+
+<a href="https://www.commonsensemedia.org/"><img src="http://www.thinkersmith.org/images/commonSense.png" border="0"></a><br/>
+
 [/content]
 
 <link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

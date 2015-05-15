@@ -108,7 +108,7 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
 };
 
 DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
-  $('.ace_editor .tooltipstered').tooltipster('destroy');
+  $('.ace_autocomplete .tooltipstered').tooltipster('destroy');
 };
 
 /**
@@ -119,7 +119,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
   return DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
-    parameters: tooltipInfo.paramNames,
+    parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
     fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "у вулику"},
 "atFlower":function(d){return "у квітці"},
 "avoidCowAndRemove":function(d){return "уникнути корови і видалити 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "робити"},
 "elseCode":function(d){return "інакше"},
 "fill":function(d){return "заповнити 1"},
-"fillN":function(d){return "заповнити "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "заповнити всі "+appLocale.v(d,"shovelfuls")+" ямок"},
+"fillN":function(d){return "заповнити "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "заповнити всі "+maze_locale.v(d,"shovelfuls")+" ямок"},
 "fillSquare":function(d){return "заповнити квадрат"},
 "fillTooltip":function(d){return "поставити 1 відро землі"},
 "finalLevel":function(d){return "Вітання! Ви розв'язали останнє завдання."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "є купа"},
 "putdownTower":function(d){return "зруйнувати башту"},
 "removeAndAvoidTheCow":function(d){return "видалити 1 і уникнути корови"},
-"removeN":function(d){return "видалити "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "видалити "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "видалити купу"},
-"removeStack":function(d){return "видалити купу з "+appLocale.v(d,"shovelfuls")+" елементів"},
+"removeStack":function(d){return "видалити купу з "+maze_locale.v(d,"shovelfuls")+" елементів"},
 "removeSquare":function(d){return "видалити квадрат"},
 "repeatCarefullyError":function(d){return "Щоб розв'язати цю задачу, уважно подумайте про шаблон з двох ходів та повороту, який потрібно розмістити у блоці \"повтори\". Можна використати додатковий поворот в кінці."},
 "repeatUntil":function(d){return "повторювати до"},

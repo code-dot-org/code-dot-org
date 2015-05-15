@@ -1,5 +1,6 @@
 name 'PDK5 Strategies O'
 title 'Strategies for Teaching Computer Science'
+css 'unplugged'
 success_title "Awesome!"
 success_body "Thanks for your response"
 height '200'

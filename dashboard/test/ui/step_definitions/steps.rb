@@ -2,12 +2,17 @@ require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
-    url = url.gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
+    url = url.
+      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
+      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
-  url
+  # Convert http to https, and x.y.code.org to x-y.code.org
+  url.
+    gsub(/^http:\/\//,'https://').
+    gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
@@ -19,6 +24,14 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until { @browser.find_element(selection_criteria) }
+end
+
+When /^I close the dialog$/ do
+  # Add a wait to closing dialog because it's sometimes animated, now.
+  steps %q{
+    When I press "x-close"
+    And I wait for 0.75 seconds
+  }
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -39,6 +52,11 @@ end
 Then /^check that I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.current_url.should eq url
+end
+
+Then /^check that the URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  @browser.current_url.should include url
 end
 
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
@@ -364,4 +382,8 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+When /^I disable onBeforeUnload$/ do
+  @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end

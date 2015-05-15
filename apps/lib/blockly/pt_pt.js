@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.pt_pt');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "chamada";
 Blockly.Msg.ADD = "Adicionar";
 Blockly.Msg.ADD_COMMENT = "Adicionar Comentário";
@@ -80,7 +78,7 @@ Blockly.Msg.EXTERNAL_INPUTS = "Entradas externas";
 Blockly.Msg.FUNCTION_CREATE = "Criar uma função";
 Blockly.Msg.FUNCTION_EDIT = "editar";
 Blockly.Msg.FUNCTION_NAME_LABEL = "Dá um nome à tua função:";
-Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "O que é que a sua função faz?";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "O que é suposto a sua função fazer?";
 Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "Quais são os parâmetros da sua função?";
 Blockly.Msg.FUNCTION_HEADER = "Função";
 Blockly.Msg.FUNCTIONAL_CREATE = "Novo bloco";

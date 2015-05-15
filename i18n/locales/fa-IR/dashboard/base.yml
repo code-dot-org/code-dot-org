@@ -64,6 +64,8 @@ fa:
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'برای ایجاد یک حساب کاربری ثبت نام کنید تا پیشرفتتون را دنبال کنید.ایمیل شما اساسا برای ورود به سایت و بازیابی پسورد استفاده میشه.برای اطلاعات بیشتر  به  <a href="http://code.org/privacy">سیاست حفظ حریم خصوصی</a> ما مراجعه کنید.'
     overview_teacher: 'با ایجاد یک حساب کاربری ،علوم کامپیوتر را در کلاس خود آموزش دهید.<p/>شما میتوانید دانش آموزان خود را اضافه کرده و پیشرفت آنها را دنبال کنید.'
     no_signup_message: 'شما می‌توانید <a target="_blank" href="http://learn.code.org"> فهرست مراحل و پازل‌های مختلف را بررسی کنید</a>. باید ثبت نام کنید تا بتوانید پیشرفت‌های خود را ذخیره کنید.'
@@ -314,6 +316,7 @@ fa:
     classroom_activity: فعالیت کلاسی
   home:
     title: کد استودیو
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: بررسی اجمالی دوره های 1 و 2 و 3
     lesson_plans: طرح درس
     signin_message: 'قبلا ثبت نام کرده‌اید؟ %{link}'
@@ -347,7 +350,7 @@ fa:
     heading_apps: '<h2>سرگرم کننده برای</h2><h1>برای همه</h1>'
     heading_legacy: '<h2> دوره عمومی ما </h2><h1>همه سنین</h1>'
     your_gallery: گالری
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: یک کلاس را در کد استدیو امتحان کنید
   gender:
     male: مرد
     female: زن
@@ -479,6 +482,8 @@ fa:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: پاسخ خود را اینجا وارد کنید
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Ok
   time:
