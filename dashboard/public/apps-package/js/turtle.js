@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({247:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({267:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var Artist = require('./turtle');
@@ -18,7 +18,8 @@ window.turtleMain = function(options) {
   appMain(artist, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./blocks":241,"./levels":246,"./skins":249,"./turtle":252}],249:[function(require,module,exports){
+
+},{"../StudioApp":4,"../appMain":5,"./blocks":260,"./levels":265,"./skins":269,"./turtle":272}],269:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -79,7 +80,8 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207}],241:[function(require,module,exports){
+
+},{"../skins":225}],260:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -106,8 +108,8 @@ exports.load = function (assetUrl, id) {
 'use strict';
 
 var Colours = require('./colours');
-var msg = require('../../locale/current/turtle');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 
 var customLevelBlocks = require('./customLevelBlocks');
 var Turtle = require('./turtle');
@@ -1025,7 +1027,8 @@ exports.install = function(blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/current/common":258,"../../locale/current/turtle":265,"./colours":242,"./customLevelBlocks":244,"./turtle":252}],252:[function(require,module,exports){
+
+},{"../locale":112,"./colours":261,"./customLevelBlocks":263,"./locale":266,"./turtle":272}],272:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -1054,13 +1057,13 @@ exports.install = function(blockly, blockInstallOptions) {
  */
 'use strict';
 
-var commonMsg = require('../../locale/current/common');
-var turtleMsg = require('../../locale/current/turtle');
+var commonMsg = require('../locale');
+var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -1226,7 +1229,7 @@ Artist.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -1307,9 +1310,11 @@ Artist.prototype.afterInject_ = function (config) {
   // Set their initial contents.
   this.loadTurtle();
   this.drawImages();
+
   this.isDrawingAnswer_ = true;
   this.drawAnswer();
   this.isDrawingAnswer_ = false;
+
   if (this.level.predrawBlocks) {
     this.isPredrawing_ = true;
     this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);
@@ -1728,7 +1733,7 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, scope, {
+    codegen.initJSInterpreter(interpreter, null, scope, {
       Turtle: this.api
     });
   }, this);
@@ -2484,11 +2489,12 @@ Artist.prototype.resetStepInfo_ = function () {
   this.stepDistanceCovered = 0;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/turtle":265,"../codegen":55,"../dropletUtils":59,"../slider":208,"../templates/page.html":232,"../utils":253,"./api":240,"./colours":242,"./controls.html":243,"./dropletConfig":245,"./levels":246}],246:[function(require,module,exports){
+
+},{"../codegen":67,"../dropletUtils":71,"../locale":112,"../slider":226,"../templates/page.html.ejs":251,"../utils":273,"./api":259,"./colours":261,"./controls.html.ejs":262,"./dropletConfig":264,"./levels":265,"./locale":266}],265:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./colours');
 var answer = require('./answers').answer;
-var msg = require('../../locale/current/turtle');
+var msg = require('./locale');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 
@@ -2499,7 +2505,7 @@ var LEVELBUILDER_LEVEL = 7;
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolbox.xml')({
+  return require('./toolbox.xml.ejs')({
     page: page,
     level: level
   });
@@ -2507,7 +2513,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -3389,7 +3395,8 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/current/turtle":265,"../block_utils":27,"../level_base":96,"../utils":253,"./answers":239,"./colours":242,"./requiredBlocks":248,"./startBlocks.xml":250,"./toolbox.xml":251}],251:[function(require,module,exports){
+
+},{"../block_utils":37,"../level_base":111,"../utils":273,"./answers":258,"./colours":261,"./locale":266,"./requiredBlocks":268,"./startBlocks.xml.ejs":270,"./toolbox.xml.ejs":271}],271:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3403,7 +3410,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var msg = require('../../locale/current/turtle');
+var msg = require('./locale');
 // An early hack introduced some levelbuilder levels as page 5, level 7. Long
 // term we can probably do something much cleaner, but for now I'm calling
 // out that this level is special (on page 5).
@@ -3517,7 +3524,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/turtle":265,"ejs":274}],250:[function(require,module,exports){
+},{"./locale":266,"ejs":283}],270:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3531,7 +3538,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var msg = require('../../locale/current/turtle');
+var msg = require('./locale');
 
 /**
  * Common code for creating procedures drawing different regular polygons.
@@ -3583,7 +3590,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/turtle":265,"ejs":274}],248:[function(require,module,exports){
+},{"./locale":266,"ejs":283}],268:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.requiredBlocks_.
@@ -3787,7 +3794,8 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":205}],245:[function(require,module,exports){
+
+},{"../required_block_utils":223}],264:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Artist', 'params': ["100"], 'idArgLast': true },
   {'func': 'turnRight', 'category': 'Artist', 'params': ["90"], 'idArgLast': true },
@@ -3802,7 +3810,8 @@ module.exports.categories = {
   },
 };
 
-},{}],243:[function(require,module,exports){
+
+},{}],262:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3822,12 +3831,12 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],244:[function(require,module,exports){
+},{"ejs":283}],263:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
-var msg = require('../../locale/current/turtle');
+var msg = require('./locale');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -4511,9 +4520,13 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/turtle":265,"../utils":253}],265:[function(require,module,exports){
-/*turtle*/ module.exports = window.blockly.appLocale;
-},{}],242:[function(require,module,exports){
+
+},{"../utils":273,"./locale":266}],266:[function(require,module,exports){
+// locale for turtle
+module.exports = window.blockly.turtle_locale;
+
+
+},{}],261:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -4546,7 +4559,8 @@ var Colours = {
 
 module.exports = Colours;
 
-},{}],239:[function(require,module,exports){
+
+},{}],258:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -4893,7 +4907,8 @@ exports.answer = function(page, level) {
   return api.log;
 };
 
-},{"./api":240}],240:[function(require,module,exports){
+
+},{"./api":259}],259:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -5087,4 +5102,5 @@ ArtistAPI.prototype.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../utils":253}]},{},[247]);
+
+},{"../utils":273}]},{},[267]);

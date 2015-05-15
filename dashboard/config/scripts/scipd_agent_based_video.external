@@ -1,0 +1,25 @@
+name 'sciPD agent based video'
+title 'Agent Based Modeling'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+### Agent Based Modeling of Complex Adaptive Systems
+
+In this lesson, you will build your background knowledge on Agent Based Modeling by watching a video, reviewing a checklist of questions to ask when trying to understand an agent based model, and checking your understanding by answering a few quiz questions. 
+<br>
+
+<iframe width="600" height="338" src="https://youtubeeducation.com/embed/W7_kU2IWuXU" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/1zf54f407l4e5ha/Agent%20Based%20Modeling%20of%20CASs%20-%20SCI%20PD%204_1.mp4)**
+
+<br>
+
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

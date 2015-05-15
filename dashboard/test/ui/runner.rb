@@ -17,7 +17,7 @@ $options.os_version = nil
 $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
-$options.dashboard_domain = 'test.learn.code.org'
+$options.dashboard_domain = 'test.studio.code.org'
 $options.tunnel = nil
 $options.local = nil
 $options.html = nil
@@ -52,7 +52,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost:9393") do |d|
     $options.pegasus_domain = d
   end
-  opts.on("-d", "--dashboard Domain", String, "Specify an override domain for learn.code.org, e.g. localhost:3000") do |d|
+  opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost:3000") do |d|
     $options.dashboard_domain = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do

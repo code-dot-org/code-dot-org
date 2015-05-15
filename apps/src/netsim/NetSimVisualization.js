@@ -67,6 +67,12 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   this.entities_ = [];
 
   /**
+   * Reference to the local node viz entity, the anchor for the visualization.
+   * @type {NetSimVizNode}
+   */
+  this.localNode = null;
+
+  /**
    * Width (in svg-units) of visualization
    * @type {number}
    */
@@ -189,9 +195,10 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
-    this.localNode.isLocalNode = true;
+    this.localNode.setIsLocalNode();
   } else {
     this.localNode.kill();
+    this.localNode = null;
   }
   this.pullElementsToForeground();
 };
@@ -246,6 +253,7 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
     var newVizNode = new NetSimVizNode(node);
+    newVizNode.setDnsMode(this.netsim_.getDnsMode());
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
         Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
@@ -266,7 +274,9 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
 
   // Update collection of VizWires from source data
   this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
-    return new NetSimVizWire(wire, this.getEntityByID.bind(this));
+    var newVizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
+    newVizWire.setEncodings(this.netsim_.getEncodings());
+    return newVizWire;
   }.bind(this));
 
   // Since the wires table determines simulated connectivity, we trigger a
@@ -515,7 +525,7 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
   // Tell all nodes about the new DNS mode, so they can decide whether to
@@ -536,4 +546,106 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
       vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
     }
   });
+};
+
+/**
+ * Update encoding-view setting across the visualization.
+ *
+ * @param {EncodingType[]} newEncodings
+ */
+NetSimVisualization.prototype.setEncodings = function (newEncodings) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizWire) {
+      vizEntity.setEncodings(newEncodings);
+    }
+  });
+};
+
+/**
+ * Kick off an animation that will show the state of the simplex wire being
+ * set by the local node.
+ * @param {"0"|"1"} newState
+ */
+NetSimVisualization.prototype.animateSetWireState = function (newState) {
+  // Assumptions - we are talking about the wire between the local node
+  // and its remote partner.
+  // This only gets used in peer-to-peer mode, so there should be an incoming
+  // wire too, which we should hide.
+  // This is a no-op if no such wire exists.
+  // We can stop any previous animation on the wire if this is called
+
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  // Hide the incoming wire because we are in simplex mode.
+  incomingWire.hide();
+  // Animate the outgoing wire
+  vizWire.animateSetState(newState);
+};
+
+/**
+ * Kick off an animation that will show the state of the simplex wire being
+ * read by the local node.
+ * @param {"0"|"1"} newState
+ */
+NetSimVisualization.prototype.animateReadWireState = function (newState) {
+  // Assumes we are in simplex P2P mode and talking about the wire between
+  // the local node and its remote partner.  This is a no-op if no such wire
+  // exists.  We can stop any previous animation on the wire if this is called.
+
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  // Hide the incoming wire because we are in simplex mode.
+  incomingWire.hide();
+  // Animate the outgoing wire
+  vizWire.animateReadState(newState);
+};
+
+/**
+ * Find the outgoing wire from the local node to a remote node.
+ * @returns {NetSimVizWire|null} null if no outgoing connection is established.
+ */
+NetSimVisualization.prototype.getVizWireToRemote = function () {
+  if (!this.localNode) {
+    return null;
+  }
+
+  var outgoingWires = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        entity.localVizNode === this.localNode;
+  }, this);
+
+  if (outgoingWires.length === 0) {
+    return null;
+  }
+
+  return outgoingWires[0];
+};
+
+/**
+ * Find the incoming wire from a remote node to the local node.
+ * @returns {NetSimVizWire|null} null if no incoming connection is established.
+ */
+NetSimVisualization.prototype.getVizWireFromRemote = function () {
+  if (!this.localNode) {
+    return null;
+  }
+
+  var incomingWires = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        entity.remoteVizNode === this.localNode;
+  }, this);
+
+  if (incomingWires.length === 0) {
+    return null;
+  }
+
+  return incomingWires[0];
 };

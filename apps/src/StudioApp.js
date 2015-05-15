@@ -1,5 +1,4 @@
-// Globals:
-//   Blockly
+/* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -7,7 +6,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -19,7 +18,9 @@ var FeedbackUtils = require('./feedback');
 var MIN_WIDTH = 900;
 var MOBILE_SHARE_WIDTH_PADDING = 50;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var WORKSPACE_PLAYSPACE_GAP = 15;
+var MAX_VISUALIZATION_WIDTH = 400;
+var MIN_VISUALIZATION_WIDTH = 200;
+
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
@@ -245,6 +246,7 @@ StudioApp.prototype.init = function(config) {
         this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
         if (!this.editor.currentlyUsingBlocks) {
           this.editor.aceEditor.focus();
+          this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
         }
       } else {
         this.feedback_.showGeneratedCode(this.Dialog);
@@ -335,15 +337,17 @@ StudioApp.prototype.init = function(config) {
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    aniGifPreview.onclick = _.bind(function() {
-      this.showInstructions_(config.level, false);
-    }, this);
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
   } else {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'none';
   }
+
+  var bubble = document.getElementById('bubble');
+  dom.addClickTouchEvent(bubble, _.bind(function() {
+    this.showInstructions_(config.level, false);
+  }, this));
 
   if (this.editCode) {
     this.handleEditCode_({
@@ -352,12 +356,29 @@ StudioApp.prototype.init = function(config) {
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject
+      afterInject: config.afterInject,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
 
   if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
+  }
+
+  var vizResizeBar = document.getElementById('visualizationResizeBar');
+  if (vizResizeBar) {
+    dom.addMouseDownTouchEvent(vizResizeBar,
+                               _.bind(this.onMouseDownVizResizeBar, this));
+
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     _.bind(this.onMouseUpVizResizeBar, this));
+    }
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -402,7 +423,12 @@ StudioApp.prototype.init = function(config) {
           Blockly.mainBlockSpace.clear();
           this.setStartBlocks_(config, false);
         } else {
-          this.editor.setValue(config.level.startBlocks || '');
+          var resetValue = '';
+          if (config.level.startBlocks) {
+            // Don't pass CRLF pairs to droplet until they fix CR handling:
+            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+          }
+          this.editor.setValue(resetValue);
         }
       }).bind(this));
     }).bind(this));
@@ -431,6 +457,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     if (belowVisualization) {
       if (options.noButtonsBelowOnMobileShare) {
+        var visualization = document.getElementById('visualization');
         belowVisualization.style.display = 'none';
         visualization.style.marginBottom = '0px';
       } else {
@@ -456,7 +483,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
   var upSale = document.createElement('div');
   if (options.makeYourOwn) {
-    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+    upSale.innerHTML = require('./templates/makeYourOwn.html.ejs')({
       data: {
         makeUrl: options.makeUrl,
         makeString: options.makeString,
@@ -468,7 +495,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
-    upSale.innerHTML = require('./templates/learn.html')({
+    upSale.innerHTML = require('./templates/learn.html.ejs')({
       assetUrl: this.assetUrl
     });
     belowVisualization.appendChild(upSale);
@@ -700,10 +727,10 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -711,11 +738,31 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
+  // If there is an instructions block on the screen, we want the instructions dialog to
+  // shrink down to that instructions block when it's dismissed.
+  // We then want to flash the instructions block.
+  var hideFn = null;
+  var hideOptions = null;
+  var endTargetSelector = "#bubble";
+
+  if ($(endTargetSelector).length) {
+    hideOptions = {};
+    hideOptions.endTarget = endTargetSelector;
+
+    // Momentarily flash the instruction block white then back to regular.
+    hideFn = function() {
+      $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
+        .delay(500)
+        .animate({"background-color":"rgba(0,0,0,0)"},1000);
+    };
+  }
+
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
-    defaultBtnSelector: '#ok-button'
+    defaultBtnSelector: '#ok-button',
+    onHidden: hideFn
   });
 
   if (autoClose) {
@@ -733,7 +780,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     });
   }
 
-  dialog.show();
+  dialog.show({hideOptions: hideOptions});
 };
 
 /**
@@ -756,6 +803,93 @@ StudioApp.prototype.onResize = function() {
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
 };
+
+StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+
+  if (!this.onMouseMoveBoundHandler) {
+    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (this.mouseMoveTouchEventName) {
+      document.body.addEventListener(this.mouseMoveTouchEventName,
+                                     this.onMouseMoveBoundHandler);
+    }
+
+    event.preventDefault();
+  }
+};
+
+function applyTransformScaleToChildren(element, scale) {
+  for (var i = 0; i < element.children.length; i++) {
+    element.children[i].style.transform = scale;
+    element.children[i].style.msTransform = scale;
+    element.children[i].style.webkitTransform = scale;
+  }
+}
+
+/**
+*  Handle mouse moves while dragging the visualization resize bar. We set
+*  styles on each of the elements directly, overriding the normal responsive
+*  classes that would typically adjust width and scale.
+*/
+StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualization = document.getElementById('visualization');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var rect = visualizationResizeBar.getBoundingClientRect();
+  var offset;
+  var newVizWidth;
+  if (this.isRtl()) {
+    offset = window.innerWidth -
+             (window.pageXOffset + rect.left + (rect.width / 2)) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+    newVizWidth = (window.innerWidth - event.pageX) - offset;
+  } else {
+    offset = window.pageXOffset + rect.left + (rect.width / 2) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+    newVizWidth = event.pageX - offset;
+  }
+  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  var newVizWidthString = newVizWidth + 'px';
+  var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
+
+  if (this.isRtl()) {
+    visualizationResizeBar.style.right = newVizWidthString;
+    codeWorkspace.style.right = newVizWidthString;
+  } else {
+    visualizationResizeBar.style.left = newVizWidthString;
+    codeWorkspace.style.left = newVizWidthString;
+  }
+  // Add extra width to visualizationColumn if visualization has a border:
+  visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
+  visualization.style.maxWidth = newVizWidthString;
+  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  applyTransformScaleToChildren(visualization,
+      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+  if (visualizationEditor) {
+    visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (this.onMouseMoveBoundHandler) {
+    document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    if (this.mouseMoveTouchEventName) {
+      document.body.removeEventListener(this.mouseMoveTouchEventName,
+                                        this.onMouseMoveBoundHandler);
+    }
+    this.onMouseMoveBoundHandler = null;
+  }
+};
+
 
 /**
 *  Updates the width of the toolbox-header to match the width of the toolbox
@@ -835,7 +969,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 // to the server.
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
+  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: builderDetails,
@@ -1006,6 +1140,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.vizAspectRatio = config.vizAspectRatio || 1.0;
+  this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -1021,8 +1157,18 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onInitialize = config.onInitialize ?
+                        config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+};
+
+// Overwritten by applab.
+StudioApp.prototype.runButtonClickWrapper = function (callback) {
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+  }
+  callback();
 };
 
 /**
@@ -1039,12 +1185,8 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(function () {
-    if (window.$) {
-      $(window).trigger('run_button_pressed');
-    }
-    this.runButtonClick();
-  }, 250, true);
+  var runClick = this.runButtonClick.bind(this);
+  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -1111,8 +1253,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
+  document.getElementById('visualizationResizeBar').style.display = 'none';
+
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
@@ -1147,7 +1292,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
+
+    /* jshint ignore:start */
     ace = window.ace;
+    /* jshint ignore:end */
 
     var fullDropletPalette = dropletUtils.generateDropletPalette(
       options.codeFunctions, options.dropletConfig);
@@ -1163,15 +1311,23 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
+      var functionsFilter = null;
+      if (options.autocompletePaletteApisOnly) {
+         functionsFilter = options.codeFunctions;
+      }
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+
+    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager.registerBlocksFromList(
+      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
     // Bind listener to palette/toolbox 'Hide' and 'Show' links
     var hideToolboxLink = document.getElementById('hide-toolbox');
@@ -1191,32 +1347,21 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
-    this.dropletTooltipManager.registerBlocksFromList(
-      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
-
-    var installTooltips = function () {
-      this.dropletTooltipManager.installTooltipsOnVisibleToolboxBlocks();
-    }.bind(this);
-
-    this.editor.on('changepalette', installTooltips);
-
-    this.editor.on('toggledone', function () {
-      if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-        installTooltips();
-      }
-    });
-
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
-      this.editor.setValue(options.startBlocks);
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
     }
 
     if (options.afterEditorReady) {
       options.afterEditorReady();
-      installTooltips();
+      this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
+
+    // Since the droplet editor loads asynchronously, we must call onInitialize
+    // here once loading is complete.
+    this.onInitialize();
   }, this));
 
   if (options.afterInject) {
@@ -1297,7 +1442,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: utils.valueOr(config.level.edit_blocks, false)
+    editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(

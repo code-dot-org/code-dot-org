@@ -1,0 +1,15 @@
+name 'PDAlg functional'
+title 'Functional Programming'
+answer_line true
+question 'Have you ever programmed before?'
+right "Yes, and I'm familiar with functional programming"
+right "Yes, but I don't know if it would be considered functional"
+right "No"
+
+markdown <<MARKDOWN
+The language that we'll be using in this course is called a Functional programming language, which is a type of language that follows a set of rules that aligns very well with the rules of Algebra. Some of the defining characteristics of this language are:
+
+- Variables are immutable (once a value has been defined, it cannot be changed)
+- Functions do not have side effects (given the same inputs, a function will run the same way every time, because it can't be impacted by outside elements)
+- Every function maps its inputs (domain) to its output (range)
+MARKDOWN

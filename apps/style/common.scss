@@ -85,6 +85,7 @@ html[dir='rtl'] #visualizationColumn {
   position: relative;
   top: 0px;
   left: 0px;
+  overflow-x: hidden;
 }
 
 #visualizationColumn.embed_hidesource {
@@ -232,7 +233,7 @@ div.droplet-palette-group-header-selected.orange {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
-  bottom: 160px;
+  bottom: 156px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -262,6 +263,15 @@ html[dir='rtl'] #codeWorkspace {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
+}
+
+#visualizationResizeBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  left: 400px;
+  cursor: ew-resize;
 }
 
 #visualization {
@@ -321,6 +331,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   #visualizationEditor.responsive {
     margin-left: $width;
   }
@@ -348,6 +364,12 @@ html[dir='rtl'] #codeWorkspace {
     left: $width;
   }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   #visualizationEditor.responsive {
@@ -379,6 +401,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   #visualizationEditor.responsive {
     margin-left: $width;
   }
@@ -406,6 +434,12 @@ html[dir='rtl'] #codeWorkspace {
     left: $width;
   }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   #visualizationEditor.responsive {
@@ -678,6 +712,8 @@ input[type="radio"] {
 #bubble {
   color: black;
   margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
 #prompt-table {
@@ -705,7 +741,6 @@ input[type="radio"] {
 $aniGifPreviewWidth: 80px;
 $aniGifPreviewHeight: 60px;
 #ani-gif-preview {
-  cursor: pointer;
   display: table-cell;
   background-size: $aniGifPreviewWidth $aniGifPreviewHeight;
   // background-image set via javascript
@@ -723,9 +758,6 @@ $aniGifPreviewHeight: 60px;
 }
 
 /* Place ani-gif next to text for column width 300px or wider. */
-#bubble {
-  position: relative;
-}
 @media screen and (min-width: 1051px) {
   #prompt-table.with-ani-gif {
     margin-right: $aniGifPreviewWidth;
@@ -787,14 +819,14 @@ $aniGifPreviewHeight: 60px;
   #hide-toolbox, #show-toolbox {
     cursor: pointer;
     &:hover {
-      color: #ffb81d;
+      color: $yellow-dark;
     }
   }
   .block-counter-default {
     color: white;
   }
   .block-counter-overflow {
-    color: #ffb81d;
+    color: $yellow-dark;
   }
 }
 
@@ -1202,6 +1234,10 @@ $see-examples-thick-underline-color: $yellow-dark;
   font-size: 16px;
   margin-top: 3px;
   margin-bottom: 7px;
+}
+
+.current-tooltip-parameter-name {
+  border-bottom: 3px solid $yellow-dark;
 }
 
 // Tooltipster theme class

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var bounce_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){bounce_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "הקפץ כדור"},
 "bounceBallTooltip":function(d){return "הקפץ כדור על אובייקט."},
 "continue":function(d){return "המשך"},
@@ -206,7 +206,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundLosePoint2":function(d){return "השמע צליל איבוד נקודה 2"},
 "playSoundRetro":function(d){return "השמע צליל רטרו"},
 "playSoundRubber":function(d){return "השמע צליל גומי"},
-"playSoundSlap":function(d){return "השמע צליל סטירה"},
+"playSoundSlap":function(d){return "השמע צליל חבטה"},
 "playSoundTooltip":function(d){return "נגן את הצליל שנבחר."},
 "playSoundWinPoint":function(d){return "השמע צליל נקודת ניצחון"},
 "playSoundWinPoint2":function(d){return "השמע צליל נקודת ניצחון 2"},
@@ -217,26 +217,26 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "חזור עד אשר"},
 "repeatUntilBlocked":function(d){return "כאשר דרך מקדימה"},
 "repeatUntilFinish":function(d){return "חזור עד סיום"},
-"scoreText":function(d){return "ניקוד: "+appLocale.v(d,"playerScore")+":"+appLocale.v(d,"opponentScore")},
-"setBackgroundRandom":function(d){return "הפעל סצנה אקראית"},
+"scoreText":function(d){return "ניקוד: "+bounce_locale.v(d,"playerScore")+":"+bounce_locale.v(d,"opponentScore")},
+"setBackgroundRandom":function(d){return "הגדר זירה אקראית"},
 "setBackgroundHardcourt":function(d){return "הפעל סצנת מגרש"},
 "setBackgroundRetro":function(d){return "הפעל סצנת רטרו"},
 "setBackgroundTooltip":function(d){return "קובע את תמונת הרקע"},
 "setBallRandom":function(d){return "ערוך כדור אקראי"},
 "setBallHardcourt":function(d){return "קובע כדור מגרש"},
 "setBallRetro":function(d){return "קובע כדור רטרו"},
-"setBallTooltip":function(d){return "תסדר את התמונה של הכדור"},
-"setBallSpeedRandom":function(d){return "תסדר את המהירות של הכדור האקראי"},
+"setBallTooltip":function(d){return "מגדיר את תמונת הכדור"},
+"setBallSpeedRandom":function(d){return "קובע את מהירות הכדור כאקראית"},
 "setBallSpeedVerySlow":function(d){return "קובע מהירות איטית מאוד של כדור"},
 "setBallSpeedSlow":function(d){return "קובע מהירות איטית של כדור"},
-"setBallSpeedNormal":function(d){return "קובע מהירות נורמלית של כדור"},
-"setBallSpeedFast":function(d){return "קובע מהירות גבוהה מאוד של כדור"},
+"setBallSpeedNormal":function(d){return "קובע מהירות רגילה של כדור"},
+"setBallSpeedFast":function(d){return "קובע מהירות גבוהה של כדור"},
 "setBallSpeedVeryFast":function(d){return "קובע מהירות מאוד גבוהה של כדור"},
 "setBallSpeedTooltip":function(d){return "קובע את מהירות הכדור"},
-"setPaddleRandom":function(d){return "קבע פדל אקראי"},
-"setPaddleHardcourt":function(d){return "קבע פדל מגרש"},
+"setPaddleRandom":function(d){return "קבע מטקה אקראית"},
+"setPaddleHardcourt":function(d){return "קבע מטקת מגרש"},
 "setPaddleRetro":function(d){return "קבע פדל רטרו"},
-"setPaddleTooltip":function(d){return "קובע תמונת פדל"},
+"setPaddleTooltip":function(d){return "קובע תמונת מטקה"},
 "setPaddleSpeedRandom":function(d){return "קבע מהירות אקראית של פדל"},
 "setPaddleSpeedVerySlow":function(d){return "קבע מהירות איטית מאוד של פדל"},
 "setPaddleSpeedSlow":function(d){return "קבע מהירות איטית של פדל"},

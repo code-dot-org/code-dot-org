@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "នៅ​សំបុក​ឃ្មុំ"},
 "atFlower":function(d){return "នៅ​ផ្កា"},
 "avoidCowAndRemove":function(d){return "ចៀស​គោ ហើយ​ដក​ចេញ 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "ធ្វើ"},
 "elseCode":function(d){return "បើ​មិន​អ៊ីចឹង​ទេ"},
 "fill":function(d){return "ចាក់​បំពេញ 1"},
-"fillN":function(d){return "ចាក់​បំពេញ "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "fill stack of "+appLocale.v(d,"shovelfuls")+" holes"},
+"fillN":function(d){return "ចាក់​បំពេញ "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "fill stack of "+maze_locale.v(d,"shovelfuls")+" holes"},
 "fillSquare":function(d){return "fill square"},
 "fillTooltip":function(d){return "ដាក់​ដី 1 ដុំ"},
 "finalLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។"},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "មាន​ពំនូក​មួយ"},
 "putdownTower":function(d){return "put down tower"},
 "removeAndAvoidTheCow":function(d){return "ដក​ចេញ 1 ហើយ​ចៀស​ពី​គោ"},
-"removeN":function(d){return "ដក​ចេញ "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "ដក​ចេញ "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "យក​ពំនូក​ចេញ"},
-"removeStack":function(d){return "remove stack of "+appLocale.v(d,"shovelfuls")+" piles"},
+"removeStack":function(d){return "remove stack of "+maze_locale.v(d,"shovelfuls")+" piles"},
 "removeSquare":function(d){return "remove square"},
 "repeatCarefullyError":function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."},
 "repeatUntil":function(d){return "ធ្វើ​ឡើង​វិញ​រហូត​ដល់"},

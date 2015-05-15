@@ -91,7 +91,7 @@ ru-RU:
   learn_classes: Найти организации в которых обучают программированию
   hoc_is_here: '#HourOfCode уже здесь - посмотрите! @codeorg'
   just_did_hoc: 'Я только что закончил #HourOfCode - посмотрите! @codeorg'
-  twitter_teach_cs: Почему мало школ учат информатике? Мы можем исправить это. http://youtu.be/nKIu9yen5nc. Посетите http://code.org/ чтобы узнать больше.
+  twitter_teach_cs: Почему не во всех школах изучают информатику? Мы можем исправить это. http://youtu.be/nKIu9yen5nc. Посетите наш сайт http://code.org/ чтобы узнать больше.
   learn_hoc: Учитесь программировать с Часом Кода
   beyond_hoc: После первого часа
   what_gender: Какого Вы пола?
@@ -125,19 +125,19 @@ ru-RU:
   studiobar_donate_body: За каждый пожертвованный доллар, один ребенок получает возможность учиться
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ломайте стереотипы. Носите наш логотип с гордостью.
-  homepage_hero_text_malala: «Я призываю девочек в каждой стране, чтобы учиться одному Часу Кода» Малала, лауреат Нобелевской премии мира
-  homepage_hero_text_susan: «Если вы сможете изменить технологию, вы сможете изменить мир.» Сьюзен, Генеральный директор YouTube
-  homepage_hero_text_fistbump: «Не просто играйте на вашем телефоне, программируйте на нём» Президент Barack Obama
+  homepage_hero_text_malala: '«Я призываю всех девочек мира изучать Час Кода», - Малала, лауреат Нобелевской премии мира'
+  homepage_hero_text_susan: '«Если вы сможете изменить технологии, вы сможете изменить мир», - Сьюзен, Генеральный директор YouTube'
+  homepage_hero_text_fistbump: '«Не просто играйте на своем телефоне, программируйте на нём», - Президент Барак Обама'
   homepage_hero_text_sheryl: '«Нашим детям - в том числе девочкам - нужна возможность изучать информатику.» Sheryl, главный операционный директор Facebook'
-  homepage_hero_text_satya: «Компьютерная наука может раскрыть лучшие возможности в мире.» Сатья, Генеральный директор Microsoft
-  homepage_hero_text_bosh: «Если вы программируете, вы можете выбрать направление вашей жизни.» Chris Bosh
+  homepage_hero_text_satya: '«Информатика поможет раскрыть лучшие возможности в мире», - Сатья, Генеральный директор Microsoft'
+  homepage_hero_text_bosh: '«Если Вы программируете, значит Вы можете выбрать направление своей жизни», - Крис Бош'
   homepage_hero_text_student1: '«Эти навыки изменили мое будущее. Не говоря уже о том, что это просто весело." Luna, 7-й класс'
   homepage_hero_text_student2: «Я никогда не видел моих детей такими увлеченными обучением.» Майкл, учитель
-  homepage_hero_text_student3: «Компьютерная наука — это поле, вы не можете знать, понравится вам или нет, прежде чем вы попробуете» Джексон, 6-й класс
-  homepage_hero_text_student4: «Вы можете сделать всё, что ваш разум хочет сделать с программированием.» Майя, 2 класс
-  homepage_hero_text_student5: '«Информатика - это наука не для кого-то другого. Это наука для вас, здесь, сейчас." Geraldo, преподаватель'
-  homepage_hero_text_teacher1: '«Искры творчества, вдохновения и инноваций при кодировании - все что имеет важное значение в любой карьере.» Floresa, учитель'
-  homepage_hero_text_teacher2: '«Эта программа привлекла, вовлекла принять участие 100% моих учеников.» Адам, учитель'
+  homepage_hero_text_student3: «Информатика — это огромная область, и Вы не узнаете, нравится Вам она или нет, пока не попробуете» Джексон, 6-й класс
+  homepage_hero_text_student4: «Вы можете сделать всё, что ваш разум захочет сделать с программированием.» Майя, 2 класс
+  homepage_hero_text_student5: '«Информатика - это наука не для кого-то другого. Это наука для вас, здесь и сейчас." Geraldo, преподаватель'
+  homepage_hero_text_teacher1: '«Искры творчества, вдохновения и инноваций при кодировании - все самое важное в любой карьере.» Floresa, учитель'
+  homepage_hero_text_teacher2: '«Эта программа привлекла 100% моих учеников.» Адам, учитель'
   homepage_slot_text_hoc: Час кода
   homepage_slot_text_frozen: Холодное сердце с Анной и Эльзой
   homepage_slot_text_teacher: Панель управления преподавателя
@@ -147,31 +147,31 @@ ru-RU:
   homepage_slot_text_flappy: Порхающий код
   homepage_action_text_codevideo: Посмотрите видео
   homepage_action_text_teachervideo: Посмотрите видео
-  homepage_action_text_learn: Начни обучение сегодня
+  homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Подписать петицию
   homepage_signpetition_dropdown: 'Подписать нашу петицию &#x25BE;'
   homepage_slot_text_title_hoc: Hour of Code
-  homepage_slot_text_blurb_hoc: Любой может научиться. Начни сегодня
+  homepage_slot_text_blurb_hoc: Любой может научиться. Начните сегодня
   homepage_slot_text_link_hoc: Попробуйте Час кода
   homepage_slot_text_link_host: Провести Час Кода
-  homepage_slot_text_link_hocserved: Попробовало
+  homepage_slot_text_link_hocserved: Уже попробовали
   homepage_slot_text_title_students: Ученики
   homepage_slot_text_blurb_students: Изучите все наши обучающие курсы
   homepage_slot_text_link_codestudio: Попробуйте Студию Кода
   homepage_slot_text_link_local: Найти местный класс
   homepage_slot_text_link_othercourses: Другие онлайн курсы
   homepage_slot_text_title_educators: Преподаватели
-  homepage_slot_text_blurb_educators: Научите ваших учеников
-  homepage_slot_text_link_k5: Курсы для классов K-5
+  homepage_slot_text_blurb_educators: Научите Ваших учеников
+  homepage_slot_text_link_k5: Курсы для детей
   homepage_slot_text_link_fullcurriculum: Посмотрите наш полный курс обучения
   homepage_slot_text_link_pd: Профессиональная разработка
   homepage_slot_text_title_advocates: Единомышленники
   homepage_slot_text_blurb_advocates: Поддержите нашу работу
   homepage_slot_text_link_stats: Посмотреть статистику
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: Принять участие
   homepage_slot_text_link_donate: Сделать пожертвование
   homepage_header_codestudio: Творения учеников Студии Кода
-  homepage_header_donors: Code.org благодарит своих сторонников
+  homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: Просмотреть всё
   homepage_donors_donate: Пожертвовать
   contact_form_topic_student: Я ученик
@@ -285,7 +285,7 @@ ru-RU:
   dashboard_sections_choose_secret: 'Если вы хотите раздать учетные записи вашим ученикам, выберите тип секретного <b>слова</b> или <b>картинку</b> для данного раздела.'
   dashboard_sections_secret_word: '<b>Слово</b> позволяет установить секретное слово для каждого ученика.'
   dashboard_sections_secret_picture: '<b>Картинка</b> позволяет установить секретное изображение для каждого ученика, идеально подходит для младших учеников, которые еще не умеют печатать.'
-  dashboard_sections_secret_none: 'Если вы хотите, чтобы ваши ученики сами управляли своими учетными записями, включая выбор собственных паролей, выберете секретный тип <b>"нет"</b>.'
+  dashboard_sections_secret_none: 'Если вы хотите, чтобы ваши ученики сами управляли своими учетными записями, включая выбор собственных паролей, выберите секретный тип <b>"нет"</b>.'
   dashboard_sections_print_secrets: Затем вы можете распечатать листы, содержащие данные учетной записи и раздать ученикам индивидуально.
   dashboard_sections_switch_section: 'Переключить раздел:'
   dashboard_students_add_student: Добавить ученика
@@ -309,18 +309,18 @@ ru-RU:
   dashboard_students_auto_generated: Автоматически сгененированные
   dashboard_students_reset_secret: Переустановить секрет
   dashboard_students_reset_password: Сменить пароль
-  dashboard_students_share_section: 'Поделитесь страницей для входа в этот раздел со своими студентами:'
+  dashboard_students_share_section: 'Поделитесь страницей со своими студентами для входа в этот раздел:'
   dashboard_students_print_info: Распечатать карточки с данными для доступа учеников.
   dashboard_students_secret_picture: Секретное изображение
-  dashboard_students_reset_picture: 'Вы может переустановить секретное изображение ученика в любое время, выбрав <b>Показать секрет</b>, и затем <b>Сменить секрет</b>. Новое секретное изображение будет сгенерированно для входа этого ученика.'
+  dashboard_students_reset_picture: 'Вы может поменять секретное изображение ученика в любое время, выберите <b>Показать секрет</b>,  затем <b>Сменить секрет</b>. Новое секретное изображение будет сгенерировано для входа этого ученика.'
   dashboard_students_secret_word: Секретное слово
-  dashboard_students_reset_word: 'Вы можете сбросить секретные слова ученика в любое время выбрав <b>Показать секрет</b> и затем <b>Сбросит секрет</b>. Новая пара секретных слов  будет сгенерированна для этого ученика при входе. '
+  dashboard_students_reset_word: 'Вы можете сбросить секретные слова ученика в любое время выбрав <b>Показать секрет</b> и затем <b>Сбросить секрет</b>. Новая пара секретных слов  будет сгенерирована для этого ученика при входе. '
   dashboard_students_join_link: Скажите вашим ученикам создать свои собственные учетные записи и присоединиться к вашему разделу в
-  dashboard_students_no_email: 'Если ваши ученики не имеют адреса электронной почты, или вы хотите создать учетные записи для них, измените секретный тип этого раздел на <b>слово</b> или <b>изображение</b>.'
+  dashboard_students_no_email: 'Если ваши ученики не имеют адреса электронной почты или вы хотите создать учетные записи для них, измените секретный тип этого раздел на <b>слово</b> или <b>изображение</b>.'
   dashboard_students_print_page: Распечатать эту страницу
   dashboard_students_url: Ссылка
-  dashboard_privacy_document_link: 'Открыть нашу <a href="/privacy/student-privacy", target="_blank">политику конфиденциальности</a>, чтобы распечатать ее или поделиться со своими студентами.'
-  dashboard_curriculum_overview: Обзор программы для дошкольников и начальной школы
+  dashboard_privacy_document_link: 'Распечатать нашу политику конфиденциальности или поделиться можно<a href="/privacy/student-privacy", target="_blank">здесь</a>.'
+  dashboard_curriculum_overview: Обзор программы для дошкольников и учеников начальной школы
   dashboard_view_all_lesson_plans: Посмотреть все планы уроков
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
@@ -388,7 +388,7 @@ ru-RU:
   teachers_notes: Заметки учителя
   teachers_notes_hoc: 'Учителям: ознакомьтесь с важными заметками для педагогов здесь'
   previous: Назад
-  next: Далее
+  next: Вперед
   older_systems: Уроки доступные на более старых системах
   older_systems_subheading: 'Эти уроки должны работать в более старых браузерах. Для доступа ко всем урокам, установите <a href="http://browsehappy.com/" target="_blank">браузер новой версии.</a>'
   mobile_devices: Учебники для мобильных устройств

@@ -104,7 +104,7 @@ config.copy = {
       {
         expand: true,
         cwd: 'src/',
-        src: ['**/*.js'],
+        src: ['**/*.js', '**/*.jsx'],
         dest: 'build/js'
       }
     ]
@@ -266,13 +266,14 @@ APPS.forEach(function (app) {
 });
 
 // Use command-line tools to run browserify (faster/more stable this way)
-var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' + allFilesSrc.join(' ') +
+var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify -t reactify ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
     ' -o ' + allFilesDest[0]);
 
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v'
+  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
+  mochaTest: 'node test/util/runTests.js --color'
 };
 
 var ext = DEV ? 'uncompressed' : 'compressed';
@@ -359,13 +360,22 @@ config.jshint = {
   options: {
     curly: true,
     node: true,
+    mocha: true,
     browser: true,
+    undef: true,
     globals: {
       Blockly: true,
-      //TODO: Eliminate the globals below here.
+      //TODO: Eliminate the globals below here. Could at least warn about them
+      // in their respective files
+      Studio: true,
       Maze: true,
       Turtle: true,
-      Bounce: true
+      Bounce: true,
+      Eval: true,
+      Flappy: true,
+      Applab: true,
+      Calc: true,
+      Jigsaw: true
     }
   },
   all: [
@@ -377,22 +387,9 @@ config.jshint = {
     '!src/lodash.js',
     '!src/lodash.min.js',
     '!src/canvg/*.js',
-    '!src/calc/js-numbers/js-numbers.js'
+    '!src/calc/js-numbers/js-numbers.js',
+    '!src/ResizeSensor.js'
   ]
-};
-
-config.mochaTest = {
-  all: {
-    options: {
-      reporter: 'spec',
-      timeout: 10000
-    },
-    src: [
-      'test/*.js',
-      'test/calc/*.js',
-      'test/netsim/*.js'
-    ]
-  }
 };
 
 config.strip_code = {
@@ -466,9 +463,12 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
+  grunt.registerTask('mochaTest', ['exec:mochaTest']);
+
   grunt.registerTask('test', ['jshint', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
-  config.mochaTest.all.options.grep = new RegExp(grunt.option('grep'));
+  process.env.mocha_grep = grunt.option('grep') || '';
+  process.env.mocha_debug = grunt.option('debug') || '';
 };

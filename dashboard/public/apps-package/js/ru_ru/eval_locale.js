@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var eval_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,22 +150,22 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Вы использовали неправильную строку цвета: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Вы использовали неправильную строку стиля: "+appLocale.v(d,"val")},
+v:function(d,k){eval_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).eval_locale = {
+"badColorStringError":function(d){return "Вы использовали неправильную строку цвета: "+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "Вы использовали неправильную строку стиля: "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "круг (радиус, стиль, цвет)"},
 "displayBlockTitle":function(d){return "проверить"},
 "ellipseBlockTitle":function(d){return "эллипс (ширина, высота, стиль, цвет)"},
-"extraTopBlocks":function(d){return "У вас есть неприсоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
+"extraTopBlocks":function(d){return "У вас есть не присоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
 "infiniteRecursionError":function(d){return "Ваша функция вызывает сама себя. Мы вынуждены это остановить, иначе она бы вызывала себя постоянно."},
 "overlayBlockTitle":function(d){return "наложение (сверху, снизу)"},
 "placeImageBlockTitle":function(d){return "поместить изображение (x, y, изображение)"},
 "offsetBlockTitle":function(d){return "сдвиг (x, y, изображение)"},
 "rectangleBlockTitle":function(d){return "прямоугольник (ширина, высота, стиль, цвет)"},
-"reinfFeedbackMsg":function(d){return "Вы можете нажать на кнопку «Продолжить играть» для редактирования вашего рисунка."},
+"reinfFeedbackMsg":function(d){return "Вы можете нажать на кнопку «Продолжить играть» для редактирования Вашей программы."},
 "rotateImageBlockTitle":function(d){return "поворот (градусов, изображение)"},
 "scaleImageBlockTitle":function(d){return "шкала (фактор, изображение)"},
 "squareBlockTitle":function(d){return "квадрат (размер, стиль, цвет)"},

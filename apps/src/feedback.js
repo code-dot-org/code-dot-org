@@ -1,3 +1,5 @@
+/* global trackEvent, $, jQuery */
+
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -20,11 +22,11 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var trophy = require('./templates/trophy.html');
+var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = utils.getLodash();
 var codegen = require('./codegen');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var dom = require('./dom');
 var xml = require('./xml');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -312,7 +314,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
   }
 
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
@@ -338,7 +340,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
 FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
-  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({shareFailure: shareFailure});
   return shareFailureDiv;
 };
 
@@ -559,7 +561,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
-  sharingDiv.innerHTML = require('./templates/sharing.html')({
+  sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
 
@@ -671,7 +673,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  showCodeDiv.innerHTML = require('./templates/showCode.html')({
+  showCodeDiv.innerHTML = require('./templates/showCode.html.ejs')({
     numLinesWritten: numLinesWritten,
     totalNumLinesWritten: totalNumLinesWritten
   });
@@ -722,7 +724,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./templates/code.html')({
+  codeDiv.innerHTML = require('./templates/code.html.ejs')({
     message: infoMessage,
     code: code
   });
@@ -737,7 +739,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -771,7 +773,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
       '<p>' + msg.clearPuzzleConfirm() + '</p>';
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       clearPuzzle: true,
       cancel: true
@@ -812,7 +814,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }

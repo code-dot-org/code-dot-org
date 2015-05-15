@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils');
+var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
@@ -36,18 +37,6 @@ var NetSimNode = module.exports = function (shard, nodeRow) {
    * @private
    */
   this.displayName_ = nodeRow.name;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.status_ = nodeRow.status;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.statusDetail_ = nodeRow.statusDetail;
 };
 NetSimNode.inherits(NetSimEntity);
 
@@ -56,17 +45,15 @@ NetSimNode.inherits(NetSimEntity);
  * @returns {SharedTable}
  * @private
  */
-NetSimNode.prototype.getTable_= function () {
+NetSimNode.prototype.getTable= function () {
   return this.shard_.nodeTable;
 };
 
 /** Build table row for this node */
-NetSimNode.prototype.buildRow_ = function () {
+NetSimNode.prototype.buildRow = function () {
   return {
     type: this.getNodeType(),
-    name: this.getDisplayName(),
-    status: this.getStatus(),
-    statusDetail: this.getStatusDetail()
+    name: this.getDisplayName()
   };
 };
 
@@ -75,7 +62,22 @@ NetSimNode.prototype.buildRow_ = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getDisplayName = function () {
-  return this.displayName_ ? this.displayName_ : '[New Node]';
+  return this.displayName_ ? this.displayName_ : i18n.defaultNodeName();
+};
+
+/**
+ * Get node's short display name, which is the same as the display name
+ * but truncated to the first word if it's over a certain length.
+ * @returns {string}
+ */
+NetSimNode.prototype.getShortDisplayName = function () {
+  // If the name is longer than ten characters (longer than "Router 999")
+  // then only show up to the first whitespace.
+  var shortName = this.getDisplayName();
+  if (shortName.length > 10) {
+    shortName = shortName.split(/\s/)[0];
+  }
+  return shortName;
 };
 
 /**
@@ -86,7 +88,7 @@ NetSimNode.prototype.getHostname = function () {
   // Strip everything that's not a word-character or a digit from the display
   // name, then append the node ID so that hostnames are more likely to
   // be unique.
-  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase() +
+  return this.getShortDisplayName().replace(/[^\w\d]/g, '').toLowerCase() +
       this.entityID;
 };
 
@@ -99,20 +101,11 @@ NetSimNode.prototype.getNodeType = function () {
 };
 
 /**
- * Get node's status, usually a string enum value.
+ * Get localized description of node status.
  * @returns {string}
  */
 NetSimNode.prototype.getStatus = function () {
-  return this.status_;
-};
-
-/**
- * Get node's additional status info, usually display-only
- * status info.
- * @returns {string}
- */
-NetSimNode.prototype.getStatusDetail = function () {
-  return this.statusDetail_ ? this.statusDetail_ : '';
+  throw new Error('getStatus method is not implemented');
 };
 
 /**

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "bij de honingraat"},
 "atFlower":function(d){return "op de bloem"},
 "avoidCowAndRemove":function(d){return "vermijd de koe en verwijder 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "voer uit"},
 "elseCode":function(d){return "anders"},
 "fill":function(d){return "vul in 1"},
-"fillN":function(d){return "vul "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "vul stapel met "+appLocale.v(d,"shovelfuls")+" gaten"},
+"fillN":function(d){return "vul "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "vul stapel met "+maze_locale.v(d,"shovelfuls")+" gaten"},
 "fillSquare":function(d){return "vul vierkant"},
 "fillTooltip":function(d){return "plaats 1 deel aarde"},
 "finalLevel":function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "er is een stapel"},
 "putdownTower":function(d){return "zet een toren neer"},
 "removeAndAvoidTheCow":function(d){return "verwijder 1 en ontwijk de koe"},
-"removeN":function(d){return "verwijder "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "verwijder "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "verwijder stapel"},
-"removeStack":function(d){return "verwijder stapel van "+appLocale.v(d,"shovelfuls")+" hopen"},
+"removeStack":function(d){return "verwijder stapel van "+maze_locale.v(d,"shovelfuls")+" hopen"},
 "removeSquare":function(d){return "verwijder vierkant"},
 "repeatCarefullyError":function(d){return "Denk goed na over het patroon van twee zetten en één draai die in het \"herhaal\" blok gaan. Een extra draai aan het einde maakt niet uit."},
 "repeatUntil":function(d){return "herhaal totdat"},

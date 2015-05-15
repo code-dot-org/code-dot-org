@@ -64,6 +64,8 @@ km:
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'បង្កើត​គណនី​មួយ​សម្រាប់​កត់ត្រា​ដំណើរ​របស់​អ្នក។ អ៊ីមែល​របស់​អ្នក​នឹង​ត្រូវបាន​ប្រើ​សម្រាប់​ការ​ចូល​គណនី និង​សម្រាប់​ការ​កំណត់​ពាក្យ​សម្ងាត់​ឡើង​វិញូ។ សម្រាប់​ព័ត៌មាន​បន្ថែម សូម​មើល <a href="http://code.org/privacy">គោលការណ៍​ភាព​ឯកជន</a> របស់​យើង។'
     overview_teacher: 'បង្រៀន​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​ក្នុង​ថ្នាក់​របស់​អ្នក ដោយ​គ្រាន់​តែ​បង្កើត​គណនី​មួយ។<p/> អ្នក​ថែម​ទាំងអាច​បន្ថែម​សិស្ស និង​តាមដាន​ដំណើរការ​របស់​ពួកគេ​ថែម​ទៀត​ផង។'
     no_signup_message: 'អ្នក​អាច​<a target="_blank" href="http://learn.code.org">រក​មើល​ដំណាក់កាល​និង​ល្បែង​ប្រាជ្ញា​ជា​ច្រើន​បាន</a>, ប៉ុន្តែ​អ្នក​ត្រូវ​ចុះឈ្មោះ ដើម្បី​រក្សាទុក​ដំណើរការ​របស់​អ្នក។'
@@ -316,6 +318,7 @@ km:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'បាន​ចុះឈ្មោះ​ហើយ​មែនទេ? %{link}'
@@ -482,6 +485,8 @@ km:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: យល់ព្រម
   time:

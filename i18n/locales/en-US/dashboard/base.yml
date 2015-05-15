@@ -64,6 +64,8 @@ en:
     need_confirmation: crwdns2937:0crwdne2937:0
     need_unlock: crwdns2938:0crwdne2938:0
   signup_form:
+    student_count: 'crwdns37544:0%{count}crwdne37544:0'
+    teacher_count: 'crwdns37545:0%{count}crwdne37545:0'
     overview_student: crwdns9000:0crwdne9000:0
     overview_teacher: crwdns9001:0crwdne9001:0
     no_signup_message: crwdns4055:0crwdne4055:0
@@ -309,6 +311,7 @@ en:
     classroom_activity: crwdns5090:0crwdne5090:0
   home:
     title: crwdns8814:0crwdne8814:0
+    lines_of_code: 'crwdns37546:0%{lines_count}crwdne37546:0'
     all_courses: crwdns19023:0crwdne19023:0
     lesson_plans: crwdns19024:0crwdne19024:0
     signin_message: 'crwdns4633:0%{link}crwdne4633:0'
@@ -474,6 +477,8 @@ en:
     baddomaintype: crwdns36302:0crwdne36302:0
   text_match:
     placeholder: crwdns22206:0crwdne22206:0
+    open_response_title: crwdns37547:0crwdne37547:0
+    open_response_body: crwdns37548:0crwdne37548:0
   dialog:
     ok: crwdns5100:0crwdne5100:0
   time:

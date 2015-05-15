@@ -6,10 +6,10 @@
   background: $lighter_gray;
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
   h4 {
     font-size: 14px;
-    font-weight: bold;
+    font-family: 'Gotham 7r', sans-serif; font-weight: normal;
     margin: 0 0 5px 0;
   }
   opacity: 0.75;
@@ -21,5 +21,5 @@
   /* only display scrollbars when needed */
   overflow: auto;
   /* admin box appears in front of the rest of the level */
-  z-index: 1;
+  z-index: 200;
 }

@@ -9,12 +9,12 @@
     white; text-decoration:underline; font-weight:bold">策劃您的編程一小時</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是電腦科學的導師嗎？請查閱其它CWSdWeek的資源</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>嘗試過嗎</h3><h2>一小時的編程</h2>
+  n_have_learned_an_hoc: <h1>即刻試下</h1><h2>一小時編程</h2><h3>#人已嘗試</h3>
   anybody_can_learn: 任何人都可以學習。
   learn_now: 現在就開始進行學習課程
   petition_message: 每個在學校的學生都應該有機會去學習電腦科學
   petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: '如果你支持我們，請在這裡簽名。加入 # 已簽名的。'
   name: 你的名字
   email: 電子郵件
   zipcode: 郵遞區號或國家
@@ -100,8 +100,8 @@
   learn_classes: 尋找當地的教室
   hoc_is_here: '#HourOfCode 已經開始了，讓我們一起試試吧！ @codeorg'
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: 為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/
+    了解更多。
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -134,55 +134,26 @@
   studiobar_donate_title: 捐贈
   studiobar_donate_body: 一個孩子學習為你捐的每一分錢
   studiobar_shop_title: 商店
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+  studiobar_shop_body: 打破傳統。驕傲地戴上我們的徽標。
+  homepage_hero_text_malala: '&ldquo;挑戰世界各地的女孩去學習一小時編程&rdquo;馬萊拉，諾貝爾和平獎得主'
+  homepage_hero_text_susan: '&ldquo;如果你能改變科技，你可以改變世界。&rdquo;蘇珊，YouTube 首席執行官'
+  homepage_hero_text_fistbump: '&ldquo;不要只是在您的電話上玩遊戲，在電話上編程&rdquo;奧巴馬, 美國總統'
+  homepage_hero_text_sheryl: '&ldquo;我們的孩子 &mdash; 包括女孩子 &mdash; 需要機會去學習計算機科學。&rdquo;謝麗爾，Facebook
+    首席運營官'
+  homepage_hero_text_satya: '&ldquo;計算機科學可以提供世界上最好的機會&rdquo;薩提亞，微軟首席執行官。'
+  homepage_hero_text_bosh: '&ldquo;如果你懂得編程，你可以選擇你的生活。&rdquo; Chris Bosh'
+  homepage_hero_text_student1: '&ldquo;這些技能已經改變了我的未來。而且它是很有趣的。&rdquo;盧娜，中一學生'
+  homepage_hero_text_student2: '&ldquo;我從來沒見過我的孩子這樣興奮地學習。 &rdquo;Michael，老師'
+  homepage_hero_text_student3: '&ldquo;計算機科學是一個在你嘗試之前不知道喜歡或不喜歡的領域&rdquo;Jackson，6
+    年級學生'
+  homepage_hero_text_student4: '&ldquo;通過編程，你可以做任何你想要做的。&rdquo;瑪雅，二年級學生'
+  homepage_hero_text_student5: '&ldquo;計算機科學，不是為他人的。它是為了現在在這裡的你。&rdquo;傑拉爾多，老師。'
+  homepage_hero_text_teacher1: '&ldquo;編程啟發創意、 靈感和創新 &mdash; 它們都是在任何職業不可缺少的&rdquo;Floresa，老師'
+  homepage_hero_text_teacher2: '&ldquo;這個課程得到 同學100%的投入、 參與和參加。&rdquo;亞當，老師'
   homepage_slot_text_hoc: 一小時的編程
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: 魔雪奇緣 安娜與艾莎
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: 我們所有的輔助教學
   homepage_slot_text_course4: 課程 4
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: Flappy遊戲設計

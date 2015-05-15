@@ -7,7 +7,7 @@ Background:
   And I've initialized the workspace with my flappy puzzle.
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
-  When I press "x-close"
+  When I close the dialog
   Then I press "runButton"
   Then I press "rightButton"
   And I wait for 1 seconds

@@ -1,0 +1,12 @@
+name 'sciPD class models 1'
+title 'Using Models in the Classroom'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
+
+question 'Which of the following is not a tenet of Papert\'s theory of Constructionism?'
+right 'constructing social relationships'
+wrong 'interacting with others'
+wrong 'creating artifacts of social relevance'
+wrong 'building relationships between old and new knowledge'

@@ -164,7 +164,7 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -344,6 +344,11 @@ class User < ActiveRecord::Base
       index_by(&:level_id)
   end
 
+  def user_level_for(script_level)
+    user_levels.find_by(script_id: [script_level.script_id, nil],
+                        level_id: script_level.level_id)
+  end
+
   def levels_from_script(script, stage = nil)
     ul_map = user_levels_by_level(script)
     q = script.script_levels.includes(:level, :script, :stage).order(:position)
@@ -440,6 +445,10 @@ SQL
 
   def teacher?
     self.user_type == TYPE_TEACHER
+  end
+
+  def student_of?(teacher)
+    followeds.find_by_user_id(teacher.id).present?
   end
 
   def locale

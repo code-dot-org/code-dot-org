@@ -1,0 +1,12 @@
+name 'sciPD computer models 2'
+title 'Multiple Choice - Common Features Of Lab And Computational Science Experiments'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
+
+question 'Which of the following are common to both lab experiments and computational science experiments?'
+wrong 'automation of experiments is easy'
+wrong 'changing physical properties like the gravitational constant'
+wrong 'sweeping a set of variables'
+right 'the need for controlled experiments'

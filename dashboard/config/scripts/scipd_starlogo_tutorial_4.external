@@ -1,0 +1,48 @@
+name 'sciPD StarLogo tutorial 4'
+title 'StarLogo Nova Tutorial Part 4'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+<span style="background-color: transparent; color: #4f81bd; font-family: Cambria; font-size: 27px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">
+### PART 4: Remix Your Project</span>
+<div dir="ltr" style="margin-left: 0pt;">
+<table style="border-collapse: collapse; border: none;"><colgroup><col width="312"></col><col width="312"></col></colgroup><tbody>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #4f81bd; font-family: Cambria; font-size: 27px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="93px;" src="https://lh5.googleusercontent.com/REJ7CogC4zpC59rAb2-_ltySI5qjKhVgwD3Jn6EZe-9DriqoTCStfuuIH3VXN0soM_poBxleYOt-enjkQfPz1IE3R57fjsVel0YAhkHhk4AxjpD5aYveU1BwR1eRQ4agCAhV0hM" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="420px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1) Click Remix to create a new version of your project.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="173px;" src="https://lh6.googleusercontent.com/Mzxee9qPwrR1oN7LS_8AAduZ_zi6bIwK3CLpmy4k9z2EOU5eddYk7rp9tAVm0ge3-LL_sgAmrahTWHK7e9w-NG7euvo6qI1U6qrZGC-VFZsAzvio2P2yu72zJqwJZmMg8YxUWAU" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="517px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2) Remix is similar to “Save As” – it preserves your previous version and saves you a new version with the name “REMIX” and a timestamp at the end of the project name.   Change the name of the project to “Orientation - version 2” and edit the info text as well.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="368px;" src="https://lh5.googleusercontent.com/L3io9O2P2LsVXVEYxK7g4OswpP7rGvuIemEsqqobx7N-EBVmmAz0l0E7z6l3fWsOsJD6wP_wyate6k95WQkH8rCp480id5T71xOoqJjTFldt9eUD0jjw8-CrKhZRet9t4Y1zsk4" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="529px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3) Each time you REMIX a model, the remixed version appears in the same gallery where the original was located. So if you remix a project in your public gallery, the remixed version is also in your public gallery.  But if you remix a project in your private gallery, the remixed version is also in your private gallery.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="79px;" src="https://lh4.googleusercontent.com/275oEn3gYE7DPgiVEbix7VCwe1Z63-ASyp-XI8SDVmoQ55a9Vmy_JxlRmGgODW9xITjk6hrIXXsRoYXgr7eplwxNCGGX5Sek-s8N6u-O3cPDQUVEWU6pK1nVKnRYCjUfOCqLI_I" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="187px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">4) Click on My Profile to get back to your profile page. </span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="108px;" src="https://lh4.googleusercontent.com/OUks9YlOq_8xELcK1eY7danrWl3-ubwxtwr068DluXSNpuLZnovp093nBoHKWST0fyvftCZNDDygbeLq5yuyrCAVVN5CH7KR8WPeFFTs46nECQsjnZxpMzeliZ4eFsIgygHQa-g" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="209px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">5) Once there, click on the project “Orientation – version 2”, this is the REMIX of version 1 that was saved to your Public Gallery.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td colspan="2" style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Hooray, you’ve learned how to remix a project.</span></div>
+</td></tr>
+</tbody></table>
+</div>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 17pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> </span></div>
+<span id="docs-internal-guid-79ee82ba-08b1-df37-6666-e9dbdd7a4599"><br /></span>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

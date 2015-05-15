@@ -111,9 +111,9 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
  * @private
  * @override
  */
-CleaningHeartbeat.prototype.buildRow_ = function () {
+CleaningHeartbeat.prototype.buildRow = function () {
   return utils.extend(
-      CleaningHeartbeat.superPrototype.buildRow_.call(this),
+      CleaningHeartbeat.superPrototype.buildRow.call(this),
       { cleaner: true }
   );
 };
@@ -127,9 +127,10 @@ CleaningHeartbeat.prototype.buildRow_ = function () {
  * right now, and we proceed to clean the tables of expired rows.
  *
  * @param {!NetSimShard} shard
+ * @param {number} initialCleaningDelayMs
  * @constructor
  */
-var NetSimShardCleaner = module.exports = function (shard) {
+var NetSimShardCleaner = module.exports = function (shard, initialCleaningDelayMs) {
 
   /**
    * Shard we intend to keep clean.
@@ -144,7 +145,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
    * @type {number}
    * @private
    */
-  this.nextAttemptTime_ = Date.now();
+  this.nextAttemptTime_ = Date.now() + initialCleaningDelayMs;
 
   /**
    * A special heartbeat that acts as our cleaning lock on the shard
@@ -152,7 +153,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
    * @type {CleaningHeartbeat}
    * @private
    */
-  this.heartbeat_ = null;
+  this.heartbeat = null;
 };
 
 /**
@@ -166,8 +167,8 @@ NetSimShardCleaner.prototype.tick = function (clock) {
     this.cleanShard();
   }
 
-  if (this.heartbeat_) {
-    this.heartbeat_.tick(clock);
+  if (this.heartbeat) {
+    this.heartbeat.tick(clock);
   }
 
   if (this.steps_){
@@ -218,7 +219,7 @@ NetSimShardCleaner.prototype.cleanShard = function () {
  * @returns {boolean}
  */
 NetSimShardCleaner.prototype.hasCleaningLock = function () {
-  return this.heartbeat_ !== null;
+  return this.heartbeat !== null;
 };
 
 /**
@@ -245,7 +246,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
       }
 
       // Success, we have cleaning lock.
-      this.heartbeat_ = heartbeat;
+      this.heartbeat = heartbeat;
       logger.info("Cleaning lock acquired");
       onComplete(null, null);
     }.bind(this));
@@ -259,8 +260,8 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
-  this.heartbeat_.destroy(function (err) {
-    this.heartbeat_ = null;
+  this.heartbeat.destroy(function (err) {
+    this.heartbeat = null;
     this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
     onComplete(err, null);

@@ -26,13 +26,13 @@
  */
 'use strict';
 
-var commonMsg = require('../../locale/current/common');
-var turtleMsg = require('../../locale/current/turtle');
+var commonMsg = require('../locale');
+var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -198,7 +198,7 @@ Artist.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -279,9 +279,11 @@ Artist.prototype.afterInject_ = function (config) {
   // Set their initial contents.
   this.loadTurtle();
   this.drawImages();
+
   this.isDrawingAnswer_ = true;
   this.drawAnswer();
   this.isDrawingAnswer_ = false;
+
   if (this.level.predrawBlocks) {
     this.isPredrawing_ = true;
     this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);
@@ -700,7 +702,7 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, scope, {
+    codegen.initJSInterpreter(interpreter, null, scope, {
       Turtle: this.api
     });
   }, this);

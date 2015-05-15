@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({86:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({100:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Flappy = require('./flappy');
@@ -15,8 +15,9 @@ window.flappyMain = function(options) {
   appMain(window.Flappy, levels, options);
 };
 
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":81,"./flappy":84,"./levels":85,"./skins":87}],87:[function(require,module,exports){
+},{"../appMain":5,"./blocks":94,"./flappy":97,"./levels":98,"./skins":101}],101:[function(require,module,exports){
 /**
  * Load Skin for Flappy.
  */
@@ -185,13 +186,14 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207}],85:[function(require,module,exports){
+
+},{"../skins":225}],98:[function(require,module,exports){
 /*jshint multistr: true */
 
 // todo - i think our prepoluated code counts as LOCs
 
 var constants = require('./constants');
-var flappyMsg = require('../../locale/current/flappy');
+var flappyMsg = require('./locale');
 var tb = require('../block_utils').createToolbox;
 var utils = require('../utils');
 
@@ -760,7 +762,8 @@ module.exports.k1_9 = {
     eventBlock('when_run', setSpeedBlock)
 };
 
-},{"../../locale/current/flappy":260,"../block_utils":27,"../utils":253,"./constants":82}],84:[function(require,module,exports){
+
+},{"../block_utils":37,"../utils":273,"./constants":95,"./locale":99}],97:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -771,12 +774,12 @@ module.exports.k1_9 = {
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var flappyMsg = require('../../locale/current/flappy');
+var commonMsg = require('../locale');
+var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -1239,13 +1242,17 @@ Flappy.onMouseDown = function (e) {
     document.getElementById('instructions').setAttribute('visibility', 'hidden');
     document.getElementById('getready').setAttribute('visibility', 'hidden');
   } else if (Flappy.gameState === Flappy.GameStates.WAITING) {
-    studioApp.runButtonClick();
+    Flappy.runButtonClick();
   }
 };
 /**
  * Initialize Blockly and the Flappy app.  Called on page load.
  */
 Flappy.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.reset = this.reset.bind(this);
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+
   Flappy.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1258,8 +1265,8 @@ Flappy.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -1371,7 +1378,7 @@ Flappy.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Flappy.reset = function(first) {
   var i;
   Flappy.clearEventHandlersKillTickLoop();
 
@@ -1425,7 +1432,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Flappy.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1769,7 +1776,8 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/flappy":260,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html":232,"../utils":253,"./api":80,"./constants":82,"./controls.html":83,"./visualization.html":88}],88:[function(require,module,exports){
+
+},{"../StudioApp":4,"../codegen":67,"../dom":70,"../dropletUtils":71,"../locale":112,"../skins":225,"../templates/page.html.ejs":251,"../utils":273,"./api":93,"./constants":95,"./controls.html.ejs":96,"./locale":99,"./visualization.html.ejs":102}],102:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1789,7 +1797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],83:[function(require,module,exports){
+},{"ejs":283}],96:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1801,7 +1809,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="right-button-cell">\n  <button id="rightButton" class="share">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '">', escape((5,  msg.finish() )), '\n  </button>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n<div id="right-button-cell">\n  <button id="rightButton" class="share">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '">', escape((5,  msg.finish() )), '\n  </button>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -1809,7 +1817,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],82:[function(require,module,exports){
+},{"../locale":112,"ejs":283}],95:[function(require,module,exports){
 module.exports = {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,
@@ -1819,7 +1827,8 @@ module.exports = {
   AVATAR_WIDTH: 34,
   AVATAR_Y_OFFSET: 0
 };
-},{}],81:[function(require,module,exports){
+
+},{}],94:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -1828,8 +1837,8 @@ module.exports = {
  */
 'use strict';
 
-var msg = require('../../locale/current/flappy');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -2465,9 +2474,14 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/flappy":260,"../StudioApp":4,"../block_utils":27,"../utils":253}],260:[function(require,module,exports){
-/*flappy*/ module.exports = window.blockly.appLocale;
-},{}],80:[function(require,module,exports){
+
+},{"../StudioApp":4,"../block_utils":37,"../locale":112,"../utils":273,"./locale":99}],99:[function(require,module,exports){
+// locale for flappy
+
+module.exports = window.blockly.flappy_locale;
+
+
+},{}],93:[function(require,module,exports){
 var studioApp = require('../StudioApp').singleton;
 
 exports.FlapHeight = {
@@ -2569,4 +2583,5 @@ exports.incrementPlayerScore = function(id) {
   Flappy.displayScore();
 };
 
-},{"../StudioApp":4}]},{},[86]);
+
+},{"../StudioApp":4}]},{},[100]);

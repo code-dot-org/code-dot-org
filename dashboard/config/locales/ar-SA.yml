@@ -66,6 +66,8 @@
     need_confirmation: لم استلم تعليمات تأكيد الحساب؟
     need_unlock: لم أستلم تعليمات فتح الحساب؟
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: قم بالتسجيل للحصول على حساب لتتابع تقدمك. يستخدم البريد الالكتروني
       الخاص بك بشكل أساسي للسماح لك بتسجيل الدخول وإستعادة كلمة المرور. للمزيد من
       المعلومات, شاهد <a href="http://code.org/privacy">سياسة الخصوصية</a>.
@@ -355,6 +357,7 @@
     classroom_activity: نشاط موصول
   home:
     title: ستوديو كود
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: مراجعة للدروس 1,2, و 3
     lesson_plans: خطط الدرس
     signin_message: مسجل مسبقاً؟ %{link}
@@ -546,6 +549,8 @@
       in the wrong order.
   text_match:
     placeholder: 'ادخل إجابتك هنا '
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: موافق
   time:

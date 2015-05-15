@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "på bistaden"},
 "atFlower":function(d){return "på blomsten"},
 "avoidCowAndRemove":function(d){return "undgå koen og fjern 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "udfør"},
 "elseCode":function(d){return "ellers"},
 "fill":function(d){return "fyld 1"},
-"fillN":function(d){return "fyld "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "Fyld stak af "+appLocale.v(d,"shovelfuls")+" huller"},
+"fillN":function(d){return "fyld "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "Fyld stak af "+maze_locale.v(d,"shovelfuls")+" huller"},
 "fillSquare":function(d){return "Udfyld firkanten"},
 "fillTooltip":function(d){return "placér 1 enhed af jord"},
 "finalLevel":function(d){return "Tillykke! Du har løst den sidste opgave."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "der er en bunke"},
 "putdownTower":function(d){return "sæt tårn ned"},
 "removeAndAvoidTheCow":function(d){return "fjern 1 og undgå koen"},
-"removeN":function(d){return "fjern "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "fjern "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "fjern bunke"},
-"removeStack":function(d){return "fjern stak af "+appLocale.v(d,"shovelfuls")+" bunker"},
+"removeStack":function(d){return "fjern stak af "+maze_locale.v(d,"shovelfuls")+" bunker"},
 "removeSquare":function(d){return "fjern firkant"},
 "repeatCarefullyError":function(d){return "For at løse dette, tænk omhyggeligt på et mønster af to bevægelser og et drej til at sætte i den \"gentag\" blokken.  Det er okay at have en ekstra tur i slutningen."},
 "repeatUntil":function(d){return "gentag indtil"},

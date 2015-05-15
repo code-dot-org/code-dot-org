@@ -65,6 +65,8 @@
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Creaţi-vă un cont pentru a vă putea urmări progresul. Email-ul
       este utilizat în principal pentru a vă permite să vă conectaţi şi pentru recuperarea
       parolei. Pentru informaţii suplimentare, consultaţi <a href="http://code.org/privacy">
@@ -266,7 +268,7 @@
         artist: Desenează ceva
     user:
       classroom: Pagina de Start a Profesorilor
-      district_dashboard: District Dashboard
+      district_dashboard: Tablou de bord local
       label: Salut %{username}
       stats: Progresul meu
       settings: Contul meu
@@ -373,6 +375,7 @@
     classroom_activity: Activitate Unplugged
   home:
     title: Studio de Cod
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Prezentare generală a cursurilor 1, 2 și 3
     lesson_plans: Planuri de lecție
     signin_message: Deja înregistrat? %{link}
@@ -575,6 +578,8 @@
       in the wrong order.
   text_match:
     placeholder: Completați răspunsul aici
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

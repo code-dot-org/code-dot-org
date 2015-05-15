@@ -66,6 +66,7 @@ browser.manage.timeouts.implicit_wait = 25
 
 Before do
   @browser = browser
+  @browser.manage.delete_all_cookies
 end
 
 at_exit do

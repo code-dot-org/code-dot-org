@@ -147,7 +147,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit3'
   end
 
   def is_k1?
@@ -173,7 +173,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1).include?(self.name)
   end
 
   def show_freeplay_links?
@@ -254,6 +254,10 @@ class Script < ActiveRecord::Base
 
       unless level
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
+      end
+
+      if level.game && level.game == Game.applab && !script.hidden && !script.login_required
+        raise 'Applab levels can only be added to a script that requires login'
       end
 
       script_level_attributes = {
@@ -375,5 +379,9 @@ class Script < ActiveRecord::Base
   def self.clear_cache
     # only call this in a test!
     @@script_cache = nil
+  end
+
+  def localized_title
+    I18n.t "data.script.name.#{name}.title"
   end
 end

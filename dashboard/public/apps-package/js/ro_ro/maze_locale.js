@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "la fagurele de miere"},
 "atFlower":function(d){return "la flori"},
 "avoidCowAndRemove":function(d){return "evită vaca şi elimină 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "fă"},
 "elseCode":function(d){return "altfel"},
 "fill":function(d){return "umple 1"},
-"fillN":function(d){return "umple "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "umple stiva de "+appLocale.v(d,"shovelfuls")+" gauri"},
+"fillN":function(d){return "umple "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "umple stiva de "+maze_locale.v(d,"shovelfuls")+" gauri"},
 "fillSquare":function(d){return "umple pătratul"},
 "fillTooltip":function(d){return "Plasaţi o unitate de pământ"},
 "finalLevel":function(d){return "Felicitări! Ai rezolvat puzzle-ul final."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "există o grămadă"},
 "putdownTower":function(d){return "pune jos turnul"},
 "removeAndAvoidTheCow":function(d){return "elimină 1 şi evită vaca"},
-"removeN":function(d){return "elimină "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "elimină "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "elimină grămada"},
-"removeStack":function(d){return "elimină set de "+appLocale.v(d,"shovelfuls")+" grămezi"},
+"removeStack":function(d){return "elimină set de "+maze_locale.v(d,"shovelfuls")+" grămezi"},
 "removeSquare":function(d){return "elimină pătratul"},
 "repeatCarefullyError":function(d){return "Pentru a rezolva acest lucru, gândește-te cu atenţie la modelul de două mişcări si o întoarcere pentru a o pune în blocul \"repeat\".  Este bine să aibă o întoarcere suplimentare la sfârşit."},
 "repeatUntil":function(d){return "repetă până când"},

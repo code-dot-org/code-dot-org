@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ko_kr');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "전화 phone";
 Blockly.Msg.ADD = "추가 ";
 Blockly.Msg.ADD_COMMENT = "설명 입력";

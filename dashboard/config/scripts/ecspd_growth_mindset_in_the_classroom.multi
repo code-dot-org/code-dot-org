@@ -1,5 +1,8 @@
 name 'ECSPD growth mindset in the classroom'
 title 'Growth Mindset in the Classroom'
+answer_line true
+skip_sound true
+hide_submit true
 
 question 'How can we use praise to encourage Growth Mindset in our students?'
 wrong 'praise students for getting the right answer'

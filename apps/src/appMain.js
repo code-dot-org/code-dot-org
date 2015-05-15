@@ -7,7 +7,15 @@ var studioApp = require('./StudioApp').singleton;
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
   loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
-  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp)
+  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp),
+  getDropletContents: function () {
+    return _.bind(studioApp.editor.getValue, studioApp.editor)();
+  },
+  getDroplet: function () {
+    return studioApp.editor;
+  },
+  // Set to true to ignore onBeforeUnload events
+  ignoreOnBeforeUnload: false
 };
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -62,10 +70,8 @@ module.exports = function(app, levels, options) {
       app.init(options);
       if (options.onInitialize) {
         if (studioApp.editCode) {
-          // for editCode levels, we have to delay the onInitialize callback
-          // until the droplet editor has loaded.
-          // TODO: build a proper state machine with onEditorReady() callback
-          setTimeout(options.onInitialize.bind(options), 0);
+          // for editCode levels, we can't call the onInitialize callback
+          // immediately. it will be called when the droplet editor has loaded.
         } else {
           options.onInitialize();
         }

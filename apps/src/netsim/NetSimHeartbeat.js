@@ -61,7 +61,15 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @type {function}
    * @private
    */
-  this.onFailedHeartbeat_ = undefined;
+  this.onFailedHeartbeat = undefined;
+
+  /**
+   * Fake age to apply to this heartbeat's remote row, allowing us to manually
+   * expire it for debugging purposes.
+   * @type {number}
+   * @private
+   */
+  this.falseAgeMS_ = 0;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -123,7 +131,7 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
  * @returns {NetSimTable}
  * @override
  */
-NetSimHeartbeat.prototype.getTable_ = function () {
+NetSimHeartbeat.prototype.getTable = function () {
   return this.shard_.heartbeatTable;
 };
 
@@ -131,10 +139,10 @@ NetSimHeartbeat.prototype.getTable_ = function () {
  * Build own row for the wire table
  * @override
  */
-NetSimHeartbeat.prototype.buildRow_ = function () {
+NetSimHeartbeat.prototype.buildRow = function () {
   return {
     nodeID: this.nodeID,
-    time: this.time_
+    time: (this.time_ - this.falseAgeMS_)
   };
 };
 
@@ -153,14 +161,14 @@ NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
  * Set a handler to call if this heartbeat is unable to update its remote
  * storage representation.  Can be used to go into a recovery mode,
  * acknowledge disconnect, and/or attempt an auto-reconnect.
- * @param {function} onFailedHeartbeat
+ * @param {function} failedHeartbeatCallback
  * @throws if set would clobber a previously-set callback
  */
-NetSimHeartbeat.prototype.setFailureCallback = function (onFailedHeartbeat) {
-  if (this.onFailedHeartbeat_ !== undefined && onFailedHeartbeat !== undefined) {
+NetSimHeartbeat.prototype.setFailureCallback = function (failedHeartbeatCallback) {
+  if (this.onFailedHeartbeat !== undefined && failedHeartbeatCallback !== undefined) {
     throw new Error("Heartbeat already has a failure callback.");
   }
-  this.onFailedHeartbeat_ = onFailedHeartbeat;
+  this.onFailedHeartbeat = failedHeartbeatCallback;
 };
 
 /**
@@ -174,10 +182,19 @@ NetSimHeartbeat.prototype.tick = function () {
       if (err) {
         // A failed heartbeat update may indicate that we've been disconnected
         // or kicked from the shard.  We may want to take action.
-        if (this.onFailedHeartbeat_ !== undefined) {
-          this.onFailedHeartbeat_();
+        if (this.onFailedHeartbeat !== undefined) {
+          this.onFailedHeartbeat();
         }
       }
     }.bind(this));
   }
+};
+
+/**
+ * Cause this heartbeat to look like it's ten minutes old to the other
+ * nodes on the shard, so it will be cleaned up by another node.
+ */
+NetSimHeartbeat.prototype.spoofExpired = function () {
+  this.falseAgeMS_ += 600000; // 10 minutes old
+  this.update();
 };

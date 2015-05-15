@@ -9,10 +9,8 @@ class ScriptLevelsController < ApplicationController
     if current_user.teacher? || current_user.admin?
       @level = Level.find(params[:level_id])
       @game = @level.game
-      level_view_options(
-        start_blocks: @level.ideal_level_source.try(:data),
-        share: true
-      )
+      level_view_options(start_blocks: @level.ideal_level_source.try(:data),
+                         share: true)
       view_options(full_width: true)
       @level_source_id = @level.ideal_level_source_id
       @level_source = LevelSource.find(@level_source_id)
@@ -48,13 +46,15 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    load_user
+
     present_level
 
     slog(tag: 'activity_start',
          script_level_id: @script_level.id,
          level_id: @script_level.level.id,
          user_agent: request.user_agent,
-         locale: locale) unless @script_level.level.unplugged?
+         locale: locale) if @script_level.level.finishable?
   end
 
   private
@@ -97,10 +97,37 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    # Set start blocks to the user's previous attempt at this puzzle. Must be called after
-    # set_videos_and_blocks_and_callouts because we override @start_blocks set there.
-    if current_user && @level.game.name != 'Jigsaw'
+    return if @level.game.name == 'Jigsaw'
+    if @user && current_user && @user != current_user
+      @last_attempt = @user.last_attempt(@level).try(:level_source).try(:data)
+      view_options(readonly_workspace: true,
+                   callouts: [])
+    elsif current_user
+      # Set start blocks to the user's previous attempt at this puzzle.
       @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
+    end
+  end
+
+  def load_user
+    return if params[:user_id].blank?
+
+    user = User.find(params[:user_id])
+
+    if user.student_of?(current_user)
+      @user = user
+      @user_level = @user.user_level_for(@script_level)
+    end
+
+    load_section
+  end
+
+  def load_section
+    return if params[:section_id].blank?
+
+    section = Section.find(params[:section_id])
+
+    if section.user == current_user
+      @section = section
     end
   end
 
@@ -109,8 +136,6 @@ class ScriptLevelsController < ApplicationController
     @level = @script_level.level
     @game = @level.game
     @stage = @script_level.stage
-
-    set_videos_and_callouts
 
     load_level_source
 

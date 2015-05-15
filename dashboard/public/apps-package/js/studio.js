@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({219:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({238:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -15,8 +15,9 @@ window.studioMain = function(options) {
   appMain(window.Studio, levels, options);
 };
 
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":211,"./levels":218,"./skins":223,"./studio":224}],224:[function(require,module,exports){
+},{"../appMain":5,"./blocks":229,"./levels":236,"./skins":242,"./studio":243}],243:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -27,15 +28,15 @@ window.studioMain = function(options) {
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var studioMsg = require('../../locale/current/studio');
+var commonMsg = require('../locale');
+var studioMsg = require('./locale');
 var skins = require('../skins');
 var constants = require('./constants');
 var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
@@ -182,6 +183,7 @@ function loadLevel() {
       Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
+  blocks.registerCustomGameLogic(Studio.customLogic);
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -1065,6 +1067,10 @@ var arrangeStartBlocks = function (config) {
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.reset = this.reset.bind(this);
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1081,11 +1087,11 @@ Studio.init = function(config) {
 
   var showFinishButton = !level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     finishButton: !finishButtonFirstLine && showFinishButton
   });
@@ -1094,7 +1100,7 @@ Studio.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -1240,7 +1246,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
     Studio.perExecutionTimeouts.forEach(function (timeout) {
       clearInterval(timeout);
     });
-   }
+  }
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1260,7 +1266,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
@@ -1384,7 +1390,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Studio.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1425,7 +1431,8 @@ var displayFeedback = function() {
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
+          !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -1651,7 +1658,7 @@ Studio.execute = function() {
 
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, scope, {
+      codegen.initJSInterpreter(interpreter, null, scope, {
                                         StudioApp: studioApp,
                                         Studio: api,
                                         Globals: Studio.Globals } );
@@ -3011,7 +3018,8 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/studio":264,"../StudioApp":4,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html":232,"../utils":253,"../xml":254,"./api":209,"./bigGameLogic":210,"./blocks":211,"./collidable":212,"./constants":213,"./controls.html":214,"./dropletConfig":216,"./extraControlRows.html":217,"./projectile":220,"./rocketHeightLogic":221,"./samBatLogic":222,"./visualization.html":225}],225:[function(require,module,exports){
+
+},{"../StudioApp":4,"../canvg/StackBlur.js":62,"../canvg/canvg.js":63,"../canvg/rgbcolor.js":64,"../canvg/svg_todataurl":65,"../codegen":67,"../constants":69,"../dom":70,"../dropletUtils":71,"../locale":112,"../skins":225,"../templates/page.html.ejs":251,"../utils":273,"../xml":274,"./api":227,"./bigGameLogic":228,"./blocks":229,"./collidable":230,"./constants":231,"./controls.html.ejs":232,"./dropletConfig":234,"./extraControlRows.html.ejs":235,"./locale":237,"./projectile":239,"./rocketHeightLogic":240,"./samBatLogic":241,"./visualization.html.ejs":244}],244:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3031,7 +3039,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],222:[function(require,module,exports){
+},{"ejs":283}],241:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3155,7 +3163,8 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":55,"../constants":57,"./api":209,"./constants":213,"./customGameLogic":215}],221:[function(require,module,exports){
+
+},{"../codegen":67,"../constants":69,"./api":227,"./constants":231,"./customGameLogic":233}],240:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3217,7 +3226,8 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 
 module.exports = RocketHeightLogic;
 
-},{"../codegen":55,"./api":209,"./constants":213,"./customGameLogic":215}],220:[function(require,module,exports){
+
+},{"../codegen":67,"./api":227,"./constants":231,"./customGameLogic":233}],239:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3310,6 +3320,13 @@ Projectile.prototype = new Collidable();
 module.exports = Projectile;
 
 /**
+ * Test only function so that we can start our id count over.
+ */
+Projectile.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {
@@ -3391,7 +3408,8 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":212,"./constants":213}],223:[function(require,module,exports){
+
+},{"./collidable":230,"./constants":231}],242:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3400,7 +3418,7 @@ Projectile.prototype.moveToNextPosition = function () {
 // specified, otherwise, use background.png.
 
 var skinsBase = require('../skins');
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 var constants = require('./constants');
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
@@ -3760,10 +3778,11 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":264,"../skins":207,"./constants":213}],218:[function(require,module,exports){
+
+},{"../skins":225,"./constants":231,"./locale":237}],236:[function(require,module,exports){
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var constants = require('./constants');
@@ -5260,7 +5279,8 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":264,"../block_utils":27,"../utils":253,"./constants":213}],217:[function(require,module,exports){
+
+},{"../block_utils":37,"../utils":273,"./constants":231,"./locale":237}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5272,7 +5292,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -5280,8 +5300,8 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],216:[function(require,module,exports){
-var msg = require('../../locale/current/studio');
+},{"../locale":112,"ejs":283}],234:[function(require,module,exports){
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },
@@ -5304,7 +5324,8 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/studio":264}],214:[function(require,module,exports){
+
+},{"./locale":237}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5316,7 +5337,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -5324,7 +5345,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],212:[function(require,module,exports){
+},{"../locale":112,"ejs":283}],230:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5430,7 +5451,8 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":4,"./constants":213}],211:[function(require,module,exports){
+
+},{"../StudioApp":4,"./constants":231}],229:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5441,9 +5463,9 @@ Collidable.prototype.outOfBounds = function () {
 /* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
-var msg = require('../../locale/current/studio');
+var msg = require('./locale');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('../../locale/current/common');
+var commonMsg = require('../locale');
 var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -5483,6 +5505,8 @@ var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
 
+var customGameLogic = null;
+
 exports.setSpriteCount = function(blockly, count) {
   spriteCount = count;
 };
@@ -5501,6 +5525,10 @@ exports.enableSpritesOutsidePlayspace = function(blockly) {
 
 exports.setStartAvatars = function (avatarList) {
   startAvatars = avatarList.slice(0);
+};
+
+exports.registerCustomGameLogic = function (customGameLogicToRegister) {
+  customGameLogic = customGameLogicToRegister;
 };
 
 /**
@@ -7148,7 +7176,11 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
+    if (customGameLogic) {
+      customGameLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
+    } else {
+      throw new Error('must register custom game logic');
+    }
   };
 
   blockly.Blocks.functional_start_setVars = {
@@ -7241,6 +7273,10 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setFuncs = function() {
+    if (!customGameLogic) {
+      throw new Error('must register custom game logic');
+    }
+
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
@@ -7250,7 +7286,7 @@ exports.install = function(blockly, blockInstallOptions) {
         return;
       }
 
-      Studio.customLogic.cacheBlock(arg.name, inputBlock);
+      customGameLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
 
@@ -7443,9 +7479,14 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":258,"../../locale/current/studio":264,"../StudioApp":4,"../codegen":55,"../sharedFunctionalBlocks":206,"../utils":253,"./constants":213}],264:[function(require,module,exports){
-/*studio*/ module.exports = window.blockly.appLocale;
-},{}],210:[function(require,module,exports){
+
+},{"../StudioApp":4,"../codegen":67,"../locale":112,"../sharedFunctionalBlocks":224,"../utils":273,"./constants":231,"./locale":237}],237:[function(require,module,exports){
+// locale for studio
+
+module.exports = window.blockly.studio_locale;
+
+
+},{}],228:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7678,7 +7719,8 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":55,"./api":209,"./constants":213,"./customGameLogic":215}],215:[function(require,module,exports){
+
+},{"../codegen":67,"./api":227,"./constants":231,"./customGameLogic":233}],233:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7747,7 +7789,8 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 
 module.exports = CustomGameLogic;
 
-},{"../codegen":55,"./api":209,"./constants":213}],209:[function(require,module,exports){
+
+},{"../codegen":67,"./api":227,"./constants":231}],227:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7911,7 +7954,8 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":213}],213:[function(require,module,exports){
+
+},{"./constants":231}],231:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8088,4 +8132,5 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}]},{},[219]);
+
+},{}]},{},[238]);

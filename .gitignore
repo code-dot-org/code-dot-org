@@ -8,6 +8,7 @@
 /.gdrive_session
 /crontab
 /dashboard/public/blockly
+/dashboard/public/shared
 /.dropbox.cache
 /build-started
 /locals.yml
@@ -20,3 +21,6 @@
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
 /globals.yml
+/aws/.shared-built
+/aws/.shared-commit-built
+/shared/js/node_modules/

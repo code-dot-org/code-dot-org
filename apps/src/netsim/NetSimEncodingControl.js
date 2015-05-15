@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimEncodingControl.html');
+var markup = require('./NetSimEncodingControl.html.ejs');
 var EncodingType = require('./netsimConstants').EncodingType;
 
 /**

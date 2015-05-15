@@ -172,25 +172,25 @@ ru:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Видеоигры и координатные плоскости
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Узнайте, как видео игры в которые вы любите играть на самом деле работают при помощи алгебры! Исследуйте как алгебраические выражения и плоскости координат могут помочь нам понять, как работают видео игры и затем начать планировать видео игру, которую создадите вы.
         video: alg_11_coordinate_plane
       Contracts:
         title: Контракты, домен, и диапазон
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        desc: Контракты дают нам возможность понимать и обсуждать функции. В этом уроке мы рассмотрим как Контракты могут помочь нам понять новый язык программирования или функцию.
         video: alg_5_contracts
       DesignRecipe:
         title: Создание рецепта
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'В последнем этапе студенты писали некоторые очень простые функции - но более сложные функции требуют более вдумчивый подход. Набор правил Структуры кода являются структурированным подходом к написанию функций, включает в себя написание тестов, чтобы убедиться, что функция работает как ожидалось.'
         video: alg_8_design_recipe
       Booleans:
         title: Логика и логические выражения
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        desc: Логические значения являются четвертым и последним типом данных, о которых вы узнаете в этом курсе. В этом упражнении вы узнаете о том, что такое Логические значения, и как они могут помочь нам писать функции, которые мыслят логически
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Условные выражения и сложные функции
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: Параметры, которые мы передаем функции вызывают результаты меняющиеся в зависимости от очень жёсткого шаблона. Предположим, мы хотим, чтобы параметры с некоторыми значениями создали результаты с использованием одного шаблона, но другие значения использовали другой шаблон. Это там, где необходимы условные значения...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Обнаружение Конфликтов и Теорема Пифагора
+        desc: Определение, когда объекты на сенсорном экране, является важным аспектом большинства игр. В этом уроке мы рассмотрим как теорема Пифагора и Формула Расстояния может использоваться для измерения расстояния между двумя точками на плоскости, а затем решить, касаются ли эти две точки (или игровые персонажи).
         video: alg_16_biggame_collision_detection

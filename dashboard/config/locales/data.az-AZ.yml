@@ -169,8 +169,9 @@
         maze_2_19: Sadəcə 3 blok əlavə etməklə mənə daha çətin labirintdən baş çıxarmaqda
           kömək edə bilərsinizmi? Əgər bunu düzgün etsəniz mən uzunluğundan asılı
           olmayaraq ixtiyari əyri yolla gedə bilərəm.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
+        turtle_1_1: Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar, hər şey
+          çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir neçə
+          blokdan istifadə edin.
         turtle_1_2: 'İndi bir kvadrat çəkin. QEYD: yeni "rəng seç" blokundan götürməklə
           öz sevimli rənginizdən istifadə edin.'
         turtle_1_3: Yalnız 3 blokdan istifadə etməklə kvadrat düzəldin.

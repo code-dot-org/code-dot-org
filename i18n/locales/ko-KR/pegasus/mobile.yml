@@ -178,15 +178,15 @@ ko-KR:
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: 안나, 엘사와 함께 하는 겨울왕국
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: 모든 튜토리얼
   homepage_slot_text_course4: 과정4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: 플래피 코드
   homepage_action_text_codevideo: 동영상 보기
   homepage_action_text_teachervideo: 동영상 보기
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: Hour of Code
@@ -196,7 +196,7 @@ ko-KR:
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: 학생들
   homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_codestudio: 코드 스튜디오를 사용해 보세요.
   homepage_slot_text_link_local: Find a local class
   homepage_slot_text_link_othercourses: Other online courses
   homepage_slot_text_title_educators: Educators
@@ -208,9 +208,9 @@ ko-KR:
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
   homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
+  homepage_slot_text_link_donate: 기부하기
+  homepage_header_codestudio: Code Studio 학생들의 작품
+  homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
   contact_form_topic_student: 학생입니다.
@@ -381,7 +381,7 @@ ko-KR:
   dashboard_login_none: 이메일
   dashboard_new_password: 새 비밀번호
   dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_in_progress: 진행 중
   dashboard_progress_not_completed: 완료되지 않음
   dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
   dashboard_progress_completed_perfect: 완료
@@ -421,7 +421,7 @@ ko-KR:
   carousel_heading_robots: 로봇 프로그래밍
   carousel_heading_ide: 선생님들이 자주 사용하는 양식들
   educator_notes: 교육자 참고사항들
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: "'Hour of Code' 가르치는 방법"
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   participants: 참여자
   teachers_notes: 선생님 참고사항들

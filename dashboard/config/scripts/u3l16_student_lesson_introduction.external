@@ -1,0 +1,23 @@
+name 'U3L16 Student Lesson Introduction'
+title 'Beyond Buttons'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 16 - Beyond Buttons. Toward Apps.
+
+# Background
+
+It’s time to add interactive images, textLabels, and textInput (text boxes) to the screen. Don’t worry--these act in much the same way as buttons. They respond to mouse events, keystrokes, and other events. Add to that the ability to place elements wherever you want, and you have a clicker game!
+
+# Lesson
+
+* Place images at a specific place on the screen.
+* Hide and show elements on the screen in response to events.
+* Create a clicker game.
+
+
+# Resources
+* Activity Guide: <a href="https://docs.google.com/document/d/15zX072HeR9vdi_8sfj-qYERlOAXPxIea6-PJCWJwl2w/edit?usp=sharing" target="_blank">Beyond Buttons Project Guide</a>
+* Activity Rubric: <a href="https://docs.google.com/a/code.org/document/d/1eJx4Nf8pTA-8rFMn16ReMoF02NAKLJ6EENxojWb_XHM/edit?usp=sharing" target="_blank">Beyond Buttons Project Rubric</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

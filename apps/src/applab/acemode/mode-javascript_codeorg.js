@@ -1,3 +1,5 @@
+/* global ace */
+
 var dropletConfig = require('../dropletConfig');
 var dropletUtils = require('../../dropletUtils');
 var annotationList = require('./annotationList');
@@ -86,6 +88,10 @@ oop.inherits(Mode, JavaScriptMode);
     });
 
     return worker;
+  };
+
+  this.cleanup = function () {
+    annotationList.detachFromSession();
   };
 }).call(Mode.prototype);
 

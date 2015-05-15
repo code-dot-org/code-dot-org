@@ -64,6 +64,8 @@ pt:
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Cria uma conta para poderes ver o teu progresso. O teu e-mail será utilizado para iniciares sessão e para repores a palavra-passe (no caso de te esqueceres dela). Para mais informações, lê a nossa <a href="http://code.org/privacy">Política de privacidade</a>.'
     overview_teacher: 'Ensine ciência da computação na sua sala de aula por criar uma conta.<p/> Poderá adicionar os seus alunos e acompanhar os seus progressos.'
     no_signup_message: 'Podes <a target="_blank" href="http://learn.code.org">explorar várias etapas e desafios</a>, mas terás de criar uma conta para guardares o teu progresso.'
@@ -316,6 +318,7 @@ pt:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Lesson plans
     signin_message: 'Já criaste uma conta? %{link}'
@@ -481,6 +484,8 @@ pt:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

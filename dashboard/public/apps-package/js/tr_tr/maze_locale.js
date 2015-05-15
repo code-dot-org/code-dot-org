@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "Petekte"},
 "atFlower":function(d){return "çiçekte"},
 "avoidCowAndRemove":function(d){return "inek kaçın ve 1 çıkarın"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "yap"},
 "elseCode":function(d){return "değilse"},
 "fill":function(d){return "1 doldurun"},
-"fillN":function(d){return appLocale.v(d,"shovelfuls")+" doldurun"},
-"fillStack":function(d){return appLocale.v(d,"shovelfuls")+" delikleri yığını doldurun"},
+"fillN":function(d){return maze_locale.v(d,"shovelfuls")+" doldurun"},
+"fillStack":function(d){return maze_locale.v(d,"shovelfuls")+" delikleri yığını doldurun"},
 "fillSquare":function(d){return "Kare doldurun"},
 "fillTooltip":function(d){return "1 adet toprak yerleştirin"},
 "finalLevel":function(d){return "Tebrikler! Son bulmacayı da çözdünüz."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "bir yığın var"},
 "putdownTower":function(d){return "Kule koyun"},
 "removeAndAvoidTheCow":function(d){return "1 çıkarın ve inekten kaçının"},
-"removeN":function(d){return appLocale.v(d,"shovelfuls")+" çıkarmak"},
+"removeN":function(d){return maze_locale.v(d,"shovelfuls")+" çıkarmak"},
 "removePile":function(d){return "Yığını Kaldır"},
-"removeStack":function(d){return appLocale.v(d,"shovelfuls")+" yığınını Kaldır"},
+"removeStack":function(d){return maze_locale.v(d,"shovelfuls")+" yığınını Kaldır"},
 "removeSquare":function(d){return "Kareyi Kaldır"},
 "repeatCarefullyError":function(d){return "Bunu çözmek için, iki hamle ve bir dönüşün örgüsünü \"tekrar\" bloğuna koymayı dikkatle düşün. Sonunda fazladan bir dönüş olması sorun değil."},
 "repeatUntil":function(d){return "kadar tekrarla"},

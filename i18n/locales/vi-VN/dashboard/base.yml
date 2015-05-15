@@ -64,6 +64,8 @@ vi:
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Đăng ký cho một tài khoản để theo dõi tiến độ của bạn. Email của bạn chủ yếu được sử dụng để cho phép bạn đăng nhập vào và phục hồi mật khẩu. Để biết thêm chi tiết, xem <a href="http://code.org/privacy">Chính sách bảo mật</a> của chúng tôi .'
     overview_teacher: 'Dạy môn khoa học máy tính trong lớp học của bạn bằng cách đăng ký một tài khoản. <p/> Bạn sẽ có thể thêm học sinh của bạn và theo dõi sự tiến bộ của họ.'
     no_signup_message: 'Bạn có thể dùng mã <a target="_blank" href="http://learn.code.org"> để duyệt các màn và các câu đố khác nhau</a>,nhưng bạn cần đăng ký để lưu lại tiến trình của bạn.'
@@ -312,6 +314,7 @@ vi:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
@@ -478,6 +481,8 @@ vi:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Đồng ý
   time:

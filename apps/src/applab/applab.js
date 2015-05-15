@@ -5,18 +5,20 @@
  *
  */
 /* global $ */
+/* global dashboard */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var applabMsg = require('../../locale/current/applab');
+var commonMsg = require('../locale');
+var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -27,10 +29,15 @@ var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
-var Hammer = utils.getHammer();
+// var Hammer = utils.getHammer();
+var keyEvent = require('./keyEvent');
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
+var React = require('react');
+var DesignProperties = require('./designProperties.jsx');
+
+var vsprintf = require('./sprintf').vsprintf;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -71,6 +78,9 @@ var ErrorLevel = {
   WARNING: 'WARNING',
   ERROR: 'ERROR'
 };
+
+var MIN_DEBUG_AREA_HEIGHT = 70;
+var MAX_DEBUG_AREA_HEIGHT = 400;
 
 // The typical width of the visualization area (indepdendent of appWidth)
 var vizAppWidth = 400;
@@ -201,22 +211,27 @@ function adjustAppSizeStyles(container) {
         } else if (rules[j].media && childRules) {
           adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
 
+          // NOTE: selectorText can appear in two different forms when styles and IDs
+          // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
-            if (childRules[k].selectorText === "div#visualization.responsive") {
+          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
+            if (childRules[k].selectorText === "div#visualization.responsive" ||
+                childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
               childRules[k].style.cssText = "max-height: " +
                   Applab.appHeight * scale + "px; max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive" ||
+                       childRules[k].selectorText === "div.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding" ||
+                       childRules[k].selectorText === "div.with_padding.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn (with_padding)
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
@@ -226,12 +241,23 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
+              // set the left for the visualizationResizeBar
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#visualizationResizeBar") {
+              // set the right for the visualizationResizeBar (RTL mode)
+              childRules[k].style.cssText = "right: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
+                       childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
               // (importantly, the divApplab element)
               childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
@@ -250,7 +276,6 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
-  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -283,10 +308,10 @@ function outputApplabConsole(output) {
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
   if (debugOutput) {
-    if (debugOutput.value.length > 0) {
-      debugOutput.value += '\n' + output;
+    if (debugOutput.textContent.length > 0) {
+      debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.value = output;
+      debugOutput.textContent = output;
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
@@ -312,6 +337,25 @@ function outputError(warning, level, lineNum) {
 
 var OPTIONAL = true;
 
+/**
+ * @param value
+ * @returns {boolean} true if value is a string, number, boolean, undefined or null.
+ *     returns false for other values, including instances of Number or String.
+ */
+function isPrimitiveType(value) {
+  switch (typeof value) {
+    case 'string':
+    case 'number':
+    case 'boolean':
+    case 'undefined':
+      return true;
+    case 'object':
+      return (value === null);
+    default:
+      return false;
+  }
+}
+
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -323,9 +367,22 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         var color = new RGBColor(varValue);
         properType = color.ok;
       }
+    } else if (expectedType === 'uistring') {
+      properType = (typeof varValue === 'string') ||
+                   (typeof varValue === 'number') ||
+                   (typeof varValue === 'boolean');
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else if (expectedType === 'number') {
+      properType = (typeof varValue === 'number' ||
+                    (typeof varValue === 'string' && !isNaN(varValue)));
+    } else if (expectedType === 'primitive') {
+      properType = isPrimitiveType(varValue);
+      if (!properType) {
+        // Ensure a descriptive error message is displayed.
+        expectedType = 'string, number, boolean, undefined or null';
+      }
     } else {
       properType = (typeof varValue === expectedType);
     }
@@ -344,15 +401,16 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue) {
+                                 expectedType, minValue, maxValue, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
   if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
     var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
     if (inRange) {
       inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
     }
+    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
       var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
                                                     Applab.cumulativeLength,
@@ -426,6 +484,13 @@ function onDebugInputKeyDown(e) {
           scope: currentScope,
           thisExpression: currentScope
       }];
+      // Copy these properties directly into the evalInterpreter so the .isa()
+      // method behaves as expected
+      ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
+        'UNDEFINED'].forEach(
+        function (prop) {
+          evalInterpreter[prop] = Applab.interpreter[prop];
+        });
       try {
         evalInterpreter.run();
         outputApplabConsole('< ' + String(evalInterpreter.value));
@@ -506,7 +571,7 @@ Applab.onTick = function() {
 
 Applab.executeNativeJS = function () {
   if (Applab.tickCount === 1) {
-    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    try { Applab.whenRunFunc(studioApp, apiBlockly, Applab.Globals); } catch (e) { }
   }
 };
 
@@ -610,8 +675,9 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         Applab.nextStep = StepType.RUN;
+        Applab.updatePauseUIState();
       } else {
-        Applab.onPauseButton();
+        Applab.onPauseContinueButton();
       }
       // Store some properties about where we stopped:
       Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -710,6 +776,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             Applab.nextStep = StepType.RUN;
+            Applab.updatePauseUIState();
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -758,6 +825,10 @@ Applab.initReadonly = function(config) {
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.reset = this.reset.bind(this);
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -779,23 +850,23 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: true
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html')({tagName:null});
-  var designModeBox = require('./designModeBox.html')({
+  var designProperties = require('./designProperties.html.ejs')({tagName:null});
+  var designModeBox = require('./designModeBox.html.ejs')({
     designProperties: designProperties
   });
 
@@ -803,7 +874,7 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -859,7 +930,7 @@ Applab.init = function(config) {
 
     if (studioApp.share) {
       // automatically run in share mode:
-      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
+      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     }
   };
 
@@ -875,6 +946,9 @@ Applab.init = function(config) {
 
   config.dropletConfig = dropletConfig;
   config.pinWorkspaceToBottom = true;
+
+  config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
+  config.nativeVizWidth = Applab.appWidth;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
@@ -906,7 +980,7 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 35, 130, slider);
+      Applab.speedSlider = new Slider(10, 27, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -919,23 +993,43 @@ Applab.init = function(config) {
     }
   }
 
+  var debugResizeBar = document.getElementById('debugResizeBar');
+  if (debugResizeBar) {
+    dom.addMouseDownTouchEvent(debugResizeBar,
+                               Applab.onMouseDownDebugResizeBar);
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup', Applab.onMouseUpDebugResizeBar);
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     Applab.onMouseUpDebugResizeBar);
+    }
+  }
+
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
+      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
       dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
+      // Simulate a run button click, to load the channel id.
+      var viewDataClick = studioApp.runButtonClickWrapper.bind(
+          studioApp, Applab.onViewData);
+      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
     var designModeButton = document.getElementById('designModeButton');
     if (designModeButton) {
@@ -963,23 +1057,89 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var scale = vizAppWidth / Applab.appWidth;
-      var gridSize = 20;
+      var GRID_SIZE = 20;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
 
-          var left = ui.position.left / scale;
-          left = Math.round(left - left % gridSize);
-          var top = ui.position.top / scale;
-          top = Math.round(top - top % gridSize);
+          var div = document.getElementById('divApplab');
+          var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+          var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+          var left = ui.position.left / xScale;
+          var top = ui.position.top / yScale;
+
+          // snap top-left corner to nearest location in the grid
+          left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+          top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
           Applab.createElement(elementType, left, top);
         }
       });
     }
 
+  }
+};
+
+Applab.onMouseDownDebugResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+
+  if (event.srcElement.id === 'debugResizeBar') {
+    Applab.draggingDebugResizeBar = true;
+    document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.addEventListener(Applab.mouseMoveTouchEventName,
+                                     Applab.onMouseMoveDebugResizeBar);
+    }
+
+    event.preventDefault();
+  }
+};
+
+/**
+*  Handle mouse moves while dragging the debug resize bar.
+*/
+Applab.onMouseMoveDebugResizeBar = function (event) {
+  var debugResizeBar = document.getElementById('debugResizeBar');
+  var codeApp = document.getElementById('codeApp');
+  var codeTextbox = document.getElementById('codeTextbox');
+  var debugArea = document.getElementById('debug-area');
+
+  var rect = debugResizeBar.getBoundingClientRect();
+  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
+               rect.height / 2;
+  var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
+                       Math.min(MAX_DEBUG_AREA_HEIGHT,
+                                (window.innerHeight - event.pageY) - offset));
+
+  codeTextbox.style.bottom = newDbgHeight + 'px';
+  debugArea.style.height = newDbgHeight + 'px';
+
+  // Prevent the codeTextbox from being shrunk too small vertically
+  // (half for code, half for debug-area, minus half toolbar height + 1px border)
+  //
+  // (we would do this in CSS, but for precedence rules to work properly, if
+  //  we explicitly set bottom/height styles on the elements above, we need to
+  //  do the same for these styles as well)
+
+  codeTextbox.style.minHeight = 'calc(50% - 21px)';
+  debugArea.style.maxHeight = 'calc(50% - 21px)';
+
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+Applab.onMouseUpDebugResizeBar = function (event) {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (Applab.draggingDebugResizeBar) {
+    document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
+                                        Applab.onMouseMoveDebugResizeBar);
+    }
+    Applab.draggingDebugResizeBar = false;
   }
 };
 
@@ -1024,30 +1184,38 @@ Applab.getUnusedElementId = function (prefix) {
  * @param {number} top Position from top.
  */
 Applab.createElement = function (elementType, left, top) {
-  var el = document.createElement(elementType);
+  var element = document.createElement(elementType);
   switch (elementType) {
     case ElementType.BUTTON:
-      el.appendChild(document.createTextNode('Button'));
-      el.style.margin = 0;
+      element.appendChild(document.createTextNode('Button'));
+      element.style.padding = '0px';
+      element.style.margin = '2px';
+      element.style.height = '36px';
+      element.style.width = '76px';
+      element.style.fontSize = '14px';
       break;
     case ElementType.LABEL:
-      el.appendChild(document.createTextNode("text"));
-      el.style.margin = '10px';
+      element.appendChild(document.createTextNode("text"));
+      element.style.margin = '10px 5px';
+      element.style.height = '20px';
       break;
     case ElementType.INPUT:
-      el.style.margin = '10px';
+      element.style.margin = '5px 2px';
+      element.style.width = '236px';
+      element.style.height = '30px';
       break;
     default:
       throw "unrecognized element type " + elementType;
   }
-  el.id = Applab.getUnusedElementId(elementType);
-  el.style.position = 'absolute';
-  el.style.left = left + 'px';
-  el.style.top = top + 'px';
+  element.id = Applab.getUnusedElementId(elementType);
+  element.style.position = 'absolute';
+  element.style.left = left + 'px';
+  element.style.top = top + 'px';
 
   var divApplab = document.getElementById('divApplab');
-  divApplab.appendChild(el);
-  Applab.makeDraggable($(el));
+  divApplab.appendChild(element);
+  Applab.makeDraggable($(element));
+  Applab.editElementProperties(element);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
@@ -1056,7 +1224,7 @@ Applab.createElement = function (elementType, left, top) {
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 Applab.makeDraggable = function (jq) {
-  var gridSize = 20;
+  var GRID_SIZE = 20;
   jq.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
@@ -1064,24 +1232,26 @@ Applab.makeDraggable = function (jq) {
       // so adjust the position in various ways here.
 
       // dragging
-      var scale = Applab.getVizScaleFactor();
+      var div = document.getElementById('divApplab');
+      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
       var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
       var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / scale;
+      var newTop = (ui.originalPosition.top + changeTop) / yScale;
+
+      // snap top-left corner to nearest location in the grid
+      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
       // containment
       var container = $('#divApplab');
-      var maxLeft = container.width() - ui.helper.outerWidth(true);
-      var maxTop = container.height() - ui.helper.outerHeight(true);
+      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
       newLeft = Math.min(newLeft, maxLeft);
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
       newTop = Math.max(newTop, 0);
-
-      // grid
-      newLeft -= newLeft % gridSize;
-      newTop -= newTop % gridSize;
 
       ui.position.left = newLeft;
       ui.position.top = newTop;
@@ -1092,21 +1262,11 @@ Applab.makeDraggable = function (jq) {
   });
 };
 
-Applab.getVizScaleFactor = function () {
-  var width = $('body').width();
-  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
-  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
-    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
-        Applab.vizScaleFactors;
-  }
-  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
-    if (width > vizScaleBreakpoints[i]) {
-      return Applab.vizScaleFactors[i];
-    }
-  }
-  throw 'Unexpected body width: ' + width;
-};
-
+/**
+ * If in design mode and program is not running, display Properties
+ * pane for editing the clicked element.
+ * @param event
+ */
 Applab.onDivApplabClick = function (event) {
   if (!window.$ || $('#designModeButton').is(':visible') ||
       $('#resetButton').is(':visible')) {
@@ -1116,44 +1276,106 @@ Applab.onDivApplabClick = function (event) {
   Applab.editElementProperties(event.target);
 };
 
+/**
+ * @param element {Element}
+ * @returns {number} The outerWidth (width + margin) of the element in pixels,
+ * or NaN if element's css width or margin are not defined.
+ */
+Applab.getOuterWidth = function(element) {
+  var marginLeft = parseInt($(element).css('margin-left'), 10);
+  var marginRight = parseInt($(element).css('margin-right'), 10);
+  return parseInt(element.style.width, 10) + marginLeft + marginRight;
+};
+
+/**
+ * Sets element width equal to outerWidth minus margin,
+ * or to '' if margin is undefined.
+ * @param element {Element}
+ * @param outerWidth {number} Desired element outerWidth in pixels.
+ */
+Applab.setOuterWidth = function(element, outerWidth) {
+  var marginLeft = parseInt($(element).css('margin-left'), 10);
+  var marginRight = parseInt($(element).css('margin-right'), 10);
+  var width = +outerWidth - marginLeft - marginRight;
+  element.style.width = isNaN(width) ? '' : width + 'px';
+};
+
+/**
+ * @param element {Element}
+ * @returns {number} the outerHeight (height + margin) of the element in pixels,
+ * or NaN if element's css height or margin are not defined.
+ */
+Applab.getOuterHeight = function(element) {
+  var marginTop = parseInt($(element).css('margin-top'), 10);
+  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
+  return parseInt(element.style.height, 10) + marginTop + marginBottom;
+};
+
+/**
+ * Sets element height equal to outerHeight minus margin,
+ * or to '' if margin is undefined.
+ * @param element {Element}
+ * @param outerHeight {number} Desired element outerHeight in pixels.
+ */
+Applab.setOuterHeight = function(element, outerHeight) {
+  var marginTop = parseInt($(element).css('margin-top'), 10);
+  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
+  var height = +outerHeight - marginTop - marginBottom;
+  element.style.height = isNaN(height) ? '' : height + 'px';
+};
+
 // Currently there is a 1:1 mapping between applab element types and HTML tag names
 // (input, label, button, ...), so elements are simply identified by tag name.
-Applab.editElementProperties = function(el) {
-  var tagName = el.tagName.toLowerCase();
+Applab.editElementProperties = function(element) {
+  var tagName = element.tagName.toLowerCase();
   if (!Applab.isValidElementType(tagName)) {
    Applab.clearProperties();
    return;
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
-    tagName: tagName,
-    props: {
-      id: el.id,
-      left: el.style.left,
-      top: el.style.top,
-      width: el.style.width,
-      height: el.style.height,
-      text: $(el).text()
-    }
-  });
-  var savePropertiesButton = document.getElementById('savePropertiesButton');
-  var onSave = Applab.onSavePropertiesButton.bind(this, el);
-  if (savePropertiesButton) {
-    dom.addClickTouchEvent(savePropertiesButton, onSave);
-  }
-  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
-  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
-  if (deletePropertiesButton) {
-    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  var outerWidth = Applab.getOuterWidth(element);
+  var outerHeight = Applab.getOuterHeight(element);
+  React.render(
+    React.createElement(DesignProperties, {
+        tagName: tagName,
+        id: element.id,
+        left: parseInt(element.style.left, 10) || 0,
+        top: parseInt(element.style.top, 10) || 0,
+        width: isNaN(outerWidth) ? '' : outerWidth,
+        height: isNaN(outerHeight) ? '' : outerHeight,
+        text: $(element).text(),
+        handleChange: Applab.onPropertyChange.bind(this, element),
+        onDone: Applab.onDonePropertiesButton,
+        onDelete: Applab.onDeletePropertiesButton.bind(this, element)}
+    ),
+    designPropertiesEl);
+};
+
+/**
+ * Clear the Properties pane of applab's design mode.
+ */
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  if (designPropertiesEl) {
+    React.render(React.createElement(DesignProperties, {tagName: null}), designPropertiesEl);
   }
 };
 
-Applab.clearProperties = function () {
-  var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
-    tagName: null
+/**
+ * Enable (or disable) dragging of new elements from the element tray,
+ * and show (or hide) the 'Clear' button.
+ * @param allowEditing {boolean}
+ */
+Applab.resetElementTray = function (allowEditing) {
+  $('#design-elements .new-design-element').each(function() {
+    $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
+  var designModeClear = document.getElementById('designModeClear');
+  if (designModeClear) {
+    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
+  }
+
 };
 
 Applab.isValidElementType = function (type) {
@@ -1165,18 +1387,38 @@ Applab.isValidElementType = function (type) {
   return false;
 };
 
-Applab.onSavePropertiesButton = function(el, event) {
-  el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value;
-  el.style.top = document.getElementById('design-property-top').value;
-  el.style.width = document.getElementById('design-property-width').value;
-  el.style.height = document.getElementById('design-property-height').value;
-  $(el).text(document.getElementById('design-property-text').value);
+Applab.onPropertyChange = function(element, name, value) {
+  switch (name) {
+    case 'id':
+      element.id = value;
+      break;
+    case 'left':
+      element.style.left = value + 'px';
+      break;
+    case 'top':
+      element.style.top = value + 'px';
+      break;
+    case 'width':
+      Applab.setOuterWidth(element, value);
+      break;
+    case 'height':
+      Applab.setOuterHeight(element, value);
+      break;
+    case 'text':
+      $(element).text(value);
+      break;
+    default:
+      throw "unknown property name " + name;
+  }
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
-Applab.onDeletePropertiesButton = function(el, event) {
-  el.parentNode.removeChild(el);
+Applab.onDonePropertiesButton = function() {
+  Applab.clearProperties();
+};
+
+Applab.onDeletePropertiesButton = function(element, event) {
+  element.parentNode.removeChild(element);
   Applab.levelHtml = Applab.serializeToLevelHtml();
   Applab.clearProperties();
 };
@@ -1190,14 +1432,18 @@ Applab.serializeToLevelHtml = function () {
   return s.serializeToString(clone);
 };
 
-Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+/**
+ * @param rootEl {Element}
+ * @param allowDragging {boolean}
+ */
+Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (!Applab.levelHtml) {
     return;
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
   children.appendTo(rootEl);
-  if (isDesignMode) {
+  if (allowDragging) {
     Applab.makeDraggable(children);
   }
 };
@@ -1216,12 +1462,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 
   var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
   var stepInButton = document.getElementById('stepInButton');
   var stepOverButton = document.getElementById('stepOverButton');
   var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.textContent = applabMsg.pause();
+  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+    pauseButton.style.display = "inline-block";
     pauseButton.disabled = true;
+    continueButton.style.display = "none";
     stepInButton.disabled = true;
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
@@ -1232,7 +1480,7 @@ Applab.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Applab.reset = function(first) {
   var i;
   Applab.clearEventHandlersKillTickLoop();
 
@@ -1266,11 +1514,20 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  if (level.showTurtleBeforeRun) {
+    turtleSetVisibility(true);
+  }
+
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+  var isRunning = window.$ && $('#resetButton').is(':visible');
+  var allowDragging = isDesignMode && !isRunning;
+  Applab.parseFromLevelHtml(newDivApplab, allowDragging);
+  if (isDesignMode) {
+    Applab.clearProperties();
+    Applab.resetElementTray(allowDragging);
+  }
 
   newDivApplab.addEventListener('click', Applab.onDivApplabClick);
-
 
   // Reset goal successState:
   if (level.goal) {
@@ -1288,12 +1545,14 @@ studioApp.reset = function(first) {
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.textContent = applabMsg.pause();
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = true;
+      continueButton.style.display = "none";
       stepInButton.disabled = false;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1304,7 +1563,7 @@ studioApp.reset = function(first) {
     }
     var debugOutput = document.getElementById('debug-output');
     if (debugOutput) {
-      debugOutput.value = '';
+      debugOutput.textContent = '';
     }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
@@ -1319,11 +1578,35 @@ studioApp.reset = function(first) {
   Applab.interpreter = null;
 };
 
+// TODO(dave): remove once channel id is passed in appOptions.
+/**
+ * If channel id has not yet been loaded, delays calling of the callback
+ * until the saveProject response comes back. Otherwise, calls the callback
+ * directly.
+ * @param callback {Function}
+ */
+studioApp.runButtonClickWrapper = function (callback) {
+  // Behave like other apps when not editing a project or channel id is present.
+  if (window.dashboard &&
+      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
+    if (window.$) {
+      $(window).trigger('run_button_pressed');
+    }
+    callback();
+  } else {
+    if (window.$) {
+      $(window).trigger('run_button_pressed', callback);
+    } else {
+      callback();
+    }
+  }
+};
+
 /**
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Applab.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1338,19 +1621,9 @@ studioApp.runButtonClick = function() {
   studioApp.attempts++;
   Applab.execute();
 
-  // Show view data button now that channel id is available.
-  var viewDataButton = document.getElementById('viewDataButton');
-  if (viewDataButton) {
-    viewDataButton.style.display = "inline-block";
-  }
-
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
-    var designCell = document.getElementById('design-cell');
-    if (designCell) {
-      designCell.className = 'design-cell-enabled';
-    }
   }
 };
 
@@ -1400,7 +1673,7 @@ var defineProcedures = function (blockType) {
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          studioApp: studioApp,
-                         Applab: api,
+                         Applab: apiBlockly,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -1511,11 +1784,10 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Applab');
-    Applab.userCodeStartOffset = codeWhenRun.length;
-    Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
-    codeWhenRun += studioApp.editor.getValue();
-    Applab.userCodeLength = codeWhenRun.length - Applab.userCodeStartOffset;
+    codeWhenRun = studioApp.editor.getValue();
+    Applab.userCodeStartOffset = 0;
+    Applab.userCodeLineOffset = 0;
+    Applab.userCodeLength = codeWhenRun.length;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
@@ -1544,9 +1816,9 @@ Applab.execute = function() {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter,
+                                  dropletConfig.blocks,
                                   scope,
-                                  { Applab: api,
-                                    console: consoleApi,
+                                  { console: consoleApi,
                                     JSON: JSONApi });
 
         populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
@@ -1580,18 +1852,21 @@ Applab.execute = function() {
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
-                                          Applab: api,
+                                          Applab: apiBlockly,
                                           Globals: Applab.Globals } );
     }
   }
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = false;
+      continueButton.style.display = "none";
       stepInButton.disabled = true;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1611,27 +1886,40 @@ Applab.execute = function() {
   queueOnTick();
 };
 
-Applab.onPauseButton = function() {
+Applab.onPauseContinueButton = function() {
   if (Applab.running) {
-    var pauseButton = document.getElementById('pauseButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
-    if (Applab.paused) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
       Applab.paused = false;
-      Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.pause();
     } else {
       Applab.paused = true;
       Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.continue();
     }
+    Applab.updatePauseUIState();
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     stepInButton.disabled = !Applab.paused;
     stepOverButton.disabled = !Applab.paused;
     stepOutButton.disabled = !Applab.paused;
-    document.getElementById('spinner').style.visibility =
-        Applab.paused ? 'hidden' : 'visible';
+  }
+};
+
+Applab.updatePauseUIState = function() {
+  var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
+  var spinner = document.getElementById('spinner');
+
+  if (pauseButton && continueButton && spinner) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+      pauseButton.style.display = "none";
+      continueButton.style.display = "inline-block";
+      spinner.style.visibility = 'hidden';
+    } else {
+      pauseButton.style.display = "inline-block";
+      continueButton.style.display = "none";
+      spinner.style.visibility = 'visible';
+    }
   }
 };
 
@@ -1639,25 +1927,25 @@ Applab.onStepOverButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OVER;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
 Applab.onStepInButton = function() {
   if (!Applab.running) {
-    studioApp.runButtonClick();
-    Applab.onPauseButton();
+    Applab.runButtonClick();
+    Applab.onPauseContinueButton();
   }
   Applab.paused = true;
   Applab.nextStep = StepType.IN;
-  document.getElementById('spinner').style.visibility = 'visible';
+  Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OUT;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
@@ -1671,8 +1959,8 @@ Applab.onViewData = function() {
 };
 
 Applab.onDesignModeButton = function() {
-  studioApp.resetButtonClick();
   Applab.toggleDesignMode(true);
+  studioApp.resetButtonClick();
 };
 
 Applab.onCodeModeButton = function() {
@@ -1681,6 +1969,19 @@ Applab.onCodeModeButton = function() {
 
 Applab.onDesignModeClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDragging = function(enable) {
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else {
+    children.each(function() {
+      if ($(this).data('uiDraggable')) {
+        $(this).draggable('destroy');
+      }
+    });
+  }
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -1702,12 +2003,7 @@ Applab.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
-  var children = $('#divApplab').children();
-  if (enable) {
-    Applab.makeDraggable(children);
-  } else if (children.data('uiDraggable')) {
-    children.draggable('destroy');
-  }
+  Applab.toggleDragging(enable);
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1813,7 +2109,7 @@ Applab.container = function (opts) {
 
 Applab.write = function (opts) {
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'write', 'html', opts.html, 'string');
+  apiValidateType(opts, 'write', 'html', opts.html, 'uistring');
   return Applab.container(opts);
 };
 
@@ -1822,7 +2118,7 @@ Applab.button = function (opts) {
 
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
-  apiValidateType(opts, 'button', 'text', opts.text, 'string');
+  apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -2068,7 +2364,7 @@ Applab.getDirection = function (opts) {
 Applab.dot = function (opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
-  if (ctx) {
+  if (ctx && opts.radius > 0) {
     ctx.beginPath();
     if (Applab.turtle.penUpColor) {
       // If the pen is up and the color has been changed, use that color:
@@ -2116,18 +2412,32 @@ Applab.penWidth = function (opts) {
   }
 };
 
-Applab.penColor = function (opts) {
-  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+Applab.penColorInternal = function (rgbstring) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
       // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = opts.color;
+      Applab.turtle.penUpColor = rgbstring;
     } else {
-      ctx.strokeStyle = opts.color;
+      ctx.strokeStyle = rgbstring;
     }
-    ctx.fillStyle = opts.color;
+    ctx.fillStyle = rgbstring;
   }
+};
+
+Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+  Applab.penColorInternal(opts.color);
+};
+
+Applab.penRGB = function (opts) {
+  apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'a', opts.a, 'number', 0, 1, OPTIONAL);
+  var alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  var rgbstring = "rgba(" + opts.r + "," + opts.g + "," + opts.b + "," + alpha + ")";
+  Applab.penColorInternal(rgbstring);
 };
 
 Applab.speed = function (opts) {
@@ -2347,7 +2657,7 @@ Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -2360,8 +2670,10 @@ Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
-  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
+  if (typeof opts.forId !== 'undefined') {
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, true);
+  }
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -2415,7 +2727,7 @@ Applab.dropdown = function (opts) {
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
-      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'uistring');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -2470,7 +2782,7 @@ Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+  apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -2688,11 +3000,64 @@ Applab.getYPosition = function (opts) {
 
 Applab.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
+    var div = document.getElementById('divApplab');
+    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+    var xOffset = 0;
+    var yOffset = 0;
+    while (div) {
+      xOffset += div.offsetLeft;
+      yOffset += div.offsetTop;
+      div = div.offsetParent;
+    }
+
+    var applabEvent = {};
+    // Pass these properties through to applabEvent:
+    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
+      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = e[prop];
+        }
+      });
+    // Convert x coordinates and then pass through to applabEvent:
+    ['clientX', 'pageX', 'x'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - xOffset) / xScale;
+        }
+      });
+    // Convert y coordinates and then pass through to applabEvent:
+    ['clientY', 'pageY', 'y'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - yOffset) / yScale;
+        }
+      });
+    // Replace DOM elements with IDs and then add them to applabEvent:
+    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
+      'toElement'].forEach(
+      function (prop) {
+        if (e[prop]) {
+          applabEvent[prop + "Id"] = e[prop].id;
+        }
+      });
+    // Attempt to populate key property (not yet supported in Chrome/Safari):
+    //
+    // keyup/down has no charCode and can be translated with the keyEvent[] map
+    // keypress can use charCode
+    //
+    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
+    if (typeof keyProp !== 'undefined') {
+      applabEvent.key = keyProp;
+    }
+
     // Push a function call on the queue with an array of arguments consisting
-    // of just the 'e' parameter
+    // of the applabEvent parameter (and any extraArgs originally supplied)
     Applab.eventQueue.push({
       'fn': opts.func,
-      'arguments': [e].concat(opts.extraArgs)
+      'arguments': [applabEvent].concat(opts.extraArgs)
     });
   } else {
     Applab.eventQueue.push({'fn': opts.func});
@@ -2713,14 +3078,15 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
-  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
-  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
     opts.elementId = 'divApplab';
+  } else {
+    apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
   }
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
@@ -2745,7 +3111,6 @@ Applab.onEvent = function (opts) {
       case 'rotate':
       case 'release':
       case 'gesture':
-      */
       case 'pinch':
       case 'pinchin':
       case 'pinchout':
@@ -2753,13 +3118,28 @@ Applab.onEvent = function (opts) {
         hammerElement.on(opts.eventName,
                          Applab.onEventFired.bind(this, opts));
         break;
-      default:
+      */
+      case 'click':
+      case 'change':
+      case 'keyup':
+      case 'mousemove':
+      case 'dblclick':
+      case 'mousedown':
+      case 'mouseup':
+      case 'mouseover':
+      case 'mouseout':
+      case 'keydown':
+      case 'keypress':
+      case 'input':
         // For now, we're not tracking how many of these we add and we don't allow
         // the user to detach the handler. We detach all listeners by cloning the
         // divApplab DOM node inside of reset()
         domElement.addEventListener(
             opts.eventName,
             Applab.onEventFired.bind(this, opts));
+        break;
+      default:
+        return false;
     }
     return true;
   }
@@ -2834,6 +3214,11 @@ Applab.clearInterval = function (opts) {
 };
 
 Applab.createRecord = function (opts) {
+  apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
+  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
+  apiValidateType(opts, 'createRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -2860,6 +3245,9 @@ Applab.handleError = function(errorCallback, message) {
 };
 
 Applab.getKeyValue = function(opts) {
+  apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'getKeyValue', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
@@ -2875,6 +3263,10 @@ Applab.handleReadValue = function(successCallback, value) {
 };
 
 Applab.setKeyValue = function(opts) {
+  apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
+  apiValidateType(opts, 'setKeyValue', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
@@ -2890,6 +3282,10 @@ Applab.handleSetKeyValue = function(successCallback) {
 };
 
 Applab.readRecords = function (opts) {
+  apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
+  apiValidateType(opts, 'readRecords', 'searchParams', opts.searchParams, 'object');
+  apiValidateType(opts, 'readRecords', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
@@ -2905,6 +3301,11 @@ Applab.handleReadRecords = function(successCallback, records) {
 };
 
 Applab.updateRecord = function (opts) {
+  apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'updateRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
@@ -2920,6 +3321,11 @@ Applab.handleUpdateRecord = function(successCallback, record) {
 };
 
 Applab.deleteRecord = function (opts) {
+  apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'deleteRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
@@ -3018,194 +3424,14 @@ var getPegasusHost = function() {
         case 'test':
         case 'levelbuilder':
           return name + '.code.org';
+        case 'staging-studio':
+          return 'staging.code.org';
+        case 'test-studio':
+          return 'test.code.org';
+        case 'levelbuilder-studio':
+          return 'levelbuilder.code.org';
         default:
           return null;
       }
   }
 };
-
-/*jshint asi:true */
-/*jshint -W064 */
-
-//
-// Extracted from https://github.com/alexei/sprintf.js
-//
-// Copyright (c) 2007-2014, Alexandru Marasteanu <hello [at) alexei (dot] ro>
-// All rights reserved.
-//
-// Current as of 10/30/14
-// commit c3ac006aff511dda804589af8f5b3c0d5da5afb1
-//
-
-    var re = {
-        not_string: /[^s]/,
-        number: /[dief]/,
-        text: /^[^\x25]+/,
-        modulo: /^\x25{2}/,
-        placeholder: /^\x25(?:([1-9]\d*)\$|\(([^\)]+)\))?(\+)?(0|'[^$])?(-)?(\d+)?(?:\.(\d+))?([b-fiosuxX])/,
-        key: /^([a-z_][a-z_\d]*)/i,
-        key_access: /^\.([a-z_][a-z_\d]*)/i,
-        index_access: /^\[(\d+)\]/,
-        sign: /^[\+\-]/
-    }
-
-    function sprintf() {
-        var key = arguments[0], cache = sprintf.cache
-        if (!(cache[key] && cache.hasOwnProperty(key))) {
-            cache[key] = sprintf.parse(key)
-        }
-        return sprintf.format.call(null, cache[key], arguments)
-    }
-
-    sprintf.format = function(parse_tree, argv) {
-        var cursor = 1, tree_length = parse_tree.length, node_type = "", arg, output = [], i, k, match, pad, pad_character, pad_length, is_positive = true, sign = ""
-        for (i = 0; i < tree_length; i++) {
-            node_type = get_type(parse_tree[i])
-            if (node_type === "string") {
-                output[output.length] = parse_tree[i]
-            }
-            else if (node_type === "array") {
-                match = parse_tree[i] // convenience purposes only
-                if (match[2]) { // keyword argument
-                    arg = argv[cursor]
-                    for (k = 0; k < match[2].length; k++) {
-                        if (!arg.hasOwnProperty(match[2][k])) {
-                            throw new Error(sprintf("[sprintf] property '%s' does not exist", match[2][k]))
-                        }
-                        arg = arg[match[2][k]]
-                    }
-                }
-                else if (match[1]) { // positional argument (explicit)
-                    arg = argv[match[1]]
-                }
-                else { // positional argument (implicit)
-                    arg = argv[cursor++]
-                }
-
-                if (get_type(arg) == "function") {
-                    arg = arg()
-                }
-
-                if (re.not_string.test(match[8]) && (get_type(arg) != "number" && isNaN(arg))) {
-                    throw new TypeError(sprintf("[sprintf] expecting number but found %s", get_type(arg)))
-                }
-
-                if (re.number.test(match[8])) {
-                    is_positive = arg >= 0
-                }
-
-                switch (match[8]) {
-                    case "b":
-                        arg = arg.toString(2)
-                    break
-                    case "c":
-                        arg = String.fromCharCode(arg)
-                    break
-                    case "d":
-                    case "i":
-                        arg = parseInt(arg, 10)
-                    break
-                    case "e":
-                        arg = match[7] ? arg.toExponential(match[7]) : arg.toExponential()
-                    break
-                    case "f":
-                        arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg)
-                    break
-                    case "o":
-                        arg = arg.toString(8)
-                    break
-                    case "s":
-                        arg = ((arg = String(arg)) && match[7] ? arg.substring(0, match[7]) : arg)
-                    break
-                    case "u":
-                        arg = arg >>> 0
-                    break
-                    case "x":
-                        arg = arg.toString(16)
-                    break
-                    case "X":
-                        arg = arg.toString(16).toUpperCase()
-                    break
-                }
-                if (re.number.test(match[8]) && (!is_positive || match[3])) {
-                    sign = is_positive ? "+" : "-"
-                    arg = arg.toString().replace(re.sign, "")
-                }
-                else {
-                    sign = ""
-                }
-                pad_character = match[4] ? match[4] === "0" ? "0" : match[4].charAt(1) : " "
-                pad_length = match[6] - (sign + arg).length
-                pad = match[6] ? (pad_length > 0 ? str_repeat(pad_character, pad_length) : "") : ""
-                output[output.length] = match[5] ? sign + arg + pad : (pad_character === "0" ? sign + pad + arg : pad + sign + arg)
-            }
-        }
-        return output.join("")
-    }
-
-    sprintf.cache = {}
-
-    sprintf.parse = function(fmt) {
-        var _fmt = fmt, match = [], parse_tree = [], arg_names = 0
-        while (_fmt) {
-            if ((match = re.text.exec(_fmt)) !== null) {
-                parse_tree[parse_tree.length] = match[0]
-            }
-            else if ((match = re.modulo.exec(_fmt)) !== null) {
-                parse_tree[parse_tree.length] = "%"
-            }
-            else if ((match = re.placeholder.exec(_fmt)) !== null) {
-                if (match[2]) {
-                    arg_names |= 1
-                    var field_list = [], replacement_field = match[2], field_match = []
-                    if ((field_match = re.key.exec(replacement_field)) !== null) {
-                        field_list[field_list.length] = field_match[1]
-                        while ((replacement_field = replacement_field.substring(field_match[0].length)) !== "") {
-                            if ((field_match = re.key_access.exec(replacement_field)) !== null) {
-                                field_list[field_list.length] = field_match[1]
-                            }
-                            else if ((field_match = re.index_access.exec(replacement_field)) !== null) {
-                                field_list[field_list.length] = field_match[1]
-                            }
-                            else {
-                                throw new SyntaxError("[sprintf] failed to parse named argument key")
-                            }
-                        }
-                    }
-                    else {
-                        throw new SyntaxError("[sprintf] failed to parse named argument key")
-                    }
-                    match[2] = field_list
-                }
-                else {
-                    arg_names |= 2
-                }
-                if (arg_names === 3) {
-                    throw new Error("[sprintf] mixing positional and named placeholders is not (yet) supported")
-                }
-                parse_tree[parse_tree.length] = match
-            }
-            else {
-                throw new SyntaxError("[sprintf] unexpected placeholder")
-            }
-            _fmt = _fmt.substring(match[0].length)
-        }
-        return parse_tree
-    }
-
-    var vsprintf = function(fmt, argv, _argv) {
-        _argv = (argv || []).slice(0)
-        _argv.splice(0, 0, fmt)
-        return sprintf.apply(null, _argv)
-    }
-
-    /**
-     * helpers
-     */
-    function get_type(variable) {
-        return Object.prototype.toString.call(variable).slice(8, -1).toLowerCase()
-    }
-
-    function str_repeat(input, multiplier) {
-        return Array(multiplier + 1).join(input)
-    }

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,22 +150,22 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
-"divideByZeroError":function(d){return "โปรแกรมของคุณเกิดการหารด้วยศูนย์"},
-"emptyComputeBlock":function(d){return "คุณต้องแนบบล็อกเพื่อทำงานกับอีกบล็อก."},
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
+"divideByZeroError":function(d){return "โปรแกรมของคุณให้ผลลัพธ์ผิดพลาดเพราะมีการหารด้วยศูนย์."},
+"emptyComputeBlock":function(d){return "คุณต้องเชื่อมบล๊อกเข้ากับ \"evaluate\" บล๊อก."},
 "equivalentExpression":function(d){return "ลองจัดลำดับ argument ใหม่ เพื่อให้ได้ expression ที่เหมือนกันจริงๆ."},
 "evaluate":function(d){return "การทดสอบ"},
-"extraTopBlocks":function(d){return "คุณมีบล็อกที่ไม่ได้ติดอยู่กับโปรแกรมนี้ คุณหมายถึงว่า คุณอยากจะเอาบล็อกนั้นมาอยู่กับบล็อกที่จะทำงานนี้หรือไม่?"},
+"extraTopBlocks":function(d){return "คุณมีบางบล๊อกที่ไม่ได้เชื่อมต่อ. คุณตั้งใจที่จะเชื่อมบล๊อกเหล่านี้เข้ากับ \"evaluate\" บล๊อกใช่หรือไม่?"},
 "failedInput":function(d){return "ฟังค์ชั่นของคุณไม่สามารถส่งผลลัพท์ที่ถูกต้องคืนมาได้ สำหรับทุกค่า."},
 "goal":function(d){return "เป้าหมาย:"},
 "levelIncompleteError":function(d){return "Expression ของคุณไม่ตรงกับเป้าหมาย."},
-"missingFunctionError":function(d){return "คุณต้องประกาศฟังก์ชัน"+appLocale.v(d,"functionName")},
-"missingVariableX":function(d){return "Expression ของคุณขาด variable "+appLocale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "นี่คือการคำนวณของคุณ! ทำงานต่อไป, หรือไปทำปริศนาอันต่อไป!"},
+"missingFunctionError":function(d){return "คุณต้องประกาศฟังก์ชันชื่อ "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Expression ของคุณขาดตัวแปร "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "นี่คือการผลการคำนวณของคุณ! คุณต้องการทำต่อหรือข้ามไปทำปริศนาอันต่อไป?"},
 "yourExpression":function(d){return "Expression ของคุณ:"},
 "wrongInput":function(d){return "คุณใช้ค่าที่ผิดในการเรียกฟังค์ชั่นของคุณ."},
-"wrongOtherValuesX":function(d){return "ผลลัพท์ของ Expression ของคุณกับค่าที่ผิด ถ้าเรามีค่า "+appLocale.v(d,"var")+" ที่หลากหลาย."},
+"wrongOtherValuesX":function(d){return "ผลลัพท์จาก Expression ของคุณจะไม่ถูกต้องถ้าเราป้อนค้า "+calc_locale.v(d,"var")+" ที่หลากหลาย."},
 "wrongResult":function(d){return "Expression ของคุณไม่ส่งค่าผลลัพท์ที่ถูกต้องกลับคืนมา."}};

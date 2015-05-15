@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var applab_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -26,10 +26,10 @@ var appLocale = {lc:{"ar":function(n){
 },"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){applab_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:(k=applab_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).applab_locale = {
 "catActions":function(d){return "פעולות"},
 "catControl":function(d){return "חזרות"},
 "catEvents":function(d){return "אירועים"},
@@ -40,14 +40,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "משתנים"},
 "continue":function(d){return "המשך"},
 "container":function(d){return "צור חלוקה"},
-"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"containerTooltip":function(d){return "יוצר חלוקה ומגדיר את הHTML הפנימי שלה."},
 "finalLevel":function(d){return "מזל טוב! פתרת את החידה האחרונה."},
 "nextLevel":function(d){return "מזל טוב! השלמת את הפאזל הזה."},
 "no":function(d){return "לא"},
 "numBlocksNeeded":function(d){return "ניתן לפתור את הפאזל עם %1 בלוק."},
 "pause":function(d){return "שבור"},
 "reinfFeedbackMsg":function(d){return "באפשרותך להקיש על לחצן \"נסה שוב\" כדי לחזור ולהריץ את האפליקציה שלך."},
-"repeatForever":function(d){return "repeat forever"},
+"repeatForever":function(d){return "חזור לנצח"},
 "repeatDo":function(d){return "בצע"},
 "repeatForeverTooltip":function(d){return "בצע את הפעולות בבלוק הזה שוב ושוב כל עוד האפליקציה רצה."},
 "shareApplabTwitter":function(d){return "תראו את האפליקציה שהכנתי. אני כתבתי אותה בעצמי עם @codeorg"},
@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "היכנס"},
 "stepOver":function(d){return "עבור מעל"},
 "stepOut":function(d){return "צא"},
-"viewData":function(d){return "ראה נתונים"},
+"viewData":function(d){return "צפה בנתונים"},
 "yes":function(d){return "כן"}};

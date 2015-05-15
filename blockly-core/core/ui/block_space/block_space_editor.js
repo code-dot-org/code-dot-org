@@ -434,12 +434,11 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   }
 
   // Subtract any pixels present above the svg element from the available height
-  // (only need to do this for mainBlockSpaceEditor's svg element, but fall back
-  // to this.svg_ during mainBlockSpaceEditor's creation)
   var containerDiv = svg.parentNode;
-  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
-  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement)
-    - goog.style.getPageOffsetTop(containerDiv);
+  var containerStyle = window.getComputedStyle(containerDiv);
+  var containerTopBorder = containerStyle ? parseInt(containerStyle.borderTopWidth, 10) : 0;
+  var headerHeight = goog.style.getPageOffsetTop(svg)
+    - (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
 
   var svgWidth = containerDiv.clientWidth - svgBorderWidth;
   var svgHeight = containerDiv.clientHeight - headerHeight;
@@ -488,9 +487,14 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceWidth = function() {
  * Note, this includes the categories tree (for levels with categories).
  */
 Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
-  var flyout = this.flyout_ || this.toolbox.flyout_;
-  var metrics = flyout.blockSpace_.getMetrics();
-  var width = metrics ? metrics.viewWidth : 0;
+  var width = 0;
+  var flyout = this.flyout_ || (this.toolbox && this.toolbox.flyout_);
+  if (flyout) {
+    var metrics = flyout.blockSpace_.getMetrics();
+    if (metrics) {
+      width = metrics.viewWidth;
+    }
+  }
   if (this.toolbox) {
     width += this.toolbox.HtmlDiv.getBoundingClientRect().width;
   }

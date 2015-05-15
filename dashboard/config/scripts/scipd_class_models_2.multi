@@ -1,0 +1,12 @@
+name 'sciPD class models 2'
+title 'Constructionism'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
+
+question 'Constructionism focuses on how learning is constructed during the...'
+wrong 'design of learning artifacts'
+wrong 'creation of learning artifacts'
+wrong 'discussion of learning artifacts'
+right 'all of the above'

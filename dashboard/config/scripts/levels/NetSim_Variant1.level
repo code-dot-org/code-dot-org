@@ -45,9 +45,11 @@
     "show_metronome": "true",
     "show_bit_rate_control": "false",
     "lock_bit_rate_control": "false",
-    "default_bit_rate_bits_per_second": "1",
+    "default_bit_rate_bits_per_second": "0.5",
     "show_chunk_size_control": "false",
-    "lock_chunk_size_control": "false"
+    "lock_chunk_size_control": "false",
+    "show_hostname_in_graph": "false",
+    "show_pulse_rate_slider": "true"
   },
   "md5": "4f6c2be7a81200975d6f6540230868a7"
 }]]></config>

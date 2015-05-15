@@ -1,5 +1,9 @@
 # Abstract class for DSL types which provide a standard set of content-definition methods.
 class ContentDSL < BaseDSL
+  def initialize
+    super
+    @hash.merge! options: {}
+  end
   def title(text) @hash[:title] = text end
   def type(text) @hash[:type] = text end
 
@@ -22,6 +26,11 @@ class ContentDSL < BaseDSL
 
   def parse_output
     {name: @name, properties: @hash}
+  end
+
+  def method_missing(key, *args)
+    @hash[:options] ||= {}
+    @hash[:options][key.to_sym] = args.first
   end
 
   def i18n_strings

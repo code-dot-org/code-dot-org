@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.cs_cz');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "skutečný";
 Blockly.Msg.ADD = "Přidat";
 Blockly.Msg.ADD_COMMENT = "Přidat komentář";

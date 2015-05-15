@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({111:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({128:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Maze = require('./maze');
@@ -16,8 +16,9 @@ window.mazeMain = function(options) {
   appMain(window.Maze, levels, options);
 };
 
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":102,"./levels":110,"./maze":112,"./skins":116}],116:[function(require,module,exports){
+},{"../appMain":5,"./blocks":118,"./levels":126,"./maze":129,"./skins":133}],133:[function(require,module,exports){
 /**
  * Load Skin for Maze.
  */
@@ -229,7 +230,8 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207,"../utils":253}],112:[function(require,module,exports){
+
+},{"../skins":225,"../utils":273}],129:[function(require,module,exports){
 /**
  * Blockly Apps: Maze
  *
@@ -256,11 +258,11 @@ exports.load = function(assetUrl, id) {
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
+var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -296,7 +298,7 @@ var skin;
 /**
  * Milliseconds between each animation frame.
  */
-var stepSpeed;
+var stepSpeed = 100;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -739,6 +741,10 @@ function resetDirtImages(running) {
  * Initialize Blockly and the maze.  Called on page load.
  */
 Maze.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+  studioApp.reset = this.reset.bind(this);
+
   var extraControlRows = null;
 
   skin = config.skin;
@@ -754,7 +760,7 @@ Maze.init = function(config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html')({
+    extraControlRows = require('./extraControlRows.html.ejs')({
       assetUrl: studioApp.assetUrl,
       searchWord: level.searchWord
     });
@@ -768,8 +774,8 @@ Maze.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl,
         showStepButton: level.step && !level.edit_blocks
       }),
@@ -976,7 +982,7 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Maze.reset = function(first) {
   if (Maze.bee) {
     // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
@@ -1105,7 +1111,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Maze.runButtonClick = function() {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');
@@ -1530,7 +1536,7 @@ function animatedMove (direction, timeForMove) {
 /**
  * Schedule a movement animating using a spritesheet.
  */
-function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
@@ -1547,7 +1553,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
       });
     }, timePerFrame * frame);
   });
-}
+};
 
 /**
  * Schedule the animations for a move from the current position
@@ -1572,7 +1578,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+    Maze.scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
       numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
@@ -1703,7 +1709,7 @@ Maze.scheduleFail = function(forward) {
         }
         // animate our sprite sheet
         var timePerFrame = 100;
-        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+        Maze.scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
           {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
         setTimeout(function () {
@@ -1833,8 +1839,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin()) {
-    scrat.scheduleDance(victoryDance, timeAlloted);
+  if (mazeUtils.isScratSkin(skin.id)) {
+    scrat.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 
@@ -2040,7 +2046,8 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html":123,"./wordsearch":124}],124:[function(require,module,exports){
+
+},{"../StudioApp":4,"../codegen":67,"../dom":70,"../dropletUtils":71,"../locale":112,"../templates/page.html.ejs":251,"../timeoutList":257,"../utils":273,"./api":114,"./bee":115,"./beeItemDrawer":117,"./controls.html.ejs":119,"./dirtDrawer":120,"./dropletConfig":121,"./executionInfo":122,"./extraControlRows.html.ejs":123,"./mazeUtils":130,"./scrat":132,"./tiles":135,"./visualization.html.ejs":140,"./wordsearch":141}],141:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -2293,7 +2300,8 @@ WordSearch.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":253,"./mazeUtils":113,"./tiles":118}],123:[function(require,module,exports){
+
+},{"../utils":273,"./mazeUtils":130,"./tiles":135}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2313,8 +2321,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],115:[function(require,module,exports){
+},{"ejs":283}],132:[function(require,module,exports){
 var SquareType = require('./tiles').SquareType;
+var Direction = require('./tiles').Direction;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -2411,7 +2420,7 @@ module.exports.drawMapTiles = function (svg) {
  * Schedule the animations for Scrat dancing.
  * @param {integer} timeAlloted How much time we have for our animations
  */
-module.exports.scheduleDance = function (victoryDance, timeAlloted) {
+module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     finishIcon.setAttribute('visibility', 'hidden');
@@ -2421,22 +2430,23 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted) {
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };
 
-},{"../utils":253,"./tiles":118}],110:[function(require,module,exports){
+
+},{"../utils":273,"./tiles":135}],126:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var mazeMsg = require('../../locale/current/maze');
+var mazeMsg = require('./locale');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolboxes/maze.xml')({
+  return require('./toolboxes/maze.xml.ejs')({
     page: page,
     level: level
   });
@@ -2444,7 +2454,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -3059,7 +3069,8 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../utils":253,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml":117,"./tiles":118,"./toolboxes/maze.xml":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
+
+},{"../block_utils":37,"../utils":273,"./karelLevels":124,"./locale":127,"./requiredBlocks":131,"./startBlocks.xml.ejs":134,"./tiles":135,"./toolboxes/maze.xml.ejs":139,"./wordsearchLevels":142}],142:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3299,7 +3310,8 @@ module.exports = {
 
 };
 
-},{"../block_utils":27,"./requiredBlocks":114,"./tiles":118}],122:[function(require,module,exports){
+
+},{"../block_utils":37,"./requiredBlocks":131,"./tiles":135}],139:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3319,7 +3331,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],117:[function(require,module,exports){
+},{"ejs":283}],134:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3339,7 +3351,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],114:[function(require,module,exports){
+},{"ejs":283}],131:[function(require,module,exports){
 var requiredBlockUtils = require('../required_block_utils');
 
 var MOVE_FORWARD = {'test': 'moveForward', 'type': 'maze_moveForward'};
@@ -3367,12 +3379,13 @@ module.exports = {
   FOR_LOOP: FOR_LOOP
 };
 
-},{"../required_block_utils":205}],108:[function(require,module,exports){
+
+},{"../required_block_utils":223}],124:[function(require,module,exports){
 /*jshint multistr: true */
 
 var levelBase = require('../level_base');
 var Direction = require('./tiles').Direction;
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
 //TODO: Fix hacky level-number-dependent toolbox.
@@ -3381,13 +3394,13 @@ var toolbox = function(page, level) {
   // Must use switch, since browserify only works on requires with literals.
   switch (page) {
     case 1:
-      template = require('./toolboxes/karel1.xml');
+      template = require('./toolboxes/karel1.xml.ejs');
       break;
     case 2:
-      template = require('./toolboxes/karel2.xml');
+      template = require('./toolboxes/karel2.xml.ejs');
       break;
     case 3:
-      template = require('./toolboxes/karel3.xml');
+      template = require('./toolboxes/karel3.xml.ejs');
       break;
   }
   return template({level: level});
@@ -3395,7 +3408,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./karelStartBlocks.xml')({
+  return require('./karelStartBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -4617,7 +4630,8 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml":109,"./tiles":118,"./toolboxes/karel1.xml":119,"./toolboxes/karel2.xml":120,"./toolboxes/karel3.xml":121}],121:[function(require,module,exports){
+
+},{"../block_utils":37,"../level_base":111,"./karelStartBlocks.xml.ejs":125,"./locale":127,"./tiles":135,"./toolboxes/karel1.xml.ejs":136,"./toolboxes/karel2.xml.ejs":137,"./toolboxes/karel3.xml.ejs":138}],138:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4631,7 +4645,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var msg = require('../../../locale/current/common');
+var msg = require('../../locale');
 
 /**
  * Add the procedures category to the toolbox.
@@ -4650,7 +4664,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/current/common":258,"ejs":274}],120:[function(require,module,exports){
+},{"../../locale":112,"ejs":283}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4664,8 +4678,8 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var commonMsg = require('../../../locale/current/common');
-var mazeMsg = require('../../../locale/current/maze');
+var commonMsg = require('../../locale');
+var mazeMsg = require('.././locale');
 
 var addProcedures = function() {; buf.push('  ');6; if (level > 3) {; buf.push('    <category name="', escape((6,  commonMsg.catProcedures() )), '" custom="PROCEDURE"></category>\n  ');7; } else if (level == 2 || level == 3) {; buf.push('    <category name="', escape((7,  commonMsg.catProcedures() )), '">\n      <block type="procedures_callnoreturn">\n        <mutation name="', escape((9,  mazeMsg.fillN({shovelfuls: 5}) )), '"></mutation>\n      </block>\n    </category>\n  ');12; }; buf.push('  ');12; if (level < 9) {; buf.push('    <category name="', escape((12,  commonMsg.catLogic() )), '">\n      <block type="karel_if"></block>\n    </category>\n  ');15; } else if (level > 8) {; buf.push('    <category name="', escape((15,  commonMsg.catLogic() )), '">\n      <block type="karel_if"></block>\n      <block type="karel_ifElse"></block>\n    </category>\n  ');19; }; buf.push('');19; };; buf.push('\n<xml id="toolbox" style="display: none;">\n  <category name="', escape((21,  commonMsg.catActions() )), '">\n    <block type="maze_moveForward"></block>\n    <block type="maze_turn"><title name="DIR">turnLeft</title></block>\n    <block type="maze_turn"><title name="DIR">turnRight</title></block>\n    <block type="maze_dig"></block>\n    <block type="maze_fill"></block>\n  </category>\n  ');28; addProcedures(); buf.push('  <category name="', escape((28,  commonMsg.catLoops() )), '">\n    <block type="maze_untilBlocked"></block>\n    <block type="controls_repeat"></block>\n  </category>\n</xml>\n'); })();
 } 
@@ -4675,7 +4689,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/current/common":258,"../../../locale/current/maze":262,"ejs":274}],119:[function(require,module,exports){
+},{"../../locale":112,".././locale":127,"ejs":283}],136:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4695,7 +4709,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],109:[function(require,module,exports){
+},{"ejs":283}],125:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4709,7 +4723,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 
 /**
  * Template to create function for filling in shovels.
@@ -4726,7 +4740,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":262,"ejs":274}],107:[function(require,module,exports){
+},{"./locale":127,"ejs":283}],123:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4738,7 +4752,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/maze') ; buf.push('\n<div id="spelling-table-wrapper">\n  <table id="spelling-table" class="float-right">\n    <tr>\n      <td class="spellingTextCell">', escape((5,  msg.word() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="searchWord" class="spellingButton" disabled>\n          ');8; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+ buf.push('');1; var msg = require('./locale') ; buf.push('\n<div id="spelling-table-wrapper">\n  <table id="spelling-table" class="float-right">\n    <tr>\n      <td class="spellingTextCell">', escape((5,  msg.word() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="searchWord" class="spellingButton" disabled>\n          ');8; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
 ; buf.push('\n          <img src="', escape((9,  assetUrl('media/1x1.gif') )), '"/>', escape((9,  searchWord )), '\n        </button>\n      </td>\n    </tr>\n    <tr>\n      <td class="spellingTextCell">', escape((14,  msg.youSpelled() )), ':</td>\n      <td class="spellingButtonCell">\n        <button id="currentWord" class="spellingButton" disabled>\n          ');17; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
 ; buf.push('\n          <img src="', escape((18,  assetUrl('media/1x1.gif') )), '"><span id="currentWordContents"></span>\n        </button>\n      </td>\n    </tr>\n  </table>\n</div>\n'); })();
 } 
@@ -4748,7 +4762,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":262,"ejs":274}],106:[function(require,module,exports){
+},{"./locale":127,"ejs":283}],122:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -4874,8 +4888,9 @@ ExecutionInfo.prototype.checkTimeout = function() {
   }
 };
 
-},{"../utils":253}],105:[function(require,module,exports){
-var msg = require('../../locale/current/maze');
+
+},{"../utils":273}],121:[function(require,module,exports){
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Movement' },
@@ -4890,7 +4905,8 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/maze":262}],103:[function(require,module,exports){
+
+},{"./locale":127}],119:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4902,7 +4918,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/maze') ; buf.push('\n\n<button id="stepButton" class="launch ', escape((3,  showStepButton ? '' : 'hide' )), ' float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
+ buf.push('');1; var msg = require('./locale') ; buf.push('\n\n<button id="stepButton" class="launch ', escape((3,  showStepButton ? '' : 'hide' )), ' float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering 
 ; buf.push('\n  <img src="', escape((5,  assetUrl('media/1x1.gif') )), '">', escape((5,  msg.step() )), '\n</button>\n\n'); })();
 } 
 return buf.join('');
@@ -4911,7 +4927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":262,"ejs":274}],102:[function(require,module,exports){
+},{"./locale":127,"ejs":283}],118:[function(require,module,exports){
 /**
  * Blockly Demo: Maze
  *
@@ -4937,8 +4953,8 @@ return buf.join('');
  */
 'use strict';
 
-var msg = require('../../locale/current/maze');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 var mazeUtils = require('./mazeUtils');
@@ -5321,7 +5337,8 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/current/common":258,"../../locale/current/maze":262,"../block_utils":27,"../codegen":55,"./beeBlocks":100,"./mazeUtils":113}],101:[function(require,module,exports){
+
+},{"../block_utils":37,"../codegen":67,"../locale":112,"./beeBlocks":116,"./locale":127,"./mazeUtils":130}],117:[function(require,module,exports){
 /*jshint -W086 */
 
 var DirtDrawer = require('./dirtDrawer');
@@ -5608,7 +5625,8 @@ BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
   }
 };
 
-},{"../utils":253,"./dirtDrawer":104,"./mazeUtils":113}],104:[function(require,module,exports){
+
+},{"../utils":273,"./dirtDrawer":120,"./mazeUtils":130}],120:[function(require,module,exports){
 var cellId = require('./mazeUtils').cellId;
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
@@ -5721,7 +5739,8 @@ DirtDrawer.__testonly__ = {
 };
 /* end-test-block */
 
-},{"./mazeUtils":113}],113:[function(require,module,exports){
+
+},{"./mazeUtils":130}],130:[function(require,module,exports){
 /**
  * Generalized function for generating ids for cells in a table
  */
@@ -5743,12 +5762,13 @@ exports.isScratSkin = function (skinId) {
   return (/scrat/).test(skinId);
 };
 
-},{}],100:[function(require,module,exports){
+
+},{}],116:[function(require,module,exports){
 /**
  * Blocks specific to Bee
  */
 
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
@@ -5976,7 +5996,8 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 }
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../codegen":55}],98:[function(require,module,exports){
+
+},{"../block_utils":37,"../codegen":67,"./locale":127}],114:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var MoveDirection = tiles.MoveDirection;
@@ -6233,11 +6254,56 @@ exports.loopHighlight = API_FUNCTION(function (id) {
 });
 
 
-for (var functionName in Bee.api) {
-  exports[functionName] = API_FUNCTION(Bee.api[functionName]);
-}
 
-},{"../utils":253,"./bee":99,"./tiles":118}],118:[function(require,module,exports){
+/**
+ * Bee related API functions. If better modularized, we could potentially
+ * separate these out, but as things stand right now they will be loaded
+ * whether or not we're a Bee level
+ */
+exports.getNectar = API_FUNCTION(function(id) {
+  Maze.bee.getNectar(id);
+});
+
+exports.makeHoney = API_FUNCTION(function(id) {
+  Maze.bee.makeHoney(id);
+});
+
+exports.atFlower = API_FUNCTION(function(id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.executionInfo.queueAction("at_flower", id);
+  return Maze.bee.isFlower(row, col, true);
+});
+
+exports.atHoneycomb = API_FUNCTION(function(id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.executionInfo.queueAction("at_honeycomb", id);
+  return Maze.bee.isHive(row, col, true);
+});
+
+exports.nectarRemaining = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("nectar_remaining", id);
+  return Maze.bee.nectarRemaining(true);
+});
+
+exports.honeyAvailable = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("honey_available", id);
+  return Maze.bee.honeyAvailable();
+});
+
+exports.nectarCollected = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("nectar_collected", id);
+  return Maze.bee.nectars_.length;
+});
+
+exports.honeyCreated = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("honey_created", id);
+  return Maze.bee.honey_;
+});
+
+
+},{"../utils":273,"./bee":115,"./tiles":135}],135:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -6300,9 +6366,10 @@ Tiles.constrainDirection4 = function(d) {
   return utils.mod(d, 4);
 };
 
-},{"../utils":253}],99:[function(require,module,exports){
+
+},{"../utils":273}],115:[function(require,module,exports){
 var utils = require('../utils');
-var mazeMsg = require('../../locale/current/maze');
+var mazeMsg = require('./locale');
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 
@@ -6715,52 +6782,10 @@ Bee.prototype.animateMakeHoney = function () {
   this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
 };
 
-/**
- * Bee related API functions
- */
-Bee.api = {};
-Bee.api.getNectar = function(id) {
-  Maze.bee.getNectar(id);
-};
 
-Bee.api.makeHoney = function(id) {
-  Maze.bee.makeHoney(id);
-};
+},{"../constants.js":69,"../utils":273,"./locale":127}],127:[function(require,module,exports){
+// locale for maze
+module.exports = window.blockly.maze_locale;
 
-Bee.api.atFlower = function(id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.executionInfo.queueAction("at_flower", id);
-  return Maze.bee.isFlower(row, col, true);
-};
 
-Bee.api.atHoneycomb = function(id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.executionInfo.queueAction("at_honeycomb", id);
-  return Maze.bee.isHive(row, col, true);
-};
-
-Bee.api.nectarRemaining = function (id) {
-  Maze.executionInfo.queueAction("nectar_remaining", id);
-  return Maze.bee.nectarRemaining(true);
-};
-
-Bee.api.honeyAvailable = function (id) {
-  Maze.executionInfo.queueAction("honey_available", id);
-  return Maze.bee.honeyAvailable();
-};
-
-Bee.api.nectarCollected = function (id) {
-  Maze.executionInfo.queueAction("nectar_collected", id);
-  return Maze.bee.nectars_.length;
-};
-
-Bee.api.honeyCreated = function (id) {
-  Maze.executionInfo.queueAction("honey_created", id);
-  return Maze.bee.honey_;
-};
-
-},{"../../locale/current/maze":262,"../constants.js":57,"../utils":253}],262:[function(require,module,exports){
-/*maze*/ module.exports = window.blockly.appLocale;
-},{}]},{},[111]);
+},{}]},{},[128]);

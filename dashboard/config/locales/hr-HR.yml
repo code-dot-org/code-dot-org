@@ -66,6 +66,8 @@
     need_confirmation: Nisi primio upute za potvrdu?
     need_unlock: Nisi primio upute za otključavanje?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Prijavite se za račun kako biste mogli pratiti svoj napredak.
       Vaša e-pošta koristi se prvenstveno kako bismo vam omogućili prijavu i ponovno
       dobijanje lozinke. Za više informacija pogledajte naša <a href="http://code.org/privacy">Pravila
@@ -359,6 +361,7 @@
     classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Pregled tečajeva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: Jeste li već registrirani? %{link}
@@ -557,6 +560,8 @@
       in the wrong order.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: U redu
   time:

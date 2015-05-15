@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "בחלת דבש"},
 "atFlower":function(d){return "בפרח"},
 "avoidCowAndRemove":function(d){return "המנע מהפרה ומחק 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "בצע"},
 "elseCode":function(d){return "אחרת"},
 "fill":function(d){return "מלא 1"},
-"fillN":function(d){return "מלא "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "מלא ערמה של "+appLocale.v(d,"shovelfuls")+" בורות"},
+"fillN":function(d){return "מלא "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "מלא ערמה של "+maze_locale.v(d,"shovelfuls")+" בורות"},
 "fillSquare":function(d){return "מלא את הריבוע"},
 "fillTooltip":function(d){return "שים יחידה אחת של עפר"},
 "finalLevel":function(d){return "כל הכבוד! פתרת את החידה האחרונה."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "ישנה ערימה"},
 "putdownTower":function(d){return "תוריד מגדל למטה"},
 "removeAndAvoidTheCow":function(d){return "מחק 1 והימנע מהפרה"},
-"removeN":function(d){return "הסר "+appLocale.v(d,"shovelfuls")+" דליים"},
+"removeN":function(d){return "הסר "+maze_locale.v(d,"shovelfuls")+" דליים"},
 "removePile":function(d){return "הסר ערימה"},
-"removeStack":function(d){return "הסר ערמה של "+appLocale.v(d,"shovelfuls")+" ערימות עפר"},
+"removeStack":function(d){return "הסר ערמה של "+maze_locale.v(d,"shovelfuls")+" ערימות עפר"},
 "removeSquare":function(d){return "הסר ריבוע"},
 "repeatCarefullyError":function(d){return "כדי לפתור זאת, חשוב היטב על התבנית של שתי תזוזות וסיבוב אחד שייכנסו לבלוק \"חזר שוב\". זה בסדר שיש לך פנייה נוספת בסוף."},
 "repeatUntil":function(d){return "חזור עד אשר"},

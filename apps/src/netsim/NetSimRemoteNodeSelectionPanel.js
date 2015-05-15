@@ -13,10 +13,11 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var NetSimPanel = require('./NetSimPanel');
-var markup = require('./NetSimRemoteNodeSelectionPanel.html');
+var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./netsimConstants').NodeType;
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Generator and controller for lobby node listing, selection, and connection
@@ -25,30 +26,21 @@ var NodeType = require('./netsimConstants').NodeType;
  * @param {jQuery} rootDiv
  *
  * @param {Object} options
- * @param {netsimLevelConfiguration} options.levelConfig
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
- * @param {NetSimNode} options.selectedNode
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
  * @param {number} options.myNodeID
  *
  * @param {Object} callbacks
  * @param {function} callbacks.addRouterCallback
- * @param {function} callbacks.selectNodeCallback
- * @param {function} callbacks.connectButtonCallback
  * @param {function} callbacks.cancelButtonCallback
+ * @param {function} callbacks.joinButtonCallback
  *
  * @constructor
  * @augments NetSimPanel
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
     options, callbacks) {
-  /**
-   * @type {netsimLevelConfiguration}
-   * @private
-   */
-  this.levelConfig_ = options.levelConfig;
-
   /**
    * @type {NetSimNode[]}
    * @private
@@ -60,13 +52,6 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @private
    */
   this.incomingConnectionNodes_ = options.incomingConnectionNodes;
-
-  /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimNode}
-   * @private
-   */
-  this.selectedNode_ = options.selectedNode;
 
   /**
    * @type {NetSimNode}
@@ -88,30 +73,23 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.addRouterCallback_ = callbacks.addRouterCallback;
 
   /**
-   * Handler for selecting a node row
-   * @type {function}
-   * @private
-   */
-  this.selectNodeCallback_ = callbacks.selectNodeCallback;
-
-  /**
-   * Handler for connect button
-   * @type {function}
-   * @private
-   */
-  this.connectButtonCallback_ = callbacks.connectButtonCallback;
-
-  /**
    * Handler for cancel button (backs out of non-mutual connection)
    * @type {function}
    * @private
    */
   this.cancelButtonCallback_ = callbacks.cancelButtonCallback;
 
+  /**
+   * Handler for "join" button next to each connectable node.
+   * @type {function}
+   * @private
+   */
+  this.joinButtonCallback_ = callbacks.joinButtonCallback;
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
-    panelTitle: i18n.connectToANode(),
+    panelTitle: this.getLocalizedPanelTitle(),
     canMinimize: false
   });
 };
@@ -127,7 +105,8 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
-    showAddRouterButton: this.levelConfig_.showAddRouterButton,
+    assetUrl: netsimGlobals.getAssetUrlFunction(),
+    showAddRouterButton: netsimGlobals.getLevelConfig().showAddRouterButton,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
     remoteNode: this.remoteNode_
@@ -137,37 +116,63 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
 
-  this.connectButton_ = this.getBody().find('#netsim-lobby-connect');
-  this.connectButton_.click(this.connectButtonCallback_);
+  this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
+};
 
-  this.cancelButton_ = this.getBody().find('#netsim-lobby-cancel');
-  this.cancelButton_.click(this.cancelButtonCallback_);
+/**
+ * @returns {string} a localized panel title appropriate to the current level
+ *          configuration
+ */
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
 
-  this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
+  if (levelConfig.canConnectToClients &&
+      levelConfig.canConnectToRouters) {
+    return i18n.connectToANode();
+  } else if (levelConfig.canConnectToClients) {
+    return i18n.connectToAPeer();
+  } else if (levelConfig.canConnectToRouters) {
+    return i18n.connectToARouter();
+  }
+  return i18n.connectToANode();
+};
+
+/**
+ * @returns {string} localized lobby instructions appropriate to the current
+ *          level configuration
+ */
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
+  if (levelConfig.canConnectToClients &&
+      levelConfig.canConnectToRouters) {
+    return i18n.lobbyInstructionsGeneral();
+  } else if (levelConfig.canConnectToClients) {
+    return i18n.lobbyInstructionsForPeers();
+  } else if (levelConfig.canConnectToRouters) {
+    return i18n.lobbyInstructionsForRouters();
+  }
+  return i18n.lobbyInstructionsGeneral();
 };
 
 /**
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimRemoteNodeSelectionPanel.prototype.onRowClick_ = function (jQueryEvent) {
+NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function (jQueryEvent) {
   var target = $(jQueryEvent.target);
+  if (target.is('[disabled]')) {
+    return;
+  }
+
   var nodeID = target.data('nodeId');
   var clickedNode = _.find(this.nodesOnShard_, function (node) {
     return node.entityID === nodeID;
   });
 
-  // Don't even allow clicking on nodes we can't connect to.
-  if (!clickedNode || !this.canConnectToNode(clickedNode)) {
-    return;
-  }
-
-  // If the selected node was clicked, we want to deselect.
-  if (this.selectedNode_ && this.selectedNode_.entityID === clickedNode.entityID) {
-    this.selectNodeCallback_(null);
-  } else {
-    this.selectNodeCallback_(clickedNode);
-  }
+  this.joinButtonCallback_(clickedNode);
 };
 
 /**
@@ -190,29 +195,14 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
     return false;
   }
 
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   // Permissible connection limited by level configuration
   var isClient = (connectionTarget.getNodeType() === NodeType.CLIENT);
   var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
-  var allowClients = this.levelConfig_.canConnectToClients;
-  var allowRouters = this.levelConfig_.canConnectToRouters;
+  var allowClients = levelConfig.canConnectToClients;
+  var allowRouters = levelConfig.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
-};
-
-/**
- * @returns {boolean} TRUE if a node is selected in the listing.
- */
-NetSimRemoteNodeSelectionPanel.prototype.hasSelectedNode = function () {
-  return !!(this.selectedNode_);
-};
-
-/**
- * @param {NetSimNode} node
- * @returns {boolean} TRUE if the given node has the same ID as the currently
- *          selected node.
- */
-NetSimRemoteNodeSelectionPanel.prototype.isSelectedNode = function (node) {
-  return node && this.selectedNode_ &&
-      node.entityID === this.selectedNode_.entityID;
 };
 
 /**
@@ -228,10 +218,11 @@ NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function () {
  * @returns {boolean} TRUE if the given node should show up in the lobby
  */
 NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
+  var levelConfig = netsimGlobals.getLevelConfig();
   var isClient = (node.getNodeType() === NodeType.CLIENT);
   var isRouter = (node.getNodeType() === NodeType.ROUTER);
-  var showClients = this.levelConfig_.showClientsInLobby;
-  var showRouters = this.levelConfig_.showRoutersInLobby;
+  var showClients = levelConfig.showClientsInLobby;
+  var showRouters = levelConfig.showRoutersInLobby;
   return (isClient && showClients) || (isRouter && showRouters);
 };
 

@@ -3,12 +3,12 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
+var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
+var Packet = require('@cdo/apps/netsim/Packet');
+
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
-
-var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
-var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 
 describe("NetSimLogEntry", function () {
   var testShard;
@@ -19,12 +19,12 @@ describe("NetSimLogEntry", function () {
 
   it ("uses the logEntry table", function () {
     var logEntry = new NetSimLogEntry(testShard);
-    assert(logEntry.getTable_() === testShard.logTable, "Using wrong table");
+    assert(logEntry.getTable() === testShard.logTable, "Using wrong table");
   });
 
   it ("has expected row structure and default values", function () {
     var logEntry = new NetSimLogEntry(testShard);
-    var row = logEntry.buildRow_();
+    var row = logEntry.buildRow();
 
     assertOwnProperty(row, 'nodeID');
     assertEqual(row.nodeID, undefined);

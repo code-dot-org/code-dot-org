@@ -1,14 +1,22 @@
 <%
   def canonical_hostname(domain)
     return "console.#{domain}" if node.name == 'production-console'
-    return "daemon.#{domain}" if node.name == 'production-daemon'
-    return "levelbuilder.#{domain}" if node.name == 'levelbuilder-staging'
-    return "levelbuilder-dev.#{domain}" if node.name == 'levelbuilder-development'
-    return "react.#{domain}" if node.name == 'react'
-    return "translate.#{domain}" if node.name == 'crowdin'
+    return "daemon#.#{domain}" if node.name == 'production-daemon'
     return "#{node.name}.#{domain}" if ['hoc-levels'].include?(node.name)
     return domain if rack_env?(:production)
-    "#{node.chef_environment}.#{domain}"
+
+    # our HTTPS wildcard certificate only supports *.code.org
+    # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
+    sep = domain.include?('.code.org') ? '-' : '.'
+    {
+      react: 'react',
+      translate: 'crowdin',
+      levelbuilder: 'levelbuilder-staging',
+      'levelbuilder-dev' => 'levelbuilder-development'
+    }.each do |subdomain, node_name|
+      return "#{subdomain}#{sep}#{domain}" if node.name == node_name
+    end
+    "#{node.chef_environment}#{sep}#{domain}"
   end
 
   def rack_env?(env)
@@ -21,8 +29,14 @@
     cookie
   end
 
-  def storage_cookie()
+  def deprecated_storage_cookie()
     name = "storage"
+    name += "_#{node.chef_environment}" unless rack_env?(:production)
+    name
+  end
+
+  def storage_id_cookie()
+    name = "storage_id"
     name += "_#{node.chef_environment}" unless rack_env?(:production)
     name
   end
@@ -280,7 +294,7 @@ sub vcl_recv
   if (req.request == "GET" && req.url ~ "^/health_check.php$") {
     error 200 "Varnish is healthy.";
   }
-  
+
   if(req.http.host ~ "\.$")
   {
     /* Don't allow domain names that end in "." */
@@ -298,7 +312,7 @@ sub vcl_recv
   }
   <%
     # Alias the following domains to one of our primary ones.
-    {
+    redirects = {
       'aws.code.org'      => 'code.org',
       'blockly.com'       => 'studio.code.org',
       'learn.code.org'    => 'studio.code.org',
@@ -322,13 +336,27 @@ sub vcl_recv
       'csedweek.net'        => 'csedweek.org',
       'cseducationweek.com' => 'csedweek.org',
       'cseducationweek.org' => 'csedweek.org',
-    }.each_pair do |domain,site|
+    }
+    unless rack_env?(:production)
+      # Redirect e.g. [env].studio.code.org to [env]-studio.code.org
+      redirects.merge!(Hash[*%w(studio learn i18n al ar br italia ro eu uk za).map{|x|["#{node.chef_environment}.#{x}.code.org", "#{node.chef_environment}-#{x}.code.org"]}.flatten])
+      redirects.merge!({ 'translate.studio.code.org' => 'translate-studio.code.org'}) if rack_env?(:staging)
+      redirects.merge!({ 'staging.translate.hourofcode.com' => 'staging-translate.hourofcode.com'}) if rack_env?(:staging)
+    end
+    redirects.each_pair do |domain,site|
   %>else if(req.http.Host == "<%= domain %>")
   {
     /* <%= domain %> redirects to <%= site %> */
-    error 751 "http://<%= site %>" + req.url;
+    error 751 "<%= rack_env?(:production) ? 'http' : 'https' %>://<%= site %>" + req.url;
   }
   <% end%>
+  <% unless rack_env?(:production) %>
+  else if(req.http.X-Forwarded-Proto !~ "(?i)https")
+  {
+  /* Redirect http to https */
+  error 751 "https://" + req.http.host + req.url;
+  }
+  <% end %>
 
   C{
       vcl_rewrite_accept_language(sp);
@@ -420,9 +448,9 @@ end
   }
   else if (req.url ~ "^/dashboardapi/")
   {
-    # Map /dashboardapi to learn.code.org/api
+    # Map /dashboardapi to studio.code.org/api
     set req.backend = dashboard;
-    set req.http.host = "<%= canonical_hostname('learn.code.org') %>";
+    set req.http.host = "<%= canonical_hostname('studio.code.org') %>";
     set req.url = regsub(req.url, "^/dashboardapi/", "/api/");
     return(pass);
   }
@@ -497,9 +525,9 @@ end
     } else if (req.url ~ "^/auth") {
       set req.http.Cookie = regsuball(req.http.Cookie, ";(cdo-private|hour_of_code|NO_CACHE)=", "; \1=");
     } else if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" || req.http.host == "<%= canonical_hostname('studio.code.org') %>") {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(language_|<%= session_cookie %>|<%= storage_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
-    } else if (req.url ~ "^/dashboardapi/" || req.url ~ "^/v2/" || req.url ~ "^/v3/" || req.url ~ "^/api/" || req.url == "/private" || req.url ~ "^/private/" || req.url ~ "^/create-company-profile"  || req.url ~ "^/edit-company-profile" || req.url ~ "^/teacher-dashboard" || req.url ~ "^/manage-professional-development-workshops" || req.url ~ "^/professional-development-workshop-surveys/" || req.url ~ "^/ops-dashboard") {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(<%= session_cookie %>|<%= storage_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(language_|<%= session_cookie %>|<%= deprecated_storage_cookie %>|<%= storage_id_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
+    } else if (req.url ~ "^/dashboardapi/" || req.url ~ "^/v2/" || req.url ~ "^/v3/" || req.url ~ "^/api/" || req.url == "/private" || req.url ~ "^/private/" || req.url ~ "^/create-company-profile"  || req.url ~ "^/edit-company-profile" || req.url ~ "^/teacher-dashboard" || req.url ~ "^/manage-professional-development-workshops" || req.url ~ "^/professional-development-workshop-surveys/" || req.url ~ "^/ops-dashboard" || req.url ~ "^/poste") {
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(<%= session_cookie %>|<%= deprecated_storage_cookie %>|<%= storage_id_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
     } else {
       set req.http.Cookie = regsuball(req.http.Cookie, ";(NO_CACHE)=", "; \1=");
     }

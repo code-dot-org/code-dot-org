@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var eval_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,12 +150,12 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Vous avez utilisé une chaîne de couleur invalide : "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Vous avez utilisé une chaîne de style invalide : "+appLocale.v(d,"val")},
+v:function(d,k){eval_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).eval_locale = {
+"badColorStringError":function(d){return "Vous avez utilisé une chaîne de couleur invalide : "+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "Vous avez utilisé une chaîne de style invalide : "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "cercle (rayon, style, couleur)"},
 "displayBlockTitle":function(d){return "évaluez"},
 "ellipseBlockTitle":function(d){return "ellipse (largeur, hauteur, style, couleur)"},
@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "zone d'image (x, y, image)"},
 "offsetBlockTitle":function(d){return "decalage (x, y, image)"},
 "rectangleBlockTitle":function(d){return "rectangle (largeur, hauteur, style, couleur)"},
-"reinfFeedbackMsg":function(d){return "Vous pouvez appuyer sur le bouton « Continuer à jouer » pour éditer votre dessin."},
+"reinfFeedbackMsg":function(d){return "Tu peux appuyer sur le bouton «Continuer à jouer» pour éditer ton programme."},
 "rotateImageBlockTitle":function(d){return "rotation (degrés, image)"},
 "scaleImageBlockTitle":function(d){return "échelle (facteur, image)"},
 "squareBlockTitle":function(d){return "carré (taille, style, couleur)"},
