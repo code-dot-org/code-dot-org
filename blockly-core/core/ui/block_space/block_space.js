@@ -560,9 +560,12 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 * @param {integer} mouseDx The X difference from mouse initial location to current location.
 * @return {boolean} True if event is in a delete area.
 */
-Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
+Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
   var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
+
+  var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(startDragX, 0, this.blockSpaceEditor.svg_);
+  var dragStartXY = new goog.math.Coordinate(mouseDragStartXY.x, mouseDragStartXY.x);
 
   //console.log(xy.x, xy.y);
 
@@ -576,7 +579,7 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
     }
   }
 
-  this.drawHotZone(xy.x);
+  this.drawHotZone(xy.x, dragStartXY.x);
 
   // Check against all delete areas
   for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
@@ -595,10 +598,10 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
 };
 
 Blockly.BlockSpace.prototype.hideDelete = function() {
-  this.drawHotZone(10000);
+  this.drawHotZone(10000, 0);
 };
 
-Blockly.BlockSpace.prototype.drawHotZone = function(x) {
+Blockly.BlockSpace.prototype.drawHotZone = function(x, startDragX) {
 
   var background;
   var blockGroup;
@@ -621,7 +624,7 @@ Blockly.BlockSpace.prototype.drawHotZone = function(x) {
 
   var toolbarWidth = background.getBoundingClientRect().width;
 
-  var hotZone = 100;
+  var hotZone = startDragX - toolbarWidth + 10;
 
   var trashColorIntensity = 0;
   if (x <= toolbarWidth) {

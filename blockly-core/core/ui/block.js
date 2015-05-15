@@ -692,7 +692,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     }
   } else if (Blockly.selected &&
       Blockly.selected.areBlockAndDescendantsDeletable() &&
-      thisBlockSpace.isDeleteArea(e)) {
+      thisBlockSpace.isDeleteArea(e, this.startDragMouseX)) {
     // The ordering of the statement above is important because isDeleteArea()
     // has a side effect of opening the trash can.
     var trashcan = thisBlockSpace.trashcan;
@@ -1111,7 +1111,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       // We only want to check for deleting if the user has moved
       // the block left of its starting point at some point in this drag.
       if (this.movedLeft) {
-        this.blockSpace.isDeleteArea(e, dx);
+        this.blockSpace.isDeleteArea(e, this.startDragMouseX);
       }
     }
   }
