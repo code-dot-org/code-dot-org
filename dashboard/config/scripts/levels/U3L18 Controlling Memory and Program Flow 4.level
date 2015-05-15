@@ -1,7 +1,7 @@
 <Multi>
   <config><![CDATA[{
   "game_id": 29,
-  "created_at": "2015-05-15T13:51:01.556Z",
+  "created_at": "2015-05-15T13:51:01.000Z",
   "properties": {
     "questions": [
       {
@@ -23,12 +23,7 @@
       }
     ],
     "title": "Controlling Memory and Control Quiz",
-    "content1": "Select the programming technique that best fits the described game feature.",
-    "type": "Multi",
-    "dsl_text": "name 'U3L18 Controlling Memory and Program Flow 4'\r\ntitle 'Controlling Memory and Control Quiz'\r\ndescription  'Select the programming technique that best fits the described game feature.'\r\n\r\nquestion '4. You want to change the size of the images when a certain score is reached.'\r\nwrong 'conditional'\r\nwrong 'variable'\r\nright 'both'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "content1": "Select the programming technique that best fits the described game feature."
   }
 }]]></config>
 </Multi>

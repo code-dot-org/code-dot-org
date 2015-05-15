@@ -1,7 +1,7 @@
 <Multi>
   <config><![CDATA[{
   "game_id": 29,
-  "created_at": "2015-05-15T13:53:39.288Z",
+  "created_at": "2015-05-15T13:53:39.000Z",
   "properties": {
     "questions": [
       {
@@ -23,12 +23,7 @@
       }
     ],
     "title": "Controlling Memory and Control Quiz",
-    "content1": "Select the programming technique that best fits the described game feature.",
-    "type": "Multi",
-    "dsl_text": "name 'U3L18 Controlling Memory and Program Flow 5'\r\ntitle 'Controlling Memory and Control Quiz'\r\ndescription 'Select the programming technique that best fits the described game feature.'\r\n\r\nquestion '5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).'\r\nright 'conditional'\r\nwrong 'variable'\r\nwrong 'both'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "content1": "Select the programming technique that best fits the described game feature."
   }
 }]]></config>
 </Multi>

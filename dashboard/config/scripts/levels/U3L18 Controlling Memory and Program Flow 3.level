@@ -23,11 +23,7 @@
       }
     ],
     "title": "Controlling Memory and Control Quiz",
-    "content1": "Select the programming technique that best fits the described game feature.",
-    "type": "Multi",
-    "concept_ids": [
-      ""
-    ]
+    "content1": "Select the programming technique that best fits the described game feature."
   }
 }]]></config>
 </Multi>
