@@ -35,15 +35,15 @@ exports.removeItem = function (array, index) {
   index = getInt(index, 0);
   if (index < 0) {
     index = Math.max(array.length + index, 0);
-  } else {
-    index = Math.min(index, array.length);
   }
   // Remove by shifting items after index downward.
   for (var i = index; i < array.length - 1; i++) {
     array.properties[i] = array.properties[i + 1];
-    delete array.properties[i + 1];
   }
-  array.length -= 1;
+  if (index < array.length) {
+    delete array.properties[array.length - 1];
+    array.length -= 1;
+  }
 };
 
 exports.appendItem = function (array, item) {
