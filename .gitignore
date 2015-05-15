@@ -21,3 +21,6 @@
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
 /globals.yml
+/aws/.shared-built
+/aws/.shared-commit-built
+/shared/js/node_modules/
