@@ -5,6 +5,8 @@ class Applab < Blockly
     app_width
     app_height
     free_play
+    show_turtle_before_run
+    autocomplete_palette_apis_only
   )
 
   # List of possible skins, the first is used as a default.

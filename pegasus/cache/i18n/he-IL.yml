@@ -190,24 +190,24 @@
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
   homepage_slot_text_link_host: ארח שעה של קוד
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: '# למדו'
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
   homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
   homepage_slot_text_link_local: מצא כיתה מקומית
   homepage_slot_text_link_othercourses: קורסים אחרים באינטרנט
-  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_title_educators: מחנכים
   homepage_slot_text_blurb_educators: למד את התלמידים שלך
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_k5: קורסים לגילאי גן חובה-כיתה ה'
+  homepage_slot_text_link_fullcurriculum: ראה את תוכנית הלימודים המלאה שלנו
+  homepage_slot_text_link_pd: פיתוח מקצועי
+  homepage_slot_text_title_advocates: תומכים
+  homepage_slot_text_blurb_advocates: תמוך בעבודה שלנו
   homepage_slot_text_link_stats: ראה סטטיסטיקה
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
+  homepage_header_codestudio: יצירותיהם של תלמידי קוד סטודיו
+  homepage_header_donors: code.org מודה לתומכיו
   homepage_donors_seall: ראה הכל
   homepage_donors_donate: תרום
   contact_form_topic_student: אני תלמיד
@@ -227,8 +227,8 @@
   class_submission_in_school_full_university_cs_curriculum: תוכנית לימודים מלאה באוניברסיטה
     בפקולטה למדעי המחשב
   class_submission_in_school_robotics_club: מועדון רובוטיקה
-  class_submission_in_school_programming_integrated_in_other_classes: Programming
-    integrated in other classes (math, science, etc)
+  class_submission_in_school_programming_integrated_in_other_classes: תכנות משולב
+    במקצועות אחרים (מתמטיקה, מדעים וכו')
   class_submission_in_school_summer_school_cs_program: תוכנית קיץ בית הספר למדעי המחשב
   class_submission_in_school_exploring_computer_science: Exploring Computer Science
   class_submission_in_school_other: השני בבית הספר
@@ -266,28 +266,28 @@
   volunteer_engineer_submission_experience_software_professional: תוכנה מקצועית
   petition_age: גיל
   dashboard_landing_title: דף הבית של המורה
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  dashboard_landing_welcome: ברוכים הבאים לתצוגת המורה המשופרת.
   dashboard_landing_video: צפה בסרטון זה
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
+  dashboard_landing_watch_video: לסיור בתכונות החדשות!
+  dashboard_landing_view_as_student: הצג את האתר בתצוגה לתלמיד
   dashboard_landing_students_title: תלמידיך
   dashboard_landing_students_manage: צפה ונהל את התלמידים שלך
-  dashboard_landing_news_title: K-5 Educator Resources (in English only)
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links (in English only)
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
-    office hours.
+  dashboard_landing_news_title: משאבים למחנך של גילאי גן חובה-כיתה ה' (באנגלית בלבד)
+  dashboard_landing_new_beta: חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'.
+  dashboard_landing_new_k5courses: חדש! נסה את הקורסים שלנו לגילאי גן חובה-כיתה ה'.
+  dashboard_landing_useful_links: קישורים שימושיים נוספים (באנגלית בלבד)
+  dashboard_landing_office_hours: שאל שאלות באופן אישי! בקר בשעות הקבלה בוידאו החודשיות
+    שלנו.
   dashboard_landing_print_certificates: הדפס תעודות לתלמידים שגמרו את הקורס הזה
   dashboard_landing_educator_blog: קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"
   dashboard_landing_smart_hints: אנא עזור לנו להוסים רמזים חכמים למדריכים code.org
   dashboard_landing_video_player: נסה את נגן הוידאו החדש שלנו בבית ספרך
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
+  dashboard_landing_progress_title: התקדמות השיעור הראשי
+  dashboard_landing_progress_biggest: . זאת ההתקדמות עבור מקטע הכי גדול שלך.
   dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
-  dashboard_landing_available_courses: Here are the courses currently available for
-    you and your students.
+  dashboard_landing_available_title: קורסים זמינים
+  dashboard_landing_available_courses: להלן הקורסים הזמינים כעת עבור התלמידים שלך
+    ולך.
   dashboard_landing_loading: טוען...
   dashboard_action_edit: ערוך
   dashboard_action_save: שמור
@@ -301,18 +301,18 @@
   dashboard_action_remove_confirm: להסיר?
   dashboard_action_done: מוכן
   dashboard_action_required: דרוש
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_section_student_progress: Student Accounts and Progress
+  dashboard_navigation_home_page: דף הבית של המורה
+  dashboard_navigation_section_student_progress: חשבונות תלמידים וההתקדמות שלהם
   dashboard_navigation_section_teacher_progress: התקדמות הקורס שלך
-  dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_lesson_plans: מערכי שיעור ומשאבים
+  dashboard_navigation_section_community: עזרה וקהילה
   dashboard_navigation_section_pd: פיתוח מקצועי
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
-  dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
+  dashboard_navigation_section_speakers: מדעי המחשב <br/> מציגים אורחים
+  dashboard_navigation_all_sections: חשבונות תלמידים וההתקדמות שלהם
+  dashboard_navigation_view_progress: צפה בהתקדמות
+  dashboard_navigation_add_students: הוסף תלמידים
+  dashboard_navigation_manage_students: נהל תלמידים
+  dashboard_navigation_lesson_plans_resources: מערכי שיעור ומשאבים
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
@@ -497,8 +497,8 @@
   projguts_name: Rock, Paper, Scissors
   hourofcode_name: Placeholder for new code.org/hoc
   playlab_name: Play Lab
-  codeorg_gradelevel: Ages 4-104
-  codeintl_gradelevel: Ages 4-104
+  codeorg_gradelevel: גילאי 4-104
+  codeintl_gradelevel: גילאי 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -525,7 +525,7 @@
   kodable_gradelevel: בית ספר יסודי
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
+  flappy_gradelevel: גילאי 4-104
   bitsbox_gradelevel: בית ספר יסודי
   makegameswithus_gradelevel: בית ספר תיכון
   touchdevelop_gradelevel: בית ספר תיכון
@@ -534,12 +534,12 @@
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
-  hourofcode_gradelevel: Ages 4-104
+  hourofcode_gradelevel: גילאי 4-104
   frozen_gradelevel: Ages 8+
-  playlab_gradelevel: Ages 4-104
-  codeorg_platformtext: Modern browsers, smartphones, tablets
-  codeintl_platformtext: Modern browsers, smartphones, tablets
-  thinkersmithspanish_platformtext: Unplugged
+  playlab_gradelevel: גילאי 4-104
+  codeorg_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  codeintl_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  thinkersmithspanish_platformtext: ללא חיבור
   khan_platformtext: Modern web browsers
   khanes_platformtext: Modern web browsers
   khanpt_platformtext: Modern web browsers
@@ -547,12 +547,12 @@
   khanfr_platformtext: Modern web browsers
   khanpl_platformtext: Modern web browsers
   tynker_platformtext: Modern web browsers
-  scratch_platformtext: Desktop-only web browsers (not tablets)
-  lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
-  thinkersmith_platformtext: Unplugged
+  scratch_platformtext: דפדפנים במחשב נייח בלבד (לא טבלטים)
+  lightbot_platformtext: כל הדפדפנים ו iOS, אנדרואיד או קונסולת משחקים
+  thinkersmith_platformtext: ללא חיבור
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
-  codehs_platformtext: Modern browsers. (Follow-on course requires  $$)
+  codehs_platformtext: דפדפנים מודרנים. (קורס ההמשך הנו בתשלום)
   codecademy_platformtext: Modern web browsers. iOS, Android apps
   codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: Modern web browsers
@@ -565,29 +565,29 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
   robomindnl_platformtext: Modern web browsers, Mobile web
-  flappy_platformtext: Modern browsers, smartphones, tablets
+  flappy_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   bitsbox_platformtext: Modern web browsers
   makegameswithus_platformtext: Modern Web browsers
   touchdevelop_platformtext: Modern browsers, smartphones, all devices
   appinventor_platformtext: Modern browsers + Android
   blockly_platformtext: Modern browsers only
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
-  hourofcode_platformtext: Modern browsers, smartphones, tablets
+  thinkersmith2_platformtext: ללא חיבור
+  kodableunplugged_platformtext: ללא חיבור
+  projguts_platformtext: ללא חיבור
+  hourofcode_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   frozen_platformtext: Modern browsers + tablets
-  playlab_platformtext: Modern browsers, smartphones, tablets
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  playlab_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  codeorg_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
+  codeintl_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  khanpt_shortdescription: Learn to draw in JavaScript
-  khanhe_shortdescription: Learn to draw in JavaScript
-  khanfr_shortdescription: Learn to draw in JavaScript
-  khanpl_shortdescription: Learn to draw in JavaScript
-  tynker_shortdescription: Learn to code by solving fun puzzles and build your own
-    mobile games.
+  khan_shortdescription: לומדים לצייר ב- JavaScript
+  khanes_shortdescription: לומדים לצייר ב- JavaScript
+  khanpt_shortdescription: לומדים לצייר ב- JavaScript
+  khanhe_shortdescription: לומדים לצייר ב- JavaScript
+  khanfr_shortdescription: לומדים לצייר ב- JavaScript
+  khanpl_shortdescription: לומדים לצייר ב- JavaScript
+  tynker_shortdescription: למד לכתוב קוד על ידי פתירת חידות מהנות ובנה משחקי מובייל
+    משלך.
   scratch_shortdescription: Create interactive games, stories, and animations.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and
     loops!
@@ -619,7 +619,7 @@
   touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all
     on your phone. '
   appinventor_shortdescription: Make your own app! (Android-only)
-  blockly_shortdescription: Download a ZIP file to learn offline
+  blockly_shortdescription: הורד קובץ ZIP כדי ללמוד במצב לא מקוון
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
@@ -800,7 +800,7 @@
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
+  codeorg_beyond_gradelevel: גילאי 4-104
   khan_beyond_gradelevel: Middle school +
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
@@ -874,8 +874,8 @@
   processing_beyond_platformtext: Modern web browsers
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
+  codeorg_beyond_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
+  khan_beyond_shortdescription: לומדים לצייר ב- JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create interactive games, stories, and animations.

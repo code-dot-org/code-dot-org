@@ -23,8 +23,8 @@ var Eval = module.exports;
  */
 var studioApp = require('../StudioApp').singleton;
 var Eval = module.exports;
-var commonMsg = require('../../locale/current/common');
-var evalMsg = require('../../locale/current/eval');
+var commonMsg = require('../locale');
+var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
@@ -70,6 +70,7 @@ Eval.encodedFeedbackImage = null;
  * Initialize Blockly and the Eval.  Called on page load.
  */
 Eval.init = function(config) {
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
   level = config.level;
@@ -157,7 +158,7 @@ Eval.init = function(config) {
 /**
  * Click the run button.  Start the program.
  */
-studioApp.runButtonClick = function() {
+Eval.runButtonClick = function() {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;
@@ -452,7 +453,7 @@ var displayFeedback = function(response) {
     response: response,
     level: level,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
-    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,

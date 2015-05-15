@@ -2,7 +2,7 @@ Feature: Complete a complicated maze level
 
 Background:
   Given I am on "http://learn.code.org/reset_session"
-  Given I am on "http://learn.code.org/s/1/level/16?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
   And I wait for 2 seconds
   Then element ".dialog-title" has text "Puzzle 15 of 20"
@@ -11,7 +11,7 @@ Background:
 
 @no_mobile
 Scenario: Submit an invalid solution
-  When I press "x-close"
+  When I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And I press "runButton"
@@ -29,7 +29,7 @@ Scenario: Submit an invalid solution
 
 @no_mobile
 Scenario: Submit a valid solution
-  When I press "x-close"
+  When I close the dialog
   Then I wait until element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I drag block "4" to block "6"

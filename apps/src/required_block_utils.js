@@ -3,7 +3,7 @@
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-var msg = require('../locale/current/common');
+var msg = require('./locale');
 var _ = utils.getLodash();
 
 /**

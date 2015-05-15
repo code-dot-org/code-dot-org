@@ -14,11 +14,15 @@
         "correct": true
       },
       {
+        "text": "8",
+        "correct": false
+      },
+      {
         "text": "15",
         "correct": false
       },
       {
-        "text": "do not know",
+        "text": "string",
         "correct": false
       }
     ],

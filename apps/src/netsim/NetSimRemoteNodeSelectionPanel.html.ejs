@@ -1,7 +1,7 @@
 <%
 var utils = require('../utils');
 var _ = utils.getLodash();
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var NodeType = require('./netsimConstants').NodeType;
 
 
@@ -195,7 +195,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeHeader(i18n.outgoingConnectionRequests());
           outgoingRequestRows.forEach(function (row) {
             var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="/assets/spinner-big.gif" />',
+              spinner: '<img src="' + assetUrl('media/netsim/loading.gif') + '" />',
               otherName: row.displayName,
               otherStatus: row.status
             });

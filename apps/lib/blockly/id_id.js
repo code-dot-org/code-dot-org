@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.id_id');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "memanggil";
 Blockly.Msg.ADD = "Tambahkan";
 Blockly.Msg.ADD_COMMENT = "Tambahkan komentar";

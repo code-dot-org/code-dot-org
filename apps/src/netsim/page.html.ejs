@@ -1,5 +1,5 @@
 <%
-  var msg = require('../../locale/current/common');
+  var msg = require('../locale');
 %>
 
 <div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
@@ -23,7 +23,6 @@
     </table>
     <div id="ani-gif-preview-wrapper">
       <div id="ani-gif-preview">
-        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
       </div>
     </div>
   </div>
@@ -67,13 +66,11 @@
       </div>
 
       <div id="netsim-rightcol">
-        <div class="rightcol-connected">
-          <div id="netsim-logs">
-            <div id="netsim-received"></div>
-            <div id="netsim-sent"></div>
-          </div>
-          <div id="netsim-send"></div>
+        <div id="netsim-logs">
+          <div id="netsim-received"></div>
+          <div id="netsim-sent"></div>
         </div>
+        <div id="netsim-send"></div>
       </div>
     </div>
   </div>

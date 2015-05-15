@@ -13,7 +13,9 @@ window.__TestInterface = {
   },
   getDroplet: function () {
     return studioApp.editor;
-  }
+  },
+  // Set to true to ignore onBeforeUnload events
+  ignoreOnBeforeUnload: false
 };
 
 var addReadyListener = require('./dom').addReadyListener;

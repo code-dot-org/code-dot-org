@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/applab');
+var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
@@ -29,6 +29,8 @@ levels.simple = {
 
 levels.custom = {
   'sliderSpeed': 0.95,
+  'appWidth': 320,
+  'appHeight': 480,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -105,6 +107,7 @@ levels.custom = {
     "penDown": null,
     "penWidth": null,
     "penColor": null,
+    "penRGB": null,
     "show": null,
     "hide": null,
     "speed" : null,
@@ -158,8 +161,6 @@ levels.custom = {
 levels.ec_simple = utils.extend(levels.custom, {
   'freePlay': true,
   'editCode': true,
-  'appWidth': 320,
-  'appHeight': 480,
 });
 
 // Functions in Advanced category currently disabled in all levels:

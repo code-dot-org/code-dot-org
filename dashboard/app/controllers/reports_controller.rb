@@ -9,6 +9,7 @@ class ReportsController < ApplicationController
 
   before_action :set_script
   include LevelSourceHintsHelper
+  include UsersHelper
 
   def user_stats
     @user = User.find(params[:user_id])
@@ -26,7 +27,12 @@ SQL
   end
 
   def header_stats
-    if params[:user_id]
+    if params[:section_id].present?
+      @section = Section.find(params[:section_id])
+      authorize! :read, @section
+    end
+
+    if params[:user_id].present?
       user = User.find(params[:user_id])
       authorize! :read, user
     end
@@ -232,11 +238,57 @@ SQL
       output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
+    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+
     @data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value)
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
     @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+  end
+
+  def monthly_metrics
+    authorize! :read, :reports
+    recent_users = User.where(current_sign_in_at: (Time.now - 30.days)..Time.now)
+    metrics = {
+      :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
+      :'Active Students' => recent_users.count,
+      :'Active Female Students' => (f = recent_users.where(gender: 'f').count),
+      :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
+      :'Female Ratio' => f.to_f / (f + m),
+    }
+    render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
+  end
+
+  def pd_progress
+    authorize! :read, :reports
+    script = Script.find_by(name: params[:script] || 'K5PD')
+    # Get all users with any activity in the script
+    users = Activity.where(level_id: script.levels.map(&:id)).map(&:user_id).uniq.map{|id|User.find(id)}
+    headers = nil
+    data = users.map do |user|
+      row = {}
+      row.merge!({
+                     :'ID' => user.id,
+                     :'Ops First Name' => user.ops_first_name,
+                     :'Ops Last name' => user.ops_last_name,
+                     :'Email' => user.email,
+                     :'District' => user.district || 'None'
+                 })
+      user_progress = summarize_user_progress(script, user)
+      percent = percent_complete(script, user)
+      script.stages.each do |stage|
+        levels = Hash[stage.script_levels.map(&:level).map do |level|
+          ["<a href='#{level_path(level.id)}'>#{level.id}</a>", (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
+        end]
+        row.merge!(levels)
+        row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
+      end
+      row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
+      headers ||= row.keys
+      row.values
+    end
+    render locals: {headers: headers, data: data, script: script}
   end
 
   private

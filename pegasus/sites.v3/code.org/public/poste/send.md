@@ -1,3 +1,5 @@
+<%= view :breadcrumbs, trail: [{text: 'Dashboard', url:'/poste'}, {text:'Test Mail'}] %>
+
 ## Send Test Message
 
 <form action="/v2/poste/send-message" method="post">

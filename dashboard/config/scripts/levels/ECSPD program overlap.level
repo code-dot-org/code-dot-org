@@ -8,11 +8,8 @@
     "options": {
       "skip_sound": true
     },
-    "markdown": "\n#### Now that you've read more about the ECS program, what relationship do you see between the curriculum and Professional Development? What aspects of the two piece of the program seem most important or interesting to you?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
-  }
+    "markdown": "\n#### Now that you've read more about the ECS program, what relationship do you see between the curriculum and Professional Development? What aspects of the two piece of the program seem most important or interesting to you?\n"
+  },
+  "md5": "cfa4fc0a1e6b576785f4f293e911e994"
 }]]></config>
 </TextMatch>

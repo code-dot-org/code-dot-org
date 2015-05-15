@@ -6,8 +6,8 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
-var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 
 describe("NetSimMessage", function () {
   var testShard, messageTable;
@@ -19,12 +19,12 @@ describe("NetSimMessage", function () {
 
   it ("uses the message table", function () {
     var message = new NetSimMessage(testShard);
-    assert(message.getTable_() === testShard.messageTable);
+    assert(message.getTable() === testShard.messageTable);
   });
 
   it ("has expected row structure and default values", function () {
     var message = new NetSimMessage(testShard);
-    var row = message.buildRow_();
+    var row = message.buildRow();
 
     assertOwnProperty(row, 'fromNodeID');
     assertEqual(row.fromNodeID, undefined);

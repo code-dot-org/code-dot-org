@@ -1,0 +1,8 @@
+name 'U3L14 - MC order of button and onEvent'
+title 'Buttons and Event Handlers'
+description ''
+question 'Does order matter when adding a button and its event handler to your code?'
+wrong 'The button, with its id, must appear in the code AFTER the event handler'
+wrong 'JavaScript is flexible. The button and its event handler can appear in any order in the code'
+right 'The button, with its id, must appear in the code BEFORE the event handler'
+wrong 'JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API'

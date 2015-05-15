@@ -13,7 +13,7 @@
 
 var utils = require('../utils');
 var markup = require('./NetSimSlider.html.ejs');
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 
 /**
  * @type {number}
