@@ -410,6 +410,8 @@ en:
         title: title
       U3L16 Student Lesson Introduction:
         Beyond Buttons: Beyond Buttons
+      U3L18 Student Lesson Introduction:
+        Controlling Memory and Program Flow: Controlling Memory and Program Flow
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -497,6 +499,98 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      2-3 Big Event Match 1:
+        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png, 200: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png, 200
+        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png, 300: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png, 300
+        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
+        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Matching: Matching
+    multi:
+      PDAlg Blocks Video:
+        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
+        Intro to Evaluation Blocks: Intro to Evaluation Blocks
+        Play Area: Play Area
+        Toolbox: Toolbox
+        Workspace: Workspace
+      PDAlg functional:
+        Functional Programming: Functional Programming
+        Have you ever programmed before?: Have you ever programmed before?
+        'No': 'No'
+        Yes, and I'm familiar with functional programming: Yes, and I'm familiar with functional programming
+        Yes, but I don't know if it would be considered functional: Yes, but I don't know if it would be considered functional
+      U1L2 Multiple Choice Assessment Question:
+        'A binary question is defined as:': 'A binary question is defined as:'
+        A message which has two possible states: A message which has two possible states
+        A piece of information that is sent in pairs: A piece of information that is sent in pairs
+        A question which can be answered in only one of two possible ways: A question which can be answered in only one of two possible ways
+        Describe me!: Describe me!
+        Multiple Choice: Multiple Choice
+        'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary Messages'
+        Two questions which share the same answer: Two questions which share the same answer
+      U3L14 - MC Duplicate Ids:
+        'A binary question is defined as:': 'A binary question is defined as:'
+        A message which can be in two possible states: A message which can be in two possible states
+        A piece of information that is sent in pairs: A piece of information that is sent in pairs
+        A question which can be answered in only one of two possible ways: A question which can be answered in only one of two possible ways
+        A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
+        Buttons and Ids: Buttons and Ids
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.
+        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant
+        The first button created with the id will work, the other will not: The first button created with the id will work, the other will not
+        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other
+        Two questions that share the same answer: Two questions that share the same answer
+        What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
+      U3L18 Controlling Memory and Program Flow:
+        1. You want to see additional random images displayed that are worth different points when clicked.: 1. You want to see additional random images displayed that are worth different points when clicked.
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        ? You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).
+        : You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).
+        You want to change the size of the images when a certain score is reached.: You want to change the size of the images when a certain score is reached.
+        You want to see additional random images displayed that are worth different points when clicked.: You want to see additional random images displayed that are worth different points when clicked.
+        You want to see the elapsed time.: You want to see the elapsed time.
+        You want to see various motivational messages based upon the score.: You want to see various motivational messages based upon the score.
+        both: both
+        conditional: conditional
+        variable: variable
+      U3L18 Controlling Memory and Program Flow 2:
+        2. You want to see various motivational messages based upon the score.: 2. You want to see various motivational messages based upon the score.
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        both: both
+        conditional: conditional
+        variable: variable
+      U3L18 Controlling Memory and Program Flow 3:
+        3. You want to see the elapsed time.: 3. You want to see the elapsed time.
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        both: both
+        conditional: conditional
+        variable: variable
+      U3L18 Controlling Memory and Program Flow 4:
+        4. You want to change the size of the images when a certain score is reached.: 4. You want to change the size of the images when a certain score is reached.
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        both: both
+        conditional: conditional
+        variable: variable
+      U3L18 Controlling Memory and Program Flow 5:
+        ? 5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).
+        : 5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        both: both
+        conditional: conditional
+        variable: variable
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -515,15 +609,18 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 3:
+        ((5 < 10 < 15)): ((5 < 10 < 15))
         ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
         ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
         ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        (5 < 10 < 15): (5 < 10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
         (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
         /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
+        5 < 10 < 15: 5 < 10 < 15
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
@@ -536,6 +633,10 @@ en:
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
+        (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
+        (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
+        (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
+        (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -699,6 +800,7 @@ en:
         'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L2 Free response assessment question:
+        .: .
         'Assessment: Sending Binary Messages': 'Assessment: Sending Binary Messages'
         Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your response here.: Enter your response here.
@@ -761,6 +863,9 @@ en:
         Beyond Buttons Getting Started: Beyond Buttons Getting Started
       U3L16 Free Response Wrap Up:
         Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
+      U3L18 Free Response Wrap Up:
+        Controlling Memory and Program Flow: Controlling Memory and Program Flow
+        Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7

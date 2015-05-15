@@ -55,11 +55,7 @@
         "text": "Calls an embedded function"
       }
     ],
-    "title": "Matching: Buttons on the Screen",
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "title": "Matching: Buttons on the Screen"
   }
 }]]></config>
 </Match>
