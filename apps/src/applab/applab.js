@@ -274,7 +274,6 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
-  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -849,7 +848,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -1062,9 +1061,12 @@ Applab.init = function(config) {
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
 
-          var scale = Applab.getVizScaleFactor();
-          var left = ui.position.left / scale;
-          var top = ui.position.top / scale;
+          var div = document.getElementById('divApplab');
+          var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+          var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+          var left = ui.position.left / xScale;
+          var top = ui.position.top / yScale;
 
           // snap top-left corner to nearest location in the grid
           left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -1228,11 +1230,13 @@ Applab.makeDraggable = function (jq) {
       // so adjust the position in various ways here.
 
       // dragging
-      var scale = Applab.getVizScaleFactor();
+      var div = document.getElementById('divApplab');
+      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
       var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
       var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / scale;
+      var newTop = (ui.originalPosition.top + changeTop) / yScale;
 
       // snap top-left corner to nearest location in the grid
       newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -1254,21 +1258,6 @@ Applab.makeDraggable = function (jq) {
       Applab.levelHtml = Applab.serializeToLevelHtml();
     }
   });
-};
-
-Applab.getVizScaleFactor = function () {
-  var width = $('body').width();
-  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
-  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
-    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
-        Applab.vizScaleFactors;
-  }
-  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
-    if (width > vizScaleBreakpoints[i]) {
-      return Applab.vizScaleFactors[i];
-    }
-  }
-  throw 'Unexpected body width: ' + width;
 };
 
 /**
