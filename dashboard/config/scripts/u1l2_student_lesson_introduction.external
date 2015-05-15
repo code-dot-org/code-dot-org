@@ -9,7 +9,13 @@ markdown <<MARKDOWN
 
 # Background
 
-The simplest meaningful piece of information that can be communicated is a single binary message. The word binary is not actually a term from computing.  “Binary” is used to describe any object or situation that can only be in one of two possible states.  For example, the question “Do we have a quiz today?” is a binary question as there are only two possible responses, “yes”, and “no”. In fact, any question that can only be answered with a “yes/no”, “true/false” etc. would be considered a binary question. It is also possible to make a question binary by limiting the acceptable responses to two, as in Which do you prefer: Coke or Pepsi?  Country music or hip hop? 
+The simplest meaningful piece of information that can be communicated is a single binary message. The word binary is not actually a term from computing.  “Binary” is used to describe something that can only be in one of two possible states.  For example, the question “Do we have a quiz today?” is a binary question as there are only two possible responses, “yes”, and “no”. In fact, any question that can only be answered with a “yes/no”, “true/false” etc. would be considered a binary question. It is also possible to make a question binary by limiting the acceptable responses to two, as in Which do you prefer: Coke or Pepsi?  Country music or hip hop? 
+
+# Vocabulary
+
+Binary Question: a question to which there are only two possible answers
+
+Binary Message: a message that can only be one of two possible values
 
 # Lesson
 

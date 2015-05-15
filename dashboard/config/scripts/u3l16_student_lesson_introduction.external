@@ -2,16 +2,17 @@ name 'U3L16 Student Lesson Introduction'
 title 'Beyond Buttons'
 
 markdown <<MARKDOWN
+## Unit 3: Lesson 16 - Beyond Buttons. Toward Apps.
+
 # Background
 
-It’s time to add interactive images, textLabels, and textInput (text boxes) to the screen. Don’t worry--these act in much the same way as buttons. They respond to mouse events, keystrokes, and other events. Add to that the ability to place elements wherever you want, and you have a mole masher game!
+It’s time to add interactive images, textLabels, and textInput (text boxes) to the screen. Don’t worry--these act in much the same way as buttons. They respond to mouse events, keystrokes, and other events. Add to that the ability to place elements wherever you want, and you have a clicker game!
 
 # Lesson
 
-* Place images at a specific place on the screen
-.
+* Place images at a specific place on the screen.
 * Hide and show elements on the screen in response to events.
-* Create a mole masher game.
+* Create a clicker game.
 
 
 # Resources
