@@ -86,7 +86,14 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD
+Franklin University
+<br />
+Frasch Hall, Room 318
+<br />
+S Grant Ave
+<br />
+Columbus, OH 43215
+<br />
 
 ### What do I bring to Phase 2?
 
@@ -125,7 +132,14 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD
+Franklin University
+<br />
+Frasch Hall, Room 317
+<br />
+S Grant Ave
+<br />
+Columbus, OH 43215
+<br />
 
 ### What do I bring to Phase 2?
 
