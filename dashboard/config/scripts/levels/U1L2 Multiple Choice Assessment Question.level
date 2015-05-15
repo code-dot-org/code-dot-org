@@ -26,11 +26,7 @@
         "correct": true
       }
     ],
-    "title": "Multiple Choice: Sending Binary Messages",
-    "type": "Multi",
-    "concept_ids": [
-      ""
-    ]
+    "title": "Multiple Choice: Sending Binary Messages"
   }
 }]]></config>
 </Multi>
