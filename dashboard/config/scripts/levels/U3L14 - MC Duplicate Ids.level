@@ -26,11 +26,15 @@
         "correct": false
       },
       {
-        "text": "Two buttons with same id are linked during the running of the program.  Clicking one is just like clicking the other",
+        "text": "Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other",
         "correct": false
       }
     ],
-    "title": "Buttons and Ids"
+    "title": "Buttons and Ids",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Multi>

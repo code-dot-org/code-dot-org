@@ -1,12 +1,9 @@
 name 'U1L2 Free response assessment question'
 title 'Assessment: Sending Binary Messages'
-content1 'Complete the Lesson 2 Rubric.'
 placeholder 'Enter your response here.'
 
 markdown <<MARKDOWN
-Respond in 100 words or less on this question: 
-
-What was the most challenging aspect of building a binary message device and how did you and your team overcome it?
+Provide an example of a question that could NOT be answered with a binary message. Explain why this is the case making reference to the definition of a binary message. 
 
 
 MARKDOWN
