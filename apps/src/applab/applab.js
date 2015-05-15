@@ -1044,6 +1044,10 @@ Applab.init = function(config) {
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
     }
+    var designModeManageAssets = document.getElementById('design-manage-assets');
+    if (designModeManageAssets) {
+      dom.addClickTouchEvent(designModeManageAssets, Applab.onDesignModeManageAssets);
+    }
 
     // Allow elements to be dragged and dropped from the design mode
     // element tray to the play space.
@@ -1980,6 +1984,19 @@ Applab.onCodeModeButton = function() {
 
 Applab.onDesignModeClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.onDesignModeManageAssets = function() {
+  var codeDiv = document.createElement('div');
+  codeDiv.innerHTML = require('./manageAssets.html.ejs')();
+  var dialog = studioApp.createModalDialogWithIcon({
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: studioApp.icon,
+    defaultBtnSelector: 'again-button'
+  });
+
+  dialog.show();
 };
 
 Applab.toggleDragging = function(enable) {
