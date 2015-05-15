@@ -136,7 +136,7 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
       {'class': 'blocklyFlyoutBackground'}, this.svgGroup_);
   this.svgGroup_.appendChild(this.blockSpace_.createDom());
 
-  // we kinda want to show a trash can here
+  // Add a trashcan.
   if (! insideToolbox) {
     var trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = trashcan.createDom();
@@ -270,9 +270,6 @@ Blockly.Flyout.prototype.init = function(blockSpace, withScrollbar) {
   this.position_();
   this.changeWrapper_ = Blockly.bindEvent_(this.targetBlockSpace_.getCanvas(),
       'blocklyBlockSpaceChange', this, this.filterForCapacity_);
-
-  // We want our own trashcan image.
-  //this.blockSpace_.addTrashcan();
 };
 
 /**
