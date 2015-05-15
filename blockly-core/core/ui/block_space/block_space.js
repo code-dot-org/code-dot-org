@@ -564,8 +564,10 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
   var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
-  var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(startDragX, 0, this.blockSpaceEditor.svg_);
-  var dragStartXY = new goog.math.Coordinate(mouseDragStartXY.x, mouseDragStartXY.x);
+  var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(
+    startDragX, 0, this.blockSpaceEditor.svg_);
+  var dragStartXY = new goog.math.Coordinate(
+    mouseDragStartXY.x, mouseDragStartXY.x);
 
   // Update trash can visual state
   // Might be nice to do this side-effect elsewhere.
@@ -629,7 +631,8 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   var toolbarWidth = background.getBoundingClientRect().width;
 
-  // The user can drag towards the trash zone a little bit before the zone starts fading in.
+  // The user can drag towards the trash zone a little bit before the zone
+  // starts fading in.
   var dragBuffer = 10;
 
   // Has the user dragged the block a certain amount towards the trash zone?
@@ -650,30 +653,30 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
     trashZoneWidth = startDragX - toolbarWidth - dragBuffer;
   }
 
-  var normalColorIntensity = 1;
+  var normalIntensity = 1;
 
   if (pastThreshold) {
     if (xDifference <= 0) {
-      normalColorIntensity = 0;
+      normalIntensity = 0;
       trashcan.setOpen_(true);
     } else {
       trashcan.setOpen_(false);
       if (xDifference >= trashZoneWidth) {
-        normalColorIntensity = 1;
+        normalIntensity = 1;
       } else {
-        normalColorIntensity = xDifference / trashZoneWidth;
+        normalIntensity = xDifference / trashZoneWidth;
       }
     }
   }
 
-  var trashColorIntensity = 1 - normalColorIntensity;
+  var trashIntensity = 1 - normalIntensity;
 
-  var regularGreyLevel = 0xaa;
-  var trashGreyLevel = 0xdd;
+  var regularGrey = 0xaa;
+  var trashGrey = 0xdd;
 
-  var r = Math.floor(trashColorIntensity * regularGreyLevel + normalColorIntensity * trashGreyLevel);
-  var g = Math.floor(trashColorIntensity * regularGreyLevel + normalColorIntensity * trashGreyLevel);
-  var b = Math.floor(trashColorIntensity * regularGreyLevel + normalColorIntensity * trashGreyLevel);
+  var r = Math.floor(trashIntensity * regularGrey + normalIntensity * trashGrey);
+  var g = Math.floor(trashIntensity * regularGrey + normalIntensity * trashGrey);
+  var b = Math.floor(trashIntensity * regularGrey + normalIntensity * trashGrey);
   var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
 
   if (this.blockSpaceEditor.toolbox) {
@@ -685,10 +688,10 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   }
 
   // Fade out the blocks in the flyout area.
-  blockGroup.style["opacity"] = normalColorIntensity;
+  blockGroup.style["opacity"] = normalIntensity;
 
   // Fade in the trash can.
-  var trashcanDisplay = trashColorIntensity == 0 ? "none" : "block";
-  trashcanElement.style["opacity"] = trashColorIntensity;
+  var trashcanDisplay = trashIntensity == 0 ? "none" : "block";
+  trashcanElement.style["opacity"] = trashIntensity;
   trashcanElement.style["display"] = trashcanDisplay;
 };

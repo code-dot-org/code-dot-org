@@ -122,6 +122,7 @@ Blockly.Flyout.prototype.onResizeWrapper_ = null;
 
 /**
  * Creates the flyout's DOM.  Only needs to be called once.
+ * @type {boolean} insideToolbox Whether this flyout is in a toolbox.
  * @return {!Element} The flyout's SVG group.
  */
 Blockly.Flyout.prototype.createDom = function(insideToolbox) {
@@ -137,7 +138,7 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
   this.svgGroup_.appendChild(this.blockSpace_.createDom());
 
   // Add a trashcan.
-  if (! insideToolbox) {
+  if (!insideToolbox) {
     var trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = trashcan.createDom();
     svgTrashcan.setAttribute("style", "opacity: 0");
