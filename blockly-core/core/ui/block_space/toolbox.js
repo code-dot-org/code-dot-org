@@ -80,7 +80,7 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   // Add a trashcan inside a holder svg element.
   this.trashcanHolder = Blockly.createSvgElement('svg', {
     id: 'trashcanHolder',
-    width: 90,
+    width: 114,
     height: 90,
     style: 'display: none; position: absolute'
   }, this.HtmlDiv);

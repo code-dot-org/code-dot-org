@@ -554,10 +554,10 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 };
 
 /**
-* Is the mouse event over a delete area (toolbar or non-closing flyout)?
-* Opens or closes the trashcan and sets the cursor as a side effect.
+* Is the mouse event over a delete area?
+* Shows the trash zone as a side effect.
 * @param {!Event} e Mouse move event.
-* @param {integer} mouseDx The X difference from mouse initial location to current location.
+* @param {integer} startDragX The x coordinate of the drag start.
 * @return {boolean} True if event is in a delete area.
 */
 Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
@@ -566,8 +566,6 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
 
   var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(startDragX, 0, this.blockSpaceEditor.svg_);
   var dragStartXY = new goog.math.Coordinate(mouseDragStartXY.x, mouseDragStartXY.x);
-
-  //console.log(xy.x, xy.y);
 
   // Update trash can visual state
   // Might be nice to do this side-effect elsewhere.
@@ -579,30 +577,37 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
     }
   }
 
-  this.drawHotZone(xy.x, dragStartXY.x);
+  this.drawTrashZone(xy.x, dragStartXY.x);
 
   // Check against all delete areas
   for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
     if (area.contains(xy)) {
       this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
-
       return true;
     }
   }
 
   this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
 
-  //goog.dom.getElementByClass("blocklyFlyoutBackground").setAttribute("style", "fill:#ddd")
-
   return false;
 };
 
+/**
+* Called when a drag event ends, to hide any delete UI.
+*/
 Blockly.BlockSpace.prototype.hideDelete = function() {
-  this.drawHotZone(10000, 0);
+  var veryDistantX = Blockly.RTL ? -10000 : 10000;
+  this.drawTrashZone(veryDistantX, 0);
 };
 
-Blockly.BlockSpace.prototype.drawHotZone = function(x, startDragX) {
-
+/**
+* Draws the trash zone over the toolbox/flyout, as the user drags an
+* item towards it.
+* @param {!Event} e Mouse move event.
+* @param {integer} startDragX The x coordinate of the drag start.
+* @return {boolean} True if event is in a delete area.
+*/
+Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   var background;
   var blockGroup;
   var trashcan;
@@ -624,44 +629,66 @@ Blockly.BlockSpace.prototype.drawHotZone = function(x, startDragX) {
 
   var toolbarWidth = background.getBoundingClientRect().width;
 
-  var hotZone = startDragX - toolbarWidth + 10;
+  // The user can drag towards the trash zone a little bit before the zone starts fading in.
+  var dragBuffer = 10;
 
-  var trashColorIntensity = 0;
-  if (x <= toolbarWidth) {
-    trashColorIntensity = 1;
-    trashcan.setOpen_(true);
+  // Has the user dragged the block a certain amount towards the trash zone?
+  var pastThreshold = false;
+
+  var xDifference;
+  var trashZoneWidth;
+
+  if (Blockly.RTL) {
+    pastThreshold = x > startDragX + dragBuffer;
+    var editorWidth = this.blockSpaceEditor.svg_.getBoundingClientRect().width;
+    var canvasAreaWidth = editorWidth - toolbarWidth;
+    xDifference = canvasAreaWidth - x;
+    trashZoneWidth = canvasAreaWidth - startDragX - dragBuffer;
+  } else {
+    pastThreshold = x < startDragX - dragBuffer;
+    xDifference = x - toolbarWidth;
+    trashZoneWidth = startDragX - toolbarWidth - dragBuffer;
   }
-  else {
-    trashcan.setOpen_(false);
 
-    if (x >= toolbarWidth + hotZone) {
-      trashColorIntensity = 0;
-    }
-    else {
-      trashColorIntensity = 1 - (x - toolbarWidth) / hotZone;
+  var normalColorIntensity = 1;
+
+  if (pastThreshold) {
+    if (xDifference <= 0) {
+      normalColorIntensity = 0;
+      trashcan.setOpen_(true);
+    } else {
+      trashcan.setOpen_(false);
+      if (xDifference >= trashZoneWidth) {
+        normalColorIntensity = 1;
+      } else {
+        normalColorIntensity = xDifference / trashZoneWidth;
+      }
     }
   }
-  var normalColorIntensity = 1 - trashColorIntensity;
 
-  var r = Math.floor(trashColorIntensity * 0xaa + normalColorIntensity * 0xdd);
-  var g = Math.floor(trashColorIntensity * 0xaa + normalColorIntensity * 0xdd);
-  var b = Math.floor(trashColorIntensity * 0xaa + normalColorIntensity * 0xdd);
+  var trashColorIntensity = 1 - normalColorIntensity;
+
+  var regularGreyLevel = 0xaa;
+  var trashGreyLevel = 0xdd;
+
+  var r = Math.floor(trashColorIntensity * regularGreyLevel + normalColorIntensity * trashGreyLevel);
+  var g = Math.floor(trashColorIntensity * regularGreyLevel + normalColorIntensity * trashGreyLevel);
+  var b = Math.floor(trashColorIntensity * regularGreyLevel + normalColorIntensity * trashGreyLevel);
   var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
 
   if (this.blockSpaceEditor.toolbox) {
-    // fade towards the new toolbox background colour.
-    // this element can have existing styling, so use this syntax to modify a single property.
+    // Fade towards the new toolbox background colour.
     background.style["background-color"] = rgbString;
   } else {
-    // fade towards the new flyout backround colour
-    background.setAttribute("style", "fill:" + rgbString);
+    // Fade towards the new flyout backround colour
+     background.style["fill"] = rgbString;
   }
 
-  // and fade out the blocks in the flyout area
-  blockGroup.setAttribute("style", "opacity:" + normalColorIntensity);
+  // Fade out the blocks in the flyout area.
+  blockGroup.style["opacity"] = normalColorIntensity;
 
-  // and fade in the trash can
+  // Fade in the trash can.
   var trashcanDisplay = trashColorIntensity == 0 ? "none" : "block";
-  var styleString = "opacity: " + trashColorIntensity + "; display: " + trashcanDisplay + "; position: absolute";
-  trashcanElement.setAttribute("style", styleString);
+  trashcanElement.style["opacity"] = trashColorIntensity;
+  trashcanElement.style["display"] = trashcanDisplay;
 };
