@@ -372,8 +372,6 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.blockSpace);
     this.blockSpace.scrollbar.resize();
   }
-
-  //this.blockSpace.addTrashcan();
 };
 
 Blockly.BlockSpaceEditor.prototype.detectBrokenControlPoints = function() {
