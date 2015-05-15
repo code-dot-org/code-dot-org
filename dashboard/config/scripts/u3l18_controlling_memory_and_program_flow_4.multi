@@ -1,0 +1,12 @@
+name 'U3L18 Controlling Memory and Program Flow 4'
+title 'Controlling Memory and Control Quiz'
+description  'Select the programming technique that best fits the described game feature.'
+
+question '4. You want to change the size of the images when a certain score is reached.'
+wrong 'conditional'
+wrong 'variable'
+right 'both'
+
+markdown <<MARKDOWN
+
+MARKDOWN

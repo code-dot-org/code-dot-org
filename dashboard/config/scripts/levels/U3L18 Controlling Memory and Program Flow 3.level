@@ -1,0 +1,33 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-15T13:47:56.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "3. You want to see the elapsed time."
+      }
+    ],
+    "answers": [
+      {
+        "text": "conditional",
+        "correct": false
+      },
+      {
+        "text": "variable",
+        "correct": true
+      },
+      {
+        "text": "both",
+        "correct": false
+      }
+    ],
+    "title": "Controlling Memory and Control Quiz",
+    "content1": "Select the programming technique that best fits the described game feature.",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</Multi>

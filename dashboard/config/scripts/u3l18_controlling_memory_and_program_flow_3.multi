@@ -1,0 +1,12 @@
+name 'U3L18 Controlling Memory and Program Flow 3'
+title 'Controlling Memory and Control Quiz'
+description 'Select the programming technique that best fits the described game feature.'
+
+question '3. You want to see the elapsed time.'
+wrong 'conditional'
+right 'variable'
+wrong 'both'
+
+markdown <<MARKDOWN
+
+MARKDOWN
