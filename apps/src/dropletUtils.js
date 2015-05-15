@@ -225,7 +225,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var cf = mergedFunctions[i];
     var block = cf.block;
     if (!block) {
-      block = cf.func + "(";
+      block = (cf.blockPrefix || cf.func) + "(";
       if (cf.params) {
         for (j = 0; j < cf.params.length; j++) {
           if (j !== 0) {
@@ -308,8 +308,7 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
 
     if (config.blocks[i].type === 'value') {
       newFunc.value = true;
-    }
-    else if (config.blocks[i].type === 'either') {
+    } else if (config.blocks[i].type === 'either') {
       newFunc.value = true;
       newFunc.command = true;
     }
@@ -321,7 +320,9 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
 
     newFunc.dropdown = config.blocks[i].dropdown;
 
-    modeOptions.functions[config.blocks[i].func] = newFunc;
+    var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
+
+    modeOptions.functions[modeOptionName] = newFunc;
   }
 }
 
