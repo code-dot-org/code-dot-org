@@ -35,7 +35,7 @@ var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
-var DesignProperties = require('./designProperties.jsx');
+var DesignProperties = require('./designProperties');
 
 var vsprintf = require('./sprintf').vsprintf;
 
@@ -1332,32 +1332,26 @@ Applab.editElementProperties = function(element) {
    return;
   }
 
-  var designPropertiesEl = document.getElementById('design-properties');
-  var outerWidth = Applab.getOuterWidth(element);
-  var outerHeight = Applab.getOuterHeight(element);
+  var designPropertiesElement = document.getElementById('design-properties');
   React.render(
     React.createElement(DesignProperties, {
-        tagName: tagName,
-        id: element.id,
-        left: parseInt(element.style.left, 10) || 0,
-        top: parseInt(element.style.top, 10) || 0,
-        width: isNaN(outerWidth) ? '' : outerWidth,
-        height: isNaN(outerHeight) ? '' : outerHeight,
-        text: $(element).text(),
+        element: element,
         handleChange: Applab.onPropertyChange.bind(this, element),
         onDone: Applab.onDonePropertiesButton,
         onDelete: Applab.onDeletePropertiesButton.bind(this, element)}
     ),
-    designPropertiesEl);
+    designPropertiesElement);
 };
 
 /**
  * Clear the Properties pane of applab's design mode.
  */
 Applab.clearProperties = function () {
-  var designPropertiesEl = document.getElementById('design-properties');
-  if (designPropertiesEl) {
-    React.render(React.createElement(DesignProperties, {tagName: null}), designPropertiesEl);
+  var designPropertiesElement = document.getElementById('design-properties');
+  if (designPropertiesElement) {
+    React.render(
+      React.createElement(DesignProperties, {}),
+      designPropertiesElement);
   }
 };
 

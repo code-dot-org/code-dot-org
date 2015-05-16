@@ -1,4 +1,8 @@
-var React = require('react')
+var React = require('react');
+
+// TODO (brent) - make it so that we dont need to specifiy jsx
+var ButtonProperties = require('./elements/button').ButtonProperties;
+var DefaultProperties = require('./elements/default').DefaultProperties;
 
 React.PropTypes.emptyString = function(props, propName, componentName) {
   if (props[propName] !== '') {
@@ -44,58 +48,41 @@ var DesignProperties = module.exports = React.createClass({
   // might also be the case that we actually want the list to be more dynamic
   // than it is currently
   propTypes: {
-    tagName: React.PropTypes.string,
-    id: React.PropTypes.string,
-    left: React.PropTypes.number,
-    top: React.PropTypes.number,
-    width: React.PropTypes.numberOrEmptyString,
-    height: React.PropTypes.number,
-    text: React.PropTypes.string,
+    // element:
+    // TODO required unless element is null
     handleChange: React.PropTypes.func,
     onDone: React.PropTypes.func,
     onDelete: React.PropTypes.func
   },
 
   render: function() {
-    if (!this.props.tagName) {
+    if (!this.props.element) {
       return <p>Click on an element to edit its properties.</p>;
+    }
+
+    var propertiesElement;
+    var tagname = this.props.element.tagName.toLowerCase();
+    // TODO - eventually this will have to be something other than tagname
+    switch (tagname) {
+      case 'button':
+        properties = <ButtonProperties
+          element={this.props.element}
+          handleChange={this.props.handleChange}/>;
+        break;
+
+      default:
+        properties = <DefaultProperties
+          element={this.props.element}
+          handleChange={this.props.handleChange}/>;
+        break;
     }
 
     // We provide a key to the outer div so that element foo and element bar are
     // seen to be two completely different tables. Otherwise they don't the
-    // defaultValues in inputs don't update correctly.  
+    // defaultValues in inputs don't update correctly.
     return (
       <div key={this.props.id}>
-        <table>
-          <tr>
-            <th>name</th>
-            <th>value</th>
-          </tr>
-          <PropertyRow
-            desc={'id'}
-            initialValue={this.props['id']}
-            handleChange={this.props.handleChange.bind(this, 'id')} />
-          <PropertyRow
-            desc={'x position (px)'}
-            initialValue={this.props['left']}
-            handleChange={this.props.handleChange.bind(this, 'left')} />
-          <PropertyRow
-            desc={'y position (px)'}
-            initialValue={this.props['top']}
-            handleChange={this.props.handleChange.bind(this, 'top')} />
-          <PropertyRow
-            desc={'width (px)'}
-            initialValue={this.props['width']}
-            handleChange={this.props.handleChange.bind(this, 'width')} />
-          <PropertyRow
-            desc={'height (px)'}
-            initialValue={this.props['height']}
-            handleChange={this.props.handleChange.bind(this, 'height')} />
-          <PropertyRow
-            desc={'text'}
-            initialValue={this.props['text']}
-            handleChange={this.props.handleChange.bind(this, 'text')} />
-        </table>
+        {properties}
         <button
           id="donePropertiesButton"
           onClick={this.props.onDone}>
