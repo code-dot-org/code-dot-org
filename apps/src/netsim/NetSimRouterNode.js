@@ -1274,8 +1274,60 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
       return;
     }
 
-    this.forwardMessageToRecipient_(message, onComplete);
+    var levelConfig = netsimGlobals.getLevelConfig();
+    if (levelConfig.broadcastMode) {
+      logger.info("Forwarding to all");
+      this.forwardMessageToAll_(message, onComplete);
+    } else {
+      this.forwardMessageToRecipient_(message, onComplete);
+    }
   }.bind(this));
+};
+
+NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete) {
+  // Assumptions for broadcast mode:
+  // 1. We can totally ignore packet headers, because addresses don't matter
+  // 2. We won't send to the Auto-DNS, since DNS make no sense with no addresses
+
+  // Grab the list of all connected nodes
+  var connectedNodeIDs = this.myWireRowCache_.map(function (wireRow) {
+    return wireRow.localNodeID;
+  });
+
+  this.forwardMessageToNodeIDs_(message, connectedNodeIDs, function (err, result) {
+    if (err) {
+      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+    } else {
+      this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
+    }
+    onComplete(err, result);
+  }.bind(this));
+};
+
+NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
+    nodeIDs, onComplete) {
+  if (nodeIDs.length === 0) {
+    // All done!
+    onComplete(null);
+    return;
+  }
+
+  // Otherwise, send to the first one and then call for the rest.
+  var nextRecipientNodeID = nodeIDs[0];
+  NetSimMessage.send(
+      this.shard_,
+      this.entityID,
+      nextRecipientNodeID,
+      nextRecipientNodeID,
+      message.payload,
+      function (err) {
+        if (err) {
+          onComplete(err);
+          return;
+        }
+        this.forwardMessageToNodeIDs_(message, nodeIDs.slice(1), onComplete);
+      }.bind(this)
+  );
 };
 
 /**
