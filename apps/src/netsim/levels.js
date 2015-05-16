@@ -40,6 +40,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           and dump them to the received message log.  If false, some other
  *           method must be used for receiving messages.
  *
+ * @property {boolean} broadcastMode - Enabling this option turns "routers"
+ *           into "rooms" and makes it so every message sent in the room
+ *           will be received by every other person in that room.
+ *
  * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
  *           to route them.
@@ -146,6 +150,7 @@ levels.custom = {
   // Simulator-wide setup
   messageGranularity: MessageGranularity.BITS,
   automaticReceive: false,
+  broadcastMode: false,
 
   // Packet header specification
   routerExpectsPacketHeader: [],
