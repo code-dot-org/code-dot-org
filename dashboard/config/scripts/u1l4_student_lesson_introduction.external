@@ -5,14 +5,18 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 4 - Bit Sending Widget
+## Unit 1: Lesson 4 - Coordination on the Internet
 
 # Background
-Computer science involves being comfortable with multiple layers of abstraction in order to focus on specific problems at hand and also to break problems down into manageable parts. Using the bit-sending simulator you can solve the problem of how to coordinate sending messages between two devices more quickly. If you solve the problem using the simulator, you will be able to try it out on your bit-sending device. 
+Computer science involves being comfortable with multiple layers of abstraction in order to focus on specific problems at hand and also to break problems down into manageable parts. Using the Internet Simulator you can solve the problem of how to coordinate sending messages between two devices more quickly. This tools simulates a single wire shared between two people.  
+
+# Vocabulary
+
+*Bit Rate: The speed at which a system is able to transmit bits.
 
 # Lesson
 
-* Use the “Bit Sending Widget” simulation to send bits between two points. 
+* Use the “Internet Simulator” to send bits between two points. 
 * Create a protocol for encoding messages to be sent using the widget.
 * Interpret the bits as they are received by the widget.
 
@@ -21,7 +25,7 @@ Computer science involves being comfortable with multiple layers of abstraction 
 
 <!-- * [Bit Sending Widget](http://bit.ly/sendingBits_AB -->
 <!-- * Video [Demonstration of the Widget](http://youtu.be/dubPPv_ECPA)  -->
-* Student Activity <a href="https://docs.google.com/document/d/1QUuYyC0y4N_-rwPrMuUWYgaPmzjFADaqzKx1Ur7bblE/edit?usp=sharing" target="_blank">The Weathervane</a>
+* Student Activity: <a href="https://docs.google.com/document/d/1Oyfk9VC9ymoDTCG-Z5pC95zupRI4FBTttO2rqvCUlcs/edit?usp=sharing">Coordination on the Internet</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
