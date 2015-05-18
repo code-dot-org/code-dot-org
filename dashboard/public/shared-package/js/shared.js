@@ -304,7 +304,7 @@ dashboard.updateTimestamp = function() {
   }
 };
 
-function appToProjectUrl() {
+dashboard.appToProjectUrl = function () {
   switch (appOptions.app) {
     case 'applab':
       return '/p/applab';
@@ -316,7 +316,7 @@ function appToProjectUrl() {
       }
       return '/p/playlab';
   }
-}
+};
 
 /**
  * @returns {string} The serialized level source from the editor.
@@ -337,7 +337,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = overrideSource || dashboard.getEditorSource();
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
-  dashboard.currentApp.level = appToProjectUrl();
+  dashboard.currentApp.level = dashboard.appToProjectUrl();
   if (channelId && dashboard.currentApp.isOwner) {
     channels.update(channelId, dashboard.currentApp, function(callback, data) {
       if (data) {
@@ -445,7 +445,7 @@ function initApp() {
       appOptions.callouts = [];
       dashboard.showMinimalProjectHeader();
     }
-  } else if (appOptions.isLegacyShare && appToProjectUrl()) {
+  } else if (appOptions.isLegacyShare && dashboard.appToProjectUrl()) {
     dashboard.currentApp = {
       name: 'Untitled Project'
     };

@@ -186,6 +186,9 @@ div#visualization.with_padding {
 #divApplab img {
   opacity: 1; }
 
+#divApplab label {
+  display: inline-block; }
+
 #divApplab div {
   overflow: hidden; }
 

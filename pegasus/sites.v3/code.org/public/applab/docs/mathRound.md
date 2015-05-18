@@ -104,7 +104,7 @@ A number representing the integer nearest to x, or NaN if x is not a number or n
 [tips]
 
 ### Tips
-- This function is identical to the native JavaScript [round Method](http://www.w3schools.com/jsref/jsref_round.asp).
+- This function is identical to the native JavaScript [Math.round Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round).
 
 [/tips]
 

@@ -7,7 +7,6 @@ nav: pd2_nav
 # Miami-Dade Professional Development
 
 - [I'm attending Exploring Computer Science PD](#ecs)
-- [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
 
 <a id="ecs"></a>
@@ -75,7 +74,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 8, 2015 - Wednesday, June 10, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 

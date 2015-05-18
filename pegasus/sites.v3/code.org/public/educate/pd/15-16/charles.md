@@ -43,7 +43,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, July 27, 2015 - Tuesday, July 28, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served.
 
@@ -88,7 +88,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Wednesday, July 29, 2015 - Friday, July 31, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 
