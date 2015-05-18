@@ -181,7 +181,7 @@ Both group 1 & 2 will be hosted on the following dates:
 <br />
 Monday, August 10, 2015 - Wednesday, August 12, 2015
 <br />
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served.
 <br />
