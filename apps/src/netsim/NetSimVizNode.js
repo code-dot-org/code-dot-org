@@ -277,9 +277,13 @@ NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 NetSimVizNode.prototype.updateAddressDisplay = function () {
-  // Routers never show their address
-  // If a DNS mode has not been set we never show an address
-  if (this.isRouter || this.address_ === undefined) {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
+  // If we are never assigned an address, don't try to show one.
+  // In broadcast mode we will be assigned addresses but never use them, so
+  //   they should be hidden.
+  // Routers never show their address.
+  if (this.address_ === undefined || levelConfig.broadcastMode || this.isRouter) {
     this.addressGroup_.hide();
     return;
   }
