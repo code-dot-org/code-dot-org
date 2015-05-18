@@ -1,8 +1,8 @@
 var React = require('react');
 
-var ButtonProperties = require('./elements/button').PropertyTable;
-var TextProperties = require('./elements/text').PropertyTable;
-var InputProperties = require('./elements/textInput').PropertyTable;
+var ButtonProperties = require('./designElements/button').PropertyTable;
+var TextProperties = require('./designElements/text').PropertyTable;
+var InputProperties = require('./designElements/textInput').PropertyTable;
 
 
 React.PropTypes.emptyString = function(props, propName, componentName) {
