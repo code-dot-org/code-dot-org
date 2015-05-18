@@ -161,9 +161,9 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
 };
 
 function shareProject() {
-  dashboard.saveProject(function () {
+  dashboard.project.save(function () {
     var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.appToProjectUrl() + '#' + dashboard.currentApp.id;
+    var shareUrl = origin + dashboard.project.appToProjectUrl() + '#' + dashboard.project.current.id;
     var encodedShareUrl = encodeURIComponent(shareUrl);
     var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
     + '<div id="project-share" class="modal-content">'
@@ -226,7 +226,7 @@ function shareProject() {
           var phone = $("#project-share #phone");
           var params = jQuery.param({
             type: location.pathname.match(/^\/p\/(\w+)/)[1],
-            channel_id: dashboard.currentApp.id,
+            channel_id: dashboard.project.current.id,
             phone: phone.val()
           });
           $(submitButton).val("Sending..");
@@ -252,17 +252,17 @@ function shareProject() {
 }
 
 function remixProject() {
-  delete dashboard.currentApp.id;
-  delete dashboard.currentApp.hidden;
-  dashboard.currentApp.name = "Remix: " + (dashboard.currentApp.name || appOptions.level.projectTemplateLevelName || "My Project");
-  $('.project_name').text(dashboard.currentApp.name);
-  dashboard.saveProject();
+  delete dashboard.project.current.id;
+  delete dashboard.project.current.hidden;
+  dashboard.project.current.name = "Remix: " + (dashboard.project.current.name || appOptions.level.projectTemplateLevelName || "My Project");
+  $('.project_name').text(dashboard.project.current.name);
+  dashboard.project.save();
 }
 
 // Minimal project header for legacy /c/ share pages.
 dashboard.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
-      .append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
+      .append($('<div class="project_name header_text">').text(dashboard.project.current.name))
       .append($('<div class="project_updated_at header_text">').text("<%= I18n.t('project.click_to_remix') %>"));
 
   $('.project_info')
@@ -282,14 +282,14 @@ dashboard.showProjectLevelHeader = function () {
 
 dashboard.showProjectHeader = function () {
   function projectNameShow() {
-    $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.currentApp.name));
-    dashboard.updateTimestamp();
+    $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.current.name));
+    dashboard.project.updateTimestamp();
     $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'));
   }
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
-    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.currentApp.name));
+    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.project.current.name));
     $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text('<%= I18n.t('project.save') %>'));
   }
 
@@ -327,8 +327,8 @@ dashboard.showProjectHeader = function () {
       return;
     }
     $(this).attr('disabled', true);
-    dashboard.currentApp.name = $('.project_name').val().trim().substr(0, 100);
-    dashboard.saveProject(function () {
+    dashboard.project.current.name = $('.project_name').val().trim().substr(0, 100);
+    dashboard.project.save(function () {
       projectNameShow();
     });
   });
@@ -364,7 +364,7 @@ dashboard.showProjectHeader = function () {
     });
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
-      dashboard.deleteProject(function () {
+      dashboard.project.delete(function () {
         location.href = location.pathname;
       });
     });
@@ -376,8 +376,8 @@ dashboard.showProjectHeader = function () {
   $('.project_new').click(function (e) {
     e.preventDefault(); // Don't change the hash.
     // Save the project if one exists (i.e. isn't just the default one) then navigate.
-    if (dashboard.currentApp.id) {
-      dashboard.saveProject(function () {
+    if (dashboard.project.current.id) {
+      dashboard.project.save(function () {
         location.href = location.pathname;
       });
     } else {

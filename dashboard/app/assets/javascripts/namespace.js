@@ -1,4 +1,6 @@
 // Dashboard namespace
 if (!window.dashboard) {
-  window.dashboard = {};
+  window.dashboard = {
+    project: {}
+  };
 }
