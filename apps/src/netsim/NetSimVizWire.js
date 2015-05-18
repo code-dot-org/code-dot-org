@@ -17,6 +17,7 @@ var NetSimVizNode = require('./NetSimVizNode');
 var tweens = require('./tweens');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 
@@ -117,6 +118,10 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
 
   if (this.remoteVizNode) {
     this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
+
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    this.getRoot().css('display', 'none');
   }
 };
 
