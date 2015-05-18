@@ -1,16 +1,18 @@
-// TODO (brent) - this file will go away eventually
-
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow');
 
 var TextInputProperties = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
   render: function () {
     var element = this.props.element;
     var id = element.id;
     var text = $(element).text();
 
-    // TODO (brent): move getOuterWidth/getOuterHeight
     var outerWidth = Applab.getOuterWidth(element);
     var outerHeight = Applab.getOuterHeight(element);
     var width = isNaN(outerWidth) ? '' : outerWidth;
@@ -53,16 +55,15 @@ var TextInputProperties = React.createClass({
   }
 });
 
-function createElement() {
-  var element = document.createElement('input');
-  element.style.margin = '5px 2px';
-  element.style.width = '236px';
-  element.style.height = '30px';
-
-  return element;
-}
-
 module.exports = {
-  create: createElement,
-  PropertyTable: TextInputProperties
+  PropertyTable: TextInputProperties,
+
+  create: function () {
+    var element = document.createElement('input');
+    element.style.margin = '5px 2px';
+    element.style.width = '236px';
+    element.style.height = '30px';
+
+    return element;
+  }
 };

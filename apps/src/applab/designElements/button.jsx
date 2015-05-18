@@ -6,9 +6,7 @@ var PropertyRow = require('./PropertyRow');
 
 var ButtonProperties = React.createClass({
   propTypes: {
-    // TODO (brent) prob need a custom validator for html element
-    // even better if we ensure it's a button element
-    // element: React.PropTypes.element.isRequired,
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
   },
 
@@ -17,7 +15,6 @@ var ButtonProperties = React.createClass({
     var id = element.id;
     var text = $(element).text();
 
-    // TODO (brent): move getOuterWidth/getOuterHeight
     var outerWidth = Applab.getOuterWidth(element);
     var outerHeight = Applab.getOuterHeight(element);
     var width = isNaN(outerWidth) ? '' : outerWidth;
@@ -72,20 +69,17 @@ var ButtonProperties = React.createClass({
   }
 });
 
-function createElement() {
-  var element = document.createElement('button');
-  element.appendChild(document.createTextNode('Button'));
-  element.style.padding = '0px';
-  element.style.margin = '2px';
-  element.style.height = '36px';
-  element.style.width = '76px';
-  element.style.fontSize = '14px';
-
-  return element;
-}
-
-// TODO (brent) how do i want to organize exports?
 module.exports = {
-  create: createElement,
-  PropertyTable: ButtonProperties
+  PropertyTable: ButtonProperties,
+  create: function () {
+    var element = document.createElement('button');
+    element.appendChild(document.createTextNode('Button'));
+    element.style.padding = '0px';
+    element.style.margin = '2px';
+    element.style.height = '36px';
+    element.style.width = '76px';
+    element.style.fontSize = '14px';
+
+    return element;
+  }
 };

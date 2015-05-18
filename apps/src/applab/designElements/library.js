@@ -50,8 +50,6 @@ module.exports = {
     var element = elementClass.create();
 
     // Stuff that's common across all elements
-    // TODO (brent) for prefix, determine whether i need to be the same as
-    // the API
     element.id = this.getUnusedElementId(elementType.toLowerCase());
     element.style.position = 'absolute';
     element.style.left = left + 'px';

@@ -3,12 +3,16 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow');
 
 var TextProperties = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
   render: function () {
     var element = this.props.element;
     var id = element.id;
     var text = $(element).text();
 
-    // TODO (brent): move getOuterWidth/getOuterHeight
     var outerWidth = Applab.getOuterWidth(element);
     var outerHeight = Applab.getOuterHeight(element);
     var width = isNaN(outerWidth) ? '' : outerWidth;
@@ -62,16 +66,15 @@ var TextProperties = React.createClass({
   }
 });
 
-function createElement() {
-  var element = document.createElement('label');
-  element.appendChild(document.createTextNode("text"));
-  element.style.margin = '10px 5px';
-  element.style.height = '20px';
-
-  return element;
-}
-
 module.exports = {
-  create: createElement,
-  PropertyTable: TextProperties
+  PropertyTable: TextProperties,
+
+  create: function() {
+    var element = document.createElement('label');
+    element.appendChild(document.createTextNode("text"));
+    element.style.margin = '10px 5px';
+    element.style.height = '20px';
+
+    return element;
+  }
 };

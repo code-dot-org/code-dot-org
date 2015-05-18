@@ -1285,12 +1285,7 @@ Applab.editElementProperties = function(element) {
  * Clear the Properties pane of applab's design mode.
  */
 Applab.clearProperties = function () {
-  var designPropertiesElement = document.getElementById('design-properties');
-  if (designPropertiesElement) {
-    React.render(
-      React.createElement(DesignProperties, {}),
-      designPropertiesElement);
-  }
+  Applab.editElementProperties(null);
 };
 
 /**
