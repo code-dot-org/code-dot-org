@@ -31,7 +31,13 @@ Monday, June 29th - Wednesday, July 1st
 Breakfast and lunch will be served. 
 
 #### Location
-More info coming soon! 
+Amazon
+<br />
+Mayday Building
+<br />
+535 Terry Ave N
+<br />
+Seattle, WA 98109
 
 #### What do I bring to Phase 4 PD? ####
 Exploring Computer Science binder with curriculum
