@@ -61,10 +61,10 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   /**
    * List of VizEntities, which are all the elements that will actually show up
    * in our visualization.
-   * @type {Array.<NetSimVizEntity>}
+   * @type {Array.<NetSimVizElement>}
    * @private
    */
-  this.entities_ = [];
+  this.elements_ = [];
 
   /**
    * Reference to the local node viz entity, the anchor for the visualization.
@@ -103,12 +103,12 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
  */
 NetSimVisualization.prototype.tick = function (clock) {
   // Everyone gets an update
-  this.entities_.forEach(function (entity) {
+  this.elements_.forEach(function (entity) {
     entity.tick(clock);
   });
 
   // Tear out dead entities.
-  this.entities_ = this.entities_.filter(function (entity) {
+  this.elements_ = this.elements_.filter(function (entity) {
     if (entity.isDead()) {
       entity.getRoot().remove();
       return false;
@@ -121,7 +121,7 @@ NetSimVisualization.prototype.tick = function (clock) {
  * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
  */
 NetSimVisualization.prototype.render = function () {
-  this.entities_.forEach(function (entity) {
+  this.elements_.forEach(function (entity) {
     entity.render();
   });
 };
@@ -192,7 +192,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
-      this.entities_.push(this.localNode);
+      this.elements_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
     this.localNode.setIsLocalNode();
@@ -220,7 +220,7 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
  * @returns {NetSimVizEntity} or undefined if not found
  */
 NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
-  return _.find(this.entities_, function (entity) {
+  return _.find(this.elements_, function (entity) {
     return entity instanceof entityType && entity.id === entityID;
   });
 };
@@ -232,7 +232,7 @@ NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
  * @returns {Array.<NetSimVizWire>} the attached wires
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
-  return this.entities_.filter(function (entity) {
+  return this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
         (
         (entity.localVizNode === vizNode) ||
@@ -323,7 +323,7 @@ NetSimVisualization.prototype.updateVizEntitiesOfType_ = function (
  */
 NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
     vizEntityType, entityCollection) {
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     var isCorrectType = (vizEntity instanceof vizEntityType);
     var foundMatch = entityCollection.some(function (entity) {
       return entity.entityID === vizEntity.id;
@@ -337,12 +337,12 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
 
 /**
  * Adds a VizEntity to the visualization.
- * @param {NetSimVizEntity} vizEntity
+ * @param {NetSimVizElement} vizElement
  * @private
  */
-NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
-  this.entities_.push(vizEntity);
-  this.svgRoot_.find('#background-group').prepend(vizEntity.getRoot());
+NetSimVisualization.prototype.addVizEntity_ = function (vizElement) {
+  this.elements_.push(vizElement);
+  this.svgRoot_.find('#background-group').prepend(vizElement.getRoot());
 };
 
 /**
@@ -350,15 +350,15 @@ NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
  * layer. Special rule (for now): Prepend wires so that they show up behind
  * nodes.  Will need a better solution for this if/when the viz gets more
  * complex.
- * @param {NetSimVizEntity} vizEntity
+ * @param {NetSimVizElement} vizElement
  * @param {jQuery} newParent
  */
-var moveVizEntityToGroup = function (vizEntity, newParent) {
-  vizEntity.getRoot().detach();
-  if (vizEntity instanceof NetSimVizWire) {
-    vizEntity.getRoot().prependTo(newParent);
+var moveVizEntityToGroup = function (vizElement, newParent) {
+  vizElement.getRoot().detach();
+  if (vizElement instanceof NetSimVizWire) {
+    vizElement.getRoot().prependTo(newParent);
   } else {
-    vizEntity.getRoot().appendTo(newParent);
+    vizElement.getRoot().appendTo(newParent);
   }
 };
 
@@ -369,7 +369,7 @@ var moveVizEntityToGroup = function (vizEntity, newParent) {
  */
 NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Begin by marking all entities background (unvisited)
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     vizEntity.visited = false;
   });
 
@@ -402,7 +402,7 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Possible optimization: Can we do this with just one operation on the live DOM?
   var foreground = this.svgRoot_.find('#foreground-group');
   var background = this.svgRoot_.find('#background-group');
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
 
     // Check whether a change should occur.  If not, we leave
@@ -470,7 +470,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
  */
 NetSimVisualization.prototype.distributeForegroundNodes = function () {
   /** @type {Array.<NetSimVizNode>} */
-  var foregroundNodes = this.entities_.filter(function (entity) {
+  var foregroundNodes = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizNode && entity.isForeground;
   });
 
@@ -530,7 +530,7 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
   // Tell all nodes about the new DNS mode, so they can decide whether to
   // show or hide their address.
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizNode) {
       vizEntity.setDnsMode(newDnsMode);
     }
@@ -541,7 +541,7 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
  * @param {number} dnsNodeID
  */
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizNode) {
       vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
     }
@@ -554,7 +554,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimVisualization.prototype.setEncodings = function (newEncodings) {
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizWire) {
       vizEntity.setEncodings(newEncodings);
     }
@@ -617,7 +617,7 @@ NetSimVisualization.prototype.getVizWireToRemote = function () {
     return null;
   }
 
-  var outgoingWires = this.entities_.filter(function (entity) {
+  var outgoingWires = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
         entity.localVizNode === this.localNode;
   }, this);
@@ -638,7 +638,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
     return null;
   }
 
-  var incomingWires = this.entities_.filter(function (entity) {
+  var incomingWires = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
         entity.remoteVizNode === this.localNode;
   }, this);
