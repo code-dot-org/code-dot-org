@@ -13,6 +13,14 @@
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
 
+  - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
+  - if newsbanner
+    #newsbanner
+      .container_responsive
+        != I18n.t(newsbanner[:text1_s])
+        %a{href: newsbanner[:param2_s], target: "_blank"}
+          = I18n.t(newsbanner[:param1_s])
+
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
