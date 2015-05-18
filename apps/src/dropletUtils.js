@@ -262,12 +262,14 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
 
 function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
-    var cf = configBlocks[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category
-    });
+    var block = configBlocks[i];
+    if (!block.noAutocomplete) {
+      apis.push({
+        name: 'api',
+        value: block.func,
+        meta: block.category
+      });
+    }
   }
 }
 
