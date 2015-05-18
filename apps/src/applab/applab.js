@@ -1303,11 +1303,13 @@ Applab.resetElementTray = function (allowEditing) {
   if (designModeClear) {
     designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
   }
-
 };
 
-
-
+// TODO (brent) I think some of these properties are going to end up having
+// different behaviors based on element type. I think the best way of handling
+// this is to have an onPropertyChange per element that gets the first shot to
+// handle the change, and reports whether it did or not. If it didn't, we fall
+// back to the default function
 Applab.onPropertyChange = function(element, name, value) {
   switch (name) {
     case 'id':
