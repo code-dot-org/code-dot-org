@@ -178,7 +178,7 @@
     var answer;
     var errorType = null;
 
-    if (selectedAnswers.length !== numAnswers)
+    if (numAnswers > 1 && selectedAnswers.length !== numAnswers)
     {
       errorType = "toofew";
     }
