@@ -1,8 +1,9 @@
 var React = require('react');
 
-// TODO (brent) - make it so that we dont need to specifiy jsx
-var ButtonProperties = require('./elements/button').ButtonProperties;
-var DefaultProperties = require('./elements/default').DefaultProperties;
+var ButtonProperties = require('./elements/button').PropertyTable;
+var TextProperties = require('./elements/text').PropertyTable;
+var InputProperties = require('./elements/textInput').PropertyTable;
+
 
 React.PropTypes.emptyString = function(props, propName, componentName) {
   if (props[propName] !== '') {
@@ -70,16 +71,23 @@ var DesignProperties = module.exports = React.createClass({
           handleChange={this.props.handleChange}/>;
         break;
 
-      default:
-        properties = <DefaultProperties
+      // TODO - this will become a div
+      case 'label':
+        properties = <TextProperties
           element={this.props.element}
           handleChange={this.props.handleChange}/>;
         break;
+
+      case 'input':
+        properties = <InputProperties
+          element={this.props.element}
+          handleChange={this.props.handleChange}/>
     }
 
     // We provide a key to the outer div so that element foo and element bar are
     // seen to be two completely different tables. Otherwise they don't the
     // defaultValues in inputs don't update correctly.
+    // TODO - can we do better than depend on HTML elements having unique ids?
     return (
       <div key={this.props.id}>
         {properties}

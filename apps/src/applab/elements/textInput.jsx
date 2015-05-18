@@ -1,17 +1,10 @@
-// TODO (brent) - hook up linter somewhere
+// TODO (brent) - this file will go away eventually
 
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow');
 
-var ButtonProperties = React.createClass({
-  propTypes: {
-    // TODO (brent) prob need a custom validator for html element
-    // even better if we ensure it's a button element
-    // element: React.PropTypes.element.isRequired,
-    handleChange: React.PropTypes.func.isRequired
-  },
-
+var TextInputProperties = React.createClass({
   render: function () {
     var element = this.props.element;
     var id = element.id;
@@ -57,21 +50,9 @@ var ButtonProperties = React.createClass({
           initialValue={top}
           handleChange={this.props.handleChange.bind(this, 'top')} />
       </table>);
-
-    // TODO:
-    // textColor
-    // backgroundColor
-    // fontSize
-    // image
-    // bold/italics/underline (p2)
-    // shape (p2)
-    // textAlignment (p2)
-    // enabled (p2)
-    // hidden
-    // send back/forward
   }
 });
 
 module.exports = {
-  PropertyTable: ButtonProperties
+  PropertyTable: TextInputProperties
 };
