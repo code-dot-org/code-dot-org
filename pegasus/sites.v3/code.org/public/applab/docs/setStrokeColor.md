@@ -103,8 +103,8 @@ No return value. Outputs to the display only.
 ### Tips
 - `setStrokeColor` only affects the active canvas. If there is more than one canvas, each one can have a different stroke color.
 - When a new canvas is created, its stroke color will be black.
-- For an interactive tool that provides color hex values, see http://html-color-codes.info/.
-- For a list of color names and corresponding hex codes, see http://www.w3schools.com/html/html_colornames.asp.
+- For an interactive tool that provides color hex values, see https://developer.mozilla.org/en-US/docs/Web/CSS/Tools/ColorPicker_Tool.
+- For a list of color names and corresponding hex codes, see https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords.
 
 [/tips]
 

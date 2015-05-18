@@ -27,7 +27,7 @@ Request data from the internet and execute code when the request is complete.
 
 The function passed to `startWebRequest` will be called with three parameters:
 
-- The status of the request (completed or failed), using [HTTP status codes](http://www.w3schools.com/tags/ref_httpmessages.asp)
+- The status of the request (completed or failed), using [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
 - The type of data returned by the service (text, image etc.)
 - The data itself
 
@@ -55,7 +55,7 @@ ____________________________________________________
 
 In this more advanced example, we read the response from the service and print the description of the weather in Seattle to the debugging console.
 
-**Note:** In order to write code that reads the content of the response returned by the service, we need to know the format of the response. This will often be documented online by the service, in our case the [OpenWeatherMap project](http://openweathermap.org/weather-data). We will also need to use the [JSON.parse()](http://www.w3schools.com/js/js_json.asp) function, which can be used to transform the string of JSON into an object that we can use in our code.
+**Note:** In order to write code that reads the content of the response returned by the service, we need to know the format of the response. This will often be documented online by the service, in our case the [OpenWeatherMap project](http://openweathermap.org/weather-data). We will also need to use the [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) function, which can be used to transform the string of JSON into an object that we can use in our code.
 <pre>
 startWebRequest("http://api.openweathermap.org/data/2.5/weather?q=Seattle,us", function(status, type, content) {
   console.log(status); //Print the request status to the console
