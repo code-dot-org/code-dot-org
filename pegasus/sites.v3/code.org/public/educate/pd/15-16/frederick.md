@@ -33,9 +33,11 @@ Breakfast and lunch will be served.
 
 ### Location
 
-Frederick County Public Schools
+Applications and Research Laboratory (ARL)
 <br />
-Staff Development Center, 4 W Frederick St, Walkersville, MD 21793
+10920 Clarksville Pike
+<br />
+Ellicott City, MD 21042
 
 ### What do I bring to Phase 2?
 
@@ -81,7 +83,13 @@ Breakfast and lunch will be served.
 
 ### Location
 
-More details coming soon!
+Frederick County Public Schools
+<br />
+Staff Development Center
+<br />
+4 West Frederick Street 
+<br />
+Walkersville, MD 21793
 
 ### What do I bring to Phase 2?
 
