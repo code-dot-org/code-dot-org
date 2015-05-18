@@ -8,7 +8,7 @@ require_https: true
 <img src="/sites/default/files/fpcoverphoto.jpeg" alt="Kids at computers" width="851" height="315"/>
 
 <br/>
-[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)    &nbsp; [<button>Donate by Bitcoin</button>](https://coinbase.com/codeorg)
+[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)
 
 
 ## For every dollar you give, one child will learn computer science
@@ -37,7 +37,7 @@ Our donors include Microsoft, Google, Ballmer Family Giving, Omidyar Network and
 </div>
 <br/>
 <hr/>
-[<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL) &nbsp; [<button>Donate by Bitcoin</button>](https://coinbase.com/codeorg)
+[<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)
 
 To make a donation by check, wire-transfer, or stock-transfer, [contact us](/contact).
 
