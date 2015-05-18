@@ -227,8 +227,9 @@ hu:
       signup: Regisztrálás
       already_registered: Már regisztráltál?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Fejlődése
-      lines: 'A kód teljes hossza: %{lines}'
+      lines: 'A kód teljes hossza: %{lines} sor'
       close: BEZÁRÁS
       mastery: Fogalmak
       puzzle_map: Szakaszok
@@ -294,6 +295,10 @@ hu:
     cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert %{student_name} nem regisztrált e-mail címet'
     cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál e-mail címet'
     student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára a rendszerben'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Diák
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -313,8 +318,8 @@ hu:
     show_more: Mutass többet
     classroom_activity: Offline tevékenység
   home:
-    title: Kód Stúdió
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    title: Kód stúdió
+    lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
     all_courses: 1., 2. és 3. tanfolyam áttekintése
     lesson_plans: Óravázlatok
     signin_message: 'Már regisztráltál? %{link}'
@@ -330,7 +335,7 @@ hu:
     classroom: A tantermed
     student_progress: Előrehaladásod
     student_stats: 'Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept Mastery" trófeákból.'
-    student_left_off: 'Ahol abbahagyta:'
+    student_left_off: 'Ahol abbahagytad:'
     student_finished: 'Befejezted az összes gyakorlatot. Válassz másik osztályt %{online_link} vagy %{local_school_link}'
     local_school: helyi iskola
     online: online

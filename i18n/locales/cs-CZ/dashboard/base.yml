@@ -231,6 +231,7 @@ cs:
       signup: Registrace
       already_registered: Už jste zaregistrováni?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Tvůj pokrok
       lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
@@ -298,6 +299,10 @@ cs:
     cant_remove_student_no_email: '%{student_name} nemůže být zaregistrován jako tvůj student, protože student%{student_name} nezaregistroval e-mailovou adresu'
     cant_remove_teacher_no_email: '%{teacher_name} nemůže být odstraněn jako tvůj učitel, protože jsi nezaregistroval e-mailovou adresu'
     student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: student
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

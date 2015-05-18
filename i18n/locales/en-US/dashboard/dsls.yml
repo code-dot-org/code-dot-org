@@ -70,9 +70,15 @@ en:
         0: crwdns27828:0crwdne27828:0
         1: crwdns27829:0crwdne27829:0
         wide-rect|Image|Number|String: crwdns35126:0crwdne35126:0
+      Rocket Contract 1:
+        Contract for rocket-height: crwdns38406:0crwdne38406:0
+        rocket-height|Number|Number: crwdns38407:0crwdne38407:0
     external:
       AlgPD Break:
         Before you move on...: crwdns37550:0crwdne37550:0
+      App Lab Feedback:
+        App Lab Feedback: crwdns38281:0crwdne38281:0
+        description here: crwdns38282:0crwdne38282:0
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: crwdns37551:0crwdne37551:0
         Eventually replace this with a free-response journal entry level: crwdns37552:0crwdne37552:0
@@ -169,10 +175,14 @@ en:
       PDAlg commitment:
         CS in Algebra PD commitments: crwdns37583:0crwdne37583:0
         overview of program commitments: crwdns37584:0crwdne37584:0
+      PDAlg first forum:
+        Starting the Conversation: crwdns38283:0crwdne38283:0
       PDAlg functions:
         The Concept of Function: crwdns37585:0crwdne37585:0
       PDAlg hard video:
         Why is Algebra so Hard?: crwdns37586:0crwdne37586:0
+      PDAlg whats next:
+        What's Next?: crwdns38284:0crwdne38284:0
       PDCSP Intro: [ ]
       PDECS Intro:
         PD Intro: crwdns36332:0crwdne36332:0
@@ -205,12 +215,16 @@ en:
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
         Pair Programming: crwdns35602:0crwdne35602:0
+      PDK5 Puzzle Goals:
+        Puzzle Goals: crwdns38285:0crwdne38285:0
       PDK5 Strategies:
         Strategies for Teaching Computer Science: crwdns35603:0crwdne35603:0
       PDK5 Strategies 1:
         Classroom Strategies: crwdns37590:0crwdne37590:0
       PDK5 Strategies F:
         Strategies Discussion: crwdns37591:0crwdne37591:0
+      PDK5 Survey:
+        Phase 1 Experience Survey: crwdns38408:0crwdne38408:0
       PDK5 Teacher Dashboard 1:
         Dashboard 1: crwdns35604:0crwdne35604:0
       PDK5 Teacher Dashboard 2:
@@ -334,9 +348,9 @@ en:
       U1L12 Student Lesson Introduction:
         description here: crwdns36347:0crwdne36347:0
         title: crwdns36348:0crwdne36348:0
-      U1L13 Student Lesson Introduction:
-        description here: crwdns36349:0crwdne36349:0
-        title: crwdns36350:0crwdne36350:0
+      U1L13 Student Lesson Summary:
+        description here: crwdns38286:0crwdne38286:0
+        title: crwdns38287:0crwdne38287:0
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: crwdns37592:0crwdne37592:0
         U1L13 Text Compression: crwdns37593:0crwdne37593:0
@@ -373,6 +387,69 @@ en:
       U1L9 Student Lesson Introduction:
         description here: crwdns36373:0crwdne36373:0
         title: crwdns36374:0crwdne36374:0
+      U3L12 - Mission Unsortable:
+        description here: crwdns38288:0crwdne38288:0
+        title: crwdns38289:0crwdne38289:0
+      U3L12 - Student Introduction 1:
+        Events Unplugged: crwdns38290:0crwdne38290:0
+      U3L13 - Explanation of Ids:
+        description here: crwdns38291:0crwdne38291:0
+        title: crwdns38292:0crwdne38292:0
+      U3L13 Add Button Instrucitons:
+        description here: crwdns38293:0crwdne38293:0
+        title: crwdns38294:0crwdne38294:0
+      U3L13 Add Button Instructions:
+        description here: crwdns38295:0crwdne38295:0
+        title: crwdns38296:0crwdne38296:0
+      U3L13 Student Lesson Introduction:
+        Buttons on the Screen: crwdns38297:0crwdne38297:0
+      U3L14 - Student Intro Page:
+        description here: crwdns38298:0crwdne38298:0
+        title: crwdns38299:0crwdne38299:0
+      U3L16 Student Lesson Introduction:
+        Beyond Buttons: crwdns38300:0crwdne38300:0
+      U3L18 Student Lesson Introduction:
+        Controlling Memory and Program Flow: crwdns38409:0crwdne38409:0
+      U3L19 - Intro to variables:
+        U3L19 - Intro to variables: crwdns38410:0crwdne38410:0
+        description here: crwdns38411:0crwdne38411:0
+      U3L19 - concatenate string with var:
+        U3L19 - concatenate string with var: crwdns38412:0crwdne38412:0
+        description here: crwdns38413:0crwdne38413:0
+      U3L19 - explanation diff between string and var name:
+        U3L19 - explanation diff between string and var name: crwdns38414:0crwdne38414:0
+        description here: crwdns38415:0crwdne38415:0
+      U3L19 - misconception variable assignment order pt1:
+        U3L19 - misconception variable assignment order pt1: crwdns38416:0crwdne38416:0
+        description here: crwdns38417:0crwdne38417:0
+      U3L19 - variable breakdown - Assigning a value:
+        U3L19 - variable breakdown - Assigning a value: crwdns38418:0crwdne38418:0
+        description here: crwdns38419:0crwdne38419:0
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        U3L19 - variable breakdown - common mistake - declaring twice: crwdns38420:0crwdne38420:0
+        description here: crwdns38421:0crwdne38421:0
+      U3L19 - variable breakdown - declaration:
+        U3L19 - variable breakdown - declaration: crwdns38422:0crwdne38422:0
+        description here: crwdns38423:0crwdne38423:0
+      U3L19 - variable breakdown - setText in label:
+        U3L19 - variable breakdown - setText in label: crwdns38424:0crwdne38424:0
+        description here: crwdns38425:0crwdne38425:0
+      U3L19 - variable breakdown - ways to read pt1:
+        U3L19 - variable breakdown - ways to read pt1: crwdns38426:0crwdne38426:0
+        description here: crwdns38427:0crwdne38427:0
+      U3L19 - variable breakdown intro:
+        U3L19 - variable breakdown intro: crwdns38428:0crwdne38428:0
+        description here: crwdns38429:0crwdne38429:0
+      U3L19 Student Lesson Intro:
+        Clicker V.1: crwdns38430:0crwdne38430:0
+      U3L20 Student Lesson Introduction:
+        Conditional Basics: crwdns38431:0crwdne38431:0
+      U3L21 Student Lesson Introduction:
+        More Variables: crwdns38432:0crwdne38432:0
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: crwdns38433:0crwdne38433:0
+      U3L23 Student Lesson Introduction:
+        Natural Language Processing: crwdns38434:0crwdne38434:0
       facilitator test: [ ]
       sciPD Course Overview: [ ]
       sciPD Intro: [ ]
@@ -465,6 +542,7 @@ en:
         ((4+5) > 9): crwdns35736:0crwdne35736:0
         (4+5) > 9: crwdns24835:0crwdne24835:0
         /script_assets/msm/unit6/blockstomath1.png, 300: crwdns36375:0crwdne36375:0
+        4+5 > 9: crwdns38318:0crwdne38318:0
         Convert Blocks to Math: crwdns24832:0crwdne24832:0
         Type out the arithmetic expression that matches this code: crwdns24833:0crwdne24833:0
         Type the arithmetic expression here: crwdns24836:0crwdne24836:0
@@ -477,15 +555,18 @@ en:
         Type out the arithmetic expression that matches this code: crwdns24838:0crwdne24838:0
         Type the arithmetic expression here: crwdns24843:0crwdne24843:0
       Blocks to Bools 3:
+        ((5 < 10 < 15)): crwdns38435:0crwdne38435:0
         ((5 < 10) && (10 < 15)): crwdns35975:0crwdne35975:0
         ((5 < 10) AND (10 < 15)): crwdns35974:0crwdne35974:0
         ((5 < 10) And (10 < 15)): crwdns35973:0crwdne35973:0
         ((5 < 10) and (10 < 15)): crwdns35972:0crwdne35972:0
+        (5 < 10 < 15): crwdns38436:0crwdne38436:0
         (5 < 10) && (10 < 15): crwdns24849:0crwdne24849:0
         (5 < 10) AND (10 < 15): crwdns24848:0crwdne24848:0
         (5 < 10) And (10 < 15): crwdns35971:0crwdne35971:0
         (5 < 10) and (10 < 15): crwdns24847:0crwdne24847:0
         /script_assets/msm/unit6/blockstomath3.png, 500: crwdns35970:0crwdne35970:0
+        5 < 10 < 15: crwdns38437:0crwdne38437:0
         Convert Blocks to Math: crwdns24844:0crwdne24844:0
         Type out the arithmetic expression that matches this code: crwdns24845:0crwdne24845:0
         Type the arithmetic expression here: crwdns24850:0crwdne24850:0
@@ -498,6 +579,10 @@ en:
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): crwdns24854:0crwdne24854:0
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): crwdns35977:0crwdne35977:0
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): crwdns24855:0crwdne24855:0
+        (1 < x < 5) OR (8 < x < 10): crwdns38438:0crwdne38438:0
+        (1 < x < 5) Or (8 < x < 10): crwdns38439:0crwdne38439:0
+        (1 < x < 5) or (8 < x < 10): crwdns38440:0crwdne38440:0
+        (1 < x < 5) || (8 < x < 10): crwdns38441:0crwdne38441:0
         /script_assets/msm/unit6/blockstomath4.png, 500: crwdns35976:0crwdne35976:0
         Convert Blocks to Math: crwdns24851:0crwdne24851:0
         Type out the arithmetic expression that matches this code: crwdns24852:0crwdne24852:0
@@ -575,6 +660,9 @@ en:
       Open text response example:
         I loved it because...: crwdns35070:0crwdne35070:0
         Open text response example: crwdns35069:0crwdne35069:0
+      PDAlg Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: crwdns38319:0crwdne38319:0
+        In my classroom, I want to...: crwdns38320:0crwdne38320:0
       PDAlg course goals:
         Documenting Your Course Goals: crwdns37636:0crwdne37636:0
       PDK5 Challenges:
@@ -582,8 +670,6 @@ en:
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: crwdns35071:0crwdne35071:0
         In my classroom, I want to...: crwdns35074:0crwdne35074:0
-        0: crwdns35072:0crwdne35072:0
-        1: crwdns35073:0crwdne35073:0
       PDK5 Course Descriptions:
         Course Structure: crwdns35590:0crwdne35590:0
         I am going to start with Course...: crwdns35076:0crwdne35076:0
@@ -657,12 +743,15 @@ en:
         Respond to this prompt or to another as directed by your teacher.: crwdns36405:0crwdne36405:0
       U1L2 Free response assessment question:
         "Assessment: Sending Binary Messages": crwdns36406:0crwdne36406:0
-        Complete the Lesson 2 Rubric.: crwdns36407:0crwdne36407:0
         Enter your response here.: crwdns36408:0crwdne36408:0
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: crwdns36409:0crwdne36409:0
         Enter your reflection here.: crwdns36410:0crwdne36410:0
         "Reflection: Sending Binary Messages": crwdns36411:0crwdne36411:0
+      U1L3 Free Response:
+        Enter your reflection here: crwdns38442:0crwdne38442:0
+        0: crwdns38443:0crwdne38443:0
+        1: crwdns38444:0crwdne38444:0
+        "Reflection: Sending Complex Messages": crwdns38445:0crwdne38445:0
       U1L3 Free response reflection question:
         Complete the Lesson 3 Rubric.: crwdns36412:0crwdne36412:0
         Enter your reflection here.: crwdns36413:0crwdne36413:0
@@ -671,7 +760,7 @@ en:
         Enter your reflection here.: crwdns36415:0crwdne36415:0
         Reflect on this lesson: crwdns36416:0crwdne36416:0
       U1L4 Free response reflection question:
-        "Assessment: Bit sending Widget": crwdns36417:0crwdne36417:0
+        "Assessment: Coordination on the Internet": crwdns38446:0crwdne38446:0
         Complete the Lesson 2 Rubric.: crwdns36418:0crwdne36418:0
         Enter your reflection here.: crwdns36419:0crwdne36419:0
       U1L5 Free Response Assessment:
@@ -697,6 +786,41 @@ en:
         "Reflection: Sending Numbers ": crwdns36432:0crwdne36432:0
       U1L9 Free Response Assessment:
         "Assessment: Real-world Numbers ": crwdns36433:0crwdne36433:0
+      U3L12 - Reflection - Mission Unsortable:
+        Activity Reflection: crwdns38321:0crwdne38321:0
+        Mission Unsortable : crwdns38322:0crwdne38322:0
+      U3L12 Free Response Getting Started:
+        "Getting Started: Events Unplugged": crwdns38323:0crwdne38323:0
+        Respond to the following prompt: crwdns38324:0crwdne38324:0
+      U3L12 Free Response Reflection:
+        "Reflection: Mission Unsortable": crwdns38325:0crwdne38325:0
+      U3L13 Free Response Getting Started:
+        Buttons on the Screen - Getting Started: crwdns38327:0crwdne38327:0
+      U3L13 Free Response Reflection:
+        Buttons on the Screen Wrap Up: crwdns38329:0crwdne38329:0
+      U3L14 - Journal Favorite Event:
+        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: crwdns38331:0crwdne38331:0
+        "Reflection: Events": crwdns38332:0crwdne38332:0
+      U3L16 Assessment Free Response:
+        "Beyond Buttons: Assessment": crwdns38333:0crwdne38333:0
+      U3L16 Free Response Getting Started:
+        Beyond Buttons Getting Started: crwdns38334:0crwdne38334:0
+      U3L16 Free Response Wrap Up:
+        Beyond Buttons Wrap Up: crwdns38335:0crwdne38335:0
+      U3L18 Free Response Wrap Up:
+        Controlling Memory and Program Flow Wrap Up: crwdns38447:0crwdne38447:0
+      U3L20 Free Response Getting Started:
+        "Getting Started: Conditional Basics": crwdns38448:0crwdne38448:0
+      U3L20 Free Response Wrap Up:
+        "Wrap Up: Conditional Basics": crwdns38449:0crwdne38449:0
+      U3L21 Assessment Wrap Up:
+        More Variables Wrap Up: crwdns38450:0crwdne38450:0
+      U3L22 Assessment:
+        Permanent Data Storage Assessment: crwdns38451:0crwdne38451:0
+      U3L22 Free Response Getting Started:
+        "Permanent Data Storage: Getting Started": crwdns38452:0crwdne38452:0
+      U3L22 Reflection:
+        The Clicker Game with Permanent Data Storage: crwdns38453:0crwdne38453:0
       text match test:
         (9-3)+(4*7): crwdns23419:0crwdne23419:0
         (9-3)+4: null

@@ -10,7 +10,7 @@
   "placeImageBlockTitle": "położenie-obraz (x, y, obraz)",
   "offsetBlockTitle": "offset (x, y, obraz)",
   "rectangleBlockTitle": "prostokąt (szerokość, wysokość, styl, kolor)",
-  "reinfFeedbackMsg": "Możesz nacisnąć przycisk Spróbuj ponownie, aby edytować swój rysunek. ",
+  "reinfFeedbackMsg": "Możesz nacisnąć przycisk \"Odtwarzaj Dalej\" aby edytować program.",
   "rotateImageBlockTitle": "obróć  (stopnie, obraz)",
   "scaleImageBlockTitle": "skala (czynnik, obraz)",
   "squareBlockTitle": "kwadrat (rozmiar, styl, kolor)",

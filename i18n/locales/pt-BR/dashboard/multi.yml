@@ -160,7 +160,7 @@ pt-BR:
         a string: uma string
         boolean: booleano
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        Green colored blocks are associated with __________ ?: Blocos de cor verde estão associados com __________ ?
         a image: uma imagem
         a number: um número
         a string: uma string
@@ -322,6 +322,15 @@ pt-BR:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Baker test of multi can delete:
+        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+        What is 2 + 2?: What is 2 + 2?
+        2+3: 2+3
+        5-1: 5-1
+        3 - 7: '3 - 7'
+        3+1: 3+1
+        3+4: 3+4
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
@@ -348,25 +357,25 @@ pt-BR:
         more perseverance: mais perseverança
         all of the above: todas as anteriores
       ECSPD impact vid2 question:
-        Barrier to Using Data: Barrier to Using Data
-        0: "? \"Based on the video you just watched, answer the following \nquestion\""
-        1: ": \"Based on the video you just watched, answer the following \nquestion\""
-        2: '? What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?'
-        3: ': What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?'
-        data stored in ways that makes it difficult to analyze it: data stored in ways that makes it difficult to analyze it
-        data is technically available, but often not posted online: data is technically available, but often not posted online
-        data is normalized, so it is difficult to analyze data from different sources: data is normalized, so it is difficult to analyze data from different sources
+        Barrier to Using Data: Barreira para o uso de dados
+        0: "? \"Com base no vídeo ao qual você acabou de assistir, responda à seguinte \nquestão\""
+        1: ": \"Com base no vídeo ao qual você acabou de assistir, responda à seguinte \nquestão\""
+        2: '? Que problemas Ben Wellington abordou em sua palestra TED que estavam relacionados às barreiras apresentadas por pessoas que querem acessar e analisar grandes dados?'
+        3: ': Que problemas Ben Wellington abordou em sua palestra TED que estavam relacionados às barreiras apresentadas por pessoas que querem acessar e analisar grandes dados?'
+        data stored in ways that makes it difficult to analyze it: dados armazenados de formas que dificultam sua análise
+        data is technically available, but often not posted online: dados que estão tecnicamente disponíveis, mas muitas vezes não estão publicados on-line
+        data is normalized, so it is difficult to analyze data from different sources: dados normalizados, o que dificulta a análise de dados de diferentes fontes
         all of the above: todas as anteriores
       ECSPD unit:
-        ECS Curriculum: ECS Curriculum
-        Based on what you just read about the ECS course, answer the following question: Based on what you just read about the ECS course, answer the following question
-        What unit from the ECS curriculum are you most interested in?: What unit from the ECS curriculum are you most interested in?
-        "Unit 1: Human Computer Interaction": 'Unit 1: Human Computer Interaction'
-        "Unit 2: Problem Solving": 'Unit 2: Problem Solving'
-        "Unit 3: Web Design": 'Unit 3: Web Design'
-        "Unit 4: Introduction to Programming": 'Unit 4: Introduction to Programming'
-        "Unit 5: Computing and Data Analysis": 'Unit 5: Computing and Data Analysis'
-        "Unit 6: Robotics": 'Unit 6: Robotics'
+        ECS Curriculum: Currículo ECS
+        Based on what you just read about the ECS course, answer the following question: Com base no que você acabou de ler sobre o curso ECS, responda à seguinte questão
+        What unit from the ECS curriculum are you most interested in?: Em qual unidade do currículo ECS você está mais interessado?
+        "Unit 1: Human Computer Interaction": 'Unidade 1: Interação entre humano e computador'
+        "Unit 2: Problem Solving": 'Unidade 2: Resolução de problemas'
+        "Unit 3: Web Design": 'Unidade 3: Web Design'
+        "Unit 4: Introduction to Programming": 'Unidade 4: Introdução à programação'
+        "Unit 5: Computing and Data Analysis": 'Unidade 5: Computação e análise de dados'
+        "Unit 6: Robotics": 'Unidade 6: Robótica'
       K-1 Artist 1 Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -625,8 +634,9 @@ pt-BR:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of x?: Qual é o valor de x?
         3: "3"
+        8: "8"
         15: "15"
-        do not know: não sei
+        string: string
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of (p - x)?: 'Qual é o valor de (p - x)?'
@@ -687,35 +697,42 @@ pt-BR:
         Please confirm that you have read the Attendance Policy and will work to follow it.: Confirme que você leu e concorda com a política de atendimento.
         I have read and agree to the Attendance Policy: Eu li e concordo com a política de atendimento
       PDAlg Blocks Video:
-        Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
-        Play Area: Play Area
+        Intro to Evaluation Blocks: Introdução aos blocos de avaliação
+        In which are of the screen do you click blocks together to write a program?: Em que parte da tela você clica e junta os blocos para escrever um programa?
+        Play Area: Área de jogo
         Toolbox: Caixa de ferramentas
-        Workspace: Workspace
+        Workspace: Área de trabalho
+      PDAlg end of P3:
+        Plans for the Future: Planos para o futuro
+        What are your plans for next year?: Quais são seus planos para o próximo ano?
+        Keep teaching Bootstrap: Continuar ensinando Bootstrap
+        Start teaching CS in Algebra: Começar a ensinar CC em álgebra
+        Not teaching either: Não ensinar
+        Not sure yet: Ainda não tenho certeza
       PDAlg functional:
-        Functional Programming: Functional Programming
-        Have you ever programmed before?: Have you ever programmed before?
-        Yes, and I'm familiar with functional programming: "Yes, and I'm familiar with functional programming"
-        Yes, but I don't know if it would be considered functional: "Yes, but I don't know if it would be considered functional"
+        Functional Programming: Programação funcional
+        Have you ever programmed before?: Você já programou alguma vez?
+        Yes, and I'm familiar with functional programming: Sim, e estou familiarizado com a programação funcional
+        Yes, but I don't know if it would be considered functional: Sim, mas não sei se isso poderia ser considerado funcional
         "No": Não
       PDAlg implementation:
-        Curriculum Implementation: Curriculum Implementation
-        0: '? Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?'
-        1: ': Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?'
-        September - October: 'September - October'
-        November - December: 'November - December'
-        January - February: 'January - February'
-        March - April: 'March - April'
-        May - June: 'May - June'
-        Throughout the year: Throughout the year
+        Curriculum Implementation: Implementação do currículo
+        0: '? Dados o escopo e a sequência da última página, qual opção a seguir descreve melhor quando você espera implementar o currículo de ciência da computação em álgebra?'
+        1: ': Dados o escopo e a sequência da última página, qual opção a seguir descreve melhor quando você espera implementar o currículo de ciência da computação em álgebra?'
+        September - October: 'Setembro - Outubro'
+        November - December: 'Novembro - Dezembro'
+        January - February: 'Janeiro - Fevereiro'
+        March - April: 'Março - Abril'
+        May - June: 'Maio - Junho'
+        Throughout the year: Durante o ano todo
       PDAlg PreQ 1:
-        Pre-Survey Question 1: Pre-Survey Question 1
-        Have you ever participated in an online PD program before?: Have you ever participated in an online PD program before?
+        Pre-Survey Question 1: 'Pesquisa prévia - Questão 1'
+        Have you ever participated in an online PD program before?: Você já participou alguma vez de um programa de DP on-line?
         "Yes": Sim
         "No": Não
       PDAlg PreQ 2:
-        Pre-Survey Question 2: Pre-Survey Question 2
-        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        Pre-Survey Question 2: 'Pesquisa prévia - Questão 2'
+        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Você já fez algum curso on-line antes (em uma plataforma como Coursera, edX, Udacity, Khan Academy, etc.)?
         "Yes": Sim
         "No": Não
       PDECS attendance commitment:
@@ -731,7 +748,7 @@ pt-BR:
         a secret password: uma senha secreta
       PDK5 Beyond:
         What do I do now?: O que eu faço agora?
-        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: 'Essa é a última peça do nosso PD on-line. Parabéns! Clique em "Terminei" quando você estiver pronto!'
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: 'Essa é a última peça do nosso DP on-line. Parabéns! Clique em "Terminei" quando você estiver pronto!'
         Im finished: Terminei
       PDK5 Blockly Intro:
         Writing your first computer program!: Escrevendo seu primeiro programa de computador!
@@ -755,7 +772,7 @@ pt-BR:
         "Yes": Sim
       PDK5 Intro:
         Welcome!: Bem-vindo!
-        Before now, have you ever participated in an online PD program?: Você já participou alguma vez de um programa PD on-line?
+        Before now, have you ever participated in an online PD program?: Você já participou alguma vez de um programa de DP on-line?
         "Yes": Sim
         "No": Não
       PDK5 Sequence2:
@@ -792,7 +809,7 @@ pt-BR:
         All of the above: Todas as anteriores
       PDK5 What is CS:
         What is Computer Science?: O que é ciência da computação?
-        "A computer program, or \"code,\" is:": 'A computer program, or "code," is:'
+        "A computer program, or \"code,\" is:": 'Um programa de computador, ou "código", é:'
         a part inside of a computer: uma parte dentro de um computador
         a set of instructions a person gives a computer to execute: um conjunto de instruções que uma pessoa dá a um computador para que ele as execute
         a week-long course to learn about computers: um curso de uma semana para aprender sobre computadores
@@ -816,114 +833,114 @@ pt-BR:
         rocket-height(seconds) = seconds * 7 + 3: 'altura-foguete(segundos) = segundos * 7 + 3'
         rocket-height(seconds) = seconds * 10 - 3: 'altura-foguete(segundos) = segundos * 10 - 3'
       sciPD agent based 1:
-        Multiple Choice - Interactions In Agent-based Models: 'Multiple Choice - Interactions In Agent-based Models'
-        What types of interactions can occur in agent-based models?: What types of interactions can occur in agent-based models?
-        agents interact with their environment only: agents interact with their environment only
-        agents interact with other agents only: agents interact with other agents only
-        agents interact with both their environment and other agents: agents interact with both their environment and other agents
+        Multiple Choice - Interactions In Agent-based Models: 'Múltipla escolha - Interações em modelos com base em agentes'
+        What types of interactions can occur in agent-based models?: Que tipos de interações podem ocorrer em modelos com base em agentes?
+        agents interact with their environment only: agentes interagem apenas com seu próprio ambiente
+        agents interact with other agents only: agentes interagem apenas com outros agentes
+        agents interact with both their environment and other agents: agentes interagem com seu ambiente e também com outros agentes
         all of the above: todas as anteriores
       sciPD agent based 2:
-        Multiple Choice - Agent-based Models: 'Multiple Choice - Agent-based Models'
-        What type of systems are agent-based models suitable for modeling?: What type of systems are agent-based models suitable for modeling?
-        simple mechanical systems: simple mechanical systems
-        complex adaptive systems: complex adaptive systems
-        systems of mathematical equations: systems of mathematical equations
+        Multiple Choice - Agent-based Models: 'Múltipla escolha - modelos com base em agentes'
+        What type of systems are agent-based models suitable for modeling?: Que tipo de sistemas são modelos com base em agentes apropriados para modelagem?
+        simple mechanical systems: sistemas mecânicos simples
+        complex adaptive systems: sistemas adaptativos complexos
+        systems of mathematical equations: sistemas de equações matemáticas
         all of the above: todas as anteriores
       sciPD attendance commitment:
         Please confirm that you have read the Attendance Policy and will work to follow it.: Confirme que você leu e concorda com a política de atendimento.
         I have read and agree to the Attendance Policy: Eu li e concordo com a política de atendimento
       sciPD class models 1:
-        Using Models in the Classroom: Using Models in the Classroom
-        Which of the following is not a tenet of Papert's theory of Constructionism?: "Which of the following is not a tenet of Papert's theory of Constructionism?"
-        constructing social relationships: constructing social relationships
-        interacting with others: interacting with others
-        creating artifacts of social relevance: creating artifacts of social relevance
-        building relationships between old and new knowledge: building relationships between old and new knowledge
+        Using Models in the Classroom: Usando modelos na sala de aula
+        Which of the following is not a tenet of Papert's theory of Constructionism?: Qual dos seguintes princípios não é um princípio da teoria do Construcionismo de Papert?
+        constructing social relationships: construção de relações sociais
+        interacting with others: interação com os outros
+        creating artifacts of social relevance: criar artefatos de relevância social
+        building relationships between old and new knowledge: construir relações entre conhecimentos antigos e novos
       sciPD class models 2:
-        Constructionism: Constructionism
-        Constructionism focuses on how learning is constructed during the...: Constructionism focuses on how learning is constructed during the...
-        design of learning artifacts: design of learning artifacts
-        creation of learning artifacts: creation of learning artifacts
-        discussion of learning artifacts: discussion of learning artifacts
+        Constructionism: Construcionismo
+        Constructionism focuses on how learning is constructed during the...: O Construcionismo enfatiza como a aprendizagem é construída durante o (a)...
+        design of learning artifacts: design de artefatos de aprendizagem
+        creation of learning artifacts: criação de artefatos de aprendizagem
+        discussion of learning artifacts: discussão de artefatos de aprendizagem
         all of the above: todas as anteriores
       sciPD complex adaptive 1:
-        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
-        Which of the following IS a characteristic of a complex adaptive system?: Which of the following IS a characteristic of a complex adaptive system?
-        has a leader: has a leader
-        is predictable: is predictable
-        has centralized control: has centralized control
-        generates emergent patterns: generates emergent patterns
+        Intro to Complex Adaptive Systems: Introdução a sistemas adaptativos complexos
+        Which of the following IS a characteristic of a complex adaptive system?: Qual das seguintes características está presente em um sistema adaptativo complexo?
+        has a leader: tem um líder
+        is predictable: é previsível
+        has centralized control: tem controle centralizado
+        generates emergent patterns: gera padrões emergentes
       sciPD complex adaptive 2:
-        Examples of Complex Adaptive Systems: Examples of Complex Adaptive Systems
-        Which of the following is NOT an example of a complex adaptive system?: Which of the following is NOT an example of a complex adaptive system?
-        a bee hive: a bee hive
-        a wall clock: a wall clock
-        a traffic jam: a traffic jam
-        the internet: the internet
+        Examples of Complex Adaptive Systems: Exemplos de sistemas adaptativos complexos
+        Which of the following is NOT an example of a complex adaptive system?: Qual dos seguintes exemplos não é um exemplo de um sistema adaptativo complexo?
+        a bee hive: uma colmeia de abelhas
+        a wall clock: um relógio de parede
+        a traffic jam: um engarrafamento
+        the internet: a internet
       sciPD computer models 1:
-        Multiple Choice - Stochastic Models: 'Multiple Choice - Stochastic Models'
-        What does it mean for a model to be stochastic?: What does it mean for a model to be stochastic?
-        It includes some randomness: It includes some randomness
-        It can be easily automated: It can be easily automated
-        It is predictable: It is predictable
-        It has fixed percentages of different elements: It has fixed percentages of different elements
+        Multiple Choice - Stochastic Models: 'Múltipla escolha - Modelos estocásticos'
+        What does it mean for a model to be stochastic?: O que significa para um modelo ser estocástico?
+        It includes some randomness: ele inclui algum tipo de aleatoriedade
+        It can be easily automated: ele pode ser automatizado facilmente
+        It is predictable: ele é previsível
+        It has fixed percentages of different elements: ele tem porcentagens fixas de elementos diferentes
       sciPD computer models 2:
-        Multiple Choice - Common Features Of Lab And Computational Science Experiments: 'Multiple Choice - Common Features Of Lab And Computational Science Experiments'
-        Which of the following are common to both lab experiments and computational science experiments?: Which of the following are common to both lab experiments and computational science experiments?
-        automation of experiments is easy: automation of experiments is easy
-        changing physical properties like the gravitational constant: changing physical properties like the gravitational constant
-        sweeping a set of variables: sweeping a set of variables
-        the need for controlled experiments: the need for controlled experiments
+        Multiple Choice - Common Features Of Lab And Computational Science Experiments: 'Múltipla escola - Características comuns entre experimentos de laboratório e de ciência computacional'
+        Which of the following are common to both lab experiments and computational science experiments?: Quais das seguintes características são comuns tanto aos experimentos de laboratório quanto aos experimentos de ciência computacional?
+        automation of experiments is easy: a automação dos experimentos é fácil
+        changing physical properties like the gravitational constant: alterar propriedades físicas, como a constante gravitacional
+        sweeping a set of variables: varrer um conjunto de variáveis
+        the need for controlled experiments: a necessidade de experimentos controlados
       sciPD culture 1:
-        Multiple Choice - Getting Unstuck: 'Multiple Choice - Getting Unstuck'
-        Which of the following was NOT suggested as a way to get unstuck?: Which of the following was NOT suggested as a way to get unstuck?
-        taking a break: taking a break
-        meditating: meditating
-        looking at other similar pieces of code: looking at other similar pieces of code
-        reading through your code line by line: reading through your code line by line
+        Multiple Choice - Getting Unstuck: 'Múltipla escolha - Desempacando'
+        Which of the following was NOT suggested as a way to get unstuck?: Qual das seguintes opções não foi sugerida como uma forma de desempacar?
+        taking a break: fazer uma pausa
+        meditating: meditar
+        looking at other similar pieces of code: olhar para outros trechos de código que sejam similares
+        reading through your code line by line: ler o código linha por linha
       sciPD culture 2:
-        Multiple Choice - Role Of Teacher: 'Multiple Choice - Role Of Teacher'
-        What role for a teacher incorporating models and simulations into the classroom was proposed?: What role for a teacher incorporating models and simulations into the classroom was proposed?
-        engaging lecturer: engaging lecturer
-        learning coach or guide: learning coach or guide
-        expert in a computer language: expert in a computer language
-        classroom manager: classroom manager
+        Multiple Choice - Role Of Teacher: 'Múltipla escolha - O papel do professor'
+        What role for a teacher incorporating models and simulations into the classroom was proposed?: Qual papel para um professor incorporar modelos e simulações na sala de aula foi proposto?
+        engaging lecturer: palestrante envolvente
+        learning coach or guide: guia ou tutor de ensino
+        expert in a computer language: expert em uma linguagem de computador
+        classroom manager: gerente de sala de aula
       sciPD framework 1:
-        Multiple Choice - Computational Thinking 1: 'Multiple Choice - Computational Thinking 1'
-        "Computational Thinking was referred to in the video as:": 'Computational Thinking was referred to in the video as:'
-        a way of communicating with a computer: a way of communicating with a computer
-        a process that computers use to think: a process that computers use to think
-        a human thought process: a human thought process
-        a subfield of computer science: a subfield of computer science
+        Multiple Choice - Computational Thinking 1: 'Múltipla escola - Pensamento computacional 1'
+        "Computational Thinking was referred to in the video as:": 'O pensamento computacional foi referido no vídeo como:'
+        a way of communicating with a computer: uma forma de se comunicar com um computador
+        a process that computers use to think: um processos que os computadores usam para pensar
+        a human thought process: um processo de pensamento humano
+        a subfield of computer science: um subcampo da ciência da computação
       sciPD framework 2:
-        Multiple Choice - Computational Thinking 2: 'Multiple Choice - Computational Thinking 2'
-        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?
-        abstraction: abstraction
-        automation: automation
-        analysis: analysis
-        algorithms: algorithms
+        Multiple Choice - Computational Thinking 2: 'Múltipla escola - Pensamento computacional 2'
+        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: Comparar resultados com o que é conhecido sobre o mundo real recai sob qual pilar do pensamento computacional?
+        abstraction: abstração
+        automation: automação
+        analysis: análise
+        algorithms: algoritmos
       sciPD intro to CS 1:
-        Intro to Computational Science: Intro to Computational Science
-        "Computer modeling is used to study problems that are:": 'Computer modeling is used to study problems that are:'
-        too dangerous to study in the real world: too dangerous to study in the real world
-        too time consuming to study in the real world: too time consuming to study in the real world
-        too expensive to study in the real world: too expensive to study in the real world
+        Intro to Computational Science: Introdução à ciência computacional
+        "Computer modeling is used to study problems that are:": 'Modelagem de computador é usada para estudar problemas que são:'
+        too dangerous to study in the real world: muito perigosos para estudar no mundo real
+        too time consuming to study in the real world: muito demorados para estudar no mundo real
+        too expensive to study in the real world: muito caros para estudar no mundo real
         all of the above: todas as anteriores
       sciPD intro to CS 2:
-        Intro to Computational Science: Intro to Computational Science
-        What is computational science good for?: What is computational science good for?
-        it replaces traditional science labs: it replaces traditional science labs
-        it complements lab and theoretical science : 'it complements lab and theoretical science '
-        it slows the process of discovery: it slows the process of discovery
-        nothing at all: nothing at all
+        Intro to Computational Science: Introdução à ciência computacional
+        What is computational science good for?: Para que a ciência computacional é boa?
+        it replaces traditional science labs: ela substitui os laboratórios de ciência tradicionais
+        it complements lab and theoretical science : 'ela complementa a ciência teórica e de laboratório '
+        it slows the process of discovery: ela retarda o processo de descoberta
+        nothing at all: absolutamente nada
       sciPD PreQ 1:
-        Pre-Survey Question 1: Pre-Survey Question 1
-        Before now, have you ever participated in an online PD program?: Você já participou alguma vez de um programa PD on-line?
+        Pre-Survey Question 1: 'Pesquisa prévia - Questão 1'
+        Before now, have you ever participated in an online PD program?: Você já participou alguma vez de um programa de DP on-line?
         "Yes": Sim
         "No": Não
       sciPD PreQ 2:
-        Pre-Survey Question 2: Pre-Survey Question 2
-        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        Pre-Survey Question 2: 'Pesquisa prévia - Questão 2'
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Antes, você já tinha feito algum curso on-line (em uma plataforma como Coursera, edX, Udacity, Khan Academy, etc.)?
         "Yes": Sim
         "No": Não
       test multi image:
@@ -988,6 +1005,22 @@ pt-BR:
         4 bytes: 4 bytes
         8 bytes: 8 bytes
         16 bytes: 16 bytes
+      U1L2 Multiple Choice Assessment Question:
+        "Multiple Choice: Sending Binary Messages": 'Multiple Choice: Sending Binary Messages'
+        "A binary question is defined as:": 'A binary question is defined as:'
+        A piece of information that is sent in pairs: A piece of information that is sent in pairs
+        Two questions which share the same answer: Two questions which share the same answer
+        A message which has two possible states: A message which has two possible states
+        A question which can be answered in only one of two possible ways: A question which can be answered in only one of two possible ways
+      U1L3 Multiple Choice:
+        "Multiple Choice: Sending Complex Messages": 'Multiple Choice: Sending Complex Messages'
+        0: '? When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?'
+        1: ': When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?'
+        5 bits: 5 bits
+        4 bits: 4 bits
+        3 bits: 3 bits
+        2 bits: 2 bits
+        1 bit: 1 bit
       U1L6 Assessment multiple choice:
         "Multiple Choice: Number Systems": 'Múltipla escolha: Sistemas numéricos'
         If you just had a circle and a square, how many 3-shape rows could you make?: Se você tivesse apenas um círculo e um quadrado, quantas fileiras de 3 formas você poderia fazer?
@@ -998,13 +1031,76 @@ pt-BR:
         12: "12"
       U3L06-API-multichoice:
         Multiple Choice: Múltipla Escolha
-        Choose the option that best answers the question.: Choose the option that best answers the question.
-        What is the primary purpose of an API in a programming language?: What is the primary purpose of an API in a programming language?
-        Application Primary Interactions are fundamental to programming: Application Primary Interactions are fundamental to programming
-        To make programming more complex for those without experience: To make programming more complex for those without experience
-        Programs won't run without good API documentation: "Programs won't run without good API documentation"
-        To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
-        It is impossible to write a program without an API: It is impossible to write a program without an API
+        Choose the option that best answers the question.: Escolha a opção que melhor responde à questão.
+        What is the primary purpose of an API in a programming language?: Qual é o objetivo principal de uma API em uma linguagem de programação?
+        Application Primary Interactions are fundamental to programming: A aplicação de interações primárias é fundamental na programação
+        To make programming more complex for those without experience: Para tornar a programação mais complexa para os que não possuem experiência
+        Programs won't run without good API documentation: Os programas não serão executados sem uma boa documentação de API
+        To provide high-level functionality that simplifies complex programming tasks: Para fornecer funcionalidades de alto nível que simplificam tarefas de programação complexas
+        It is impossible to write a program without an API: É impossível escrever um programa sem uma API
+      U3L14 - MC Duplicate Ids:
+        Buttons and Ids: Botões e ids
+        What happens when two buttons are given the same id?: O que acontece quando dois botões têm o mesmo id?
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript é flexível. Dois botões com o mesmo id vão responder a um único manipulador de eventos associado a esse id.
+        A warning message will appear for the second button that that id is already in use: Um mensagem de alerta vai aparecer para o segundo botão informando que esse id já está em uso
+        The first button created with the id will work, the other will not: O primeiro botão criado com o id vai funcionar, o segundo não
+        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: A API JavaScript para MVC permite a duplicação de ids enquanto o HTML for compatível com o CSS
+        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other
+      U3L14 - MC order of button and onEvent:
+        Buttons and Event Handlers: Botões e manipuladores de eventos
+        Does order matter when adding a button and its event handler to your code?: A ordem importa quando você adiciona um botão e seu manipulador de evento ao seu código?
+        The button, with its id, must appear in the code AFTER the event handler: O botão e seu id devem aparecer no código APÓS o manipulador de evento
+        JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript é flexível. O botão e seu manipulador de evento podem aparecer em qualquer ordem no código
+        The button, with its id, must appear in the code BEFORE the event handler: O botão e seu id devem aparecer no código ANTES do manipulador de evento
+        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: O JavaScript força você a desacoplar a visão e o controlador. Você deve declarar botões em uma API separada
+      U3L18 Controlling Memory and Program Flow:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        1. You want to see additional random images displayed that are worth different points when clicked.: 1. You want to see additional random images displayed that are worth different points when clicked.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 2:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        2. You want to see various motivational messages based upon the score.: 2. You want to see various motivational messages based upon the score.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 3:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        3. You want to see the elapsed time.: 3. You want to see the elapsed time.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 4:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        4. You want to change the size of the images when a certain score is reached.: 4. You want to change the size of the images when a certain score is reached.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 5:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
+        0: '? 5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).'
+        1: ': 5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).'
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L21 Assessment 1:
+        More Variables Question 1: More Variables Question 1
+        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?
+        56*61\3+2: '56*61\3+2'
+        fifteen: fifteen
+      U3L21 Assessment 2:
+        More Variables Question 2: More Variables Question 2
+        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?
+        Meaningful variable names make code easier to debug: Meaningful variable names make code easier to debug
+        The literary quality of variable names is an important attribute of successful programs: The literary quality of variable names is an important attribute of successful programs
+        Readable variable names makes it easier to understand the program logic: Readable variable names makes it easier to understand the program logic
+        Descriptive names makes it easier for other programmers to understand the program: Descriptive names makes it easier for other programmers to understand the program
       unique level name here:
         title: título
         description here: descrição aqui

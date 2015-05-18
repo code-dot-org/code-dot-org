@@ -552,10 +552,6 @@ pt-BR:
         Desenho livre! Desenhe o que você estiver inspirado
         a criar.
       4-5 Artist Functions 1_instruction: Use um laço repita para desenhar esse triângulo.
-      4-5 Artist Functions 10_instruction: |
-        Desenhe um floco de neve usando a função "desenhe um quadrado"
-        Repita a função do quadrado para criar 10 quadrados com 50 pixels cada um.  Quanto
-        você precisa virar a cada vez que um círculo é feito? Dica: vire (360 / 10) graus.
       4-5 Artist Functions 10a_instruction: |
         Coloque esse código na função "desenhe um floco de neve"
         e substitua o 50 pelo parâmetro "tamanho". A função já é
@@ -675,9 +671,9 @@ pt-BR:
         Vamos repetir esse código para desenhar duas fileiras
         de hexágonos. Perceba como nossa segunda fileira está deslocada para a direita.
       4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
+        Agora, repita o código 3 vezes para desenhar a
+        a linha inteira. Dica: cada hexágono tem 80 pixels de largura da extrema esquerda
+        à extrema direita.
       4-5 Artist Patterns Free Play_instruction: |
         Atividade livre - experimente criar
         seu próprio padrão!
@@ -860,7 +856,7 @@ pt-BR:
         Belo trabalho no último desafio, vamos tentar novamente.
         Desta vez, vamos fazer esse design bacana com hexágonos de 60 pixels.
       Alice Test_instruction: Veja aqui algumas instruções!
-      All green everything_instruction: click and drag the blocks
+      All green everything_instruction: clique e arraste os blocos
       Alpha 2-3 Artist Loops New 3_instruction: |
         Agora, vamos desenhar 6 quadrados, cada
         um com uma cor aleatória. Que ângulo devemos usar para virar entre cada quadrado para
@@ -890,7 +886,7 @@ pt-BR:
       Alpha Course 3 Bee Conditionals 9_instruction: |
         Colete néctar usando a função
         "verifique a flor roxa".
-      applab_test2_sarah_instruction: This is the instructions panel for level 2
+      applab_test2_sarah_instruction: Esse é painel de instruções para o nível 2
       Arbitrary_instruction: Faça uma reta
       Artist - Nested Loops 1_instruction: |
         Complete o código para desenhar esses triângulos. O
@@ -1057,10 +1053,10 @@ pt-BR:
         our game. Click play to see what your game can currently do (not much!), update
         any variables you like, and then click finish to move on.
       Big Game Animation 1_instruction: |
-        Now that you've learned to write simple
-        linear functions, let's work on using them to add some movement to our game.
-        Click run to see what your game can currently do (not much!), update any variables
-        you like, and then click finish to move on.
+        Agora que você aprendeu a escrever funções lineares
+        simples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.
+        Clique em Executar para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que
+        você quiser e depois clique em Concluir para seguir em frente.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
@@ -1101,11 +1097,11 @@ pt-BR:
         você deve ver o alvo sair pelo lado direito da tela e retornar pela
         esquerda.
       Big Game Booleans 4_instruction: |
-        We've provided a couple of empty functions
-        for safe-left? and safe-right? The first thing you need to do is complete
-        the onscreen? function so that it checks whether both safe-left? and safe-right?
-        are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen - why do you think that is?
+        Fornecemos algumas funções vazias
+        para esquerda-segura? e direita-segura?. A primeira coisa que você precisa fazer é completar
+        a função na-tela? para que ela verifique se esquerda-segura? e direita-segura?
+        são verdadeiras. Dica - mesmo depois de adicionar esquerda-segura? e direita-segura? seus
+        objetos não vão retornar à tela - porque você acha que isso acontece?
       Big Game Booleans 5_instruction: |
         Nesse ponto do seu jogo, seu inimigo deve percorrer
         a tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para
@@ -1138,14 +1134,11 @@ pt-BR:
         py) e as coordenadas centrais de outro objeto (cx, cy). Fornecemos uma função
         de uma linha que funciona para lhe ajudar.
       Big Game Collision 4_instruction: |
-        Temos uma função chamada distância que
-        deve retornar a distância entre dois objetos e, usando isso, podemos decidir
-        quando esses objetos estão perto o suficiente para se tocarem. Complete a função
-        "colisão?" para que ela verifique a função de distância e retorne
-        verdadeiro se os dois pontos estiverem perto o suficiente para se tocarem (100 pixels de
-        distância é um bom começo). Dica: a função de distância ainda não funciona (ela sempre
-        retorna zero), então se você for bem sucedido, você vai ver que seus objetos estão
-        "colidindo" instantaneamente, mas vamos arrumar isso em breve!
+        A função "distância" retorna a distância
+        entre dois objetos. Complete a função "colisão?" para que ela retorne
+        verdadeiro se a distância entre dois pontos for menor que 100 pixels. Se
+        a completar corretamente, seus objetos vão colidir instantaneamente - por que você
+        acha que isso acontece?
       Big Game Complete (copy 1)_instruction: |
         Uma demonstração do projeto Grande Jogo
         da Álgebra em CC completo
@@ -1274,8 +1267,8 @@ pt-BR:
         de cálculo.
       Calc Circles of Eval 1_instruction: |
         Todo operador matemático (+, -, *,
-        /, e assim por diante) pode ser representado por um bloco de cálculo em código. Converta o
-        bloco de cálculo para corresponder à expressão.
+        /, e assim por diante) podem ser representados por um bloco de cálculo. Altere o
+        bloco de cálculo para associá-lo à expressão.
       Calc Circles of Eval 2 (copy 1)_instruction: |
         Converta essa instrução para <alguma_forma>
         de cálculo.
@@ -2265,8 +2258,8 @@ pt-BR:
         Confira a função "rotacione" - você pode
         usá-la para rotacionar esse quadrado verde de 90 pixels em 45 graus?
       Eval Contracts E_instruction: |
-        Try using the "text" function to write this
-        "Hello, world!" in teal at size 40.
+        Experimente usar a função "texto" para escrever esse
+        "Olá, mundo!" na cor azul e com tamanho 40.
       Eval Contracts shrink_instruction: |
         Você pode completar essa imagem usando o bloco
         de função "encolha"? O raio é 20. 
@@ -2297,9 +2290,9 @@ pt-BR:
         que preenche sua tela com minha-imagem. Altere minha-imagem para ver que padrão
         você pode fazer.
       Eval Design Recipe .1_instruction: |
-        Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function definition (you will see two examples provided).
+        Temos aqui uma receita de design para uma função
+        chamada "quadrado-círculo" com domínio de número e string e intervalo de imagem. Clique
+        em Editar para escrever a definição da função (você vai ver dois exemplos fornecidos).
       Eval Design Recipe 1 (copy 1)_instruction: |
         Vamos escrever uma função
         que desenha um retângulo sólido de qualquer cor e que tenha a largura duas vezes maior que
@@ -2378,8 +2371,8 @@ pt-BR:
         amarela com raio de 75 pixels em cima de um quadrado azul com 150 pixels de comprimento.
       Eval Strings Images 7_instruction: |
         O bloco "deslocamento" permite que você mova uma imagem
-        com relação a onde ela normalmente estaria posicionada. Use esse bloco para deslocar o
-        quadrado 100 pixels no eixo y.
+        com relação a onde ela normalmente seria colocada. Use esse bloco para deslocar o
+        quadrado por 100 pixels no eixo y.
       Eval Strings Images 8_instruction: |
         Temos aqui um tipo diferente de bloco de estrela
         - ele é chamado "estrela-radial" e permite que você desenhe estrelas com qualquer número
@@ -2816,6 +2809,9 @@ pt-BR:
       NetSim_SendingABTest_instruction: |
         Esse é o teste de Sarah para fazer um nível
         netsim
+      NetSim_SendNumbers_instruction: |
+        In this version of the simulator, you can
+        view the decimal representations of the binary you are sending.
       NetSim_Superuser_instruction: Você carregou o NetSim no modo superusuário.
       NetSim_Variant1_instruction: |
         NetSim: Variante 1 permite que os alunos elaborem
@@ -3042,18 +3038,18 @@ pt-BR:
         que não tenha néctar algum. Verifique se o néctar é igual a 1 usando
         o bloco se.
       PDK5 Conditionals 2_instruction: |
-        Try this puzzle that uses conditionals and
-        loops together. Use the "if" block to decide when to turn. Hint: you only
-        need one more block to complete this puzzle. 
+        Experimente esse desafio que usa condicionais e
+        laços em conjunto. Use o bloco "se" para decidir quando virar. Dica: você só
+        precisa de mais um bloco para completar este desafio. 
       PDK5 Events 1_instruction: |
         Até agora, todos os programas que escrevemos são executados
         em ordem, de cima para baixo. Nesse desafio, vamos usar "Eventos" para responder
         a uma ação em demanda. Faça o polvo dizer "Olá" somente quando você
         clicar nele. 
       PDK5 Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing! Help
-        me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
-        shorter than the square length.
+        Olá. Mim artista zumbi. Mim amar desenhar! Ajude-me
+        a desenhar os óculos quadrados. Dica: a haste entre os óculos é 25 pixels
+        menor que o comprimento do quadrado.
       PDK5 Functions 2_instruction: |
         As funções permitem que você defina novos blocos! Movemos
         os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
@@ -3099,8 +3095,8 @@ pt-BR:
         Agora, a largura e a altura estão codificadas nos
         dados do pixel. Você consegue descobrir como ajustar as dimensões?
       Play Lab Rocket 1_instruction: |
-        Um foguete dispara, viajando a 15 metros
-        por segundo... pressione "Executar" para ver como esse problema fica na forma de animação.
+        Um foguete é lançado, viajando a 15 metros
+        por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
       Play Lab Rocket 2 (copy 1)_instruction: |
         Adicionamos seu contrato e dois
         exemplos da receita de design para a altura do foguete. Agora escreva a função
@@ -3175,12 +3171,12 @@ pt-BR:
         superior da tela são atualizadas para que você saiba sua localização. Use as setas do teclado
         para mover Sam pelo quintal. Ajude Sam a coletar todas as bandeiras para seguir em frente.
       Sam the Butterfly 1_instruction: |
-        This bat is named Sam, and the game area
-        is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
-        see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        Esse morcego se chama Sam e a área do jogo é o quintal
+        de Sam. O quintal de Sam tem 400 pixels de largura por 400 de altura! Como você pode
+        ver, Sam é livre para andar pelo quintal e as coordenadas na parte superior da tela são
+        atualizadas para que você saiba sua localização. Use as setas do teclado para mover Sam
+        pelo quintal, anotando as coordenadas de Sam em diferentes localizações.
+        Clique em "Concluir" quando você estiver pronto para seguir em frente.
       Sam the Butterfly 2_instruction: |
         A mãe de Sam quer garantir que ela sempre possa
         ver pelo menos uma parte dele, então vamos escrever algumas funções que ajudem a garantir
@@ -3345,148 +3341,242 @@ pt-BR:
         Esse poema foi comprimido com
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
         outro padrão comum para comprimir ainda mais o poema?
-      the terps_instruction: Try your best to get to the green pig!!!
-      the yolo maze_instruction: Put the block in the right place
+      the terps_instruction: Dê o seu melhor para chegar ao porco verde!!!
+      the yolo maze_instruction: Coloque o bloco no lugar correto
       toby-test5-16-1_instruction: dafsfas
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variante 1 - parque de diversões: EM CONSTRUÇÃO:
         A variante 1 ainda não é funcional porque as conexões P2P não foram implementadas.
         A variante 1 permite que os alunos elaborem manualmente o tempo de envio de bits
         para trás e para a frente.
+      U313 Two Buttons with Ids_instruction: |
+        Sua vez de tentar! Fornecemos a você um
+        código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
+        os Ids padrões de "id". Você precisa alterar esses ids para conectar
+        o manipulador de eventos ao botão correto. (Curiosamente, o programa
+        incorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais
+        sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
       U3L03 choose your own drawing_instruction: |
-        Now choose your own!  Pick one
-        of the three drawings shown here and attempt to create it on your own, making
-        smart decisions about how to break the problem down into re-usable functions.  You
-        will review your work with a peer using "procedures peer review rubric."  Check
-        it for the requirements.  GIF: U3L3-ProceduresChooseOne.png
+        Agora escolha o seu!  Escolha um dos
+        três desenhos mostrados aqui e ente criá-lo você mesmo, tomando decisões
+        inteligentes sobre como dividir o problema em funções reutilizáveis.  Você vai revisar seu
+        trabalho com um colega usando os "procedimentos para a rubrica de revisão em pares".
+        Verifique os procedimentos para ver os requisitos.  GIF: U3L3-ProceduresChooseOne.png
       U3L03 Creating Procedures 1_instruction: |
-        Write the turnAround() function and
-        use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
+        Escreva a função virar() e
+        use-a para fazer a tartaruga se mover como descrito. Veja: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Write the turnAround() function
-        and use it to make the turtle move as depicted.
+        Escreva a função virar() e
+        use-a para fazer a tartaruga se mover como descrito.
       U3L03 define turnRight and draw a rectangle_instruction: |
-        Create a turnRight()
-        function and draw a rectangle twice as tall as it is wide by having the turtle
-        navigate clockwise to draw the rectangle. Make sure to comment your function
-        as shown in the turnAround() function. 
+        Crie uma função virarDireita()
+        e desenhe um retângulo com a altura duas vezes maior que sua largura fazendo a tartaruga
+        navegar em sentido horário para desenhar o retângulo. Lembre-se de comentar sua função
+        como mostrado na função virar(). 
       U3L03 Draw a T using turnAround_instruction: |
-        The turnAround function is now
-        provided for you in the code.  Use the turnAround() function to draw a T as
-        depicted.
-      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with other movement made between calls.  HINT: you might want\nto make another function that handles drawing one side of the diamond. "
+        Agora a  função "virar" é 
+        fornecida no código.  Use a função virar() para desenhar um T conforme
+        descrito.
+      U3L03 draw diamond_instruction: "Use qualquer função que você escreveu\nantes para fazer uma forma de \"diamante\" conforme mostrado na imagem.\r\n\r\nOBSERVAÇÃO:\nessa é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra função que desenha um lado do diamante. "
       U3L03 Three Steps_instruction: |
-        Draw 3 "steps" moving up and to the right.  Notice
-        the pattern in the movement. You should define a function called drawStep()
-        which draws one of the steps, and then call it 3 times to achieve the effect.
+        Desenhe 3 "passos", movendo para cima e para a direita. Observe
+        o padrão do movimento. Você deve definir uma função chamada desenharPasso()
+        que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
       U3L04 choose your own drawing_instruction: |
-        Now choose your own!  Pick one
-        of the three drawings shown here and attempt to create it on your own, making
-        smart decisions about how to break the problem down into re-usable functions.  You
-        will review your work with a peer using "procedures peer review rubric."  Check
-        it for the requirements.
+        Agora escolha o seu!  Escolha um dos
+        três desenhos mostrados aqui e ente criá-lo você mesmo, tomando decisões
+        inteligentes sobre como dividir o problema em funções reutilizáveis.  Você vai revisar seu
+        trabalho com um colega usando os "procedimentos para a rubrica de revisão em pares".
+        Verifique os procedimentos para ver os requisitos.
       U3L04 diamond solution_instruction: |
-        Study this solution to the drawDiamond
-        problem.  Notice that the whole program starts by calling drawDiamond() at
-        the top.  The program then follows a chain of function calls.  You can trace
-        what's happening in the code to see the functions reused.  It's also easy
-        to read because the function names describe the expected behavior.
+        Estude essa solução para o problema da função desenharDiamante
+        Observe que todo o programa começa chamando desenharDiamante() no
+        começo.  Então, o programa segue uma cadeia de chamadas. Você pode acompanhar
+        o que está acontecendo no código para ver se a função ser reutilizada.  Também é fácil
+        de ler porque os nomes das funções descrevem o comportamento esperado.
       U3L05_3x3GridEfficiencyChallenge_instruction: |
-        Let's revisit the 3x3 grid
-        problem you did a few lessons ago.  This time the challenge is to program
-        the solution "as efficiently as possible."  Now that you know how to write
-        functions, it should be easier to break the problem down, and your code should
-        be easier to read and debug.  See the rubric for more details about requirements
-        and expectations.
+        Vamos revisitar o problema da grade 3x3
+        que você resolveu algumas lições atrás.  Desta vez o desafio é programar a
+        a solução da forma "mais eficiente possível".  Agora que você sabe como escrever
+        funções, deve ser mais fácil dividir o problema e seu código deve ser
+        mais fácil de ler e depurar. Veja a rubrica para mais detalhes sobre os requisitos
+        e as expectativas.
       U3L05_draw3x3GridEfficiently_instruction: |
-        Draw a 3x3 grid above and to the
-        right of the turtle. Try to do so with the fewest number of commands possible.
-        NOTE: This is a very challenging problem.  You may need to play with it for
-        a while and tweak it.  You might also consider using pencil and paper to sketch
-        your ideas.
-      U3L06 Challenge 1 triangle_instruction: "Check out the extended Turtle palette\nnow made available to you. These new commands accept parameters, allowing\nyou to specify precisely how the function operates rather than only being\nable to move or turn a predetermined amount. Make use of these functions to\ndraw the triangle as shown.\r\nPNG: U3L06-challenge1.png"
+        Desenhe uma grade 3x3 acima e para a
+        direita da tartaruga. Tente fazer isso com o menor número de comandos possível.
+        OBSERVAÇÃO: esse problema é bastante desafiador. Você deve precisar passar um tempo
+        resolvendo-o e ajustando-o. Você também deve considerar usar lápis e papel para esboçar
+        suas ideias.
+      U3L06 Challenge 1 triangle_instruction: "Dê uma olhada na paleta estendida da tartaruga que\nagora está disponível para você. Esses novos comandos aceitam parâmetros, que permitem que\nvocê especifique precisamente como a função opera, ao invés de somente poder\nmover ou virar de acordo com um valor predeterminado. Use essas funções para\ndesenhar o triângulo como mostrado.\r\nPNG: U3L06-challenge1.png"
       U3L06 Challenge 2 purple square_instruction: |
-        This time we're going to learn
-        a little bit about changing the turtle's pen. Read through the documentation
-        for penWidth() and penColor(), and then draw the purple square as shown.
+        Desta vez vamos aprender
+        um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
+        larguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado.
       U3L06 Challenge 3 fill pink_instruction: |
-        Now let's try to fill in the entire
-        background of the screen. To make it a little easier for you, we can tell
-        you the color we chose is one of the 140 named colors.  If you don't know
-        what the named colors are, take a closer look at the documentation for penColor()
-        again. Hint: you need to use dot().
+        Agora, vamos tentar preencher todo o fundo
+        da tela. Para deixar as coisas um pouco mais fáceis para você, podemos lhe dizer
+        que a cor que escolhemos é uma das 140 cores nomeadas. Se você não souber os
+        nomes das cores, dê uma olhada na documentação de corCaneta()
+        novamente. Dica: você precisa usar ponto().
       U3L06 Challenge 4 bullseye_instruction: |
-        Let's try this out one more time.
-        This time the colors are NOT named colors - you need to use the hex-color
-        number to set the color.  So that you're not randomly guessing, we'll give
-        you a hint -- each of the colors shown in the target image is one of these
-        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
-        #11CC00  You might be able to guess correctly if you apply what you know about
-        RGB colors.
+        Vamos tentar mais uma vez.
+        Desta vez as cores NÃO são chamadas pelo nome - você precisa usar o número hexadecimal
+        cor para defini-la. Assim, para que você não fique tentando adivinhar aleatoriamente, vamos
+        lhe dar uma dica -- cada uma das cores mostradas na imagem alvo é uma das
+        cinco listadas a seguir:  #00ABDC, #CC4400, #1188CC, #006699,
+        #11CC00  Você deve acertar o palpite se você aplicar o que você sabe sobre
+        cores RGB.
       U3L06 Challenge 5 overlapping circles_instruction: |
-        This image is created just
-        using dot() and penColor() but, how are we going to get those circles to be
-        transparent?  If you haven't gotten the hint yet: check out the documentation!
+        Essa imagem é criada apenas
+        usando ponto() e corCaneta(), mas como vamos fazer esses círculos ficarem
+        transparentes? Se você ainda não recebeu a dica: leia a documentação!
       U3L06 Challenge 6 squiggles_instruction: |
-        Next we're going to be adding some
-        curves to our drawing. Read the documentation for the "arc" commands and
-        then draw the squiggles as shown. To make things easier here's a hint: all
-        the parameters are multiples of 10, and the colors are from the following
-        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+        Em seguida, vamos adicionar algumas
+        curvas ao nosso desenho. Leia a documentação para os comandos de "arco" e
+        então desenhe os rabiscos como mostrado. Para facilitar as coisas, temos aqui uma dica: todos
+        os parâmetros são múltiplos de 10 e as cores são da seguinte lista de
+        nomes de cores: azulCeleste, azulClaro, azulTurquesa, Roxo e Magenta.
       U3L06 Challenge 7 smiley face_instruction: |
-        To make this smiley face you'll
-        need to look at the documentation for the move() command and then use it with
-        the others you've learned.  You can make reasonable guesses about the colors.
+        Para fazer essa carinha feliz você vai
+        precisar olhar a documentação do comando mova() e então usá-lo com os
+        outros que você aprendeu. Você pode fazer suposições razoáveis sobre as cores.
       U3L06 Challenge 8 make your own_instruction: |
-        Use the tools you've learned
-        today to create a drawing of your own creation. If you have time, challenge
-        your friends to see if they can duplicate your image.  We'll show you the
-        drawing we made for ourselves.  You can try to duplicate that if you want
-        to, otherwise, have fun making your own!
+        Use as ferramentas que você aprendeu
+        hoje para criar um desenho próprio. Se você tiver tempo, desafie seus
+        amigos para ver se eles conseguem duplicar sua imagem. Vamos mostrar para você os
+        desenhos que nós mesmos fizemos. Você pode tentar duplicá-los se você quiser.
+        Caso não queira, divirta-se criando o seu próprio desenho!
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Atividade livre! Use o que você aprendeu
+        sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
       U3L07 - Starry Night Starter Code_instruction: |
-        You are going to use loops
-        and random numbers to generate an image of starry night sky similar to one
-        shown here.  We have given you some starter code to generate the ground and
-        sky (just two giant dots), you will add code to this project to make the stars,
-        grass, and moon.  All of the effects are clever applications of turtle dots,
-        lines, and colors.  To get started, follow the series of steps suggested in
-        the accompanying worksheet. 
+        Você vai usar laços e números
+        aleatórios para gerar uma imagem do céu em uma noite estrelada parecida com uma
+        mostrada aqui. Fornecemos um código inicial para gerar o chão e o céu
+        (apenas dois pontos gigantes) e você vai adicionar código a esse projeto para fazer as
+        estrelas, a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,
+        linhas e cores da tartaruga.  Para começar, siga a série de etapas sugeridas na
+        planilha de acompanhamento. 
+      U3L08 - Enchantment Under the Sea_instruction: |
+        Fornecemos a você um código
+        inicial para uma cena "Subaquática" que inclui três funções,
+        para a estrela-do-mar, para a grama e para o peixe. Crie versões dessas funções
+        que aceitam parâmetros que permitam que você adicione mais variações à cena. A
+        planilha do aluno fornece mais detalhes e instruções. GIF: U3L08-UnderTheSea.gif
       U3L13 - Button with ID_instruction: |
-        Drag a button out onto the screen and
-        set its text to "Go forth!".  Run the program to make sure you can see the
-        button.
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+        Arraste um botão para fora da tela e
+        defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
+        o botão.
+      U3L13 - Debug Id plus logic problem_instruction: "O último problema foi um exemplo\nde erro de sintaxe. O laboratório de aplicativo não entendeu qual objeto ele deveria ouvir \npara um evento \"clique\", então ele mostrou uma mensagem de erro no console para lhe\ninformar. Outro tipo de erro é um erro lógico - o programa é válido,\nmas não faz o que você quer que ele faça.\r\n\r\nEsse programa tem dois erros.\nUm erro de sintaxe (complicado) e um erro lógico.  Encontre-os, conserte-os e faça\no programa funcionar como esperado."
       U3L13 - Debug Id Problem_instruction: |
-        This program has problem!  Can you figure
-        it out?  Run the program and see if you can figure out from the error messages
-        in the console what the issue is.  There is not much code, so you might be
-        able to figure it out just by reading carefully.  Make a change that will
-        make the program work as expected.
+        Esse programa tem um problema! Você pode descobrir
+        qual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro
+        no console qual é o problema. Não há muito código para ver, então você deve ser capaz
+        de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
+        que faça o programa funcionar como esperado.
       U3L13 - Turtle Driver Project_instruction: |
-        Create a “turtle driver” with at
-        least three buttons on the screen to move the turtle forward, and turn the
-        turtle right and left. If you have time, try adding additional buttons!  You
-        can also have fun changing the parameters on the turtle functions, using colors,
+        Desafio: crie uma "tartaruga motorista"
+        com pelo menos três botões na tela para mover a tartaruga para a frente e
+        virá-la para a direita e para a esquerda. Você pode copiar/colar de um nível anterior
+        se você quiser, mas você vai exercitar seus músculos em programação se você criar
+        esse pequeno programa desde o início. Se você tiver tempo, adicione botões extras! Você
+        também pode se divertir alterando os parâmetros nas funções da tartaruga, usando cores,
         etc.
       U3L13 - Turtle move with button_instruction: |
-        Drag a button out onto the screen
-        and set its text to "Go forth!".  Add an event handler for the button, that
-        makes the turtle move forward.  Run the program to make sure it works. 
+        Arraste um botão para fora da tela e
+        defina seu texto como "Vá em frente!". Adicione um manipular de evento para o botão que
+        faz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. 
+      U3L14 - Unfortunate Events Free Play_instruction: |
+        Siga a planilha de "Eventos
+        infelizes" e insira seu código aqui para testá-lo. Carregamos previamente
+        o código que você precisa para começar.
+      U3L16 - challenge say hi app_instruction: "Nesse desafio, demos a você o código\ninicial que estabelece todos os elementos na tela. Você precisa fazer\no seguinte:\r\nAdicionar um manipulador de evento a textInput com o tipo de evento \"input\" que mostra\no botão \"Diga olá\" quando o evento ocorre.\r\nAdicione um manipulador de evento ao botão\npara que, ao ser clicado, ele escreva uma saudação na tela e oculte o textInput\ne o botão. GIF: U3L16 - sayHiApp.gif"
+      U3L16 - hideAndShow_instruction: |
+        Introdução de textInput, getText e write.  Primeiro,
+        execute o código inicial várias vezes. Tente alterar o que é escrito na
+        tela quando o botão for clicado. Então, use getText para escrever na tela
+        o que o usuário digitou na caixa de texto. GIF: U3L16 - useGetText.gif
+      U3L16 - hideAndShowPractice_instruction: |
+        é fornecido um código inicial que
+        coloca uma imagem e dois botões na tela. A imagem está inicialmente oculta.
+        Adicione dois novos manipuladores de evento: um para cada botão que, quando clicados,
+        ocultam e mostram a imagem. GIF: U3L16 - hideAndShowExample.gif
+      U3L16 - image and text labels_instruction: |
+        Introdução do comando setPosition!  Substitua
+        o moveTo no manipulador de eventos de clique do botão para usar setPosition para mover o
+        botão para uma posição aleatória quando ele for clicado.
+      U3L16 - images and text labels_instruction: |
+        Introdução de objetos diferentes de
+        botões! - textLabels e imagens.  Primeiro, tente substituir seu botão por um
+        textLabel.  O texto vai responder a eventos da mesma forma que o botão?  Tente conectá-lo
+        a um manipulador de eventos. Fornecemos um código inicial similar ao resultado do
+        último nível, então você pode copiar o código do último nível aqui se você
+        preferir. 
+      U3L16 - images_instruction: |
+        Introdução de imagens. Tente substituir o textLabel
+        por uma imagem. A imagem vai responder aos eventos como o botão respondia? Tente 
+        conectá-la a um manipulador de eventos. Fornecemos um código inicial similar
+        ao resultado do último nível, então você pode copiar o código do último nível
+        aqui se você preferir. 
+      U3L16 - quick double click_instruction: |
+        Mini projeto. O jogo do clique duplo
+        rápido.  Nesse jogo simples, um objeto (uma imagem) se move, ou aparece aleatoriamente
+        na tela, quando o usuário clicar. O objetivo do nosso jogo é tentar clicar
+        duas vezes no objeto antes dele se mover.  Parte do desafio (e da diversão)
+        é criar esse aplicativo desde o início. Você pode olhar em seus trabalhos anteriores para
+        ver exemplos, mas também é divertido criar algo do início.
+        Tente! Para mais detalhes, veja o guia de atividade para essa lição. GIF:U3L16 -
+        quickDoubleClick.gif
+      U3L16 - setPosition to move button_instruction: |
+        Introdução do comando setPosition!
+        Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
+        para mover o botão para uma posição aleatória quando ele for clicado.
+      U3L16 - setPositionMoveButton_instruction: Use setPosition para moveButton
+      U3L16 - setupMoveToRandom_instruction: |
+        Vamos nos basear em alguns códigos
+        iniciais simples para essa lição. Sua primeira tarefa: use moveTo e randomNumber
+        para fazer a tartaruga se mover para uma posição aleatória a cada clique do botão. Fornecemos
+        a você o código inicial para nossa configuração comum: um botão que move a tartaruga
+        quando é clicado. Você deve modificar esse código.  
+      U3L16 - text labels_instruction: |
+        Introdução de textLabels.  Primeiro, tente substituir
+        seu botão por um textLabel.  O texto vai responder a eventos da mesma forma que o
+        botão?  Tente conectá-lo a um manipulador de eventos. Fornecemos um código
+        inicial similar ao resultado do último nível, então você pode copiar o código do
+        último nível aqui se você preferir. 
+      U3L16 - textInput getText write_instruction: |
+        Introdução de textInput, getText
+        e write.  Primeiro, execute o código inicial várias vezes. Tente alterar o que
+        é escrito na tela quando o botão for clicado. Então, use getText para escrever
+        na tela o que o usuário digitou na caixa de texto.
+      U3L16 - use images_instruction: |
+        Introdução de imagens. Tente substituir o textLabel
+        por uma imagem. A imagem vai responder aos eventos como o botão respondia? Tente 
+        conectá-la a um manipulador de eventos. Fornecemos um código inicial similar
+        ao resultado do último nível, então você pode copiar o código do último nível
+        aqui se você preferir. GIF: U3L16 - useImage.gif
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe error and get the program to run.  Also note the error message since it\nmight come up at some point later in your life.\r\n\r\n"
+      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou the three lines of code shown in the previous page.  Add three lines of\ncode just below the ones shown here to make your own variable, assign it a\nvalue and write it to the screen.  NOTE: change the variable name from the\ndefault x to something else.\r\n"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - write var and string with same name_instruction: |
+        Now look at this
+        example. We’ve added another write statement.  Before you run the code, see
+        if you can predict what the output will be.  Seriously, write it down. THEN
+        run the code, mess with it if you like, and continue to the next page for
+        an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Desenhe um quadrado usando apenas avance
+        e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
+        inicial da tartaruga.
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Desenhe uma grade 3x3 acima e à direita da
+        tartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:
+        Esse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o
+        e ajustando-o.  Você também deve considerar usar lápis e papel para esboçar
+        suas ideias.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
-        of the starting location.
+        Desenhe um quadrado usando apenas avance
+        e vireEsquerda, mas desta vez faça o quadrado aparecer ACIMA e À DIREITA
+        da posição inicial.
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes de unidade

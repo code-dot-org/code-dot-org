@@ -240,6 +240,7 @@
       signup: 登陆
       already_registered: 已经注册？
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: 您的进度
       lines: 代码总行数： %{lines}
       close: 关闭
@@ -307,6 +308,10 @@
     cant_remove_student_no_email: 因为 %{student_name} 未注册电子邮件地址， %{student_name}不能移动为你的学生。
     cant_remove_teacher_no_email: 因为您还没有注册的电子邮件地址，%{teacher_name}不能移为你的老师。
     student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
+    panel:
+      answer_viewer: Answer Viewer
+      student: 学生
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
     email_confirm_needed_required: 你的电子邮件地址尚未确认 %{email}：

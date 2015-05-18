@@ -234,6 +234,7 @@ zh:
       signup: 註冊帳號
       already_registered: 已經註冊了嗎？
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: 您的進度
       lines: '全部程式碼行數: %{lines}'
       close: 關閉
@@ -301,6 +302,10 @@ zh:
     cant_remove_student_no_email: '因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name} 從你的學生中移除'
     cant_remove_teacher_no_email: '因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}'
     student_teacher_disassociated: '%{student_name}的老師%{teacher_name}已經被移除'
+    panel:
+      answer_viewer: Answer Viewer
+      student: '學生 '
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

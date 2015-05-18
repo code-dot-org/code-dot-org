@@ -226,6 +226,7 @@ ru:
       signup: Зарегистрироваться
       already_registered: Уже зарегистрированы?
     popup:
+      progress_for_user: '%{name} прогресс'
       progress: Ваши результаты
       lines: 'Всего строк кода: %{lines}'
       close: ЗАКРЫТЬ
@@ -293,6 +294,10 @@ ru:
     cant_remove_student_no_email: '%{student_name} не может быть удален из списка Ваших  учеников,, поскольку %{student_name} не зарегистрировал адрес электронной почты'
     cant_remove_teacher_no_email: 'Учитель %{teacher_name} не может быть удален, поскольку  Вы не зарегистрировали адрес электронной почты'
     student_teacher_disassociated: 'Учитель %{teacher_name} удалён у ученика %{student_name}'
+    panel:
+      answer_viewer: Просмотр ответов
+      student: Ученик
+      try_it_yourself: Попробуйте сами
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
@@ -313,7 +318,7 @@ ru:
     classroom_activity: Урок без компьютера
   home:
     title: Студия кода
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} СТРОК КОДА, НАПИСАННЫЕ СТУДЕНТАМИ'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: 'Уже зарегистрированы? %{link}'
@@ -479,8 +484,8 @@ ru:
     baddomaintype: Один или несколько элементов домена имеет неверный тип, или они находятся в неправильном порядке.
   text_match:
     placeholder: Внеси сюда свой ответ
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Спасибо
+    open_response_body: Спасибо за ваш ответ!
   dialog:
     ok: Продолжить
   time:

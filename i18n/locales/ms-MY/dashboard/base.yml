@@ -224,6 +224,7 @@ ms:
       signup: Mendaftar
       already_registered: Already registered?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'
       close: TUTUP
@@ -291,6 +292,10 @@ ms:
     cant_remove_student_no_email: '%{student_name} tidak dapat dikeluarkan sebagai pelajar anda kerana %{student_name} belum mendaftar alamat e-mel'
     cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dikeluarkan sebagai guru anda kerana anda belum mendaftarkan alamat e-mel'
     student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: pelajar
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
