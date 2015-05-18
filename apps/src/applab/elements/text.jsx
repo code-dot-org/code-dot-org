@@ -62,6 +62,16 @@ var TextProperties = React.createClass({
   }
 });
 
+function createElement() {
+  var element = document.createElement('label');
+  element.appendChild(document.createTextNode("text"));
+  element.style.margin = '10px 5px';
+  element.style.height = '20px';
+
+  return element;
+}
+
 module.exports = {
+  create: createElement,
   PropertyTable: TextProperties
 };

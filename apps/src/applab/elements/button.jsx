@@ -72,6 +72,20 @@ var ButtonProperties = React.createClass({
   }
 });
 
+function createElement() {
+  var element = document.createElement('button');
+  element.appendChild(document.createTextNode('Button'));
+  element.style.padding = '0px';
+  element.style.margin = '2px';
+  element.style.height = '36px';
+  element.style.width = '76px';
+  element.style.fontSize = '14px';
+
+  return element;
+}
+
+// TODO (brent) how do i want to organize exports?
 module.exports = {
+  create: createElement,
   PropertyTable: ButtonProperties
 };

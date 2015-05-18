@@ -53,6 +53,16 @@ var TextInputProperties = React.createClass({
   }
 });
 
+function createElement() {
+  var element = document.createElement('input');
+  element.style.margin = '5px 2px';
+  element.style.width = '236px';
+  element.style.height = '30px';
+
+  return element;
+}
+
 module.exports = {
+  create: createElement,
   PropertyTable: TextInputProperties
 };
