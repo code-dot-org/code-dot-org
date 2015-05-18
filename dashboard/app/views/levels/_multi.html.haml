@@ -61,9 +61,6 @@
   // The index of the last selection.
   var lastSelectionIndex = -1;
 
-  // A string of the last result.  Looks like "1" or "2,3".
-  var previousResult = #{ @last_attempt.to_json || -1}.split(',');
-
   // How many answers should there be?
   var numAnswers = "#{data['type']}" == 'multi2' ? 2 : 1;
 
@@ -163,9 +160,14 @@
 
     enableButton(false);
 
+    // A string of the last result.  Looks like "1" or "2,3".
+    var lastAttemptString = #{@last_attempt.to_json};
+
     // Pre-select previously submitted response if available.
-    if (previousResult.length >= 1)
+    if (lastAttemptString)
     {
+      var previousResult = lastAttemptString.split(',');
+
       for (var i = 0; i < previousResult.length; i++)
       {
         clickItem(previousResult[i]);
