@@ -87,6 +87,8 @@ Interpreter.prototype.initGlobalScope = function(scope) {
   this.initBoolean(scope);
   this.initDate(scope);
   this.initMath(scope);
+  this.initRegExp(scope);
+  this.initJSON(scope);
 
   // Initialize global functions.
   var thisInterpreter = this;
@@ -494,6 +496,69 @@ Interpreter.prototype.initArray = function(scope) {
   };
   this.setProperty(this.ARRAY.properties.prototype, 'lastIndexOf',
                    this.createNativeFunction(wrapper), false, true);
+
+  wrapper = function(opt_compFunc) {
+    var compFuncWrapper;
+    if (opt_compFunc) {
+      var node = opt_compFunc.node;
+      var body = node.body;
+      // set callee depending whether the call is via
+      // inline function or function name
+      var callee = node.type == 'FunctionDeclaration'
+                    ? node.id : opt_compFunc.node;
+      compFuncWrapper = function(x, y) {
+        var callState = {
+          callee: callee,
+          arguments: node.params,
+          type: 'CallExpression',
+          start: 0,
+          end: 0
+        };
+        var exprState = {
+          expression: callState,
+          type: 'ExpressionStatement',
+          start: 0,
+          end: 0
+        };
+        var scope = thisInterpreter.createScope(opt_compFunc, opt_compFunc.parentScope);
+        // Add all arguments.
+        for (var i = 0; i < node.params.length; i++) {
+          var paramName = thisInterpreter.createPrimitive(node.params[i].name);
+          var paramValue = arguments.length > i ? arguments[i] :
+              thisInterpreter.UNDEFINED;
+          thisInterpreter.setProperty(scope, paramName, paramValue);
+        }
+        // Build arguments variable.
+        var argsList = thisInterpreter.createObject(thisInterpreter.ARRAY);
+        for (var i = 0; i < arguments.length; i++) {
+          thisInterpreter.setProperty(argsList, thisInterpreter.createPrimitive(i),
+                                      arguments[i]);
+        }
+        thisInterpreter.setProperty(scope, 'arguments', argsList);
+        thisInterpreter.stateStack.unshift({
+          node: exprState,
+          scope: scope,
+          breakpoint: true
+        });
+        // run the function
+        do {
+          thisInterpreter.step();
+        } while (!thisInterpreter.stateStack[0].breakpoint)
+        return thisInterpreter.stateStack[0].value.data;
+      }
+    }
+    var jsList = [];
+    for (var i = 0; i < this.length; i++) {
+      jsList[i] = this.properties[i];
+    }
+    jsList.sort(compFuncWrapper);
+    for (var i = 0; i < jsList.length; i++) {
+      thisInterpreter.setProperty(this, i, jsList[i]);
+    }
+    return this;
+  };
+  this.setProperty(this.ARRAY.properties.prototype, 'sort',
+                   this.createNativeFunction(wrapper), false, true);
 };
 
 /**
@@ -652,7 +717,12 @@ Interpreter.prototype.initString = function(scope) {
 
   wrapper = function(separator, limit) {
     var str = this.toString();
-    separator = separator ? separator.toString() : undefined;
+    if (separator) {
+      separator = thisInterpreter.isa(separator, thisInterpreter.REGEXP) 
+                  ? separator.data : separator.toString();
+    } else { // is this really necessary?
+      separator = undefined;
+    }
     limit = limit ? limit.toNumber() : undefined;
     var jsList = str.split(separator, limit);
     var pseudoList = thisInterpreter.createObject(thisInterpreter.ARRAY);
@@ -700,6 +770,31 @@ Interpreter.prototype.initString = function(scope) {
     return thisInterpreter.createPrimitive(str.slice(beginSlice, endSlice));
   };
   this.setProperty(this.STRING.properties.prototype, 'slice',
+                   this.createNativeFunction(wrapper), false, true);
+
+  wrapper = function(regexp) {
+    var str = this.toString();
+    regexp = regexp ? regexp.data : undefined;
+    var match = str.match(regexp);
+    if (match === null) {
+      return thisInterpreter.createPrimitive(null);
+    }
+    var pseudoList = thisInterpreter.createObject(thisInterpreter.ARRAY);
+    for (var i = 0; i < match.length; i++) {
+      thisInterpreter.setProperty(pseudoList, i,
+          thisInterpreter.createPrimitive(match[i]));
+    }
+    return pseudoList;
+  };
+  this.setProperty(this.STRING.properties.prototype, 'match',
+                   this.createNativeFunction(wrapper), false, true);
+
+  wrapper = function(regexp) {
+    var str = this.toString();
+    regexp = regexp ? regexp.data : undefined;
+    return thisInterpreter.createPrimitive(str.search(regexp));
+  };
+  this.setProperty(this.STRING.properties.prototype, 'search',
                    this.createNativeFunction(wrapper), false, true);
 };
 
@@ -887,6 +982,154 @@ Interpreter.prototype.initMath = function(scope) {
 };
 
 /**
+ * Initialize Regular Expression object.
+ * @param {!Object} scope Global scope.
+ */
+Interpreter.prototype.initRegExp = function(scope) {
+  var thisInterpreter = this;
+  var wrapper;
+  // Regex constructor.
+  wrapper = function(pattern, flags) {
+    var rgx;
+    if (this.parent == thisInterpreter.REGEXP) {
+      rgx = this;
+    } else {
+      rgx = thisInterpreter.createObject(thisInterpreter.REGEXP);
+    }
+
+    pattern = pattern.toString();
+    flags = flags && flags.toString();
+    thisInterpreter.createRegExp(rgx, new RegExp(pattern, flags || ''));
+    return rgx;
+  };
+  this.REGEXP = this.createNativeFunction(wrapper);
+  this.setProperty(scope, 'RegExp', this.REGEXP);
+
+  wrapper = function() {
+    return thisInterpreter.createPrimitive(this.data.toString());
+  };
+  this.setProperty(this.REGEXP.properties.prototype, 'toString',
+                   this.createNativeFunction(wrapper), false, true);
+
+  wrapper = function(str) {
+    str = str.toString();
+    return thisInterpreter.createPrimitive(this.data.test(str));
+  };
+  this.setProperty(this.REGEXP.properties.prototype, 'test',
+                   this.createNativeFunction(wrapper), false, true);
+
+  wrapper = function(str) {
+    str = str.toString();
+    // Get lastIndex from wrapped regex, since this is settable.
+    this.data.lastIndex =
+        thisInterpreter.getProperty(this, 'lastIndex').toNumber();
+    var match = this.data.exec(str);
+    thisInterpreter.setProperty(this, 'lastIndex',
+        thisInterpreter.createPrimitive(this.data.lastIndex));
+
+    if (match) {
+      var result = thisInterpreter.createObject(thisInterpreter.ARRAY);
+      for (var i = 0; i < match.length; i++) {
+        thisInterpreter.setProperty(result, i,
+            thisInterpreter.createPrimitive(match[i]));
+      }
+      // match has additional properties.
+      thisInterpreter.setProperty(result, 'index',
+          thisInterpreter.createPrimitive(match.index));
+      thisInterpreter.setProperty(result, 'input',
+          thisInterpreter.createPrimitive(match.input));
+      return result;
+    }
+    return thisInterpreter.createPrimitive(null);
+  };
+  this.setProperty(this.REGEXP.properties.prototype, 'exec',
+                   this.createNativeFunction(wrapper), false, true);
+};
+
+/**
+ * Initialize JSON object.
+ * @param {!Object} scope Global scope.
+ */
+Interpreter.prototype.initJSON = function(scope) {
+  var thisInterpreter = this;
+  var myJSON = thisInterpreter.createObject(this.OBJECT);
+  this.setProperty(scope, 'JSON', myJSON);
+
+  /**
+   * Converts from native JS object to this.OBJECT.
+   * @param {!Object} nativeObj The native JS object to be converted.
+   * @return {Object} The equivalent this.OBJECT.
+   */
+  function toPseudoObject(nativeObj) {
+    if (typeof nativeObj !== 'object') {
+      return thisInterpreter.createPrimitive(nativeObj);
+    }
+
+    var pseudoObject;
+    if (nativeObj instanceof Array) { // is array
+      pseudoObject = thisInterpreter.createObject(thisInterpreter.ARRAY);
+      for (var i = 0; i < nativeObj.length; i++) {
+        thisInterpreter.setProperty(pseudoObject, i,
+                                    toPseudoObject(nativeObj[i]));
+      }
+    } else { // is object
+      pseudoObject = thisInterpreter.createObject(thisInterpreter.OBJECT);
+      for (var key in nativeObj) {
+        thisInterpreter.setProperty(pseudoObject, key,
+                                    toPseudoObject(nativeObj[key]));
+      }
+    }
+
+    return pseudoObject;
+  }
+
+  var wrapper = (function(nativeFunc) {
+    return function() {
+      var arg = arguments[0].data;
+      var nativeObj = nativeFunc.call(JSON, arg);
+      return toPseudoObject(nativeObj);
+    };
+  })(JSON.parse);
+  this.setProperty(myJSON, 'parse',
+                   this.createNativeFunction(wrapper));
+
+  /**
+   * Converts from this.OBJECT object to native JS object.
+   * @param {!Object} obj The this.OBJECT object to be converted.
+   * @return {Object} The equivalent native JS object.
+   */
+  function toNativeObject(obj) {
+    if (obj.isPrimitive) {
+      return obj.data;
+    }
+
+    var nativeObj;
+    if (obj.length) { // is array
+      nativeObj = [];
+      for (var i = 0; i < obj.length; i++) {
+        nativeObj[i] = toNativeObject(obj.properties[i]);
+      }
+    } else { // is object
+      nativeObj = {};
+      for (var key in obj.properties) {
+        nativeObj[key] = toNativeObject(obj.properties[key]);
+      }
+    }
+
+    return nativeObj;
+  }
+
+  wrapper = (function(nativeFunc) {
+    return function() {
+      var arg = toNativeObject(arguments[0]);
+      return thisInterpreter.createPrimitive(nativeFunc.call(JSON, arg));
+    };
+  })(JSON.stringify);
+  this.setProperty(myJSON, 'stringify',
+                   this.createNativeFunction(wrapper));
+};
+
+/**
  * Is an object of a certain class?
  * @param {Object} child Object to check.
  * @param {!Object} parent Class of object.
@@ -951,6 +1194,9 @@ Interpreter.prototype.arrayIndex = function(n) {
  * @return {!Object} New data object.
  */
 Interpreter.prototype.createPrimitive = function(data) {
+  if (data instanceof RegExp) {
+    return this.createRegExp(this.createObject(this.REGEXP), data);
+  }
   var type = typeof data;
   var obj = {
     data: data,
@@ -1008,6 +1254,23 @@ Interpreter.prototype.createObject = function(parent) {
 
   return obj;
 };
+
+/**
+ * Creates a new regular expression object.
+ * @param {Object} obj The existing object to set.
+ * @param {Object} data The native regular expression.
+ * @return {!Object} New regular expression object.
+ */
+Interpreter.prototype.createRegExp = function(obj, data) {
+  obj.data = data
+  // lastIndex is settable, all others are read-only attributes
+  this.setProperty(obj, 'lastIndex', this.createPrimitive(obj.data.lastIndex), false, true);
+  this.setProperty(obj, 'source', this.createPrimitive(obj.data.source), true, true);
+  this.setProperty(obj, 'global', this.createPrimitive(obj.data.global), true, true);
+  this.setProperty(obj, 'ignoreCase', this.createPrimitive(obj.data.ignoreCase), true, true);
+  this.setProperty(obj, 'multiline', this.createPrimitive(obj.data.multiline), true, true);
+  return obj;
+}
 
 /**
  * Create a new function.
@@ -1484,7 +1747,7 @@ Interpreter.prototype['stepBreakStatement'] = function() {
   }
   state = this.stateStack.shift();
   while (state && state.node.type != 'callExpression') {
-    if (label ? label == state.label : state.isLoop) {
+    if (label ? label == state.label : (state.isLoop || state.isSwitch)) {
       return;
     }
     state = this.stateStack.shift();
@@ -1934,6 +2197,47 @@ Interpreter.prototype['stepSequenceExpression'] = function() {
   } else {
     this.stateStack.shift();
     this.stateStack[0].value = state.value;
+  }
+};
+
+Interpreter.prototype['stepSwitchStatement'] = function() {
+  var state = this.stateStack[0];
+  state.checked = state.checked || [];
+  state.isSwitch = true;
+
+  if (!state.test) {
+    state.test = true;
+    this.stateStack.unshift({node: state.node.discriminant});
+  } else {
+    if (!state.switchValue) {
+      // Preserve switch value between case tests.
+      state.switchValue = state.value;
+    }
+
+    var index = state.index || 0;
+    var currentCase = state.node.cases[index];
+    if (currentCase) {
+      if (!state.done && !state.checked[index] && currentCase.test) {
+        state.checked[index] = true;
+        this.stateStack.unshift({node: currentCase.test});
+      } else {
+        // Test on the default case will be null.
+        if (state.done || !currentCase.test ||
+            this.comp(state.value, state.switchValue) == 0) {
+          state.done = true;
+          var n = state.n || 0;
+          if (currentCase.consequent[n]) {
+            this.stateStack.unshift({node: currentCase.consequent[n]});
+            state.n = n + 1;
+            return;
+          }
+        }
+        state.n = 0;
+        state.index = index + 1;
+      }
+    } else {
+      this.stateStack.shift();
+    }
   }
 };
 

@@ -33,7 +33,11 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD
+Lamar High School 
+<br />
+3325 Westheimer Road
+<br />
+Houston, TX 77098
 
 ### What do I bring to Phase 2?
 
@@ -77,7 +81,11 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD
+Garden Oaks Montessori School 
+<br />
+901 Sue Barnett Drive 
+<br />
+Houston, TX 77018
 
 ### What do I bring to Phase 2?
 
@@ -115,7 +123,11 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD
+Garden Oaks Montessori School 
+<br />
+901 Sue Barnett Drive 
+<br />
+Houston, TX 77018
 
 ### What do I bring to Phase 2?
 

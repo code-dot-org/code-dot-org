@@ -5,5 +5,5 @@ placeholder 'Enter your reflection here.'
 
 
 markdown <<MARKDOWN
-What did you see in other students’ bit-sending devices that you could use to improve your device if you had more time to work on it?
+Why would we decide to send a message in only bits rather than modifying our devices to represent more states (State C, State D, State E, …)?
 MARKDOWN
