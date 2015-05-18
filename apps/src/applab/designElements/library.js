@@ -13,9 +13,9 @@ var _ = utils.getLodash();
 var nextElementIdMap = {};
 
 var elements = {
-  BUTTON: require('./button'),
-  TEXT: require('./text'),
-  TEXT_INPUT: require('./textInput'),
+  BUTTON: require('./button.jsx'),
+  TEXT: require('./text.jsx'),
+  TEXT_INPUT: require('./textInput.jsx'),
 };
 
 module.exports = {

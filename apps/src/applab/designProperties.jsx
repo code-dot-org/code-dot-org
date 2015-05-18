@@ -1,8 +1,10 @@
 var React = require('react');
 
-var ButtonProperties = require('./designElements/button').PropertyTable;
-var TextProperties = require('./designElements/text').PropertyTable;
-var InputProperties = require('./designElements/textInput').PropertyTable;
+// TODO (brent) - might make more sense to require library and get these from
+// the library
+var ButtonProperties = require('./designElements/button.jsx').PropertyTable;
+var TextProperties = require('./designElements/text.jsx').PropertyTable;
+var InputProperties = require('./designElements/textInput.jsx').PropertyTable;
 
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
