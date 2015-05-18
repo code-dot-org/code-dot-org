@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-18T01:42:18.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "U3L19 - explanation diff between string and var name",
+    "content1": "description here",
+    "markdown": "# Difference between a string and variable name\n\n\n<pre>\nwrite(foo);\nwrite(\"foo\");\n</pre>\nThese lines show how JavaScript knows whether or not you want to literally print the characters \"foo\" to the screen, or whether you want to retrieve a value from memory. If JavaScript sees a word in your code that's inside quotes it treats it as a string of text. If the word doesn't have quotes and JavaScript doesn't recognize it as a word of the programming language itself, it assumes that it's a variable and attempts to look it up in memory. If it doesn't find it in memory. It throws an error.\n\nLet's show you what that error looks like.  See it and try to correct it on the next page.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue to try...</a>\n\n\n"
+  }
+}]]></config>
+</External>

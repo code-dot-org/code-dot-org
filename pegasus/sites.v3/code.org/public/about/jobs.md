@@ -6,10 +6,7 @@ nav: about_nav
 # Job Openings at Code.org
 
 - [Evaluation Manager](#Eval)	
-- [Technical Product Manager](#Tech-PM)
 - [K-5 Affiliate Program Manager](#K-5-PM)
-- [Hour of Code Campaign Coordinator](#HOC-Temp)
-- [Head of Engineering](#head-engineering)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (New York City, Ft. Lauderdale/Miami area)](#reg-PM)
 - [Data Engineer](#data-engineer)
@@ -43,32 +40,7 @@ The ideal candidate has the following qualifications:
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="Tech-PM"href="#Tech-PM">Technical Product Manager (Seattle,WA)</a>
-**Job Summary:**
 
-Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. Full-time, salaried. Responsibilities of the position include:
-
-- Defining the scope of these projects
-- Designing user experience and working with engineers and other teams at Code.org to implement them
-
-This person must be able to work in a fast paced environment with continuous release to customers
-
-**Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Bachelors degree in Computer Science
-- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
-- Experience in designing user experience for non-tech savvy customers
-- Strong technical background
-- Strong communication and collaboration skills
-
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="K-5-PM"href="#K-5-PM">K-5 Affiliate Program Manager (Seattle, WA)</a>
 **Job Summary:**
@@ -107,31 +79,6 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="HOC-Temp"href="#HOC-Temp">Hour of Code Campaign Coordinator (Temp) (Seattle,WA)</a>
-**Job Summary:**
-
-The Hour of Code initiative is a yearly campaign to encourage students to try computer science during Computer Science Education Week (Dec. 7-13). Since 2013, it has reached over 100M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting temporary staff to assist the Marketing team in the planning and execution of December’s global Hour of Code campaign. Full-time, June-December contract position.
-
-Responsibilities of this position include:
-
-- Assisting overall marketing efforts for the Hour of Code campaign
-- Managing partner commitments
-- Managing prize fulfillment, guiding winners through the fulfillment process
-- Helping plan special events and maintain a database of key Hour of Code events
-- Supporting our community and fielding questions about the Hour of Code in a timely manner
-- Tracking social media and press coverage related to the campaign 
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Qualifications:**
-
-- Degree in Marketing, Communications or related field
-- Must be a self-starter, multi-tasker and excel in a fast-paced environment
-- Excellent writing skills, with an interest in social media platforms and trends
-- Demonstrated experience with Google Drive (spreadsheets), Google Hangouts, Skype 
-- Passion for technology and inspiring new students to try computer science
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 
 
@@ -161,36 +108,6 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="head-engineering" href="#head-engineering">Head of Engineering (Seattle, WA)</a>
-**Job Summary:**
-
-Code.org is recruiting for an experienced Head of Engineering. Full-time, salaried. Responsibilities of the position include:
-
-- Partnering with the Head of Product/Marketing to build a curriculum platform that reaches tens of millions of students and hundreds of thousands of classrooms
-- Manage the Code.org engineering team (team of 10+ software engineers)
-- Set architectural direction for how Code.org's web site, services, and tutorial platform is built
-- Hiring, career development, and mentorship of new engineers
-
-**Qualifications:**
-
-- Bachelor’s degree with a major in Computer Science
-- 10+ years as a software engineer or manager of software engineers
-- 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
-- Full stack Web engineering experience, i.e. databases, application, front-end
-- DEEP knowledge and experience in either JavaScript OR Ruby
-- Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
-- Experience building and running a large scale consumer-focused Web service, with at least 1M users
-- Mobile development experience (iOS, Android) desired but not required
-- Experience in a fast growth start-up environment desired
-
-In addition, candidates:
-
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
-Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
