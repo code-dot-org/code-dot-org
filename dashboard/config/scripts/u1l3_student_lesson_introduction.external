@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 ## Unit 1: Lesson 3 - Sending More Complex Messages
 
 # Background
-The word “bit” comes from the contraction: “binary digit.” A bit is the unit of a binary message, it is a name for the thing that can represent one of two possible states. A bit sending device can be used to send any kind of message, as long as the message is binary and a communication protocol has been established. Bits can be grouped together to send more complex messages.
+As you discussed in your previous class, information is a fairly abstract concept. To send information we need to encode it in some way, or in other words turn it into something physical that the receiver could recognize. The information you sent with your devices was binary because it could only take one of two states. We call this type of information a bit, which is short for “binary digit”. This means that last class you were using your devices to encode bits. This was pretty convenient, since the messages you were sending were also binary. Today, you will consider how to send information that may have more than two states that you want to communicate.
 
 # Lesson
 
