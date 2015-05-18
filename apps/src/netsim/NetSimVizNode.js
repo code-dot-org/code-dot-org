@@ -146,7 +146,8 @@ NetSimVizNode.inherits(NetSimVizEntity);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  if (netsimGlobals.getLevelConfig().showHostnameInGraph) {
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (levelConfig.showHostnameInGraph) {
     this.setName(sourceNode.getHostname());
   } else {
     this.setName(sourceNode.getShortDisplayName());
@@ -156,6 +157,9 @@ NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   if (sourceNode.getNodeType() === NodeType.ROUTER) {
     this.isRouter = true;
     this.getRoot().addClass('router-node');
+    if (levelConfig.broadcastMode) {
+      this.getRoot().css('display', 'none');
+    }
   }
 };
 
