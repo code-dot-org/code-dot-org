@@ -33,7 +33,11 @@ Breakfast and lunch will be served.
 
 ### Location
 
-TBD
+Lamar High School 
+<br />
+3325 Westheimer Road
+<br />
+Houston, TX 77098
 
 ### What do I bring to Phase 2?
 
@@ -70,14 +74,18 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, July 20, 2015 - Wednesday, July 22, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 <br/>
 
 ### Location
 
-TBD
+Garden Oaks Montessori School 
+<br />
+901 Sue Barnett Drive 
+<br />
+Houston, TX 77018
 
 ### What do I bring to Phase 2?
 
@@ -109,13 +117,17 @@ The first phase of professional development is a two-hour online introduction th
 
 Wednesday, July 22, 2015 - Friday, July 24, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-TBD
+Garden Oaks Montessori School 
+<br />
+901 Sue Barnett Drive 
+<br />
+Houston, TX 77018
 
 ### What do I bring to Phase 2?
 

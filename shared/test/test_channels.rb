@@ -70,4 +70,14 @@ class ChannelsTest < Minitest::Unit::TestCase
     assert last_response.ok?
     assert_equal false, JSON.parse(last_response.body)['isOwner']
   end
+
+  def test_unicode_in_channel
+    post '/v3/channels', {emoticon: "\xF0\x9F\x91\x8D"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    assert_equal "\xF0\x9F\x91\x8D", JSON.parse(last_response.body)['emoticon']
+  end
 end
