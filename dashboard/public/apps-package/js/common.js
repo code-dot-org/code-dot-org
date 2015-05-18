@@ -5956,11 +5956,7 @@ StudioApp.prototype.init = function(config) {
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
-        this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
-        if (!this.editor.currentlyUsingBlocks) {
-          this.editor.aceEditor.focus();
-          this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
-        }
+        this.onDropletToggle_();
       } else {
         this.feedback_.showGeneratedCode(this.Dialog);
       }
@@ -7068,6 +7064,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     }
 
     if (options.afterEditorReady) {
+      // droplet may come in code mode if it couldn't parse the code into
+      // blocks, so update the UI based on the current state:
+      this.onDropletToggle_();
       options.afterEditorReady();
       this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
@@ -7188,6 +7187,17 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   if (blockCount) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
+  }
+};
+
+/**
+ * Handle updates after a droplet toggle between blocks/code has taken place
+ */
+StudioApp.prototype.onDropletToggle_ = function () {
+  this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
+  if (!this.editor.currentlyUsingBlocks) {
+    this.editor.aceEditor.focus();
+    this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
   }
 };
 
@@ -11021,7 +11031,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var cf = mergedFunctions[i];
     var block = cf.block;
     if (!block) {
-      block = cf.func + "(";
+      block = (cf.blockPrefix || cf.func) + "(";
       if (cf.params) {
         for (j = 0; j < cf.params.length; j++) {
           if (j !== 0) {
@@ -11058,12 +11068,14 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
 
 function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
-    var cf = configBlocks[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category
-    });
+    var block = configBlocks[i];
+    if (!block.noAutocomplete) {
+      apis.push({
+        name: 'api',
+        value: block.func,
+        meta: block.category
+      });
+    }
   }
 }
 
@@ -11104,8 +11116,7 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
 
     if (config.blocks[i].type === 'value') {
       newFunc.value = true;
-    }
-    else if (config.blocks[i].type === 'either') {
+    } else if (config.blocks[i].type === 'either') {
       newFunc.value = true;
       newFunc.command = true;
     }
@@ -11117,7 +11128,9 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
 
     newFunc.dropdown = config.blocks[i].dropdown;
 
-    modeOptions.functions[config.blocks[i].func] = newFunc;
+    var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
+
+    modeOptions.functions[modeOptionName] = newFunc;
   }
 }
 

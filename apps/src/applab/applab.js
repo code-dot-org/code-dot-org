@@ -383,6 +383,8 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         // Ensure a descriptive error message is displayed.
         expectedType = 'string, number, boolean, undefined or null';
       }
+    } else if (expectedType === 'array') {
+      properType = Array.isArray(varValue);
     } else {
       properType = (typeof varValue === expectedType);
     }

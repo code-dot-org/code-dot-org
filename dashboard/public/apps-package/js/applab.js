@@ -185,9 +185,19 @@ levels.custom = {
     // Variables
     "declareAssign_x": null,
     "assign_x": null,
-    "declareAssign_x_array_1_4": null,
     "declareAssign_x_prompt": null,
     "console.log": null,
+    "declareAssign_str_hello_world": null,
+    "substring": null,
+    "indexOf": null,
+    "length": null,
+    "toUpperCase": null,
+    "toLowerCase": null,
+    "declareAssign_list_abde": null,
+    "listLength": null,
+    "insertItem": null,
+    "appendItem": null,
+    "removeItem": null,
 
     // Functions
     "functionParams_none": null,
@@ -684,6 +694,8 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         // Ensure a descriptive error message is displayed.
         expectedType = 'string, number, boolean, undefined or null';
       }
+    } else if (expectedType === 'array') {
+      properType = Array.isArray(varValue);
     } else {
       properType = (typeof varValue === expectedType);
     }
@@ -4351,6 +4363,53 @@ var Applab = require('./applab');
 // (valuable for performance or to support in/out parameters)
 //
 // dropletConfig for each of these APIs should be marked with dontMarshal:true
+
+// Array functions
+
+var getInt = function(obj, def) {
+  // Return an integer, or the default.
+  var n = obj ? Math.floor(obj.toNumber()) : def;
+  if (isNaN(n)) {
+    n = def;
+  }
+  return n;
+};
+
+exports.insertItem = function (array, index, item) {
+  index = getInt(index, 0);
+  if (index < 0) {
+    index = Math.max(array.length + index, 0);
+  } else {
+    index = Math.min(index, array.length);
+  }
+  // Insert item.
+  for (var i = array.length - 1; i >= index; i--) {
+    array.properties[i + 1] = array.properties[i];
+  }
+  array.length += 1;
+  array.properties[index] = item;
+};
+
+exports.removeItem = function (array, index) {
+  index = getInt(index, 0);
+  if (index < 0) {
+    index = Math.max(array.length + index, 0);
+  }
+  // Remove by shifting items after index downward.
+  for (var i = index; i < array.length - 1; i++) {
+    array.properties[i] = array.properties[i + 1];
+  }
+  if (index < array.length) {
+    delete array.properties[array.length - 1];
+    array.length -= 1;
+  }
+};
+
+exports.appendItem = function (array, item) {
+  array.properties[array.length] = item;
+  array.length++;
+  return Applab.interpreter.createPrimitive(array.length);
+};
 
 // ImageData RGB helper functions
 
@@ -25065,6 +25124,28 @@ exports.penRGB = function (blockId, r, g, b, a) {
                            'a': a });
 };
 
+exports.insertItem = function (blockId, array, index, item) {
+  return Applab.executeCmd(blockId,
+                          'insertItem',
+                          {'array': array,
+                           'index': index,
+                           'item': item });
+};
+
+exports.appendItem = function (blockId, array, item) {
+  return Applab.executeCmd(blockId,
+                          'appendItem',
+                          {'array': array,
+                           'item': item });
+};
+
+exports.removeItem = function (blockId, array, index) {
+  return Applab.executeCmd(blockId,
+                          'removeItem',
+                          {'array': array,
+                           'index': index });
+};
+
 
 
 },{}],8:[function(require,module,exports){
@@ -25261,6 +25342,17 @@ module.exports.blocks = [
   {'func': 'clearInterval', 'parent': api, 'category': 'Control', 'params': ["0"] },
 
   {'func': 'console.log', 'category': 'Variables', 'params': ['"Message"'] },
+  {'func': 'declareAssign_str_hello_world', 'block': 'var str = "Hello World";', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'substring', 'blockPrefix': 'str.substring', 'category': 'Variables', 'params': ["6", "11"], 'modeOptionName': '*.substring' },
+  {'func': 'indexOf', 'blockPrefix': 'str.indexOf', 'category': 'Variables', 'params': ['"World"'], 'modeOptionName': '*.indexOf' },
+  {'func': 'length', 'block': 'str.length', 'category': 'Variables', 'modeOptionName': '*.length' },
+  {'func': 'toUpperCase', 'blockPrefix': 'str.toUpperCase', 'category': 'Variables', 'modeOptionName': '*.toUpperCase' },
+  {'func': 'toLowerCase', 'blockPrefix': 'str.toLowerCase', 'category': 'Variables', 'modeOptionName': '*.toLowerCase' },
+  {'func': 'declareAssign_list_abde', 'block': 'var list = ["a", "b", "d", "e"];', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'listLength', 'block': 'list.length', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'insertItem', 'category': 'Variables', 'params': ["list", "2", '"c"'], 'dontMarshal': true },
+  {'func': 'appendItem', 'category': 'Variables', 'params': ["list", '"f"'], 'dontMarshal': true },
+  {'func': 'removeItem', 'category': 'Variables', 'params': ["list", "0"], 'dontMarshal': true },
 
   {'func': 'imageUploadButton', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"text"'] },
   {'func': 'container', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"html"'] },
@@ -25804,6 +25896,28 @@ exports.penRGB = function (r, g, b, a) {
                            'g': g,
                            'b': b,
                            'a': a });
+};
+
+exports.insertItem = function (array, index, item) {
+  return Applab.executeCmd(null,
+                          'insertItem',
+                          {'array': array,
+                           'index': index,
+                           'item': item });
+};
+
+exports.appendItem = function (array, item) {
+  return Applab.executeCmd(null,
+                          'appendItem',
+                          {'array': array,
+                           'item': item });
+};
+
+exports.removeItem = function (array, index) {
+  return Applab.executeCmd(null,
+                          'removeItem',
+                          {'array': array,
+                           'index': index });
 };
 
 
