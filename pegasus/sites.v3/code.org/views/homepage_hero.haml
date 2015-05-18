@@ -13,12 +13,13 @@
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
 
-  - if request.language == "en"
-    #newsbanner{style: "position:absolute; bottom: 0px; width: 100%;  color: #696969; background-color:rgba(255,255,255,0.8); text-align:center; padding:5px"}
+  - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
+  - if newsbanner
+    #newsbanner
       .container_responsive
-        Code.org and the College Board form an alliance to improve diversity in computer science. 
-        %a{href: "http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/", target: "_blank"}
-          Learn more
+        != I18n.t(newsbanner[:text1_s])
+        %a{href: newsbanner[:param2_s], target: "_blank"}
+          = I18n.t(newsbanner[:param1_s])
 
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
