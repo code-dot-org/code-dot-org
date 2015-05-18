@@ -2050,18 +2050,6 @@ consoleApi.log = function() {
   outputApplabConsole(output);
 };
 
-var JSONApi = {};
-
-// NOTE: this version of parse does not support the reviver parameter
-
-JSONApi.parse = function(text) {
-  return JSON.parse(text);
-};
-
-JSONApi.stringify = function(object) {
-  return JSON.stringify(object);
-};
-
 function populateNonMarshalledFunctions(interpreter, scope, parent) {
   for (var i = 0; i < dropletConfig.blocks.length; i++) {
     var block = dropletConfig.blocks[i];
@@ -2131,8 +2119,7 @@ Applab.execute = function() {
         codegen.initJSInterpreter(interpreter,
                                   dropletConfig.blocks,
                                   scope,
-                                  { console: consoleApi,
-                                    JSON: JSONApi });
+                                  { console: consoleApi });
 
         populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
 

@@ -327,6 +327,15 @@ en:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Baker test of multi can delete:
+        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
+        What is 2 + 2?: What is 2 + 2?
+        2+3: 2+3
+        5-1: 5-1
+        3 - 7: 3 - 7
+        3+1: 3+1
+        3+4: 3+4
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
@@ -1008,6 +1017,15 @@ en:
         Two questions which share the same answer: Two questions which share the same answer
         A message which has two possible states: A message which has two possible states
         A question which can be answered in only one of two possible ways: A question which can be answered in only one of two possible ways
+      U1L3 Multiple Choice:
+        'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex Messages'
+        ? When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
+        : When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
+        5 bits: 5 bits
+        4 bits: 4 bits
+        3 bits: 3 bits
+        2 bits: 2 bits
+        1 bit: 1 bit
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
         If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
@@ -1076,6 +1094,20 @@ en:
         conditional: conditional
         variable: variable
         both: both
+      U3L21 Assessment 1:
+        More Variables Question 1: More Variables Question 1
+        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?
+        '''4 * 7''': '''4 * 7'''
+        56*61\3+2: 56*61\3+2
+        '''''101''''': '''''101'''''
+        fifteen: fifteen
+      U3L21 Assessment 2:
+        More Variables Question 2: More Variables Question 2
+        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?
+        Meaningful variable names make code easier to debug: Meaningful variable names make code easier to debug
+        The literary quality of variable names is an important attribute of successful programs: The literary quality of variable names is an important attribute of successful programs
+        Readable variable names makes it easier to understand the program logic: Readable variable names makes it easier to understand the program logic
+        Descriptive names makes it easier for other programmers to understand the program: Descriptive names makes it easier for other programmers to understand the program
       unique level name here:
         title: title
         description here: description here

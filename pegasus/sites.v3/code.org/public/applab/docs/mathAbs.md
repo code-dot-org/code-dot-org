@@ -114,7 +114,7 @@ A number representing the absolute value of x, or NaN if x is not a number, or 0
 [tips]
 
 ### Tips
-- This function is identical to the native JavaScript [abs Method](http://www.w3schools.com/jsref/jsref_abs.asp).
+- This function is identical to the native JavaScript [Math.abs Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs).
 
 [/tips]
 
