@@ -2,13 +2,9 @@
 // TODO (brent) - I wonder if we should sub-namespace dashboard
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
 
-// Attempt to save projects every 30 seconds
-var AUTOSAVE_INTERVAL = 30 * 1000;
-var hasProjectChanged = false;
-
-var channels = require('./client_api/channels');
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
+dashboard.project = require('./project');
 
 if (!window.dashboard) {
   throw new Error('Assume existence of window.dashboard');
@@ -102,41 +98,6 @@ $.extend(true, appOptions, baseOptions);
 })(appOptions.level);
 
 /**
- * Only execute the given argument if it is a function.
- * @param callback
- */
-function callbackSafe(callback, data) {
-  if (typeof callback === 'function') {
-    callback(data);
-  }
-}
-
-dashboard.project.updateTimestamp = function() {
-  if (dashboard.project.current.updatedAt) {
-    // TODO i18n
-    $('.project_updated_at').empty().append("Saved ")  // TODO i18n
-        .append($('<span class="timestamp">').attr('title', dashboard.project.current.updatedAt)).show();
-    $('.project_updated_at span.timestamp').timeago();
-  } else {
-    $('.project_updated_at').text("Not saved"); // TODO i18n
-  }
-};
-
-dashboard.project.appToProjectUrl = function () {
-  switch (appOptions.app) {
-    case 'applab':
-      return '/p/applab';
-    case 'turtle':
-      return '/p/artist';
-    case 'studio':
-      if (appOptions.level.useContractEditor) {
-        return '/p/algebra_game';
-      }
-      return '/p/playlab';
-  }
-};
-
-/**
  * @returns {string} The serialized level source from the editor.
  */
 dashboard.getEditorSource = function() {
@@ -145,130 +106,8 @@ dashboard.getEditorSource = function() {
     window.Applab && Applab.getCode();
 };
 
-/**
- * Saves the project to the Channels API. Calls `callback` on success if a
- * callback function was provided. If `overrideSource` is set it will save that
- * string instead of calling `dashboard.getEditorSource()`.
- */
-dashboard.project.save = function(callback, overrideSource) {
-  $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-  var channelId = dashboard.project.current.id;
-  dashboard.project.current.levelSource = overrideSource || dashboard.getEditorSource();
-  dashboard.project.current.levelHtml = window.Applab && Applab.getHtml();
-  dashboard.project.current.level = dashboard.project.appToProjectUrl();
-  if (channelId && dashboard.project.current.isOwner) {
-    channels.update(channelId, dashboard.project.current, function(callback, data) {
-      if (data) {
-        dashboard.project.current = data;
-        dashboard.project.updateTimestamp();
-        callbackSafe(callback, data);
-      }  else {
-        $('.project_updated_at').text('Error saving project');  // TODO i18n
-      }
-    }.bind(this, callback));
-  } else {
-    channels.create(dashboard.project.current, function(callback, data) {
-      if (data) {
-        dashboard.project.current = data;
-        location.href = dashboard.project.current.level + '#' + dashboard.project.current.id + '/edit';
-        dashboard.project.updateTimestamp();
-        callbackSafe(callback, data);
-      } else {
-        $('.project_updated_at').text('Error saving project');  // TODO i18n
-      }
-    }.bind(this, callback));
-  }
-};
-
-dashboard.project.delete = function(callback) {
-  var channelId = dashboard.project.current.id;
-  if (channelId) {
-    channels.delete(channelId, function(data) {
-      callbackSafe(callback, data);
-    });
-  } else {
-    callbackSafe(callback, false);
-  }
-};
-
 function initApp() {
-  if (appOptions.level.isProjectLevel || dashboard.project.current) {
-
-    $(window).on('hashchange', function () {
-      var hashData = parseHash();
-      if ((dashboard.project.current &&
-          hashData.channelId !== dashboard.project.current.id) ||
-          hashData.isEditingProject !== dashboard.project.isEditing) {
-        location.reload();
-      }
-    });
-
-    if (dashboard.project.current && dashboard.project.current.levelHtml) {
-      appOptions.level.levelHtml = dashboard.project.current.levelHtml;
-    }
-
-    if (dashboard.project.isEditing) {
-      if (dashboard.project.current) {
-        if (dashboard.project.current.levelSource) {
-          appOptions.level.lastAttempt = dashboard.project.current.levelSource;
-        }
-      } else {
-        dashboard.project.current = {
-          name: 'My Project'
-        };
-      }
-
-      $(window).on('run_button_pressed', function(event, callback) {
-        dashboard.project.save(callback);
-      });
-
-      // Autosave every AUTOSAVE_INTERVAL milliseconds
-      $(window).on('appInitialized', function () {
-        // Get the initial app code as a baseline
-        dashboard.project.current.levelSource = dashboard.getEditorSource();
-      });
-      $(window).on('workspaceChange', function () {
-        hasProjectChanged = true;
-      });
-      window.setInterval(function () {
-        // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-        if (dashboard.project.current.levelSource === undefined) {
-          return;
-        }
-        // `dashboard.getEditorSource()` is expensive for Blockly so only call if `workspaceChange` fires
-        if (appOptions.droplet || hasProjectChanged) {
-          var source = dashboard.getEditorSource();
-          if (dashboard.project.current.levelSource !== source) {
-            dashboard.project.save(function() {
-              hasProjectChanged = false;
-            }, source);
-          } else {
-            hasProjectChanged = false;
-          }
-        }
-      }, AUTOSAVE_INTERVAL);
-
-      if (!dashboard.project.current.hidden) {
-        if (dashboard.project.current.isOwner || location.hash === '') {
-          dashboard.showProjectHeader();
-        } else {
-          dashboard.showMinimalProjectHeader();
-          appOptions.readonlyWorkspace = true;
-          appOptions.callouts = [];
-        }
-      }
-    } else if (dashboard.project.current && dashboard.project.current.levelSource) {
-      appOptions.level.lastAttempt = dashboard.project.current.levelSource;
-      appOptions.hideSource = true;
-      appOptions.callouts = [];
-      dashboard.showMinimalProjectHeader();
-    }
-  } else if (appOptions.isLegacyShare && dashboard.project.appToProjectUrl()) {
-    dashboard.project.current = {
-      name: 'Untitled Project'
-    };
-    dashboard.showMinimalProjectHeader();
-  }
+  dashboard.project.init();
   window[appOptions.app + 'Main'](appOptions);
 }
 
@@ -295,73 +134,6 @@ function loadStyle(name) {
   }));
 }
 
-function parseHash() {
-  // Example paths:
-  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
-  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
-  var isEditingProject = false;
-  var channelId = location.hash.slice(1);
-  if (channelId) {
-    // TODO: Use a router.
-    var params = channelId.split("/");
-    if (params.length > 1 && params[1] == "edit") {
-      channelId = params[0];
-      isEditingProject = true;
-    }
-  }
-  return {
-    channelId: channelId,
-    isEditingProject: isEditingProject
-  };
-}
-
-function loadProject(promise) {
-  if (appOptions.level.isProjectLevel) {
-    var hashData = parseHash();
-    if (hashData.channelId) {
-      if (hashData.isEditingProject) {
-        dashboard.project.isEditing = true;
-      } else {
-        $('#betainfo').hide();
-      }
-
-      // Load the project ID, if one exists
-      promise = promise.then(function () {
-        var deferred = new $.Deferred();
-        channels.fetch(hashData.channelId, function (data) {
-          if (data) {
-            dashboard.project.current = data;
-            deferred.resolve();
-          } else {
-            // Project not found, redirect to the new project experience.
-            location.href = location.pathname;
-          }
-        });
-        return deferred;
-      });
-    } else {
-      dashboard.project.isEditing = true;
-    }
-  } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
-    // this is an embedded project
-    dashboard.project.isEditing = true;
-    promise = promise.then(function () {
-      var deferred = new $.Deferred();
-      channels.fetch(appOptions.channel, function(data) {
-        if (data) {
-          dashboard.project.current = data;
-          deferred.resolve();
-        } else {
-          deferred.reject();
-        }
-      });
-      return deferred;
-    });
-    dashboard.showProjectLevelHeader();
-  }
-  return promise;
-}
-
 loadStyle('common');
 loadStyle(appOptions.app);
 var promise;
@@ -375,11 +147,11 @@ if (appOptions.droplet) {
       .then(loadSource('ace/ext-language_tools'))
       .then(loadSource('droplet/droplet-full'))
       .then(loadSource('tooltipster/jquery.tooltipster'));
-  promise = loadProject(promise);
+  promise = dashboard.project.load(promise);
 } else {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
-  promise = loadProject(promise);
+  promise = dashboard.project.load(promise);
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
