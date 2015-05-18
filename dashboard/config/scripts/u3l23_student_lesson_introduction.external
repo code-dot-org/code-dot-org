@@ -1,0 +1,24 @@
+name 'U3L23 Student Lesson Introduction'
+title 'Natural Language Processing'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 23 - Natural Language Processing
+
+# Background
+
+Natural Language Processing (NLP) is a field of computer science which refers to algorithms that process unstructured text -- both written and spoken. It is technology that allows programs, called chatbots, such as Siri to recognize your voice and respond “intelligently”. Some look for keywords and respond with pre-fabricated sentences. More sophisticated chatbots analyze the parts of speech and the meaning of words.
+
+# Lesson
+
+* Interact with a variety of chatbots.
+* Speculate on elements in the algorithms for chatbots. 
+* Analyze the purpose, features, and interface of a chatbot. 
+
+
+
+# Resources
+* Activity: <a href=" https://docs.google.com/document/d/13dG_S8Qi8sMoWUbCdpNa8CtrzLGoWlk-BbrAPRnwEYk" target="_blank">Chatbot Analysis 
+</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

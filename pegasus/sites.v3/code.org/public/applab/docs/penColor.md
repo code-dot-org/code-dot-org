@@ -24,9 +24,8 @@ Sets the color of the trail drawn behind the turtle as it moves.
 [/short_description]
 
 **Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.  
-**Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [HTML colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
-**Note**: You can also use any of the valid CSS color naming conventions, especially, rgba(...) which allows you set a color with some amount of transparency. Reference [CSS colors](http://www.w3schools.com/cssref/css_colors_legal.asp)
-
+**Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords) for a complete list of all available colors.
+**Note**: You can also use any of the valid CSS color naming conventions, especially, rgba(...) which allows you set a color with some amount of transparency. Reference [CSS colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
 [/description]
 
@@ -142,7 +141,7 @@ No return value. Outputs to the display only.
 
 ### Tips
 - If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.
-- The color value being passed can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
+- The color value being passed can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) for a complete list of all available colors.
 
 [/tips]
 

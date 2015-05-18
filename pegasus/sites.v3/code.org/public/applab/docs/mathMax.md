@@ -100,7 +100,7 @@ A number representing the highest of the values given as parameters, or -Infinit
 [tips]
 
 ### Tips
-- This function is identical to the native JavaScript [max Method](http://www.w3schools.com/jsref/jsref_max.asp).
+- This function is identical to the native JavaScript [Math.max Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max).
 
 [/tips]
 
