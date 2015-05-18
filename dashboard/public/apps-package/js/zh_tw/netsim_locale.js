@@ -176,6 +176,7 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "connectToAPeer":function(d){return "Connect to a Peer"},
 "connectToARouter":function(d){return "Connect to a Router"},
 "decimal":function(d){return "十進位"},
+"defaultNodeName":function(d){return "[New Node]"},
 "disconnected":function(d){return "已中斷連線"},
 "dns":function(d){return "DNS (網域名稱系統)"},
 "dnsMode":function(d){return "DNS 模式"},
