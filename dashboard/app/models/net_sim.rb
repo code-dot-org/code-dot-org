@@ -7,6 +7,7 @@ class NetSim < Blockly
     show_add_router_button
     message_granularity
     automatic_receive
+    broadcast_mode
     router_expects_packet_header
     client_initial_packet_header
     show_hostname_in_graph
