@@ -1,10 +1,8 @@
-// TODO (brent) - this file will go away eventually
-
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow');
 
-var DefaultProperties = React.createClass({
+var TextProperties = React.createClass({
   render: function () {
     var element = this.props.element;
     var id = element.id;
@@ -19,8 +17,6 @@ var DefaultProperties = React.createClass({
     var left = parseInt(element.style.left, 10) || 0;
     var top = parseInt(element.style.top, 10) || 0;
 
-    // TODO - can we do better than depend on HTML elements having unique ids?
-
     return (
       <table>
         <tr>
@@ -32,13 +28,9 @@ var DefaultProperties = React.createClass({
           initialValue={id}
           handleChange={this.props.handleChange.bind(this, 'id')} />
         <PropertyRow
-          desc={'x position (px)'}
-          initialValue={left}
-          handleChange={this.props.handleChange.bind(this, 'left')} />
-        <PropertyRow
-          desc={'y position (px)'}
-          initialValue={top}
-          handleChange={this.props.handleChange.bind(this, 'top')} />
+          desc={'text'}
+          initialValue={text}
+          handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
           initialValue={width}
@@ -48,13 +40,28 @@ var DefaultProperties = React.createClass({
           initialValue={height}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
-          desc={'text'}
-          initialValue={text}
-          handleChange={this.props.handleChange.bind(this, 'text')} />
+          desc={'x position (px)'}
+          initialValue={left}
+          handleChange={this.props.handleChange.bind(this, 'left')} />
+        <PropertyRow
+          desc={'y position (px)'}
+          initialValue={top}
+          handleChange={this.props.handleChange.bind(this, 'top')} />
       </table>);
+
+    // TODO:
+    // link
+    // textColor
+    // backgroundColor
+    // fontSize
+    // bold/italics/underline (p2)
+    // textAlignment (p2)
+    // enabled (p2)
+    // hidden
+    // send back/forward
   }
 });
 
 module.exports = {
-  DefaultProperties: DefaultProperties
+  PropertyTable: TextProperties
 };
