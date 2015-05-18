@@ -6104,19 +6104,7 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      if (Blockly.contractEditor) {
-        Blockly.contractEditor.autoOpenWithLevelConfiguration({
-          autoOpenFunction: config.level.openFunctionDefinition,
-          contractCollapse: config.level.contractCollapse,
-          contractHighlight: config.level.contractHighlight,
-          examplesCollapse: config.level.examplesCollapse,
-          examplesHighlight: config.level.examplesHighlight,
-          definitionCollapse: config.level.definitionCollapse,
-          definitionHighlight: config.level.definitionHighlight
-        });
-      } else {
-        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
-      }
+      this.openFunctionDefinition_(config);
     }
   }
 
@@ -6131,6 +6119,9 @@ StudioApp.prototype.init = function(config) {
           }
           Blockly.mainBlockSpace.clear();
           this.setStartBlocks_(config, false);
+          if (config.level.openFunctionDefinition) {
+            this.openFunctionDefinition_(config);
+          }
         } else {
           var resetValue = '';
           if (config.level.startBlocks) {
@@ -7116,6 +7107,25 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     } else {
       throw e;
     }
+  }
+};
+
+/**
+ * Show the configured starting function definition.
+ */
+StudioApp.prototype.openFunctionDefinition_ = function(config) {
+  if (Blockly.contractEditor) {
+    Blockly.contractEditor.autoOpenWithLevelConfiguration({
+      autoOpenFunction: config.level.openFunctionDefinition,
+      contractCollapse: config.level.contractCollapse,
+      contractHighlight: config.level.contractHighlight,
+      examplesCollapse: config.level.examplesCollapse,
+      examplesHighlight: config.level.examplesHighlight,
+      definitionCollapse: config.level.definitionCollapse,
+      definitionHighlight: config.level.definitionHighlight
+    });
+  } else {
+    Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
   }
 };
 
