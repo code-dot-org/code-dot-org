@@ -32,14 +32,12 @@
         - data['answers'].each_with_index do |answer, i|
           - correct = answer['correct']
           %span.answerbutton.btn{style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
-            -#.item-radio{id: "radio_#{i}"}
-              %input{id: "choice_#{i}", name: 'vote', type: 'radio', value: "#{i}", correct: "#{correct}"}
-            .item-cross{id: "unchecked_#{i}"}
-              %strong O
-            .item-cross{id: "checked_#{i}", style: 'display: none;'}
-              %strong Y
-            .item-cross{id: "cross_#{i}", style: 'display: none;'}
-              %strong X
+            .item-mark{id: "unchecked_#{i}"}
+              .fa.fa-circle-o
+            .item-mark{id: "checked_#{i}", style: 'display: none;'}
+              .fa.fa-dot-circle-o
+            .item-mark{id: "cross_#{i}", style: 'display: none;'}
+              .fa.fa-times-circle-o
             .item-label
               %label{style: "height: #{height}"}!= multi_t(answer['text'])
 
@@ -57,43 +55,106 @@
 
 = render partial: 'levels/common_audio'
 
+
 :javascript
 
-  var selection = "none";   // "none", "wrong", "right"
-  var selectionIndex = #{ @last_attempt || -1};
+  // The index of the last selection.
+  var lastSelectionIndex = -1;
+
+  // A string of the last result.  Looks like "1" or "2,3".
+  var previousResult = #{ @last_attempt.to_json || -1}.split(',');
+
+  // How many answers should there be?
+  var numAnswers = "#{data['type']}" == 'matchtwo' ? 2 : 1;
+
+  // A boolean array of the answers.  true is correct.
+  var answers = #{data['answers'].map {|answer| answer['correct']}};
+
+  // Tracking which answers are currently selected.
+  var selectedAnswers = [];
+
+  // Tracking which answers have been crossed out.
+  var crossedAnswers = [];
 
   function enableButton(enable)
   {
     $('.submitButton').attr('disabled', !enable);
   }
 
-
   function choiceClicked(button)
   {
     var index = $(button).attr('index');
-    var correctChoice = $(button).attr('correct') === 'true';
     CDOSounds.play('click');
 
-    enableButton(true);
-    selection = correctChoice ? "right" : "wrong";
-    selectionIndex = index;
+    clickItem(index);
+  }
 
-    // hide unchecked
+  function clickItem(index)
+  {
+    // If this button is already crossed, do nothing more.
+    if (crossedAnswers.indexOf(index) !== -1)
+    {
+      return;
+    }
+
+    // If single answer, and this button is already selected, do nothing more.
+    if (numAnswers == 1 && $.inArray(index, selectedAnswers) !== -1)
+    {
+      return;
+    }
+
+    // If multiple answer, and this button is already selected, deselect it.
+    if (numAnswers > 1 && $.inArray(index, selectedAnswers) !== -1)
+    {
+      unclickItem(index);
+      return;
+    }
+
+    enableButton(true);
+
+    lastSelectionIndex = index;
+
+    // Unchecked->checked.
     $("#unchecked_" + index).hide();
     $("#checked_" + index).show();
+
+    // Add this answer to the list of selected answers.
+    selectedAnswers.unshift(index);
+
+    // Unselect previously selected answer if there are now too many selected.
+    if (selectedAnswers.length > numAnswers)
+    {
+      var unselectIndex = selectedAnswers.pop();
+
+      // Although don't uncheck it if it's already crossed out.
+      if (crossedAnswers.indexOf(unselectIndex) === -1 )
+      {
+        $("#unchecked_" + unselectIndex).show();
+        $("#checked_" + unselectIndex).hide();
+      }
+    }
 
     return true;
   }
 
+  function unclickItem(index)
+  {
+    var selectedItemIndex = selectedAnswers.indexOf(index);
+    selectedAnswers.splice(selectedItemIndex, 1);
+
+    // Checked->unchecked.
+    $("#unchecked_" + index).show();
+    $("#checked_" + index).hide();
+  }
+
   $(function()
   {
-
     $('span.answerbutton').click(function() {
       choiceClicked(this);
     });
 
     $('#voteform img').on('dragstart', function(e) {
-      // Prevent button images from being dragged, check button instead
+      // Prevent button images from being dragged, click the button instead.
       var button = $(this).parent().parent().parent();
       choiceClicked(button);
       e.preventDefault();
@@ -102,26 +163,67 @@
 
     enableButton(false);
 
-    // Pre-select previously submitted response if available
-    if (selectionIndex != -1) {
-      var radioButton = $('#choice_' + selectionIndex);
-      radioButton.prop('checked', true);
-      var correctChoice = $(radioButton).attr('correct') === 'true';
-      selection = correctChoice ? "right" : "wrong";
-      enableButton(true);
+    // Pre-select previously submitted response if available.
+    if (previousResult.length >= 1)
+    {
+      for (var i = 0; i < previousResult.length; i++)
+      {
+        clickItem(previousResult[i]);
+      }
     }
   });
 
-  function getResult() {
+  function getResult() 
+  {
+    var answer;
+    var errorType = null;
+
+    if (selectedAnswers.length !== numAnswers)
+    {
+      errorType = "toofew";
+    }
+
+    if (numAnswers == 1)
+    {
+      answer = lastSelectionIndex;
+    }
+    else
+    {
+      answer = selectedAnswers
+    }
+
     return {
-      "response": selectionIndex,
-      "result": (selection == "right")
+      "response": answer,
+      "result": validateAnswers(),
+      "errorType": errorType
     }
   }
 
   $('.submitButton').click(function() {
-    if (selection == "wrong") {
-      $("#radio_" + selectionIndex).hide();
-      $("#cross_" + selectionIndex).show();
+    // If the solution only takes one answer, and it's wrong, and it's not 
+    // already crossed out, then mark it as answered wrong.
+    if (numAnswers == 1 && 
+        crossedAnswers.indexOf(lastSelectionIndex) == -1 && 
+        ! validateAnswers())
+    {
+      $("#checked_" + lastSelectionIndex).hide();
+      $("#cross_" + lastSelectionIndex).show();
+      crossedAnswers.unshift(lastSelectionIndex);
     }
   });
+
+  function validateAnswers()
+  {
+    if (selectedAnswers.length == numAnswers)
+    {
+      for (var i = 0; i < numAnswers; i++)
+      {
+        if (! answers[selectedAnswers[i]])
+        {
+          return false
+        }
+      }
+      return true;
+    }
+  }
+

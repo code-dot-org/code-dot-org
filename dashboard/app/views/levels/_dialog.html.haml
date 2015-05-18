@@ -17,6 +17,16 @@
         %button#ok-button.secondary
           =t('dialog.ok')
 
+  #toofew-dialogcontent
+    .modal-content
+      %p.dialog-title
+        =t("multi.toofew_title")
+      %p
+        =t("multi.toofew_body")
+      .farSide
+        %button#ok-button.secondary
+          =t('dialog.ok')
+
   #pre-dialogcontent
     - if data['pre_image']
       .modal-image{style: 'margin-top: 0px;'}
