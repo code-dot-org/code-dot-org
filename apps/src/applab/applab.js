@@ -36,7 +36,7 @@ var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
 var DesignProperties = require('./designProperties');
-var elementLibrary = require('./elements/library');
+var elementLibrary = require('./designElements/library');
 
 var vsprintf = require('./sprintf').vsprintf;
 
