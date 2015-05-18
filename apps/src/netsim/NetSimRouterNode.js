@@ -608,6 +608,12 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    return i18n.roomX({
+      x: this.entityID
+    });
+  }
+
   return i18n.routerX({
     x: this.entityID
   });
@@ -632,6 +638,8 @@ NetSimRouterNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getStatus = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   // Determine status based on cached wire data
   var cachedWireRows = this.shard_.wireTable.readAllCached();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
@@ -639,6 +647,12 @@ NetSimRouterNode.prototype.getStatus = function () {
   }, this);
 
   if (incomingWireRows.length === 0) {
+    if (levelConfig.broadcastMode) {
+      return i18n.roomStatusNoConnections({
+        maximumClients: MAX_CLIENT_CONNECTIONS
+      });
+    }
+
     return i18n.routerStatusNoConnections({
       maximumClients: MAX_CLIENT_CONNECTIONS
     });
@@ -656,8 +670,21 @@ NetSimRouterNode.prototype.getStatus = function () {
   }).join(', ');
 
   if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+    if (levelConfig.broadcastMode) {
+      return i18n.roomStatusFull({
+        connectedClients: connectedNodeNames
+      });
+    }
+
     return i18n.routerStatusFull({
       connectedClients: connectedNodeNames
+    });
+  }
+
+  if (levelConfig.broadcastMode) {
+    return i18n.roomStatus({
+      connectedClients: connectedNodeNames,
+      remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
     });
   }
 
