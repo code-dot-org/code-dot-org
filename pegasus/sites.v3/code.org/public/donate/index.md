@@ -10,7 +10,6 @@ require_https: true
 <br/>
 [<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)
 
-
 ## For every dollar you give, one child will learn computer science
 
 We use donations to work towards these main objectives:
