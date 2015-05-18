@@ -65,7 +65,7 @@
   var previousResult = #{ @last_attempt.to_json || -1}.split(',');
 
   // How many answers should there be?
-  var numAnswers = "#{data['type']}" == 'matchtwo' ? 2 : 1;
+  var numAnswers = "#{data['type']}" == 'multi2' ? 2 : 1;
 
   // A boolean array of the answers.  true is correct.
   var answers = #{data['answers'].map {|answer| answer['correct']}};
