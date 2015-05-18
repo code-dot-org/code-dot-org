@@ -1,6 +1,6 @@
 var React = require('react');
 
-var PropertyRow = require('./PropertyRow');
+var PropertyRow = require('./PropertyRow.jsx');
 
 var TextProperties = React.createClass({
   propTypes: {
