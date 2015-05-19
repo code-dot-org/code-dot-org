@@ -5,10 +5,15 @@ var assertThrows = testUtils.assertThrows;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 var Packet = require('@cdo/apps/netsim/Packet');
 
 describe("Packet.Encoder", function () {
+
+  beforeEach(function () {
+    netsimTestUtils.initializeGlobalsToDefaultValues();
+  });
 
   describe("address format bit widths", function () {
     var calculateBitWidth = Packet.Encoder.prototype.calculateBitWidth;
@@ -130,8 +135,6 @@ describe("Packet.Encoder", function () {
     });
   });
 
-
-
   describe("constructing binary from data", function () {
     var shortFormat;
 
@@ -198,6 +201,50 @@ describe("Packet.Encoder", function () {
     });
   });
 
+  describe("constructing binary from data with multi-tier address", function () {
+    var encoder;
+
+    beforeEach(function () {
+      encoder = new Packet.Encoder('4.4', 0, ['toAddress', 'fromAddress']);
+    });
+
+    it ("concatenates binary for keys in correct order", function () {
+      var binary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: '6.1',
+            fromAddress: '6.2'
+          }),
+          '0010');
+
+      //              6   1       6   2        2
+      assertEqual('01100001'+ '01100010' + '0010', binary);
+    });
+
+    it ("fills remaining components with zeroes if too few are provided", function () {
+      var binary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: '6',
+            fromAddress: '6.'
+          }),
+          '0010');
+
+      //              6   0       6   0        2
+      assertEqual('01100000'+ '01100000' + '0010', binary);
+    });
+
+    it ("ignores extra components, using leftmost components first", function () {
+      var binary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: '3.4.5',
+            fromAddress: '6.a.7.8'
+          }),
+          '0010');
+
+      //              3   4       6   7        2
+      assertEqual('00110100'+ '01100111' + '0010', binary);
+    });
+  });
+
   describe("retrieving fields from binary", function () {
     it ("deconstructs binary using a provided format", function () {
       var packet = '00000001 00000010';
@@ -255,6 +302,62 @@ describe("Packet.Encoder", function () {
 
       assertEqual('11110000', format.getHeader('toAddress', packet));
       assertEqual('', format.getBody(packet));
+    });
+  });
+
+  describe("retrieving multi-tier address from binary", function () {
+    it ("deconstructs binary using a provided format", function () {
+      var packet = '01000001 01000010';
+
+      var format = new Packet.Encoder('4.4', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('01000001', format.getHeader('toAddress', packet));
+      assertEqual('01000010', format.getHeader('fromAddress', packet));
+
+      var otherFormat = new Packet.Encoder('2.5', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('0100000', otherFormat.getHeader('toAddress', packet));
+      assertEqual('1010000', otherFormat.getHeader('fromAddress', packet));
+    });
+
+    it ("returns zeroes when getting a key that is beyond the binary length", function () {
+      var packet = '11111111';
+
+      var format = new Packet.Encoder('4.4', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('00000000', format.getHeader('fromAddress', packet));
+    });
+
+    it ("right-pads with zeroes when getting a key that overlaps the binary end", function () {
+      var packet = '11111100 11';
+
+      var format = new Packet.Encoder('4.4', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('11000000', format.getHeader('fromAddress', packet));
+    });
+
+    it ("converts back to a string in original format", function () {
+      var packet = '01000001 01000010 10101';
+      var format = new Packet.Encoder('4.4', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('4.1', format.getHeaderAsAddressString('toAddress', packet));
+      assertEqual('4.2', format.getHeaderAsAddressString('fromAddress', packet));
+    });
+
+    it ("handles nonuniform parts", function () {
+      var packet = '01000001 01000010 10101';
+      var format = new Packet.Encoder('4.3.1', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('4.0.1', format.getHeaderAsAddressString('toAddress', packet));
+      assertEqual('4.1.0', format.getHeaderAsAddressString('fromAddress', packet));
+    });
+
+    it ("Allows non-dot separator", function () {
+      var packet = '010011 111000 10101';
+      var format = new Packet.Encoder('2-3 1', 0, ['toAddress', 'fromAddress']);
+
+      assertEqual('1-1 1', format.getHeaderAsAddressString('toAddress', packet));
+      assertEqual('3-4 0', format.getHeaderAsAddressString('fromAddress', packet));
     });
   });
 
