@@ -1,0 +1,12 @@
+name 'U3L23 Free Response Wrap Up'
+title 'Natural Language Processing'
+
+markdown <<MARKDOWN
+Identify a global problem that a NLP (Natural Language Processing) application could be used to help solve. 
+
+* Describe the problem.
+* Explain how you think a NLP app could contribute to a solution.
+* Describe how the app would interact with the user. 
+* What would you name the app? 
+
+MARKDOWN
