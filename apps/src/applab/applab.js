@@ -1330,8 +1330,24 @@ Applab.onPropertyChange = function(element, name, value) {
     case 'text':
       $(element).text(value);
       break;
+    case 'textColor':
+      element.style.color = value;
+      break;
+    case 'backgroundColor':
+      element.style.backgroundColor = value;
+      break;
+    case 'fontSize':
+      element.style.fontSize = value + 'px';
+      break;
+    case 'image':
+      element.style.backgroundImage = 'url(' + value + ')';
+      break;
+    case 'hidden':
+      $(element).toggleClass('design-mode-hidden', value === true);
+      break;
     default:
-      throw "unknown property name " + name;
+      console.warn("unknown property name " + name);
+      break;
   }
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
@@ -1351,7 +1367,8 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
-  $(clone).find('*').removeAttr('class');
+  // TODO (brent) - can i remove class with a wild card?
+  $(clone).find('*').removeClass('ui-draggable').removeClass('ui-draggable-handle');
   return s.serializeToString(clone);
 };
 
@@ -1912,6 +1929,8 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   Applab.toggleDragging(enable);
 };
