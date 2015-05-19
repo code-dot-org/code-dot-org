@@ -1086,10 +1086,18 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;
+  this.createModalDialog(options, imageDiv);
+};
 
+/**
+ *
+ */
+FeedbackUtils.prototype.createModalDialog = function(options, icon) {
   var modalBody = document.createElement('div');
-  modalBody.appendChild(imageDiv);
-  options.contentDiv.className += ' modal-content';
+  if (icon) {
+    modalBody.appendChild(icon);
+    options.contentDiv.className += ' modal-content';
+  }
   modalBody.appendChild(options.contentDiv);
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);

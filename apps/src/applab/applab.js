@@ -1888,11 +1888,12 @@ Applab.onDesignModeClear = function() {
 Applab.onDesignModeManageAssets = function() {
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./manageAssets.html.ejs')();
-  var dialog = studioApp.createModalDialogWithIcon({
+  var dialog = studioApp.createModalDialog({
     Dialog: Dialog,
     contentDiv: codeDiv,
     icon: studioApp.icon,
-    defaultBtnSelector: 'again-button'
+    defaultBtnSelector: 'again-button',
+    id: 'manageAssetsModal'
   });
 
   dialog.show();
