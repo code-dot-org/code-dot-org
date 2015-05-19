@@ -582,12 +582,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    multi:
-      ECSPD2 question:
-        Question: Question
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
