@@ -586,6 +586,11 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
  *                  O        O        O   O      O   O
  */
 NetSimVisualization.prototype.distributeForegroundNodes = function () {
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    this.distributeForegroundNodesForBroadcast_();
+    return;
+  }
+
   /** @type {Array.<NetSimVizNode>} */
   var foregroundNodes = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizNode && entity.isForeground;
@@ -629,6 +634,77 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
 
   myNode.tweenToPosition(-100, 0, 400, tweens.easeOutQuad);
   routerNode.tweenToPosition(0, 0, 500, tweens.easeOutQuad);
+  var radiansBetweenNodes = 2*Math.PI / (otherNodes.length + 1); // Include myNode!
+  for (var i = 0; i < otherNodes.length; i++) {
+    // sin(rad) = o/h
+    var h = 100;
+    // Extra Math.PI here puts 0deg on the left.
+    var rad = Math.PI + (i+1) * radiansBetweenNodes;
+    var x = Math.cos(rad) * h;
+    var y = Math.sin(rad) * h;
+    otherNodes[i].tweenToPosition(x, y, 600, tweens.easeOutQuad);
+  }
+};
+
+/**
+ * Explicitly control VizNodes in the foreground, moving them into a desired
+ * configuration based on their number and types.  Nodes are given animation
+ * commands (via tweenToPosition) so that they interpolate nicely to their target
+ * positions.
+ *
+ * Configurations:
+ * One node (local node): Centered on the screen.
+ *   |  L  |
+ *
+ * Two nodes: Local node on left, remote node on right, nothing in the middle.
+ *   | L-R |
+ *
+ * Three or more nodes: Distributed around center of frame
+ * 3:    O    4:  O      5: O  O    6:O   O
+ *   L          L   O      L          L   O
+ *       O        O         O  O      O   O
+ */
+NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function () {
+  /** @type {Array.<NetSimVizNode>} */
+  var foregroundNodes = this.elements_.filter(function (entity) {
+    return entity instanceof NetSimVizNode &&
+        entity.isForeground &&
+        !entity.isRouter;
+  });
+
+  // Sometimes, there's no work to do.
+  if (foregroundNodes.length === 0) {
+    return;
+  }
+
+  // One node: Centered on screen
+  if (foregroundNodes.length === 1) {
+    foregroundNodes[0].tweenToPosition(0, 0, 600, tweens.easeOutQuad);
+    return;
+  }
+
+  var myNode;
+
+  // Two nodes: Placed across from each other, local node on left
+  if (foregroundNodes.length === 2) {
+    myNode = this.localNode;
+    var otherNode = _.find(foregroundNodes, function (node) {
+      return node !== myNode;
+    });
+    myNode.tweenToPosition(-75, 0, 400, tweens.easeOutQuad);
+    otherNode.tweenToPosition(75, 0, 600, tweens.easeOutQuad);
+    return;
+  }
+
+  // Three or more nodes:
+  // * Local node on left
+  // * Other nodes evenly distributed in a circle
+  myNode = this.localNode;
+  var otherNodes = foregroundNodes.filter(function (node) {
+    return node !== myNode;
+  });
+
+  myNode.tweenToPosition(-100, 0, 400, tweens.easeOutQuad);
   var radiansBetweenNodes = 2*Math.PI / (otherNodes.length + 1); // Include myNode!
   for (var i = 0; i < otherNodes.length; i++) {
     // sin(rad) = o/h
