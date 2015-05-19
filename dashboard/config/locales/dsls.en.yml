@@ -391,6 +391,42 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U2L1 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L11 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L2 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L4 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L6 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L7 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L8 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L9 Student Lesson Introduction:
+        description here: description here
+        title: title
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -454,6 +490,8 @@ en:
         Permanent Data Storage: Permanent Data Storage
       U3L23 Student Lesson Introduction:
         Natural Language Processing: Natural Language Processing
+      U3L24 Student Lesson Introduction:
+        Chained Conditionals: Chained Conditionals
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -768,7 +806,7 @@ en:
         Enter your reflection here.: Enter your reflection here.
         Reflect on this lesson: Reflect on this lesson
       U1L4 Free response reflection question:
-        'Assessment: Coordination on the Internet': 'Assessment: Coordination on the Internet'
+        'Assessment: Coordination and Binary Messages': 'Assessment: Coordination and Binary Messages'
         Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your reflection here.: Enter your reflection here.
       U1L5 Free Response Assessment:
@@ -794,6 +832,16 @@ en:
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
       U1L9 Free Response Assessment:
         'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+      U3L03 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L04 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L05 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L06 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L07 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '
@@ -817,6 +865,8 @@ en:
         Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
       U3L18 Free Response Wrap Up:
         Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
+      U3L2 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
       U3L20 Free Response Getting Started:
         'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
       U3L20 Free Response Wrap Up:
@@ -829,6 +879,12 @@ en:
         'Permanent Data Storage: Getting Started': 'Permanent Data Storage: Getting Started'
       U3L22 Reflection:
         The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
+      U3L23 Free Response Getting Started:
+        NLP Getting Started: NLP Getting Started
+      U3L23 Free Response Wrap Up:
+        Natural Language Processing: Natural Language Processing
+      U3L24 Assessment 3:
+        Question 3: Question 3
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7
