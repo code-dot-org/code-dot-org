@@ -1,7 +1,7 @@
 Blockly.Msg.ACTUAL = "opkald";
 Blockly.Msg.ADD = "Tilføj";
 Blockly.Msg.ADD_COMMENT = "Tilføj kommentar";
-Blockly.Msg.ADD_PARAMETER = "Tilføj Parameter";
+Blockly.Msg.ADD_PARAMETER = "Tilføj parameter";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Ændre værdien:";
 Blockly.Msg.COLLAPSE_ALL = "Fold blokke sammen";
 Blockly.Msg.COLLAPSE_BLOCK = "Klap blok sammen";
@@ -331,7 +331,7 @@ Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "tilmeld";
 Blockly.Msg.TEXT_CREATE_JOIN_TOOLTIP = "Tilføj, fjern eller omarranger sektioner for at omkonfigurere denne tekstblok.";
 Blockly.Msg.TEXT_GET_SUBSTRING_END_FROM_END = "til bogstav # fra slutningen";
 Blockly.Msg.TEXT_GET_SUBSTRING_END_FROM_START = "gå til bogstav #";
-Blockly.Msg.TEXT_GET_SUBSTRING_END_LAST = "gp til sidste bogstav";
+Blockly.Msg.TEXT_GET_SUBSTRING_END_LAST = "gå til sidste bogstav";
 Blockly.Msg.TEXT_GET_SUBSTRING_HELPURL = "http://code.google.com/p/blockly/wiki/Text#Extracting_a_region_of_text";
 Blockly.Msg.TEXT_GET_SUBSTRING_INPUT_IN_TEXT = "i tekst";
 Blockly.Msg.TEXT_GET_SUBSTRING_START_FIRST = "hent delstreng fra første bogstav";
