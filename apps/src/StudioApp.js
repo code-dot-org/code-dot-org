@@ -328,6 +328,11 @@ StudioApp.prototype.init = function(config) {
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
     promptIcon.src = this.smallIcon;
+
+    var bubble = document.getElementById('bubble');
+    dom.addClickTouchEvent(bubble, _.bind(function() {
+      this.showInstructions_(config.level, false);
+    }, this));
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -339,11 +344,6 @@ StudioApp.prototype.init = function(config) {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'none';
   }
-
-  var bubble = document.getElementById('bubble');
-  dom.addClickTouchEvent(bubble, _.bind(function() {
-    this.showInstructions_(config.level, false);
-  }, this));
 
   if (this.editCode) {
     this.handleEditCode_({
