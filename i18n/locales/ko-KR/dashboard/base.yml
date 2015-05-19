@@ -231,6 +231,7 @@ ko:
       signup: 가입 신청하기
       already_registered: 이미 등록하였나요?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: 내 진도
       lines: '총 %{lines} 라인'
       close: CLOSE
@@ -298,6 +299,10 @@ ko:
     cant_remove_student_no_email: '%{student_name} 학생은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다.'
     cant_remove_teacher_no_email: '%{teacher_name} 선생님은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다.'
     student_teacher_disassociated: '%{teacher_name} 선생님은 %{student_name} 학생의 선생님에서 삭제되었습니다.'
+    panel:
+      answer_viewer: Answer Viewer
+      student: student
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'

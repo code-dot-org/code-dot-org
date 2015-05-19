@@ -230,6 +230,7 @@ tr:
       signup: Kaydol
       already_registered: Zaten hesabınız var mı?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: İlerlemeniz
       lines: 'Toplam kod satırı: %{lines}'
       close: kapat
@@ -297,6 +298,10 @@ tr:
     cant_remove_student_no_email: 'Öğrenciniz olan %{student_name} çıkarılamaz çünkü %{student_name} için kayıtlı bir e-posta adresi yok'
     cant_remove_teacher_no_email: 'Öğretmeniniz olan %{teacher_name} çıkarılamaz çünkü kayıtlı bir e-posta adresiniz yok'
     student_teacher_disassociated: "% {teacher_name},  % {student_name} 'in öğretmeni olmaktan kaldırıldı"
+    panel:
+      answer_viewer: Answer Viewer
+      student: öğrenci
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'

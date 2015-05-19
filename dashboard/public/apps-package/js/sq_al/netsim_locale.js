@@ -176,6 +176,7 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "connectToAPeer":function(d){return "Connect to a Peer"},
 "connectToARouter":function(d){return "Connect to a Router"},
 "decimal":function(d){return "Dhjetor"},
+"defaultNodeName":function(d){return "[New Node]"},
 "disconnected":function(d){return "Jo i lidhur"},
 "dns":function(d){return "DNS"},
 "dnsMode":function(d){return "Mënyra DNS"},

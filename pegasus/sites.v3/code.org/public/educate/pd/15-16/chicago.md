@@ -163,14 +163,14 @@ You will only need to attend one of the following options.
 <br />
 Wednesday, July 8, 2015 - Friday, July 10, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 <br />
 **Option 2:**
 <br />
 Monday, August 3, 2015 - Tuesday, August 4, 2015
 <br />
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 <br />
 Breakfast and lunch will be served. 
@@ -237,14 +237,14 @@ You will only need to attend one of the following options.
 <br />
 Wednesday, July 8, 2015 - Friday, July 10, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 <br />
 **Option 2:**
 <br />
 Wednesday, August 5, 2015 - Friday, August 7, 2015
 <br />
-8:00am - 4:20pm
+8:00am - 4:00pm
 
 Breakfast and lunch will be served. 
 

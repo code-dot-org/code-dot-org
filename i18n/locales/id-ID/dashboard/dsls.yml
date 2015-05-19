@@ -3,86 +3,92 @@ id:
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
         Big Triangle: Segitiga Besar
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        Big Triangle|Image|Number|String: Segitiga besar l Gambar l Angka l Kawat
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
+        Write a contract for a big red triangle that is 100 pixels in size: Menulis sebuah kontrak untuk sebuah segitiga merah yang berukuran 100 pixelz
       Creating Contracts From Examples 2:
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
         Square Contract: Kontrak persegi
-        Square|Image|Number|String: Square|Image|Number|String
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
+        Square|Image|Number|String: Kotak l Gambar l Angka l Tali
+        Write a contract for a purple square that is 15 pixels in size.: Menulis sebuah kontrak untuk sebuah kotak ungu yang memiliki ukuran 15 pixels.
       Creating Contracts From Examples 3A:
-        Banner Contract: Banner Contract
-        Banner Function block: Banner Function block
+        Banner Contract: Kontrak spanduk
+        Banner Function block: Fungsi spanduk balok
         Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: Spanduk l Gambar l Tali
       Creating Contracts From Examples 4:
         Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
         Shrink Contract: Mengecilkan kontrak
         Try using the "shrink" function.: 'Mencoba menggunakan fungsi "Mengecilkan".'
-        shrink|Image|Image: shrink|Image|Image
+        shrink|Image|Image: Mengkerut l Gambar l Gambat
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        Design Recipe 1 Contract: 1 kontrak rumus desain
+        0: '? Menulis sebuah kontrak untuk fungsi disebut "wide-rect" yang dapat menciptakan sebuah persegi panjang dengan tinggi dan warna yang dua kali lebih lebar dan tinggi.'
+        1: ': Menulis kontrak pada sebuah fungsi disebut "wide-rect" yang dapat menciptakan sebuah persegi panjang yang dapat di berikan tinggi dan warna dua kali lebih luas dan tinggi.'
+        wide-rect|Image|Number|String: Lebar-rect l Gambar l Angka l Tali
       Enter name here:
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
+        Contract Name|Number|Number|String: Nama Kontrak l Angka l Angka l Tali
         Enter prompt here: Masukkan perintah di sini
         Enter title here: Masukkan judul di sini
       Eval Contracts 1 B:
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         Star Contract: Bintang kontrak
         Write a contract for the star function: Tulis kontrak untuk fungsi bintang
-        star|Image|String|Number|String: star|Image|String|Number|String
+        star|Image|String|Number|String: Bintang l Gambar l Tali l Angka l Tali
       Eval Contracts 2 B:
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
         Rotate Contract: Memutar kontrak
         Write a contract for the rotate function: Menulis kontrak untuk fungsi memutar
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: Berputar l Gambar l Angka l Gambar
       Eval Contracts 3 B:
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         Text Contract: Teks kontrak
         Write a contract for the text function: Menulis kontrak untuk fungsi teks
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: Tulisan l Gambat l Tali l Angka l Tali
       Eval Contracts 4 B:
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
         Scale Contract: Skala kontrak
         Write a contract for the scale function: Menulis kontrak untuk fungsi skala
-        scale|Image|Number|Image: scale|Image|Number|Image
+        scale|Image|Number|Image: Skala l Gambar l Angka l Gambar
       Eval Contracts B:
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         Star Contract: Bintang kontrak
         Write a contract for the star function: Tulis kontrak untuk fungsi bintang
-        star|Image|Number|String|String: star|Image|Number|String|String
+        star|Image|Number|String|String: Bintang l Gambar l Angka l Tali l Tali
       Eval Contracts D:
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
         Rotate Contract: Memutar kontrak
         Write a contract for the rotate function: Menulis kontrak untuk fungsi memutar
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: Berputar l Gambar l Angka l Gambar
       Eval Contracts F:
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         Text Contract: Teks kontrak
         Write a contract for the text function: Menulis kontrak untuk fungsi teks
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: Tulisan l Gambat l Tali l Angka l Tali
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        Design Recipe 1 Contract: 1 kontrak rumus desain
+        0: '? Menulis sebuah kontrak untuk fungsi disebut "wide-rect" yang dapat menciptakan sebuah persegi panjang dengan tinggi dan warna yang dua kali lebih lebar dan tinggi.'
+        1: ': Menulis kontrak pada sebuah fungsi disebut "wide-rect" yang dapat menciptakan sebuah persegi panjang yang dapat di berikan tinggi dan warna dua kali lebih luas dan tinggi.'
+        wide-rect|Image|Number|String: Lebar-rect l Gambar l Angka l Tali
+      Rocket Contract 1:
+        Contract for rocket-height: Contract for rocket-height
+        rocket-height|Number|Number: rocket-height|Number|Number
     external:
       AlgPD Break:
-        Before you move on...: Before you move on...
+        Before you move on...: 'Sebelum  anda melanjutkan...'
+      App Lab Feedback:
+        App Lab Feedback: App Lab Feedback
+        description here: description here
       CSP Journal Entry Placeholder:
-        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
-        Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
+        CSP Journal Entry Placeholder: CSP Jurnal masuk pengganti
+        Eventually replace this with a free-response journal entry level: Pada akhirnya mengganti ini dengan sebuah respon bebas pada level jurnal masuk
       CSP Journal Entry Placeholder2:
         description here: description here
         title: judul
       CSP Lesson 14 encode letter A instructions:
-        "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+        "Instructions: Encode the Letter A": 'Petunjuk: menyandikan huruf A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
-        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'Rencana Murid CSP - U1L5 - Mengirimkan Bits dalam dunia nyata'
         description here: description here
       CSPStudentLessonPlanTemplate:
         description here: description here
@@ -91,26 +97,26 @@ id:
         Create images with bits and bytes.: Create images with bits and bytes.
         title: judul
       ECSPD PD Phases:
-        ECSPD PD Phases: ECSPD PD Phases
+        ECSPD PD Phases: Fase ECSPD PD
       ECSPD PD details:
-        ECSPD PD details: ECSPD PD details
+        ECSPD PD details: Rincian ECSPD PD
       ECSPD PD overview:
-        ECS PD Overview: ECS PD Overview
+        ECS PD Overview: Ikhtisar ECS PD
       ECSPD curriculum overview:
-        ECS Curriculum Overview: ECS Curriculum Overview
-        Overview of Curriculum: Overview of Curriculum
+        ECS Curriculum Overview: Peninjauan dari kurikulum ECS
+        Overview of Curriculum: Peninjauan dari kurikulum
       ECSPD end of p1:
-        ECSPD end of p1: ECSPD end of p1
+        ECSPD end of p1: ECSPD Akhir dari p1
       ECSPD forum introduction:
-        ECS Forum Introductions: ECS Forum Introductions
-        Forum Introductions: Forum Introductions
+        ECS Forum Introductions: Forum perkenalan dari Ecs
+        Forum Introductions: Forum Perkenalan
       ECSPD growth mindset strategies:
-        Growth Mindset Strategies: Growth Mindset Strategies
+        Growth Mindset Strategies: Pola Pikir Strategi Pertumbuhan
       ECSPD impact of CS:
-        Impact of Computer Science: Impact of Computer Science
+        Impact of Computer Science: Dampak dari Ilmu Komputer
         description here: description here
       ECSPD impact vid1:
-        ECSPD impact vid1: ECSPD impact vid1
+        ECSPD impact vid1: ECSPD berdampak vid1
       ECSPD impact vid2:
         ECSPD impact vid2: ECSPD impact vid2
       ECSPD meet facilitator:
@@ -169,10 +175,14 @@ id:
       PDAlg commitment:
         CS in Algebra PD commitments: CS in Algebra PD commitments
         overview of program commitments: overview of program commitments
+      PDAlg first forum:
+        Starting the Conversation: Starting the Conversation
       PDAlg functions:
         The Concept of Function: The Concept of Function
       PDAlg hard video:
         Why is Algebra so Hard?: Why is Algebra so Hard?
+      PDAlg whats next:
+        What's Next?: "What's Next?"
       PDCSP Intro: [ ]
       PDECS Intro:
         PD Intro: PD Intro
@@ -205,12 +215,16 @@ id:
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
         Pair Programming: Pemrograman berpasangan
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Puzzle Goals
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Strategies 1:
         Classroom Strategies: Classroom Strategies
       PDK5 Strategies F:
         Strategies Discussion: Strategies Discussion
+      PDK5 Survey:
+        Phase 1 Experience Survey: Phase 1 Experience Survey
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Dashboard 1
       PDK5 Teacher Dashboard 2:
@@ -334,7 +348,7 @@ id:
       U1L12 Student Lesson Introduction:
         description here: description here
         title: judul
-      U1L13 Student Lesson Introduction:
+      U1L13 Student Lesson Summary:
         description here: description here
         title: judul
       U1L13 Text Compression:
@@ -373,6 +387,69 @@ id:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: judul
+      U3L12 - Mission Unsortable:
+        description here: description here
+        title: judul
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Events Unplugged
+      U3L13 - Explanation of Ids:
+        description here: description here
+        title: judul
+      U3L13 Add Button Instrucitons:
+        description here: description here
+        title: judul
+      U3L13 Add Button Instructions:
+        description here: description here
+        title: judul
+      U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Buttons on the Screen
+      U3L14 - Student Intro Page:
+        description here: description here
+        title: judul
+      U3L16 Student Lesson Introduction:
+        Beyond Buttons: Beyond Buttons
+      U3L18 Student Lesson Introduction:
+        Controlling Memory and Program Flow: Controlling Memory and Program Flow
+      U3L19 - Intro to variables:
+        U3L19 - Intro to variables: 'U3L19 - Intro to variables'
+        description here: description here
+      U3L19 - concatenate string with var:
+        U3L19 - concatenate string with var: 'U3L19 - concatenate string with var'
+        description here: description here
+      U3L19 - explanation diff between string and var name:
+        U3L19 - explanation diff between string and var name: 'U3L19 - explanation diff between string and var name'
+        description here: description here
+      U3L19 - misconception variable assignment order pt1:
+        U3L19 - misconception variable assignment order pt1: 'U3L19 - misconception variable assignment order pt1'
+        description here: description here
+      U3L19 - variable breakdown - Assigning a value:
+        U3L19 - variable breakdown - Assigning a value: 'U3L19 - variable breakdown - Assigning a value'
+        description here: description here
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        U3L19 - variable breakdown - common mistake - declaring twice: 'U3L19 - variable breakdown - common mistake - declaring twice'
+        description here: description here
+      U3L19 - variable breakdown - declaration:
+        U3L19 - variable breakdown - declaration: 'U3L19 - variable breakdown - declaration'
+        description here: description here
+      U3L19 - variable breakdown - setText in label:
+        U3L19 - variable breakdown - setText in label: 'U3L19 - variable breakdown - setText in label'
+        description here: description here
+      U3L19 - variable breakdown - ways to read pt1:
+        U3L19 - variable breakdown - ways to read pt1: 'U3L19 - variable breakdown - ways to read pt1'
+        description here: description here
+      U3L19 - variable breakdown intro:
+        U3L19 - variable breakdown intro: 'U3L19 - variable breakdown intro'
+        description here: description here
+      U3L19 Student Lesson Intro:
+        Clicker V.1: Clicker V.1
+      U3L20 Student Lesson Introduction:
+        Conditional Basics: Conditional Basics
+      U3L21 Student Lesson Introduction:
+        More Variables: More Variables
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: Permanent Data Storage
+      U3L23 Student Lesson Introduction:
+        Natural Language Processing: Natural Language Processing
       facilitator test: [ ]
       sciPD Course Overview: [ ]
       sciPD Intro: [ ]
@@ -465,6 +542,7 @@ id:
         ((4+5) > 9): '((4+5) > 9)'
         (4+5) > 9: '(4+5) > 9'
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png, 300
+        4+5 > 9: '4+5 > 9'
         Convert Blocks to Math: Konversi blok ke matematika
         Type out the arithmetic expression that matches this code: Ketik ekspresi aritmatika yang cocok dengan kode ini
         Type the arithmetic expression here: Ketik operasi arimatika disini
@@ -477,15 +555,18 @@ id:
         Type out the arithmetic expression that matches this code: Ketik ekspresi aritmatika yang cocok dengan kode ini
         Type the arithmetic expression here: Ketik operasi arimatika disini
       Blocks to Bools 3:
+        ((5 < 10 < 15)): '((5 < 10 < 15))'
         ((5 < 10) && (10 < 15)): '((5 < 10) && (10 < 15))'
         ((5 < 10) AND (10 < 15)): '((5 < 10) AND (10 < 15))'
         ((5 < 10) And (10 < 15)): '((5 < 10) And (10 < 15))'
         ((5 < 10) and (10 < 15)): '((5 < 10) and (10 < 15))'
+        (5 < 10 < 15): '(5 < 10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
         (5 < 10) AND (10 < 15): '(5 < 10) DAN (10 < 15)'
         (5 < 10) And (10 < 15): '(5 < 10) And (10 < 15)'
         (5 < 10) and (10 < 15): '(5 < 10) dan (10 < 15)'
         /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
+        5 < 10 < 15: '5 < 10 < 15'
         Convert Blocks to Math: Konversi blok ke matematika
         Type out the arithmetic expression that matches this code: Ketik ekspresi aritmatika yang cocok dengan kode ini
         Type the arithmetic expression here: Ketik operasi arimatika disini
@@ -498,6 +579,10 @@ id:
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) DAN (x < 5)) ATAU ((8 < x) DAN (x < 10))'
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): '((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) dan (x < 5)) atau ((8 < x) dan (x < 10))'
+        (1 < x < 5) OR (8 < x < 10): '(1 < x < 5) OR (8 < x < 10)'
+        (1 < x < 5) Or (8 < x < 10): '(1 < x < 5) Or (8 < x < 10)'
+        (1 < x < 5) or (8 < x < 10): '(1 < x < 5) or (8 < x < 10)'
+        (1 < x < 5) || (8 < x < 10): '(1 < x < 5) || (8 < x < 10)'
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         Convert Blocks to Math: Konversi blok ke matematika
         Type out the arithmetic expression that matches this code: Ketik ekspresi aritmatika yang cocok dengan kode ini
@@ -575,6 +660,9 @@ id:
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
+      PDAlg Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
+        In my classroom, I want to...: In my classroom, I want to...
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -582,8 +670,6 @@ id:
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
         In my classroom, I want to...: In my classroom, I want to...
-        0: '? Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
-        1: ': Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
       PDK5 Course Descriptions:
         Course Structure: Course Structure
         I am going to start with Course...: I am going to start with Course...
@@ -657,12 +743,15 @@ id:
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L2 Free response assessment question:
         "Assessment: Sending Binary Messages": 'Assessment: Sending Binary Messages'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your response here.: Enter your response here.
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your reflection here.: Enter your reflection here.
         "Reflection: Sending Binary Messages": 'Reflection: Sending Binary Messages'
+      U1L3 Free Response:
+        Enter your reflection here: Enter your reflection here
+        0: '? How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?'
+        1: ': How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?'
+        "Reflection: Sending Complex Messages": 'Reflection: Sending Complex Messages'
       U1L3 Free response reflection question:
         Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
         Enter your reflection here.: Enter your reflection here.
@@ -671,7 +760,7 @@ id:
         Enter your reflection here.: Enter your reflection here.
         Reflect on this lesson: Reflect on this lesson
       U1L4 Free response reflection question:
-        "Assessment: Bit sending Widget": 'Assessment: Bit sending Widget'
+        "Assessment: Coordination on the Internet": 'Assessment: Coordination on the Internet'
         Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your reflection here.: Enter your reflection here.
       U1L5 Free Response Assessment:
@@ -697,6 +786,41 @@ id:
         "Reflection: Sending Numbers ": 'Reflection: Sending Numbers '
       U1L9 Free Response Assessment:
         "Assessment: Real-world Numbers ": 'Assessment: Real-world Numbers '
+      U3L12 - Reflection - Mission Unsortable:
+        Activity Reflection: Activity Reflection
+        Mission Unsortable : 'Mission Unsortable '
+      U3L12 Free Response Getting Started:
+        "Getting Started: Events Unplugged": 'Getting Started: Events Unplugged'
+        Respond to the following prompt: Respond to the following prompt
+      U3L12 Free Response Reflection:
+        "Reflection: Mission Unsortable": 'Reflection: Mission Unsortable'
+      U3L13 Free Response Getting Started:
+        Buttons on the Screen - Getting Started: 'Buttons on the Screen - Getting Started'
+      U3L13 Free Response Reflection:
+        Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
+      U3L14 - Journal Favorite Event:
+        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: "Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to."
+        "Reflection: Events": 'Reflection: Events'
+      U3L16 Assessment Free Response:
+        "Beyond Buttons: Assessment": 'Beyond Buttons: Assessment'
+      U3L16 Free Response Getting Started:
+        Beyond Buttons Getting Started: Beyond Buttons Getting Started
+      U3L16 Free Response Wrap Up:
+        Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
+      U3L18 Free Response Wrap Up:
+        Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
+      U3L20 Free Response Getting Started:
+        "Getting Started: Conditional Basics": 'Getting Started: Conditional Basics'
+      U3L20 Free Response Wrap Up:
+        "Wrap Up: Conditional Basics": 'Wrap Up: Conditional Basics'
+      U3L21 Assessment Wrap Up:
+        More Variables Wrap Up: More Variables Wrap Up
+      U3L22 Assessment:
+        Permanent Data Storage Assessment: Permanent Data Storage Assessment
+      U3L22 Free Response Getting Started:
+        "Permanent Data Storage: Getting Started": 'Permanent Data Storage: Getting Started'
+      U3L22 Reflection:
+        The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
       text match test:
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null

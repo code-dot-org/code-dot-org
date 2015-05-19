@@ -1,54 +1,67 @@
-var React = require('react')
+var React = require('react');
 
-var PropertyRow = React.createClass({
-  handleChangeInternal: function(event) {
-    var value = event.target.value;
-    this.props.handleChange(value);
-  },
-  render: function() {
-    return <tr>
-        <td>{this.props.desc}</td>
-        <td>
-          <input
-            defaultValue={this.props.initialValue}
-            onChange={this.handleChangeInternal}/></td>
-      </tr>
-  }
-});
+// TODO (brent) - might make more sense to require library and get these from
+// the library
+var ButtonProperties = require('./designElements/button.jsx').PropertyTable;
+var TextProperties = require('./designElements/text.jsx').PropertyTable;
+var InputProperties = require('./designElements/textInput.jsx').PropertyTable;
 
 var DesignProperties = module.exports = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement),
+    handleChange: React.PropTypes.func.isRequired,
+    onDone: React.PropTypes.func.isRequired,
+    onDelete: React.PropTypes.func.isRequired
+  },
+
   render: function() {
-    if (this.props.tagName) {
-      return <div>
-        <table>
-          <tr>
-            <th>name</th>
-            <th>value</th>
-          </tr>
-          <PropertyRow
-              desc={'id'} initialValue={this.props['id']}
-              handleChange={this.props.handleChange.bind(this, 'id')} />
-          <PropertyRow
-              desc={'x position (px)'} initialValue={this.props['left']}
-              handleChange={this.props.handleChange.bind(this, 'left')} />
-          <PropertyRow
-              desc={'y position (px)'} initialValue={this.props['top']}
-              handleChange={this.props.handleChange.bind(this, 'top')} />
-          <PropertyRow
-              desc={'width (px)'} initialValue={this.props['width']}
-              handleChange={this.props.handleChange.bind(this, 'width')} />
-          <PropertyRow
-              desc={'height (px)'} initialValue={this.props['height']}
-              handleChange={this.props.handleChange.bind(this, 'height')} />
-          <PropertyRow
-              desc={'text'} initialValue={this.props['text']}
-              handleChange={this.props.handleChange.bind(this, 'text')} />
-        </table>
-        <button id="donePropertiesButton" class="share" onClick={this.props.onDone}>Done</button>
-        <button id="deletePropertiesButton" class="share" onClick={this.props.onDelete}>Delete</button>
-      </div>
-    } else {
+    if (!this.props.element) {
       return <p>Click on an element to edit its properties.</p>;
     }
+
+    var tagname = this.props.element.tagName.toLowerCase();
+    var propertyClass;
+    // TODO (brent) - eventually this will have to be something other than tagname
+    switch (tagname) {
+      case 'button':
+        propertyClass = ButtonProperties;
+        break;
+
+      // TODO (brent)- this will become a div
+      case 'label':
+        propertyClass = TextProperties;
+        break;
+
+      case 'input':
+        propertyClass = InputProperties;
+        break;
+    }
+
+    var propertiesElement = React.createElement(propertyClass, {
+      element: this.props.element,
+      handleChange: this.props.handleChange
+    });
+
+    // We provide a key to the outer div so that element foo and element bar are
+    // seen to be two completely different tables. Otherwise the defaultValues
+    // in inputs don't update correctly.
+    // TODO (brent) - right now if i create two elements with the same id, I
+    // can still run into the same problem, where I click on the other element
+    // and the table doesn't update
+    return (
+      <div key={this.props.element.id}>
+        {propertiesElement}
+        <button
+          id="donePropertiesButton"
+          onClick={this.props.onDone}>
+          Done
+        </button>
+        <button
+          id="deletePropertiesButton"
+          onClick={this.props.onDelete}>
+          Delete
+        </button>
+      </div>
+    );
   }
 });

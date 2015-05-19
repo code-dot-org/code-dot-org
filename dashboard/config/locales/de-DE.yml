@@ -278,6 +278,7 @@
       signup: Registrieren
       already_registered: Bereits registriert?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Ihre Fortschritte
       lines: 'Gesamte Codezeilen: %{lines}'
       close: schließen
@@ -353,6 +354,10 @@
       werden, da du keine E-Mail-Adresse registriert hast'
     student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name}
       entfernt'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Schüler
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'

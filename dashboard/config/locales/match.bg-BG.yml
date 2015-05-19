@@ -172,39 +172,39 @@
         <h4>STAR</h4>: <h4>STAR</h4>
         <h4>RAMP</h4>: <h4>RAMP</h4>
       ECSPD phase matching:
-        Matching PD Phases and Descriptions: Matching PD Phases and Descriptions
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Phase 4: Phase 4
-        Online introduction to PD program: Online introduction to PD program
+        Matching PD Phases and Descriptions: Съвпадение на фазите на PD и описания
+        Phase 1: Фаза 1
+        Phase 2: Фаза 2
+        Phase 3: Фаза 3
+        Phase 4: Фаза 4
+        Online introduction to PD program: Онлайн въведение в PD програмата
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended
           in-person and online PD, focused on building pedagogical strategies and
           getting comfortable with the curriculum
         Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended
           in-person and online PD, focused on supporting academic year instruction,
           and provide space for learning content
-        In-person wrap up to the first year of teaching the course: In-person wrap
-          up to the first year of teaching the course
+        In-person wrap up to the first year of teaching the course: Личносно израстване
+          до първата година на обучение на курса
       ECSPD unit matching:
-        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Matching Unit Descriptions and Numbers: Съвпадение на описания и числа и цифри
         Unit 1: Част 1
         Unit 2: Част 2
-        Unit 3: Unit 3
-        Unit 4: Unit 4
-        Unit 5: Unit 5
-        Unit 6: Unit 6
-        introduction to the concepts of computer and computing: introduction to the
-          concepts of computer and computing
-        application of problem solving techniques to develop solutions: application
-          of problem solving techniques to develop solutions
-        website development and design: website development and design
-        create programs to solve computational problems: create programs to solve
-          computational problems
-        use computing to manage and interpret data: use computing to manage and interpret
-          data
-        apply programming and problem solving to the study of robots: apply programming
-          and problem solving to the study of robots
+        Unit 3: Част 3
+        Unit 4: Част 4
+        Unit 5: Част 5
+        Unit 6: Част 6
+        introduction to the concepts of computer and computing: Въведение в понятията
+          за компютър и компютърна техника
+        application of problem solving techniques to develop solutions: прилагане
+          на техники за решаване на проблема за разработване на решения
+        website development and design: уеб сайт изработка и дизайн
+        create programs to solve computational problems: създаване на програми за
+          решаване на изчислителни проблеми
+        use computing to manage and interpret data: Използване на компютри, за да
+          управляват и тълкуват данни
+        apply programming and problem solving to the study of robots: прилагане на
+          програмиране и решаване на проблеми в изучаването на роботи
       K-1 Artist 2 Match 1:
         Matching: Съвпадение
         Is the square next to, above, or below the ball?: Квадратът до, над или под
@@ -398,10 +398,9 @@
         'bigger-string: string string -> string': 'по-голям низ: низ низ-> низ'
         'find-price: string -> number': 'Търсене-цена: низ-> номер'
       PDAlg block match:
-        Block match: Block match
-        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match
-          the expressions with the appropriate Circle of Evaluation or Evaluation
-          Block
+        Block match: Блок съвпадение
+        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Напаснете
+          изразите със съответния кръг на оценка или блок за оценка
         http://staging.studio.code.org/script_assets/pd/circle1.png: http://staging.studio.code.org/script_assets/pd/circle1.png
         http://staging.studio.code.org/script_assets/pd/circle2.png: http://staging.studio.code.org/script_assets/pd/circle2.png
         http://staging.studio.code.org/script_assets/pd/circle3.png: http://staging.studio.code.org/script_assets/pd/circle3.png
@@ -414,31 +413,31 @@
           back at the Program Commitment details on the previous page'
         1: ': Match the phases of PD with their descriptions below. Feel free to look
           back at the Program Commitment details on the previous page'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer
-          Study: 3 days in-person and 8 hours online'
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
-          Year Development: 2 days in-person and 10 hours online'
+        Phase 1: Фаза 1
+        Phase 2: Фаза 2
+        Phase 3: Фаза 3
+        'Online Introduction: 2 hours online': 'Онлайн въведение: 2 часа онлайн'
+        'Blended Summer Study: 3 days in-person and 8 hours online': 'Смесено лятно
+          обучение: 3 дни лично и 8 часа онлайн'
+        'Academic Year Development: 2 days in-person and 10 hours online': 'Академична
+          година развитие: 2 дни лично и 10 часа онлайн'
       PDAlg Design Recipe Video:
-        Intro to Data Types: Intro to Data Types
-        Place the Design Recipe steps in the correct order.: Place the Design Recipe
-          steps in the correct order.
-        Step 1: Step 1
-        Step 2: Step 2
-        Step 3: Step 3
-        Contract and Purpose Statement: Contract and Purpose Statement
-        Examples: Examples
+        Intro to Data Types: Въведение в типове данни
+        Place the Design Recipe steps in the correct order.: Подреди стъпките на рецептата
+          за дизайн в правилния ред.
+        Step 1: Стъпка 1
+        Step 2: Стъпка 2
+        Step 3: Стъпка 3
+        Contract and Purpose Statement: Договор и отчитане на цел
+        Examples: Примери
         Definition: Дефиниция
       PDAlg Types Video:
-        Intro to Data Types: Intro to Data Types
-        Match each data type with its color code: Match each data type with its color
-          code
+        Intro to Data Types: Въведение в типове данни
+        Match each data type with its color code: Съединете всеки тип данни със своя
+          цветен код
         Number: Номер
-        String: String
-        Image: Image
+        String: Низ
+        Image: Изображение
         http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
         http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
         http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
@@ -452,16 +451,16 @@
           back at the Program Commitment details on the previous page (you can get
           back to the last level by clicking above on the small circle immediately
           to the left of the number 3).'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Phase 4: Phase 4
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
-        'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer
-          Study: 5 days in-person and 8 hours online'
-        'Academic Year Development: 4 days in-person and 12 hours online': 'Academic
-          Year Development: 4 days in-person and 12 hours online'
-        'Summer Wrap-up: 3 days in-person': 'Summer Wrap-up: 3 days in-person'
+        Phase 1: Фаза 1
+        Phase 2: Фаза 2
+        Phase 3: Фаза 3
+        Phase 4: Фаза 4
+        'Online Introduction: 2 hours online': 'Онлайн въведение: 2 часа онлайн'
+        'Blended Summer Study: 5 days in-person and 8 hours online': 'Смесено лятно
+          обучение: 5 дни лично и 8 часа онлайн'
+        'Academic Year Development: 4 days in-person and 12 hours online': 'Академична
+          година развитие: 4 дни личво и 12 часа онлайн'
+        'Summer Wrap-up: 3 days in-person': 'Лято заключение: 3 дни лично'
       PDK5 Pair programming match:
         Pair programming match: Програмиране по двойки
         Match the definitions to the words you were introduced to in the last video.: Открий
@@ -486,14 +485,14 @@
           back at the Program Commitment details on the previous page'
         1: ': Match the phases of PD with their descriptions below. Feel free to look
           back at the Program Commitment details on the previous page'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer
-          Study: 3 days in-person and 8 hours online'
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
-          Year Development: 2 days in-person and 10 hours online'
+        Phase 1: Фаза 1
+        Phase 2: Фаза 2
+        Phase 3: Фаза 3
+        'Online Introduction: 2 hours online': 'Онлайн въведение: 2 часа онлайн'
+        'Blended Summer Study: 3 days in-person and 8 hours online': 'Смесено лятно
+          обучение: 3 дни лично и 8 часа онлайн'
+        'Academic Year Development: 2 days in-person and 10 hours online': 'Академична
+          година развитие: 2 дни лично и 10 часа онлайн'
       test matching image:
         Matching Images Two: Съвпадение изображения 2
         Match up all the flowers by colour!: Съвпадение всички цветя по цвят!
@@ -520,3 +519,40 @@
         salt: солен
         Van Minnen: Ван Миннен
         Sydney: Сидни
+      U3L13 Assessment Matching:
+        'Matching: Buttons on the Screen': 'Matching: Buttons on the Screen'
+        elements: elements
+        id: идентификатор(ИД)
+        element text: element text
+        events: events
+        actions: actions
+        trigger: trigger
+        button("id","text"): button("id","text")
+        'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function()
+          {...}):'
+        Things on the screen that the user interacts with: Things on the screen that
+          the user interacts with
+        Official program name of an element: Official program name of an element
+        Words appearing on an element: Words appearing on an element
+        User interactions with an application: User interactions with an application
+        Responses from the computer to events: Responses from the computer to events
+        mouseover: посочете с мишка
+        Places a button on the screen: Places a button on the screen
+        Calls an embedded function: Calls an embedded function
+      U3L14 - Matching Events to Description:
+        Event triggers: Event triggers
+        Match the event type name with the description of what triggers it.: Match
+          the event type name with the description of what triggers it.
+        Triggers constantly while hovering over a button.: Triggers constantly while
+          hovering over a button.
+        Triggers once, the instant mouse hovers over the button: Triggers once, the
+          instant mouse hovers over the button
+        Triggers when mouse button is clicked once: Triggers when mouse button is
+          clicked once
+        Triggers when mouse button is released: Triggers when mouse button is released
+        Triggers when mouse button is pressed: Triggers when mouse button is pressed
+        mousemove: mousemove
+        mouseover: посочете с мишка
+        click: click
+        mouseup: mouseup
+        mousedown: mousedown

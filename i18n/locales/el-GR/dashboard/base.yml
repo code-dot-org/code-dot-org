@@ -232,6 +232,7 @@ el:
       signup: Εγγραφή
       already_registered: Έχετε εγγραφεί ήδη;
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Η πρόοδός σου
       lines: 'Συνολικές γραμμές κώδικα: %{lines}'
       close: ΚΛΕΙΣΙΜΟ
@@ -299,6 +300,10 @@ el:
     cant_remove_student_no_email: 'Ο %{student_name} δεν μπορεί να αφαιρεθεί ως μαθητής σας επειδή ο %{student_name} δεν έχει καταχωρήσει μια διεύθυνση email'
     cant_remove_teacher_no_email: 'Ο %{teacher_name} δεν μπορεί να αφαιρεθεί ως δάσκαλος σας, επειδή δεν έχετε καταχωρήσει μια διεύθυνση email'
     student_teacher_disassociated: 'Ο %{teacher_name} αφαιρέθηκε από τους δασκάλους του %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: φοιτητής/μαθητής
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'

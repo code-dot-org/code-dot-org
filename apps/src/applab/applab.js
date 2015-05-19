@@ -35,7 +35,10 @@ var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
+// TODO (brent) - make it so that we dont need to specify .jsx. This currently
+// works in our grunt build, but not in tests
 var DesignProperties = require('./designProperties.jsx');
+var elementLibrary = require('./designElements/library');
 
 var vsprintf = require('./sprintf').vsprintf;
 
@@ -383,6 +386,8 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         // Ensure a descriptive error message is displayed.
         expectedType = 'string, number, boolean, undefined or null';
       }
+    } else if (expectedType === 'array') {
+      properType = Array.isArray(varValue);
     } else {
       properType = (typeof varValue === expectedType);
     }
@@ -865,10 +870,7 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html.ejs')({tagName:null});
-  var designModeBox = require('./designModeBox.html.ejs')({
-    designProperties: designProperties
-  });
+  var designModeBox = require('./designModeBox.html.ejs')({});
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -1143,74 +1145,15 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   }
 };
 
-/**
- * The types of acceptable HTML elements in the levelHtml.
- * @type {{BUTTON: string, LABEL: string, INPUT: string}}
- */
-var ElementType = {
-  BUTTON: 'button',
-  LABEL: 'label',
-  INPUT: 'input'
-};
-Applab.ElementType = ElementType;
-
-/**
- * A map from prefix to the next numerical suffix to try to
- * use as an id in the applab app's DOM.
- * @type {Object.<string, number>}
- */
-Applab.nextElementIdMap = {};
-
-/**
- * Returns an element id with the given prefix which is unused within
- * the applab app's DOM.
- * @param {string} prefix
- * @returns {string}
- */
-Applab.getUnusedElementId = function (prefix) {
-  var divApplab = $('#divApplab');
-  var i = Applab.nextElementIdMap[prefix] || 1;
-  while (divApplab.find("#" + prefix + i).length !== 0) {
-    i++;
-  }
-  Applab.nextElementIdMap[prefix] = i + 1;
-  return prefix + i;
-};
 
 /**
  * Create a new element of the specified type within the play space.
- * @param {ElementType} elementType HTML element type to create.
+ * @param {ElementType} elementType Type of element to create
  * @param {number} left Position from left.
  * @param {number} top Position from top.
  */
 Applab.createElement = function (elementType, left, top) {
-  var element = document.createElement(elementType);
-  switch (elementType) {
-    case ElementType.BUTTON:
-      element.appendChild(document.createTextNode('Button'));
-      element.style.padding = '0px';
-      element.style.margin = '2px';
-      element.style.height = '36px';
-      element.style.width = '76px';
-      element.style.fontSize = '14px';
-      break;
-    case ElementType.LABEL:
-      element.appendChild(document.createTextNode("text"));
-      element.style.margin = '10px 5px';
-      element.style.height = '20px';
-      break;
-    case ElementType.INPUT:
-      element.style.margin = '5px 2px';
-      element.style.width = '236px';
-      element.style.height = '30px';
-      break;
-    default:
-      throw "unrecognized element type " + elementType;
-  }
-  element.id = Applab.getUnusedElementId(elementType);
-  element.style.position = 'absolute';
-  element.style.left = left + 'px';
-  element.style.top = top + 'px';
+  var element = elementLibrary.createElement(elementType, left, top);
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(element);
@@ -1273,7 +1216,11 @@ Applab.onDivApplabClick = function (event) {
     return;
   }
   event.preventDefault();
-  Applab.editElementProperties(event.target);
+  if (event.target.id === 'divApplab') {
+    Applab.clearProperties();
+  } else {
+    Applab.editElementProperties(event.target);
+  }
 };
 
 /**
@@ -1324,42 +1271,23 @@ Applab.setOuterHeight = function(element, outerHeight) {
   element.style.height = isNaN(height) ? '' : height + 'px';
 };
 
-// Currently there is a 1:1 mapping between applab element types and HTML tag names
-// (input, label, button, ...), so elements are simply identified by tag name.
 Applab.editElementProperties = function(element) {
-  var tagName = element.tagName.toLowerCase();
-  if (!Applab.isValidElementType(tagName)) {
-   Applab.clearProperties();
-   return;
-  }
-
-  var designPropertiesEl = document.getElementById('design-properties');
-  var outerWidth = Applab.getOuterWidth(element);
-  var outerHeight = Applab.getOuterHeight(element);
+  var designPropertiesElement = document.getElementById('design-properties');
   React.render(
     React.createElement(DesignProperties, {
-        tagName: tagName,
-        id: element.id,
-        left: parseInt(element.style.left, 10) || 0,
-        top: parseInt(element.style.top, 10) || 0,
-        width: isNaN(outerWidth) ? '' : outerWidth,
-        height: isNaN(outerHeight) ? '' : outerHeight,
-        text: $(element).text(),
+        element: element,
         handleChange: Applab.onPropertyChange.bind(this, element),
         onDone: Applab.onDonePropertiesButton,
         onDelete: Applab.onDeletePropertiesButton.bind(this, element)}
     ),
-    designPropertiesEl);
+    designPropertiesElement);
 };
 
 /**
  * Clear the Properties pane of applab's design mode.
  */
 Applab.clearProperties = function () {
-  var designPropertiesEl = document.getElementById('design-properties');
-  if (designPropertiesEl) {
-    React.render(React.createElement(DesignProperties, {tagName: null}), designPropertiesEl);
-  }
+  Applab.editElementProperties(null);
 };
 
 /**
@@ -1375,18 +1303,13 @@ Applab.resetElementTray = function (allowEditing) {
   if (designModeClear) {
     designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
   }
-
 };
 
-Applab.isValidElementType = function (type) {
-  for (var prop in Applab.ElementType) {
-    if (type === Applab.ElementType[prop]) {
-      return true;
-    }
-  }
-  return false;
-};
-
+// TODO (brent) I think some of these properties are going to end up having
+// different behaviors based on element type. I think the best way of handling
+// this is to have an onPropertyChange per element that gets the first shot to
+// handle the change, and reports whether it did or not. If it didn't, we fall
+// back to the default function
 Applab.onPropertyChange = function(element, name, value) {
   switch (name) {
     case 'id':
@@ -1737,18 +1660,6 @@ consoleApi.log = function() {
   outputApplabConsole(output);
 };
 
-var JSONApi = {};
-
-// NOTE: this version of parse does not support the reviver parameter
-
-JSONApi.parse = function(text) {
-  return JSON.parse(text);
-};
-
-JSONApi.stringify = function(object) {
-  return JSON.stringify(object);
-};
-
 function populateNonMarshalledFunctions(interpreter, scope, parent) {
   for (var i = 0; i < dropletConfig.blocks.length; i++) {
     var block = dropletConfig.blocks[i];
@@ -1818,8 +1729,7 @@ Applab.execute = function() {
         codegen.initJSInterpreter(interpreter,
                                   dropletConfig.blocks,
                                   scope,
-                                  { console: consoleApi,
-                                    JSON: JSONApi });
+                                  { console: consoleApi });
 
         populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
 

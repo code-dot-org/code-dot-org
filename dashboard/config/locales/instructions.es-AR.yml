@@ -505,10 +505,6 @@
         Free Draw!  Draw whatever you are inspired
         to create.
       4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10_instruction: |
-        Draw a snowflake using the 'draw a square'
-        function.  Repeat the square function to create 10 squares of 50 pixels each.  How
-        much do you turn each time a circle is made?  Hint: Turn (360 / 10) degrees.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
@@ -1082,14 +1078,11 @@
         py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        We've got a function called distance that
-        should return the distance between two sprites, and using that we can decide
-        when those sprites are close enough to be considered touching. Complete the
-        'collide?' function so that it checks the distance function and returns
-        true if the two points are close enough to touch (100 pixels apart is a good
-        place to start). TIP: the distance function doesn't work yet (it always returns
-        zero), so if you're successful you'll see that your sprites are instantly
-        "colliding," but we'll fix that in a second!
+        The 'distance' function returns the distance
+        between two sprites. Complete the 'collide?' function so that it returns
+        true if the distance between two points is less than 100 pixels apart. If
+        you're successful, your sprites will instantly collide - why do you think
+        that is?
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1218,7 +1211,7 @@
         of evaluation.
       Calc Circles of Eval 1_instruction: |
         Every mathematical operator (+, -, *,
-        /, and so on) can be represented by an Evaluation Block in code. Convert the
+        /, and so on) can be represented by an Evaluation Block in code. Change the
         Evaluation Block to match the expression.
       Calc Circles of Eval 2 (copy 1)_instruction: |
         Convert this statement to <some_shape>
@@ -2332,7 +2325,7 @@
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
-        square by 100 pixels on the y axis.
+        square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2745,6 +2738,9 @@
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
+      NetSim_SendNumbers_instruction: |
+        In this version of the simulator, you can
+        view the decimal representations of the binary you are sending.
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 allows students to manually
@@ -3017,7 +3013,7 @@
         the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
-        per second... press "run" to see how this word problem looks as an animation.
+        per second... press "Run" to see how this word problem looks as an animation.
       Play Lab Rocket 2 (copy 1)_instruction: |
         We've added your contract and two
         examples into the Design Recipe for rocket-height. Now write the function
@@ -3261,6 +3257,13 @@
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U313 Two Buttons with Ids_instruction: |
+        Now you try it! We've given you some
+        starting code with two buttons and two event handlers on the screen, but we've
+        just left the default Ids of "id".  You need to change the ids to connect
+        the right event handler to the right button. (Interestingly, the incorrect
+        program does work, but exhibits some bizarre behavior.  We'll discuss this
+        more in the next lesson.  Make the buttons work correctly for now).
       U3L03 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -3368,6 +3371,12 @@
         and moon.  All of the effects are clever applications of turtle dots,\nlines,
         and colors.  To get started, follow the series of steps suggested in\nthe
         accompanying worksheet. \n"
+      U3L08 - Enchantment Under the Sea_instruction: |
+        You have been provided with
+        starter code for an “Under the Sea” scene which includes three functions,
+        one each for the starfish, sea grass, and fish. Create versions of these functions
+        which accept parameters to allow you to add more variation to your scene.  The
+        student worksheet provides more details and guidance. GIF: U3L08-UnderTheSea.gif
       U3L13 - Button with ID_instruction: |
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
@@ -3386,14 +3395,115 @@
         able to figure it out just by reading carefully.  Make a change that will
         make the program work as expected.
       U3L13 - Turtle Driver Project_instruction: |
-        Create a “turtle driver” with at
-        least three buttons on the screen to move the turtle forward, and turn the
-        turtle right and left. If you have time, try adding additional buttons!  You
+        Challenge: Create a “turtle driver”
+        with at least three buttons on the screen to move the turtle forward, and
+        turn the turtle right and left. You can copy/paste code from a previous level
+        if you like but it will help build your coding muscles if you create this
+        small program from scratch.  If you have time, try adding additional buttons!  You
         can also have fun changing the parameters on the turtle functions, using colors,
         etc.
       U3L13 - Turtle move with button_instruction: "Drag a button out onto the screen\nand
         set its text to \"Go forth!\".  Add an event handler for the button, that\nmakes
         the turtle move forward.  Run the program to make sure it works. \n"
+      U3L14 - Unfortunate Events Free Play_instruction: |
+        Follow the "Unfortunate
+        Events" Worksheet and enter your code here to experiment.  We've pre-loaded
+        the code you need to start.
+      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode
+        that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd
+        event handler to textInput with the event type ‘input’ that shows\nthe “Say
+        hi” button when that event occurs.\r\nAdd event handler to button\nso that
+        on click, it writes a hello message to the screen and hides the textInput\nand
+        button. GIF: U3L16 - sayHiApp.gif"
+      U3L16 - hideAndShow_instruction: |
+        Introducing textInput, getText and write.  First
+        run the starter code several times.  Try to change what's written to the
+        screen when the button is clicked. Then use getText to write to the screen
+        what the user entered in the text box. GIF: U3L16 - useGetText.gif
+      U3L16 - hideAndShowPractice_instruction: |
+        ou are given some starting code that
+        puts an image and two buttons on the screen.  The image is initially hidden.
+        Add two new event handlers: one for each button, that when clicked hide and
+        show the image. GIF: U3L16 - hideAndShowExample.gif
+      U3L16 - image and text labels_instruction: |
+        Introducing the setPosition command!  Replace
+        the moveTo in the button-click event handler to use setPosition to move the
+        button itself to a random location when it's clicked.
+      U3L16 - images and text labels_instruction: "Introducing objects other than\nbuttons!
+        - textLabels and images.  First try replacing your button with a\ntextLabel.
+        \ Will the text respond to events just like the button?  Try connecting\nan
+        event handler to it.  We've started you out with code similar to the result\nof
+        the last level, you can copy your code from that level into here if you\nprefer.
+        \n"
+      U3L16 - images_instruction: "Introducing Images.  Try replacing the textLabel\nwith
+        an image..  Will the image respond to events just like the button?  Try\nconnecting
+        an event handler to it.  We've started you out with code similar\nto the result
+        of the last level, you can copy your code from that level into\nhere if you
+        prefer. \n"
+      U3L16 - quick double click_instruction: |
+        Mini-Project.  The Quick Double-Click
+        game.  In this simple game an object (an image) moves around, or pops up randomly
+        on the screen, as the user clicks it.  The goal of our game will be to try
+        to double-click the object before it moves.  Part of the challenge (and fun)
+        here is creating this app from scratch.  You can look back at your previous
+        work for examples, but it's fun to create something from scratch, too.  Try
+        it!  For more details see the Activity guide for this lesson. GIF:U3L16 -
+        quickDoubleClick.gif
+      U3L16 - setPosition to move button_instruction: |
+        Introducing the setPosition
+        command!  Replace the moveTo in the button-click event handler to use setPosition
+        to move the button itself to a random location when it's clicked.
+      U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
+      U3L16 - setupMoveToRandom_instruction: "We'll be building upon some simple\nstarting
+        code throughout this lesson.  Your first task: use moveTo and randomNumber\nto
+        get the turtle to move to a random location with each button click.  We've\ngiven
+        you starting code for our common setup: a button that moves the turtle\nwhen
+        clicked.  You should modify this code.  \n"
+      U3L16 - text labels_instruction: "Introducing textLabels.  First try replacing\nyour
+        button with a textLabel.  Will the text respond to events just like the\nbutton?
+        \ Try connecting an event handler to it.  We've started you out with\ncode
+        similar to the result of the last level, you can copy your code from\nthat
+        level into here if you prefer. \n"
+      U3L16 - textInput getText write_instruction: |
+        Introducing textInput, getText
+        and write.  First run the starter code several times.  Try to change what's
+        written to the screen when the button is clicked. Then use getText to write
+        to the screen what the user entered in the text box.
+      U3L16 - use images_instruction: |
+        Introducing Images.  Try replacing the textLabel
+        with an image..  Will the image respond to events just like the button?  Try
+        connecting an event handler to it.  We've started you out with code similar
+        to the result of the last level, you can copy your code from that level into
+        here if you prefer. GIF: U3L16 - useImage.gif
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof
+        code from the previous screen.  Try changing the value assigned to foo\nto
+        see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto
+        foo to see the string change. \r\n2. By only modifying the lines of code\nthat
+        were given to you, try to get the output to say: “The value of foo is:\n9.
+        \ And isn’t that fine.” \r\n"
+      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith
+        an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe
+        error and get the program to run.  Also note the error message since it\nmight
+        come up at some point later in your life.\r\n\r\n"
+      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou
+        the three lines of code shown in the previous page.  Add three lines of\ncode
+        just below the ones shown here to make your own variable, assign it a\nvalue
+        and write it to the screen.  NOTE: change the variable name from the\ndefault
+        x to something else.\r\n"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe
+        statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
+        \ Run\nthe program and you should see the output show up in the console area
+        below\nthe workspace.  Then try adding a few more console.log statements.
+        \ Display\nsome text.  Make another variable and display that.  \r\nThe app
+        screen will\nbe blank -- that's the point.  With console.log you can test
+        output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF:
+        U3L19-useconsolelog.gif"
+      U3L19 - write var and string with same name_instruction: |
+        Now look at this
+        example. We’ve added another write statement.  Before you run the code, see
+        if you can predict what the output will be.  Seriously, write it down. THEN
+        run the code, mess with it if you like, and continue to the next page for
+        an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square using only moveForward
         and turnLeft.  The square should be drawn above and to the left of the turtle's

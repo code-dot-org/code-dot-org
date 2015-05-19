@@ -178,26 +178,26 @@ hu:
           Még mindig sötét van. Vezess végig a földemen. Ha földkupacot találsz, takarítsd el, ha gödört, töltsd fel.
           Tipp: használd a "ha" blokk legördülő menüjét.
         turtle_2_1: 'Helló. Én lenni zombi művész. Én szeret rajzol! Segíteni nekem rajzol különleges színű négyzet. Fontos megjegyzés: ugyanazok a blokkjaid vannak, de most már csoportokba vannak rendezve.'
-        turtle_2_2: 'Örömmel mutatom meg neked azokat a funkciókat, amelyekkel új blokkokat határozhatsz meg! Próbáld ki az új "rajzoljon egy négyzetet" blokkot, amely a "funkciók" között található. Ez egy kis 50x50-es zöld négyzetet rajzol.'
+        turtle_2_2: 'Örömmel mutatom meg neked azokat a függvényeket, amelyekkel új blokkokat határozhatsz meg! Próbáld ki az új "rajzoljon egy négyzetet" blokkot, amely a "függvények" között található. Ez egy kis 50x50-es zöld négyzetet rajzol.'
         turtle_2_3: 'Használd az "ismételd" blokkot (a "ciklusok" közül), hogy rajzoljunk 3 négyzetet, amelyek oldala 100 egységnyi, és 120 fokkal vannak elfordítva egymástól. Rajzoljuk ezeket 3 különböző, véletlenszerű színnel.'
         turtle_2_4: 'Legyünk viccesek. Változtassuk meg a kódot, rajzoljunk 36 négyzetet, amelyek oldala 100 képpont, és 10 fokkal vannak elforgatva egymástól. Tipp: Használhatod a csúszkát, hogy begyorsuljon a rajzolás.'
-        turtle_2_5: 'Rajzolj 50, 60, 70, 80 és 90 képpont oldalú négyzeteket.  Ötször lesz szükséged a "rajzoljon egy négyzetet" funkcióra.'
+        turtle_2_5: 'Rajzolj 50, 60, 70, 80 és 90 képpont oldalú négyzeteket.  Ötször lesz szükséged a "rajzoljon egy négyzetet" függvényre.'
         turtle_2_6: 'OK, ez az utolsó program egy számlálót használ az előző feladványból ismert négyzeteknek a rajzolásához. A négyzet oldala legyen akkora, mint amit a számláló mutat. Ehhez használd a "számláló" blokkot. Tipp: a változók között találod.'
         turtle_2_7: 'Ez a program egy spirált rajzolna, de a blokkok le vannak tiltva, így nem fut a program. Írj egy új programot: használd a "számolja a számlálót" blokkot (a ciklusok közül) és a "számláló" blokkot (a változók közül), és rajzold meg ugyanezt a spirált.'
-        turtle_2_7_5: 'Van egy új "rajzolj egy hóembert" blokk a "funkciók" között. Rajzolj egy 250 és egy 100 pixel magas hóembert.'
+        turtle_2_7_5: 'Van egy új "rajzolj egy hóembert" blokk a "függvények" között. Rajzolj egy 250 és egy 100 pixel magas hóembert.'
         turtle_2_8: 'Ez egy kicsit trükkös lesz. Használd a "rajzolj egy hóembert" blokkot, és az új "ugrás előre" blokkot (a műveletek kategóriából). A 3 hóember legyen különböző színű, és 100 képpont távolságra legyenek egymástól.'
         turtle_2_9: 'A "számolja a számlálót" hurok segítségével rajzolj egy hóember családot 110, 100, 90, 80, 70 képpontos magasságokkal. A hóemberek legyenek 60 képpontra egymástól.'
         turtle_2_10: 'Itt van egy kód, hogy különböző spirálokkal kísérletezz.  Mi történik, ha módosítod a fordulatot? Vagy egy véletlenszerű színt állítasz be?  Rajzolj bármit, amit szeretnél!'
         maze_karel_2_1: 'Blokkok használatával segíts nekem eltakarítani a földhalmokat, és feltölteni a gödröket a szántóföldön. Használj ciklusokat a sok blokk helyett. Tipp: egy ciklus belsejében is elhelyezhetsz egy másik ciklust.'
-        maze_karel_2_2: 'Létrehoztunk egy saját blokkot, az úgynevezett "temesd be 5"-öt, amely a funkciók között található. Használd,  hogy betemesd ezt a lyukat.'
-        maze_karel_2_3: 'Az új "töltsd fel 5" funkció blokk segítségével töltse fel a lyukakat. A "töltsd fel 5" blokkot függvények között találja.'
-        maze_karel_2_4: Definiáljunk egy új funkciót, amely eltávolít 7 lapátnyi földet. Aztán használd arra, hogy írj egy programot, ami segít nekem eltávolítani az összes kupacot.
-        maze_karel_2_5: Hozz létre egy új funkciót, amely eltávolít egy 6 lapátnyi kupacot, majd használd, hogy el tudjam lapátolni az összes halmot.
-        maze_karel_2_6: 'Használd a két új funkciót, a "temesd be 8"-at és a "távolítsd el 8"-at, hogy el tudjam tüntetni az összes kupacot és fel tudjam tölteni az összes lyukat.'
+        maze_karel_2_2: 'Létrehoztunk egy saját blokkot, az úgynevezett "temesd be 5"-öt, amely a függvények között található. Használd,  hogy betemesd ezt a lyukat.'
+        maze_karel_2_3: 'Az új "töltsd fel 5" blokk segítségével töltsd fel a lyukakat. A "töltsd fel 5" blokkot a függvények között találod.'
+        maze_karel_2_4: Definiáljunk egy új függvényt, amely eltávolít 7 lapátnyi földet. Aztán használd arra, hogy írj egy programot, ami segít nekem eltávolítani az összes kupacot.
+        maze_karel_2_5: Hozz létre egy új függvényt, amely eltávolít egy 6 lapátnyi kupacot, majd használd, hogy el tudjam lapátolni az összes halmot.
+        maze_karel_2_6: 'Használd a két új függvényt, a "temesd be 8"-at és a "távolítsd el 8"-at, hogy el tudjam tüntetni az összes kupacot és fel tudjam tölteni az összes lyukat.'
         maze_karel_2_7: A földemen van egy tehén! Írj egy új funkciót, amely segít kikerülni a tehenet, és ellapátolni a halmot. Tedd mindezt egy új funkció blokkba.
         maze_karel_2_8: 'Használja ezt a függvényt, "kerüld ki a tehenet, és tüntess el 1", hogy segítsen nekem eltávolítani a kupacokat.'
         maze_karel_2_9: OK, itt van egy függvény, amely eltávolít a 4 kupac földet egy függőleges oszlopban. Próbálja ki ez a funkciót egy ciklus belsejében, hogy eltávolítsa az összes kupacot, csak néhány új blokkok segítségével.
-        maze_karel_2_10: Mozgass a mezőn, és a két funkció segítségével segíts nekem eltakarítani a földkupacokat, és feltölteni a lyukakat.
+        maze_karel_2_10: Mozgass a mezőn, és a két függvény segítségével segíts nekem eltakarítani a földkupacokat, és feltölteni a lyukakat.
         turtle_3_1: 'Ez a játék bemutatja, hogyan határoztuk meg a "rajzoljon egy négyzetet" és a "kör rajzolása" függvényeket.  A függvény meghatározásától még nem futnak le a blokkok.  Elő kell húznod a "rajzoljon egy négyzetet" blokkot, hogy ténylegesen megrajzold a négyzetet.'
         turtle_3_2: 'Használd a "rajzoljon egy négyzetet" függvényt példaképp, hogy elkészítsd a "rajzolj egy háromszöget" függvényt, majd alkalmazd.'
         turtle_3_3: 'Rajzolj háromszög alakú kerítést a macskák körül, és négyzet alakú kerítést a tehenek körül! Tipp: teszteld a programot, ahogy előre haladsz.'

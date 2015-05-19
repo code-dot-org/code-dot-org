@@ -64,8 +64,8 @@ fa-AF:
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} دانش آموز تا حالا ثبت نام کرده اند.'
+    teacher_count: '%{count} معلم تا حالا ثبت نام کرده اند.'
     overview_student: 'برای ایجاد یک حساب کاربری ثبت نام کنید تا پیشرفتتون را دنبال کنید.ایمیل شما اساسا برای ورود به سایت و بازیابی پسورد استفاده میشه.برای اطلاعات بیشتر  به  <a href="http://code.org/privacy">سیاست حفظ حریم خصوصی</a> ما مراجعه کنید.'
     overview_teacher: 'با ایجاد یک حساب کاربری ،علوم کامپیوتر را در کلاس خود آموزش دهید.<p/>شما میتوانید دانش آموزان خود را اضافه کرده و پیشرفت آنها را دنبال کنید.'
     no_signup_message: 'شما می‌توانید <a target="_blank" href="http://learn.code.org"> فهرست مراحل و پازل‌های مختلف را بررسی کنید</a>. باید ثبت نام کنید تا بتوانید پیشرفت‌های خود را ذخیره کنید.'
@@ -229,6 +229,7 @@ fa-AF:
       signup: ثبت نام
       already_registered: قبلا ثبت نام کرده اید؟?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: پیشرفت شما
       lines: 'تعداد خطوط کد: %{lines}'
       close: بستن
@@ -296,6 +297,10 @@ fa-AF:
     cant_remove_student_no_email: '%{student_name} به عنوان دانش آموز شما نمیتواند حذف شود چون %{student_name} نشانی پست الکترونیکی ثبت نکرده است'
     cant_remove_teacher_no_email: '%{teacher_name} به عنوان معلم شما نمیتواندحذف شود زیرا شما آدرس پست الکترونیکی ثبت نکرده اید'
     student_teacher_disassociated: '%{teacher_name}  به عنوان یک معلم برای %{student_name} حذف شده است'
+    panel:
+      answer_viewer: Answer Viewer
+      student: دانش آموز
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
@@ -316,7 +321,7 @@ fa-AF:
     classroom_activity: فعالیت کلاسی
   home:
     title: کد استودیو
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} خط کد توسط دانش آموزان نوشته شده است'
     all_courses: بررسی اجمالی دوره های 1 و 2 و 3
     lesson_plans: طرح درس
     signin_message: 'قبلا ثبت نام کرده‌اید؟ %{link}'
@@ -479,11 +484,11 @@ fa-AF:
     badrange: محدوده ی تابع شما اشتباه است.
     baddomainsize: تابع شما تعداد درست موارد لازم در ورودی را ندارد.
     baddomainname: اسم یک یا تعدادی از موارد ورودی تابع شما اشتباه است.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: یکی یا بیشتر از ورودی های تابع شما نوع اشتباه دارند، یا ترتیب آن ها اشتباه است.
   text_match:
     placeholder: پاسخ خود را اینجا وارد کنید
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: متشکرم
+    open_response_body: برای پاسختان سپاسگزارم!
   dialog:
     ok: باشه
   time:

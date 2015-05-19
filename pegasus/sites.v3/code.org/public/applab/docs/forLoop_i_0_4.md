@@ -18,23 +18,20 @@ Category: Control
 
 [short_description]
 
-The following definition is from [w3schools documentation on for-loops](http://www.w3schools.com/js/js_loop_for.asp)
-
 ____________________________________________________
 [example]
 
-The **for loop** is often the tool you will use when you want to create a loop. The for loop has the following syntax:
+The **for loop** repeats statements like a **while loop** but adds an **initialization** and **final expression** step.
 <pre>
-for (statement 1; statement 2; statement 3) {
-    code block to be executed
+for (initialization; condition; final expression) {
+    code to execute
 }
 </pre>
-**Statement 1** is executed before the loop (the code block) starts.
+**initialization** is executed once, before anything else.
 
-**Statement 2** defines the condition for running the loop (the code block).
+**condition** is checked each iteration, to see if the loop should execute.
 
-**Statement 3** is executed each time after the loop (the code block) has been executed.
-
+**final expression** is executed every iteration, after all the code inside the loop.
 
 [/example]
 ____________________________________________________
@@ -53,7 +50,6 @@ Following the definition above here is a breakdown of the meaning the individual
 
 The simple repeat behavior is shown in the first example.
 
- 
 [/short_description]
 
 [/description]
@@ -127,6 +123,13 @@ for (initialization; condition; expression) {
 </pre>
 
 [/syntax]
+
+[tips]
+
+### Tips
+- This statement is identical to the native JavaScript [for Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for).
+
+[/tips]
 
 [bug]
 

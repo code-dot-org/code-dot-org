@@ -157,7 +157,7 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "Dapat kang maglakip ng isang block sa \"compute\" block."},
 "equivalentExpression":function(d){return "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "suriin"},
 "extraTopBlocks":function(d){return "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?"},
 "failedInput":function(d){return "Ang iyong  function ay hindi binalik ang tamang resulta para sa lahat ng mga value."},
 "goal":function(d){return "Goal:"},
@@ -168,4 +168,4 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "yourExpression":function(d){return "Ang iyong expression:"},
 "wrongInput":function(d){return "Ginagamit mo ang iyong  function na may maling value."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Ang iyong ekspresyon ay hindi nagbabalik ng tamang resulta."}};

@@ -285,6 +285,7 @@
       signup: Iscriviti
       already_registered: Sei già iscritto?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: I tuoi progressi
       lines: 'Totale delle linee di codice:  %{lines}'
       close: CHIUDI
@@ -362,6 +363,10 @@
       insegnante perché non si è iscritto con un indirizzo di posta elettronica'
     student_teacher_disassociated: '%{teacher_name} è stato rimosso come insegnante
       per %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Studente
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}

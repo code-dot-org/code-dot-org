@@ -32,7 +32,7 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "المتغيرات"},
 "continue":function(d){return "أستمر"},
 "container":function(d){return "إنشاء حاوية"},
-"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"containerTooltip":function(d){return "يخلق وعاء الانقسام ويضع HTML في الداخلية."},
 "finalLevel":function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."},
 "nextLevel":function(d){return "تهانينا ! لقد تم الانتهاء من اللغز."},
 "no":function(d){return "لا"},

@@ -66,8 +66,8 @@
     need_confirmation: Не сте получили инструкции за потвърждение ?
     need_unlock: Не сте получили инструкции за отключване?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} ученици вече са се регистрирали.'
+    teacher_count: '%{count} учители вече са се регистрирали.'
     overview_student: Регистрирайте се, за да следите напредъка си. Вашият имейл се
       използва само при влизане в сайта и за възстановяване на парола. За повече информация
       вижте нашата <a href="http://code.org/privacy"> Политика за поверителност</a>.
@@ -269,6 +269,7 @@
       signup: Регистрирайте се
       already_registered: Вече сте регистриран?
     popup:
+      progress_for_user: на %{name} в прогрес
       progress: Вашият напредък
       lines: 'Общо реда код: %{lines}'
       close: ЗАТВОРИ
@@ -343,6 +344,10 @@
     cant_remove_teacher_no_email: '%{teacher_name} не може да бъде премахнато като
       ваш учител, защото не сте регистриран с e-mail адрес'
     student_teacher_disassociated: '%{teacher_name} е премахнато като учител %{student_name}'
+    panel:
+      answer_viewer: Преглед на отговора
+      student: Ученик
+      try_it_yourself: Опитайте сами
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -365,7 +370,7 @@
     classroom_activity: Ънплъгд дейност
   home:
     title: Студио по кодиране
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} РЕДА КОД, НАПИСАНИ ОТ УЧЕНИЦИТЕ'
     all_courses: Преглед на курсове 1, 2 и 3
     lesson_plans: Учебни планове
     signin_message: Вече сте регистриран? %{link}
@@ -569,8 +574,8 @@
       в грешен ред.
   text_match:
     placeholder: Въведете отговора си тук
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Благодаря
+    open_response_body: Благодаря за вашия отговор!
   dialog:
     ok: OK
   time:

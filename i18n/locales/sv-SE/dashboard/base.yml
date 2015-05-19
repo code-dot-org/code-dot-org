@@ -236,6 +236,7 @@ sv:
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -305,6 +306,10 @@ sv:
     cant_remove_student_no_email: '%{student_name} kan inte tas bort som din elev eftersom %{student_name} inte har registrerat en e-postadress'
     cant_remove_teacher_no_email: '%{teacher_name} kan inte tas bort som din lärare eftersom du inte har registrerat en e-postadress'
     student_teacher_disassociated: '%{teacher_name} har tagits bort som lärare för %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Student
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
