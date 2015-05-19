@@ -69,18 +69,18 @@ var ButtonProperties = React.createClass({
           desc={'font size (px)'}
           initialValue='14'
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        {/* eventually this will be a ImageChooserPropertyRow */ }
         <PropertyRow
           desc={'image'}
           initialValue=''
-          hasImageChooser={true}
-          handleChange={this.props.handleChange.bind(this, 'imageChooser')} />
+          handleChange={this.props.handleChange.bind(this, 'image')} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={hidden}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
       </table>);
 
-    // TODO:
+    // TODO (brent):
     // bold/italics/underline (p2)
     // shape (p2)
     // textAlignment (p2)
