@@ -1341,9 +1341,15 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.fontSize = value + 'px';
       break;
     case 'image':
+      // For now, we stretch to image to fit the element
+      var width = Applab.getOuterWidth(element);
+      var height = Applab.getOuterHeight(element);
       element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
     case 'hidden':
+      // Add a class that shows as 30% opacity in design mode, and invisible
+      // in code mode.
       $(element).toggleClass('design-mode-hidden', value === true);
       break;
     default:
@@ -1368,8 +1374,7 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
-  // TODO (brent) - can i remove class with a wild card?
-  $(clone).find('*').removeClass('ui-draggable').removeClass('ui-draggable-handle');
+  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
   return s.serializeToString(clone);
 };
 

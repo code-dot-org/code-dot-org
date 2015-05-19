@@ -15,11 +15,11 @@ var PropertyRow = React.createClass({
     };
   },
 
-  // TODO :change foo
   componentDidMount: function () {
-    $(this.getDOMNode().querySelector('button')).colpick({
+    var element = this.getDOMNode().querySelector('.colorPicker');
+    $(element).colpick({
       color: this.state.value,
-    	layout: 'hex',
+    	layout: 'rgbhex',
     	submit: 0,
       onChange: this.handleColorChange
     });
@@ -39,6 +39,9 @@ var PropertyRow = React.createClass({
   },
 
   render: function() {
+    var buttonStyle = {
+      backgroundColor: this.state.value
+    };
     return (
       <tr>
         <td>{this.props.desc}</td>
@@ -46,7 +49,7 @@ var PropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
-          <button>Pick Color</button>
+          <button style={buttonStyle} className='colorPicker'></button>
         </td>
       </tr>
     );
