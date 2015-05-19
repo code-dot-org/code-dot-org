@@ -1311,6 +1311,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
   }.bind(this));
 };
 
+/**
+ * Forward the given message to all nodes that are connected to this router.
+ * This is effectively "hub" operation.
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
 NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete) {
   // Assumptions for broadcast mode:
   // 1. We can totally ignore packet headers, because addresses don't matter
@@ -1331,6 +1338,17 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
   }.bind(this));
 };
 
+/**
+ * Forward the given message to the list of node IDs provided.
+ * This function works by calling itself recusively with the tail of the
+ * node ID list each time it finishes sending one of the messages, so
+ * timing on this "broadcast" won't be exactly correct - that's probably okay
+ * though, especially at the point in the curriculum where this is used.
+ * @param {NetSimMessage} message
+ * @param {number[]} nodeIDs
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
 NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
     nodeIDs, onComplete) {
   if (nodeIDs.length === 0) {
