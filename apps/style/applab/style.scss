@@ -500,3 +500,12 @@ button.arrow:focus {
   background-size: 16px 16px;
   background-position: 2px 0px;
 }
+
+.design-mode-hidden {
+  visibility: hidden;
+}
+
+.divApplabDesignMode .design-mode-hidden {
+  visibility: visible;
+  opacity: 0.3;
+}
