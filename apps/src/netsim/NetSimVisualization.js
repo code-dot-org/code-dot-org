@@ -258,28 +258,6 @@ NetSimVisualization.prototype.getFakeWiresAttachedToNode = function (vizNode) {
 };
 
 /**
- * Locate an existing fake wire in the visualization that connects the nodes
- * with the given IDs.
- *
- * @param {number} nodeANodeID - entity ID of node at one end of the wire
- * @param {number} nodeBNodeID - entity ID of node at the other end of the wire
- * @returns {NetSimFakeVizWire|undefined}
- */
-NetSimVisualization.prototype.getFakeWireByEndpoints = function (nodeANodeID,
-    nodeBNodeID) {
-  return _.find(this.elements_, function (element) {
-    if (element instanceof NetSimFakeVizWire) {
-      return (element.localNodeID() === nodeANodeID &&
-          element.remoteNodeID() === nodeBNodeID
-          ) || (
-          element.localNodeID() === nodeBNodeID &&
-          element.remoteNodeID() === nodeANodeID);
-    }
-    return false;
-  });
-};
-
-/**
  * Handle notification that node table contents have changed.
  * @param {Array.<Object>} rows - node table rows
  * @private
@@ -337,28 +315,19 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
  * @private
  */
 NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
-  // Kill any fake wires that now have an invalid endpoint
+  // Kill all fake wires
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimFakeVizWire) {
-      var localNode = this.getEntityByID(NetSimVizNode, vizElement.localNodeID());
-      var remoteNode = this.getEntityByID(NetSimVizNode, vizElement.remoteNodeID());
-      if (!localNode || localNode.isDying() || localNode.isDead() ||
-          !remoteNode || remoteNode.isDying() || remoteNode.isDead()) {
-        vizElement.kill();
-      }
+      vizElement.kill();
     }
   }, this);
 
   // Generate new wires where they don't already exist
   var connections = this.generateBroadcastModeConnections_();
   connections.forEach(function (connectedPair) {
-    var fakeWire = this.getFakeWireByEndpoints(connectedPair.nodeA,
-        connectedPair.nodeB);
-    if (!fakeWire) {
-      var newFakeWire = new NetSimFakeVizWire(connectedPair,
-          this.getEntityByID.bind(this));
-      this.addVizEntity_(newFakeWire);
-    }
+    var newFakeWire = new NetSimFakeVizWire(connectedPair,
+        this.getEntityByID.bind(this));
+    this.addVizEntity_(newFakeWire);
   }, this);
 };
 
