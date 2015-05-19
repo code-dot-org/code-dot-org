@@ -1,6 +1,8 @@
 @import "color";
+@import "mixins";
 
 .admin {
+  @include selectable;
   border: 2px solid $light_gray;
   padding: 10px;
   background: $lighter_gray;

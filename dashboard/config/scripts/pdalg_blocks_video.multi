@@ -3,7 +3,7 @@ title 'Intro to Evaluation Blocks'
 skip_sound true
 hide_submit true
 
-question 'In which are of the screen do you click blocks together to write a program?'
+question 'In which area of the screen do you click blocks together to write a program?'
 wrong 'Play Area'
 wrong 'Toolbox'
 right 'Workspace'

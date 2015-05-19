@@ -1,0 +1,31 @@
+name 'U2L7 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 2: Lesson 7 - The Need for Packets
+
+# Background
+
+Background goes here
+
+# Vocabulary
+
+Vocabulary goes here
+
+# Lesson
+
+* Lesson overview
+* Goes here
+
+# Resources
+
+* Activity Guide: <a href="" target="_blank">TBD</a>
+* Assessment:  <a href="" target="_blank">TBD 2</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

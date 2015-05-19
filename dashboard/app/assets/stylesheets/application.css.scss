@@ -27,6 +27,7 @@
  */
 
 @import "color";
+@import "mixins";
 
 $baseFontFamily: 'Gotham 4r', sans-serif;
 $headingsFontWeight: normal;
@@ -35,18 +36,6 @@ $btnPrimaryBackgroundHighlight: $orange;
 
 @import "bootstrap";
 @import "font-awesome";
-
-@mixin unselectable {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-@mixin selectable {
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-}
 
 p,pre,span {
   @include selectable;
