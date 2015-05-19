@@ -259,11 +259,13 @@ describe("NetSimRouterNode", function () {
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
       packetHeaderSpec = [
-        {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
-        {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
+        Packet.HeaderType.FROM_ADDRESS,
+        Packet.HeaderType.TO_ADDRESS
       ];
+      netsimGlobals.getLevelConfig().addressFormat = '4';
+      netsimGlobals.getLevelConfig().packetCountBitWidth = 0;
       netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
-      encoder = new Packet.Encoder(packetHeaderSpec);
+      encoder = new Packet.Encoder('4', 0, packetHeaderSpec);
 
       // Make router
       NetSimRouterNode.create(testShard, function (e, r) {

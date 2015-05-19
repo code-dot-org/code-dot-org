@@ -74,14 +74,14 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
  * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
- * @param {packetHeaderSpec} options.packetSpec
+ * @param {Packet.HeaderType[]} options.packetSpec
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
 var NetSimLogPanel = module.exports = function (rootDiv, options) {
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = options.packetSpec;
@@ -219,7 +219,7 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
  * @param {Object} options
- * @param {packetHeaderSpec} options.packetSpec
+ * @param {Packet.HeaderType[]} options.packetSpec
  * @param {EncodingType[]} options.encodings - which display style to use initially
  * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
@@ -236,7 +236,7 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.packetBinary_ = packetBinary;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = options.packetSpec;

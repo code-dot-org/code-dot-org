@@ -10,61 +10,133 @@ var Packet = require('@cdo/apps/netsim/Packet');
 
 describe("Packet.Encoder", function () {
 
+  describe("address format bit widths", function () {
+    var calculateBitWidth = Packet.Encoder.prototype.calculateBitWidth;
+
+    it ("calculates zero width for empty string", function () {
+      assertEqual(0, calculateBitWidth(''));
+    });
+
+    it ("calculates zero width for any string having no numbers", function () {
+      assertEqual(0, calculateBitWidth('a.b.c'));
+      assertEqual(0, calculateBitWidth('a million'));
+    });
+
+    it ("calculates zero width for string zero", function () {
+      assertEqual(0, calculateBitWidth('0'));
+      assertEqual(0, calculateBitWidth('0000.0000.0000.0000'));
+    });
+
+    it ("treats contiguous sets of digits as section bit-widths", function () {
+      assertEqual(4, calculateBitWidth('4'));
+      assertEqual(8, calculateBitWidth('8'));
+      assertEqual(8, calculateBitWidth('4.4'));
+      assertEqual(32, calculateBitWidth('8.8.8.8'));
+
+      assertEqual(4, calculateBitWidth('1.1.1.1'));
+      assertEqual(22, calculateBitWidth('11.11'));
+      assertEqual(112, calculateBitWidth('111.1'));
+      assertEqual(1111, calculateBitWidth('1111'));
+    });
+
+    it ("is okay with surrounding white-space", function () {
+      assertEqual(4, calculateBitWidth(' 4 '));
+      assertEqual(8, calculateBitWidth(' 8 '));
+      assertEqual(8, calculateBitWidth(' 4.4 '));
+      assertEqual(32, calculateBitWidth(' 8 . 8 . 8 . 8 '));
+    });
+
+    it ("totally ignores intermediate non-digits", function () {
+      assertEqual(4, calculateBitWidth(' IPv4 '));
+      assertEqual(8, calculateBitWidth(' 4-by-4 '));
+      assertEqual(24, calculateBitWidth(' 8 . 8 . A . 8 '));
+    });
+
+  });
+
   describe("format validation", function () {
 
-    it ("throws on construction if any field is missing a key", function () {
+    it ("throws on construction if addressFormat in interpreted as zero-length " +
+        "and an address field is present", function () {
+      var packetCountBits = 4;
+      var headerFields = [ "toAddress" ];
       assertThrows(Error, function () {
-        var format = new Packet.Encoder([
-          { bits: 8 },
-          { key: 'fieldTwo', bits: 8 }
+        var format = new Packet.Encoder("", packetCountBits, headerFields);
+      });
+      assertThrows(Error, function () {
+        var format = new Packet.Encoder("a.b.c", packetCountBits, headerFields);
+      });
+    });
+
+    it ("ignores addressFormat when no address field is present", function () {
+      var packetCountBits = 4;
+      var headerFields = [ "packetIndex" ];
+      var format = new Packet.Encoder('', packetCountBits, headerFields);
+      format = new Packet.Encoder('a.b.c', packetCountBits, headerFields);
+    });
+
+    it ("throws on construction if packetCountBitWidth is zero and packet " +
+        " fields are present", function () {
+      var addressFormat = "4";
+      assertThrows(Error, function () {
+        var format = new Packet.Encoder(addressFormat, 0, ["packetIndex"]);
+      });
+      assertThrows(Error, function () {
+        var format = new Packet.Encoder(addressFormat, 0, ["packetCount"]);
+      });
+    });
+
+    it ("ignores zero packetCountBitWidth if no packet fields are used", function () {
+      var addressFormat = "4";
+      var format = new Packet.Encoder(addressFormat, 0, []);
+      format = new Packet.Encoder(addressFormat, 0, ["toAddress"]);
+    });
+
+    it ("allows four header field types", function () {
+      var addressFormat = '4';
+      var packetFieldWidth = 4;
+      var format = new Packet.Encoder(addressFormat, packetFieldWidth, ["toAddress"]);
+      format = new Packet.Encoder(addressFormat, packetFieldWidth, ["fromAddress"]);
+      format = new Packet.Encoder(addressFormat, packetFieldWidth, ["packetIndex"]);
+      format = new Packet.Encoder(addressFormat, packetFieldWidth, ["packetCount"]);
+    });
+
+    it ("throws if unknown header field type is passed", function () {
+      var addressFormat = '4';
+      var packetFieldWidth = 4;
+      assertThrows(Error, function () {
+        var format = new Packet.Encoder(addressFormat, packetFieldWidth, ["otherField"]);
+      });
+    });
+
+    it ("throws if a valid field shows up multiple times", function () {
+      var addressFormat = '4';
+      var packetFieldWidth = 4;
+      assertThrows(Error, function () {
+        var format = new Packet.Encoder(addressFormat, packetFieldWidth, [
+          "packetIndex",
+          "packetIndex"
         ]);
       });
     });
 
-    it ("throws on construction if any field is missing a length", function () {
-      assertThrows(Error, function () {
-        var format = new Packet.Encoder([
-          { key: 'fieldOne' },
-          { key: 'fieldTwo', bits: 8 }
-        ]);
-      });
-    });
-
-    it ("throws on construction if keys are not unique", function () {
-      assertThrows(Error, function () {
-        var format = new Packet.Encoder([
-          { key: 'fieldOne', bits: 8 },
-          { key: 'fieldOne', bits: 8 }
-        ]);
-      });
-    });
-
-    it ("throws on construction if Infinity field length used", function () {
-      assertThrows(Error, function () {
-        var format = new Packet.Encoder([
-          { key: 'infinityFirst', bits: Infinity },
-          { key: 'fixedLater', bits: 8 }
-        ]);
-      });
-
-      assertThrows(Error, function () {
-        var format = new Packet.Encoder([
-          { key: 'infinityFirst', bits: 8 },
-          { key: 'fixedLater', bits: Infinity }
-        ]);
-      });
+    it ("allows different valid fields together in the header", function () {
+      var addressFormat = '4';
+      var packetFieldWidth = 4;
+      var format = new Packet.Encoder(addressFormat, packetFieldWidth, [
+        "packetIndex",
+        "packetCount"
+      ]);
     });
   });
+
 
 
   describe("constructing binary from data", function () {
     var shortFormat;
 
     beforeEach(function () {
-      shortFormat = new Packet.Encoder([
-        { key: 'toAddress', bits: 4 },
-        { key: 'fromAddress', bits: 4 }
-      ]);
+      shortFormat = new Packet.Encoder('4', 0, ['toAddress', 'fromAddress']);
     });
 
     it ("concatenates binary for keys in correct order", function () {
@@ -130,18 +202,12 @@ describe("Packet.Encoder", function () {
     it ("deconstructs binary using a provided format", function () {
       var packet = '00000001 00000010';
 
-      var format = new Packet.Encoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'fromAddress', bits: 8 }
-      ]);
+      var format = new Packet.Encoder('8', 0, ['toAddress', 'fromAddress']);
 
       assertEqual('00000001', format.getHeader('toAddress', packet));
       assertEqual('00000010', format.getHeader('fromAddress', packet));
 
-      var otherFormat = new Packet.Encoder([
-        { key: 'toAddress', bits: 4 },
-        { key: 'fromAddress', bits: 4 }
-      ]);
+      var otherFormat = new Packet.Encoder('4', 0, ['toAddress', 'fromAddress']);
 
       assertEqual('0000', otherFormat.getHeader('toAddress', packet));
       assertEqual('0001', otherFormat.getHeader('fromAddress', packet));
@@ -150,10 +216,7 @@ describe("Packet.Encoder", function () {
     it ("throws when getting a key that isn't in the spec", function () {
       var packet = '00000001 10101010 10101010 10101';
 
-      var format = new Packet.Encoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'payload', bits: 8 }
-      ]);
+      var format = new Packet.Encoder('8', 0, ['toAddress']);
 
       assertThrows(Error, function () {
         format.getHeader('fromAddress', packet);
@@ -163,42 +226,32 @@ describe("Packet.Encoder", function () {
     it ("returns zeroes when getting a key that is beyond the binary length", function () {
       var packet = '1111';
 
-      var format = new Packet.Encoder([
-        { key: 'toAddress', bits: 4 },
-        { key: 'payload', bits: 4 }
-      ]);
+      var format = new Packet.Encoder('4', 0, ['toAddress', 'fromAddress']);
 
-      assertEqual('0000', format.getHeader('payload', packet));
+      assertEqual('0000', format.getHeader('fromAddress', packet));
     });
 
     it ("right-pads with zeroes when getting a key that overlaps the binary end", function () {
       var packet = '1111 11';
 
-      var format = new Packet.Encoder([
-        { key: 'toAddress', bits: 4 },
-        { key: 'payload', bits: 4 }
-      ]);
+      var format = new Packet.Encoder('4', 0, ['toAddress', 'fromAddress']);
 
-      assertEqual('1100', format.getHeader('payload', packet));
+      assertEqual('1100', format.getHeader('fromAddress', packet));
     });
 
-    it ("gets remaining bits into Infinity field", function () {
+    it ("gets remaining bits into Infinity body field", function () {
       var packet = '00000001 10101010 10101010 10101';
 
-      var format = new Packet.Encoder([
-        { key: 'toAddress', bits: 8 }
-      ]);
+      var format = new Packet.Encoder('8', 0, ['toAddress']);
 
       assertEqual('00000001', format.getHeader('toAddress', packet));
       assertEqual('10101010' + '10101010' + '10101', format.getBody(packet));
     });
 
-    it ("gets zero bits into Infinity field if it's beyond the binary length", function () {
+    it ("gets zero bits into Infinity body field if it's beyond the binary length", function () {
       var packet = '1111';
 
-      var format = new Packet.Encoder([
-        { key: 'toAddress', bits: 8 }
-      ]);
+      var format = new Packet.Encoder('8', 0, ['toAddress']);
 
       assertEqual('11110000', format.getHeader('toAddress', packet));
       assertEqual('', format.getBody(packet));
