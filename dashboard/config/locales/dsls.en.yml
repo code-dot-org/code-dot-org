@@ -582,6 +582,19 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      PDECS commitment match:
+        'Academic Year Development: 4 days in-person and 12 hours online': 'Academic Year Development: 4 days in-person and 12 hours online'
+        'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer Study: 5 days in-person and 8 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Wrap-up: 3 days in-person': 'Summer Wrap-up: 3 days in-person'
     multi:
       ECSPD2 question:
         Question: Question
