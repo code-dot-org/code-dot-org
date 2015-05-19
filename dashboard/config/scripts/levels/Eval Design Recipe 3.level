@@ -18,7 +18,7 @@
     "open_function_definition": "wide-rect",
     "default_num_example_blocks": "2",
     "min_workspace_height": "1500",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"function_editor_draw_square\",\r\n  \"callout_text\": \"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\r\n  \"element_id\": \"[block-id='26']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"eval_design_recipe_3\",\r\n  \"callout_text\": \"This is your function definition. This code runs every time you use the 'wide-rect' fucnction\",\r\n  \"element_id\": \"[block-id='26']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "true",
     "examples_highlight": "false",
@@ -53,9 +53,9 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_example" inline="false" deletable="false" movable="false">
+        <block type="functional_example" inline="false" movable="false">
           <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" deletable="false" movable="false">
+            <block type="functional_call" inline="false" movable="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
                 <arg name="color" type="String"/>
@@ -106,9 +106,9 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_example" inline="false" deletable="false" movable="false">
+        <block type="functional_example" inline="false" movable="false">
           <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" deletable="false" movable="false">
+            <block type="functional_call" inline="false" movable="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
                 <arg name="color" type="String"/>
