@@ -27,6 +27,7 @@
  */
 
 @import "color";
+@import "mixins";
 
 $baseFontFamily: 'Gotham 4r', sans-serif;
 $headingsFontWeight: normal;
@@ -35,18 +36,6 @@ $btnPrimaryBackgroundHighlight: $orange;
 
 @import "bootstrap";
 @import "font-awesome";
-
-@mixin unselectable {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-@mixin selectable {
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-}
 
 p,pre,span {
   @include selectable;
@@ -1601,13 +1590,14 @@ $information-desktop: "only screen and (min-width: 1024px)";
     box-sizing: border-box;
     @include yTranslation(-35%);
   }
-  .item-cross {
+  .item-mark {
     display: inline-block;
     float: left;
     width: 32px;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
+    font-size: 21px;
   }
   .item-label {
     display: inline-block;
