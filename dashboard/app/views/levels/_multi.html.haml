@@ -27,17 +27,27 @@
     - height = data['height'] || '20'
     - height += 'px'
 
+    -# multi2 gets checkboxes; regular multi gets radio buttons.
+    - if data['type'] == 'multi2'
+      - unchecked_class = 'fa-square-o'
+      - checked_class = 'fa-check-square-o'
+      - cross_class = 'fa-times'
+    - else
+      - unchecked_class = 'fa-circle-o'
+      - checked_class = 'fa-check-square-o'
+      - cross_class = 'fa-times'
+
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
           - correct = answer['correct']
           %span.answerbutton.btn{style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
-              .fa.fa-circle-o
+              .fa{class: unchecked_class}
             .item-mark{id: "checked_#{i}", style: 'display: none;'}
-              .fa.fa-dot-circle-o
+              .fa{class: checked_class}
             .item-mark{id: "cross_#{i}", style: 'display: none;'}
-              .fa.fa-times-circle-o
+              .fa{class: cross_class}
             .item-label
               %label{style: "height: #{height}"}!= multi_t(answer['text'])
 
