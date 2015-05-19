@@ -4,6 +4,7 @@ var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
 var ButtonProperties = React.createClass({
   propTypes: {
@@ -56,15 +57,13 @@ var ButtonProperties = React.createClass({
           desc={'y position (px)'}
           initialValue={top}
           handleChange={this.props.handleChange.bind(this, 'top')} />
-        <PropertyRow
+        <ColorPickerPropertyRow
           desc={'text color'}
-          initialValue='black'
-          hasColorPicker={true}
+          initialValue='#000000'
           handleChange={this.props.handleChange.bind(this, 'textColor')} />
-        <PropertyRow
+        <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue='#eee'
-          hasColorPicker={true}
+          initialValue='#eeeeee'
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <PropertyRow
           desc={'font size (px)'}
