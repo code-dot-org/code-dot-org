@@ -1,0 +1,19 @@
+name 'U3L19 - explanation diff between string and var name'
+title 'U3L19 - explanation diff between string and var name'
+description 'description here'
+markdown <<MARKDOWN
+# Difference between a string and variable name
+
+
+<pre>
+write(foo);
+write("foo");
+</pre>
+These lines show how JavaScript knows whether or not you want to literally print the characters "foo" to the screen, or whether you want to retrieve a value from memory. If JavaScript sees a word in your code that’s inside quotes it treats it as a string of text. If the word doesn’t have quotes and JavaScript doesn’t recognize it as a word of the programming language itself, it assumes that it’s a variable and attempts to look it up in memory. If it doesn’t find it in memory. It throws an error.
+
+Let's show you what that error looks like.  See it and try to correct it on the next page.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue to try...</a>
+
+
+MARKDOWN

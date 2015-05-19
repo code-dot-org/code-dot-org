@@ -79,14 +79,21 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 15, 2015 - Wednesday, June 17, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 <br/>
 
 ### Location
 
-TBD
+Franklin University
+<br />
+Frasch Hall, Room 318
+<br />
+S Grant Ave
+<br />
+Columbus, OH 43215
+<br />
 
 ### What do I bring to Phase 2?
 
@@ -118,14 +125,21 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 15, 2015 - Wednesday, June 17, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served.
 <br/>
 
 ### Location
 
-TBD
+Franklin University
+<br />
+Frasch Hall, Room 317
+<br />
+S Grant Ave
+<br />
+Columbus, OH 43215
+<br />
 
 ### What do I bring to Phase 2?
 

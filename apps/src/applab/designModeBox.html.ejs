@@ -15,15 +15,15 @@
     <tr>
       <td>
         <div id="design-elements">
-          <div data-element-type="button" class="new-design-element">button</div>
-          <div data-element-type="label" class="new-design-element">label</div>
-          <div data-element-type="input" class="new-design-element">input</div>
+        <!-- TODO (brent) better approach than storing this as a data on the element? -->
+          <div data-element-type="BUTTON" class="new-design-element">button</div>
+          <div data-element-type="TEXT" class="new-design-element">label</div>
+          <div data-element-type="TEXT_INPUT" class="new-design-element">input</div>
           <button id="designModeClear" class="share">Clear</button><br>
         </div>
       </td>
       <td>
         <div id="design-properties">
-          <%- designProperties %>
         </div>
       </td>
     </tr>

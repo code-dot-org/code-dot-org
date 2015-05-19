@@ -243,11 +243,7 @@ StudioApp.prototype.init = function(config) {
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
-        this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
-        if (!this.editor.currentlyUsingBlocks) {
-          this.editor.aceEditor.focus();
-          this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
-        }
+        this.onDropletToggle_();
       } else {
         this.feedback_.showGeneratedCode(this.Dialog);
       }
@@ -395,19 +391,7 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      if (Blockly.contractEditor) {
-        Blockly.contractEditor.autoOpenWithLevelConfiguration({
-          autoOpenFunction: config.level.openFunctionDefinition,
-          contractCollapse: config.level.contractCollapse,
-          contractHighlight: config.level.contractHighlight,
-          examplesCollapse: config.level.examplesCollapse,
-          examplesHighlight: config.level.examplesHighlight,
-          definitionCollapse: config.level.definitionCollapse,
-          definitionHighlight: config.level.definitionHighlight
-        });
-      } else {
-        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
-      }
+      this.openFunctionDefinition_(config);
     }
   }
 
@@ -422,6 +406,9 @@ StudioApp.prototype.init = function(config) {
           }
           Blockly.mainBlockSpace.clear();
           this.setStartBlocks_(config, false);
+          if (config.level.openFunctionDefinition) {
+            this.openFunctionDefinition_(config);
+          }
         } else {
           var resetValue = '';
           if (config.level.startBlocks) {
@@ -1355,6 +1342,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     }
 
     if (options.afterEditorReady) {
+      // droplet may come in code mode if it couldn't parse the code into
+      // blocks, so update the UI based on the current state:
+      this.onDropletToggle_();
       options.afterEditorReady();
       this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
@@ -1404,6 +1394,25 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     } else {
       throw e;
     }
+  }
+};
+
+/**
+ * Show the configured starting function definition.
+ */
+StudioApp.prototype.openFunctionDefinition_ = function(config) {
+  if (Blockly.contractEditor) {
+    Blockly.contractEditor.autoOpenWithLevelConfiguration({
+      autoOpenFunction: config.level.openFunctionDefinition,
+      contractCollapse: config.level.contractCollapse,
+      contractHighlight: config.level.contractHighlight,
+      examplesCollapse: config.level.examplesCollapse,
+      examplesHighlight: config.level.examplesHighlight,
+      definitionCollapse: config.level.definitionCollapse,
+      definitionHighlight: config.level.definitionHighlight
+    });
+  } else {
+    Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
   }
 };
 
@@ -1475,6 +1484,17 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   if (blockCount) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
+  }
+};
+
+/**
+ * Handle updates after a droplet toggle between blocks/code has taken place
+ */
+StudioApp.prototype.onDropletToggle_ = function () {
+  this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
+  if (!this.editor.currentlyUsingBlocks) {
+    this.editor.aceEditor.focus();
+    this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
   }
 };
 

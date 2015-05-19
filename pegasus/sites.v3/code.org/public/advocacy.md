@@ -50,7 +50,6 @@ For more information, please contact advocacy@code.org.
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a> 
 * <a href="https://www.google.com/edu/">Google</a> 
 * <a href="http://csta.acm.org/">CSTA</a> 
-* <a href="https://www.apple.com/education/">Apple</a>  
 * <a href="https://www.facebook.com/facebookdiversity">Facebook</a>  
 * <a href="https://www.ncwit.org/">NCWIT</a>  
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a> 

@@ -11,7 +11,10 @@
       "((5 < 10) and (10 < 15))",
       "((5 < 10) And (10 < 15))",
       "((5 < 10) AND (10 < 15))",
-      "((5 < 10) && (10 < 15))"
+      "((5 < 10) && (10 < 15))",
+      "((5 < 10 < 15))",
+      "(5 < 10 < 15)",
+      "5 < 10 < 15"
     ],
     "title": "Convert Blocks to Math",
     "placeholder": "Type the arithmetic expression here",

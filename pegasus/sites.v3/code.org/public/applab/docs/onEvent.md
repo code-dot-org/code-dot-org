@@ -25,7 +25,7 @@ Execute the callbackFunction code when a specific event type occurs for the spec
 
 **Note:** A UI control must exist before the onEvent function can be used.
 
-There are many events that can be used with this function to respond to all kinds of actions that a user can take. You can find the full list [here](http://www.w3schools.com/jsref/dom_obj_event.asp) but some of the most commonly used are:
+There are many events that can be used with this function to respond to all kinds of actions that a user can take. You can find the full list [here](https://developer.mozilla.org/en-US/docs/Web/Events) but some of the most commonly used are:
 
 | Name  | Description                   |
 |-------|-------------------------------|

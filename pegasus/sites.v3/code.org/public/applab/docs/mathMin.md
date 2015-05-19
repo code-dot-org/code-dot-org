@@ -100,7 +100,7 @@ A number representing the lowest of the values given as parameters, or Infinity 
 [tips]
 
 ### Tips
-- This function is identical to the native JavaScript [min Method](http://www.w3schools.com/jsref/jsref_min.asp).
+- This function is identical to the native JavaScript [Math.min Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min).
 
 [/tips]
 
