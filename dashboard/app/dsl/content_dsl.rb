@@ -5,6 +5,7 @@ class ContentDSL < BaseDSL
     @hash.merge! options: {}
   end
   def title(text) @hash[:title] = text end
+  def type(text) @hash[:type] = text end
 
   # legacy
   def description(text) @hash[:content1] = text end
