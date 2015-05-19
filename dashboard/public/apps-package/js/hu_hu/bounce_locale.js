@@ -174,7 +174,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "incrementPlayerScore":function(d){return "pontszám"},
 "incrementPlayerScoreTooltip":function(d){return "Adjon egyet az aktuális játékos pontjaihoz."},
 "isWall":function(d){return "Ez egy fal?"},
-"isWallTooltip":function(d){return "Igaz értéket ad, ha itt van fal"},
+"isWallTooltip":function(d){return "Igaz értéket ad, ha ott van egy fal"},
 "launchBall":function(d){return "Indíts új labdát"},
 "launchBallTooltip":function(d){return "Hozd játékba a labdát."},
 "makeYourOwn":function(d){return "Készíts saját visszapattanós játékot"},

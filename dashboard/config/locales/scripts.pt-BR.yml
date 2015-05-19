@@ -378,7 +378,7 @@
           title: Desenvolvimento profissional para o Ensino Fundamental
           description: Desenvolvimento profissional para cursos do Ensino Fundamental
           description_short: Desenvolvimento profissional para cursos do Ensino Fundamental
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           Blockly Basics: Princípios do Blockly
           Writing computer programs: Escrevendo programas de computador
           Navigating the teacher dashboard: Navegação no painel do professor
@@ -394,11 +394,11 @@
           Next Steps: Próximas etapas
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Programming Concepts: Conceitos de programação
-          Reflection: Reflection
-          'Programming Concept: Loops': 'Programming Concept: Loops'
-          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
-          'Programming Concept: Functions': 'Programming Concept: Functions'
-          'Programming Concept: Events': 'Programming Concept: Events'
+          Reflection: Reflexão
+          'Programming Concept: Loops': 'Conceitos de programação: Laços'
+          'Programming Concept: Conditionals': 'Conceitos de programação: Condicionais'
+          'Programming Concept: Functions': 'Conceitos de programação: Funções'
+          'Programming Concept: Events': 'Conceitos de programação: Eventos'
         netsim:
           title: Simulador de internet
           description_short: ''
@@ -600,13 +600,13 @@
             partes
           Rocket-Height: Altura do foguete
           Design Recipe Practice: Prática de receita de design
-          Introduction to PD: Introdução a PD
-          Course Overview: Course Overview
+          Introduction to PD: Introdução ao DP
+          Course Overview: Visão geral do curso
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Teacher Dashboard: Painel de controle do professor
-          Why Computer Science belongs in Algebra: Why Computer Science belongs in
-            Algebra
-          Preparing for in-person PD: Preparação para PD em pessoa
+          Why Computer Science belongs in Algebra: Por que a ciência da computação
+            faz parte da álgebra
+          Preparing for in-person PD: Preparação presencial para o DP
         algPDmiami:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
@@ -629,207 +629,222 @@
           Text Compression: Compressão de texto
         CSPPD:
           new stage: nova fase
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
         CSPLessonSamples:
           title: Exemplos de lição para CSP
           description_short: exemplos de lição para csp
           Lesson 14: Lição 14
           Lesson 15: Lição 15
         ECSPD:
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           What is ECS?: O que é ECS?
           Growth Mindset: Mentalidade de crescimento
           Teaching Strategies: Estratégias de ensino
-          Preparing for in-person PD: Preparação para PD em pessoa
+          Preparing for in-person PD: Preparação presencial para o DP
           reference: referência
-          title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          Impact of Computer Science: Impact of Computer Science
+          title: Explorando o DP em Ciência da Computação
+          description: Introdução on-line a ECS
+          Impact of Computer Science: Impacto da ciência da computação
         sciencePD:
-          Introduction to PD: Introdução a PD
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          Pre-Workshop Online Component: Pre-Workshop Online Component
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
-            Systems
-          Introduction to Computational Science: Introduction to Computational Science
-          What to Expect: What to Expect
-          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
-            Complex Adaptive Systems
-          Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
-          Dispositions and Classroom Culture: Dispositions and Classroom Culture
-          Computational Thinking And The Framework For K-12 Science Education: Computational
-            Thinking And The Framework For K-12 Science Education
-          Introduction to StarLogo Nova: Introduction to StarLogo Nova
-          The Tutorial: The Tutorial
-          Post-Survey: Post-Survey
+          Introduction to PD: Introdução ao DP
+          title: DP da ciência da computação na ciência
+          description: Em parceria com o Projeto GUTS
+          Pre-Workshop Online Component: Componente on-line pré-workshop
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+          Introduction to Computational Science: Introdução à ciência computacional
+          What to Expect: O que esperar
+          Agent Based Modeling of Complex Adaptive Systems: Agente com base na modelagem
+            de sistemas adaptativos complexos
+          Using Computer Models in Science: Usando modelos de computadores em ciência
+          Using Models in the Classroom: Usando modelos na sala de aula
+          Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+          Computational Thinking And The Framework For K-12 Science Education: Pensamento
+            computacional e a estrutura para o ensino de ciências para o Ensino Fundamental
+          Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+          The Tutorial: O tutorial
+          Post-Survey: Pesquisa posterior
         rbo-reference:
           reference: referência
         Test Wednesday:
-          PDK5 Intro: PDK5 Intro
+          PDK5 Intro: Introdução a PDK5
         cspunit3:
-          title: CSP Unit 3 - Programming
-          description_short: Programming
-          description: Programming in Javascript and AppLap
-          Getting to know AppLab: Getting to know AppLab
+          title: CSP Unidade 3 - Programação
+          description_short: Programação
+          description: Esta unidade introduz os conceitos fundamentais de programação
+            de computadores, que ajudam na habilidade de criar ricos aplicativos interativos.
+            Esse curso usa JavaScript como linguagem de programação, e o Laboratório
+            de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
+            mas os conceitos aprendidos nessas lições envolvem todas as ferramentas
+            e linguagens de programação.
+          Getting to know AppLab: Conhecendo o laboratório de aplicativo
           Functions: Funções
-          Using Simple Commands: Using Simple Commands
-          Creating Procedures - Part 1: Creating Procedures - Part 1
-          Layers of Abstraction and Programming Efficiency: Layers of Abstraction
-            and Programming Efficiency
-          APIs and Function Parameters: APIs and Function Parameters
-          Looping and Random Numbers: Looping and Random Numbers
-          Creating functions with Parameters: Creating functions with Parameters
-          Scene Design Part 1 - Plan: Scene Design Part 1 - Plan
-          Scene Design Part 2 - Code: Scene Design Part 2 - Code
-          Scene Design Part 3 - Reflect: Scene Design Part 3 - Reflect
-          Unplugged Events Activity -  Mission Unsortable: Unplugged Events Activity
-            -  Mission Unsortable
-          Buttons on the Screen: Buttons on the Screen
-          Unfortunate Events: Unfortunate Events
-          On Beyond Buttons: On Beyond Buttons
-          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
-          Controlling Memory and Program Flow: Controlling Memory and Program Flow
-          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
-          Clicker v.1 -  Variable Basics: Clicker v.1 -  Variable Basics
-          Conditional Basics: Conditional Basics
-          More Variables (2 days): More Variables (2 days)
-          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
-            Clicker Completion
-          Natural Language Processing and Chat Bots: Natural Language Processing and
-            Chat Bots
-          Chained Conditionals: Chained Conditionals
-          Compound Conditionals: Compound Conditionals
-          Strings and Substrings: Strings and Substrings
-          While Loop Basics: While Loop Basics
-          While Loops_ Counting Flips: While Loops_ Counting Flips
-          Arrays_ Intro: Arrays_ Intro
-          Arrays_ Photo Album: Arrays_ Photo Album
-          Images are Arrays: Images are Arrays
-          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
-          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
-          The Need For Programming Languages: The Need For Programming Languages
-          Creating Procedures - Part 2: Creating Procedures - Part 2
-          Sarah testing project backed levels: Sarah testing project backed levels
+          Using Simple Commands: Usando comandos simples
+          Creating Procedures - Part 1: Criação de procedimentos - Parte 1
+          Layers of Abstraction and Programming Efficiency: Camadas de abstração e
+            eficiência de programação
+          APIs and Function Parameters: APIs e parâmetros de função
+          Looping and Random Numbers: Repetição e números aleatórios
+          Creating functions with Parameters: Criação de funções com parâmetros
+          Scene Design Part 1 - Plan: Design de cena, parte 1 - Planejar
+          Scene Design Part 2 - Code: Design de cena, parte 2 - Programar
+          Scene Design Part 3 - Reflect: Design de cena, parte 2 - Refletir
+          Unplugged Events Activity -  Mission Unsortable: Atividade para eventos
+            offline - Missão não classificada
+          Buttons on the Screen: Botões na tela
+          Unfortunate Events: Eventos infelizes
+          On Beyond Buttons: Além dos botões
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 - DEPRECIADO
+          Controlling Memory and Program Flow: Controle de memória e fluxo de programa
+          Variable Basics DEPRECIATED: Noções básicas de variáveis - DEPRECIADO
+          Clicker v.1 -  Variable Basics: Clicker v.1 - Noções básicas de variáveis
+          Conditional Basics: Noções básicas de condicionais
+          More Variables (2 days): Mais variáveis (2 dias)
+          Permanent Data Storage and Clicker Completion: Armazenamento permanente
+            de dados e conclusão do Clicker
+          Natural Language Processing and Chat Bots: Processamento de linguagem natural
+            e conversas automatizadas
+          Chained Conditionals: Condicionais encadeadas
+          Compound Conditionals: Condicionais compostas
+          Strings and Substrings: Strings e substrings
+          While Loop Basics: Noções básicas do laço enquanto
+          While Loops_ Counting Flips: Laços enquanto_ Contando arremessos
+          Arrays_ Intro: Arrays_ Introdução
+          Arrays_ Photo Album: Arrays_ Álbum de fotografias
+          Images are Arrays: Imagens são arrays
+          Arrays and Loops_ Altering Images: Arrays e laços_ alterando imagens
+          Arrays and Loops_ Hidden Images: Arrays e laços_ Imagens ocultas
+          The Need For Programming Languages: A necessidade de linguagens de programação
+          Creating Procedures - Part 2: Criação de procedimentos - Parte 2
+          Sarah testing project backed levels: Sarah testando níveis apoiados em projetos
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker - Noções básicas de variáveis
+          Events Unplugged: Eventos offline
+          Beyond Buttons Toward Apps: Além dos botões para aplicativos
+          Improving the Clicker Game: Improving the Clicker Game
         algebraPD3:
-          description: Teach Algebra through block-based Functional Programming
-          Introduction to the new Computer Science in Algebra: Introduction to the
-            new Computer Science in Algebra
-          Course Overview: Course Overview
+          title: DP - Fase 3
+          description: Ensine álgebra com programação funcional com base em blocos
+          Introduction to the new Computer Science in Algebra: Introdução à nova ciência
+            da computação em álgebra
+          Course Overview: Visão geral do curso
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Teacher Dashboard: Painel de controle do professor
           Evaluation Blocks: Blocos de cálculo
-          The Big Game: The Big Game
+          The Big Game: O grande jogo
           Strings and Images: Strings e imagens
           The Design Recipe: A receita de design
+          Next Steps: Próximas etapas
         sciPD complex adaptive 2:
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          Introduction to PD: Introdução a PD
-          Pre-Workshop Online Component: Pre-Workshop Online Component
+          title: DP da ciência da computação na ciência
+          description: Em parceria com o Projeto GUTS
+          Introduction to PD: Introdução ao DP
+          Pre-Workshop Online Component: Componente on-line pré-workshop
         sciPD complex adaptive forum:
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          Introduction to PD: Introdução a PD
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
-            Systems
+          title: DP da ciência da computação na ciência
+          description: Em parceria com o Projeto GUTS
+          Introduction to PD: Introdução ao DP
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
         Glenallan Career Day Demo:
           new stage: nova fase
-          title: Glenallan Career Day Demo
-          description_short: Let's make some puzzles!
+          title: Demonstração do dia da profissão na escola Glenallan
+          description_short: Vamos fazer alguns desafios!
           description: Experimente esses divertidos desafios de programação. Dê o
             melhor de si!
           Puzzles: Desafios
         ECSPD-NexTech:
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           What is ECS?: O que é ECS?
           Growth Mindset: Mentalidade de crescimento
           Teaching Strategies: Estratégias de ensino
-          Preparing for in-person PD: Preparação para PD em pessoa
+          Preparing for in-person PD: Preparação presencial para o DP
           logo_image: nextech_logo.png
-          title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          Impact of Computer Science: Impact of Computer Science
+          title: Explorando o DP em Ciência da Computação
+          description: Introdução on-line a ECS
+          Impact of Computer Science: Impacto da ciência da computação
         ECSPD-iZone:
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           What is ECS?: O que é ECS?
           Growth Mindset: Mentalidade de crescimento
           Teaching Strategies: Estratégias de ensino
-          Preparing for in-person PD: Preparação para PD em pessoa
+          Preparing for in-person PD: Preparação presencial para o DP
           logo_image: izone_logo.png
-          title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          Impact of Computer Science: Impact of Computer Science
+          title: Explorando o DP em Ciência da Computação
+          description: Introdução on-line a ECS
+          Impact of Computer Science: Impacto da ciência da computação
         algebraPD-NexTech:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           Evaluation Blocks: Blocos de cálculo
           logo_image: nextech_logo.png
-          Course Overview: Course Overview
+          Course Overview: Visão geral do curso
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Teacher Dashboard: Painel de controle do professor
-          Why Computer Science belongs in Algebra: Why Computer Science belongs in
-            Algebra
-          Preparing for in-person PD: Preparação para PD em pessoa
+          Why Computer Science belongs in Algebra: Por que a ciência da computação
+            faz parte da álgebra
+          Preparing for in-person PD: Preparação presencial para o DP
         algebraPD-iZone:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           Evaluation Blocks: Blocos de cálculo
           logo_image: izone_logo.png
-          Course Overview: Course Overview
+          Course Overview: Visão geral do curso
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Teacher Dashboard: Painel de controle do professor
-          Why Computer Science belongs in Algebra: Why Computer Science belongs in
-            Algebra
-          Preparing for in-person PD: Preparação para PD em pessoa
+          Why Computer Science belongs in Algebra: Por que a ciência da computação
+            faz parte da álgebra
+          Preparing for in-person PD: Preparação presencial para o DP
         sciencePD-NexTech:
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           logo_image: nextech_logo.png
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          What to Expect: What to Expect
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
-            Systems
-          Introduction to Computational Science: Introduction to Computational Science
-          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
-            Complex Adaptive Systems
-          Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
-          Dispositions and Classroom Culture: Dispositions and Classroom Culture
-          Computational Thinking And The Framework For K-12 Science Education: Computational
-            Thinking And The Framework For K-12 Science Education
-          Introduction to StarLogo Nova: Introduction to StarLogo Nova
-          The Tutorial: The Tutorial
-          Post-Survey: Post-Survey
+          title: DP da ciência da computação na ciência
+          description: Em parceria com o Projeto GUTS
+          What to Expect: O que esperar
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+          Introduction to Computational Science: Introdução à ciência computacional
+          Agent Based Modeling of Complex Adaptive Systems: Agente com base na modelagem
+            de sistemas adaptativos complexos
+          Using Computer Models in Science: Usando modelos de computadores em ciência
+          Using Models in the Classroom: Usando modelos na sala de aula
+          Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+          Computational Thinking And The Framework For K-12 Science Education: Pensamento
+            computacional e a estrutura para o ensino de ciências para o Ensino Fundamental
+          Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+          The Tutorial: O tutorial
+          Post-Survey: Pesquisa posterior
         sciencePD-iZone:
-          Introduction to PD: Introdução a PD
+          Introduction to PD: Introdução ao DP
           logo_image: izone_logo.png
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          What to Expect: What to Expect
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
-            Systems
-          Introduction to Computational Science: Introduction to Computational Science
-          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
-            Complex Adaptive Systems
-          Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
-          Dispositions and Classroom Culture: Dispositions and Classroom Culture
-          Computational Thinking And The Framework For K-12 Science Education: Computational
-            Thinking And The Framework For K-12 Science Education
-          Introduction to StarLogo Nova: Introduction to StarLogo Nova
-          The Tutorial: The Tutorial
-          Post-Survey: Post-Survey
+          title: DP da ciência da computação na ciência
+          description: Em parceria com o Projeto GUTS
+          What to Expect: O que esperar
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+          Introduction to Computational Science: Introdução à ciência computacional
+          Agent Based Modeling of Complex Adaptive Systems: Agente com base na modelagem
+            de sistemas adaptativos complexos
+          Using Computer Models in Science: Usando modelos de computadores em ciência
+          Using Models in the Classroom: Usando modelos na sala de aula
+          Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+          Computational Thinking And The Framework For K-12 Science Education: Pensamento
+            computacional e a estrutura para o ensino de ciências para o Ensino Fundamental
+          Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+          The Tutorial: O tutorial
+          Post-Survey: Pesquisa posterior
         ui_tests:
-          title: UI Tests
-          description: Script for test. Careful, don't change level ordering.
-          All the Tests: All the Tests
-          Free Response: Free Response
+          title: Testes de UI
+          description: Script para o teste. Cuidado, não altere a ordenação dos níveis.
+          All the Tests: Todos os testes
+          Free Response: Resposta livre
           Multi: Multi
+          Big Game: Grande jogo
         sciencePD2:
-          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Phase 2 Summer Workshop: Workshop de verão - Fase 2
         sciencePD3:
           new stage: nova fase
+        Testing:
+          Testing: Testing

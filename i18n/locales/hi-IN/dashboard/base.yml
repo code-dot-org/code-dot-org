@@ -31,16 +31,16 @@ hi:
   add_hint_form:
     placeholder: कृपया अपने सुझाव यहाँ दर्ज करें
     submit: जोड़ने के संकेत
-  appname: Code.org
-  stage: Stage
-  stage_number: 'Stage %{number}'
-  puzzle: Puzzle
-  trophies: Trophies
-  courses: Courses
-  of: of
-  more: MORE
-  less: LESS
-  beta: beta
+  appname: कोड.ऑर्ग
+  stage: मंच
+  stage_number: 'मंच %{number}'
+  puzzle: पहेली
+  trophies: ट्राफियां
+  courses: पाठ्यक्रम
+  of: की
+  more: अधिक
+  less: कम
+  beta: बीटा
   try_hoc: 'Try the Hour of Code, click here >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
@@ -231,6 +231,7 @@ hi:
       signup: Sign up
       already_registered: Already registered?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
       close: CLOSE
@@ -259,7 +260,7 @@ hi:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trophies
+      trophies: ट्राफियां
     students:
       name: नाम
       username: उपयोगकर्ता नाम
@@ -298,6 +299,10 @@ hi:
     cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
     cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: छात्र
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

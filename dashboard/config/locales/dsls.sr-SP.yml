@@ -2,104 +2,108 @@
   data:
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: Big Triangle
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        Big Triangle: Велики троугао
+        Big Triangle|Image|Number|String: Велики троугао|Слика|Број|Веза
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
+        Write a contract for a big red triangle that is 100 pixels in size: Напишите
+          уговор за велики црвени троугао величине 100 пиксела
       Creating Contracts From Examples 2:
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square Contract: Square Contract
-        Square|Image|Number|String: Square|Image|Number|String
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract
-          for a purple square that is 15 pixels in size.
+        Square Contract: Квадратни контракт
+        Square|Image|Number|String: Квадрат|Слика|Број|Веза
+        Write a contract for a purple square that is 15 pixels in size.: Напишите
+          контракт за пурпурни квадрат величине 15 пиксела.
       Creating Contracts From Examples 3A:
-        Banner Contract: Banner Contract
-        Banner Function block: Banner Function block
+        Banner Contract: Јарбол контракт
+        Banner Function block: Јарбол функционални блок
         Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: Јарбол|Слика|Веза
       Creating Contracts From Examples 4:
         Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        Shrink Contract: Shrink Contract
-        Try using the "shrink" function.: Try using the "shrink" function.
-        shrink|Image|Image: shrink|Image|Image
+        Shrink Contract: Скупљени контракт
+        Try using the "shrink" function.: Покушајте употребу "скупљене" функције.
+        shrink|Image|Image: Скупљени|Слика|Слика
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        Design Recipe 1 Contract: Дизајнерски поступак 1 контракта
+        0: '? Напишите контракт за функцију звану "широки правоугаоник"која ствара
+          правоугаоник задате висине и боје који је двоструко шири у односу на висину.'
+        1: ':Напишите контракт за функцију звану "широки правоугаоник"која ствара
+          правоугаоник задате висине и боје који је двоструко шири у односу на висину.'
+        wide-rect|Image|Number|String: Широки правоугаоник|Слика|Број|Веза
       Enter name here:
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
-        Enter prompt here: Enter prompt here
-        Enter title here: Enter title here
+        Contract Name|Number|Number|String: Име контракта|Број|Број|Веза
+        Enter prompt here: Овде унесите решење
+        Enter title here: Овде унесите наслов
       Eval Contracts 1 B:
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        Star Contract: Star Contract
-        Write a contract for the star function: Write a contract for the star function
-        star|Image|String|Number|String: star|Image|String|Number|String
+        Star Contract: Контракт са звездом
+        Write a contract for the star function: Напишите контракт за функцију звезде
+        star|Image|String|Number|String: звезда|Слика|Веза|Број|Веза
       Eval Contracts 2 B:
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
           300
-        Rotate Contract: Rotate Contract
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        Rotate Contract: Контракт за ротацију
+        Write a contract for the rotate function: Напишите контракт за функцију ротације
+        rotate|Image|Number|Image: ротирај|Слика|Број|Слика
       Eval Contracts 3 B:
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
           300
-        Text Contract: Text Contract
-        Write a contract for the text function: Write a contract for the text function
-        text|Image|String|Number|String: text|Image|String|Number|String
+        Text Contract: Текстуални контракт
+        Write a contract for the text function: Напишите контракт за текстуалну функцију
+        text|Image|String|Number|String: текст|Слика|Веза|Број|Веза
       Eval Contracts 4 B:
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
           300
-        Scale Contract: Scale Contract
-        Write a contract for the scale function: Write a contract for the scale function
-        scale|Image|Number|Image: scale|Image|Number|Image
+        Scale Contract: Контракт за опсег
+        Write a contract for the scale function: Напишите контракт за функцију опсега
+        scale|Image|Number|Image: опсег|Слика|Број|Слика
       Eval Contracts B:
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        Star Contract: Star Contract
-        Write a contract for the star function: Write a contract for the star function
-        star|Image|Number|String|String: star|Image|Number|String|String
+        Star Contract: Контракт са звездом
+        Write a contract for the star function: Напишите контракт за функцију звезде
+        star|Image|Number|String|String: звезда|Слика|Број|Веза|Веза
       Eval Contracts D:
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
           300
-        Rotate Contract: Rotate Contract
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        Rotate Contract: Контракт за ротацију
+        Write a contract for the rotate function: Напишите контракт за функцију ротације
+        rotate|Image|Number|Image: ротирај|Слика|Број|Слика
       Eval Contracts F:
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
           300
-        Text Contract: Text Contract
-        Write a contract for the text function: Write a contract for the text function
-        text|Image|String|Number|String: text|Image|String|Number|String
+        Text Contract: Текстуални контракт
+        Write a contract for the text function: Напишите контракт за текстуалну функцију
+        text|Image|String|Number|String: текст|Слика|Веза|Број|Веза
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        Design Recipe 1 Contract: Дизајнерски поступак 1 контракта
+        0: '? Напишите контракт за функцију звану "широки правоугаоник"која ствара
+          правоугаоник задате висине и боје који је двоструко шири у односу на висину.'
+        1: ':Напишите контракт за функцију звану "широки правоугаоник"која ствара
+          правоугаоник задате висине и боје који је двоструко шири у односу на висину.'
+        wide-rect|Image|Number|String: Широки правоугаоник|Слика|Број|Веза
+      Rocket Contract 1:
+        Contract for rocket-height: Contract for rocket-height
+        rocket-height|Number|Number: rocket-height|Number|Number
     external:
       AlgPD Break:
-        Before you move on...: Before you move on...
+        Before you move on...: Пре него наставите даље...
+      App Lab Feedback:
+        App Lab Feedback: Подаци о резултатима из лабораторије апликација
+        description here: description here
       CSP Journal Entry Placeholder:
-        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
-        Eventually replace this with a free-response journal entry level: Eventually
-          replace this with a free-response journal entry level
+        CSP Journal Entry Placeholder: ЦПС празно место за унос вести
+        Eventually replace this with a free-response journal entry level: По потреби
+          замените ово са слободном вешћу
       CSP Journal Entry Placeholder2:
         description here: description here
         title: title
       CSP Lesson 14 encode letter A instructions:
-        'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+        'Instructions: Encode the Letter A': 'Инструкције: шифрирајте слово А'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
-        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
-          - U1L5 - Sending Bits in the real world
+        CSP Student Plan - U1L5 - Sending Bits in the real world: ЦСП ученички план-У1Л5-Слање
+          битова у стваран свет
         description here: description here
       CSPStudentLessonPlanTemplate:
         description here: description here
@@ -108,28 +112,28 @@
         Create images with bits and bytes.: Create images with bits and bytes.
         title: title
       ECSPD PD Phases:
-        ECSPD PD Phases: ECSPD PD Phases
+        ECSPD PD Phases: ЕЦСПД ПД фразе
       ECSPD PD details:
-        ECSPD PD details: ECSPD PD details
+        ECSPD PD details: ЕЦСПД ПД детаљи
       ECSPD PD overview:
-        ECS PD Overview: ECS PD Overview
+        ECS PD Overview: ЕЦС ПД преглед
       ECSPD curriculum overview:
-        ECS Curriculum Overview: ECS Curriculum Overview
-        Overview of Curriculum: Overview of Curriculum
+        ECS Curriculum Overview: ЕЦС преглед наставног плана
+        Overview of Curriculum: Преглед наставног плана
       ECSPD end of p1:
-        ECSPD end of p1: ECSPD end of p1
+        ECSPD end of p1: ЕЦСПД крај првог дела
       ECSPD forum introduction:
-        ECS Forum Introductions: ECS Forum Introductions
-        Forum Introductions: Forum Introductions
+        ECS Forum Introductions: ЕЦС представљање форума
+        Forum Introductions: Представљање форума
       ECSPD growth mindset strategies:
-        Growth Mindset Strategies: Growth Mindset Strategies
+        Growth Mindset Strategies: Стратегије за повећање знања
       ECSPD impact of CS:
-        Impact of Computer Science: Impact of Computer Science
+        Impact of Computer Science: Утицај науке о компјутерима
         description here: description here
       ECSPD impact vid1:
-        ECSPD impact vid1: ECSPD impact vid1
+        ECSPD impact vid1: ЕЦСПД утицај видео 1
       ECSPD impact vid2:
-        ECSPD impact vid2: ECSPD impact vid2
+        ECSPD impact vid2: ЕЦСПД утицај вид2
       ECSPD meet facilitator:
         Meet your Facilitator!: Meet your Facilitator!
       ECSPD pause:
@@ -186,10 +190,14 @@
       PDAlg commitment:
         CS in Algebra PD commitments: CS in Algebra PD commitments
         overview of program commitments: overview of program commitments
+      PDAlg first forum:
+        Starting the Conversation: Starting the Conversation
       PDAlg functions:
         The Concept of Function: The Concept of Function
       PDAlg hard video:
         Why is Algebra so Hard?: Why is Algebra so Hard?
+      PDAlg whats next:
+        What's Next?: What's Next?
       PDCSP Intro: []
       PDECS Intro:
         PD Intro: PD Intro
@@ -222,6 +230,8 @@
       PDK5 Intro C: []
       PDK5 Pair Programming 1:
         Pair Programming: Pair Programming
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Puzzle Goals
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer
           Science
@@ -229,6 +239,8 @@
         Classroom Strategies: Classroom Strategies
       PDK5 Strategies F:
         Strategies Discussion: Strategies Discussion
+      PDK5 Survey:
+        Phase 1 Experience Survey: Phase 1 Experience Survey
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Dashboard 1
       PDK5 Teacher Dashboard 2:
@@ -247,7 +259,7 @@
         Why teach computer science in elementary school?: Why teach computer science
           in elementary school?
       Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
+        Pixelation - Hadi Emoji: ЕЦСПД утицај вид2
         description here: description here
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
@@ -368,7 +380,7 @@
       U1L12 Student Lesson Introduction:
         description here: description here
         title: title
-      U1L13 Student Lesson Introduction:
+      U1L13 Student Lesson Summary:
         description here: description here
         title: title
       U1L13 Text Compression:
@@ -408,6 +420,75 @@
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U3L12 - Mission Unsortable:
+        description here: description here
+        title: title
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Events Unplugged
+      U3L13 - Explanation of Ids:
+        description here: description here
+        title: title
+      U3L13 Add Button Instrucitons:
+        description here: description here
+        title: title
+      U3L13 Add Button Instructions:
+        description here: description here
+        title: title
+      U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Buttons on the Screen
+      U3L14 - Student Intro Page:
+        description here: description here
+        title: title
+      U3L16 Student Lesson Introduction:
+        Beyond Buttons: Beyond Buttons
+      U3L18 Student Lesson Introduction:
+        Controlling Memory and Program Flow: Controlling Memory and Program Flow
+      U3L19 - Intro to variables:
+        U3L19 - Intro to variables: U3L19 - Intro to variables
+        description here: description here
+      U3L19 - concatenate string with var:
+        U3L19 - concatenate string with var: U3L19 - concatenate string with var
+        description here: description here
+      U3L19 - explanation diff between string and var name:
+        U3L19 - explanation diff between string and var name: U3L19 - explanation
+          diff between string and var name
+        description here: description here
+      U3L19 - misconception variable assignment order pt1:
+        U3L19 - misconception variable assignment order pt1: U3L19 - misconception
+          variable assignment order pt1
+        description here: description here
+      U3L19 - variable breakdown - Assigning a value:
+        U3L19 - variable breakdown - Assigning a value: U3L19 - variable breakdown
+          - Assigning a value
+        description here: description here
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        U3L19 - variable breakdown - common mistake - declaring twice: U3L19 - variable
+          breakdown - common mistake - declaring twice
+        description here: description here
+      U3L19 - variable breakdown - declaration:
+        U3L19 - variable breakdown - declaration: U3L19 - variable breakdown - declaration
+        description here: description here
+      U3L19 - variable breakdown - setText in label:
+        U3L19 - variable breakdown - setText in label: U3L19 - variable breakdown
+          - setText in label
+        description here: description here
+      U3L19 - variable breakdown - ways to read pt1:
+        U3L19 - variable breakdown - ways to read pt1: U3L19 - variable breakdown
+          - ways to read pt1
+        description here: description here
+      U3L19 - variable breakdown intro:
+        U3L19 - variable breakdown intro: U3L19 - variable breakdown intro
+        description here: description here
+      U3L19 Student Lesson Intro:
+        Clicker V.1: Clicker V.1
+      U3L20 Student Lesson Introduction:
+        Conditional Basics: Conditional Basics
+      U3L21 Student Lesson Introduction:
+        More Variables: More Variables
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: Permanent Data Storage
+      U3L23 Student Lesson Introduction:
+        Natural Language Processing: Natural Language Processing
       facilitator test: []
       sciPD Course Overview: []
       sciPD Intro: []
@@ -505,6 +586,7 @@
         (4+5) > 9: (4+5) > 9
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png,
           300
+        4+5 > 9: 4+5 > 9
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic
           expression that matches this code
@@ -520,16 +602,19 @@
           expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 3:
+        ((5 < 10 < 15)): ((5 < 10 < 15))
         ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
         ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
         ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        (5 < 10 < 15): (5 < 10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
         (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
         /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
           500
+        5 < 10 < 15: 5 < 10 < 15
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic
           expression that matches this code
@@ -551,6 +636,10 @@
           ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
           ((8 < x) and (x < 10))
+        (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
+        (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
+        (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
+        (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
           500
         Convert Blocks to Math: Convert Blocks to Math
@@ -639,6 +728,10 @@
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
+      PDAlg Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating
+          a positive learning environment in your computer science classroom
+        In my classroom, I want to...: In my classroom, I want to...
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -647,10 +740,6 @@
         Facilitating a positive learning environment in your computer science classroom: Facilitating
           a positive learning environment in your computer science classroom
         In my classroom, I want to...: In my classroom, I want to...
-        0: '? Now that you know more about our curriculum, what practices do you want
-          to use to promote a healthy atmosphere in your computer science classroom?'
-        1: ': Now that you know more about our curriculum, what practices do you want
-          to use to promote a healthy atmosphere in your computer science classroom?'
       PDK5 Course Descriptions:
         Course Structure: Course Structure
         I am going to start with Course...: I am going to start with Course...
@@ -719,8 +808,8 @@
           to do this. How would you address these problem?'
         Sending Numbers Free Response: Sending Numbers Free Response
       Test Markdown level:
-        Enter prompt here: Enter prompt here
-        Enter title here: Enter title here
+        Enter prompt here: Овде унесите решење
+        Enter title here: Овде унесите наслов
       U1L10 Assessment Free Response:
         'A follow-up to the Assessment Question #2:': 'A follow-up to the Assessment
           Question #2:'
@@ -756,12 +845,19 @@
           to this prompt or to another as directed by your teacher.
       U1L2 Free response assessment question:
         'Assessment: Sending Binary Messages': 'Assessment: Sending Binary Messages'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your response here.: Enter your response here.
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your reflection here.: Enter your reflection here.
         'Reflection: Sending Binary Messages': 'Reflection: Sending Binary Messages'
+      U1L3 Free Response:
+        Enter your reflection here: Enter your reflection here
+        0: '? How did collaboration impact the development of your protocol? What
+          challenges did working in a group present and in what ways did it positively
+          impact your final product?'
+        1: ': How did collaboration impact the development of your protocol? What
+          challenges did working in a group present and in what ways did it positively
+          impact your final product?'
+        'Reflection: Sending Complex Messages': 'Reflection: Sending Complex Messages'
       U1L3 Free response reflection question:
         Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
         Enter your reflection here.: Enter your reflection here.
@@ -770,7 +866,8 @@
         Enter your reflection here.: Enter your reflection here.
         Reflect on this lesson: Reflect on this lesson
       U1L4 Free response reflection question:
-        'Assessment: Bit sending Widget': 'Assessment: Bit sending Widget'
+        'Assessment: Coordination on the Internet': 'Assessment: Coordination on the
+          Internet'
         Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your reflection here.: Enter your reflection here.
       U1L5 Free Response Assessment:
@@ -800,6 +897,46 @@
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
       U1L9 Free Response Assessment:
         'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+      U3L12 - Reflection - Mission Unsortable:
+        Activity Reflection: Activity Reflection
+        Mission Unsortable: 'Mission Unsortable '
+      U3L12 Free Response Getting Started:
+        'Getting Started: Events Unplugged': 'Getting Started: Events Unplugged'
+        Respond to the following prompt: Respond to the following prompt
+      U3L12 Free Response Reflection:
+        'Reflection: Mission Unsortable': 'Reflection: Mission Unsortable'
+      U3L13 Free Response Getting Started:
+        Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
+      U3L13 Free Response Reflection:
+        Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
+      U3L14 - Journal Favorite Event:
+        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick
+          one of the two prompts below to answer.  Start by copy/pasting the prompt
+          you're responding to.
+        'Reflection: Events': 'Reflection: Events'
+      U3L16 Assessment Free Response:
+        'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
+      U3L16 Free Response Getting Started:
+        Beyond Buttons Getting Started: Beyond Buttons Getting Started
+      U3L16 Free Response Wrap Up:
+        Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
+      U3L18 Free Response Wrap Up:
+        Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program
+          Flow Wrap Up
+      U3L20 Free Response Getting Started:
+        'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
+      U3L20 Free Response Wrap Up:
+        'Wrap Up: Conditional Basics': 'Wrap Up: Conditional Basics'
+      U3L21 Assessment Wrap Up:
+        More Variables Wrap Up: More Variables Wrap Up
+      U3L22 Assessment:
+        Permanent Data Storage Assessment: Permanent Data Storage Assessment
+      U3L22 Free Response Getting Started:
+        'Permanent Data Storage: Getting Started': 'Permanent Data Storage: Getting
+          Started'
+      U3L22 Reflection:
+        The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent
+          Data Storage
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4: 

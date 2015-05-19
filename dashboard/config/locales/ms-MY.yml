@@ -270,6 +270,7 @@
       signup: Mendaftar
       already_registered: Already registered?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'
       close: TUTUP
@@ -345,6 +346,10 @@
       guru anda kerana anda belum mendaftarkan alamat e-mel'
     student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: pelajar
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

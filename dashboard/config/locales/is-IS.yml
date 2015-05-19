@@ -65,8 +65,8 @@
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} nemendur hafa þegar skráð sig.'
+    teacher_count: '%{count} kennarar hafa þegar skráð sig.'
     overview_student: Skráðu þig sem notandi til að geyma vinnu þína. Netfangið þitt
       er aðallega notað til að þú getir skráð þig inn og til að endurheimta aðgangsorð.
       Nánari upplýsingar má fá í <a href="http://code.org/privacy">persónuverndarstefnu</a>
@@ -274,6 +274,7 @@
       signup: Skráning
       already_registered: Þegar skráð/ur?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Framvinda þín
       lines: 'Samtals línur af kóða: %{lines}'
       close: LOKA
@@ -349,6 +350,10 @@
       þinn vegna þess að þú hefur ekki skráð tölvupóstfang
     student_teacher_disassociated: '%{teacher_name} hefur verið fjarlægð(ur) sem kennari
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: nemandi
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -371,7 +376,7 @@
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM'
     all_courses: Yfirlit yfir námskeið 1, 2 og 3
     lesson_plans: Námsáætlun
     signin_message: Þegar skráð(ur)? %{link}
@@ -414,7 +419,7 @@
     heading_apps: <h2>Skemmtun fyrir</h2><h1>alla</h1>
     heading_legacy: <h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
     your_gallery: Safn
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Prófaðu námskeið hjá Code Studio
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -565,12 +570,12 @@
     badrange: Samningurinn þinn hefur rangt svið.
     baddomainsize: Samningurinn þinn hefur ekki réttan fjölda atriða í gildamenginu.
     baddomainname: Eitt eða fleiri atriði í gildamenginu heitir röngu nafni.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomaintype: Eitt eða fleiri atriði í gildamenginu hefur ranga gerð eða þau
+      eru í rangri röð.
   text_match:
     placeholder: Skráðu svar þitt hér
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Þakkir
+    open_response_body: Þökkum viðbrögð þín!
   dialog:
     ok: Í lagi
   time:

@@ -21,6 +21,7 @@
   "connectToAPeer":"Connect to a Peer",
   "connectToARouter":"Connect to a Router",
   "decimal":"十进制",
+  "defaultNodeName":"[New Node]",
   "disconnected":"连接已断开",
   "dns":"DNS",
   "dnsMode":"DNS模式",

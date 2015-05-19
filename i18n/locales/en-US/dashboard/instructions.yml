@@ -208,7 +208,6 @@ en:
       4-5 Artist For Loops 9_instruction: crwdns34089:0crwdne34089:0
       4-5 Artist Free Draw 1_instruction: crwdns34091:0crwdne34091:0
       4-5 Artist Functions 1_instruction: crwdns30440:0crwdne30440:0
-      4-5 Artist Functions 10_instruction: crwdns34092:0crwdne34092:0
       4-5 Artist Functions 10a_instruction: crwdns34093:0crwdne34093:0
       4-5 Artist Functions 10b_instruction: crwdns34094:0crwdne34094:0
       4-5 Artist Functions 11_instruction: crwdns34095:0crwdne34095:0
@@ -388,7 +387,7 @@ en:
       Big Game Collision 1_instruction: crwdns35677:0crwdne35677:0
       Big Game Collision 2_instruction: crwdns35678:0crwdne35678:0
       Big Game Collision 3_instruction: crwdns36439:0crwdne36439:0
-      Big Game Collision 4_instruction: crwdns36440:0crwdne36440:0
+      Big Game Collision 4_instruction: crwdns38336:0crwdne38336:0
       Big Game Complete (copy 1)_instruction: crwdns34947:0crwdne34947:0
       Big Game Complete_instruction: crwdns34948:0crwdne34948:0
       Big Game Final_instruction: crwdns34949:0crwdne34949:0
@@ -425,7 +424,7 @@ en:
       Calc Circles of Eval .3_instruction: crwdns36234:0crwdne36234:0
       Calc Circles of Eval .4_instruction: crwdns34240:0crwdne34240:0
       Calc Circles of Eval 1 (copy 1)_instruction: crwdns34241:0crwdne34241:0
-      Calc Circles of Eval 1_instruction: crwdns34242:0crwdne34242:0
+      Calc Circles of Eval 1_instruction: crwdns38337:0crwdne38337:0
       Calc Circles of Eval 2 (copy 1)_instruction: crwdns34243:0crwdne34243:0
       Calc Circles of Eval 2_instruction: crwdns35997:0crwdne35997:0
       Calc Circles of Eval 3_instruction: crwdns34245:0crwdne34245:0
@@ -733,7 +732,7 @@ en:
       Eval Strings Images 4_instruction: crwdns35666:0crwdne35666:0
       Eval Strings Images 5_instruction: crwdns34496:0crwdne34496:0
       Eval Strings Images 6_instruction: crwdns34497:0crwdne34497:0
-      Eval Strings Images 7_instruction: crwdns36239:0crwdne36239:0
+      Eval Strings Images 7_instruction: crwdns38338:0crwdne38338:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
       Examples 4_instruction: crwdns30916:0crwdne30916:0
@@ -925,6 +924,7 @@ en:
       NetSim_SendAscii_instruction: crwdns36449:0crwdne36449:0
       NetSim_SendBits_instruction: crwdns36450:0crwdne36450:0
       NetSim_SendingABTest_instruction: crwdns35669:0crwdne35669:0
+      NetSim_SendNumbers_instruction: crwdns38454:0crwdne38454:0
       NetSim_Superuser_instruction: crwdns35182:0crwdne35182:0
       NetSim_Variant1_instruction: crwdns36451:0crwdne36451:0
       NetSim_Variant2_instruction: crwdns36452:0crwdne36452:0
@@ -1006,7 +1006,7 @@ en:
       Pixelation - Lesson 14 - Make your own B&W Image_instruction: crwdns36244:0crwdne36244:0
       Pixelation 2_instruction: crwdns36245:0crwdne36245:0
       Pixelation 4x4 Empty_instruction: crwdns36246:0crwdne36246:0
-      Play Lab Rocket 1_instruction: crwdns34652:0crwdne34652:0
+      Play Lab Rocket 1_instruction: crwdns38340:0crwdne38340:0
       Play Lab Rocket 2 (copy 1)_instruction: crwdns34653:0crwdne34653:0
       Play Lab Rocket 2 (copy 2)_instruction: crwdns35186:0crwdne35186:0
       Play Lab Rocket 2_instruction: crwdns34654:0crwdne34654:0
@@ -1081,6 +1081,7 @@ en:
       the yolo maze_instruction: crwdns37654:0crwdne37654:0
       toby-test5-16-1_instruction: crwdns31217:0crwdne31217:0
       U1L4 NetSim SendAB_instruction: crwdns36458:0crwdne36458:0
+      U313 Two Buttons with Ids_instruction: crwdns38341:0crwdne38341:0
       U3L03 choose your own drawing_instruction: crwdns37655:0crwdne37655:0
       U3L03 Creating Procedures 1_instruction: crwdns37656:0crwdne37656:0
       U3L03 Define and use turnAround_instruction: crwdns37657:0crwdne37657:0
@@ -1102,11 +1103,31 @@ en:
       U3L06 Challenge 8 make your own_instruction: crwdns37673:0crwdne37673:0
       U3L07 - Free Play Loops and Random_instruction: crwdns37674:0crwdne37674:0
       U3L07 - Starry Night Starter Code_instruction: crwdns37675:0crwdne37675:0
+      U3L08 - Enchantment Under the Sea_instruction: crwdns38342:0crwdne38342:0
       U3L13 - Button with ID_instruction: crwdns37676:0crwdne37676:0
       U3L13 - Debug Id plus logic problem_instruction: crwdns37677:0crwdne37677:0
       U3L13 - Debug Id Problem_instruction: crwdns37678:0crwdne37678:0
-      U3L13 - Turtle Driver Project_instruction: crwdns37679:0crwdne37679:0
+      U3L13 - Turtle Driver Project_instruction: crwdns38343:0crwdne38343:0
       U3L13 - Turtle move with button_instruction: crwdns37680:0crwdne37680:0
+      U3L14 - Unfortunate Events Free Play_instruction: crwdns38344:0crwdne38344:0
+      U3L16 - challenge say hi app_instruction: crwdns38345:0crwdne38345:0
+      U3L16 - hideAndShow_instruction: crwdns38346:0crwdne38346:0
+      U3L16 - hideAndShowPractice_instruction: crwdns38347:0crwdne38347:0
+      U3L16 - image and text labels_instruction: crwdns38348:0crwdne38348:0
+      U3L16 - images and text labels_instruction: crwdns38349:0crwdne38349:0
+      U3L16 - images_instruction: crwdns38350:0crwdne38350:0
+      U3L16 - quick double click_instruction: crwdns38351:0crwdne38351:0
+      U3L16 - setPosition to move button_instruction: crwdns38352:0crwdne38352:0
+      U3L16 - setPositionMoveButton_instruction: crwdns38353:0crwdne38353:0
+      U3L16 - setupMoveToRandom_instruction: crwdns38354:0crwdne38354:0
+      U3L16 - text labels_instruction: crwdns38355:0crwdne38355:0
+      U3L16 - textInput getText write_instruction: crwdns38356:0crwdne38356:0
+      U3L16 - use images_instruction: crwdns38357:0crwdne38357:0
+      U3L19 - do concatenate string with var_instruction: crwdns38455:0crwdne38455:0
+      U3L19 - fix the var name syntax error_instruction: crwdns38456:0crwdne38456:0
+      U3L19 - three basic ops of variables_instruction: crwdns38457:0crwdne38457:0
+      U3L19 - try out console log_instruction: crwdns38458:0crwdne38458:0
+      U3L19 - write var and string with same name_instruction: crwdns38459:0crwdne38459:0
       U3L2 Using Simple Commands_instruction: crwdns37681:0crwdne37681:0
       U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0

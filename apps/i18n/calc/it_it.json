@@ -1,17 +1,17 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "È necessario attaccare un blocco al blocco 'quando si clicca su \"Esegui\" '.",
+  "divideByZeroError": "Il tuo programma risulta in divisione per zero.",
+  "emptyComputeBlock": "Devi attaccare un blocco al blocco di valutazione.",
   "equivalentExpression": "Prova a riordinare i tuoi argomenti per ottenere esattamente la stessa espressione.",
-  "evaluate": "evaluate",
-  "extraTopBlocks": "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'calcola'?",
+  "evaluate": "valuta",
+  "extraTopBlocks": "Hai dei blocchi non attaccati. Volevi attaccarli a questo blocco di valutazione?",
   "failedInput": "La tua funzione non restituisce il risultato corretto per tutti i valori.",
   "goal": "Obiettivo:",
   "levelIncompleteError": "La tua espressione non è adeguata all'obiettivo.",
-  "missingFunctionError": "You must define a function named {functionName}.",
-  "missingVariableX": "Your expression is missing variable {var}.",
+  "missingFunctionError": "Devi definire una funzione nominata {functionName}.",
+  "missingVariableX": "Nella tua espressione manca la variabile {var}.",
   "reinfFeedbackMsg": "Ecco il risultato! Continua a lavorarci sopra, o passa al prossimo esercizio!",
   "yourExpression": "La tua espressione:",
   "wrongInput": "Stai invocando la funzione con un valore sbagliato.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongOtherValuesX": "La tua espressione assume un valore errato se variamo {var}.",
+  "wrongResult": "La tua espressione non restituisce il risultato corretto."
 }

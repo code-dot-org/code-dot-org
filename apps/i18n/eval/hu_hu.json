@@ -1,6 +1,6 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Érvénytelen színt használtál: {val}",
+  "badStyleStringError": "Érvénytelen stílust használtál: {val}",
   "circleBlockTitle": "kör (sugár, stílus, szín)",
   "displayBlockTitle": "kiértékel",
   "ellipseBlockTitle": "ellipszis (szélesség, magasság, stílus, szín)",

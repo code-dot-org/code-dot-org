@@ -21,6 +21,7 @@
   "connectToAPeer":"Connect to a Peer",
   "connectToARouter":"Connect to a Router",
   "decimal":"Dezimalzahl",
+  "defaultNodeName":"[New Node]",
   "disconnected":"Getrennt",
   "dns":"DNS",
   "dnsMode":"DNS-Modus",

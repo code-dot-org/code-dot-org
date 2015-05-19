@@ -322,6 +322,15 @@ en:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: crwdns20151:0crwdne20151:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: crwdns20152:0crwdne20152:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: crwdns20153:0crwdne20153:0
+      Baker test of multi can delete:
+        Test of 2 correct answer multi choice: crwdns38477:0crwdne38477:0
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: crwdns38478:0crwdne38478:0
+        What is 2 + 2?: crwdns38479:0crwdne38479:0
+        2+3: crwdns38480:0crwdne38480:0
+        5-1: crwdns38481:0crwdne38481:0
+        3 - 7: crwdns38482:0crwdne38482:0
+        3+1: crwdns38483:0crwdne38483:0
+        3+4: crwdns38484:0crwdne38484:0
       Coordinates Multi 1:
         Video game Coordinates: crwdns24898:0crwdne24898:0
         Ninjacat Demo Embed.level: crwdns24899:0crwdne24899:0
@@ -625,8 +634,9 @@ en:
         /script_assets/msm/define_xpq.png, 600: crwdns35228:0crwdne35228:0
         What is the value of x?: crwdns34740:0crwdne34740:0
         3: crwdns34741:0crwdne34741:0
+        8: crwdns38370:0crwdne38370:0
         15: crwdns34742:0crwdne34742:0
-        do not know: crwdns34743:0crwdne34743:0
+        string: crwdns38371:0crwdne38371:0
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: crwdns35229:0crwdne35229:0
         What is the value of (p - x)?: crwdns34745:0crwdne34745:0
@@ -692,6 +702,13 @@ en:
         Play Area: crwdns37784:0crwdne37784:0
         Toolbox: crwdns37785:0crwdne37785:0
         Workspace: crwdns37786:0crwdne37786:0
+      PDAlg end of P3:
+        Plans for the Future: crwdns38372:0crwdne38372:0
+        What are your plans for next year?: crwdns38373:0crwdne38373:0
+        Keep teaching Bootstrap: crwdns38374:0crwdne38374:0
+        Start teaching CS in Algebra: crwdns38375:0crwdne38375:0
+        Not teaching either: crwdns38376:0crwdne38376:0
+        Not sure yet: crwdns38377:0crwdne38377:0
       PDAlg functional:
         Functional Programming: crwdns37787:0crwdne37787:0
         Have you ever programmed before?: crwdns37788:0crwdne37788:0
@@ -988,6 +1005,22 @@ en:
         4 bytes: crwdns36512:0crwdne36512:0
         8 bytes: crwdns36513:0crwdne36513:0
         16 bytes: crwdns36514:0crwdne36514:0
+      U1L2 Multiple Choice Assessment Question:
+        "Multiple Choice: Sending Binary Messages": crwdns38485:0crwdne38485:0
+        "A binary question is defined as:": crwdns38486:0crwdne38486:0
+        A piece of information that is sent in pairs: crwdns38487:0crwdne38487:0
+        Two questions which share the same answer: crwdns38488:0crwdne38488:0
+        A message which has two possible states: crwdns38489:0crwdne38489:0
+        A question which can be answered in only one of two possible ways: crwdns38490:0crwdne38490:0
+      U1L3 Multiple Choice:
+        "Multiple Choice: Sending Complex Messages": crwdns38491:0crwdne38491:0
+        0: crwdns38492:0crwdne38492:0
+        1: crwdns38493:0crwdne38493:0
+        5 bits: crwdns38494:0crwdne38494:0
+        4 bits: crwdns38495:0crwdne38495:0
+        3 bits: crwdns38496:0crwdne38496:0
+        2 bits: crwdns38497:0crwdne38497:0
+        1 bit: crwdns38498:0crwdne38498:0
       U1L6 Assessment multiple choice:
         "Multiple Choice: Number Systems": crwdns36278:0crwdne36278:0
         If you just had a circle and a square, how many 3-shape rows could you make?: crwdns36279:0crwdne36279:0
@@ -1005,6 +1038,69 @@ en:
         Programs won't run without good API documentation: crwdns37909:0crwdne37909:0
         To provide high-level functionality that simplifies complex programming tasks: crwdns37910:0crwdne37910:0
         It is impossible to write a program without an API: crwdns37911:0crwdne37911:0
+      U3L14 - MC Duplicate Ids:
+        Buttons and Ids: crwdns38378:0crwdne38378:0
+        What happens when two buttons are given the same id?: crwdns38379:0crwdne38379:0
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: crwdns38380:0crwdne38380:0
+        A warning message will appear for the second button that that id is already in use: crwdns38381:0crwdne38381:0
+        The first button created with the id will work, the other will not: crwdns38382:0crwdne38382:0
+        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: crwdns38383:0crwdne38383:0
+        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: crwdns38499:0crwdne38499:0
+      U3L14 - MC order of button and onEvent:
+        Buttons and Event Handlers: crwdns38385:0crwdne38385:0
+        Does order matter when adding a button and its event handler to your code?: crwdns38386:0crwdne38386:0
+        The button, with its id, must appear in the code AFTER the event handler: crwdns38387:0crwdne38387:0
+        JavaScript is flexible. The button and its event handler can appear in any order in the code: crwdns38388:0crwdne38388:0
+        The button, with its id, must appear in the code BEFORE the event handler: crwdns38389:0crwdne38389:0
+        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: crwdns38390:0crwdne38390:0
+      U3L18 Controlling Memory and Program Flow:
+        Controlling Memory and Control Quiz: crwdns38500:0crwdne38500:0
+        Select the programming technique that best fits the described game feature.: crwdns38501:0crwdne38501:0
+        1. You want to see additional random images displayed that are worth different points when clicked.: crwdns38502:0crwdne38502:0
+        conditional: crwdns38503:0crwdne38503:0
+        variable: crwdns38504:0crwdne38504:0
+        both: crwdns38505:0crwdne38505:0
+      U3L18 Controlling Memory and Program Flow 2:
+        Controlling Memory and Control Quiz: crwdns38506:0crwdne38506:0
+        Select the programming technique that best fits the described game feature.: crwdns38507:0crwdne38507:0
+        2. You want to see various motivational messages based upon the score.: crwdns38508:0crwdne38508:0
+        conditional: crwdns38509:0crwdne38509:0
+        variable: crwdns38510:0crwdne38510:0
+        both: crwdns38511:0crwdne38511:0
+      U3L18 Controlling Memory and Program Flow 3:
+        Controlling Memory and Control Quiz: crwdns38512:0crwdne38512:0
+        Select the programming technique that best fits the described game feature.: crwdns38513:0crwdne38513:0
+        3. You want to see the elapsed time.: crwdns38514:0crwdne38514:0
+        conditional: crwdns38515:0crwdne38515:0
+        variable: crwdns38516:0crwdne38516:0
+        both: crwdns38517:0crwdne38517:0
+      U3L18 Controlling Memory and Program Flow 4:
+        Controlling Memory and Control Quiz: crwdns38518:0crwdne38518:0
+        Select the programming technique that best fits the described game feature.: crwdns38519:0crwdne38519:0
+        4. You want to change the size of the images when a certain score is reached.: crwdns38520:0crwdne38520:0
+        conditional: crwdns38521:0crwdne38521:0
+        variable: crwdns38522:0crwdne38522:0
+        both: crwdns38523:0crwdne38523:0
+      U3L18 Controlling Memory and Program Flow 5:
+        Controlling Memory and Control Quiz: crwdns38524:0crwdne38524:0
+        Select the programming technique that best fits the described game feature.: crwdns38525:0crwdne38525:0
+        0: crwdns38526:0crwdne38526:0
+        1: crwdns38527:0crwdne38527:0
+        conditional: crwdns38528:0crwdne38528:0
+        variable: crwdns38529:0crwdne38529:0
+        both: crwdns38530:0crwdne38530:0
+      U3L21 Assessment 1:
+        More Variables Question 1: crwdns38531:0crwdne38531:0
+        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: crwdns38532:0crwdne38532:0
+        56*61\3+2: crwdns38534:0crwdne38534:0
+        fifteen: crwdns38536:0crwdne38536:0
+      U3L21 Assessment 2:
+        More Variables Question 2: crwdns38537:0crwdne38537:0
+        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: crwdns38538:0crwdne38538:0
+        Meaningful variable names make code easier to debug: crwdns38539:0crwdne38539:0
+        The literary quality of variable names is an important attribute of successful programs: crwdns38540:0crwdne38540:0
+        Readable variable names makes it easier to understand the program logic: crwdns38541:0crwdne38541:0
+        Descriptive names makes it easier for other programmers to understand the program: crwdns38542:0crwdne38542:0
       unique level name here:
         title: crwdns36515:0crwdne36515:0
         description here: crwdns21784:0crwdne21784:0

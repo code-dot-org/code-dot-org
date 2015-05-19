@@ -165,7 +165,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "setja-mynd (x, y, mynd)"},
 "offsetBlockTitle":function(d){return "hliðrun (x, y, mynd)"},
 "rectangleBlockTitle":function(d){return "rétthyrningur (breidd, hæð, gerð, litur)"},
-"reinfFeedbackMsg":function(d){return "Þú getur ýtt á hnappinn \"Spila áfram\" til að breyta teikningunni þinni."},
+"reinfFeedbackMsg":function(d){return "Þú getur ýtt á hnappinn \"Spila áfram\" til að gera breytingar á forritinu."},
 "rotateImageBlockTitle":function(d){return "snúa (gráður, mynd)"},
 "scaleImageBlockTitle":function(d){return "kvarða (stuðull, mynd)"},
 "squareBlockTitle":function(d){return "ferningur (hlið, gerð, litur)"},

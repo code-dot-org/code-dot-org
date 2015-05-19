@@ -257,6 +257,7 @@
       signup: Luo käyttäjätunnus
       already_registered: Jo rekisteröitynyt?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Sinun edistymisesi
       lines: 'Koodirivien yhteismäärä: %{lines}'
       close: SULJE
@@ -336,6 +337,10 @@
       sillä et ole rekisteröinyt sähköpostiosoitetta'
     student_teacher_disassociated: Opettaja %{teacher_name} on poistettu oppilaalta
       %{student_name}
+    panel:
+      answer_viewer: Answer Viewer
+      student: Oppilas
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'

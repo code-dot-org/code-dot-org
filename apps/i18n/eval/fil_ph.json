@@ -2,7 +2,7 @@
   "badColorStringError": "Ginamit mo ang isang hindi wastong color string:{val}",
   "badStyleStringError": "Ginamit mo ang isang hindi wastong color string:{val}",
   "circleBlockTitle": "bilog (radius, klase, kulay)",
-  "displayBlockTitle": "display",
+  "displayBlockTitle": "suriin",
   "ellipseBlockTitle": "ellipse (lapad, taas, style, kulay)",
   "extraTopBlocks": "Mayroon kang hindi isinama na block. Ibig mo bang isama ito sa \"display\" block?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",

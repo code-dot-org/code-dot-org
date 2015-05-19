@@ -105,7 +105,7 @@
           ocorre.
       3:
         image: notes/flappy03.jpg
-        text: 'Por exemplo, você poderia ter um MANIPULAR DE EVENTOS que diz "quando
+        text: 'Por exemplo, você poderia ter um MANIPULADOR DE EVENTOS que diz "quando
           o mouse for clicado, toque um som" '
       4:
         image: notes/flappy04.jpg

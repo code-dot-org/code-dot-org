@@ -275,6 +275,7 @@
       signup: Zarejestruj się
       already_registered: Czy jesteś Już zarejestrowany?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Twoje postępy
       lines: 'Łączna ilość linii kodu: %{lines}'
       close: ZAMKNIJ
@@ -350,6 +351,10 @@
       nauczyciel, ponieważ nie zarejestrowałeś adresu e-mail'
     student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Uczeń
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -573,8 +578,8 @@
       in the wrong order.
   text_match:
     placeholder: Wprowadź swoją odpowiedź tutaj
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Dzięki
+    open_response_body: Dzięki za odpowiedź!
   dialog:
     ok: OK
   time:
