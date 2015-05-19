@@ -24,6 +24,7 @@ OneDay = 24 * OneHour
 
 ExcludedBrowsers = [
   'bingbot',
+  'Chrome Frame',
   'Epiphany',
   'Googlebot',
   'IE 6.0',

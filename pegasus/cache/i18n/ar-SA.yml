@@ -16,7 +16,7 @@
   petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة الفرصة لتعلم علوم الحاسب
     الآلي
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: اذا اردت مساعدتنا , سجل أسمك. انضم مع الاخرين.
   name: الاسم
   email: البريد الإلكتروني
   zipcode: الرمز البريدي أو اسم البلد
@@ -207,6 +207,9 @@
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
+    diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: ساعة من البرمجة
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: جرب "Hour of Code"
