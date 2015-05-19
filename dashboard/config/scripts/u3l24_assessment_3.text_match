@@ -1,0 +1,7 @@
+name 'U3L24 Assessment 3'
+title 'Question 3'
+
+
+markdown <<MARKDOWN
+Write a set of chained conditionals that respond to the keywords, ‘sunny’, ‘cloudy’, ‘rain’ and ‘sun’. 
+MARKDOWN
