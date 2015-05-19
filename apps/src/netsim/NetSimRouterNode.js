@@ -176,7 +176,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    *
    * Not persisted on server.
    *
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = [];
@@ -697,7 +697,7 @@ NetSimRouterNode.prototype.getStatus = function () {
 /**
  * Makes sure that the given specification contains the fields that this
  * router needs to do its job.
- * @param {packetHeaderSpec} packetSpec
+ * @param {Packet.HeaderType[]} packetSpec
  * @private
  */
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {

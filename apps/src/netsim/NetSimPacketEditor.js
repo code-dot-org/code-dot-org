@@ -20,6 +20,7 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
@@ -47,7 +48,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
  * @param {MessageGranularity} initialConfig.messageGranularity
- * @param {packetHeaderSpec} initialConfig.packetSpec
+ * @param {Packet.HeaderType[]} initialConfig.packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -76,7 +77,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.messageGranularity_ = initialConfig.messageGranularity;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = initialConfig.packetSpec;
@@ -662,7 +663,9 @@ NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var encoder = new Packet.Encoder(this.packetSpec_);
+  var level = netsimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
   return encoder.concatenateBinary(
       encoder.makeBinaryHeaders({
         toAddress: this.toAddress,

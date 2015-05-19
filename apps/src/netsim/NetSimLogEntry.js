@@ -37,7 +37,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
  * @param {logEntryRow} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
- * @param {packetHeaderSpec} [packetSpec] - Packet layout spec used to
+ * @param {Packet.HeaderType[]} [packetSpec] - Packet layout spec used to
  *        interpret the contents of the logged packet
  * @constructor
  * @augments NetSimEntity
