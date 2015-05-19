@@ -21,4 +21,3 @@ end
 def unsupported_media_type()
   halt(415, "Unsupported Media Type\n")
 end
-
