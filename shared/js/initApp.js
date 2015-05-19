@@ -146,12 +146,12 @@ if (appOptions.droplet) {
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
       .then(loadSource('droplet/droplet-full'))
-      .then(loadSource('tooltipster/jquery.tooltipster'));
-  promise = dashboard.project.load(promise);
+      .then(loadSource('tooltipster/jquery.tooltipster'))
+      .then(dashboard.project.load);
 } else {
   promise = loadSource('blockly')()
-    .then(loadSource(appOptions.locale + '/blockly_locale'));
-  promise = dashboard.project.load(promise);
+      .then(loadSource(appOptions.locale + '/blockly_locale'))
+      .then(dashboard.project.load);
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))

@@ -155,52 +155,50 @@ module.exports = {
       callbackSafe(callback, false);
     }
   },
-  load: function (promise) {
-    var that = this;
+  /**
+   * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
+   */
+  load: function () {
+    var deferred;
     if (appOptions.level.isProjectLevel) {
       var hashData = parseHash();
       if (hashData.channelId) {
         if (hashData.isEditingProject) {
-          this.isEditing = true;
+          module.exports.isEditing = true;
         } else {
           $('#betainfo').hide();
         }
 
         // Load the project ID, if one exists
-        promise = promise.then(function () {
-          var deferred = new $.Deferred();
-          channels.fetch(hashData.channelId, function (data) {
-            if (data) {
-              that.current = data;
-              deferred.resolve();
-            } else {
-              // Project not found, redirect to the new project experience.
-              location.href = location.pathname;
-            }
-          });
-          return deferred;
-        });
-      } else {
-        this.isEditing = true;
-      }
-    } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
-      // this is an embedded project
-      this.isEditing = true;
-      promise = promise.then(function () {
-        var deferred = new $.Deferred();
-        channels.fetch(appOptions.channel, function(data) {
+        deferred = new $.Deferred();
+        channels.fetch(hashData.channelId, function (data) {
           if (data) {
-            that.current = data;
+            module.exports.current = data;
             deferred.resolve();
           } else {
-            deferred.reject();
+            // Project not found, redirect to the new project experience.
+            location.href = location.pathname;
           }
         });
         return deferred;
+      } else {
+        module.exports.isEditing = true;
+      }
+    } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
+      // this is an embedded project
+      module.exports.isEditing = true;
+      deferred = new $.Deferred();
+      channels.fetch(appOptions.channel, function(data) {
+        if (data) {
+          module.exports.current = data;
+          dashboard.showProjectLevelHeader();
+          deferred.resolve();
+        } else {
+          deferred.reject();
+        }
       });
-      dashboard.showProjectLevelHeader();
+      return deferred;
     }
-    return promise;
   }
 };
 
