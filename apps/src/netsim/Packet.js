@@ -148,7 +148,6 @@ Packet.Encoder.scrubSpecForBackwardsCompatibility = function (spec) {
 };
 
 /**
- *
  * @param {string} addressFormat
  * @private
  */
@@ -241,6 +240,33 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
 };
 
 /**
+ * Retrieve an address header as a string, so we can give the multi-part
+ * representation.
+ * @param {Packet.HeaderType} key
+ * @param {string} binary for whole packet
+ * @returns {string}
+ */
+Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
+  var fieldBinary = this.getHeader(key, binary);
+  var indexIntoBinary = 0;
+  // Parentheses in the split() regex cause the dividing elements to be caputred
+  // and also included in the return value.
+  return this.addressFormat_.split(/(\D+)/).map(function (formatPart) {
+    var bitWidth = parseInt(formatPart, 10);
+    if (isNaN(bitWidth)) {
+      // Pass non-number parts of the format through, so we use the original
+      // entered characters/layout for formatting.
+      return formatPart;
+    }
+
+    var binarySlice = fieldBinary.substr(indexIntoBinary, bitWidth);
+    var intVal = dataConverters.binaryToInt(binarySlice);
+    indexIntoBinary += bitWidth;
+    return intVal.toString();
+  }).join('');
+};
+
+/**
  * Skip over headers given in spec and return remainder of binary which
  * must be the message body.
  * @param {string} binary - entire packet as a binary string
@@ -300,11 +326,46 @@ Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
   var binaryHeaders = {};
   this.headerSpec_.forEach(function (headerField){
     if (headers.hasOwnProperty(headerField)) {
-      binaryHeaders[headerField] = dataConverters.intToBinary(
-          headers[headerField], this.getFieldBitWidth(headerField));
+      // Convert differently for address and packet fields?
+      if (Packet.isAddressField(headerField)) {
+        binaryHeaders[headerField] = this.addressStringToBinary(headers[headerField]);
+      } else {
+        binaryHeaders[headerField] = dataConverters.intToBinary(
+            headers[headerField], this.getFieldBitWidth(headerField));
+      }
     }
   }, this);
   return binaryHeaders;
+};
+
+/**
+ * Convert an address string (possibly multi-part) into binary based on the
+ * configured address format.
+ * @param {string} address
+ * @returns {string} binary representation
+ */
+Packet.Encoder.prototype.addressStringToBinary = function (address) {
+  // Actual user input, converted to a number[]
+  var addressParts = address.toString().split(/\D+/).map(function (stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  // Format, converted to a number[] where the numbers are bit-widths
+  var partWidths = this.addressFormat_.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var partValue;
+  var binary = '';
+  for (var i = 0; i < partWidths.length; i++) {
+    partValue = i < addressParts.length ? addressParts[i] : 0;
+    binary = binary + dataConverters.intToBinary(partValue, partWidths[i]);
+  }
+  return binary;
 };
 
 /**
