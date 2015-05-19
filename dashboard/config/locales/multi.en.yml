@@ -703,7 +703,7 @@ en:
         I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
       PDAlg Blocks Video:
         Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
+        In which area of the screen do you click blocks together to write a program?: In which area of the screen do you click blocks together to write a program?
         Play Area: Play Area
         Toolbox: Toolbox
         Workspace: Workspace
@@ -1026,6 +1026,15 @@ en:
         3 bits: 3 bits
         2 bits: 2 bits
         1 bit: 1 bit
+      U1L4 Multiple Choice:
+        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination and Binary Messages'
+        ? A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?
+        : A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?
+        ABAB: ABAB
+        AABB: AABB
+        AAAA: AAAA
+        BBBB: BBBB
+        ABBB: ABBB
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
         If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
