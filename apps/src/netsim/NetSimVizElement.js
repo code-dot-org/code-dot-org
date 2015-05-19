@@ -92,6 +92,15 @@ NetSimVizElement.prototype.isDead = function () {
 };
 
 /**
+ * @returns {boolean} whether this entity is playing its final animation
+ *          and will be ready to be cleaned up by the visualization manager
+ *          soon.
+ */
+NetSimVizElement.prototype.isDying = function () {
+  return this.isDead_ && this.tweens_.length > 0;
+};
+
+/**
  * Update all of the tweens currently running on this VizElement (which will
  * probably modify its properties) and then remove any tweens that are completed
  * from the list.
