@@ -252,11 +252,10 @@ function shareProject() {
 }
 
 function remixProject() {
-  delete dashboard.project.current.id;
-  delete dashboard.project.current.hidden;
-  dashboard.project.current.name = "Remix: " + (dashboard.project.current.name || appOptions.level.projectTemplateLevelName || "My Project");
-  $('.project_name').text(dashboard.project.current.name);
-  dashboard.project.save();
+  var newName = "Remix: " + (dashboard.project.current.name || appOptions.level.projectTemplateLevelName || "My Project");
+  dashboard.project.copy(newName, function () {
+    $('.project_name').text(dashboard.project.current.name);
+  });
 }
 
 // Minimal project header for legacy /c/ share pages.
@@ -327,10 +326,7 @@ dashboard.showProjectHeader = function () {
       return;
     }
     $(this).attr('disabled', true);
-    dashboard.project.current.name = $('.project_name').val().trim().substr(0, 100);
-    dashboard.project.save(function () {
-      projectNameShow();
-    });
+    dashboard.project.rename($('.project_name').val().trim().substr(0, 100), projectNameShow);
   });
 
   $('.project_share').click(shareProject);
