@@ -38,6 +38,7 @@ var React = require('react');
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignProperties = require('./designProperties.jsx');
+var ManageAssets = require('./manageAssets.jsx');
 var elementLibrary = require('./designElements/library');
 
 var vsprintf = require('./sprintf').vsprintf;
@@ -1887,7 +1888,6 @@ Applab.onDesignModeClear = function() {
 
 Applab.onDesignModeManageAssets = function() {
   var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./manageAssets.html.ejs')();
   var dialog = studioApp.createModalDialog({
     Dialog: Dialog,
     contentDiv: codeDiv,
@@ -1895,6 +1895,13 @@ Applab.onDesignModeManageAssets = function() {
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
   });
+  React.render(React.createElement(ManageAssets, {
+    assets: [{
+      name: "A"
+    }, {
+      name: "B"
+    }]
+  }), codeDiv);
 
   dialog.show();
 };
