@@ -208,9 +208,12 @@
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_codevideo: Assista ao vídeo
   homepage_action_text_teachervideo: Assista ao vídeo
-  homepage_action_text_learn: Comece a aprender hoje
+  homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assine a petição
   homepage_signpetition_dropdown: Assine nossa petição &#x25BE;
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
+    diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código

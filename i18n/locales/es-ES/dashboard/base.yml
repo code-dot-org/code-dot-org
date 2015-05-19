@@ -231,6 +231,7 @@ es:
       signup: Registrarse
       already_registered: ¿Ya estás registrado?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Tu progreso
       lines: 'Total de líneas de código: %{lines}'
       close: CERRAR
@@ -298,6 +299,10 @@ es:
     cant_remove_student_no_email: '%{student_name} no puede eliminarse como su estudiante porque % {student_name} no ha registrado una dirección de correo electrónico'
     cant_remove_teacher_no_email: '%{teacher_name} no puede eliminarse como tu maestro, porque no has registrado una dirección de correo electrónico'
     student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor de %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: estudiante
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'

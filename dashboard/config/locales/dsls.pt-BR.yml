@@ -90,13 +90,19 @@
         1: ': Escreva o contrato para a função chamada "ret-largo" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
         wide-rect|Image|Number|String: ret-largo|Imagem|Número|String
+      Rocket Contract 1:
+        Contract for rocket-height: Contract for rocket-height
+        rocket-height|Number|Number: rocket-height|Number|Number
     external:
       AlgPD Break:
-        Before you move on...: Before you move on...
+        Before you move on...: Antes de seguir em frente...
+      App Lab Feedback:
+        App Lab Feedback: Feedback do Laboratório de aplicativo
+        description here: descrição aqui
       CSP Journal Entry Placeholder:
-        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
-        Eventually replace this with a free-response journal entry level: Eventually
-          replace this with a free-response journal entry level
+        CSP Journal Entry Placeholder: Espaço reservado de entrada do Diário CSP
+        Eventually replace this with a free-response journal entry level: Por fim,
+          substitua o espaço reservado por uma entrada de diário de resposta livre
       CSP Journal Entry Placeholder2:
         description here: descrição aqui
         title: título
@@ -113,39 +119,39 @@
         Create images with bits and bytes.: Crie imagens com bits e bytes.
         title: título
       ECSPD PD Phases:
-        ECSPD PD Phases: ECSPD PD Phases
+        ECSPD PD Phases: Fases ECSPD DP
       ECSPD PD details:
-        ECSPD PD details: ECSPD PD details
+        ECSPD PD details: Detalhes ECSPD DP
       ECSPD PD overview:
         ECS PD Overview: Visão geral de ECS PD
       ECSPD curriculum overview:
         ECS Curriculum Overview: Visão geral do currículo ECS
         Overview of Curriculum: Visão geral do currículo
       ECSPD end of p1:
-        ECSPD end of p1: ECSPD end of p1
+        ECSPD end of p1: Fim da parte 1 de ECSPD
       ECSPD forum introduction:
-        ECS Forum Introductions: ECS Forum Introductions
-        Forum Introductions: Forum Introductions
+        ECS Forum Introductions: Introduções do Fórum ECS
+        Forum Introductions: Introduções do Fórum
       ECSPD growth mindset strategies:
         Growth Mindset Strategies: Estratégias de mentalidade de crescimento
       ECSPD impact of CS:
-        Impact of Computer Science: Impact of Computer Science
+        Impact of Computer Science: Impacto da ciência da computação
         description here: descrição aqui
       ECSPD impact vid1:
-        ECSPD impact vid1: ECSPD impact vid1
+        ECSPD impact vid1: Impacto do ECSPD - vídeo 1
       ECSPD impact vid2:
-        ECSPD impact vid2: ECSPD impact vid2
+        ECSPD impact vid2: Impacto do ECSPD - vídeo 2
       ECSPD meet facilitator:
         Meet your Facilitator!: Conheça seu facilitador!
       ECSPD pause:
-        ECSPD pause: ECSPD pause
+        ECSPD pause: Pausa ECSPD
       ECSPD postsurvey: []
       ECSPD presurvey: []
       ECSPD program overview:
         ECS Program Overview: Visão geral do programa ECS
         Overview of ECS Program: Visão geral do programa ECS
       ECSPD teaching strategies video:
-        ECSPD teaching strategies video: ECSPD teaching strategies video
+        ECSPD teaching strategies video: Vídeo de estratégias de ensino do ECSPD
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: Uma exploração da mentalidade de crescimento
         What is Growth Mindset?: O que é mentalidade de crescimento?
@@ -153,61 +159,67 @@
         first computer program: primeiro programa de computador
       Hour of Code test content: []
       Intro to CodeStudio:
-        An Introduction to Code Studio: An Introduction to Code Studio
+        An Introduction to Code Studio: Uma introdução ao Code Studio
       Mixing Colors:
         description here: descrição aqui
         title: título
       Odometer:
-        Odometer: Odometer
+        Odometer: Hodômetro
       PDAlg Attitude Survey:
-        CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+        CS in Algebra Pre-attitude survey: Pesquisa prévia de atitude sobre CC em
+          álgebra
       PDAlg Curriculum Overview:
-        Curriculum Overview: Curriculum Overview
-        Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+        Curriculum Overview: Visão geral do currículo
+        Overview of CS in Algebra curriculum: Visão geral do currículo de CC em álgebra
       PDAlg Details:
-        CS in Algebra PD Details: CS in Algebra PD Details
+        CS in Algebra PD Details: Detalhes do DP em CC em álgebra
       PDAlg End of P1:
-        End of Phase 1: End of Phase 1
+        End of Phase 1: Fim da fase 1
       PDAlg Facilitator Test:
         description here: descrição aqui
         title: título
       PDAlg Facilitators:
-        Meet Your Facilitators: Meet Your Facilitators
+        Meet Your Facilitators: Conheça seus facilitadores
       PDAlg Intro: []
       PDAlg Post Survey:
-        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+        CS in Algebra Post-attitude survey: Pesquisa posterior de atitude sobre CC
+          em álgebra
       PDAlg Scope:
-        Scope and Sequence: Scope and Sequence
+        Scope and Sequence: Escopo e sequência
       PDAlg Teacher Dashboard:
         Course Progress: Progresso do curso
       PDAlg Teacher Introduction:
-        Introduce yourself: Introduce yourself
+        Introduce yourself: Apresente-se
       PDAlg big game:
-        Introduction to the Big Game: Introduction to the Big Game
+        Introduction to the Big Game: Introdução ao grande jogo
       PDAlg bootstrap:
-        From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
+        From Bootstrap to CS in Algebra: De Bootstrap a CC em álgebra
       PDAlg circles to blocks:
-        From Circles to Blocks: From Circles to Blocks
+        From Circles to Blocks: De círculos a blocos
       PDAlg commitment:
-        CS in Algebra PD commitments: CS in Algebra PD commitments
+        CS in Algebra PD commitments: Metas do DP na CC em álgebra
         overview of program commitments: visão geral de compromissos do programa
+      PDAlg first forum:
+        Starting the Conversation: Iniciando a conversa
       PDAlg functions:
-        The Concept of Function: The Concept of Function
+        The Concept of Function: O conceito de função
       PDAlg hard video:
-        Why is Algebra so Hard?: Why is Algebra so Hard?
+        Why is Algebra so Hard?: Por que a álgebra é tão difícil?
+      PDAlg whats next:
+        What's Next?: O que vem a seguir?
       PDCSP Intro: []
       PDECS Intro:
-        PD Intro: Introdução a PD
-        Welcome to ECS Online PD: Bem-vindo ao PD on-line para ECS
+        PD Intro: Introdução ao DP
+        Welcome to ECS Online PD: Bem-vindo ao DP on-line para ECS
       PDECS Welcome Video:
         Welcome Video: Vídeo de boas-vindas
-        Welcome to Online PD for ECS: Bem-vindo ao PD on-line para ECS
+        Welcome to Online PD for ECS: Bem-vindo ao DP on-line para ECS
       PDECS commitment:
-        ECS PD commitments: Compromissos de PD para ECS
+        ECS PD commitments: Metas do DP para ECS
         overview of program commitments: visão geral de compromissos do programa
       PDECS tour:
-        Tour of PD Space: Um tour pelo espaço PD
-        tour of the PD space: um tour pelo espaço PD
+        Tour of PD Space: Um tour pelo espaço do DP
+        tour of the PD space: um tour pelo espaço do DP
       PDK5 Beyond C:
         Beyond: Além
       PDK5 CS Video:
@@ -217,23 +229,27 @@
       PDK5 Classroom Culture C:
         Classroom Culture: Cultura de sala de aula
       PDK5 Connections:
-        Connections: Connections
+        Connections: Conexões
       PDK5 Course Maps C: []
       PDK5 Course Overview C: []
       PDK5 Foundations F:
-        foundational skill: foundational skill
+        foundational skill: Habilidade fundamental
       PDK5 Glossary C:
         Vocabulary: Vocabulário
       PDK5 Intro C: []
       PDK5 Pair Programming 1:
         Pair Programming: Programação em duplas
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Objetivos do desafio
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Estratégias para o ensino de ciência
           da computação
       PDK5 Strategies 1:
-        Classroom Strategies: Classroom Strategies
+        Classroom Strategies: Estratégias de sala de aula
       PDK5 Strategies F:
-        Strategies Discussion: Strategies Discussion
+        Strategies Discussion: Discussão de estratégias
+      PDK5 Survey:
+        Phase 1 Experience Survey: Phase 1 Experience Survey
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Painel de controle 1
       PDK5 Teacher Dashboard 2:
@@ -375,13 +391,13 @@
       U1L12 Student Lesson Introduction:
         description here: descrição aqui
         title: título
-      U1L13 Student Lesson Introduction:
+      U1L13 Student Lesson Summary:
         description here: descrição aqui
         title: título
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: Comprima o texto identificando
           padrões repetidos.
-        U1L13 Text Compression: U1L13 Text Compression
+        U1L13 Text Compression: Compressão de texto U1L13
       U1L16 Student Lesson Introduction:
         description here: descrição aqui
         title: título
@@ -415,90 +431,162 @@
       U1L9 Student Lesson Introduction:
         description here: descrição aqui
         title: título
+      U3L12 - Mission Unsortable:
+        description here: descrição aqui
+        title: título
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Eventos offline
+      U3L13 - Explanation of Ids:
+        description here: descrição aqui
+        title: título
+      U3L13 Add Button Instrucitons:
+        description here: descrição aqui
+        title: título
+      U3L13 Add Button Instructions:
+        description here: descrição aqui
+        title: título
+      U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Botões na tela
+      U3L14 - Student Intro Page:
+        description here: descrição aqui
+        title: título
+      U3L16 Student Lesson Introduction:
+        Beyond Buttons: Além dos botões
+      U3L18 Student Lesson Introduction:
+        Controlling Memory and Program Flow: Controle de memória e fluxo de programa
+      U3L19 - Intro to variables:
+        U3L19 - Intro to variables: U3L19 - Intro to variables
+        description here: descrição aqui
+      U3L19 - concatenate string with var:
+        U3L19 - concatenate string with var: U3L19 - concatenate string with var
+        description here: descrição aqui
+      U3L19 - explanation diff between string and var name:
+        U3L19 - explanation diff between string and var name: U3L19 - explanation
+          diff between string and var name
+        description here: descrição aqui
+      U3L19 - misconception variable assignment order pt1:
+        U3L19 - misconception variable assignment order pt1: U3L19 - misconception
+          variable assignment order pt1
+        description here: descrição aqui
+      U3L19 - variable breakdown - Assigning a value:
+        U3L19 - variable breakdown - Assigning a value: U3L19 - variable breakdown
+          - Assigning a value
+        description here: descrição aqui
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        U3L19 - variable breakdown - common mistake - declaring twice: U3L19 - variable
+          breakdown - common mistake - declaring twice
+        description here: descrição aqui
+      U3L19 - variable breakdown - declaration:
+        U3L19 - variable breakdown - declaration: U3L19 - variable breakdown - declaration
+        description here: descrição aqui
+      U3L19 - variable breakdown - setText in label:
+        U3L19 - variable breakdown - setText in label: U3L19 - variable breakdown
+          - setText in label
+        description here: descrição aqui
+      U3L19 - variable breakdown - ways to read pt1:
+        U3L19 - variable breakdown - ways to read pt1: U3L19 - variable breakdown
+          - ways to read pt1
+        description here: descrição aqui
+      U3L19 - variable breakdown intro:
+        U3L19 - variable breakdown intro: U3L19 - variable breakdown intro
+        description here: descrição aqui
+      U3L19 Student Lesson Intro:
+        Clicker V.1: Clicker V.1
+      U3L20 Student Lesson Introduction:
+        Conditional Basics: Noções básicas de condicionais
+      U3L21 Student Lesson Introduction:
+        More Variables: More Variables
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: Permanent Data Storage
+      U3L23 Student Lesson Introduction:
+        Natural Language Processing: Natural Language Processing
       facilitator test: []
       sciPD Course Overview: []
       sciPD Intro: []
       sciPD StarLogo intro 1:
-        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided
-          Introduction to StarLogo Nova
+        Preface to the Guided Introduction to StarLogo Nova: Prefácio ao guia de introdução
+          do StarLogo Nova
       sciPD StarLogo intro 2:
-        Guided Intro to StarLogo Nova: Guided Intro to StarLogo Nova
+        Guided Intro to StarLogo Nova: Guia de introdução ao StarLogo Nova
       sciPD StarLogo intro 3:
-        Guided Tour of StarLogo Nova pt 3: Guided Tour of StarLogo Nova pt 3
+        Guided Tour of StarLogo Nova pt 3: Guia de introdução ao StarLogo Nova - parte
+          3
       sciPD StarLogo intro 4:
-        Guided Intro to StarLogo Nova part 4: Guided Intro to StarLogo Nova part 4
+        Guided Intro to StarLogo Nova part 4: Guia de introdução ao StarLogo Nova
+          - parte 4
       sciPD StarLogo intro video:
-        Introduction to StarLogo Nova: Introduction to StarLogo Nova
+        Introduction to StarLogo Nova: Introdução ao StarLogo Nova
       sciPD StarLogo tutorial 1:
-        StarLogo Tutorial part 1: StarLogo Tutorial part 1
+        StarLogo Tutorial part 1: Tutorial sobre StarLogo - parte 1
       sciPD StarLogo tutorial 2:
-        StarLogo Tutorial part 2: StarLogo Tutorial part 2
+        StarLogo Tutorial part 2: Tutorial sobre StarLogo - parte 2
       sciPD StarLogo tutorial 3:
-        StarLogo Tutorial part 3: StarLogo Tutorial part 3
+        StarLogo Tutorial part 3: Tutorial sobre StarLogo - parte 3
       sciPD StarLogo tutorial 4:
-        StarLogo Nova Tutorial Part 4: StarLogo Nova Tutorial Part 4
+        StarLogo Nova Tutorial Part 4: Tutorial sobre StarLogo Nova - parte 4
       sciPD StarLogo tutorial 5:
-        StarLogo Nova Tutorial Part 5: StarLogo Nova Tutorial Part 5
+        StarLogo Nova Tutorial Part 5: Tutorial sobre StarLogo Nova - parte 5
       sciPD StarLogo tutorial 6:
-        StarLogo Nova Tutorial Part 6: StarLogo Nova Tutorial Part 6
+        StarLogo Nova Tutorial Part 6: Tutorial sobre StarLogo Nova - parte 6
       sciPD StarLogo tutorial 7:
-        StarLogo Nova Tutorial Part 7: StarLogo Nova Tutorial Part 7
+        StarLogo Nova Tutorial Part 7: Tutorial sobre StarLogo Nova - parte 7
       sciPD StarLogo tutorial 8:
-        StarLogo Nova Tutorial Part 8: StarLogo Nova Tutorial Part 8
+        StarLogo Nova Tutorial Part 8: Tutorial sobre StarLogo Nova - parte 8
       sciPD agent based forum:
-        Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive
-          Systems Forum
+        Agent Based Modeling of Adaptive Systems Forum: Fórum de modelagem de sistemas
+          adaptativos com base em agentes
       sciPD agent based video:
-        Agent Based Modeling: Agent Based Modeling
+        Agent Based Modeling: Modelagem com base em agentes
       sciPD class models forum:
-        Models in the Classroom: Models in the Classroom
+        Models in the Classroom: Modelos na sala de aula
       sciPD class models video:
-        Using Models in the Classroom: Using Models in the Classroom
+        Using Models in the Classroom: Usando modelos na sala de aula
       sciPD complex adaptive forum:
-        Complex Adaptive Forum: Complex Adaptive Forum
+        Complex Adaptive Forum: Fórum adaptativo complexo
       sciPD complex adaptive video:
-        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+        Intro to Complex Adaptive Systems: Introdução a sistemas adaptativos complexos
       sciPD computer models forum:
-        Using Computer Models in Science: Using Computer Models in Science
+        Using Computer Models in Science: Usando modelos de computadores em ciência
       sciPD computer models video:
-        Using Computer Models in Science: Using Computer Models in Science
+        Using Computer Models in Science: Usando modelos de computadores em ciência
       sciPD culture forum:
-        Dispositions and Classroom Culture: Dispositions and Classroom Culture
+        Dispositions and Classroom Culture: Disposições e cultura de sala de aula
       sciPD culture video:
-        Dispositions And Classroom Culture: Dispositions And Classroom Culture
+        Dispositions And Classroom Culture: Disposições e cultura de sala de aula
       sciPD expectations: []
       sciPD finish:
-        Code.org Post Survey: Code.org Post Survey
+        Code.org Post Survey: Pesquisa posterior da Code.org
       sciPD framework forum:
-        Computational Thinking and the Framework for K-12: Computational Thinking
-          and the Framework for K-12
+        Computational Thinking and the Framework for K-12: Pensamento computacional
+          e a estrutura para o Ensino Fundamental
       sciPD framework video:
         Framework: Quadro
       sciPD intro finale: []
       sciPD intro to CS forum: []
       sciPD intro to CS video:
-        Intro to Computational Science: Intro to Computational Science
+        Intro to Computational Science: Introdução à ciência computacional
       sciPD intro video:
-        Welcome to CS in Science: Welcome to CS in Science
+        Welcome to CS in Science: Bem-vindo à ciência da computação na ciência
       sciPD logistics 1:
-        Details and Logistics: Details and Logistics
+        Details and Logistics: Detalhes e logística
       sciPD materials:
-        Workshop Materials: Workshop Materials
+        Workshop Materials: Materiais de workshop
       sciPD meet and greet: []
       sciPD p2 intro:
-        Welcome to Phase 2: Welcome to Phase 2
+        Welcome to Phase 2: Bem-vindo à fase 2
       sciPD p3 intro:
-        CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase
-          3 PD
+        CS in Science Introduction to Phase 3 PD: Ciência da computação na ciência
+          - introdução à fase 3 do DP
       sciPD preQ:
-        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+        Computer Science in Science Pre-Survey: Pesquisa prévia sobre a ciência da
+          computação na ciência
       sciPD what to expect:
-        What to Expect: What to Expect
+        What to Expect: O que esperar
       test demo level:
         demo description: demo description
         demo title: demo title
       test discourse level type:
-        this is a discourse forum: this is a discourse forum
+        this is a discourse forum: este é um fórum de discussão
         title: título
       test html katie:
         lkajsdfasdf: lkajsdfasdf
@@ -512,6 +600,7 @@
         (4+5) > 9: (4+5) > 9
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png,
           300
+        4+5 > 9: 4+5 > 9
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão
           aritmética que corresponde a esse código
@@ -527,16 +616,19 @@
           aritmética que corresponde a esse código
         Type the arithmetic expression here: Insira a expressão aritmética aqui
       Blocks to Bools 3:
+        ((5 < 10 < 15)): ((5 < 10 < 15))
         ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
         ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
         ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        (5 < 10 < 15): (5 < 10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) E (10 < 15)
         (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) and (10 < 15): (5 < 10) e (10 < 15)
         /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
           500
+        5 < 10 < 15: 5 < 10 < 15
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão
           aritmética que corresponde a esse código
@@ -558,6 +650,10 @@
           ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) e (x < 5)) ou ((8
           < x) e (x < 10))
+        (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
+        (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
+        (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
+        (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
           500
         Convert Blocks to Math: Converta os blocos em matemática
@@ -631,35 +727,32 @@
           aritmética que corresponde a esse código
         Type the arithmetic expression here: Insira a expressão aritmética aqui
       ECSPD PD goals:
-        Documenting Your PD Goals: Documenting Your PD Goals
+        Documenting Your PD Goals: Documentando seus objetivos no DP
       ECSPD course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
+        Documenting Your Course Goals: Documentando seus objetivos no curso
       ECSPD impact in program:
-        Impact of Computing: Impact of Computing
+        Impact of Computing: Impacto da computação
       ECSPD program overlap:
-        Relationship between Curriculum and PD: Relationship between Curriculum and
-          PD
+        Relationship between Curriculum and PD: Relação entre currículo e DP
       ECSPD strategies:
-        Classroom Strategies Journal: Diário de estratégias de sala de aula
+        Classroom Strategies Journal: Diário de estratégias para a sala de aula
       ECSPD your goals:
         Documenting Your Goals: Documentando seus objetivos
       Open text response example:
         I loved it because...: Eu amei porque...
         Open text response example: Exemplo de resposta com texto aberto
+      PDAlg Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Proporcionando
+          um ambiente de aprendizagem positivo em sua sala de ciência da computação
+        In my classroom, I want to...: Em minha sala de aula, eu quero...
       PDAlg course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
+        Documenting Your Course Goals: Documentando seus objetivos no curso
       PDK5 Challenges:
         Biggest Challenges: Os maiores desafios
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Proporcionando
           um ambiente de aprendizagem positivo em sua sala de ciência da computação
         In my classroom, I want to...: Em minha sala de aula, eu quero...
-        0: '? Agora que você sabe mais sobre nosso currículo, quais práticas você
-          quer usar para promover uma atmosfera saudável em sua sala de ciência da
-          computação?'
-        1: ': Agora que você sabe mais sobre nosso currículo, quais práticas você
-          quer usar para promover uma atmosfera saudável em sua sala de ciência da
-          computação?'
       PDK5 Course Descriptions:
         Course Structure: Estrutura do curso
         I am going to start with Course...: Eu vou começar com o curso...
@@ -692,7 +785,7 @@
           alunos estão aprendendo? Explique por que sim ou por que não.
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
+        Real-world applications for Students: Aplicações do mundo real para os alunos
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Loops 2:
         The Importance of Loops: A importância dos laços
@@ -704,8 +797,8 @@
         'Code Studio: Kid tested, Teacher approved': 'Code Studio: aluno testado,
           professor aprovado'
       PDK5 Promo Video 2:
-        'Code Studio: Kid Tested, Teacher Approved!': 'Code Studio: Kid Tested, Teacher
-          Approved!'
+        'Code Studio: Kid Tested, Teacher Approved!': 'Code Studio: aluno testado,
+          professor aprovado!'
         My first impressions of Code Studio are...: Minhas primeiras impressões do
           Code Studio são...
       PDK5 Strategies O:
@@ -765,12 +858,19 @@
           ao que é pedido ou ao que é direcionado por seu professor.
       U1L2 Free response assessment question:
         'Assessment: Sending Binary Messages': 'Avaliação: envio de mensagens binárias'
-        Complete the Lesson 2 Rubric.: Complete a rubrica da lição 2.
         Enter your response here.: Digite sua resposta aqui.
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: Complete a rubrica da lição 2.
         Enter your reflection here.: Digite sua reflexão aqui.
         'Reflection: Sending Binary Messages': 'Reflexão: envio de mensagens binárias'
+      U1L3 Free Response:
+        Enter your reflection here: Digite sua reflexão aqui
+        0: '? How did collaboration impact the development of your protocol? What
+          challenges did working in a group present and in what ways did it positively
+          impact your final product?'
+        1: ': How did collaboration impact the development of your protocol? What
+          challenges did working in a group present and in what ways did it positively
+          impact your final product?'
+        'Reflection: Sending Complex Messages': 'Reflexão: envio de mensagens complexas'
       U1L3 Free response reflection question:
         Complete the Lesson 3 Rubric.: Complete a rubrica da lição 3.
         Enter your reflection here.: Digite sua reflexão aqui.
@@ -779,7 +879,8 @@
         Enter your reflection here.: Digite sua reflexão aqui.
         Reflect on this lesson: Reflita sobre essa lição
       U1L4 Free response reflection question:
-        'Assessment: Bit sending Widget': 'Avaliação: widget de envio de bits'
+        'Assessment: Coordination on the Internet': 'Assessment: Coordination on the
+          Internet'
         Complete the Lesson 2 Rubric.: Complete a rubrica da lição 2.
         Enter your reflection here.: Digite sua reflexão aqui.
       U1L5 Free Response Assessment:
@@ -809,6 +910,46 @@
         'Reflection: Sending Numbers ': 'Reflexão: envio de números '
       U1L9 Free Response Assessment:
         'Assessment: Real-world Numbers ': 'Avaliação: números do mundo real '
+      U3L12 - Reflection - Mission Unsortable:
+        Activity Reflection: Reflexão da atividade
+        Mission Unsortable: 'Missão não classificada  '
+      U3L12 Free Response Getting Started:
+        'Getting Started: Events Unplugged': 'Primeiros passos: eventos offline'
+        Respond to the following prompt: Responda à seguinte mensagem
+      U3L12 Free Response Reflection:
+        'Reflection: Mission Unsortable': 'Reflexão: missão não classificada'
+      U3L13 Free Response Getting Started:
+        Buttons on the Screen - Getting Started: Botões na tela - primeiros passos
+      U3L13 Free Response Reflection:
+        Buttons on the Screen Wrap Up: Conclusão - Botões na tela
+      U3L14 - Journal Favorite Event:
+        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Escolha
+          uma das duas opções abaixo para responder. Comece copiando/colando a opção
+          que você vai responder.
+        'Reflection: Events': 'Reflexão: eventos'
+      U3L16 Assessment Free Response:
+        'Beyond Buttons: Assessment': 'Além dos botões: avaliação'
+      U3L16 Free Response Getting Started:
+        Beyond Buttons Getting Started: 'Primeiros passos: Além dos botões'
+      U3L16 Free Response Wrap Up:
+        Beyond Buttons Wrap Up: Conclusão - Além dos botões
+      U3L18 Free Response Wrap Up:
+        Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program
+          Flow Wrap Up
+      U3L20 Free Response Getting Started:
+        'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
+      U3L20 Free Response Wrap Up:
+        'Wrap Up: Conditional Basics': 'Wrap Up: Conditional Basics'
+      U3L21 Assessment Wrap Up:
+        More Variables Wrap Up: More Variables Wrap Up
+      U3L22 Assessment:
+        Permanent Data Storage Assessment: Permanent Data Storage Assessment
+      U3L22 Free Response Getting Started:
+        'Permanent Data Storage: Getting Started': 'Permanent Data Storage: Getting
+          Started'
+      U3L22 Reflection:
+        The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent
+          Data Storage
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4: 

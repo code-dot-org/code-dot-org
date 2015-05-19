@@ -176,9 +176,11 @@ id-ID:
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Tonton videonya
   homepage_action_text_teachervideo: Tonton videonya
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
   homepage_signpetition_dropdown: 'Tandatangani petisi kami &#x25BE;'
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: 'Cobalah "Hour of Code"'

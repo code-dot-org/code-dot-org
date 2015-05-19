@@ -19,7 +19,7 @@
   "incrementPlayerScore":"pontszám",
   "incrementPlayerScoreTooltip":"Adjon egyet az aktuális játékos pontjaihoz.",
   "isWall":"Ez egy fal?",
-  "isWallTooltip":"Igaz értéket ad, ha itt van fal",
+  "isWallTooltip":"Igaz értéket ad, ha ott van egy fal",
   "launchBall":"Indíts új labdát",
   "launchBallTooltip":"Hozd játékba a labdát.",
   "makeYourOwn":"Készíts saját visszapattanós játékot",

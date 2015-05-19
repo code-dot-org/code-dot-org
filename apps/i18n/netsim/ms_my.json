@@ -1,7 +1,7 @@
 {
-  "a_and_b": "A/B",
-  "addPacket": "Add Packet",
-  "addRouter": "Add Router",
+  "a_and_b": "A / B",
+  "addPacket": "Tambah pakej",
+  "addRouter": "Tambah penghala (Router)",
   "appendCountToTitle": "{title} ({count})",
   "ascii": "ASCII",
   "autoDnsUsageMessage": "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]",
@@ -21,6 +21,7 @@
   "connectToAPeer": "Connect to a Peer",
   "connectToARouter": "Connect to a Router",
   "decimal": "Decimal",
+  "defaultNodeName": "[New Node]",
   "disconnected": "Disconnected",
   "dns": "DNS",
   "dnsMode": "DNS Mode",

@@ -232,6 +232,7 @@ ar:
       signup: تسجيل
       already_registered: مسجل بالفعل ؟
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: إنجازاتك
       lines: 'عدد أسطر الكود البرمجي : %{lines}'
       close: إغلاق
@@ -299,6 +300,10 @@ ar:
     cant_remove_student_no_email: 'لا يمكن إزالة % {student_name} كالطالب الخاص بك لأن % {student_name} لم يتم تسجيل عنوان البريد الإلكتروني'
     cant_remove_teacher_no_email: 'لا يمكن إزالة % {teacher_name} كالمعلم الخاص بك لأنه ليس لديك تسجيل عنوان بريد إلكتروني'
     student_teacher_disassociated: 'تم إزالة % {teacher_name} كمدرس ل % {student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: طالب
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

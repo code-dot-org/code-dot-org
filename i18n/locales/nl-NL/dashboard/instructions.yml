@@ -253,7 +253,6 @@ nl:
       4-5 Artist For Loops 9_instruction: 'Deze cirkels zijn 5, 10, 15, 20, 25, 30 en 35 groot. Teken de cirkels door gebruik te maken van een "for" blok.'
       4-5 Artist Free Draw 1_instruction: Vrij tekenen! Teken wat in je opkomt.
       4-5 Artist Functions 1_instruction: Gebruik een herhaal lus om deze driehoek te tekenen.
-      4-5 Artist Functions 10_instruction: 'Gebruik de "teken een vierkant" functie om een sneeuwvlok te tekenen. Herhaal de vierkant functie om 10 vierkanten van elk 50 pixels te maken. Hoeveel moet je draaien na elk vierkant? Tip: draai (360 / 10) graden.'
       4-5 Artist Functions 10a_instruction: "Plaats deze code in de 'teken een sneeuwvlok' functie en vervang de 50 door de parameter 'grootte'. De functie wordt al aangeroepen om een sneeuwvlok 100 pixels groot te maken."
       4-5 Artist Functions 10b_instruction: 'Gebruik de "teken een sneeuwvlok" functie om verschillende grootte vlokken te maken. Tip: de eerste sneeuwvlok is 25 lang en elke sneeuwvlok is twee maal zo groot als de voorgaande.'
       4-5 Artist Functions 11_instruction: 'Deze "tekenen een zeshoek" functie maakt gebruik van de "teken een driehoek" functie. Maak de zeshoek functie af. (Hint: een zeshoek heeft 6 zijden, elk 100 pixels lang)'
@@ -285,193 +284,93 @@ nl:
       4-5 Artist Patterns 7_instruction: 'Laten we de code van de laatste puzzel aanpassen om dit complexere patroon te maken. Merk op hoe de diamanten elkaar nu overlappen. Probeer de eerste "spring achteruit" van 100 naar 50 (half zo ver) te veranderen - hoe ver moet de kunstenaar nu gaan in de tweede "spring achteruit"?'
       4-5 Artist Patterns 8_instruction: Gebruik een lus om deze zeshoek met 40 pixel zijden en 60 graden hoeken te tekenen.
       4-5 Artist Patterns 9.5_instruction: Laten we deze code in een lus zetten om twee rijen van zeshoeken te tekenen. Merk op hoe onze tweede rij naar rechts verschoven is.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
+      4-5 Artist Patterns 9_instruction: Herhaal die code nu 3 keer om de hele rij te tekenen. Hint, elke zeshoek is 80 pixels breed van uiterst links naar uiterst rechts.
+      4-5 Artist Patterns Free Play_instruction: 'Vrij spelen - probeer een eigen patroon te maken!'
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: De bij kan niet onderscheiden of dit een bloem of een honingraat is. Verzamel alleen nectar van bloemen, maar test eerst of het een bloem of een honingraat is.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Remember,
-        not all objects are flowers, so check to gather nectar only at flowers.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 2_instruction: De bij wil nu alleen nectar. Vergeet niet dat niet alle objecten bloemen zijn, dus test om alleen bij bloemen nectar verzamelen.
+      4-5 Bee Conditionals 3_instruction: 'Nu wil de bij alleen honing maken.  Test om alleen honing te maken bij de honingraten.'
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: Het onbekende object is een bloem of een honingraat. Gebruik het als/anders blok om bij een bloem nectar te verzamelen en om anders honing te maken (omdat het een honigraat is).
+      4-5 Bee Conditionals 5_instruction: Er kan een bloem of een honingraat onder die wolken zijn. Gebruik het als/anders blok om bij een bloem nectar te verzamelen en om anders honing te maken (omdat het een honigraat is).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
-      4-5 Bee Debugging 5_instruction: "Something isn't right here..."
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: |
-        Collect all of the nectar from each flower.
-        Use a nested loop. 
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: |
-        Collect all of the nectar from each flower
-        and make honey at each honeycomb. Use a nested loop. 
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop. Replace the inner repeat times block with a while
-        block. 
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Bee Conditionals 6_instruction: Deze paarse bloem heeft 3, 2 of 1 nectar. Hier is een als/anders blok gecombineerd met nog een als/anders blok om een als, anders/als, anders blok te maken. Maak de oplossing af om de onbekende hoeveelheid nectar te verzamelen.
+      4-5 Bee Conditionals 7_instruction: 'Onthoud dat paarse bloemen 3, 2 of 1 nectar kunnen hebben. Maak de "controleer paarse bloem" functie af en gebruik hem om alle nectar bij de bloemen te verzamelen.'
+      4-5 Bee Conditionals 8_instruction: 'Schrijf een functie binnen het blok genaamd "controleer bloem maak honing". Jouw functie moet controleren hoeveel nectar de paarse bloem heeft en dit verzamelen, vooruit bewegen en honing maken.'
+      4-5 Bee Conditionals Assessment 1_instruction: 'Evaluatie: Deze code is onjuist. Maak de "haal nectar of maak honing" functie af en roep deze vervolgens aan om alle nectar en honing te verzamelen. Vergeet niet dat paarse bloemen 3, 2 of 1 nectar kunnen hebben.'
+      4-5 Bee Debugging 1_instruction: Deze blokken storen me echt. Kun jij ze in orde maken?
+      4-5 Bee Debugging 10_instruction: Vind de fouten en los ze op.
+      4-5 Bee Debugging 11_instruction: Telt dit correct?
+      4-5 Bee Debugging 2_instruction: Help de bij nectar te verzamelen en honing te maken.
+      4-5 Bee Debugging 3_instruction: Vind de fouten en los ze op.
+      4-5 Bee Debugging 4_instruction: Deze blokken werken niet. Wat is het patroon?
+      4-5 Bee Debugging 5_instruction: Iets is hier niet in orde...
+      4-5 Bee Debugging 6_instruction: De paarse bloem heeft een onbekende hoeveelheid nectar. Maak de blokken in orde om alle nectar uit de bloem te krijgen.
+      4-5 Bee Debugging 7_instruction: Deze functie mist iets...
+      4-5 Bee Debugging 8_instruction: Deze functie is in orde, maar hij wordt niet goed gebruikt.
+      4-5 Bee Debugging 9_instruction: Waarom maakt de bij niet genoeg honing?
+      4-5 Bee Debugging Assessment 1_instruction: 'Evaluatie: Repareer de code.'
+      4-5 Bee Nested Loops 1_instruction: Gebruik een lus om alle nectar te verzamelen.
+      4-5 Bee Nested Loops 2_instruction: 'Verzamel alle nectar van elke bloem. Gebruik een geneste lus. '
+      4-5 Bee Nested Loops 3_instruction: Verzamel alle nectar door de gegeven code in een geneste lus te plaatsen.
+      4-5 Bee Nested Loops 4_instruction: 'Verzamel alle nectar van elke bloem en maak honing bij elke honingraat. Gebruik een geneste lus. '
+      4-5 Bee Nested Loops 5_instruction: Verzamel alle nectar door een geneste lus te maken.
+      4-5 Bee Nested Loops 6_instruction: Verzamel alle nectar.
+      4-5 Bee Nested Loops 7_instruction: Zet deze lus in een andere lus om een geneste lus te maken en verzamel alle nectar van de bloemen.
+      4-5 Bee Nested Loops 8_instruction: 'Verzamel alle nectar van deze bloemen door een zolang lus te nesten. Vervang het binnenste herhaal keer blok door een zolang lus. '
+      4-5 Bee Nested Loops 9_instruction: Verzamel alle nectar van deze bloemen door een zolang lus te nesten in een herhaling.
+      4-5 Bee Nested Loops Assessment 1_instruction: 'Test - Verzamel alle nectar en maak alle honing door gebruik te maken van lussen.'
+      4-5 Bee Nested Loops Rows_instruction: Verzamel nectar van de rijen bloemen! Gebruik een geneste lus.
+      4-5 Maze 1 (copy 1)_instruction: Lieve persoon. Ik zombie. Moet... bij... zonnebloem komen.
+      4-5 Maze 1_instruction: Lieve persoon. Ik zombie. Moet... bij... zonnebloem komen.
       4-5 Maze 10_instruction: Lukt het je om bij de zonnebloem te komen door maar vier blokken te gebruiken?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 11_instruction: Kun je met slechts zes blokken bij de zonnebloem komen?
+      4-5 Maze 12_instruction: OK, is dit iets anders. Kunt jij het in slechts zes blokken doen?
       4-5 Maze 13_instruction: Breng me naar het varken!
-      4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: 'Create a loop with the "repeat until" block.'
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
+      4-5 Maze 14_instruction: Breng me naar het varken! Gebruik het herhaal tot blok.
+      4-5 Maze 2 (copy 1)_instruction: Breng de zombie naar de zonnebloem, maar vermijd de happer!
+      4-5 Maze 2_instruction: Breng de zombie naar de zonnebloem, maar vermijd de happer!
+      4-5 Maze 3 (copy 1)_instruction: Moet... bij... de zonnebloem... komen.
+      4-5 Maze 3_instruction: Moet... bij... de zonnebloem... komen.
+      4-5 Maze 4 (copy 1)_instruction: 'Probeer het "herhaal" blok om minder blokken te gebruiken...'
+      4-5 Maze 4_instruction: 'Probeer het "herhaal" blok om minder blokken te gebruiken...'
+      4-5 Maze 5 (copy 1)_instruction: Kun jij deze puzzel met het minste aantal blokken oplossen?
+      4-5 Maze 5_instruction: Kun jij deze puzzel met het minste aantal blokken oplossen?
+      4-5 Maze 6 (copy 1)_instruction: Kun jij deze puzzel met het minste aantal blokken oplossen?
+      4-5 Maze 6_instruction: Kun jij deze puzzel met het minste aantal blokken oplossen?
+      4-5 Maze 7_instruction: Lieve persoon. Ik zombie. Moet... bij... zonnebloem komen.
+      4-5 Maze 8_instruction: 'Gebruik het "herhaal" blok om de zombie bij de zonnebloem te brengen. (Vermijd de happers!)'
+      4-5 Maze 9_instruction: 'Maak een lus met het "herhaal tot" blok.'
+      4-5 Maze Assessment 1_instruction: 'Test: Ga naar de zonnebloem.'
+      4-5 Maze Conditionals 1_instruction: Gebruik het herhaal tot blok om de zombie bij de zonnebloem te brengen.
+      4-5 Maze Conditionals 10_instruction: Kun je slechts 3 blokken toevoegen om me te helpen een ingewikkelder doolhof op te lossen? Als je het goed doet kan ik elk kronkelig pad lopen, ongeacht de lengte.
+      4-5 Maze Conditionals 2_instruction: Gebruik het herhaal tot blok om de zombie bij de zonnebloem te brengen.
+      4-5 Maze Conditionals 3_instruction: 'Gebruik het "als" blok om me te laten beslissen wanneer te draaien. Tip: je hebt nog slechts een blok nodig, maar leer hoe wij het instelden zodat je het de volgende keer zelf kunt.'
+      4-5 Maze Conditionals 4_instruction: 'OK, dit is net als de vorige puzzel, maar je moet onthouden hoe je het "als" blok en het "herhaal" blok samen gebruikte.'
+      4-5 Maze Conditionals 5_instruction: 'Ik wil zonnebloem! Gebruik een "als" blok om me daar te krijgen met het minste aantal blokken.'
+      4-5 Maze Conditionals 6_instruction: 'Ik wil zonnebloem! Gebruik een "als" blok om me daar te krijgen met het minste aantal blokken.'
+      4-5 Maze Conditionals 7_instruction: 'OK, laten we dat om te oefenen nog eens doen - dit is niet heel anders, maar kijk uit voor de happers!'
+      4-5 Maze Conditionals 8_instruction: 'Het "als-anders" blok controleert een voorwaarde en doet dan het ene OF het andere. Probeer dit nieuwe blok te gebruiken om me bij de zonnebloem te brengen.'
+      4-5 Maze Conditionals 9_instruction: 'Nog een oefening met het "als-anders" blok, kun je het in een keer goed doen?'
+      4-5 Maze Conditionals Assessment 1_instruction: 'Gebruik een "herhaal tot" en een "als-anders" blok om me met zo min mogelijk blokken bij de zonnebloem te brengen.'
       A test level ArtistArtist_instruction: A test level ArtistArtist
-      add 2_instruction: |
-        Awesome job on the last puzzle, let's try it again this
-        time let's make this cool design with with 60 pixel hexagon's.
-      Alice Test_instruction: Here are some instructions!
-      All green everything_instruction: click and drag the blocks
+      add 2_instruction: Geweldig gedaan de vorige puzzel, laten we het nog eens proberen. Laten we deze keer dit coole patroon met 60 pixel zeshoeken maken.
+      Alice Test_instruction: Hier zijn wat instructies!
+      All green everything_instruction: klik en sleep de blokken
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -520,7 +419,10 @@ nl:
         Now nest this loop inside another loop
         to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: |
+        Maak een zon door de gegeven code
+        in een tweede lus te plaatsen. Dit heet een geneste lus.
+        
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the
@@ -750,14 +652,11 @@ nl:
         py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        We've got a function called distance that
-        should return the distance between two sprites, and using that we can decide
-        when those sprites are close enough to be considered touching. Complete the
-        'collide?' function so that it checks the distance function and returns
-        true if the two points are close enough to touch (100 pixels apart is a good
-        place to start). TIP: the distance function doesn't work yet (it always returns
-        zero), so if you're successful you'll see that your sprites are instantly
-        "colliding," but we'll fix that in a second!
+        The 'distance' function returns the distance
+        between two sprites. Complete the 'collide?' function so that it returns
+        true if the distance between two points is less than 100 pixels apart. If
+        you're successful, your sprites will instantly collide - why do you think
+        that is?
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -886,7 +785,7 @@ nl:
         of evaluation.
       Calc Circles of Eval 1_instruction: |
         Every mathematical operator (+, -, *,
-        /, and so on) can be represented by an Evaluation Block in code. Convert the
+        /, and so on) can be represented by an Evaluation Block in code. Change the
         Evaluation Block to match the expression.
       Calc Circles of Eval 2 (copy 1)_instruction: |
         Convert this statement to <some_shape>
@@ -1084,7 +983,7 @@ nl:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      copy 1_instruction: 'Try the "repeat" block to use fewer blocks...'
+      copy 1_instruction: 'Probeer het "herhaal" blok om minder blokken te gebruiken...'
       course 1 artist 1 level 10_instruction: |
         Draw the dashed line by using both
         the jump and draw blocks
@@ -1591,13 +1490,9 @@ nl:
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 4_instruction: 'Probeer het "herhaal" blok om minder blokken te gebruiken...'
+      Course 4 Maze 5_instruction: Kun jij deze puzzel met het minste aantal blokken oplossen?
+      Course 4 Maze 6_instruction: Kun jij deze puzzel met het minste aantal blokken oplossen?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -1766,7 +1661,7 @@ nl:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "Dit is een test!\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen"
       Course1MazeAssessment2_instruction: "Dit is een test!\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen."
-      course3 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      course3 Maze 1_instruction: Lieve persoon. Ik zombie. Moet... bij... zonnebloem komen.
       Coursen 4 Artist Functions 11_instruction: |
         Can you create a new function that
         will draw a cube shape?
@@ -2004,7 +1899,7 @@ nl:
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
-        square by 100 pixels on the y axis.
+        square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2019,8 +1914,8 @@ nl:
         block to create 10 overlapping circles. Don't forget to jump forward between
         circles
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels maken, draai 18 graden tussen de cirkels.
-      frozen circle function with parameter_instruction: 'Hier is een "Maak cirkel" blok dat cirkels van verschillende grootte kan maken. Kun jij dit blok gebruiken om een kleine cirkel van grootte 5 en grotere cirkel van grootte 10 te maken?'
-      frozen circle function_instruction: 'Gebruik het nieuwe "Maak cirkel" blok om 10 overlappende cirkels te maken. Vergeet niet vooruit te springen tussen de cirkels.'
+      frozen circle function with parameter_instruction: 'Hier is een "Maak een cirkel" blok dat cirkels van verschillende grootte kan maken. Kun jij dit blok gebruiken om een kleine cirkel van grootte 5 en grotere cirkel van grootte 10 te maken?'
+      frozen circle function_instruction: 'Gebruik het nieuwe "Maak een cirkel" blok om 10 overlappende cirkels te maken. Vergeet niet vooruit te springen tussen de cirkels.'
       frozen circle_instruction: Een cirkel is een speciale vorm. Kun jij bedenken welk getal op de plaats van de vraagtekens moet komen om een cirkel te tekenen?
       frozen cross rotate (copy 1)_instruction: |
         Now try repeating it 10 times. How
@@ -2041,8 +1936,8 @@ nl:
         Create a winter wonderland.
       frozen freeplay_instruction: Je bent nu officieel een meester kunstenaar geworden! Maak een winter wonderland.
       frozen line_instruction: Hoi! Ik ben Elsa van Arendelle. Help mij met het maken van een lijn.
-      frozen perpendicular_instruction: 'Laten we nu eens kijken of we twee lijnen kunnen maken die in een hoek van 90 graden staan. Je zult zowel het "Draai" als het "Verplaats" blok moeten gebruiken.'
-      frozen snowflake branch_instruction: 'Probeer het "Maak sneeuwvloktak" blok te gebruiken om 3 takken te maken, dit begint al op een sneeuwvlok te lijken.'
+      frozen perpendicular_instruction: 'Laten we nu eens kijken of we twee lijnen kunnen maken die in een hoek van 90 graden staan. Je zult zowel het "draai" als het "ga vooruit" blok moeten gebruiken.'
+      frozen snowflake branch_instruction: 'Probeer het "Maak een sneeuwvloktak" blok te gebruiken om 3 takken te maken, dit begint al op een sneeuwvlok te lijken.'
       frozen snowflake full_instruction: Laten we dit nu 8 keer herhalen om een mooie sneeuwvlok te maken!
       frozen snowflower_instruction: Ingewikkelde sneeuw patronen kunnen gemaakt worden met zeer eenvoudige vormen. Kun je een patroon maken door 5 cirkels van grootte 5 te herhalen en 5 cirkels van grootte 10?
       frozen square iterative_instruction: Het lijkt er op dat we half op weg zijn om een vierkant te maken. Laten we 4 lijnen bij elkaar doen om een vierkant te maken.
@@ -2064,7 +1959,7 @@ nl:
         a "Function block." Click on "RUN" to see what it can do. 
       Function Block_instruction: |-
         Hier is een nieuw type blok. Het heet een "Functie blok." Klik op 'Uitvoeren' om te zien wat het doet. 
-      function_instruction: 'Gebruik het nieuwe "Maak cirkel" blok om twee cirkels te maken'
+      function_instruction: 'Gebruik het nieuwe "Maak een cirkel" blok om twee cirkels te maken'
       Go Up Artist_instruction: Go Up Artist
       Infinity_catch_instruction: Kun je Elsa (acteur 2) laten inhalen door Anna met behulp van de pijltjestoetsen?
       Infinity_finale_instruction: Maak wat je maar wilt en deel het!
@@ -2078,7 +1973,7 @@ nl:
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Raak nog meer sneeuwvlokken aan!
       Infinity_touch_four_instruction: Beweeg Anna omhoog, naar beneden, links en rechts om de vier sneeuwvlokken aan te raken.
-      Infinity_touch_score_instruction: "Zorg dat Anne een punt scoort wanneer ze een sneeuwvlok aanraakt. Klik vervolgens op 'uitvoeren' en beweeg haar om iedere sneeuwvlok één keer aan te raken."
+      Infinity_touch_score_instruction: "Zorg dat Anna een punt scoort wanneer ze een sneeuwvlok aanraakt. Klik vervolgens op 'uitvoeren' en bestuur haar om iedere sneeuwvlok één keer aan te raken."
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2330,6 +2225,9 @@ nl:
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
+      NetSim_SendNumbers_instruction: |
+        In this version of the simulator, you can
+        view the decimal representations of the binary you are sending.
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 allows students to manually
@@ -2517,11 +2415,7 @@ nl:
         is called the "increment,"  and each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of for
-        Loops? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
-        You’re given the starter code except for the numbers in the counter loops.
-        Let's collect some nectar!
+      NEW Course 4 Bee For Loops 7_instruction: Krijg je lussen onder de knie? Deze opdracht lijkt op de vorige, maar je moet 2, 4, 6, 8, 10 nectar pakken. Je krijgt vast wat code, behalve voor de getallen in de lussen. Laten we nectar verzamelen!
       NEW Course 4 Bee For Loops 8_instruction: "If your loop is counting up, the\nincrement is added to your counter variable each loop. What should your increment\nbe to collect 3, 6, 9 nectar?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: |
         If your loop is counting down, the
@@ -2611,7 +2505,7 @@ nl:
         the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
-        per second... press "run" to see how this word problem looks as an animation.
+        per second... press "Run" to see how this word problem looks as an animation.
       Play Lab Rocket 2 (copy 1)_instruction: |
         We've added your contract and two
         examples into the Design Recipe for rocket-height. Now write the function
@@ -2854,6 +2748,13 @@ nl:
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U313 Two Buttons with Ids_instruction: |
+        Now you try it! We've given you some
+        starting code with two buttons and two event handlers on the screen, but we've
+        just left the default Ids of "id".  You need to change the ids to connect
+        the right event handler to the right button. (Interestingly, the incorrect
+        program does work, but exhibits some bizarre behavior.  We'll discuss this
+        more in the next lesson.  Make the buttons work correctly for now).
       U3L03 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -2947,14 +2848,13 @@ nl:
       U3L07 - Free Play Loops and Random_instruction: |
         Free Play!  Use what you learned
         from loops and random to make your own little scene.  Have fun.
-      U3L07 - Starry Night Starter Code_instruction: |
-        You are going to use loops
-        and random numbers to generate an image of starry night sky similar to one
-        shown here.  We have given you some starter code to generate the ground and
-        sky (just two giant dots), you will add code to this project to make the stars,
-        grass, and moon.  All of the effects are clever applications of turtle dots,
-        lines, and colors.  To get started, follow the series of steps suggested in
-        the accompanying worksheet. 
+      U3L07 - Starry Night Starter Code_instruction: 'Je gaat lussen en willekeurige getallen gebruiken om een afbeelding te maken van een sterrenhemel, vergelijkbaar met het voorbeeld. We hebben je alvast wat code gegeven om de grond en de hemel te maken (twee grote stippen). Je moet in deze opdracht code toevoegen om de sterren, het gras en de maan te maken. Alle effecten krijg je door slim gebruik te maken van punten, lijnen en kleuren. Om te beginnen, voer de stappen uit die worden voorgesteld in het bijbehorende werkblad. '
+      U3L08 - Enchantment Under the Sea_instruction: |
+        You have been provided with
+        starter code for an “Under the Sea” scene which includes three functions,
+        one each for the starfish, sea grass, and fish. Create versions of these functions
+        which accept parameters to allow you to add more variation to your scene.  The
+        student worksheet provides more details and guidance. GIF: U3L08-UnderTheSea.gif
       U3L13 - Button with ID_instruction: |
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
@@ -2967,15 +2867,96 @@ nl:
         able to figure it out just by reading carefully.  Make a change that will
         make the program work as expected.
       U3L13 - Turtle Driver Project_instruction: |
-        Create a “turtle driver” with at
-        least three buttons on the screen to move the turtle forward, and turn the
-        turtle right and left. If you have time, try adding additional buttons!  You
+        Challenge: Create a “turtle driver”
+        with at least three buttons on the screen to move the turtle forward, and
+        turn the turtle right and left. You can copy/paste code from a previous level
+        if you like but it will help build your coding muscles if you create this
+        small program from scratch.  If you have time, try adding additional buttons!  You
         can also have fun changing the parameters on the turtle functions, using colors,
         etc.
       U3L13 - Turtle move with button_instruction: |
         Drag a button out onto the screen
         and set its text to "Go forth!".  Add an event handler for the button, that
         makes the turtle move forward.  Run the program to make sure it works. 
+      U3L14 - Unfortunate Events Free Play_instruction: |
+        Follow the "Unfortunate
+        Events" Worksheet and enter your code here to experiment.  We've pre-loaded
+        the code you need to start.
+      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button. GIF: U3L16 - sayHiApp.gif"
+      U3L16 - hideAndShow_instruction: |
+        Introducing textInput, getText and write.  First
+        run the starter code several times.  Try to change what's written to the
+        screen when the button is clicked. Then use getText to write to the screen
+        what the user entered in the text box. GIF: U3L16 - useGetText.gif
+      U3L16 - hideAndShowPractice_instruction: |
+        ou are given some starting code that
+        puts an image and two buttons on the screen.  The image is initially hidden.
+        Add two new event handlers: one for each button, that when clicked hide and
+        show the image. GIF: U3L16 - hideAndShowExample.gif
+      U3L16 - image and text labels_instruction: |
+        Introducing the setPosition command!  Replace
+        the moveTo in the button-click event handler to use setPosition to move the
+        button itself to a random location when it's clicked.
+      U3L16 - images and text labels_instruction: |
+        Introducing objects other than
+        buttons! - textLabels and images.  First try replacing your button with a
+        textLabel.  Will the text respond to events just like the button?  Try connecting
+        an event handler to it.  We've started you out with code similar to the result
+        of the last level, you can copy your code from that level into here if you
+        prefer. 
+      U3L16 - images_instruction: |
+        Introducing Images.  Try replacing the textLabel
+        with an image..  Will the image respond to events just like the button?  Try
+        connecting an event handler to it.  We've started you out with code similar
+        to the result of the last level, you can copy your code from that level into
+        here if you prefer. 
+      U3L16 - quick double click_instruction: |
+        Mini-Project.  The Quick Double-Click
+        game.  In this simple game an object (an image) moves around, or pops up randomly
+        on the screen, as the user clicks it.  The goal of our game will be to try
+        to double-click the object before it moves.  Part of the challenge (and fun)
+        here is creating this app from scratch.  You can look back at your previous
+        work for examples, but it's fun to create something from scratch, too.  Try
+        it!  For more details see the Activity guide for this lesson. GIF:U3L16 -
+        quickDoubleClick.gif
+      U3L16 - setPosition to move button_instruction: |
+        Introducing the setPosition
+        command!  Replace the moveTo in the button-click event handler to use setPosition
+        to move the button itself to a random location when it's clicked.
+      U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
+      U3L16 - setupMoveToRandom_instruction: |
+        We'll be building upon some simple
+        starting code throughout this lesson.  Your first task: use moveTo and randomNumber
+        to get the turtle to move to a random location with each button click.  We've
+        given you starting code for our common setup: a button that moves the turtle
+        when clicked.  You should modify this code.  
+      U3L16 - text labels_instruction: |
+        Introducing textLabels.  First try replacing
+        your button with a textLabel.  Will the text respond to events just like the
+        button?  Try connecting an event handler to it.  We've started you out with
+        code similar to the result of the last level, you can copy your code from
+        that level into here if you prefer. 
+      U3L16 - textInput getText write_instruction: |
+        Introducing textInput, getText
+        and write.  First run the starter code several times.  Try to change what's
+        written to the screen when the button is clicked. Then use getText to write
+        to the screen what the user entered in the text box.
+      U3L16 - use images_instruction: |
+        Introducing Images.  Try replacing the textLabel
+        with an image..  Will the image respond to events just like the button?  Try
+        connecting an event handler to it.  We've started you out with code similar
+        to the result of the last level, you can copy your code from that level into
+        here if you prefer. GIF: U3L16 - useImage.gif
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe error and get the program to run.  Also note the error message since it\nmight come up at some point later in your life.\r\n\r\n"
+      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou the three lines of code shown in the previous page.  Add three lines of\ncode just below the ones shown here to make your own variable, assign it a\nvalue and write it to the screen.  NOTE: change the variable name from the\ndefault x to something else.\r\n"
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - write var and string with same name_instruction: |
+        Now look at this
+        example. We’ve added another write statement.  Before you run the code, see
+        if you can predict what the output will be.  Seriously, write it down. THEN
+        run the code, mess with it if you like, and continue to the next page for
+        an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square using only moveForward
         and turnLeft.  The square should be drawn above and to the left of the turtle's

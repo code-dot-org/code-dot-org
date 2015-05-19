@@ -21,6 +21,7 @@
   "connectToAPeer": "Connect to a Peer",
   "connectToARouter": "Connect to a Router",
   "decimal": "ทศนิยม",
+  "defaultNodeName": "[New Node]",
   "disconnected": "ถูกตัดการเชื่อมต่อเรียบร้อยแล้ว",
   "dns": "DNS",
   "dnsMode": "สถานะของ DNS",

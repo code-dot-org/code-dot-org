@@ -21,6 +21,7 @@
   "connectToAPeer": "Connect to a Peer",
   "connectToARouter": "Connect to a Router",
   "decimal": "Ondalık",
+  "defaultNodeName": "[New Node]",
   "disconnected": "Çevrim Dışı",
   "dns": "DNS",
   "dnsMode": "DNS modu",

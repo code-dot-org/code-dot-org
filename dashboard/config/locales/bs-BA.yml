@@ -264,6 +264,7 @@
       signup: Registruj se
       already_registered: Jeste li već registrirani?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Tvoj napredak
       lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
@@ -338,6 +339,10 @@
     cant_remove_teacher_no_email: '%{teacher_name} ne može biti uklonjen kao vaš učitelj
       jer niste registrirali e-mail adresu'
     student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Učenik
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

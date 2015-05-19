@@ -67,8 +67,8 @@
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} alunos já se registraram.'
+    teacher_count: '%{count} professores já se registraram.'
     overview_student: Crie uma conta para acompanhar seu progresso. Seu e-mail é usado
       principalmente para permitir que você faça logon e para a recuperação de senha.
       Para obter mais informações, consulte nossa <a href="http://code.org/privacy">Política
@@ -277,6 +277,7 @@
       signup: Inscreva-se
       already_registered: Já se cadastrou?
     popup:
+      progress_for_user: progresso de %{name}'s
       progress: Seu progresso
       lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
@@ -353,6 +354,10 @@
       professor porque você não registrou um endereço de email'
     student_teacher_disassociated: '%{teacher_name} foi removido como professor de
       %{student_name}'
+    panel:
+      answer_viewer: Visualizador de resposta
+      student: Estudante
+      try_it_yourself: Tente você mesmo
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -374,7 +379,7 @@
     classroom_activity: Atividade off-line
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos de aula
     signin_message: Já se registrou? %{link}
@@ -579,8 +584,8 @@
       estão na ordem errada.
   text_match:
     placeholder: Insira sua resposta aqui
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Obrigado
+    open_response_body: Obrigado pela sua resposta!
   dialog:
     ok: OK
   time:

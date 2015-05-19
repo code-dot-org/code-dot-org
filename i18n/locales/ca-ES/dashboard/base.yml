@@ -236,6 +236,7 @@ ca:
       signup: "Inscriure's"
       already_registered: Ja estàs registrat?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: El teu progrés
       lines: 'Línies totals de codi: %{lines}'
       close: TANCA
@@ -303,6 +304,10 @@ ca:
     cant_remove_student_no_email: '%{student_name} no es pot borrar com a estudiant teu perquè %{student_name} no ha registrat una adreça de correu electrònic'
     cant_remove_teacher_no_email: "%{teacher_name} no es pot borrar com a mestre perquè no t'has inscrit amb una adreça de correu electrònic"
     student_teacher_disassociated: "%{teacher_name} s'ha esborrat com a mestre de %{student_name}"
+    panel:
+      answer_viewer: Answer Viewer
+      student: estudiant
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: "L'adreça de correu electrònic no ha estat confirmada:"
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no ha estat confirmada:'

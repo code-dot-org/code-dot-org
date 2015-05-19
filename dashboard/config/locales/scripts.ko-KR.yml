@@ -598,7 +598,7 @@
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
           Introduction to Computational Science: Introduction to Computational Science
-          What to Expect: What to Expect
+          What to Expect: 기대 할 것은
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
             Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
@@ -657,7 +657,13 @@
           The Need For Programming Languages: The Need For Programming Languages
           Creating Procedures - Part 2: Creating Procedures - Part 2
           Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
         algebraPD3:
+          title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the
             new Computer Science in Algebra
@@ -668,6 +674,7 @@
           The Big Game: The Big Game
           Strings and Images: Strings and Images
           The Design Recipe: 디자인 레시피
+          Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
@@ -734,7 +741,7 @@
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
-          What to Expect: What to Expect
+          What to Expect: 기대 할 것은
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -753,7 +760,7 @@
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
-          What to Expect: What to Expect
+          What to Expect: 기대 할 것은
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -773,7 +780,10 @@
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: 객관식
+          Big Game: Big Game
         sciencePD2:
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
         sciencePD3:
           new stage: new stage
+        Testing:
+          Testing: Testing

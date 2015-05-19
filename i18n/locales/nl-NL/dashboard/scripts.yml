@@ -106,7 +106,7 @@ nl:
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitale Burgerschap
-          Farmer - While Loops: 'Boer - Terwijl Lussen'
+          Farmer - While Loops: 'Boer - Zolang-lussen'
           description: Cursus 3 is ontwikkeld voor leerlingen die cursus 2 hebben gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen voor complexere problemen te vinden. Aan het eind van deze cursus maken studenten interactieve verhalen en spellen, die ze met iedereen kunnen delen.
           "Studio: Create a Game": 'Speel Lab - Maak een Spel'
           Maze: Doolhof
@@ -116,7 +116,7 @@ nl:
           "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
           "Maze: Conditionals": 'Doolhof: voorwaardelijke instructies'
           "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
-          "Farmer: While Loops": 'Boer: Terwijl Lussen'
+          "Farmer: While Loops": 'Boer: Zolang-lussen'
           "Bee: Nested Loops": 'Bij: geneste lussen'
           "Bee: Debugging": 'Bij: Foutopsporing'
           Maze2: Doolhof2
@@ -126,7 +126,7 @@ nl:
           "Bee: Conditionals2": 'Bij: voorwaardelijke instructies2'
           "Maze: Conditionals2": 'Doolhof: voorwaardelijke instructies2'
           "Artist: Nested Loops2": 'Kunstenaar: geneste lussen2'
-          "Farmer: While Loops2": 'Boer: Terwijl Lussen2'
+          "Farmer: While Loops2": 'Boer: Zolang-lussen2'
           "Bee: Nested Loops2": 'Bij: geneste lussen2'
           "Bee: Debugging2": 'Bij: Foutopsporing2'
           "Artist: Patterns": 'Kunstenaar: Patronen'
@@ -246,7 +246,7 @@ nl:
           "Artist: Loops": 'Kustenaar: lussen'
           "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
           "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
-          "Farmer: While Loops": 'Boer: Terwijl Lussen'
+          "Farmer: While Loops": 'Boer: Zolang-lussen'
           "Bee: Nested Loops": 'Bij: geneste lussen'
           "Artist: Functions": 'Kunstenaar: Functies'
           "Bee: Debugging": 'Bij: Foutopsporing'
@@ -456,7 +456,7 @@ nl:
           "Artist: Loops": 'Kustenaar: lussen'
           "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
           "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
-          "Farmer: While Loops": 'Boer: Terwijl Lussen'
+          "Farmer: While Loops": 'Boer: Zolang-lussen'
           "Bee: Nested Loops": 'Bij: geneste lussen'
           "Artist: Functions": 'Kunstenaar: Functies'
           "Bee: Debugging": 'Bij: Foutopsporing'
@@ -594,7 +594,7 @@ nl:
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
-          description: Programming in Javascript and AppLap
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Functies
           Using Simple Commands: Using Simple Commands
@@ -631,7 +631,13 @@ nl:
           The Need For Programming Languages: The Need For Programming Languages
           Creating Procedures - Part 2: 'Creating Procedures - Part 2'
           Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
         algebraPD3:
+          title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
@@ -641,6 +647,7 @@ nl:
           The Big Game: The Big Game
           Strings and Images: Tekenreeksen en afbeeldingen
           The Design Recipe: Het ontwerp Recept
+          Next Steps: Volgende stappen
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
@@ -737,7 +744,10 @@ nl:
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: meerdere
+          Big Game: Big Game
         sciencePD2:
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
         sciencePD3:
           new stage: nieuw niveau
+        Testing:
+          Testing: Testing

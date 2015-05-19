@@ -189,6 +189,8 @@ fi-FI:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: 'Allekirjoita vetoomuksemme &#x25BE;'
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
