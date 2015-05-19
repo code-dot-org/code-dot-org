@@ -5,13 +5,14 @@ nav: translate_nav
 
 # Tips and Guidelines for Consistent Translations
 
-## All Languages
-
 ### Be Gender Neutral
 The target audience for drag-drop programming is individual or small groups of children, aged 8+. Please use gender-neutral forms if possible in your language.
 
 ### Keep Spanish General
 There are several languages with multiple dialects, but please keep Spanish and other such languages in a general form that will be universally understandable by all dialects.
+
+### Japanese
+Since Code.org curriculum currently targets children ages 4-18, try to use Katakana or Hiragana as much as possible over Kanji characters.
 
 ### Avoid Technical Jargon
 Our tutorials are meant for beginners, so please avoid technical jargon. It is **far** more important that language be clear to beginners than for it to match what experienced programmers might use. For example, Blockly uses the term "text" instead of "string", and we use "list" instead of "array". Also, Blockly uses 1-based indexing instead of the more common 0-based indexing.
@@ -30,6 +31,3 @@ The tone is informal and conversational, and we prefer short phrases to long one
 
 ### CrowdIn Etiquette
 As a translator, please do not submit a translation that is identical to another user's submission. If you think a proofreader has made a mistake, please leave a comment in the comment section to bring it to their attention. As a proofreader, please do not delete translations.
-
-## Japanese
-Since Code.org curriculum currently targets children ages 4-18, try to use Katakana or Hiragana as much as possible over Kanji characters.

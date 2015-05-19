@@ -15,12 +15,14 @@ level 'U1L2 Free response reflection question'
 stage "Sending More Complex Messages"
 level 'U1L3 Student Lesson Introduction'
 level 'U1L3 Free response reflection question'
+level 'U1L3 Multiple Choice'
+level 'U1L3 Free Response'
 
 stage 'Bit Sending Widget'
 level 'U1L4 Student Lesson Introduction'
 level 'U1L4 Widget Demo - Video'
 level 'U1L4 NetSim SendAB'
-level 'U1L4 Free response reflection question'
+level 'U1L4 Multiple Choice'
 level 'U1L4 Free Response Reflection'
 
 stage 'Sending Bits in the Real World'

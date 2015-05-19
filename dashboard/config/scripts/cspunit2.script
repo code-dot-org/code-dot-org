@@ -1,0 +1,44 @@
+title 'CSP Unit 2 - The Internet'
+description 'In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+structure and design of the internet and the implications of those design decisions including
+the reliability of network communication, the security of data, and personal privacy. Topics
+include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+concerns.'
+description_short 'The Internet'
+login_required 'true'
+
+stage 'Beyond Sending Bits'
+level 'U2L1 Student Lesson Introduction'
+
+stage 'The Need for Addressing'
+level 'U2L2 Student Lesson Introduction'
+
+stage 'Invent an Addressing Protocol'
+level 'U2L3 Student Lesson Introduction'
+
+stage 'Routers and Addresses'
+level 'U2L4 Student Lesson Introduction'
+
+stage 'Classroom Internet'
+level 'U2L5 Student Lesson Introduction'
+
+stage 'Algorithms in Networking'
+level 'U2L6 Student Lesson Introduction'
+
+stage 'The Need for Packets'
+level 'U2L7 Student Lesson Introduction'
+
+stage 'Packets in the Real World'
+level 'U2L8 Student Lesson Introduction'
+
+stage 'The Need for DNS'
+level 'U2L9 Student Lesson Introduction'
+
+stage 'DNS Simulation'
+level 'U2L10 Student Lesson Introduction'
+
+stage 'How HTTP Works'
+level 'U2L11 Student Lesson Introduction'
+
+stage 'IP and DNS in the Real World'
+level 'U2L12 Student Lesson Introduction'

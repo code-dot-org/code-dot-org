@@ -509,3 +509,25 @@ exports.penRGB = function (blockId, r, g, b, a) {
                            'a': a });
 };
 
+exports.insertItem = function (blockId, array, index, item) {
+  return Applab.executeCmd(blockId,
+                          'insertItem',
+                          {'array': array,
+                           'index': index,
+                           'item': item });
+};
+
+exports.appendItem = function (blockId, array, item) {
+  return Applab.executeCmd(blockId,
+                          'appendItem',
+                          {'array': array,
+                           'item': item });
+};
+
+exports.removeItem = function (blockId, array, index) {
+  return Applab.executeCmd(blockId,
+                          'removeItem',
+                          {'array': array,
+                           'index': index });
+};
+
