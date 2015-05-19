@@ -31,7 +31,13 @@ Breakfast and lunch will be served.
 
 #### Location 
 
-More info coming soon! 
+The University of Massachusetts Venture Development Center
+<br />
+University of Massachusetts Boston
+<br />
+100 Morrissey Boulevard
+<br />
+Boston, MA 02125 
 
 #### What do I bring to Phase 4 PD? ####
 Exploring Computer Science binder with curriculum

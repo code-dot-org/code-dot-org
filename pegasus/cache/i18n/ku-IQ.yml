@@ -142,7 +142,7 @@
     پۆلی پێنج'
   stats_michael: '"ئەمن <b>قەت و هیچ</b> قوتابیەکانم ئەوەندە پەرۆش نەدیتیە بۆ فێربوون."
     - مایكل کلارك، مامۆستا'
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title: لەناو كۆد<a href='http://studio.code.org'>كۆد ستۆدیۆدا</a> بگەڕێ
   studiobar_title_nolink: ستۆدیۆی کۆدنووسی بناسە
   studiobar_elementary_title: کۆڕسی بنەڕەتی
   studiobar_elementary_body: سێ كۆرسە نوێیەكەمان بۆ K&#8209;5
@@ -169,48 +169,44 @@
     شێریل، گەورە فەرمانبەری بەکاربردن لە فەیسبووك
   homepage_hero_text_satya: '&ldquo;زانستی کۆمپیوتەر دەتوانی باشترین دەرفەتەکانی جیهان
     بكاتەوە.&rdquo; ساتیا، بەڕێوەبەری مایكرۆسۆفت'
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+  homepage_hero_text_bosh: '&ldquo; ئەگەت کۆدی پرۆگرام  بنوسی، دەتوانی ڕێگای ژیانت
+    هەڵبژێری.&rdquo; کریس بۆش'
+  homepage_hero_text_student1: "&ldquo; ئەو بەهرانە داهاتوومیان گۆڕی، وە لەیاديش نەکەین،
+    كە هەر خۆشیەکی بێ گەردە. &rdquo; \nلونا، پۆلی حەفت\n"
+  homepage_hero_text_student2: "&ldquo; من هەرگیز منداڵەکانی خۆم نەدیتییە  ئەوەندە
+    بەپەرۆشی فێربوون بن. &rdquo; \nمایكل، مامۆستا\n"
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;زانستی کۆمپیوتەر ئەو بوارەیە کە نازانی ڕات لێ یە یان نا تا بەخۆت تاقی نەکەیەوە. &rdquo;
+    جاکسۆن، پۆلی شەشی سەرەتایی
+  homepage_hero_text_student4: "&ldquo; هەر شتێك مێشكت بیەوێت دەتانی بە به‌رنامه‌
+    بی ‌هێنییە  جێ.&rdquo; \nمایا، پۆلی دوو\n"
+  homepage_hero_text_student5: |
+    &ldquo;زانستی کۆمپیوتەر لۆ خەلکی تر نییە. هەر ئێستا لۆ تۆیە. &rdquo;
+    گیرالدۆ، مامۆستا
+  homepage_hero_text_teacher1: |
+    &ldquo; کۆد نووسین پڕيشك و هاندەرە بۆ داهێنان و نوێکاری&mdash; کە هەموویان زۆر گرینگن بۆ هەر پیشەیەك.&rdquo;
+    فلۆریسا، مامۆستا
+  homepage_hero_text_teacher2: "&ldquo; ئەو پرۆگرامە وای لە قوتابیانم کرد ١٠٠% بەشداربن.&rdquo;
+    \nئادەم، مامۆستا\n"
   homepage_slot_text_hoc: كاژێری كۆدنووسی
   homepage_slot_text_frozen: کارتۆنی فرۆزن لەگەڵ ئانا و ئێلسا
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: هەموو فێرکاریەکانمان
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: کڕین
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: ڤیدیۆکە ببینە
   homepage_action_text_teachervideo: ڤیدیۆکە ببینە
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_learn: فێربوون دەستپێبکە
+  homepage_action_text_signpetition: داواکە واژووبکە
+  homepage_signpetition_dropdown: داواکەمان واژوو بکە &#x25BE;
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
+    diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: كاژێری كۆدنووسی
   homepage_slot_text_blurb_hoc: هەموو کەسێک دەتوانێت فێربێت. ئەمڕۆ دەستپێبکە
   homepage_slot_text_link_hoc: Try the Hour of Code
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: خانەخوێی كاژێرێکی كۆدنووسی بە
   homepage_slot_text_link_hocserved: '# خزمەت کراوە'
   homepage_slot_text_title_students: خوێندکارەکان
   homepage_slot_text_blurb_students: لە نێو هەموو وانەکانمان بگەڕێ
@@ -221,13 +217,13 @@
   homepage_slot_text_blurb_educators: قوتابییەکانت فێرکە
   homepage_slot_text_link_k5: وانە بۆ پۆلەکانی سەرەتایی
   homepage_slot_text_link_fullcurriculum: هەموو بابەتەکانی وانەکە سەیرکە
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_link_pd: پەرەسەندنى پيشەگەر
+  homepage_slot_text_title_advocates: بانگەوازان
   homepage_slot_text_blurb_advocates: پاڵپشتی کارەکانمان بکە
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_stats: سەیری ئامارەکان بکە
   homepage_slot_text_link_buy: بەشداری بکە
   homepage_slot_text_link_donate: بەخشینێک بکە
-  homepage_header_codestudio: Code Studio student creations
+  homepage_header_codestudio: داهێنانی قوتابیانی كۆد ستۆدیۆ
   homepage_header_donors: Code.org سوپاسی هاوکارانی دەکات
   homepage_donors_seall: هەمووی ببینە
   homepage_donors_donate: بەخشین

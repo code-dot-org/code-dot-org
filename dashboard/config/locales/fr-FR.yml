@@ -282,6 +282,7 @@
       signup: S’inscrire
       already_registered: Déjà inscrit ?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Votre progression
       lines: 'Nombre de lignes de code : %{lines}'
       close: FERMER
@@ -358,6 +359,10 @@
       d''enseignants car vous n''avez pas enregistré d''adresse de messagerie'
     student_teacher_disassociated: '%{teacher_name} n''est plus considéré comme l''enseignant
       de %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Elève
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'L''adresse de messagerie n''a pas été confirmée :'
     email_confirm_needed_required: 'Votre addresse email %{email} n''a pas été confirmée

@@ -342,11 +342,11 @@ bg:
           Next Steps: Следващи стъпки
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Programming Concepts: Концепсии на програмиране
-          Reflection: Reflection
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          "Programming Concept: Events": 'Programming Concept: Events'
+          Reflection: Рефлексия
+          "Programming Concept: Loops": 'Програмиране концепция: Цикли'
+          "Programming Concept: Conditionals": 'Програмиране концепция: Условия'
+          "Programming Concept: Functions": 'Програмиране концепция: функции'
+          "Programming Concept: Events": 'Програмиране концепция: събития'
         netsim:
           title: Интернет симулатор
           description_short: ""
@@ -529,10 +529,10 @@ bg:
           Rocket-Height: Ракетна височина
           Design Recipe Practice: 'Дизайн на рецепта - практика'
           Introduction to PD: Въведение в PD
-          Course Overview: Course Overview
+          Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
-          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Why Computer Science belongs in Algebra: Защо компютърните науки са част от алгебрата
           Preparing for in-person PD: Подготовка за лично PD
         algPDmiami:
           title: Компютърни науки в алгебрата
@@ -568,93 +568,100 @@ bg:
           Teaching Strategies: Стратегии за преподаване
           Preparing for in-person PD: Подготовка за лично PD
           reference: препратка
-          title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          Impact of Computer Science: Impact of Computer Science
+          title: Проучване на компютърни науки PD
+          description: Онлайн въведение в ECS
+          Impact of Computer Science: Въздействието на компютърните науки
         sciencePD:
           Introduction to PD: Въведение в PD
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          Pre-Workshop Online Component: Pre-Workshop Online Component
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
-          Introduction to Computational Science: Introduction to Computational Science
-          What to Expect: What to Expect
-          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
-          Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
-          Dispositions and Classroom Culture: Dispositions and Classroom Culture
-          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
-          Introduction to StarLogo Nova: Introduction to StarLogo Nova
-          The Tutorial: The Tutorial
-          Post-Survey: Post-Survey
+          title: Компютърни науки в науката PD
+          description: В партньорство с проект КУРАЖ
+          Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
+          Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
+          Introduction to Computational Science: Въведение в компютърната наука
+          What to Expect: Какво да очаквате
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата насложни адаптивни системи
+          Using Computer Models in Science: Използване на компютърни модели в науката
+          Using Models in the Classroom: Използване на модели в класната стая
+          Dispositions and Classroom Culture: Мерки и култура в класната стая
+          Computational Thinking And The Framework For K-12 Science Education: Изчислително мислене и рамката за К-12 образование по науки
+          Introduction to StarLogo Nova: Въведение в StarLogo Nova
+          The Tutorial: Урок
+          Post-Survey: След изследването
         rbo-reference:
           reference: препратка
         Test Wednesday:
-          PDK5 Intro: PDK5 Intro
+          PDK5 Intro: PDK5 интро
         cspunit3:
-          title: 'CSP Unit 3 - Programming'
-          description_short: Programming
-          description: Programming in Javascript and AppLap
-          Getting to know AppLab: Getting to know AppLab
+          title: 'CSP блок 3 - програмиране'
+          description_short: Програмиране
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхващат всички езици за програмиране и инструменти.
+          Getting to know AppLab: Запознаване с AppLab
           Functions: Функции
-          Using Simple Commands: Using Simple Commands
-          Creating Procedures - Part 1: 'Creating Procedures - Part 1'
-          Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
-          APIs and Function Parameters: APIs and Function Parameters
-          Looping and Random Numbers: Looping and Random Numbers
-          Creating functions with Parameters: Creating functions with Parameters
-          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
-          Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
-          Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
-          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
-          Buttons on the Screen: Buttons on the Screen
-          Unfortunate Events: Unfortunate Events
-          On Beyond Buttons: On Beyond Buttons
-          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
-          Controlling Memory and Program Flow: Controlling Memory and Program Flow
-          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
-          Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
-          Conditional Basics: Conditional Basics
-          More Variables (2 days): More Variables (2 days)
-          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
-          Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
-          Chained Conditionals: Chained Conditionals
-          Compound Conditionals: Compound Conditionals
-          Strings and Substrings: Strings and Substrings
-          While Loop Basics: While Loop Basics
-          While Loops_ Counting Flips: While Loops_ Counting Flips
-          Arrays_ Intro: Arrays_ Intro
-          Arrays_ Photo Album: Arrays_ Photo Album
-          Images are Arrays: Images are Arrays
-          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
-          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
-          The Need For Programming Languages: The Need For Programming Languages
-          Creating Procedures - Part 2: 'Creating Procedures - Part 2'
-          Sarah testing project backed levels: Sarah testing project backed levels
+          Using Simple Commands: Използване на прости команди
+          Creating Procedures - Part 1: 'Създаване на процедури - част 1'
+          Layers of Abstraction and Programming Efficiency: Слоеве на абстракция и ефективност в програмирането
+          APIs and Function Parameters: API и параметри на функцията
+          Looping and Random Numbers: Цикли и случайни числа
+          Creating functions with Parameters: Създаване на функции с параметри
+          Scene Design Part 1 - Plan: 'Дизайн на сцена: част 1 - план'
+          Scene Design Part 2 - Code: 'Дизайн на сцена: Част 2-код'
+          Scene Design Part 3 - Reflect: 'Дизайн на сцена: част 3 - рефлексия'
+          Unplugged Events Activity -  Mission Unsortable: 'Събития с ънплъгд  дейности - Мисия несуртируема'
+          Buttons on the Screen: Бутони на екрана
+          Unfortunate Events: Злополучия
+          On Beyond Buttons: Извън бутоните
+          Cookie Clicker 1.0 DEPRECIATED: Бисквитково щракане 1.0 АМОРТИЗИРАНО
+          Controlling Memory and Program Flow: Контрол на паметта и потока на програмата
+          Variable Basics DEPRECIATED: 'Основи на променливата: АМОРТИЗИРАНЕ'
+          Clicker v.1 -  Variable Basics: 'Кликър v.1 - основи на променливата'
+          Conditional Basics: Основи на Условията
+          More Variables (2 days): Повече променливи (2 дни)
+          Permanent Data Storage and Clicker Completion: 'Постоянно съхраняване на данни и кликър: завършване'
+          Natural Language Processing and Chat Bots: Обработка на естествен език и чат ботове
+          Chained Conditionals: Оковани условия
+          Compound Conditionals: Комбинирани условия
+          Strings and Substrings: низ и поднизове
+          While Loop Basics: 'Докато цикли: основи'
+          While Loops_ Counting Flips: Докато Loops_ преброяване на превъртания
+          Arrays_ Intro: Arrays_ интро
+          Arrays_ Photo Album: Arrays_ фото албум
+          Images are Arrays: Изображенията са Arrays
+          Arrays and Loops_ Altering Images: Масиви и цикли_ промяна изображения
+          Arrays and Loops_ Hidden Images: Масиви и цикли_ скрити изображения
+          The Need For Programming Languages: Нуждата от програмни езици
+          Creating Procedures - Part 2: 'Създаване на процедури - част 2'
+          Sarah testing project backed levels: Сара тества проекта с подкрепящи нива
+          Cookie Clicker: Бисквитка кликер
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Ънплъгд събития
+          Beyond Buttons Toward Apps: Отвъд бутоните към приложения
+          Improving the Clicker Game: Improving the Clicker Game
         algebraPD3:
-          description: Teach Algebra through block-based Functional Programming
-          Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
-          Course Overview: Course Overview
+          title: Фаза 3 PD
+          description: Научи алгебра чрез блок базирано функционално програмиране
+          Introduction to the new Computer Science in Algebra: Въведение на компютърните науки в алгебрата
+          Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
           Evaluation Blocks: Блокове за оценка
-          The Big Game: The Big Game
+          The Big Game: Голямата игра
           Strings and Images: Стрингове и изображения
           The Design Recipe: Рецепта за дизайн
+          Next Steps: Следващи стъпки
         sciPD complex adaptive 2:
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
+          title: Компютърни науки в науката PD
+          description: В партньорство с проект КУРАЖ
           Introduction to PD: Въведение в PD
-          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
         sciPD complex adaptive forum:
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
+          title: Компютърни науки в науката PD
+          description: В партньорство с проект КУРАЖ
           Introduction to PD: Въведение в PD
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
         Glenallan Career Day Demo:
           new stage: нов етап
-          title: Glenallan Career Day Demo
-          description_short: "Let's make some puzzles!"
+          title: 'Glenallan Ден на кариерата: демо'
+          description_short: Да направим пъзели!
           description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
           Puzzles: Пъзели
         ECSPD-NexTech:
@@ -664,9 +671,9 @@ bg:
           Teaching Strategies: Стратегии за преподаване
           Preparing for in-person PD: Подготовка за лично PD
           logo_image: nextech_logo.png
-          title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          Impact of Computer Science: Impact of Computer Science
+          title: Проучване на компютърни науки PD
+          description: Онлайн въведение в ECS
+          Impact of Computer Science: Въздействието на компютърните науки
         ECSPD-iZone:
           Introduction to PD: Въведение в PD
           What is ECS?: Какво е ECS?
@@ -674,19 +681,19 @@ bg:
           Teaching Strategies: Стратегии за преподаване
           Preparing for in-person PD: Подготовка за лично PD
           logo_image: izone_logo.png
-          title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          Impact of Computer Science: Impact of Computer Science
+          title: Проучване на компютърни науки PD
+          description: Онлайн въведение в ECS
+          Impact of Computer Science: Въздействието на компютърните науки
         algebraPD-NexTech:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: nextech_logo.png
-          Course Overview: Course Overview
+          Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
-          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Why Computer Science belongs in Algebra: Защо компютърните науки са част от алгебрата
           Preparing for in-person PD: Подготовка за лично PD
         algebraPD-iZone:
           title: Компютърни науки в алгебрата
@@ -694,50 +701,53 @@ bg:
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: izone_logo.png
-          Course Overview: Course Overview
+          Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
-          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Why Computer Science belongs in Algebra: Защо компютърните науки са част от алгебрата
           Preparing for in-person PD: Подготовка за лично PD
         sciencePD-NexTech:
           Introduction to PD: Въведение в PD
           logo_image: nextech_logo.png
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          What to Expect: What to Expect
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
-          Introduction to Computational Science: Introduction to Computational Science
-          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
-          Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
-          Dispositions and Classroom Culture: Dispositions and Classroom Culture
-          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
-          Introduction to StarLogo Nova: Introduction to StarLogo Nova
-          The Tutorial: The Tutorial
-          Post-Survey: Post-Survey
+          title: Компютърни науки в науката PD
+          description: В партньорство с проект КУРАЖ
+          What to Expect: Какво да очаквате
+          Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
+          Introduction to Computational Science: Въведение в компютърната наука
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата насложни адаптивни системи
+          Using Computer Models in Science: Използване на компютърни модели в науката
+          Using Models in the Classroom: Използване на модели в класната стая
+          Dispositions and Classroom Culture: Мерки и култура в класната стая
+          Computational Thinking And The Framework For K-12 Science Education: Изчислително мислене и рамката за К-12 образование по науки
+          Introduction to StarLogo Nova: Въведение в StarLogo Nova
+          The Tutorial: Урок
+          Post-Survey: След изследването
         sciencePD-iZone:
           Introduction to PD: Въведение в PD
           logo_image: izone_logo.png
-          title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          What to Expect: What to Expect
-          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
-          Introduction to Computational Science: Introduction to Computational Science
-          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
-          Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
-          Dispositions and Classroom Culture: Dispositions and Classroom Culture
-          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
-          Introduction to StarLogo Nova: Introduction to StarLogo Nova
-          The Tutorial: The Tutorial
-          Post-Survey: Post-Survey
+          title: Компютърни науки в науката PD
+          description: В партньорство с проект КУРАЖ
+          What to Expect: Какво да очаквате
+          Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
+          Introduction to Computational Science: Въведение в компютърната наука
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата насложни адаптивни системи
+          Using Computer Models in Science: Използване на компютърни модели в науката
+          Using Models in the Classroom: Използване на модели в класната стая
+          Dispositions and Classroom Culture: Мерки и култура в класната стая
+          Computational Thinking And The Framework For K-12 Science Education: Изчислително мислене и рамката за К-12 образование по науки
+          Introduction to StarLogo Nova: Въведение в StarLogo Nova
+          The Tutorial: Урок
+          Post-Survey: След изследването
         ui_tests:
-          title: UI Tests
-          description: "Script for test. Careful, don't change level ordering."
-          All the Tests: All the Tests
-          Free Response: Free Response
+          title: Тестове UI
+          description: Скрипт за тест. Внимавай, не се препоръчва промяна на нивото.
+          All the Tests: Всички тестове
+          Free Response: Свободен отговор
           Multi: Мулти
+          Big Game: Голямата игра
         sciencePD2:
-          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Phase 2 Summer Workshop: Фаза 2 Летен семинар
         sciencePD3:
           new stage: нов етап
+        Testing:
+          Testing: Testing

@@ -247,7 +247,7 @@ nl:
         flappy_5: 'Laten we een puntentelling toevoegen en punten geven als Flappy langs obstakels vliegt. Plak een blok aan het "bij het raken van een obstakel" blok en geef een punt als Flappy door de eerst reeks buizen vliegt.'
         flappy_6: Kijk of je nog steeds punten geeft als Flappy meer of minder flappert.
         flappy_7: 'Probeer vervolgens de scène te wijzigen door een ander blok toe te voegen aan het "bij uitvoeren" blok.'
-        flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iet gebeurd, als Flappy bijvoorbeeld een obstakel passeert.
+        flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
         flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel niet te beëindigen maar de score weer op 0 te zetten.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om je vrienden je spel te laten spelen op hun telefoons.
         flappy_k1_1: Speel Flappy
@@ -401,7 +401,7 @@ nl:
         C3_bee_conditionals: Bij voorwaardelijke instructies
         C3_maze_conditionals: Doolhof voorwaardelijke instructies
         C3_artist_nested_loops: Geneste lussen
-        C3_farmer_while: Zolang lussen
+        C3_farmer_while: Zolang-lussen
         C3_bee_nested_loops: Genestelde lussen
         C3_bee_debugging: Bij foutopsporing
         C3_bounce: Stuiter

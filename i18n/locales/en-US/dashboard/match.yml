@@ -449,3 +449,34 @@ en:
         salt: crwdns6027:0crwdne6027:0
         Van Minnen: crwdns6028:0crwdne6028:0
         Sydney: crwdns6029:0crwdne6029:0
+      U3L13 Assessment Matching:
+        "Matching: Buttons on the Screen": crwdns38460:0crwdne38460:0
+        elements: crwdns38461:0crwdne38461:0
+        id: crwdns38462:0crwdne38462:0
+        element text: crwdns38463:0crwdne38463:0
+        events: crwdns38464:0crwdne38464:0
+        actions: crwdns38465:0crwdne38465:0
+        trigger: crwdns38466:0crwdne38466:0
+        button("id","text"): crwdns38467:0crwdne38467:0
+        "onEvent(\"id\", \"click\", function() {...}):": 'crwdns38468:0{...}crwdne38468:0'
+        Things on the screen that the user interacts with: crwdns38469:0crwdne38469:0
+        Official program name of an element: crwdns38470:0crwdne38470:0
+        Words appearing on an element: crwdns38471:0crwdne38471:0
+        User interactions with an application: crwdns38472:0crwdne38472:0
+        Responses from the computer to events: crwdns38473:0crwdne38473:0
+        mouseover: crwdns38474:0crwdne38474:0
+        Places a button on the screen: crwdns38475:0crwdne38475:0
+        Calls an embedded function: crwdns38476:0crwdne38476:0
+      U3L14 - Matching Events to Description:
+        Event triggers: crwdns38358:0crwdne38358:0
+        Match the event type name with the description of what triggers it.: crwdns38359:0crwdne38359:0
+        Triggers constantly while hovering over a button.: crwdns38360:0crwdne38360:0
+        Triggers once, the instant mouse hovers over the button: crwdns38361:0crwdne38361:0
+        Triggers when mouse button is clicked once: crwdns38362:0crwdne38362:0
+        Triggers when mouse button is released: crwdns38363:0crwdne38363:0
+        Triggers when mouse button is pressed: crwdns38364:0crwdne38364:0
+        mousemove: crwdns38365:0crwdne38365:0
+        mouseover: crwdns38366:0crwdne38366:0
+        click: crwdns38367:0crwdne38367:0
+        mouseup: crwdns38368:0crwdne38368:0
+        mousedown: crwdns38369:0crwdne38369:0

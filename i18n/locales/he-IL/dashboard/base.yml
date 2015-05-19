@@ -157,7 +157,7 @@ he:
     title: 'פדה פרסים: %{name}'
     provider: 'ספק:'
     code: 'קוד:'
-    redeem_header: 'To redeem:'
+    redeem_header: 'כדי לקבל:'
     donorschoose_register: הירשם כמורה ב donorschoose.org
     donorschoose_project: פרסם פרוייקט
     donorschoose_how_to: איך להשתמש בקוד שלך
@@ -235,6 +235,7 @@ he:
       signup: הירשם
       already_registered: Already registered?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: ההתקדמות שלך
       lines: 'סה כ שורות קוד: %{lines}'
       close: קרוב
@@ -302,6 +303,10 @@ he:
     cant_remove_student_no_email: '%{student_name} לא יכול להיות מוסר מרשימת התלמידים שלך בגלל ש %{student_name} לא נרשם עם כתובת מייל'
     cant_remove_teacher_no_email: '%{teacher_name} לא יכול להימחק מרשימת המורים שלך מכיוון שלא נרשמת עם כתובת מייל'
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: תלמיד
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

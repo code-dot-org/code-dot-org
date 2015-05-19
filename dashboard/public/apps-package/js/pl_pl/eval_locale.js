@@ -165,7 +165,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "położenie-obraz (x, y, obraz)"},
 "offsetBlockTitle":function(d){return "offset (x, y, obraz)"},
 "rectangleBlockTitle":function(d){return "prostokąt (szerokość, wysokość, styl, kolor)"},
-"reinfFeedbackMsg":function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby edytować swój rysunek. "},
+"reinfFeedbackMsg":function(d){return "Możesz nacisnąć przycisk \"Odtwarzaj Dalej\" aby edytować program."},
 "rotateImageBlockTitle":function(d){return "obróć  (stopnie, obraz)"},
 "scaleImageBlockTitle":function(d){return "skala (czynnik, obraz)"},
 "squareBlockTitle":function(d){return "kwadrat (rozmiar, styl, kolor)"},

@@ -594,7 +594,7 @@ en:
         cspunit3:
           title: crwdns37941:0crwdne37941:0
           description_short: crwdns37942:0crwdne37942:0
-          description: crwdns37943:0crwdne37943:0
+          description: crwdns38391:0crwdne38391:0
           Getting to know AppLab: crwdns37944:0crwdne37944:0
           Functions: crwdns37945:0crwdne37945:0
           Using Simple Commands: crwdns37946:0crwdne37946:0
@@ -631,7 +631,13 @@ en:
           The Need For Programming Languages: crwdns37977:0crwdne37977:0
           Creating Procedures - Part 2: crwdns37978:0crwdne37978:0
           Sarah testing project backed levels: crwdns37979:0crwdne37979:0
+          Cookie Clicker: crwdns38392:0crwdne38392:0
+          Clicker Variable Basics: crwdns38393:0crwdne38393:0
+          Events Unplugged: crwdns38394:0crwdne38394:0
+          Beyond Buttons Toward Apps: crwdns38395:0crwdne38395:0
+          Improving the Clicker Game: crwdns38543:0crwdne38543:0
         algebraPD3:
+          title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
           Introduction to the new Computer Science in Algebra: crwdns37981:0crwdne37981:0
           Course Overview: crwdns37982:0crwdne37982:0
@@ -641,6 +647,7 @@ en:
           The Big Game: crwdns37986:0crwdne37986:0
           Strings and Images: crwdns37987:0crwdne37987:0
           The Design Recipe: crwdns37988:0crwdne37988:0
+          Next Steps: crwdns38397:0crwdne38397:0
         sciPD complex adaptive 2:
           title: crwdns37989:0crwdne37989:0
           description: crwdns37990:0crwdne37990:0
@@ -737,7 +744,10 @@ en:
           All the Tests: crwdns38072:0crwdne38072:0
           Free Response: crwdns38073:0crwdne38073:0
           Multi: crwdns38074:0crwdne38074:0
+          Big Game: crwdns38398:0crwdne38398:0
         sciencePD2:
           Phase 2 Summer Workshop: crwdns38075:0crwdne38075:0
         sciencePD3:
           new stage: crwdns38076:0crwdne38076:0
+        Testing:
+          Testing: crwdns38544:0crwdne38544:0

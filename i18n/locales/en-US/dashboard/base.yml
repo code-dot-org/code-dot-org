@@ -224,6 +224,7 @@ en:
       signup: crwdns2598:0crwdne2598:0
       already_registered: crwdns8813:0crwdne8813:0
     popup:
+      progress_for_user: 'crwdns38277:0%{name}crwdne38277:0'
       progress: crwdns2599:0crwdne2599:0
       lines: 'crwdns2966:0%{lines}crwdne2966:0'
       close: crwdns2600:0crwdne2600:0
@@ -291,6 +292,10 @@ en:
     cant_remove_student_no_email: 'crwdns4802:0%{student_name}crwdnd4802:0%{student_name}crwdne4802:0'
     cant_remove_teacher_no_email: 'crwdns4803:0%{teacher_name}crwdne4803:0'
     student_teacher_disassociated: 'crwdns4366:0%{teacher_name}crwdnd4366:0%{student_name}crwdne4366:0'
+    panel:
+      answer_viewer: crwdns38278:0crwdne38278:0
+      student: crwdns38279:0crwdne38279:0
+      try_it_yourself: crwdns38280:0crwdne38280:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'

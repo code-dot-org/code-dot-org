@@ -157,7 +157,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Ginamit mo ang isang hindi wastong color string:"+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "Ginamit mo ang isang hindi wastong color string:"+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "bilog (radius, klase, kulay)"},
-"displayBlockTitle":function(d){return "display"},
+"displayBlockTitle":function(d){return "suriin"},
 "ellipseBlockTitle":function(d){return "ellipse (lapad, taas, style, kulay)"},
 "extraTopBlocks":function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang isama ito sa \"display\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},

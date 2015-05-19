@@ -60,10 +60,10 @@ es-AR:
       invitation_token_invalid: The invitation token provided is not valid!
       updated: Your password was set successfully. You are now signed in.
       no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      invitation_removed: Su invitación ha sido removida.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Enviar invitación
+        submit_button: Enviar una invitación
       edit:
         header: Set your password
         submit_button: Set my password

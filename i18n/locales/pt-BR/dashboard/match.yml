@@ -158,29 +158,29 @@ pt-BR:
         <h4>STAR</h4>: '<h4>STAR</h4>'
         <h4>RAMP</h4>: '<h4>RAMP</h4>'
       ECSPD phase matching:
-        Matching PD Phases and Descriptions: Matching PD Phases and Descriptions
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Phase 4: Phase 4
-        Online introduction to PD program: Online introduction to PD program
-        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum
-        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
-        In-person wrap up to the first year of teaching the course: In-person wrap up to the first year of teaching the course
+        Matching PD Phases and Descriptions: Associação de fases do DP e suas descrições
+        Phase 1: Fase 1
+        Phase 2: Fase 2
+        Phase 3: Fase 3
+        Phase 4: Fase 4
+        Online introduction to PD program: Introdução on-line ao programa de DP
+        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Combinação de DP presencial e on-line, com ênfase na construção de estratégias pedagógicas e na identificação do currículo
+        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Combinação de DP presencial e on-line, com ênfase nas instruções acadêmicas anuais e no fornecimento de espaço para a aprendizagem de conteúdo
+        In-person wrap up to the first year of teaching the course: Conclusão presencial do primeiro ano de ensino do curso
       ECSPD unit matching:
-        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Matching Unit Descriptions and Numbers: Combinando descrições de unidade e números
         Unit 1: Unidade 1
         Unit 2: Unidade 2
-        Unit 3: Unit 3
-        Unit 4: Unit 4
-        Unit 5: Unit 5
-        Unit 6: Unit 6
-        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
-        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
-        website development and design: website development and design
-        create programs to solve computational problems: create programs to solve computational problems
-        use computing to manage and interpret data: use computing to manage and interpret data
-        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        Unit 6: Unidade 6
+        introduction to the concepts of computer and computing: introdução aos conceitos de computador e computação
+        application of problem solving techniques to develop solutions: aplicação de técnicas de resolução de problemas para desenvolver soluções
+        website development and design: desenvolvimento e design de websites
+        create programs to solve computational problems: crie programas para resolver problemas computacionais
+        use computing to manage and interpret data: use a computação para gerenciar e interpretar dados
+        apply programming and problem solving to the study of robots: aplique a programação e a resolução de problemas ao estudo de robôs
       K-1 Artist 2 Match 1:
         Matching: Associação
         Is the square next to, above, or below the ball?: O quadrado está ao lado, acima ou abaixo da bola?
@@ -353,8 +353,8 @@ pt-BR:
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
       PDAlg block match:
-        Block match: Block match
-        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match the expressions with the appropriate Circle of Evaluation or Evaluation Block
+        Block match: Combinação de blocos
+        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Combine as expressões com com o círculo ou bloco de avaliação apropriados
         "http://staging.studio.code.org/script_assets/pd/circle1.png": http://staging.studio.code.org/script_assets/pd/circle1.png
         "http://staging.studio.code.org/script_assets/pd/circle2.png": http://staging.studio.code.org/script_assets/pd/circle2.png
         "http://staging.studio.code.org/script_assets/pd/circle3.png": http://staging.studio.code.org/script_assets/pd/circle3.png
@@ -362,45 +362,45 @@ pt-BR:
         "http://staging.studio.code.org/script_assets/pd/block2.png": http://staging.studio.code.org/script_assets/pd/block2.png
         "http://staging.studio.code.org/script_assets/pd/block3.png": http://staging.studio.code.org/script_assets/pd/block3.png
       PDAlg commitment match:
-        Program Commitment Matching Question: Program Commitment Matching Question
+        Program Commitment Matching Question: Exercício de associação de metas do programa
         0: '? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
         1: ': Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        "Online Introduction: 2 hours online": 'Online Introduction: 2 hours online'
-        "Blended Summer Study: 3 days in-person and 8 hours online": 'Blended Summer Study: 3 days in-person and 8 hours online'
-        "Academic Year Development: 2 days in-person and 10 hours online": 'Academic Year Development: 2 days in-person and 10 hours online'
+        Phase 1: Fase 1
+        Phase 2: Fase 2
+        Phase 3: Fase 3
+        "Online Introduction: 2 hours online": 'Introdução on-line: 2 horas on-line'
+        "Blended Summer Study: 3 days in-person and 8 hours online": 'Estudos de verão combinados: 3 dias presenciais e 8 horas on-line'
+        "Academic Year Development: 2 days in-person and 10 hours online": 'Desenvolvimento do ano acadêmico: 2 dias presenciais e 10 horas on-line'
       PDAlg Design Recipe Video:
-        Intro to Data Types: Intro to Data Types
-        Place the Design Recipe steps in the correct order.: Place the Design Recipe steps in the correct order.
-        Step 1: Step 1
-        Step 2: Step 2
-        Step 3: Step 3
-        Contract and Purpose Statement: Contract and Purpose Statement
-        Examples: Examples
+        Intro to Data Types: Introdução aos tipos de dados
+        Place the Design Recipe steps in the correct order.: Coloque as etapas da receita de design na ordem correta.
+        Step 1: Etapa 1
+        Step 2: Etapa 2
+        Step 3: Etapa 3
+        Contract and Purpose Statement: Declaração de propósito e contrato
+        Examples: Exemplos
         Definition: Definição
       PDAlg Types Video:
-        Intro to Data Types: Intro to Data Types
-        Match each data type with its color code: Match each data type with its color code
+        Intro to Data Types: Introdução aos tipos de dados
+        Match each data type with its color code: Combine cada tipo de dado com o código de sua cor
         Number: Número
         String: String
-        Image: Image
+        Image: Imagem
         "http://staging.studio.code.org/script_assets/pd/blue.png": http://staging.studio.code.org/script_assets/pd/blue.png
         "http://staging.studio.code.org/script_assets/pd/teal.png": http://staging.studio.code.org/script_assets/pd/teal.png
         "http://staging.studio.code.org/script_assets/pd/purple.png": http://staging.studio.code.org/script_assets/pd/purple.png
       PDECS commitment match:
-        Program Commitment Matching Question: Program Commitment Matching Question
+        Program Commitment Matching Question: Exercício de associação de metas do programa
         0: '? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).'
         1: ': Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Phase 4: Phase 4
-        "Online Introduction: 2 hours online": 'Online Introduction: 2 hours online'
-        "Blended Summer Study: 5 days in-person and 8 hours online": 'Blended Summer Study: 5 days in-person and 8 hours online'
-        "Academic Year Development: 4 days in-person and 12 hours online": 'Academic Year Development: 4 days in-person and 12 hours online'
-        "Summer Wrap-up: 3 days in-person": 'Summer Wrap-up: 3 days in-person'
+        Phase 1: Fase 1
+        Phase 2: Fase 2
+        Phase 3: Fase 3
+        Phase 4: Fase 4
+        "Online Introduction: 2 hours online": 'Introdução on-line: 2 horas on-line'
+        "Blended Summer Study: 5 days in-person and 8 hours online": 'Estudos de verão combinados: 5 dias presenciais e 8 horas on-line'
+        "Academic Year Development: 4 days in-person and 12 hours online": 'Desenvolvimento do ano acadêmico: 4 dias presenciais e 12 horas on-line'
+        "Summer Wrap-up: 3 days in-person": 'Resumo de verão: 3 dias presenciais'
       PDK5 Pair programming match:
         Pair programming match: Associação de definições de programação em dupla
         Match the definitions to the words you were introduced to in the last video.: Associe as definições às palavras que você viu no último vídeo.
@@ -415,15 +415,15 @@ pt-BR:
         Question: Pergunta
         Answer 1: Resposta 1
       sciPD commitment match:
-        Program Commitment Matching Question: Program Commitment Matching Question
+        Program Commitment Matching Question: Exercício de associação de metas do programa
         0: '? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
         1: ': Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        "Online Introduction: 2 hours online": 'Online Introduction: 2 hours online'
-        "Blended Summer Study: 3 days in-person and 8 hours online": 'Blended Summer Study: 3 days in-person and 8 hours online'
-        "Academic Year Development: 2 days in-person and 10 hours online": 'Academic Year Development: 2 days in-person and 10 hours online'
+        Phase 1: Fase 1
+        Phase 2: Fase 2
+        Phase 3: Fase 3
+        "Online Introduction: 2 hours online": 'Introdução on-line: 2 horas on-line'
+        "Blended Summer Study: 3 days in-person and 8 hours online": 'Estudos de verão combinados: 3 dias presenciais e 8 horas on-line'
+        "Academic Year Development: 2 days in-person and 10 hours online": 'Desenvolvimento do ano acadêmico: 2 dias presenciais e 10 horas on-line'
       test matching image:
         Matching Images Two: Associando Imagens Dois
         Match up all the flowers by colour!: Conecte todas as flores pela cor!
@@ -449,3 +449,34 @@ pt-BR:
         salt: sal
         Van Minnen: Van Minnen
         Sydney: Sydney
+      U3L13 Assessment Matching:
+        "Matching: Buttons on the Screen": 'Matching: Buttons on the Screen'
+        elements: elements
+        id: id
+        element text: element text
+        events: events
+        actions: actions
+        trigger: trigger
+        button("id","text"): 'button("id","text")'
+        "onEvent(\"id\", \"click\", function() {...}):": 'onEvent("id", "click", function() {...}):'
+        Things on the screen that the user interacts with: Things on the screen that the user interacts with
+        Official program name of an element: Official program name of an element
+        Words appearing on an element: Words appearing on an element
+        User interactions with an application: User interactions with an application
+        Responses from the computer to events: Responses from the computer to events
+        mouseover: mouseover
+        Places a button on the screen: Places a button on the screen
+        Calls an embedded function: Calls an embedded function
+      U3L14 - Matching Events to Description:
+        Event triggers: Disparadores de evento
+        Match the event type name with the description of what triggers it.: Relacione o nome do tipo de evento à descrição do que o dispara.
+        Triggers constantly while hovering over a button.: Dispara constantemente enquanto o mouse estiver sobre um botão.
+        Triggers once, the instant mouse hovers over the button: Dispara uma vez, no instante que o mouse fica sobre o botão
+        Triggers when mouse button is clicked once: Dispara quando o botão do mouse for clicado uma vez
+        Triggers when mouse button is released: Dispara quando o botão do mouse for solto
+        Triggers when mouse button is pressed: Dispara quando o botão do mouse for pressionado
+        mousemove: mousemove
+        mouseover: mouseover
+        click: click
+        mouseup: mouseup
+        mousedown: mousedown

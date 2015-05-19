@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-15T13:51:01.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "4. You want to change the size of the images when a certain score is reached."
+      }
+    ],
+    "answers": [
+      {
+        "text": "conditional",
+        "correct": false
+      },
+      {
+        "text": "variable",
+        "correct": false
+      },
+      {
+        "text": "both",
+        "correct": true
+      }
+    ],
+    "title": "Controlling Memory and Control Quiz",
+    "content1": "Select the programming technique that best fits the described game feature."
+  }
+}]]></config>
+</Multi>

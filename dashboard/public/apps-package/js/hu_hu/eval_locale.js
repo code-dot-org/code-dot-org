@@ -154,8 +154,8 @@ v:function(d,k){eval_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
-"badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
-"badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
+"badColorStringError":function(d){return "Érvénytelen színt használtál: "+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "Érvénytelen stílust használtál: "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "kör (sugár, stílus, szín)"},
 "displayBlockTitle":function(d){return "kiértékel"},
 "ellipseBlockTitle":function(d){return "ellipszis (szélesség, magasság, stílus, szín)"},

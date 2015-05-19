@@ -232,6 +232,7 @@ id:
       signup: Daftar
       already_registered: Apa Sudah Terdaftar?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Kemajuan Anda
       lines: 'Jumlah baris kode: %{lines}'
       close: TUTUP
@@ -299,6 +300,10 @@ id:
     cant_remove_student_no_email: '% {student_name} tidak dapat dihapus sebagai siswa Anda karena %{student_name} belum mendaftar e-mail'
     cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dihapus sebagai guru Anda karena Anda belum mendaftarkan e-mail'
     student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: siswa
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'

@@ -1,6 +1,8 @@
 name 'U3L13 Student Lesson Introduction'
 title 'Buttons on the Screen'
 markdown <<MARKDOWN
+## Unit 3: Lesson 13 - Buttons on the Screen
+
 # Background
 
 In the previous lesson, you were introduced to event-driven programming in the unplugged activity, Mission Unsortable. Now, it’s time to create your own event-driven program with elements, event handlers, and triggers to control the turtle.

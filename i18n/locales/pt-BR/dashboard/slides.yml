@@ -78,7 +78,7 @@ pt-BR:
         text: Sempre que alguém clica, digita, ou toca na tela de um celular, é gerado um EVENTO, e existe alguns códigos que decidem o que fazer quando um EVENTO ocorre.
       3:
         image: notes/flappy03.jpg
-        text: 'Por exemplo, você poderia ter um MANIPULAR DE EVENTOS que diz "quando o mouse for clicado, toque um som" '
+        text: 'Por exemplo, você poderia ter um MANIPULADOR DE EVENTOS que diz "quando o mouse for clicado, toque um som" '
       4:
         image: notes/flappy04.jpg
         text: Você já ouviu falar do jogo Flappy Bird? Usando manipuladores de eventos, vamos aprender a programar nossa própria versão do Flappy Bird!

@@ -110,7 +110,7 @@ hu-HU:
   stats_student: '"Tudtam, hogy ez egy <b>egyszeri lehetőség az életemben</b>." - Mariana Alzate, 5. osztályos'
   stats_michael: '"<b>Soha életemben</b> nem láttam még ennyire izgatottnak a diákjaimat tanulás közben." - Michael Clark, tanár'
   studiobar_title: "Fedezd fel a <a href='http://studio.code.org'>Code Studio-t</a>"
-  studiobar_title_nolink: Fedezd fel a Code Studio-t
+  studiobar_title_nolink: Fedezd fel a Kód stúdiót
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: 'Három új tanfolyamunk k &#8209; 5 nek'
   studiobar_hoc_title: A kódolás órája
@@ -118,7 +118,7 @@ hu-HU:
   studiobar_flappy_title: Flappy kód
   studiobar_flappy_body: Készítsd el és oszd meg saját Flappy Bird játékodat
   studiobar_teacher_title: Tanároknak
-  studiobar_teacher_body: Mutasd be a Code Studiot az osztályodnak
+  studiobar_teacher_body: Mutasd be a Kód stúdiót az osztályodnak
   studiobar_frozen_title: A kódolás órája
   studiobar_frozen_body: Hozz létre egy téli csodaországot Annával és Elsával!
   studiobar_donate_title: Támogatás
@@ -189,6 +189,8 @@ hu-HU:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: 'Írd alá a petíciót &#x25BE;'
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
@@ -196,20 +198,20 @@ hu-HU:
   homepage_slot_text_link_hocserved: '# fő már kipróbálta'
   homepage_slot_text_title_students: Diákok
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
-  homepage_slot_text_link_codestudio: Próbáld ki a Kódolóstúdiót
+  homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
   homepage_slot_text_link_local: Keress egy helyi osztályt
   homepage_slot_text_link_othercourses: További online tanfolyamok
   homepage_slot_text_title_educators: Oktatók
   homepage_slot_text_blurb_educators: Tanítsd a diákjaidat
   homepage_slot_text_link_k5: Tanfolyamok alsó tagozatosoknak
   homepage_slot_text_link_fullcurriculum: Teljes tananyag megtekintése
-  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_link_pd: Szakmai fejlődés
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Támogasd munkánkat
   homepage_slot_text_link_stats: Nézd meg a statisztikákat
   homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Adományozz
-  homepage_header_codestudio: Kódolóstúdiós diákalkotások
+  homepage_header_codestudio: Kód stúdiós diákalkotások
   homepage_header_donors: A Code.org megköszöni a támogatásokat
   homepage_donors_seall: Összes megtekintése
   homepage_donors_donate: Támogatás
@@ -302,7 +304,7 @@ hu-HU:
   dashboard_navigation_section_teacher_progress: A tanfolyam haladás
   dashboard_navigation_section_lesson_plans: Óravázlatok és erőforrások
   dashboard_navigation_section_community: Súgó és Közösség
-  dashboard_navigation_section_pd: Professzionális fejlesztések
+  dashboard_navigation_section_pd: Szakmai fejlődés
   dashboard_navigation_section_speakers: 'Számítógép-tudomány <br/> vendég előadók'
   dashboard_navigation_all_sections: Diákok fiókja és haladása
   dashboard_navigation_view_progress: Fejlődés megtekintése

@@ -65,8 +65,8 @@
     need_confirmation: Har ikke modtaget bekræftelses instruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} eleverne har allerede tilmeldt sig.'
+    teacher_count: '%{count} lærerne har allerede tilmeldt sig.'
     overview_student: Tilmeld dig en konto for at spore dine fremskridt. Din email
       bruges primært til at tillade log ind og til gendannelse af din adgangskode.
       For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.
@@ -273,6 +273,7 @@
       signup: Tilmeld
       already_registered: Allerede registreret?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Dine fremskridt
       lines: 'Total linjer kode: %{lines}'
       close: LUK
@@ -348,6 +349,10 @@
       fordi du ikke har registreret en e-mailadresse'
     student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: studerende
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -370,7 +375,7 @@
     classroom_activity: Unplugged aktivitet
   home:
     title: Kode Værktøj
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} LINJER KODE SKREVET AF ELEVER'
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: Allerede registreret? %{link}
@@ -413,7 +418,7 @@
     heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
     heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Prøv et kursusforløb på Code Studio
   gender:
     male: Mand
     female: Kvinde
@@ -566,12 +571,12 @@
     badrange: Din kontrakt har det forkert navn.
     baddomainsize: Din kontrakt har ikke det rigtige antal elementer i domænet.
     baddomainname: Én eller flere af dine domæneelementer har det forkert navn.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomaintype: En eller flere af dine domæne elementer har en forkert type, eller
+      de er i forkert rækkefølge.
   text_match:
     placeholder: Skriv dit svar her
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Tak
+    open_response_body: Tak for dit svar!
   dialog:
     ok: Ok
   time:

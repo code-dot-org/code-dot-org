@@ -4,11 +4,7 @@
   "created_at": "2015-05-14T13:14:26.000Z",
   "properties": {
     "title": "Beyond Buttons Wrap Up",
-    "markdown": "In the next lesson, you will enhance the button masher program to make it more interesting and more fun.\n\nWhat features would you like to add to your program?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "In the next lesson, you will enhance the clicker game to make it more interesting and more fun.\n\nWhat features would you like to add to your program?\n"
   }
 }]]></config>
 </TextMatch>
