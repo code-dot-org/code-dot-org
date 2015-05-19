@@ -1086,7 +1086,7 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;
-  this.createModalDialog(options, imageDiv);
+  return this.createModalDialog(options, imageDiv);
 };
 
 /**
