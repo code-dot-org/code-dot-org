@@ -270,6 +270,7 @@
       signup: Meld deg på
       already_registered: Allerede registrert?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Din fremdrift
       lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
@@ -343,6 +344,10 @@
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer
       fordi du ikke har registrert en e-postadresse'
     student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: student
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'

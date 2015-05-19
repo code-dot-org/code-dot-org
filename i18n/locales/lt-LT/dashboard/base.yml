@@ -233,6 +233,7 @@ lt:
       signup: Užsiregistruoti
       already_registered: Jau užsiregistravote?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Jūsų pažanga
       lines: 'Iš viso kodo eilučių: %{lines}'
       close: UŽDARYTI
@@ -300,6 +301,10 @@ lt:
     cant_remove_student_no_email: '%{student_name} negalima pašalinti, nes %{student_name} neprisiregistravo su el. pašto adresu'
     cant_remove_teacher_no_email: '%{teacher_name} negalima pašalinti, nes tu neprisiregistravai su savo el. pašto adresu'
     student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Mokinys
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'

@@ -2,7 +2,7 @@
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "Dapat kang maglakip ng isang block sa \"compute\" block.",
   "equivalentExpression": "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon.",
-  "evaluate": "evaluate",
+  "evaluate": "suriin",
   "extraTopBlocks": "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?",
   "failedInput": "Ang iyong  function ay hindi binalik ang tamang resulta para sa lahat ng mga value.",
   "goal": "Goal:",
@@ -13,5 +13,5 @@
   "yourExpression": "Ang iyong expression:",
   "wrongInput": "Ginagamit mo ang iyong  function na may maling value.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Ang iyong ekspresyon ay hindi nagbabalik ng tamang resulta."
 }

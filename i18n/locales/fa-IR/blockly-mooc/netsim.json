@@ -21,6 +21,7 @@
   "connectToAPeer":"Connect to a Peer",
   "connectToARouter":"Connect to a Router",
   "decimal":"ده دهی",
+  "defaultNodeName":"[New Node]",
   "disconnected":"قطع شده",
   "dns":"سیستم نامگذاری اصلی",
   "dnsMode":"حالت DNS",

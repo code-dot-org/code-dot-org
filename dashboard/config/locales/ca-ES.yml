@@ -276,6 +276,7 @@
       signup: Inscriure's
       already_registered: Ja estàs registrat?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: El teu progrés
       lines: 'Línies totals de codi: %{lines}'
       close: TANCA
@@ -351,6 +352,10 @@
       no t''has inscrit amb una adreça de correu electrònic'
     student_teacher_disassociated: '%{teacher_name} s''ha esborrat com a mestre de
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: estudiant
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no

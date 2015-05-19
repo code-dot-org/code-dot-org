@@ -261,9 +261,10 @@
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Szia, Brina vagyok , mérnök az Instagram-nál. Egy függvény az bizonyos
-          sorok a kódból amit újra és újra használni szeretnél, így ahelyett, hogy
-          a kódot ki minden alkalommal be kelljen írni, akkor csak használ egy blokk.
+        text: Szia, Brina vagyok, mérnök az Instagramnál. Egy függvény lehetővé teszi,
+          hogy ha egy kód bizonyos sorait újra és újra használni szeretnéd, akkor
+          ne kelljen mindig az összes sort újra beírni. Helyette használhatsz egyetlen
+          blokkot.
       2:
         image: notes/stage13_2.jpg
         text: Itt az idő, hogy megtanuljunk függvényeket definiálni. A függvény definíciókat

@@ -231,6 +231,7 @@ sl:
       signup: Prijava
       already_registered: Že registrirani?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Tvoj napredek
       lines: 'Skupno število vrstic kode: %{lines}'
       close: ZAPRI
@@ -298,6 +299,10 @@ sl:
     cant_remove_student_no_email: 'Ne morete odstraniti %{student_name} kot vašega učenca, ker %{student_name} nima registriranega e-poštnega naslova'
     cant_remove_teacher_no_email: 'Ne moreš odstraniti %{teacher_name} kot svojo učiteljico/učitelja, ker se sam nisi registriral/a s svojim e-poštnim naslovom'
     student_teacher_disassociated: '%{teacher_name} je bil/a odstranjen/a kot učitelj/ica %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Učenec
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

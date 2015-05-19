@@ -286,7 +286,10 @@
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Video game dan Bidang Koordinat
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Ketahuilah bahwa video permainan yang anda suka sebenarnya bagian dari
+          aljabar!   Dalami bagaimana fungsi aljabar dan koordinat pesawat dapat membantu
+          kita mengerti cara kerja permainan video dan kemudian mulailah merencanakan
+          video permainan apa yang akan anda ciptakan.
         video: alg_11_coordinate_plane
       Contracts:
         title: Kontrak, Domain dan Jangkauan
@@ -296,11 +299,19 @@
         video: alg_5_contracts
       DesignRecipe:
         title: Resep desain
-        desc: Design Recipe lesson description
+        desc: Pada tahap akhir, Para siswa menuliskan contoh dari fungsi-fungsi yang
+          sangat sederhana - namun fungsi-fungsi permintaan tersebut lebih rumit dan
+          melalui pendekatan yang masuk akal. Ini merupakan gambaran rumus yang disusun
+          melalui pendekatan terstruktur untuk dapat menulis fungsi-fungsi termasuk
+          penulisan studi kasus untuk memastikan bahwa fungsi bekerja seperti yang
+          di harapkan.
         video: alg_8_design_recipe
       Booleans:
         title: Boolean dan logika
-        desc: Booleans lesson description
+        desc: Booleans adalah tipe data yang ke-empat dan yang terakhir yang anda
+          akan pelajari dalam kursus ini. Pada kegiatan ini, anda akan mempelajari
+          tentang apa itu booleans, dan bagaimana booleans dapat membantu kita untuk
+          menuliskan fungsi-fungsi secara logika
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Kondisional dan fungsi Piecewise

@@ -279,6 +279,7 @@ sq:
       signup: Rregjistrohu
       already_registered: Je i rregistruar?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Ecuria jote
       lines: 'Totali i rreshtave të kodit: %{lines}'
       close: MBYLL
@@ -346,6 +347,10 @@ sq:
     cant_remove_student_no_email: '%{student_name} nuk mund të hiqet si studenti juaj, sepse %{student_name} nuk ka rregjistruar një adresë emaili'
     cant_remove_teacher_no_email: '%{teacher_name} nuk mund të hiqet si mësuesi juaj, sepse nuk ka rregjistruar një adresë emaili'
     student_teacher_disassociated: '%{teacher_name} është hequr si mësues për%{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: student
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Adresa e emailit nuk është konfirmuar:'
     email_confirm_needed_required: 'Posta E Juaj Elektronike %{email}  Nuk Eshte Konfirmuar:'

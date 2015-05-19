@@ -735,24 +735,29 @@
         csp_pixelation_color_3: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3
         csp_pixelation_bw: Βοήθημα Ασπρόμαυρης εικονοστοιχειοποίησης
         csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
-        csp_textcompression: Text compression widget
+        csp_textcompression: Εργαλείο συμπίεσης κειμένου
         alg_1_intro: CS στην Άλγεβρα - Εισαγωγή
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_2_eval_block: Πληροφορική στην Άλγεβρα - Πλακάκια αξιολόγησης
+        alg_3_pemdas: Πληροφορική στην Άλγεβρα - Σειρά πράξεων
         alg_4_data_types: CS στην Άλγεβρα - Τύποι Δεδομένων
-        alg_5_contracts: CS in Algebra - Contracts
+        alg_5_contracts: Πληροφορική στην Άλγεβρα - Συμβάσεις
         alg_6_variables: CS στην Άλγεβρα - Μεταβλητές
         alg_7_function: CS στην Άλγεβρα - Συναρτήσεις
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        alg_8_design_recipe: Πληροφορική στην Άλγεβρα - Συνταγή σχεδίασης
+        alg_9_booleans: Πληροφορική στην Άλγεβρα - Λογικές τιμές
+        alg_10_conditionals: Πληροφορική στην Άλγεβρα - Δομές επιλογής
+        alg_11_coordinate_plane: Πληροφορική στην Άλγεβρα - Σχέδιο προσανατολισμού
+        alg_12_biggame_variables: Πληροφορική στην Άλγεβρα - Μεταβλητές μεγάλου παιχνιδιού
+        alg_13_biggame_animation: Πληροφορική στην Άλγεβρα - Κινούμενο σχέδιο μεγάλου
+          παιχνιδιού
+        alg_14_biggame_booleans: Πληροφορική στην Άλγεβρα - Λογικές τιμές μεγάλου
+          παιχνιδιού
+        alg_15_biggame_update_player: Πληροφορική στην Άλγεβρα - Ανανέωση παίκτη μεγάλου
+          παιχνιδιού
+        alg_16_biggame_collision_detection: Πληροφορική στην Άλγεβρα - Ανίχνευση σύγκρουσης
+          μεγάλου παιχνιδιού
+        alg_17_sambat_compound_booleans: Πληροφορική στην Άλγεβρα - Σύνθετες λογικές
+          τιμές
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
@@ -863,6 +868,7 @@
         Infinity_move_right_runbutton: Προσθέστε εδώ το μπλοκ μετακίνησης
         Infinity_move_directions_callout: Ποιο μπλοκ θα κάνει τον Baymax να μετακινηθεί
           προς τα πάνω όταν πατιέται το πάνω βελάκι;
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Χρησιμοποιήστε αυτά τα βελάκια για
+          να το κατευθύνετε
         Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
         Infinity_repeat_callout: Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα

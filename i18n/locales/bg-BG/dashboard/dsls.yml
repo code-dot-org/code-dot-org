@@ -70,12 +70,18 @@ bg:
         0: '? Запишете договор за функция, наречена "wide-rect", което създава правоъгълник с дадена височина и цвят, който е два пъти по-широк, отколкото е висок.'
         1: ': Напишете Договор за функция, наречена "wide-rect", което създава правоъгълник с дадена височина и цвят, който е два пъти по-широк, отколкото е висок.'
         wide-rect|Image|Number|String: Wide-rect| изображение| номер| Низ
+      Rocket Contract 1:
+        Contract for rocket-height: Contract for rocket-height
+        rocket-height|Number|Number: rocket-height|Number|Number
     external:
       AlgPD Break:
-        Before you move on...: Before you move on...
+        Before you move on...: Преди да преминете...
+      App Lab Feedback:
+        App Lab Feedback: App Lab Feedback
+        description here: описание тук
       CSP Journal Entry Placeholder:
-        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
-        Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
+        CSP Journal Entry Placeholder: 'CSP дневник: вписване на заместител'
+        Eventually replace this with a free-response journal entry level: В крайна сметка заменете това със свободен отговор при влизане в дневника
       CSP Journal Entry Placeholder2:
         description here: описание тук
         title: Заглавие
@@ -91,39 +97,39 @@ bg:
         Create images with bits and bytes.: Създаване на изображения с битове и байтове.
         title: Заглавие
       ECSPD PD Phases:
-        ECSPD PD Phases: ECSPD PD Phases
+        ECSPD PD Phases: ECSPD PD фази
       ECSPD PD details:
-        ECSPD PD details: ECSPD PD details
+        ECSPD PD details: ECSPD PD детайли
       ECSPD PD overview:
         ECS PD Overview: ECS PD преглед
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS програма преглед
         Overview of Curriculum: Преглед на учебната програма
       ECSPD end of p1:
-        ECSPD end of p1: ECSPD end of p1
+        ECSPD end of p1: ECSPD край на p1
       ECSPD forum introduction:
-        ECS Forum Introductions: ECS Forum Introductions
-        Forum Introductions: Forum Introductions
+        ECS Forum Introductions: ECS форум въведение
+        Forum Introductions: Форум въведение
       ECSPD growth mindset strategies:
         Growth Mindset Strategies: Стратегии за растеж нагласи
       ECSPD impact of CS:
-        Impact of Computer Science: Impact of Computer Science
+        Impact of Computer Science: Въздействието на компютърните науки
         description here: описание тук
       ECSPD impact vid1:
-        ECSPD impact vid1: ECSPD impact vid1
+        ECSPD impact vid1: ECSPD удар vid1
       ECSPD impact vid2:
-        ECSPD impact vid2: ECSPD impact vid2
+        ECSPD impact vid2: ECSPD удар vid2
       ECSPD meet facilitator:
         Meet your Facilitator!: Запознайте се с вашия посредник!
       ECSPD pause:
-        ECSPD pause: ECSPD pause
+        ECSPD pause: ECSPD пауза
       ECSPD postsurvey: [ ]
       ECSPD presurvey: [ ]
       ECSPD program overview:
         ECS Program Overview: ECS програма преглед
         Overview of ECS Program: Преглед на ECS програма
       ECSPD teaching strategies video:
-        ECSPD teaching strategies video: ECSPD teaching strategies video
+        ECSPD teaching strategies video: ECSPD учебни стратегии видео
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: Изследване на нагласите за напредък
         What is Growth Mindset?: Какво представлява нагласата за растеж?
@@ -131,48 +137,52 @@ bg:
         first computer program: първата компютърна програма
       Hour of Code test content: [ ]
       Intro to CodeStudio:
-        An Introduction to Code Studio: An Introduction to Code Studio
+        An Introduction to Code Studio: Въведение в Студиото по кодиране
       Mixing Colors:
         description here: описание тук
         title: Заглавие
       Odometer:
-        Odometer: Odometer
+        Odometer: Километраж
       PDAlg Attitude Survey:
-        CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+        CS in Algebra Pre-attitude survey: 'CS в алгебра: проучване на предварителната нагласа'
       PDAlg Curriculum Overview:
-        Curriculum Overview: Curriculum Overview
-        Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+        Curriculum Overview: Преглед на програмата
+        Overview of CS in Algebra curriculum: 'Преглед на CS в алгебрата: учебен план'
       PDAlg Details:
-        CS in Algebra PD Details: CS in Algebra PD Details
+        CS in Algebra PD Details: CS в алгебра PD детайли
       PDAlg End of P1:
-        End of Phase 1: End of Phase 1
+        End of Phase 1: Края на фаза 1
       PDAlg Facilitator Test:
         description here: описание тук
         title: Заглавие
       PDAlg Facilitators:
-        Meet Your Facilitators: Meet Your Facilitators
+        Meet Your Facilitators: Запознайте се с вашия посредник
       PDAlg Intro: [ ]
       PDAlg Post Survey:
-        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+        CS in Algebra Post-attitude survey: 'CS в алгебрата: проучване на предварителната нагласа'
       PDAlg Scope:
-        Scope and Sequence: Scope and Sequence
+        Scope and Sequence: Обхват и последователност
       PDAlg Teacher Dashboard:
         Course Progress: Прогрес в курса
       PDAlg Teacher Introduction:
-        Introduce yourself: Introduce yourself
+        Introduce yourself: Представяне
       PDAlg big game:
-        Introduction to the Big Game: Introduction to the Big Game
+        Introduction to the Big Game: Въведение в голямата игра
       PDAlg bootstrap:
-        From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
+        From Bootstrap to CS in Algebra: От Bootstrap на CS в алгебрата
       PDAlg circles to blocks:
-        From Circles to Blocks: From Circles to Blocks
+        From Circles to Blocks: От кръгове до блокове
       PDAlg commitment:
-        CS in Algebra PD commitments: CS in Algebra PD commitments
+        CS in Algebra PD commitments: CS в алгебра PD ангажименти
         overview of program commitments: Преглед на поетите от програмата ангажименти
+      PDAlg first forum:
+        Starting the Conversation: Започване на разговора
       PDAlg functions:
-        The Concept of Function: The Concept of Function
+        The Concept of Function: Концепцията на функцията
       PDAlg hard video:
-        Why is Algebra so Hard?: Why is Algebra so Hard?
+        Why is Algebra so Hard?: Защо е алгебрата толкова трудна?
+      PDAlg whats next:
+        What's Next?: Какво следва?
       PDCSP Intro: [ ]
       PDECS Intro:
         PD Intro: PD въведение
@@ -195,22 +205,26 @@ bg:
       PDK5 Classroom Culture C:
         Classroom Culture: Култура на класната стая
       PDK5 Connections:
-        Connections: Connections
+        Connections: Връзки
       PDK5 Course Maps C: [ ]
       PDK5 Course Overview C: [ ]
       PDK5 Foundations F:
-        foundational skill: foundational skill
+        foundational skill: фундаментални умения
       PDK5 Glossary C:
         Vocabulary: Речник
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
         Pair Programming: Програмиране по двойки
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Пъзел цели
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Стратегии за преподаване на информатика
       PDK5 Strategies 1:
-        Classroom Strategies: Classroom Strategies
+        Classroom Strategies: Стратегии в класната стая
       PDK5 Strategies F:
-        Strategies Discussion: Strategies Discussion
+        Strategies Discussion: Обсъждане на стратегии
+      PDK5 Survey:
+        Phase 1 Experience Survey: Phase 1 Experience Survey
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Табло 1
       PDK5 Teacher Dashboard 2:
@@ -334,12 +348,12 @@ bg:
       U1L12 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
-      U1L13 Student Lesson Introduction:
+      U1L13 Student Lesson Summary:
         description here: описание тук
         title: Заглавие
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: Компресиране на текст чрез идентифициране на повтарящи се модели.
-        U1L13 Text Compression: U1L13 Text Compression
+        U1L13 Text Compression: U1L13 текст компресия
       U1L16 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
@@ -373,86 +387,149 @@ bg:
       U1L9 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
+      U3L12 - Mission Unsortable:
+        description here: описание тук
+        title: Заглавие
+      U3L12 - Student Introduction 1:
+        Events Unplugged: Ънплъгд събития
+      U3L13 - Explanation of Ids:
+        description here: описание тук
+        title: Заглавие
+      U3L13 Add Button Instrucitons:
+        description here: описание тук
+        title: Заглавие
+      U3L13 Add Button Instructions:
+        description here: описание тук
+        title: Заглавие
+      U3L13 Student Lesson Introduction:
+        Buttons on the Screen: Бутони на екрана
+      U3L14 - Student Intro Page:
+        description here: описание тук
+        title: Заглавие
+      U3L16 Student Lesson Introduction:
+        Beyond Buttons: Отвъд бутоните
+      U3L18 Student Lesson Introduction:
+        Controlling Memory and Program Flow: Контрол на паметта и потока на програмата
+      U3L19 - Intro to variables:
+        U3L19 - Intro to variables: 'U3L19 - Intro to variables'
+        description here: описание тук
+      U3L19 - concatenate string with var:
+        U3L19 - concatenate string with var: 'U3L19 - concatenate string with var'
+        description here: описание тук
+      U3L19 - explanation diff between string and var name:
+        U3L19 - explanation diff between string and var name: 'U3L19 - explanation diff between string and var name'
+        description here: описание тук
+      U3L19 - misconception variable assignment order pt1:
+        U3L19 - misconception variable assignment order pt1: 'U3L19 - misconception variable assignment order pt1'
+        description here: описание тук
+      U3L19 - variable breakdown - Assigning a value:
+        U3L19 - variable breakdown - Assigning a value: 'U3L19 - variable breakdown - Assigning a value'
+        description here: описание тук
+      U3L19 - variable breakdown - common mistake - declaring twice:
+        U3L19 - variable breakdown - common mistake - declaring twice: 'U3L19 - variable breakdown - common mistake - declaring twice'
+        description here: описание тук
+      U3L19 - variable breakdown - declaration:
+        U3L19 - variable breakdown - declaration: 'U3L19 - variable breakdown - declaration'
+        description here: описание тук
+      U3L19 - variable breakdown - setText in label:
+        U3L19 - variable breakdown - setText in label: 'U3L19 - variable breakdown - setText in label'
+        description here: описание тук
+      U3L19 - variable breakdown - ways to read pt1:
+        U3L19 - variable breakdown - ways to read pt1: 'U3L19 - variable breakdown - ways to read pt1'
+        description here: описание тук
+      U3L19 - variable breakdown intro:
+        U3L19 - variable breakdown intro: 'U3L19 - variable breakdown intro'
+        description here: описание тук
+      U3L19 Student Lesson Intro:
+        Clicker V.1: Clicker V.1
+      U3L20 Student Lesson Introduction:
+        Conditional Basics: Основи на Условията
+      U3L21 Student Lesson Introduction:
+        More Variables: More Variables
+      U3L22 Student Lesson Introduction:
+        Permanent Data Storage: Permanent Data Storage
+      U3L23 Student Lesson Introduction:
+        Natural Language Processing: Natural Language Processing
       facilitator test: [ ]
       sciPD Course Overview: [ ]
       sciPD Intro: [ ]
       sciPD StarLogo intro 1:
-        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+        Preface to the Guided Introduction to StarLogo Nova: Предговор към Въведение в StarLogo Nova
       sciPD StarLogo intro 2:
-        Guided Intro to StarLogo Nova: Guided Intro to StarLogo Nova
+        Guided Intro to StarLogo Nova: Представяне на Ръководството към StarLogo Nova
       sciPD StarLogo intro 3:
-        Guided Tour of StarLogo Nova pt 3: Guided Tour of StarLogo Nova pt 3
+        Guided Tour of StarLogo Nova pt 3: Екскурзовод на StarLogo Nova pt 3
       sciPD StarLogo intro 4:
-        Guided Intro to StarLogo Nova part 4: Guided Intro to StarLogo Nova part 4
+        Guided Intro to StarLogo Nova part 4: Представяне на ръководство към StarLogo Nova част 4
       sciPD StarLogo intro video:
-        Introduction to StarLogo Nova: Introduction to StarLogo Nova
+        Introduction to StarLogo Nova: Въведение в StarLogo Nova
       sciPD StarLogo tutorial 1:
-        StarLogo Tutorial part 1: StarLogo Tutorial part 1
+        StarLogo Tutorial part 1: StarLogo Урок част 1
       sciPD StarLogo tutorial 2:
-        StarLogo Tutorial part 2: StarLogo Tutorial part 2
+        StarLogo Tutorial part 2: StarLogo Урок част 2
       sciPD StarLogo tutorial 3:
-        StarLogo Tutorial part 3: StarLogo Tutorial part 3
+        StarLogo Tutorial part 3: StarLogo Урок част 3
       sciPD StarLogo tutorial 4:
-        StarLogo Nova Tutorial Part 4: StarLogo Nova Tutorial Part 4
+        StarLogo Nova Tutorial Part 4: StarLogo Nova урок част 4
       sciPD StarLogo tutorial 5:
-        StarLogo Nova Tutorial Part 5: StarLogo Nova Tutorial Part 5
+        StarLogo Nova Tutorial Part 5: StarLogo Nova урок част 5
       sciPD StarLogo tutorial 6:
-        StarLogo Nova Tutorial Part 6: StarLogo Nova Tutorial Part 6
+        StarLogo Nova Tutorial Part 6: StarLogo Nova урок част 6
       sciPD StarLogo tutorial 7:
-        StarLogo Nova Tutorial Part 7: StarLogo Nova Tutorial Part 7
+        StarLogo Nova Tutorial Part 7: StarLogo Nova урок част 7
       sciPD StarLogo tutorial 8:
-        StarLogo Nova Tutorial Part 8: StarLogo Nova Tutorial Part 8
+        StarLogo Nova Tutorial Part 8: StarLogo Nova урок част 8
       sciPD agent based forum:
-        Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive Systems Forum
+        Agent Based Modeling of Adaptive Systems Forum: Форум за моделиране на адаптивни базови системи
       sciPD agent based video:
-        Agent Based Modeling: Agent Based Modeling
+        Agent Based Modeling: Моделиране на базата
       sciPD class models forum:
-        Models in the Classroom: Models in the Classroom
+        Models in the Classroom: Модели в класната стая
       sciPD class models video:
-        Using Models in the Classroom: Using Models in the Classroom
+        Using Models in the Classroom: Използване на модели в класната стая
       sciPD complex adaptive forum:
-        Complex Adaptive Forum: Complex Adaptive Forum
+        Complex Adaptive Forum: Форум за комплексно адаптиране
       sciPD complex adaptive video:
-        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+        Intro to Complex Adaptive Systems: Представяне на сложни адаптивни системи
       sciPD computer models forum:
-        Using Computer Models in Science: Using Computer Models in Science
+        Using Computer Models in Science: Използване на компютърни модели в науката
       sciPD computer models video:
-        Using Computer Models in Science: Using Computer Models in Science
+        Using Computer Models in Science: Използване на компютърни модели в науката
       sciPD culture forum:
-        Dispositions and Classroom Culture: Dispositions and Classroom Culture
+        Dispositions and Classroom Culture: Мерки и култура в класната стая
       sciPD culture video:
-        Dispositions And Classroom Culture: Dispositions And Classroom Culture
+        Dispositions And Classroom Culture: Мерки и култура в класната стая
       sciPD expectations: [ ]
       sciPD finish:
-        Code.org Post Survey: Code.org Post Survey
+        Code.org Post Survey: Code.org публикуване на проучване
       sciPD framework forum:
-        Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
+        Computational Thinking and the Framework for K-12: Изчислително мислене и рамка за К-12
       sciPD framework video:
         Framework: Рамка
       sciPD intro finale: [ ]
       sciPD intro to CS forum: [ ]
       sciPD intro to CS video:
-        Intro to Computational Science: Intro to Computational Science
+        Intro to Computational Science: Въведение в компютърните науки
       sciPD intro video:
-        Welcome to CS in Science: Welcome to CS in Science
+        Welcome to CS in Science: Добре дошли в CS в науката
       sciPD logistics 1:
-        Details and Logistics: Details and Logistics
+        Details and Logistics: Детайли и логистика
       sciPD materials:
-        Workshop Materials: Workshop Materials
+        Workshop Materials: Семинар материали
       sciPD meet and greet: [ ]
       sciPD p2 intro:
-        Welcome to Phase 2: Welcome to Phase 2
+        Welcome to Phase 2: Добре дошли във фаза 2
       sciPD p3 intro:
-        CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase 3 PD
+        CS in Science Introduction to Phase 3 PD: CS в науката Въведение към фаза 3 PD
       sciPD preQ:
-        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+        Computer Science in Science Pre-Survey: Компютърни науки в науката предварително проучване
       sciPD what to expect:
-        What to Expect: What to Expect
+        What to Expect: Какво да очаквате
       test demo level:
         demo description: demo description
         demo title: demo title
       test discourse level type:
-        this is a discourse forum: this is a discourse forum
+        this is a discourse forum: Това е дискусионен форум
         title: Заглавие
       test html katie:
         lkajsdfasdf: lkajsdfasdf
@@ -465,6 +542,7 @@ bg:
         ((4+5) > 9): '((4 + 5) > 9)'
         (4+5) > 9: '(4 + 5) > 9'
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png, 300
+        4+5 > 9: '4 + 5 > 9'
         Convert Blocks to Math: 'Конвертиране на блокове  в Математика'
         Type out the arithmetic expression that matches this code: Напишете аритметичен израз, който съответства на този код
         Type the arithmetic expression here: Въведете аритметичния израз тук
@@ -477,15 +555,18 @@ bg:
         Type out the arithmetic expression that matches this code: Напишете аритметичен израз, който съответства на този код
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Bools 3:
+        ((5 < 10 < 15)): '((5 < 10 < 15))'
         ((5 < 10) && (10 < 15)): '((5 < 10) && (10 < 15))'
         ((5 < 10) AND (10 < 15)): '((5 < 10) AND (10 < 15))'
         ((5 < 10) And (10 < 15)): '((5 < 10) And (10 < 15))'
         ((5 < 10) and (10 < 15)): '((5 < 10) and (10 < 15))'
+        (5 < 10 < 15): '(5 < 10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
         (5 < 10) AND (10 < 15): '(5 < 10) И (10 < 15)'
         (5 < 10) And (10 < 15): '(5 < 10) And (10 < 15)'
         (5 < 10) and (10 < 15): '(5 < 10) и (10 < 15)'
         /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
+        5 < 10 < 15: '5 < 10 < 15'
         Convert Blocks to Math: 'Конвертиране на блокове  в Математика'
         Type out the arithmetic expression that matches this code: Напишете аритметичен израз, който съответства на този код
         Type the arithmetic expression here: Въведете аритметичния израз тук
@@ -498,6 +579,10 @@ bg:
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) и (x < 5)) ИЛИ ((8 < x) и (x < 10))'
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): '((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) и (x < 5)) или ((8 < x) и (x < 10))'
+        (1 < x < 5) OR (8 < x < 10): '(1 < x < 5) OR (8 < x < 10)'
+        (1 < x < 5) Or (8 < x < 10): '(1 < x < 5) Or (8 < x < 10)'
+        (1 < x < 5) or (8 < x < 10): '(1 < x < 5) or (8 < x < 10)'
+        (1 < x < 5) || (8 < x < 10): '(1 < x < 5) || (8 < x < 10)'
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         Convert Blocks to Math: 'Конвертиране на блокове  в Математика'
         Type out the arithmetic expression that matches this code: Напишете аритметичен израз, който съответства на този код
@@ -561,13 +646,13 @@ bg:
         Type out the arithmetic expression that matches this code: Напишете аритметичен израз, който съответства на този код
         Type the arithmetic expression here: Въведете аритметичния израз тук
       ECSPD PD goals:
-        Documenting Your PD Goals: Documenting Your PD Goals
+        Documenting Your PD Goals: Документиране на вашите PD целите
       ECSPD course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
+        Documenting Your Course Goals: Документиране на целите Ви курса
       ECSPD impact in program:
-        Impact of Computing: Impact of Computing
+        Impact of Computing: Въздействието на компютрите
       ECSPD program overlap:
-        Relationship between Curriculum and PD: Relationship between Curriculum and PD
+        Relationship between Curriculum and PD: Връзката между учебната програма и PD
       ECSPD strategies:
         Classroom Strategies Journal: Дневник на стратегиите в Класната стая
       ECSPD your goals:
@@ -575,15 +660,16 @@ bg:
       Open text response example:
         I loved it because...: Обичах го, защото...
         Open text response example: Отворен отговор с примерен текст
+      PDAlg Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Спомагане положителна учебна среда във вашия клас по компютърни науки
+        In my classroom, I want to...: В моята класна стая аз искам да...
       PDAlg course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
+        Documenting Your Course Goals: Документиране на целите Ви курса
       PDK5 Challenges:
         Biggest Challenges: Най-големите предизвикателства
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Спомагане положителна учебна среда във вашия клас по компютърни науки
         In my classroom, I want to...: В моята класна стая аз искам да...
-        0: '? Сега, когато знаете повече за нашата учебна програма, какви практики искате да използвате за насърчаване здравословната атмосфера във вашия клас по компютърни науки?'
-        1: '? Сега, когато знаете повече за нашата учебна програма, какви практики искате да използвате за насърчаване здравословната атмосфера във вашия клас по компютърни науки?'
       PDK5 Course Descriptions:
         Course Structure: Структура на курса
         I am going to start with Course...: Аз смятам да започна с курс...
@@ -606,7 +692,7 @@ bg:
         Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Компютърните науки се свързват с други теми или предмети, които вашите ученици изучават? Обяснява защо или защо не.
         Your thoughts here: Вашите мисли тук
       PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
+        Real-world applications for Students: Реални приложения за ученици
         Your thoughts here: Вашите мисли тук
       PDK5 Loops 2:
         The Importance of Loops: Значението на циклите
@@ -616,7 +702,7 @@ bg:
       PDK5 Promo Video:
         "Code Studio: Kid tested, Teacher approved": 'Код студио: изпробвани от деца, одобрени от учители'
       PDK5 Promo Video 2:
-        "Code Studio: Kid Tested, Teacher Approved!": 'Code Studio: Kid Tested, Teacher Approved!'
+        "Code Studio: Kid Tested, Teacher Approved!": 'Студио за кодиране: изпробвано от деца, одобрено от учители!'
         My first impressions of Code Studio are...: Моите първи впечатления от код студио са...
       PDK5 Strategies O:
         "I think teaching computer science will be different than teaching other subjects in these ways: ...": Мисля, че преподаването компютърни науки ще бъде различено от преподаването на други предмети по следните причини:...
@@ -636,13 +722,13 @@ bg:
         "Assessment: Encoding Text": 'Оценка: Кодиране на текст'
       U1L10 Journal Free Response:
         "Free Response: Encoding Text": 'Свободен отговор: Кодиране на текст'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        Respond to this prompt or to another as directed by your teacher.: Отговорете на този или в друг ред, както е указано от вашия учител.
       U1L11 Reflection Free Response:
         "Reflection: Sending Formatted Text": 'Коментар: Изпращане на форматиран текст'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        Respond to this prompt or to another as directed by your teacher.: Отговорете на този или в друг ред, както е указано от вашия учител.
       U1L12 Reflection Free Response:
         "Reflection: Data Storage": 'Коментар: Съхраняване на данни'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        Respond to this prompt or to another as directed by your teacher.: Отговорете на този или в друг ред, както е указано от вашия учител.
       U1L13 Assessment 1:
         "Assessment 1: Text Compression": 'Оценка 1: Компресиране на текст'
         Write (in the space below) a segment of text that should compress effectively and efficiently.: Напишете (в полето по-долу) част от текст, който ще има висока степен на компресия.
@@ -651,18 +737,21 @@ bg:
         Write (in the space below) a segment of text that will not compress well.: Напишете (в полето по-долу) част от текст, който ще има средна степен на компресия.
       U1L13 Reflection Free Response:
         "Reflection: Text Compression": 'Коментар: Компресия на текста'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        Respond to this prompt or to another as directed by your teacher.: Отговорете на този или в друг ред, както е указано от вашия учител.
       U1L16 Reflection Free Response:
         "Reflection: Encoding Complex data": 'Коментар: Кодиране на сложни данни'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        Respond to this prompt or to another as directed by your teacher.: Отговорете на този или в друг ред, както е указано от вашия учител.
       U1L2 Free response assessment question:
         "Assessment: Sending Binary Messages": 'Оценка: Изпращане на бинарни съобщения'
-        Complete the Lesson 2 Rubric.: Попълнете рубриката от урок 2.
         Enter your response here.: Въведете вашия отговор тук.
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: Попълнете рубриката от урок 2.
         Enter your reflection here.: Въведете коментара си тук.
         "Reflection: Sending Binary Messages": 'Коментар: Изпращане на бинарни съобщения'
+      U1L3 Free Response:
+        Enter your reflection here: Въведете коментара си тук
+        0: '? How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?'
+        1: ': How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?'
+        "Reflection: Sending Complex Messages": 'Коментар: Изпращане на сложни съобщения'
       U1L3 Free response reflection question:
         Complete the Lesson 3 Rubric.: Попълнете рубриката от урок 3.
         Enter your reflection here.: Въведете коментара си тук.
@@ -671,7 +760,7 @@ bg:
         Enter your reflection here.: Въведете коментара си тук.
         Reflect on this lesson: Коментар на този урок
       U1L4 Free response reflection question:
-        "Assessment: Bit sending Widget": 'Оценка: Приспособление за изпращане на битове'
+        "Assessment: Coordination on the Internet": 'Assessment: Coordination on the Internet'
         Complete the Lesson 2 Rubric.: Попълнете рубриката от урок 2.
         Enter your reflection here.: Въведете коментара си тук.
       U1L5 Free Response Assessment:
@@ -693,10 +782,45 @@ bg:
         "Getting Started: Sending Numbers ": 'Първи стъпки: Изпращане на номера '
         Respond to the following question.: Отговори на следния въпрос.
       U1L8 Free Response Reflection:
-        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete the Sending Numbers Checklist and then respond to the following prompt.
+        Complete the Sending Numbers Checklist and then respond to the following prompt.: Завърши контролен списък за изпращане на числата и след това отговори на следното питане.
         "Reflection: Sending Numbers ": 'Коментар: Изпращане на номера '
       U1L9 Free Response Assessment:
         "Assessment: Real-world Numbers ": 'Оценка: Реални числа '
+      U3L12 - Reflection - Mission Unsortable:
+        Activity Reflection: Рефлексивна дейност
+        Mission Unsortable : Мисия Несортирана
+      U3L12 Free Response Getting Started:
+        "Getting Started: Events Unplugged": 'Първи стъпки: Ънплъгд събития '
+        Respond to the following prompt: Отговори на следното искане
+      U3L12 Free Response Reflection:
+        "Reflection: Mission Unsortable": 'Рефлексия: Мисия Несортирана'
+      U3L13 Free Response Getting Started:
+        Buttons on the Screen - Getting Started: 'Бутони на екрана - първи стъпки'
+      U3L13 Free Response Reflection:
+        Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
+      U3L14 - Journal Favorite Event:
+        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: 'Изберете една от двете инструкции по-долу за отговор.  Започнете с копиране/поставяне на отговора на подканата.'
+        "Reflection: Events": 'Рефлексия: събития'
+      U3L16 Assessment Free Response:
+        "Beyond Buttons: Assessment": 'Отвъд бутоните: Оценка'
+      U3L16 Free Response Getting Started:
+        Beyond Buttons Getting Started: 'Отвъд бутоните: първи стъпки'
+      U3L16 Free Response Wrap Up:
+        Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
+      U3L18 Free Response Wrap Up:
+        Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
+      U3L20 Free Response Getting Started:
+        "Getting Started: Conditional Basics": 'Getting Started: Conditional Basics'
+      U3L20 Free Response Wrap Up:
+        "Wrap Up: Conditional Basics": 'Wrap Up: Conditional Basics'
+      U3L21 Assessment Wrap Up:
+        More Variables Wrap Up: More Variables Wrap Up
+      U3L22 Assessment:
+        Permanent Data Storage Assessment: Permanent Data Storage Assessment
+      U3L22 Free Response Getting Started:
+        "Permanent Data Storage: Getting Started": 'Permanent Data Storage: Getting Started'
+      U3L22 Reflection:
+        The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
       text match test:
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null

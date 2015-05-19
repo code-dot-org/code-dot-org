@@ -405,6 +405,17 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Baker test of multi can delete:
+        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There
+          are two answers here that are correct.  Looks like you can choose either
+          one and be right.
+        What is 2 + 2?: What is 2 + 2?
+        2+3: 2+3
+        5-1: 5-1
+        3 - 7: 3 - 7
+        3+1: 3+1
+        3+4: 3+4
       Coordinates Multi 1:
         Video game Coordinates: Coordonnées de jeu vidéo
         Ninjacat Demo Embed.level: Ninjacat Démo Embed.level
@@ -771,8 +782,9 @@
           600
         What is the value of x?: Quelle est la valeur de x ?
         3: '3'
+        8: '8'
         15: '15'
-        do not know: Ne sais pas
+        string: chaîne
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
           600
@@ -850,6 +862,13 @@
         Play Area: Play Area
         Toolbox: Toolbox
         Workspace: Workspace
+      PDAlg end of P3:
+        Plans for the Future: Plans for the Future
+        What are your plans for next year?: What are your plans for next year?
+        Keep teaching Bootstrap: Keep teaching Bootstrap
+        Start teaching CS in Algebra: Start teaching CS in Algebra
+        Not teaching either: Not teaching either
+        Not sure yet: Not sure yet
       PDAlg functional:
         Functional Programming: Functional Programming
         Have you ever programmed before?: Have you ever programmed before?
@@ -1247,6 +1266,30 @@
         4 bytes: 4 bytes
         8 bytes: 8 bytes
         16 bytes: 16 bytes
+      U1L2 Multiple Choice Assessment Question:
+        'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary
+          Messages'
+        'A binary question is defined as:': 'A binary question is defined as:'
+        A piece of information that is sent in pairs: A piece of information that
+          is sent in pairs
+        Two questions which share the same answer: Two questions which share the same
+          answer
+        A message which has two possible states: A message which has two possible
+          states
+        A question which can be answered in only one of two possible ways: A question
+          which can be answered in only one of two possible ways
+      U1L3 Multiple Choice:
+        'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex
+          Messages'
+        0: '? When sending a response to a question with four possible answers, the
+          most efficient method will require no more than what number of bits?'
+        1: ': When sending a response to a question with four possible answers, the
+          most efficient method will require no more than what number of bits?'
+        5 bits: 5 bits
+        4 bits: 4 bits
+        3 bits: 3 bits
+        2 bits: 2 bits
+        1 bit: 1 bit
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
         If you just had a circle and a square, how many 3-shape rows could you make?: If
@@ -1272,6 +1315,106 @@
           provide high-level functionality that simplifies complex programming tasks
         It is impossible to write a program without an API: It is impossible to write
           a program without an API
+      U3L14 - MC Duplicate Ids:
+        Buttons and Ids: Buttons and Ids
+        What happens when two buttons are given the same id?: What happens when two
+          buttons are given the same id?
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript
+          is flexible. Two buttons with same id will respond to a single event handler
+          associated with that id.
+        A warning message will appear for the second button that that id is already in use: A
+          warning message will appear for the second button that that id is already
+          in use
+        The first button created with the id will work, the other will not: The first
+          button created with the id will work, the other will not
+        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The
+          JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS
+          compliant
+        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two
+          buttons with same id are linked during the running of the program. Clicking
+          one is just like clicking the other
+      U3L14 - MC order of button and onEvent:
+        Buttons and Event Handlers: Buttons and Event Handlers
+        Does order matter when adding a button and its event handler to your code?: Does
+          order matter when adding a button and its event handler to your code?
+        The button, with its id, must appear in the code AFTER the event handler: The
+          button, with its id, must appear in the code AFTER the event handler
+        JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript
+          is flexible. The button and its event handler can appear in any order in
+          the code
+        The button, with its id, must appear in the code BEFORE the event handler: The
+          button, with its id, must appear in the code BEFORE the event handler
+        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: JavaScript
+          forces you decouple view and controller. You are required to declare buttons
+          in a separate API
+      U3L18 Controlling Memory and Program Flow:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        1. You want to see additional random images displayed that are worth different points when clicked.: 1.
+          You want to see additional random images displayed that are worth different
+          points when clicked.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 2:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        2. You want to see various motivational messages based upon the score.: 2.
+          You want to see various motivational messages based upon the score.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 3:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        3. You want to see the elapsed time.: 3. You want to see the elapsed time.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 4:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        4. You want to change the size of the images when a certain score is reached.: 4.
+          You want to change the size of the images when a certain score is reached.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 5:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        0: '? 5. You want to change the size of the image based upon its location
+          on the screen (i.e. the higher it is on the screen the smaller it appears).'
+        1: ': 5. You want to change the size of the image based upon its location
+          on the screen (i.e. the higher it is on the screen the smaller it appears).'
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L21 Assessment 1:
+        More Variables Question 1: More Variables Question 1
+        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED
+          TO FIX Which of the following is a numeric value that can be assigned to
+          a variable?
+        56*61\3+2: 56*61\3+2
+        fifteen: fifteen
+      U3L21 Assessment 2:
+        More Variables Question 2: More Variables Question 2
+        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which
+          of the following is NOT a reason for giving variables meaningful, readable,
+          descriptive names?
+        Meaningful variable names make code easier to debug: Meaningful variable names
+          make code easier to debug
+        The literary quality of variable names is an important attribute of successful programs: The
+          literary quality of variable names is an important attribute of successful
+          programs
+        Readable variable names makes it easier to understand the program logic: Readable
+          variable names makes it easier to understand the program logic
+        Descriptive names makes it easier for other programmers to understand the program: Descriptive
+          names makes it easier for other programmers to understand the program
       unique level name here:
         title: titre
         description here: description ici

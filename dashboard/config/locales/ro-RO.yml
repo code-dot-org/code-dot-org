@@ -278,6 +278,7 @@
       signup: Inregistrează-te
       already_registered: Eşti deja înregistrat?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Progresul tău
       lines: 'Total linii de cod: %{lines}'
       close: ÎNCHIDE
@@ -354,6 +355,10 @@
       al tău pentru că nu ai înregistrat o adresă de e-mail'
     student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor
       pentru %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: elev
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de email %{email} nu a fost confirmată:'

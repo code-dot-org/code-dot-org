@@ -231,6 +231,7 @@ nl:
       signup: Meld je aan
       already_registered: Al geregistreerd?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Je voortgang
       lines: 'Totaal aantal regels code: %{lines}'
       close: SLUITEN
@@ -298,6 +299,10 @@ nl:
     cant_remove_student_no_email: '%{student_name} kan niet worden verwijderd als je leerling omdat %{student_name} geen emailadres heeft opgegeven'
     cant_remove_teacher_no_email: '%{teacher_name} kan niet worden verwijderd als je leraar omdat je geen emailadres hebt opgegeven'
     student_teacher_disassociated: '%{teacher_name} is verwijderd als een leraar voor %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Leerling
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'

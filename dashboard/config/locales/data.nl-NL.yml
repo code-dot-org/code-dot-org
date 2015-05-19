@@ -424,8 +424,8 @@
         flappy_7: Probeer vervolgens de scène te wijzigen door een ander blok toe
           te voegen aan het "bij uitvoeren" blok.
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel
-          start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iet gebeurd,
-          als Flappy bijvoorbeeld een obstakel passeert.
+          start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iets gebeurt,
+          bijvoorbeeld als Flappy een obstakel passeert.
         flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel
           niet te beëindigen maar de score weer op 0 te zetten.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal
@@ -644,7 +644,7 @@
         C3_bee_conditionals: Bij voorwaardelijke instructies
         C3_maze_conditionals: Doolhof voorwaardelijke instructies
         C3_artist_nested_loops: Geneste lussen
-        C3_farmer_while: Zolang lussen
+        C3_farmer_while: Zolang-lussen
         C3_bee_nested_loops: Genestelde lussen
         C3_bee_debugging: Bij foutopsporing
         C3_bounce: Stuiter

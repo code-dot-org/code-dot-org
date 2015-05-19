@@ -231,6 +231,7 @@ lv:
       signup: Piereģistrēties
       already_registered: Jau reģistrējies?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Jūsu progress
       lines: 'Kopējais koda līniju skaits: %{lines}'
       close: AIZVĒRT
@@ -298,6 +299,10 @@ lv:
     cant_remove_student_no_email: '%{student_name} skolnieks nevar tikt dzēsts, jo %{student_name}, jo nav reģistrēta e-pasta adrese'
     cant_remove_teacher_no_email: '%{teacher_name} nevarat noņemt savu pasniedzēju, jo jūs neesat reģistrējis e-pasta adresi'
     student_teacher_disassociated: 'Pasniedzējs %{teacher_name} ir noņemts no skolēna %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Students
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

@@ -307,7 +307,7 @@
           s'assurer que la fonction fonctionne comme prévu.
         video: alg_8_design_recipe
       Booleans:
-        title: Les booléens et la logique
+        title: Les valeurs booléennes et la logique
         desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
           dans ce cours. Dans cette activité, vous apprendrez quels sont les types
           booléens, et comment ils peuvent aider à nous écrire des fonctions qui raisonnent

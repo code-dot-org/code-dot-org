@@ -21,6 +21,7 @@
   "connectToAPeer": "Connect to a Peer",
   "connectToARouter": "Connect to a Router",
   "decimal": "Dhjetor",
+  "defaultNodeName": "[New Node]",
   "disconnected": "Jo i lidhur",
   "dns": "DNS",
   "dnsMode": "Mënyra DNS",

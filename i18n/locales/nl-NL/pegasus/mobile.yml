@@ -172,9 +172,11 @@ nl-NL:
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Bekijk de video
   homepage_action_text_teachervideo: Bekijk de video
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Begin met leren
   homepage_action_text_signpetition: Teken de petitie
   homepage_signpetition_dropdown: 'Teken onze petitie &#x25BE;'
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: Een Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
@@ -193,7 +195,7 @@ nl-NL:
   homepage_slot_text_title_advocates: Pleitbezorgers
   homepage_slot_text_blurb_advocates: Ondersteun ons werk
   homepage_slot_text_link_stats: Bekijk de statistieken
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: Doe mee
   homepage_slot_text_link_donate: Doneer
   homepage_header_codestudio: Creaties van Code Studio leerlingen
   homepage_header_donors: Code.org dankt zijn aanhangers

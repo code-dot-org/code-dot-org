@@ -268,6 +268,7 @@
       signup: สมัครสมาชิก
       already_registered: Already registered?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: ความคืบหน้าของคุณ
       lines: 'Total lines of code: %{lines}'
       close: ปิด
@@ -343,6 +344,10 @@
       because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: นักเรียน
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

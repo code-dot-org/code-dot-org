@@ -176,6 +176,7 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "connectToAPeer":function(d){return "Connect to a Peer"},
 "connectToARouter":function(d){return "Connect to a Router"},
 "decimal":function(d){return "ده دهی"},
+"defaultNodeName":function(d){return "[New Node]"},
 "disconnected":function(d){return "قطع شده"},
 "dns":function(d){return "سیستم نامگذاری اصلی"},
 "dnsMode":function(d){return "حالت DNS"},

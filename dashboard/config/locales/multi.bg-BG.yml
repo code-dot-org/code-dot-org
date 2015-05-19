@@ -407,6 +407,17 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Baker test of multi can delete:
+        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There
+          are two answers here that are correct.  Looks like you can choose either
+          one and be right.
+        What is 2 + 2?: What is 2 + 2?
+        2+3: 2+3
+        5-1: 5-1
+        3 - 7: 3 - 7
+        3+1: 3+1
+        3+4: 3+4
       Coordinates Multi 1:
         Video game Coordinates: Видео игра Координати
         Ninjacat Demo Embed.level: Ninjacat демо Embed.level
@@ -444,32 +455,34 @@
         more perseverance: повече постоянство
         all of the above: Всички от горните
       ECSPD impact vid2 question:
-        Barrier to Using Data: Barrier to Using Data
-        0: "? \"Based on the video you just watched, answer the following \nquestion\""
-        1: ": \"Based on the video you just watched, answer the following \nquestion\""
-        2: '? What issues did Ben Wellington address in his TED talk related to the
-          barriers presented for people who want to access and analyze Big Data?'
-        3: ': What issues did Ben Wellington address in his TED talk related to the
-          barriers presented for people who want to access and analyze Big Data?'
-        data stored in ways that makes it difficult to analyze it: data stored in
-          ways that makes it difficult to analyze it
-        data is technically available, but often not posted online: data is technically
-          available, but often not posted online
-        data is normalized, so it is difficult to analyze data from different sources: data
-          is normalized, so it is difficult to analyze data from different sources
+        Barrier to Using Data: Пречка за използването на данни
+        0: "? \"Въз основа на видеото, което гледа, отговори на следните \nquestion\""
+        1: ": \"Въз основа на видеото, което гледа, отговори на следните \nquestion\""
+        2: '? Какви проблеми отбеляза в неговият TED разговор Бен Уелингтън, свързани
+          с пречки, за хора, които искат да имат достъп до голямо количество данни
+          за анализиране?'
+        3: '? Какви проблеми отбеляза в неговият TED разговор Бен Уелингтън, свързани
+          с пречки, за хора, които искат да имат достъп до голямо количество данни
+          за анализиране?'
+        data stored in ways that makes it difficult to analyze it: данните, съхранявани
+          по начин, който ги прави трудни за анализиране
+        data is technically available, but often not posted online: данните са технически
+          достъпни, но често не са публикувани онлайн
+        data is normalized, so it is difficult to analyze data from different sources: данните
+          се нормализирани, така че е трудно да се анализират данни от различни източници
         all of the above: Всички от горните
       ECSPD unit:
-        ECS Curriculum: ECS Curriculum
-        Based on what you just read about the ECS course, answer the following question: Based
-          on what you just read about the ECS course, answer the following question
-        What unit from the ECS curriculum are you most interested in?: What unit from
-          the ECS curriculum are you most interested in?
-        'Unit 1: Human Computer Interaction': 'Unit 1: Human Computer Interaction'
-        'Unit 2: Problem Solving': 'Unit 2: Problem Solving'
-        'Unit 3: Web Design': 'Unit 3: Web Design'
-        'Unit 4: Introduction to Programming': 'Unit 4: Introduction to Programming'
-        'Unit 5: Computing and Data Analysis': 'Unit 5: Computing and Data Analysis'
-        'Unit 6: Robotics': 'Unit 6: Robotics'
+        ECS Curriculum: ECS учебна програма
+        Based on what you just read about the ECS course, answer the following question: Въз
+          основа на това, което прочетохте в ECS курса, отговорете на следния въпрос
+        What unit from the ECS curriculum are you most interested in?: Каква единица
+          от ECS учебния план беше най-интересна?
+        'Unit 1: Human Computer Interaction': 'Урок 1: Човек- компютър взаимодействие'
+        'Unit 2: Problem Solving': 'Раздел 2: Решаване на проблеми'
+        'Unit 3: Web Design': 'Раздел 3: Уеб дизайн'
+        'Unit 4: Introduction to Programming': 'Раздел 4: Въведение в програмирането'
+        'Unit 5: Computing and Data Analysis': 'Раздел 5: Компютър и анализ на данни'
+        'Unit 6: Robotics': 'Раздел 6: роботика'
       K-1 Artist 1 Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -764,8 +777,9 @@
           600
         What is the value of x?: Каква е стойността на х?
         3: '3'
+        8: '8'
         15: '15'
-        do not know: не се знае
+        string: поредица
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/MSM/define_xpq.PNG,
           600
@@ -836,43 +850,53 @@
         I have read and agree to the Attendance Policy: Аз прочетох и се съгласявам
           с правилата
       PDAlg Blocks Video:
-        Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        In which are of the screen do you click blocks together to write a program?: In
-          which are of the screen do you click blocks together to write a program?
-        Play Area: Play Area
+        Intro to Evaluation Blocks: Въведение в оценката блокове
+        In which are of the screen do you click blocks together to write a program?: От
+          всички блокове които са на екрана, кои ще съедините, за да напишете програма?
+        Play Area: Зона за игра
         Toolbox: Кутия с инструменти
-        Workspace: Workspace
+        Workspace: Работна област
+      PDAlg end of P3:
+        Plans for the Future: Планове за бъдещето
+        What are your plans for next year?: Какви са вашите планове за следващата
+          година?
+        Keep teaching Bootstrap: Продължавате да преподавате Bootstrap
+        Start teaching CS in Algebra: Започвате да преподаване CS в алгебрата
+        Not teaching either: Или не преподавате
+        Not sure yet: Не съм сигурен още
       PDAlg functional:
-        Functional Programming: Functional Programming
-        Have you ever programmed before?: Have you ever programmed before?
-        Yes, and I'm familiar with functional programming: Yes, and I'm familiar with
-          functional programming
-        Yes, but I don't know if it would be considered functional: Yes, but I don't
-          know if it would be considered functional
+        Functional Programming: Функционално програмиране
+        Have you ever programmed before?: Програмирали ли сте някога преди?
+        Yes, and I'm familiar with functional programming: Да, и аз съм запознат с
+          функционално програмиране
+        Yes, but I don't know if it would be considered functional: Да, но аз не знамзачита
+          за функционално програмиране
         'No': Не
       PDAlg implementation:
-        Curriculum Implementation: Curriculum Implementation
-        0: '? Given the scope and sequence from the last page, which of the following
-          best describes when you expect to implement the CS in Algebra curriculum?'
-        1: ': Given the scope and sequence from the last page, which of the following
-          best describes when you expect to implement the CS in Algebra curriculum?'
-        September - October: September - October
-        November - December: November - December
-        January - February: January - February
-        March - April: March - April
-        May - June: May - June
-        Throughout the year: Throughout the year
+        Curriculum Implementation: Прилагане в учебната програма
+        0: '? Предвид обхвата и последователността от последната страница, кое от
+          следните най-добре описва, какво очаквате от прилагането на CS в програмата
+          по алгебра?'
+        1: '? Предвид обхвата и последователността от последната страница, кое от
+          следните най-добре описва, какво очаквате от прилагането на CS в програмата
+          по алгебра?'
+        September - October: Септември - октомври
+        November - December: Ноември - декември
+        January - February: Януари - февруари
+        March - April: Март - април
+        May - June: Май - юни
+        Throughout the year: През цялата година
       PDAlg PreQ 1:
-        Pre-Survey Question 1: Pre-Survey Question 1
-        Have you ever participated in an online PD program before?: Have you ever
-          participated in an online PD program before?
+        Pre-Survey Question 1: 'Предварително проучване: въпрос 1'
+        Have you ever participated in an online PD program before?: Някога участвали
+          ли сте в онлайн програма за PD преди?
         'Yes': Да
         'No': Не
       PDAlg PreQ 2:
-        Pre-Survey Question 2: Pre-Survey Question 2
-        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Have
-          you ever taken an Online Course before (through a platform like Coursera,
-          edX, Udacity, Khan Academy, etc)?
+        Pre-Survey Question 2: 'Предварително проучване: въпрос 2'
+        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Вземали
+          ли сте някога онлайн курс преди (чрез платформа като Coursera, edX, Udacity,
+          Хан академия, и т.н.)?
         'Yes': Да
         'No': Не
       PDECS attendance commitment:
@@ -965,7 +989,7 @@
         All of the above: Всички от горните
       PDK5 What is CS:
         What is Computer Science?: Какво са компютърните науки?
-        'A computer program, or "code," is:': 'A computer program, or "code," is:'
+        'A computer program, or "code," is:': 'Компютърна програма, или код, е:'
         a part inside of a computer: част вътре в компютъра
         a set of instructions a person gives a computer to execute: набор от инструкции,
           които човек дава на компютъра за изпълнение
@@ -1001,24 +1025,25 @@
         rocket-height(seconds) = seconds * 10 - 3: ракета-височина(секунди) = секунди
           * 10 -3
       sciPD agent based 1:
-        Multiple Choice - Interactions In Agent-based Models: Multiple Choice - Interactions
-          In Agent-based Models
-        What types of interactions can occur in agent-based models?: What types of
-          interactions can occur in agent-based models?
-        agents interact with their environment only: agents interact with their environment
-          only
-        agents interact with other agents only: agents interact with other agents
-          only
-        agents interact with both their environment and other agents: agents interact
-          with both their environment and other agents
+        Multiple Choice - Interactions In Agent-based Models: Избор от много отговори
+          - взаимодействия в агент базирани модели
+        What types of interactions can occur in agent-based models?: Какви типове
+          на взаимодействия може да се появят в агент базирани модели?
+        agents interact with their environment only: агентите взаимодействат само
+          с тяхната среда
+        agents interact with other agents only: агентите взаимодействат само с други
+          агенти
+        agents interact with both their environment and other agents: агентите взаимодействат
+          с тяхната околна среда и други агенти
         all of the above: Всички от горните
       sciPD agent based 2:
-        Multiple Choice - Agent-based Models: Multiple Choice - Agent-based Models
+        Multiple Choice - Agent-based Models: Избор от няколко отговора- агент базирани
+          модели
         What type of systems are agent-based models suitable for modeling?: What type
           of systems are agent-based models suitable for modeling?
-        simple mechanical systems: simple mechanical systems
-        complex adaptive systems: complex adaptive systems
-        systems of mathematical equations: systems of mathematical equations
+        simple mechanical systems: прости механични системи
+        complex adaptive systems: сложни адаптивни системи
+        systems of mathematical equations: системи от математически уравнения
         all of the above: Всички от горните
       sciPD attendance commitment:
         Please confirm that you have read the Attendance Policy and will work to follow it.: Моля,
@@ -1026,124 +1051,121 @@
         I have read and agree to the Attendance Policy: Аз прочетох и се съгласявам
           с правилата
       sciPD class models 1:
-        Using Models in the Classroom: Using Models in the Classroom
-        Which of the following is not a tenet of Papert's theory of Constructionism?: Which
-          of the following is not a tenet of Papert's theory of Constructionism?
-        constructing social relationships: constructing social relationships
-        interacting with others: interacting with others
-        creating artifacts of social relevance: creating artifacts of social relevance
-        building relationships between old and new knowledge: building relationships
-          between old and new knowledge
+        Using Models in the Classroom: Използване на модели в класната стая
+        Which of the following is not a tenet of Papert's theory of Constructionism?: Кое
+          от следните не е принцип на Пейпърт от теорията за контруктивизма?
+        constructing social relationships: изграждане на социални взаимоотношения
+        interacting with others: взаимодействие с другите
+        creating artifacts of social relevance: създаване на артефакти от социално
+          значение
+        building relationships between old and new knowledge: изграждане на взаимоотношения
+          между стари и нови знания
       sciPD class models 2:
-        Constructionism: Constructionism
-        Constructionism focuses on how learning is constructed during the...: Constructionism
-          focuses on how learning is constructed during the...
-        design of learning artifacts: design of learning artifacts
-        creation of learning artifacts: creation of learning artifacts
-        discussion of learning artifacts: discussion of learning artifacts
+        Constructionism: Конструктивизъм
+        Constructionism focuses on how learning is constructed during the...: Конструктивизмът
+          се фокусира върху това, как обучението е конструирано по време...
+        design of learning artifacts: дизайн на предмети за обучение
+        creation of learning artifacts: създаване на учебни предмети
+        discussion of learning artifacts: 'обсъждане на предметите за обучение '
         all of the above: Всички от горните
       sciPD complex adaptive 1:
-        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
-        Which of the following IS a characteristic of a complex adaptive system?: Which
-          of the following IS a characteristic of a complex adaptive system?
-        has a leader: has a leader
-        is predictable: is predictable
-        has centralized control: has centralized control
-        generates emergent patterns: generates emergent patterns
+        Intro to Complex Adaptive Systems: Представяне на сложни адаптивни системи
+        Which of the following IS a characteristic of a complex adaptive system?: Кой
+          от следните е характеристика на сложна адаптивна система?
+        has a leader: има лидер
+        is predictable: е предвидима
+        has centralized control: има централизиран контрол
+        generates emergent patterns: генерира възникващи модели
       sciPD complex adaptive 2:
-        Examples of Complex Adaptive Systems: Examples of Complex Adaptive Systems
-        Which of the following is NOT an example of a complex adaptive system?: Which
-          of the following is NOT an example of a complex adaptive system?
-        a bee hive: a bee hive
-        a wall clock: a wall clock
-        a traffic jam: a traffic jam
-        the internet: the internet
+        Examples of Complex Adaptive Systems: Примери за сложни адаптивни системи
+        Which of the following is NOT an example of a complex adaptive system?: Кое
+          от следните не е пример за една сложна адаптивна система?
+        a bee hive: Пчелен кошер
+        a wall clock: стенен часовник
+        a traffic jam: задръстване
+        the internet: интернет
       sciPD computer models 1:
-        Multiple Choice - Stochastic Models: Multiple Choice - Stochastic Models
-        What does it mean for a model to be stochastic?: What does it mean for a model
-          to be stochastic?
-        It includes some randomness: It includes some randomness
-        It can be easily automated: It can be easily automated
-        It is predictable: It is predictable
-        It has fixed percentages of different elements: It has fixed percentages of
-          different elements
+        Multiple Choice - Stochastic Models: избор от множество отговори - стохастични
+          модели
+        What does it mean for a model to be stochastic?: Какво означава това стохастичен
+          модел?
+        It includes some randomness: Той включва някои случайности
+        It can be easily automated: Той може да бъде лесно автоматизиран
+        It is predictable: Това е предвидим
+        It has fixed percentages of different elements: Той има фиксирани проценти
+          на различни елементи
       sciPD computer models 2:
-        Multiple Choice - Common Features Of Lab And Computational Science Experiments: Multiple
-          Choice - Common Features Of Lab And Computational Science Experiments
+        Multiple Choice - Common Features Of Lab And Computational Science Experiments: Тест
+          - общи характеристики на лабораторните и компютърните научни експерименти
         Which of the following are common to both lab experiments and computational science experiments?: Which
           of the following are common to both lab experiments and computational science
           experiments?
-        automation of experiments is easy: automation of experiments is easy
-        changing physical properties like the gravitational constant: changing physical
-          properties like the gravitational constant
-        sweeping a set of variables: sweeping a set of variables
-        the need for controlled experiments: the need for controlled experiments
+        automation of experiments is easy: автоматизацията на експериментите е лесно
+        changing physical properties like the gravitational constant: промяна на физически
+          свойства като гравитационната константа
+        sweeping a set of variables: Спадът на набор от променливи
+        the need for controlled experiments: необходимостта от контролирани експерименти
       sciPD culture 1:
         Multiple Choice - Getting Unstuck: Multiple Choice - Getting Unstuck
         Which of the following was NOT suggested as a way to get unstuck?: Which of
           the following was NOT suggested as a way to get unstuck?
-        taking a break: taking a break
-        meditating: meditating
-        looking at other similar pieces of code: looking at other similar pieces of
-          code
-        reading through your code line by line: reading through your code line by
-          line
+        taking a break: почивка
+        meditating: медитация
+        looking at other similar pieces of code: търсене в други подобни парчета код
+        reading through your code line by line: четене във вашия код ред по ред
       sciPD culture 2:
-        Multiple Choice - Role Of Teacher: Multiple Choice - Role Of Teacher
-        What role for a teacher incorporating models and simulations into the classroom was proposed?: What
-          role for a teacher incorporating models and simulations into the classroom
-          was proposed?
-        engaging lecturer: engaging lecturer
-        learning coach or guide: learning coach or guide
-        expert in a computer language: expert in a computer language
-        classroom manager: classroom manager
+        Multiple Choice - Role Of Teacher: Тест - ролята на учителя
+        What role for a teacher incorporating models and simulations into the classroom was proposed?: Каква
+          е ролята на учителя, в предложените модели и симулации в класната стая?
+        engaging lecturer: ангажиране на преподавател
+        learning coach or guide: обучител, треньор или водач
+        expert in a computer language: експерт по компютърен език
+        classroom manager: Мениджър на класна стая
       sciPD framework 1:
-        Multiple Choice - Computational Thinking 1: Multiple Choice - Computational
-          Thinking 1
-        'Computational Thinking was referred to in the video as:': 'Computational
-          Thinking was referred to in the video as:'
-        a way of communicating with a computer: a way of communicating with a computer
-        a process that computers use to think: a process that computers use to think
-        a human thought process: a human thought process
-        a subfield of computer science: a subfield of computer science
+        Multiple Choice - Computational Thinking 1: Тест - изчислително мислене 1
+        'Computational Thinking was referred to in the video as:': 'Изчислително мислене
+          е посочено във видеото като:'
+        a way of communicating with a computer: начин за комуникация с компютър
+        a process that computers use to think: процес, който компютрите използват
+          за да мислят
+        a human thought process: Процесът на човешката мисъл
+        a subfield of computer science: подобласт на компютърните науки
       sciPD framework 2:
-        Multiple Choice - Computational Thinking 2: Multiple Choice - Computational
-          Thinking 2
-        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: Comparing
-          outcomes with what is known about the real world falls under which pillar
-          of computational thinking?
-        abstraction: abstraction
-        automation: automation
-        analysis: analysis
-        algorithms: algorithms
+        Multiple Choice - Computational Thinking 2: Тест - изчислително мислене 2
+        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: В
+          кое направление на компютърното мислене попада сравняването на резултатите
+          с това, което е известно за реалния свят?
+        abstraction: Абстракция
+        automation: автоматизация
+        analysis: анализ
+        algorithms: Алгоритми
       sciPD intro to CS 1:
-        Intro to Computational Science: Intro to Computational Science
-        'Computer modeling is used to study problems that are:': 'Computer modeling
-          is used to study problems that are:'
-        too dangerous to study in the real world: too dangerous to study in the real
-          world
-        too time consuming to study in the real world: too time consuming to study
-          in the real world
-        too expensive to study in the real world: too expensive to study in the real
-          world
+        Intro to Computational Science: Въведение в компютърните науки
+        'Computer modeling is used to study problems that are:': 'Компютърно моделиране
+          се използва за изучаване на проблеми, които са:'
+        too dangerous to study in the real world: твърде опасни да изучават в реалния
+          свят
+        too time consuming to study in the real world: отнемат твърде много време
+          в реалния свят
+        too expensive to study in the real world: твърде скъпи да се изучават в реалния
+          свят
         all of the above: Всички от горните
       sciPD intro to CS 2:
-        Intro to Computational Science: Intro to Computational Science
-        What is computational science good for?: What is computational science good
-          for?
-        it replaces traditional science labs: it replaces traditional science labs
-        it complements lab and theoretical science: 'it complements lab and theoretical
-          science '
-        it slows the process of discovery: it slows the process of discovery
-        nothing at all: nothing at all
+        Intro to Computational Science: Въведение в компютърните науки
+        What is computational science good for?: В какво е добра компютърна наука?
+        it replaces traditional science labs: Тя замества традиционните научни лаборатории
+        it complements lab and theoretical science: 'Тя допълва лабораторията и теоретичните
+          науки '
+        it slows the process of discovery: Това забавя процеса на откривана
+        nothing at all: нищо от изброените
       sciPD PreQ 1:
-        Pre-Survey Question 1: Pre-Survey Question 1
+        Pre-Survey Question 1: 'Предварително проучване: въпрос 1'
         Before now, have you ever participated in an online PD program?: Преди  участвали
           ли сте в онлайн PD програма?
         'Yes': Да
         'No': Не
       sciPD PreQ 2:
-        Pre-Survey Question 2: Pre-Survey Question 2
+        Pre-Survey Question 2: 'Предварително проучване: въпрос 2'
         Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before
           now, have you ever taken an Online Course (through a platform like Coursera,
           edX, Udacity, Khan Academy, etc)?
@@ -1230,6 +1252,30 @@
         4 bytes: 4 байта
         8 bytes: 8 байта
         16 bytes: 16 байта
+      U1L2 Multiple Choice Assessment Question:
+        'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary
+          Messages'
+        'A binary question is defined as:': 'A binary question is defined as:'
+        A piece of information that is sent in pairs: A piece of information that
+          is sent in pairs
+        Two questions which share the same answer: Two questions which share the same
+          answer
+        A message which has two possible states: A message which has two possible
+          states
+        A question which can be answered in only one of two possible ways: A question
+          which can be answered in only one of two possible ways
+      U1L3 Multiple Choice:
+        'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex
+          Messages'
+        0: '? When sending a response to a question with four possible answers, the
+          most efficient method will require no more than what number of bits?'
+        1: ': When sending a response to a question with four possible answers, the
+          most efficient method will require no more than what number of bits?'
+        5 bits: 5 бита
+        4 bits: 4 бита
+        3 bits: 3 бита
+        2 bits: 2 бита
+        1 bit: 1 bit
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Избор от няколко отговора: бройни системи'
         If you just had a circle and a square, how many 3-shape rows could you make?: ако  просто
@@ -1241,10 +1287,10 @@
         12: '12'
       U3L06-API-multichoice:
         Multiple Choice: избор от множество отговори
-        Choose the option that best answers the question.: Choose the option that
-          best answers the question.
-        What is the primary purpose of an API in a programming language?: What is
-          the primary purpose of an API in a programming language?
+        Choose the option that best answers the question.: Изберете опцията, която
+          най-добре отговаря на въпроса.
+        What is the primary purpose of an API in a programming language?: Каква е
+          основната цел на API в програмния език?
         Application Primary Interactions are fundamental to programming: Application
           Primary Interactions are fundamental to programming
         To make programming more complex for those without experience: To make programming
@@ -1255,6 +1301,106 @@
           provide high-level functionality that simplifies complex programming tasks
         It is impossible to write a program without an API: It is impossible to write
           a program without an API
+      U3L14 - MC Duplicate Ids:
+        Buttons and Ids: Buttons and Ids
+        What happens when two buttons are given the same id?: What happens when two
+          buttons are given the same id?
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript
+          is flexible. Two buttons with same id will respond to a single event handler
+          associated with that id.
+        A warning message will appear for the second button that that id is already in use: A
+          warning message will appear for the second button that that id is already
+          in use
+        The first button created with the id will work, the other will not: The first
+          button created with the id will work, the other will not
+        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The
+          JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS
+          compliant
+        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two
+          buttons with same id are linked during the running of the program. Clicking
+          one is just like clicking the other
+      U3L14 - MC order of button and onEvent:
+        Buttons and Event Handlers: Buttons and Event Handlers
+        Does order matter when adding a button and its event handler to your code?: Does
+          order matter when adding a button and its event handler to your code?
+        The button, with its id, must appear in the code AFTER the event handler: The
+          button, with its id, must appear in the code AFTER the event handler
+        JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript
+          is flexible. The button and its event handler can appear in any order in
+          the code
+        The button, with its id, must appear in the code BEFORE the event handler: The
+          button, with its id, must appear in the code BEFORE the event handler
+        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: JavaScript
+          forces you decouple view and controller. You are required to declare buttons
+          in a separate API
+      U3L18 Controlling Memory and Program Flow:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        1. You want to see additional random images displayed that are worth different points when clicked.: 1.
+          You want to see additional random images displayed that are worth different
+          points when clicked.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 2:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        2. You want to see various motivational messages based upon the score.: 2.
+          You want to see various motivational messages based upon the score.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 3:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        3. You want to see the elapsed time.: 3. You want to see the elapsed time.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 4:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        4. You want to change the size of the images when a certain score is reached.: 4.
+          You want to change the size of the images when a certain score is reached.
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L18 Controlling Memory and Program Flow 5:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Select the programming technique that best fits the described game feature.: Select
+          the programming technique that best fits the described game feature.
+        0: '? 5. You want to change the size of the image based upon its location
+          on the screen (i.e. the higher it is on the screen the smaller it appears).'
+        1: ': 5. You want to change the size of the image based upon its location
+          on the screen (i.e. the higher it is on the screen the smaller it appears).'
+        conditional: conditional
+        variable: variable
+        both: both
+      U3L21 Assessment 1:
+        More Variables Question 1: More Variables Question 1
+        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED
+          TO FIX Which of the following is a numeric value that can be assigned to
+          a variable?
+        56*61\3+2: 56*61\3+2
+        fifteen: fifteen
+      U3L21 Assessment 2:
+        More Variables Question 2: More Variables Question 2
+        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which
+          of the following is NOT a reason for giving variables meaningful, readable,
+          descriptive names?
+        Meaningful variable names make code easier to debug: Meaningful variable names
+          make code easier to debug
+        The literary quality of variable names is an important attribute of successful programs: The
+          literary quality of variable names is an important attribute of successful
+          programs
+        Readable variable names makes it easier to understand the program logic: Readable
+          variable names makes it easier to understand the program logic
+        Descriptive names makes it easier for other programmers to understand the program: Descriptive
+          names makes it easier for other programmers to understand the program
       unique level name here:
         title: Заглавие
         description here: описание тук

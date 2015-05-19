@@ -325,9 +325,9 @@ hu:
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: A dizájn receptje
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
+          title: Szakmai fejlődés tanítóknak
+          description: Szakmai fejlődés alsó tagozatos kurzusokhoz
+          description_short: Szakmai fejlődés alsó tagozatos kurzusokhoz
           Introduction to PD: Introduction to PD
           Blockly Basics: Blockly Basics
           Writing computer programs: Writing computer programs
@@ -594,7 +594,7 @@ hu:
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
-          description: Programming in Javascript and AppLap
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Függvények
           Using Simple Commands: Using Simple Commands
@@ -631,7 +631,13 @@ hu:
           The Need For Programming Languages: The Need For Programming Languages
           Creating Procedures - Part 2: 'Creating Procedures - Part 2'
           Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
         algebraPD3:
+          title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
@@ -641,6 +647,7 @@ hu:
           The Big Game: The Big Game
           Strings and Images: Strings and Images
           The Design Recipe: A dizájn receptje
+          Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
@@ -737,7 +744,10 @@ hu:
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Feleletválasztás
+          Big Game: Big Game
         sciencePD2:
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
         sciencePD3:
           new stage: new stage
+        Testing:
+          Testing: Testing

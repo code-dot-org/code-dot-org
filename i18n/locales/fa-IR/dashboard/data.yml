@@ -465,21 +465,21 @@ fa:
         drag_blocks: 'یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان'
         run: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
         watch_again: 'برای تماشای دوباره این ویدیو اینجا را کلیک کنید '
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        gray_block_explanation: بلوک های خاکستری را نمی توان پاک کرد. با این وجود می توانید معما را حل کنید?
         show_code_explanation: اینجا را کلیک کن تا کد برنامه‌ای که می‌سازی را ببینی
         instructions_repeat_explanation: دستورالعمل‌های هر معما اینجا تکرار شدن
         category_explanation: تمام اون بلوک‌ها رو داری اما حالا داخل دسته‌بندی قرار گرفتن
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
+        set_sprite_image: 'یک بلوک "set actor to image" را به بلوک "when story starts" وصل کنید تا یک بازیگر برای این داستان بوجود بیاورید'
         studio_say_text: چیزی رو که می‌خواهی بازیگرت بگه، داخل این علامت‌های نقل قول تایپ کن
         jigsaw_click: این بلوک را کلیک کن!
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: 'یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید'
+        turn_elsa: 'از بلوک "Turn" برای چرخاندن السا استفاده کنید. شماره ی منوی کشویی تعیین می کند که السا چقدر می چرخد'
+        replace_questions: 'از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید'
+        replace_questions_degree: 'از منوی کشویی برای جایگزین کردن "???" با درجه ی درست چرخش استفاده کنید'
+        repeat_blocks: 'از بلوک "repeat" استفاده کنید و آن را دور بلوک های موجود در فضای کار بپیچید'
+        repeat_blocks_1: (1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری در فضای کار بگذارید
+        repeat_blocks_2: '(2) بلوک "Repeat" را به اینجا حرکت دهید، و بلوک های خاکستری را داخلش قرار دهید'
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'

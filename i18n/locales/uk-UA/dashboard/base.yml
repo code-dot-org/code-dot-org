@@ -231,6 +231,7 @@ uk:
       signup: Зареєструватися
       already_registered: Вже зареєстровані?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Ваш прогрес
       lines: 'Усього рядків коду: %{lines}'
       close: ЗАКРИТИ
@@ -298,6 +299,10 @@ uk:
     cant_remove_student_no_email: 'Неможливо видалити %{student_name} зі списку ваших учнів, оскільки %{student_name} не реєстрував адресу електронної пошти'
     cant_remove_teacher_no_email: 'Неможливо видалити %{teacher_name} як вашого вчителя, бо ви не реєстрували адресу електронної пошти'
     student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: учень
+      try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'

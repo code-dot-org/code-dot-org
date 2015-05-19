@@ -26,6 +26,20 @@ The final translation that appears on our site is selected as follows:
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
 
+
+## Translating dashboard/instructions.yml
+This is a really big file for the instructions of our courses. Do this file in sections by course, by searching for the course's keyword in the search bar.
+
+* [Hour of Code levels 1-15](studio.code.org/hoc/1) - go to file dashboard/data.yml and search for "maze_2"
+* [Hour of Code levels 16-20](studio.code.org/hoc/16) - search for "Scrat"
+* [Frozen Code with Anna and Elsa](studio.code.org/s/frozen) - search for "Frozen"
+* [Disney Infinity Play Lab](http://studio.code.org/s/infinity) - search for "Infinity"
+* [Course 1](studio.code.org/s/course1) - search for "K-1"
+* [Course 2](studio.code.org/s/course2) - search for "2-3"
+* [Course 3](studio.code.org/s/course2) - search for "4-5"
+* [Course 4](studio.code.org/s/course4) - search for "Course 4"
+
+ 
 ---
 
 ### Translate Khan Academy coding tutorials to Spanish and Portuguese
