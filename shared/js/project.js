@@ -143,6 +143,23 @@ module.exports = {
       }.bind(this, callback));
     }
   },
+  /**
+   * Renames and saves the project.
+   */
+  rename: function(newName, callback) {
+    dashboard.project.current.name = newName;
+    dashboard.project.save(callback);
+  },
+  /**
+   * Creates a copy of the project, gives it the provided name, and sets the
+   * copy to the current project.
+   */
+  copy: function(newName, callback) {
+    delete dashboard.project.current.id;
+    delete dashboard.project.current.hidden;
+    dashboard.project.current.name = newName;
+    dashboard.project.save(callback);
+  },
   delete: function(callback) {
     var channelId = this.current.id;
     if (channelId) {
