@@ -1896,11 +1896,15 @@ Applab.onDesignModeManageAssets = function() {
     id: 'manageAssetsModal'
   });
   React.render(React.createElement(ManageAssets, {
-    assets: [{
-      name: "A"
-    }, {
-      name: "B"
-    }]
+    assets: [
+      {name: 'cat.jpg', type: 'image', src: '/blockly/media/skins/studio/cat_thumb.png'},
+      {name: 'dog.png', type: 'image', src: '/blockly/media/skins/studio/dog_thumb.png'},
+      {name: 'dinosaur.gif', type: 'image', src: '/blockly/media/skins/studio/dinosaur_thumb.png'},
+      {name: 'bark.mp3', type: 'sound'},
+      {name: 'meow.wav', type: 'sound'},
+      {name: 'rawr.ogg', type: 'sound'},
+      {name: 'unknown', type: 'unknown'}
+    ]
   }), codeDiv);
 
   dialog.show();

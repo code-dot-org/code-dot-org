@@ -18,7 +18,7 @@ module.exports = React.createClass({
             <th width="250">Actions</th>
           </tr>
           {this.props.assets.map(function (asset) {
-            return <AssetRow name={asset.name}/>;
+            return <AssetRow name={asset.name} type={asset.type} src={asset.src}/>;
           })}
         </table>
         <button className="share"><i className="fa fa-upload"></i> Upload File</button>
