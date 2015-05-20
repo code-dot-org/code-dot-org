@@ -13,11 +13,9 @@ var TextInputProperties = React.createClass({
     var id = element.id;
     var text = $(element).text();
 
-    var outerWidth = Applab.getOuterWidth(element);
-    var outerHeight = Applab.getOuterHeight(element);
-    var width = isNaN(outerWidth) ? '' : outerWidth;
-    var height = isNaN(outerHeight) ? '' : outerHeight;
-
+    var width = parseInt(element.style.width, 10)
+    var height = parseInt(element.style.height, 10)
+    
     var left = parseInt(element.style.left, 10) || 0;
     var top = parseInt(element.style.top, 10) || 0;
 

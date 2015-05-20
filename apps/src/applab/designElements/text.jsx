@@ -1,6 +1,9 @@
+/* global $ */
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
+var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
 var TextProperties = React.createClass({
   propTypes: {
@@ -13,13 +16,15 @@ var TextProperties = React.createClass({
     var id = element.id;
     var text = $(element).text();
 
-    var outerWidth = Applab.getOuterWidth(element);
-    var outerHeight = Applab.getOuterHeight(element);
-    var width = isNaN(outerWidth) ? '' : outerWidth;
-    var height = isNaN(outerHeight) ? '' : outerHeight;
+    var width = parseInt(element.style.width, 10)
+    var height = parseInt(element.style.height, 10)
+
+    var link = $(element).data('link');
 
     var left = parseInt(element.style.left, 10) || 0;
     var top = parseInt(element.style.top, 10) || 0;
+
+    var hidden = $(element).hasClass('design-mode-hidden');
 
     return (
       <table>
@@ -51,17 +56,33 @@ var TextProperties = React.createClass({
           desc={'y position (px)'}
           initialValue={top}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <PropertyRow
+          desc={'link'}
+          initialValue={link}
+          handleChange={this.props.handleChange.bind(this, 'link')} />
+        <ColorPickerPropertyRow
+          desc={'text color'}
+          initialValue='#000000'
+          handleChange={this.props.handleChange.bind(this, 'textColor')} />
+        <ColorPickerPropertyRow
+          desc={'background color'}
+          initialValue='#ffffff'
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
+        <PropertyRow
+          desc={'font size (px)'}
+          initialValue='14'
+          handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <BooleanPropertyRow
+          desc={'hidden'}
+          initialValue={hidden}
+          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+
       </table>);
 
     // TODO:
-    // link
-    // textColor
-    // backgroundColor
-    // fontSize
     // bold/italics/underline (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // hidden
     // send back/forward
   }
 });
@@ -70,10 +91,13 @@ module.exports = {
   PropertyTable: TextProperties,
 
   create: function() {
-    var element = document.createElement('label');
-    element.appendChild(document.createTextNode("text"));
+    var element = document.createElement('div');
     element.style.margin = '10px 5px';
-    element.style.height = '20px';
+    element.style.width = '100px';
+    element.style.height = '100px';
+    element.style.overflow = 'hidden';
+    element.style.wordWrap = 'break-word';
+    element.textContent = 'text';
 
     return element;
   }
