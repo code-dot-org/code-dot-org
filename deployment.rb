@@ -76,7 +76,10 @@ def load_configuration()
     'dynamo_tables_index'         => "channel_id-table_name-index",
     'use_dynamo_properties'       => false,
     'dynamo_properties_table'     => "#{rack_env}_properties",
-    'lint'                        => rack_env == :staging || rack_env == :development
+    'lint'                        => rack_env == :staging || rack_env == :development,
+    'assets_s3_bucket'             => "cdo-v3-assets",
+    'assets_s3_directory'          => rack_env == :production ? 'assets' : "assets_#{rack_env}",
+
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']

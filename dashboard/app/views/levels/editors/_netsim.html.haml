@@ -9,20 +9,20 @@
       %td Whether client nodes should appear in the lobby list at all.
     %tr
       %td= boolean_check_box f, :show_routers_in_lobby
-      %td= f.label :show_routers_in_lobby, 'Show Routers in Lobby'
-      %td Whether router nodes should appear in the lobby list at all.
+      %td= f.label :show_routers_in_lobby, 'Show Routers/Rooms in Lobby'
+      %td Whether router nodes (or broadcast rooms) should appear in the lobby list at all.
     %tr
       %td= boolean_check_box f, :can_connect_to_clients
       %td= f.label :can_connect_to_clients, 'Can connect to clients'
       %td Whether the student can connect directly to other students' client nodes.
     %tr
       %td= boolean_check_box f, :can_connect_to_routers
-      %td= f.label :can_connect_to_routers, 'Can connect to routers'
-      %td Whether the student can connect to router nodes.
+      %td= f.label :can_connect_to_routers, 'Can connect to routers/rooms'
+      %td Whether the student can connect to router nodes (or broadcast rooms).
     %tr
       %td= boolean_check_box f, :show_add_router_button
-      %td= f.label :show_add_router_button, 'Show "Add Router" Button'
-      %td Whether the "Add Router" button should be available to students.
+      %td= f.label :show_add_router_button, 'Show "Add Router/Room" Button'
+      %td Whether the "Add Router" (or "Add Room") button should be available to students.
 
 %h3 Simulation Configuration
 .field
@@ -33,12 +33,16 @@
   %table.checkboxes
     %tr
       %td= boolean_check_box f, :automatic_receive
-      %td= f.label :automatic_receive, 'Auto-receive'
+      %td(nowrap)= f.label :automatic_receive, 'Auto-receive'
       %td Whether the local node will watch the message table and automatically pick up messages directed to itself, dumping them into the message log.  If false, some other method must be used for receiving data (like a manual 'receive' button)
+    %tr
+      %td= boolean_check_box f, :broadcast_mode
+      %td(nowrap)= f.label :broadcast_mode, 'Broadcast Mode'
+      %td Turns routers into "rooms" where any packets sent will go to everyone present in the room. (Recommended to hide the Router tab when using this)
 
 %h3 Packet Headers
 .field
-  %p Packet headers can be customized to different header column combinations, orderings, and sizes with a JSON spec.
+  %p Packet headers can be customized to different header column combinations, orderings, and sizes with a JSON spec.  This can safely be left empty <tt>[]</tt> in "Broadcast Mode."
   %p Example: <tt>[{"key":"toAddress", "bits":8}, {"key":"fromAddress", "bits":8}]</tt>
   %p Valid header keys are "toAddress", "fromAddress", "packetIndex" and "packetCount"
   = f.label :router_expects_packet_header, 'Router expects packet header'
