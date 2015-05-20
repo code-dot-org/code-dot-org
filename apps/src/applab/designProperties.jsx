@@ -1,10 +1,6 @@
 var React = require('react');
 
-// TODO (brent) - might make more sense to require library and get these from
-// the library
-var ButtonProperties = require('./designElements/button.jsx').PropertyTable;
-var TextProperties = require('./designElements/text.jsx').PropertyTable;
-var InputProperties = require('./designElements/textInput.jsx').PropertyTable;
+var elementLibrary = require('./designElements/library');
 
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
@@ -21,18 +17,18 @@ var DesignProperties = module.exports = React.createClass({
 
     var tagname = this.props.element.tagName.toLowerCase();
     var propertyClass;
-    // TODO (brent) - eventually this will have to be something other than tagname
+    // TODO (brent) - eventually this may have to be something other than tagname
     switch (tagname) {
       case 'button':
-        propertyClass = ButtonProperties;
+        propertyClass = elementLibrary.getElementPropertyTable('BUTTON')
         break;
 
-      case 'div':
-        propertyClass = TextProperties;
+      case 'label':
+        propertyClass = elementLibrary.getElementPropertyTable('LABEL')
         break;
 
       case 'input':
-        propertyClass = InputProperties;
+        propertyClass = elementLibrary.getElementPropertyTable('TEXT_INPUT')
         break;
     }
 
