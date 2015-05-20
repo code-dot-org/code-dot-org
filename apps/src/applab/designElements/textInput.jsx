@@ -10,14 +10,6 @@ var TextInputProperties = React.createClass({
 
   render: function () {
     var element = this.props.element;
-    var id = element.id;
-    var text = $(element).text();
-
-    var width = parseInt(element.style.width, 10)
-    var height = parseInt(element.style.height, 10)
-    
-    var left = parseInt(element.style.left, 10) || 0;
-    var top = parseInt(element.style.top, 10) || 0;
 
     return (
       <table>
@@ -27,27 +19,27 @@ var TextInputProperties = React.createClass({
         </tr>
         <PropertyRow
           desc={'id'}
-          initialValue={id}
+          initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')} />
         <PropertyRow
           desc={'text'}
-          initialValue={text}
+          initialValue={$(element).text()}
           handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
-          initialValue={width}
+          initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
-          initialValue={height}
+          initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
           desc={'x position (px)'}
-          initialValue={left}
+          initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')} />
         <PropertyRow
           desc={'y position (px)'}
-          initialValue={top}
+          initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
       </table>);
   }

@@ -14,7 +14,7 @@ var nextElementIdMap = {};
 
 var elements = {
   BUTTON: require('./button.jsx'),
-  TEXT: require('./text.jsx'),
+  LABEL: require('./label.jsx'),
   TEXT_INPUT: require('./textInput.jsx'),
 };
 
@@ -56,5 +56,10 @@ module.exports = {
     element.style.top = top + 'px';
 
     return element;
+  },
+
+  getElementPropertyTable: function (elementType) {
+    return elements[elementType].PropertyTable;
   }
+
 };

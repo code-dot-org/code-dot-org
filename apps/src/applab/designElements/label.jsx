@@ -7,7 +7,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
-var TextProperties = React.createClass({
+var LabelProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -74,10 +74,10 @@ var TextProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: TextProperties,
+  PropertyTable: LabelProperties,
 
   create: function() {
-    var element = document.createElement('div');
+    var element = document.createElement('label');
     element.style.margin = '10px 5px';
     element.style.width = '100px';
     element.style.height = '100px';
