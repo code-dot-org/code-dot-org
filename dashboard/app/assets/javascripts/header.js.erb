@@ -259,7 +259,7 @@ function remixProject() {
 }
 
 // Minimal project header for legacy /c/ share pages.
-dashboard.showMinimalProjectHeader = function () {
+dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
       .append($('<div class="project_name header_text">').text(dashboard.project.current.name))
       .append($('<div class="project_updated_at header_text">').text("<%= I18n.t('project.click_to_remix') %>"));
@@ -271,7 +271,7 @@ dashboard.showMinimalProjectHeader = function () {
 };
 
 // Project header for levels backed by a channel, with "Share" and "Remix".
-dashboard.showProjectLevelHeader = function () {
+dashboard.header.showProjectLevelHeader = function () {
   $('.project_info')
       .append($('<div class="project_share header_button header_button_light">').text('<%= I18n.t('project.share') %>'))
       .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
@@ -279,7 +279,7 @@ dashboard.showProjectLevelHeader = function () {
   $('.project_remix').click(remixProject);
 };
 
-dashboard.showProjectHeader = function () {
+dashboard.header.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.current.name));
     dashboard.project.updateTimestamp();
