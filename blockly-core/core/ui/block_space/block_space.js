@@ -584,7 +584,6 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
   // Check against all delete areas
   for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
     if (area.contains(xy)) {
-      this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
       return true;
     }
   }
@@ -655,6 +654,15 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   var normalIntensity = 1;
 
+  // When dragging within this distance, we directly fade in the trash can.
+  // When dragging from beyond this distance, we fade a little until we reach
+  // this distance, and then we fade in the rest of the way from there.
+  var innerTrashDistance = 100;
+
+  // The intensity when at the innerTrashDistance during a long drag.
+  var innerTrashNormalIntensity = 0.8;
+  var innerTrashTrashcanIntensity = 1 - innerTrashNormalIntensity;
+
   if (pastThreshold) {
     if (xDifference <= 0) {
       normalIntensity = 0;
@@ -663,8 +671,27 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
       trashcan.setOpen_(false);
       if (xDifference >= trashZoneWidth) {
         normalIntensity = 1;
-      } else {
+      } else if (trashZoneWidth < innerTrashDistance) {
+        // Short drag, just do a regular scale.
         normalIntensity = xDifference / trashZoneWidth;
+      } else {
+        // Long drag...
+        if (xDifference < innerTrashDistance)
+        {
+          // Last part of the drag:
+          // fade normal blocks from mostly-visible to invisible.
+          normalIntensity = xDifference / innerTrashDistance *
+            innerTrashNormalIntensity;
+        }
+        else
+        {
+          // Initial part of the drag:
+          // fade normal blocks from fully-visible to mostly-visible.
+          normalIntensity = innerTrashNormalIntensity + 
+            (xDifference-innerTrashDistance) / 
+            (trashZoneWidth - innerTrashDistance) * 
+            innerTrashTrashcanIntensity;
+        }
       }
     }
   }
