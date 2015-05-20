@@ -27,8 +27,7 @@ var DesignProperties = module.exports = React.createClass({
         propertyClass = ButtonProperties;
         break;
 
-      // TODO (brent)- this will become a div
-      case 'label':
+      case 'div':
         propertyClass = TextProperties;
         break;
 
@@ -48,6 +47,7 @@ var DesignProperties = module.exports = React.createClass({
     // TODO (brent) - right now if i create two elements with the same id, I
     // can still run into the same problem, where I click on the other element
     // and the table doesn't update
+    // TODO (brent) - it appears the wrong element sometimes gets deleted
     return (
       <div key={this.props.element.id}>
         {propertiesElement}

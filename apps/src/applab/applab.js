@@ -1217,59 +1217,13 @@ Applab.onDivApplabClick = function (event) {
     return;
   }
   event.preventDefault();
-  if (event.target.id === 'divApplab') {
+
+  var element = event.target;
+  if (element.id === 'divApplab') {
     Applab.clearProperties();
   } else {
-    Applab.editElementProperties(event.target);
+    Applab.editElementProperties(element);
   }
-};
-
-/**
- * @param element {Element}
- * @returns {number} The outerWidth (width + margin) of the element in pixels,
- * or NaN if element's css width or margin are not defined.
- */
-Applab.getOuterWidth = function(element) {
-  var marginLeft = parseInt($(element).css('margin-left'), 10);
-  var marginRight = parseInt($(element).css('margin-right'), 10);
-  return parseInt(element.style.width, 10) + marginLeft + marginRight;
-};
-
-/**
- * Sets element width equal to outerWidth minus margin,
- * or to '' if margin is undefined.
- * @param element {Element}
- * @param outerWidth {number} Desired element outerWidth in pixels.
- */
-Applab.setOuterWidth = function(element, outerWidth) {
-  var marginLeft = parseInt($(element).css('margin-left'), 10);
-  var marginRight = parseInt($(element).css('margin-right'), 10);
-  var width = +outerWidth - marginLeft - marginRight;
-  element.style.width = isNaN(width) ? '' : width + 'px';
-};
-
-/**
- * @param element {Element}
- * @returns {number} the outerHeight (height + margin) of the element in pixels,
- * or NaN if element's css height or margin are not defined.
- */
-Applab.getOuterHeight = function(element) {
-  var marginTop = parseInt($(element).css('margin-top'), 10);
-  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
-  return parseInt(element.style.height, 10) + marginTop + marginBottom;
-};
-
-/**
- * Sets element height equal to outerHeight minus margin,
- * or to '' if margin is undefined.
- * @param element {Element}
- * @param outerHeight {number} Desired element outerHeight in pixels.
- */
-Applab.setOuterHeight = function(element, outerHeight) {
-  var marginTop = parseInt($(element).css('margin-top'), 10);
-  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
-  var height = +outerHeight - marginTop - marginBottom;
-  element.style.height = isNaN(height) ? '' : height + 'px';
 };
 
 Applab.editElementProperties = function(element) {
@@ -1323,10 +1277,10 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.top = value + 'px';
       break;
     case 'width':
-      Applab.setOuterWidth(element, value);
+      element.style.width = value + 'px';
       break;
     case 'height':
-      Applab.setOuterHeight(element, value);
+      element.style.height = value + 'px';
       break;
     case 'text':
       $(element).text(value);
@@ -1342,8 +1296,8 @@ Applab.onPropertyChange = function(element, name, value) {
       break;
     case 'image':
       // For now, we stretch the image to fit the element
-      var width = Applab.getOuterWidth(element);
-      var height = Applab.getOuterHeight(element);
+      var width = parseInt(element.style.width, 10);
+      var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
@@ -1351,6 +1305,11 @@ Applab.onPropertyChange = function(element, name, value) {
       // Add a class that shows as 30% opacity in design mode, and invisible
       // in code mode.
       $(element).toggleClass('design-mode-hidden', value === true);
+      break;
+    case 'link':
+      // Store the link location. Depend on our deserialization code looking
+      // for elements with this data item and creating our click handler
+      $(element).attr('data-link', value);
       break;
     default:
       throw "unknown property name " + name;
@@ -1394,6 +1353,20 @@ Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (allowDragging) {
     Applab.makeDraggable(children);
   }
+
+  // event handlers get blown away when we serialize, so we have to recreate
+  // it here
+  $('[data-link]').on('click', function (event) {
+    // link only works while running
+    var isRunning = $('#resetButton').is(':visible');
+    if (!isRunning) {
+      return;
+    }
+    var url = $(event.target).data('link');
+    if (url) {
+      window.location.href = url;
+    }
+  });
 };
 
 /**
