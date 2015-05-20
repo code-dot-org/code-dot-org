@@ -1,3 +1,5 @@
+@import '../common';
+
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
 // ** START OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
@@ -481,6 +483,14 @@ button.arrow:focus {
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
+}
+
+.assetRow {
+  border-bottom: 1px solid #999;
+}
+
+.assetRow:hover {
+  background: $lighter_purple;
 }
 
 #divApplab {
