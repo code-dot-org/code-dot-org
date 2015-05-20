@@ -385,3 +385,38 @@ exports.binaryToAddressString = function (binaryString, addressFormat) {
     return intVal.toString();
   }).join('');
 };
+
+/**
+ * Converts a formatted address string (decimal numbers with separators) into
+ * binary with bit-widths for each part matching the given format.
+ * @param {string} addressString
+ * @param {addressHeaderFormat} addressFormat
+ * @returns {string}
+ */
+exports.addressStringToBinary = function (addressString, addressFormat) {
+  if (addressString.length === 0) {
+    return '';
+  }
+
+  // Actual user input, converted to a number[]
+  var addressParts = addressString.toString().split(/\D+/).map(function (stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  // Format, converted to a number[] where the numbers are bit-widths
+  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var partValue;
+  var binary = '';
+  for (var i = 0; i < partWidths.length; i++) {
+    partValue = i < addressParts.length ? addressParts[i] : 0;
+    binary = binary + exports.intToBinary(partValue, partWidths[i]);
+  }
+  return binary;
+};

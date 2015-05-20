@@ -690,4 +690,69 @@ describe("dataConverters", function () {
     });
   });
 
+  describe("addressStringToBinary", function () {
+    var addressStringToBinary = dataConverters.addressStringToBinary;
+
+    it ("converts empty string to empty string", function () {
+      var addressFormat = '4.4';
+      assertEqual('', addressStringToBinary('', addressFormat));
+    });
+
+    it ("produces correct binary for the given address", function () {
+      var addressFormat = '4.4';
+      assertEqual('00000000', addressStringToBinary('0.0', addressFormat));
+      assertEqual('00000001', addressStringToBinary('0.1', addressFormat));
+      assertEqual('00000010', addressStringToBinary('0.2', addressFormat));
+      assertEqual('00010001', addressStringToBinary('1.1', addressFormat));
+      assertEqual('00010010', addressStringToBinary('1.2', addressFormat));
+      assertEqual('00110100', addressStringToBinary('3.4', addressFormat));
+      assertEqual('10111100', addressStringToBinary('11.12', addressFormat));
+      assertEqual('11111111', addressStringToBinary('15.15', addressFormat));
+    });
+
+    it ("produces correct binary for the given format", function () {
+      var addressString = '2.3.4.5';
+      assertEqual('0010', addressStringToBinary(addressString, '4'));
+      assertEqual('00000010', addressStringToBinary(addressString, '8'));
+      assertEqual('0010' + '0011', addressStringToBinary(addressString, '4.4'));
+      assertEqual('00000010' + '00000011', addressStringToBinary(addressString, '8.8'));
+      assertEqual('0010' + '00000011', addressStringToBinary(addressString, '4.8'));
+      assertEqual('0010' + '0011' + '0100' + '0101', addressStringToBinary(addressString, '4.4.4.4'));
+      assertEqual('00000010' + '00000011' + '00000100' + '00000101', addressStringToBinary(addressString, '8.8.8.8'));
+      assertEqual('010' + '011' + '100' + '101', addressStringToBinary(addressString, '3.3.3.3'));
+    });
+
+    it ("ignores extra address parts", function () {
+      var addressString = '2.3.4.5';
+      assertEqual('0010', addressStringToBinary(addressString, '4'));
+      assertEqual('0010' + '0011', addressStringToBinary(addressString, '4.4'));
+      assertEqual('0010' + '0011' + '0100', addressStringToBinary(addressString, '4.4.4'));
+    });
+
+    it ("fills missing address parts with zero", function () {
+      var addressString = '2';
+      assertEqual('0010' + '0000', addressStringToBinary(addressString, '4.4'));
+      assertEqual('0010' + '0000' + '0000', addressStringToBinary(addressString, '4.4.4'));
+      assertEqual('0010' + '0000' + '0000' + '0000', addressStringToBinary(addressString, '4.4.4.4'));
+    });
+
+    it ("individual parts can overflow based on their bit-width", function () {
+      var fourBitLimit = '4.4';
+      assertEqual('1111' + '1111', addressStringToBinary('15.15', fourBitLimit));
+      assertEqual('0000' + '1111', addressStringToBinary('16.15', fourBitLimit));
+      assertEqual('0001' + '1111', addressStringToBinary('17.15', fourBitLimit));
+      assertEqual('1111' + '0000', addressStringToBinary('15.16', fourBitLimit));
+      assertEqual('1111' + '0001', addressStringToBinary('15.17', fourBitLimit));
+
+      var eightBitLimit = '8.8';
+      assertEqual('00001111' + '00001111', addressStringToBinary('15.15', eightBitLimit));
+      assertEqual('00010000' + '00001111', addressStringToBinary('16.15', eightBitLimit));
+      assertEqual('00010001' + '00001111', addressStringToBinary('17.15', eightBitLimit));
+
+      assertEqual('11111111' + '11111111', addressStringToBinary('255.255', eightBitLimit));
+      assertEqual('00000000' + '11111111', addressStringToBinary('256.255', eightBitLimit));
+      assertEqual('00000001' + '11111111', addressStringToBinary('257.255', eightBitLimit));
+    });
+  });
+
 });
