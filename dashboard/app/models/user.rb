@@ -695,6 +695,11 @@ SQL
 
       user_level.save!
     end
+
+    if new_level_completed && script_level.script
+      track_script_progress(script_level.script)
+    end
+
     new_level_completed
   end
 

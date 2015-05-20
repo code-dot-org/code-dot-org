@@ -136,7 +136,6 @@ class ActivitiesController < ApplicationController
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
-      current_user.track_script_progress(@script_level.script)
     end
 
     passed = Activity.passing?(test_result)
