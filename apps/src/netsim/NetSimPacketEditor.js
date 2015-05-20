@@ -478,23 +478,7 @@ function abToAddressString(abString) {
 
 function binaryToAddressString(binaryString) {
   var level = netsimGlobals.getLevelConfig();
-  var indexIntoBinary = 0;
-  // Parentheses in the split() regex cause the dividing elements to be caputred
-  // and also included in the return value.
-  return level.addressFormat.split(/(\D+)/).map(function (formatPart) {
-    var bitWidth = parseInt(formatPart, 10);
-    if (isNaN(bitWidth)) {
-      // Pass non-number parts of the format through, so we use the original
-      // entered characters/layout for formatting.
-      return formatPart;
-    }
-
-    var binarySlice = binaryString.substr(indexIntoBinary, bitWidth);
-    var intVal = binarySlice.length > 0 ?
-        dataConverters.binaryToInt(binarySlice) : 0;
-    indexIntoBinary += bitWidth;
-    return intVal.toString();
-  }).join('');
+  return dataConverters.binaryToAddressString(binaryString, level.addressFormat);
 }
 
 function hexToAddressString(hexString) {
@@ -618,7 +602,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       /** @type {Packet.HeaderType} */
       var fieldName = fieldSpec;
       /** @type {number} */
-      var fieldWidth = encoder.getFieldBitWidth(fieldName)
+      var fieldWidth = encoder.getFieldBitWidth(fieldName);
 
       var allowedCharacterFunction, conversionFunction;
       if (Packet.isAddressField(fieldName)) {
@@ -685,7 +669,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
       abConverter = intToAB;
       binaryConverter = intToBinary;
       hexConverter = intToHex;
-      decimalConverter = function (val) { return val.toString(10) };
+      decimalConverter = function (val) { return val.toString(10); };
       asciiConverter = decimalConverter;
     }
 
