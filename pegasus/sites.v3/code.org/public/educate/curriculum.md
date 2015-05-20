@@ -32,7 +32,9 @@ Find the curriculum and other resources at [exploringcs.org/curriculum](http://w
 
 ## Computer Science Principles
 
-The College Board has proposed a new AP® course called AP® Computer Science: Principles.  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment. Find more information about the CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
+The College Board has proposed a new AP® course called AP® Computer Science: Principles.  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment. Find more information about the CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/).
+
+Code.org is creating a complete curriculum consisting of daily lesson plans, videos, tutorials, tools, and assessments that covers the learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). The Code.org course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
 
 AP® is a registered trademark of the College Board.
 
