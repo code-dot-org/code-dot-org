@@ -26,11 +26,11 @@ module.exports = React.createClass({
   render: function () {
     return (
       <tr className="assetRow">
-        <td><div className="assetThumbnail" style={{
+        <td width="80"><div className="assetThumbnail" style={{
           width: '60px', height: '60px', margin: '10px auto', background: '#eee', border: '1px solid #ccc', textAlign: 'center'
         }}>{getThumbnail(this.props.type, this.props.src)}</div></td>
         <td>{this.props.name}</td>
-        <td className="assetActions">
+        <td width="250" className="assetActions">
           <button className="btn-primary">Set as image</button>
           <button><i className="fa fa-eye"></i></button>
           <button><i className="fa fa-trash-o"></i></button>
