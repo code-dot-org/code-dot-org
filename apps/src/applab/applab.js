@@ -1892,13 +1892,6 @@ Applab.onViewData = function() {
   window.open(
     '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
-  var assetsApi = new AssetsApi(AppStorage.getChannelId());
-  assetsApi.readAll(function (err, data) {
-    if (err === null) {
-      console.log(JSON.stringify(data));
-    }
-  })
-
 };
 
 Applab.onDesignModeButton = function() {
