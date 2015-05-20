@@ -5,6 +5,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
+var elementUtils = require('./elementUtils');
+
 var TextProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
@@ -13,18 +15,6 @@ var TextProperties = React.createClass({
 
   render: function () {
     var element = this.props.element;
-    var id = element.id;
-    var text = $(element).text();
-
-    var width = parseInt(element.style.width, 10)
-    var height = parseInt(element.style.height, 10)
-
-    var link = $(element).data('link');
-
-    var left = parseInt(element.style.left, 10) || 0;
-    var top = parseInt(element.style.top, 10) || 0;
-
-    var hidden = $(element).hasClass('design-mode-hidden');
 
     return (
       <table>
@@ -34,47 +24,43 @@ var TextProperties = React.createClass({
         </tr>
         <PropertyRow
           desc={'id'}
-          initialValue={id}
+          initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')} />
         <PropertyRow
           desc={'text'}
-          initialValue={text}
+          initialValue={$(element).text()}
           handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
-          initialValue={width}
+          initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
-          initialValue={height}
+          initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
           desc={'x position (px)'}
-          initialValue={left}
+          initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')} />
         <PropertyRow
           desc={'y position (px)'}
-          initialValue={top}
+          initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
-        <PropertyRow
-          desc={'link'}
-          initialValue={link}
-          handleChange={this.props.handleChange.bind(this, 'link')} />
         <ColorPickerPropertyRow
           desc={'text color'}
-          initialValue='#000000'
+          initialValue={elementUtils.rgb2hex(element.style.color)}
           handleChange={this.props.handleChange.bind(this, 'textColor')} />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue='#ffffff'
+          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <PropertyRow
           desc={'font size (px)'}
-          initialValue='14'
+          initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <BooleanPropertyRow
           desc={'hidden'}
-          initialValue={hidden}
+          initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
 
       </table>);
@@ -95,9 +81,12 @@ module.exports = {
     element.style.margin = '10px 5px';
     element.style.width = '100px';
     element.style.height = '100px';
+    element.style.fontSize = '14px';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
+    element.style.color = '#000000';
+    element.style.backgroundColor = '#ffffff';
 
     return element;
   }

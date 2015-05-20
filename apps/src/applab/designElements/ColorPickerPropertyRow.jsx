@@ -16,6 +16,17 @@ var PropertyRow = React.createClass({
   },
 
   componentDidMount: function () {
+    this.ensureColorPicker();
+  },
+
+  componentDidUpdate: function () {
+    this.ensureColorPicker();
+  },
+
+  /**
+   * Make our button a colpick color picker, if it isn't already
+   */
+  ensureColorPicker: function () {
     var element = this.getDOMNode().querySelector('.colorPicker');
     $(element).colpick({
       color: this.state.value,

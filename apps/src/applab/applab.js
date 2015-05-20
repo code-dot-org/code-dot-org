@@ -1306,11 +1306,6 @@ Applab.onPropertyChange = function(element, name, value) {
       // in code mode.
       $(element).toggleClass('design-mode-hidden', value === true);
       break;
-    case 'link':
-      // Store the link location. Depend on our deserialization code looking
-      // for elements with this data item and creating our click handler
-      $(element).attr('data-link', value);
-      break;
     default:
       throw "unknown property name " + name;
   }
@@ -1353,20 +1348,6 @@ Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (allowDragging) {
     Applab.makeDraggable(children);
   }
-
-  // event handlers get blown away when we serialize, so we have to recreate
-  // it here
-  $('[data-link]').on('click', function (event) {
-    // link only works while running
-    var isRunning = $('#resetButton').is(':visible');
-    if (!isRunning) {
-      return;
-    }
-    var url = $(event.target).data('link');
-    if (url) {
-      window.location.href = url;
-    }
-  });
 };
 
 /**
