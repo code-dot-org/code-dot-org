@@ -45,10 +45,9 @@ exec(command, function (err, stdout, stderr) {
     return;
   }
 
-  // TODO: DO NOT CHECK IN!
   var globs = [
-    //'./test/*.js',
-    //'./test/calc/*.js',
+    './test/*.js',
+    './test/calc/*.js',
     './test/netsim/*.js'
   ];
   mochify(globs.join(' '), {
