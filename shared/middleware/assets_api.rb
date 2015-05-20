@@ -49,7 +49,6 @@ class AssetsApi < Sinatra::Base
     not_found unless type = filename.split('.').last
     content_type type
 
-    # storage_decrypt_channel_id('niR2mv8Utp9BOKv8sN2E8A') --> [1, 371]
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     s3 = Aws::S3::Client.new(region: 'us-east-1')
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
