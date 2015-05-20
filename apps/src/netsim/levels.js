@@ -44,10 +44,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           into "rooms" and makes it so every message sent in the room
  *           will be received by every other person in that room.
  *
- * @property {string} addressFormat - Specify how many bits wide an address
- *           is within the simulation and how it should be divided up into
- *           a hierarchy. Format resembles IPv4 dot-decimal notation, but
- *           the numbers specify the number of bits for each section.
+ * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
+ *           an address is within the simulation and how it should be divided
+ *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
+ *           but the numbers specify the number of bits for each section.
  *           Examples:
  *           "8.8" - 16-bit address, represented as two 8-bit integers.
  *           "4" - 4 bit address represented as one 4-bit integer.
@@ -170,7 +170,7 @@ levels.custom = {
   broadcastMode: false,
 
   // Packet header specification
-  addressFormat: '4.4',
+  addressFormat: '4',
   packetCountBitWidth: 4,
   routerExpectsPacketHeader: [],
   clientInitialPacketHeader: [],
