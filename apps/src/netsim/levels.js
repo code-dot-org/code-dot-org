@@ -170,7 +170,7 @@ levels.custom = {
   broadcastMode: false,
 
   // Packet header specification
-  addressFormat: '4',
+  addressFormat: '4.4',
   packetCountBitWidth: 4,
   routerExpectsPacketHeader: [],
   clientInitialPacketHeader: [],

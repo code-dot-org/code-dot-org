@@ -80,13 +80,15 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @type {Packet.HeaderType[]}
    * @private
    */
-  this.packetSpec_ = initialConfig.packetSpec;
+  this.packetSpec_ = Packet.Encoder.scrubSpecForBackwardsCompatibility(
+      initialConfig.packetSpec);
 
-  /** @type {number} */
-  this.toAddress = initialConfig.toAddress || 0;
+  /** @type {string} */
+  this.toAddress = initialConfig.toAddress || '0';
+  // TODO: Better default value for these
   
-  /** @type {number} */
-  this.fromAddress = initialConfig.fromAddress || 0;
+  /** @type {string} */
+  this.fromAddress = initialConfig.fromAddress || '0';
   
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
@@ -411,6 +413,10 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
  * field from binary.
  * @typedef {Object} rowType
  * @property {EncodingType} typeName
+ * @property {RegExp} addressFieldAllowedCharacters - Whitelist of characters
+ *           that may be typed into an address field.
+ * @property {function} addressFieldConversion - How to convert from binary
+ *           to an address string in this row when the binary is updated.
  * @property {RegExp} shortNumberAllowedCharacters - Whitelist of characters
  *           that may be typed into a header field.
  * @property {function} shortNumberConversion - How to convert from binary
@@ -466,6 +472,72 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
   return truncatedBinaryToInt(intToBinary(parseInt(decimalString, 10)), maxWidth);
 };
 
+function abToAddressString(abString) {
+  return binaryToAddressString(abToBinary(abString));
+}
+
+function binaryToAddressString(binaryString) {
+  var level = netsimGlobals.getLevelConfig();
+  var indexIntoBinary = 0;
+  // Parentheses in the split() regex cause the dividing elements to be caputred
+  // and also included in the return value.
+  return level.addressFormat.split(/(\D+)/).map(function (formatPart) {
+    var bitWidth = parseInt(formatPart, 10);
+    if (isNaN(bitWidth)) {
+      // Pass non-number parts of the format through, so we use the original
+      // entered characters/layout for formatting.
+      return formatPart;
+    }
+
+    var binarySlice = binaryString.substr(indexIntoBinary, bitWidth);
+    var intVal = binarySlice.length > 0 ?
+        dataConverters.binaryToInt(binarySlice) : 0;
+    indexIntoBinary += bitWidth;
+    return intVal.toString();
+  }).join('');
+}
+
+function hexToAddressString(hexString) {
+  return binaryToAddressString(hexToBinary(hexString));
+}
+
+function reformatAddressString(originalString) {
+  return binaryToAddressString(addressStringToBinary(originalString));
+}
+
+function addressStringToAB(addressString) {
+  return binaryToAB(addressStringToBinary(addressString));
+}
+
+function addressStringToBinary(addressString) {
+  var level = netsimGlobals.getLevelConfig();
+  // Actual user input, converted to a number[]
+  var addressParts = addressString.toString().split(/\D+/).map(function (stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  // Format, converted to a number[] where the numbers are bit-widths
+  var partWidths = level.addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var partValue;
+  var binary = '';
+  for (var i = 0; i < partWidths.length; i++) {
+    partValue = i < addressParts.length ? addressParts[i] : 0;
+    binary = binary + dataConverters.intToBinary(partValue, partWidths[i]);
+  }
+  return binary;
+}
+
+function addressStringToHex(addressString) {
+  return binaryToHex(addressStringToBinary(addressString));
+}
+
 /**
  * Get relevant elements from the page and bind them to local variables.
  * @private
@@ -477,6 +549,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   var rowTypes = [
     {
       typeName: EncodingType.A_AND_B,
+      addressFieldAllowedCharacters: /[AB\s]/i,
+      addressFieldConversion: abToAddressString,
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
       messageAllowedCharacters: /[AB\s]/i,
@@ -484,6 +558,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.BINARY,
+      addressFieldAllowedCharacters: /[01\s]/i,
+      addressFieldConversion: binaryToAddressString,
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: truncatedBinaryToInt,
       messageAllowedCharacters: /[01\s]/,
@@ -491,6 +567,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.HEXADECIMAL,
+      addressFieldAllowedCharacters: /[0-9a-f\s]/i,
+      addressFieldConversion: hexToAddressString,
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: truncatedHexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
@@ -498,6 +576,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.DECIMAL,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: reformatAddressString,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /[0-9\s]/,
@@ -507,6 +587,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.ASCII,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: reformatAddressString,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /./,
@@ -528,19 +610,32 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
 
+    var level = netsimGlobals.getLevelConfig();
+    var encoder = new Packet.Encoder(level.addressFormat,
+        level.packetCountBitWidth, this.packetSpec_);
+
     this.packetSpec_.forEach(function (fieldSpec) {
       /** @type {Packet.HeaderType} */
-      var fieldName = fieldSpec.key;
+      var fieldName = fieldSpec;
       /** @type {number} */
-      var fieldWidth = fieldSpec.bits;
+      var fieldWidth = encoder.getFieldBitWidth(fieldName)
+
+      var allowedCharacterFunction, conversionFunction;
+      if (Packet.isAddressField(fieldName)) {
+        allowedCharacterFunction = rowType.addressFieldAllowedCharacters;
+        conversionFunction = rowType.addressFieldConversion;
+      } else {
+        allowedCharacterFunction = rowType.shortNumberAllowedCharacters;
+        conversionFunction = rowType.shortNumberConversion;
+      }
 
       rowFields[fieldName] = tr.find('input.' + fieldName);
-      rowFields[fieldName].keypress(
-          makeKeypressHandlerWithWhitelist(rowType.shortNumberAllowedCharacters));
-      rowFields[fieldName].keyup(
-          this.makeKeyupHandler(fieldName, rowType.shortNumberConversion, fieldWidth));
-      rowFields[fieldName].blur(
-          this.makeBlurHandler(fieldName, rowType.shortNumberConversion, fieldWidth));
+      rowFields[fieldName].keypress(makeKeypressHandlerWithWhitelist(
+          allowedCharacterFunction));
+      rowFields[fieldName].keyup(this.makeKeyupHandler(fieldName,
+          conversionFunction, fieldWidth));
+      rowFields[fieldName].blur(this.makeBlurHandler(fieldName,
+          conversionFunction, fieldWidth));
     }, this);
 
     rowFields.message = tr.find('textarea.message');
@@ -569,35 +664,54 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
+  var level = netsimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
+
   this.packetSpec_.forEach(function (fieldSpec) {
     /** @type {Packet.HeaderType} */
-    var fieldName = fieldSpec.key;
+    var fieldName = fieldSpec;
     /** @type {number} */
-    var fieldWidth = fieldSpec.bits;
+    var fieldWidth = encoder.getFieldBitWidth(fieldName);
+
+    var abConverter, binaryConverter, hexConverter, decimalConverter, asciiConverter;
+    if (Packet.isAddressField(fieldName)) {
+      abConverter = addressStringToAB;
+      binaryConverter = addressStringToBinary;
+      hexConverter = addressStringToHex;
+      decimalConverter = reformatAddressString;
+      asciiConverter = reformatAddressString;
+    } else {
+      abConverter = intToAB;
+      binaryConverter = intToBinary;
+      hexConverter = intToHex;
+      decimalConverter = function (val) { return val.toString(10) };
+      asciiConverter = decimalConverter;
+    }
 
     liveFields.push({
       inputElement: this.a_and_bUI[fieldName],
-      newValue: intToAB(this[fieldName], fieldWidth)
+      newValue: abConverter(this[fieldName], fieldWidth)
     });
 
     liveFields.push({
       inputElement: this.binaryUI[fieldName],
-      newValue: intToBinary(this[fieldName], fieldWidth)
+      newValue: binaryConverter(this[fieldName], fieldWidth)
     });
 
     liveFields.push({
       inputElement: this.hexadecimalUI[fieldName],
-      newValue: intToHex(this[fieldName], Math.ceil(fieldWidth / 4))
+      newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
     });
 
     liveFields.push({
       inputElement: this.decimalUI[fieldName],
-      newValue: this[fieldName].toString(10)
+      newValue: decimalConverter(this[fieldName], fieldWidth)
     });
 
     liveFields.push({
       inputElement: this.asciiUI[fieldName],
-      newValue: this[fieldName].toString(10)
+      newValue: asciiConverter(this[fieldName], fieldWidth)
     });
   }, this);
 
@@ -713,7 +827,7 @@ NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
  */
 NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
   return this.packetSpec_.some(function (headerSpec) {
-    return headerSpec.key === headerKey;
+    return headerSpec === headerKey;
   });
 };
 
