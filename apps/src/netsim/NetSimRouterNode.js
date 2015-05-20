@@ -620,6 +620,15 @@ NetSimRouterNode.prototype.getDisplayName = function () {
 };
 
 /**
+ * Get node's own address, which is dependent on the address format
+ * configured in the level but for routers always ends in zero.
+ * @returns {string}
+ */
+NetSimRouterNode.prototype.getAddress = function () {
+  return this.makeLocalNetworkAddress_(ROUTER_LOCAL_ADDRESS);
+};
+
+/**
  * Get node's hostname, a modified version of its display name.
  * @returns {string}
  * @override
@@ -962,19 +971,54 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
     // Find the lowest unused integer address starting at 2
     // Non-optimal, but should be okay since our address list should not exceed 10.
-    var newAddress = 1;
-    while (contains(addressList, newAddress)) {
-      newAddress++;
+    var newAddressPart = 1;
+    var localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
+    while (contains(addressList, localNetworkAddress)) {
+      newAddressPart++;
+      localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
     }
 
-    wire.localAddress = newAddress;
+    wire.localAddress = localNetworkAddress;
     wire.localHostname = hostname;
-    wire.remoteAddress = ROUTER_LOCAL_ADDRESS;
+    wire.remoteAddress = self.getAddress();
     wire.remoteHostname = self.getHostname();
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
-  });
+  }.bind(this));
+};
+
+/**
+ * Generate an address matching the level's configured address format, that
+ * falls within this router's local network and ends in the given value.
+ * @param {number} lastPart
+ * @returns {string}
+ * @private
+ */
+NetSimRouterNode.prototype.makeLocalNetworkAddress_ = function (lastPart) {
+  var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+  var usedLastPart = false;
+  var usedRouterID = false;
+
+  return addressFormat.split(/(\D+)/).reverse().map(function (part) {
+    var bitWidth = parseInt(part, 10);
+    if (isNaN(bitWidth)) {
+      // This is a non-number part, pass it through to the result
+      return part;
+    }
+
+    if (!usedLastPart) {
+      usedLastPart = true;
+      return lastPart.toString();
+    }
+
+    if (!usedRouterID) {
+      usedRouterID = true;
+      return this.entityID.toString();
+    }
+
+    return '0';
+  }.bind(this)).reverse().join('');
 };
 
 /**
@@ -1036,7 +1080,7 @@ NetSimRouterNode.prototype.getAddressForNodeID_ = function (nodeID) {
  */
 NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   if (hostname === this.getHostname()) {
-    return ROUTER_LOCAL_ADDRESS;
+    return this.getAddress();
   }
 
   if (this.dnsMode === DnsMode.AUTOMATIC && hostname === AUTO_DNS_HOSTNAME) {
@@ -1057,12 +1101,12 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
  * Given a local network address, finds the node ID of the node at that
  * address.  Will return undefined if no node is found at the given address.
  *
- * @param {number} address
+ * @param {string} address
  * @returns {number|undefined}
  * @private
  */
 NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
-  if (address === ROUTER_LOCAL_ADDRESS) {
+  if (address === this.getAddress()) {
     return this.entityID;
   }
 
@@ -1399,7 +1443,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     return;
   }
 
-  if (toAddress === ROUTER_LOCAL_ADDRESS) {
+  if (toAddress === this.getAddress()) {
     // This packet has reached its destination, it's done.
     logger.warn("Packet stopped at router.");
     this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);

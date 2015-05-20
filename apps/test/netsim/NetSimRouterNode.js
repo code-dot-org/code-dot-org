@@ -234,6 +234,110 @@ describe("NetSimRouterNode", function () {
     });
   });
 
+  describe("address assignment rules", function () {
+    var router, wire1, wire2, wire3;
+
+    beforeEach(function () {
+      NetSimRouterNode.create(testShard, function (e, r) {
+        router = r;
+      });
+
+      NetSimWire.create(testShard, router.entityID + 1, router.entityID, function (e, w) {
+        wire1 = w;
+      });
+
+      NetSimWire.create(testShard, router.entityID + 2, router.entityID, function (e, w) {
+        wire2 = w;
+      });
+
+      NetSimWire.create(testShard, router.entityID + 3, router.entityID, function (e, w) {
+        wire3 = w;
+      });
+
+      assertTableSize(testShard, 'wireTable', 3);
+    });
+
+    describe("requesting three addresses in simple four-bit format", function () {
+      beforeEach(function () {
+        netsimGlobals.getLevelConfig().addressFormat = '4';
+        router.requestAddress(wire1, 'client1', function () {});
+        router.requestAddress(wire2, 'client2', function () {});
+        router.requestAddress(wire3, 'client3', function () {});
+      });
+
+      it ("assigns passed local hostname to respective wire", function () {
+        assertEqual('client1', wire1.localHostname);
+        assertEqual('client2', wire2.localHostname);
+        assertEqual('client3', wire3.localHostname);
+      });
+
+      it ("assigns single-number addresses when using single-number address format", function () {
+        assertEqual('1', wire1.localAddress);
+        assertEqual('2', wire2.localAddress);
+        assertEqual('3', wire3.localAddress);
+      });
+
+      it ("assigns own hostname as remote hostname on all wires", function () {
+        assertEqual(router.getHostname(), wire1.remoteHostname);
+        assertEqual(router.getHostname(), wire2.remoteHostname);
+        assertEqual(router.getHostname(), wire3.remoteHostname);
+      });
+
+      it ("assigns own address (zero) as remote address on all wires", function () {
+        assertEqual('0', router.getAddress());
+        assertEqual(router.getAddress(), wire1.remoteAddress);
+        assertEqual(router.getAddress(), wire2.remoteAddress);
+        assertEqual(router.getAddress(), wire3.remoteAddress);
+      });
+    });
+
+    describe("requesting three addresses in two-part format", function () {
+      beforeEach(function () {
+        netsimGlobals.getLevelConfig().addressFormat = '4.4';
+        router.requestAddress(wire1, 'client1', function () {});
+        router.requestAddress(wire2, 'client2', function () {});
+        router.requestAddress(wire3, 'client3', function () {});
+      });
+
+      it ("assigns two-part addresses where first part is router number", function () {
+        assertEqual(router.entityID + '.1', wire1.localAddress);
+        assertEqual(router.entityID + '.2', wire2.localAddress);
+        assertEqual(router.entityID + '.3', wire3.localAddress);
+      });
+
+      it ("assigns own two-part address (router#.0) as remote address on all wires", function () {
+        assertEqual(router.entityID + '.0', router.getAddress());
+        assertEqual(router.getAddress(), wire1.remoteAddress);
+        assertEqual(router.getAddress(), wire2.remoteAddress);
+        assertEqual(router.getAddress(), wire3.remoteAddress);
+      });
+    });
+
+    describe("requesting three addresses in four-part format", function () {
+      beforeEach(function () {
+        netsimGlobals.getLevelConfig().addressFormat = '8.8.8.8';
+        router.requestAddress(wire1, 'client1', function () {});
+        router.requestAddress(wire2, 'client2', function () {});
+        router.requestAddress(wire3, 'client3', function () {});
+      });
+
+      it ("uses zeros for all except last two parts", function () {
+        assertEqual('0.0.' + router.entityID + '.1', wire1.localAddress);
+        assertEqual('0.0.' + router.entityID + '.2', wire2.localAddress);
+        assertEqual('0.0.' + router.entityID + '.3', wire3.localAddress);
+      });
+
+      it ("assigns own four-part address (0.0.router#.0) as remote address", function () {
+        assertEqual('0.0.' + router.entityID + '.0', router.getAddress());
+        assertEqual(router.getAddress(), wire1.remoteAddress);
+        assertEqual(router.getAddress(), wire2.remoteAddress);
+        assertEqual(router.getAddress(), wire3.remoteAddress);
+      });
+    });
+
+
+  });
+
   describe("message routing rules", function () {
     var packetHeaderSpec, router, localClient, remoteA, encoder;
 
