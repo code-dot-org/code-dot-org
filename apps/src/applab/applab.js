@@ -35,6 +35,7 @@ var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
+
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignProperties = require('./designProperties.jsx');
@@ -1335,6 +1336,27 @@ Applab.onPropertyChange = function(element, name, value) {
     case 'text':
       $(element).text(value);
       break;
+    case 'textColor':
+      element.style.color = value;
+      break;
+    case 'backgroundColor':
+      element.style.backgroundColor = value;
+      break;
+    case 'fontSize':
+      element.style.fontSize = value + 'px';
+      break;
+    case 'image':
+      // For now, we stretch the image to fit the element
+      var width = Applab.getOuterWidth(element);
+      var height = Applab.getOuterHeight(element);
+      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundSize = width + 'px ' + height + 'px';
+      break;
+    case 'hidden':
+      // Add a class that shows as 30% opacity in design mode, and invisible
+      // in code mode.
+      $(element).toggleClass('design-mode-hidden', value === true);
+      break;
     default:
       throw "unknown property name " + name;
   }
@@ -1356,7 +1378,10 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
-  $(clone).find('*').removeAttr('class');
+  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
+  // things like $().data or $().draggable('destroy'), so I just manually
+  // remove the classes instead.
+  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
   return s.serializeToString(clone);
 };
 
@@ -1515,8 +1540,8 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (window.dashboard &&
-      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
+  if (window.dashboard && (!dashboard.project.isEditing ||
+      (dashboard.project.current && dashboard.project.current.id))) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
@@ -1941,6 +1966,8 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   Applab.toggleDragging(enable);
 };
@@ -2888,16 +2915,30 @@ Applab.setPosition = function (opts) {
   apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
   apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
   apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
-  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
 
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.position = 'absolute';
-    div.style.left = String(opts.left) + 'px';
-    div.style.top = String(opts.top) + 'px';
-    div.style.width = String(opts.width) + 'px';
-    div.style.height = String(opts.height) + 'px';
+  var el = document.getElementById(opts.elementId);
+  if (divApplab.contains(el)) {
+    el.style.position = 'absolute';
+    el.style.left = opts.left + 'px';
+    el.style.top = opts.top + 'px';
+    var setWidthHeight = false;
+    // don't set width/height if
+    // (1) both parameters are undefined AND
+    // (2) width/height already specified OR IMG element with width/height attributes
+    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
+        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
+        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
+            setWidthHeight = true;
+        }
+    } else {
+        setWidthHeight = true;
+    }
+    if (setWidthHeight) {
+        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+        el.style.width = opts.width + 'px';
+        el.style.height = opts.height + 'px';
+    }
     return true;
   }
   return false;
