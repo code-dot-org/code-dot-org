@@ -123,6 +123,12 @@ config.copy = {
         src: ['**'],
         //TODO: Would be preferrable to separate Blockly media.
         dest: 'build/package/media'
+      },
+      {
+        expand: true,
+        cwd: 'style/applab',
+        src: ['*.css'],
+        dest: 'build/package/css'
       }
     ]
   },
@@ -389,7 +395,8 @@ config.jshint = {
     '!src/lodash.min.js',
     '!src/canvg/*.js',
     '!src/calc/js-numbers/js-numbers.js',
-    '!src/ResizeSensor.js'
+    '!src/ResizeSensor.js',
+    '!src/applab/colpick.js'
   ]
 };
 
