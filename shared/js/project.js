@@ -66,9 +66,9 @@ module.exports = {
 
         if (!this.current.hidden) {
           if (this.current.isOwner || location.hash === '') {
-            dashboard.showProjectHeader();
+            dashboard.header.showProjectHeader();
           } else {
-            dashboard.showMinimalProjectHeader();
+            dashboard.header.showMinimalProjectHeader();
             appOptions.readonlyWorkspace = true;
             appOptions.callouts = [];
           }
@@ -77,13 +77,13 @@ module.exports = {
         appOptions.level.lastAttempt = this.current.levelSource;
         appOptions.hideSource = true;
         appOptions.callouts = [];
-        dashboard.showMinimalProjectHeader();
+        dashboard.header.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       this.current = {
         name: 'Untitled Project'
       };
-      dashboard.showMinimalProjectHeader();
+      dashboard.header.showMinimalProjectHeader();
     }
   },
   updateTimestamp: function() {
@@ -152,7 +152,7 @@ module.exports = {
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
-   * copy to the current project.
+   * copy as the current project.
    */
   copy: function(newName, callback) {
     delete dashboard.project.current.id;
@@ -206,7 +206,7 @@ module.exports = {
       channels.fetch(appOptions.channel, function(data) {
         if (data) {
           module.exports.current = data;
-          dashboard.showProjectLevelHeader();
+          dashboard.header.showProjectLevelHeader();
           deferred.resolve();
         } else {
           deferred.reject();
