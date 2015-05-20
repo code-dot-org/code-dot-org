@@ -472,41 +472,26 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
   return truncatedBinaryToInt(intToBinary(parseInt(decimalString, 10)), maxWidth);
 };
 
-function abToAddressString(abString) {
-  return binaryToAddressString(abToBinary(abString));
-}
-
-function binaryToAddressString(binaryString) {
+/**
+ * Convert an address string to binary and back using the level's address
+ * format, which coerces it to the exact format the level wants.
+ * @param {string} originalString
+ * @returns {string}
+ */
+var cleanAddressString = function (originalString) {
   var level = netsimGlobals.getLevelConfig();
-  return dataConverters.binaryToAddressString(binaryString, level.addressFormat);
-}
-
-function hexToAddressString(hexString) {
-  return binaryToAddressString(hexToBinary(hexString));
-}
-
-function reformatAddressString(originalString) {
-  return binaryToAddressString(addressStringToBinary(originalString));
-}
-
-function addressStringToAB(addressString) {
-  return binaryToAB(addressStringToBinary(addressString));
-}
-
-function addressStringToBinary(addressString) {
-  var level = netsimGlobals.getLevelConfig();
-  return dataConverters.addressStringToBinary(addressString, level.addressFormat);
-}
-
-function addressStringToHex(addressString) {
-  return binaryToHex(addressStringToBinary(addressString));
-}
+  var binaryForm = dataConverters.addressStringToBinary(
+      originalString, level.addressFormat);
+  return dataConverters.binaryToAddressString(
+      binaryForm, level.addressFormat);
+};
 
 /**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
+  var level = netsimGlobals.getLevelConfig();
   var rootDiv = this.rootDiv_;
 
   /** @type {rowType[]} */
@@ -514,7 +499,10 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     {
       typeName: EncodingType.A_AND_B,
       addressFieldAllowedCharacters: /[AB\s]/i,
-      addressFieldConversion: abToAddressString,
+      addressFieldConversion: function (abString) {
+        return dataConverters.binaryToAddressString(
+            dataConverters.abToBinary(abString), level.addressFormat);
+      },
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
       messageAllowedCharacters: /[AB\s]/i,
@@ -523,7 +511,10 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     {
       typeName: EncodingType.BINARY,
       addressFieldAllowedCharacters: /[01\s]/i,
-      addressFieldConversion: binaryToAddressString,
+      addressFieldConversion: function (binaryString) {
+        return dataConverters.binaryToAddressString(
+            binaryString, level.addressFormat);
+      },
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: truncatedBinaryToInt,
       messageAllowedCharacters: /[01\s]/,
@@ -532,7 +523,10 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     {
       typeName: EncodingType.HEXADECIMAL,
       addressFieldAllowedCharacters: /[0-9a-f\s]/i,
-      addressFieldConversion: hexToAddressString,
+      addressFieldConversion: function (hexString) {
+        return dataConverters.binaryToAddressString(
+            dataConverters.hexToBinary(hexString), level.addressFormat);
+      },
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: truncatedHexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
@@ -541,7 +535,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     {
       typeName: EncodingType.DECIMAL,
       addressFieldAllowedCharacters: /[0-9.\s]/i,
-      addressFieldConversion: reformatAddressString,
+      addressFieldConversion: cleanAddressString,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /[0-9\s]/,
@@ -552,7 +546,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     {
       typeName: EncodingType.ASCII,
       addressFieldAllowedCharacters: /[0-9.\s]/i,
-      addressFieldConversion: reformatAddressString,
+      addressFieldConversion: cleanAddressString,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /./,
@@ -640,11 +634,22 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
     var abConverter, binaryConverter, hexConverter, decimalConverter, asciiConverter;
     if (Packet.isAddressField(fieldName)) {
-      abConverter = addressStringToAB;
-      binaryConverter = addressStringToBinary;
-      hexConverter = addressStringToHex;
-      decimalConverter = reformatAddressString;
-      asciiConverter = reformatAddressString;
+      abConverter = function (addressString) {
+        return dataConverters.binaryToAB(
+            dataConverters.addressStringToBinary(
+                addressString, level.addressFormat));
+      };
+      binaryConverter = function (addressString) {
+        return dataConverters.addressStringToBinary(
+            addressString, level.addressFormat);
+      };
+      hexConverter = function (addressString) {
+        return dataConverters.binaryToHex(
+            dataConverters.addressStringToBinary(
+                addressString, level.addressFormat));
+      };
+      decimalConverter = cleanAddressString;
+      asciiConverter = cleanAddressString;
     } else {
       abConverter = intToAB;
       binaryConverter = intToBinary;
