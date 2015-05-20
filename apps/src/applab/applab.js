@@ -1037,7 +1037,11 @@ Applab.init = function(config) {
     }
     var designModeButton = document.getElementById('designModeButton');
     if (designModeButton) {
-      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+      // Simulate a run button click, to load the channel id.
+      var designModeClick = studioApp.runButtonClickWrapper.bind(
+          studioApp, Applab.onDesignModeButton);
+      var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+      dom.addClickTouchEvent(designModeButton, throttledDesignModeClick);
     }
     var codeModeButton = document.getElementById('codeModeButton');
     if (codeModeButton) {
