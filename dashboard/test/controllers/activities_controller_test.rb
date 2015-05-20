@@ -93,28 +93,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
-  test "logged in milestone with existing userlevel without script" do
-    # do all the logging
-    @controller.expects :log_milestone
-    @controller.expects :slog
-
-    @controller.expects(:trophy_check).with(@user)
-
-    UserScript.create(user: @user, script: @script_level.script)
-    UserLevel.create(level: @script_level.level, user: @user)
-
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(GalleryActivity, UserLevel, UserScript) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params
-        end
-      end
-    end
-
-    assert_response :success
-  end
-
-
   test "logged in milestone with existing userlevel with script" do
     # do all the logging
     @controller.expects :log_milestone
@@ -278,7 +256,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_start_date = Time.now - 5.days
     existing_sl = @script_level.script.script_levels.last
     UserLevel.record_timestamps = false
-    UserLevel.create!(user_id: @user.id, level_id: existing_sl.level.id, best_result: 100,
+    UserLevel.create!(user_id: @user.id, level_id: existing_sl.level.id, script_id: existing_sl.script_id, best_result: 100,
                      created_at: script_start_date, updated_at: script_start_date)
     UserLevel.record_timestamps = true
 
@@ -606,16 +584,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
     user_level_finder = mock('user_level_finder')
-    user_level_finder.stubs(:first).returns(nil)
-    user_level_finder.stubs(:update_all).with(attempts: 1, best_result: 100)
-    UserLevel.stubs(:where).returns(user_level_finder)
-
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
-    UserLevel.stubs(:create).
+    user_level_finder.stubs(:first_or_create!).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
       then.
       returns(existing_user_level)
 
+    UserLevel.stubs(:where).returns(user_level_finder)
 
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(GalleryActivity, UserLevel) do
@@ -635,11 +610,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     # simulate always throwing an exception on first_or_create (not
     # supposed to happen, but we shouldn't get stuck in a loop anyway)
     user_level_finder = mock('user_level_finder')
-    user_level_finder.stubs(:first).returns(nil)
-    UserLevel.stubs(:where).returns(user_level_finder)
-
-    UserLevel.stubs(:create).
+    user_level_finder.stubs(:first_or_create!).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'")))
+
+    UserLevel.stubs(:where).returns(user_level_finder)
 
     # we should just raise the exception
     assert_raises(ActiveRecord::RecordNotUnique) do
