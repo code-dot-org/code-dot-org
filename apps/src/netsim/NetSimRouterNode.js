@@ -1340,7 +1340,7 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
 
 /**
  * Forward the given message to the list of node IDs provided.
- * This function works by calling itself recusively with the tail of the
+ * This function works by calling itself recursively with the tail of the
  * node ID list each time it finishes sending one of the messages, so
  * timing on this "broadcast" won't be exactly correct - that's probably okay
  * though, especially at the point in the curriculum where this is used.
@@ -1357,7 +1357,7 @@ NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
     return;
   }
 
-  // Otherwise, send to the first one and then call for the rest.
+  // Send to the first recipient, then recurse on the remaining recipients
   var nextRecipientNodeID = nodeIDs[0];
   NetSimMessage.send(
       this.shard_,
