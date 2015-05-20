@@ -2,6 +2,14 @@ var React = require('react');
 
 var AssetRow = require('./manageAssets/assetRow.jsx');
 
+var errorMessages = {
+  415: 'This type of file is not supported.'
+};
+
+function getErrorMessage(status) {
+  return errorMessages[status] || 'An unknown error occurred.';
+}
+
 module.exports = React.createClass({
   propTypes: {
     assets: React.PropTypes.instanceOf(Array)
@@ -23,12 +31,15 @@ module.exports = React.createClass({
     var uploadStatus = document.querySelector('#uploadStatus');
 
     var xhr = new XMLHttpRequest();
-    xhr.open('PUT', '/v3/assets/' + dashboard.project.current.id + '/' + file.name, true);
     xhr.addEventListener('load', (function () {
       this.props.assets.push({name: file.name, type: 'unknown'});
       this.setState({uploadStatus: 'File "' + file.name + '" successfully uploaded!'});
     }).bind(this));
+    xhr.addEventListener('error', (function () {
+      this.setState({uploadStatus: 'Error uploading file: ' + getErrorMessage(xhr.status)});
+    }).bind(this));
 
+    xhr.open('PUT', '/v3/assets/' + dashboard.project.current.id + '/' + file.name, true);
     xhr.send(file);
     this.setState({uploadStatus: 'Uploading...'});
   },
