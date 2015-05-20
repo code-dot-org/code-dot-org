@@ -77,8 +77,11 @@ class AssetsApi < Sinatra::Base
 
     s3 = Aws::S3::Client.new(region: 'us-east-1')
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
-    s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:request.body.read)
-    no_content
+    body = request.body.read
+    s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:body)
+    content_type :json
+    category = mime_type.split('/').first
+    {filename:filename, category:category, size:body.length}.to_json
   end
 
   #
