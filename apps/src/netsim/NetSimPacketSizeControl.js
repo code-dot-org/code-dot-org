@@ -45,7 +45,7 @@ NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
   if (packetSize === Infinity) {
     return i18n.unlimited();
   }
-  return i18n.numBitsPerPacket({ x: packetSize });
+  return i18n.numBitsPerPacket({ numBits: packetSize });
 };
 
 /**
@@ -59,7 +59,7 @@ NetSimPacketSizeControl.prototype.valueToLabel = function (val) {
   if (val === Infinity) {
     return i18n.unlimited();
   }
-  return i18n.numBitsPerPacket({x: val});
+  return i18n.numBitsPerPacket({numBits: val});
 };
 
 /**

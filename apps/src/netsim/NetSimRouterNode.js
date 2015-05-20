@@ -609,12 +609,12 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
   if (netsimGlobals.getLevelConfig().broadcastMode) {
-    return i18n.roomX({
+    return i18n.roomNumberX({
       x: this.entityID
     });
   }
 
-  return i18n.routerX({
+  return i18n.routerNumberX({
     x: this.entityID
   });
 };
