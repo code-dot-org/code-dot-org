@@ -16,7 +16,6 @@ var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
 var apiBlockly = require('./apiBlockly');
-var AssetsApi = require('../clientApi').AssetsApi
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html.ejs');
