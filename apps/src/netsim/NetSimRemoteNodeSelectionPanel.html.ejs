@@ -6,7 +6,7 @@ var netsimGlobals = require('./netsimGlobals');
 var NodeType = require('./netsimConstants').NodeType;
 
 /** @type {function} */
-var assetUrl = netsimGlobals.getAssetUrlFunction();
+var getAssetUrl = netsimGlobals.getAssetUrlFunction();
 
 /** @type {netsimLevelConfiguration} */
 var levelConfig = netsimGlobals.getLevelConfig();
@@ -202,7 +202,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeHeader(i18n.outgoingConnectionRequests());
           outgoingRequestRows.forEach(function (row) {
             var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="' + assetUrl('media/netsim/loading.gif') + '" />',
+              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
               otherName: row.displayName,
               otherStatus: row.status
             });
