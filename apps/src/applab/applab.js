@@ -2859,16 +2859,30 @@ Applab.setPosition = function (opts) {
   apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
   apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
   apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
-  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
 
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.position = 'absolute';
-    div.style.left = String(opts.left) + 'px';
-    div.style.top = String(opts.top) + 'px';
-    div.style.width = String(opts.width) + 'px';
-    div.style.height = String(opts.height) + 'px';
+  var el = document.getElementById(opts.elementId);
+  if (divApplab.contains(el)) {
+    el.style.position = 'absolute';
+    el.style.left = opts.left + 'px';
+    el.style.top = opts.top + 'px';
+    var setWidthHeight = false;
+    // don't set width/height if
+    // (1) both parameters are undefined AND
+    // (2) width/height already specified OR IMG element with width/height attributes
+    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
+        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
+        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
+            setWidthHeight = true;
+        }
+    } else {
+        setWidthHeight = true;
+    }
+    if (setWidthHeight) {
+        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+        el.style.width = opts.width + 'px';
+        el.style.height = opts.height + 'px';
+    }
     return true;
   }
   return false;
