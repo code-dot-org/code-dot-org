@@ -15,6 +15,19 @@ require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
 
 /**
+ * @typedef {string} addressHeaderFormat
+ * A string indicating the parts of an address field in the packet header,
+ * their respective byte-widths, and the separators to be used when converting
+ * binary to a readable format.
+ * Examples:
+ * "4" indicates a single 4-byte number, e.g. 5 / 0101
+ * "8.4" indicates an 8-byte number followed by a 4-byte number, separated
+ *   by a period, e.g. 1.1 / 000000010001 or 18.9 / 00010010 1001
+ * "8.8.8.8" would be an IPv4 address, e.g.
+ *   127.0.0.1 / 01111111 00000000 00000000 00000001
+ */
+
+/**
  * Converts an As and Bs string into its most compact representation, forced
  * to uppercase.
  * @param {string} abString
@@ -339,4 +352,36 @@ exports.binaryToAscii = function (binaryString, byteSize) {
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
+};
+
+/**
+ * Converts binary to an address string using the provided address format.
+ * @param {string} binaryString
+ * @param {addressHeaderFormat} addressFormat
+ * @returns {string}
+ */
+exports.binaryToAddressString = function (binaryString, addressFormat) {
+  var binary = exports.minifyBinary(binaryString);
+  if (binary.length === 0) {
+    return '';
+  }
+
+  var indexIntoBinary = 0;
+
+  // Parentheses in the split() regex cause the dividing elements to be caputred
+  // and also included in the return value.
+  return addressFormat.split(/(\D+)/).map(function (formatPart) {
+    var bitWidth = parseInt(formatPart, 10);
+    if (isNaN(bitWidth)) {
+      // Pass non-number parts of the format through, so we use the original
+      // entered characters/layout for formatting.
+      return formatPart;
+    }
+
+    var binarySlice = binary.substr(indexIntoBinary, bitWidth);
+    var intVal = binarySlice.length > 0 ?
+        exports.binaryToInt(binarySlice) : 0;
+    indexIntoBinary += bitWidth;
+    return intVal.toString();
+  }).join('');
 };

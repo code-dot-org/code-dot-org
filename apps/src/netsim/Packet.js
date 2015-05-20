@@ -247,23 +247,8 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
  * @returns {string}
  */
 Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
-  var fieldBinary = this.getHeader(key, binary);
-  var indexIntoBinary = 0;
-  // Parentheses in the split() regex cause the dividing elements to be caputred
-  // and also included in the return value.
-  return this.addressFormat_.split(/(\D+)/).map(function (formatPart) {
-    var bitWidth = parseInt(formatPart, 10);
-    if (isNaN(bitWidth)) {
-      // Pass non-number parts of the format through, so we use the original
-      // entered characters/layout for formatting.
-      return formatPart;
-    }
-
-    var binarySlice = fieldBinary.substr(indexIntoBinary, bitWidth);
-    var intVal = dataConverters.binaryToInt(binarySlice);
-    indexIntoBinary += bitWidth;
-    return intVal.toString();
-  }).join('');
+  return dataConverters.binaryToAddressString(
+      this.getHeader(key, binary), this.addressFormat_);
 };
 
 /**
