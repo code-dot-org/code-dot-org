@@ -34,8 +34,8 @@ describe("NetSimRouterNode", function () {
   var testShard;
 
   beforeEach(function () {
-    NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     netsimTestUtils.initializeGlobalsToDefaultValues();
+    netsimGlobals.getLevelConfig().broadcastMode = false;
 
     testShard = fakeShard();
   });
@@ -291,6 +291,7 @@ describe("NetSimRouterNode", function () {
       wire.localAddress = 1;
       wire.remoteAddress = 0;
       wire.update();
+      localClient.myWire = wire;
 
       NetSimWire.create(testShard, remoteA.entityID, router.entityID, function (e, w) {
         wire = w;
@@ -299,6 +300,7 @@ describe("NetSimRouterNode", function () {
       wire.localAddress = 2;
       wire.remoteAddress = 0;
       wire.update();
+      remoteA.myWire = wire;
 
       var addressTable = router.getAddressTable();
       assertEqual(addressTable.length, 2);
@@ -388,6 +390,44 @@ describe("NetSimRouterNode", function () {
       // Verify that message from/to node IDs are correct
       assertFirstMessageProperty('fromNodeID', router.entityID);
       assertFirstMessageProperty('toNodeID', remoteA.entityID);
+    });
+
+
+    describe ("broadcast mode", function () {
+      var remoteB;
+
+      beforeEach(function () {
+        // Put level in broadcast mode
+        netsimGlobals.getLevelConfig().broadcastMode = true;
+
+        NetSimLocalClientNode.create(testShard, "remoteB", function (e, n) {
+          remoteB = n;
+        });
+
+        // Manually connect nodes
+        var wire;
+        NetSimWire.create(testShard, remoteB.entityID, router.entityID, function (e, w) {
+          wire = w;
+        });
+        wire.localHostname = remoteB.getHostname();
+        remoteB.myWire = wire;
+        wire.update();
+      });
+
+      it ("forwards all messages it receives to every connected node", function () {
+        localClient.sendMessage("00001111", function () {});
+
+        // Router must tick to process messages; 1000ms is sufficient time for
+        // a short packet.
+        router.tick({time: 1000});
+
+        // Router should log having picked up one message
+        assertTableSize(testShard, 'logTable', 1);
+
+        // Message forwarded in triplicate: Back to local, and out to both remotes
+        assertTableSize(testShard, 'messageTable', 3);
+        assertFirstMessageProperty('fromNodeID', router.entityID);
+      });
     });
 
     describe("Router bandwidth limits", function () {
