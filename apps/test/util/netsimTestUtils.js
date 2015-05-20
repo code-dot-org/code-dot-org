@@ -1,6 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var levels = require('@cdo/apps/netsim/levels');
@@ -156,6 +157,7 @@ exports.fakeShard = function () {
  * Set up global singleton with default level configuration
  */
 exports.initializeGlobalsToDefaultValues = function () {
+  NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
   netsimGlobals.setRootControllers({}, {
     level: levels.custom
   });
