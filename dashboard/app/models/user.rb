@@ -695,7 +695,10 @@ SQL
 
       user_level.save!
     end
-    new_level_completed
+
+    if new_level_completed
+      track_script_progress(script)
+    end
   end
 
   def assign_script(script)
