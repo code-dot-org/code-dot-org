@@ -46,6 +46,8 @@ describe('Level tests', function() {
       assert(window.requirejs);
       done();
     });
+
+    window.jQuery = $;
   });
 
   beforeEach(function () {

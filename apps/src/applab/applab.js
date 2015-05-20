@@ -35,6 +35,7 @@ var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
+
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignProperties = require('./designProperties.jsx');
@@ -1330,6 +1331,27 @@ Applab.onPropertyChange = function(element, name, value) {
     case 'text':
       $(element).text(value);
       break;
+    case 'textColor':
+      element.style.color = value;
+      break;
+    case 'backgroundColor':
+      element.style.backgroundColor = value;
+      break;
+    case 'fontSize':
+      element.style.fontSize = value + 'px';
+      break;
+    case 'image':
+      // For now, we stretch the image to fit the element
+      var width = Applab.getOuterWidth(element);
+      var height = Applab.getOuterHeight(element);
+      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundSize = width + 'px ' + height + 'px';
+      break;
+    case 'hidden':
+      // Add a class that shows as 30% opacity in design mode, and invisible
+      // in code mode.
+      $(element).toggleClass('design-mode-hidden', value === true);
+      break;
     default:
       throw "unknown property name " + name;
   }
@@ -1351,7 +1373,10 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
-  $(clone).find('*').removeAttr('class');
+  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
+  // things like $().data or $().draggable('destroy'), so I just manually
+  // remove the classes instead.
+  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
   return s.serializeToString(clone);
 };
 
@@ -1912,6 +1937,8 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   Applab.toggleDragging(enable);
 };

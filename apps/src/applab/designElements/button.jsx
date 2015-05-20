@@ -3,6 +3,8 @@
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
+var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
 var ButtonProperties = React.createClass({
   propTypes: {
@@ -22,6 +24,8 @@ var ButtonProperties = React.createClass({
 
     var left = parseInt(element.style.left, 10) || 0;
     var top = parseInt(element.style.top, 10) || 0;
+
+    var hidden = $(element).hasClass('design-mode-hidden');
 
     return (
       <table>
@@ -53,18 +57,34 @@ var ButtonProperties = React.createClass({
           desc={'y position (px)'}
           initialValue={top}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <ColorPickerPropertyRow
+          desc={'text color'}
+          initialValue='#000000'
+          handleChange={this.props.handleChange.bind(this, 'textColor')} />
+        <ColorPickerPropertyRow
+          desc={'background color'}
+          initialValue='#eeeeee'
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
+        <PropertyRow
+          desc={'font size (px)'}
+          initialValue='14'
+          handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        {/* eventually this will be a ImageChooserPropertyRow */ }
+        <PropertyRow
+          desc={'image'}
+          initialValue=''
+          handleChange={this.props.handleChange.bind(this, 'image')} />
+        <BooleanPropertyRow
+          desc={'hidden'}
+          initialValue={hidden}
+          handleChange={this.props.handleChange.bind(this, 'hidden')} />
       </table>);
 
-    // TODO:
-    // textColor
-    // backgroundColor
-    // fontSize
-    // image
+    // TODO (brent):
     // bold/italics/underline (p2)
     // shape (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // hidden
     // send back/forward
   }
 });
