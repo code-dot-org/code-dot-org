@@ -84,6 +84,14 @@ Packet.prototype.getHeaderAsInt = function (headerType) {
 };
 
 /**
+ * @param {Packet.HeaderType} headerType
+ * @returns {string}
+ */
+Packet.prototype.getHeaderAsAddressString = function (headerType) {
+  return this.encoder.getHeaderAsAddressString(headerType, this.binary);
+};
+
+/**
  * @returns {string} binary content
  */
 Packet.prototype.getBodyAsBinary = function () {

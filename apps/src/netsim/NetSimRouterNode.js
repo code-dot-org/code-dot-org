@@ -1435,7 +1435,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   // Find a connection to route this message to.
   try {
     var packet = new Packet(this.packetSpec_, message.payload);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by router");
     this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);

@@ -24,7 +24,7 @@ var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
 var dataConverters = require('@cdo/apps/netsim/dataConverters');
 
-var intToBinary = dataConverters.intToBinary;
+var addressStringToBinary = dataConverters.addressStringToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
@@ -394,8 +394,8 @@ describe("NetSimRouterNode", function () {
         wire = w;
       });
       wire.localHostname = localClient.getHostname();
-      wire.localAddress = 1;
-      wire.remoteAddress = 0;
+      wire.localAddress = '1';
+      wire.remoteAddress = '0';
       wire.update();
       localClient.myWire = wire;
 
@@ -403,8 +403,8 @@ describe("NetSimRouterNode", function () {
         wire = w;
       });
       wire.localHostname = remoteA.getHostname();
-      wire.localAddress = 2;
-      wire.remoteAddress = 0;
+      wire.localAddress = '2';
+      wire.remoteAddress = '0';
       wire.update();
       remoteA.myWire = wire;
 
@@ -479,8 +479,8 @@ describe("NetSimRouterNode", function () {
       var toAddress = remoteA.address;
 
       var payload = encoder.concatenateBinary({
-        toAddress: intToBinary(toAddress, 4),
-        fromAddress: intToBinary(fromAddress, 4)
+        toAddress: addressStringToBinary(toAddress, netsimGlobals.getLevelConfig().addressFormat),
+        fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
       }, 'messageBody');
 
       NetSimMessage.send(testShard, fromNodeID, toNodeID,fromNodeID, payload,
@@ -541,8 +541,8 @@ describe("NetSimRouterNode", function () {
 
       var sendMessageOfSize = function (messageSizeBits) {
         var payload = encoder.concatenateBinary({
-          toAddress: intToBinary(toAddress, 4),
-          fromAddress: intToBinary(fromAddress, 4)
+          toAddress: addressStringToBinary(toAddress, netsimGlobals.getLevelConfig().addressFormat),
+          fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
         }, '0'.repeat(messageSizeBits - 8));
 
         NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
@@ -860,8 +860,8 @@ describe("NetSimRouterNode", function () {
     describe("Router memory limits", function () {
       var sendMessageOfSize = function (messageSizeBits) {
         var payload = encoder.concatenateBinary({
-          toAddress: intToBinary(remoteA.address, 4),
-          fromAddress: intToBinary(localClient.address, 4)
+          toAddress: addressStringToBinary(remoteA.address, netsimGlobals.getLevelConfig().addressFormat),
+          fromAddress: addressStringToBinary(localClient.address, netsimGlobals.getLevelConfig().addressFormat)
         }, '0'.repeat(messageSizeBits - 8));
 
         NetSimMessage.send(testShard, localClient.entityID, router.entityID,
@@ -1055,8 +1055,8 @@ describe("NetSimRouterNode", function () {
 
       var sendToAutoDns = function (fromNode, asciiPayload) {
         var payload = encoder.concatenateBinary({
-          toAddress: intToBinary(autoDnsAddress, 4),
-          fromAddress: intToBinary(fromNode.address, 4)
+          toAddress: addressStringToBinary(autoDnsAddress, netsimGlobals.getLevelConfig().addressFormat),
+          fromAddress: addressStringToBinary(fromNode.address, netsimGlobals.getLevelConfig().addressFormat)
         },  asciiToBinary(asciiPayload, BITS_PER_BYTE));
         NetSimMessage.send(testShard, fromNode.entityID, router.entityID,
             fromNode.entityID, payload, function () {});
