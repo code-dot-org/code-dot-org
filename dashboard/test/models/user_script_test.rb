@@ -44,7 +44,7 @@ class UserScriptTest < ActiveSupport::TestCase
   test "check completed for script with all levels completed" do
     # complete all levels
     @script_levels.each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level).create
+      user_level = UserLevel.where(user: @user, level: script_level.level, script: @script).create
       user_level.best_result = 100
       user_level.save
     end
