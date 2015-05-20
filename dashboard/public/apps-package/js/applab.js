@@ -1846,8 +1846,8 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (window.dashboard &&
-      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
+  if (window.dashboard && (!dashboard.project.isEditing ||
+      (dashboard.project.current && dashboard.project.current.id))) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
@@ -25303,7 +25303,7 @@ AppStorage.tempChannelId =
 
 AppStorage.getChannelId = function() {
   // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.currentApp && dashboard.currentApp.id;
+  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
   return id || AppStorage.tempChannelId;
 };
 
