@@ -495,27 +495,7 @@ function addressStringToAB(addressString) {
 
 function addressStringToBinary(addressString) {
   var level = netsimGlobals.getLevelConfig();
-  // Actual user input, converted to a number[]
-  var addressParts = addressString.toString().split(/\D+/).map(function (stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
-
-  // Format, converted to a number[] where the numbers are bit-widths
-  var partWidths = level.addressFormat.split(/\D+/).map(function(stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
-
-  var partValue;
-  var binary = '';
-  for (var i = 0; i < partWidths.length; i++) {
-    partValue = i < addressParts.length ? addressParts[i] : 0;
-    binary = binary + dataConverters.intToBinary(partValue, partWidths[i]);
-  }
-  return binary;
+  return dataConverters.addressStringToBinary(addressString, level.addressFormat);
 }
 
 function addressStringToHex(addressString) {

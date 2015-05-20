@@ -330,27 +330,7 @@ Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
  * @returns {string} binary representation
  */
 Packet.Encoder.prototype.addressStringToBinary = function (address) {
-  // Actual user input, converted to a number[]
-  var addressParts = address.toString().split(/\D+/).map(function (stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
-
-  // Format, converted to a number[] where the numbers are bit-widths
-  var partWidths = this.addressFormat_.split(/\D+/).map(function(stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
-
-  var partValue;
-  var binary = '';
-  for (var i = 0; i < partWidths.length; i++) {
-    partValue = i < addressParts.length ? addressParts[i] : 0;
-    binary = binary + dataConverters.intToBinary(partValue, partWidths[i]);
-  }
-  return binary;
+  return dataConverters.addressStringToBinary(address, this.addressFormat_);
 };
 
 /**
