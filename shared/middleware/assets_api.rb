@@ -13,7 +13,7 @@ class AssetsApi < Sinatra::Base
     end
   end
 
-  @allowed_file_types = [
+  @@allowed_file_types = [
     'jpg',
     'jpeg',
     'gif',
@@ -36,14 +36,7 @@ class AssetsApi < Sinatra::Base
     s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}/(.+)$}.match(fileinfo.key)[1]
       mime_type = Sinatra::Base.mime_type(filename.split('.').last)
-      case mime_type.split('/').first
-        when 'image'
-          category = 'image'
-        when 'audio'
-          category = 'sound'
-        else
-          halt(500, 'Unexpected mime type: ' + mime_type)
-      end
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
       {filename:filename, category:category, size:fileinfo.size}
     end.to_json
   end
@@ -76,7 +69,7 @@ class AssetsApi < Sinatra::Base
   put %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
     file_type = filename.split('.').last
-    unsupported_media_type unless file_type
+    unsupported_media_type unless @@allowed_file_types.include?(file_type)
     mime_type = request.content_type.to_s.split(';').first
     unsupported_media_type unless  mime_type == Sinatra::Base.mime_type(file_type)
 
