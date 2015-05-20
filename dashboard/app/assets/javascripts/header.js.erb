@@ -258,6 +258,9 @@ function remixProject() {
   });
 }
 
+// Namespace for manipulating the header DOM.
+dashboard.header = {};
+
 // Minimal project header for legacy /c/ share pages.
 dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
