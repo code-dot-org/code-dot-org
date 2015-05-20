@@ -1341,7 +1341,7 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.fontSize = value + 'px';
       break;
     case 'image':
-      // For now, we stretch to image to fit the element
+      // For now, we stretch the image to fit the element
       var width = Applab.getOuterWidth(element);
       var height = Applab.getOuterHeight(element);
       element.style.backgroundImage = 'url(' + value + ')';
@@ -1353,8 +1353,7 @@ Applab.onPropertyChange = function(element, name, value) {
       $(element).toggleClass('design-mode-hidden', value === true);
       break;
     default:
-      console.warn("unknown property name " + name);
-      break;
+      throw "unknown property name " + name;
   }
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
@@ -1374,6 +1373,9 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
+  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
+  // things like $().data or $().draggable('destroy'), so I just manually
+  // remove the classes instead.
   $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
   return s.serializeToString(clone);
 };
