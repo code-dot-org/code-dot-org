@@ -201,6 +201,21 @@ ClientApiRequest.prototype.set = function (key, value, callback) {
 };
 
 /**
+ * Channel-specific storage for assets such as images and sounds.
+ * Objects stored in API must have a name representing a filename
+ * with the pattern <name>.<extension> where <extension> is one of:
+ * 'jpg', 'jpeg', 'gif', 'png' or 'mp3'. This API supports
+ * readAll(), read(), update() and delete(), but not post().
+ * @param channel_publickey
+ * @constructor
+ */
+var AssetsApi = function(channel_publickey) {
+  ClientApiRequest.call(this, '/v3/assets/' + channel_publickey);
+};
+AssetsApi.inherits(ClientApiRequest);
+
+
+/**
  * API for accessing channel resources on the server.
  * @constructor
  */
@@ -267,6 +282,7 @@ var UserPropertyBagApi = function (channel_publickey) {
 UserPropertyBagApi.inherits(ClientApiRequest);
 
 module.exports = {
+  AssetsApi: AssetsApi,
   ChannelsApi: ChannelsApi,
   SharedTableApi: SharedTableApi,
   UserTableApi: UserTableApi,
