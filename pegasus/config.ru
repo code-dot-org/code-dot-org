@@ -3,6 +3,9 @@ require File.expand_path('../router', __FILE__)
 require 'varnish_environment'
 use VarnishEnvironment
 
+require 'assets_api'
+use AssetsApi
+
 require 'channels_api'
 use ChannelsApi
 

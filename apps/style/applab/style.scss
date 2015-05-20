@@ -1,4 +1,5 @@
 @import '../common';
+@import "colpick.css";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -518,4 +519,13 @@ button.arrow:focus {
   background-image: url('/blockly/media/skins/applab/gutterWarn.png');
   background-size: 16px 16px;
   background-position: 2px 0px;
+}
+
+.design-mode-hidden {
+  visibility: hidden;
+}
+
+.divApplabDesignMode .design-mode-hidden {
+  visibility: visible;
+  opacity: 0.3;
 }

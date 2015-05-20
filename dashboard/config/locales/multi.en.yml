@@ -345,6 +345,11 @@ en:
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
         The unicorn's x value decreases: The unicorn's x value decreases
+      ECSPD2 question:
+        title: title
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?

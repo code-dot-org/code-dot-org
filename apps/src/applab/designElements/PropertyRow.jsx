@@ -9,17 +9,25 @@ var PropertyRow = React.createClass({
     handleChange: React.PropTypes.func
   },
 
+  getInitialState: function () {
+    return {
+      value: this.props.initialValue
+    };
+  },
+
   handleChangeInternal: function(event) {
     var value = event.target.value;
     this.props.handleChange(value);
+    this.setState({value: value});
   },
+
   render: function() {
     return (
       <tr>
         <td>{this.props.desc}</td>
         <td>
           <input
-            defaultValue={this.props.initialValue}
+            value={this.state.value}
             onChange={this.handleChangeInternal}/>
         </td>
       </tr>
