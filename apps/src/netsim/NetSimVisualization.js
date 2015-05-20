@@ -660,9 +660,9 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
  *   | L-R |
  *
  * Three or more nodes: Distributed around center of frame
- * 3:    O    4:  O      5: O  O    6:O   O
+ * 3:    O    4:  O      5: O  O    6: O O
  *   L          L   O      L          L   O
- *       O        O         O  O      O   O
+ *       O        O         O  O       O O
  */
 NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function () {
   /** @type {Array.<NetSimVizNode>} */
