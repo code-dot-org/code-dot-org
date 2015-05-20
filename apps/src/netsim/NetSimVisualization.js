@@ -322,7 +322,7 @@ NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
     }
   }, this);
 
-  // Generate new wires where they don't already exist
+  // Generate new wires
   var connections = this.generateBroadcastModeConnections_();
   connections.forEach(function (connectedPair) {
     var newFakeWire = new NetSimFakeVizWire(connectedPair,

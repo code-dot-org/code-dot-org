@@ -23,7 +23,7 @@ var NetSimVizNode = require('./NetSimVizNode');
  *
  * @param {{nodeA:{number}, nodeB:{number}}} endpoints
  * @param {function} getEntityByID - Allows this wire to search
- *        for other entities in the simulation
+ *        for entities in the simulation
  * @constructor
  * @augments NetSimVizElement
  */
