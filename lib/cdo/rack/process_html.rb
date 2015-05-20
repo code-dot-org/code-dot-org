@@ -1,6 +1,7 @@
-# Base class for processing html
+# Base Rack middleware class for processing html through a Nokogiri filter on every request.
 require 'rack/utils'
 require 'nokogiri'
+require 'cdo/pegasus/string'
 
 module Rack
   class ProcessHtml
@@ -8,11 +9,13 @@ module Rack
     # Create Rack::ProcessHtml middleware.
     #
     # [app] rack app instance
-    # [options] hash of middleware options, i.e.
+    # [options] hash of middleware options:
+    #           'xpath' - XPath 1.0 string returning the set of nodes to process.
     #           'min_length' - minimum content length to trigger processing (defaults to 1024 bytes)
     #           'skip_if' - a lambda which, if evaluates to true, skips processing
     #           'include' - a lambda (Ruby 1.9+) or string denoting paths to be included in processing
     #           'exclude' - a lambda (Ruby 1.9+) or string denoting paths to be excluded in processing
+    # [block] Array of captured nodes passed as argument to block
     def initialize(app, options = {}, &block)
       @app = app
 
@@ -33,14 +36,9 @@ module Rack
         return [status, headers, body]
       end
 
-      puts "Processing!!"
-      request = Request.new(env)
-
-
       content = body.reduce(:+).tap{|x|x.close if x.respond_to? :close}
       doc = ::Nokogiri::HTML(content)
       process_doc(doc)
-
       content = doc.to_html
       headers['content-length'] = content.bytesize.to_s
       response = [content]
@@ -51,7 +49,6 @@ module Rack
     private
 
     def process_doc(doc)
-      puts "Processing doc:#{doc}"
       nodes = ::Nokogiri::XML::NodeSet.new(doc)
       nodes += doc.xpath(@xpath) unless @xpath.nil?
       @block.call(nodes) unless nodes.empty?
@@ -65,36 +62,32 @@ module Rack
         return false
       end
 
-      # Skip if :content_types provided and response isn't [that type].
+      # Skip if content-type header doesn't include one of allowed types.
       if @content_types
         content_type = headers['Content-Type'] || 'application/octet-stream'
-        return content_type.include_one_of?(@content_types)
+        return false unless content_type.include_one_of?(@content_types)
       end
 
       # Skip if response body is too short
       if @min_length > headers['Content-Length'].to_i
-        puts "not min length: content-length=#{headers['Content-Length']}"
         return false
       end
 
       # Skip if :include is provided and evaluates to false
       if @include &&
           !(@include === env['PATH_INFO'])
-        puts "include provided"
         return false
       end
 
       # Skip if :exclude is provided and evaluates to true
       if @exclude &&
           @exclude === env['PATH_INFO']
-        puts "exclude provided"
         return false
       end
 
       # Skip if :skip_if lambda is provided and evaluates to true
       if @skip_if &&
           @skip_if.call(env, status, headers, body)
-        puts "skip if provided"
         return false
       end
 
