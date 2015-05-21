@@ -1,5 +1,5 @@
 var React = require('react');
-
+var AssetsApi = require('./manageAssets/clientApi');
 var AssetRow = require('./manageAssets/assetRow.jsx');
 
 var errorMessages = {
@@ -25,16 +25,11 @@ module.exports = React.createClass({
 
   componentWillMount: function () {
     // TODO: Use Dave's client api when it's finished.
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', (function () {
+    AssetsApi.ajax('GET', '', function (xhr) {
       this.setState({assets: JSON.parse(xhr.responseText)});
-    }).bind(this));
-    xhr.addEventListener('error', (function () {
+    }.bind(this), function (xhr) {
       this.setState({uploadStatus: 'Error loading asset list: ' + getErrorMessage(xhr.status)});
-    }).bind(this));
-
-    xhr.open('GET', '/v3/assets/' + dashboard.project.current.id, true);
-    xhr.send();
+    }.bind(this));
   },
 
   fileUploadClicked: function () {
@@ -47,17 +42,13 @@ module.exports = React.createClass({
     var uploadStatus = document.querySelector('#uploadStatus');
 
     // TODO: Use Dave's client api when it's finished.
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', (function () {
+    AssetsApi.ajax('PUT', file.name, function (xhr) {
       this.state.assets.push(JSON.parse(xhr.responseText));
       this.setState({uploadStatus: 'File "' + file.name + '" successfully uploaded!'});
-    }).bind(this));
-    xhr.addEventListener('error', (function () {
+    }.bind(this), function (xhr) {
       this.setState({uploadStatus: 'Error uploading file: ' + getErrorMessage(xhr.status)});
-    }).bind(this));
+    }.bind(this), file);
 
-    xhr.open('PUT', '/v3/assets/' + dashboard.project.current.id + '/' + file.name, true);
-    xhr.send(file);
     this.setState({uploadStatus: 'Uploading...'});
   },
 
