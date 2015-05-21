@@ -9,9 +9,11 @@ def replace_hostname(url)
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
-  # Convert http to https, and x.y.code.org to x-y.code.org
-  url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
-  url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
+  # Convert http to https
+  url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
+  # Convert x.y.code.org to x-y.code.org
+  url = url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
+  url
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
