@@ -10616,20 +10616,27 @@ exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
  */
 exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   var state = interpreter.stateStack[0];
+  var type = state.node.type;
   if (state.done) {
     return true;
   }
-  if (state.node.type === "ForStatement") {
+  if (type === "ForStatement") {
     var mode = state.mode || 0;
     // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
     // but not mode 1 (test) or mode 2 (body) while unwinding...
     return mode === 0 || mode === 3;
   }
-  switch (state.node.type) {
+  if (type === "SwitchStatement") {
+    // Safe to skip over SwitchStatement's except the very start (before a
+    // switchValue has been set):
+    return typeof state.switchValue !== 'undefined';
+  }
+  switch (type) {
     // Declarations:
     case "VariableDeclaration":
     // Statements:
     case "BlockStatement":
+    case "BreakStatement":
     // All Expressions:
     case "ThisExpression":
     case "ArrayExpression":
@@ -10704,9 +10711,9 @@ function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
   range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-  range.start.col = start - cumulativeLength[range.start.row];
+  range.start.column = start - cumulativeLength[range.start.row];
   range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
-  range.end.col = end - cumulativeLength[range.end.row];
+  range.end.column = end - cumulativeLength[range.end.row];
 
   selection.setSelectionRange(range);
 }
@@ -10733,7 +10740,7 @@ exports.selectCurrentCode = function (interpreter,
     // Only show selection if the node being executed is inside the user's
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
+    if (start >= 0 && start < userCodeLength && end <= userCodeLength) {
       userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
@@ -10747,6 +10754,13 @@ exports.selectCurrentCode = function (interpreter,
       } else {
         var selection = editor.aceEditor.getSelection();
         createSelection(selection, cumulativeLength, start, end);
+      }
+    } else {
+      if (editor.currentlyUsingBlocks) {
+        editor.clearLineMarks();
+      } else {
+        var tempSelection = editor.aceEditor.getSelection();
+        tempSelection.clearSelection();
       }
     }
   } else {

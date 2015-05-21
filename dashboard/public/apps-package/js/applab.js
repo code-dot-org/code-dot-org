@@ -68,6 +68,8 @@ levels.simple = {
 };
 
 levels.custom = {
+  'freePlay': true,
+  'editCode': true,
   'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
@@ -209,8 +211,6 @@ levels.custom = {
 };
 
 levels.ec_simple = utils.extend(levels.custom, {
-  'freePlay': true,
-  'editCode': true,
 });
 
 // Functions in Advanced category currently disabled in all levels:
@@ -1047,11 +1047,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
-        // If we've arrived at a BlockStatement, set doneUserLine even though the
-        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
-        // sense (otherwise we'll skip over the first line in loops):
+        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
+        // though the the stateStack doesn't have "done" set, so that stepping in the
+        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
+        var nodeType = Applab.interpreter.stateStack[0].node.type;
         doneUserLine = doneUserLine ||
-          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
+          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
+
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
