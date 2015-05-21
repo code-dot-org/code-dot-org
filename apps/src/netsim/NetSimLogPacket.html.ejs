@@ -152,7 +152,7 @@
         logRow(EncodingType.BINARY,
             formatBinary(toAddress, 4),
             formatBinary(fromAddress, 4),
-            formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+            formatBinary(packetIndex, level.packetCountBitWidth) + ' ' + formatBinary(packetCount, level.packetCountBitWidth),
             formatBinary(message, chunkSize));
 
         logRow(EncodingType.A_AND_B,
