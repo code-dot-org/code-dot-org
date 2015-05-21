@@ -199,11 +199,16 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
     return false;
   }
 
-  var levelConfig = netsimGlobals.getLevelConfig();
-
-  // Permissible connection limited by level configuration
   var isClient = (connectionTarget.getNodeType() === NodeType.CLIENT);
   var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
+
+  // Can't connect to full routers
+  if (isRouter && connectionTarget.isFull()) {
+    return false;
+  }
+
+  // Permissible connection limited by level configuration
+  var levelConfig = netsimGlobals.getLevelConfig();
   var allowClients = levelConfig.canConnectToClients;
   var allowRouters = levelConfig.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
