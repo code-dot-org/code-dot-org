@@ -17,6 +17,7 @@ module.exports = React.createClass({
 
   getInitialState: function () {
     return {
+      assets: this.props.assets,
       uploadStatus: ''
     };
   },
@@ -32,7 +33,7 @@ module.exports = React.createClass({
 
     var xhr = new XMLHttpRequest();
     xhr.addEventListener('load', (function () {
-      this.props.assets.push({name: file.name, type: 'unknown'});
+      this.state.assets.push({name: file.name, type: 'unknown'});
       this.setState({uploadStatus: 'File "' + file.name + '" successfully uploaded!'});
     }).bind(this));
     xhr.addEventListener('error', (function () {
@@ -44,15 +45,26 @@ module.exports = React.createClass({
     this.setState({uploadStatus: 'Uploading...'});
   },
 
+  deleteFile: function (name) {
+    console.log('delete', name); // TODO: Remove!
+    this.setState({
+      assets: this.state.assets.filter(function (asset) {
+        return asset.name !== name;
+      })
+    });
+  },
+
   render: function() {
     return (
       <div className="modal-content" style={{margin: 0}}>
         <p className="dialog-title">Manage Assets</p>
         <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
           <table style={{width: '100%'}}>
-            {this.props.assets.map(function (asset) {
-              return <AssetRow name={asset.name} type={asset.type} src={asset.src}/>;
-            })}
+            <tbody>
+              {this.state.assets.map(function (asset) {
+                return <AssetRow name={asset.name} type={asset.type} src={asset.src} delete={this.deleteFile.bind(this, asset.name)}/>;
+              }.bind(this))}
+            </tbody>
           </table>
         </div>
         <input type="file" id="uploader" style={{display: 'none'}} onChange={this.upload}/>
