@@ -885,6 +885,8 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
+      // TODO (brent) - seems a little gross that we've made this part of a
+      // template shared across all apps
       hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
@@ -1049,6 +1051,8 @@ Applab.init = function(config) {
 
     // Allow elements to be dragged and dropped from the design mode
     // element tray to the play space.
+    // TODO (brent) - get rid of this. requires support jquery-ui, and possibly
+    // also tooltipster in unit tests
     if (window.$) {
       $('.new-design-element').draggable({
         containment:"#codeApp",
@@ -1081,7 +1085,6 @@ Applab.init = function(config) {
         }
       });
     }
-
   }
 };
 
@@ -1436,7 +1439,7 @@ Applab.reset = function(first) {
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
 
-  var allowDragging = isDesignMode && !Applab.isRunning;
+  var allowDragging = isDesignMode && !Applab.isRunning();
   Applab.parseFromLevelHtml(newDivApplab, allowDragging);
   if (isDesignMode) {
     Applab.clearProperties();

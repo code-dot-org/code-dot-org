@@ -24,6 +24,9 @@ var CheckboxProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')} />
+        {/*
+        // TODO (brent) setting width/height on a checkbox apparently doesnt
+        // work.
         <PropertyRow
           desc={'width (px)'}
           initialValue={parseInt(element.style.width, 10)}
@@ -31,7 +34,8 @@ var CheckboxProperties = React.createClass({
         <PropertyRow
           desc={'height (px)'}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'height')} />s
+        */}
         <PropertyRow
           desc={'x position (px)'}
           initialValue={parseInt(element.style.left, 10)}
