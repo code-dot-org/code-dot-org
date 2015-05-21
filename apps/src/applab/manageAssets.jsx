@@ -13,7 +13,7 @@ function getErrorMessage(status) {
 
 module.exports = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func.isRequired
+    assetChosen: React.PropTypes.func
   },
 
   getInitialState: function () {
@@ -83,7 +83,7 @@ module.exports = React.createClass({
           {this.state.assets.map(function (asset) {
             return <AssetRow key={asset.filename} name={asset.filename} type={asset.category}
                 delete={this.deleteAssetRow.bind(this, asset.filename)}
-                choose={this.props.assetChosen.bind(this, asset.filename)}/>;
+                choose={this.props.assetChosen && this.props.assetChosen.bind(this, AssetsApi.basePath + '/' + asset.filename)}/>;
           }.bind(this))}
             </tbody>
           </table>

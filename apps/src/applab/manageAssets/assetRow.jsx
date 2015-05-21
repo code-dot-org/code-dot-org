@@ -50,12 +50,16 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var actions;
+    var actions, choseImage;
+    if (this.props.choose) {
+      choseImage = <button onClick={this.props.choose}>Set as Image</button>;
+    }
+
     switch (this.state.action) {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <button onClick={this.props.choose}>Set as Image</button>
+            {choseImage}
             <button><i className="fa fa-eye"></i></button>
             <button className="btn-danger" onClick={this.confirmDelete}><i className="fa fa-trash-o"></i></button>
             {this.state.actionText}

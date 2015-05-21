@@ -5,6 +5,7 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -60,7 +61,7 @@ var ButtonProperties = React.createClass({
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         {/* eventually this will be a ImageChooserPropertyRow */ }
-        <PropertyRow
+        <ImagePickerPropertyRow
           desc={'image'}
           initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
           handleChange={this.props.handleChange.bind(this, 'image')} />
