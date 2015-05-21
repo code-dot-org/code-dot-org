@@ -608,7 +608,13 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
-  return i18n.routerX({
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    return i18n.roomNumberX({
+      x: this.entityID
+    });
+  }
+
+  return i18n.routerNumberX({
     x: this.entityID
   });
 };
@@ -632,6 +638,8 @@ NetSimRouterNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getStatus = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   // Determine status based on cached wire data
   var cachedWireRows = this.shard_.wireTable.readAllCached();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
@@ -639,6 +647,12 @@ NetSimRouterNode.prototype.getStatus = function () {
   }, this);
 
   if (incomingWireRows.length === 0) {
+    if (levelConfig.broadcastMode) {
+      return i18n.roomStatusNoConnections({
+        maximumClients: MAX_CLIENT_CONNECTIONS
+      });
+    }
+
     return i18n.routerStatusNoConnections({
       maximumClients: MAX_CLIENT_CONNECTIONS
     });
@@ -656,8 +670,21 @@ NetSimRouterNode.prototype.getStatus = function () {
   }).join(', ');
 
   if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+    if (levelConfig.broadcastMode) {
+      return i18n.roomStatusFull({
+        connectedClients: connectedNodeNames
+      });
+    }
+
     return i18n.routerStatusFull({
       connectedClients: connectedNodeNames
+    });
+  }
+
+  if (levelConfig.broadcastMode) {
+    return i18n.roomStatus({
+      connectedClients: connectedNodeNames,
+      remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
     });
   }
 
@@ -1274,8 +1301,78 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
       return;
     }
 
-    this.forwardMessageToRecipient_(message, onComplete);
+    var levelConfig = netsimGlobals.getLevelConfig();
+    if (levelConfig.broadcastMode) {
+      logger.info("Forwarding to all");
+      this.forwardMessageToAll_(message, onComplete);
+    } else {
+      this.forwardMessageToRecipient_(message, onComplete);
+    }
   }.bind(this));
+};
+
+/**
+ * Forward the given message to all nodes that are connected to this router.
+ * This is effectively "hub" operation.
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete) {
+  // Assumptions for broadcast mode:
+  // 1. We can totally ignore packet headers, because addresses don't matter
+  // 2. We won't send to the Auto-DNS, since DNS make no sense with no addresses
+
+  // Grab the list of all connected nodes
+  var connectedNodeIDs = this.myWireRowCache_.map(function (wireRow) {
+    return wireRow.localNodeID;
+  });
+
+  this.forwardMessageToNodeIDs_(message, connectedNodeIDs, function (err, result) {
+    if (err) {
+      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+    } else {
+      this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
+    }
+    onComplete(err, result);
+  }.bind(this));
+};
+
+/**
+ * Forward the given message to the list of node IDs provided.
+ * This function works by calling itself recursively with the tail of the
+ * node ID list each time it finishes sending one of the messages, so
+ * timing on this "broadcast" won't be exactly correct - that's probably okay
+ * though, especially at the point in the curriculum where this is used.
+ * @param {NetSimMessage} message
+ * @param {number[]} nodeIDs
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
+    nodeIDs, onComplete) {
+  if (nodeIDs.length === 0) {
+    // All done!
+    onComplete(null);
+    return;
+  }
+
+  // Send to the first recipient, then recurse on the remaining recipients
+  var nextRecipientNodeID = nodeIDs[0];
+  NetSimMessage.send(
+      this.shard_,
+      this.entityID,
+      nextRecipientNodeID,
+      nextRecipientNodeID,
+      message.payload,
+      function (err) {
+        if (err) {
+          onComplete(err);
+          return;
+        }
+        this.forwardMessageToNodeIDs_(message, nodeIDs.slice(1), onComplete);
+      }.bind(this)
+  );
 };
 
 /**

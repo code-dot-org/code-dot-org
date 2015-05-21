@@ -35,6 +35,7 @@ var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var React = require('react');
+
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignProperties = require('./designProperties.jsx');
@@ -735,11 +736,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
-        // If we've arrived at a BlockStatement, set doneUserLine even though the
-        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
-        // sense (otherwise we'll skip over the first line in loops):
+        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
+        // though the the stateStack doesn't have "done" set, so that stepping in the
+        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
+        var nodeType = Applab.interpreter.stateStack[0].node.type;
         doneUserLine = doneUserLine ||
-          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
+          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
+
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
@@ -884,6 +887,8 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
+      // TODO (brent) - seems a little gross that we've made this part of a
+      // template shared across all apps
       hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
@@ -1048,6 +1053,8 @@ Applab.init = function(config) {
 
     // Allow elements to be dragged and dropped from the design mode
     // element tray to the play space.
+    // TODO (brent) - get rid of this. requires support jquery-ui, and possibly
+    // also tooltipster in unit tests
     if (window.$) {
       $('.new-design-element').draggable({
         containment:"#codeApp",
@@ -1080,7 +1087,6 @@ Applab.init = function(config) {
         }
       });
     }
-
   }
 };
 
@@ -1216,59 +1222,13 @@ Applab.onDivApplabClick = function (event) {
     return;
   }
   event.preventDefault();
-  if (event.target.id === 'divApplab') {
+
+  var element = event.target;
+  if (element.id === 'divApplab') {
     Applab.clearProperties();
   } else {
-    Applab.editElementProperties(event.target);
+    Applab.editElementProperties(element);
   }
-};
-
-/**
- * @param element {Element}
- * @returns {number} The outerWidth (width + margin) of the element in pixels,
- * or NaN if element's css width or margin are not defined.
- */
-Applab.getOuterWidth = function(element) {
-  var marginLeft = parseInt($(element).css('margin-left'), 10);
-  var marginRight = parseInt($(element).css('margin-right'), 10);
-  return parseInt(element.style.width, 10) + marginLeft + marginRight;
-};
-
-/**
- * Sets element width equal to outerWidth minus margin,
- * or to '' if margin is undefined.
- * @param element {Element}
- * @param outerWidth {number} Desired element outerWidth in pixels.
- */
-Applab.setOuterWidth = function(element, outerWidth) {
-  var marginLeft = parseInt($(element).css('margin-left'), 10);
-  var marginRight = parseInt($(element).css('margin-right'), 10);
-  var width = +outerWidth - marginLeft - marginRight;
-  element.style.width = isNaN(width) ? '' : width + 'px';
-};
-
-/**
- * @param element {Element}
- * @returns {number} the outerHeight (height + margin) of the element in pixels,
- * or NaN if element's css height or margin are not defined.
- */
-Applab.getOuterHeight = function(element) {
-  var marginTop = parseInt($(element).css('margin-top'), 10);
-  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
-  return parseInt(element.style.height, 10) + marginTop + marginBottom;
-};
-
-/**
- * Sets element height equal to outerHeight minus margin,
- * or to '' if margin is undefined.
- * @param element {Element}
- * @param outerHeight {number} Desired element outerHeight in pixels.
- */
-Applab.setOuterHeight = function(element, outerHeight) {
-  var marginTop = parseInt($(element).css('margin-top'), 10);
-  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
-  var height = +outerHeight - marginTop - marginBottom;
-  element.style.height = isNaN(height) ? '' : height + 'px';
 };
 
 Applab.editElementProperties = function(element) {
@@ -1322,13 +1282,40 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.top = value + 'px';
       break;
     case 'width':
-      Applab.setOuterWidth(element, value);
+      element.style.width = value + 'px';
       break;
     case 'height':
-      Applab.setOuterHeight(element, value);
+      element.style.height = value + 'px';
       break;
     case 'text':
       $(element).text(value);
+      break;
+    case 'textColor':
+      element.style.color = value;
+      break;
+    case 'backgroundColor':
+      element.style.backgroundColor = value;
+      break;
+    case 'fontSize':
+      element.style.fontSize = value + 'px';
+      break;
+    case 'image':
+      // For now, we stretch the image to fit the element
+      var width = parseInt(element.style.width, 10);
+      var height = parseInt(element.style.height, 10);
+      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundSize = width + 'px ' + height + 'px';
+      break;
+    case 'hidden':
+      // Add a class that shows as 30% opacity in design mode, and invisible
+      // in code mode.
+      $(element).toggleClass('design-mode-hidden', value === true);
+      break;
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      element.checked = value;
+      element.setAttribute('checked', value ? 'checked' : null);
       break;
     default:
       throw "unknown property name " + name;
@@ -1351,7 +1338,10 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
-  $(clone).find('*').removeAttr('class');
+  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
+  // things like $().data or $().draggable('destroy'), so I just manually
+  // remove the classes instead.
+  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
   return s.serializeToString(clone);
 };
 
@@ -1369,6 +1359,10 @@ Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (allowDragging) {
     Applab.makeDraggable(children);
   }
+
+  children.each(function () {
+    elementLibrary.onDeserialize($(this)[0]);
+  });
 };
 
 /**
@@ -1397,6 +1391,10 @@ Applab.clearEventHandlersKillTickLoop = function() {
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
   }
+};
+
+Applab.isRunning = function () {
+  return $('#resetButton').is(':visible');
 };
 
 /**
@@ -1442,8 +1440,8 @@ Applab.reset = function(first) {
   }
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  var isRunning = window.$ && $('#resetButton').is(':visible');
-  var allowDragging = isDesignMode && !isRunning;
+
+  var allowDragging = isDesignMode && !Applab.isRunning();
   Applab.parseFromLevelHtml(newDivApplab, allowDragging);
   if (isDesignMode) {
     Applab.clearProperties();
@@ -1510,8 +1508,8 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (window.dashboard &&
-      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
+  if (window.dashboard && (!dashboard.project.isEditing ||
+      (dashboard.project.current && dashboard.project.current.id))) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
@@ -1912,6 +1910,8 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   Applab.toggleDragging(enable);
 };
@@ -2859,16 +2859,30 @@ Applab.setPosition = function (opts) {
   apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
   apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
   apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
-  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
 
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.position = 'absolute';
-    div.style.left = String(opts.left) + 'px';
-    div.style.top = String(opts.top) + 'px';
-    div.style.width = String(opts.width) + 'px';
-    div.style.height = String(opts.height) + 'px';
+  var el = document.getElementById(opts.elementId);
+  if (divApplab.contains(el)) {
+    el.style.position = 'absolute';
+    el.style.left = opts.left + 'px';
+    el.style.top = opts.top + 'px';
+    var setWidthHeight = false;
+    // don't set width/height if
+    // (1) both parameters are undefined AND
+    // (2) width/height already specified OR IMG element with width/height attributes
+    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
+        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
+        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
+            setWidthHeight = true;
+        }
+    } else {
+        setWidthHeight = true;
+    }
+    if (setWidthHeight) {
+        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+        el.style.width = opts.width + 'px';
+        el.style.height = opts.height + 'px';
+    }
     return true;
   }
   return false;
