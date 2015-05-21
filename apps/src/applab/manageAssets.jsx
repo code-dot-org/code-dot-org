@@ -49,7 +49,7 @@ module.exports = React.createClass({
     // TODO: Use Dave's client api when it's finished.
     var xhr = new XMLHttpRequest();
     xhr.addEventListener('load', (function () {
-      this.state.assets.push({filename: file.name}); // TODO: Use response from 'PUT'.
+      this.state.assets.push(JSON.parse(xhr.responseText));
       this.setState({uploadStatus: 'File "' + file.name + '" successfully uploaded!'});
     }).bind(this));
     xhr.addEventListener('error', (function () {
@@ -90,8 +90,8 @@ module.exports = React.createClass({
           <table style={{width: '100%'}}>
             <tbody>
           {this.state.assets.map(function (asset) {
-            return <AssetRow key={asset.filename} name={asset.filename} type={asset.type}
-                src={asset.src} delete={this.deleteAssetRow.bind(this, asset.filename)}
+            return <AssetRow key={asset.filename} name={asset.filename} type={asset.category}
+                delete={this.deleteAssetRow.bind(this, asset.filename)}
                 choose={this.props.assetChosen.bind(this, asset.filename)}/>;
           }.bind(this))}
             </tbody>

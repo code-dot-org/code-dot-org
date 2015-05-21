@@ -6,10 +6,11 @@ var defaultIcons = {
   video: 'fa fa-video-camera'
 };
 
-function getThumbnail(type, src) {
+function getThumbnail(type, name) {
   switch (type) {
     case 'image':
-      return <img src={src} style={{width: 'auto', maxWidth: '100%', height: 'auto', maxHeight: '100%', zoom: 2}}/>;
+      return <img src={'/v3/assets/' + dashboard.project.current.id + '/' + name}
+          style={{width: 'auto', maxWidth: '100%', height: 'auto', maxHeight: '100%', zoom: 2, marginTop: '50%', transform: 'translateY(-50%)'}}/>;
     default:
       return <i className={defaultIcons[type] || 'fa fa-question'} style={{margin: '15px 0', fontSize: '32px'}}></i>;
   }
@@ -19,7 +20,6 @@ module.exports = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video', 'unknown']).isRequired,
-    src: React.PropTypes.string,
     choose: React.PropTypes.func.isRequired,
     delete: React.PropTypes.func.isRequired
   },
@@ -88,7 +88,7 @@ module.exports = React.createClass({
       <tr className="assetRow">
         <td width="80"><div className="assetThumbnail" style={{
           width: '60px', height: '60px', margin: '10px auto', background: '#eee', border: '1px solid #ccc', textAlign: 'center'
-        }}>{getThumbnail(this.props.type, this.props.src)}</div></td>
+        }}>{getThumbnail(this.props.type, this.props.name)}</div></td>
         <td>{this.props.name}</td>
       {actions}
       </tr>
