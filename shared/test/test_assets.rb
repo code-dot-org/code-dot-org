@@ -15,7 +15,7 @@ class AssetsTest < Minitest::Unit::TestCase
 
   def delete_channel
     @channels.delete "/v3/channels/#{@channel_id}"
-    #assert @channels.last_response.successful?
+    assert @channels.last_response.successful?
   end
 
   def list()
@@ -50,28 +50,28 @@ class AssetsTest < Minitest::Unit::TestCase
 
     self.create_channel
 
-    imageFilename = 'dog.jpg'
-    imageBody = 'stub-image-contents'
+    image_filename = 'dog.jpg'
+    image_body = 'stub-image-contents'
 
-    actualImageInfo = JSON.parse(put(imageFilename, imageBody, 'image/jpeg'))
-    expectedImageInfo = {'filename' =>  imageFilename, 'category' =>  'image', 'size' =>  imageBody.length}
-    assert_fileinfo_equal(expectedImageInfo, actualImageInfo)
+    actual_image_info = JSON.parse(put(image_filename, image_body, 'image/jpeg'))
+    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
+    assert_fileinfo_equal(expected_image_info, actual_image_info)
 
-    soundFilename = 'woof.mp3'
-    soundBody = 'stub-sound-contents'
+    sound_filename = 'woof.mp3'
+    sound_body = 'stub-sound-contents'
 
-    actualSoundInfo = JSON.parse(put(soundFilename, soundBody, 'audio/mpeg'))
-    expectedSoundInfo = {'filename' =>  soundFilename, 'category' => 'audio', 'size' => soundBody.length}
-    assert_fileinfo_equal(expectedSoundInfo, actualSoundInfo)
+    actual_sound_info = JSON.parse(put(sound_filename, sound_body, 'audio/mpeg'))
+    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    assert_fileinfo_equal(expected_sound_info, actual_sound_info)
 
-    fileInfos = JSON.parse(list())
-    assert_fileinfo_equal(actualImageInfo, fileInfos[0])
-    assert_fileinfo_equal(actualSoundInfo, fileInfos[1])
+    file_infos = JSON.parse(self.list)
+    assert_fileinfo_equal(actual_image_info, file_infos[0])
+    assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
-    delete(imageFilename)
+    delete(image_filename)
     assert @assets.last_response.successful?
 
-    delete(soundFilename)
+    delete(sound_filename)
     assert @assets.last_response.successful?
 
     # unsupported media type
@@ -83,8 +83,8 @@ class AssetsTest < Minitest::Unit::TestCase
     assert_equal 415, @assets.last_response.status
 
     # invalid files are not uploaded
-    fileInfos = JSON.parse(list())
-    assert_equal 0, fileInfos.length
+    file_infos = JSON.parse(self.list)
+    assert_equal 0, file_infos.length
 
     delete('nonexistent.jpg')
     assert @assets.last_response.successful?
