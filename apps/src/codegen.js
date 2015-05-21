@@ -444,7 +444,7 @@ function createSelection (selection, cumulativeLength, start, end) {
   range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
   range.end.column = end - cumulativeLength[range.end.row];
 
-  selection.setSelectionRange(range);
+  selection.setSelectionRange(range, true);
 }
 
 /**
