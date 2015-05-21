@@ -1,5 +1,4 @@
-// TODO (brent) - hook up linter somewhere
-
+/* global $ */
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
@@ -8,7 +7,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
-var ButtonProperties = React.createClass({
+var LabelProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -59,20 +58,15 @@ var ButtonProperties = React.createClass({
           desc={'font size (px)'}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
-        {/* eventually this will be a ImageChooserPropertyRow */ }
-        <PropertyRow
-          desc={'image'}
-          initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
-          handleChange={this.props.handleChange.bind(this, 'image')} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
+
       </table>);
 
-    // TODO (brent):
+    // TODO:
     // bold/italics/underline (p2)
-    // shape (p2)
     // textAlignment (p2)
     // enabled (p2)
     // send back/forward
@@ -80,17 +74,19 @@ var ButtonProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: ButtonProperties,
-  create: function () {
-    var element = document.createElement('button');
-    element.appendChild(document.createTextNode('Button'));
-    element.style.padding = '0px';
-    element.style.margin = '2px';
-    element.style.height = '36px';
-    element.style.width = '76px';
+  PropertyTable: LabelProperties,
+
+  create: function() {
+    var element = document.createElement('label');
+    element.style.margin = '10px 5px';
+    element.style.width = '100px';
+    element.style.height = '100px';
     element.style.fontSize = '14px';
+    element.style.overflow = 'hidden';
+    element.style.wordWrap = 'break-word';
+    element.textContent = 'text';
     element.style.color = '#000000';
-    element.style.backgroundColor = '#eeeeee';
+    element.style.backgroundColor = '#ffffff';
 
     return element;
   }
