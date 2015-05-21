@@ -1,8 +1,11 @@
+/* global $ */
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
+var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
-var TextInputProperties = React.createClass({
+var CheckboxProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -21,10 +24,9 @@ var TextInputProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')} />
-        <PropertyRow
-          desc={'text'}
-          initialValue={$(element).text()}
-          handleChange={this.props.handleChange.bind(this, 'text')} />
+        {/*
+        // TODO (brent) setting width/height on a checkbox apparently doesnt
+        // work.
         <PropertyRow
           desc={'width (px)'}
           initialValue={parseInt(element.style.width, 10)}
@@ -32,7 +34,8 @@ var TextInputProperties = React.createClass({
         <PropertyRow
           desc={'height (px)'}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'height')} />s
+        */}
         <PropertyRow
           desc={'x position (px)'}
           initialValue={parseInt(element.style.left, 10)}
@@ -41,19 +44,43 @@ var TextInputProperties = React.createClass({
           desc={'y position (px)'}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <BooleanPropertyRow
+          desc={'hidden'}
+          initialValue={$(element).hasClass('design-mode-hidden')}
+          handleChange={this.props.handleChange.bind(this, 'hidden')} />
+        <BooleanPropertyRow
+          desc={'checked'}
+          initialValue={element.checked}
+          handleChange={this.props.handleChange.bind(this, 'checked')} />
+
       </table>);
+
+    // TODO:
+    // enabled (p2)
+    // send back/forward
   }
 });
 
 module.exports = {
-  PropertyTable: TextInputProperties,
+  PropertyTable: CheckboxProperties,
 
-  create: function () {
+  create: function() {
     var element = document.createElement('input');
-    element.style.margin = '5px 2px';
-    element.style.width = '236px';
-    element.style.height = '30px';
+    element.type = 'checkbox';
+    element.style.width = '12px';
+    element.style.height = '12px';
+
+    this.onDeserialize(element);
 
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // Disable click events unless running
+    $(element).on('click', function(e) {
+      if (!Applab.isRunning()) {
+        element.checked = !element.checked;
+      }
+    });
   }
 };
