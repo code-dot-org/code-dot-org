@@ -29,10 +29,14 @@ module Dashboard
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
-    config.middleware.insert_after SharedResources, ::Rack::UpgradeInsecureRequests
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites
+    end
+
+    unless Rails.env.production?
+      config.middleware.use ::Rack::UpgradeInsecureRequests
+      config.middleware.use ::Rack::ContentLength
     end
 
     config.encoding = 'utf-8'

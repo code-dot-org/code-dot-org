@@ -8,6 +8,7 @@ module Rack
   class UpgradeInsecureRequests < ProcessHtml
 
     # Hash of domains we want to rewrite links from http-explicit to protocol-relative urls.
+    # Most of the time, switching scheme from http to https will work, but we can add any exceptions to this list.
     # Only the first match is rewritten
     HTTPS_DOMAINS = {
         /\Ahttp:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
@@ -26,15 +27,33 @@ module Rack
 
     def call(env)
       super(env).tap do |_, headers, _|
-        # Add upgrade-insecure-requests header for compatible browsers
-        headers['Content-Security-Policy'] = 'upgrade-insecure-requests' unless not_ssl?(env)
+        # Add HSTS and CSP headers to enable strict transport security and prohibit+log mixed content.
+        # See 'recommendations' and 'reporting upgrades':
+        # http://www.w3.org/TR/upgrade-insecure-requests/#recommendations
+        # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
+        if ssl?(env)
+          headers['Strict-Transport-Security'] = 'max-age=86400'
+          # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
+          headers['Content-Security-Policy'] = [
+              "default-src 'self' https:",
+              "script-src 'self' https: 'unsafe-inline' 'unsafe-eval'",
+              "style-src 'self' https: 'unsafe-inline'",
+              "img-src 'self' https: data:",
+              "font-src 'self' https: data:",
+              "report-uri #{CDO.code_org_url('https/mixed-content')}"
+          ].join('; ')
+        end
       end
     end
 
     private
 
+    def ssl?(env)
+      Request.new(env).ssl?
+    end
+
     def not_ssl?(env, *_)
-      !(Request.new(env).ssl?)
+      !ssl?(env)
     end
 
     def process(node)
