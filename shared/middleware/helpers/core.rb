@@ -10,6 +10,10 @@ def bad_request()
   halt(400, "Bad Request\n")
 end
 
+def not_authorized()
+  halt(401, "Not authorized\n")
+end
+
 def not_found()
   halt(404, "Not found\n")
 end

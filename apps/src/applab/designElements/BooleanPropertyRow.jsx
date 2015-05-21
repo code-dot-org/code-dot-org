@@ -1,33 +1,31 @@
 var React = require('react');
 
-var PropertyRow = React.createClass({
+var BooleanPropertyRow = React.createClass({
   propTypes: {
-    initialValue: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
-    ]).isRequired,
+    initialValue: React.PropTypes.bool.isRequired,
     handleChange: React.PropTypes.func
   },
 
   getInitialState: function () {
     return {
-      value: this.props.initialValue
-    };
+      isChecked: this.props.initialValue
+    }
   },
 
   handleChangeInternal: function(event) {
-    var value = event.target.value;
+    var value = event.target.checked;
     this.props.handleChange(value);
-    this.setState({value: value});
+    this.setState({isChecked: value});
   },
-
+  
   render: function() {
     return (
       <tr>
         <td>{this.props.desc}</td>
         <td>
           <input
-            value={this.state.value}
+            type="checkbox"
+            checked={this.state.isChecked}
             onChange={this.handleChangeInternal}/>
         </td>
       </tr>
@@ -35,4 +33,4 @@ var PropertyRow = React.createClass({
   }
 });
 
-module.exports = PropertyRow;
+module.exports = BooleanPropertyRow;

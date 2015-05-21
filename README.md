@@ -114,33 +114,20 @@ Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blo
 
 ## Contributing
 
-We'd love to have you join our group of contributors!
+We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to Alice (alice@code.org), and we’ll be happy to match you with a project. You can start setting up with these next steps.
 
-### Before You Push
+1. Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
-Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
+2. [Join our community development HipChat room](http://www.hipchat.com/gBebkHP6g) for help getting set up, picking a task, etc. We're happy to have you! If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
 
-### Getting Started Contributing
-
-#### HipChat room
-
-[Join our community development HipChat room](http://www.hipchat.com/gBebkHP6g) for help getting set up, picking a task, etc. We're happy to have you!
-
-If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
-
-#### Contribution ideas
-
-We maintain a [Pivotal Tracker board](https://www.pivotaltracker.com/n/projects/1192642) with volunteer-friendly bug tasks, project ideas and small infrastructure/code quality opportunities here: https://www.pivotaltracker.com/n/projects/1192642
-
-If you'd like to grab a task, have ideas for projects or want to discuss an item, email [brian@code.org](mailto:brian@code.org) for a board invite.
+3. Get your build setup, following this README. Fork our repo and make sure to merge our staging branch in **WEEKLY** as we do update frequently.
 
 ## Submitting Contributions
+Please check your PR against our tests before submitting.
 
-### Code style
+#### Code style
 
 Running `rake lint` locally will find any Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
-
-### Testing your changes
 
 #### Manually
 
