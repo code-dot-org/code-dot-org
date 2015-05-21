@@ -10,14 +10,25 @@ var _ = utils.getLodash();
  */
 var nextElementIdMap = {};
 
-var elements = {
-  BUTTON: require('./button.jsx'),
-  LABEL: require('./label.jsx'),
-  TEXT_INPUT: require('./textInput.jsx'),
-  CHECKBOX: require('./checkbox.jsx')
+/**
+ * @readonly
+ * @enum {string}
+ */
+var ElementType = {
+  BUTTON: 'BUTTON',
+  LABEL: 'LABEL',
+  TEXT_INPUT: 'TEXT_INPUT',
+  CHECKBOX: 'CHECKBOX'
 };
 
+var elements = {};
+elements[ElementType.BUTTON] = require('./button.jsx');
+elements[ElementType.LABEL] = require('./label.jsx');
+elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
+elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
+
 module.exports = {
+  ElementType: ElementType,
   /**
    * Returns an element id with the given prefix which is unused within
    * the applab app's DOM.
@@ -75,14 +86,14 @@ module.exports = {
     var tagname = element.tagName.toLowerCase();
     switch (tagname) {
       case 'button':
-        return 'BUTTON';
+        return ElementType.BUTTON;
       case 'label':
-        return 'LABEL';
+        return ElementType.LABEL;
       case 'input':
         if (element.getAttribute('type') === 'checkbox') {
-          return 'CHECKBOX';
+          return ElementType.CHECKBOX;
         }
-        return 'TEXT_INPUT';
+        return ElementType.TEXT_INPUT;
     }
     throw new Error('unknown element type');
   },
