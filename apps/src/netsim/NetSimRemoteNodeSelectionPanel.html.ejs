@@ -2,8 +2,14 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
+var netsimGlobals = require('./netsimGlobals');
 var NodeType = require('./netsimConstants').NodeType;
 
+/** @type {function} */
+var getAssetUrl = netsimGlobals.getAssetUrlFunction();
+
+/** @type {netsimLevelConfiguration} */
+var levelConfig = netsimGlobals.getLevelConfig();
 
 /**
  * @typedef {Object} rowMetadata
@@ -169,8 +175,9 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });
 
-        if (!controller.hasOutgoingRequest() && showAddRouterButton) {
-          writeEmptyRow(buttonMarkup(i18n.addRouter(), 'netsim-lobby-add-router', ['secondary']));
+        if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
+          var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
+          writeEmptyRow(buttonMarkup(buttonText, 'netsim-lobby-add-router', ['secondary']));
         } else if (lobbyRows.length === 0) {
           writeEmptyRow(i18n.lobbyIsEmpty());
         }
@@ -195,7 +202,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeHeader(i18n.outgoingConnectionRequests());
           outgoingRequestRows.forEach(function (row) {
             var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="' + assetUrl('media/netsim/loading.gif') + '" />',
+              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
               otherName: row.displayName,
               otherStatus: row.status
             });
