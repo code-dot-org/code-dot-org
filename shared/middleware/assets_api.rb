@@ -98,11 +98,7 @@ class AssetsApi < Sinatra::Base
     s3 = Aws::S3::Client.new(region: 'us-east-1')
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
 
-    begin
-      s3.delete_object(bucket:CDO.assets_s3_bucket, key:key)
-    rescue Aws::S3::Errors::NoSuchKey
-      not_found
-    end
+    s3.delete_object(bucket:CDO.assets_s3_bucket, key:key)
     no_content
   end
 
