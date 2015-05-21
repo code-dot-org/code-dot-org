@@ -12,8 +12,7 @@ def replace_hostname(url)
   # Convert http to https
   url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
-  url = url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
-  url
+  url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
