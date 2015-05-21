@@ -60,6 +60,8 @@ course_names_to_old_new_renames.each do |course_name, old_to_new_levels|
     old_level_id = Level.find_by('name' => old_name).id
     new_level_id = Level.find_by('name' => new_name).id
 
+    puts "Converting level progress from #{old_name} to #{new_name}"
+
     UserLevel.where(level_id: old_level_id,
         script_id: script_id).find_each do |old_user_level|
       new_user_level = UserLevel.find_by(
