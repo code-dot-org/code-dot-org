@@ -91,7 +91,7 @@ module.exports = {
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
     element.style.color = '#000000';
-    element.style.backgroundColor = '#ffffff';
+    element.style.backgroundColor = '';
 
     return element;
   }
