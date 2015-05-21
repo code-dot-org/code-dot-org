@@ -31,6 +31,7 @@ module.exports = React.createClass({
     var file = document.querySelector('#uploader').files[0];
     var uploadStatus = document.querySelector('#uploadStatus');
 
+    // TODO: Use Dave's client api when it's finished.
     var xhr = new XMLHttpRequest();
     xhr.addEventListener('load', (function () {
       this.state.assets.push({name: file.name, type: 'unknown'});
@@ -45,13 +46,13 @@ module.exports = React.createClass({
     this.setState({uploadStatus: 'Uploading...'});
   },
 
-  deleteFile: function (name) {
-    console.log('delete', name); // TODO: Remove!
+  deleteAssetRow: function (name) {
     this.setState({
       assets: this.state.assets.filter(function (asset) {
         return asset.name !== name;
       })
     });
+    this.setState({uploadStatus: 'File "' + name + '" successfully deleted!'});
   },
 
   render: function() {
@@ -62,7 +63,7 @@ module.exports = React.createClass({
           <table style={{width: '100%'}}>
             <tbody>
               {this.state.assets.map(function (asset) {
-                return <AssetRow key={asset.name} name={asset.name} type={asset.type} src={asset.src} delete={this.deleteFile.bind(this, asset.name)}/>;
+                return <AssetRow key={asset.name} name={asset.name} type={asset.type} src={asset.src} delete={this.deleteAssetRow.bind(this, asset.name)}/>;
               }.bind(this))}
             </tbody>
           </table>

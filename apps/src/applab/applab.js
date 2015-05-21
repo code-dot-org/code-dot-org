@@ -1929,9 +1929,9 @@ Applab.onDesignModeManageAssets = function() {
       {name: 'cat.jpg', type: 'image', src: '/blockly/media/skins/studio/cat_thumb.png'},
       {name: 'dog.png', type: 'image', src: '/blockly/media/skins/studio/dog_thumb.png'},
       {name: 'dinosaur.gif', type: 'image', src: '/blockly/media/skins/studio/dinosaur_thumb.png'},
-      {name: 'bark.mp3', type: 'sound'},
-      {name: 'meow.wav', type: 'sound'},
-      {name: 'rawr.ogg', type: 'sound'},
+      {name: 'bark.mp3', type: 'audio'},
+      {name: 'meow.wav', type: 'audio'},
+      {name: 'rawr.ogg', type: 'audio'},
       {name: 'unknown', type: 'unknown'}
     ]
   }), codeDiv);
