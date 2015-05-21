@@ -642,8 +642,11 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
                 addressString, level.addressFormat));
       };
       binaryConverter = function (addressString) {
-        return dataConverters.addressStringToBinary(
-            addressString, level.addressFormat);
+        return dataConverters.formatBinaryForAddressHeader(
+            dataConverters.addressStringToBinary(
+                addressString,
+                level.addressFormat),
+            level.addressFormat);
       };
       hexConverter = function (addressString) {
         return dataConverters.binaryToHex(

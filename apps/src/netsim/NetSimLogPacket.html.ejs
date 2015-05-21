@@ -23,6 +23,9 @@
   var binaryToAddressString = function (binaryString) {
     return dataConverters.binaryToAddressString(binaryString, level.addressFormat);
   };
+  var formatBinaryForAddressHeader = function (binaryString) {
+    return dataConverters.formatBinaryForAddressHeader(binaryString, level.addressFormat);
+  };
 
   /** @type {Packet} */
   var packet = new Packet(packetSpec, packetBinary);
@@ -150,15 +153,15 @@
             formatHex(binaryToHex(message), chunkSize));
 
         logRow(EncodingType.BINARY,
-            formatBinary(toAddress, 4),
-            formatBinary(fromAddress, 4),
-            formatBinary(packetIndex, level.packetCountBitWidth) + ' ' + formatBinary(packetCount, level.packetCountBitWidth),
+            formatBinaryForAddressHeader(toAddress, 4),
+            formatBinaryForAddressHeader(fromAddress, 4),
+            formatBinary(packetIndex + packetCount, level.packetCountBitWidth),
             formatBinary(message, chunkSize));
 
         logRow(EncodingType.A_AND_B,
             binaryToAB(toAddress),
             binaryToAB(fromAddress),
-            binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+            formatAB(binaryToAB(packetIndex + packetCount), level.packetCountBitWidth),
             formatAB(binaryToAB(message), chunkSize));
        %>
       </tbody>
