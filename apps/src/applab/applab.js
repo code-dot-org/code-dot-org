@@ -1288,7 +1288,7 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.height = value + 'px';
       break;
     case 'text':
-      $(element).text(value);
+      element.textContent = value;
       break;
     case 'textColor':
       element.style.color = value;
@@ -1341,6 +1341,12 @@ Applab.onPropertyChange = function(element, name, value) {
       break;
     case 'placeholder':
       element.setAttribute('placeholder', value);
+      break;
+    case 'rows':
+      element.setAttribute('rows', value);
+      break;
+    case 'cols':
+      element.setAttribute('rows', value);
       break;
     default:
       throw "unknown property name " + name;
