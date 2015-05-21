@@ -19,7 +19,8 @@ var ElementType = {
   LABEL: 'LABEL',
   TEXT_INPUT: 'TEXT_INPUT',
   CHECKBOX: 'CHECKBOX',
-  DROPDOWN: 'DROPDOWN'
+  DROPDOWN: 'DROPDOWN',
+  RADIO_BUTTON: 'RADIO_BUTTON'
 };
 
 var elements = {};
@@ -28,6 +29,7 @@ elements[ElementType.LABEL] = require('./label.jsx');
 elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
 elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
 elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
+elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -92,10 +94,15 @@ module.exports = {
       case 'label':
         return ElementType.LABEL;
       case 'input':
-        if (element.getAttribute('type') === 'checkbox') {
-          return ElementType.CHECKBOX;
+        switch (element.getAttribute('type')) {
+          case 'checkbox':
+            return ElementType.CHECKBOX;
+          case 'radio':
+            return ElementType.RADIO_BUTTON;
+          default:
+            return ElementType.TEXT_INPUT;
         }
-        return ElementType.TEXT_INPUT;
+        break;
       case 'select':
         return ElementType.DROPDOWN;
     }

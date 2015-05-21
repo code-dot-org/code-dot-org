@@ -1315,7 +1315,11 @@ Applab.onPropertyChange = function(element, name, value) {
       // element.checked represents the current state, the attribute represents
       // the serialized state
       element.checked = value;
-      element.setAttribute('checked', value ? 'checked' : null);
+      if (value) {
+        element.setAttribute('checked', 'checked');
+      } else {
+        element.removeAttribute('checked');
+      }
       break;
     case 'options':
       // value you should be an array of options in this case
@@ -1331,6 +1335,9 @@ Applab.onPropertyChange = function(element, name, value) {
       for (i = value.length; i < element.children.length; i++) {
         element.removeChild(element.children[i]);
       }
+      break;
+    case 'groupid':
+      element.setAttribute('name', value);
       break;
     default:
       throw "unknown property name " + name;
