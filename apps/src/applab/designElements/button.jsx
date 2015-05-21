@@ -33,18 +33,22 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
           desc={'x position (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')} />
         <PropertyRow
           desc={'y position (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ColorPickerPropertyRow
@@ -57,6 +61,7 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <PropertyRow
           desc={'font size (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         {/* eventually this will be a ImageChooserPropertyRow */ }

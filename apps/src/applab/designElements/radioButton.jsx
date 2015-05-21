@@ -28,24 +28,24 @@ var RadioButtonProperties = React.createClass({
           desc={'group id'}
           initialValue={element.getAttribute('name') || ''}
           handleChange={this.props.handleChange.bind(this, 'groupid')} />
-        {/*
-        // TODO (brent) setting width/height on a checkbox apparently doesnt
-        // work on a mac
-        */}
         <PropertyRow
           desc={'width (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
           desc={'x position (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')} />
         <PropertyRow
           desc={'y position (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <BooleanPropertyRow
