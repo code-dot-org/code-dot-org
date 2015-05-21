@@ -9,24 +9,30 @@ login_required 'true'
 
 stage 'Beyond Sending Bits'
 level 'U2L1 Student Lesson Introduction'
+level 'Choose 2 Test'
 
 stage 'The Need for Addressing'
 level 'U2L2 Student Lesson Introduction'
+level 'U2L2 NetSim Hub Mode'
 
 stage 'Invent an Addressing Protocol'
 level 'U2L3 Student Lesson Introduction'
+level 'U2L3 NetSim Hub Mode'
 
 stage 'Routers and Addresses'
 level 'U2L4 Student Lesson Introduction'
+level 'U2L4 NetSim Routers Addresses'
 
 stage 'Classroom Internet'
 level 'U2L5 Student Lesson Introduction'
+level 'U2L5 NetSim Classroom Internet'
 
 stage 'Algorithms in Networking'
 level 'U2L6 Student Lesson Introduction'
 
 stage 'The Need for Packets'
 level 'U2L7 Student Lesson Introduction'
+level 'U2L7 NetSim Need for Packets'
 
 stage 'Packets in the Real World'
 level 'U2L8 Student Lesson Introduction'
@@ -36,6 +42,9 @@ level 'U2L9 Student Lesson Introduction'
 
 stage 'DNS Simulation'
 level 'U2L10 Student Lesson Introduction'
+level 'U2L10 NetSim Manual DNS'
+level 'U2L10 NetSim Automatic DNS'
+
 
 stage 'How HTTP Works'
 level 'U2L11 Student Lesson Introduction'
