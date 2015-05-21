@@ -18,7 +18,8 @@ var ElementType = {
   BUTTON: 'BUTTON',
   LABEL: 'LABEL',
   TEXT_INPUT: 'TEXT_INPUT',
-  CHECKBOX: 'CHECKBOX'
+  CHECKBOX: 'CHECKBOX',
+  DROPDOWN: 'DROPDOWN'
 };
 
 var elements = {};
@@ -26,6 +27,7 @@ elements[ElementType.BUTTON] = require('./button.jsx');
 elements[ElementType.LABEL] = require('./label.jsx');
 elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
 elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
+elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -94,6 +96,8 @@ module.exports = {
           return ElementType.CHECKBOX;
         }
         return ElementType.TEXT_INPUT;
+      case 'select':
+        return ElementType.DROPDOWN;
     }
     throw new Error('unknown element type');
   },
