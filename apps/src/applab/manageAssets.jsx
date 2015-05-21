@@ -12,7 +12,8 @@ function getErrorMessage(status) {
 
 module.exports = React.createClass({
   propTypes: {
-    assets: React.PropTypes.instanceOf(Array)
+    assets: React.PropTypes.instanceOf(Array),
+    assetChosen: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -63,7 +64,9 @@ module.exports = React.createClass({
           <table style={{width: '100%'}}>
             <tbody>
               {this.state.assets.map(function (asset) {
-                return <AssetRow key={asset.name} name={asset.name} type={asset.type} src={asset.src} delete={this.deleteAssetRow.bind(this, asset.name)}/>;
+                return <AssetRow key={asset.name} name={asset.name} type={asset.type}
+                  src={asset.src} delete={this.deleteAssetRow.bind(this, asset.name)}
+                  choose={this.props.assetChosen.bind(this, asset.name)}/>;
               }.bind(this))}
             </tbody>
           </table>

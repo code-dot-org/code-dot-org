@@ -1925,6 +1925,10 @@ Applab.onDesignModeManageAssets = function() {
     id: 'manageAssetsModal'
   });
   React.render(React.createElement(ManageAssets, {
+    assetChosen: function (fileWithPath) {
+      dialog.hide();
+      console.log('Asset chosen:', fileWithPath); // TODO: Call the callback.
+    },
     assets: [
       {name: 'cat.jpg', type: 'image', src: '/blockly/media/skins/studio/cat_thumb.png'},
       {name: 'dog.png', type: 'image', src: '/blockly/media/skins/studio/dog_thumb.png'},

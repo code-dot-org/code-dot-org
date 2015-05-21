@@ -18,10 +18,11 @@ function getThumbnail(type, src) {
 
 module.exports = React.createClass({
   propTypes: {
-    name: React.PropTypes.instanceOf(String).isRequired,
-    type: React.PropTypes.oneOf(['image', 'sound', 'video', 'unknown']).isRequired,
-    src: React.PropTypes.instanceOf(String),
-    delete: React.PropTypes.instanceOf(Function).isRequired
+    name: React.PropTypes.string.isRequired,
+    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'unknown']).isRequired,
+    src: React.PropTypes.string,
+    choose: React.PropTypes.func.isRequired,
+    delete: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -59,7 +60,7 @@ module.exports = React.createClass({
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <button>Set as Image</button>
+            <button onClick={this.props.choose}>Set as Image</button>
             <button><i className="fa fa-eye"></i></button>
             <button className="btn-danger" onClick={this.confirmDelete}><i className="fa fa-trash-o"></i></button>
             {this.state.actionText}
