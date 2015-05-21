@@ -280,7 +280,8 @@ SQL
       percent = percent_complete(script, user)
       script.stages.each do |stage|
         levels = Hash[stage.script_levels.map(&:level).map do |level|
-          ["<a href='#{level_path(level.id)}'>#{level.id}</a>", (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
+          key = (request.format.csv? ? level.id.to_s : "<a href='#{level_path(level.id)}'>#{level.id}</a>")
+          [key, (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
         end]
         row.merge!(levels)
         row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
