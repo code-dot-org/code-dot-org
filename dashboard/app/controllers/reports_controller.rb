@@ -262,9 +262,10 @@ SQL
 
   def pd_progress
     authorize! :read, :reports
-    script = Script.find_by(name: params[:script] || 'K5PD')
+    script = Script.find_by(name: params[:script] || 'K5PD').cached
     # Get all users with any activity in the script
-    users = Activity.where(level_id: script.levels.map(&:id)).map(&:user_id).uniq.map{|id|User.find(id)}
+    users = User.where(id: UserScript.where(script_id: script.id).pluck(:user_id).uniq)
+
     headers = nil
     data = users.map do |user|
       row = {}
@@ -273,7 +274,7 @@ SQL
                      :'Ops First Name' => user.ops_first_name,
                      :'Ops Last name' => user.ops_last_name,
                      :'Email' => user.email,
-                     :'District' => user.district || 'None'
+                     :'District' => user.district.try(:name) || 'None'
                  })
       user_progress = summarize_user_progress(script, user)
       percent = percent_complete(script, user)
