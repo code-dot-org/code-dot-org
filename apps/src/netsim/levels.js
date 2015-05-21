@@ -61,7 +61,7 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           for any "packetIndex" or "packetCount" fields in the packet
  *           specification.
  *
- * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
+ * @property {Packet.HeaderType[]} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
  *           to route them.
  *
