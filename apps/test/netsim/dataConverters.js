@@ -755,4 +755,34 @@ describe("dataConverters", function () {
     });
   });
 
+  describe("formatBinaryForAddressHeader", function() {
+    var formatBinaryForAddressHeader = dataConverters.formatBinaryForAddressHeader;
+
+    it ("is identity for empty string", function () {
+      assertEqual('', formatBinaryForAddressHeader('', ''));
+    });
+
+    it ("splits the binary string in the right places", function () {
+      var rawBinary = "0101010101010101";
+      assertEqual('0101 0101 0101 0101', formatBinaryForAddressHeader(rawBinary, '4.4.4.4'));
+      assertEqual('01010101 01010101', formatBinaryForAddressHeader(rawBinary, '8.8'));
+      assertEqual('01010101 0101 01 0 1', formatBinaryForAddressHeader(rawBinary, '8.4.2.1.1'));
+    });
+
+    it ("leaves any trailing binary as a single chunk", function () {
+      var rawBinary = "0101010101010101";
+      assertEqual('01010 10101 010101', formatBinaryForAddressHeader(rawBinary, '5.5'));
+    });
+
+    it ("stops when it runs out of source binary even if the format is longer", function () {
+      var rawBinary = "0101010101010101";
+      assertEqual('01010 10101 01010 1', formatBinaryForAddressHeader(rawBinary, '5.5.5.5'));
+    });
+
+    it ("minifies and cleans input before formatting", function () {
+      var rawInput = "01 101 A10\x15010 1";
+      assertEqual('0110 1100 101', formatBinaryForAddressHeader(rawInput, '4.4.3'));
+    });
+  });
+
 });

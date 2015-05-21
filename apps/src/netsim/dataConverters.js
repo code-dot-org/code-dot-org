@@ -420,3 +420,36 @@ exports.addressStringToBinary = function (addressString, addressFormat) {
   }
   return binary;
 };
+
+/**
+ * Convert a binary string to a formatted representation, with chunks that
+ * correspond to the parts of the address header.
+ * @param {string} binaryString
+ * @param {addressHeaderFormat} addressFormat
+ */
+exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
+  var binary = exports.minifyBinary(binaryString);
+
+  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var chunks = [];
+  var index = 0;
+  partWidths.forEach(function (bitWidth) {
+    var next = binary.substr(index, bitWidth);
+    if (next.length > 0) {
+      chunks.push(next);
+    }
+    index += bitWidth;
+  });
+
+  var next = binary.substr(index);
+  if (next.length > 0) {
+    chunks.push(next);
+  }
+
+  return chunks.join(' ');
+};
