@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "With your group, invent a standard addressing scheme for the \"Game of Messages\" game, and try it out using the Internet Simulator. \r\n\r\n[TODO: NetSim needs to be set up in broadcast mode]",
+    "instructions": "With your group, invent a standard addressing scheme for the \"Game of Messages\" game, and try it out using the Internet Simulator. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -46,7 +46,8 @@
     "show_router_bandwidth_control": "false",
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
-    "default_dns_mode": "none"
+    "default_dns_mode": "none",
+    "broadcast_mode": "true"
   }
 }]]></config>
   <blocks/>

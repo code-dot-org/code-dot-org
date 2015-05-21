@@ -1,7 +1,7 @@
 <Multi>
   <config><![CDATA[{
   "game_id": 29,
-  "created_at": "2015-05-19T20:09:08.414Z",
+  "created_at": "2015-05-19T20:09:08.000Z",
   "properties": {
     "questions": [
       {
@@ -19,12 +19,7 @@
       }
     ],
     "title": "title",
-    "markdown": "## What do you think?\na;lsdkjf;asldkfj;alsdkfjaklsdjfha;lsdjf;lkj\n\n\n",
-    "type": "Multi",
-    "dsl_text": "name 'ECSPD2 question'\r\ntitle 'title'\r\nquestion 'Question'\r\nright 'wrong answer'\r\nright 'right answer'\r\n\r\nmarkdown <<MARKDOWN\r\n## What do you think?\r\na;lsdkjf;asldkfj;alsdkfjaklsdjfha;lsdjf;lkj\r\n\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## What do you think?\na;lsdkjf;asldkfj;alsdkfjaklsdjfha;lsdjf;lkj\n\n\n"
   }
 }]]></config>
 </Multi>

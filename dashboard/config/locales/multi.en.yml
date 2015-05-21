@@ -336,6 +336,12 @@ en:
         3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
+      Choose 2 Test:
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
@@ -344,7 +350,7 @@ en:
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value decreases: The unicorn's x value decreases
+        The unicorn's x value increases: The unicorn's x value increases
       ECSPD2 question:
         title: title
         Question: Question
@@ -698,7 +704,7 @@ en:
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
+        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
@@ -1042,7 +1048,7 @@ en:
         ABBB: ABBB
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
-        If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
+        If you just had a circle and a square, how many 3-shape permutations could you make?: If you just had a circle and a square, how many 3-shape permutations could you make?
         '4': '4'
         '6': '6'
         '8': '8'
@@ -1060,10 +1066,10 @@ en:
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id
         A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
         The first button created with the id will work, the other will not: The first button created with the id will work, the other will not
-        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant
+        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant
         Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Buttons and Event Handlers
@@ -1108,6 +1114,15 @@ en:
         conditional: conditional
         variable: variable
         both: both
+      U3L19 - MC what are values of abc:
+        So, what's the answer?: So, what's the answer?
+        Choose the best answer: Choose the best answer
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13
+        a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7: a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
+        Code does not execute due to error: Code does not execute due to error
       U3L21 Assessment 1:
         More Variables Question 1: More Variables Question 1
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?
