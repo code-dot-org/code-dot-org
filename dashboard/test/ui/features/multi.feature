@@ -11,7 +11,7 @@ Scenario: Loading the level
 Scenario: Clicking an option enables submit and submitting the correct answer wins
   And element ".submitButton:first" is disabled
   And element ".submitButton:last" is disabled
-  And I press "input[correct=true]" using jQuery
+  And I press ".answerbutton[index=1]" using jQuery
   And element ".submitButton:first" is not disabled
   And element ".submitButton:last" is not disabled
   And I press ".submitButton:first" using jQuery
@@ -20,11 +20,11 @@ Scenario: Clicking an option enables submit and submitting the correct answer wi
 Scenario: Submitting an incorrect option
   And element ".submitButton:first" is disabled
   And element ".submitButton:last" is disabled
-  And I press "input[correct=false]:first" using jQuery
+  And I press ".answerbutton[index=0]" using jQuery
   And element ".submitButton:first" is not disabled
   And element ".submitButton:last" is not disabled
   And I press ".submitButton:last" using jQuery
   And I wait to see ".modal"
   And element ".modal .dialog-title" contains text "Incorrect answer"
   And I press ".modal #ok-button" using jQuery
-  And I wait until element ".item-cross" is visible
+  And I wait until element "#cross_0" is visible
