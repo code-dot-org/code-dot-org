@@ -215,6 +215,9 @@ exports.deserializeNumber = function (storedNum) {
 exports.scrubLevelConfiguration_ = function (levelConfig) {
   var scrubbedLevel = _.clone(levelConfig, true);
 
+  // Coerce certain values to string that might have been mistaken for numbers
+  scrubbedLevel.addressFormat = scrubbedLevel.addressFormat.toString();
+
   // Explicitly list fields that we suspect may have a string value that
   // needs to be converted to a number, like "Infinity"
   scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
