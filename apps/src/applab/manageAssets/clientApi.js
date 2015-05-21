@@ -1,6 +1,7 @@
 module.exports = {
+  basePath: '/v3/assets/' + dashboard.project.current.id,
   ajax: function (method, file, success, error, data) {
-    var url = '/v3/assets/' + dashboard.project.current.id;
+    var url = this.basePath;
     if (file) {
       url += '/' + file;
     }
