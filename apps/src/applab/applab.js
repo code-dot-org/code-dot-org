@@ -1888,7 +1888,7 @@ Applab.onDesignModeClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
-Applab.onDesignModeManageAssets = function(assetChosen) {
+Applab.onDesignModeManageAssets = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
@@ -1899,6 +1899,7 @@ Applab.onDesignModeManageAssets = function(assetChosen) {
     id: 'manageAssetsModal'
   });
   React.render(React.createElement(ManageAssets, {
+    typeFilter : typeFilter,
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);

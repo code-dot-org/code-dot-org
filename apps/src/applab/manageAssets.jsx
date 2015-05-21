@@ -13,7 +13,8 @@ function getErrorMessage(status) {
 
 module.exports = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func
+    assetChosen: React.PropTypes.func,
+    typeFilter: React.PropTypes.string
   },
 
   getInitialState: function () {
@@ -26,7 +27,13 @@ module.exports = React.createClass({
   componentWillMount: function () {
     // TODO: Use Dave's client api when it's finished.
     AssetsApi.ajax('GET', '', function (xhr) {
-      this.setState({assets: JSON.parse(xhr.responseText)});
+      var assets = JSON.parse(xhr.responseText);
+      if (this.props.typeFilter) {
+        assets = assets.filter(function (asset) {
+          return asset.category === this.props.typeFilter;
+        }.bind(this));
+      }
+      this.setState({assets: assets});
     }.bind(this), function (xhr) {
       this.setState({uploadStatus: 'Error loading asset list: ' + getErrorMessage(xhr.status)});
     }.bind(this));
