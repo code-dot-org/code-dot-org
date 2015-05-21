@@ -1317,6 +1317,21 @@ Applab.onPropertyChange = function(element, name, value) {
       element.checked = value;
       element.setAttribute('checked', value ? 'checked' : null);
       break;
+    case 'options':
+      // value you should be an array of options in this case
+      for (var i = 0; i < value.length; i++) {
+        var optionElement = element.children[i];
+        if (!optionElement) {
+          optionElement = document.createElement('option');
+          element.appendChild(optionElement);
+        }
+        optionElement.textContent = value[i];
+      }
+      // remove any extra options
+      for (i = value.length; i < element.children.length; i++) {
+        element.removeChild(element.children[i]);
+      }
+      break;
     default:
       throw "unknown property name " + name;
   }
