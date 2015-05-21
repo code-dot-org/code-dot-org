@@ -20,7 +20,8 @@ var ElementType = {
   TEXT_INPUT: 'TEXT_INPUT',
   CHECKBOX: 'CHECKBOX',
   DROPDOWN: 'DROPDOWN',
-  RADIO_BUTTON: 'RADIO_BUTTON'
+  RADIO_BUTTON: 'RADIO_BUTTON',
+  TEXT_AREA: 'TEXT_AREA'
 };
 
 var elements = {};
@@ -30,6 +31,7 @@ elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
 elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
 elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
 elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
+elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -105,6 +107,8 @@ module.exports = {
         break;
       case 'select':
         return ElementType.DROPDOWN;
+      case 'div':
+        return ElementType.TEXT_AREA;
     }
     throw new Error('unknown element type');
   },
