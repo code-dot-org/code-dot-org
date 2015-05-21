@@ -8,6 +8,10 @@ class Script < ActiveRecord::Base
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
+  include SerializedProperties
+
+  serialized_attrs %w(pd)
+
   # Names used throughout the code
   HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
   EDIT_CODE_NAME = 'edit-code'
@@ -200,6 +204,9 @@ class Script < ActiveRecord::Base
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
+          properties: {
+            pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+          },
           wrapup_video: script_data[:wrapup_video],
           id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
@@ -323,6 +330,9 @@ class Script < ActiveRecord::Base
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
+          properties: {
+            pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+          }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
       end
