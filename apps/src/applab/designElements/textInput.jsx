@@ -1,6 +1,10 @@
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
+var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+
+var elementUtils = require('./elementUtils');
 
 var TextInputProperties = React.createClass({
   propTypes: {
@@ -22,9 +26,9 @@ var TextInputProperties = React.createClass({
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')} />
         <PropertyRow
-          desc={'text'}
-          initialValue={$(element).text()}
-          handleChange={this.props.handleChange.bind(this, 'text')} />
+          desc={'placeholder'}
+          initialValue={element.getAttribute('placeholder') || ''}
+          handleChange={this.props.handleChange.bind(this, 'placeholder')} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
@@ -45,6 +49,23 @@ var TextInputProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <ColorPickerPropertyRow
+          desc={'text color'}
+          initialValue={elementUtils.rgb2hex(element.style.color)}
+          handleChange={this.props.handleChange.bind(this, 'textColor')} />
+        <ColorPickerPropertyRow
+          desc={'background color'}
+          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
+        <PropertyRow
+          desc={'font size (px)'}
+          isNumber={true}
+          initialValue={parseInt(element.style.fontSize, 10)}
+          handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <BooleanPropertyRow
+          desc={'hidden'}
+          initialValue={$(element).hasClass('design-mode-hidden')}
+          handleChange={this.props.handleChange.bind(this, 'hidden')} />
       </table>);
   }
 });
@@ -57,6 +78,8 @@ module.exports = {
     element.style.margin = '5px 2px';
     element.style.width = '236px';
     element.style.height = '30px';
+    element.style.color = '#000000';
+    element.style.backgroundColor = '';
 
     return element;
   }

@@ -1339,6 +1339,9 @@ Applab.onPropertyChange = function(element, name, value) {
     case 'groupid':
       element.setAttribute('name', value);
       break;
+    case 'placeholder':
+      element.setAttribute('placeholder', value);
+      break;
     default:
       throw "unknown property name " + name;
   }
