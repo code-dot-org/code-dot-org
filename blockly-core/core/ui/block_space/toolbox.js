@@ -158,6 +158,12 @@ Blockly.Toolbox.prototype.position_ = function(blockSpaceEditor) {
     // For some reason the LTR toolbox now reports as 1px too wide.
     this.width -= 1;
   }
+
+  // Update the toolbox background rectangle location/dimension to match the div.
+  var rectX = Blockly.RTL ? (svgSize.width - treeDiv.offsetWidth) : 0;
+  blockSpaceEditor.svgBackground_.setAttribute("x", rectX);
+  blockSpaceEditor.svgBackground_.setAttribute("width", treeDiv.offsetWidth);
+  blockSpaceEditor.svgBackground_.setAttribute("height", svgSize.height);
 };
 
 /**

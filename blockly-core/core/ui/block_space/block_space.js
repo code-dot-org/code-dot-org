@@ -616,7 +616,7 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   if (this.blockSpaceEditor.toolbox) {
     var toolbox = this.blockSpaceEditor.toolbox;
-    background = toolbox.HtmlDiv;
+    background = this.blockSpaceEditor.svgBackground_;
     blockGroup = toolbox.tree_.element_;
     trashcan = toolbox.trashcan;
     trashcanElement = toolbox.trashcanHolder;
@@ -698,21 +698,16 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   var trashIntensity = 1 - normalIntensity;
 
-  var regularGrey = 0xaa;
-  var trashGrey = 0xdd;
+  var regularGrey = 0xdd;
+  var trashGrey = 0xaa;
 
-  var r = Math.floor(trashIntensity * regularGrey + normalIntensity * trashGrey);
-  var g = Math.floor(trashIntensity * regularGrey + normalIntensity * trashGrey);
-  var b = Math.floor(trashIntensity * regularGrey + normalIntensity * trashGrey);
+  var r = Math.floor(trashIntensity * trashGrey + normalIntensity * regularGrey);
+  var g = Math.floor(trashIntensity * trashGrey + normalIntensity * regularGrey);
+  var b = Math.floor(trashIntensity * trashGrey + normalIntensity * regularGrey);
   var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
 
-  if (this.blockSpaceEditor.toolbox) {
-    // Fade towards the new toolbox background colour.
-    background.style["background-color"] = rgbString;
-  } else {
-    // Fade towards the new flyout backround colour
-     background.style["fill"] = rgbString;
-  }
+  // Fade towards the new backround color.
+  background.style["fill"] = rgbString;
 
   // Fade out the blocks in the flyout area.
   blockGroup.style["opacity"] = normalIntensity;

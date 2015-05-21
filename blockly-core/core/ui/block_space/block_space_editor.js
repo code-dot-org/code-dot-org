@@ -192,12 +192,25 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     'class': 'blocklySvg'
   }, null);
   this.svg_ = svg;
+
   container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
   var defs = Blockly.createSvgElement('defs', {
     id: 'blocklySvgDefs'
   }, svg);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
+
+  // If we're going to have a toolbox, create a rect which is the same
+  // location/dimensions as the HTML div that contains the rest of the toolbox.
+  // This new rect will have the grey shade of the toolbox background.  We create
+  // it here so that blocks can be dragged over the top of it.  The HTML div
+  // appears over the blocks, meaning that blocks dragged to it would appear
+  // underneath it, if it had a background color, which wouldn't look as good.
+  if (!Blockly.readOnly && Blockly.hasCategories) {
+    this.svgBackground_ = Blockly.createSvgElement('rect',
+      {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
+      this.svg_);
+  }
 
   svg.appendChild(this.blockSpace.createDom());
 
