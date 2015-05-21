@@ -40,7 +40,16 @@ or
 <pre>
 a = b;
 </pre>
-...JavaScript always takes the *value* on the right, and *assigns* it into a variable on the left.
+
+#### Key understanding:
+**...JavaScript always takes the *value* on the right, and *assigns* it into a variable on the left.**
+
+### Tip: read the = sign as "gets"
+
+Don't let the = sign confuse you into thinking that a = b is a statement of mathematical equality.  It's not. It's an instruction to move memory around.  One tip is to read the statement *a=b* as: ***a gets the value of b*** or just ***a gets b***.  Another example: read *a=b+7*  as ***a gets b plus 7*** and so on.  
+
+When you read the = sign as "gets", and say it out loud that way, you'll prevent confusing yourself, and other programmers will know what you're talking about.
+
 
 Back to the example.
 
