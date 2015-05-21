@@ -660,7 +660,9 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
       abConverter = intToAB;
       binaryConverter = intToBinary;
       hexConverter = intToHex;
-      decimalConverter = function (val) { return val.toString(10); };
+      decimalConverter = function (val) {
+        return val.toString(10);
+      };
       asciiConverter = decimalConverter;
     }
 

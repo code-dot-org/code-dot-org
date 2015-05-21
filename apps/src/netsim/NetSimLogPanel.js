@@ -327,8 +327,8 @@ NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
 
   // Adjust width of address columns
   // For columns, 50px is sufficient for 4 bits
-  var pxPerBit = 50 / 4;
-  var addressColumnWidthInPx = pxPerBit * addressBitWidth;
+  var PX_PER_BIT = 50 / 4;
+  var addressColumnWidthInPx = PX_PER_BIT * addressBitWidth;
 
   // Adjust width of address columns
   rootElement.find('td.toAddress, th.toAddress, td.fromAddress, th.fromAddress')
@@ -337,20 +337,20 @@ NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
 
   // Adjust width of address input fields
   // For inputs, 3em is sufficient for 4 bits
-  var emsPerBit = 3 / 4;
-  var addressFieldWidthInEms = emsPerBit * addressBitWidth;
+  var EMS_PER_BIT = 3 / 4;
+  var addressFieldWidthInEms = EMS_PER_BIT * addressBitWidth;
   rootElement.find('td.toAddress input, td.fromAddress input')
       .css('width', addressFieldWidthInEms + 'em');
 
 
   // Adjust width of packet info column
   // Packet info column uses two fields and an extra 21px for " of "
-  var packetInfoColumnWidthInPx = (2 * pxPerBit * packetInfoBitWidth) + 21;
+  var packetInfoColumnWidthInPx = (2 * PX_PER_BIT * packetInfoBitWidth) + 21;
   rootElement.find('td.packetInfo, th.packetInfo')
       .css('width', packetInfoColumnWidthInPx + 'px');
 
   // Adjust width of packet info fields
-  var packetInfoFieldWidthInEms = emsPerBit * packetInfoBitWidth;
+  var packetInfoFieldWidthInEms = EMS_PER_BIT * packetInfoBitWidth;
   rootElement.find('td.packetInfo input')
       .css('width', packetInfoFieldWidthInEms + 'em');
 };
