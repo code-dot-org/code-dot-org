@@ -30,7 +30,8 @@
     "disable_examples": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true"
+    "autocomplete_palette_apis_only": "true",
+    "app_height": "200"
   }
 }]]></config>
   <blocks/>

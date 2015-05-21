@@ -1343,6 +1343,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     if (options.startBlocks) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+      // Reset ace Undo stack:
+      var UndoManager = window.ace.require("ace/undomanager").UndoManager;
+      this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
     }
 
     if (options.afterEditorReady) {

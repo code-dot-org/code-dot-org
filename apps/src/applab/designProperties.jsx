@@ -1,10 +1,6 @@
 var React = require('react');
 
-// TODO (brent) - might make more sense to require library and get these from
-// the library
-var ButtonProperties = require('./designElements/button.jsx').PropertyTable;
-var TextProperties = require('./designElements/text.jsx').PropertyTable;
-var InputProperties = require('./designElements/textInput.jsx').PropertyTable;
+var elementLibrary = require('./designElements/library');
 
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
@@ -19,23 +15,8 @@ var DesignProperties = module.exports = React.createClass({
       return <p>Click on an element to edit its properties.</p>;
     }
 
-    var tagname = this.props.element.tagName.toLowerCase();
-    var propertyClass;
-    // TODO (brent) - eventually this will have to be something other than tagname
-    switch (tagname) {
-      case 'button':
-        propertyClass = ButtonProperties;
-        break;
-
-      // TODO (brent)- this will become a div
-      case 'label':
-        propertyClass = TextProperties;
-        break;
-
-      case 'input':
-        propertyClass = InputProperties;
-        break;
-    }
+    var elementType = elementLibrary.getElementType(this.props.element);
+    var propertyClass = elementLibrary.getElementPropertyTable(elementType);
 
     var propertiesElement = React.createElement(propertyClass, {
       element: this.props.element,
@@ -48,6 +29,7 @@ var DesignProperties = module.exports = React.createClass({
     // TODO (brent) - right now if i create two elements with the same id, I
     // can still run into the same problem, where I click on the other element
     // and the table doesn't update
+    // TODO (brent) - it appears the wrong element sometimes gets deleted
     return (
       <div key={this.props.element.id}>
         {propertiesElement}

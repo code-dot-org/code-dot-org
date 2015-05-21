@@ -25,8 +25,24 @@
     "first_sprite_index": "0",
     "embed": "false",
     "disable_sharing": "false",
-    "maze_data": null
-  }
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
+  },
+  "md5": "179578fabb8ad3521da956d9987bd601"
 }]]></config>
   <blocks>
     <start_blocks>

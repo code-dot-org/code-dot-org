@@ -316,7 +316,8 @@ class UserTest < ActiveSupport::TestCase
     twenty_hour.script_levels.each do |script_level|
       next if script_level.level.game.unplugged? # skip all unplugged
       next if script_level.chapter > 33
-      UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+      UserLevel.create(user: user, level: script_level.level, script: twenty_hour,
+                       attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     assert_equal(35, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
@@ -326,7 +327,8 @@ class UserTest < ActiveSupport::TestCase
     twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
-      UserLevel.create(user: create(:user), level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+      UserLevel.create(user: create(:user), level: script_level.level, script: twenty_hour,
+                       attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
@@ -606,14 +608,17 @@ class UserTest < ActiveSupport::TestCase
 
     start_date = Time.now - 3.months
 
+    twenty_hour = Script.twenty_hour_script
+    hoc = Script.find_by(name: 'hourofcode')
+
     # do a level that is both in script 1 and hoc
-    UserLevel.create!(user_id: user.id, level_id: Script.twenty_hour_script.script_levels[1].level.id,
-                      created_at: start_date, updated_at: start_date)
+    [twenty_hour, hoc].each do |script|
+      UserLevel.create!(user_id: user.id, level_id: Script.twenty_hour_script.script_levels[1].level.id, script: script,
+                        created_at: start_date, updated_at: start_date)
+    end
 
     user.backfill_user_scripts
-
-
-    assert_equal [Script.twenty_hour_script, Script.find_by(name: 'hourofcode')], user.working_on_scripts
+    assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
   test "user scripts backfills started_at and completed_at" do
@@ -627,10 +632,10 @@ class UserTest < ActiveSupport::TestCase
       sl2 = script.script_levels[5]
 
       UserLevel.record_timestamps = false # ooh
-      UserLevel.create!(user_id: user.id, level_id: sl1.level.id,
+      UserLevel.create!(user_id: user.id, level_id: sl1.level.id, script: script,
                         created_at: start_date, updated_at: start_date)
 
-      UserLevel.create!(user_id: user.id, level_id: sl2.level.id,
+      UserLevel.create!(user_id: user.id, level_id: sl2.level.id, script: script,
                         created_at: progress_date, updated_at: progress_date)
 
       assert_creates(UserScript) do
@@ -675,13 +680,13 @@ class UserTest < ActiveSupport::TestCase
   def complete_script_for_user(user, script, completed_date = Time.now)
     # complete all except last level a day earlier
     script.script_levels[0..-2].each do |sl|
-      UserLevel.create!(user_id: user.id, level_id: sl.level_id, best_result: 100,
+      UserLevel.create!(user_id: user.id, level_id: sl.level_id, script: script, best_result: 100,
                         created_at: completed_date - 1.day, updated_at: completed_date - 1.day)
     end
 
     # completed last level
     sl = script.script_levels.last
-    UserLevel.create!(user_id: user.id, level_id: sl.level_id, best_result: 100,
+    UserLevel.create!(user_id: user.id, level_id: sl.level_id, script: script, best_result: 100,
                       created_at: completed_date, updated_at: completed_date)
   end
 
@@ -748,7 +753,9 @@ class UserTest < ActiveSupport::TestCase
     user = create :student
     assert !user.needs_to_backfill_user_scripts?
 
-    create :user_level, user: user, level: Script.find(1).script_levels.first.level
+    script = Script.find(1)
+
+    create :user_level, user: user, level: script.script_levels.first.level, script: script
     # now has progress
     assert user.needs_to_backfill_user_scripts?
 

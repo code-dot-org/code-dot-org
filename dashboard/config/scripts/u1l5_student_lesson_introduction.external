@@ -8,10 +8,15 @@ markdown <<MARKDOWN
 ## Unit 1: Lesson 5 - Sending Bits in the Real World
 
 # Background
-The Internet is an interconnected system of various types of bit-sending devices. In the “real world,” a copper wire is used to transmit binary messages using electricity - a voltage on the wire means one thing, and no voltage means the other. Fiber-optic cables use light (literally on or off) to transmit a binary message. Bits are sent using a variety of mediums, each of which has benefits and drawbacks. 
+The Internet is really just an interconnected system of bit-sending devices, each relying on different methods of encoding bits. Most wired connections in your house or school will vary voltages in a copper wire to send binary messages. If you use a wireless connection your bits are translated into alternating frequencies on a radio wave. In either case, once these bits leave the building it is increasingly common that they will be converted into beams of light travelling along fiber optic cables. Each method of encoding bits has pros and cons which make it better suited for certain situations, and so a binary message may travel in many different forms on its journey across the Internet.
+
+# Vocabulary
+* Bandwidth: transmission capacity of a bit-sending system, as measured by bit rate
+* Latency: the amount of time it takes a bit to travel from a sender to a receiver
 
 # What happens in this lesson?
 * Investigate how bits are transmitted on the Internet.
+* Research the bit-sending technology underlying a familiar device
 * Present your finding to your classmates.
 
 
