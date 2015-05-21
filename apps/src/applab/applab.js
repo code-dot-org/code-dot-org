@@ -524,6 +524,8 @@ function selectEditorRowCol(row, col) {
     range.end.row = row;
     range.end.column = col + 1;
 
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
     selection.setSelectionRange(range, true);
   }
 }
