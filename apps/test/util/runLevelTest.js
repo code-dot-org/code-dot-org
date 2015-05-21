@@ -130,6 +130,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
     baseUrl: '/', // Doesn't matter
     containerId: 'app',
     Dialog: StubDialog,
+    isAdmin: true,
     onInitialize: function() {
       // Click the run button!
       if (beforeClick) {
