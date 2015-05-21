@@ -137,11 +137,15 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
  * Get requested packet header field as a number.  Returns empty string
  * if the requested field is not in the current packet format.
  * @param {Packet.HeaderType} field
- * @returns {number|string}
+ * @returns {string}
  */
 NetSimLogEntry.prototype.getHeaderField = function (field) {
   try {
-    return this.packet_.getHeaderAsInt(field);
+    if (Packet.isAddressField(field)) {
+      return this.packet_.getHeaderAsAddressString(field);
+    } else {
+      return this.packet_.getHeaderAsInt(field).toString();
+    }
   } catch (e) {
     return '';
   }

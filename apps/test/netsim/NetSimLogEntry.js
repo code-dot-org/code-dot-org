@@ -119,10 +119,10 @@ describe("NetSimLogEntry", function () {
       Packet.HeaderType.PACKET_INDEX,
       Packet.HeaderType.PACKET_COUNT
     ]);
-    assertEqual(1, logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
-    assertEqual(2, logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
-    assertEqual(3, logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
-    assertEqual(4, logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
+    assertEqual('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
+    assertEqual('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
+    assertEqual('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
+    assertEqual('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
     assertEqual('01010110', logEntry.getMessageBinary());
   });
 
