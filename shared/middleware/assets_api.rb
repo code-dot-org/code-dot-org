@@ -68,6 +68,9 @@ class AssetsApi < Sinatra::Base
   #
   put %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
+
+    # verify that file type is in our whitelist, and that the user-specified
+    # mime type matches what Rack expects for that file type.
     file_type = filename.split('.').last
     unsupported_media_type unless @@allowed_file_types.include?(file_type)
     mime_type = request.content_type.to_s.split(';').first
