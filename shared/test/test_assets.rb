@@ -18,7 +18,19 @@ class AssetsTest < Minitest::Unit::TestCase
     assert @channels.last_response.successful?
   end
 
-  def list()
+  def ensure_aws_credentials
+    self.list
+    credentials_missing =
+        !@assets.last_response.successful? &&
+        @assets.last_response.body.index('Aws::Errors::MissingCredentialsError')
+    credentials_msg =
+          "Aws::Errors::MissingCredentialsError: if you are running these tests locally,\n"\
+          "follow these instructions to configure your AWS credentials and try again:\n"\
+          "http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html"
+    flunk credentials_msg if credentials_missing
+  end
+
+  def list
     @assets.get("/v3/assets/#{@channel_id}").body
   end
 
@@ -49,6 +61,8 @@ class AssetsTest < Minitest::Unit::TestCase
     @assets = Rack::Test::Session.new(Rack::MockSession.new(AssetsApi, "studio.code.org"))
 
     self.create_channel
+
+    self.ensure_aws_credentials
 
     image_filename = 'dog.jpg'
     image_body = 'stub-image-contents'
