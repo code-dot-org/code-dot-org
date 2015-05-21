@@ -108,8 +108,13 @@
     <tt>[]</tt> in "Broadcast Mode."
   %p
     Example:
-    <tt>[{"key":"toAddress", "bits":8}, {"key":"fromAddress", "bits":8}]</tt>
+    <tt>["toAddress", "fromAddress"]</tt>
   %p Valid header keys are "toAddress", "fromAddress", "packetIndex" and "packetCount"
+  %p
+    These fields are also backwards-compatible with the old key/bits format,
+    but the "bits" part will be ignored because header column widths are now
+    defined using the "Address format" and "Packet info field bit-width",
+    above.
 .field
   = f.label :client_initial_packet_header, 'Client initial packet header'
   %p
