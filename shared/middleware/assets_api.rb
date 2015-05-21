@@ -22,7 +22,12 @@ class AssetsApi < Sinatra::Base
   ]
 
   def s3()
-    @s3 ||= Aws::S3::Client.new(region: 'us-east-1')
+    return @s3 if @s3
+    params = {region: 'us-east-1'}
+    if CDO.s3_access_key_id && CDO.s3_secret_access_key
+      params[:credentials] = Aws::Credentials.new(CDO.s3_access_key_id, CDO.s3_secret_access_key)
+    end
+    @s3 = Aws::S3::Client.new(params)
   end
 
   #
