@@ -1,0 +1,38 @@
+name 'AppLab Level U3L19 - variable re-assignment challenge pt1'
+title 'AppLab Level U3L19 - variable re-assignment challenge pt1'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variable assignment challenge
+
+Ok, this one is kind of a big deal...
+
+**If you can understand this problem, it puts you in the group of people who correlate highly with people who do well on the AP exam.**
+
+That's right.  It turns out that people who do well in AP Computer Science have a proper *mental model* of what the computer is doing.  A paper written in 2008 demonstrated that a single programming question on the multiple choice section of the AP exam correlated highly with that student doing well or poorly on the exam overall.
+
+The question below is similar to the question discovered for that paper. If you can understand the answer to this question it means that you have a good mental model for how computers work.  That understanding alone will carry you far.  So, here is the problem.
+
+### What are the values of **a**, **b**, and **c** after the following lines of code have executed?
+
+<pre>
+var a = 3;
+var b = 7;
+var c = 10;
+a = a+b;
+b = a+b;
+c = a+b;
+</pre>
+
+
+First, make a prediction.  Write it down.  Seriously, write it down.
+
+Then continue on to the next page.  We've got this set up for you in code.  You will have to add your own **write** or **console.log** statements to verify the answer.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue to try it out.</a>
+
+
+
+
+
+MARKDOWN

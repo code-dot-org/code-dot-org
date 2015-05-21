@@ -7,16 +7,23 @@ skip_dialog true
 markdown <<MARKDOWN
 ### Welcome to Phase 2!
 
-<br><br>
-<div dir="ltr" style="line-height: 1.38; margin-bottom: 17pt; margin-top: 0pt; color: #3c3c3c; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Phase 2, the Summer Face-to-Face Professional Development Workshop will span three full days.  The primary focus during the summer workshop will be on experiencing the curriculum as a learner, then practicing the delivery of the curriculum as a learning coach.
+**Find your region below for more information and Phase 2 PD dates.** 
 
-<b>Day 1:</b>   Walk through and prepare to teach Module 1 "Introduction to Computer Modeling and Simulation."   Module 1 consists of a set of design and build activities that lead up to building a computer model.
+#### Regional PD Pages
+- <a href="http://code.org/educate/pd/15-16/lausd" target="_blank">CA - Los Angeles (LAUSD only)</a>
+- <a href="http://code.org/educate/pd/15-16/orange" target="_blank">CA - Orange County</a>
+- <a href="http://code.org/educate/pd/15-16/broward" target="_blank">FL - Broward</a>
+- <a href="http://code.org/educate/pd/15-16/miami">FL - Miami</a>
+- <a href="http://code.org/educate/pd/15-16/atlanta" target="_blank">GA - Atlanta</a>
+- <a href="http://code.org/educate/pd/15-16/idaho" target="_blank">ID - Boise</a>
+- <a href="http://code.org/educate/pd/15-16/chicago" target="_blank">IL - Chicago</a>
+- <a href="http://code.org/educate/pd/15-16/charles" target="_blank">MD - Charles</a>
+- <a href="http://code.org/educate/pd/15-16/frederick">MD - Frederick</a>
+- <a href="http://code.org/educate/pd/15-16/nyc">NY - New York City</a>
+- <a href="http://code.org/educate/pd/15-16/ohio" target="_blank">OH - Columbus</a>
+- <a href="http://code.org/educate/pd/15-16/houston" target="_blank">TX - Houston</a>
+- <a href="http://code.org/educate/pd/15-16/seattle" target="_blank">WA - Seattle</a>
 
-<b>Day 2:</b>   Walk through and prepare to teach the Computational Science Cycle and Scientific Practices using Computer Models.  Then customize/modify the model and run your own experiments.
 
-<b>Day 3:</b>   Walk through and prepare to teach Modules 2, 3, and 4 in subject area groupings (Earth Science, Life Science, and Physical Science).
-
-The three days of Phase 2 will be completed in approximately 21 hours.</div>
-<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
