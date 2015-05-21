@@ -772,11 +772,11 @@ NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
   var packet = new Packet(this.packetSpec_, rawBinary);
 
   if (this.specContainsHeader_(Packet.HeaderType.TO_ADDRESS)) {
-    this.toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    this.toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   }
 
   if (this.specContainsHeader_(Packet.HeaderType.FROM_ADDRESS)) {
-    this.fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    this.fromAddress = packet.getHeaderAsAddressString(Packet.HeaderType.FROM_ADDRESS);
   }
 
   if (this.specContainsHeader_(Packet.HeaderType.PACKET_INDEX)) {
