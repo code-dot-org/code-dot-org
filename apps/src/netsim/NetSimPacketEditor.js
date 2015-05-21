@@ -64,6 +64,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
+  var level = netsimGlobals.getLevelConfig();
 
   /**
    * @type {jQuery}
@@ -84,11 +85,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.packetSpec_ = initialConfig.packetSpec;
 
   /** @type {string} */
-  this.toAddress = initialConfig.toAddress || '0';
-  // TODO: Better default value for these
+  this.toAddress = initialConfig.toAddress ||
+      dataConverters.binaryToAddressString('0', level.addressFormat);
   
   /** @type {string} */
-  this.fromAddress = initialConfig.fromAddress || '0';
+  this.fromAddress = initialConfig.fromAddress ||
+      dataConverters.binaryToAddressString('0', level.addressFormat);
   
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
