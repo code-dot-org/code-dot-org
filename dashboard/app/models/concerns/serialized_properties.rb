@@ -42,6 +42,7 @@ module SerializedProperties
     def init_internals
       sti_hierarchy.map { |x| serialized_properties[x.to_s] || [] }.flatten.each do |property|
         define_method(property) { read_attribute('properties')[property.to_s] }
+        define_method("#{property}?") { read_attribute('properties')[property.to_s] }
         define_method("#{property}=") { |value| read_attribute('properties')[property.to_s] = value }
       end
     end
