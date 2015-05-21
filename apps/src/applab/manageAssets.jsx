@@ -3,7 +3,8 @@ var React = require('react');
 var AssetRow = require('./manageAssets/assetRow.jsx');
 
 var errorMessages = {
-  415: 'This type of file is not supported.'
+  415: 'This type of file is not supported.',
+  500: 'The server responded with an error.'
 };
 
 function getErrorMessage(status) {
@@ -12,15 +13,28 @@ function getErrorMessage(status) {
 
 module.exports = React.createClass({
   propTypes: {
-    assets: React.PropTypes.instanceOf(Array),
     assetChosen: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
     return {
-      assets: this.props.assets,
+      assets: null,
       uploadStatus: ''
     };
+  },
+
+  componentWillMount: function () {
+    // TODO: Use Dave's client api when it's finished.
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener('load', (function () {
+      this.setState({assets: JSON.parse(xhr.responseText)});
+    }).bind(this));
+    xhr.addEventListener('error', (function () {
+      this.setState({uploadStatus: 'Error loading asset list: ' + getErrorMessage(xhr.status)});
+    }).bind(this));
+
+    xhr.open('GET', '/v3/assets/' + dashboard.project.current.id, true);
+    xhr.send();
   },
 
   fileUploadClicked: function () {
@@ -35,7 +49,7 @@ module.exports = React.createClass({
     // TODO: Use Dave's client api when it's finished.
     var xhr = new XMLHttpRequest();
     xhr.addEventListener('load', (function () {
-      this.state.assets.push({name: file.name, type: 'unknown'});
+      this.state.assets.push({filename: file.name}); // TODO: Use response from 'PUT'.
       this.setState({uploadStatus: 'File "' + file.name + '" successfully uploaded!'});
     }).bind(this));
     xhr.addEventListener('error', (function () {
@@ -50,27 +64,46 @@ module.exports = React.createClass({
   deleteAssetRow: function (name) {
     this.setState({
       assets: this.state.assets.filter(function (asset) {
-        return asset.name !== name;
+        return asset.filename !== name;
       })
     });
     this.setState({uploadStatus: 'File "' + name + '" successfully deleted!'});
   },
 
   render: function() {
-    return (
-      <div className="modal-content" style={{margin: 0}}>
-        <p className="dialog-title">Manage Assets</p>
+    var assetList;
+    if (this.state.assets === null) {
+      assetList = (
+        <div style={{margin: '1em 0', textAlign: 'center'}}>
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
+        </div>
+      )
+    } else if (this.state.assets.length === 0) {
+      assetList = (
+        <div style={{margin: '1em 0'}}>
+          Your assets will appear here.  Click "Upload File" to add a new asset for this project.
+        </div>
+      );
+    } else {
+      assetList = (
         <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
           <table style={{width: '100%'}}>
             <tbody>
-              {this.state.assets.map(function (asset) {
-                return <AssetRow key={asset.name} name={asset.name} type={asset.type}
-                  src={asset.src} delete={this.deleteAssetRow.bind(this, asset.name)}
-                  choose={this.props.assetChosen.bind(this, asset.name)}/>;
-              }.bind(this))}
+          {this.state.assets.map(function (asset) {
+            return <AssetRow key={asset.filename} name={asset.filename} type={asset.type}
+                src={asset.src} delete={this.deleteAssetRow.bind(this, asset.filename)}
+                choose={this.props.assetChosen.bind(this, asset.filename)}/>;
+          }.bind(this))}
             </tbody>
           </table>
         </div>
+      );
+    }
+
+    return (
+      <div className="modal-content" style={{margin: 0}}>
+        <p className="dialog-title">Manage Assets</p>
+        {assetList}
         <input type="file" id="uploader" style={{display: 'none'}} onChange={this.upload}/>
         <button onClick={this.fileUploadClicked} className="share"><i className="fa fa-upload"></i> Upload File</button>
         <span id="uploadStatus" style={{margin: '0 10px'}}>{this.state.uploadStatus}</span>
