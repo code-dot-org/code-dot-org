@@ -1026,7 +1026,7 @@ describe("NetSimRouterNode", function () {
 
     describe("Auto-DNS behavior", function () {
       // Reserved auto-dns address, for now.
-      var autoDnsAddress = 15;
+      var autoDnsAddress = '15';
 
       var assertFirstMessageHeader = function (headerType, expectedValue) {
         var messages = getRows(testShard, 'messageTable');
@@ -1034,7 +1034,12 @@ describe("NetSimRouterNode", function () {
           throw new Error("No rows in message table, unable to check first message.");
         }
 
-        var headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
+        var headerValue;
+        if (Packet.isAddressField(headerType)) {
+          headerValue = encoder.getHeaderAsAddressString(headerType, messages[0].payload);
+        } else {
+          headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
+        }
 
         assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
             headerType + " header to be " + expectedValue + ", but got " +
