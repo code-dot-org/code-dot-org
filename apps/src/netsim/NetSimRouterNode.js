@@ -719,14 +719,14 @@ NetSimRouterNode.prototype.getStatus = function () {
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
   // Require TO_ADDRESS for routing
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === Packet.HeaderType.TO_ADDRESS;
+        return headerField === Packet.HeaderType.TO_ADDRESS;
       })) {
     logger.error("Packet specification does not have a toAddress field.");
   }
 
   // Require FROM_ADDRESS for auto-DNS tasks
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === Packet.HeaderType.FROM_ADDRESS;
+        return headerField === Packet.HeaderType.FROM_ADDRESS;
       })) {
     logger.error("Packet specification does not have a fromAddress field.");
   }

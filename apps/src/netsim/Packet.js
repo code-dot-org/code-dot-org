@@ -128,31 +128,9 @@ Packet.Encoder = function (addressFormat, packetCountBitWidth, headerSpec) {
   this.packetCountBitWidth_ = packetCountBitWidth;
 
   /** @type {Packet.HeaderType[]} */
-  this.headerSpec_ = Packet.Encoder.scrubSpecForBackwardsCompatibility(headerSpec);
+  this.headerSpec_ = headerSpec;
 
   this.validateSpec();
-};
-
-/**
- * Helper for converting from an older header-spec format to a new, simpler one.
- * Old format: {key:{string}, bits:{number}}[]
- * New format: string[]
- * If we detect the old format, we return a spec in the new format.
- * @param {Array} spec
- * @returns {Array}
- */
-Packet.Encoder.scrubSpecForBackwardsCompatibility = function (spec) {
-  var scrubbedSpec = [];
-  spec.forEach(function (specEntry) {
-    if (typeof specEntry === 'string') {
-      // This is new new format, we can just copy it over.
-      scrubbedSpec.push(specEntry);
-    } else if (specEntry !== null && typeof specEntry === 'object') {
-      // This is the old {key:'', bits:0} format.  We just want the key.
-      scrubbedSpec.push(specEntry.key);
-    }
-  });
-  return scrubbedSpec;
 };
 
 /**

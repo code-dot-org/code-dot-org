@@ -81,8 +81,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @type {Packet.HeaderType[]}
    * @private
    */
-  this.packetSpec_ = Packet.Encoder.scrubSpecForBackwardsCompatibility(
-      initialConfig.packetSpec);
+  this.packetSpec_ = initialConfig.packetSpec;
 
   /** @type {string} */
   this.toAddress = initialConfig.toAddress || '0';
