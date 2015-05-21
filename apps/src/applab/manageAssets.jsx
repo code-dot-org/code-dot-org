@@ -62,7 +62,7 @@ module.exports = React.createClass({
           <table style={{width: '100%'}}>
             <tbody>
               {this.state.assets.map(function (asset) {
-                return <AssetRow name={asset.name} type={asset.type} src={asset.src} delete={this.deleteFile.bind(this, asset.name)}/>;
+                return <AssetRow key={asset.name} name={asset.name} type={asset.type} src={asset.src} delete={this.deleteFile.bind(this, asset.name)}/>;
               }.bind(this))}
             </tbody>
           </table>
