@@ -3,8 +3,7 @@ var React = require('react');
 var defaultIcons = {
   image: 'fa fa-picture-o',
   audio: 'fa fa-music',
-  video: 'fa fa-video-camera',
-  unknown: 'fa fa-question'
+  video: 'fa fa-video-camera'
 };
 
 function getThumbnail(type, src) {
@@ -12,7 +11,7 @@ function getThumbnail(type, src) {
     case 'image':
       return <img src={src} style={{width: 'auto', maxWidth: '100%', height: 'auto', maxHeight: '100%', zoom: 2}}/>;
     default:
-      return <i className={defaultIcons[type]} style={{margin: '15px 0', fontSize: '32px'}}></i>;
+      return <i className={defaultIcons[type] || 'fa fa-question'} style={{margin: '15px 0', fontSize: '32px'}}></i>;
   }
 }
 
