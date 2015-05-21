@@ -31,13 +31,11 @@ var _ = utils.getLodash();
 var serializeNumber = netsimUtils.serializeNumber;
 var deserializeNumber = netsimUtils.deserializeNumber;
 
-var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 
 var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 
 var logger = NetSimLogger.getSingleton();
 var netsimGlobals = require('./netsimGlobals');
@@ -629,6 +627,15 @@ NetSimRouterNode.prototype.getAddress = function () {
 };
 
 /**
+ * Get local network's auto-dns address, which is dependent on the address
+ * format configured for the level but the last part should always be 15.
+ * @returns {string}
+ */
+NetSimRouterNode.prototype.getAutoDnsAddress = function () {
+  return this.makeLocalNetworkAddress_(AUTO_DNS_RESERVED_ADDRESS);
+};
+
+/**
  * Get node's hostname, a modified version of its display name.
  * @returns {string}
  * @override
@@ -1040,7 +1047,7 @@ NetSimRouterNode.prototype.getAddressTable = function () {
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     addressTable.push({
       hostname: AUTO_DNS_HOSTNAME,
-      address: AUTO_DNS_RESERVED_ADDRESS,
+      address: this.getAutoDnsAddress(),
       isLocal: false,
       isDnsNode: true
     });
@@ -1084,7 +1091,7 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   }
 
   if (this.dnsMode === DnsMode.AUTOMATIC && hostname === AUTO_DNS_HOSTNAME) {
-    return AUTO_DNS_RESERVED_ADDRESS;
+    return this.getAutoDnsAddress();
   }
 
   var wireRow = _.find(this.myWireRowCache_, function (row) {
@@ -1111,7 +1118,7 @@ NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
   }
 
   if (this.dnsMode === DnsMode.AUTOMATIC &&
-      address === AUTO_DNS_RESERVED_ADDRESS) {
+      address === this.getAutoDnsAddress()) {
     return this.entityID;
   }
 
@@ -1530,7 +1537,7 @@ NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   var packet, toAddress;
   try {
     packet = new Packet(this.packetSpec_, messageRow.payload);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by auto-DNS: " + error);
     return false;
@@ -1540,7 +1547,7 @@ NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   // addressed to the DNS.
   return messageRow.toNodeID === this.entityID &&
       messageRow.fromNodeID === this.entityID &&
-      toAddress === AUTO_DNS_RESERVED_ADDRESS;
+      toAddress === this.getAutoDnsAddress();
 };
 
 /**
@@ -1598,7 +1605,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
   // Extract message contents
   try {
     packet = new Packet(this.packetSpec_, message.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    fromAddress = packet.getHeaderAsAddressString(Packet.HeaderType.FROM_ADDRESS);
     query = packet.getBodyAsAscii(BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
@@ -1624,14 +1631,14 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
   }
 
   responseHeaders = {
-    fromAddress: intToBinary(AUTO_DNS_RESERVED_ADDRESS, BITS_PER_NIBBLE),
-    toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
-    packetIndex: intToBinary(1, BITS_PER_NIBBLE),
-    packetCount: intToBinary(1, BITS_PER_NIBBLE)
+    fromAddress:this.getAutoDnsAddress(),
+    toAddress: fromAddress,
+    packetIndex: 1,
+    packetCount: 1
   };
 
   responseBinary = packet.encoder.concatenateBinary(
-      responseHeaders,
+      packet.encoder.makeBinaryHeaders(responseHeaders),
       asciiToBinary(responseBody, BITS_PER_BYTE));
 
   NetSimMessage.send(
