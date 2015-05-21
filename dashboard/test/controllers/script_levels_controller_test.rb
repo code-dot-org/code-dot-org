@@ -255,9 +255,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     custom_script = create(:script, :name => 'coolscript')
     custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', position: 1)
     first_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 1)
-    UserLevel.create(user: @student, level: first_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    UserLevel.create(user: @student, level: first_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     second_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 2)
-    UserLevel.create(user: @student, level: second_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    UserLevel.create(user: @student, level: second_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 3)
     last_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 4)
 

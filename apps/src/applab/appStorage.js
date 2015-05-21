@@ -15,7 +15,7 @@ AppStorage.tempChannelId =
 
 AppStorage.getChannelId = function() {
   // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.currentApp && dashboard.currentApp.id;
+  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
   return id || AppStorage.tempChannelId;
 };
 

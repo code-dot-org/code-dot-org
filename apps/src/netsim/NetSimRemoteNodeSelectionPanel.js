@@ -105,8 +105,6 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
-    assetUrl: netsimGlobals.getAssetUrlFunction(),
-    showAddRouterButton: netsimGlobals.getLevelConfig().showAddRouterButton,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
     remoteNode: this.remoteNode_
@@ -134,6 +132,9 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
   } else if (levelConfig.canConnectToClients) {
     return i18n.connectToAPeer();
   } else if (levelConfig.canConnectToRouters) {
+    if (levelConfig.broadcastMode) {
+      return i18n.connectToARoom();
+    }
     return i18n.connectToARouter();
   }
   return i18n.connectToANode();
@@ -152,6 +153,9 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = functio
   } else if (levelConfig.canConnectToClients) {
     return i18n.lobbyInstructionsForPeers();
   } else if (levelConfig.canConnectToRouters) {
+    if (levelConfig.broadcastMode) {
+      return i18n.lobbyInstructionsForRooms();
+    }
     return i18n.lobbyInstructionsForRouters();
   }
   return i18n.lobbyInstructionsGeneral();
