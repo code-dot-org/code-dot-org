@@ -6,6 +6,7 @@ var PropertyRow = React.createClass({
       React.PropTypes.string,
       React.PropTypes.number
     ]).isRequired,
+    isNumber: React.PropTypes.bool,
     handleChange: React.PropTypes.func
   },
 
@@ -27,6 +28,7 @@ var PropertyRow = React.createClass({
         <td>{this.props.desc}</td>
         <td>
           <input
+            type={this.props.isNumber ? 'number' : undefined}
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
         </td>
