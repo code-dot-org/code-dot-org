@@ -1,12 +1,17 @@
 #!/usr/bin/env ruby
-# Add script ids to existing UserLevels. Because in the 'past',
-# UserLevels were independent of script, we don't know what script
-# they belong to, so we'll just create a new one for every possible
-# script that the level is in.
+
+# Resolves https://www.pivotaltracker.com/story/show/95174118
+
+# In https://github.com/code-dot-org/code-dot-org/pull/2462 we
+# renamed a number of levels, destroying ScriptLevel and Level objects,
+# but not the old UserLevel objects.
+
+# This script maps existing UserLevel progress from one set of script+level
+# combos to another set of script + level combos
 
 require_relative '../../config/environment'
 
-course_titles_to_renames = {
+course_names_to_old_new_renames = {
     'course1' => {
         'Course1MazeAssessment1' => 'K-1 Maze Sequence Assessment 1',
         'Course1MazeAssessment2' => 'K-1 Maze Sequence Assessment 2',
@@ -48,28 +53,27 @@ course_titles_to_renames = {
     }
 }
 
-course_titles_to_renames.each do |course_name, old_to_new_levels|
-  script_id = Script.where(name: course_name).first.id
+course_names_to_old_new_renames.each do |course_name, old_to_new_levels|
+  script_id = Script.find_by(name: course_name).id
 
   old_to_new_levels.each do |old_name, new_name|
-    old_level_id = Level.where('name' => old_name).first.id
-    old_user_levels = UserLevel.where(
-        level_id: old_level_id,
-        script_id: script_id)
-    old_user_levels.each do |old_user_level|
-      new_level_id = Level.where('name' => new_name).first.id
-      new_user_level = UserLevel.where(
+    old_level_id = Level.find_by('name' => old_name).id
+    new_level_id = Level.find_by('name' => new_name).id
+
+    UserLevel.where(level_id: old_level_id,
+        script_id: script_id).find_each do |old_user_level|
+      new_user_level = UserLevel.find_by(
           level_id: new_level_id,
           script_id: script_id,
-          user_id: old_user_level.user_id).first
+          user_id: old_user_level.user_id)
       if new_user_level
         # They have also played since we made the change
-        new_user_level.attempts = Math.max(new_user_level.attempts, old_user_level)
-        new_user_level.best_result = Math.max(new_user_level.attempts, old_user_level)
+        new_user_level.attempts = new_user_level.attempts + old_user_level.attempts
         new_user_level.best_result = [
             new_user_level.best_result || 0,
             old_user_level.best_result || 0].max
         new_user_level.save
+        old_user_level.destroy
       else
         # Just move their progress to the new version
         old_user_level.level_id = new_level_id
