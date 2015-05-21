@@ -1306,6 +1306,12 @@ Applab.onPropertyChange = function(element, name, value) {
       // in code mode.
       $(element).toggleClass('design-mode-hidden', value === true);
       break;
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      element.checked = value;
+      element.setAttribute('checked', value ? 'checked' : null);
+      break;
     default:
       throw "unknown property name " + name;
   }
@@ -1348,6 +1354,10 @@ Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (allowDragging) {
     Applab.makeDraggable(children);
   }
+
+  children.each(function () {
+    elementLibrary.onDeserialize($(this)[0]);
+  });
 };
 
 /**
@@ -1376,6 +1386,10 @@ Applab.clearEventHandlersKillTickLoop = function() {
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
   }
+};
+
+Applab.isRunning = function () {
+  return $('#resetButton').is(':visible');
 };
 
 /**
@@ -1421,8 +1435,8 @@ Applab.reset = function(first) {
   }
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  var isRunning = window.$ && $('#resetButton').is(':visible');
-  var allowDragging = isDesignMode && !isRunning;
+
+  var allowDragging = isDesignMode && !Applab.isRunning;
   Applab.parseFromLevelHtml(newDivApplab, allowDragging);
   if (isDesignMode) {
     Applab.clearProperties();
