@@ -31,9 +31,7 @@
   var packet = new Packet(packetSpec, packetBinary);
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec.map(function (headerField) {
-    return headerField.key;
-  });
+  var headerFields = packetSpec;
 
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
