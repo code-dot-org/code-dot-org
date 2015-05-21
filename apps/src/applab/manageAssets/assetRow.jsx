@@ -1,4 +1,5 @@
 var React = require('react');
+var AssetsApi = require('./clientApi');
 
 var defaultIcons = {
   image: 'fa fa-picture-o',
@@ -43,14 +44,9 @@ module.exports = React.createClass({
     this.setState({action: 'deleting', actionText: ''});
 
     // TODO: Use Dave's client api when it's finished.
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', this.props.delete);
-    xhr.addEventListener('error', (function () {
+    AssetsApi.ajax('DELETE', this.props.name, this.props.delete, function () {
       this.setState({action: 'confirming delete', actionText: 'Error deleting file.'});
-    }).bind(this));
-
-    xhr.open('DELETE', '/v3/assets/' + dashboard.project.current.id + '/' + this.props.name, true);
-    xhr.send();
+    }.bind(this));
   },
 
   render: function () {
