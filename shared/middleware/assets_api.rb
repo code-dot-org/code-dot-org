@@ -13,7 +13,7 @@ class AssetsApi < Sinatra::Base
     end
   end
 
-  @allowed_file_types = [
+  @@allowed_file_types = [
     'jpg',
     'jpeg',
     'gif',
@@ -35,7 +35,9 @@ class AssetsApi < Sinatra::Base
     s3 = Aws::S3::Client.new(region: 'us-east-1')
     s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}/(.+)$}.match(fileinfo.key)[1]
-      {filename:filename, size:fileinfo.size}
+      mime_type = Sinatra::Base.mime_type(filename.split('.').last)
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      {filename:filename, category:category, size:fileinfo.size}
     end.to_json
   end
 
@@ -66,17 +68,23 @@ class AssetsApi < Sinatra::Base
   #
   put %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
+
+    # verify that file type is in our whitelist, and that the user-specified
+    # mime type matches what Sinatra expects for that file type.
     file_type = filename.split('.').last
-    unsupported_media_type unless file_type
+    unsupported_media_type unless @@allowed_file_types.include?(file_type)
     mime_type = request.content_type.to_s.split(';').first
-    unsupported_media_type unless  mime_type == Sinatra::Base.mime_type(file_type)
+    unsupported_media_type unless mime_type == Sinatra::Base.mime_type(file_type)
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     s3 = Aws::S3::Client.new(region: 'us-east-1')
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
-    s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:request.body.read)
-    no_content
+    body = request.body.read
+    s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:body)
+    content_type :json
+    category = mime_type.split('/').first
+    {filename:filename, category:category, size:body.length}.to_json
   end
 
   #

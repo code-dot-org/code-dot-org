@@ -38,13 +38,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "app_width": "300",
     "app_height": "300",
     "slider_speed": "0.1",
     "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n}",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-Tshape.gif"
-  }
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-Tshape.gif",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false"
+  },
+  "md5": "f17cb1953f613588fb7ba23e827dffc8"
 }]]></config>
   <blocks/>
 </Applab>
