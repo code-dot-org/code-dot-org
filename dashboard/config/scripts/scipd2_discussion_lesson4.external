@@ -1,0 +1,13 @@
+name 'sciPD2 discussion lesson4'
+title 'Lesson 4 Discussion'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### Lesson 4 Discussion
+
+**Make modification and run experiment using experimental design form.**
+
+<br><br>
+<div id="discourse-comments"></div><br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

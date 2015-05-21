@@ -28,6 +28,8 @@ levels.simple = {
 };
 
 levels.custom = {
+  'freePlay': true,
+  'editCode': true,
   'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
@@ -169,8 +171,6 @@ levels.custom = {
 };
 
 levels.ec_simple = utils.extend(levels.custom, {
-  'freePlay': true,
-  'editCode': true,
 });
 
 // Functions in Advanced category currently disabled in all levels:

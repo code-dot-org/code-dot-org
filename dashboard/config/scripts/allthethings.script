@@ -1,0 +1,57 @@
+stage 'Jigsaw'
+level 'blockly:Jigsaw:3'
+
+stage 'Maze'
+level 'k-1 maze 1'
+level 'K-1 Maze Loops 3'
+level '2-3 Maze 1'
+level '4-5 Maze 4'
+level '4-5 Maze Conditionals 3'
+
+stage 'Artist'
+level 'K-1 Artist1 1'
+level '2-3 Artist 1 new'
+level '2-3 Artist Functions 4'
+level 'NEW Course 4 Artist Vars 2'
+level 'NEW Course 4 Artist Functions 3'
+
+stage 'Bee'
+level 'K-1 Bee 1'
+level 'blockly:CustomMaze:wordsearch_k_1'
+level '2-3 Bee Loops 2A'
+level '2-3 Bee Conditionals 5'
+
+stage 'PlayLab'
+level 'blockly:Studio:k1_1'
+level 'blockly:Studio:c2_1'
+level 'Course 4 Play Labs For Loops 1'
+level 'Course 4 Play Lab Params 2'
+
+stage 'Farmer'
+level '4-5 While Loops 4'
+
+stage 'Flappy'
+level 'blockly:Flappy:1'
+
+stage 'Bounce'
+level 'blockly:Bounce:1'
+
+stage 'Multi'
+level 'K-1 Happy Maps Multi 1'
+
+stage 'Match'
+level 'K-1 Maze Match 1'
+
+stage 'TextMatch'
+
+
+stage 'CSinA'
+
+
+stage 'Netsim'
+
+
+stage 'applab'
+
+
+stage 'online pd?'
