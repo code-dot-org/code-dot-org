@@ -17,6 +17,7 @@ var netsimMsg = require('./locale');
 var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
@@ -227,6 +228,7 @@ NetSimPacketEditor.prototype.render = function () {
   this.bindElements_();
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
+  NetSimLogPanel.adjustHeaderColumnWidths(this.rootDiv_);
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
 };
 
@@ -370,7 +372,7 @@ NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName,
     converterFunction, fieldWidth) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
-    if (!isNaN(newValue)) {
+    if (typeof newValue === 'string' || !isNaN(newValue)) {
       this[fieldName] = newValue;
       this.updateFields_(jqueryEvent.target);
     }
@@ -399,7 +401,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
     converterFunction, fieldWidth) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
-    if (isNaN(newValue)) {
+    if (typeof newValue === 'number' && isNaN(newValue)) {
       newValue = converterFunction('0');
     }
     this[fieldName] = newValue;
