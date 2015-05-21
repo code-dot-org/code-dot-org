@@ -26,31 +26,63 @@ module.exports = React.createClass({
 
   getInitialState: function () {
     return {
-      confirmingDelete: false
+      action: 'normal',
+      actionText: ''
     };
   },
 
   confirmDelete: function () {
-    this.setState({confirmingDelete: true});
+    this.setState({action: 'confirming delete', actionText: ''});
   },
 
   cancelDelete: function () {
-    this.setState({confirmingDelete: false});
+    this.setState({action: 'normal', actionText: ''});
+  },
+
+  handleDelete: function () {
+    this.setState({action: 'deleting', actionText: ''});
+
+    // TODO: Use Dave's client api when it's finished.
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener('load', this.props.delete);
+    xhr.addEventListener('error', (function () {
+      this.setState({action: 'confirming delete', actionText: 'Error deleting file.'});
+    }).bind(this));
+
+    xhr.open('DELETE', '/v3/assets/' + dashboard.project.current.id + '/' + this.props.name, true);
+    xhr.send();
   },
 
   render: function () {
-    var actions = (this.state.confirmingDelete) ? (
-      <td width="250" style={{textAlign: 'right'}}>
-        <button className="btn-danger" onClick={this.props.delete}>Delete File</button>
-        <button onClick={this.cancelDelete}>Cancel</button>
-      </td>
-    ) : (
-      <td width="250" style={{textAlign: 'right'}}>
-        <button>Set as Image</button>
-        <button><i className="fa fa-eye"></i></button>
-        <button className="btn-danger" onClick={this.confirmDelete}><i className="fa fa-trash-o"></i></button>
-      </td>
-    );
+    var actions;
+    switch (this.state.action) {
+      case 'normal':
+        actions = (
+          <td width="250" style={{textAlign: 'right'}}>
+            <button>Set as Image</button>
+            <button><i className="fa fa-eye"></i></button>
+            <button className="btn-danger" onClick={this.confirmDelete}><i className="fa fa-trash-o"></i></button>
+            {this.state.actionText}
+          </td>
+        );
+        break;
+      case 'confirming delete':
+        actions = (
+          <td width="250" style={{textAlign: 'right'}}>
+            <button className="btn-danger" onClick={this.handleDelete}>Delete File</button>
+            <button onClick={this.cancelDelete}>Cancel</button>
+            {this.state.actionText}
+          </td>
+        );
+        break;
+      case 'deleting':
+        actions = (
+          <td width="250" style={{textAlign: 'right'}}>
+            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px', marginRight: '15px'}}></i>
+          </td>
+        );
+        break;
+    }
 
     return (
       <tr className="assetRow">
