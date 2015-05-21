@@ -885,6 +885,8 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
+      // TODO (brent) - seems a little gross that we've made this part of a
+      // template shared across all apps
       hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
@@ -1049,6 +1051,8 @@ Applab.init = function(config) {
 
     // Allow elements to be dragged and dropped from the design mode
     // element tray to the play space.
+    // TODO (brent) - get rid of this. requires support jquery-ui, and possibly
+    // also tooltipster in unit tests
     if (window.$) {
       $('.new-design-element').draggable({
         containment:"#codeApp",
@@ -1081,7 +1085,6 @@ Applab.init = function(config) {
         }
       });
     }
-
   }
 };
 
@@ -1217,59 +1220,13 @@ Applab.onDivApplabClick = function (event) {
     return;
   }
   event.preventDefault();
-  if (event.target.id === 'divApplab') {
+
+  var element = event.target;
+  if (element.id === 'divApplab') {
     Applab.clearProperties();
   } else {
-    Applab.editElementProperties(event.target);
+    Applab.editElementProperties(element);
   }
-};
-
-/**
- * @param element {Element}
- * @returns {number} The outerWidth (width + margin) of the element in pixels,
- * or NaN if element's css width or margin are not defined.
- */
-Applab.getOuterWidth = function(element) {
-  var marginLeft = parseInt($(element).css('margin-left'), 10);
-  var marginRight = parseInt($(element).css('margin-right'), 10);
-  return parseInt(element.style.width, 10) + marginLeft + marginRight;
-};
-
-/**
- * Sets element width equal to outerWidth minus margin,
- * or to '' if margin is undefined.
- * @param element {Element}
- * @param outerWidth {number} Desired element outerWidth in pixels.
- */
-Applab.setOuterWidth = function(element, outerWidth) {
-  var marginLeft = parseInt($(element).css('margin-left'), 10);
-  var marginRight = parseInt($(element).css('margin-right'), 10);
-  var width = +outerWidth - marginLeft - marginRight;
-  element.style.width = isNaN(width) ? '' : width + 'px';
-};
-
-/**
- * @param element {Element}
- * @returns {number} the outerHeight (height + margin) of the element in pixels,
- * or NaN if element's css height or margin are not defined.
- */
-Applab.getOuterHeight = function(element) {
-  var marginTop = parseInt($(element).css('margin-top'), 10);
-  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
-  return parseInt(element.style.height, 10) + marginTop + marginBottom;
-};
-
-/**
- * Sets element height equal to outerHeight minus margin,
- * or to '' if margin is undefined.
- * @param element {Element}
- * @param outerHeight {number} Desired element outerHeight in pixels.
- */
-Applab.setOuterHeight = function(element, outerHeight) {
-  var marginTop = parseInt($(element).css('margin-top'), 10);
-  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
-  var height = +outerHeight - marginTop - marginBottom;
-  element.style.height = isNaN(height) ? '' : height + 'px';
 };
 
 Applab.editElementProperties = function(element) {
@@ -1323,10 +1280,10 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.top = value + 'px';
       break;
     case 'width':
-      Applab.setOuterWidth(element, value);
+      element.style.width = value + 'px';
       break;
     case 'height':
-      Applab.setOuterHeight(element, value);
+      element.style.height = value + 'px';
       break;
     case 'text':
       $(element).text(value);
@@ -1342,8 +1299,8 @@ Applab.onPropertyChange = function(element, name, value) {
       break;
     case 'image':
       // For now, we stretch the image to fit the element
-      var width = Applab.getOuterWidth(element);
-      var height = Applab.getOuterHeight(element);
+      var width = parseInt(element.style.width, 10);
+      var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
@@ -1351,6 +1308,12 @@ Applab.onPropertyChange = function(element, name, value) {
       // Add a class that shows as 30% opacity in design mode, and invisible
       // in code mode.
       $(element).toggleClass('design-mode-hidden', value === true);
+      break;
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      element.checked = value;
+      element.setAttribute('checked', value ? 'checked' : null);
       break;
     default:
       throw "unknown property name " + name;
@@ -1394,6 +1357,10 @@ Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (allowDragging) {
     Applab.makeDraggable(children);
   }
+
+  children.each(function () {
+    elementLibrary.onDeserialize($(this)[0]);
+  });
 };
 
 /**
@@ -1422,6 +1389,10 @@ Applab.clearEventHandlersKillTickLoop = function() {
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
   }
+};
+
+Applab.isRunning = function () {
+  return $('#resetButton').is(':visible');
 };
 
 /**
@@ -1467,8 +1438,8 @@ Applab.reset = function(first) {
   }
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  var isRunning = window.$ && $('#resetButton').is(':visible');
-  var allowDragging = isDesignMode && !isRunning;
+
+  var allowDragging = isDesignMode && !Applab.isRunning();
   Applab.parseFromLevelHtml(newDivApplab, allowDragging);
   if (isDesignMode) {
     Applab.clearProperties();
