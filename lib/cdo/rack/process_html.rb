@@ -36,10 +36,13 @@ module Rack
         return [status, headers, body]
       end
 
-      content = body.reduce(:+).tap{|x|x.close if x.respond_to? :close}
+      content = ''
+      body.each{|x|content += x}
+      body.close if body.respond_to? :close
       doc = ::Nokogiri::HTML(content)
       process_doc(doc)
       content = doc.to_html
+      # Update content-length after transform
       headers['content-length'] = content.bytesize.to_s
       response = [content]
 
