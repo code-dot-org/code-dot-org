@@ -15,22 +15,8 @@ var DesignProperties = module.exports = React.createClass({
       return <p>Click on an element to edit its properties.</p>;
     }
 
-    var tagname = this.props.element.tagName.toLowerCase();
-    var propertyClass;
-    // TODO (brent) - eventually this may have to be something other than tagname
-    switch (tagname) {
-      case 'button':
-        propertyClass = elementLibrary.getElementPropertyTable('BUTTON')
-        break;
-
-      case 'label':
-        propertyClass = elementLibrary.getElementPropertyTable('LABEL')
-        break;
-
-      case 'input':
-        propertyClass = elementLibrary.getElementPropertyTable('TEXT_INPUT')
-        break;
-    }
+    var elementType = elementLibrary.getElementType(this.props.element);
+    var propertyClass = elementLibrary.getElementPropertyTable(elementType);
 
     var propertiesElement = React.createElement(propertyClass, {
       element: this.props.element,
