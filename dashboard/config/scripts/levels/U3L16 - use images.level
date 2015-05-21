@@ -54,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing Images.  Try replacing the textLabel with an image..  Will the image respond to events just like the button?  Try connecting an event handler to it.  We've started you out with code similar to the result of the last level, you can copy your code from that level into here if you prefer. GIF: U3L16 - useImage.gif",
+    "instructions": "Introducing Images.  Try replacing the textLabel with an image..  Will the image respond to events just like the button?  Try connecting an event handler to it.  We've started you out with code similar to the result of the last level, you can copy your code from that level into here if you prefer.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -73,7 +73,8 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - useImage.gif"
   },
   "md5": "5b1b88db941b15bd8105e35271f10b3a"
 }]]></config>

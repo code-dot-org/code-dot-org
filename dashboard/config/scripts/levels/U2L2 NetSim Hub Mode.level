@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "You'll now play the \"Game of Messages\" game you just played in person, but this time using the Internet Simulator. Join a room to be connected to your group, and then follow the instructions on the worksheet handed out by your teacher.\r\n\r\n[TODO: NetSim needs to be set up in broadcast mode]",
+    "instructions": "You'll now play the \"Game of Messages\" game you just played in person, but this time using the Internet Simulator. Join a room to be connected to your group, and then follow the instructions on the worksheet handed out by your teacher.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -46,7 +46,8 @@
     "show_router_bandwidth_control": "false",
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
-    "default_dns_mode": "none"
+    "default_dns_mode": "none",
+    "broadcast_mode": "true"
   }
 }]]></config>
   <blocks/>
