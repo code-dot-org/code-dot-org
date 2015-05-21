@@ -139,8 +139,7 @@ Packet.Encoder = function (addressFormat, packetCountBitWidth, headerSpec) {
  */
 Packet.Encoder.prototype.calculateBitWidth = function (addressFormat) {
   return addressFormat.split(/\D+/).reduce(function (prev, cur) {
-    var curInt = parseInt(cur, 10);
-    return prev + (isNaN(curInt) ? 0 : curInt);
+    return prev + (parseInt(cur, 10) || 0);
   }, 0);
 };
 

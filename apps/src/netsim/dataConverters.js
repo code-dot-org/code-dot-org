@@ -368,7 +368,7 @@ exports.binaryToAddressString = function (binaryString, addressFormat) {
 
   var indexIntoBinary = 0;
 
-  // Parentheses in the split() regex cause the dividing elements to be caputred
+  // Parentheses in the split() regex cause the dividing elements to be captured
   // and also included in the return value.
   return addressFormat.split(/(\D+)/).map(function (formatPart) {
     var bitWidth = parseInt(formatPart, 10);
