@@ -3,8 +3,6 @@
 var utils = require('../../utils');
 var _ = utils.getLodash();
 
-// TODO - rename elements directory to designElements?
-
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -12,19 +10,37 @@ var _ = utils.getLodash();
  */
 var nextElementIdMap = {};
 
-var elements = {
-  BUTTON: require('./button.jsx'),
-  TEXT: require('./text.jsx'),
-  TEXT_INPUT: require('./textInput.jsx'),
+/**
+ * @readonly
+ * @enum {string}
+ */
+var ElementType = {
+  BUTTON: 'BUTTON',
+  LABEL: 'LABEL',
+  TEXT_INPUT: 'TEXT_INPUT',
+  CHECKBOX: 'CHECKBOX'
 };
 
+var elements = {};
+elements[ElementType.BUTTON] = require('./button.jsx');
+elements[ElementType.LABEL] = require('./label.jsx');
+elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
+elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
+
 module.exports = {
+  ElementType: ElementType,
   /**
    * Returns an element id with the given prefix which is unused within
    * the applab app's DOM.
    * @param {string} prefix
    * @returns {string}
    */
+  // TODO (brent) - the following seems a little bit strange to me:
+  // 1) Add item1, item2, delete item1
+  // 2) Add another item, it gets id item3
+  // 3) Reload page, add another item, it gets item1
+  // Seems a little like we should always get the lowest available (as in step 3)
+  // or always get the next (as in step 2)
   getUnusedElementId: function (prefix) {
     var divApplab = $('#divApplab');
     var i = nextElementIdMap[prefix] || 1;
@@ -56,5 +72,40 @@ module.exports = {
     element.style.top = top + 'px';
 
     return element;
+  },
+
+  getElementPropertyTable: function (elementType) {
+    return elements[elementType].PropertyTable;
+  },
+
+  /**
+   * @param {HTMLElement} element
+   * @returns {string} String representing elementType
+   */
+  getElementType: function (element) {
+    var tagname = element.tagName.toLowerCase();
+    switch (tagname) {
+      case 'button':
+        return ElementType.BUTTON;
+      case 'label':
+        return ElementType.LABEL;
+      case 'input':
+        if (element.getAttribute('type') === 'checkbox') {
+          return ElementType.CHECKBOX;
+        }
+        return ElementType.TEXT_INPUT;
+    }
+    throw new Error('unknown element type');
+  },
+
+  /**
+   * Code to be called after deserializing element, allowing us to attach any
+   * necessary event handlers.
+   */
+  onDeserialize: function (element) {
+    var elementType = this.getElementType(element);
+    if (elements[elementType].onDeserialize) {
+      elements[elementType].onDeserialize(element);
+    }
   }
 };

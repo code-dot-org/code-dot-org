@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({218:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({225:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -16,7 +16,7 @@ window.netsimMain = function(options) {
 };
 
 
-},{"../StudioApp":4,"../appMain":5,"./levels":216,"./netsim":219,"./skins":225}],225:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":223,"./netsim":226,"./skins":232}],232:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -25,7 +25,7 @@ exports.load = function (assetUrl, id) {
 };
 
 
-},{"../skins":229}],219:[function(require,module,exports){
+},{"../skins":236}],226:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -1253,7 +1253,7 @@ NetSim.prototype.updateLayout = function () {
 };
 
 
-},{"../ObservableEvent":1,"../RunLoop":3,"../utils":277,"./DashboardUser":147,"./NetSimBitLogPanel":150,"./NetSimLobby":166,"./NetSimLocalClientNode":167,"./NetSimLogPanel":171,"./NetSimLogger":172,"./NetSimRouterNode":190,"./NetSimSendPanel":196,"./NetSimShard":197,"./NetSimShardCleaner":198,"./NetSimStatusPanel":204,"./NetSimTabsComponent":207,"./NetSimVisualization":208,"./controls.html.ejs":214,"./locale":217,"./netsimConstants":220,"./netsimGlobals":221,"./netsimUtils":223,"./page.html.ejs":224}],224:[function(require,module,exports){
+},{"../ObservableEvent":1,"../RunLoop":3,"../utils":284,"./DashboardUser":152,"./NetSimBitLogPanel":155,"./NetSimLobby":172,"./NetSimLocalClientNode":173,"./NetSimLogPanel":177,"./NetSimLogger":178,"./NetSimRouterNode":196,"./NetSimSendPanel":202,"./NetSimShard":203,"./NetSimShardCleaner":204,"./NetSimStatusPanel":210,"./NetSimTabsComponent":213,"./NetSimVisualization":214,"./controls.html.ejs":221,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228,"./netsimUtils":230,"./page.html.ejs":231}],231:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1275,7 +1275,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":116,"ejs":287}],216:[function(require,module,exports){
+},{"../locale":121,"ejs":294}],223:[function(require,module,exports){
 /*jshint multistr: true */
 
 var netsimConstants = require('./netsimConstants');
@@ -1317,6 +1317,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           automatically pick up messages to itself from the message table,
  *           and dump them to the received message log.  If false, some other
  *           method must be used for receiving messages.
+ *
+ * @property {boolean} broadcastMode - Enabling this option turns "routers"
+ *           into "rooms" and makes it so every message sent in the room
+ *           will be received by every other person in that room.
  *
  * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
@@ -1424,6 +1428,7 @@ levels.custom = {
   // Simulator-wide setup
   messageGranularity: MessageGranularity.BITS,
   automaticReceive: false,
+  broadcastMode: false,
 
   // Packet header specification
   routerExpectsPacketHeader: [],
@@ -1469,7 +1474,7 @@ levels.custom = {
 };
 
 
-},{"./Packet":213,"./netsimConstants":220}],214:[function(require,module,exports){
+},{"./Packet":220,"./netsimConstants":227}],221:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1489,7 +1494,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],208:[function(require,module,exports){
+},{"ejs":294}],214:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1506,10 +1511,13 @@ return buf.join('');
 var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimFakeVizWire = require('./NetSimFakeVizWire');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
+var netsimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
+var NodeType = require('./netsimConstants').NodeType;
 
 /**
  * Top-level controller for the network visualization.
@@ -1553,10 +1561,10 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   /**
    * List of VizEntities, which are all the elements that will actually show up
    * in our visualization.
-   * @type {Array.<NetSimVizEntity>}
+   * @type {Array.<NetSimVizElement>}
    * @private
    */
-  this.entities_ = [];
+  this.elements_ = [];
 
   /**
    * Reference to the local node viz entity, the anchor for the visualization.
@@ -1595,12 +1603,12 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
  */
 NetSimVisualization.prototype.tick = function (clock) {
   // Everyone gets an update
-  this.entities_.forEach(function (entity) {
+  this.elements_.forEach(function (entity) {
     entity.tick(clock);
   });
 
   // Tear out dead entities.
-  this.entities_ = this.entities_.filter(function (entity) {
+  this.elements_ = this.elements_.filter(function (entity) {
     if (entity.isDead()) {
       entity.getRoot().remove();
       return false;
@@ -1613,7 +1621,7 @@ NetSimVisualization.prototype.tick = function (clock) {
  * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
  */
 NetSimVisualization.prototype.render = function () {
-  this.entities_.forEach(function (entity) {
+  this.elements_.forEach(function (entity) {
     entity.render();
   });
 };
@@ -1684,7 +1692,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
-      this.entities_.push(this.localNode);
+      this.elements_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
     this.localNode.setIsLocalNode();
@@ -1712,7 +1720,7 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
  * @returns {NetSimVizEntity} or undefined if not found
  */
 NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
-  return _.find(this.entities_, function (entity) {
+  return _.find(this.elements_, function (entity) {
     return entity instanceof entityType && entity.id === entityID;
   });
 };
@@ -1724,12 +1732,25 @@ NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
  * @returns {Array.<NetSimVizWire>} the attached wires
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
-  return this.entities_.filter(function (entity) {
+  return this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
         (
         (entity.localVizNode === vizNode) ||
         (vizNode.isRouter && entity.remoteVizNode === vizNode)
         );
+  });
+};
+
+/**
+ * Gets the set of FakeVizWires directly attached to the given VizNode (in
+ * either direction).
+ * @param {NetSimVizNode} vizNode
+ * @returns {NetSimFakeVizWire[]} the attached fake wires
+ */
+NetSimVisualization.prototype.getFakeWiresAttachedToNode = function (vizNode) {
+  return this.elements_.filter(function (entity) {
+    return entity instanceof NetSimFakeVizWire &&
+        (entity.localVizNode === vizNode || entity.remoteVizNode === vizNode);
   });
 };
 
@@ -1771,11 +1792,108 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
     return newVizWire;
   }.bind(this));
 
+  // In broadcast mode we hide the real wires and router, and overlay a set
+  // of fake wires showing everybody connected to everybody else.
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    this.updateBroadcastModeWires_();
+  }
+
   // Since the wires table determines simulated connectivity, we trigger a
   // recalculation of which nodes are in the local network (should be in the
   // foreground) and then re-layout the foreground nodes.
   this.pullElementsToForeground();
   this.distributeForegroundNodes();
+};
+
+/**
+ * Based on new connectivity information, recalculate which 'fake' connections
+ * we need to display to show all nodes in a 'room' having direct wires to
+ * one another.
+ * @private
+ */
+NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
+  // Kill all fake wires
+  this.elements_.forEach(function (vizElement) {
+    if (vizElement instanceof NetSimFakeVizWire) {
+      vizElement.kill();
+    }
+  }, this);
+
+  // Generate new wires
+  var connections = this.generateBroadcastModeConnections_();
+  connections.forEach(function (connectedPair) {
+    var newFakeWire = new NetSimFakeVizWire(connectedPair,
+        this.getEntityByID.bind(this));
+    this.addVizEntity_(newFakeWire);
+  }, this);
+};
+
+/**
+ * Using the cached node and wire data, generates the set of all node pairs (A,B)
+ * on the shard such that both A and B are client nodes, and A is reachable
+ * from B.
+ * @returns {Array.<{nodeA:{number}, nodeB:{number}}>}
+ * @private
+ */
+NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
+  var nodeRows = this.shard_.nodeTable.readAllCached();
+  var wireRows = this.shard_.wireTable.readAllCached();
+  var nodeCount = nodeRows.length;
+
+  // Generate a reverse mapping for lookups
+  var nodeIDToIndex = {};
+  for (var matrixIndex = 0; matrixIndex < nodeCount; matrixIndex++) {
+    nodeIDToIndex[nodeRows[matrixIndex].id] = matrixIndex;
+  }
+
+  // Generate empty graph matrix initialized with no connections.
+  var graph = new Array(nodeCount);
+  for (var x = 0; x < nodeCount; x++) {
+    graph[x] = new Array(nodeCount);
+    for (var y = 0; y < nodeCount; y++) {
+      graph[x][y] = false;
+    }
+  }
+
+  // Apply real connections (wires) to the graph matrix
+  wireRows.forEach(function (wireRow) {
+    var localNodeIndex = nodeIDToIndex[wireRow.localNodeID];
+    var remoteNodeIndex = nodeIDToIndex[wireRow.remoteNodeID];
+    if (localNodeIndex !== undefined && remoteNodeIndex !== undefined) {
+      graph[localNodeIndex][remoteNodeIndex] = true;
+      graph[remoteNodeIndex][localNodeIndex] = true;
+    }
+  });
+
+  // Use simple Floyd-Warshall to complete the transitive closure graph
+  for (var k = 0; k < nodeCount; k++) {
+    for (var i = 0; i < nodeCount; i++) {
+      for (var j = 0; j < nodeCount; j++) {
+        if (graph[i][k] && graph[k][j]) {
+          graph[i][j] = true;
+        }
+      }
+    }
+  }
+
+  // Now, generate unique pairs doing lookup on our transitive closure graph
+  var connections = [];
+  for (var from = 0; from < nodeCount - 1; from++) {
+    for (var to = from + 1; to < nodeCount; to++) {
+      // leave router connections out of this list
+      var clientToClient = (nodeRows[from].type === NodeType.CLIENT &&
+          nodeRows[to].type === NodeType.CLIENT);
+      // Must be reachable
+      var reachable = graph[from][to];
+      if (clientToClient && reachable) {
+        connections.push({
+          nodeA: nodeRows[from].id,
+          nodeB: nodeRows[to].id
+        });
+      }
+    }
+  }
+  return connections;
 };
 
 /**
@@ -1815,7 +1933,7 @@ NetSimVisualization.prototype.updateVizEntitiesOfType_ = function (
  */
 NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
     vizEntityType, entityCollection) {
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     var isCorrectType = (vizEntity instanceof vizEntityType);
     var foundMatch = entityCollection.some(function (entity) {
       return entity.entityID === vizEntity.id;
@@ -1829,12 +1947,12 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
 
 /**
  * Adds a VizEntity to the visualization.
- * @param {NetSimVizEntity} vizEntity
+ * @param {NetSimVizElement} vizElement
  * @private
  */
-NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
-  this.entities_.push(vizEntity);
-  this.svgRoot_.find('#background-group').prepend(vizEntity.getRoot());
+NetSimVisualization.prototype.addVizEntity_ = function (vizElement) {
+  this.elements_.push(vizElement);
+  this.svgRoot_.find('#background-group').prepend(vizElement.getRoot());
 };
 
 /**
@@ -1842,15 +1960,16 @@ NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
  * layer. Special rule (for now): Prepend wires so that they show up behind
  * nodes.  Will need a better solution for this if/when the viz gets more
  * complex.
- * @param {NetSimVizEntity} vizEntity
+ * @param {NetSimVizElement} vizElement
  * @param {jQuery} newParent
  */
-var moveVizEntityToGroup = function (vizEntity, newParent) {
-  vizEntity.getRoot().detach();
-  if (vizEntity instanceof NetSimVizWire) {
-    vizEntity.getRoot().prependTo(newParent);
+var moveVizEntityToGroup = function (vizElement, newParent) {
+  vizElement.getRoot().detach();
+  if (vizElement instanceof NetSimVizWire ||
+      vizElement instanceof NetSimFakeVizWire) {
+    vizElement.getRoot().prependTo(newParent);
   } else {
-    vizEntity.getRoot().appendTo(newParent);
+    vizElement.getRoot().appendTo(newParent);
   }
 };
 
@@ -1861,8 +1980,8 @@ var moveVizEntityToGroup = function (vizEntity, newParent) {
  */
 NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Begin by marking all entities background (unvisited)
-  this.entities_.forEach(function (vizEntity) {
-    vizEntity.visited = false;
+  this.elements_.forEach(function (vizElement) {
+    vizElement.visited = false;
   });
 
   if (this.netsim_.isConnectedToRemote()) {
@@ -1877,11 +1996,11 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
     // While there are still nodes that need visiting,
     // visit the next node, marking it as "foreground/visited" and
     // pushing all of its unvisited connections onto the stack.
-    var currentVizEntity;
+    var currentVizElement;
     while (toExplore.length > 0) {
-      currentVizEntity = toExplore.pop();
-      currentVizEntity.visited = true;
-      toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
+      currentVizElement = toExplore.pop();
+      currentVizElement.visited = true;
+      toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizElement));
     }
   } else if (this.localNode) {
     // ONLY pull the local node to the foreground if we don't have a connection
@@ -1894,7 +2013,7 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Possible optimization: Can we do this with just one operation on the live DOM?
   var foreground = this.svgRoot_.find('#foreground-group');
   var background = this.svgRoot_.find('#background-group');
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
 
     // Check whether a change should occur.  If not, we leave
@@ -1923,7 +2042,8 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
   var neighbors = [];
 
   if (vizEntity instanceof NetSimVizNode) {
-    neighbors = this.getWiresAttachedToNode(vizEntity);
+    neighbors = this.getWiresAttachedToNode(vizEntity)
+        .concat(this.getFakeWiresAttachedToNode(vizEntity));
   } else if (vizEntity instanceof NetSimVizWire) {
     if (vizEntity.localVizNode) {
       neighbors.push(vizEntity.localVizNode);
@@ -1933,6 +2053,8 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
       neighbors.push(vizEntity.remoteVizNode);
     }
   }
+  // We intentionally exclude NetSimFakeVizWire; it should give no
+  // neighbors because it's not used to calculate reachability.
 
   return neighbors.filter(function (vizEntity) {
     return !vizEntity.visited;
@@ -1961,8 +2083,13 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
  *                  O        O        O   O      O   O
  */
 NetSimVisualization.prototype.distributeForegroundNodes = function () {
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    this.distributeForegroundNodesForBroadcast_();
+    return;
+  }
+
   /** @type {Array.<NetSimVizNode>} */
-  var foregroundNodes = this.entities_.filter(function (entity) {
+  var foregroundNodes = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizNode && entity.isForeground;
   });
 
@@ -2017,12 +2144,83 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
 };
 
 /**
+ * Explicitly control VizNodes in the foreground, moving them into a desired
+ * configuration based on their number and types.  Nodes are given animation
+ * commands (via tweenToPosition) so that they interpolate nicely to their target
+ * positions.
+ *
+ * Configurations:
+ * One node (local node): Centered on the screen.
+ *   |  L  |
+ *
+ * Two nodes: Local node on left, remote node on right, nothing in the middle.
+ *   | L-R |
+ *
+ * Three or more nodes: Distributed around center of frame
+ * 3:    O    4:  O      5: O  O    6: O O
+ *   L          L   O      L          L   O
+ *       O        O         O  O       O O
+ */
+NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function () {
+  /** @type {Array.<NetSimVizNode>} */
+  var foregroundNodes = this.elements_.filter(function (entity) {
+    return entity instanceof NetSimVizNode &&
+        entity.isForeground &&
+        !entity.isRouter;
+  });
+
+  // Sometimes, there's no work to do.
+  if (foregroundNodes.length === 0) {
+    return;
+  }
+
+  // One node: Centered on screen
+  if (foregroundNodes.length === 1) {
+    foregroundNodes[0].tweenToPosition(0, 0, 600, tweens.easeOutQuad);
+    return;
+  }
+
+  var myNode;
+
+  // Two nodes: Placed across from each other, local node on left
+  if (foregroundNodes.length === 2) {
+    myNode = this.localNode;
+    var otherNode = _.find(foregroundNodes, function (node) {
+      return node !== myNode;
+    });
+    myNode.tweenToPosition(-75, 0, 400, tweens.easeOutQuad);
+    otherNode.tweenToPosition(75, 0, 600, tweens.easeOutQuad);
+    return;
+  }
+
+  // Three or more nodes:
+  // * Local node on left
+  // * Other nodes evenly distributed in a circle
+  myNode = this.localNode;
+  var otherNodes = foregroundNodes.filter(function (node) {
+    return node !== myNode;
+  });
+
+  myNode.tweenToPosition(-100, 0, 400, tweens.easeOutQuad);
+  var radiansBetweenNodes = 2*Math.PI / (otherNodes.length + 1); // Include myNode!
+  for (var i = 0; i < otherNodes.length; i++) {
+    // sin(rad) = o/h
+    var h = 100;
+    // Extra Math.PI here puts 0deg on the left.
+    var rad = Math.PI + (i+1) * radiansBetweenNodes;
+    var x = Math.cos(rad) * h;
+    var y = Math.sin(rad) * h;
+    otherNodes[i].tweenToPosition(x, y, 600, tweens.easeOutQuad);
+  }
+};
+
+/**
  * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
   // Tell all nodes about the new DNS mode, so they can decide whether to
   // show or hide their address.
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizNode) {
       vizEntity.setDnsMode(newDnsMode);
     }
@@ -2033,7 +2231,7 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
  * @param {number} dnsNodeID
  */
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizNode) {
       vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
     }
@@ -2046,7 +2244,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimVisualization.prototype.setEncodings = function (newEncodings) {
-  this.entities_.forEach(function (vizEntity) {
+  this.elements_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizWire) {
       vizEntity.setEncodings(newEncodings);
     }
@@ -2109,7 +2307,7 @@ NetSimVisualization.prototype.getVizWireToRemote = function () {
     return null;
   }
 
-  var outgoingWires = this.entities_.filter(function (entity) {
+  var outgoingWires = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
         entity.localVizNode === this.localNode;
   }, this);
@@ -2130,7 +2328,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
     return null;
   }
 
-  var incomingWires = this.entities_.filter(function (entity) {
+  var incomingWires = this.elements_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
         entity.remoteVizNode === this.localNode;
   }, this);
@@ -2143,7 +2341,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 };
 
 
-},{"../utils":277,"./NetSimVizNode":210,"./NetSimVizWire":211,"./NetSimWire":212,"./netsimNodeFactory":222,"./tweens":226}],211:[function(require,module,exports){
+},{"../utils":284,"./NetSimFakeVizWire":170,"./NetSimVizNode":217,"./NetSimVizWire":218,"./NetSimWire":219,"./netsimConstants":227,"./netsimGlobals":228,"./netsimNodeFactory":229,"./tweens":233}],218:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2163,6 +2361,7 @@ var NetSimVizNode = require('./NetSimVizNode');
 var tweens = require('./tweens');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 
@@ -2263,6 +2462,10 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
 
   if (this.remoteVizNode) {
     this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
+
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    this.getRoot().css('display', 'none');
   }
 };
 
@@ -2459,791 +2662,7 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
 };
 
 
-},{"../utils":277,"./NetSimVizEntity":209,"./NetSimVizNode":210,"./dataConverters":215,"./netsimConstants":220,"./netsimUtils":223,"./tweens":226}],210:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-require('../utils');
-var netsimConstants = require('./netsimConstants');
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
-var tweens = require('./tweens');
-
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
-
-var netsimGlobals = require('./netsimGlobals');
-
-/**
- * The narrowest that a text bubble is allowed to be.
- * @type {number}
- * @const
- */
-var TEXT_MIN_WIDTH = 30;
-
-/**
- * Width to add to the bubble beyond the width of the student's name.
- * @type {number}
- * @const
- */
-var TEXT_PADDING_X = 20;
-
-/**
- * Height to add to the bubble beyond the height of the student's name.
- * @type {number}
- * @const
- */
-var TEXT_PADDING_Y = 10;
-
-/**
- * @param {NetSimNode} sourceNode
- * @constructor
- * @augments NetSimVizEntity
- */
-var NetSimVizNode = module.exports = function (sourceNode) {
-  NetSimVizEntity.call(this, sourceNode);
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.address_ = undefined;
-
-  /**
-   * @type {DnsMode}
-   * @private
-   */
-  this.dnsMode_ = undefined;
-
-  /**
-   * @type {number}
-   */
-  this.nodeID = undefined;
-
-  /**
-   * @type {boolean}
-   */
-  this.isRouter = false;
-
-  /**
-   * @type {boolean}
-   */
-  this.isLocalNode = false;
-
-  /**
-   * @type {boolean}
-   */
-  this.isDnsNode = false;
-
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
-
-  // Going for a diameter of _close_ to 75
-  var radius = 37;
-  var textVerticalOffset = 4;
-
-  /**
-   *
-   * @type {jQuery}
-   * @private
-   */
-  jQuerySvgElement('circle')
-      .attr('cx', 0)
-      .attr('cy', 0)
-      .attr('r', radius)
-      .appendTo(root);
-
-  this.nameGroup_ = jQuerySvgElement('g')
-      .attr('transform', 'translate(0,0)')
-      .appendTo(root);
-
-  this.displayName_ = jQuerySvgElement('text')
-      .attr('x', 0)
-      .attr('y', textVerticalOffset);
-
-  this.nameBox_ = jQuerySvgElement('rect')
-      .addClass('name-box');
-
-  this.nameGroup_
-      .append(this.nameBox_)
-      .append(this.displayName_);
-
-  this.addressGroup_ = jQuerySvgElement('g')
-      .attr('transform', 'translate(0,30)')
-      .hide()
-      .appendTo(root);
-
-  this.addressBox_ = jQuerySvgElement('rect')
-      .addClass('address-box')
-      .appendTo(this.addressGroup_);
-
-  this.addressText_ = jQuerySvgElement('text')
-      .addClass('address-box')
-      .attr('x', 0)
-      .attr('y', textVerticalOffset)
-      .text('?')
-      .appendTo(this.addressGroup_);
-
-  // Set an initial default tween for zooming in from nothing.
-  this.snapToScale(0);
-  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
-
-  this.configureFrom(sourceNode);
-  this.render();
-};
-NetSimVizNode.inherits(NetSimVizEntity);
-
-/**
- *
- * @param {NetSimNode} sourceNode
- */
-NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  if (netsimGlobals.getLevelConfig().showHostnameInGraph) {
-    this.setName(sourceNode.getHostname());
-  } else {
-    this.setName(sourceNode.getShortDisplayName());
-  }
-  this.nodeID = sourceNode.entityID;
-
-  if (sourceNode.getNodeType() === NodeType.ROUTER) {
-    this.isRouter = true;
-    this.getRoot().addClass('router-node');
-  }
-};
-
-/**
- * Flag this viz node as the simulation local node.
- */
-NetSimVizNode.prototype.setIsLocalNode = function () {
-  this.isLocalNode = true;
-  this.getRoot().addClass('local-node');
-};
-
-/**
- * Change the display name of the viz node
- * @param {string} newName
- */
-NetSimVizNode.prototype.setName = function (newName) {
-  this.displayName_.text(newName);
-  this.resizeNameBox_();
-};
-
-/** @private */
-NetSimVizNode.prototype.resizeNameBox_ = function () {
-  this.resizeRectToText_(this.nameBox_, this.displayName_);
-};
-
-/** @private */
-NetSimVizNode.prototype.resizeAddressBox_ = function () {
-  this.resizeRectToText_(this.addressBox_, this.addressText_);
-};
-
-/**
- * Utility for resizing a background rounded-rect to fit the given text element.
- * @param {jQuery} rect
- * @param {jQuery} text
- * @private
- */
-NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
-  try {
-    var box = text[0].getBBox();
-    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
-    var height = box.height + TEXT_PADDING_Y;
-    var halfWidth = width / 2;
-    var halfHeight = height / 2;
-    rect.attr('x', -halfWidth)
-        .attr('y', -halfHeight)
-        .attr('rx', halfHeight)
-        .attr('ry', halfHeight)
-        .attr('width', width)
-        .attr('height', height);
-  } catch (e) {
-    // Just allow this to be a no-op if it fails.  In some browsers,
-    // getBBox will throw if the element is not yet in the DOM.
-  }
-};
-
-/**
- * Killing a visualization node removes its ID so that it won't conflict with
- * another node of matching ID being added, and begins its exit animation.
- * @override
- */
-NetSimVizNode.prototype.kill = function () {
-  NetSimVizNode.superPrototype.kill.call(this);
-  this.stopAllAnimation();
-  this.tweenToScale(0, 200, tweens.easeInQuad);
-};
-
-/**
- * Provides drifting animation for nodes in the background.
- * @param {RunLoop.Clock} clock
- */
-NetSimVizNode.prototype.tick = function (clock) {
-  NetSimVizNode.superPrototype.tick.call(this, clock);
-  if (!this.isForeground && this.tweens_.length === 0) {
-    var randomX = 300 * Math.random() - 150;
-    var randomY = 300 * Math.random() - 150;
-    this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
-  } else if (this.isForeground && this.tweens_.length > 0) {
-    this.resizeNameBox_();
-    this.resizeAddressBox_();
-  }
-};
-
-/**
- * @param {boolean} isForeground
- */
-NetSimVizNode.prototype.onDepthChange = function (isForeground) {
-  NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
-  this.tweens_.length = 0;
-  if (isForeground) {
-    this.tweenToScale(1, 600, tweens.easeOutElastic);
-  } else {
-    this.tweenToScale(0.5, 600, tweens.easeOutElastic);
-  }
-};
-
-NetSimVizNode.prototype.setAddress = function (address) {
-  this.address_ = address;
-  this.updateAddressDisplay();
-};
-
-/**
- * @param {DNSMode} newDnsMode
- */
-NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsMode_ = newDnsMode;
-  this.updateAddressDisplay();
-};
-
-/**
- * @param {boolean} isDnsNode
- */
-NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
-  this.isDnsNode = isDnsNode;
-  this.updateAddressDisplay();
-};
-
-NetSimVizNode.prototype.updateAddressDisplay = function () {
-  // Routers never show their address
-  // If a DNS mode has not been set we never show an address
-  if (this.isRouter || this.address_ === undefined) {
-    this.addressGroup_.hide();
-    return;
-  }
-
-  this.addressGroup_.show();
-  if (this.dnsMode_ === DnsMode.NONE) {
-    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
-  } else {
-    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
-  }
-  this.resizeAddressBox_();
-};
-
-
-},{"../utils":277,"./NetSimVizEntity":209,"./netsimConstants":220,"./netsimGlobals":221,"./netsimUtils":223,"./tweens":226}],209:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var tweens = require('./tweens');
-
-/**
- * A VizEntity is an object that maps to a NetSimEntity somewhere in shared
- * storage, and has a representation in the network visualization.  Its role
- * is to maintain that visual representation and update it to reflect the
- * state of the stored entity it represents.
- *
- * In doing so, it has behaviors and a lifetime that don't directly represent
- * the stored entity because while quantities in our model snap to new values
- * or are created/destroyed in a single frame, we want their visual
- * representation to animate nicely.  Thus, a VizEntity has helpers for tweening
- * and may often be in progress toward the state of the entity it represents,
- * rather than an exact representation of that entity.  Likewise, a VizEntity
- * will outlive its actual entity, because it can have a 'death' animation.
- *
- * Every VizEntity has a root element which is a <g> tag, an SVG "group"
- * that contains the other components that will actually draw.
- *
- * @constructor
- * @param {NetSimEntity} entity - the netsim Entity that this element represents
- */
-var NetSimVizEntity = module.exports =  function (entity) {
-  /**
-   * @type {number}
-   */
-  this.id = entity.entityID;
-
-  /**
-   * @type {number}
-   */
-  this.posX = 0;
-
-  /**
-   * @type {number}
-   */
-  this.posY = 0;
-
-  /**
-   * @type {number}
-   */
-  this.scale = 1;
-
-  /**
-   * @type {boolean}
-   */
-  this.isForeground = false;
-
-  /**
-   * Root SVG <g> (group) element for this object.
-   * @type {jQuery}
-   * @private
-   */
-  this.rootGroup_ = jQuerySvgElement('g');
-
-  /**
-   * Set of tweens we should currently be running on this node.
-   * Processed by tick()
-   * @type {Array.<exports.TweenValueTo>}
-   * @private
-   */
-  this.tweens_ = [];
-
-  /**
-   * @type {boolean}
-   * @private
-   */
-  this.isDead_ = false;
-};
-
-/**
- * @returns {jQuery} wrapper around root <g> element
- */
-NetSimVizEntity.prototype.getRoot = function () {
-  return this.rootGroup_;
-};
-
-/**
- * Begins the process of destroying this VizEntity.  Once started, this
- * process cannot be stopped.  Immediately clears its ID to remove any
- * association with the stored entity, which probably doesn't exist anymore.
- * This method can be overridden to trigger an "on-death" animation.
- */
-NetSimVizEntity.prototype.kill = function () {
-  this.id = undefined;
-  this.isDead_ = true;
-};
-
-/**
- * @returns {boolean} whether this entity is done with its death animation
- *          and is ready to be cleaned up by the visualization manager.
- *          The default implementation here returns TRUE as soon as kill()
- *          is called and all animations are completed.
- */
-NetSimVizEntity.prototype.isDead = function () {
-  return this.isDead_ && this.tweens_.length === 0;
-};
-
-/**
- * Update all of the tweens currently running on this VizEntity (which will
- * probably modify its properties) and then remove any tweens that are completed
- * from the list.
- * @param {RunLoop.Clock} clock
- */
-NetSimVizEntity.prototype.tick = function (clock) {
-  this.tweens_.forEach(function (tween) {
-    tween.tick(clock);
-  });
-  this.tweens_ = this.tweens_.filter(function (tween) {
-    return !tween.isFinished;
-  });
-};
-
-/**
- * Update the root group's properties to reflect our current position
- * and scale.
- */
-NetSimVizEntity.prototype.render = function () {
-  // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
-  //                   out of date.
-  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
-      ' scale(' + this.scale + ')';
-  this.rootGroup_.attr('transform', transform);
-};
-
-/**
- * @param {boolean} isForeground
- */
-NetSimVizEntity.prototype.onDepthChange = function (isForeground) {
-  this.isForeground = isForeground;
-};
-
-/**
- * Throw away all existing tweens on this object.
- */
-NetSimVizEntity.prototype.stopAllAnimation = function () {
-  this.tweens_.length = 0;
-};
-
-/**
- * Stops any existing motion animation and begins an animated motion to the
- * given coordinates.  Note: This animates the VizEntity's root group.
- * @param {number} newX given in SVG points
- * @param {number} newY given in SVG points
- * @param {number} [duration=600] in milliseconds
- * @param {TweenFunction} [tweenFunction=linear]
- */
-NetSimVizEntity.prototype.tweenToPosition = function (newX, newY, duration,
-    tweenFunction) {
-  // Remove any existing tweens controlling posX or posY
-  this.removeAllTweensOnProperties(['posX', 'posY']);
-
-  // Add two new tweens, one for each axis
-  if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'posX', newX, duration,
-        tweenFunction));
-    this.tweens_.push(new tweens.TweenValueTo(this, 'posY', newY, duration,
-        tweenFunction));
-  } else {
-    this.posX = newX;
-    this.posY = newY;
-  }
-
-};
-
-/**
- * Alias for calling tweenToPosition with a zero duration
- * @param {number} newX given in SVG points
- * @param {number} newY given in SVG points
- */
-NetSimVizEntity.prototype.snapToPosition = function (newX, newY) {
-  this.tweenToPosition(newX, newY, 0);
-};
-
-/**
- * Stops any existing animation of the entity's scale and begins an animated
- * change to the given target scale value.  Note: this animates the VizEntity's
- * root group.
- * @param {number} newScale where 1.0 is 100% (unscaled)
- * @param {number} [duration=600] in milliseconds
- * @param {TweenFunction} [tweenFunction=linear]
- */
-NetSimVizEntity.prototype.tweenToScale = function (newScale, duration,
-    tweenFunction) {
-  // Remove existing scale tweens
-  this.removeAllTweensOnProperty('scale');
-
-  // On nonzero duration, add tween to target scale.  Otherwise just set it.
-  if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'scale', newScale, duration,
-        tweenFunction));
-  } else {
-    this.scale = newScale;
-  }
-};
-
-NetSimVizEntity.prototype.doAfterDelay = function (delay, callback) {
-  if (delay > 0) {
-    this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
-  } else {
-    callback();
-  }
-};
-
-/**
- * Remove (stop) all active tweens that control the given property on this
- * visualization entity.
- * @param {string} propertyName
- */
-NetSimVizEntity.prototype.removeAllTweensOnProperty = function (propertyName) {
-  this.removeAllTweensOnProperties([propertyName]);
-};
-
-/**
- * Remove (stop) all active tweens that control any of the given properties
- * on this visualization entity.
- * @param {string[]} propertyNames
- */
-NetSimVizEntity.prototype.removeAllTweensOnProperties = function (propertyNames) {
-  this.tweens_ = this.tweens_.filter(function (tween) {
-    var targetsThisEntity = tween.target === this;
-    var isRemovableProperty = propertyNames.some(function (name) {
-      return tween.propertyName === name;
-    });
-
-    // Invert for filter() because we want to keep everything BUT the matched
-    // properties
-    return !(targetsThisEntity && isRemovableProperty);
-  }, this);
-};
-
-/**
- * Alias for calling tweenToScale with a zero duration.
- * @param {number} newScale where 1.0 is 100% (unscaled)
- */
-NetSimVizEntity.prototype.snapToScale = function (newScale) {
-  this.tweenToScale(newScale, 0);
-};
-
-
-},{"./netsimUtils":223,"./tweens":226}],226:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-var valueOr = require('../utils').valueOr;
-
-/**
- * Default tween duration in milliseconds
- * @type {number}
- * @const
- */
-var DEFAULT_TWEEN_DURATION = 600;
-
-/**
- * A four-arg interpolation function.
- *
- * @typedef {function} TweenFunction
- * @param {number} t - current Time, in milliseconds since tween began
- * @param {number} b - Begin value
- * @param {number} c - final Change in value
- * @param {number} d - total tween Duration
- * @returns {number} the interpolated value for the current time
- */
-
-/**
- * Interpolates with a little back-and-forth over the target value at the end.
- * @type {TweenFunction}
- */
-exports.easeOutElastic = function (t, b, c, d) {
-  var s, p, a;
-  s=1.70158;
-  p=0;
-  a=c;
-  if (t===0) {
-    return b;
-  }
-  if ((t/=d)==1) {
-    return b+c;
-  }
-  if (!p) {
-    p=d*0.3;
-  }
-  if (a < Math.abs(c)) {
-    a=c;
-    s=p/4;
-  } else {
-    s = p/(2*Math.PI) * Math.asin (c/a);
-  }
-  return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-};
-
-/**
- * Interpolates, accelerating as it goes.
- * @type {TweenFunction}
- */
-exports.easeInQuad = function (t, b, c, d) {
-  return c*(t/=d)*t + b;
-};
-
-/**
- * Interpolates, decelerating as it goes.
- * @type {TweenFunction}
- */
-exports.easeOutQuad = function (t, b, c, d) {
-  return -c*(t/=d)*(t-2) + b;
-};
-
-exports.easeInOutQuad = function (t, b, c, d) {
-  if ((t/=d/2) < 1) {
-    return c/2*t*t + b;
-  }
-  return -c/2 * ((--t)*(t-2) - 1) + b;
-};
-
-/**
- * Linear interpolation
- * @type {TweenFunction}
- */
-exports.linear = function (t, b, c, d) {
-  return c * (t / d) + b;
-};
-
-/**
- * Wraps a tween method with the state it needs to animate a property.
- * On creation, assumes that property's current value for start values.
- * Must be ticked to progress toward completion.
- *
- * @param {!Object} target - The object owning the property we want to animate
- * @param {!string} propertyName - Must be a valid property on target
- * @param {!number} endValue - The desired final value of the property
- * @param {number} [duration] - How long the tween should take in milliseconds,
- *        default 600ms
- * @param {TweenFunction} [tweenFunction] - A tween function, default linear
- * @constructor
- */
-exports.TweenValueTo = function (target, propertyName, endValue, duration,
-    tweenFunction) {
-  /**
-   * Will be set to TRUE when tween is completed.
-   * @type {boolean}
-   */
-  this.isFinished = false;
-
-  /**
-   * Will be set on our first tick.
-   * @type {number}
-   * @private
-   */
-  this.startTime_ = undefined;
-
-  /**
-   * @type {Object}
-   */
-  this.target = target;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.propertyName = propertyName;
-
-  /**
-   * @type {TweenFunction}
-   * @private
-   */
-  this.tweenFunction_ = valueOr(tweenFunction, exports.linear);
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.startValue_ = target[propertyName];
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.deltaValue_ = endValue - this.startValue_;
-
-  /**
-   * Duration of tween in milliseconds
-   * @type {number}
-   * @private
-   */
-  this.duration_ = valueOr(duration, DEFAULT_TWEEN_DURATION);
-};
-
-/**
- * @param {RunLoop.clock} clock
- */
-exports.TweenValueTo.prototype.tick = function (clock) {
-  if (this.startTime_ === undefined) {
-    this.startTime_ = clock.time;
-  }
-
-  var timeSinceStart = clock.time - this.startTime_;
-
-  if (this.deltaValue_ !== 0) {
-    this.target[this.propertyName] = this.tweenFunction_(
-        timeSinceStart,
-        this.startValue_,
-        this.deltaValue_,
-        this.duration_
-    );
-  }
-
-  if (timeSinceStart >= this.duration_) {
-    this.target[this.propertyName] = this.startValue_ + this.deltaValue_;
-    this.isFinished = true;
-  }
-};
-
-exports.DoAfterDelay = function (target, duration, callback) {
-  /**
-   * Will be set to TRUE when tween is completed.
-   * @type {boolean}
-   */
-  this.isFinished = false;
-
-
-  /**
-   * Will be set on our first tick.
-   * @type {number}
-   * @private
-   */
-  this.startTime_ = undefined;
-
-  /**
-   * @type {Object}
-   */
-  this.target = target;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.propertyName = null;
-
-  /**
-   * Duration of tween in milliseconds
-   * @type {number}
-   * @private
-   */
-  this.duration_ = duration;
-
-  /**
-   * Function to call when the duration has elapsed.
-   * @type {function}
-   */
-  this.callback_ = callback;
-};
-
-/**
- * @param {RunLoop.clock} clock
- */
-exports.DoAfterDelay.prototype.tick = function (clock) {
-  if (this.startTime_ === undefined) {
-    this.startTime_ = clock.time;
-  }
-
-  var timeSinceStart = clock.time - this.startTime_;
-  if (timeSinceStart >= this.duration_) {
-    this.callback_();
-    this.isFinished = true;
-  }
-};
-
-
-},{"../utils":277}],207:[function(require,module,exports){
+},{"../utils":284,"./NetSimVizEntity":216,"./NetSimVizNode":217,"./dataConverters":222,"./netsimConstants":227,"./netsimGlobals":228,"./netsimUtils":230,"./tweens":233}],213:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3523,7 +2942,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimDnsTab":159,"./NetSimMyDeviceTab":178,"./NetSimRouterTab":194,"./NetSimTabsComponent.html.ejs":206,"./netsimConstants":220,"./netsimGlobals":221,"./netsimUtils":223}],206:[function(require,module,exports){
+},{"./NetSimDnsTab":164,"./NetSimMyDeviceTab":184,"./NetSimRouterTab":200,"./NetSimTabsComponent.html.ejs":212,"./netsimConstants":227,"./netsimGlobals":228,"./netsimUtils":230}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3555,7 +2974,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"./netsimConstants":220,"./netsimUtils":223,"ejs":287}],204:[function(require,module,exports){
+},{"./locale":224,"./netsimConstants":227,"./netsimUtils":230,"ejs":294}],210:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3654,7 +3073,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 };
 
 
-},{"../utils":277,"./NetSimPanel.js":184,"./NetSimStatusPanel.html.ejs":203}],203:[function(require,module,exports){
+},{"../utils":284,"./NetSimPanel.js":190,"./NetSimStatusPanel.html.ejs":209}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3685,7 +3104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"ejs":287}],198:[function(require,module,exports){
+},{"./locale":224,"ejs":294}],204:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4283,7 +3702,7 @@ CleanLogs.prototype.onBegin_ = function () {
 };
 
 
-},{"../commands":72,"../utils":277,"./NetSimEntity":164,"./NetSimHeartbeat":165,"./NetSimLogEntry":168,"./NetSimLogger":172,"./NetSimMessage":174,"./NetSimNode":179,"./NetSimWire":212}],197:[function(require,module,exports){
+},{"../commands":77,"../utils":284,"./NetSimEntity":169,"./NetSimHeartbeat":171,"./NetSimLogEntry":174,"./NetSimLogger":178,"./NetSimMessage":180,"./NetSimNode":185,"./NetSimWire":219}],203:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4367,7 +3786,7 @@ NetSimShard.prototype.tick = function (clock) {
 };
 
 
-},{"../clientApi":70,"./NetSimTable":205}],205:[function(require,module,exports){
+},{"../clientApi":75,"./NetSimTable":211}],211:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4612,7 +4031,7 @@ NetSimTable.prototype.tick = function () {
 };
 
 
-},{"../ObservableEvent":1,"../utils":277}],196:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":284}],202:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5138,7 +4557,7 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":277,"./NetSimLogger":172,"./NetSimPacketEditor":181,"./NetSimPacketSizeControl":182,"./NetSimPanel":184,"./NetSimSendPanel.html.ejs":195,"./Packet":213,"./dataConverters":215,"./locale":217,"./netsimConstants":220}],195:[function(require,module,exports){
+},{"../utils":284,"./NetSimLogger":178,"./NetSimPacketEditor":187,"./NetSimPacketSizeControl":188,"./NetSimPanel":190,"./NetSimSendPanel.html.ejs":201,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5161,7 +4580,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"./netsimConstants":220,"ejs":287}],194:[function(require,module,exports){
+},{"./locale":224,"./netsimConstants":227,"ejs":294}],200:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5352,7 +4771,7 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
 };
 
 
-},{"./NetSimBandwidthControl":148,"./NetSimMemoryControl":173,"./NetSimRouterLogTable":189,"./NetSimRouterStatsTable":192,"./NetSimRouterTab.html.ejs":193,"./netsimGlobals":221}],193:[function(require,module,exports){
+},{"./NetSimBandwidthControl":153,"./NetSimMemoryControl":179,"./NetSimRouterLogTable":195,"./NetSimRouterStatsTable":198,"./NetSimRouterTab.html.ejs":199,"./netsimGlobals":228}],199:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5374,7 +4793,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"ejs":287}],192:[function(require,module,exports){
+},{"./locale":224,"ejs":294}],198:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5663,7 +5082,7 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
 };
 
 
-},{"./NetSimLogEntry":168,"./NetSimRouterStatsTable.html.ejs":191,"./netsimUtils":223}],191:[function(require,module,exports){
+},{"./NetSimLogEntry":174,"./NetSimRouterStatsTable.html.ejs":197,"./netsimUtils":230}],197:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5711,7 +5130,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":277,"./netsimUtils":223,"ejs":287}],189:[function(require,module,exports){
+},{"../utils":284,"./netsimUtils":230,"ejs":294}],195:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5778,7 +5197,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimRouterLogTable.html.ejs":188}],188:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html.ejs":194}],194:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5827,7 +5246,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":213,"./locale":217,"./netsimConstants":220,"./netsimUtils":223,"ejs":287}],182:[function(require,module,exports){
+},{"./Packet":220,"./locale":224,"./netsimConstants":227,"./netsimUtils":230,"ejs":294}],188:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5875,7 +5294,7 @@ NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
   if (packetSize === Infinity) {
     return i18n.unlimited();
   }
-  return i18n.numBitsPerPacket({ x: packetSize });
+  return i18n.numBitsPerPacket({ numBits: packetSize });
 };
 
 /**
@@ -5889,7 +5308,7 @@ NetSimPacketSizeControl.prototype.valueToLabel = function (val) {
   if (val === Infinity) {
     return i18n.unlimited();
   }
-  return i18n.numBitsPerPacket({x: val});
+  return i18n.numBitsPerPacket({numBits: val});
 };
 
 /**
@@ -5906,7 +5325,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":202,"./locale":217}],181:[function(require,module,exports){
+},{"./NetSimSlider":208,"./locale":224}],187:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6727,7 +6146,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 };
 
 
-},{"../constants":73,"../utils":277,"./NetSimEncodingControl":163,"./NetSimPacketEditor.html.ejs":180,"./Packet":213,"./dataConverters":215,"./locale":217,"./netsimConstants":220}],180:[function(require,module,exports){
+},{"../constants":78,"../utils":284,"./NetSimEncodingControl":168,"./NetSimPacketEditor.html.ejs":186,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227}],186:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6802,7 +6221,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":213,"./locale":217,"./netsimConstants":220,"./netsimUtils":223,"ejs":287}],178:[function(require,module,exports){
+},{"./Packet":220,"./locale":224,"./netsimConstants":227,"./netsimUtils":230,"ejs":294}],184:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7008,7 +6427,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
 };
 
 
-},{"./NetSimBitRateControl":151,"./NetSimChunkSizeControl":152,"./NetSimEncodingControl":163,"./NetSimMetronome":176,"./NetSimMyDeviceTab.html.ejs":177,"./NetSimPulseRateControl":185,"./netsimGlobals":221}],185:[function(require,module,exports){
+},{"./NetSimBitRateControl":156,"./NetSimChunkSizeControl":157,"./NetSimEncodingControl":168,"./NetSimMetronome":182,"./NetSimMyDeviceTab.html.ejs":183,"./NetSimPulseRateControl":191,"./netsimGlobals":228}],191:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7075,7 +6494,7 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"../utils":277,"./NetSimSlider":202,"./locale":217}],177:[function(require,module,exports){
+},{"../utils":284,"./NetSimSlider":208,"./locale":224}],183:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7095,7 +6514,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],176:[function(require,module,exports){
+},{"ejs":294}],182:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7214,7 +6633,7 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
 };
 
 
-},{"./NetSimMetronome.html.ejs":175}],175:[function(require,module,exports){
+},{"./NetSimMetronome.html.ejs":181}],181:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7306,7 +6725,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],173:[function(require,module,exports){
+},{"ejs":294}],179:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7359,7 +6778,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":277,"./NetSimSlider":202,"./netsimConstants":220,"./netsimUtils":223}],171:[function(require,module,exports){
+},{"../utils":284,"./NetSimSlider":208,"./netsimConstants":227,"./netsimUtils":230}],177:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7749,7 +7168,7 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":277,"./NetSimEncodingControl":163,"./NetSimLogPacket.html.ejs":169,"./NetSimLogPanel.html.ejs":170,"./NetSimPanel":184,"./locale":217,"./netsimGlobals":221}],170:[function(require,module,exports){
+},{"../utils":284,"./NetSimEncodingControl":168,"./NetSimLogPacket.html.ejs":175,"./NetSimLogPanel.html.ejs":176,"./NetSimPanel":190,"./locale":224,"./netsimGlobals":228}],176:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7769,7 +7188,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],169:[function(require,module,exports){
+},{"ejs":294}],175:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7902,7 +7321,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":213,"./dataConverters":215,"./locale":217,"./netsimConstants":220,"./netsimUtils":223,"ejs":287}],167:[function(require,module,exports){
+},{"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimUtils":230,"ejs":294}],173:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8605,7 +8024,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 };
 
 
-},{"../ObservableEvent":1,"../utils":277,"./NetSimClientNode":153,"./NetSimEntity":164,"./NetSimHeartbeat":165,"./NetSimLogger":172,"./NetSimMessage":174,"./netsimConstants":220,"./netsimGlobals":221}],166:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":284,"./NetSimClientNode":158,"./NetSimEntity":169,"./NetSimHeartbeat":171,"./NetSimLogger":178,"./NetSimMessage":180,"./netsimConstants":227,"./netsimGlobals":228}],172:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9107,7 +8526,7 @@ NetSimLobby.prototype.getShareLink = function () {
 };
 
 
-},{"../utils":277,"./NetSimClientNode":153,"./NetSimLogger":172,"./NetSimRemoteNodeSelectionPanel":187,"./NetSimRouterNode":190,"./NetSimShardSelectionPanel":200,"./locale":217,"./netsimGlobals":221,"./netsimNodeFactory":222}],222:[function(require,module,exports){
+},{"../utils":284,"./NetSimClientNode":158,"./NetSimLogger":178,"./NetSimRemoteNodeSelectionPanel":193,"./NetSimRouterNode":196,"./NetSimShardSelectionPanel":206,"./locale":224,"./netsimGlobals":228,"./netsimNodeFactory":229}],229:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9161,7 +8580,7 @@ netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
 };
 
 
-},{"./NetSimClientNode":153,"./NetSimRouterNode":190,"./netsimConstants":220}],200:[function(require,module,exports){
+},{"./NetSimClientNode":158,"./NetSimRouterNode":196,"./netsimConstants":227}],206:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9335,7 +8754,7 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
 };
 
 
-},{"../constants":73,"../utils":277,"./NetSimPanel":184,"./NetSimShardSelectionPanel.html.ejs":199,"./locale":217}],199:[function(require,module,exports){
+},{"../constants":78,"../utils":284,"./NetSimPanel":190,"./NetSimShardSelectionPanel.html.ejs":205,"./locale":224}],205:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9367,7 +8786,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"ejs":287}],190:[function(require,module,exports){
+},{"./locale":224,"ejs":294}],196:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9978,7 +9397,13 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
-  return i18n.routerX({
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    return i18n.roomNumberX({
+      x: this.entityID
+    });
+  }
+
+  return i18n.routerNumberX({
     x: this.entityID
   });
 };
@@ -10002,6 +9427,8 @@ NetSimRouterNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getStatus = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   // Determine status based on cached wire data
   var cachedWireRows = this.shard_.wireTable.readAllCached();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
@@ -10009,6 +9436,12 @@ NetSimRouterNode.prototype.getStatus = function () {
   }, this);
 
   if (incomingWireRows.length === 0) {
+    if (levelConfig.broadcastMode) {
+      return i18n.roomStatusNoConnections({
+        maximumClients: MAX_CLIENT_CONNECTIONS
+      });
+    }
+
     return i18n.routerStatusNoConnections({
       maximumClients: MAX_CLIENT_CONNECTIONS
     });
@@ -10026,8 +9459,21 @@ NetSimRouterNode.prototype.getStatus = function () {
   }).join(', ');
 
   if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+    if (levelConfig.broadcastMode) {
+      return i18n.roomStatusFull({
+        connectedClients: connectedNodeNames
+      });
+    }
+
     return i18n.routerStatusFull({
       connectedClients: connectedNodeNames
+    });
+  }
+
+  if (levelConfig.broadcastMode) {
+    return i18n.roomStatus({
+      connectedClients: connectedNodeNames,
+      remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
     });
   }
 
@@ -10644,8 +10090,78 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
       return;
     }
 
-    this.forwardMessageToRecipient_(message, onComplete);
+    var levelConfig = netsimGlobals.getLevelConfig();
+    if (levelConfig.broadcastMode) {
+      logger.info("Forwarding to all");
+      this.forwardMessageToAll_(message, onComplete);
+    } else {
+      this.forwardMessageToRecipient_(message, onComplete);
+    }
   }.bind(this));
+};
+
+/**
+ * Forward the given message to all nodes that are connected to this router.
+ * This is effectively "hub" operation.
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete) {
+  // Assumptions for broadcast mode:
+  // 1. We can totally ignore packet headers, because addresses don't matter
+  // 2. We won't send to the Auto-DNS, since DNS make no sense with no addresses
+
+  // Grab the list of all connected nodes
+  var connectedNodeIDs = this.myWireRowCache_.map(function (wireRow) {
+    return wireRow.localNodeID;
+  });
+
+  this.forwardMessageToNodeIDs_(message, connectedNodeIDs, function (err, result) {
+    if (err) {
+      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+    } else {
+      this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
+    }
+    onComplete(err, result);
+  }.bind(this));
+};
+
+/**
+ * Forward the given message to the list of node IDs provided.
+ * This function works by calling itself recursively with the tail of the
+ * node ID list each time it finishes sending one of the messages, so
+ * timing on this "broadcast" won't be exactly correct - that's probably okay
+ * though, especially at the point in the curriculum where this is used.
+ * @param {NetSimMessage} message
+ * @param {number[]} nodeIDs
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
+    nodeIDs, onComplete) {
+  if (nodeIDs.length === 0) {
+    // All done!
+    onComplete(null);
+    return;
+  }
+
+  // Send to the first recipient, then recurse on the remaining recipients
+  var nextRecipientNodeID = nodeIDs[0];
+  NetSimMessage.send(
+      this.shard_,
+      this.entityID,
+      nextRecipientNodeID,
+      nextRecipientNodeID,
+      message.payload,
+      function (err) {
+        if (err) {
+          onComplete(err);
+          return;
+        }
+        this.forwardMessageToNodeIDs_(message, nodeIDs.slice(1), onComplete);
+      }.bind(this)
+  );
 };
 
 /**
@@ -10873,7 +10389,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 };
 
 
-},{"../ObservableEvent":1,"../utils":277,"./NetSimEntity":164,"./NetSimHeartbeat":165,"./NetSimLogEntry":168,"./NetSimLogger":172,"./NetSimMessage":174,"./NetSimNode":179,"./NetSimWire":212,"./Packet":213,"./dataConverters":215,"./locale":217,"./netsimConstants":220,"./netsimGlobals":221,"./netsimUtils":223}],174:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":284,"./NetSimEntity":169,"./NetSimHeartbeat":171,"./NetSimLogEntry":174,"./NetSimLogger":178,"./NetSimMessage":180,"./NetSimNode":185,"./NetSimWire":219,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228,"./netsimUtils":230}],180:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10988,7 +10504,7 @@ NetSimMessage.prototype.buildRow = function () {
 };
 
 
-},{"../utils":277,"./NetSimEntity":164}],168:[function(require,module,exports){
+},{"../utils":284,"./NetSimEntity":169}],174:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11158,7 +10674,7 @@ NetSimLogEntry.prototype.getLocalizedStatus = function () {
 };
 
 
-},{"../utils":277,"./NetSimEntity":164,"./Packet":213,"./dataConverters":215,"./locale":217,"./netsimConstants":220}],213:[function(require,module,exports){
+},{"../utils":284,"./NetSimEntity":169,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227}],220:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11433,7 +10949,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 };
 
 
-},{"./dataConverters":215,"./netsimUtils":223}],187:[function(require,module,exports){
+},{"./dataConverters":222,"./netsimUtils":230}],193:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11541,8 +11057,6 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Add our own content markup
   var newMarkup = $(markup({
     controller: this,
-    assetUrl: netsimGlobals.getAssetUrlFunction(),
-    showAddRouterButton: netsimGlobals.getLevelConfig().showAddRouterButton,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
     remoteNode: this.remoteNode_
@@ -11570,6 +11084,9 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
   } else if (levelConfig.canConnectToClients) {
     return i18n.connectToAPeer();
   } else if (levelConfig.canConnectToRouters) {
+    if (levelConfig.broadcastMode) {
+      return i18n.connectToARoom();
+    }
     return i18n.connectToARouter();
   }
   return i18n.connectToANode();
@@ -11588,6 +11105,9 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = functio
   } else if (levelConfig.canConnectToClients) {
     return i18n.lobbyInstructionsForPeers();
   } else if (levelConfig.canConnectToRouters) {
+    if (levelConfig.broadcastMode) {
+      return i18n.lobbyInstructionsForRooms();
+    }
     return i18n.lobbyInstructionsForRouters();
   }
   return i18n.lobbyInstructionsGeneral();
@@ -11664,7 +11184,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 
 
 
-},{"../utils":277,"./NetSimPanel":184,"./NetSimRemoteNodeSelectionPanel.html.ejs":186,"./locale":217,"./netsimConstants":220,"./netsimGlobals":221}],186:[function(require,module,exports){
+},{"../utils":284,"./NetSimPanel":190,"./NetSimRemoteNodeSelectionPanel.html.ejs":192,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228}],192:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11680,8 +11200,14 @@ with (locals || {}) { (function(){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
+var netsimGlobals = require('./netsimGlobals');
 var NodeType = require('./netsimConstants').NodeType;
 
+/** @type {function} */
+var getAssetUrl = netsimGlobals.getAssetUrlFunction();
+
+/** @type {netsimLevelConfiguration} */
+var levelConfig = netsimGlobals.getLevelConfig();
 
 /**
  * @typedef {Object} rowMetadata
@@ -11792,16 +11318,16 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
 }
 
 function writeHeader(headerText) {
-  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((119,  headerText )), '</th>\n    </tr>\n  ');121;
+  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((125,  headerText )), '</th>\n    </tr>\n  ');127;
 }
 
 function writeEmptyRow(contents) {
   contents = utils.valueOr(contents, '');
-  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (128,  contents ), '</td>\n    </tr>\n  ');130;
+  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (134,  contents ), '</td>\n    </tr>\n  ');136;
 }
 
 function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
-  ; buf.push('\n    <tr>\n      <td nowrap>', escape((136,  nodeName )), '</td>\n      <td>', (137,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');139;
+  ; buf.push('\n    <tr>\n      <td nowrap>', escape((142,  nodeName )), '</td>\n      <td>', (143,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');145;
           var markup = '';
           if (buttonType === 'join-button') {
             markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
@@ -11810,10 +11336,10 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           } else if (buttonType === 'cancel-button') {
             markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
           }
-        ; buf.push('\n        ', (149,  markup ), '\n      </td>\n    </tr>\n  ');152;
+        ; buf.push('\n        ', (155,  markup ), '\n      </td>\n    </tr>\n  ');158;
 }
 
-; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((157,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');161;
+; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((163,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');167;
         // Primary lobby list
         writeHeader(i18n.lobby());
         lobbyRows.forEach(function (row) {
@@ -11824,8 +11350,9 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });
 
-        if (!controller.hasOutgoingRequest() && showAddRouterButton) {
-          writeEmptyRow(buttonMarkup(i18n.addRouter(), 'netsim-lobby-add-router', ['secondary']));
+        if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
+          var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
+          writeEmptyRow(buttonMarkup(buttonText, 'netsim-lobby-add-router', ['secondary']));
         } else if (lobbyRows.length === 0) {
           writeEmptyRow(i18n.lobbyIsEmpty());
         }
@@ -11850,7 +11377,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeHeader(i18n.outgoingConnectionRequests());
           outgoingRequestRows.forEach(function (row) {
             var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="' + assetUrl('media/netsim/loading.gif') + '" />',
+              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
               otherName: row.displayName,
               otherStatus: row.status
             });
@@ -11865,7 +11392,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":277,"./locale":217,"./netsimConstants":220,"ejs":287}],165:[function(require,module,exports){
+},{"../utils":284,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228,"ejs":294}],171:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12068,7 +11595,985 @@ NetSimHeartbeat.prototype.spoofExpired = function () {
 };
 
 
-},{"../utils":277,"./NetSimEntity":164}],159:[function(require,module,exports){
+},{"../utils":284,"./NetSimEntity":169}],170:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var NetSimVizElement = require('./NetSimVizElement');
+var NetSimVizNode = require('./NetSimVizNode');
+
+/**
+ * Represents a connection between two nodes that does not actually exist
+ * in the simulation - original use case is for broadcast mode, where nodes
+ * are ACTUALLY connected through a hub, but we want it to appear that they
+ * are all connected to one another.
+ *
+ * @param {{nodeA:{number}, nodeB:{number}}} endpoints
+ * @param {function} getEntityByID - Allows this wire to search
+ *        for entities in the simulation
+ * @constructor
+ * @augments NetSimVizElement
+ */
+var NetSimFakeVizWire = module.exports = function (endpoints, getEntityByID) {
+  NetSimVizElement.call(this);
+
+  var root = this.getRoot();
+  root.addClass('viz-wire');
+
+  /**
+   * @type {jQuery} wrapped around a SVGPathElement
+   * @private
+   */
+  this.line_ = jQuerySvgElement('path')
+      .appendTo(root);
+
+  /**
+   * Bound getEntityByID method from vizualization controller.
+   * @type {Function}
+   * @private
+   */
+  this.getEntityByID_ = getEntityByID;
+
+  this.localVizNode = null;
+  this.remoteVizNode = null;
+
+  this.configureFrom(endpoints);
+  this.render();
+};
+NetSimFakeVizWire.inherits(NetSimVizElement);
+
+/**
+ * Configuring a wire means looking up the viz nodes that will be its endpoints.
+ * @param {{nodeA:{number}, nodeB:{number}}} endpoints
+ */
+NetSimFakeVizWire.prototype.configureFrom = function (endpoints) {
+  this.localVizNode = this.getEntityByID_(NetSimVizNode, endpoints.nodeA);
+  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, endpoints.nodeB);
+};
+
+/**
+ * Node ID of local-end node, if it exists.
+ * @returns {number|undefined}
+ */
+NetSimFakeVizWire.prototype.localNodeID = function () {
+  if (this.localVizNode) {
+    return this.localVizNode.id;
+  }
+  return undefined;
+};
+
+/**
+ * Node ID of remote-end node, if it exists.
+ * @returns {number|undefined}
+ */
+NetSimFakeVizWire.prototype.remoteNodeID = function () {
+  if (this.remoteVizNode) {
+    return this.remoteVizNode.id;
+  }
+  return undefined;
+};
+
+/**
+ * Update path data for wire.
+ */
+NetSimFakeVizWire.prototype.render = function () {
+  NetSimFakeVizWire.superPrototype.render.call(this);
+
+  var pathData = 'M 0 0';
+  if (this.localVizNode && this.remoteVizNode) {
+    pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
+    ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
+  }
+  this.line_.attr('d', pathData);
+};
+
+/**
+ * Hide this wire - used to hide the incoming wire when we're trying to show
+ * simplex mode.
+ */
+NetSimFakeVizWire.prototype.hide = function () {
+  this.getRoot().addClass('hidden-wire');
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimFakeVizWire.prototype.kill = function () {
+  NetSimFakeVizWire.superPrototype.kill.call(this);
+  this.localVizNode = null;
+  this.remoteVizNode = null;
+};
+
+/**
+ * Adds/removes classes from the SVG root according to the given wire state.
+ * Passing anything other than "1" or "0" will put the wire in an "unknown"
+ * state, which begins a CSS transition fade back to gray.
+ * @param {"0"|"1"|*} newState
+ * @private
+ */
+NetSimFakeVizWire.prototype.setWireClasses_ = function (newState) {
+  var stateOff = (newState === '0');
+  var stateOn = (!stateOff && newState === '1');
+  var stateUnknown = (!stateOff && !stateOn);
+
+  this.getRoot().toggleClass('state-on', stateOn);
+  this.getRoot().toggleClass('state-off', stateOff);
+  this.getRoot().toggleClass('state-unknown', stateUnknown);
+};
+
+
+},{"../utils":284,"./NetSimVizElement":215,"./NetSimVizNode":217,"./netsimUtils":230}],217:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var netsimConstants = require('./netsimConstants');
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var NetSimVizEntity = require('./NetSimVizEntity');
+var tweens = require('./tweens');
+
+var DnsMode = netsimConstants.DnsMode;
+var NodeType = netsimConstants.NodeType;
+
+var netsimGlobals = require('./netsimGlobals');
+
+/**
+ * The narrowest that a text bubble is allowed to be.
+ * @type {number}
+ * @const
+ */
+var TEXT_MIN_WIDTH = 30;
+
+/**
+ * Width to add to the bubble beyond the width of the student's name.
+ * @type {number}
+ * @const
+ */
+var TEXT_PADDING_X = 20;
+
+/**
+ * Height to add to the bubble beyond the height of the student's name.
+ * @type {number}
+ * @const
+ */
+var TEXT_PADDING_Y = 10;
+
+/**
+ * @param {NetSimNode} sourceNode
+ * @constructor
+ * @augments NetSimVizEntity
+ */
+var NetSimVizNode = module.exports = function (sourceNode) {
+  NetSimVizEntity.call(this, sourceNode);
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
+
+  /**
+   * @type {number}
+   */
+  this.nodeID = undefined;
+
+  /**
+   * @type {boolean}
+   */
+  this.isRouter = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDnsNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
+  /**
+   *
+   * @type {jQuery}
+   * @private
+   */
+  jQuerySvgElement('circle')
+      .attr('cx', 0)
+      .attr('cy', 0)
+      .attr('r', radius)
+      .appendTo(root);
+
+  this.nameGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,0)')
+      .appendTo(root);
+
+  this.displayName_ = jQuerySvgElement('text')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset);
+
+  this.nameBox_ = jQuerySvgElement('rect')
+      .addClass('name-box');
+
+  this.nameGroup_
+      .append(this.nameBox_)
+      .append(this.displayName_);
+
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
+  this.addressBox_ = jQuerySvgElement('rect')
+      .addClass('address-box')
+      .appendTo(this.addressGroup_);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset)
+      .text('?')
+      .appendTo(this.addressGroup_);
+
+  // Set an initial default tween for zooming in from nothing.
+  this.snapToScale(0);
+  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
+
+  this.configureFrom(sourceNode);
+  this.render();
+};
+NetSimVizNode.inherits(NetSimVizEntity);
+
+/**
+ *
+ * @param {NetSimNode} sourceNode
+ */
+NetSimVizNode.prototype.configureFrom = function (sourceNode) {
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (levelConfig.showHostnameInGraph) {
+    this.setName(sourceNode.getHostname());
+  } else {
+    this.setName(sourceNode.getShortDisplayName());
+  }
+  this.nodeID = sourceNode.entityID;
+
+  if (sourceNode.getNodeType() === NodeType.ROUTER) {
+    this.isRouter = true;
+    this.getRoot().addClass('router-node');
+    if (levelConfig.broadcastMode) {
+      this.getRoot().css('display', 'none');
+    }
+  }
+};
+
+/**
+ * Flag this viz node as the simulation local node.
+ */
+NetSimVizNode.prototype.setIsLocalNode = function () {
+  this.isLocalNode = true;
+  this.getRoot().addClass('local-node');
+};
+
+/**
+ * Change the display name of the viz node
+ * @param {string} newName
+ */
+NetSimVizNode.prototype.setName = function (newName) {
+  this.displayName_.text(newName);
+  this.resizeNameBox_();
+};
+
+/** @private */
+NetSimVizNode.prototype.resizeNameBox_ = function () {
+  this.resizeRectToText_(this.nameBox_, this.displayName_);
+};
+
+/** @private */
+NetSimVizNode.prototype.resizeAddressBox_ = function () {
+  this.resizeRectToText_(this.addressBox_, this.addressText_);
+};
+
+/**
+ * Utility for resizing a background rounded-rect to fit the given text element.
+ * @param {jQuery} rect
+ * @param {jQuery} text
+ * @private
+ */
+NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
+  try {
+    var box = text[0].getBBox();
+    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+    var height = box.height + TEXT_PADDING_Y;
+    var halfWidth = width / 2;
+    var halfHeight = height / 2;
+    rect.attr('x', -halfWidth)
+        .attr('y', -halfHeight)
+        .attr('rx', halfHeight)
+        .attr('ry', halfHeight)
+        .attr('width', width)
+        .attr('height', height);
+  } catch (e) {
+    // Just allow this to be a no-op if it fails.  In some browsers,
+    // getBBox will throw if the element is not yet in the DOM.
+  }
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizNode.prototype.kill = function () {
+  NetSimVizNode.superPrototype.kill.call(this);
+  this.stopAllAnimation();
+  this.tweenToScale(0, 200, tweens.easeInQuad);
+};
+
+/**
+ * Provides drifting animation for nodes in the background.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVizNode.prototype.tick = function (clock) {
+  NetSimVizNode.superPrototype.tick.call(this, clock);
+  if (!this.isForeground && this.tweens_.length === 0) {
+    var randomX = 300 * Math.random() - 150;
+    var randomY = 300 * Math.random() - 150;
+    this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
+  } else if (this.isForeground && this.tweens_.length > 0) {
+    this.resizeNameBox_();
+    this.resizeAddressBox_();
+  }
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizNode.prototype.onDepthChange = function (isForeground) {
+  NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
+  this.tweens_.length = 0;
+  if (isForeground) {
+    this.tweenToScale(1, 600, tweens.easeOutElastic);
+  } else {
+    this.tweenToScale(0.5, 600, tweens.easeOutElastic);
+  }
+};
+
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {DNSMode} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
+  // If we are never assigned an address, don't try to show one.
+  // In broadcast mode we will be assigned addresses but never use them, so
+  //   they should be hidden.
+  // Routers never show their address.
+  if (this.address_ === undefined || levelConfig.broadcastMode || this.isRouter) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
+  }
+  this.resizeAddressBox_();
+};
+
+
+},{"../utils":284,"./NetSimVizEntity":216,"./netsimConstants":227,"./netsimGlobals":228,"./netsimUtils":230,"./tweens":233}],216:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils'); // For Function.prototype.inherits
+var NetSimVizElement = require('./NetSimVizElement');
+
+/**
+ * A VizEntity is a NetSimVizElement that maps to a NetSimEntity somewhere in
+ * shared storage, and has a representation in the network visualization.
+ * Its role is to maintain that visual representation and update it to reflect
+ * the state of the stored entity it represents.
+ *
+ * In doing so, it has behaviors and a lifetime that don't directly represent
+ * the stored entity because while quantities in our model snap to new values
+ * or are created/destroyed in a single frame, we want their visual
+ * representation to animate nicely.  Thus, a VizEntity has helpers for tweening
+ * and may often be in progress toward the state of the entity it represents,
+ * rather than an exact representation of that entity.  Likewise, a VizEntity
+ * will outlive its actual entity, because it can have a 'death' animation.
+ *
+ * @constructor
+ * @param {NetSimEntity} entity - the netsim Entity that this element represents
+ */
+var NetSimVizEntity = module.exports =  function (entity) {
+  NetSimVizElement.call(this);
+
+  /**
+   * @type {number}
+   */
+  this.id = entity.entityID;
+};
+NetSimVizEntity.inherits(NetSimVizElement);
+
+/**
+ * Begins the process of destroying this VizEntity.  Once started, this
+ * process cannot be stopped.  Immediately clears its ID to remove any
+ * association with the stored entity, which probably doesn't exist anymore.
+ * This method can be overridden to trigger an "on-death" animation.
+ */
+NetSimVizEntity.prototype.kill = function () {
+  this.id = undefined;
+  NetSimVizEntity.superPrototype.kill.call(this);
+};
+
+
+},{"../utils":284,"./NetSimVizElement":215}],215:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var tweens = require('./tweens');
+
+/**
+ * A VizElement is an object that  has a representation in the network
+ * visualization.  Its role is to maintain that visual representation.
+ * A VizElement has helpers for positioning, scaling and tweening.
+ * Every VizElement has a root element which is a <g> tag, an SVG "group"
+ * that contains the other components that will actually draw.
+ *
+ * @constructor
+ */
+var NetSimVizElement = module.exports =  function () {
+  /**
+   * @type {number}
+   */
+  this.posX = 0;
+
+  /**
+   * @type {number}
+   */
+  this.posY = 0;
+
+  /**
+   * @type {number}
+   */
+  this.scale = 1;
+
+  /**
+   * @type {boolean}
+   */
+  this.isForeground = false;
+
+  /**
+   * Root SVG <g> (group) element for this object.
+   * @type {jQuery}
+   * @private
+   */
+  this.rootGroup_ = jQuerySvgElement('g');
+
+  /**
+   * Set of tweens we should currently be running on this node.
+   * Processed by tick()
+   * @type {Array.<exports.TweenValueTo>}
+   * @private
+   */
+  this.tweens_ = [];
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isDead_ = false;
+};
+
+/**
+ * @returns {jQuery} wrapper around root <g> element
+ */
+NetSimVizElement.prototype.getRoot = function () {
+  return this.rootGroup_;
+};
+
+/**
+ * Begins the process of destroying this VizElement.  Once started, this
+ * process cannot be stopped.
+ * This method can be overridden to trigger an "on-death" animation.
+ */
+NetSimVizElement.prototype.kill = function () {
+  this.isDead_ = true;
+};
+
+/**
+ * @returns {boolean} whether this entity is done with its death animation
+ *          and is ready to be cleaned up by the visualization manager.
+ *          The default implementation here returns TRUE as soon as kill()
+ *          is called and all animations are completed.
+ */
+NetSimVizElement.prototype.isDead = function () {
+  return this.isDead_ && this.tweens_.length === 0;
+};
+
+/**
+ * @returns {boolean} whether this entity is playing its final animation
+ *          and will be ready to be cleaned up by the visualization manager
+ *          soon.
+ */
+NetSimVizElement.prototype.isDying = function () {
+  return this.isDead_ && this.tweens_.length > 0;
+};
+
+/**
+ * Update all of the tweens currently running on this VizElement (which will
+ * probably modify its properties) and then remove any tweens that are completed
+ * from the list.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVizElement.prototype.tick = function (clock) {
+  this.tweens_.forEach(function (tween) {
+    tween.tick(clock);
+  });
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    return !tween.isFinished;
+  });
+};
+
+/**
+ * Update the root group's properties to reflect our current position
+ * and scale.
+ */
+NetSimVizElement.prototype.render = function () {
+  // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
+  //                   out of date.
+  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
+      ' scale(' + this.scale + ')';
+  this.rootGroup_.attr('transform', transform);
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizElement.prototype.onDepthChange = function (isForeground) {
+  this.isForeground = isForeground;
+};
+
+/**
+ * Throw away all existing tweens on this object.
+ */
+NetSimVizElement.prototype.stopAllAnimation = function () {
+  this.tweens_.length = 0;
+};
+
+/**
+ * Stops any existing motion animation and begins an animated motion to the
+ * given coordinates.  Note: This animates the VizElement's root group.
+ * @param {number} newX given in SVG points
+ * @param {number} newY given in SVG points
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
+    tweenFunction) {
+  // Remove any existing tweens controlling posX or posY
+  this.removeAllTweensOnProperties(['posX', 'posY']);
+
+  // Add two new tweens, one for each axis
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'posX', newX, duration,
+        tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'posY', newY, duration,
+        tweenFunction));
+  } else {
+    this.posX = newX;
+    this.posY = newY;
+  }
+
+};
+
+/**
+ * Alias for calling tweenToPosition with a zero duration
+ * @param {number} newX given in SVG points
+ * @param {number} newY given in SVG points
+ */
+NetSimVizElement.prototype.snapToPosition = function (newX, newY) {
+  this.tweenToPosition(newX, newY, 0);
+};
+
+/**
+ * Stops any existing animation of the entity's scale and begins an animated
+ * change to the given target scale value.  Note: this animates the VizElement's
+ * root group.
+ * @param {number} newScale where 1.0 is 100% (unscaled)
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizElement.prototype.tweenToScale = function (newScale, duration,
+    tweenFunction) {
+  // Remove existing scale tweens
+  this.removeAllTweensOnProperty('scale');
+
+  // On nonzero duration, add tween to target scale.  Otherwise just set it.
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'scale', newScale, duration,
+        tweenFunction));
+  } else {
+    this.scale = newScale;
+  }
+};
+
+NetSimVizElement.prototype.doAfterDelay = function (delay, callback) {
+  if (delay > 0) {
+    this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
+  } else {
+    callback();
+  }
+};
+
+/**
+ * Remove (stop) all active tweens that control the given property on this
+ * visualization entity.
+ * @param {string} propertyName
+ */
+NetSimVizElement.prototype.removeAllTweensOnProperty = function (propertyName) {
+  this.removeAllTweensOnProperties([propertyName]);
+};
+
+/**
+ * Remove (stop) all active tweens that control any of the given properties
+ * on this visualization entity.
+ * @param {string[]} propertyNames
+ */
+NetSimVizElement.prototype.removeAllTweensOnProperties = function (propertyNames) {
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    var targetsThisEntity = tween.target === this;
+    var isRemovableProperty = propertyNames.some(function (name) {
+      return tween.propertyName === name;
+    });
+
+    // Invert for filter() because we want to keep everything BUT the matched
+    // properties
+    return !(targetsThisEntity && isRemovableProperty);
+  }, this);
+};
+
+/**
+ * Alias for calling tweenToScale with a zero duration.
+ * @param {number} newScale where 1.0 is 100% (unscaled)
+ */
+NetSimVizElement.prototype.snapToScale = function (newScale) {
+  this.tweenToScale(newScale, 0);
+};
+
+
+},{"./netsimUtils":230,"./tweens":233}],233:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var valueOr = require('../utils').valueOr;
+
+/**
+ * Default tween duration in milliseconds
+ * @type {number}
+ * @const
+ */
+var DEFAULT_TWEEN_DURATION = 600;
+
+/**
+ * A four-arg interpolation function.
+ *
+ * @typedef {function} TweenFunction
+ * @param {number} t - current Time, in milliseconds since tween began
+ * @param {number} b - Begin value
+ * @param {number} c - final Change in value
+ * @param {number} d - total tween Duration
+ * @returns {number} the interpolated value for the current time
+ */
+
+/**
+ * Interpolates with a little back-and-forth over the target value at the end.
+ * @type {TweenFunction}
+ */
+exports.easeOutElastic = function (t, b, c, d) {
+  var s, p, a;
+  s=1.70158;
+  p=0;
+  a=c;
+  if (t===0) {
+    return b;
+  }
+  if ((t/=d)==1) {
+    return b+c;
+  }
+  if (!p) {
+    p=d*0.3;
+  }
+  if (a < Math.abs(c)) {
+    a=c;
+    s=p/4;
+  } else {
+    s = p/(2*Math.PI) * Math.asin (c/a);
+  }
+  return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+};
+
+/**
+ * Interpolates, accelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeInQuad = function (t, b, c, d) {
+  return c*(t/=d)*t + b;
+};
+
+/**
+ * Interpolates, decelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeOutQuad = function (t, b, c, d) {
+  return -c*(t/=d)*(t-2) + b;
+};
+
+exports.easeInOutQuad = function (t, b, c, d) {
+  if ((t/=d/2) < 1) {
+    return c/2*t*t + b;
+  }
+  return -c/2 * ((--t)*(t-2) - 1) + b;
+};
+
+/**
+ * Linear interpolation
+ * @type {TweenFunction}
+ */
+exports.linear = function (t, b, c, d) {
+  return c * (t / d) + b;
+};
+
+/**
+ * Wraps a tween method with the state it needs to animate a property.
+ * On creation, assumes that property's current value for start values.
+ * Must be ticked to progress toward completion.
+ *
+ * @param {!Object} target - The object owning the property we want to animate
+ * @param {!string} propertyName - Must be a valid property on target
+ * @param {!number} endValue - The desired final value of the property
+ * @param {number} [duration] - How long the tween should take in milliseconds,
+ *        default 600ms
+ * @param {TweenFunction} [tweenFunction] - A tween function, default linear
+ * @constructor
+ */
+exports.TweenValueTo = function (target, propertyName, endValue, duration,
+    tweenFunction) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = propertyName;
+
+  /**
+   * @type {TweenFunction}
+   * @private
+   */
+  this.tweenFunction_ = valueOr(tweenFunction, exports.linear);
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.startValue_ = target[propertyName];
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.deltaValue_ = endValue - this.startValue_;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = valueOr(duration, DEFAULT_TWEEN_DURATION);
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.TweenValueTo.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+
+  if (this.deltaValue_ !== 0) {
+    this.target[this.propertyName] = this.tweenFunction_(
+        timeSinceStart,
+        this.startValue_,
+        this.deltaValue_,
+        this.duration_
+    );
+  }
+
+  if (timeSinceStart >= this.duration_) {
+    this.target[this.propertyName] = this.startValue_ + this.deltaValue_;
+    this.isFinished = true;
+  }
+};
+
+exports.DoAfterDelay = function (target, duration, callback) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = null;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = duration;
+
+  /**
+   * Function to call when the duration has elapsed.
+   * @type {function}
+   */
+  this.callback_ = callback;
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.DoAfterDelay.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+  if (timeSinceStart >= this.duration_) {
+    this.callback_();
+    this.isFinished = true;
+  }
+};
+
+
+},{"../utils":284}],164:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12191,7 +12696,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsManualControl":155,"./NetSimDnsModeControl":157,"./NetSimDnsTab.html.ejs":158,"./NetSimDnsTable":161,"./netsimConstants":220,"./netsimGlobals":221}],161:[function(require,module,exports){
+},{"./NetSimDnsManualControl":160,"./NetSimDnsModeControl":162,"./NetSimDnsTab.html.ejs":163,"./NetSimDnsTable":166,"./netsimConstants":227,"./netsimGlobals":228}],166:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12266,7 +12771,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsTable.html.ejs":160,"./netsimConstants":220}],160:[function(require,module,exports){
+},{"./NetSimDnsTable.html.ejs":165,"./netsimConstants":227}],165:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12309,7 +12814,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":220,"ejs":287}],158:[function(require,module,exports){
+},{"./netsimConstants":227,"ejs":294}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12329,7 +12834,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],157:[function(require,module,exports){
+},{"ejs":294}],162:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12416,7 +12921,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
 };
 
 
-},{"./NetSimDnsModeControl.html.ejs":156,"./netsimConstants":220}],156:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html.ejs":161,"./netsimConstants":227}],161:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12447,7 +12952,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"./netsimConstants":220,"ejs":287}],155:[function(require,module,exports){
+},{"./locale":224,"./netsimConstants":227,"ejs":294}],160:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12513,7 +13018,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 
-},{"./NetSimDnsManualControl.html.ejs":154}],154:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html.ejs":159}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12533,7 +13038,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],153:[function(require,module,exports){
+},{"ejs":294}],158:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12632,7 +13137,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
 };
 
 
-},{"../utils":277,"./NetSimEntity":164,"./NetSimNode":179,"./locale":217,"./netsimConstants":220}],179:[function(require,module,exports){
+},{"../utils":284,"./NetSimEntity":169,"./NetSimNode":185,"./locale":224,"./netsimConstants":227}],185:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12786,7 +13291,7 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
 
-},{"../utils":277,"./NetSimEntity":164,"./NetSimWire":212,"./locale":217}],212:[function(require,module,exports){
+},{"../utils":284,"./NetSimEntity":169,"./NetSimWire":219,"./locale":224}],219:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12911,7 +13416,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
 };
 
 
-},{"../utils":277,"./NetSimEntity":164}],164:[function(require,module,exports){
+},{"../utils":284,"./NetSimEntity":169}],169:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13058,7 +13563,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 };
 
 
-},{}],152:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13118,7 +13623,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":202,"./locale":217}],151:[function(require,module,exports){
+},{"./NetSimSlider":208,"./locale":224}],156:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13170,7 +13675,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":277,"./NetSimSlider":202,"./netsimUtils":223}],150:[function(require,module,exports){
+},{"../utils":284,"./NetSimSlider":208,"./netsimUtils":230}],155:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13415,7 +13920,7 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":277,"./NetSimBitLogPanel.html.ejs":149,"./NetSimEncodingControl":163,"./NetSimLogger":172,"./NetSimPanel":184,"./locale":217,"./netsimGlobals":221}],221:[function(require,module,exports){
+},{"../utils":284,"./NetSimBitLogPanel.html.ejs":154,"./NetSimEncodingControl":168,"./NetSimLogger":178,"./NetSimPanel":190,"./locale":224,"./netsimGlobals":228}],228:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13482,7 +13987,7 @@ module.exports = {
 };
 
 
-},{}],184:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13670,7 +14175,7 @@ NetSimPanel.prototype.getBody = function () {
 };
 
 
-},{"../utils":277,"./NetSimPanel.html.ejs":183}],183:[function(require,module,exports){
+},{"../utils":284,"./NetSimPanel.html.ejs":189}],189:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13690,7 +14195,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],163:[function(require,module,exports){
+},{"ejs":294}],168:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13814,7 +14319,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
 };
 
 
-},{"./NetSimEncodingControl.html.ejs":162,"./netsimConstants":220}],162:[function(require,module,exports){
+},{"./NetSimEncodingControl.html.ejs":167,"./netsimConstants":227}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13849,7 +14354,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":217,"./netsimConstants":220,"ejs":287}],149:[function(require,module,exports){
+},{"./locale":224,"./netsimConstants":227,"ejs":294}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13896,7 +14401,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./dataConverters":215,"./locale":217,"./netsimConstants":220,"./netsimUtils":223,"ejs":287}],215:[function(require,module,exports){
+},{"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimUtils":230,"ejs":294}],222:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14241,7 +14746,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
 };
 
 
-},{"../utils":277,"./netsimUtils":223}],148:[function(require,module,exports){
+},{"../utils":284,"./netsimUtils":230}],153:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14295,7 +14800,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":277,"./NetSimSlider":202,"./netsimConstants":220,"./netsimUtils":223}],223:[function(require,module,exports){
+},{"../utils":284,"./NetSimSlider":208,"./netsimConstants":227,"./netsimUtils":230}],230:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14620,7 +15125,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
 
 
 
-},{"../utils":277,"./NetSimLogger":172,"./locale":217,"./netsimConstants":220}],172:[function(require,module,exports){
+},{"../utils":284,"./NetSimLogger":178,"./locale":224,"./netsimConstants":227}],178:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14773,7 +15278,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
 };
 
 
-},{}],220:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14925,7 +15430,7 @@ exports.PacketUIColumnType = {
 };
 
 
-},{}],202:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15422,13 +15927,13 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
 };
 
 
-},{"../utils":277,"./NetSimSlider.html.ejs":201,"./locale":217}],217:[function(require,module,exports){
+},{"../utils":284,"./NetSimSlider.html.ejs":207,"./locale":224}],224:[function(require,module,exports){
 // locale for netsim
 
 module.exports = window.blockly.netsim_locale;
 
 
-},{}],201:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -15448,7 +15953,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":287}],147:[function(require,module,exports){
+},{"ejs":294}],152:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -15565,7 +16070,7 @@ DashboardUser.prototype.whenReady = function (callback) {
   }
 };
 
-},{}],72:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15790,7 +16295,7 @@ CommandSequence.prototype.tick = function (clock) {
 };
 
 
-},{"./utils":277}],70:[function(require,module,exports){
+},{"./utils":284}],75:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -16068,7 +16573,7 @@ module.exports = {
 };
 
 
-},{"./utils":277}],3:[function(require,module,exports){
+},{"./utils":284}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16278,4 +16783,4 @@ ObservableEvent.prototype.notifyObservers = function () {
   });
 };
 
-},{}]},{},[218]);
+},{}]},{},[225]);
