@@ -2,10 +2,28 @@
   = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
   = javascript_include_tag 'jquery.handsontable.full'
 %h1 Online Course Name: #{script.name}
+%button.csv Copy data
 #progress
 :javascript
   var data = #{ data.try(:to_json)};
+  var headers = #{ headers.try(:to_json)};
   $("#progress").handsontable({
       data: data,
-      colHeaders: #{ headers.try(:to_json)}
+      colHeaders: headers
+  });
+
+  function selectElement(text) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(text);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+  $(".csv").click(function() {
+    var element = document.getElementById('progress');
+    selectElement(element);
+    document.execCommand('copy');
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    alert('Copied to clipboard\n\r\n\rGo to Excel/Docs and press Ctrl+V');
   });

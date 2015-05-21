@@ -51,7 +51,15 @@ select.ng-invalid-required + span.required {
 
 /* PROGRESS */
 
+.table-wrapper {
+  width: 971px;
+  overflow-x: auto;
+}
+
 table#progress {
+  -webkit-transition: left 0.5s; /* For Safari 3.1 to 6.0 */
+  transition: left 0.5s;
+
   th {
     border: 1px solid white;
   }
@@ -59,23 +67,53 @@ table#progress {
     border: none;
     padding: 0px;
   }
+
+  table-layout: fixed;
+  width: 100%;
+
+  .level_link {
+    box-sizing: border-box;
+  }
 }
 
-.progressheader .stage {
-  box-sizing: border-box;
-  background-color: $lighter_gray;
-  color: white;
-  float:left;
-  height:50px;
-  padding: 5px 0 0 5px;
-  border-left: 1px solid $light_gray;
+
+.progressheader td,
+.progressheader td.studentname {
+  height: 50px;
 }
 
-.studentzone {
+#progress {
+  .stage {
+    box-sizing: border-box;
+    padding: 2px 0 0 2px;
+    border-left: 1px solid $light_gray;
+
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+  }
+
+  .progressheader .stage {
+    cursor: pointer;
+    background-color: $lighter_gray;
+    color: white;
+    float: left;
+    height: 49px;
+  }
+
+  .studentprogress .stage {
+    background-color: $lightest_gray;
+    float:left;
+    height:40px;
+  }
+}
+
+td.studentprogress {
+  height: 40px;
   position: relative;
 
   .studentbar {
     position: absolute;
+    width: 100%;
   }
 
   .studentdot {
@@ -89,36 +127,37 @@ table#progress {
   }
 }
 
-.studentzone .stage {
-  box-sizing: border-box;
-  background-color: $lightest_gray;
-  color: white;
-  float:left;
-  padding: 5px 0 0 5px;
-  height:40px;
-  border-left: 1px solid $lighter_gray
-}
-
 .studentname {
-  width: 160px;
-  height: 40px;
-  line-height: 40px;
+  position: absolute;
+  width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  z-index: 10; // so .studentprogress scrolls 'behind' us
 }
 
-.studentzone .studentname {
+td.studentname {
   height: 40px;
+  line-height: 40px;
+  background: white;
 }
 
-.bar {
+.studentbar .level_link {
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+}
+
+.zoomed-out .studentbar .level_link {
+  min-width: 0;
+  border-radius: 0;
+  padding: 0;
   float: left;
   margin-top: 15px;
   height:10px;
   opacity: 0.8;
   cursor: default;
   background-color: $level_not_tried;
+  color: transparent !important;
 
   -webkit-transition: background-color 2s; /* For Safari 3.1 to 6.0 */
   transition: background-color 2s;
@@ -145,7 +184,7 @@ table#progress {
 
 }
 
-.dot {
+.zoomed-out .dot {
   box-sizing: content-box;
   border-radius: 20px;
   border: 2px solid $lighter_gray;
@@ -182,33 +221,66 @@ table#progress {
   }
 }
 
+.zoomed-in .studentdot {
+  display: none;
+}
+
 .key {
   margin: 10px 0;
-  float: left;
+  width: 100%;
   background-color: $lightest_gray;
-  padding: 10px;
+  float: left;
+
+  &.zoomed-out {
+    padding: 10px;
+  }
+
+  &.zoomed-in {
+    padding: 0;
+  }
+
   dl {
     margin: 0;
     float: left;
   }
+
   dd, dt {
     padding: 0;
-    height: 20px;
-    line-height: 20px;
     float: left;
-    margin-right: 5px;
   }
+
   dt {
-    padding: 5px 0;
+    margin-right: 5px;
   }
   dd {
     margin-right: 30px;
   }
+
+  &.zoomed-out {
+    dd, dt {
+      height: 20px;
+      line-height: 20px;
+    }
+    dt {
+      padding: 5px 0;
+    }
+  }
+
+  &.zoomed-in {
+    dd, dt {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+
   .bar {
     margin: 0;
   }
   .dot {
     margin-top: -12px;
+  }
+  .studentbar .level_link {
+    margin-top: 0;
   }
 }
 
