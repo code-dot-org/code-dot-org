@@ -1,6 +1,6 @@
 module Ops
   class WorkshopsController < OpsControllerBase
-    before_filter :convert_facilitators, only: [:create, :update]
+    before_filter :convert_facilitators, :convert_cohorts, only: [:create, :update]
 
     load_and_authorize_resource
 
@@ -69,7 +69,7 @@ module Ops
         :location,
         :instructions,
         :cohort_id,
-        cohorts: [:cohort_id],
+        cohorts: [:id, :_destroy],
         facilitators: [:ops_first_name, :ops_last_name, :email]
       )
     end
