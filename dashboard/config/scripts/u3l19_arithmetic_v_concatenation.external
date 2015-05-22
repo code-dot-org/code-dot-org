@@ -3,7 +3,7 @@ title 'U3L19 - Arithmetic v Concatenation'
 description 'description here'
 
 markdown <<MARKDOWN
-## Arithmetic v. Concatenation 
+# Arithmetic v. Concatenation 
 
 We learned before that if you use the plus symbol (+) with strings of text, the plus symbol will concatenate strings.  
 
@@ -14,7 +14,7 @@ For example:
 <pre>
 var firstName = "Alice";
 var message = " is an great student!";
-write(firstName+lastName);
+write(firstName+message);
 </pre>
 
 That **write** statement will output to the display...
@@ -71,21 +71,29 @@ The computer relies on you - the programmer - to make sure that the **type of da
 <details>
 <summary> Where does this issue actually arise?</summary>
 
-WARNING: you do not really need to know what's below right now.  We'll cover it later, but in case you're interested...
+NOTE: you do not really need to know what's below right now.  We'll cover it later, but in case you're interested...
 
 We'll talk about this a little bit later in the course.  But the issue of determining whether a variable holds a string or number, most frequently comes into play when you are asking the user to type something at the keyboard.  Computers often assume that what the user is typing is a string.  But what if you need the user to type a number that you then need to do some arithmetic on?  
 
-Well there is a way to convert a string to a number **if and only if** that string contains only the characters 0-9.  There is a function called **Number** built into JavaScript that will attempt to convert a string into a number.  
+Well there is a way to convert a string to a number **if and only if** that string contains only the characters '.' and 0-9.  There is a function called **Number** built into JavaScript that will attempt to convert a string into a number.  
 
 <pre>
 var num1 = "16";
 var num2 = "3.14159";
 var num1Convert = Number(num1);
 var num2Convert = Number(num2);
+write(num1+num2);
 write(num1Convert+num2Convert);
 </pre>
 
-You do not really need to know this right now.
+This will write to the display...
+
+<pre>
+163.14159
+19.14159
+</pre>
+
+You do not really need to know that right now.
 </details>
 
 ### misconception alert 2
@@ -112,7 +120,7 @@ num1 = num1 + 10;
 
 <p>It's helpful to read this statement the way we learned earlier: <strong><em>num1 gets num1 + 10</em></strong>. Reading it that way makes the intent more clear: num1 is getting the value of the <em>current</em> value of num1...plus 10.
 </P><p>
-The way this works is: in order to assign a new value to num1, the computer must first perform a calculation: num1+10. Once it has computed that number *then* it can take that number and put it into num1.
+The way this works is: in order to assign a new value to num1, the computer must first perform a calculation: num1+10. Once it has computed that number <em>then</em> it can take that number and put it into num1.
 </p>
 <p>
 The diagram at right shows the order of things. <strong>It assumes that the current value of num1 is 7</strong>

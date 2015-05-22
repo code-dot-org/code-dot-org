@@ -1080,40 +1080,44 @@ en:
         JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
-        1. You want to see additional random images displayed that are worth different points when clicked.: 1. You want to see additional random images displayed that are worth different points when clicked.
-        conditional: conditional
-        variable: variable
-        both: both
+        'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
+        Remember things during play: Remember things during play
+        Make decisions: Make decisions
+        Make calculations: Make calculations
+        track of time: track of time
+        store information permanently: store information permanently
       U3L18 Controlling Memory and Program Flow 2:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
-        2. You want to see various motivational messages based upon the score.: 2. You want to see various motivational messages based upon the score.
-        conditional: conditional
-        variable: variable
-        both: both
+        'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
+        Remember things during play: Remember things during play
+        Make decisions: Make decisions
+        Make calculations: Make calculations
+        Track of time: Track of time
+        Store information permanently: Store information permanently
       U3L18 Controlling Memory and Program Flow 3:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
-        3. You want to see the elapsed time.: 3. You want to see the elapsed time.
-        conditional: conditional
-        variable: variable
-        both: both
+        'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. '
+        Remember things during play: Remember things during play
+        Make decisions: Make decisions
+        Make calculations: Make calculations
+        track of time: track of time
+        store information permanently: store information permanently
       U3L18 Controlling Memory and Program Flow 4:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
-        4. You want to change the size of the images when a certain score is reached.: 4. You want to change the size of the images when a certain score is reached.
-        conditional: conditional
-        variable: variable
-        both: both
+        'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
+        Remember things during play: Remember things during play
+        Make decisions: Make decisions
+        Make calculations: Make calculations
+        track of time: track of time
+        store information permanently: store information permanently
       U3L18 Controlling Memory and Program Flow 5:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select the programming technique that best fits the described game feature.
-        ? 5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).
-        : 5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).
-        conditional: conditional
-        variable: variable
-        both: both
+        'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. '
+        Remember things during play: Remember things during play
+        Make decisions: Make decisions
+        Make calculations: Make calculations
+        track of time: track of time
+        store information permanently: store information permanently
       U3L19 - MC what are values of abc:
         So, what's the answer?: So, what's the answer?
         Choose the best answer: Choose the best answer
@@ -1123,6 +1127,35 @@ en:
         a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
         a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
         Code does not execute due to error: Code does not execute due to error
+      U3L20 Assessment1:
+        Conditional Basics Question 1: Conditional Basics Question 1
+        Which two of the following programming statements did you use when you wrote turtle drawing programs?: Which two of the following programming statements did you use when you wrote turtle drawing programs?
+        sequential statements: sequential statements
+        "function calls\t": "function calls\t"
+        event handlers: event handlers
+        conditionals: conditionals
+      U3L20 Assessment2:
+        Conditional Basics Question 2: Conditional Basics Question 2
+        Which program statement reacts to actions by the user?: Which program statement reacts to actions by the user?
+        sequential statements: sequential statements
+        function calls: function calls
+        event handlers: event handlers
+        conditionals: conditionals
+      U3L20 Assessment3:
+        Conditional Basics Question 3: Conditional Basics Question 3
+        Which programming statement executes different code based upon the true or false results?: Which programming statement executes different code based upon the true or false results?
+        sequential statements: sequential statements
+        function calls: function calls
+        event handlers: event handlers
+        conditionals: conditionals
+      U3L20 Assessment9:
+        Conditional Basics Question 9: Conditional Basics Question 9
+        Which of the following are not valid operators in Boolean expressions?: Which of the following are not valid operators in Boolean expressions?
+        <=: <=
+        ' !=': ' !='
+        =: =
+        '>': '>'
+        '||': '||'
       U3L21 Assessment 1:
         More Variables Question 1: More Variables Question 1
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?

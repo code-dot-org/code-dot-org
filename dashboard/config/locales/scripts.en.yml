@@ -558,6 +558,9 @@ en:
         CSPPD:
           new stage: new stage
           Introduction to PD: Introduction to PD
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
@@ -823,6 +826,13 @@ en:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pixelation
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
