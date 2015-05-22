@@ -4,7 +4,7 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZIndexRow = require('./ZIndexRow.jsx');
+var ZOrderRow = require('./ZOrderRow.jsx');
 
 var CheckboxProperties = React.createClass({
   propTypes: {
@@ -55,7 +55,7 @@ var CheckboxProperties = React.createClass({
           desc={'checked'}
           initialValue={element.checked}
           handleChange={this.props.handleChange.bind(this, 'checked')} />
-        <ZIndexRow
+        <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
       </table>);
