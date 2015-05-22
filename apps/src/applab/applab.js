@@ -1312,8 +1312,9 @@ Applab.onPropertyChange = function(element, name, value) {
     case 'picture':
       element.src = value;
       element.onload = function () {
-        element.style.width = this.naturalWidth + 'px';
-        element.style.height = this.naturalHeight + 'px';
+        // naturalWidth/Height aren't populated until image has loaded.
+        element.style.width = element.naturalWidth + 'px';
+        element.style.height = element.naturalHeight + 'px';
         // Re-render properties
         if (Applab.designModeEditedElement === element) {
           Applab.editElementProperties(element);
@@ -1329,14 +1330,25 @@ Applab.onPropertyChange = function(element, name, value) {
       // element.checked represents the current state, the attribute represents
       // the serialized state
       element.checked = value;
+
       if (value) {
+        var groupName = element.getAttribute('name');
+        if (groupName) {
+          // Remove checked attribute from all other radio buttons in group
+          var buttons = document.getElementsByName(groupName);
+          Array.prototype.forEach.call(buttons, function (item) {
+            if (item.type === 'radio') {
+              item.removeAttribute('checked');
+            }
+          });
+        }
         element.setAttribute('checked', 'checked');
       } else {
         element.removeAttribute('checked');
       }
       break;
     case 'options':
-      // value you should be an array of options in this case
+      // value should be an array of options in this case
       for (var i = 0; i < value.length; i++) {
         var optionElement = element.children[i];
         if (!optionElement) {
@@ -1350,7 +1362,7 @@ Applab.onPropertyChange = function(element, name, value) {
         element.removeChild(element.children[i]);
       }
       break;
-    case 'groupid':
+    case 'groupId':
       element.setAttribute('name', value);
       break;
     case 'placeholder':
