@@ -1396,7 +1396,11 @@ Applab.onDeletePropertiesButton = function(element, event) {
 };
 
 Applab.onDepthChange = function (element, depthDirection) {
-  // TODO - use an enum?
+  // TODO (brent) - have another branch in progress where i move this and a bunch
+  // of other design mode logic into a designMode.js file. As part of that, I
+  // will also convert to use an enum for ['forward', 'backward', toFront', 'toBack']
+  // I don't want to do that just yet, because it will result in merge conflicts
+  // later
 
   var parent = element.parentNode;
   var index = Array.prototype.indexOf.call(parent.children, element);

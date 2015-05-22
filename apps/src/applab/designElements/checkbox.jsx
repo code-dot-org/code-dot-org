@@ -4,11 +4,13 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ZIndexRow = require('./ZIndexRow.jsx');
 
 var CheckboxProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
@@ -53,7 +55,9 @@ var CheckboxProperties = React.createClass({
           desc={'checked'}
           initialValue={element.checked}
           handleChange={this.props.handleChange.bind(this, 'checked')} />
-
+        <ZIndexRow
+          element={this.props.element}
+          onDepthChange={this.props.onDepthChange}/>
       </table>);
 
     // TODO:
