@@ -5,25 +5,34 @@
   "properties": {
     "questions": [
       {
-        "text": "1. You want to see additional random images displayed that are worth different points when clicked."
+        "text": "Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. "
       }
     ],
     "answers": [
       {
-        "text": "conditional",
-        "correct": false
-      },
-      {
-        "text": "variable",
+        "text": "Remember things during play",
         "correct": true
       },
       {
-        "text": "both",
+        "text": "Make decisions",
+        "correct": false
+      },
+      {
+        "text": "Make calculations",
+        "correct": true
+      },
+      {
+        "text": "track of time",
+        "correct": false
+      },
+      {
+        "text": "store information permanently",
         "correct": false
       }
     ],
     "title": "Controlling Memory and Control Quiz",
-    "content1": "Select the programming technique that best fits the described game feature."
+    "type": "multi2",
+    "markdown": "### Desired program feature\n\nYou want multiple images displayed that add different amounts to the the total points when clicked.\n"
   }
 }]]></config>
 </Multi>

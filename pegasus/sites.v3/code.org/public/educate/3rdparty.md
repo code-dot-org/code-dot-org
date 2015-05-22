@@ -24,7 +24,7 @@ nav: educate_nav
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
 | [Bootstrap](http://www.bootstrapworld.org/) | Computer science activities for algebra, FREE | 3-day workshops for schools and districts, $15/teacher/hour |
-| [CodeHS](https://codehs.com) | Year-long course with optional online mentoring, $200/section/year | Online PD, in-person bootcamp in San Francisco, $1000/teacher for online, $5000/teacher for in-person |
+| [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | 20-lesson CS in Algebra and CS in Science modules for math and science classes, FREE  | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway/gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
@@ -43,11 +43,11 @@ nav: educate_nav
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Computer science activities for algebra. FREE | 3-day workshops for schools and districts, $15/teacher/hour |
 | [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
-| [CodeHS](https://codehs.com) | Year-long course with optional online mentoring, $200/section/year | Online PD and in-person bootcamp in San Francisco, $1000/teacher for online, $5000/teacher for in-person |
+| [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE| In-person summer training and 4 days of PD throughout year | ~$15,000/school, variable on # of students |
-| [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway/gateway-curriculum) | 3 courses, $2000/school | 5 or 10-day in-person training, $1200 or $2400, depending on course |
+| [Project Lead The Way](https://www.pltw.org/our-programs/pltw-computer-science/pltw-computer-science-curriculum) | 3 courses, $2000/school | 5 or 10-day in-person training, $1200 or $2400, depending on course |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
 
