@@ -406,7 +406,7 @@ button.arrow:focus {
     display: none; }
 
 .new-design-element {
-  width: 100px;
+  width: 120px;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -444,7 +444,9 @@ button.arrow:focus {
 
 .design-mode-hidden {
   visibility: hidden; }
+  .divApplabDesignMode .design-mode-hidden {
+    visibility: visible;
+    opacity: 0.3; }
 
-.divApplabDesignMode .design-mode-hidden {
-  visibility: visible;
-  opacity: 0.3; }
+.divApplabDesignMode canvas {
+  background-color: #eee; }
