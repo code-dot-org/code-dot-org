@@ -67,10 +67,13 @@ module.exports = React.createClass({
 
     switch (this.state.action) {
       case 'normal':
+        var src = '/v3/assets/' + dashboard.project.current.id + '/' + this.props.name;
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <button><i className="fa fa-eye"></i></button>
+            <a href={src} target="_blank" style={{backgroundColor: 'transparent'}}>
+              <button><i className="fa fa-eye"></i></button>
+            </a>
             <button className="btn-danger" onClick={this.confirmDelete}>
               <i className="fa fa-trash-o"></i>
             </button>
