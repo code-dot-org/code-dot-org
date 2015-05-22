@@ -69,21 +69,40 @@ module.exports = {
             dashboard.header.showProjectHeader();
           } else {
             dashboard.header.showMinimalProjectHeader();
-            appOptions.readonlyWorkspace = true;
-            appOptions.callouts = [];
+            this.setAppOptionsForShareMode();
           }
         }
       } else if (this.current && this.current.levelSource) {
         appOptions.level.lastAttempt = this.current.levelSource;
-        appOptions.hideSource = true;
-        appOptions.callouts = [];
         dashboard.header.showMinimalProjectHeader();
+        this.setAppOptionsForShareMode();
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       this.current = {
         name: 'Untitled Project'
       };
       dashboard.header.showMinimalProjectHeader();
+    }
+    if (appOptions.noPadding) {
+      $(".full_container").css({"padding":"0px"});
+    }
+  },
+  setAppOptionsForShareMode: function() {
+    appOptions.readonlyWorkspace = true;
+    appOptions.share = true;
+    appOptions.hideSource = true;
+    appOptions.noPadding = this.determineNoPadding();
+    appOptions.callouts = [];
+  },
+  determineNoPadding: function() {
+    switch (appOptions.app) {
+      case 'applab':
+      case 'flappy':
+      case 'studio':
+      case 'bounce':
+        return appOptions.isMobile;
+      default:
+        return false;
     }
   },
   updateTimestamp: function() {
