@@ -162,8 +162,11 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
+browser_features = $browsers.product Dir.glob('features/*.feature')
+
+Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
   browser_name = browser['name'] || 'UnknownBrowser'
+  test_run_name = "#{browser_name} #{feature}"
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{browser_name}</b> (changes detected)"
@@ -185,6 +188,8 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   HipChat.log "Testing <b>dashboard</b> UI with <b>#{browser_name}</b>..."
   print "Starting UI tests for #{browser_name}\n"
 
+  ENV['BROWSER_CONFIG'] = browser_name
+
   ENV['SELENIUM_BROWSER'] = browser['browser']
   ENV['SELENIUM_VERSION'] = browser['browser_version']
   ENV['BS_AUTOMATE_OS'] = browser['os']
@@ -198,9 +203,11 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
+  ENV['TEST_RUN_NAME'] = test_run_name
 
   arguments = ''
-  arguments += "#{$options.feature}" if $options.feature
+#  arguments += "#{$options.feature}" if $options.feature
+  arguments += feature
   arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
