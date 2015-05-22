@@ -831,11 +831,13 @@ function selectEditorRowCol(row, col) {
     var range = selection.getRange();
 
     range.start.row = row;
-    range.start.col = col;
+    range.start.column = col;
     range.end.row = row;
-    range.end.col = col + 1;
+    range.end.column = col + 1;
 
-    selection.setSelectionRange(range);
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
+    selection.setSelectionRange(range, true);
   }
 }
 
@@ -856,7 +858,9 @@ function handleExecutionError(err, lineNumber) {
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
-  Applab.onPuzzleComplete();
+  if (!level.freePlay) {
+    Applab.onPuzzleComplete();
+  }
 }
 
 Applab.getCode = function () {
@@ -2329,15 +2333,14 @@ Applab.container = function (opts) {
 };
 
 Applab.write = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'write', 'html', opts.html, 'uistring');
+  apiValidateType(opts, 'write', 'text', opts.html, 'uistring');
   return Applab.container(opts);
 };
 
 Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: button: id vs. buttonId
   apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
   apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
@@ -2350,9 +2353,8 @@ Applab.button = function (opts) {
 };
 
 Applab.image = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
-  apiValidateType(opts, 'image', 'src', opts.src, 'string');
+  apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var divApplab = document.getElementById('divApplab');
 
@@ -2467,10 +2469,10 @@ Applab.move = function (opts) {
 };
 
 Applab.moveForward = function (opts) {
+  apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number', OPTIONAL);
   var newOpts = {};
   var distance = 25;
   if (typeof opts.distance !== 'undefined') {
-    apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number');
     distance = opts.distance;
   }
   newOpts.x = Applab.turtle.x +
@@ -2481,22 +2483,21 @@ Applab.moveForward = function (opts) {
 };
 
 Applab.moveBackward = function (opts) {
+  apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number', OPTIONAL);
   var distance = -25;
   if (typeof opts.distance !== 'undefined') {
-    apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number');
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
 };
 
 Applab.turnRight = function (opts) {
+  apiValidateType(opts, 'turnRight', 'angle', opts.degrees, 'number', OPTIONAL);
   // call this first to ensure there is a turtle (in case this is the first API)
   getTurtleContext();
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
-    // TODO: cpirich: may need to update param name
-    apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
 
@@ -2506,18 +2507,16 @@ Applab.turnRight = function (opts) {
 };
 
 Applab.turnLeft = function (opts) {
+  apiValidateType(opts, 'turnLeft', 'angle', opts.degrees, 'number', OPTIONAL);
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
-    // TODO: cpirich: may need to update param name
-    apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
   Applab.turnRight({'degrees': degrees });
 };
 
 Applab.turnTo = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
+  apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
 };
@@ -2527,8 +2526,7 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'angle', opts.degrees, 'number');
   apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
 
   // call this first to ensure there is a turtle (in case this is the first API)
@@ -2559,8 +2557,7 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'angle', opts.degrees, 'number');
   apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
 
   opts.counterclockwise = true;
@@ -2625,7 +2622,6 @@ Applab.penDown = function (opts) {
 };
 
 Applab.penWidth = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
@@ -2652,6 +2648,9 @@ Applab.penColor = function (opts) {
 };
 
 Applab.penRGB = function (opts) {
+  // PARAMNAME: penRGB: red vs. r
+  // PARAMNAME: penRGB: green vs. g
+  // PARAMNAME: penRGB: blue vs. b
   apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
   apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
   apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
@@ -2662,8 +2661,8 @@ Applab.penRGB = function (opts) {
 };
 
 Applab.speed = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
+  // DOCBUG: range is 0-100, not 1-100
+  apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
     var sliderSpeed = opts.percent / 100;
     if (Applab.speedSlider) {
@@ -2675,7 +2674,10 @@ Applab.speed = function (opts) {
 
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: createCanvas: id vs. canvasId
   apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
+  apiValidateType(opts, 'createCanvas', 'width', width, 'number', OPTIONAL);
+  apiValidateType(opts, 'createCanvas', 'height', height, 'number', OPTIONAL);
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -2684,8 +2686,6 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
-    apiValidateType(opts, 'createCanvas', 'width', width, 'number');
-    apiValidateType(opts, 'createCanvas', 'height', height, 'number');
     newElement.width = width;
     newElement.height = height;
     newElement.style.width = width + 'px';
@@ -2709,7 +2709,7 @@ Applab.createCanvas = function (opts) {
 
 Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: setActiveCanvas: id vs. canvasId
   apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
@@ -2738,6 +2738,8 @@ Applab.line = function (opts) {
 
 Applab.circle = function (opts) {
   apiValidateActiveCanvas(opts, 'circle');
+  // PARAMNAME: circle: centerX vs. x
+  // PARAMNAME: circle: centerY vs. y
   apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
   apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
   apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
@@ -2754,6 +2756,8 @@ Applab.circle = function (opts) {
 
 Applab.rect = function (opts) {
   apiValidateActiveCanvas(opts, 'rect');
+  // PARAMNAME: rect: upperLeftX vs. x
+  // PARAMNAME: rect: upperLeftY vs. y
   apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
   apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
   apiValidateType(opts, 'rect', 'width', opts.width, 'number');
@@ -2792,7 +2796,6 @@ Applab.setStrokeColor = function (opts) {
 };
 
 Applab.setFillColor = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateActiveCanvas(opts, 'setFillColor');
   apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
@@ -2818,9 +2821,9 @@ Applab.clearCanvas = function (opts) {
 
 Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: drawImage: imageId vs. id
   apiValidateActiveCanvas(opts, 'drawImage');
-  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'imageId', opts.imageId, true);
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'id', opts.imageId, true);
   apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
   apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var image = document.getElementById(opts.imageId);
@@ -2847,6 +2850,7 @@ Applab.drawImage = function (opts) {
 
 Applab.getImageData = function (opts) {
   apiValidateActiveCanvas(opts, 'getImageData');
+  // PARAMNAME: getImageData: all params + doc bugs
   apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
   apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
@@ -2858,9 +2862,11 @@ Applab.getImageData = function (opts) {
 };
 
 Applab.putImageData = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateActiveCanvas(opts, 'putImageData');
-  apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
+  // PARAMNAME: putImageData: imageData vs. imgData
+  // PARAMNAME: putImageData: startX vs. x
+  // PARAMNAME: putImageData: startY vs. y
+  apiValidateType(opts, 'putImageData', 'imgData', opts.imageData, 'object');
   apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
@@ -2876,7 +2882,7 @@ Applab.putImageData = function (opts) {
 
 Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: textInput: id vs. inputId
   apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
   apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
@@ -2889,7 +2895,7 @@ Applab.textInput = function (opts) {
 
 Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: textLabel: id vs. labelId
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
   apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
   if (typeof opts.forId !== 'undefined') {
@@ -2910,7 +2916,7 @@ Applab.textLabel = function (opts) {
 
 Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: checkbox: id vs. checkboxId
   apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
   // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
@@ -2924,7 +2930,6 @@ Applab.checkbox = function (opts) {
 
 Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
   // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
   apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
@@ -2940,7 +2945,7 @@ Applab.radioButton = function (opts) {
 
 Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: dropdown: id vs. dropdownId
   apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
@@ -2983,7 +2988,6 @@ Applab.setAttribute = function (opts) {
 
 Applab.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
@@ -3001,7 +3005,6 @@ Applab.getText = function (opts) {
 
 Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
   apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
@@ -3021,7 +3024,6 @@ Applab.setText = function (opts) {
 
 Applab.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
@@ -3033,7 +3035,6 @@ Applab.getChecked = function (opts) {
 
 Applab.setChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
   // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
 
@@ -3047,7 +3048,7 @@ Applab.setChecked = function (opts) {
 
 Applab.getImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: getImageURL: id vs. imageId
   apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
@@ -3066,9 +3067,8 @@ Applab.getImageURL = function (opts) {
 
 Applab.setImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
+  apiValidateType(opts, 'setImageURL', 'url', opts.src, 'string');
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
@@ -3079,7 +3079,6 @@ Applab.setImageURL = function (opts) {
 };
 
 Applab.playSound = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
@@ -3103,7 +3102,6 @@ Applab.innerHTML = function (opts) {
 
 Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -3119,7 +3117,6 @@ Applab.deleteElement = function (opts) {
 
 Applab.showElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -3132,7 +3129,6 @@ Applab.showElement = function (opts) {
 
 Applab.hideElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -3166,10 +3162,9 @@ Applab.setParent = function (opts) {
 
 Applab.setPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
-  apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
+  apiValidateType(opts, 'setPosition', 'x', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'y', opts.top, 'number');
 
   var el = document.getElementById(opts.elementId);
   if (divApplab.contains(el)) {
@@ -3201,7 +3196,6 @@ Applab.setPosition = function (opts) {
 
 Applab.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -3218,7 +3212,6 @@ Applab.getXPosition = function (opts) {
 
 Applab.getYPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -3320,8 +3313,9 @@ Applab.onEvent = function (opts) {
   } else {
     apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
   }
-  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
-  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
+  apiValidateType(opts, 'onEvent', 'type', opts.eventName, 'string');
+  // PARAMNAME: onEvent: callback vs. callbackFunction
+  apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
@@ -3399,11 +3393,11 @@ Applab.onHttpRequestEvent = function (opts) {
 
 Applab.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
-  apiValidateType(opts, 'startWebRequest', 'function', opts.func, 'function');
+  apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
-  req.open('GET', String(opts.url), true);
+  req.open('GET', opts.url, true);
   req.send();
 };
 
@@ -3419,59 +3413,68 @@ Applab.onTimerFired = function (opts) {
 };
 
 Applab.setTimeout = function (opts) {
-  apiValidateType(opts, 'setTimeout', 'function', opts.func, 'function');
+  // PARAMNAME: setTimeout: callback vs. function
+  // PARAMNAME: setTimeout: ms vs. milliseconds
+  apiValidateType(opts, 'setTimeout', 'callback', opts.func, 'function');
   apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
 
   return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
+  apiValidateType(opts, 'clearTimeout', 'timeout', opts.timeoutId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
   apiTimeoutList.clearTimeout(opts.timeoutId);
 };
 
 Applab.setInterval = function (opts) {
-  apiValidateType(opts, 'setInterval', 'function', opts.func, 'function');
+  // PARAMNAME: setInterval: callback vs. function
+  // PARAMNAME: setInterval: ms vs. milliseconds
+  apiValidateType(opts, 'setInterval', 'callback', opts.func, 'function');
   apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
 
   return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearInterval = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
+  apiValidateType(opts, 'clearInterval', 'interval', opts.intervalId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setInterval() function
   apiTimeoutList.clearInterval(opts.intervalId);
 };
 
 Applab.createRecord = function (opts) {
+  // PARAMNAME: createRecord: table vs. tableName
+  // PARAMNAME: createRecord: callback vs. callbackFunction
   apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
   apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
-  apiValidateType(opts, 'createRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleCreateRecord.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateRecord = function(successCallback, record) {
-  if (successCallback) {
+Applab.handleCreateRecord = function(opts, record) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [record]
     });
   }
 };
 
-Applab.handleError = function(errorCallback, message) {
-  if (errorCallback) {
+Applab.handleError = function(opts, message) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onError && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': errorCallback,
+      'fn': opts.onError,
       'arguments': [message]
     });
   } else {
@@ -3480,96 +3483,120 @@ Applab.handleError = function(errorCallback, message) {
 };
 
 Applab.getKeyValue = function(opts) {
+  // PARAMNAME: getKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
-  apiValidateType(opts, 'getKeyValue', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleReadValue.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-Applab.handleReadValue = function(successCallback, value) {
-  if (successCallback) {
+Applab.handleReadValue = function(opts, value) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [value]
     });
   }
 };
 
 Applab.setKeyValue = function(opts) {
+  // PARAMNAME: setKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
-  apiValidateType(opts, 'setKeyValue', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-Applab.handleSetKeyValue = function(successCallback) {
-  if (successCallback) {
+Applab.handleSetKeyValue = function(opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': []
     });
   }
 };
 
 Applab.readRecords = function (opts) {
+  // PARAMNAME: readRecords: table vs. tableName
+  // PARAMNAME: readRecords: callback vs. callbackFunction
+  // PARAMNAME: readRecords: terms vs. searchTerms
   apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
-  apiValidateType(opts, 'readRecords', 'searchParams', opts.searchParams, 'object');
-  apiValidateType(opts, 'readRecords', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
+  apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleReadRecords.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadRecords = function(successCallback, records) {
-  if (successCallback) {
+Applab.handleReadRecords = function(opts, records) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [records]
     });
   }
 };
 
 Applab.updateRecord = function (opts) {
+  // PARAMNAME: updateRecord: table vs. tableName
+  // PARAMNAME: updateRecord: callback vs. callbackFunction
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'updateRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleUpdateRecord.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback, record) {
-  if (successCallback) {
+Applab.handleUpdateRecord = function(opts, record) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [record]
     });
   }
 };
 
 Applab.deleteRecord = function (opts) {
+  // PARAMNAME: deleteRecord: table vs. tableName
+  // PARAMNAME: deleteRecord: callback vs. callbackFunction
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'deleteRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleDeleteRecord.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleDeleteRecord = function(successCallback) {
-  if (successCallback) {
+Applab.handleDeleteRecord = function(opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': []
     });
   }
@@ -26310,99 +26337,99 @@ var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';
 
 module.exports.blocks = [
-  {'func': 'onEvent', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"], 'dropdown': { 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
-  {'func': 'button', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'textInput', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'textLabel', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
-  {'func': 'dropdown', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
-  {'func': 'getText', 'parent': api, 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setText', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'checkbox', 'parent': api, 'category': 'UI controls', 'params': ['"id"', "false"], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'radioButton', 'parent': api, 'category': 'UI controls', 'params': ['"id"', "false", '"group"'], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'getChecked', 'parent': api, 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setChecked', 'parent': api, 'category': 'UI controls', 'params': ['"id"', "true"], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'image', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'getImageURL', 'parent': api, 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setImageURL', 'parent': api, 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'playSound', 'parent': api, 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
-  {'func': 'showElement', 'parent': api, 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'hideElement', 'parent': api, 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'deleteElement', 'parent': api, 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'setPosition', 'parent': api, 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
-  {'func': 'write', 'parent': api, 'category': 'UI controls', 'params': ['"html"'] },
-  {'func': 'getXPosition', 'parent': api, 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'getYPosition', 'parent': api, 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'onEvent', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','type','callback'], 'params': ['"id"', '"click"', "function(event) {\n  \n}"], 'dropdown': { 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
+  {'func': 'button', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
+  {'func': 'textInput', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
+  {'func': 'textLabel', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text','forId'], 'params': ['"id"', '"text"'] },
+  {'func': 'dropdown', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','option1','etc'], 'params': ['"id"', '"option1"', '"etc"'] },
+  {'func': 'getText', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setText', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
+  {'func': 'checkbox', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false"], 'dropdown': { 1: [ "true", "false" ] } },
+  {'func': 'radioButton', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false", '"group"'], 'dropdown': { 1: [ "true", "false" ] } },
+  {'func': 'getChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "true"], 'dropdown': { 1: [ "true", "false" ] } },
+  {'func': 'image', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'getImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'playSound', 'parent': api, 'category': 'UI controls', 'paletteParams': ['url'], 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
+  {'func': 'showElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'hideElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'deleteElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'setPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','x','y','width','height'], 'params': ['"id"', "0", "0", "100", "100"] },
+  {'func': 'write', 'parent': api, 'category': 'UI controls', 'paletteParams': ['text'], 'params': ['"text"'] },
+  {'func': 'getXPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'getYPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
 
-  {'func': 'createCanvas', 'parent': api, 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
-  {'func': 'setActiveCanvas', 'parent': api, 'category': 'Canvas', 'params': ['"id"'] },
-  {'func': 'line', 'parent': api, 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
-  {'func': 'circle', 'parent': api, 'category': 'Canvas', 'params': ["160", "240", "100"] },
-  {'func': 'rect', 'parent': api, 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
-  {'func': 'setStrokeWidth', 'parent': api, 'category': 'Canvas', 'params': ["3"] },
-  {'func': 'setStrokeColor', 'parent': api, 'category': 'Canvas', 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
-  {'func': 'setFillColor', 'parent': api, 'category': 'Canvas', 'params': ['"yellow"'], 'dropdown': { 0: [ '"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"' ] } },
-  {'func': 'drawImage', 'parent': api, 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
-  {'func': 'getImageData', 'parent': api, 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
-  {'func': 'putImageData', 'parent': api, 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
+  {'func': 'createCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','width','height'], 'params': ['"id"', "320", "480"] },
+  {'func': 'setActiveCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'line', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x1','y1','x2','y2'], 'params': ["0", "0", "160", "240"] },
+  {'func': 'circle', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','radius'], 'params': ["160", "240", "100"] },
+  {'func': 'rect', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','width','height'], 'params': ["80", "120", "160", "240"] },
+  {'func': 'setStrokeWidth', 'parent': api, 'category': 'Canvas', 'paletteParams': ['width'], 'params': ["3"] },
+  {'func': 'setStrokeColor', 'parent': api, 'category': 'Canvas', 'paletteParams': ['color'], 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'setFillColor', 'parent': api, 'category': 'Canvas', 'paletteParams': ['color'], 'params': ['"yellow"'], 'dropdown': { 0: [ '"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"' ] } },
+  {'func': 'drawImage', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','x','y'], 'params': ['"id"', "0", "0"] },
+  {'func': 'getImageData', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','width','height'], 'params': ["0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'putImageData', 'parent': api, 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"] },
   {'func': 'clearCanvas', 'parent': api, 'category': 'Canvas', },
-  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setRGB', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255"], 'dontMarshal': true },
+  {'func': 'getRed', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'getGreen', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'getBlue', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'getAlpha', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'setRed', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','r'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setGreen', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','g'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setBlue', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','b'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setAlpha', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','a'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','r','g','b'], 'params': ["imgData", "0", "0", "255", "255", "255"], 'dontMarshal': true },
 
-  {'func': 'startWebRequest', 'parent': api, 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
-  {'func': 'setKeyValue', 'parent': api, 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
-  {'func': 'getKeyValue', 'parent': api, 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'parent': api, 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
-  {'func': 'readRecords', 'parent': api, 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'parent': api, 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
-  {'func': 'deleteRecord', 'parent': api, 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
-  {'func': 'getUserId', 'parent': api, 'category': 'Data', 'params': [], type: 'value' },
+  {'func': 'startWebRequest', 'parent': api, 'category': 'Data', 'paletteParams': ['url','callback'], 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {'func': 'setKeyValue', 'parent': api, 'category': 'Data', 'paletteParams': ['key','value','callback'], 'params': ['"key"', '"value"', "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'parent': api, 'category': 'Data', 'paletteParams': ['key','callback'], 'params': ['"key"', "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
+  {'func': 'readRecords', 'parent': api, 'category': 'Data', 'paletteParams': ['table','terms','callback'], 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
+  {'func': 'deleteRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'parent': api, 'category': 'Data', type: 'value' },
 
-  {'func': 'moveForward', 'parent': api, 'category': 'Turtle', 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
-  {'func': 'moveBackward', 'parent': api, 'category': 'Turtle', 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
-  {'func': 'move', 'parent': api, 'category': 'Turtle', 'params': ["25", "25"], 'dropdown': { 0: [ "25", "50", "100", "200" ], 1: [ "25", "50", "100", "200" ] } },
-  {'func': 'moveTo', 'parent': api, 'category': 'Turtle', 'params': ["0", "0"] },
-  {'func': 'dot', 'parent': api, 'category': 'Turtle', 'params': ["5"], 'dropdown': { 0: [ "1", "5", "10" ] } },
-  {'func': 'turnRight', 'parent': api, 'category': 'Turtle', 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
-  {'func': 'turnLeft', 'parent': api, 'category': 'Turtle', 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
-  {'func': 'turnTo', 'parent': api, 'category': 'Turtle', 'params': ["0"], 'dropdown': { 0: [ "0", "90", "180", "270" ] } },
-  {'func': 'arcRight', 'parent': api, 'category': 'Turtle', 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
-  {'func': 'arcLeft', 'parent': api, 'category': 'Turtle', 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
+  {'func': 'moveForward', 'parent': api, 'category': 'Turtle', 'paletteParams': ['pixels'], 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
+  {'func': 'moveBackward', 'parent': api, 'category': 'Turtle', 'paletteParams': ['pixels'], 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
+  {'func': 'move', 'parent': api, 'category': 'Turtle', 'paletteParams': ['x','y'], 'params': ["25", "25"], 'dropdown': { 0: [ "25", "50", "100", "200" ], 1: [ "25", "50", "100", "200" ] } },
+  {'func': 'moveTo', 'parent': api, 'category': 'Turtle', 'paletteParams': ['x','y'], 'params': ["0", "0"] },
+  {'func': 'dot', 'parent': api, 'category': 'Turtle', 'paletteParams': ['radius'], 'params': ["5"], 'dropdown': { 0: [ "1", "5", "10" ] } },
+  {'func': 'turnRight', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
+  {'func': 'turnLeft', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
+  {'func': 'turnTo', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["0"], 'dropdown': { 0: [ "0", "90", "180", "270" ] } },
+  {'func': 'arcRight', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle','radius'], 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
+  {'func': 'arcLeft', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle','radius'], 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
   {'func': 'getX', 'parent': api, 'category': 'Turtle', 'type': 'value' },
   {'func': 'getY', 'parent': api, 'category': 'Turtle', 'type': 'value' },
   {'func': 'getDirection', 'parent': api, 'category': 'Turtle', 'type': 'value' },
   {'func': 'penUp', 'parent': api, 'category': 'Turtle' },
   {'func': 'penDown', 'parent': api, 'category': 'Turtle' },
-  {'func': 'penWidth', 'parent': api, 'category': 'Turtle', 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
-  {'func': 'penColor', 'parent': api, 'category': 'Turtle', 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
-  {'func': 'penRGB', 'parent': api, 'category': 'Turtle', 'params': ["120", "180", "200"] },
+  {'func': 'penWidth', 'parent': api, 'category': 'Turtle', 'paletteParams': ['width'], 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
+  {'func': 'penColor', 'parent': api, 'category': 'Turtle', 'paletteParams': ['color'], 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'penRGB', 'parent': api, 'category': 'Turtle', 'paletteParams': ['r','g','b'], 'params': ["120", "180", "200"] },
   {'func': 'show', 'parent': api, 'category': 'Turtle' },
   {'func': 'hide', 'parent': api, 'category': 'Turtle' },
-  {'func': 'speed', 'parent': api, 'category': 'Turtle', 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },
+  {'func': 'speed', 'parent': api, 'category': 'Turtle', 'paletteParams': ['value'], 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },
 
-  {'func': 'setTimeout', 'parent': api, 'category': 'Control', 'type': 'either', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearTimeout', 'parent': api, 'category': 'Control', 'params': ["0"] },
-  {'func': 'setInterval', 'parent': api, 'category': 'Control', 'type': 'either', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearInterval', 'parent': api, 'category': 'Control', 'params': ["0"] },
+  {'func': 'setTimeout', 'parent': api, 'category': 'Control', 'type': 'either', 'paletteParams': ['callback','ms'], 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'parent': api, 'category': 'Control', 'paletteParams': ['__'], 'params': ["__"] },
+  {'func': 'setInterval', 'parent': api, 'category': 'Control', 'type': 'either', 'paletteParams': ['callback','ms'], 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearInterval', 'parent': api, 'category': 'Control', 'paletteParams': ['__'], 'params': ["__"] },
 
-  {'func': 'console.log', 'category': 'Variables', 'params': ['"Message"'] },
+  {'func': 'console.log', 'category': 'Variables', 'paletteParams': ['message'], 'params': ['"message"'] },
   {'func': 'declareAssign_str_hello_world', 'block': 'var str = "Hello World";', 'category': 'Variables', 'noAutocomplete': true },
-  {'func': 'substring', 'blockPrefix': 'str.substring', 'category': 'Variables', 'params': ["6", "11"], 'modeOptionName': '*.substring' },
-  {'func': 'indexOf', 'blockPrefix': 'str.indexOf', 'category': 'Variables', 'params': ['"World"'], 'modeOptionName': '*.indexOf' },
+  {'func': 'substring', 'blockPrefix': 'str.substring', 'category': 'Variables', 'paletteParams': ['start','end'], 'params': ["6", "11"], 'modeOptionName': '*.substring' },
+  {'func': 'indexOf', 'blockPrefix': 'str.indexOf', 'category': 'Variables', 'paletteParams': ['searchValue'], 'params': ['"World"'], 'modeOptionName': '*.indexOf' },
   {'func': 'length', 'block': 'str.length', 'category': 'Variables', 'modeOptionName': '*.length' },
   {'func': 'toUpperCase', 'blockPrefix': 'str.toUpperCase', 'category': 'Variables', 'modeOptionName': '*.toUpperCase' },
   {'func': 'toLowerCase', 'blockPrefix': 'str.toLowerCase', 'category': 'Variables', 'modeOptionName': '*.toLowerCase' },
   {'func': 'declareAssign_list_abde', 'block': 'var list = ["a", "b", "d", "e"];', 'category': 'Variables', 'noAutocomplete': true },
   {'func': 'listLength', 'block': 'list.length', 'category': 'Variables', 'noAutocomplete': true },
-  {'func': 'insertItem', 'category': 'Variables', 'params': ["list", "2", '"c"'], 'dontMarshal': true },
-  {'func': 'appendItem', 'category': 'Variables', 'params': ["list", '"f"'], 'dontMarshal': true },
-  {'func': 'removeItem', 'category': 'Variables', 'params': ["list", "0"], 'dontMarshal': true },
+  {'func': 'insertItem', 'category': 'Variables', 'paletteParams': ['list','index','item'], 'params': ["list", "2", '"c"'], 'dontMarshal': true },
+  {'func': 'appendItem', 'category': 'Variables', 'paletteParams': ['list','item'], 'params': ["list", '"f"'], 'dontMarshal': true },
+  {'func': 'removeItem', 'category': 'Variables', 'paletteParams': ['list','index'], 'params': ["list", "0"], 'dontMarshal': true },
 
   {'func': 'imageUploadButton', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"text"'] },
   {'func': 'container', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"html"'] },
