@@ -17,38 +17,44 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 - [Florida](#fl)
 - [Georgia](#ga)
 - [Hawaii](#hi)
+- [Idaho](#id)
+- [Illinois](#il)
 
 [/col-25]
 
 
 [col-25]
 
-- [Idaho](#id)
-- [Illinois](#il)
-- [Indiana] (#in)
+
+- [Indiana](#in)
 - [Iowa](#ia)
+- [Kansas](#ks)
+- [Kentucky](#ky)
 - [Louisiana](#la)
 - [Maine](#me)
 - [Maryland](#md)
 - [Massachusetts](#ma)
 - [Minnesota](#mn)
 - [Missouri](#mo)
+- [North Carolina](#nc)
+
 
 [/col-25]
 
 
 [col-25]
 
-
-- [North Carolina](#nc)
-- [North Dakota](#nd)
 - [Nebraska](#ne)
 - [New Hampshire](#nh)
 - [New Jersey](#nj)
+- [New Mexico](#nm)
 - [Nevada](#nv)
 - [New York](#ny)
 - [Ohio](#oh)
 - [Oklahoma](#ok)
+- [Oregon](#or)
+- [Pennsylvania](#pa)
+- [Rhode Island](#ri)
 
 
 [/col-25]
@@ -56,10 +62,6 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 
 [col-25]
 
-
-- [Oregon](#or)
-- [Pennsylvania](#pa)
-- [Rhode Island](#ri)
 - [South Carolina](#sc)
 - [Tennessee](#tn)
 - [Texas](#tx)
@@ -97,6 +99,7 @@ molyneux@pd.code.org
 style="clear:both"&nbsp;
 </p>
 
+<br />
 <a id="ar"></a>
 ## Arkansas
 ### Joel Spencer
@@ -104,22 +107,75 @@ Sherwood, AR
 
 Spencer@pd.code.org
 
+<br />
 <a id="az"></a>
 ## Arizona
+[col-33]
 ### Linda Angeloff
 Scottsdale, AZ
 
 angeloff@pd.code.org
 
+[/col-33]
+
+[col-33]
+### Mary Lou Klem
+Tucson, AZ
+
+Klem@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both"&nbsp;
+</p>
+
+<br />
 <a id="ca"></a>
 ## California
-### Bay Area
+### **Bay Area**
 [col-33]
 
 ### Ben Chun
 San Fran, CA
 
 chun@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Michelle Friend
+San Fran, CA
+
+friend@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Olivier Monteil
+Palo Alto, CA
+
+Monteil@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Lisa Anothony
+Berkeley, CA
+
+Anthony@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Seema Khan
+San Jose, CA
+
+Khan@pd.code.org
 
 [/col-33]
 
@@ -151,7 +207,7 @@ agbowo@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-### Sacramento Area
+### **Sacramento Area**
 [col-33]
 ### Matthew Rowland
 Sacramento, CA
@@ -180,7 +236,7 @@ feder@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-### Los Angeles Area
+### **Los Angeles Area**
 [col-33]
 ### Dave Dawson
 Lancaster, CA
@@ -254,8 +310,17 @@ casas@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-### San Diego Area
+### **San Diego Area**
 [col-33]
+### Andrew Svehaug
+San Diego, CA
+
+Svehaug@pd.code.org
+
+[/col-33]
+
+[col-33]
+
 ### Frank Carmody
 San Diego, CA
 
@@ -275,6 +340,7 @@ hopper@pd.code.org
 <p
 style="clear:both">&nbsp;</p>
 
+
 <a id="co"></a>
 ## Colorado
 ### Bobbie Bastian
@@ -282,6 +348,7 @@ Thorton, CO
 
 bastian@pd.code.org
 
+<br />
 <a id="ct"></a>
 ## Connecticut
 [col-33]
@@ -410,11 +477,13 @@ foust@pd.code.org
 
 <a id="hi"></a>
 ## Hawaii
-Shane Asselstine
+### Shane Asselstine
 
 Honolulu, HI
 
 asselstine@pd.code.org
+
+<br />
 <a id="id"></a>
 ## Idaho
 ### Heidi Pluska
@@ -422,9 +491,19 @@ Boise, ID
 
 pluska@pd.code.org
 
+<br />
 <a id="il"></a>
 ## Illinois
 [col-33]
+### Katherine Lavin
+Chicago, IL
+
+lavin@pd.code.org
+
+[/col-33]
+
+[col-33]
+
 ### Brian Myers
 Chicago, IL
 
@@ -461,6 +540,7 @@ Indianapolis, IN
 
 roberts@pd.code.org
 
+<br />
 <a id="ia"></a>
 ## Iowa
 ### Ben Schafer
@@ -468,6 +548,23 @@ Cedar Falls, IA
 
 schafer@pd.code.org
 
+<br />
+<a id="ks"></a>
+## Kansas
+### Jessica Asbury
+Kansas City, KS
+
+Asbury@pd.code.org
+
+<br />
+<a id="ky"></a>
+## Kentucky
+### Mark Lorence
+Louisville, KY
+
+Lorence@pd.code.org
+
+<br />
 <a id="la"></a>
 ## Louisiana
 [col-33]
@@ -486,6 +583,16 @@ jacobsen@pd.code.org
 
 [/col-33]
 
+[col-33]
+
+### Kristin Thibodeaux
+Shreveport, LA
+
+Thibodeaux@pd.code.org
+
+[/col-33]
+
+
 <p style="clear:both">&nbsp;</p>
 
 <a id="me"></a>
@@ -495,13 +602,14 @@ Falmouth, ME
 
 harvey@pd.code.org
 
+<br />
 <a id="md"></a>
 ## Maryland
 [col-33]
-### Margaret Roth
+### Gretchen Legrand
 Baltimore, MD
 
-roth@pd.code.org
+legrand@pd.code.org
 
 [/col-33]
 
@@ -552,10 +660,26 @@ style="clear:both">&nbsp;
 
 <a id="mn"></a>
 ## Minnesota
+[col-33]
 ### Teri Sue Hitchcock
 Apple Valley, MN
 
 hitchcock@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Angie Kalthoff
+Richmond, MN
+
+Kalthoff@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="mo"></a>
 ## Missouri
@@ -564,6 +688,8 @@ St. Louis, MO
 
 powell@pd.code.org
 
+
+<br />
 <a id="nc"></a>
 ## North Carolina
 [col-33]
@@ -587,13 +713,6 @@ astrachan@pd.code.org
 style="clear:both">&nbsp;
 </p>
 
-<a id="nd"></a>
-## North Dakota
-### Tom Stokke
-Grand Forks, ND
-
-stokke@pd.code.org
-
 <a id="ne"></a>
 ## Nebraska
 ### Kent Steen
@@ -601,6 +720,7 @@ Lincoln, NE
 
 steen@pd.code.org
 
+<br />
 <a id="nh"></a>
 ## New Hampshire
 ### Karen Locke
@@ -608,16 +728,9 @@ Hopkinton, NH
 
 locke@pd.code.org
 
+<br />
 <a id="nj"></a>
 ## New Jersey
-[col-33]
-### Jerri Drakes
-Newark, NJ
-
-drakes@pd.code.org
-
-[/col-33]
-
 [col-33]
 ### Joann Presbrey
 Jersey City, NJ
@@ -626,10 +739,36 @@ presbrey@pd.code.org
 
 [/col-33]
 
+[col-33]
+
+### Kim Monroe
+Egg Harbor Township
+
+monroe@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Jerri Drakes
+Newark, NJ
+
+drakes@pd.code.org
+
+[/col-33]
+
 <p
 style="clear:both">&nbsp;
 </p>
 
+<a id="nm"></a>
+## New Mexico
+### Paige Prescott
+Sante Fe, NM
+
+Prescott@pd.code.org
+
+<br />
 <a id="nv"></a>
 ## Nevada
 [col-33]
@@ -744,6 +883,7 @@ Blanchard, OK
 
 carr@pd.code.org
 
+<br />
 <a id="or"></a>
 ## Oregon
 [col-33]
@@ -773,6 +913,7 @@ Philadelphia, PA
 
 scribner@pd.code.org
 
+<br />
 <a id="ri"></a>
 ## Rhode Island
 ### Sharon Ficarra
@@ -780,6 +921,7 @@ Westerly, RI
 
 ficarra@pd.code.org
 
+<br />
 <a id="sc"></a>
 ## South Carolina
 ### Ann Puckett
@@ -787,16 +929,33 @@ Columbia, SC
 
 puckett@pd.code.org
 
+<br />
 <a id="tn"></a>
 ## Tennessee
+[col-33]
+### Herman Nelson
+Murfreesboro, TN
+
+Nelson@pd.code.org
+
+[/col-33]
+
+[col-33]
+
 ### Keith Jackson
 Oak Ridge, TN
 
 jackson@pd.code.org
 
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
+
 <a id="tx"></a>
 ## Texas
-### Austin
+### **Austin**
 [col-33]
 ### Phillip Eaglin
 Austin, TX
@@ -827,13 +986,13 @@ speed@pd.code.org
 style="clear:both">&nbsp;
 </p>
 
-### Dallas
+### **Dallas**
 ### Kimberly Lane
 Dallas, TX
 
 lane@pd.code.org
 
-### Houston
+### **Houston**
 [col-33]
 ### Ruth Hanson
 Houston, TX
@@ -893,6 +1052,7 @@ Burlington, VT
 
 mcavoy@pd.code.org
 
+<br />
 <a id="va"></a>
 ## Virginia
 [col-33]
@@ -920,6 +1080,24 @@ dovi@pd.code.org
 Seattle, WA
 
 olson@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Tracey Sconyers
+Seattle, WA
+
+sconyers@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Lauren Bricker
+Seattle, WA
+
+bricker@pd.code.org
 
 [/col-33]
 
