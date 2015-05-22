@@ -1066,7 +1066,7 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var GRID_SIZE = 20;
+      var GRID_SIZE = 5;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
@@ -1173,7 +1173,7 @@ Applab.createElement = function (elementType, left, top) {
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 Applab.makeDraggable = function (jq) {
-  var GRID_SIZE = 20;
+  var GRID_SIZE = 5;
   jq.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
