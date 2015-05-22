@@ -12,7 +12,8 @@ var elementUtils = require('./elementUtils');
 var ButtonProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
@@ -75,7 +76,8 @@ var ButtonProperties = React.createClass({
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
         <ZIndexRow
-          element={this.props.element}/>
+          element={this.props.element}
+          onDepthChange={this.props.onDepthChange}/>
       </table>);
 
     // TODO (brent):
