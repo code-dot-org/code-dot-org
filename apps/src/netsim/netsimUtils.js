@@ -207,6 +207,38 @@ exports.deserializeNumber = function (storedNum) {
 };
 
 /**
+ * Helper for converting from an older header-spec format to a new, simpler one.
+ * Old format: {key:{string}, bits:{number}}[]
+ * New format: string[]
+ * If we detect the old format, we return a spec in the new format.
+ * @param {Array} spec
+ * @returns {Array}
+ */
+exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
+  var foundOldFormat = false;
+  var scrubbedSpec = [];
+  spec.forEach(function (specEntry) {
+    if (typeof specEntry === 'string') {
+      // This is new new format, we can just copy it over.
+      scrubbedSpec.push(specEntry);
+    } else if (specEntry !== null && typeof specEntry === 'object') {
+      // This is the old {key:'', bits:0} format.  We just want the key.
+      scrubbedSpec.push(specEntry.key);
+      foundOldFormat = true;
+    }
+  });
+
+  // Issue a warning if an old format got converted, so we know to update
+  // the level.
+  if (foundOldFormat) {
+    logger.warn("Converting old header specification format to new format." +
+        " This level should be updated to use the new format.");
+  }
+
+  return scrubbedSpec;
+};
+
+/**
  * @param {netsimLevelConfiguration} levelConfig
  * @returns {netsimLevelConfiguration} same thing, but with certain values
  *          converted or cleaned.
@@ -214,6 +246,17 @@ exports.deserializeNumber = function (storedNum) {
  */
 exports.scrubLevelConfiguration_ = function (levelConfig) {
   var scrubbedLevel = _.clone(levelConfig, true);
+
+  // Convert old header spec format to new header spec format
+  scrubbedLevel.routerExpectsPacketHeader =
+      exports.scrubHeaderSpecForBackwardsCompatibility(
+          scrubbedLevel.routerExpectsPacketHeader);
+  scrubbedLevel.clientInitialPacketHeader =
+      exports.scrubHeaderSpecForBackwardsCompatibility(
+          scrubbedLevel.clientInitialPacketHeader);
+
+  // Coerce certain values to string that might have been mistaken for numbers
+  scrubbedLevel.addressFormat = scrubbedLevel.addressFormat.toString();
 
   // Explicitly list fields that we suspect may have a string value that
   // needs to be converted to a number, like "Infinity"
@@ -228,7 +271,7 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
   scrubbedLevel.defaultRouterMemory = exports.deserializeNumber(
       scrubbedLevel.defaultRouterMemory);
 
-  // Generate a warning if we see a possible missed conversion (development aid)
+  // Generate a warning if we see a possible missed string-to-number conversion
   Object.keys(scrubbedLevel).filter(function (key) {
     // Ignore level params with underscores, they are the dashboard versions
     // of the camelCase parameters that the app actually uses.
