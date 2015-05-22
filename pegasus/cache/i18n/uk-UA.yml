@@ -16,7 +16,8 @@
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
     # інших.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
+    Приєднайтесь до # інших.'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -114,8 +115,8 @@
   learn_classes: Знайти місцеві класи
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити.
+    http://youtu.be/nKIu9yen5nc. Відвідайте http://code.org/ щоб дізнатися більше.
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Більше Однієї Години
   what_gender: Якої ви статі?
@@ -153,52 +154,53 @@
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: "&ldquo;Я закликаю дівчат у всіх країнах\nвивчити одну
+    Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру\n"
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Якщо ви можете змінити технології,
+    ви можете змінити світ.&rdquo;
+    Сюзен, виконавчий директор YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Не просто грайтесь на вашому телефоні,
-    програмуйте на ньому.&rdquo;
+    програмуйте його.&rdquo;
     Президент Барак Обама
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Нашим дітям &mdash; включно з дівчатками &mdash;
+    потрібна можливість вивчати програмування.&rdquo;
+    Шерил, операційний директор Facebook
   homepage_hero_text_satya: |
     &ldquo;Інформатика допоможе розкрити
     кращі можливості в світі.&rdquo;
     Сатья, Генеральный директор Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
+    &ldquo;Якщо вмієте програмувати, ви можете
+    вибирати стежину в житті.&rdquo;
+    Кріс Бош
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Ці знання змінили моє майбутнє.
+    Вже не кажучи про те, що це цікаво.&rdquo;
+    Луна, 7 клас
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Я ніколи не бачив своїх учнів
+    настільки захопленими навчанням.&rdquo;
+    Майкл, вчитель
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+    &ldquo;Інформатика - це така сфера, у якій ви не можете
+    знати, чи вам це подобається, поки не спробуєте.&rdquo;
+    Джексон, 6 клас
+  homepage_hero_text_student4: "&ldquo;Ви можете зробити все, що забажає\nваша фантазія,
+    з допомогою програмування .&rdquo; \nМайя, 2 клас\n"
+  homepage_hero_text_student5: "&ldquo;Інформатика - не для когось-там.\nВона для
+    тебе, тут і зараз.&rdquo; \nДжеральдо, вчитель\n"
+  homepage_hero_text_teacher1: "&ldquo;Програмування збуджує творчість, натхнення
+    та інноваційність &mdash; \nа всі вони важливі для будь-якої професії.&rdquo;\nФлореза,
+    вчитель\n"
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Ця програма спонукала 100% моїх учнів
+    до активної участі та залучення.&rdquo;
+    Адам, вчитель
   homepage_slot_text_hoc: Година Коду
-  homepage_slot_text_frozen: Холодне серце з Анною і Ельзою
+  homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Всі наші підручники
   homepage_slot_text_course4: Курс 4
@@ -208,31 +210,31 @@
   homepage_action_text_teachervideo: Переглянути відео
   homepage_action_text_learn: Початок навчання
   homepage_action_text_signpetition: Підписати петицію
-  homepage_signpetition_dropdown: Подписати нашу петицію &#x25BE;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
+  homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення
+    різноманітності в інформатиці.
+  homepage_banner_text_link: Дізнайтеся більше
   homepage_slot_text_title_hoc: Година Коду
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
   homepage_slot_text_link_hoc: Спробуйте годину коду
-  homepage_slot_text_link_host: Провести Годину Кодування
+  homepage_slot_text_link_host: Провести Годину Коду
   homepage_slot_text_link_hocserved: '# спробували'
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Вивчіть всі наші навчальні курси
-  homepage_slot_text_link_codestudio: Спробуйте Code Studio
+  homepage_slot_text_link_codestudio: Спробуйте Студію Коду
   homepage_slot_text_link_local: Знайти місцевий клас
   homepage_slot_text_link_othercourses: Інші онлайн курси
   homepage_slot_text_title_educators: Викладачі
   homepage_slot_text_blurb_educators: Навчіть Ваших учнів
   homepage_slot_text_link_k5: Курси для дітей
   homepage_slot_text_link_fullcurriculum: Подивіться наш повний курс навчання
-  homepage_slot_text_link_pd: Професійна розробка
+  homepage_slot_text_link_pd: Професійний розвиток
   homepage_slot_text_title_advocates: Однодумці
   homepage_slot_text_blurb_advocates: Підтримайте нашу роботу
   homepage_slot_text_link_stats: Подивитися статистику
-  homepage_slot_text_link_buy: Прийняти участь
+  homepage_slot_text_link_buy: Взяти участь
   homepage_slot_text_link_donate: Зробити пожертвування
-  homepage_header_codestudio: Творчість учнів Code Studio
+  homepage_header_codestudio: Творчість учнів Студії Коду
   homepage_header_donors: Code.org дякує своїм помічникам
   homepage_donors_seall: Подивитися все
   homepage_donors_donate: Підтримати
@@ -434,8 +436,8 @@
   dashboard_login_picture: Зображення
   dashboard_login_none: Електронна пошта
   dashboard_new_password: новий пароль
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: не розпочато
+  dashboard_progress_in_progress: триває
   dashboard_progress_not_completed: не завершено
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально
