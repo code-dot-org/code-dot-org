@@ -1244,6 +1244,7 @@ Applab.editElementProperties = function(element) {
     React.createElement(DesignProperties, {
         element: element,
         handleChange: Applab.onPropertyChange.bind(this, element),
+        onDepthChange: Applab.onDepthChange,
         onDone: Applab.onDonePropertiesButton,
         onDelete: Applab.onDeletePropertiesButton.bind(this, element)}
     ),
@@ -1392,6 +1393,61 @@ Applab.onDeletePropertiesButton = function(element, event) {
   element.parentNode.removeChild(element);
   Applab.levelHtml = Applab.serializeToLevelHtml();
   Applab.clearProperties();
+};
+
+Applab.onDepthChange = function (element, depthDirection) {
+  // TODO (brent) - have another branch in progress where i move this and a bunch
+  // of other design mode logic into a designMode.js file. As part of that, I
+  // will also convert to use an enum for ['forward', 'backward', toFront', 'toBack']
+  // I don't want to do that just yet, because it will result in merge conflicts
+  // later
+
+  var parent = element.parentNode;
+  var index = Array.prototype.indexOf.call(parent.children, element);
+
+  if (depthDirection === 'forward' && index + 2 >= parent.children.length) {
+    // We're either the last or second to last element
+    depthDirection = 'toFront';
+  }
+
+  var removed;
+
+  switch (depthDirection) {
+    case 'forward':
+      var twoAhead = element.nextSibling.nextSibling;
+      removed = parent.removeChild(element);
+      parent.insertBefore(removed, twoAhead);
+      break;
+
+    case 'toFront':
+      removed = parent.removeChild(element);
+      parent.appendChild(removed);
+      break;
+
+    case 'backward':
+      var previous = element.previousSibling;
+      if (!previous) {
+        return;
+      }
+
+      removed = parent.removeChild(element);
+      parent.insertBefore(removed, previous);
+      break;
+
+    case 'toBack':
+      if (parent.children.length === 1) {
+        return;
+      }
+      removed = parent.removeChild(element);
+      parent.insertBefore(removed, parent.children[0]);
+      break;
+
+    default:
+      throw new Error('unknown depthDirection: ' + depthDirection);
+  }
+
+  element.focus();
+  Applab.editElementProperties(element);
 };
 
 Applab.serializeToLevelHtml = function () {
