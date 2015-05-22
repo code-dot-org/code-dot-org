@@ -22,7 +22,8 @@ var ElementType = {
   DROPDOWN: 'DROPDOWN',
   RADIO_BUTTON: 'RADIO_BUTTON',
   TEXT_AREA: 'TEXT_AREA',
-  IMAGE: 'IMAGE'
+  IMAGE: 'IMAGE',
+  CANVAS: 'CANVAS'
 };
 
 var elements = {};
@@ -34,6 +35,7 @@ elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
 elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
 elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
 elements[ElementType.IMAGE] = require('./image.jsx');
+elements[ElementType.CANVAS] = require('./canvas.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -92,11 +94,20 @@ module.exports = {
    */
   getElementType: function (element) {
     var tagname = element.tagName.toLowerCase();
+
     switch (tagname) {
       case 'button':
         return ElementType.BUTTON;
       case 'label':
         return ElementType.LABEL;
+      case 'select':
+        return ElementType.DROPDOWN;
+      case 'div':
+        return ElementType.TEXT_AREA;
+      case 'img':
+        return ElementType.IMAGE;
+      case 'canvas':
+        return ElementType.CANVAS;
       case 'input':
         switch (element.getAttribute('type')) {
           case 'checkbox':
@@ -107,12 +118,6 @@ module.exports = {
             return ElementType.TEXT_INPUT;
         }
         break;
-      case 'select':
-        return ElementType.DROPDOWN;
-      case 'div':
-        return ElementType.TEXT_AREA;
-      case 'img':
-        return ElementType.IMAGE;
     }
     throw new Error('unknown element type');
   },

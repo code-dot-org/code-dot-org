@@ -505,9 +505,13 @@ button.arrow:focus {
 
 .design-mode-hidden {
   visibility: hidden;
+
+  .divApplabDesignMode & {
+    visibility: visible;
+    opacity: 0.3;
+  }
 }
 
-.divApplabDesignMode .design-mode-hidden {
-  visibility: visible;
-  opacity: 0.3;
+.divApplabDesignMode canvas {
+  background-color: #eee;
 }
