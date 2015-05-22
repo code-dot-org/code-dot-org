@@ -35,7 +35,8 @@ module.exports = React.createClass({
       }
       this.setState({assets: assets});
     }.bind(this), function (xhr) {
-      this.setState({uploadStatus: 'Error loading asset list: ' + getErrorMessage(xhr.status)});
+      this.setState({uploadStatus: 'Error loading asset list: ' +
+          getErrorMessage(xhr.status)});
     }.bind(this));
   },
 
@@ -51,7 +52,8 @@ module.exports = React.createClass({
     if (file.type && this.props.typeFilter) {
       var type = file.type.split('/')[0];
       if (type !== this.props.typeFilter) {
-        this.setState({uploadStatus: 'Only ' + this.props.typeFilter + ' assets can be used here.'});
+        this.setState({uploadStatus: 'Only ' + this.props.typeFilter +
+          ' assets can be used here.'});
         return;
       }
     }
@@ -59,9 +61,11 @@ module.exports = React.createClass({
     // TODO: Use Dave's client api when it's finished.
     AssetsApi.ajax('PUT', file.name, function (xhr) {
       this.state.assets.push(JSON.parse(xhr.responseText));
-      this.setState({uploadStatus: 'File "' + file.name + '" successfully uploaded!'});
+      this.setState({uploadStatus: 'File "' + file.name +
+          '" successfully uploaded!'});
     }.bind(this), function (xhr) {
-      this.setState({uploadStatus: 'Error uploading file: ' + getErrorMessage(xhr.status)});
+      this.setState({uploadStatus: 'Error uploading file: ' +
+          getErrorMessage(xhr.status)});
     }.bind(this), file);
 
     this.setState({uploadStatus: 'Uploading...'});
@@ -76,7 +80,7 @@ module.exports = React.createClass({
     this.setState({uploadStatus: 'File "' + name + '" successfully deleted!'});
   },
 
-  render: function() {
+  render: function () {
     var assetList;
     if (this.state.assets === null) {
       assetList = (
@@ -87,7 +91,8 @@ module.exports = React.createClass({
     } else if (this.state.assets.length === 0) {
       assetList = (
         <div style={{margin: '1em 0'}}>
-          Your assets will appear here.  Click "Upload File" to add a new asset for this project.
+          Your assets will appear here. Click "Upload File" to add a new asset
+          for this project.
         </div>
       );
     } else {
@@ -95,11 +100,15 @@ module.exports = React.createClass({
         <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
           <table style={{width: '100%'}}>
             <tbody>
-          {this.state.assets.map(function (asset) {
-            return <AssetRow key={asset.filename} name={asset.filename} type={asset.category}
-                delete={this.deleteAssetRow.bind(this, asset.filename)}
-                choose={this.props.assetChosen && this.props.assetChosen.bind(this, AssetsApi.basePath + '/' + asset.filename)}/>;
-          }.bind(this))}
+              {this.state.assets.map(function (asset) {
+                var choose = this.props.assetChosen &&
+                    this.props.assetChosen.bind(this, AssetsApi.basePath + '/' +
+                    asset.filename);
+
+                return <AssetRow key={asset.filename} name={asset.filename}
+                    type={asset.category} choose={choose}
+                    delete={this.deleteAssetRow.bind(this, asset.filename)}/>;
+              }.bind(this))}
             </tbody>
           </table>
         </div>
@@ -115,9 +124,14 @@ module.exports = React.createClass({
       <div className="modal-content" style={{margin: 0}}>
         {title}
         {assetList}
-        <input type="file" accept={accept} id="uploader" style={{display: 'none'}} onChange={this.upload}/>
-        <button onClick={this.fileUploadClicked} className="share"><i className="fa fa-upload"></i> Upload File</button>
-        <span id="uploadStatus" style={{margin: '0 10px'}}>{this.state.uploadStatus}</span>
+        <input type="file" accept={accept} id="uploader"
+            style={{display: 'none'}} onChange={this.upload}/>
+        <button onClick={this.fileUploadClicked} className="share">
+          <i className="fa fa-upload"></i>
+          Upload File</button>
+        <span id="uploadStatus" style={{margin: '0 10px'}}>
+          {this.state.uploadStatus}
+        </span>
       </div>
     );
   }

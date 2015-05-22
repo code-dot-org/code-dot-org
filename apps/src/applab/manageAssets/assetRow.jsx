@@ -10,17 +10,21 @@ var defaultIcons = {
 function getThumbnail(type, name) {
   switch (type) {
     case 'image':
-      return <img src={'/v3/assets/' + dashboard.project.current.id + '/' + name}
-          style={{width: 'auto', maxWidth: '100%', height: 'auto', maxHeight: '100%', zoom: 2, marginTop: '50%', transform: 'translateY(-50%)'}}/>;
+      var src = '/v3/assets/' + dashboard.project.current.id + '/' + name;
+      return <img src={src} style={{
+        width: 'auto', maxWidth: '100%', height: 'auto', maxHeight: '100%',
+        zoom: 2, marginTop: '50%', transform: 'translateY(-50%)'
+      }}/>;
     default:
-      return <i className={defaultIcons[type] || 'fa fa-question'} style={{margin: '15px 0', fontSize: '32px'}}></i>;
+      return <i className={defaultIcons[type] || 'fa fa-question'}
+          style={{margin: '15px 0', fontSize: '32px'}}></i>;
   }
 }
 
 module.exports = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'unknown']).isRequired,
+    type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired,
     choose: React.PropTypes.func.isRequired,
     delete: React.PropTypes.func.isRequired
   },
@@ -45,7 +49,8 @@ module.exports = React.createClass({
 
     // TODO: Use Dave's client api when it's finished.
     AssetsApi.ajax('DELETE', this.props.name, this.props.delete, function () {
-      this.setState({action: 'confirming delete', actionText: 'Error deleting file.'});
+      this.setState({action: 'confirming delete',
+          actionText: 'Error deleting file.'});
     }.bind(this));
   },
 
@@ -61,7 +66,9 @@ module.exports = React.createClass({
           <td width="250" style={{textAlign: 'right'}}>
             {choseImage}
             <button><i className="fa fa-eye"></i></button>
-            <button className="btn-danger" onClick={this.confirmDelete}><i className="fa fa-trash-o"></i></button>
+            <button className="btn-danger" onClick={this.confirmDelete}>
+              <i className="fa fa-trash-o"></i>
+            </button>
             {this.state.actionText}
           </td>
         );
@@ -69,7 +76,9 @@ module.exports = React.createClass({
       case 'confirming delete':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <button className="btn-danger" onClick={this.handleDelete}>Delete File</button>
+            <button className="btn-danger" onClick={this.handleDelete}>
+              Delete File
+            </button>
             <button onClick={this.cancelDelete}>Cancel</button>
             {this.state.actionText}
           </td>
@@ -78,7 +87,8 @@ module.exports = React.createClass({
       case 'deleting':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px', marginRight: '15px'}}></i>
+            <i className="fa fa-spinner fa-spin"
+                style={{fontSize: '32px', marginRight: '15px'}}></i>
           </td>
         );
         break;
@@ -86,11 +96,16 @@ module.exports = React.createClass({
 
     return (
       <tr className="assetRow">
-        <td width="80"><div className="assetThumbnail" style={{
-          width: '60px', height: '60px', margin: '10px auto', background: '#eee', border: '1px solid #ccc', textAlign: 'center'
-        }}>{getThumbnail(this.props.type, this.props.name)}</div></td>
+        <td width="80">
+          <div className="assetThumbnail" style={{
+            width: '60px', height: '60px', margin: '10px auto',
+            background: '#eee', border: '1px solid #ccc', textAlign: 'center'
+          }}>
+            {getThumbnail(this.props.type, this.props.name)}
+          </div>
+        </td>
         <td>{this.props.name}</td>
-      {actions}
+        {actions}
       </tr>
     );
   }
