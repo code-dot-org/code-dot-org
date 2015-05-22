@@ -1,12 +1,19 @@
 name 'U3L18 Controlling Memory and Program Flow 4'
 title 'Controlling Memory and Control Quiz'
-description  'Select the programming technique that best fits the described game feature.'
+type 'multi2'
+description ''
 
-question '4. You want to change the size of the images when a certain score is reached.'
-wrong 'conditional'
-wrong 'variable'
-right 'both'
+question 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
+right ‘Remember things during play’
+right ‘Make decisions’
+wrong ‘Make calculations’
+wrong ‘track of time’
+wrong ‘store information permanently’
 
 markdown <<MARKDOWN
+### Desired program feature
+
+You want to change the size of the images when a certain score is reached.
+
 
 MARKDOWN

@@ -12,7 +12,7 @@ In the previous page the problem with code was the line **var count = count + 1*
 
 You already know the main reason this caused a problem and why:
 
-* using **var count** is like saying "create a new variable called count" and in this case you didn't want to create a new variable.  You wanted to reference the one created at the top of the program.
+* Using **var count** is like saying "create a new variable called count." In this case you didn't want to create a new variable - you wanted to reference the one created at the top of the program.
 
 But there is something else we can now tell you....
 
@@ -20,7 +20,7 @@ But there is something else we can now tell you....
 
 You can think of variables created inside functions as temporary - they only live to serve the running of one call to the function.  
 
-If a variable is created inside a button click event like this...
+Example: A variable is created inside a button click event.
 <pre style=“display: inline-block”>
 onEvent("myButton", "click", function(){
    ...
@@ -30,11 +30,14 @@ onEvent("myButton", "click", function(){
 </pre>
 
 You may also be wondering:
+
 * Does that mean that a new variable is created every time the button is clicked?
+
 * Where do all these variables go?  Can I see them?
+
 * Is it possible for many variables to have the same name?
 
-Well, the answer is yes, a new variable is created each time, but *only* the code inside the function can see it.  And both the variable and its value are lost once the function is done running.
+Well, the answer is yes, a new variable is created each time, but *only* the code inside the function can see it.  Both the variable and its value are lost once the function is done running.
 
 Here is an example of this in action...
 
