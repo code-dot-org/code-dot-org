@@ -837,6 +837,8 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  Applab.designModeEditedElement = null;
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1233,6 +1235,7 @@ Applab.onDivApplabClick = function (event) {
 
 Applab.editElementProperties = function(element) {
   var designPropertiesElement = document.getElementById('design-properties');
+  Applab.designModeEditedElement = element;
   React.render(
     React.createElement(DesignProperties, {
         element: element,
@@ -1305,6 +1308,17 @@ Applab.onPropertyChange = function(element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
+      break;
+    case 'picture':
+      element.src = value;
+      element.onload = function () {
+        element.style.width = this.naturalWidth + 'px';
+        element.style.height = this.naturalHeight + 'px';
+        // Re-render properties
+        if (Applab.designModeEditedElement === element) {
+          Applab.editElementProperties(element);
+        }
+      };
       break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible
