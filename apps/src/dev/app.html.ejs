@@ -19,11 +19,19 @@
   <% } else { -%>
     <script type="text/javascript" src="../js/jsinterpreter/acorn_interpreter.js"></script>
   <% } -%>
+  <!--
+    Get jquery from our node_modules. Unfortuantely, the jquery-ui in our node_modules
+    is not browser friendly. Instead, we'll grab a version from the CDN that is the
+    same as what's currently on dashboard
+   -->
+  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="../js/requirejs/require.js"></script>
   <script type="text/javascript" src="../js/ace/ace.js"></script>
   <script type="text/javascript" src="../js/ace/ext-language_tools.js"></script>
   <script type="text/javascript" src="../js/droplet/droplet-full.js"></script>
   <script type="text/javascript" src="../js/ace/mode-javascript.js"></script>
+  <script type="text/javascript" src="../js/tooltipster/jquery.tooltipster.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/droplet/droplet.min.css">
 <% } else { -%>
   <script type="text/javascript" src="../js/blockly.js"></script>

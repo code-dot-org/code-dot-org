@@ -1,3 +1,5 @@
+/* global $ */
+
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
@@ -14,7 +16,7 @@ var currentlyEditedElement = null;
  * @param event
  */
 designMode.onDivApplabClick = function (event) {
-  if (!window.$ || $('#designModeButton').is(':visible') ||
+  if ($('#designModeButton').is(':visible') ||
       $('#resetButton').is(':visible')) {
     return;
   }
@@ -276,7 +278,7 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   var children = $(levelDom).children();
   children.appendTo(rootEl);
   if (allowDragging) {
-    (children);
+    makeDraggable(children);
   }
 
   children.each(function () {
@@ -299,7 +301,7 @@ function toggleDragging (enable) {
       }
     });
   }
-};
+}
 
 designMode.toggleDesignMode = function(enable) {
   var codeModeHeaders = document.getElementById('codeModeHeaders');
@@ -366,4 +368,4 @@ function makeDraggable (jq) {
       Applab.levelHtml = designMode.serializeToLevelHtml();
     }
   });
-};
+}
