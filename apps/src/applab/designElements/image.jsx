@@ -1,11 +1,12 @@
-/* global $ */
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
-var CheckboxProperties = React.createClass({
+var elementUtils = require('./elementUtils');
+
+var ImageProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -23,8 +24,11 @@ var CheckboxProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          isNumber={true}
           handleChange={this.props.handleChange.bind(this, 'id')} />
+        <PropertyRow
+          desc={'text'}
+          initialValue={$(element).text()}
+          handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
@@ -45,43 +49,34 @@ var CheckboxProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        {/* eventually this will be a ImageChooserPropertyRow */ }
+        <PropertyRow
+          desc={'picture'}
+          initialValue={element.getAttribute('src')}
+          handleChange={this.props.handleChange.bind(this, 'picture')} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
-        <BooleanPropertyRow
-          desc={'checked'}
-          initialValue={element.checked}
-          handleChange={this.props.handleChange.bind(this, 'checked')} />
-
       </table>);
 
-    // TODO:
+    // TODO (brent):
+    // bold/italics/underline (p2)
+    // shape (p2)
+    // textAlignment (p2)
     // enabled (p2)
     // send back/forward
   }
 });
 
 module.exports = {
-  PropertyTable: CheckboxProperties,
-
-  create: function() {
-    var element = document.createElement('input');
-    element.type = 'checkbox';
-    element.style.width = '12px';
-    element.style.height = '12px';
-
-    this.onDeserialize(element);
+  PropertyTable: ImageProperties,
+  create: function () {
+    var element = document.createElement('img');
+    element.style.height = '50px';
+    element.style.width = '50px';
+    element.setAttribute('src', '');
 
     return element;
-  },
-
-  onDeserialize: function (element) {
-    // Disable click events unless running
-    $(element).on('click', function(e) {
-      if (!Applab.isRunning()) {
-        element.checked = !element.checked;
-      }
-    });
   }
 };

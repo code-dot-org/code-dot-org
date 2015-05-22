@@ -3,9 +3,11 @@ var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var OptionsSelectRow = require('./OptionsSelectRow.jsx');
 
-var CheckboxProperties = React.createClass({
+var elementUtils = require('./elementUtils');
+
+var DropdownProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -23,8 +25,11 @@ var CheckboxProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          isNumber={true}
           handleChange={this.props.handleChange.bind(this, 'id')} />
+        <OptionsSelectRow
+          desc={'options'}
+          element={element}
+          handleChange={this.props.handleChange.bind(this, 'options')} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
@@ -45,43 +50,35 @@ var CheckboxProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <PropertyRow
+          desc={'font size (px)'}
+          isNumber={true}
+          initialValue={parseInt(element.style.fontSize, 10)}
+          handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
-        <BooleanPropertyRow
-          desc={'checked'}
-          initialValue={element.checked}
-          handleChange={this.props.handleChange.bind(this, 'checked')} />
 
       </table>);
 
     // TODO:
+    // bold/italics/underline (p2)
+    // textAlignment (p2)
     // enabled (p2)
     // send back/forward
   }
 });
 
 module.exports = {
-  PropertyTable: CheckboxProperties,
+  PropertyTable: DropdownProperties,
 
   create: function() {
-    var element = document.createElement('input');
-    element.type = 'checkbox';
-    element.style.width = '12px';
-    element.style.height = '12px';
-
-    this.onDeserialize(element);
+    var element = document.createElement('select');
+    element.style.width = '100px';
+    element.style.height = '30px';
+    element.style.fontSize = '14px';
 
     return element;
-  },
-
-  onDeserialize: function (element) {
-    // Disable click events unless running
-    $(element).on('click', function(e) {
-      if (!Applab.isRunning()) {
-        element.checked = !element.checked;
-      }
-    });
   }
 };
