@@ -106,7 +106,7 @@ module.exports = React.createClass({
                     asset.filename);
 
                 return <AssetRow key={asset.filename} name={asset.filename}
-                    type={asset.category} choose={choose}
+                    type={asset.category} size={asset.size} choose={choose}
                     delete={this.deleteAssetRow.bind(this, asset.filename)}/>;
               }.bind(this))}
             </tbody>
