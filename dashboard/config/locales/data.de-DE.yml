@@ -34,7 +34,7 @@
           desc: Hüpfen (beta)
           Bounce: Stufe 1
         Builder Levels:
-          desc: von Benutzern erstellte Puzzles (beta)
+          desc: von Benutzern erstellte Aufgaben (beta)
           Custom: Stufe 1
         Flappy Levels:
           desc: Flappy Bird
@@ -56,7 +56,7 @@
           Bounce: Stufe 1
           Studio: Teil 2
         builder:
-          desc: von Benutzern erstellte Puzzles (beta)
+          desc: von Benutzern erstellte Aufgaben (beta)
           Custom: Stufe 1
         flappy:
           desc: Flappy Bird
@@ -124,7 +124,8 @@
     level:
       instructions:
         maze_2_2: 'Kannst du mir helfen, das freche Schwein zu fangen? Stecke ein
-          paar „vorwärts“-Bausteine zusammen und drücke „Ausführen“, um mir zu helfen. '
+          paar „vorwärts bewegen“-Bausteine zusammen und drücke „Ausführen“, um mir
+          zu helfen. '
         maze_2_1: Dieses Schwein lässt meine Federn zu Berge stehen. Hilf mir es zu
           finden!
         maze_2_2_5: Folge dem Weg und führe mich zum Schwein. Lass mich nicht ins
@@ -136,48 +137,48 @@
           Schweinchen komme. Findest du ihn?
         maze_2_6: Versuche mich mit nur drei Blöcken zum grünen Eindringling zu bringen.
         maze_2_7: Hilf mir dieses böse Schweinchen mit möglichst wenigen Bausteinen
-          zu erwischen. Verwende mehr als einen „Wiederhole _ mal“-Baustein.
-        maze_2_8: 'Wenn ein Baustein grau ist, kannst du ihn nicht löschen. Löse das
-          Rätsel mit dem „wiederholen“-Baustein, der die Aktionen darin 3 mal wiederholt.
-          Versuche die folgenden 3 Bausteine in den grauen „wiederholen“-Baustein
-          zu stecken: bewegen, bewegen, drehen.'
+          zu erwischen. Verwende mehr als einen „Wiederholen“-Baustein.
+        maze_2_8: 'Wenn ein Baustein grau ist, kannst du ihn nicht löschen. Löse die
+          Aufgabe mit dem „Wiederholen“-Baustein, der die Aktionen darin 3 mal wiederholt.
+          Versuche die folgenden 3 Bausteine in den grauen „Wiederholen“-Baustein
+          zu stecken: Bewegen, Bewegen, Drehen.'
         maze_2_9: OK, probiere den neuen „Wiederholen-bis“-Baustein aus – dieser wiederholt
           alle Aktionen darin, bis ich das grüne Schwein erreiche.
         maze_2_10: Okay, eine letzte Übung - kannst du das mit nur 4 Bausteinen lösen?
-        maze_2_11: Sehr geehrte Person. Ich Zombie. Ich hungrig. ... Muss... zur...
-          Sonnenblume... gelangen. Kannst du mich mit nur 5 Bausteinen hin bringen?
+        maze_2_11: Hallo Mensch. Ich Zombie. Ich hungrig. Muss… zur… Sonnenblume…
+          gelangen. Kannst du mich mit nur 5 Bausteinen dorthin bringen?
         maze_2_12: OK, das ist ähnlich, aber etwas anders. Schaffst du es in nur 5
           Bausteinen?
         maze_2_13: 'Nutze den neuen "Wenn" Baustein um zu entscheiden wann ich mich
           drehen soll. Hinweis: Du brauchst nur einen weiteren Baustein, aber schau
           dir an wie wir es gemacht haben um es beim nächsten Mal alleine machen zu
           können.'
-        maze_2_14: Ok, es ist wie das letzte Puzzle, aber vergiss nicht wie du den
+        maze_2_14: Ok, es ist wie die letzte Aufgabe, aber vergiss nicht wie du den
           "Wenn" Baustein und den "Wiederholen" Baustein zusammen verwendet hast.
         maze_2_15: Sonnenblume haben will! Benutze einen "Wenn" Baustein um mich mit
           so wenig Bausteinen wie möglich dort hin zu bringen.
-        maze_2_16: Ok, lass es uns nochmal versuchen - es ist nicht wirklich anders,
-          aber pass vor den Fleischfressenden Pflanzen auf!
+        maze_2_16: Ok, lass uns das nochmal üben. Das ist wieder beinahe dasselbe,
+          aber hüte dich vor den fleischfressenden Pflanzen!
         maze_2_17: Der "Wenn-Ansonsten" Baustein überprüft eine Bedingung und macht
           dann eine Sache ODER eine andere. Versuche den neuen Baustein zu verwenden
           um mich zu der Sonnenblume zu bringen.
         maze_2_18: Noch eine Übung mit dem "Wenn-Ansonsten" Baustein, schaffst du
           es mit dem ersten Versuch?
-        maze_2_19: Können Sie nur 3 Bausteine hinzufügen um mir mit einem komplexen
+        maze_2_19: Kannst du nur 3 Bausteine hinzufügen um mir mit einem komplexen
           Labyrinth zu helfen? Wenn du es richtig machst, kann ich jeden kurvigen
           Weg gehen, unabhängig von der Länge.
         turtle_1_1: Hallo, ich bin ein Künstler. Du kannst Code schreiben, um mich
           fast alles malen zu lassen. Benutze ein paar Bausteine um mich die grauen
           Linien im Bild übermalen zu lassen.
-        turtle_1_2: 'Nun zeichnen Sie ein Quadrat. HINWEIS: Verwenden Sie Ihre Lieblingsfarbe
-          von dem neuen "setze Farbe" Baustein.'
+        turtle_1_2: 'Lass uns ein Quadrat zeichnen! Tipp: Verwende deine Lieblingsfarbe,
+          indem du sie mit dem neuen „Farbe festlegen“-Baustein auswählst.'
         turtle_1_3: Zeichne ein Viereck mit nur 3 Bausteinen.
         turtle_1_4: 'Zeichne ein Dreieck, dessen Seiten alle unterschiedliche Farben
-          haben. Verwende dazu die "zufällige Farbe"-Option, welche jedes Mal eine
-          andere Farbe verwendet. Hinweis: Du musst herausfinden wie weit du drehen
-          musst, indem du die Nummern im Dreh-Baustein anklickst.'
-        turtle_1_5: Jetzt zur Übung, zeichne ein Dreieck und dann ein Quadrat um einen
-          Umschlag zu zeichnen.
+          haben. Verwende dazu die „zufällige Farbe“-Option, die jedes Mal eine andere
+          Farbe auswählt. Hinweis: Du musst herausfinden wie weit du dich an den Ecken
+          drehen musst. Klicke dazu auf die Zahl im Dreh-Baustein!'
+        turtle_1_5: Lass uns üben! Zeichne ein Dreieck und dann ein Quadrat, um einen
+          Briefumschlag zu zeichnen.
         turtle_1_6: 'Kannst du herausfinden wie man dieses Dreieck und Quadrat zeichnet?
           Tipp: Zuerst das Dreieck zeichnen, dann rechne aus wie viele Umdrehungen
           benötigt sind, bevor du das Quadrat zeichnest.'
@@ -186,43 +187,43 @@
           von jeweils 100 Pixel und sie sind 50 Pixel von einander entfernt. Vergiss
           nicht Grün zu verwenden!
         turtle_1_8: Ok, versuche herauszufinden was passiert, wenn du diesen Code
-          ausführst (oder drücke "Programm Starten" um es zu versuchen). Danach wiederhole
-          es so oft, um die Zeichnung fertigzustellen. Die Farben werden jedes Mal
-          unterschiedlich sein.
+          ausführst (oder drücke „Programm Starten“ um es zu versuchen). Danach wiederhole
+          es so oft, bis die Zeichnung fertig ist. Die Farben werden jedes Mal unterschiedlich
+          sein.
         turtle_1_9: Kannst du herausfinden mit welcher Nummer du das Fragezeichen
           ersetzen musst, um einen Kreis zu zeichnen?
         turtle_1_10: 'Du hast es geschafft! Jetzt, zeichne was du willst! Hier sind
           ein paar Ideen: ein Strichmännchen, eine Schneeflocke, oder eine Spirale.
           Probiere auch den neuen "Setze Breite"-Baustein aus. Viel Spaß!'
         turtle_4_1: 'Kannst du ein Dreieck (mit den Kanten von 100 Pixeln) mit nur
-          3 Bausteinen zeichnen? Tipp: Verwenden Sie einen "Wiederholen"-Baustein.'
+          3 Bausteinen zeichnen? Tipp: Verwende einen "Wiederholen"-Baustein.'
         turtle_4_2: Füge einen "nach rechts drehen um 90 Grad" Baustein irgendwo in
           der Mitte des Programm, welches sich bereits auf dem Arbeitsplatz befindet,
           um diese Dreiecke zu zeichnen.
         turtle_4_3: Ok, hier ist das Programm das du geschrieben hast um ein einzelnes
           Dreieck zu zeichnen. Kannst du einen "Wiederholen"- und "Drehen"-Baustein
           hinzufügen um eine hübsche Blume zu zeichnen?
-        turtle_4_4: 'Hier ist das gleiche Programm aus dem vorherigen Puzzle, aber
+        turtle_4_4: 'Hier ist das gleiche Programm aus der vorherigen Aufgabe, aber
           diesmal nur 36 Grad drehend nach dem Zeichnen jedes Dreiecks. Wie oft muss
           das wiederholt werden? (Hinweis: nach 360 Grad wird die Zeichnung zu einem
           vollen Kreis)'
-        turtle_4_5: 'Hier ist das gleiche Programm aus dem vorherigen Puzzle, aber
+        turtle_4_5: 'Hier ist das gleiche Programm aus der vorherigen Aufgabe, aber
           diesmal werden die Drehungen 36 Mal wiederholt. Wie viel Grad müssten die
           Drehungen sein? (Hinweis: nach 360 Grad wird die Zeichnung zu einem vollen
           Kreis)'
         turtle_4_6: Kannst du ein Viereck mit der Kantenlänge von 20 Pixeln mit nur
           3 Bausteinen zeichnen?
-        turtle_4_7: 'Das ist der Code vom letzten Puzzle, der Quadrate zeichnen kann.
-          Kannst du ihn wiederholen, damit er 10 angrenzende Quadrate zeichnet, die
-          zusammen aussehen wie eine Leiter? Hinweis: du brauchst nur zwei weitere
-          Bausteine.'
-        turtle_4_8: Hier ist die Lösung für das vorherige Puzzle. Können Sie nur zwei
+        turtle_4_7: 'Hier ist das Programm aus der vorherigen Aufgabe, das Quadrate
+          zeichnen kann. Kannst du es wiederholen, damit es 10 angrenzende Quadrate
+          zeichnet, die zusammen aussehen wie eine Leiter? Hinweis: du brauchst nur
+          zwei weitere Bausteine.'
+        turtle_4_8: Hier ist die Lösung für die vorherige Aufgabe. Kannst du nur zwei
           weitere Bausteine benutzen um die Zeichnung zu beenden?
-        turtle_4_9: Hier ist die Lösung für das vorherige Puzzle. Wie weit muss gedreht
+        turtle_4_9: Hier ist die Lösung für die vorherige Aufgabe. Wie weit muss gedreht
           werden um die Zeichnung zu beenden? (Du musst wahrscheinlich ein paar Mal
           probieren)
-        turtle_4_10: Hier ist die Lösung für das vorherige Puzzle. Wie oft musst du
-          wiederholen um die Zeichnung zu beenden?
+        turtle_4_10: Hier ist die Lösung für die vorherige Aufgabe. Wie oft musst
+          du wiederholen um die Zeichnung zu beenden?
         turtle_4_11: Ändere die Werte im "Drehen"- und "Wiederholen"-Baustein um verschiedene
           Muster zu zeichnen. Oder experimentiere und ändere das restliche Programm
           um zu Malen was du willst.
@@ -235,14 +236,13 @@
           entfernt werden sollen. Verwende dabei so wenig Bausteine wie möglich.
         maze_karel_1_4: 'Kannst du mir helfen alle vier Haufen Erde zu entfernen?
           Hinweis: Nutze einen "Wiederholen" Block wenn du kannst.'
-        maze_karel_1_5: 'Helfen Sie diese Löcher mit 5 Schaufeln Erde aufzufüllen.
-          Tipp: Sie können eine "Wiederholen" Baustein innerhalb des Bausteins "Wenn"
-          setzen.'
-        maze_karel_1_6: Entfernen Sie alle Erdhaufen, mit so wenig Bausteine wie möglich.
+        maze_karel_1_5: 'Hilf diese Löcher mit 5 Schaufeln Erde aufzufüllen. Tipp:
+          Du kannst einen "Wiederholen" Baustein innerhalb des Bausteins "Wenn" setzen.'
+        maze_karel_1_6: Entferne alle Erdhaufen, mit so wenig Bausteine wie möglich.
           Die neuen Optionen im Dropdown-Menü auf dem "Wenn"-Baustein sagen mir, ob
           ich auf einem Haufen oder einem Loch stehe.
         maze_karel_1_7: Wow, ich habe ein wirklich tiefes Loch gefunden! Ich weiß
-          nicht wie viele Schaufeln von Erde es braucht. Können Sie ein Programm schreiben,
+          nicht wie viele Schaufeln von Erde es braucht. Kannst du ein Programm schreiben,
           das es ausfüllt, bis der Boden eben ist?
         maze_karel_1_8: Hilf mir das Loch am Ende des Feldes zu füllen mit so wenigen
           Bausteinen wie möglich.
@@ -302,7 +302,7 @@
         maze_karel_2_3: Verwende den neuen "fülle 5"-Baustein, damit ich alle Löcher
           auffülle. Du musst den "fülle 5"-Baustein aus der Funktionen-Kategorie herausziehen.
         maze_karel_2_4: Definiere eine neue Funktion, die 7 Schaufeln voller Erde
-          beseitigt. Diese verwende Sie um ein Programm zu schreiben, das mir hilft
+          beseitigt. Diese verwendest du um ein Programm zu schreiben, das mir hilft
           alle Häufen zu entfernen.
         maze_karel_2_5: Erstelle eine neue Funktion, die 6 Schaufeln voller Erde von
           einem Haufen entfernt und hilf mir mit der Funktion alle Haufen platt zu
@@ -319,7 +319,7 @@
           so dass du alle Haufen mit nur ein paar neuen Bausteinen entfernst.
         maze_karel_2_10: Bewege mich über das Feld und verwende diese beiden Funktionen,
           um mir zu helfen, alle Haufen zu entfernen und alle Löcher zu füllen.
-        turtle_3_1: Dieses Puzzle zeigt, wie die Funktionen "Zeichne ein Quadrat"
+        turtle_3_1: Diese Aufgabe zeigt, wie die Funktionen "Zeichne ein Quadrat"
           und "Zeichne einen Kreis" definiert sind.  Eine Funktion definieren, führt
           die Bausteine nicht aus.  Du musst den Bausteine "Zeichne ein Quadrat" ziehen,
           um ein Quadrat zu zeichnen.
@@ -403,12 +403,12 @@
         bounce_3: Versuche jetzt etwas ähnliches mit dem "Wenn oben Pfeil"-Baustein.
           Bewege das Paddel zum oberen Ziel.
         bounce_4: Jetzt musst du vier Bausteine anhängen. Bewege das Paddel zu allen
-          vier Zielen, um dieses Puzzle zu lösen.
+          vier Zielen, um diese Aufgabe zu lösen.
         bounce_5: Wir werden jetzt einen Ball auf das Paddel runterfliegen lassen.
           Füge einen Baustein an den "Wenn Ball Paddel berührt"-Baustein um sicherzustellen,
           dass der Ball das Ziel erreicht.
         bounce_6: Jetzt ist das Ziel oben. Du musst Bausteine an beide "Wenn Ball
-          auftrifft"-Bausteine anhängen um dieses Puzzle zu lösen.
+          auftrifft"-Bausteine anhängen um diese Aufgabe zu lösen.
         bounce_7: Füge jedem der "Wenn"-Bausteine weitere Bausteine hinzu. Lasse den
           Ball springen bis er das Ziel trifft.
         bounce_10: Jetzt gibt es oben ein Ziel. Hänge den "Erziele einen Punkt"- und
@@ -426,19 +426,19 @@
         Custom_builder: Ziehe Bausteine aus deiner Werkzeugkiste auf den Arbeitsplatz
           um den Level zu zeichnen, welchen du erstellen möchtest. Drücke auf "Ausführen"
           wenn du bereit bist.
-        flappy_1: Füge dem "Wenn geklickt"-Baustein einen weiteren Baustein hinzu
-          und drücke dann "Programm ausführen". Klicke oder tippe auf den Bildschirm,
-          um Flappy zum Ziel zu bewegen.
+        flappy_1: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein hinzu und
+          drücke dann "Ausführen". Klicke oder tippe auf den Bildschirm, um Flappy
+          zum Ziel zu bewegen.
         flappy_2: Nun haben wir etwas Boden hinzugefügt. Füge dem "Wenn auf Boden
           gestürzt"-Baustein einen weiteren Baustein hinzu. Dein Programm benötigt
           einen "Spiel beendet"-Baustein, wenn Flappy zu Boden stürzt.
         flappy_3: Der "Wenn ausführen" Baustein erlaubt dir Code auszuführen, wenn
-          dein Spiel startet. Versuche die Geschwindigkeit des Levels zu setzen und
-          zum Ziel zu fliegen.
+          dein Spiel startet. Versuche die Geschwindigkeit zu ändern und zum Ziel
+          zu fliegen.
         flappy_4: Flappy fliegt durch Hindernisse hindurch, es sei denn, du programmierst
           ihn so, dass er abstürzt. Füge einen Baustein zum "Wenn Hindernis getroffen"-Baustein
-          hinzu. Dein Programm muss "SPIEL BEENDEN", wenn Flappy gegen die ersten
-          Rohre knallt.
+          hinzu. Dein Code muss das Spiel beenden, wenn Flappy gegen die ersten Rohre
+          fliegt.
         flappy_5: Füge einen Punktezähler hinzu, der Punkte zählt, wenn Flappy es
           an Hindernissen vorbeischafft. Füge ihn zum "Wenn Hindernis überwunden"-Baustein
           hinzu und erziele einen Punkt, indem du Flappy durch die erste Reihe von
@@ -447,7 +447,7 @@
           schwächer oder stärker flattert.
         flappy_7: Versuche als nächstes die Szene zu ändern indem du einen weitern
           Baustein zum "Wenn ausführen" Baustein hinzufügst.
-        flappy_8: Du kannst jederzeit Bilder festlegen, nicht nur zu Spielbeginn.
+        flappy_8: Du kannst jederzeit Hintergründe festlegen, nicht nur zu Spielbeginn.
           Versuche, einen zufälligen Hintergrund zu setzen, wenn andere Ereignisse
           stattfinden, zum Beispiel wenn ein Hindernis überwunden wird.
         flappy_9: 'Jetzt sorgen wir für etwas Abwechslung: Statt das Spiel zu beenden,
@@ -456,19 +456,19 @@
           Regeln und sogar die Schwerkraft verändern. Wenn du fertig bist, klicke
           auf "Teilen" um das Spiel deinen Freunden zu zeigen.
         flappy_k1_1: Flappy spielen
-        flappy_k1_2: Füge dem "Wenn geklickt"-Baustein einen weiteren Baustein hinzu
-          und drücke dann "Programm ausführen". Klicke oder tippe auf den Bildschirm,
-          um Flappy zum Ziel zu bewegen.
+        flappy_k1_2: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein hinzu
+          und drücke dann "Ausführen". Klicke oder tippe auf den Bildschirm, um Flappy
+          zum Ziel zu bewegen.
         flappy_k1_3: Nun haben wir etwas Boden hinzugefügt. Füge dem "Wenn auf Boden
           gestürzt"-Baustein einen weiteren Baustein hinzu. Dein Programm benötigt
           einen "Spiel beendet"-Baustein, wenn Flappy zu Boden stürzt.
         flappy_k1_4: Der "Wenn ausführen" Baustein erlaubt dir Code auszuführen, wenn
-          dein Spiel startet. Versuche die Geschwindigkeit des Levels zu setzen und
-          zum Ziel zu fliegen.
+          dein Spiel startet. Versuche die Geschwindigkeit zu ändern und zum Ziel
+          zu fliegen.
         flappy_k1_5: Flappy fliegt durch Hindernisse hindurch, es sei denn, du programmierst
           ihn so, dass er abstürzt. Füge einen Baustein zum "Wenn Hindernis getroffen"-Baustein
-          hinzu. Dein Programm muss "SPIEL BEENDEN", wenn Flappy gegen die ersten
-          Rohre knallt.
+          hinzu. Dein Code muss das Spiel beenden, wenn Flappy gegen die ersten Rohre
+          fliegt.
         flappy_k1_6: Füge einen Punktezähler hinzu, der Punkte zählt, wenn Flappy
           es an Hindernissen vorbeischafft. Füge ihn zum "Wenn Hindernis überwunden"-Baustein
           hinzu und erziele einen Punkt, indem du Flappy durch die erste Reihe von
@@ -605,9 +605,9 @@
         applab_ec_simple: Erstelle deine Anwendung mithilfe der Blöcke in der Toolbox.
         turtle_ec_1_2: 'Zeichne nun ein Quadrat. Hinweis: Benutze Deine Lieblingsfarbe
           durch Auswahl im "neue Stiftfarbe"-Absatz.'
-        turtle_ec_1_10: 'Sie haben es geschafft! Zeichnen Sie jetzt, was Sie wollen.
-          Einige lustige Ideen: ein Strichmännchen, Schneeflocke oder Spirale. Versuchen
-          Sie auch die neue "PenWidth"-Block. Viel Spaß!'
+        turtle_ec_1_10: 'Du hast es geschafft! Zeichne jetzt, was du willst. Einige
+          lustige Ideen: ein Strichmännchen, Schneeflocke oder Spirale. Versuche auch
+          den neuen "Stift-Breite"-Block. Viel Spaß!'
         studio_ec_sandbox: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke
           auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.
     video:
@@ -625,7 +625,7 @@
         loop_while: Solange-Baustein
         loop_for: Zähler-Baustein
         parameters: Funktionen mit Parametern
-        hoc_wrapup: Programmierstunde Zusammenfassung
+        hoc_wrapup: '"Hour of Code" Zusammenfassung'
         Unplug1: Was ist Informatik?
         Unplug2: Computerorientiertes Denken
         Unplug3: Programmieren auf Millimeterpapier
@@ -740,61 +740,60 @@
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
-        drag_blocks: Ziehen Sie einen "bewegen" Block und lassen Sie es unter den
-          anderen Block einrasten
-        run: Drücken Sie "Ausführen", um Ihr Programm zu testen
+        drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den
+          anderen Baustein einrasten
+        run: Drücke "Ausführen", um dein Programm zu testen
         watch_again: Hier klicken, um das Video nochmal anzusehen
         gray_block_explanation: Graue Blöcke können nicht gelöscht werden. Kannst
-          du das Puzzle trotzdem lösen?
+          du die Aufgabe trotzdem lösen?
         show_code_explanation: Klicke hier, um den Code deines Programms zu sehen
-        instructions_repeat_explanation: Die Anweisungen für jedes Rätsel werden hier
+        instructions_repeat_explanation: Die Anweisungen für jede Aufgabe werden hier
           wiederholt
-        category_explanation: Sie haben die gleichen Blöcke, aber sie sind jetzt in
+        category_explanation: Du hast die gleichen Blöcke, aber sie sind jetzt in
           Kategorien geordnet worden
-        set_sprite_image: Fügen sie einen "Schauspieler Bild zuweisen" Block zu "wenn
+        set_sprite_image: Füge einen "Schauspieler Bild zuweisen" Block zu einem "wenn
           die Geschichte beginnt" Block hinzu um einen Schauspieler für diese Geschichte
           zu aktivieren
-        studio_say_text: Geben sie ein was ihr Schauspieler sagen soll mit diesen
-          Zitaten
-        jigsaw_click: Klicken Sie auf diesen Block!
-        move_elsa_forward: Ziehen Sie einen Block "Move Forward" und lassen Sie es
-          unterhalb des "Run als" Blocks zu Elsa vorwärts zu bewegen
-        turn_elsa: Verwenden Sie den "Turn"-Block um Elsa zu verwandeln. Die Zahl
-          in der Dropdown-Liste bestimmt, wieviel Elsa sich dreht
-        replace_questions: Verwenden Sie den Dropdown-Pfeil, um  "???" mit einer Nummer
+        studio_say_text: Gebe ein was dein Schauspieler sagen soll zwischen diesen
+          Anführungszeichen
+        jigsaw_click: Klicke auf diesen Block!
+        move_elsa_forward: Ziehe einen "Vorwärts bewegen" Block unterhalb des "Äusführen"
+          Blocks um Elsa vorwärts zu bewegen
+        turn_elsa: Verwende den "Drehen"-Block um Elsa zu drehen. Die Zahl in der
+          Dropdown-Liste bestimmt, wieviel Elsa sich dreht
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Nummer
           zu ersetzen
-        replace_questions_degree: Verwenden Sie den Dropdown-Pfeil, um "???" mit dem
-          richtigen Grad zum drehen zu ersetzen
-        repeat_blocks: Verwenden Sie den "Repeat" Block und wickeln Sie es um die
-          Blöcke im Arbeitsbereich
+        replace_questions_degree: Verwende den Dropdown-Pfeil, um "???" mit dem richtigen
+          Drehungs-Grad zu ersetzen
+        repeat_blocks: Verwende den "Wiederholen" Block und lege diesen um die Blöcke
+          im Arbeitsbereich
         repeat_blocks_1: (1) Nutze diesen Block und platziere ihn um die grauen Blöcke
           im Arbeitsraum
         repeat_blocks_2: (2) Bewege den "Wiederholen" Block hierher und platziere
           die grauen Blöcke im Inneren
-        snowflake_dropdown: Verwenden Sie dieses Dropdown-Menü, um verschiedene Schneeflocken
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
           zu erstellen!
-        degrees_per_side: Teilen Sie 360 durch die Anzahl der Seiten, um die Größe
-          der einzelnen Winkel in Grad zu erhalten.
-        set_sides: Verwenden Sie diesen Codeblock um "Seiten" so einzustellen, dass
-          sie mit der Anzahl der Teile die für das Puzzel noch gebraucht werden übereinstimmen.
-        set_length: Verwenden Sie diesen Codeblock "Länge" auf den richtigen Wert
-          festzulegen.
+        degrees_per_side: Teile 360 durch die Anzahl der Seiten, um die Größe der
+          einzelnen Winkel in Grad zu erhalten.
+        set_sides: Verwende diesen Baustein um "Seiten" auf die gebrauchte Anzahl
+          einzustellen.
+        set_length: Verwende diesen Block um "Länge" auf den richtigen Wert festzulegen.
         which_equation: Welche Gleichung macht jede Seite kleiner und Formen mit mehr
           Seiten?
-        get_nectar: Verwenden Sie den neuen "get-Nektar"-Block.
+        get_nectar: Verwende den neuen "nehme-Nektar"-Block.
         actions_category: Die Tool-Box hat einen neuen Look! Die "Aktionen"-Blöcke
           sind jetzt drin.
-        draw_square_hint: 'Tipp: Verwenden Sie die quadratische Schleife, die Sie
-          gerade im letzten Rätsel gemacht haben.'
+        draw_square_hint: 'Hinweis: Verwende die quadratische Schleife, die du in
+          der letzten Aufgabe erstellt hast.'
         edit_function: Klicke hier um die Funktion zu bearbeiten.
-        create_function: Klicken Sie hier, um die Flyout "Funktionen" zu öffnen, dann
-          klicken Sie auf "Erstellen einer Funktion".
+        create_function: Klicke hier, um das "Funktionsmenü" zu öffnen, dann klicke
+          auf "Erstelle eine Funktion".
         house_hint: Es ist ok, wenn das Bild noch nicht wie ein Haus aussieht. Wir
-          werden es im nächsten Rätsel beheben.
-        edit_draw_square: Benutzen Sie diesen Knopf zum bearbeiten der Funktion und
-          der Schleife.
-        edit_get_nectar: Verwenden Sie diese Schaltfläche, um die Funktion zu bearbeiten
-          und ändern Sie die Richtung, der die Biene sich zuwendet um den Nektar zuerhalten.
+          werden es in der nächsten Aufgabe beheben.
+        edit_draw_square: Benutze diesen Knopf zum bearbeiten der Funktion und Schleife
+          hinzufügen.
+        edit_get_nectar: Verwende diese Schaltfläche, um die Funktion zu bearbeiten
+          und die Richtung der Biene zu ändern um den Nektar zu erhalten.
         logic_category: Öffne das "Logik"-Fenster um den "if/else"-Absatz zu finden.
         length_parameter: Kannst Du diese Funktion so anpassen, dass sie den "Länge"
           Parameter benutzt?
@@ -808,7 +807,7 @@
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: '"Ton abspielen" Block hier hinzufügen'
+        playlab_play_sound: '"Geräusch abspielen" Baustein hier hinzufügen'
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
         playlab_add_move: Add "move" blocks inside this repeat block

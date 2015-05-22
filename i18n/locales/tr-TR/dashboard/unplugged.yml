@@ -152,7 +152,7 @@ tr:
         desc: 'Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer algoritmayı basit tutacaksanız bunun bir çok yolu var.Eğer herkesin aynı şey ile sonlandırdığından emin olmak istiyorsanız,algoritmanız daha çok detaya ihtiyaç duyacaktır.'
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
+        title: Zarf değişkenleri
         desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
         video: C4_unplugged_variables
       MadGlibs:
@@ -176,7 +176,7 @@ tr:
         desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
+        title: Sözleşmeler, etki alanı ve aralığı
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
         video: alg_5_contracts
       DesignRecipe:

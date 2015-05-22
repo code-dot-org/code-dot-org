@@ -474,6 +474,8 @@ lv:
     wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nepareizs risinājums
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!

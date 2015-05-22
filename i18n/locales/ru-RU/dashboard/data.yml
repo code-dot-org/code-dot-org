@@ -495,7 +495,7 @@ ru:
         frozen_diamond_repeat: 'Используй блок "повторить" для создания этой фигуры.'
         frozen_circle_function_in_circle_turn: Не забывай поворачивать после создания каждого круга.
         frozen_circle_function_with_parameter_circle: 'Используй блок "создать круг" и меняй размер.'
-        frozen_snowflake_branch: 'Используй блок "создать снежинку-ветвь"'
+        frozen_snowflake_branch: 'Используй блок "создать ветвь снежинки"'
         frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
         playlab_drag_say: 'Перенесите сюда блок "говорить" и напишите "привет"'
         playlab_use_twice: Используйте этот блок дважды, и не забудте изменить номер персонажа

@@ -153,11 +153,11 @@ he-IL:
   homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_codevideo: צפה בסרטון
   homepage_action_text_teachervideo: צפה בסרטון
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: התחל ללמוד
   homepage_action_text_signpetition: חתום על העצומה
   homepage_signpetition_dropdown: חתום על העצומה שלנו;
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: למד עוד
   homepage_slot_text_title_hoc: שעה של קוד
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: 'נסה את "שעת הקוד" (Hour of Code)'
@@ -200,7 +200,7 @@ he-IL:
   class_submission_in_school_robotics_club: מועדון רובוטיקה
   class_submission_in_school_programming_integrated_in_other_classes: "תכנות משולב במקצועות אחרים (מתמטיקה, מדעים וכו')"
   class_submission_in_school_summer_school_cs_program: תוכנית קיץ בית הספר למדעי המחשב
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
+  class_submission_in_school_exploring_computer_science: חקר מדעי המחשב
   class_submission_in_school_other: השני בבית הספר
   class_submission_out_of_school: מבית הספר
   class_submission_out_of_school_summer_camp: מחנה קיץ
@@ -278,18 +278,18 @@ he-IL:
   dashboard_navigation_add_students: הוסף תלמידים
   dashboard_navigation_manage_students: נהל תלמידים
   dashboard_navigation_lesson_plans_resources: מערכי שיעור ומשאבים
-  dashboard_navigation_view_stats: View Stats
-  dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
+  dashboard_navigation_view_stats: ראה סטטיסטיקה
+  dashboard_navigation_section: 'חלק: %{section_name}'
+  dashboard_navigation_student: 'תלמיד: %{student_name}'
+  dashboard_sections_new_section: חלק חדש
+  dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל את המשתמשים שלהם.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_secret: סוג התחברות
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
+  dashboard_sections_name: שם החלק
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
@@ -325,14 +325,14 @@ he-IL:
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: Print this page
-  dashboard_students_url: URL
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
+  dashboard_students_print_page: הדפס דף זה
+  dashboard_students_url: קישור
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">לחץ כאן</a>למסמך הפרטיות שלנו כדי לשתף או להדפיס אותו לתלמידים שלך.'
   dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_view_all_lesson_plans: צפה בכל תכניות השיעורים
+  dashboard_course1: 'חוג 1:'
+  dashboard_course2: 'חוג 2:'
+  dashboard_course3: 'חוג 3:'
   dashboard_sequence: רצף
   dashboard_framework: Framework
   dashboard_standards: Standards
@@ -357,9 +357,9 @@ he-IL:
   dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_teacher: מורה
   dashboard_student: תלמיד
-  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_email_question: האם לכל התלמידים יש כתובת דואר תקינה?
   dashboard_sections_account_creation_question: "Who creates the student's account?"
   dashboard_sections_password_question: 'What do students use as a "password"?'
   dashboard_sections_picture_account_creation: A picture assigned by Code.org

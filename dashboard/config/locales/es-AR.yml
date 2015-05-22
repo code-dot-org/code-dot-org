@@ -1,7 +1,7 @@
 "es-AR":
   errors:
     messages:
-      not_saved: 'Por favor corrija los siguientes errores:'
+      not_saved: 'Por favor corrije los siguientes errores:'
   activerecord:
     errors:
       messages:
@@ -65,8 +65,8 @@
     need_confirmation: ¿No recibiste las instrucciones de confirmación?
     need_unlock: ¿No recibiste las instrucciones de desbloqueo?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} los estudiantes ya se han registrado.'
+    teacher_count: '%{count} los maestros ya se han registrado.'
     overview_student: Regístrese en una cuenta para poder seguir su progreso. Su correo
       se utiliza principalmente para permitirle iniciar sesión y para la recuperación
       de la contraseña. Para obtener más información, consulte nuestra <a href="http://code.org/privacy">Política
@@ -278,7 +278,7 @@
       signup: Registrarse
       already_registered: ¿Ya estás registrado?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: progreso de %{name}
       progress: Tu progreso
       lines: 'Total de líneas de código: %{lines}'
       close: CERRAR
@@ -356,9 +356,9 @@
     student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor
       de %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Ver respuesta
       student: estudiante
-      try_it_yourself: Try it yourself
+      try_it_yourself: Compruébalo tu mismo
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -367,7 +367,7 @@
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
     delete: Eliminar tu cuenta
-    delete_text: Hacer click en el botón de abajo eliminará su cuenta.
+    delete_text: Haz click en el botón de abajo para eliminar tu cuenta.
     delete_text_teacher_note: 'Nota: Eliminar su cuenta no eliminará la cuenta de
       sus alumnos.'
     delete_confirm: ¿Estás seguro que desea eliminar su cuenta?
@@ -380,7 +380,7 @@
     classroom_activity: Actividad fuera de línea
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES'
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
     signin_message: ¿Ya estás registrado? %{link}
@@ -426,7 +426,7 @@
     heading_apps: <h2>Diversión para</h2><h1>Todos</h1>
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Inénta un curso en Code Studio
   gender:
     male: Varón
     female: Mujer
@@ -570,6 +570,8 @@
     wrong_body: La respuesta no es correcta. Por favor ¡intenta de nuevo!
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solución incorrecta
     wrong_body: La solución ingresada no es la correcta.  ¡Intenta nuevamente!
@@ -582,13 +584,13 @@
       cambiar el caso del nombre de su contrato.
     badrange: El contrato tiene el nombre equivocado.
     baddomainsize: El contrato no tiene el número de elementos en el dominio.
-    baddomainname: Uno o más items de su dominio tienen el nombre equivocado.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomainname: Uno o más items de tu dominio tienen el nombre equivocado.
+    baddomaintype: Uno o más de  tus artículos de dominio estan mal escritos, o se
+      encuentran fuera de orden.
   text_match:
     placeholder: Escribe aquí tu respuesta
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Gracias
+    open_response_body: Gracias por tu respuesta!
   dialog:
     ok: OK
   time:
@@ -686,4 +688,4 @@
       no podrá seguir viendo el proyecto.
     view_all: Ver Mis Proyectos
     remix: Remezclar
-    click_to_remix: ¡Haz clic en 'Remezclar' para a variar tu propia versión!
+    click_to_remix: ¡Haz clic en 'Remix' para obtener tu propia versión!

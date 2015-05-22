@@ -410,7 +410,7 @@
     none: מעדיף לא לענות
   user_type:
     student: תלמיד
-    teacher: Teacher
+    teacher: מורה
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
@@ -540,6 +540,8 @@
     wrong_body: התשובה שענית אינה נכונה.נא נסה שנית!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: פתרון לא נכון
     wrong_body: הפתרון שענית אינו נכון.נא נסה שנית!

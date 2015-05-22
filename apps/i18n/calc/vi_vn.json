@@ -1,6 +1,6 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "Bạn phải gắn một khối vào một khối \"tính toán\".",
+  "divideByZeroError": "Kết quả lập trình của bạn trong phân khu bằng không (0)",
+  "emptyComputeBlock": "Bạn phải đính kèm một khối vào khối \"đánh giá\" này",
   "equivalentExpression": "Hãy thử sắp xếp lại những lý lẽ của bạn để có được sự diễn tả giống nhất.",
   "evaluate": "đánh giá",
   "extraTopBlocks": "Bạn có những khối chưa đính vào. Bạn có muốn đính những khối này vào khối \"đánh giá\" ?",
@@ -8,10 +8,10 @@
   "goal": "Mục tiêu:",
   "levelIncompleteError": "Cách diễn tả của bạn không phù hợp với mục tiêu. \n",
   "missingFunctionError": "Bạn phải định nghĩa một hàm tên là {functionName}.",
-  "missingVariableX": "Your expression is missing variable {var}.",
+  "missingVariableX": "Diễn đạt của bạn thiếu biến tố {var}",
   "reinfFeedbackMsg": "Đây là sự tính toán của bạn! Tiếp tục làm việc với nó, hoặc chuyển sang câu đố tiếp theo!",
   "yourExpression": "Cách diễn tả của bạn:",
   "wrongInput": "Bạn đang gọi chức năng của mình với giá trị sai.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongOtherValuesX": "Kết quả diến đạt của bạn trong giá trị này sai nếu chúng tôi thay đổi biến tố {var}",
+  "wrongResult": "Diễn đạt của bạn không mang lại kết quả đúng"
 }

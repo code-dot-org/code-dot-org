@@ -266,7 +266,7 @@
       signup: ثبت نام
       already_registered: قبلا ثبت نام کرده اید؟?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: درصد پیشرفت %{name}
       progress: پیشرفت شما
       lines: 'تعداد خطوط کد: %{lines}'
       close: بستن
@@ -343,9 +343,9 @@
     student_teacher_disassociated: '%{teacher_name}  به عنوان یک معلم برای %{student_name}
       حذف شده است'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: بیننده پاسخ
       student: دانش آموز
-      try_it_yourself: Try it yourself
+      try_it_yourself: خودت امتحان کن
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
@@ -553,6 +553,8 @@
     wrong_body: پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
     correct_title: صحیح است
     correct_body: این پاسخ صحیح است
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: راه‌حل نادرست
     wrong_body: راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!

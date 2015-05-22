@@ -567,6 +567,8 @@
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
