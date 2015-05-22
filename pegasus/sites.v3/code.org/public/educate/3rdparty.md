@@ -13,7 +13,7 @@ nav: educate_nav
 | [Code Studio](/educate/k5)  (Code.org)| 4 courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
-| [Tynker](https://www.tynker.com/school/lesson-plan) | Numerous online courses, intro course is free, the rest are $399/class or $2,000/school | 2-day PD, $2000/day + travel |
+| [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
@@ -29,7 +29,7 @@ nav: educate_nav
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway/gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
-| [Tynker](https://www.tynker.com/school/lesson-plan) | Numerous online courses with online tutorials, intro course is free, the rest are $399/class or $2,000/school | 2-day PD, $2000/day + travel |
+| [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
