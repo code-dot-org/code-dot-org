@@ -711,6 +711,19 @@ NetSimRouterNode.prototype.getStatus = function () {
 };
 
 /**
+ * @returns {boolean} whether the router is at its client connection capacity.
+ */
+NetSimRouterNode.prototype.isFull = function () {
+  // Determine status based on cached wire data
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.entityID;
+  }, this);
+
+  return incomingWireRows.length >= MAX_CLIENT_CONNECTIONS;
+};
+
+/**
  * Makes sure that the given specification contains the fields that this
  * router needs to do its job.
  * @param {Packet.HeaderType[]} packetSpec
