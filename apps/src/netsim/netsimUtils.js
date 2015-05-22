@@ -215,6 +215,7 @@ exports.deserializeNumber = function (storedNum) {
  * @returns {Array}
  */
 exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
+  var foundOldFormat = false;
   var scrubbedSpec = [];
   spec.forEach(function (specEntry) {
     if (typeof specEntry === 'string') {
@@ -223,8 +224,17 @@ exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
     } else if (specEntry !== null && typeof specEntry === 'object') {
       // This is the old {key:'', bits:0} format.  We just want the key.
       scrubbedSpec.push(specEntry.key);
+      foundOldFormat = true;
     }
   });
+
+  // Issue a warning if an old format got converted, so we know to update
+  // the level.
+  if (foundOldFormat) {
+    logger.warn("Converting old header specification format to new format." +
+        " This level should be updated to use the new format.");
+  }
+
   return scrubbedSpec;
 };
 
