@@ -68,14 +68,17 @@ module.exports = {
           if (this.current.isOwner || location.hash === '') {
             dashboard.header.showProjectHeader();
           } else {
+            // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
-            this.setAppOptionsForShareMode();
+            // URL with /edit - set hideSource to false
+            this.setAppOptionsForShareMode(false);
           }
         }
       } else if (this.current && this.current.levelSource) {
         appOptions.level.lastAttempt = this.current.levelSource;
         dashboard.header.showMinimalProjectHeader();
-        this.setAppOptionsForShareMode();
+        // URL without /edit - set hideSource to true
+        this.setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       this.current = {
@@ -87,12 +90,13 @@ module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
-  setAppOptionsForShareMode: function() {
+  setAppOptionsForShareMode: function (hideSource) {
     appOptions.readonlyWorkspace = true;
-    appOptions.share = true;
-    appOptions.hideSource = true;
-    appOptions.noPadding = this.determineNoPadding();
     appOptions.callouts = [];
+    appOptions.share = true;
+    appOptions.hideSource = hideSource;
+    // Important to call determineNoPadding() after setting hideSource value
+    appOptions.noPadding = this.determineNoPadding();
   },
   determineNoPadding: function() {
     switch (appOptions.app) {
@@ -100,7 +104,7 @@ module.exports = {
       case 'flappy':
       case 'studio':
       case 'bounce':
-        return appOptions.isMobile;
+        return appOptions.isMobile && appOptions.hideSource;
       default:
         return false;
     }
