@@ -520,11 +520,13 @@ function selectEditorRowCol(row, col) {
     var range = selection.getRange();
 
     range.start.row = row;
-    range.start.col = col;
+    range.start.column = col;
     range.end.row = row;
-    range.end.col = col + 1;
+    range.end.column = col + 1;
 
-    selection.setSelectionRange(range);
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
+    selection.setSelectionRange(range, true);
   }
 }
 
@@ -545,7 +547,9 @@ function handleExecutionError(err, lineNumber) {
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
-  Applab.onPuzzleComplete();
+  if (!level.freePlay) {
+    Applab.onPuzzleComplete();
+  }
 }
 
 Applab.getCode = function () {
@@ -836,6 +840,8 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  Applab.designModeEditedElement = null;
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1233,6 +1239,7 @@ Applab.onDivApplabClick = function (event) {
 
 Applab.editElementProperties = function(element) {
   var designPropertiesElement = document.getElementById('design-properties');
+  Applab.designModeEditedElement = element;
   React.render(
     React.createElement(DesignProperties, {
         element: element,
@@ -1288,7 +1295,7 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.height = value + 'px';
       break;
     case 'text':
-      $(element).text(value);
+      element.textContent = value;
       break;
     case 'textColor':
       element.style.color = value;
@@ -1306,6 +1313,18 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
+    case 'picture':
+      element.src = value;
+      element.onload = function () {
+        // naturalWidth/Height aren't populated until image has loaded.
+        element.style.width = element.naturalWidth + 'px';
+        element.style.height = element.naturalHeight + 'px';
+        // Re-render properties
+        if (Applab.designModeEditedElement === element) {
+          Applab.editElementProperties(element);
+        }
+      };
+      break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible
       // in code mode.
@@ -1315,7 +1334,49 @@ Applab.onPropertyChange = function(element, name, value) {
       // element.checked represents the current state, the attribute represents
       // the serialized state
       element.checked = value;
-      element.setAttribute('checked', value ? 'checked' : null);
+
+      if (value) {
+        var groupName = element.getAttribute('name');
+        if (groupName) {
+          // Remove checked attribute from all other radio buttons in group
+          var buttons = document.getElementsByName(groupName);
+          Array.prototype.forEach.call(buttons, function (item) {
+            if (item.type === 'radio') {
+              item.removeAttribute('checked');
+            }
+          });
+        }
+        element.setAttribute('checked', 'checked');
+      } else {
+        element.removeAttribute('checked');
+      }
+      break;
+    case 'options':
+      // value should be an array of options in this case
+      for (var i = 0; i < value.length; i++) {
+        var optionElement = element.children[i];
+        if (!optionElement) {
+          optionElement = document.createElement('option');
+          element.appendChild(optionElement);
+        }
+        optionElement.textContent = value[i];
+      }
+      // remove any extra options
+      for (i = value.length; i < element.children.length; i++) {
+        element.removeChild(element.children[i]);
+      }
+      break;
+    case 'groupId':
+      element.setAttribute('name', value);
+      break;
+    case 'placeholder':
+      element.setAttribute('placeholder', value);
+      break;
+    case 'rows':
+      element.setAttribute('rows', value);
+      break;
+    case 'cols':
+      element.setAttribute('rows', value);
       break;
     default:
       throw "unknown property name " + name;
@@ -2018,15 +2079,14 @@ Applab.container = function (opts) {
 };
 
 Applab.write = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'write', 'html', opts.html, 'uistring');
+  apiValidateType(opts, 'write', 'text', opts.html, 'uistring');
   return Applab.container(opts);
 };
 
 Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: button: id vs. buttonId
   apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
   apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
@@ -2039,9 +2099,8 @@ Applab.button = function (opts) {
 };
 
 Applab.image = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
-  apiValidateType(opts, 'image', 'src', opts.src, 'string');
+  apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var divApplab = document.getElementById('divApplab');
 
@@ -2156,10 +2215,10 @@ Applab.move = function (opts) {
 };
 
 Applab.moveForward = function (opts) {
+  apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number', OPTIONAL);
   var newOpts = {};
   var distance = 25;
   if (typeof opts.distance !== 'undefined') {
-    apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number');
     distance = opts.distance;
   }
   newOpts.x = Applab.turtle.x +
@@ -2170,22 +2229,21 @@ Applab.moveForward = function (opts) {
 };
 
 Applab.moveBackward = function (opts) {
+  apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number', OPTIONAL);
   var distance = -25;
   if (typeof opts.distance !== 'undefined') {
-    apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number');
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
 };
 
 Applab.turnRight = function (opts) {
+  apiValidateType(opts, 'turnRight', 'angle', opts.degrees, 'number', OPTIONAL);
   // call this first to ensure there is a turtle (in case this is the first API)
   getTurtleContext();
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
-    // TODO: cpirich: may need to update param name
-    apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
 
@@ -2195,18 +2253,16 @@ Applab.turnRight = function (opts) {
 };
 
 Applab.turnLeft = function (opts) {
+  apiValidateType(opts, 'turnLeft', 'angle', opts.degrees, 'number', OPTIONAL);
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
-    // TODO: cpirich: may need to update param name
-    apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
   Applab.turnRight({'degrees': degrees });
 };
 
 Applab.turnTo = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
+  apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
 };
@@ -2216,8 +2272,7 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'angle', opts.degrees, 'number');
   apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
 
   // call this first to ensure there is a turtle (in case this is the first API)
@@ -2248,8 +2303,7 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'angle', opts.degrees, 'number');
   apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
 
   opts.counterclockwise = true;
@@ -2314,7 +2368,6 @@ Applab.penDown = function (opts) {
 };
 
 Applab.penWidth = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
@@ -2341,6 +2394,9 @@ Applab.penColor = function (opts) {
 };
 
 Applab.penRGB = function (opts) {
+  // PARAMNAME: penRGB: red vs. r
+  // PARAMNAME: penRGB: green vs. g
+  // PARAMNAME: penRGB: blue vs. b
   apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
   apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
   apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
@@ -2351,8 +2407,8 @@ Applab.penRGB = function (opts) {
 };
 
 Applab.speed = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
+  // DOCBUG: range is 0-100, not 1-100
+  apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
     var sliderSpeed = opts.percent / 100;
     if (Applab.speedSlider) {
@@ -2364,7 +2420,10 @@ Applab.speed = function (opts) {
 
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: createCanvas: id vs. canvasId
   apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
+  apiValidateType(opts, 'createCanvas', 'width', width, 'number', OPTIONAL);
+  apiValidateType(opts, 'createCanvas', 'height', height, 'number', OPTIONAL);
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -2373,8 +2432,6 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
-    apiValidateType(opts, 'createCanvas', 'width', width, 'number');
-    apiValidateType(opts, 'createCanvas', 'height', height, 'number');
     newElement.width = width;
     newElement.height = height;
     newElement.style.width = width + 'px';
@@ -2398,7 +2455,7 @@ Applab.createCanvas = function (opts) {
 
 Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: setActiveCanvas: id vs. canvasId
   apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
@@ -2427,6 +2484,8 @@ Applab.line = function (opts) {
 
 Applab.circle = function (opts) {
   apiValidateActiveCanvas(opts, 'circle');
+  // PARAMNAME: circle: centerX vs. x
+  // PARAMNAME: circle: centerY vs. y
   apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
   apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
   apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
@@ -2443,6 +2502,8 @@ Applab.circle = function (opts) {
 
 Applab.rect = function (opts) {
   apiValidateActiveCanvas(opts, 'rect');
+  // PARAMNAME: rect: upperLeftX vs. x
+  // PARAMNAME: rect: upperLeftY vs. y
   apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
   apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
   apiValidateType(opts, 'rect', 'width', opts.width, 'number');
@@ -2481,7 +2542,6 @@ Applab.setStrokeColor = function (opts) {
 };
 
 Applab.setFillColor = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateActiveCanvas(opts, 'setFillColor');
   apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
@@ -2507,9 +2567,9 @@ Applab.clearCanvas = function (opts) {
 
 Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: drawImage: imageId vs. id
   apiValidateActiveCanvas(opts, 'drawImage');
-  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'imageId', opts.imageId, true);
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'id', opts.imageId, true);
   apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
   apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var image = document.getElementById(opts.imageId);
@@ -2536,6 +2596,7 @@ Applab.drawImage = function (opts) {
 
 Applab.getImageData = function (opts) {
   apiValidateActiveCanvas(opts, 'getImageData');
+  // PARAMNAME: getImageData: all params + doc bugs
   apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
   apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
@@ -2547,9 +2608,11 @@ Applab.getImageData = function (opts) {
 };
 
 Applab.putImageData = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateActiveCanvas(opts, 'putImageData');
-  apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
+  // PARAMNAME: putImageData: imageData vs. imgData
+  // PARAMNAME: putImageData: startX vs. x
+  // PARAMNAME: putImageData: startY vs. y
+  apiValidateType(opts, 'putImageData', 'imgData', opts.imageData, 'object');
   apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
@@ -2565,7 +2628,7 @@ Applab.putImageData = function (opts) {
 
 Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: textInput: id vs. inputId
   apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
   apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
@@ -2578,7 +2641,7 @@ Applab.textInput = function (opts) {
 
 Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: textLabel: id vs. labelId
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
   apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
   if (typeof opts.forId !== 'undefined') {
@@ -2599,7 +2662,7 @@ Applab.textLabel = function (opts) {
 
 Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: checkbox: id vs. checkboxId
   apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
   // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
@@ -2613,7 +2676,6 @@ Applab.checkbox = function (opts) {
 
 Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
   // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
   apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
@@ -2629,7 +2691,7 @@ Applab.radioButton = function (opts) {
 
 Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: dropdown: id vs. dropdownId
   apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
@@ -2672,7 +2734,6 @@ Applab.setAttribute = function (opts) {
 
 Applab.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
@@ -2690,7 +2751,6 @@ Applab.getText = function (opts) {
 
 Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
   apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
@@ -2710,7 +2770,6 @@ Applab.setText = function (opts) {
 
 Applab.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
@@ -2722,7 +2781,6 @@ Applab.getChecked = function (opts) {
 
 Applab.setChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
   // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
 
@@ -2736,7 +2794,7 @@ Applab.setChecked = function (opts) {
 
 Applab.getImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
+  // PARAMNAME: getImageURL: id vs. imageId
   apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
@@ -2755,9 +2813,8 @@ Applab.getImageURL = function (opts) {
 
 Applab.setImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
+  apiValidateType(opts, 'setImageURL', 'url', opts.src, 'string');
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
@@ -2768,7 +2825,6 @@ Applab.setImageURL = function (opts) {
 };
 
 Applab.playSound = function (opts) {
-  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
@@ -2792,7 +2848,6 @@ Applab.innerHTML = function (opts) {
 
 Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -2808,7 +2863,6 @@ Applab.deleteElement = function (opts) {
 
 Applab.showElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -2821,7 +2875,6 @@ Applab.showElement = function (opts) {
 
 Applab.hideElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -2855,10 +2908,9 @@ Applab.setParent = function (opts) {
 
 Applab.setPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
-  apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
+  apiValidateType(opts, 'setPosition', 'x', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'y', opts.top, 'number');
 
   var el = document.getElementById(opts.elementId);
   if (divApplab.contains(el)) {
@@ -2890,7 +2942,6 @@ Applab.setPosition = function (opts) {
 
 Applab.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -2907,7 +2958,6 @@ Applab.getXPosition = function (opts) {
 
 Applab.getYPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
@@ -3009,8 +3059,9 @@ Applab.onEvent = function (opts) {
   } else {
     apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
   }
-  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
-  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
+  apiValidateType(opts, 'onEvent', 'type', opts.eventName, 'string');
+  // PARAMNAME: onEvent: callback vs. callbackFunction
+  apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
     switch (opts.eventName) {
@@ -3088,11 +3139,11 @@ Applab.onHttpRequestEvent = function (opts) {
 
 Applab.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
-  apiValidateType(opts, 'startWebRequest', 'function', opts.func, 'function');
+  apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
-  req.open('GET', String(opts.url), true);
+  req.open('GET', opts.url, true);
   req.send();
 };
 
@@ -3108,59 +3159,68 @@ Applab.onTimerFired = function (opts) {
 };
 
 Applab.setTimeout = function (opts) {
-  apiValidateType(opts, 'setTimeout', 'function', opts.func, 'function');
+  // PARAMNAME: setTimeout: callback vs. function
+  // PARAMNAME: setTimeout: ms vs. milliseconds
+  apiValidateType(opts, 'setTimeout', 'callback', opts.func, 'function');
   apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
 
   return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
+  apiValidateType(opts, 'clearTimeout', 'timeout', opts.timeoutId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
   apiTimeoutList.clearTimeout(opts.timeoutId);
 };
 
 Applab.setInterval = function (opts) {
-  apiValidateType(opts, 'setInterval', 'function', opts.func, 'function');
+  // PARAMNAME: setInterval: callback vs. function
+  // PARAMNAME: setInterval: ms vs. milliseconds
+  apiValidateType(opts, 'setInterval', 'callback', opts.func, 'function');
   apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
 
   return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearInterval = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
+  apiValidateType(opts, 'clearInterval', 'interval', opts.intervalId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setInterval() function
   apiTimeoutList.clearInterval(opts.intervalId);
 };
 
 Applab.createRecord = function (opts) {
+  // PARAMNAME: createRecord: table vs. tableName
+  // PARAMNAME: createRecord: callback vs. callbackFunction
   apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
   apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
-  apiValidateType(opts, 'createRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleCreateRecord.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleCreateRecord = function(successCallback, record) {
-  if (successCallback) {
+Applab.handleCreateRecord = function(opts, record) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [record]
     });
   }
 };
 
-Applab.handleError = function(errorCallback, message) {
-  if (errorCallback) {
+Applab.handleError = function(opts, message) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onError && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': errorCallback,
+      'fn': opts.onError,
       'arguments': [message]
     });
   } else {
@@ -3169,96 +3229,120 @@ Applab.handleError = function(errorCallback, message) {
 };
 
 Applab.getKeyValue = function(opts) {
+  // PARAMNAME: getKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
-  apiValidateType(opts, 'getKeyValue', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleReadValue.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-Applab.handleReadValue = function(successCallback, value) {
-  if (successCallback) {
+Applab.handleReadValue = function(opts, value) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [value]
     });
   }
 };
 
 Applab.setKeyValue = function(opts) {
+  // PARAMNAME: setKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
-  apiValidateType(opts, 'setKeyValue', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-Applab.handleSetKeyValue = function(successCallback) {
-  if (successCallback) {
+Applab.handleSetKeyValue = function(opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': []
     });
   }
 };
 
 Applab.readRecords = function (opts) {
+  // PARAMNAME: readRecords: table vs. tableName
+  // PARAMNAME: readRecords: callback vs. callbackFunction
+  // PARAMNAME: readRecords: terms vs. searchTerms
   apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
-  apiValidateType(opts, 'readRecords', 'searchParams', opts.searchParams, 'object');
-  apiValidateType(opts, 'readRecords', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
+  apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleReadRecords.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-Applab.handleReadRecords = function(successCallback, records) {
-  if (successCallback) {
+Applab.handleReadRecords = function(opts, records) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [records]
     });
   }
 };
 
 Applab.updateRecord = function (opts) {
+  // PARAMNAME: updateRecord: table vs. tableName
+  // PARAMNAME: updateRecord: callback vs. callbackFunction
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'updateRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleUpdateRecord.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback, record) {
-  if (successCallback) {
+Applab.handleUpdateRecord = function(opts, record) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': [record]
     });
   }
 };
 
 Applab.deleteRecord = function (opts) {
+  // PARAMNAME: deleteRecord: table vs. tableName
+  // PARAMNAME: deleteRecord: callback vs. callbackFunction
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'deleteRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
-  var onError = Applab.handleError.bind(this, opts.onError);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleDeleteRecord.bind(this, opts);
+  var onError = Applab.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleDeleteRecord = function(successCallback) {
-  if (successCallback) {
+Applab.handleDeleteRecord = function(opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
     Applab.eventQueue.push({
-      'fn': successCallback,
+      'fn': opts.onSuccess,
       'arguments': []
     });
   }

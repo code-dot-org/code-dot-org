@@ -246,4 +246,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
   end
 
+  test 'pd?' do
+    assert !Script.find_by_name('flappy').pd?
+    assert Script.find_by_name('ECSPD').pd?
+  end
 end
