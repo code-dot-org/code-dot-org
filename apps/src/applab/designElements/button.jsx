@@ -5,6 +5,7 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ZIndexRow = require('./ZIndexRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -73,6 +74,8 @@ var ButtonProperties = React.createClass({
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
+        <ZIndexRow
+          element={this.props.element}/>
       </table>);
 
     // TODO (brent):
