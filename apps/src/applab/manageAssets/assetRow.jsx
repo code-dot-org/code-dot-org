@@ -25,6 +25,7 @@ module.exports = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired,
+    size: React.PropTypes.number,
     choose: React.PropTypes.func.isRequired,
     delete: React.PropTypes.func.isRequired
   },
@@ -55,16 +56,20 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var actions, choseImage;
+    var actions, flex;
+    // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.choose) {
-      choseImage = <button onClick={this.props.choose}>Set as Image</button>;
+      flex = <button onClick={this.props.choose}>Set as Image</button>;
+    } else {
+      var size = (this.props.size / 1000).toFixed(2);
+      flex = size + ' kb';
     }
 
     switch (this.state.action) {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            {choseImage}
+            {flex}
             <button><i className="fa fa-eye"></i></button>
             <button className="btn-danger" onClick={this.confirmDelete}>
               <i className="fa fa-trash-o"></i>
