@@ -599,4 +599,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden'
   end
 
+  test 'does not show teacher panel for pd scripts' do
+    @teacher.update admin: true # TODO don't need this when feature is shipped
+
+    sign_in @teacher
+
+    script = Script.find_by_name('ECSPD')
+    assert script.pd?
+
+    get :show, script_id: script, stage_id: 1, id: 1
+
+    assert_select '.teacher-panel', 0
+  end
+
 end
