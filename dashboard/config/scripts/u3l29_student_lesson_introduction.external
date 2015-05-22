@@ -1,0 +1,26 @@
+name 'U3L29 Student Lesson Introduction'
+title 'While Loops and Counting'
+
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 29 - Loops and Counting
+
+# Background
+
+Collecting data, such as counting the number of heads and tails, or the longest streaks of heads and tails, from a coin-flipping experiment of thousands of trials, can be time consuming to say the least. Such statistical analysis of data is easier when done digitally with the use of loops and counters.
+
+# Lesson
+
+* Calculate statistics from a coin flipping experiment
+.
+* Create an application to repeat the experiment 10,000 times. 
+
+
+# Resources
+* Activity: <a href="https://docs.google.com/a/lsoc.org/document/d/16CdQWtS_JtyiQAFcxFeRc0LeB1lwL-ak9hIE9ehn3gY" target="_blank">
+Flipping Coins
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
