@@ -16,7 +16,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "This example shows how you might insert console.log statements in your code to verify for yourself how the values in the variables change during the running of the code.  This is an important debugging technique to use when each line in your program doesn't have a visual effect on the app that you can see to verify things are working right.  Run the code to see the output in the console.",
-    "start_blocks": "var a = 3;\r\nvar b = 7;\r\nconsole.log(\"1. current value of a is: \" + a + \" b is: \"+b);\r\n\r\na = b;\r\nconsole.log(\"2. after a=b now a is: \" + a + \" b is: \"+b);\r\n\r\nb = a;\r\nconsole.log(\"3. after b=a now a is: \" + a + \" b is: \"+b);\r\n            \r\nwrite(\"The value of a is: \" + a);\r\nwrite(\"The value of b is: \" + b);\r\n            \r\n            ",
+    "start_blocks": "var a = 3;\r\nvar b = 7;\r\nconsole.log(\"1. current value of a is: \" + a + \" b is: \"+b);\r\n\r\na = b;\r\nconsole.log(\"2. after a=b now a is: \" + a + \" b is: \"+b);\r\n\r\nb = a;\r\nconsole.log(\"3. after b=a now a is: \" + a + \" b is: \"+b);\r\n\r\nwrite(\"The value of a is: \" + a);\r\nwrite(\"The value of b is: \" + b);\r\n \r\n ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.1",

@@ -49,7 +49,7 @@ function drawDots(size){
 First you can see here a reason why you want variables to be local to functions -- both these functions use a variable called 'size'.  It's a perfectly good variable name, and the functions only need to use it temporarily to draw the thing they need to draw.  
 
 Second **function parameters are local variables which get assigned a value by calling the function**.
-So a call to <span style="font-family: monospace">drawSquare(100);</span>..is like saying <span style="font-family: monospace">var size=100</span> *inside* the function.
+So a call to <span style="font-family: monospace">drawSquare(100);</span> is like saying <span style="font-family: monospace">var size=100</span> *inside* the function.
 
 Function parameters are a handy way for us to *pass values into a function* without having to use global variables. The same effect could technically be achieved by remembering to set a global variable before calling a function that uses it, but when programs have lots and lots of global variables it can get confusing, and the likelihood that you'd make a mistake somewhere is very high.  
 

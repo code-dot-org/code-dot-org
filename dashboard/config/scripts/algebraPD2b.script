@@ -4,7 +4,7 @@ login_required 'true'
 pd 'true'
 
 stage 'Course Overview'
-level 'PDECS tour'
+level 'K5PD tour'
 level 'PDAlg circles to blocks'
 level 'PDAlg block match'
 level 'PDAlg Scope'
