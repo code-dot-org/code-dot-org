@@ -1,3 +1,5 @@
+pd 'true'
+
 stage 'Welcome'
 level 'sciPD p2 intro'
 level 'sciPD logistics 1'
@@ -22,9 +24,3 @@ level 'sciPD2 eval'
 
 stage 'Implementation Planning'
 level 'sciPD2 implement'
-
-
-
-
-
-

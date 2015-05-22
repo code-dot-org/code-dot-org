@@ -85,4 +85,50 @@ describe("netsimUtils", function () {
     });
   });
 
+  describe("scrubHeaderSpecForBackwardsCompatibility", function () {
+    var scrubHeaderSpecForBackwardsCompatibility = netsimUtils.scrubHeaderSpecForBackwardsCompatibility;
+
+    it ("is a no-op for empty array", function () {
+      assertEqual([], scrubHeaderSpecForBackwardsCompatibility([]));
+    });
+
+    it ("is a no-op for new format", function () {
+      assertEqual(['toAddress'],
+          scrubHeaderSpecForBackwardsCompatibility(
+              ['toAddress']));
+
+      assertEqual(['toAddress', 'fromAddress'],
+          scrubHeaderSpecForBackwardsCompatibility(
+              ['toAddress', 'fromAddress']));
+
+      assertEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
+          scrubHeaderSpecForBackwardsCompatibility(
+              ['toAddress', 'fromAddress', 'packetCount', 'packetIndex']));
+    });
+
+    it ("converts old format to new format", function () {
+      assertEqual(['toAddress'],
+          scrubHeaderSpecForBackwardsCompatibility(
+              [
+                {'key':'toAddress', 'bits':4}
+              ]));
+
+      assertEqual(['toAddress', 'fromAddress'],
+          scrubHeaderSpecForBackwardsCompatibility(
+              [
+                {'key':'toAddress', 'bits':4},
+                {'key':'fromAddress', 'bits':4}
+              ]));
+
+      assertEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
+          scrubHeaderSpecForBackwardsCompatibility(
+              [
+                {'key':'toAddress', 'bits':4},
+                {'key':'fromAddress', 'bits':4},
+                {'key':'packetCount', 'bits':4},
+                {'key':'packetIndex', 'bits':4}
+              ]));
+    });
+  });
+
 });

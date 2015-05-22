@@ -51,7 +51,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
   /**
-   * @type {number}
+   * @type {string}
    * @private
    */
   this.address_ = undefined;
@@ -255,6 +255,9 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   }
 };
 
+/**
+ * @param {string} address
+ */
 NetSimVizNode.prototype.setAddress = function (address) {
   this.address_ = address;
   this.updateAddressDisplay();

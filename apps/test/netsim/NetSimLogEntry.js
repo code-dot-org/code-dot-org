@@ -5,7 +5,7 @@ var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
-
+var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
@@ -14,6 +14,7 @@ describe("NetSimLogEntry", function () {
   var testShard;
 
   beforeEach(function () {
+    netsimTestUtils.initializeGlobalsToDefaultValues();
     testShard = fakeShard();
   });
 
@@ -108,18 +109,20 @@ describe("NetSimLogEntry", function () {
   });
 
   it ("can extract binary data based on standard format", function () {
+    netsimGlobals.getLevelConfig().addressFormat = '4';
+    netsimGlobals.getLevelConfig().packetCountBitWidth = 4;
     var logEntry = new NetSimLogEntry(null, {
       binary: '0001 0010 0011 0100 01010110'
     }, [
-      { key: Packet.HeaderType.TO_ADDRESS, bits: 4 },
-      { key: Packet.HeaderType.FROM_ADDRESS, bits: 4 },
-      { key: Packet.HeaderType.PACKET_INDEX, bits: 4 },
-      { key: Packet.HeaderType.PACKET_COUNT, bits: 4 }
+      Packet.HeaderType.TO_ADDRESS,
+      Packet.HeaderType.FROM_ADDRESS,
+      Packet.HeaderType.PACKET_INDEX,
+      Packet.HeaderType.PACKET_COUNT
     ]);
-    assertEqual(1, logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
-    assertEqual(2, logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
-    assertEqual(3, logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
-    assertEqual(4, logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
+    assertEqual('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
+    assertEqual('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
+    assertEqual('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
+    assertEqual('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
     assertEqual('01010110', logEntry.getMessageBinary());
   });
 

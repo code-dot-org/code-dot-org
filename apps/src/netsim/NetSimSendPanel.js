@@ -21,6 +21,7 @@ var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var MessageGranularity = netsimConstants.MessageGranularity;
@@ -48,7 +49,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.levelConfig_ = levelConfig;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = levelConfig.clientInitialPacketHeader;
@@ -199,11 +200,14 @@ NetSimSendPanel.prototype.render = function () {
 
   // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
+    var level = netsimGlobals.getLevelConfig();
+    var encoder = new Packet.Encoder(level.addressFormat,
+        level.packetCountBitWidth, this.packetSpec_);
     this.packetSizeControl_ = new NetSimPacketSizeControl(
         this.rootDiv_.find('.packet-size'),
         this.packetSizeChangeCallback_.bind(this),
         {
-          minimumPacketSize: Packet.Encoder.getHeaderLength(this.packetSpec_),
+          minimumPacketSize: encoder.getHeaderLength(),
           sliderStepValue: 1
         });
     this.packetSizeControl_.setValue(this.maxPacketSize_);
