@@ -82,7 +82,7 @@
   "FUNCTION_DESCRIPTION_LABEL": "Was soll deine Funktion tun?",
   "FUNCTION_PARAMETERS_LABEL": "Welche Parameter braucht deine Funktion?",
   "FUNCTION_HEADER": "Funktion",
-  "FUNCTIONAL_CREATE": "Neuer Block",
+  "FUNCTIONAL_CREATE": "Neuer Baustein",
   "FUNCTIONAL_EDIT": "Bearbeiten",
   "FUNCTIONAL_NAME_LABEL": "Name",
   "FUNCTIONAL_TYPE_LABEL": "Typ auswählen...",
@@ -288,7 +288,7 @@
   "PROCEDURES_CREATE_DO": "Erzeuge \"Aufruf %1\"",
   "PROCEDURES_DEFNORETURN_DO": "",
   "PROCEDURES_DEFNORETURN_HELPURL": "http://de.wikipedia.org/wiki/Prozedur_%28Programmierung%29",
-  "PROCEDURES_DEFNORETURN_PROCEDURE": "tun Sie etwas",
+  "PROCEDURES_DEFNORETURN_PROCEDURE": "Funktionsblock",
   "PROCEDURES_DEFNORETURN_TITLE": "An",
   "PROCEDURES_DEFNORETURN_TOOLTIP": "Ein Funktionsblock ohne Rückgabewert.",
   "PROCEDURES_DEFRETURN_DO": "",
@@ -380,5 +380,5 @@
   "VARIABLES_SET_HELPURL": "http://de.wikipedia.org/wiki/Variable_%28Programmierung%29",
   "VARIABLES_SET_TAIL": "An",
   "VARIABLES_SET_TITLE": "setze",
-  "VARIABLES_SET_TOOLTIP": "Setzt den Wert einer Variable."
+  "VARIABLES_SET_TOOLTIP": "Setzt den Wert einer Variable auf die Eingabe."
 }

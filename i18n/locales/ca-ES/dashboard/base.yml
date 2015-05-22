@@ -481,6 +481,8 @@ ca:
     wrong_body: 'La resposta que he introduït no és correcta.  Si us plau, intenta-ho de nou!'
     correct_title: Correcte
     correct_body: Aquesta és la resposta correcta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solució incorrecta
     wrong_body: 'La solució que has introduït no és correcta.  Si us plau, intenta-ho de nou!'

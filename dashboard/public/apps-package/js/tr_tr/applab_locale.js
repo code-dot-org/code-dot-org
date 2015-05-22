@@ -150,7 +150,7 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "yazı"},
 "catVariables":function(d){return "Değişkenler"},
 "continue":function(d){return "Devam"},
-"container":function(d){return "Bir konteyner oluşturun"},
+"container":function(d){return "Bir tanım komutu oluşturun"},
 "containerTooltip":function(d){return "HTML içerisinde bir bölme oluşturur."},
 "finalLevel":function(d){return "Tebrikler! Son bulmacayı da çözdünüz."},
 "nextLevel":function(d){return "Tebrikler! Bu bulmacayı tamamladınız."},

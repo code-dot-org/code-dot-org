@@ -513,6 +513,8 @@
     wrong_body: 不正解です。やりなおしてみてください。
     correct_title: 正解
     correct_body: 正解です。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: うまく解決できていません。
     wrong_body: うまく解決できていません。もう一度やってみてください。
