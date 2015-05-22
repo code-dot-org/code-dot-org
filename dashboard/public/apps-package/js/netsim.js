@@ -9668,6 +9668,19 @@ NetSimRouterNode.prototype.getStatus = function () {
 };
 
 /**
+ * @returns {boolean} whether the router is at its client connection capacity.
+ */
+NetSimRouterNode.prototype.isFull = function () {
+  // Determine status based on cached wire data
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.entityID;
+  }, this);
+
+  return incomingWireRows.length >= MAX_CLIENT_CONNECTIONS;
+};
+
+/**
  * Makes sure that the given specification contains the fields that this
  * router needs to do its job.
  * @param {Packet.HeaderType[]} packetSpec
@@ -11461,11 +11474,16 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
     return false;
   }
 
-  var levelConfig = netsimGlobals.getLevelConfig();
-
-  // Permissible connection limited by level configuration
   var isClient = (connectionTarget.getNodeType() === NodeType.CLIENT);
   var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
+
+  // Can't connect to full routers
+  if (isRouter && connectionTarget.isFull()) {
+    return false;
+  }
+
+  // Permissible connection limited by level configuration
+  var levelConfig = netsimGlobals.getLevelConfig();
   var allowClients = levelConfig.canConnectToClients;
   var allowRouters = levelConfig.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
@@ -11564,6 +11582,7 @@ var nodeToRowMetadata = function (node) {
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
     status: node.getStatus(),
+    isFull: (node.getNodeType() === NodeType.ROUTER) && node.isFull(),
     canConnectToNode: controller.canConnectToNode(node)
   };
 };
@@ -11628,16 +11647,16 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
 }
 
 function writeHeader(headerText) {
-  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((125,  headerText )), '</th>\n    </tr>\n  ');127;
+  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((126,  headerText )), '</th>\n    </tr>\n  ');128;
 }
 
 function writeEmptyRow(contents) {
   contents = utils.valueOr(contents, '');
-  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (134,  contents ), '</td>\n    </tr>\n  ');136;
+  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (135,  contents ), '</td>\n    </tr>\n  ');137;
 }
 
 function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
-  ; buf.push('\n    <tr>\n      <td nowrap>', escape((142,  nodeName )), '</td>\n      <td>', (143,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');145;
+  ; buf.push('\n    <tr>\n      <td nowrap>', escape((143,  nodeName )), '</td>\n      <td>', (144,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');146;
           var markup = '';
           if (buttonType === 'join-button') {
             markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
@@ -11645,17 +11664,23 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
             markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
           } else if (buttonType === 'cancel-button') {
             markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+          } else if (buttonType === 'full-button') {
+            markup = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
           }
-        ; buf.push('\n        ', (155,  markup ), '\n      </td>\n    </tr>\n  ');158;
+        ; buf.push('\n        ', (158,  markup ), '\n      </td>\n    </tr>\n  ');161;
 }
 
-; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((163,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');167;
+; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((166,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');170;
         // Primary lobby list
         writeHeader(i18n.lobby());
         lobbyRows.forEach(function (row) {
           var buttonType;
-          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
-            buttonType = 'join-button';
+          if (!controller.hasOutgoingRequest()) {
+            if (row.isFull) {
+              buttonType = 'full-button';
+            } else if (row.canConnectToNode) {
+              buttonType = 'join-button';
+            }
           }
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });
