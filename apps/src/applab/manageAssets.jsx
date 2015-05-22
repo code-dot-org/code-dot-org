@@ -48,6 +48,14 @@ module.exports = React.createClass({
     var file = document.querySelector('#uploader').files[0];
     var uploadStatus = document.querySelector('#uploadStatus');
 
+    if (file.type && this.props.typeFilter) {
+      var type = file.type.split('/')[0];
+      if (type !== this.props.typeFilter) {
+        this.setState({uploadStatus: 'Only ' + this.props.typeFilter + ' assets can be used here.'});
+        return;
+      }
+    }
+
     // TODO: Use Dave's client api when it's finished.
     AssetsApi.ajax('PUT', file.name, function (xhr) {
       this.state.assets.push(JSON.parse(xhr.responseText));
@@ -98,11 +106,16 @@ module.exports = React.createClass({
       );
     }
 
+    var title = this.props.assetChosen
+        ? <p className="dialog-title">Choose Assets</p>
+        : <p className="dialog-title">Manage Asset</p>;
+    var accept = (this.props.typeFilter || '*') + '/*';
+
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <p className="dialog-title">Manage Assets</p>
+        {title}
         {assetList}
-        <input type="file" id="uploader" style={{display: 'none'}} onChange={this.upload}/>
+        <input type="file" accept={accept} id="uploader" style={{display: 'none'}} onChange={this.upload}/>
         <button onClick={this.fileUploadClicked} className="share"><i className="fa fa-upload"></i> Upload File</button>
         <span id="uploadStatus" style={{margin: '0 10px'}}>{this.state.uploadStatus}</span>
       </div>
