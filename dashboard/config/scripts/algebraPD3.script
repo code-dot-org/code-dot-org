@@ -1,7 +1,8 @@
 title 'Phase 3 PD'
+description "Teach Algebra through block-based Functional Programming"
+pd 'true'
 
 stage 'Introduction to the new Computer Science in Algebra'
-description "Teach Algebra through block-based Functional Programming"
 
 stage 'Course Overview'
 level 'PDAlg bootstrap'
