@@ -85,9 +85,9 @@ module.exports = {
     var element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
-    element.style.margin = '2px';
-    element.style.height = '36px';
-    element.style.width = '76px';
+    element.style.margin = '0px';
+    element.style.height = '40px';
+    element.style.width = '80px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#eeeeee';
