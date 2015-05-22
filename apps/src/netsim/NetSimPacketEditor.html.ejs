@@ -12,9 +12,7 @@
   var forEachEnumValue = netsimUtils.forEachEnumValue;
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec.map(function (headerField) {
-    return headerField.key;
-  });
+  var headerFields = packetSpec;
 
   /** @type {boolean} */
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
