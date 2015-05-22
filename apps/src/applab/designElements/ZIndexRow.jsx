@@ -22,6 +22,12 @@ var ZIndexRow = React.createClass({
     var index = Array.prototype.indexOf.call(element.parentNode.children, element);
     var isBackMost = index === 0;
     var isFrontMost = index + 1 === element.parentNode.children.length;
+
+    var squareButton = {
+      width: 42,
+      height: 42
+    };
+
     return (
       <tr>
         <td>
@@ -29,24 +35,28 @@ var ZIndexRow = React.createClass({
         </td>
         <td>
           <button
+            style={squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
             disabled={isFrontMost}
             title='Send to Front'>
             <i className="fa fa-angle-double-right"></i>
           </button>
           <button
+            style={squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'forward')}
             disabled={isFrontMost}
             title='Send Forward'>
             <i className="fa fa-angle-right"></i>
           </button>
           <button
+            style={squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
             title='Send to Back'>
             <i className="fa fa-angle-double-left"></i>
           </button>
           <button
+            style={squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'backward')}
             disabled={isBackMost}
             title='Send Backward'>
