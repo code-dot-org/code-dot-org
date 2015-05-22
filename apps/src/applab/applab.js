@@ -1052,40 +1052,36 @@ Applab.init = function(config) {
 
     // Allow elements to be dragged and dropped from the design mode
     // element tray to the play space.
-    // TODO (brent) - get rid of this. requires support jquery-ui, and possibly
-    // also tooltipster in unit tests
-    if (window.$) {
-      $('.new-design-element').draggable({
-        containment:"#codeApp",
-        helper:"clone",
-        appendTo:"#codeApp",
-        revert: 'invalid',
-        zIndex: 2,
-        start: function() {
-          studioApp.resetButtonClick();
-        }
-      });
-      var GRID_SIZE = 5;
-      $('#visualization').droppable({
-        accept: '.new-design-element',
-        drop: function (event, ui) {
-          var elementType = ui.draggable[0].dataset.elementType;
+    $('.new-design-element').draggable({
+      containment:"#codeApp",
+      helper:"clone",
+      appendTo:"#codeApp",
+      revert: 'invalid',
+      zIndex: 2,
+      start: function() {
+        studioApp.resetButtonClick();
+      }
+    });
+    var GRID_SIZE = 5;
+    $('#visualization').droppable({
+      accept: '.new-design-element',
+      drop: function (event, ui) {
+        var elementType = ui.draggable[0].dataset.elementType;
 
-          var div = document.getElementById('divApplab');
-          var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-          var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-          var left = ui.position.left / xScale;
-          var top = ui.position.top / yScale;
+        var left = ui.position.left / xScale;
+        var top = ui.position.top / yScale;
 
-          // snap top-left corner to nearest location in the grid
-          left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-          top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        // snap top-left corner to nearest location in the grid
+        left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-          designMode.createElement(elementType, left, top);
-        }
-      });
-    }
+        designMode.createElement(elementType, left, top);
+      }
+    });
   }
 };
 
@@ -1224,7 +1220,7 @@ Applab.reset = function(first) {
     turtleSetVisibility(true);
   }
 
-  var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
+  var isDesignMode = $('#codeModeButton').is(':visible');
 
   var allowDragging = isDesignMode && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
@@ -1295,16 +1291,10 @@ studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
   if (window.dashboard && (!dashboard.project.isEditing ||
       (dashboard.project.current && dashboard.project.current.id))) {
-    if (window.$) {
-      $(window).trigger('run_button_pressed');
-    }
+    $(window).trigger('run_button_pressed');
     callback();
   } else {
-    if (window.$) {
-      $(window).trigger('run_button_pressed', callback);
-    } else {
-      callback();
-    }
+    $(window).trigger('run_button_pressed', callback);
   }
 };
 
