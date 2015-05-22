@@ -68,6 +68,7 @@ module Ops
         :program_type,
         :location,
         :instructions,
+        :cohort_id,
         cohorts: [:cohort_id],
         facilitators: [:ops_first_name, :ops_last_name, :email]
       )
@@ -82,6 +83,21 @@ module Ops
         next if facilitator_params[:email].blank?
 
         User.find_or_create_facilitator(facilitator_params, current_user)
+      end
+    end
+
+    def convert_cohorts
+      return unless params[:workshop]
+      cohort_params_list = params[:workshop].delete :cohorts
+      return unless cohort_params_list
+
+      params[:workshop][:workshops_cohorts_attributes] = cohort_params_list.map do |cohort_params|
+        {cohort_id: cohort_params[:id],
+         _destroy: cohort_params[:_destroy]}.tap do |workshops_cohorts_attrs|
+          if params[:id] && existing = WorkshopsCohort.find_by(cohort_id: cohort_params[:id], workshop_id: params[:id])
+            workshops_cohorts_attrs[:id] = existing.id
+          end
+        end
       end
     end
   end
