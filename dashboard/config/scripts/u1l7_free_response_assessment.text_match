@@ -3,9 +3,5 @@ title 'Assessment: Binary Numbers'
 content1 ''
 
 markdown <<MARKDOWN
-Imagine that you have a list of 10 numbers that you want to send in binary to a friend using the bit-sending widget. The numbers are all between 0 and 100. 
-
-What issues or problems do you imagine that you and your friend would encounter in trying to do this?
-
-How would you solve these problems?
+In 100 words or less describe how place value is used in the binary number system. How is it similar or different from the way place value is used in the base 10 number system.
 MARKDOWN
