@@ -37,7 +37,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
  * @param {logEntryRow} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
- * @param {packetHeaderSpec} [packetSpec] - Packet layout spec used to
+ * @param {Packet.HeaderType[]} [packetSpec] - Packet layout spec used to
  *        interpret the contents of the logged packet
  * @constructor
  * @augments NetSimEntity
@@ -137,11 +137,15 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
  * Get requested packet header field as a number.  Returns empty string
  * if the requested field is not in the current packet format.
  * @param {Packet.HeaderType} field
- * @returns {number|string}
+ * @returns {string}
  */
 NetSimLogEntry.prototype.getHeaderField = function (field) {
   try {
-    return this.packet_.getHeaderAsInt(field);
+    if (Packet.isAddressField(field)) {
+      return this.packet_.getHeaderAsAddressString(field);
+    } else {
+      return this.packet_.getHeaderAsInt(field).toString();
+    }
   } catch (e) {
     return '';
   }
