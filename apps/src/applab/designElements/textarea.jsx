@@ -4,13 +4,15 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ZOrderRow = require('./ZOrderRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
 var TextAreaProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
@@ -69,6 +71,9 @@ var TextAreaProperties = React.createClass({
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
+        <ZOrderRow
+          element={this.props.element}
+          onDepthChange={this.props.onDepthChange}/>
 
       </table>);
 
