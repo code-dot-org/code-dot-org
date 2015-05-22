@@ -38,7 +38,9 @@ template: none
   Cohorts
 %button.btn.btn-white{"ng-click" => "workshop.cohorts.unshift({editing: true})", 'ng-show' => 'workshop.id', style:'margin-bottom:10px'}
   Add Cohort
-%table
+%div.jumbotron{'ng-show' => 'workshop.cohorts <= 0 && !segment.addition'}
+  There are currently no cohorts associated with this workshop.
+%table{'ng-hide' => 'workshop.cohorts <= 0 && !segment.addition'}
   %tr
     %th
       Name
