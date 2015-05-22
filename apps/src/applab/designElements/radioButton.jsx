@@ -27,7 +27,7 @@ var RadioButtonProperties = React.createClass({
         <PropertyRow
           desc={'group id'}
           initialValue={element.getAttribute('name') || ''}
-          handleChange={this.props.handleChange.bind(this, 'groupid')} />
+          handleChange={this.props.handleChange.bind(this, 'groupId')} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}

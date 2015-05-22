@@ -9,7 +9,7 @@ var OptionsSelectRow = React.createClass({
   getInitialState: function () {
     // Pull the text out of each of our child option elements
     var element = this.props.element;
-    value = '';
+    var value = '';
     for (var i = 0; i < element.children.length; i++) {
       value += element.children[i].textContent + '\n';
     }
