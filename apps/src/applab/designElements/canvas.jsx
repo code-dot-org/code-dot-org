@@ -1,11 +1,8 @@
-/* global $ */
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
-var CheckboxProperties = React.createClass({
+var CanvasProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -23,7 +20,6 @@ var CheckboxProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          isNumber={true}
           handleChange={this.props.handleChange.bind(this, 'id')} />
         <PropertyRow
           desc={'width (px)'}
@@ -45,43 +41,27 @@ var CheckboxProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
-        <BooleanPropertyRow
-          desc={'hidden'}
-          initialValue={$(element).hasClass('design-mode-hidden')}
-          handleChange={this.props.handleChange.bind(this, 'hidden')} />
-        <BooleanPropertyRow
-          desc={'checked'}
-          initialValue={element.checked}
-          handleChange={this.props.handleChange.bind(this, 'checked')} />
-
       </table>);
 
-    // TODO:
+    // TODO (brent):
+    // bold/italics/underline (p2)
+    // shape (p2)
+    // textAlignment (p2)
     // enabled (p2)
     // send back/forward
   }
 });
 
 module.exports = {
-  PropertyTable: CheckboxProperties,
-
-  create: function() {
-    var element = document.createElement('input');
-    element.type = 'checkbox';
-    element.style.width = '12px';
-    element.style.height = '12px';
-
-    this.onDeserialize(element);
+  PropertyTable: CanvasProperties,
+  create: function () {
+    var element = document.createElement('canvas');
+    element.style.height = '320px';
+    element.style.width = '480px';
 
     return element;
-  },
 
-  onDeserialize: function (element) {
-    // Disable click events unless running
-    $(element).on('click', function(e) {
-      if (!Applab.isRunning()) {
-        element.checked = !element.checked;
-      }
-    });
+    // Note: we use CSS to make this element have a background in design mode
+    // but not in code mode.
   }
 };

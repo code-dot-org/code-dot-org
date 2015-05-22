@@ -5,7 +5,7 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 
-var CheckboxProperties = React.createClass({
+var RadioButtonProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: React.PropTypes.func.isRequired
@@ -23,8 +23,11 @@ var CheckboxProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          isNumber={true}
           handleChange={this.props.handleChange.bind(this, 'id')} />
+        <PropertyRow
+          desc={'group id'}
+          initialValue={element.getAttribute('name') || ''}
+          handleChange={this.props.handleChange.bind(this, 'groupId')} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
@@ -53,7 +56,6 @@ var CheckboxProperties = React.createClass({
           desc={'checked'}
           initialValue={element.checked}
           handleChange={this.props.handleChange.bind(this, 'checked')} />
-
       </table>);
 
     // TODO:
@@ -63,11 +65,11 @@ var CheckboxProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: CheckboxProperties,
+  PropertyTable: RadioButtonProperties,
 
   create: function() {
     var element = document.createElement('input');
-    element.type = 'checkbox';
+    element.type = 'radio';
     element.style.width = '12px';
     element.style.height = '12px';
 

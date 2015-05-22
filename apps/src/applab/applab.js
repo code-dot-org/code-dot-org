@@ -841,6 +841,8 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  Applab.designModeEditedElement = null;
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1237,6 +1239,7 @@ Applab.onDivApplabClick = function (event) {
 
 Applab.editElementProperties = function(element) {
   var designPropertiesElement = document.getElementById('design-properties');
+  Applab.designModeEditedElement = element;
   React.render(
     React.createElement(DesignProperties, {
         element: element,
@@ -1292,7 +1295,7 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.height = value + 'px';
       break;
     case 'text':
-      $(element).text(value);
+      element.textContent = value;
       break;
     case 'textColor':
       element.style.color = value;
@@ -1310,6 +1313,18 @@ Applab.onPropertyChange = function(element, name, value) {
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
+    case 'picture':
+      element.src = value;
+      element.onload = function () {
+        // naturalWidth/Height aren't populated until image has loaded.
+        element.style.width = element.naturalWidth + 'px';
+        element.style.height = element.naturalHeight + 'px';
+        // Re-render properties
+        if (Applab.designModeEditedElement === element) {
+          Applab.editElementProperties(element);
+        }
+      };
+      break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible
       // in code mode.
@@ -1319,7 +1334,49 @@ Applab.onPropertyChange = function(element, name, value) {
       // element.checked represents the current state, the attribute represents
       // the serialized state
       element.checked = value;
-      element.setAttribute('checked', value ? 'checked' : null);
+
+      if (value) {
+        var groupName = element.getAttribute('name');
+        if (groupName) {
+          // Remove checked attribute from all other radio buttons in group
+          var buttons = document.getElementsByName(groupName);
+          Array.prototype.forEach.call(buttons, function (item) {
+            if (item.type === 'radio') {
+              item.removeAttribute('checked');
+            }
+          });
+        }
+        element.setAttribute('checked', 'checked');
+      } else {
+        element.removeAttribute('checked');
+      }
+      break;
+    case 'options':
+      // value should be an array of options in this case
+      for (var i = 0; i < value.length; i++) {
+        var optionElement = element.children[i];
+        if (!optionElement) {
+          optionElement = document.createElement('option');
+          element.appendChild(optionElement);
+        }
+        optionElement.textContent = value[i];
+      }
+      // remove any extra options
+      for (i = value.length; i < element.children.length; i++) {
+        element.removeChild(element.children[i]);
+      }
+      break;
+    case 'groupId':
+      element.setAttribute('name', value);
+      break;
+    case 'placeholder':
+      element.setAttribute('placeholder', value);
+      break;
+    case 'rows':
+      element.setAttribute('rows', value);
+      break;
+    case 'cols':
+      element.setAttribute('rows', value);
       break;
     default:
       throw "unknown property name " + name;
