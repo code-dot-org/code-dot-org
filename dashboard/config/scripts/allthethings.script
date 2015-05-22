@@ -1,3 +1,6 @@
+title 'All the Things!'
+description 'All the level types for UI testing'
+
 stage 'Jigsaw'
 level 'blockly:Jigsaw:3'
 
@@ -43,15 +46,46 @@ stage 'Match'
 level 'K-1 Maze Match 1'
 
 stage 'TextMatch'
-
+level 'Blocks to Math 1'
+level 'PDK5 Strategies O'
 
 stage 'CSinA'
-
+level 'Calc Circles of Eval .2'
+level 'Eval Strings Images .2'
+level 'Eval Contracts F'
+level 'Eval Contracts A'
+level 'Calc Vars 1'
+level 'Big Game Vars 1'
+level 'Eval Define Funcs 3'
+level 'Eval Booleans 2'
+level 'Sam the Butterfly 2'
+level "Luigi's Pizza 1"
 
 stage 'Netsim'
+level 'U1L4 NetSim SendAB'
+level 'U2L5 NetSim Classroom Internet'
+level 'U2L7 NetSim Need for Packets'
+level 'U2L10 NetSim Automatic DNS'
+
+stage 'Odometer'
+level 'Odometer'
+
+stage 'Text Compression'
+level 'U1L13 Text Compression'
+
+stage 'Pixelation'
+level 'Pixelation - Lesson 14 - Make the Letter A'
+level 'Pixelation - Lesson 15 - Complete 3-bit color'
+
+stage 'AppLab'
+level 'U3L2 Using Simple Commands'
+level 'U3L03 Define and use turnAround'
+level 'U3L07 - Starry Night Starter Code'
+level 'U3L08 - Enchantment Under the Sea'
+level 'U3L13 - Turtle move with button'
+level 'U3L16 - use images'
 
 
-stage 'applab'
-
-
-stage 'online pd?'
+# stage 'Online PD'
+# level 'PDK5 Intro C'
+# level 'PDK5 Foundations F'

@@ -97,6 +97,16 @@ en:
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
+      CSPPD Welcome Video:
+        Welcome Video: Welcome Video
+        Welcome to Online PD for CSP: Welcome to Online PD for CSP
+      CSPPD curriculum overview:
+        CSP Curriculum Overview: CSP Curriculum Overview
+        Overview of Curriculum: Overview of Curriculum
+      CSPPD presurvey: {}
+      CSPPD program overview:
+        CSP Program Overview: CSP Program Overview
+        Overview of CSP Program: Overview of CSP Program
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -145,6 +155,9 @@ en:
       Hour of Code test content: {}
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      K5PD tour:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       Mixing Colors:
         description here: description here
         title: title
@@ -468,6 +481,9 @@ en:
       U3L19 - explanation diff between string and var name:
         U3L19 - explanation diff between string and var name: U3L19 - explanation diff between string and var name
         description here: description here
+      U3L19 - improve your clicker game:
+        U3L19 - improve your clicker game: U3L19 - improve your clicker game
+        description here: description here
       U3L19 - misconception variable assignment order pt1:
         U3L19 - misconception variable assignment order pt1: U3L19 - misconception variable assignment order pt1
         description here: description here
@@ -517,8 +533,14 @@ en:
         Compound Conditionals: Compound Conditionals
       U3L26 Student Lesson Introduction:
         Strings and Substrings: Strings and Substrings
+      U3L27 Student Lesson Introduction:
+        Chatbot Challenge: Chatbot Challenge
       U3L28 Student Lesson Introduction:
         While Loop Basics: While Loop Basics
+      U3L29 Student Lesson Introduction:
+        While Loops and Counting: While Loops and Counting
+      U3L30 Student Lesson Introduction:
+        An Introduction to Arrays: An Introduction to Arrays
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -934,8 +956,21 @@ en:
         Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
       U3L18 Free Response Wrap Up:
         Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
+      U3L19 - final prompt:
+        Final writing prompt: Final writing prompt
+        Respond to your teacher's prompt below: Respond to your teacher's prompt below
       U3L2 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L20 Assessment4:
+        Conditional Basics Question 4: Conditional Basics Question 4
+      U3L20 Assessment5:
+        Conditional Basics Question 5: Conditional Basics Question 5
+      U3L20 Assessment6:
+        Conditional Basics Question 6: Conditional Basics Question 6
+      U3L20 Assessment7:
+        Conditional Basics Question 7: Conditional Basics Question 7
+      U3L20 Assessment8:
+        Conditional Basics Question 8: Conditional Basics Question 8
       U3L20 Free Response Getting Started:
         'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
       U3L20 Free Response Wrap Up:
@@ -964,10 +999,24 @@ en:
         'String and Substring: Getting Started': 'String and Substring: Getting Started'
       U3L26 Free Response Wrap Up:
         'String and Substring: Wrap Up': 'String and Substring: Wrap Up'
+      U3L27 Assessment1:
+        Chatbot Challenge Reflection 1: Chatbot Challenge Reflection 1
+      U3L27 Assessment2:
+        Chatbot Challenge Reflection 2: Chatbot Challenge Reflection 2
+      U3L27 Assessment3:
+        'Chatbot Challenge Reflection 3 ': 'Chatbot Challenge Reflection 3 '
+      U3L27 Free Response Getting Started:
+        Chatbot Challenge Getting Started: Chatbot Challenge Getting Started
       U3L28 Free Response Getting Started:
         'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
       U3L28 Free Response Wrap Up:
         'While Loop Basics: Wrap Up': 'While Loop Basics: Wrap Up'
+      U3L29 Free Response Getting Started:
+        'While Loops and Counting: Getting Started': 'While Loops and Counting: Getting Started'
+      U3L29 Free Response Wrap Up:
+        'While Loops and Counting: Wrap Up': 'While Loops and Counting: Wrap Up'
+      U3L30 Free Response Getting Started:
+        'Arrays: Getting Started': 'Arrays: Getting Started'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7
