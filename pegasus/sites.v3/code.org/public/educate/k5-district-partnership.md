@@ -10,7 +10,7 @@ Ideal partnerships are with school districts interested in bringing computer sci
 <br />
 
 
-**Applications for the 2015-2016 school year are now closed. We will begin reviewing new applications in the Spring of 2016.**
+**NOTE: Applications for the 2015-2016 school year are now closed. We will begin reviewing new applications in early 2016.**
 
 [<button>Apply Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
 <br />
