@@ -1322,11 +1322,28 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           into "rooms" and makes it so every message sent in the room
  *           will be received by every other person in that room.
  *
- * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
+ * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
+ *           an address is within the simulation and how it should be divided
+ *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
+ *           but the numbers specify the number of bits for each section.
+ *           Examples:
+ *           "8.8" - 16-bit address, represented as two 8-bit integers.
+ *           "4" - 4 bit address represented as one 4-bit integer.
+ *           "8.4" - 12-bit address, represented as an 8-bit integer followed
+ *                   by a 4-bit integer
+ *            This format will be applied to any "fromAddress" or "toAddress"
+ *            header fields in the packet specification, and will determine
+ *            how routers assign addresses.
+ *
+ * @property {number} packetCountBitWidth - How many bits should be allocated
+ *           for any "packetIndex" or "packetCount" fields in the packet
+ *           specification.
+ *
+ * @property {Packet.HeaderType[]} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
  *           to route them.
  *
- * @property {packetHeaderSpec} clientInitialPacketHeader - The header format
+ * @property {Packet.HeaderType[]} clientInitialPacketHeader - The header format
  *           used by the local client node when generating/parsing packets,
  *           which affects the layout of the send panel and log panels.
  *
@@ -1431,6 +1448,8 @@ levels.custom = {
   broadcastMode: false,
 
   // Packet header specification
+  addressFormat: '4',
+  packetCountBitWidth: 4,
   routerExpectsPacketHeader: [],
   clientInitialPacketHeader: [],
 
@@ -4055,6 +4074,7 @@ var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var MessageGranularity = netsimConstants.MessageGranularity;
@@ -4082,7 +4102,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.levelConfig_ = levelConfig;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = levelConfig.clientInitialPacketHeader;
@@ -4233,11 +4253,14 @@ NetSimSendPanel.prototype.render = function () {
 
   // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
+    var level = netsimGlobals.getLevelConfig();
+    var encoder = new Packet.Encoder(level.addressFormat,
+        level.packetCountBitWidth, this.packetSpec_);
     this.packetSizeControl_ = new NetSimPacketSizeControl(
         this.rootDiv_.find('.packet-size'),
         this.packetSizeChangeCallback_.bind(this),
         {
-          minimumPacketSize: Packet.Encoder.getHeaderLength(this.packetSpec_),
+          minimumPacketSize: encoder.getHeaderLength(),
           sliderStepValue: 1
         });
     this.packetSizeControl_.setValue(this.maxPacketSize_);
@@ -4557,7 +4580,7 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":284,"./NetSimLogger":178,"./NetSimPacketEditor":187,"./NetSimPacketSizeControl":188,"./NetSimPanel":190,"./NetSimSendPanel.html.ejs":201,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227}],201:[function(require,module,exports){
+},{"../utils":284,"./NetSimLogger":178,"./NetSimPacketEditor":187,"./NetSimPacketSizeControl":188,"./NetSimPanel":190,"./NetSimSendPanel.html.ejs":201,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5216,15 +5239,13 @@ with (locals || {}) { (function(){
   var Packet = require('./Packet');
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = level.routerExpectsPacketHeader.map(function (headerField) {
-    return headerField.key;
-  });
+  var headerFields = level.routerExpectsPacketHeader;
 
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
-; buf.push('\n<div class="netsim-router-log">\n  <h1>Router Traffic</h1>\n  <table>\n    <thead>\n    <tr>\n      ');22; if (showToAddress) { ; buf.push('\n        <th nowrap>', escape((23,  i18n.to() )), '</th>\n      ');24; } ; buf.push('\n      ');25; if (showFromAddress) { ; buf.push('\n        <th nowrap>', escape((26,  i18n.from() )), '</th>\n      ');27; } ; buf.push('\n      ');28; if (showPacketInfo) { ; buf.push('\n        <th nowrap>', escape((29,  i18n.packetInfo() )), '</th>\n      ');30; } ; buf.push('\n      <th nowrap>', escape((31,  i18n.size() )), '</th>\n      <th nowrap>', escape((32,  i18n.status() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');36;
+; buf.push('\n<div class="netsim-router-log">\n  <h1>Router Traffic</h1>\n  <table>\n    <thead>\n    <tr>\n      ');20; if (showToAddress) { ; buf.push('\n        <th nowrap>', escape((21,  i18n.to() )), '</th>\n      ');22; } ; buf.push('\n      ');23; if (showFromAddress) { ; buf.push('\n        <th nowrap>', escape((24,  i18n.from() )), '</th>\n      ');25; } ; buf.push('\n      ');26; if (showPacketInfo) { ; buf.push('\n        <th nowrap>', escape((27,  i18n.packetInfo() )), '</th>\n      ');28; } ; buf.push('\n      <th nowrap>', escape((29,  i18n.size() )), '</th>\n      <th nowrap>', escape((30,  i18n.status() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');34;
     // Sort: Most recent first
     tableData.sort(function (a, b) {
       return a.timestamp > b.timestamp ? -1 : 1;
@@ -5233,10 +5254,10 @@ with (locals || {}) { (function(){
     // Create rows
     tableData.forEach(function (logEntry) {
       var rowClasses = [];
-    ; buf.push('\n    <tr class="', escape((46,  rowClasses.join(' ') )), '" title="', escape((46,  logEntry.getMessageAscii() )), '">\n      ');47; if (showToAddress) { ; buf.push('\n        <td nowrap>', escape((48,  logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS) )), '</td>\n      ');49; } ; buf.push('\n      ');50; if (showFromAddress) { ; buf.push('\n        <td nowrap>', escape((51,  logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) )), '</td>\n      ');52; } ; buf.push('\n      ');53; if (showPacketInfo) { ; buf.push('\n        <td nowrap>', escape((54,  i18n.xOfYPackets({
+    ; buf.push('\n    <tr class="', escape((44,  rowClasses.join(' ') )), '" title="', escape((44,  logEntry.getMessageAscii() )), '">\n      ');45; if (showToAddress) { ; buf.push('\n        <td nowrap>', escape((46,  logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS) )), '</td>\n      ');47; } ; buf.push('\n      ');48; if (showFromAddress) { ; buf.push('\n        <td nowrap>', escape((49,  logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) )), '</td>\n      ');50; } ; buf.push('\n      ');51; if (showPacketInfo) { ; buf.push('\n        <td nowrap>', escape((52,  i18n.xOfYPackets({
             x: logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX),
             y: logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT)
-          }) )), '</td>\n      ');58; }; buf.push('\n      <td nowrap>', escape((59,  netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) )), '</td>\n      <td nowrap>', escape((60,  logEntry.getLocalizedStatus() )), '</td>\n    </tr>\n    ');62;
+          }) )), '</td>\n      ');56; }; buf.push('\n      <td nowrap>', escape((57,  netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) )), '</td>\n      <td nowrap>', escape((58,  logEntry.getLocalizedStatus() )), '</td>\n    </tr>\n    ');60;
     });
     ; buf.push('\n    </tbody>\n  </table>\n</div>'); })();
 } 
@@ -5345,9 +5366,11 @@ var netsimMsg = require('./locale');
 var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
@@ -5375,7 +5398,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
  * @param {MessageGranularity} initialConfig.messageGranularity
- * @param {packetHeaderSpec} initialConfig.packetSpec
+ * @param {Packet.HeaderType[]} initialConfig.packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -5390,6 +5413,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
+  var level = netsimGlobals.getLevelConfig();
 
   /**
    * @type {jQuery}
@@ -5404,16 +5428,18 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.messageGranularity_ = initialConfig.messageGranularity;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = initialConfig.packetSpec;
 
-  /** @type {number} */
-  this.toAddress = initialConfig.toAddress || 0;
+  /** @type {string} */
+  this.toAddress = initialConfig.toAddress ||
+      dataConverters.binaryToAddressString('0', level.addressFormat);
   
-  /** @type {number} */
-  this.fromAddress = initialConfig.fromAddress || 0;
+  /** @type {string} */
+  this.fromAddress = initialConfig.fromAddress ||
+      dataConverters.binaryToAddressString('0', level.addressFormat);
   
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
@@ -5552,6 +5578,7 @@ NetSimPacketEditor.prototype.render = function () {
   this.bindElements_();
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
+  NetSimLogPanel.adjustHeaderColumnWidths(this.rootDiv_);
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
 };
 
@@ -5695,7 +5722,7 @@ NetSimPacketEditor.prototype.makeKeyupHandler = function (fieldName,
     converterFunction, fieldWidth) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
-    if (!isNaN(newValue)) {
+    if (typeof newValue === 'string' || !isNaN(newValue)) {
       this[fieldName] = newValue;
       this.updateFields_(jqueryEvent.target);
     }
@@ -5724,7 +5751,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
     converterFunction, fieldWidth) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value, fieldWidth);
-    if (isNaN(newValue)) {
+    if (typeof newValue === 'number' && isNaN(newValue)) {
       newValue = converterFunction('0');
     }
     this[fieldName] = newValue;
@@ -5738,6 +5765,10 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
  * field from binary.
  * @typedef {Object} rowType
  * @property {EncodingType} typeName
+ * @property {RegExp} addressFieldAllowedCharacters - Whitelist of characters
+ *           that may be typed into an address field.
+ * @property {function} addressFieldConversion - How to convert from binary
+ *           to an address string in this row when the binary is updated.
  * @property {RegExp} shortNumberAllowedCharacters - Whitelist of characters
  *           that may be typed into a header field.
  * @property {function} shortNumberConversion - How to convert from binary
@@ -5794,16 +5825,36 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
 };
 
 /**
+ * Convert an address string to binary and back using the level's address
+ * format, which coerces it to the exact format the level wants.
+ * @param {string} originalString
+ * @returns {string}
+ */
+var cleanAddressString = function (originalString) {
+  var level = netsimGlobals.getLevelConfig();
+  var binaryForm = dataConverters.addressStringToBinary(
+      originalString, level.addressFormat);
+  return dataConverters.binaryToAddressString(
+      binaryForm, level.addressFormat);
+};
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
+  var level = netsimGlobals.getLevelConfig();
   var rootDiv = this.rootDiv_;
 
   /** @type {rowType[]} */
   var rowTypes = [
     {
       typeName: EncodingType.A_AND_B,
+      addressFieldAllowedCharacters: /[AB\s]/i,
+      addressFieldConversion: function (abString) {
+        return dataConverters.binaryToAddressString(
+            dataConverters.abToBinary(abString), level.addressFormat);
+      },
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
       messageAllowedCharacters: /[AB\s]/i,
@@ -5811,6 +5862,11 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.BINARY,
+      addressFieldAllowedCharacters: /[01\s]/i,
+      addressFieldConversion: function (binaryString) {
+        return dataConverters.binaryToAddressString(
+            binaryString, level.addressFormat);
+      },
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: truncatedBinaryToInt,
       messageAllowedCharacters: /[01\s]/,
@@ -5818,6 +5874,11 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.HEXADECIMAL,
+      addressFieldAllowedCharacters: /[0-9a-f\s]/i,
+      addressFieldConversion: function (hexString) {
+        return dataConverters.binaryToAddressString(
+            dataConverters.hexToBinary(hexString), level.addressFormat);
+      },
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: truncatedHexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
@@ -5825,6 +5886,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.DECIMAL,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: cleanAddressString,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /[0-9\s]/,
@@ -5834,6 +5897,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     },
     {
       typeName: EncodingType.ASCII,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: cleanAddressString,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: truncatedDecimalToInt,
       messageAllowedCharacters: /./,
@@ -5855,19 +5920,32 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
 
+    var level = netsimGlobals.getLevelConfig();
+    var encoder = new Packet.Encoder(level.addressFormat,
+        level.packetCountBitWidth, this.packetSpec_);
+
     this.packetSpec_.forEach(function (fieldSpec) {
       /** @type {Packet.HeaderType} */
-      var fieldName = fieldSpec.key;
+      var fieldName = fieldSpec;
       /** @type {number} */
-      var fieldWidth = fieldSpec.bits;
+      var fieldWidth = encoder.getFieldBitWidth(fieldName);
+
+      var allowedCharacterFunction, conversionFunction;
+      if (Packet.isAddressField(fieldName)) {
+        allowedCharacterFunction = rowType.addressFieldAllowedCharacters;
+        conversionFunction = rowType.addressFieldConversion;
+      } else {
+        allowedCharacterFunction = rowType.shortNumberAllowedCharacters;
+        conversionFunction = rowType.shortNumberConversion;
+      }
 
       rowFields[fieldName] = tr.find('input.' + fieldName);
-      rowFields[fieldName].keypress(
-          makeKeypressHandlerWithWhitelist(rowType.shortNumberAllowedCharacters));
-      rowFields[fieldName].keyup(
-          this.makeKeyupHandler(fieldName, rowType.shortNumberConversion, fieldWidth));
-      rowFields[fieldName].blur(
-          this.makeBlurHandler(fieldName, rowType.shortNumberConversion, fieldWidth));
+      rowFields[fieldName].keypress(makeKeypressHandlerWithWhitelist(
+          allowedCharacterFunction));
+      rowFields[fieldName].keyup(this.makeKeyupHandler(fieldName,
+          conversionFunction, fieldWidth));
+      rowFields[fieldName].blur(this.makeBlurHandler(fieldName,
+          conversionFunction, fieldWidth));
     }, this);
 
     rowFields.message = tr.find('textarea.message');
@@ -5896,35 +5974,70 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
+  var level = netsimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
+
   this.packetSpec_.forEach(function (fieldSpec) {
     /** @type {Packet.HeaderType} */
-    var fieldName = fieldSpec.key;
+    var fieldName = fieldSpec;
     /** @type {number} */
-    var fieldWidth = fieldSpec.bits;
+    var fieldWidth = encoder.getFieldBitWidth(fieldName);
+
+    var abConverter, binaryConverter, hexConverter, decimalConverter, asciiConverter;
+    if (Packet.isAddressField(fieldName)) {
+      abConverter = function (addressString) {
+        return dataConverters.binaryToAB(
+            dataConverters.addressStringToBinary(
+                addressString, level.addressFormat));
+      };
+      binaryConverter = function (addressString) {
+        return dataConverters.formatBinaryForAddressHeader(
+            dataConverters.addressStringToBinary(
+                addressString,
+                level.addressFormat),
+            level.addressFormat);
+      };
+      hexConverter = function (addressString) {
+        return dataConverters.binaryToHex(
+            dataConverters.addressStringToBinary(
+                addressString, level.addressFormat));
+      };
+      decimalConverter = cleanAddressString;
+      asciiConverter = cleanAddressString;
+    } else {
+      abConverter = intToAB;
+      binaryConverter = intToBinary;
+      hexConverter = intToHex;
+      decimalConverter = function (val) {
+        return val.toString(10);
+      };
+      asciiConverter = decimalConverter;
+    }
 
     liveFields.push({
       inputElement: this.a_and_bUI[fieldName],
-      newValue: intToAB(this[fieldName], fieldWidth)
+      newValue: abConverter(this[fieldName], fieldWidth)
     });
 
     liveFields.push({
       inputElement: this.binaryUI[fieldName],
-      newValue: intToBinary(this[fieldName], fieldWidth)
+      newValue: binaryConverter(this[fieldName], fieldWidth)
     });
 
     liveFields.push({
       inputElement: this.hexadecimalUI[fieldName],
-      newValue: intToHex(this[fieldName], Math.ceil(fieldWidth / 4))
+      newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
     });
 
     liveFields.push({
       inputElement: this.decimalUI[fieldName],
-      newValue: this[fieldName].toString(10)
+      newValue: decimalConverter(this[fieldName], fieldWidth)
     });
 
     liveFields.push({
       inputElement: this.asciiUI[fieldName],
-      newValue: this[fieldName].toString(10)
+      newValue: asciiConverter(this[fieldName], fieldWidth)
     });
   }, this);
 
@@ -5990,7 +6103,9 @@ NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var encoder = new Packet.Encoder(this.packetSpec_);
+  var level = netsimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
   return encoder.concatenateBinary(
       encoder.makeBinaryHeaders({
         toAddress: this.toAddress,
@@ -6010,11 +6125,11 @@ NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
   var packet = new Packet(this.packetSpec_, rawBinary);
 
   if (this.specContainsHeader_(Packet.HeaderType.TO_ADDRESS)) {
-    this.toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    this.toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   }
 
   if (this.specContainsHeader_(Packet.HeaderType.FROM_ADDRESS)) {
-    this.fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    this.fromAddress = packet.getHeaderAsAddressString(Packet.HeaderType.FROM_ADDRESS);
   }
 
   if (this.specContainsHeader_(Packet.HeaderType.PACKET_INDEX)) {
@@ -6038,7 +6153,7 @@ NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
  */
 NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
   return this.packetSpec_.some(function (headerSpec) {
-    return headerSpec.key === headerKey;
+    return headerSpec === headerKey;
   });
 };
 
@@ -6146,7 +6261,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 };
 
 
-},{"../constants":78,"../utils":284,"./NetSimEncodingControl":168,"./NetSimPacketEditor.html.ejs":186,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227}],186:[function(require,module,exports){
+},{"../constants":78,"../utils":284,"./NetSimEncodingControl":168,"./NetSimLogPanel":177,"./NetSimPacketEditor.html.ejs":186,"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228}],186:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6172,9 +6287,7 @@ with (locals || {}) { (function(){
   var forEachEnumValue = netsimUtils.forEachEnumValue;
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec.map(function (headerField) {
-    return headerField.key;
-  });
+  var headerFields = packetSpec;
 
   /** @type {boolean} */
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
@@ -6193,7 +6306,7 @@ with (locals || {}) { (function(){
    * Write the table header to the page, with the appropriate packet-header columns enabled.
    */
   function tableHeader() {
-    ; buf.push('\n      <thead>\n        <tr>\n          <th nowrap class="', escape((39,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');40; if (showToAddress) { ; buf.push('\n          <th nowrap class="', escape((41,  PacketUIColumnType.TO_ADDRESS )), '">', escape((41,  i18n.to() )), '</th>\n          ');42; } ; buf.push('\n          ');43; if (showFromAddress) { ; buf.push('\n          <th nowrap class="', escape((44,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((44,  i18n.from() )), '</th>\n          ');45; } ; buf.push('\n          ');46; if (showPacketInfo) { ; buf.push('\n          <th nowrap class="', escape((47,  PacketUIColumnType.PACKET_INFO )), '">', escape((47,  i18n.packet() )), '</th>\n          ');48; } ; buf.push('\n          <th class="', escape((49,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((50,  i18n.message() )), '\n            <div class="packet-controls">\n              <span class="netsim-button secondary remove-packet-button" title="', escape((52,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n            </div>\n          </th>\n        </tr>\n      </thead>\n    ');57;
+    ; buf.push('\n      <thead>\n        <tr>\n          <th nowrap class="', escape((37,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');38; if (showToAddress) { ; buf.push('\n          <th nowrap class="', escape((39,  PacketUIColumnType.TO_ADDRESS )), '">', escape((39,  i18n.to() )), '</th>\n          ');40; } ; buf.push('\n          ');41; if (showFromAddress) { ; buf.push('\n          <th nowrap class="', escape((42,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((42,  i18n.from() )), '</th>\n          ');43; } ; buf.push('\n          ');44; if (showPacketInfo) { ; buf.push('\n          <th nowrap class="', escape((45,  PacketUIColumnType.PACKET_INFO )), '">', escape((45,  i18n.packet() )), '</th>\n          ');46; } ; buf.push('\n          <th class="', escape((47,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((48,  i18n.message() )), '\n            <div class="packet-controls">\n              <span class="netsim-button secondary remove-packet-button" title="', escape((50,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n            </div>\n          </th>\n        </tr>\n      </thead>\n    ');55;
   }
 
   /**
@@ -6201,19 +6314,19 @@ with (locals || {}) { (function(){
    * @param {EncodingType} encodingType
    */
   function editorRow(encodingType) {
-    ; buf.push('\n      <tr class="', escape((66,  encodingType )), '">\n        <th nowrap class="', escape((67,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((67,  getEncodingLabel(encodingType) )), '</th>\n        ');68; if (showToAddress) { ; buf.push('\n        <td nowrap class="', escape((69,  PacketUIColumnType.TO_ADDRESS )), '"><input type="text" class="', escape((69,  Packet.HeaderType.TO_ADDRESS )), '" /></td>\n        ');70; } ; buf.push('\n        ');71; if (showFromAddress) { ; buf.push('\n        <td nowrap class="', escape((72,  PacketUIColumnType.FROM_ADDRESS )), '"><input type="text" readonly class="', escape((72,  Packet.HeaderType.FROM_ADDRESS )), '" /></td>\n        ');73; } ; buf.push('\n        ');74; if (showPacketInfo) { ; buf.push('\n        <td nowrap class="', escape((75,  PacketUIColumnType.PACKET_INFO )), '"><input type="text" readonly class="', escape((75,  Packet.HeaderType.PACKET_INDEX )), '" />', escape((75,  i18n._of_() )), '<input type="text" readonly class="', escape((75,  Packet.HeaderType.PACKET_COUNT )), '" /></td>\n        ');76; } ; buf.push('\n        <td class="', escape((77,  PacketUIColumnType.MESSAGE )), '"><div><textarea class="message"></textarea></div></td>\n      </tr>\n    ');79;
+    ; buf.push('\n      <tr class="', escape((64,  encodingType )), '">\n        <th nowrap class="', escape((65,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((65,  getEncodingLabel(encodingType) )), '</th>\n        ');66; if (showToAddress) { ; buf.push('\n        <td nowrap class="', escape((67,  PacketUIColumnType.TO_ADDRESS )), '"><input type="text" class="', escape((67,  Packet.HeaderType.TO_ADDRESS )), '" /></td>\n        ');68; } ; buf.push('\n        ');69; if (showFromAddress) { ; buf.push('\n        <td nowrap class="', escape((70,  PacketUIColumnType.FROM_ADDRESS )), '"><input type="text" readonly class="', escape((70,  Packet.HeaderType.FROM_ADDRESS )), '" /></td>\n        ');71; } ; buf.push('\n        ');72; if (showPacketInfo) { ; buf.push('\n        <td nowrap class="', escape((73,  PacketUIColumnType.PACKET_INFO )), '"><input type="text" readonly class="', escape((73,  Packet.HeaderType.PACKET_INDEX )), '" />', escape((73,  i18n._of_() )), '<input type="text" readonly class="', escape((73,  Packet.HeaderType.PACKET_COUNT )), '" /></td>\n        ');74; } ; buf.push('\n        <td class="', escape((75,  PacketUIColumnType.MESSAGE )), '"><div><textarea class="message"></textarea></div></td>\n      </tr>\n    ');77;
   }
-; buf.push('\n<table>\n  ');83;
+; buf.push('\n<table>\n  ');81;
     // Only write the header row if we are using packets
     if (usePacketGranularity) {
       tableHeader();
     }
-  ; buf.push('\n  <tbody>\n    ');90;
+  ; buf.push('\n  <tbody>\n    ');88;
       // Write a body row for every packet encoding; we hide some of them post-render.
       forEachEnumValue(EncodingType, function (encodingType) {
         editorRow(encodingType);
       });
-    ; buf.push('\n  </tbody>\n</table>\n\n');99; if (usePacketGranularity) { ; buf.push('\n  <div class="bit-counter"></div>\n');101; } ; buf.push('\n'); })();
+    ; buf.push('\n  </tbody>\n</table>\n\n');97; if (usePacketGranularity) { ; buf.push('\n  <div class="bit-counter"></div>\n');99; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6795,6 +6908,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 require('../utils'); // For Function.prototype.inherits()
 var i18n = require('./locale');
 var markup = require('./NetSimLogPanel.html.ejs');
+var Packet = require('./Packet');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
@@ -6855,14 +6969,14 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
  * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
- * @param {packetHeaderSpec} options.packetSpec
+ * @param {Packet.HeaderType[]} options.packetSpec
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
 var NetSimLogPanel = module.exports = function (rootDiv, options) {
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = options.packetSpec;
@@ -7000,7 +7114,7 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
  * @param {Object} options
- * @param {packetHeaderSpec} options.packetSpec
+ * @param {Packet.HeaderType[]} options.packetSpec
  * @param {EncodingType[]} options.encodings - which display style to use initially
  * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
@@ -7017,7 +7131,7 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.packetBinary_ = packetBinary;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = options.packetSpec;
@@ -7074,6 +7188,7 @@ NetSimLogPacket.prototype.render = function () {
     isMinimized: this.isMinimized
   });
   var jQueryWrap = $(rawMarkup);
+  NetSimLogPanel.adjustHeaderColumnWidths(jQueryWrap);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
   this.rootDiv_.find('.expander').click(this.toggleMinimized.bind(this));
@@ -7086,6 +7201,52 @@ NetSimLogPacket.prototype.render = function () {
  */
 NetSimLogPacket.prototype.getRoot = function () {
   return this.rootDiv_;
+};
+
+/**
+ * Beneath the given root element, adjust widths of packet header columns
+ * and fields to match the level's configured packet format.
+ * @param {jQuery} rootElement
+ */
+NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
+  var level = netsimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(
+      level.addressFormat,
+      level.packetCountBitWidth,
+      level.clientInitialPacketHeader);
+  var addressBitWidth = encoder.getFieldBitWidth(
+      Packet.HeaderType.TO_ADDRESS);
+  var packetInfoBitWidth = encoder.getFieldBitWidth(
+      Packet.HeaderType.PACKET_COUNT);
+
+  // Adjust width of address columns
+  // For columns, 50px is sufficient for 4 bits
+  var PX_PER_BIT = 50 / 4;
+  var addressColumnWidthInPx = PX_PER_BIT * addressBitWidth;
+
+  // Adjust width of address columns
+  rootElement.find('td.toAddress, th.toAddress, td.fromAddress, th.fromAddress')
+      .css('width', addressColumnWidthInPx + 'px');
+
+
+  // Adjust width of address input fields
+  // For inputs, 3em is sufficient for 4 bits
+  var EMS_PER_BIT = 3 / 4;
+  var addressFieldWidthInEms = EMS_PER_BIT * addressBitWidth;
+  rootElement.find('td.toAddress input, td.fromAddress input')
+      .css('width', addressFieldWidthInEms + 'em');
+
+
+  // Adjust width of packet info column
+  // Packet info column uses two fields and an extra 21px for " of "
+  var packetInfoColumnWidthInPx = (2 * PX_PER_BIT * packetInfoBitWidth) + 21;
+  rootElement.find('td.packetInfo, th.packetInfo')
+      .css('width', packetInfoColumnWidthInPx + 'px');
+
+  // Adjust width of packet info fields
+  var packetInfoFieldWidthInEms = EMS_PER_BIT * packetInfoBitWidth;
+  rootElement.find('td.packetInfo input')
+      .css('width', packetInfoFieldWidthInEms + 'em');
 };
 
 /**
@@ -7168,7 +7329,7 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":284,"./NetSimEncodingControl":168,"./NetSimLogPacket.html.ejs":175,"./NetSimLogPanel.html.ejs":176,"./NetSimPanel":190,"./locale":224,"./netsimGlobals":228}],176:[function(require,module,exports){
+},{"../utils":284,"./NetSimEncodingControl":168,"./NetSimLogPacket.html.ejs":175,"./NetSimLogPanel.html.ejs":176,"./NetSimPanel":190,"./Packet":220,"./locale":224,"./netsimGlobals":228}],176:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7202,10 +7363,13 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
   var netsimConstants = require('./netsimConstants');
+  var netsimGlobals = require('./netsimGlobals');
   var dataConverters = require('./dataConverters');
   var i18n = require('./locale');
   var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
   var Packet = require('./Packet');
+
+  var level = netsimGlobals.getLevelConfig();
 
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;
@@ -7219,14 +7383,18 @@ with (locals || {}) { (function(){
   var binaryToHex = dataConverters.binaryToHex;
   var binaryToDecimal = dataConverters.binaryToDecimal;
   var binaryToAscii = dataConverters.binaryToAscii;
+  var binaryToAddressString = function (binaryString) {
+    return dataConverters.binaryToAddressString(binaryString, level.addressFormat);
+  };
+  var formatBinaryForAddressHeader = function (binaryString) {
+    return dataConverters.formatBinaryForAddressHeader(binaryString, level.addressFormat);
+  };
 
   /** @type {Packet} */
   var packet = new Packet(packetSpec, packetBinary);
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec.map(function (headerField) {
-    return headerField.key;
-  });
+  var headerFields = packetSpec;
 
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
@@ -7266,18 +7434,18 @@ with (locals || {}) { (function(){
    * @param {string} message
    */
   function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
-    ; buf.push('\n      <tr class="', escape((68,  encodingType )), '">\n        <th nowrap class="', escape((69,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((69,  getEncodingLabel(encodingType) )), '</th>\n        ');70; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((71,  PacketUIColumnType.TO_ADDRESS )), '">', escape((71,  toAddress )), '</td>\n        ');72; } ; buf.push('\n        ');73; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((74,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((74,  fromAddress )), '</td>\n        ');75; } ; buf.push('\n        ');76; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((77,  PacketUIColumnType.PACKET_INFO )), '">', escape((77,  packetInfo )), '</td>\n        ');78; } ; buf.push('\n        <td class="', escape((79,  PacketUIColumnType.MESSAGE )), '">', escape((79,  message )), '</td>\n      </tr>\n  ');81;
+    ; buf.push('\n      <tr class="', escape((75,  encodingType )), '">\n        <th nowrap class="', escape((76,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((76,  getEncodingLabel(encodingType) )), '</th>\n        ');77; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((78,  PacketUIColumnType.TO_ADDRESS )), '">', escape((78,  toAddress )), '</td>\n        ');79; } ; buf.push('\n        ');80; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((81,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((81,  fromAddress )), '</td>\n        ');82; } ; buf.push('\n        ');83; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((84,  PacketUIColumnType.PACKET_INFO )), '">', escape((84,  packetInfo )), '</td>\n        ');85; } ; buf.push('\n        <td class="', escape((86,  PacketUIColumnType.MESSAGE )), '">', escape((86,  message )), '</td>\n      </tr>\n  ');88;
   }
- ; buf.push('\n  ');84;
+ ; buf.push('\n  ');91;
     var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
     var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
     var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
     var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
     var message = packet.getBodyAsBinary();
-  ; buf.push('\n  ');91; if (isMinimized) { ; buf.push('\n      <div class="minimized-packet single-line-with-ellipsis user-data">\n        <i class="fa fa-plus-square expander"></i>\n        ', escape((94,  getOneLinePacketSummary() )), '\n      </div>\n  ');96; } else { ; buf.push('\n    <table class="maximized-packet">\n      <thead>\n        <tr>\n          <th nowrap class="', escape((100,  PacketUIColumnType.ENCODING_LABEL )), '">\n            <i class="fa fa-minus-square expander"></i>\n          </th>\n          ');103; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((104,  PacketUIColumnType.TO_ADDRESS )), '">', escape((104,  i18n.to() )), '</th>\n          ');105; } ; buf.push('\n          ');106; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((107,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((107,  i18n.from() )), '</th>\n          ');108; } ; buf.push('\n          ');109; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((110,  PacketUIColumnType.PACKET_INFO )), '">', escape((110,  i18n.packet() )), '</th>\n          ');111; } ; buf.push('\n          <th class="', escape((112,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((113,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');118;
+  ; buf.push('\n  ');98; if (isMinimized) { ; buf.push('\n      <div class="minimized-packet single-line-with-ellipsis user-data">\n        <i class="fa fa-plus-square expander"></i>\n        ', escape((101,  getOneLinePacketSummary() )), '\n      </div>\n  ');103; } else { ; buf.push('\n    <table class="maximized-packet">\n      <thead>\n        <tr>\n          <th nowrap class="', escape((107,  PacketUIColumnType.ENCODING_LABEL )), '">\n            <i class="fa fa-minus-square expander"></i>\n          </th>\n          ');110; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((111,  PacketUIColumnType.TO_ADDRESS )), '">', escape((111,  i18n.to() )), '</th>\n          ');112; } ; buf.push('\n          ');113; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((114,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((114,  i18n.from() )), '</th>\n          ');115; } ; buf.push('\n          ');116; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((117,  PacketUIColumnType.PACKET_INFO )), '">', escape((117,  i18n.packet() )), '</th>\n          ');118; } ; buf.push('\n          <th class="', escape((119,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((120,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');125;
         logRow(EncodingType.ASCII,
-            binaryToInt(toAddress),
-            binaryToInt(fromAddress),
+            binaryToAddressString(toAddress),
+            binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
               x: binaryToInt(packetIndex),
               y: binaryToInt(packetCount)
@@ -7285,8 +7453,8 @@ with (locals || {}) { (function(){
             binaryToAscii(message, chunkSize));
 
         logRow(EncodingType.DECIMAL,
-            binaryToInt(toAddress),
-            binaryToInt(fromAddress),
+            binaryToAddressString(toAddress),
+            binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
               x: binaryToInt(packetIndex),
               y: binaryToInt(packetCount)
@@ -7303,17 +7471,17 @@ with (locals || {}) { (function(){
             formatHex(binaryToHex(message), chunkSize));
 
         logRow(EncodingType.BINARY,
-            formatBinary(toAddress, 4),
-            formatBinary(fromAddress, 4),
-            formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+            formatBinaryForAddressHeader(toAddress, 4),
+            formatBinaryForAddressHeader(fromAddress, 4),
+            formatBinary(packetIndex + packetCount, level.packetCountBitWidth),
             formatBinary(message, chunkSize));
 
         logRow(EncodingType.A_AND_B,
             binaryToAB(toAddress),
             binaryToAB(fromAddress),
-            binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+            formatAB(binaryToAB(packetIndex + packetCount), level.packetCountBitWidth),
             formatAB(binaryToAB(message), chunkSize));
-       ; buf.push('\n      </tbody>\n    </table>\n  ');160; } ; buf.push('\n'); })();
+       ; buf.push('\n      </tbody>\n    </table>\n  ');167; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -7321,7 +7489,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimUtils":230,"ejs":294}],173:[function(require,module,exports){
+},{"./Packet":220,"./dataConverters":222,"./locale":224,"./netsimConstants":227,"./netsimGlobals":228,"./netsimUtils":230,"ejs":294}],173:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8820,13 +8988,11 @@ var _ = utils.getLodash();
 var serializeNumber = netsimUtils.serializeNumber;
 var deserializeNumber = netsimUtils.deserializeNumber;
 
-var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 
 var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 
 var logger = NetSimLogger.getSingleton();
 var netsimGlobals = require('./netsimGlobals');
@@ -8965,7 +9131,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    *
    * Not persisted on server.
    *
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = [];
@@ -9409,6 +9575,24 @@ NetSimRouterNode.prototype.getDisplayName = function () {
 };
 
 /**
+ * Get node's own address, which is dependent on the address format
+ * configured in the level but for routers always ends in zero.
+ * @returns {string}
+ */
+NetSimRouterNode.prototype.getAddress = function () {
+  return this.makeLocalNetworkAddress_(ROUTER_LOCAL_ADDRESS);
+};
+
+/**
+ * Get local network's auto-dns address, which is dependent on the address
+ * format configured for the level but the last part should always be 15.
+ * @returns {string}
+ */
+NetSimRouterNode.prototype.getAutoDnsAddress = function () {
+  return this.makeLocalNetworkAddress_(AUTO_DNS_RESERVED_ADDRESS);
+};
+
+/**
  * Get node's hostname, a modified version of its display name.
  * @returns {string}
  * @override
@@ -9484,22 +9668,35 @@ NetSimRouterNode.prototype.getStatus = function () {
 };
 
 /**
+ * @returns {boolean} whether the router is at its client connection capacity.
+ */
+NetSimRouterNode.prototype.isFull = function () {
+  // Determine status based on cached wire data
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.entityID;
+  }, this);
+
+  return incomingWireRows.length >= MAX_CLIENT_CONNECTIONS;
+};
+
+/**
  * Makes sure that the given specification contains the fields that this
  * router needs to do its job.
- * @param {packetHeaderSpec} packetSpec
+ * @param {Packet.HeaderType[]} packetSpec
  * @private
  */
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
   // Require TO_ADDRESS for routing
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === Packet.HeaderType.TO_ADDRESS;
+        return headerField === Packet.HeaderType.TO_ADDRESS;
       })) {
     logger.error("Packet specification does not have a toAddress field.");
   }
 
   // Require FROM_ADDRESS for auto-DNS tasks
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === Packet.HeaderType.FROM_ADDRESS;
+        return headerField === Packet.HeaderType.FROM_ADDRESS;
       })) {
     logger.error("Packet specification does not have a fromAddress field.");
   }
@@ -9751,19 +9948,54 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
     // Find the lowest unused integer address starting at 2
     // Non-optimal, but should be okay since our address list should not exceed 10.
-    var newAddress = 1;
-    while (contains(addressList, newAddress)) {
-      newAddress++;
+    var newAddressPart = 1;
+    var localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
+    while (contains(addressList, localNetworkAddress)) {
+      newAddressPart++;
+      localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
     }
 
-    wire.localAddress = newAddress;
+    wire.localAddress = localNetworkAddress;
     wire.localHostname = hostname;
-    wire.remoteAddress = ROUTER_LOCAL_ADDRESS;
+    wire.remoteAddress = self.getAddress();
     wire.remoteHostname = self.getHostname();
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
-  });
+  }.bind(this));
+};
+
+/**
+ * Generate an address matching the level's configured address format, that
+ * falls within this router's local network and ends in the given value.
+ * @param {number} lastPart
+ * @returns {string}
+ * @private
+ */
+NetSimRouterNode.prototype.makeLocalNetworkAddress_ = function (lastPart) {
+  var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+  var usedLastPart = false;
+  var usedRouterID = false;
+
+  return addressFormat.split(/(\D+)/).reverse().map(function (part) {
+    var bitWidth = parseInt(part, 10);
+    if (isNaN(bitWidth)) {
+      // This is a non-number part, pass it through to the result
+      return part;
+    }
+
+    if (!usedLastPart) {
+      usedLastPart = true;
+      return lastPart.toString();
+    }
+
+    if (!usedRouterID) {
+      usedRouterID = true;
+      return this.entityID.toString();
+    }
+
+    return '0';
+  }.bind(this)).reverse().join('');
 };
 
 /**
@@ -9785,7 +10017,7 @@ NetSimRouterNode.prototype.getAddressTable = function () {
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     addressTable.push({
       hostname: AUTO_DNS_HOSTNAME,
-      address: AUTO_DNS_RESERVED_ADDRESS,
+      address: this.getAutoDnsAddress(),
       isLocal: false,
       isDnsNode: true
     });
@@ -9825,11 +10057,11 @@ NetSimRouterNode.prototype.getAddressForNodeID_ = function (nodeID) {
  */
 NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   if (hostname === this.getHostname()) {
-    return ROUTER_LOCAL_ADDRESS;
+    return this.getAddress();
   }
 
   if (this.dnsMode === DnsMode.AUTOMATIC && hostname === AUTO_DNS_HOSTNAME) {
-    return AUTO_DNS_RESERVED_ADDRESS;
+    return this.getAutoDnsAddress();
   }
 
   var wireRow = _.find(this.myWireRowCache_, function (row) {
@@ -9846,17 +10078,17 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
  * Given a local network address, finds the node ID of the node at that
  * address.  Will return undefined if no node is found at the given address.
  *
- * @param {number} address
+ * @param {string} address
  * @returns {number|undefined}
  * @private
  */
 NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
-  if (address === ROUTER_LOCAL_ADDRESS) {
+  if (address === this.getAddress()) {
     return this.entityID;
   }
 
   if (this.dnsMode === DnsMode.AUTOMATIC &&
-      address === AUTO_DNS_RESERVED_ADDRESS) {
+      address === this.getAutoDnsAddress()) {
     return this.entityID;
   }
 
@@ -10180,7 +10412,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   // Find a connection to route this message to.
   try {
     var packet = new Packet(this.packetSpec_, message.payload);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by router");
     this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
@@ -10188,7 +10420,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     return;
   }
 
-  if (toAddress === ROUTER_LOCAL_ADDRESS) {
+  if (toAddress === this.getAddress()) {
     // This packet has reached its destination, it's done.
     logger.warn("Packet stopped at router.");
     this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
@@ -10275,7 +10507,7 @@ NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   var packet, toAddress;
   try {
     packet = new Packet(this.packetSpec_, messageRow.payload);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    toAddress = packet.getHeaderAsAddressString(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by auto-DNS: " + error);
     return false;
@@ -10285,7 +10517,7 @@ NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   // addressed to the DNS.
   return messageRow.toNodeID === this.entityID &&
       messageRow.fromNodeID === this.entityID &&
-      toAddress === AUTO_DNS_RESERVED_ADDRESS;
+      toAddress === this.getAutoDnsAddress();
 };
 
 /**
@@ -10343,7 +10575,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
   // Extract message contents
   try {
     packet = new Packet(this.packetSpec_, message.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    fromAddress = packet.getHeaderAsAddressString(Packet.HeaderType.FROM_ADDRESS);
     query = packet.getBodyAsAscii(BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
@@ -10369,14 +10601,14 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
   }
 
   responseHeaders = {
-    fromAddress: intToBinary(AUTO_DNS_RESERVED_ADDRESS, BITS_PER_NIBBLE),
-    toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
-    packetIndex: intToBinary(1, BITS_PER_NIBBLE),
-    packetCount: intToBinary(1, BITS_PER_NIBBLE)
+    fromAddress:this.getAutoDnsAddress(),
+    toAddress: fromAddress,
+    packetIndex: 1,
+    packetCount: 1
   };
 
   responseBinary = packet.encoder.concatenateBinary(
-      responseHeaders,
+      packet.encoder.makeBinaryHeaders(responseHeaders),
       asciiToBinary(responseBody, BITS_PER_BYTE));
 
   NetSimMessage.send(
@@ -10544,7 +10776,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
  * @param {logEntryRow} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
- * @param {packetHeaderSpec} [packetSpec] - Packet layout spec used to
+ * @param {Packet.HeaderType[]} [packetSpec] - Packet layout spec used to
  *        interpret the contents of the logged packet
  * @constructor
  * @augments NetSimEntity
@@ -10644,11 +10876,15 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
  * Get requested packet header field as a number.  Returns empty string
  * if the requested field is not in the current packet format.
  * @param {Packet.HeaderType} field
- * @returns {number|string}
+ * @returns {string}
  */
 NetSimLogEntry.prototype.getHeaderField = function (field) {
   try {
-    return this.packet_.getHeaderAsInt(field);
+    if (Packet.isAddressField(field)) {
+      return this.packet_.getHeaderAsAddressString(field);
+    } else {
+      return this.packet_.getHeaderAsInt(field).toString();
+    }
   } catch (e) {
     return '';
   }
@@ -10690,32 +10926,21 @@ NetSimLogEntry.prototype.getLocalizedStatus = function () {
 
 var netsimUtils = require('./netsimUtils');
 var dataConverters = require('./dataConverters');
-
-/**
- * Single packet header field type
- * @typedef {Object} packetHeaderField
- * @property {Packet.HeaderType} key - Used to identify the field, for parsing.
- * @property {number} bits - How long (in bits) the field is.
- */
-
-/**
- * Packet header specification type
- * Note: Always assumes variable-length body following the header.
- * @typedef {packetHeaderField[]} packetHeaderSpec
- */
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Wraps binary packet content with the format information required to
  * interpret it.
- * @param {packetHeaderSpec} formatSpec
+ * @param {Packet.HeaderType[]} formatSpec
  * @param {string} binary
  * @constructor
  */
 var Packet = module.exports = function (formatSpec, binary) {
-  validateSpec(formatSpec);
+  var level = netsimGlobals.getLevelConfig();
 
   /** @type {Packet.Encoder} */
-  this.encoder = new Packet.Encoder(formatSpec);
+  this.encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, formatSpec);
 
   /** @type {string} of binary content */
   this.binary = binary;
@@ -10736,6 +10961,26 @@ Packet.HeaderType = {
 };
 
 /**
+ * Whether the given header field type will use the address format.
+ * @param {Packet.HeaderType} headerType
+ * @returns {boolean}
+ */
+Packet.isAddressField = function (headerType) {
+  return headerType === Packet.HeaderType.TO_ADDRESS ||
+      headerType === Packet.HeaderType.FROM_ADDRESS;
+};
+
+/**
+ * Whether the given header field will use the packetCount bit width.
+ * @param {Packet.HeaderType} headerType
+ * @returns {boolean}
+ */
+Packet.isPacketField = function (headerType) {
+  return headerType === Packet.HeaderType.PACKET_INDEX ||
+      headerType === Packet.HeaderType.PACKET_COUNT;
+};
+
+/**
  * @param {Packet.HeaderType} headerType
  * @returns {string} of binary content
  */
@@ -10749,6 +10994,14 @@ Packet.prototype.getHeaderAsBinary = function (headerType) {
  */
 Packet.prototype.getHeaderAsInt = function (headerType) {
   return this.encoder.getHeaderAsInt(headerType, this.binary);
+};
+
+/**
+ * @param {Packet.HeaderType} headerType
+ * @returns {string}
+ */
+Packet.prototype.getHeaderAsAddressString = function (headerType) {
+  return this.encoder.getHeaderAsAddressString(headerType, this.binary);
 };
 
 /**
@@ -10767,50 +11020,74 @@ Packet.prototype.getBodyAsAscii = function (bitsPerChar) {
 };
 
 /**
- * Verify that a given format specification describes a valid format that
- * can be used by the Packet.Encoder object.
- * @param {packetHeaderSpec} formatSpec
- */
-var validateSpec = function (formatSpec) {
-  var keyCache = {};
-
-  for (var i = 0; i < formatSpec.length; i++) {
-
-    if (!formatSpec[i].hasOwnProperty('key')) {
-      throw new Error("Invalid packet format: Each field must have a key.");
-    }
-
-    if (!formatSpec[i].hasOwnProperty('bits')) {
-      throw new Error("Invalid packet format: Each field must have a length.");
-    }
-
-    if (keyCache.hasOwnProperty(formatSpec[i].key)) {
-      throw new Error("Invalid packet format: Field keys must be unique.");
-    } else {
-      keyCache[formatSpec[i].key] = 'used';
-    }
-
-    if (formatSpec[i].bits === Infinity) {
-      throw new Error("Invalid packet format: Infinity field length not allowed.");
-    }
-  }
-};
-
-/**
  * Given a particular packet format, can convert a set of fields down
  * into a binary string matching the specification, or extract fields
  * on demand from a binary string.
- * @param {packetHeaderSpec} formatSpec - Specification of packet format, an
+ * @param {addressHeaderFormat} addressFormat
+ * @param {number} packetCountBitWidth
+ * @param {Packet.HeaderType[]} headerSpec - Specification of packet format, an
  *        ordered set of objects in the form {key:string, bits:number} where
  *        key is the field name you'll use to retrieve the information, and
  *        bits is the length of the field.
  * @constructor
  */
-Packet.Encoder = function (formatSpec) {
-  validateSpec(formatSpec);
+Packet.Encoder = function (addressFormat, packetCountBitWidth, headerSpec) {
+  /** @type {string} */
+  this.addressFormat_ = addressFormat;
 
-  /** @type {packetHeaderSpec} */
-  this.formatSpec_ = formatSpec;
+  this.addressBitWidth_ = this.calculateBitWidth(this.addressFormat_);
+
+  /** @type {number} */
+  this.packetCountBitWidth_ = packetCountBitWidth;
+
+  /** @type {Packet.HeaderType[]} */
+  this.headerSpec_ = headerSpec;
+
+  this.validateSpec();
+};
+
+/**
+ * @param {addressHeaderFormat} addressFormat
+ * @private
+ */
+Packet.Encoder.prototype.calculateBitWidth = function (addressFormat) {
+  return addressFormat.split(/\D+/).reduce(function (prev, cur) {
+    return prev + (parseInt(cur, 10) || 0);
+  }, 0);
+};
+
+/**
+ * Verify that the configured format specification describes a valid format that
+ * can be used by the Packet.Encoder object.
+ */
+Packet.Encoder.prototype.validateSpec = function () {
+  var keyCache = {};
+
+  for (var i = 0; i < this.headerSpec_.length; i++) {
+    var isAddressField = Packet.isAddressField(this.headerSpec_[i]);
+    var isPacketField = Packet.isPacketField(this.headerSpec_[i]);
+
+    if (isAddressField && this.addressBitWidth_ === 0) {
+      throw new Error("Invalid packet format: Includes an address field but " +
+        " address format is invalid.");
+    }
+
+    if (isPacketField && this.packetCountBitWidth_ === 0) {
+      throw new Error("Invalid packet format: Includes a packet count field " +
+          " but packet field bit width is zero");
+    }
+
+    if (!isAddressField && !isPacketField) {
+      throw new Error("Invalid packet format: Unrecognized packet header field " +
+          this.headerSpec_[i]);
+    }
+
+    if (keyCache.hasOwnProperty(this.headerSpec_[i])) {
+      throw new Error("Invalid packet format: Field keys must be unique.");
+    } else {
+      keyCache[this.headerSpec_[i]] = 'used';
+    }
+  }
 };
 
 /**
@@ -10827,22 +11104,23 @@ Packet.Encoder.prototype.getHeader = function (key, binary) {
   // Strip whitespace so we don't worry about being passed formatted binary
   binary = dataConverters.minifyBinary(binary);
 
-  while (this.formatSpec_[ruleIndex].key !== key) {
-    binaryIndex += this.formatSpec_[ruleIndex].bits;
+  while (this.headerSpec_[ruleIndex] !== key) {
+    binaryIndex += this.getFieldBitWidth(this.headerSpec_[ruleIndex]);
     ruleIndex++;
 
-    if (ruleIndex >= this.formatSpec_.length) {
+    if (ruleIndex >= this.headerSpec_.length) {
       // Didn't find key
       throw new Error('Key "' + key + '" not found in packet spec.');
     }
   }
 
   // Read value
-  var bits = binary.slice(binaryIndex, binaryIndex + this.formatSpec_[ruleIndex].bits);
+  var bitWidth = this.getFieldBitWidth(this.headerSpec_[ruleIndex]);
+  var bits = binary.slice(binaryIndex, binaryIndex + bitWidth);
 
   // Right-pad with zeroes to desired size
-  if (this.formatSpec_[ruleIndex].bits !== Infinity) {
-    while (bits.length < this.formatSpec_[ruleIndex].bits) {
+  if (bitWidth !== Infinity) {
+    while (bits.length < bitWidth) {
       bits += '0';
     }
   }
@@ -10860,6 +11138,18 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
 };
 
 /**
+ * Retrieve an address header as a string, so we can give the multi-part
+ * representation.
+ * @param {Packet.HeaderType} key
+ * @param {string} binary for whole packet
+ * @returns {string}
+ */
+Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
+  return dataConverters.binaryToAddressString(
+      this.getHeader(key, binary), this.addressFormat_);
+};
+
+/**
  * Skip over headers given in spec and return remainder of binary which
  * must be the message body.
  * @param {string} binary - entire packet as a binary string
@@ -10867,17 +11157,16 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
  */
 Packet.Encoder.prototype.getBody = function (binary) {
   return dataConverters.minifyBinary(binary)
-      .slice(Packet.Encoder.getHeaderLength(this.formatSpec_));
+      .slice(this.getHeaderLength());
 };
 
 /**
- * @param {packetHeaderSpec} formatSpec
  * @returns {number} How many bits the header takes up
  */
-Packet.Encoder.getHeaderLength = function (formatSpec) {
-  return formatSpec.reduce(function (prev, cur) {
-    return prev + cur.bits;
-  }, 0);
+Packet.Encoder.prototype.getHeaderLength = function () {
+  return this.headerSpec_.reduce(function (prev, cur) {
+    return prev + this.getFieldBitWidth(cur);
+  }.bind(this), 0);
 };
 
 /**
@@ -10892,6 +11181,23 @@ Packet.Encoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
 };
 
 /**
+ * @param {Packet.HeaderType} headerType
+ * @returns {number} how many bits that field should take in the packet header
+ */
+Packet.Encoder.prototype.getFieldBitWidth = function (headerType) {
+  if (Packet.isAddressField(headerType)) {
+    return this.addressBitWidth_;
+  }
+
+  if (Packet.isPacketField(headerType)) {
+    return this.packetCountBitWidth_;
+  }
+
+  // Should never get here.
+  throw new Error("Unable to select a bit-width for field " + headerType);
+};
+
+/**
  * Given a "headers" object where the values are numbers, returns a corresponding
  * "headers" object where the values have all been converted to binary
  * representations at the appropriate width.  Only header fields that appear in
@@ -10901,13 +11207,28 @@ Packet.Encoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
  */
 Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
   var binaryHeaders = {};
-  this.formatSpec_.forEach(function (headerField){
-    if (headers.hasOwnProperty(headerField.key)) {
-      binaryHeaders[headerField.key] = dataConverters.intToBinary(
-          headers[headerField.key], headerField.bits);
+  this.headerSpec_.forEach(function (headerField){
+    if (headers.hasOwnProperty(headerField)) {
+      // Convert differently for address and packet fields?
+      if (Packet.isAddressField(headerField)) {
+        binaryHeaders[headerField] = this.addressStringToBinary(headers[headerField]);
+      } else {
+        binaryHeaders[headerField] = dataConverters.intToBinary(
+            headers[headerField], this.getFieldBitWidth(headerField));
+      }
     }
-  });
+  }, this);
   return binaryHeaders;
+};
+
+/**
+ * Convert an address string (possibly multi-part) into binary based on the
+ * configured address format.
+ * @param {string} address
+ * @returns {string} binary representation
+ */
+Packet.Encoder.prototype.addressStringToBinary = function (address) {
+  return dataConverters.addressStringToBinary(address, this.addressFormat_);
 };
 
 /**
@@ -10927,21 +11248,23 @@ Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
 Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
   var parts = [];
 
-  this.formatSpec_.forEach(function (fieldSpec) {
+  this.headerSpec_.forEach(function (fieldSpec) {
+    var fieldWidth = this.getFieldBitWidth(fieldSpec);
+
     // Get header value from provided headers, if it exists.
     // If not, we'll start with an empty string and pad it to the correct
     // length, below.
-    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec.key) ?
-        binaryHeaders[fieldSpec.key] : '';
+    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec) ?
+        binaryHeaders[fieldSpec] : '';
 
     // Right-truncate to the desired size
-    fieldBits = fieldBits.slice(0, fieldSpec.bits);
+    fieldBits = fieldBits.slice(0, fieldWidth);
 
     // Left-pad to desired size
-    fieldBits = netsimUtils.zeroPadLeft(fieldBits, fieldSpec.bits);
+    fieldBits = netsimUtils.zeroPadLeft(fieldBits, fieldWidth);
 
     parts.push(fieldBits);
-  });
+  }, this);
 
   parts.push(body);
 
@@ -10949,7 +11272,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 };
 
 
-},{"./dataConverters":222,"./netsimUtils":230}],193:[function(require,module,exports){
+},{"./dataConverters":222,"./netsimGlobals":228,"./netsimUtils":230}],193:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11151,11 +11474,16 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
     return false;
   }
 
-  var levelConfig = netsimGlobals.getLevelConfig();
-
-  // Permissible connection limited by level configuration
   var isClient = (connectionTarget.getNodeType() === NodeType.CLIENT);
   var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
+
+  // Can't connect to full routers
+  if (isRouter && connectionTarget.isFull()) {
+    return false;
+  }
+
+  // Permissible connection limited by level configuration
+  var levelConfig = netsimGlobals.getLevelConfig();
   var allowClients = levelConfig.canConnectToClients;
   var allowRouters = levelConfig.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
@@ -11254,6 +11582,7 @@ var nodeToRowMetadata = function (node) {
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
     status: node.getStatus(),
+    isFull: (node.getNodeType() === NodeType.ROUTER) && node.isFull(),
     canConnectToNode: controller.canConnectToNode(node)
   };
 };
@@ -11318,16 +11647,16 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
 }
 
 function writeHeader(headerText) {
-  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((125,  headerText )), '</th>\n    </tr>\n  ');127;
+  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((126,  headerText )), '</th>\n    </tr>\n  ');128;
 }
 
 function writeEmptyRow(contents) {
   contents = utils.valueOr(contents, '');
-  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (134,  contents ), '</td>\n    </tr>\n  ');136;
+  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (135,  contents ), '</td>\n    </tr>\n  ');137;
 }
 
 function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
-  ; buf.push('\n    <tr>\n      <td nowrap>', escape((142,  nodeName )), '</td>\n      <td>', (143,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');145;
+  ; buf.push('\n    <tr>\n      <td nowrap>', escape((143,  nodeName )), '</td>\n      <td>', (144,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');146;
           var markup = '';
           if (buttonType === 'join-button') {
             markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
@@ -11335,17 +11664,23 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
             markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
           } else if (buttonType === 'cancel-button') {
             markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+          } else if (buttonType === 'full-button') {
+            markup = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
           }
-        ; buf.push('\n        ', (155,  markup ), '\n      </td>\n    </tr>\n  ');158;
+        ; buf.push('\n        ', (158,  markup ), '\n      </td>\n    </tr>\n  ');161;
 }
 
-; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((163,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');167;
+; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((166,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');170;
         // Primary lobby list
         writeHeader(i18n.lobby());
         lobbyRows.forEach(function (row) {
           var buttonType;
-          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
-            buttonType = 'join-button';
+          if (!controller.hasOutgoingRequest()) {
+            if (row.isFull) {
+              buttonType = 'full-button';
+            } else if (row.canConnectToNode) {
+              buttonType = 'join-button';
+            }
           }
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });
@@ -11789,7 +12124,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
   /**
-   * @type {number}
+   * @type {string}
    * @private
    */
   this.address_ = undefined;
@@ -11993,6 +12328,9 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   }
 };
 
+/**
+ * @param {string} address
+ */
 NetSimVizNode.prototype.setAddress = function (address) {
   this.address_ = address;
   this.updateAddressDisplay();
@@ -13334,11 +13672,10 @@ var NetSimWire = module.exports = function (shard, wireRow) {
 
   /**
    * Assigned local addresses for the ends of this wire.
-   * When connected to a router, remoteAddress is always 1.
-   * @type {number}
+   * @type {string}
    */
   this.localAddress = wireRow.localAddress;
-  /** @type {number} */
+  /** @type {string} */
   this.remoteAddress = wireRow.remoteAddress;
 
   /**
@@ -14419,6 +14756,19 @@ require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
 
 /**
+ * @typedef {string} addressHeaderFormat
+ * A string indicating the parts of an address field in the packet header,
+ * their respective byte-widths, and the separators to be used when converting
+ * binary to a readable format.
+ * Examples:
+ * "4" indicates a single 4-byte number, e.g. 5 / 0101
+ * "8.4" indicates an 8-byte number followed by a 4-byte number, separated
+ *   by a period, e.g. 1.1 / 000000010001 or 18.9 / 00010010 1001
+ * "8.8.8.8" would be an IPv4 address, e.g.
+ *   127.0.0.1 / 01111111 00000000 00000000 00000001
+ */
+
+/**
  * Converts an As and Bs string into its most compact representation, forced
  * to uppercase.
  * @param {string} abString
@@ -14745,6 +15095,106 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   return chars.join('');
 };
 
+/**
+ * Converts binary to an address string using the provided address format.
+ * @param {string} binaryString
+ * @param {addressHeaderFormat} addressFormat
+ * @returns {string}
+ */
+exports.binaryToAddressString = function (binaryString, addressFormat) {
+  var binary = exports.minifyBinary(binaryString);
+  if (binary.length === 0) {
+    return '';
+  }
+
+  var indexIntoBinary = 0;
+
+  // Parentheses in the split() regex cause the dividing elements to be captured
+  // and also included in the return value.
+  return addressFormat.split(/(\D+)/).map(function (formatPart) {
+    var bitWidth = parseInt(formatPart, 10);
+    if (isNaN(bitWidth)) {
+      // Pass non-number parts of the format through, so we use the original
+      // entered characters/layout for formatting.
+      return formatPart;
+    }
+
+    var binarySlice = binary.substr(indexIntoBinary, bitWidth);
+    var intVal = binarySlice.length > 0 ?
+        exports.binaryToInt(binarySlice) : 0;
+    indexIntoBinary += bitWidth;
+    return intVal.toString();
+  }).join('');
+};
+
+/**
+ * Converts a formatted address string (decimal numbers with separators) into
+ * binary with bit-widths for each part matching the given format.
+ * @param {string} addressString
+ * @param {addressHeaderFormat} addressFormat
+ * @returns {string}
+ */
+exports.addressStringToBinary = function (addressString, addressFormat) {
+  if (addressString.length === 0) {
+    return '';
+  }
+
+  // Actual user input, converted to a number[]
+  var addressParts = addressString.toString().split(/\D+/).map(function (stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  // Format, converted to a number[] where the numbers are bit-widths
+  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var partValue;
+  var binary = '';
+  for (var i = 0; i < partWidths.length; i++) {
+    partValue = i < addressParts.length ? addressParts[i] : 0;
+    binary = binary + exports.intToBinary(partValue, partWidths[i]);
+  }
+  return binary;
+};
+
+/**
+ * Convert a binary string to a formatted representation, with chunks that
+ * correspond to the parts of the address header.
+ * @param {string} binaryString
+ * @param {addressHeaderFormat} addressFormat
+ */
+exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
+  var binary = exports.minifyBinary(binaryString);
+
+  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var chunks = [];
+  var index = 0;
+  partWidths.forEach(function (bitWidth) {
+    var next = binary.substr(index, bitWidth);
+    if (next.length > 0) {
+      chunks.push(next);
+    }
+    index += bitWidth;
+  });
+
+  var next = binary.substr(index);
+  if (next.length > 0) {
+    chunks.push(next);
+  }
+
+  return chunks.join(' ');
+};
+
 
 },{"../utils":284,"./netsimUtils":230}],153:[function(require,module,exports){
 /* jshint
@@ -15010,6 +15460,38 @@ exports.deserializeNumber = function (storedNum) {
 };
 
 /**
+ * Helper for converting from an older header-spec format to a new, simpler one.
+ * Old format: {key:{string}, bits:{number}}[]
+ * New format: string[]
+ * If we detect the old format, we return a spec in the new format.
+ * @param {Array} spec
+ * @returns {Array}
+ */
+exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
+  var foundOldFormat = false;
+  var scrubbedSpec = [];
+  spec.forEach(function (specEntry) {
+    if (typeof specEntry === 'string') {
+      // This is new new format, we can just copy it over.
+      scrubbedSpec.push(specEntry);
+    } else if (specEntry !== null && typeof specEntry === 'object') {
+      // This is the old {key:'', bits:0} format.  We just want the key.
+      scrubbedSpec.push(specEntry.key);
+      foundOldFormat = true;
+    }
+  });
+
+  // Issue a warning if an old format got converted, so we know to update
+  // the level.
+  if (foundOldFormat) {
+    logger.warn("Converting old header specification format to new format." +
+        " This level should be updated to use the new format.");
+  }
+
+  return scrubbedSpec;
+};
+
+/**
  * @param {netsimLevelConfiguration} levelConfig
  * @returns {netsimLevelConfiguration} same thing, but with certain values
  *          converted or cleaned.
@@ -15017,6 +15499,17 @@ exports.deserializeNumber = function (storedNum) {
  */
 exports.scrubLevelConfiguration_ = function (levelConfig) {
   var scrubbedLevel = _.clone(levelConfig, true);
+
+  // Convert old header spec format to new header spec format
+  scrubbedLevel.routerExpectsPacketHeader =
+      exports.scrubHeaderSpecForBackwardsCompatibility(
+          scrubbedLevel.routerExpectsPacketHeader);
+  scrubbedLevel.clientInitialPacketHeader =
+      exports.scrubHeaderSpecForBackwardsCompatibility(
+          scrubbedLevel.clientInitialPacketHeader);
+
+  // Coerce certain values to string that might have been mistaken for numbers
+  scrubbedLevel.addressFormat = scrubbedLevel.addressFormat.toString();
 
   // Explicitly list fields that we suspect may have a string value that
   // needs to be converted to a number, like "Infinity"
@@ -15031,7 +15524,7 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
   scrubbedLevel.defaultRouterMemory = exports.deserializeNumber(
       scrubbedLevel.defaultRouterMemory);
 
-  // Generate a warning if we see a possible missed conversion (development aid)
+  // Generate a warning if we see a possible missed string-to-number conversion
   Object.keys(scrubbedLevel).filter(function (key) {
     // Ignore level params with underscores, they are the dashboard versions
     // of the camelCase parameters that the app actually uses.

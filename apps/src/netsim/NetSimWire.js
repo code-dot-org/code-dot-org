@@ -40,11 +40,10 @@ var NetSimWire = module.exports = function (shard, wireRow) {
 
   /**
    * Assigned local addresses for the ends of this wire.
-   * When connected to a router, remoteAddress is always 1.
-   * @type {number}
+   * @type {string}
    */
   this.localAddress = wireRow.localAddress;
-  /** @type {number} */
+  /** @type {string} */
   this.remoteAddress = wireRow.remoteAddress;
 
   /**

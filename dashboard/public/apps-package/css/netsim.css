@@ -218,7 +218,7 @@
     border: none; }
   #netsim .netsim-lobby-panel .button-column {
     width: 1px;
-    text-align: right; }
+    text-align: center; }
   #netsim .netsim-panel.netsim-lobby div.panel-body {
     padding: 1em; }
   #netsim .netsim-lobby-list {
