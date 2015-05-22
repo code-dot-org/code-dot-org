@@ -1,6 +1,6 @@
 var React = require('react');
 
-var ZIndexRow = React.createClass({
+var ZOrderRow = React.createClass({
   propTypes: {
     // TODO - is passing the element and modifying it good React? I think no
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
@@ -36,20 +36,6 @@ var ZIndexRow = React.createClass({
         <td>
           <button
             style={squareButton}
-            onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
-            disabled={isFrontMost}
-            title='Send to Front'>
-            <i className="fa fa-angle-double-right"></i>
-          </button>
-          <button
-            style={squareButton}
-            onClick={this.props.onDepthChange.bind(this, element, 'forward')}
-            disabled={isFrontMost}
-            title='Send Forward'>
-            <i className="fa fa-angle-right"></i>
-          </button>
-          <button
-            style={squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
             title='Send to Back'>
@@ -62,10 +48,24 @@ var ZIndexRow = React.createClass({
             title='Send Backward'>
             <i className="fa fa-angle-left"></i>
           </button>
+          <button
+            style={squareButton}
+            onClick={this.props.onDepthChange.bind(this, element, 'forward')}
+            disabled={isFrontMost}
+            title='Send Forward'>
+            <i className="fa fa-angle-right"></i>
+          </button>
+          <button
+            style={squareButton}
+            onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
+            disabled={isFrontMost}
+            title='Send to Front'>
+            <i className="fa fa-angle-double-right"></i>
+          </button>  
         </td>
       </tr>
     );
   }
 });
 
-module.exports = ZIndexRow;
+module.exports = ZOrderRow;

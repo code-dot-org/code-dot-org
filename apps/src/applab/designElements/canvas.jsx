@@ -1,7 +1,7 @@
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
-var ZIndexRow = require('./ZIndexRow.jsx');
+var ZOrderRow = require('./ZOrderRow.jsx');
 
 var CanvasProperties = React.createClass({
   propTypes: {
@@ -43,7 +43,7 @@ var CanvasProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
-        <ZIndexRow
+        <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
       </table>);
