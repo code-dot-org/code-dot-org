@@ -1,3 +1,5 @@
+/* global $ */
+
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');

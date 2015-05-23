@@ -36,10 +36,6 @@ var DEFAULT_TOOLTIP_CONFIG = {
  * @param {Editor} dropletEditor
  */
 DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
   var aceEditor = dropletEditor.aceEditor;
 
   var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
