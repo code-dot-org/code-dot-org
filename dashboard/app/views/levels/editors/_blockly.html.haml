@@ -12,6 +12,20 @@
 .field
   = f.label :instructions
   = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+.field
+  = f.label :markdown_instructions
+  %p When specified, this will render as the full in place of the instructions on the popup.
+  %p Note: since markdown instructions do not get translated, do not use outside of middle school, high school and PD.
+  = f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
+  #markdown-instructions-preview
+  %script{src: '/blockly/js/marked/marked.js', type: 'text/javascript'}
+  :javascript
+    codeMirror('markdown_instructions', 'markdown', function (editor, change) {
+      $('#markdown-instructions-preview').html(marked(editor.getValue()));
+    });
+-# Markdown instructions here
+-# Potentially use http://git.razko.nl/InlineAttachment/
+-# for codemirror
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
