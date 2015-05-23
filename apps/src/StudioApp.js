@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, requirejs */
+/* global Blockly, ace:true, $, requirejs, marked */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -714,7 +714,19 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
+  var renderedMarkdown;
+  if (marked && level.markdownInstructions) {
+    renderedMarkdown = marked(level.markdownInstructions);
+  }
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+    puzzleTitle: msg.puzzleTitle({
+      stage_total: level.stage_total,
+      puzzle_number: level.puzzle_number
+    }),
+    instructions: level.instructions,
+    renderedMarkdown: renderedMarkdown,
+    aniGifURL: level.aniGifURL
+  });
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({

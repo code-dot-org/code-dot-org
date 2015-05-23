@@ -1,9 +1,11 @@
 <% var msg = require('../locale'); %>
 
-<p class='dialog-title'><%= msg.puzzleTitle(locals) %></p>
-<% if (locals.instructions) { -%>
+<p class='dialog-title'><%= locals.puzzleTitle %></p>
+<% if (locals.renderedMarkdown) { -%>
+  <%- locals.renderedMarkdown %>
+<% } else if (locals.instructions) { -%>
   <p><%= locals.instructions %></p>
-<% }; -%>
+<% } -%>
 <% if (locals.aniGifURL) { -%>
   <img class="aniGif example-image" src='<%= locals.aniGifURL %>'/>
-<% }; -%>
+<% } -%>

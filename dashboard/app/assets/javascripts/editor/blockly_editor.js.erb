@@ -1,4 +1,5 @@
 //= require codemirror
+//= require codemirror/modes/markdown
 //= require codemirror/addons/edit/closetag
 //= require codemirror/addons/edit/matchtags
 //= require codemirror/addons/edit/matchbrackets
@@ -7,7 +8,7 @@
 //= require codemirror/modes/javascript
 //= require_self
 //= require jquery.handsontable.full
-function codeMirror(name, mode) {
+function codeMirror(name, mode, callback) {
     var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name), {
         mode: mode,
         htmlMode: false,
@@ -15,4 +16,7 @@ function codeMirror(name, mode) {
         matchTags: {bothTags: true},
         autoCloseTags: true
     });
+  if (callback) {
+    editor.on('change', callback)
+  }
 }
