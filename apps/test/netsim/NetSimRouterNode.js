@@ -23,6 +23,7 @@ var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
 var dataConverters = require('@cdo/apps/netsim/dataConverters');
+var netsimNodeFactory = require('@cdo/apps/netsim/netsimNodeFactory');
 
 var addressStringToBinary = dataConverters.addressStringToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
@@ -386,7 +387,7 @@ describe("NetSimRouterNode", function () {
       });
 
       // Tell router to simulate for local node
-      router.initializeSimulation(localClient.entityID);
+      router.initializeSimulation(localClient.entityID, netsimNodeFactory);
 
       // Manually connect nodes
       var wire;
@@ -1207,6 +1208,128 @@ describe("NetSimRouterNode", function () {
             localClient.getHostname() + ':' + localClient.address + ' ' +
             remoteA.getHostname() + ':' + remoteA.address);
       });
+    });
+  });
+
+  describe("routing to other routers", function () {
+    var addressFormat, packetHeaderSpec, encoder, routerA, routerB,
+        clientA, clientB;
+
+    var getRows = function (shard, table) {
+      var rows;
+      shard[table].readAll(function (err, result) {
+        rows = result;
+      });
+      return rows;
+    };
+
+    var assertFirstMessageProperty = function (propertyName, expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      assert(_.isEqual(messages[0][propertyName], expectedValue),
+          "Expected first message." + propertyName + " to be " +
+          expectedValue + ", but got " + messages[0][propertyName]);
+    };
+
+    var getLatestLogRow = function () {
+      var logs = getRows(testShard, 'logTable');
+      if (logs.length === 0) {
+        throw new Error("No rows in log table, unbale to retrieve latest message.");
+      }
+
+      return logs[logs.length - 1];
+    };
+
+    beforeEach(function () {
+      // Spec reversed in test vs production to show that it's flexible
+      addressFormat = '4.4';
+      packetHeaderSpec = [
+        Packet.HeaderType.FROM_ADDRESS,
+        Packet.HeaderType.TO_ADDRESS
+      ];
+      netsimGlobals.getLevelConfig().addressFormat = addressFormat;
+      netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
+      encoder = new Packet.Encoder(addressFormat, 0, packetHeaderSpec);
+
+      // Make routers
+      NetSimRouterNode.create(testShard, function (e, r) {
+        routerA = r;
+      });
+
+      NetSimRouterNode.create(testShard, function (e, r) {
+        routerB = r;
+      });
+
+      // Make clients
+      NetSimLocalClientNode.create(testShard, "clientA", function (e, n) {
+        clientA = n;
+      });
+
+      NetSimLocalClientNode.create(testShard, "clientB", function (e, n) {
+        clientB = n;
+      });
+
+      clientA.initializeSimulation(null, null);
+      clientB.initializeSimulation(null, null);
+
+      clientA.connectToRouter(routerA);
+      clientB.connectToRouter(routerB);
+
+      // Make sure router initial time is zero
+      routerA.tick({time: 0});
+      routerB.tick({time: 0});
+    });
+
+    it ("can send a message to client on another router", function () {
+      var logRow;
+
+      // This test reads better with slower routing.
+      // It lets you see each step, when with Infinite bandwidth you get
+      // several things happening on one tick, depending on how simulating
+      // routers are registered with each client.
+      routerA.setBandwidth(50); // Requires 1 second for routing
+      routerB.setBandwidth(25); // Requires 2 seconds for routing, buts starts
+                                // on first tick
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: clientB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('wop'));
+      console.log("Send message " + packetBinary.length);
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+
+      // t=1; router A picks up message, forwards to router B
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      logRow = getLatestLogRow();
+      assertEqual(routerA.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerA.entityID);
+      assertFirstMessageProperty('toNodeID', routerB.entityID);
+
+      // t=2; router B picks up message, forwards to client B
+      clientA.tick({time: 2000});
+      assertTableSize(testShard, 'logTable', 2);
+      logRow = getLatestLogRow();
+      assertEqual(routerB.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerB.entityID);
+      assertFirstMessageProperty('toNodeID', clientB.entityID);
     });
   });
 });

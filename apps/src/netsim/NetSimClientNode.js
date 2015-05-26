@@ -17,6 +17,7 @@ var i18n = require('./locale');
 var NodeType = require('./netsimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
+var NetSimWire = require('./NetSimWire');
 
 /**
  * Client model of simulated node
@@ -45,43 +46,66 @@ NetSimClientNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimClientNode.prototype.getStatus = function () {
-  // Determine status based on cached outgoing wire
+  var outgoingWire = this.getOutgoingWire();
+  if (!outgoingWire) {
+    return i18n.notConnected();
+  }
+
+  // Get remote node for display name / hostname
+  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
+    return nodeRow.id === outgoingWire.remoteNodeID;
+  });
+
+  var remoteNodeName = i18n.unknownNode();
+  if (remoteNodeRow) {
+    remoteNodeName = remoteNodeRow.name;
+  }
+
+  // Check for connection state
+  var mutualConnection;
+  if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
+    mutualConnection = true;
+  } else {
+    var cachedWireRows = this.shard_.wireTable.readAllCached();
+    mutualConnection = _.find(cachedWireRows, function (wireRow) {
+      return wireRow.localNodeID === outgoingWire.remoteNodeID &&
+          wireRow.remoteNodeID === outgoingWire.localNodeID;
+    });
+  }
+
+  if (mutualConnection) {
+    return i18n.connectedToNodeName({nodeName:remoteNodeName});
+  }
+  return i18n.connectingToNodeName({nodeName:remoteNodeName});
+};
+
+/**
+ * Determine what address has been assigned to this client on its outgoing
+ * wire.
+ * @returns {string|undefined}
+ */
+NetSimClientNode.prototype.getAddress = function () {
+  var wire = this.getOutgoingWire();
+  if (!wire) {
+    return undefined;
+  }
+  return wire.localAddress;
+};
+
+/**
+ * Based on cached wire data, retrieve this node's outgoing wire.
+ * @returns {NetSimWire} null if wire does not exist.
+ */
+NetSimClientNode.prototype.getOutgoingWire = function () {
   var cachedWireRows = this.shard_.wireTable.readAllCached();
   var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
     return wireRow.localNodeID === this.entityID;
   }, this);
-
   if (outgoingWireRow) {
-    // Get remote node for display name / hostname
-    var cachedNodeRows = this.shard_.nodeTable.readAllCached();
-    var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
-      return nodeRow.id === outgoingWireRow.remoteNodeID;
-    });
-
-    var remoteNodeName = i18n.unknownNode();
-    if (remoteNodeRow) {
-      remoteNodeName = remoteNodeRow.name;
-    }
-
-    // Check for connection state
-    var mutualConnection;
-    if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
-      mutualConnection = true;
-    } else {
-      mutualConnection = _.find(cachedWireRows, function (wireRow) {
-        return wireRow.localNodeID === outgoingWireRow.remoteNodeID &&
-            wireRow.remoteNodeID === outgoingWireRow.localNodeID;
-      });
-    }
-
-    if (mutualConnection) {
-      return i18n.connectedToNodeName({nodeName:remoteNodeName});
-    } else {
-      return i18n.connectingToNodeName({nodeName:remoteNodeName});
-    }
+    return new NetSimWire(this.shard_, outgoingWireRow);
   }
-
-  return i18n.notConnected();
+  return null;
 };
 
 /**
