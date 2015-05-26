@@ -97,16 +97,37 @@ en:
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
+      CSPPD PD Phases:
+        CSPPD PD Phases: CSPPD PD Phases
+      CSPPD PD overview:
+        CSP PD Overview: CSP PD Overview
+      CSPPD PT description:
+        Performance Tasks: Performance Tasks
+        description of the CSP PT: description of the CSP PT
       CSPPD Welcome Video:
         Welcome Video: Welcome Video
         Welcome to Online PD for CSP: Welcome to Online PD for CSP
       CSPPD curriculum overview:
         CSP Curriculum Overview: CSP Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
+      CSPPD end of p1:
+        CSPPD end of p1: CSPPD end of p1
+      CSPPD facilitators: {}
+      CSPPD forum introduction:
+        CSP Forum Introductions: CSP Forum Introductions
+        Forum Introductions: Forum Introductions
+      CSPPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: description here
+      CSPPD instructional materials:
+        CSPPD instructional materials: CSPPD instructional materials
+      CSPPD postsurvey: {}
       CSPPD presurvey: {}
       CSPPD program overview:
         CSP Program Overview: CSP Program Overview
         Overview of CSP Program: Overview of CSP Program
+      CSPPD teaching strategies video:
+        CSPPD teaching strategies video: CSPPD teaching strategies video
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -443,6 +464,13 @@ en:
       U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      U3L02 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      U3L03 Student Lesson Introduction:
+        Creating Procedures 1: Creating Procedures 1
+        Creating Procedures Part 1: Creating Procedures Part 1
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -541,6 +569,14 @@ en:
         While Loops and Counting: While Loops and Counting
       U3L30 Student Lesson Introduction:
         An Introduction to Arrays: An Introduction to Arrays
+      U3L31 Student Lesson Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      U3L32 Student Lesson Introduction:
+        Images are Arrays: Images are Arrays
+      U3L33 Student Lesson Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      U3L34 Student Lesson Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -667,9 +703,153 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      u3L04 Student Lesson Introduction:
+        Creating Procedures II: Creating Procedures II
+        Creating Procedures Part 2: Creating Procedures Part 2
+        description here: description here
       unique level name here:
         description here: description here
         title: title
+    match:
+      CSPPD phase matching:
+        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum
+        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
+        In-person wrap up to the first year of teaching the course: In-person wrap up to the first year of teaching the course
+        Matching PD Phases and Descriptions: Matching PD Phases and Descriptions
+        Online introduction to PD program: Online introduction to PD program
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+      CSPPD unit matching:
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Unit 1
+        Unit 2: Unit 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        data extraction, modeling, and processing: data extraction, modeling, and processing
+        foundations in the digital representation of information: foundations in the digital representation of information
+        javascript and computer programming principles: javascript and computer programming principles
+        javascript programming and computer programming principles: javascript programming and computer programming principles
+        planning, organizing, and completion of performance tasks: planning, organizing, and completion of performance tasks
+        programming principles and javascript: programming principles and javascript
+        structure and design of the internet: structure and design of the internet
+    multi:
+      PDK5 What is CS:
+        'A computer program, or "code," is:': 'A computer program, or "code," is:'
+        Computer Science is More than Programming: Computer Science is More than Programming
+        a part inside of a computer: a part inside of a computer
+        a secret password: a secret password
+        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
+        a week-long course to learn about computers: a week-long course to learn about computers
+      U1L10 Assessment 1:
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+      U1L10 Assessment 2:
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question # 2': 'Question # 2'
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        ? "The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the \"Shift\" key at the same time (Assume that all other keys are ignored in this question). How many bits would you need to encode every character that could be typed on this keyboard?  \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+        : "The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the \"Shift\" key at the same time (Assume that all other keys are ignored in this question). How many bits would you need to encode every character that could be typed on this keyboard?  \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+      U1L11 Assessment 1:
+        15 bits: 15 bits
+        21 bits: 21 bits
+        3 bits: 3 bits
+        30 bits: 30 bits
+        8 bits: 8 bits
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
+      U1L11 Assessment 2:
+        '"Apple" written as an ASCII number is:': '"Apple" written as an ASCII number is:'
+        065 108 108 111 119: 065 108 108 111 119
+        065 110 110 105 101: 065 110 110 105 101
+        065 112 112 108 101: 065 112 112 108 101
+        097 108 108 111 119: 097 108 108 111 119
+        097 112 112 108 101: 097 112 112 108 101
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'The word "Apple" translated into its ASCII number equivalent is:': 'The word "Apple" translated into its ASCII number equivalent is:'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
+        ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+        : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+      U3L01 Assessment2:
+        Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms.: Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms.
+        ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
+        : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
+        ? Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. Which of these is the LEAST basic action in making a sandwich for lunch?
+        : Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. Which of these is the LEAST basic action in making a sandwich for lunch?
+        Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the other, faces together
+        Place slices of bread face side up: Place slices of bread face side up
+        Serve with soup: Serve with soup
+        Spread 1 slice with jelly: Spread 1 slice with jelly
+        Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
+        Which of these is the LEAST basic action in making a sandwich for lunch?: Which of these is the LEAST basic action in making a sandwich for lunch?
+        Why Programming? Question 2: Why Programming? Question 2
+        description here: description here
+      U3L03 Assessment:
+        'Creating Procedures 1: Assessment': 'Creating Procedures 1: Assessment'
+        'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
+        It is easier to divide the work among several programmers.: It is easier to divide the work among several programmers.
+        Logical names make the program code more intuitive/understandable.: Logical names make the program code more intuitive/understandable.
+        The "spoken-language style" makes errors more logically recognizable.: The "spoken-language style" makes errors more logically recognizable.
+        There are fewer lines in the program to debug.: There are fewer lines in the program to debug.
+        They create shorter algorithms that sound like spoken language.: They create shorter algorithms that sound like spoken language.
+        They reduce the level of program abstraction.: They reduce the level of program abstraction.
+        Which of the following is NOT an advantage of using well-designed procedures and functions?: Which of the following is NOT an advantage of using well-designed procedures and functions?
+      U3L04 Assessment2:
+        'Creating Procedures II: Question 2': 'Creating Procedures II: Question 2'
+        'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
+        The name of program it was originally designed for: The name of program it was originally designed for
+        The name of the function: The name of the function
+        The post-state: The post-state
+        The pre-state: The pre-state
+        What it does: What it does
+        ? Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
+        : Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        'Arrays: Question 1': 'Arrays: Question 1'
+        Cannot be determined: Cannot be determined
+        The last index of an array is 7. How many elements are in the array?: The last index of an array is 7. How many elements are in the array?
+        cannot be determined: cannot be determined
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        'Arrays: Question 2': 'Arrays: Question 2'
+        Cannot be determined: Cannot be determined
+        What is the index of the third element in an array?: What is the index of the third element in an array?
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+        'Arrays: Question 3': 'Arrays: Question 3'
+        Cannot be determined: Cannot be determined
+        There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -777,6 +957,16 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSPPD PD goals:
+        Documenting Your PD Goals: Documenting Your PD Goals
+      CSPPD course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
+      CSPPD impact in program:
+        Impact of Computing: Impact of Computing
+      CSPPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and PD
+      CSPPD strategies:
+        Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -860,6 +1050,12 @@ en:
       U1L10 Journal Free Response:
         'Free Response: Encoding Text': 'Free Response: Encoding Text'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+      U1L11 Collaboration Reflection:
+        '': ''
+        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
+        What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?: What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
+        ? "What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it? \n\nDescribe one instance in which collaboration with a partner influenced the final protocol your team produced."
+        : "What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it? \n\nDescribe one instance in which collaboration with a partner influenced the final protocol your team produced."
       U1L11 Reflection Free Response:
         'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -920,13 +1116,50 @@ en:
         Respond to the following question.: Respond to the following question.
       U1L8 Free Response Reflection:
         Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete the Sending Numbers Checklist and then respond to the following prompt.
+        Complete the Sending Numbers Rubric and then respond to the following prompt.: Complete the Sending Numbers Rubric and then respond to the following prompt.
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
+      U1L8 Free Response2:
+        Enter answer here: Enter answer here
+        How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
+        'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
         'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+        'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+      U3L01 Assessment1:
+        Why Programming? Question 1: Why Programming? Question 1
+      U3L01 Assessment3:
+        Why Programming? Question 3: Why Programming? Question 3
+      U3L01 Free Response Getting Started:
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      U3L01 Free Response Wrap Up:
+        Why Programming? Wrap Up: Why Programming? Wrap Up
+      U3L02 Assessment:
+        Assessment Question: Assessment Question
+      U3L02 Free Response Getting Started:
+        'Programming with Simple Commands: Getting Started': 'Programming with Simple Commands: Getting Started'
+      U3L02 Free Response Wrap Up:
+        'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
+      U3L03 Free Response Getting Started:
+        'Creating Procedures 1: Getting Started': 'Creating Procedures 1: Getting Started'
+        'Creating Procedures Part 1: Getting Started': 'Creating Procedures Part 1: Getting Started'
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L03 Free Response Wrap Up:
+        Creating Procedures 1 Wrap Up: Creating Procedures 1 Wrap Up
+        Creating Procedures Part 1 Wrap Up: Creating Procedures Part 1 Wrap Up
+      U3L04 Assessment1:
+        'Creating Procedures II: Question 1': 'Creating Procedures II: Question 1'
+        'Creating Procedures Part 1: Question 1': 'Creating Procedures Part 1: Question 1'
+      U3L04 Free Response Getting Started:
+        'Creating Procedures II: Getting Started': 'Creating Procedures II: Getting Started'
+        'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
       U3L04 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L04 Free Response Wrap Up:
+        'Creating Procedures II: Wrap Up': 'Creating Procedures II: Wrap Up'
+        'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
       U3L05 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L06 Free Response Reflection:
@@ -1017,6 +1250,23 @@ en:
         'While Loops and Counting: Wrap Up': 'While Loops and Counting: Wrap Up'
       U3L30 Free Response Getting Started:
         'Arrays: Getting Started': 'Arrays: Getting Started'
+      U3L30 Free Response Wrap Up:
+        'Arrays: Wrap Up': 'Arrays: Wrap Up'
+      U3L31 Assessment1:
+        Enter prompt here: Enter prompt here
+        'Photo Album: Question 1': 'Photo Album: Question 1'
+      U3L31 Assessment2:
+        'Photo Album: Question 2': 'Photo Album: Question 2'
+      U3L31 Assessment3:
+        'Photo Album: Question 3': 'Photo Album: Question 3'
+      U3L31 Free Response Getting Started:
+        'Photo Album: Getting Started': 'Photo Album: Getting Started'
+      U3L32 Free Response Getting Started:
+        'Images are Arrays: Getting Started': 'Images are Arrays: Getting Started'
+      U3L33 Free Response Getting Started:
+        'Altering Images: Getting Started': 'Altering Images: Getting Started'
+      U3L34 Free Response Getting Started:
+        'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7
