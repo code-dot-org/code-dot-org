@@ -1,7 +1,7 @@
 "sk":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Opravte prosím nasledujúce chyby:'
   activerecord:
     errors:
       messages:
@@ -65,8 +65,8 @@
     need_confirmation: Neprišli ti pokyny na potvrdenie?
     need_unlock: Neprišli ti pokyny na odomknutie?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} študentov sa už zaregistrovalo.'
+    teacher_count: '%{count} učitelov sa už zaregistrovalo.'
     overview_student: Vytvor si účet a sleduj ako postupuješ. Tvoj email sa používa
       hlavne na prihlásenie a na získanie zabudnutého hesla. Viac informácií nájdeš
       na našej stránke zásad <a href="http://code.org/privacy">Ochrany súkromia</a>.
@@ -173,7 +173,7 @@
     success: Vaša cena bola úspešne uplatnená, pozrite si nižšie uvedený kód.
     error: Vaša cena nemôže byť uplatnená, prosím skúste to znova.
     error_us_only: Ponúkaná cena je len pre USA užívateľov.
-    error_not_earned: You have not yet earned this prize.
+    error_not_earned: Ešte si nezískal túto cenu.
     error_already_redeemed: Your prize has already been redeemed.
     no_prizes_available: Ľutujeme, ale momentálne máme k dispozícii žiadne ceny.
     teacher_info_required: 'Učiteľské ceny vyžadujú informácie o názve a adrese školy:'
@@ -549,6 +549,8 @@
     wrong_body: Zadaná odpoveď je nesprávna.  Prosím skúste to znova!
     correct_title: Správne
     correct_body: To je správna odpoveď.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!

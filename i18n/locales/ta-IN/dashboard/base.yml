@@ -475,6 +475,8 @@ ta:
     wrong_body: "The answer you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"

@@ -288,18 +288,23 @@
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videogiochi e Piani Cartesiani
-        desc: Descrizione della lezione Videogiochi e Piani Cartesiani
+        desc: "Scopri come i video games che ami sono controllati dall'algerbra! \nScopri
+          come le espressioni algebriche e il piano cartesiano possono aiutarci a
+          capire il funzionamento dei videogiochi, dopodichè inizierai a progettare
+          il tuo videogioco.\n"
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contratti
-        desc: 'Descrizione della lezione "senza rete": Contratti'
+        title: Contratti, Dominio e Range
+        desc: I contratti ci danno l'opportunità di capire e discutere le funzioni.
+          In questa lezione vedremo come i contratti possono aiutarci a capire i nuovi
+          linguaggi di programmazione e le funzioni.
         video: alg_5_contracts
       DesignRecipe:
         title: La Ricetta della Progettazione
         desc: 'Descrizione della lezione: La Ricetta della Progettazione'
         video: alg_8_design_recipe
       Booleans:
-        title: Valori Booleani
+        title: Valori booleani e logica
         desc: 'Descrizione della lezione: Valori Booleani'
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
@@ -307,6 +312,6 @@
         desc: 'Descrizione della lezione: Istruzioni Condizionali e Funzioni a Tratti'
         video: alg_10_conditionals
       CollisionDetection:
-        title: Rilevamento delle Collisioni
+        title: Rilevamento delle collisioni e il teorema di Pitagora
         desc: 'Descrizione della lezione: Rilevamento delle Collisioni'
         video: alg_16_biggame_collision_detection

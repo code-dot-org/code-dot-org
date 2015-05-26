@@ -9,7 +9,7 @@
   "levelIncompleteError":"Dein Ausdruck erfüllt nicht das Ziel.",
   "missingFunctionError":"You must define a function named {functionName}.",
   "missingVariableX":"Bei deinem Ausdruck fehlt die Variable {var}.",
-  "reinfFeedbackMsg":"Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!",
+  "reinfFeedbackMsg":"Hier ist deine Berechnung! Arbeite weiter oder gehe zur nächsten Aufgabe!",
   "yourExpression":"Dein Ausdruck:",
   "wrongInput":"Du rufst deine Funktion mit einem falschen Wert auf.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",

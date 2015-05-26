@@ -1,7 +1,7 @@
 "de":
   errors:
     messages:
-      not_saved: 'Bitte korrigieren Sie folgende Fehler:'
+      not_saved: 'Bitte korrigiere die folgenden Fehler:'
   activerecord:
     errors:
       messages:
@@ -34,7 +34,7 @@
   appname: Code.org
   stage: Teil
   stage_number: Level %{number}
-  puzzle: Puzzle
+  puzzle: Aufgabe
   trophies: Trophäen
   courses: Kurse
   of: von
@@ -74,8 +74,8 @@
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen
       und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: Du kannst <a target="_blank" href="http://learn.code.org">die
-      verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu
-      speichern musst Du dich anmelden.
+      verschiedenen Level und Aufgaben</a> durchsuchen, aber um Deinen Fortschritt
+      zu speichern musst Du dich anmelden.
     teacher_educator_guide: Lehrer-Handbuch
     teacher_pitch: Lehrer-Registrierung für Code.org
     teacher_title: Registrierung (Lehrer)
@@ -143,12 +143,12 @@
       %{name}
   follower:
     invite_sent: Einladung gesendet
-    added_teacher: '%{name} wurde als Ihr Lehrer hinzugefügt'
+    added_teacher: '%{name} wurde als dein Lehrer hinzugefügt'
     registered: Sie haben Sich für %{section_name} registriert.
     error:
-      signed_in: Bitte melden Sie sich ab bevor Sie fortfahren
+      signed_in: Bitte melde dich ab bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
-      username_in_use: '%{username} ist bereits vergeben, bitte wählen Sie einen anderen'
+      username_in_use: '%{username} ist bereits vergeben, bitte wähle einen anderen'
       no_teacher: Es konnte niemand angemeldet mit '%{teacher_email_or_code}' gefunden
         werden. Bitten Sie bitte denjenigen sich hier registrieren und versuchen Sie
         es dann erneut.
@@ -159,7 +159,7 @@
         Abschnitt teilnehmen.
     mail:
       invite_student:
-        subject: Besuchen Sie eine Klasse von %{teacher_name} auf Code.org!
+        subject: Besuche eine Klasse von %{teacher_name} auf Code.org!
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als dein(e)
           Schüler(in) zugeordnet.'
@@ -170,7 +170,7 @@
     error:
       access_denied: Sie haben keinen Zugang zu den Statistiken dieser Person
   redeem_prizes:
-    title: 'Preise Einlösen: %{name}'
+    title: 'Gewinne einlösen: %{name}'
     provider: 'Anbieter:'
     code: 'Code:'
     redeem_header: 'Zum einlösen:'
@@ -210,7 +210,7 @@
     msg:
       choose: 'Wähle einen Preis:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Sie haben etwas gewonnen! (nur für amerikanische Studenten)
+      earned: Du hast etwas gewonnen! (nur für amerikanische Studenten)
       not_earned_title: Beende das Tutorial um eine Belohnung zu bekommen (nur für
         U.S. Schüler)
       not_earned: 'Lerne alle Konzepte der Informatik, sammle alle %{num_trophies}
@@ -250,7 +250,7 @@
     new_model: Neu %{model}
     show: Anzeigen
     edit: Bearbeiten
-    edit_model: Bearbeiten Sie %{model}
+    edit_model: Bearbeite %{model}
     update: Aktualisierung
     destroy: Zerstören
     back: Zurück
@@ -262,7 +262,7 @@
   nav:
     header:
       finished_hoc: Ich habe meine Programmierstunde beendet.
-      sign_in_to_save: Melden Sie sich an um Ihren Fortschritt zu speichern
+      sign_in_to_save: Melde dich an um deinen Fortschritt zu speichern
       free_play:
         playlab: Eine App machen
         artist: Zeichne etwas
@@ -272,7 +272,7 @@
       label: Hallo %{username}
       stats: Mein Fortschritt
       settings: Mein Account
-      prizes: Preise
+      prizes: Gewinne
       logout: Abmelden
       signin: Anmelden
       signup: Registrieren
@@ -284,7 +284,7 @@
       close: schließen
       mastery: Konzepte
       puzzle_map: Level
-      prizes: Sammeln Sie alle %{total_trophies} Trophäen und gewinnen Sie Preise!
+      prizes: Sammle alle %{total_trophies} Trophäen und gewinne Preise!
       prize_earned: Alle %{total_trophies} Trophäen gesammelt. Preis gewonnen!
       prize_us_only: (nur für Schüler der USA)
       prizes_link: Mehr Informationen
@@ -312,7 +312,7 @@
       name: Name
       username: Benutzername
       password: Passwort
-      manage: Studenten verwalten
+      manage: Schüler verwalten
       dashboard: Gehen Sie zum Lehrer-Dashboard!
       add: Schüler hinzufügen
       remove: Schüler entfernen
@@ -357,7 +357,7 @@
     panel:
       answer_viewer: Answer Viewer
       student: Schüler
-      try_it_yourself: Try it yourself
+      try_it_yourself: Versuche es selbst
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -384,13 +384,13 @@
     all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
-    student_reg_link: Studenten Anmeldung
+    student_reg_link: Registrierung (Schüler)
     teacher_reg_link: Lehrer Anmeldung
     signin_directions: Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> Lehrer
       können den Fortschritt der gesamten Klasse verfolgen.
     teacher_dashboard: Fortschrittsanzeige einsehen
     teacher_student_count_one: Sie haben %{count} Schüler.
-    teacher_student_count: Sie haben %{count} Studenten.
+    teacher_student_count: Sie haben %{count} Schüler.
     teacher_averages: Im Durchschnitt haben Ihre Schüler %{trophy_average} von %{trophy_max}
       "Concept Mastery" Trophäen erreicht.
     teacher_print_certificates: Drucken sie Zertifikate für Schüler die diesen Kurs
@@ -398,9 +398,9 @@
     teacher_read_blog: Lese Nachrichten und Neuigkeiten zu unseren Materialien in
       unserem Lehrer-Blog
     classroom: Ihr Klassenzimmer
-    student_progress: Ihr Lernfortschritt
-    student_stats: Sie haben %{trophy_count} von %{trophy_max} "Concept Mastery" Trophäen.
-    student_left_off: 'Wo Sie aufgehört haben:'
+    student_progress: Dein Lernfortschritt
+    student_stats: Du hast %{trophy_count} von %{trophy_max} "Concept Mastery" Trophäen.
+    student_left_off: 'Wo du aufgehört hast:'
     student_finished: Du hast alle Tutorials abgeschlossen. Wähle eine andere Klasse
       %{online_link} oder in deiner %{local_school_link}
     local_school: örtliche Schule
@@ -423,7 +423,7 @@
     heading_apps: <h2>Spass für</h2><h1>Alle</h1>
     heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
     your_gallery: Galerie
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Probiere einen Kurs bei Code Studio
   gender:
     male: Männlich
     female: Weiblich
@@ -439,15 +439,15 @@
       Arts Inc. Alle Rechte vorbehalten.
     powered_by_aws: Betrieben von Amazon Web Services
     feedback: Feedback geben
-    translate: Helfen Sie uns in Ihre Sprache zu übersetzen
+    translate: Hilf uns in deine Sprache zu übersetzen
     support: Unterstützung
     support_url: http://support.code.org
     tos: Bedingungen
     privacy: Datenschutzerklärung
     secure: Sichere Version
   reference_area:
-    title: Brauchen Sie Hilfe?
-    subtitle: Sehen Sie sich diese Videos und Hinweise an
+    title: Brauchst du Hilfe?
+    subtitle: Schau dir diese Videos und Hinweise an
     teacher: Lösung sehen
     auth_error: Du bist nicht berechtigt, die Lösung zu sehen.
     submit: Position des Künstler aktualisieren
@@ -476,7 +476,7 @@
         Seite zu öffnen</a>, aber dies könnte Fehler hervorrufen.
       button: Liste aller unterstützten Browser
   slow_loading: Das benötigt länger als normal...
-  try_reloading: Versuchen Sie die Seite neu zu laden
+  try_reloading: Versuche die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
   lesson_plan: Stundenplan
@@ -485,11 +485,11 @@
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
   share_code:
-    title: Klicken Sie auf "Ausführen", um das Programm in Aktion zu sehen
+    title: Klicke auf "Ausführen", um das Programm in Aktion zu sehen
     bounce_og_title: Schau dir mein Sprung-Spiel an
     flappy_og_title: Schau dir mein Flappy Spiel an
     studio_og_title: Teste meinen Labor-App
-    check_out_what_i_made: Sieh was ich gemacht habe
+    check_out_what_i_made: Schau dir an was ich gemacht habe
     og_description: Ich habe meinen Code selbst mit Code.org erstellt
     phone_number_not_allowed: Es sieht aus als wäre eine Telefonnummer darin. Versuche
       den Text zu verändern.
@@ -505,7 +505,7 @@
     manage: Baue Levels
     view: Anzeigen
     back: Zurück zu den Skripten
-    success: Sie bearbeiteten die Bausteine erfolgreich.
+    success: Du hast erfolgreich die Bausteine bearbeitet.
     level:
       create: Erstelle ein neues Level
       current: Aktuelle Levels
@@ -568,6 +568,8 @@
       es erneut!
     correct_title: Richtig
     correct_body: Das ist die richtige Antwort.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Falsche Lösung
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche
@@ -576,7 +578,7 @@
     correct_body: Das ist die richtige Antwort.
   contract_match:
     wrong_title: Falsche Antwort
-    badname: Your contract has the wrong name.
+    badname: Dein Vertrag hat den falschen Namen.
     badname_case: Function names are case-sensitive. Try changing the case of your
       contract's name.
     badrange: Your contract has the wrong range.
@@ -586,8 +588,8 @@
       in the wrong order.
   text_match:
     placeholder: Gebe hier deine Antwort ein
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Danke
+    open_response_body: Danke für deine Antwort!
   dialog:
     ok: OK
   time:
@@ -634,8 +636,7 @@
     message: Wir arbeiten daran, den Schutz ihrer Privatsphäre noch besser zu gewährleisten.
       Um das zu tun müssen bereits registrierte Benutzer ihr Alter eingeben.<br/>Selbstverständlich
       wird code.org diese Information nicht an Drittparteien weitergeben.
-    sign_out: Solten sie ihr Alter nicht angeben wollen können sie sich noch<a href="%{url}">
-      abmelden</a>.
+    sign_out: Solltest du dein Alter nicht angeben wollen kannst du dich noch <a href="%{url}">abmelden</a>.
   zendesk_too_young_message: Tut uns leid, jüngere Benutzer dürfen sich für unsere
     Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a>
     durchsuchen ohne dich anzumelden oder frag deine Eltern oder Lehrer uns zu kontaktieren.

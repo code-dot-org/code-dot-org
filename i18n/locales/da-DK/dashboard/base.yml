@@ -474,6 +474,8 @@ da:
     wrong_body: 'Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!'
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Forkert løsning
     wrong_body: 'Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!'

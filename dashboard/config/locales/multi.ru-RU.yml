@@ -2,27 +2,27 @@
   data:
     multi:
       2-3 artist debug multi 1:
-        Artist Debugging Multiple Choice One: 'Художник: Отладка: Выбор варианта -
-          1'
+        Artist Debugging Multiple Choice One: Исполнитель откладывает один вариянт
+          из нескольких
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Why won't this circle go all the way around?: Почему этот круг проходит не
-          весь путь вокруг?
+        Why won't this circle go all the way around?: Почему этот круг не до конца
+          круглый?
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: 'Художник: Циклы: Выбор варианта'
+        Artist Loops Multiple Choice: 'артист выбирает ответ из вариантов '
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
-        Which shape is made by this loop?: Какая фигура нарисована этим циклом?
+        Which shape is made by this loop?: Какая форма производится этом цикле?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: 'Художник: Циклы: Выбор варианта'
+        Artist Loops Multiple Choice: 'артист выбирает ответ из вариантов '
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500
         Which shape is made by this program?: Какая фигура нарисована этой программой?
@@ -104,12 +104,10 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Начать
           с квадрата <br/>Поместить треугольник над квадратом<br/>Поместить треугольник
           под квадратом
-        0: '? Начните с квадрата <br/> Поместите треугольник справа от квадрата<br/>
-          поместите параллелограмм ниже квадрата<br/> Поместите треугольник справа
-          от параллелограмма'
-        1: ': Начните с квадрата <br/> Поместите треугольник справа от квадрата<br/>
-          Поместите параллелограмм ниже квадрата<br/>Поместите треугольник справа
-          от параллелограмма'
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Начните с квадрата<br/>Поместите треугольник справа от квадрата<br/>Поместите
+          параллелограмм ниже квадрата<br/>Поместите треугольник справа от параллелограмма
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Начните
           с квадрата <br/> Поместите параллелограмм над квадратом<br/> Поместите треугольник
           справа от параллелограмма
@@ -199,8 +197,8 @@
         a string: строка
         boolean: логическое значение
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Green colored blocks
-          are associated with __________ ?
+        Green colored blocks are associated with __________ ?: Зеленого цвета блоки,
+          связанныe с __________?
         a image: изображение
         a number: число
         a string: строка
@@ -231,7 +229,7 @@
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: 'Художник: Циклы: Выбор варианта'
+        Artist Loops Multiple Choice: 'артист выбирает ответ из вариантов '
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
         Which blocks will create the design?: Какие блоки создадут проект?
@@ -410,6 +408,14 @@
         3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
+      Choose 2 Test:
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
+          lines of code should be removed so the program will work as intended? Select
+          <u>two</u> answers
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
       Coordinates Multi 1:
         Video game Coordinates: Видеоигра Координаты
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
@@ -421,7 +427,12 @@
         The unicorn's y value changes: У единорога изменяется значение координаты
           Y
         The unicorn moves to the left: Единорог двигается влево
-        The unicorn's x value decreases: Значение x единорога уменьшается
+        The unicorn's x value increases: The unicorn's x value increases
+      ECSPD2 question:
+        title: название
+        Question: Вопрос
+        wrong answer: неправильный ответ
+        right answer: правильный ответ
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Рост Мышления в Классе
         How can we use praise to encourage Growth Mindset in our students?: Как мы
@@ -824,8 +835,8 @@
       Multi Strings Images 1:
         Strings and Images Multiple Choice: 'Несколько вариантов: строки и изображения'
         http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
-        Which of these Evaluation Blocks will draw the image: Какой из этих оценочных
-          блоков нарисуют изображение
+        Which of these Evaluation Blocks will draw the image on the left?: Which of
+          these Evaluation Blocks will draw the image on the left?
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
@@ -841,8 +852,8 @@
           Посещения
       PDAlg Blocks Video:
         Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        In which are of the screen do you click blocks together to write a program?: In
-          which are of the screen do you click blocks together to write a program?
+        In which area of the screen do you click blocks together to write a program?: In
+          which area of the screen do you click blocks together to write a program?
         Play Area: Play Area
         Toolbox: Панели инструментов
         Workspace: Workspace
@@ -1261,10 +1272,27 @@
         3 bits: 3 бита
         2 bits: 2 бита
         1 bit: 1 bit
+      U1L4 Multiple Choice:
+        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination
+          and Binary Messages'
+        0: '? A binary message consisting of four bits was sent to you by a friend.
+          The message was supposed to be ABAB. Unfortunately, your friend sent the
+          message at 1/2 the bit rate you agreed upon. What message did you receive
+          instead?'
+        1: ': A binary message consisting of four bits was sent to you by a friend.
+          The message was supposed to be ABAB. Unfortunately, your friend sent the
+          message at 1/2 the bit rate you agreed upon. What message did you receive
+          instead?'
+        ABAB: ABAB
+        AABB: AABB
+        AAAA: AAAA
+        BBBB: BBBB
+        ABBB: ABBB
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Выбор варианта: системы счисления'
-        If you just had a circle and a square, how many 3-shape rows could you make?: Если
-          у вас есть круг и квадрат, сколько рядов 3-формы вы могли бы сделать?
+        If you just had a circle and a square, how many 3-shape permutations could you make?: If
+          you just had a circle and a square, how many 3-shape permutations could
+          you make?
         4: '4'
         6: '6'
         8: '8'
@@ -1290,16 +1318,16 @@
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two
           buttons are given the same id?
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript
           is flexible. Two buttons with same id will respond to a single event handler
-          associated with that id.
+          associated with that id
         A warning message will appear for the second button that that id is already in use: A
           warning message will appear for the second button that that id is already
           in use
         The first button created with the id will work, the other will not: The first
           button created with the id will work, the other will not
-        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The
-          JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS
+        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The
+          JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS
           compliant
         Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two
           buttons with same id are linked during the running of the program. Clicking
@@ -1365,6 +1393,15 @@
         conditional: conditional
         variable: variable
         both: both
+      U3L19 - MC what are values of abc:
+        So, what's the answer?: So, what's the answer?
+        Choose the best answer: Choose the best answer
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13
+        a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7: a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
+        Code does not execute due to error: Code does not execute due to error
       U3L21 Assessment 1:
         More Variables Question 1: More Variables Question 1
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED

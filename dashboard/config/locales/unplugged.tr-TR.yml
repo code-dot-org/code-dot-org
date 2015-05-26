@@ -237,7 +237,7 @@
           detaya ihtiyaç duyacaktır.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
+        title: Zarf değişkenleri
         desc: Variables allow for a lot of freedom in computer science.  This lesson
           helps to explain what variables are and how we can use them in many different
           ways. Use this activity before (or in conjunction with) the lesson on abstraction
@@ -277,7 +277,7 @@
         desc: Video Games and Coordinate Planes lesson description
         video: alg_11_coordinate_plane
       Contracts:
-        title: Teknikler
+        title: Sözleşmeler, etki alanı ve aralığı
         desc: Contracts unplugged lesson description
         video: alg_5_contracts
       DesignRecipe:

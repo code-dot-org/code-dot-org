@@ -339,10 +339,9 @@
         turtle_3_7: Aggiungi un parametro chiamato "lunghezza" alla funzione "disegna
           una casa" e costruisci una casa grande per l'elefante (con lati lunghi 150
           pixel)
-        turtle_3_8: Qui ci sono tutti i blocchi dell'esercizio precedente.  Modifica
-          "disegna una casa" in modo che finisca all'angolo inferiore destro dopo
-          aver disegnato una nuova casa. Utilizza la funzione così modificata per
-          disegnare tre case.
+        turtle_3_8: Modificare "disegnare una casa" così finisco all'angolo inferiore
+          destro dopo aver disegnato una nuova casa. Utilizzare questa funzione modificata
+          per disegnare tre case.
         turtle_3_9: Riesci a ricreare la funzione "disegna una casa" senza aiuto?
           Provaci e poi disegna una fila di case.
         turtle_3_10: Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare
@@ -708,34 +707,35 @@
         playlab_intro: Introduzione al Laboratorio
         playlab_events: 'Laboratorio: Eventi'
         playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        tutorial_puzzle_challenge: Tutorial Puzzle sfida
         infinity_playlab_intro: Play Lab - Introduzione
         infinity_playlab_events: Play Lab - Eventi
         infinity_playlab_repeat_forever: Play Lab - Ripeti per sempre
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
+        csp_concept_rgb: Un po ' sui pixel
+        csp_pixelation_color_1: Color pixelation widget - parte 1
+        csp_pixelation_color_2: Color pixelation widget - parte 2
+        csp_pixelation_color_3: Color pixelation widget - parte 3
+        csp_pixelation_bw: Bianco e nero pixelation widget
         csp_U1L14_tipstricks: Unità 1 Lezione 14 consigli per l'insegnante
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_textcompression: Widget di compressione del testo
+        alg_1_intro: CS in Algebra - introduzione
+        alg_2_eval_block: CS in Algebra - -Blocchi di valutazione
+        alg_3_pemdas: CS in Algebra - ordine delle operazioni
+        alg_4_data_types: CS in Algebra - Tipi di dato
+        alg_5_contracts: CS in Algebra - Contratti
+        alg_6_variables: CS in Algebra - Variabili
+        alg_7_function: CS in Algebra - Funzioni
+        alg_8_design_recipe: CS in Algebra - ricetta di Design
+        alg_9_booleans: CS in Algebra - Valori booleani
+        alg_10_conditionals: CS in Algebra - Condizioni
+        alg_11_coordinate_plane: CS in Algebra - Piano Cartesiano
+        alg_12_biggame_variables: CS in Algebra - Big Game Variabili
+        alg_13_biggame_animation: CS in Algebra - Big Game Animazioni
+        alg_14_biggame_booleans: CS in Algebra - Big Game booleani
+        alg_15_biggame_update_player: CS in Algebra - Big Game Player Update
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Rilevamento delle
+          collisioni
+        alg_17_sambat_compound_booleans: CS in Algebra - Booleani composti
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -849,7 +849,7 @@
         Infinity_move_right_runbutton: Aggiungi Sposta blocco qui
         Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
           l'alto quando viene premuta la freccia in su?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Utilizzare queste frecce per guidare
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
           evento.
         Infinity_repeat_callout: Posiziona Sposta blocchi qui dentro
