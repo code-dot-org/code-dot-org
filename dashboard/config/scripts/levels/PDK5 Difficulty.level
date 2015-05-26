@@ -6,11 +6,16 @@
     "title": "Degree of Difficulty",
     "options": {
       "success_title": "Awesome!",
-      "success_body": "Thanks for your response"
+      "success_body": "Thanks for your response",
+      "skip_sound": true
     },
     "height": "200",
     "content1": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
-    "placeholder": "Your thoughts here"
+    "placeholder": "Your thoughts here",
+    "type": "TextMatch",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "34859979cd6a7e1abe6cb48791da9229"
 }]]></config>

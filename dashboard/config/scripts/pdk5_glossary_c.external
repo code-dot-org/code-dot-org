@@ -5,7 +5,7 @@ skip_dialog true
 markdown <<MARKDOWN
 ## Vocabulary
 
-Encouraging students to learn and use professional terms enables them to communicate correctly and efficiently with others and build their knowledge such that it can be further developed without having to relearn terms and concepts at a later time. The terms and concepts used in these courses are defined using words that most young students can understand.
+Encouraging young students to learn and use professional terms enables them to communicate with others and build their knowledge in computer science without having to relearn terms and concepts later. The terms and concepts used in these courses are defined using words that most young students should be able to understand.
 
 # Teaching Tip
 Best practice is to introduce the terms with easy-to-understand language, relate the terms to previous experiences, use the terms repeatedly beyond the lesson itself throughout the entire course (and in other situations) when appropriate, and reinforce students’ use in oral and written communication.
