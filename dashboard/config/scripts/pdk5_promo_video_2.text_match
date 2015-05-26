@@ -3,6 +3,10 @@ title 'Code Studio: Kid Tested, Teacher Approved!'
 placeholder 'My first impressions of Code Studio are...'
 success_title "Awesome!"
 success_body "Thanks for your response"
+css 'unplugged'
+
+skip_sound true
+
 height '200'
 markdown <<MARKDOWN
 <iframe width="640" height="390" src="https://youtubeeducation.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>

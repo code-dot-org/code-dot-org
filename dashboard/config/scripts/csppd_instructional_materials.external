@@ -1,0 +1,33 @@
+name 'CSPPD instructional materials'
+title 'CSPPD instructional materials'
+
+markdown <<MARKDOWN
+## CSP Instructional Materials
+
+We have build a set of instructional materials for each lesson or concept that will be taught in CSP. In the following levels, we are going to introduce all of the instructional materials that could be used for a lesson. The materials are summarized below.
+
+# Teacher lesson plans
+
+The lesson plan is a printable page that contains a summary of concepts, a set of resources, and a detailed description of the activities your students will do for the lesson. They are structured to be a good guide for teachers while being flexible enough for teachers to make decisions about what will work best for their students.
+
+# Student-facing activities
+
+There are several types of student-facing activities. You will be able to practice using all of them later in this PD.
+* Widgets
+* Unplugged activities
+* App-lab activities
+* Assessments
+* Projects
+
+# Content videos
+
+These videos are designed to be shown in the classroom. They explain key points behind certain concepts and are often taught by celebrities.
+
+# Video tutorials for tools
+
+These videos are designed for teacher use. They explain how to use the different teaching tools.
+
+# Teaching tip videos
+
+These videos are designed to help teachers introduce difficult concepts to the class.
+MARKDOWN

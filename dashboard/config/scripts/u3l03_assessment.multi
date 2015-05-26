@@ -1,0 +1,24 @@
+name 'U3L03 Assessment'
+title 'Creating Procedures Part 1: Assessment'
+
+question 'Which of the following is NOT an advantage of using well-designed procedures and functions?'
+wrong 'They create shorter algorithms that sound like spoken language.'
+
+
+wrong 'There are fewer lines in the program to debug.'
+
+
+wrong 'The “spoken-language style” makes errors more logically recognizable.'
+
+
+right 'They reduce the level of program abstraction.' 
+
+
+wrong 'It is easier to divide the work among several programmers.'
+
+
+wrong 'Logical names make the program code more intuitive/understandable.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
