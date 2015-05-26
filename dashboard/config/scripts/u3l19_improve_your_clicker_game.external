@@ -1,0 +1,33 @@
+name 'U3L19 - improve your clicker game'
+title 'U3L19 - improve your clicker game'
+description 'description here'
+
+markdown <<MARKDOWN
+### Programming Challenge
+
+Now, you'll finally get to modify your clicker game.  Making the minimum requirement might be pretty easy at this point.  Consider some of the enhancements suggested.
+
+#### Minimum requirement - Clicker version 1
+
+* Starting from your previous clicker app and use a variable to store a click counter. 
+* Declare and initialize your counter variable as a global variable
+* update your counter variable within the click event handler. 
+* A textLabel can be updated on each click to output the click counter value along with a message. 
+
+#### Enhancements
+
+There are lots of ways to enhance this app without needing your program to make decisions (we're going to learn how to make decisions next).  Here are some things you can do in no particular order...
+
+* Add a big image which can serve as a background image. If the player clicks on the background image they lose a point. (this is similar to the demonstration app you saw at the very beginning of the lesson).
+* Add a turtle which draws a vertical bar showing the score, or something else that shows something about the state of the game
+* Add a button that lets the user start over - reset the score.
+* Add another image that jumps around randomly, or appears and disappears that the user can click
+* Use arithmetic to change how the score is calculated with each click (e.g. rather than losing a point for doing something wrong, divide the score by 2).  
+* Add more and different event handlers that alter the score in different ways.
+* Use arithmetic to change the size of the image you need to click based on the score.  For example, make the image smaller and smaller as the score gets higher.
+
+
+
+
+
+MARKDOWN

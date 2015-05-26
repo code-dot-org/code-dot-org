@@ -563,6 +563,8 @@
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!

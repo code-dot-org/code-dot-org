@@ -547,6 +547,8 @@
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi përpiquni përsëri!
     correct_title: E saktë
     correct_body: Kjo është përgjigja e saktë.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Zgjidhje e pasaktë
     wrong_body: Zgjidhja që keni futur është e pasktë. Te lutem provo përsëri!

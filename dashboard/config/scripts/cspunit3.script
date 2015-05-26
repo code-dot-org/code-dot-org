@@ -151,10 +151,21 @@ level 'U3L19 - variable scope explanation pt2’
 level 'U3L19 - variable scope problem 2’
 level 'U3L19 - variable scope explanation pt3’
 level 'U3L19 - done with variables finally'
+level 'U3L19 - improve your clicker game'
+level 'U3L19 - final prompt'
 
 stage 'Conditional Basics'
 level 'U3L20 Student Lesson Introduction'
 level 'U3L20 Free Response Getting Started'
+level 'U3L20 Assessment1'
+level 'U3L20 Assessment2'
+level 'U3L20 Assessment3'
+level 'U3L20 Assessment4'
+level 'U3L20 Assessment5'
+level 'U3L20 Assessment6'
+level 'U3L20 Assessment7'
+level 'U3L20 Assessment8'
+level 'U3L20 Assessment9'
 level 'U3L20 Free Response Wrap Up' 
 
 stage 'More Variables (2 days)'
@@ -190,7 +201,11 @@ level 'U3L26 Free Response Getting Started'
 level 'U3L26 Free Response Wrap Up'
 
 stage 'Chatbot Challenge'
-level 'U1L1 Student Lesson Introduction'
+level 'U3L27 Student Lesson Introduction'
+level 'U3L27 Free Response Getting Started'
+level 'u3L27 Assessment1'
+level 'u3L27 Assessment2'
+level 'u3L27 Assessment3'
 
 stage 'While Loop Basics'
 level 'U3L28 Student Lesson Introduction'
@@ -198,7 +213,9 @@ level 'U3L28 Free Response Getting Started'
 level 'U3L28 Free Response Wrap Up'
 
 stage 'While Loops_ Counting Flips'
-level 'U1L1 Student Lesson Introduction'
+level 'U3L29 Student Lesson Introduction'
+level 'U3L29 Free Response Getting Started'
+level 'U3L29 Free Response Wrap Up'
 
 stage 'Arrays_ Intro'
 level 'U1L1 Student Lesson Introduction'

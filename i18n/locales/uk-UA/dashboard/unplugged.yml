@@ -190,9 +190,9 @@ uk:
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Умови та складні функції
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: 'Параметри, які ми передаємо функції, визначають результати, виходячи з певного жорсткого шаблону. Наприклад, нам потрібно, щоб параметри з певними значеннями визначали результати, використовуючи один шаблон, а інші значення - спричиняли використання іншого шаблону. В такому разі потрібно використати розгалуження...'
         video: alg_10_conditionals
       CollisionDetection:
         title: Виявлення Конфліктів та Теорема Піфагора
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        desc: "Визначення того, що об'єкти на екрані торкаються один одного є важливим аспектом більшості ігор. У цьому уроці ми розглянемо, як можна використати теорему Піфагора та формулу обчислення відстані між точками для того, щоб визначити, чи дві точки (чи ігрові персонажі) торкаються один одного."
         video: alg_16_biggame_collision_detection

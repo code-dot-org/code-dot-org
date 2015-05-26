@@ -6,6 +6,7 @@ var DesignProperties = module.exports = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
     handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired,
     onDone: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired
   },
@@ -20,7 +21,8 @@ var DesignProperties = module.exports = React.createClass({
 
     var propertiesElement = React.createElement(propertyClass, {
       element: this.props.element,
-      handleChange: this.props.handleChange
+      handleChange: this.props.handleChange,
+      onDepthChange: this.props.onDepthChange
     });
 
     // We provide a key to the outer div so that element foo and element bar are

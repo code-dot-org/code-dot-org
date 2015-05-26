@@ -1,6 +1,8 @@
+pd 'true'
+
 stage 'Introduction to PD'
 level 'PDK5 Intro C'
-level 'PDECS tour'
+level 'K5PD tour'
 level 'PDK5 CS Video'
 level 'PDK5 What is CS'
 level 'PDK5 Visual Languages'
