@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-24T00:39:05.913Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "Arrays and Loops: Altering Images",
+    "markdown": "## Unit 3: Lesson 33 - Arrays and Loops: Altering Images\n\n# Background\n\nA for-loop can be used to iterate through an image array. Cool visual effects can be achieved by changing targeted elements of the array. Specific color channels of an image can be modified by controlling the initial value and increment of an iterator variable.\n\n# Lesson\n\n* Create visual effects by alter the elements of an array.\n* Refine the visual effect by accessing specific color channels in the image. \n\n\n# Resources\nnone listed at this time\n  \n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "dsl_text": "name 'U3L33 Student Lesson Introduction'\r\ntitle 'Arrays and Loops: Altering Images'\r\n\r\nmarkdown <<MARKDOWN\r\n## Unit 3: Lesson 33 - Arrays and Loops: Altering Images\r\n\r\n# Background\r\n\r\nA for-loop can be used to iterate through an image array. Cool visual effects can be achieved by changing targeted elements of the array. Specific color channels of an image can be modified by controlling the initial value and increment of an iterator variable.\r\n\r\n# Lesson\r\n\r\n* Create visual effects by alter the elements of an array.\r\n* Refine the visual effect by accessing specific color channels in the image. \r\n\r\n\r\n# Resources\r\nnone listed at this time\r\n  \r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

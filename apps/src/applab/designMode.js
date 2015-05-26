@@ -4,6 +4,7 @@
 // works in our grunt build, but not in tests
 var React = require('react');
 var DesignProperties = require('./designProperties.jsx');
+var DesignToggleRow = require('./DesignToggleRow.jsx');
 var AssetManager = require('./assetManagement/AssetManager.jsx');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
@@ -18,7 +19,7 @@ var currentlyEditedElement = null;
  * @param event
  */
 designMode.onDivApplabClick = function (event) {
-  if ($('#designModeButton').is(':visible') ||
+  if (!Applab.isInDesignMode() ||
       $('#resetButton').is(':visible')) {
     return;
   }
@@ -343,11 +344,6 @@ designMode.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
-  var designModeButton = document.getElementById('designModeButton');
-  designModeButton.style.display = enable ? 'none' : 'block';
-  var codeModeButton = document.getElementById('codeModeButton');
-  codeModeButton.style.display = enable ? 'block' : 'none';
-
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
@@ -398,3 +394,56 @@ function makeDraggable (jq) {
     }
   });
 }
+
+designMode.configureDragAndDrop = function () {
+  // Allow elements to be dragged and dropped from the design mode
+  // element tray to the play space.
+  $('.new-design-element').draggable({
+    containment:"#codeApp",
+    helper:"clone",
+    appendTo:"#codeApp",
+    revert: 'invalid',
+    zIndex: 2,
+    start: function() {
+      studioApp.resetButtonClick();
+    }
+  });
+  var GRID_SIZE = 5;
+  $('#visualization').droppable({
+    accept: '.new-design-element',
+    drop: function (event, ui) {
+      var elementType = ui.draggable[0].dataset.elementType;
+
+      var div = document.getElementById('divApplab');
+      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+      var left = ui.position.left / xScale;
+      var top = ui.position.top / yScale;
+
+      // snap top-left corner to nearest location in the grid
+      left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+
+      designMode.createElement(elementType, left, top);
+    }
+  });
+};
+
+designMode.configureDesignToggleRow = function () {
+  var designToggleRow = document.getElementById('designToggleRow');
+  if (!designToggleRow) {
+    return;
+  }
+
+  // TODO (brent) - still need logic to generate list of screens, and rerender
+  // DesignToggleRow on changes
+  React.render(
+    React.createElement(DesignToggleRow, {
+      screens: ['screen1'],
+      onDesignModeButton: Applab.onDesignModeButton,
+      onCodeModeButton: Applab.onCodeModeButton
+    }),
+    designToggleRow
+  );
+};

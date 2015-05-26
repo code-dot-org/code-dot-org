@@ -5,7 +5,11 @@
   "properties": {
     "title": "Reflection: Sending Formatted Text",
     "content1": "Respond to this prompt or to another as directed by your teacher.",
-    "markdown": "How long did it take to send a formatted text message using your protocol? \n\nHow many extra characters (or bits) did your encoding scheme need to communicate the text?\n\n\n"
+    "markdown": "How long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n",
+    "type": "TextMatch",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "9201df57029e866ef65034bd0fe648ea"
 }]]></config>
