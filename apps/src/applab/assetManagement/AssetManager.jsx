@@ -1,6 +1,6 @@
 var React = require('react');
-var AssetsApi = require('./manageAssets/clientApi');
-var AssetRow = require('./manageAssets/assetRow.jsx');
+var AssetsApi = require('./clientApi');
+var AssetRow = require('./AssetRow.jsx');
 
 var errorMessages = {
   415: 'This type of file is not supported.',

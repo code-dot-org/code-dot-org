@@ -18,7 +18,7 @@ var PropertyRow = React.createClass({
   },
 
   handleButtonClick: function () {
-    designMode.showManageAssets(this.changeImage, 'image');
+    designMode.showAssetManager(this.changeImage, 'image');
   },
 
   changeImage: function (filename) {

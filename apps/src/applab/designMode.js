@@ -4,7 +4,7 @@
 // works in our grunt build, but not in tests
 var React = require('react');
 var DesignProperties = require('./designProperties.jsx');
-var ManageAssets = require('./manageAssets.jsx');
+var AssetManager = require('./assetManagement/AssetManager.jsx');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 
@@ -292,7 +292,7 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
-designMode.showManageAssets = function(assetChosen, typeFilter) {
+designMode.showAssetManager = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
@@ -302,7 +302,7 @@ designMode.showManageAssets = function(assetChosen, typeFilter) {
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
   });
-  React.render(React.createElement(ManageAssets, {
+  React.render(React.createElement(AssetManager, {
     typeFilter : typeFilter,
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
