@@ -19,7 +19,7 @@ var currentlyEditedElement = null;
  * @param event
  */
 designMode.onDivApplabClick = function (event) {
-  if (Applab.isInDesignMode() ||
+  if (!Applab.isInDesignMode() ||
       $('#resetButton').is(':visible')) {
     return;
   }
@@ -368,7 +368,7 @@ function makeDraggable (jq) {
   });
 }
 
-designMode.configureDragAnDrop = function () {
+designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
   $('.new-design-element').draggable({
