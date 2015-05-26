@@ -1055,7 +1055,7 @@ Applab.init = function(config) {
     }
     var designModeManageAssets = document.getElementById('design-manage-assets');
     if (designModeManageAssets) {
-      dom.addClickTouchEvent(designModeManageAssets, designMode.showManageAssets);
+      dom.addClickTouchEvent(designModeManageAssets, designMode.showAssetManager);
     }
 
     // Allow elements to be dragged and dropped from the design mode
