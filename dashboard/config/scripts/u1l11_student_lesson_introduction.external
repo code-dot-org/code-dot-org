@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 ## Unit 1: Lesson 11 - Sending Formatted Text
 # Background
 
-ASCII encoding is the standard number-to-text encoding scheme used in computers and on the Internet. The ASCII set of characters is known as “plain text.” ASCII characters can be used in a protocol to encode text formatting such as fonts, colors, and sizes. This is similar to what happens in HTML or "markup" languages.
+ASCII encoding is the standard number-to-text encoding scheme used in computers and on the Internet. This protocol is 7 bits long and so can encode 128 different symbols, each corresponding to one of the binary numbers between 0 and 127. Originally the encoding was designed for older printers and so the codes associated with the numbers 0-31 were designated as "control codes" which instruct the printer to perform certain actions. These codes are now largely out of use. Codes 32-126, however, contain many of the most commonly used symbols you use on the internet, including the lowercase and capital letters, the numbers 0-9, and most commonly-used punctuation marks. Perhaps more remarkably, this printable character set is also used to represent all of the text formatting we use to add variety and emphasis to "plain-text" documents. The ability to represent formatting using only ASCII symbols is the result of cleverly designed protocols.
 
 # Lesson
 

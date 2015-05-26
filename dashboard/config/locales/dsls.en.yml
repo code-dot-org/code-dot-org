@@ -97,16 +97,37 @@ en:
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
+      CSPPD PD Phases:
+        CSPPD PD Phases: CSPPD PD Phases
+      CSPPD PD overview:
+        CSP PD Overview: CSP PD Overview
+      CSPPD PT description:
+        Performance Tasks: Performance Tasks
+        description of the CSP PT: description of the CSP PT
       CSPPD Welcome Video:
         Welcome Video: Welcome Video
         Welcome to Online PD for CSP: Welcome to Online PD for CSP
       CSPPD curriculum overview:
         CSP Curriculum Overview: CSP Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
+      CSPPD end of p1:
+        CSPPD end of p1: CSPPD end of p1
+      CSPPD facilitators: {}
+      CSPPD forum introduction:
+        CSP Forum Introductions: CSP Forum Introductions
+        Forum Introductions: Forum Introductions
+      CSPPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: description here
+      CSPPD instructional materials:
+        CSPPD instructional materials: CSPPD instructional materials
+      CSPPD postsurvey: {}
       CSPPD presurvey: {}
       CSPPD program overview:
         CSP Program Overview: CSP Program Overview
         Overview of CSP Program: Overview of CSP Program
+      CSPPD teaching strategies video:
+        CSPPD teaching strategies video: CSPPD teaching strategies video
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -443,6 +464,12 @@ en:
       U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      U3L02 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      U3L03 Student Lesson Introduction:
+        Creating Procedures Part 1: Creating Procedures Part 1
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -541,6 +568,14 @@ en:
         While Loops and Counting: While Loops and Counting
       U3L30 Student Lesson Introduction:
         An Introduction to Arrays: An Introduction to Arrays
+      U3L31 Student Lesson Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      U3L32 Student Lesson Introduction:
+        Images are Arrays: Images are Arrays
+      U3L33 Student Lesson Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      U3L34 Student Lesson Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -667,6 +702,8 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      u3L04 Student Lesson Introduction:
+        Creating Procedures Part 2: Creating Procedures Part 2
       unique level name here:
         description here: description here
         title: title
@@ -777,6 +814,16 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSPPD PD goals:
+        Documenting Your PD Goals: Documenting Your PD Goals
+      CSPPD course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
+      CSPPD impact in program:
+        Impact of Computing: Impact of Computing
+      CSPPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and PD
+      CSPPD strategies:
+        Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -855,11 +902,13 @@ en:
         Enter prompt here: Enter prompt here
         Enter title here: Enter title here
       U1L10 Assessment Free Response:
-        'A follow-up to the Assessment Question #2:': 'A follow-up to the Assessment Question #2:'
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
         'Free Response: Encoding Text': 'Free Response: Encoding Text'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+      U1L11 Collaboration Reflection:
+        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
+        What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?: What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L11 Reflection Free Response:
         'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -919,14 +968,41 @@ en:
         'Getting Started: Sending Numbers ': 'Getting Started: Sending Numbers '
         Respond to the following question.: Respond to the following question.
       U1L8 Free Response Reflection:
-        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete the Sending Numbers Checklist and then respond to the following prompt.
+        Complete the Sending Numbers Rubric and then respond to the following prompt.: Complete the Sending Numbers Rubric and then respond to the following prompt.
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
+      U1L8 Free Response2:
+        How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
+        'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
-        'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+        'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+      U3L01 Assessment1:
+        Why Programming? Question 1: Why Programming? Question 1
+      U3L01 Assessment3:
+        Why Programming? Question 3: Why Programming? Question 3
+      U3L01 Free Response Getting Started:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      U3L01 Free Response Wrap Up:
+        Why Programming? Wrap Up: Why Programming? Wrap Up
+      U3L02 Assessment:
+        Assessment Question: Assessment Question
+      U3L02 Free Response Getting Started:
+        'Programming with Simple Commands: Getting Started': 'Programming with Simple Commands: Getting Started'
+      U3L02 Free Response Wrap Up:
+        'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
+      U3L03 Free Response Getting Started:
+        'Creating Procedures Part 1: Getting Started': 'Creating Procedures Part 1: Getting Started'
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L03 Free Response Wrap Up:
+        Creating Procedures Part 1 Wrap Up: Creating Procedures Part 1 Wrap Up
+      U3L04 Assessment1:
+        'Creating Procedures Part 1: Question 1': 'Creating Procedures Part 1: Question 1'
+      U3L04 Free Response Getting Started:
+        'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
       U3L04 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L04 Free Response Wrap Up:
+        'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
       U3L05 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L06 Free Response Reflection:
@@ -1017,6 +1093,22 @@ en:
         'While Loops and Counting: Wrap Up': 'While Loops and Counting: Wrap Up'
       U3L30 Free Response Getting Started:
         'Arrays: Getting Started': 'Arrays: Getting Started'
+      U3L30 Free Response Wrap Up:
+        'Arrays: Wrap Up': 'Arrays: Wrap Up'
+      U3L31 Assessment1:
+        'Photo Album: Question 1': 'Photo Album: Question 1'
+      U3L31 Assessment2:
+        'Photo Album: Question 2': 'Photo Album: Question 2'
+      U3L31 Assessment3:
+        'Photo Album: Question 3': 'Photo Album: Question 3'
+      U3L31 Free Response Getting Started:
+        'Photo Album: Getting Started': 'Photo Album: Getting Started'
+      U3L32 Free Response Getting Started:
+        'Images are Arrays: Getting Started': 'Images are Arrays: Getting Started'
+      U3L33 Free Response Getting Started:
+        'Altering Images: Getting Started': 'Altering Images: Getting Started'
+      U3L34 Free Response Getting Started:
+        'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7

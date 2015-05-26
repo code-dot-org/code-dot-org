@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-25T13:20:14.521Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "Programming with Simple Commands - Getting Started",
+    "markdown": "## Unit 3: Lesson 02 - Programming with Simple Commands\n\n# Background\n\nThe \"building blocks\" of a programming language are the most basic commands the programming language can describe, but do not need to be at the \"digital\" level. They vary from programming language to programming language to fit the purpose of the language.\n\n# Lesson\n\n* Learn to use the AppLab programming environment\n.\n* Write a program that uses basic \"building blocks\" to draw an image in AppLab \n\n\n\n# Resources\n* Activity: <a href=\"https://docs.google.com/document/d/1gNiURUD2KWqvBDrexgeJ3TRoM7Y2INdWfJEcaljRlfY\" target=\"_blank\">\nDrawing with Simple Commands\n</a>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "dsl_text": "name 'U3L02 Student Lesson Introduction'\r\ntitle 'Programming with Simple Commands - Getting Started'\r\n\r\nmarkdown <<MARKDOWN\r\n## Unit 3: Lesson 02 - Programming with Simple Commands\r\n\r\n# Background\r\n\r\nThe “building blocks” of a programming language are the most basic commands the programming language can describe, but do not need to be at the \"digital\" level. They vary from programming language to programming language to fit the purpose of the language.\r\n\r\n# Lesson\r\n\r\n* Learn to use the AppLab programming environment\r\n.\r\n* Write a program that uses basic “building blocks” to draw an image in AppLab \r\n\r\n\r\n\r\n# Resources\r\n* Activity: <a href=\"https://docs.google.com/document/d/1gNiURUD2KWqvBDrexgeJ3TRoM7Y2INdWfJEcaljRlfY\" target=\"_blank\">\r\nDrawing with Simple Commands\r\n</a>\r\n\r\n\r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

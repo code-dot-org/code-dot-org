@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({41:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({42:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -17,7 +17,7 @@ window.applabMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":12,"./blocks":13,"./levels":39,"./skins":43}],43:[function(require,module,exports){
+},{"../appMain":5,"./applab":13,"./blocks":14,"./levels":40,"./skins":44}],44:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -37,7 +37,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":244}],39:[function(require,module,exports){
+},{"../skins":245}],40:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -308,7 +308,7 @@ levels.full_sandbox =  {
 };
 
 
-},{"../block_utils":54,"../utils":292,"./locale":40}],12:[function(require,module,exports){
+},{"../block_utils":55,"../utils":293,"./locale":41}],13:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1348,51 +1348,18 @@ Applab.init = function(config) {
       var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
-    var designModeButton = document.getElementById('designModeButton');
-    if (designModeButton) {
-      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
-    }
-    var codeModeButton = document.getElementById('codeModeButton');
-    if (codeModeButton) {
-      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
-    }
+
+    designMode.configureDesignToggleRow();
+
+    // Start out in regular mode. Eventually likely want this to be a level setting
+    designMode.toggleDesignMode(false);
+
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, designMode.onClear);
     }
 
-    // Allow elements to be dragged and dropped from the design mode
-    // element tray to the play space.
-    $('.new-design-element').draggable({
-      containment:"#codeApp",
-      helper:"clone",
-      appendTo:"#codeApp",
-      revert: 'invalid',
-      zIndex: 2,
-      start: function() {
-        studioApp.resetButtonClick();
-      }
-    });
-    var GRID_SIZE = 5;
-    $('#visualization').droppable({
-      accept: '.new-design-element',
-      drop: function (event, ui) {
-        var elementType = ui.draggable[0].dataset.elementType;
-
-        var div = document.getElementById('divApplab');
-        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-
-        var left = ui.position.left / xScale;
-        var top = ui.position.top / yScale;
-
-        // snap top-left corner to nearest location in the grid
-        left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-        top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-        designMode.createElement(elementType, left, top);
-      }
-    });
+    designMode.configureDragAndDrop();
   }
 };
 
@@ -1531,11 +1498,11 @@ Applab.reset = function(first) {
     turtleSetVisibility(true);
   }
 
-  var isDesignMode = $('#codeModeButton').is(':visible');
 
-  var allowDragging = isDesignMode && !Applab.isRunning();
+
+  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  if (isDesignMode) {
+  if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(allowDragging);
   }
@@ -3428,8 +3395,12 @@ var getPegasusHost = function() {
   }
 };
 
+Applab.isInDesignMode = function () {
+  return $('#designModeBox').is(':visible');
+};
 
-},{"../StudioApp":4,"../codegen":84,"../constants":86,"../dom":87,"../dropletUtils":88,"../locale":129,"../skins":244,"../slider":245,"../templates/page.html.ejs":270,"../timeoutList":276,"../utils":292,"../xml":293,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./apiBlockly":10,"./appStorage":11,"./blocks":13,"./controls.html.ejs":15,"./designMode":32,"./designModeBox.html.ejs":33,"./dontMarshalApi":35,"./dropletConfig":36,"./extraControlRows.html.ejs":37,"./keyEvent":38,"./locale":40,"./rgbcolor.js":42,"./sprintf":44,"./visualization.html.ejs":45}],45:[function(require,module,exports){
+
+},{"../StudioApp":4,"../codegen":85,"../constants":87,"../dom":88,"../dropletUtils":89,"../locale":130,"../skins":245,"../slider":246,"../templates/page.html.ejs":271,"../timeoutList":277,"../utils":293,"../xml":294,"./acemode/annotationList":7,"./acemode/mode-javascript_codeorg":9,"./api":10,"./apiBlockly":11,"./appStorage":12,"./blocks":14,"./controls.html.ejs":16,"./designMode":33,"./designModeBox.html.ejs":34,"./dontMarshalApi":36,"./dropletConfig":37,"./extraControlRows.html.ejs":38,"./keyEvent":39,"./locale":41,"./rgbcolor.js":43,"./sprintf":45,"./visualization.html.ejs":46}],46:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3449,7 +3420,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":302}],44:[function(require,module,exports){
+},{"ejs":303}],45:[function(require,module,exports){
 /*jshint asi:true */
 /*jshint -W064 */
 
@@ -3641,7 +3612,7 @@ module.exports = {
 };
 
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -3910,7 +3881,7 @@ module.exports = function(color_string)
 };
 
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 // Table provided by https://www.jabcreations.com/blog/polyfill-for-event.key
 
 module.exports = {
@@ -4015,7 +3986,7 @@ module.exports = {
  };
 
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4035,7 +4006,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":129,"./locale":40,"ejs":302}],35:[function(require,module,exports){
+},{"../locale":130,"./locale":41,"ejs":303}],36:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -4155,7 +4126,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 };
 
 
-},{"./applab":12}],33:[function(require,module,exports){
+},{"./applab":13}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4175,14 +4146,17 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":302}],32:[function(require,module,exports){
+},{"ejs":303}],33:[function(require,module,exports){
 /* global $ */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
 var DesignProperties = require('./designProperties.jsx');
+var DesignToggleRow = require('./DesignToggleRow.jsx');
 var elementLibrary = require('./designElements/library');
+
+var studioApp = require('../StudioApp').singleton;
 
 var designMode = module.exports;
 
@@ -4194,7 +4168,7 @@ var currentlyEditedElement = null;
  * @param event
  */
 designMode.onDivApplabClick = function (event) {
-  if ($('#designModeButton').is(':visible') ||
+  if (!Applab.isInDesignMode() ||
       $('#resetButton').is(':visible')) {
     return;
   }
@@ -4492,11 +4466,6 @@ designMode.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
-  var designModeButton = document.getElementById('designModeButton');
-  designModeButton.style.display = enable ? 'none' : 'block';
-  var codeModeButton = document.getElementById('codeModeButton');
-  codeModeButton.style.display = enable ? 'block' : 'none';
-
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
@@ -4548,8 +4517,61 @@ function makeDraggable (jq) {
   });
 }
 
+designMode.configureDragAndDrop = function () {
+  // Allow elements to be dragged and dropped from the design mode
+  // element tray to the play space.
+  $('.new-design-element').draggable({
+    containment:"#codeApp",
+    helper:"clone",
+    appendTo:"#codeApp",
+    revert: 'invalid',
+    zIndex: 2,
+    start: function() {
+      studioApp.resetButtonClick();
+    }
+  });
+  var GRID_SIZE = 5;
+  $('#visualization').droppable({
+    accept: '.new-design-element',
+    drop: function (event, ui) {
+      var elementType = ui.draggable[0].dataset.elementType;
 
-},{"./designElements/library":28,"./designProperties.jsx":34,"react":460}],34:[function(require,module,exports){
+      var div = document.getElementById('divApplab');
+      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+      var left = ui.position.left / xScale;
+      var top = ui.position.top / yScale;
+
+      // snap top-left corner to nearest location in the grid
+      left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+
+      designMode.createElement(elementType, left, top);
+    }
+  });
+};
+
+designMode.configureDesignToggleRow = function () {
+  var designToggleRow = document.getElementById('designToggleRow');
+  if (!designToggleRow) {
+    return;
+  }
+
+  // TODO (brent) - still need logic to generate list of screens, and rerender
+  // DesignToggleRow on changes
+  React.render(
+    React.createElement(DesignToggleRow, {
+      screens: ['screen1'],
+      onDesignModeButton: Applab.onDesignModeButton,
+      onCodeModeButton: Applab.onCodeModeButton
+    }),
+    designToggleRow
+  );
+};
+
+
+},{"../StudioApp":4,"./DesignToggleRow.jsx":6,"./designElements/library":29,"./designProperties.jsx":35,"react":461}],35:[function(require,module,exports){
 var React = require('react');
 
 var elementLibrary = require('./designElements/library');
@@ -4603,7 +4625,7 @@ var DesignProperties = module.exports = React.createClass({displayName: "exports
 });
 
 
-},{"./designElements/library":28,"react":460}],28:[function(require,module,exports){
+},{"./designElements/library":29,"react":461}],29:[function(require,module,exports){
 /* global $ */
 
 var utils = require('../../utils');
@@ -4741,7 +4763,7 @@ module.exports = {
 };
 
 
-},{"../../utils":292,"./button.jsx":21,"./canvas.jsx":22,"./checkbox.jsx":23,"./dropdown.jsx":24,"./image.jsx":26,"./label.jsx":27,"./radioButton.jsx":29,"./textInput.jsx":30,"./textarea.jsx":31}],31:[function(require,module,exports){
+},{"../../utils":293,"./button.jsx":22,"./canvas.jsx":23,"./checkbox.jsx":24,"./dropdown.jsx":25,"./image.jsx":27,"./label.jsx":28,"./radioButton.jsx":30,"./textInput.jsx":31,"./textarea.jsx":32}],32:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -4858,7 +4880,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"./elementUtils":25,"react":460}],30:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"./elementUtils":26,"react":461}],31:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -4954,7 +4976,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"./elementUtils":25,"react":460}],29:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"./elementUtils":26,"react":461}],30:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5051,7 +5073,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"react":460}],27:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"react":461}],28:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5156,7 +5178,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"./elementUtils":25,"react":460}],26:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"./elementUtils":26,"react":461}],27:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -5248,7 +5270,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"./elementUtils":25,"react":460}],24:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"./elementUtils":26,"react":461}],25:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5339,7 +5361,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./OptionsSelectRow.jsx":18,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"./elementUtils":25,"react":460}],18:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./OptionsSelectRow.jsx":19,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"./elementUtils":26,"react":461}],19:[function(require,module,exports){
 var React = require('react');
 
 var OptionsSelectRow = React.createClass({displayName: "OptionsSelectRow",
@@ -5387,7 +5409,7 @@ var OptionsSelectRow = React.createClass({displayName: "OptionsSelectRow",
 module.exports = OptionsSelectRow;
 
 
-},{"react":460}],23:[function(require,module,exports){
+},{"react":461}],24:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5481,7 +5503,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"react":460}],22:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"react":461}],23:[function(require,module,exports){
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
@@ -5556,7 +5578,7 @@ module.exports = {
 };
 
 
-},{"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"react":460}],21:[function(require,module,exports){
+},{"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"react":461}],22:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -5666,7 +5688,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":16,"./ColorPickerPropertyRow.jsx":17,"./PropertyRow.jsx":19,"./ZOrderRow.jsx":20,"./elementUtils":25,"react":460}],25:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":17,"./ColorPickerPropertyRow.jsx":18,"./PropertyRow.jsx":20,"./ZOrderRow.jsx":21,"./elementUtils":26,"react":461}],26:[function(require,module,exports){
 // Taken from http://stackoverflow.com/a/3627747/2506748
 module.exports.rgb2hex = function (rgb) {
   if (rgb === '') {
@@ -5685,7 +5707,7 @@ module.exports.extractImageUrl = function (str) {
 };
 
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 var React = require('react');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
@@ -5759,7 +5781,7 @@ var ZOrderRow = React.createClass({displayName: "ZOrderRow",
 module.exports = ZOrderRow;
 
 
-},{"react":460}],19:[function(require,module,exports){
+},{"react":461}],20:[function(require,module,exports){
 var React = require('react');
 
 var PropertyRow = React.createClass({displayName: "PropertyRow",
@@ -5817,7 +5839,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"react":460}],17:[function(require,module,exports){
+},{"react":461}],18:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5890,7 +5912,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"../colpick":14,"react":460}],14:[function(require,module,exports){
+},{"../colpick":15,"react":461}],15:[function(require,module,exports){
 /*
 colpick Color Picker
 Copyright 2013 Jose Vargas. Licensed under GPL license. Based on Stefan Petre's Color Picker www.eyecon.ro, dual licensed under the MIT and GPL licenses
@@ -6413,7 +6435,7 @@ For usage and examples: colpick.com/plugin
 })(jQuery);
 
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 var React = require('react');
 
 var BooleanPropertyRow = React.createClass({displayName: "BooleanPropertyRow",
@@ -6452,10 +6474,1853 @@ var BooleanPropertyRow = React.createClass({displayName: "BooleanPropertyRow",
 module.exports = BooleanPropertyRow;
 
 
-},{"react":460}],460:[function(require,module,exports){
+},{"react":461}],16:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; // Comment so this file is not identical to studio/controls.html.ejs 
+; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((6,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((12,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');19; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((22,  assetUrl('media/1x1.gif') )), '">', escape((22,  msg.finish() )), '\n    </button>\n  </div>\n');25; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../locale":130,"ejs":303}],14:[function(require,module,exports){
+/**
+ * CodeOrgApp: Applab
+ *
+ * Copyright 2014-2015 Code.org
+ *
+ */
+'use strict';
+
+var msg = require('./locale');
+var commonMsg = require('../locale');
+var codegen = require('../codegen');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
+var RANDOM_VALUE = 'random';
+var HIDDEN_VALUE = '"hidden"';
+var CLICK_VALUE = '"click"';
+var VISIBLE_VALUE = '"visible"';
+
+var generateSetterCode = function (opts) {
+  var value = opts.ctx.getTitleValue('VALUE');
+  if (value === RANDOM_VALUE) {
+    var possibleValues =
+      _(opts.ctx.VALUES)
+        .map(function (item) { return item[1]; })
+        .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
+    value = 'Applab.randomFromArray([' + possibleValues + '])';
+  }
+
+  return 'Applab.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
+    (opts.extraParams ? opts.extraParams + ', ' : '') + value + ');\n';
+};
+
+// Install extensions to Blockly's language and JavaScript generator.
+exports.install = function(blockly, blockInstallOptions) {
+  var skin = blockInstallOptions.skin;
+  var isK1 = blockInstallOptions.isK1;
+  var generator = blockly.Generator.get('JavaScript');
+  blockly.JavaScript = generator;
+
+  generator.applab_eventHandlerPrologue = function() {
+    return '\n';
+  };
+
+  installContainer(blockly, generator, blockInstallOptions);
+};
+
+function installContainer(blockly, generator, blockInstallOptions) {
+  blockly.Blocks.applab_container = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput().appendTitle(msg.container());
+      this.appendValueInput('ID');
+      this.appendValueInput('HTML');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.containerTooltip());
+    }
+  };
+
+  generator.applab_container = function() {
+    var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    return 'Applab.container(\'block_id_' + this.id +
+               '\', ' + idParam + ', ' + htmlParam + ');\n';
+  };
+}
+
+
+},{"../codegen":85,"../locale":130,"../utils":293,"./locale":41}],41:[function(require,module,exports){
+// locale for applab
+
+module.exports = window.blockly.applab_locale;
+
+
+},{}],12:[function(require,module,exports){
+'use strict';
+
+/* global dashboard */
+
+/**
+ * Namespace for app storage.
+ */
+var AppStorage = module.exports;
+
+// TODO(dave): remove once all applab data levels are associated with
+// a project.
+AppStorage.tempChannelId =
+    window.location.hostname.split('.')[0] === 'localhost' ?
+        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+AppStorage.getChannelId = function() {
+  // TODO(dave): pull channel id directly from appOptions once available.
+  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
+  return id || AppStorage.tempChannelId;
+};
+
+/**
+ * Reads the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {function(Object)} onSuccess Function to call on success with the
+       value retrieved from storage.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.getKeyValue = function(key, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleGetKeyValue = function(onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onSuccess(undefined);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading value: unexpected http status ' + this.status);
+    return;
+  }
+  var value = JSON.parse(this.responseText);
+  onSuccess(value);
+};
+
+/**
+ * Saves the value associated with the key, accessible to all users of the app.
+ * @param {string} key The name of the key.
+ * @param {Object} value The value to associate with the key.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call on error with error msg.
+ */
+AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(value));
+};
+
+var handleSetKeyValue = function(onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error writing value: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+/**
+ * Creates a new record in the specified table, accessible to all users.
+ * @param {string} tableName The name of the table to read from.
+ * @param {Object} record Object containing other properties to store
+ *     on the record.
+ * @param {function(Object)} onSuccess Function to call with the new record.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
+  if (!tableName) {
+    onError('error creating record: missing required parameter "tableName"');
+    return;
+  }
+  if (record.id) {
+    onError('error creating record: record must not have an "id" property');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  req.open('POST', url, true);
+  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  req.send(JSON.stringify(record));
+};
+
+var handleCreateRecord = function(onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error creating record: unexpected http status ' + this.status);
+    return;
+  }
+  var record = JSON.parse(this.responseText);
+  onSuccess(record);
+};
+
+/**
+ * Reads records which match the searchParams specified by the user,
+ * and passes them to onSuccess.
+ * @param {string} tableName The name of the table to read from.
+ * @param {string} searchParams.id Optional id of record to read.
+ * @param {Object} searchParams Other search criteria. Only records
+ *     whose contents match all criteria will be returned.
+ * @param {function(Array)} onSuccess Function to call with an array of record
+       objects.
+ * @param {function(string)} onError Function to call with an error message
+ *     in case of failure.
+ */
+AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
+  if (!tableName) {
+    onError('error reading records: missing required parameter "tableName"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleReadRecords.bind(req,
+      searchParams, onSuccess, onError);
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  req.open('GET', url, true);
+  req.send();
+  
+};
+
+var handleReadRecords = function(searchParams, onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error reading records: unexpected http status ' + this.status);
+    return;
+  }
+  var records = JSON.parse(this.responseText);
+  records = records.filter(function(record) {
+    for (var prop in searchParams) {
+      if (record[prop] !== searchParams[prop]) {
+        return false;
+      }
+    }
+    return true;
+  });
+  onSuccess(records);
+};
+
+/**
+ * Updates a record in a table, accessible to all users.
+ * @param {string} tableName The name of the table to update.
+ * @param {string} record.id The id of the row to update.
+ * @param {Object} record Object containing other properites to update
+ *     on the record.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
+  if (!tableName) {
+    onError('error updating record: missing required parameter "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error updating record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+      tableName + '/' + recordId;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error updating record: could not find record id ' + record.id +
+            ' in table ' + tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error updating record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess(record);
+};
+
+/**
+ * Deletes a record from the specified table.
+ * @param {string} tableName The name of the table to delete from.
+ * @param {string} record.id The id of the record to delete.
+ * @param {Object} record Object whose other properties are ignored.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
+  if (!tableName) {
+    onError('error deleting record: missing required parameter "tableName"');
+    return;
+  }
+  var recordId = record.id;
+  if (!recordId) {
+    onError('error deleting record: missing required property "id"');
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+      tableName + '/' + recordId + '/delete';
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onError('error deleting record: could not find record id ' + record.id +
+        ' in table ' + tableName);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onError('error deleting record: unexpected http status ' + this.status);
+    return;
+  }
+  onSuccess();
+};
+
+
+},{}],11:[function(require,module,exports){
+
+exports.randomFromArray = function (values) {
+  var key = Math.floor(Math.random() * values.length);
+  return values[key];
+};
+
+// APIs needed for blockly (must include blockId) (keep in sync with api.js):
+
+exports.container = function (blockId, elementId, html) {
+  return Applab.executeCmd(blockId,
+                          'container',
+                          {'elementId': elementId,
+                           'html': html });
+};
+
+exports.write = function (blockId, html) {
+  return Applab.executeCmd(blockId,
+                          'write',
+                          {'html': html });
+};
+
+exports.innerHTML = function (blockId, elementId, html) {
+  return Applab.executeCmd(blockId,
+                          'innerHTML',
+                          {'elementId': elementId,
+                           'html': html });
+};
+
+exports.deleteElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'deleteElement',
+                          {'elementId': elementId });
+};
+
+exports.showElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'showElement',
+                          {'elementId': elementId });
+};
+
+exports.hideElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'hideElement',
+                          {'elementId': elementId });
+};
+
+exports.button = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'button',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.image = function (blockId, elementId, src) {
+  return Applab.executeCmd(blockId,
+                          'image',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
+exports.setPosition = function (blockId, elementId, left, top, width, height) {
+  return Applab.executeCmd(blockId,
+                          'setPosition',
+                          {'elementId': elementId,
+                           'left': left,
+                           'top': top,
+                           'width': width,
+                           'height': height });
+};
+
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getYPosition',
+                          {'elementId': elementId });
+};
+
+exports.createCanvas = function (blockId, elementId, width, height) {
+  return Applab.executeCmd(blockId,
+                          'createCanvas',
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setActiveCanvas = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'setActiveCanvas',
+                          {'elementId': elementId  });
+};
+
+exports.line = function (blockId, x1, y1, x2, y2) {
+  return Applab.executeCmd(blockId,
+                          'line',
+                          {'x1': x1,
+                           'y1': y1,
+                           'x2': x2,
+                           'y2': y2 });
+};
+
+exports.circle = function (blockId, x, y, radius) {
+  return Applab.executeCmd(blockId,
+                          'circle',
+                          {'x': x,
+                           'y': y,
+                           'radius': radius });
+};
+
+exports.rect = function (blockId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
+                          'rect',
+                          {'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setStrokeWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'setStrokeWidth',
+                          {'width': width });
+};
+
+exports.setStrokeColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'setStrokeColor',
+                          {'color': color });
+};
+
+exports.setFillColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'setFillColor',
+                          {'color': color });
+};
+
+exports.clearCanvas = function (blockId) {
+  return Applab.executeCmd(blockId, 'clearCanvas');
+};
+
+exports.drawImage = function (blockId, imageId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
+                          'drawImage',
+                          {'imageId': imageId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.getImageData = function (blockId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
+                          'getImageData',
+                          {'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.putImageData = function (blockId, imageData, x, y) {
+  return Applab.executeCmd(blockId,
+                          'putImageData',
+                          {'imageData': imageData,
+                           'x': x,
+                           'y': y });
+};
+
+exports.textInput = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'textInput',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.textLabel = function (blockId, elementId, text, forId) {
+  return Applab.executeCmd(blockId,
+                          'textLabel',
+                          {'elementId': elementId,
+                           'text': text,
+                           'forId': forId });
+};
+
+exports.checkbox = function (blockId, elementId, checked) {
+  return Applab.executeCmd(blockId,
+                          'checkbox',
+                          {'elementId': elementId,
+                           'checked': checked });
+};
+
+exports.radioButton = function (blockId, elementId, checked, name) {
+  return Applab.executeCmd(blockId,
+                          'radioButton',
+                          {'elementId': elementId,
+                           'checked': checked,
+                           'name': name });
+};
+
+exports.getChecked = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getChecked',
+                          {'elementId': elementId });
+};
+
+exports.setChecked = function (blockId, elementId, checked) {
+  return Applab.executeCmd(blockId,
+                          'setChecked',
+                          {'elementId': elementId,
+                           'checked': checked });
+};
+
+exports.dropdown = function (blockId, elementId) {
+  var optionsArray = Array.prototype.slice.call(arguments, 2);
+  return Applab.executeCmd(blockId,
+                          'dropdown',
+                          {'elementId': elementId,
+                           'optionsArray': optionsArray });
+};
+
+exports.getAttribute = function(blockId, elementId, attribute) {
+  return Applab.executeCmd(blockId,
+                           'getAttribute',
+                           {elementId: elementId,
+                            attribute: attribute});
+};
+
+exports.setAttribute = function(blockId, elementId, attribute, value) {
+  return Applab.executeCmd(blockId,
+                           'setAttribute',
+                           {elementId: elementId,
+                            attribute: attribute,
+                            value: value});
+};
+
+exports.getText = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getText',
+                          {'elementId': elementId });
+};
+
+exports.setText = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                          'setText',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.getImageURL = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getImageURL',
+                          {'elementId': elementId });
+};
+
+exports.setImageURL = function (blockId, elementId, src) {
+  return Applab.executeCmd(blockId,
+                          'setImageURL',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
+exports.imageUploadButton = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
+                           'imageUploadButton',
+                           {'elementId': elementId,
+                            'text': text });
+};
+
+exports.setParent = function (blockId, elementId, parentId) {
+  return Applab.executeCmd(blockId,
+                          'setParent',
+                          {'elementId': elementId,
+                           'parentId': parentId });
+};
+
+exports.setStyle = function (blockId, elementId, style) {
+  return Applab.executeCmd(blockId,
+                           'setStyle',
+                           {'elementId': elementId,
+                           'style': style });
+};
+
+exports.onEvent = function (blockId, elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
+  return Applab.executeCmd(blockId,
+                          'onEvent',
+                          {'elementId': elementId,
+                           'eventName': eventName,
+                           'func': func,
+                           'extraArgs': extraArgs});
+};
+
+exports.startWebRequest = function (blockId, url, func) {
+  return Applab.executeCmd(blockId,
+                          'startWebRequest',
+                          {'url': url,
+                           'func': func });
+};
+
+exports.setTimeout = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
+                          'setTimeout',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearTimeout = function (blockId, timeoutId) {
+  return Applab.executeCmd(blockId,
+                           'clearTimeout',
+                           {'timeoutId': timeoutId });
+};
+
+exports.setInterval = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
+                          'setInterval',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearInterval = function (blockId, intervalId) {
+  return Applab.executeCmd(blockId,
+                           'clearInterval',
+                           {'intervalId': intervalId });
+};
+
+exports.playSound = function (blockId, url) {
+  return Applab.executeCmd(blockId,
+                          'playSound',
+                          {'url': url});
+};
+
+exports.getKeyValue = function(blockId, key, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                           'getKeyValue',
+                           {'key':key,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                           'setKeyValue',
+                           {'key':key,
+                            'value': value,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.createRecord = function (blockId, table, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'createRecord',
+                          {'table': table,
+                           'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.readRecords = function (blockId, table, searchParams, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'readRecords',
+                          {'table': table,
+                           'searchParams': searchParams,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.updateRecord = function (blockId, table, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'updateRecord',
+                          {'table': table,
+                           'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
+                          'deleteRecord',
+                          {'table': table,
+                           'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.getUserId = function (blockId) {
+  return Applab.executeCmd(blockId,
+                          'getUserId',
+                          {});
+};
+
+exports.moveForward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'moveForward',
+                          {'distance': distance });
+};
+
+exports.moveBackward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
+                          'moveBackward',
+                          {'distance': distance });
+};
+
+exports.move = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'move',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.moveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
+                          'moveTo',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turnRight = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turnRight',
+                          {'degrees': degrees });
+};
+
+exports.turnLeft = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
+                          'turnLeft',
+                          {'degrees': degrees });
+};
+
+exports.turnTo = function (blockId, direction) {
+  return Applab.executeCmd(blockId,
+                           'turnTo',
+                           {'direction': direction });
+};
+
+exports.arcRight = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcRight',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.arcLeft = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
+                           'arcLeft',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.dot = function (blockId, radius) {
+  return Applab.executeCmd(blockId,
+                           'dot',
+                           {'radius': radius });
+};
+
+exports.getX = function (blockId) {
+  return Applab.executeCmd(blockId, 'getX');
+};
+
+exports.getY = function (blockId) {
+  return Applab.executeCmd(blockId, 'getY');
+};
+
+exports.getDirection = function (blockId) {
+  return Applab.executeCmd(blockId, 'getDirection');
+};
+
+exports.penUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'penUp');
+};
+
+exports.penDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'penDown');
+};
+
+exports.show = function (blockId) {
+  return Applab.executeCmd(blockId, 'show');
+};
+
+exports.hide = function (blockId) {
+  return Applab.executeCmd(blockId, 'hide');
+};
+
+exports.speed = function (blockId, percent) {
+  return Applab.executeCmd(blockId,
+                           'speed',
+                           {'percent': percent});
+};
+
+exports.penWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
+                          'penWidth',
+                          {'width': width });
+};
+
+exports.penColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
+                          'penColor',
+                          {'color': color });
+};
+
+exports.penRGB = function (blockId, r, g, b, a) {
+  return Applab.executeCmd(blockId,
+                          'penRGB',
+                          {'r': r,
+                           'g': g,
+                           'b': b,
+                           'a': a });
+};
+
+exports.insertItem = function (blockId, array, index, item) {
+  return Applab.executeCmd(blockId,
+                          'insertItem',
+                          {'array': array,
+                           'index': index,
+                           'item': item });
+};
+
+exports.appendItem = function (blockId, array, item) {
+  return Applab.executeCmd(blockId,
+                          'appendItem',
+                          {'array': array,
+                           'item': item });
+};
+
+exports.removeItem = function (blockId, array, index) {
+  return Applab.executeCmd(blockId,
+                          'removeItem',
+                          {'array': array,
+                           'index': index });
+};
+
+
+
+},{}],9:[function(require,module,exports){
+/* global ace */
+
+var dropletConfig = require('../dropletConfig');
+var dropletUtils = require('../../dropletUtils');
+var annotationList = require('./annotationList');
+
+// define ourselves for ace, so that it knows where to get us
+ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
+
+var oop = acerequire("ace/lib/oop");
+var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
+var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
+var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
+var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
+var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
+
+var Mode = function() {
+    this.HighlightRules = JavaScriptHighlightRules;
+    this.$outdent = new MatchingBraceOutdent();
+    this.$behaviour = new CstyleBehaviour();
+    this.foldingRules = new CStyleFoldMode();
+};
+oop.inherits(Mode, JavaScriptMode);
+
+(function() {
+
+  // A set of keywords we don't want to autocomplete
+  var excludedKeywords = [
+    'ArrayBuffer',
+    'Collator',
+    'EvalError',
+    'Float32Array',
+    'Float64Array',
+    'Intl',
+    'Int16Array',
+    'Int32Array',
+    'Int8Array',
+    'Iterator',
+    'NumberFormat',
+    'Object',
+    'QName',
+    'RangeError',
+    'ReferenceError',
+    'StopIteration',
+    'SyntaxError',
+    'TypeError',
+    'Uint16Array',
+    'Uint32Array',
+    'Uint8Array',
+    'Uint8ClampedArra',
+    'URIError'
+  ];
+
+  // Manually create our highlight rules so that we can modify it
+  this.$highlightRules = new JavaScriptHighlightRules();
+
+  excludedKeywords.forEach(function (keywordToRemove) {
+    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+    if (keywordIndex > 0) {
+      this.$highlightRules.$keywordList.splice(keywordIndex);
+    }
+  }, this);
+
+  this.createWorker = function(session) {
+    var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
+    worker.attachToDocument(session.getDocument());
+    var newOptions = {
+      unused: true,
+      undef: true,
+      predef: {
+      }
+    };
+    // Mark all of our blocks as predefined so that linter doesnt complain about
+    // using undefined variables
+    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
+      newOptions.predef[block.func] = false;
+    });
+
+    annotationList.attachToSession(session);
+
+    worker.send("changeOptions", [newOptions]);
+
+    worker.on("jslint", annotationList.setJSLintAnnotations);
+
+    worker.on("terminate", function() {
+      session.clearAnnotations();
+    });
+
+    return worker;
+  };
+
+  this.cleanup = function () {
+    annotationList.detachFromSession();
+  };
+}).call(Mode.prototype);
+
+exports.Mode = Mode;
+});
+
+
+},{"../../dropletUtils":89,"../dropletConfig":37,"./annotationList":7}],37:[function(require,module,exports){
+var api = require('./api');
+
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_BLUE = '#19C3E1';
+var COLOR_RED = '#F78183';
+var COLOR_CYAN = '#4DD0E1';
+var COLOR_YELLOW = '#FFF176';
+
+module.exports.blocks = [
+  {'func': 'onEvent', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','type','callback'], 'params': ['"id"', '"click"', "function(event) {\n  \n}"], 'dropdown': { 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
+  {'func': 'button', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
+  {'func': 'textInput', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
+  {'func': 'textLabel', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text','forId'], 'params': ['"id"', '"text"'] },
+  {'func': 'dropdown', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','option1','etc'], 'params': ['"id"', '"option1"', '"etc"'] },
+  {'func': 'getText', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setText', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
+  {'func': 'checkbox', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false"], 'dropdown': { 1: [ "true", "false" ] } },
+  {'func': 'radioButton', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false", '"group"'], 'dropdown': { 1: [ "true", "false" ] } },
+  {'func': 'getChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "true"], 'dropdown': { 1: [ "true", "false" ] } },
+  {'func': 'image', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'getImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'playSound', 'parent': api, 'category': 'UI controls', 'paletteParams': ['url'], 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
+  {'func': 'showElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'hideElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'deleteElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'setPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','x','y','width','height'], 'params': ['"id"', "0", "0", "100", "100"] },
+  {'func': 'write', 'parent': api, 'category': 'UI controls', 'paletteParams': ['text'], 'params': ['"text"'] },
+  {'func': 'getXPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+  {'func': 'getYPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
+
+  {'func': 'createCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','width','height'], 'params': ['"id"', "320", "480"] },
+  {'func': 'setActiveCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id'], 'params': ['"id"'] },
+  {'func': 'line', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x1','y1','x2','y2'], 'params': ["0", "0", "160", "240"] },
+  {'func': 'circle', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','radius'], 'params': ["160", "240", "100"] },
+  {'func': 'rect', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','width','height'], 'params': ["80", "120", "160", "240"] },
+  {'func': 'setStrokeWidth', 'parent': api, 'category': 'Canvas', 'paletteParams': ['width'], 'params': ["3"] },
+  {'func': 'setStrokeColor', 'parent': api, 'category': 'Canvas', 'paletteParams': ['color'], 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'setFillColor', 'parent': api, 'category': 'Canvas', 'paletteParams': ['color'], 'params': ['"yellow"'], 'dropdown': { 0: [ '"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"' ] } },
+  {'func': 'drawImage', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','x','y'], 'params': ['"id"', "0", "0"] },
+  {'func': 'getImageData', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','width','height'], 'params': ["0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'putImageData', 'parent': api, 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"] },
+  {'func': 'clearCanvas', 'parent': api, 'category': 'Canvas', },
+  {'func': 'getRed', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'getGreen', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'getBlue', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'getAlpha', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
+  {'func': 'setRed', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','r'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setGreen', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','g'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setBlue', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','b'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setAlpha', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','a'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','r','g','b'], 'params': ["imgData", "0", "0", "255", "255", "255"], 'dontMarshal': true },
+
+  {'func': 'startWebRequest', 'parent': api, 'category': 'Data', 'paletteParams': ['url','callback'], 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {'func': 'setKeyValue', 'parent': api, 'category': 'Data', 'paletteParams': ['key','value','callback'], 'params': ['"key"', '"value"', "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'parent': api, 'category': 'Data', 'paletteParams': ['key','callback'], 'params': ['"key"', "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
+  {'func': 'readRecords', 'parent': api, 'category': 'Data', 'paletteParams': ['table','terms','callback'], 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
+  {'func': 'deleteRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'parent': api, 'category': 'Data', type: 'value' },
+
+  {'func': 'moveForward', 'parent': api, 'category': 'Turtle', 'paletteParams': ['pixels'], 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
+  {'func': 'moveBackward', 'parent': api, 'category': 'Turtle', 'paletteParams': ['pixels'], 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
+  {'func': 'move', 'parent': api, 'category': 'Turtle', 'paletteParams': ['x','y'], 'params': ["25", "25"], 'dropdown': { 0: [ "25", "50", "100", "200" ], 1: [ "25", "50", "100", "200" ] } },
+  {'func': 'moveTo', 'parent': api, 'category': 'Turtle', 'paletteParams': ['x','y'], 'params': ["0", "0"] },
+  {'func': 'dot', 'parent': api, 'category': 'Turtle', 'paletteParams': ['radius'], 'params': ["5"], 'dropdown': { 0: [ "1", "5", "10" ] } },
+  {'func': 'turnRight', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
+  {'func': 'turnLeft', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
+  {'func': 'turnTo', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["0"], 'dropdown': { 0: [ "0", "90", "180", "270" ] } },
+  {'func': 'arcRight', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle','radius'], 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
+  {'func': 'arcLeft', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle','radius'], 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
+  {'func': 'getX', 'parent': api, 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getY', 'parent': api, 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getDirection', 'parent': api, 'category': 'Turtle', 'type': 'value' },
+  {'func': 'penUp', 'parent': api, 'category': 'Turtle' },
+  {'func': 'penDown', 'parent': api, 'category': 'Turtle' },
+  {'func': 'penWidth', 'parent': api, 'category': 'Turtle', 'paletteParams': ['width'], 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
+  {'func': 'penColor', 'parent': api, 'category': 'Turtle', 'paletteParams': ['color'], 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'penRGB', 'parent': api, 'category': 'Turtle', 'paletteParams': ['r','g','b'], 'params': ["120", "180", "200"] },
+  {'func': 'show', 'parent': api, 'category': 'Turtle' },
+  {'func': 'hide', 'parent': api, 'category': 'Turtle' },
+  {'func': 'speed', 'parent': api, 'category': 'Turtle', 'paletteParams': ['value'], 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },
+
+  {'func': 'setTimeout', 'parent': api, 'category': 'Control', 'type': 'either', 'paletteParams': ['callback','ms'], 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'parent': api, 'category': 'Control', 'paletteParams': ['__'], 'params': ["__"] },
+  {'func': 'setInterval', 'parent': api, 'category': 'Control', 'type': 'either', 'paletteParams': ['callback','ms'], 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearInterval', 'parent': api, 'category': 'Control', 'paletteParams': ['__'], 'params': ["__"] },
+
+  {'func': 'console.log', 'category': 'Variables', 'paletteParams': ['message'], 'params': ['"message"'] },
+  {'func': 'declareAssign_str_hello_world', 'block': 'var str = "Hello World";', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'substring', 'blockPrefix': 'str.substring', 'category': 'Variables', 'paletteParams': ['start','end'], 'params': ["6", "11"], 'modeOptionName': '*.substring' },
+  {'func': 'indexOf', 'blockPrefix': 'str.indexOf', 'category': 'Variables', 'paletteParams': ['searchValue'], 'params': ['"World"'], 'modeOptionName': '*.indexOf' },
+  {'func': 'length', 'block': 'str.length', 'category': 'Variables', 'modeOptionName': '*.length' },
+  {'func': 'toUpperCase', 'blockPrefix': 'str.toUpperCase', 'category': 'Variables', 'modeOptionName': '*.toUpperCase' },
+  {'func': 'toLowerCase', 'blockPrefix': 'str.toLowerCase', 'category': 'Variables', 'modeOptionName': '*.toLowerCase' },
+  {'func': 'declareAssign_list_abde', 'block': 'var list = ["a", "b", "d", "e"];', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'listLength', 'block': 'list.length', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'insertItem', 'category': 'Variables', 'paletteParams': ['list','index','item'], 'params': ["list", "2", '"c"'], 'dontMarshal': true },
+  {'func': 'appendItem', 'category': 'Variables', 'paletteParams': ['list','item'], 'params': ["list", '"f"'], 'dontMarshal': true },
+  {'func': 'removeItem', 'category': 'Variables', 'paletteParams': ['list','index'], 'params': ["list", "0"], 'dontMarshal': true },
+
+  {'func': 'imageUploadButton', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"text"'] },
+  {'func': 'container', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'innerHTML', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'setParent', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
+  {'func': 'setStyle', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
+  {'func': 'getAttribute', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
+  {'func': 'setAttribute', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
+];
+
+module.exports.categories = {
+  'UI controls': {
+    'color': 'yellow',
+    'rgb': COLOR_YELLOW,
+    'blocks': []
+  },
+  'Canvas': {
+    'color': 'red',
+    'rgb': COLOR_RED,
+    'blocks': []
+  },
+  'Data': {
+    'color': 'lightgreen',
+    'rgb': COLOR_LIGHT_GREEN,
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'cyan',
+    'rgb': COLOR_CYAN,
+    'blocks': []
+  },
+  'Advanced': {
+    'color': 'blue',
+    'rgb': COLOR_BLUE,
+    'blocks': []
+  },
+};
+
+
+},{"./api":10}],10:[function(require,module,exports){
+// APIs needed for droplet (keep in sync with apiBlockly.js):
+
+exports.container = function (elementId, html) {
+  return Applab.executeCmd(null,
+                          'container',
+                          {'elementId': elementId,
+                           'html': html });
+};
+
+exports.write = function (html) {
+  return Applab.executeCmd(null,
+                          'write',
+                          {'html': html });
+};
+
+exports.innerHTML = function (elementId, html) {
+  return Applab.executeCmd(null,
+                          'innerHTML',
+                          {'elementId': elementId,
+                           'html': html });
+};
+
+exports.deleteElement = function (elementId) {
+  return Applab.executeCmd(null,
+                          'deleteElement',
+                          {'elementId': elementId });
+};
+
+exports.showElement = function (elementId) {
+  return Applab.executeCmd(null,
+                          'showElement',
+                          {'elementId': elementId });
+};
+
+exports.hideElement = function (elementId) {
+  return Applab.executeCmd(null,
+                          'hideElement',
+                          {'elementId': elementId });
+};
+
+exports.button = function (elementId, text) {
+  return Applab.executeCmd(null,
+                          'button',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.image = function (elementId, src) {
+  return Applab.executeCmd(null,
+                          'image',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
+exports.setPosition = function (elementId, left, top, width, height) {
+  return Applab.executeCmd(null,
+                          'setPosition',
+                          {'elementId': elementId,
+                           'left': left,
+                           'top': top,
+                           'width': width,
+                           'height': height });
+};
+
+exports.getXPosition = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getYPosition',
+                          {'elementId': elementId });
+};
+
+exports.createCanvas = function (elementId, width, height) {
+  return Applab.executeCmd(null,
+                          'createCanvas',
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setActiveCanvas = function (elementId) {
+  return Applab.executeCmd(null,
+                          'setActiveCanvas',
+                          {'elementId': elementId  });
+};
+
+exports.line = function (x1, y1, x2, y2) {
+  return Applab.executeCmd(null,
+                          'line',
+                          {'x1': x1,
+                           'y1': y1,
+                           'x2': x2,
+                           'y2': y2 });
+};
+
+exports.circle = function (x, y, radius) {
+  return Applab.executeCmd(null,
+                          'circle',
+                          {'x': x,
+                           'y': y,
+                           'radius': radius });
+};
+
+exports.rect = function (x, y, width, height) {
+  return Applab.executeCmd(null,
+                          'rect',
+                          {'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setStrokeWidth = function (width) {
+  return Applab.executeCmd(null,
+                          'setStrokeWidth',
+                          {'width': width });
+};
+
+exports.setStrokeColor = function (color) {
+  return Applab.executeCmd(null,
+                          'setStrokeColor',
+                          {'color': color });
+};
+
+exports.setFillColor = function (color) {
+  return Applab.executeCmd(null,
+                          'setFillColor',
+                          {'color': color });
+};
+
+exports.clearCanvas = function () {
+  return Applab.executeCmd(null, 'clearCanvas');
+};
+
+exports.drawImage = function (imageId, x, y, width, height) {
+  return Applab.executeCmd(null,
+                          'drawImage',
+                          {'imageId': imageId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.getImageData = function (x, y, width, height) {
+  return Applab.executeCmd(null,
+                          'getImageData',
+                          {'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.putImageData = function (imageData, x, y) {
+  return Applab.executeCmd(null,
+                          'putImageData',
+                          {'imageData': imageData,
+                           'x': x,
+                           'y': y });
+};
+
+exports.textInput = function (elementId, text) {
+  return Applab.executeCmd(null,
+                          'textInput',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.textLabel = function (elementId, text, forId) {
+  return Applab.executeCmd(null,
+                          'textLabel',
+                          {'elementId': elementId,
+                           'text': text,
+                           'forId': forId });
+};
+
+exports.checkbox = function (elementId, checked) {
+  return Applab.executeCmd(null,
+                          'checkbox',
+                          {'elementId': elementId,
+                           'checked': checked });
+};
+
+exports.radioButton = function (elementId, checked, name) {
+  return Applab.executeCmd(null,
+                          'radioButton',
+                          {'elementId': elementId,
+                           'checked': checked,
+                           'name': name });
+};
+
+exports.getChecked = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getChecked',
+                          {'elementId': elementId });
+};
+
+exports.setChecked = function (elementId, checked) {
+  return Applab.executeCmd(null,
+                          'setChecked',
+                          {'elementId': elementId,
+                           'checked': checked });
+};
+
+exports.dropdown = function (elementId) {
+  var optionsArray = Array.prototype.slice.call(arguments, 1);
+  return Applab.executeCmd(null,
+                          'dropdown',
+                          {'elementId': elementId,
+                           'optionsArray': optionsArray });
+};
+
+exports.getAttribute = function(elementId, attribute) {
+  return Applab.executeCmd(null,
+                           'getAttribute',
+                           {elementId: elementId,
+                            attribute: attribute});
+};
+
+exports.setAttribute = function(elementId, attribute, value) {
+  return Applab.executeCmd(null,
+                           'setAttribute',
+                           {elementId: elementId,
+                            attribute: attribute,
+                            value: value});
+};
+
+exports.getText = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getText',
+                          {'elementId': elementId });
+};
+
+exports.setText = function (elementId, text) {
+  return Applab.executeCmd(null,
+                          'setText',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.getImageURL = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getImageURL',
+                          {'elementId': elementId });
+};
+
+exports.setImageURL = function (elementId, src) {
+  return Applab.executeCmd(null,
+                          'setImageURL',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
+exports.imageUploadButton = function (elementId, text) {
+  return Applab.executeCmd(null,
+                           'imageUploadButton',
+                           {'elementId': elementId,
+                            'text': text });
+};
+
+exports.setParent = function (elementId, parentId) {
+  return Applab.executeCmd(null,
+                          'setParent',
+                          {'elementId': elementId,
+                           'parentId': parentId });
+};
+
+exports.setStyle = function (elementId, style) {
+  return Applab.executeCmd(null,
+                           'setStyle',
+                           {'elementId': elementId,
+                           'style': style });
+};
+
+exports.onEvent = function (elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(3);
+  return Applab.executeCmd(null,
+                          'onEvent',
+                          {'elementId': elementId,
+                           'eventName': eventName,
+                           'func': func,
+                           'extraArgs': extraArgs});
+};
+
+exports.startWebRequest = function (url, func) {
+  return Applab.executeCmd(null,
+                          'startWebRequest',
+                          {'url': url,
+                           'func': func });
+};
+
+exports.setTimeout = function (func, milliseconds) {
+  return Applab.executeCmd(null,
+                          'setTimeout',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearTimeout = function (timeoutId) {
+  return Applab.executeCmd(null,
+                           'clearTimeout',
+                           {'timeoutId': timeoutId });
+};
+
+exports.setInterval = function (func, milliseconds) {
+  return Applab.executeCmd(null,
+                          'setInterval',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearInterval = function (intervalId) {
+  return Applab.executeCmd(null,
+                           'clearInterval',
+                           {'intervalId': intervalId });
+};
+
+exports.playSound = function (url) {
+  return Applab.executeCmd(null,
+                          'playSound',
+                          {'url': url});
+};
+
+exports.getKeyValue = function(key, onSuccess, onError) {
+  return Applab.executeCmd(null,
+                           'getKeyValue',
+                           {'key':key,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.setKeyValue = function(key, value, onSuccess, onError) {
+  return Applab.executeCmd(null,
+                           'setKeyValue',
+                           {'key':key,
+                            'value': value,
+                            'onSuccess': onSuccess,
+                            'onError': onError});
+};
+
+exports.createRecord = function (table, record, onSuccess, onError) {
+  return Applab.executeCmd(null,
+                          'createRecord',
+                          {'table': table,
+                           'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.readRecords = function (table, searchParams, onSuccess, onError) {
+  return Applab.executeCmd(null,
+                          'readRecords',
+                          {'table': table,
+                           'searchParams': searchParams,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.updateRecord = function (table, record, onSuccess, onError) {
+  return Applab.executeCmd(null,
+                          'updateRecord',
+                          {'table': table,
+                           'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.deleteRecord = function (table, record, onSuccess, onError) {
+  return Applab.executeCmd(null,
+                          'deleteRecord',
+                          {'table': table,
+                           'record': record,
+                           'onSuccess': onSuccess,
+                           'onError': onError});
+};
+
+exports.getUserId = function () {
+  return Applab.executeCmd(null,
+                          'getUserId',
+                          {});
+};
+
+exports.moveForward = function (distance) {
+  return Applab.executeCmd(null,
+                          'moveForward',
+                          {'distance': distance });
+};
+
+exports.moveBackward = function (distance) {
+  return Applab.executeCmd(null,
+                          'moveBackward',
+                          {'distance': distance });
+};
+
+exports.move = function (x, y) {
+  return Applab.executeCmd(null,
+                          'move',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.moveTo = function (x, y) {
+  return Applab.executeCmd(null,
+                          'moveTo',
+                          {'x': x,
+                           'y': y });
+};
+
+exports.turnRight = function (degrees) {
+  return Applab.executeCmd(null,
+                          'turnRight',
+                          {'degrees': degrees });
+};
+
+exports.turnLeft = function (degrees) {
+  return Applab.executeCmd(null,
+                          'turnLeft',
+                          {'degrees': degrees });
+};
+
+exports.turnTo = function (direction) {
+  return Applab.executeCmd(null,
+                           'turnTo',
+                           {'direction': direction });
+};
+
+exports.arcRight = function (degrees, radius) {
+  return Applab.executeCmd(null,
+                           'arcRight',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.arcLeft = function (degrees, radius) {
+  return Applab.executeCmd(null,
+                           'arcLeft',
+                           {'degrees': degrees,
+                            'radius': radius });
+};
+
+exports.dot = function (radius) {
+  return Applab.executeCmd(null,
+                           'dot',
+                           {'radius': radius });
+};
+
+exports.getX = function () {
+  return Applab.executeCmd(null, 'getX');
+};
+
+exports.getY = function () {
+  return Applab.executeCmd(null, 'getY');
+};
+
+exports.getDirection = function () {
+  return Applab.executeCmd(null, 'getDirection');
+};
+
+exports.penUp = function () {
+  return Applab.executeCmd(null, 'penUp');
+};
+
+exports.penDown = function () {
+  return Applab.executeCmd(null, 'penDown');
+};
+
+exports.show = function () {
+  return Applab.executeCmd(null, 'show');
+};
+
+exports.hide = function () {
+  return Applab.executeCmd(null, 'hide');
+};
+
+exports.speed = function (percent) {
+  return Applab.executeCmd(null,
+                           'speed',
+                           {'percent': percent});
+};
+
+exports.penWidth = function (width) {
+  return Applab.executeCmd(null,
+                          'penWidth',
+                          {'width': width });
+};
+
+exports.penColor = function (color) {
+  return Applab.executeCmd(null,
+                          'penColor',
+                          {'color': color });
+};
+
+exports.penRGB = function (r, g, b, a) {
+  return Applab.executeCmd(null,
+                          'penRGB',
+                          {'r': r,
+                           'g': g,
+                           'b': b,
+                           'a': a });
+};
+
+exports.insertItem = function (array, index, item) {
+  return Applab.executeCmd(null,
+                          'insertItem',
+                          {'array': array,
+                           'index': index,
+                           'item': item });
+};
+
+exports.appendItem = function (array, item) {
+  return Applab.executeCmd(null,
+                          'appendItem',
+                          {'array': array,
+                           'item': item });
+};
+
+exports.removeItem = function (array, index) {
+  return Applab.executeCmd(null,
+                          'removeItem',
+                          {'array': array,
+                           'index': index });
+};
+
+
+
+},{}],7:[function(require,module,exports){
+var errorMapper = require('./errorMapper');
+
+var annotations = [];
+var aceSession;
+
+/**
+ * Update gutter with our annotation list
+ * @private
+ */
+function updateGutter() {
+  if (!aceSession) {
+    return;
+  }
+  aceSession.setAnnotations(annotations);
+}
+
+/**
+ * Object for tracking annotations placed in gutter. General design is as
+ * follows:
+ * When jslint runs (i.e. code changes) display just jslint errors
+ * When code runs, display jslint errors and runtime errors. Runtime errors will
+ * go away the next time jstlint gets run (when code changes)
+ */
+module.exports = {
+  detachFromSession: function () {
+    aceSession = null;
+  },
+  
+  attachToSession: function (session) {
+    if (aceSession && session !== aceSession) {
+      throw new Error('Already attached to ace session');
+    }
+    aceSession = session;
+  },
+
+  setJSLintAnnotations: function (jslintResults) {
+    errorMapper.processResults(jslintResults);
+    // clone annotations in case anyone else has a reference to data
+    annotations = jslintResults.data.slice();
+    updateGutter();
+  },
+
+  /**
+   * @param {string} level
+   * @param {number} lineNumber One index line number
+   * @param {string} text Error string
+   */
+  addRuntimeAnnotation: function (level, lineNumber, text) {
+    var annotation = {
+      row: lineNumber - 1,
+      col: 0,
+      raw: text,
+      text: text,
+      type: level.toLowerCase()
+    };
+    annotations.push(annotation);
+    updateGutter();
+  },
+};
+
+
+},{"./errorMapper":8}],8:[function(require,module,exports){
+var errorMap = [
+  {
+    original: /Assignment in conditional expression/,
+    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
+  },
+  {
+    original: /(.*)\sis defined but never used./,
+    replacement: "$1 is defined, but it's not called in your program."
+  },
+  {
+    original: /(.*)\sis not defined./,
+    replacement: "$1 hasn't been declared yet."
+  }
+];
+
+/**
+ * Takes the results of a JSLint pass, and modifies the error text according to
+ * our mapping. Note this makes changes in place to the passed in results
+ * object.
+ */
+module.exports.processResults = function (results) {
+  results.data.forEach(function (item) {
+    if (item.type === 'info') {
+      item.type = 'warning';
+    }
+
+    errorMap.forEach(function (errorMapping) {
+      if (!errorMapping.original.test(item.text)) {
+        return;
+      }
+
+      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
+    });
+  });
+};
+
+
+},{}],6:[function(require,module,exports){
+var React = require('react');
+var msg = require('../locale');
+
+var Mode = {
+  CODE: 'CODE',
+  DESIGN: 'DESIGN'
+};
+
+module.exports = React.createClass({displayName: "exports",
+  propTypes: {
+    screens: React.PropTypes.array.isRequired,
+    onDesignModeButton: React.PropTypes.func.isRequired,
+    onCodeModeButton: React.PropTypes.func.isRequired
+  },
+
+
+  getInitialState: function () {
+    return {
+      mode: Mode.CODE
+    };
+  },
+
+  handleModeToggle: function () {
+    var newMode;
+    if (this.state.mode === Mode.DESIGN) {
+      this.props.onCodeModeButton();
+      newMode = Mode.CODE;
+    } else {
+      this.props.onDesignModeButton();
+      newMode = Mode.DESIGN;
+    }
+
+    this.setState({
+      mode: newMode
+    });
+  },
+
+  render: function () {
+    var selectDropdown;
+    var dropdownStyle = {
+      width: 140,
+      marginLeft: 10
+    };
+
+    if (this.state.mode === Mode.DESIGN) {
+      var options = this.props.screens.map(function (item) {
+        return React.createElement("option", null, item);
+      });
+
+      selectDropdown = (
+        React.createElement("select", {id: "screenSelector", style: dropdownStyle}, 
+          options
+        )
+      );
+    }
+
+    return (
+      React.createElement("div", null, 
+        React.createElement("button", {
+          id: "designModeToggle", 
+          className: "share", 
+          onClick: this.handleModeToggle}, 
+           this.state.mode === Mode.DESIGN ? msg.codeMode() : msg.designMode()
+        ), 
+        selectDropdown
+      )
+    );
+  }
+});
+
+
+},{"../locale":130,"react":461}],461:[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":333}],333:[function(require,module,exports){
+},{"./lib/React":334}],334:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -6607,7 +8472,7 @@ React.version = '0.13.2';
 module.exports = React;
 
 }).call(this,require('_process'))
-},{"./EventPluginUtils":323,"./ExecutionEnvironment":325,"./Object.assign":331,"./ReactChildren":337,"./ReactClass":338,"./ReactComponent":339,"./ReactContext":343,"./ReactCurrentOwner":344,"./ReactDOM":345,"./ReactDOMTextComponent":356,"./ReactDefaultInjection":359,"./ReactElement":362,"./ReactElementValidator":363,"./ReactInstanceHandles":371,"./ReactMount":375,"./ReactPerf":380,"./ReactPropTypes":383,"./ReactReconciler":386,"./ReactServerRendering":389,"./findDOMNode":422,"./onlyChild":449,"_process":296}],449:[function(require,module,exports){
+},{"./EventPluginUtils":324,"./ExecutionEnvironment":326,"./Object.assign":332,"./ReactChildren":338,"./ReactClass":339,"./ReactComponent":340,"./ReactContext":344,"./ReactCurrentOwner":345,"./ReactDOM":346,"./ReactDOMTextComponent":357,"./ReactDefaultInjection":360,"./ReactElement":363,"./ReactElementValidator":364,"./ReactInstanceHandles":372,"./ReactMount":376,"./ReactPerf":381,"./ReactPropTypes":384,"./ReactReconciler":387,"./ReactServerRendering":390,"./findDOMNode":423,"./onlyChild":450,"_process":297}],450:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -6647,7 +8512,7 @@ function onlyChild(children) {
 module.exports = onlyChild;
 
 }).call(this,require('_process'))
-},{"./ReactElement":362,"./invariant":440,"_process":296}],389:[function(require,module,exports){
+},{"./ReactElement":363,"./invariant":441,"_process":297}],390:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -6729,7 +8594,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./ReactElement":362,"./ReactInstanceHandles":371,"./ReactMarkupChecksum":374,"./ReactServerRenderingTransaction":390,"./emptyObject":420,"./instantiateReactComponent":439,"./invariant":440,"_process":296}],390:[function(require,module,exports){
+},{"./ReactElement":363,"./ReactInstanceHandles":372,"./ReactMarkupChecksum":375,"./ReactServerRenderingTransaction":391,"./emptyObject":421,"./instantiateReactComponent":440,"./invariant":441,"_process":297}],391:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -6842,7 +8707,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 
-},{"./CallbackQueue":310,"./Object.assign":331,"./PooledClass":332,"./ReactPutListenerQueue":384,"./Transaction":408,"./emptyFunction":419}],359:[function(require,module,exports){
+},{"./CallbackQueue":311,"./Object.assign":332,"./PooledClass":333,"./ReactPutListenerQueue":385,"./Transaction":409,"./emptyFunction":420}],360:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -7001,7 +8866,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./BeforeInputEventPlugin":307,"./ChangeEventPlugin":311,"./ClientReactRootIndex":312,"./DefaultEventPluginOrder":317,"./EnterLeaveEventPlugin":318,"./ExecutionEnvironment":325,"./HTMLDOMPropertyConfig":327,"./MobileSafariClickEventPlugin":330,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactComponentBrowserEnvironment":340,"./ReactDOMButton":346,"./ReactDOMComponent":347,"./ReactDOMForm":348,"./ReactDOMIDOperations":349,"./ReactDOMIframe":350,"./ReactDOMImg":351,"./ReactDOMInput":352,"./ReactDOMOption":353,"./ReactDOMSelect":354,"./ReactDOMTextComponent":356,"./ReactDOMTextarea":357,"./ReactDefaultBatchingStrategy":358,"./ReactDefaultPerf":360,"./ReactElement":362,"./ReactEventListener":367,"./ReactInjection":369,"./ReactInstanceHandles":371,"./ReactMount":375,"./ReactReconcileTransaction":385,"./SVGDOMPropertyConfig":393,"./SelectEventPlugin":394,"./ServerReactRootIndex":395,"./SimpleEventPlugin":396,"./createFullPageComponent":416,"_process":296}],416:[function(require,module,exports){
+},{"./BeforeInputEventPlugin":308,"./ChangeEventPlugin":312,"./ClientReactRootIndex":313,"./DefaultEventPluginOrder":318,"./EnterLeaveEventPlugin":319,"./ExecutionEnvironment":326,"./HTMLDOMPropertyConfig":328,"./MobileSafariClickEventPlugin":331,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactComponentBrowserEnvironment":341,"./ReactDOMButton":347,"./ReactDOMComponent":348,"./ReactDOMForm":349,"./ReactDOMIDOperations":350,"./ReactDOMIframe":351,"./ReactDOMImg":352,"./ReactDOMInput":353,"./ReactDOMOption":354,"./ReactDOMSelect":355,"./ReactDOMTextComponent":357,"./ReactDOMTextarea":358,"./ReactDefaultBatchingStrategy":359,"./ReactDefaultPerf":361,"./ReactElement":363,"./ReactEventListener":368,"./ReactInjection":370,"./ReactInstanceHandles":372,"./ReactMount":376,"./ReactReconcileTransaction":386,"./SVGDOMPropertyConfig":394,"./SelectEventPlugin":395,"./ServerReactRootIndex":396,"./SimpleEventPlugin":397,"./createFullPageComponent":417,"_process":297}],417:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -7063,7 +8928,7 @@ function createFullPageComponent(tag) {
 module.exports = createFullPageComponent;
 
 }).call(this,require('_process'))
-},{"./ReactClass":338,"./ReactElement":362,"./invariant":440,"_process":296}],396:[function(require,module,exports){
+},{"./ReactClass":339,"./ReactElement":363,"./invariant":441,"_process":297}],397:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -7491,7 +9356,7 @@ var SimpleEventPlugin = {
 module.exports = SimpleEventPlugin;
 
 }).call(this,require('_process'))
-},{"./EventConstants":319,"./EventPluginUtils":323,"./EventPropagators":324,"./SyntheticClipboardEvent":397,"./SyntheticDragEvent":399,"./SyntheticEvent":400,"./SyntheticFocusEvent":401,"./SyntheticKeyboardEvent":403,"./SyntheticMouseEvent":404,"./SyntheticTouchEvent":405,"./SyntheticUIEvent":406,"./SyntheticWheelEvent":407,"./getEventCharCode":427,"./invariant":440,"./keyOf":446,"./warning":459,"_process":296}],407:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPluginUtils":324,"./EventPropagators":325,"./SyntheticClipboardEvent":398,"./SyntheticDragEvent":400,"./SyntheticEvent":401,"./SyntheticFocusEvent":402,"./SyntheticKeyboardEvent":404,"./SyntheticMouseEvent":405,"./SyntheticTouchEvent":406,"./SyntheticUIEvent":407,"./SyntheticWheelEvent":408,"./getEventCharCode":428,"./invariant":441,"./keyOf":447,"./warning":460,"_process":297}],408:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7552,7 +9417,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
 
-},{"./SyntheticMouseEvent":404}],405:[function(require,module,exports){
+},{"./SyntheticMouseEvent":405}],406:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7600,7 +9465,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
 
-},{"./SyntheticUIEvent":406,"./getEventModifierState":429}],403:[function(require,module,exports){
+},{"./SyntheticUIEvent":407,"./getEventModifierState":430}],404:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7687,7 +9552,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
 
-},{"./SyntheticUIEvent":406,"./getEventCharCode":427,"./getEventKey":428,"./getEventModifierState":429}],428:[function(require,module,exports){
+},{"./SyntheticUIEvent":407,"./getEventCharCode":428,"./getEventKey":429,"./getEventModifierState":430}],429:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7792,7 +9657,7 @@ function getEventKey(nativeEvent) {
 
 module.exports = getEventKey;
 
-},{"./getEventCharCode":427}],427:[function(require,module,exports){
+},{"./getEventCharCode":428}],428:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7844,7 +9709,7 @@ function getEventCharCode(nativeEvent) {
 
 module.exports = getEventCharCode;
 
-},{}],401:[function(require,module,exports){
+},{}],402:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7883,7 +9748,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
 
-},{"./SyntheticUIEvent":406}],399:[function(require,module,exports){
+},{"./SyntheticUIEvent":407}],400:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7922,7 +9787,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
 
-},{"./SyntheticMouseEvent":404}],397:[function(require,module,exports){
+},{"./SyntheticMouseEvent":405}],398:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7967,7 +9832,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
 
-},{"./SyntheticEvent":400}],395:[function(require,module,exports){
+},{"./SyntheticEvent":401}],396:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -7998,7 +9863,7 @@ var ServerReactRootIndex = {
 
 module.exports = ServerReactRootIndex;
 
-},{}],394:[function(require,module,exports){
+},{}],395:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8193,7 +10058,7 @@ var SelectEventPlugin = {
 
 module.exports = SelectEventPlugin;
 
-},{"./EventConstants":319,"./EventPropagators":324,"./ReactInputSelection":370,"./SyntheticEvent":400,"./getActiveElement":426,"./isTextInputElement":443,"./keyOf":446,"./shallowEqual":455}],455:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPropagators":325,"./ReactInputSelection":371,"./SyntheticEvent":401,"./getActiveElement":427,"./isTextInputElement":444,"./keyOf":447,"./shallowEqual":456}],456:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8237,7 +10102,7 @@ function shallowEqual(objA, objB) {
 
 module.exports = shallowEqual;
 
-},{}],393:[function(require,module,exports){
+},{}],394:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8329,7 +10194,7 @@ var SVGDOMPropertyConfig = {
 
 module.exports = SVGDOMPropertyConfig;
 
-},{"./DOMProperty":314}],385:[function(require,module,exports){
+},{"./DOMProperty":315}],386:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8505,7 +10370,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 
-},{"./CallbackQueue":310,"./Object.assign":331,"./PooledClass":332,"./ReactBrowserEventEmitter":335,"./ReactInputSelection":370,"./ReactPutListenerQueue":384,"./Transaction":408}],384:[function(require,module,exports){
+},{"./CallbackQueue":311,"./Object.assign":332,"./PooledClass":333,"./ReactBrowserEventEmitter":336,"./ReactInputSelection":371,"./ReactPutListenerQueue":385,"./Transaction":409}],385:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8561,7 +10426,7 @@ PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 module.exports = ReactPutListenerQueue;
 
-},{"./Object.assign":331,"./PooledClass":332,"./ReactBrowserEventEmitter":335}],370:[function(require,module,exports){
+},{"./Object.assign":332,"./PooledClass":333,"./ReactBrowserEventEmitter":336}],371:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8696,7 +10561,7 @@ var ReactInputSelection = {
 
 module.exports = ReactInputSelection;
 
-},{"./ReactDOMSelection":355,"./containsNode":414,"./focusNode":424,"./getActiveElement":426}],426:[function(require,module,exports){
+},{"./ReactDOMSelection":356,"./containsNode":415,"./focusNode":425,"./getActiveElement":427}],427:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8725,7 +10590,7 @@ function getActiveElement() /*?DOMElement*/ {
 
 module.exports = getActiveElement;
 
-},{}],355:[function(require,module,exports){
+},{}],356:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8938,7 +10803,7 @@ var ReactDOMSelection = {
 
 module.exports = ReactDOMSelection;
 
-},{"./ExecutionEnvironment":325,"./getNodeForCharacterOffset":433,"./getTextContentAccessor":435}],433:[function(require,module,exports){
+},{"./ExecutionEnvironment":326,"./getNodeForCharacterOffset":434,"./getTextContentAccessor":436}],434:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9013,7 +10878,7 @@ function getNodeForCharacterOffset(root, offset) {
 
 module.exports = getNodeForCharacterOffset;
 
-},{}],369:[function(require,module,exports){
+},{}],370:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9055,7 +10920,7 @@ var ReactInjection = {
 
 module.exports = ReactInjection;
 
-},{"./DOMProperty":314,"./EventPluginHub":321,"./ReactBrowserEventEmitter":335,"./ReactClass":338,"./ReactComponentEnvironment":341,"./ReactDOMComponent":347,"./ReactEmptyComponent":364,"./ReactNativeComponent":378,"./ReactPerf":380,"./ReactRootIndex":388,"./ReactUpdates":392}],367:[function(require,module,exports){
+},{"./DOMProperty":315,"./EventPluginHub":322,"./ReactBrowserEventEmitter":336,"./ReactClass":339,"./ReactComponentEnvironment":342,"./ReactDOMComponent":348,"./ReactEmptyComponent":365,"./ReactNativeComponent":379,"./ReactPerf":381,"./ReactRootIndex":389,"./ReactUpdates":393}],368:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9238,7 +11103,7 @@ var ReactEventListener = {
 
 module.exports = ReactEventListener;
 
-},{"./EventListener":320,"./ExecutionEnvironment":325,"./Object.assign":331,"./PooledClass":332,"./ReactInstanceHandles":371,"./ReactMount":375,"./ReactUpdates":392,"./getEventTarget":430,"./getUnboundedScrollPosition":436}],436:[function(require,module,exports){
+},{"./EventListener":321,"./ExecutionEnvironment":326,"./Object.assign":332,"./PooledClass":333,"./ReactInstanceHandles":372,"./ReactMount":376,"./ReactUpdates":393,"./getEventTarget":431,"./getUnboundedScrollPosition":437}],437:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9278,7 +11143,7 @@ function getUnboundedScrollPosition(scrollable) {
 
 module.exports = getUnboundedScrollPosition;
 
-},{}],320:[function(require,module,exports){
+},{}],321:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -9368,7 +11233,7 @@ var EventListener = {
 module.exports = EventListener;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":419,"_process":296}],360:[function(require,module,exports){
+},{"./emptyFunction":420,"_process":297}],361:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9634,7 +11499,7 @@ var ReactDefaultPerf = {
 
 module.exports = ReactDefaultPerf;
 
-},{"./DOMProperty":314,"./ReactDefaultPerfAnalysis":361,"./ReactMount":375,"./ReactPerf":380,"./performanceNow":451}],451:[function(require,module,exports){
+},{"./DOMProperty":315,"./ReactDefaultPerfAnalysis":362,"./ReactMount":376,"./ReactPerf":381,"./performanceNow":452}],452:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9662,7 +11527,7 @@ var performanceNow = performance.now.bind(performance);
 
 module.exports = performanceNow;
 
-},{"./performance":450}],450:[function(require,module,exports){
+},{"./performance":451}],451:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9690,7 +11555,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = performance || {};
 
-},{"./ExecutionEnvironment":325}],361:[function(require,module,exports){
+},{"./ExecutionEnvironment":326}],362:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9896,7 +11761,7 @@ var ReactDefaultPerfAnalysis = {
 
 module.exports = ReactDefaultPerfAnalysis;
 
-},{"./Object.assign":331}],358:[function(require,module,exports){
+},{"./Object.assign":332}],359:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9969,7 +11834,7 @@ var ReactDefaultBatchingStrategy = {
 
 module.exports = ReactDefaultBatchingStrategy;
 
-},{"./Object.assign":331,"./ReactUpdates":392,"./Transaction":408,"./emptyFunction":419}],357:[function(require,module,exports){
+},{"./Object.assign":332,"./ReactUpdates":393,"./Transaction":409,"./emptyFunction":420}],358:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -10109,7 +11974,7 @@ var ReactDOMTextarea = ReactClass.createClass({
 module.exports = ReactDOMTextarea;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":306,"./DOMPropertyOperations":315,"./LinkedValueUtils":328,"./Object.assign":331,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362,"./ReactUpdates":392,"./invariant":440,"./warning":459,"_process":296}],354:[function(require,module,exports){
+},{"./AutoFocusMixin":307,"./DOMPropertyOperations":316,"./LinkedValueUtils":329,"./Object.assign":332,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363,"./ReactUpdates":393,"./invariant":441,"./warning":460,"_process":297}],355:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10287,7 +12152,7 @@ var ReactDOMSelect = ReactClass.createClass({
 
 module.exports = ReactDOMSelect;
 
-},{"./AutoFocusMixin":306,"./LinkedValueUtils":328,"./Object.assign":331,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362,"./ReactUpdates":392}],353:[function(require,module,exports){
+},{"./AutoFocusMixin":307,"./LinkedValueUtils":329,"./Object.assign":332,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363,"./ReactUpdates":393}],354:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -10339,7 +12204,7 @@ var ReactDOMOption = ReactClass.createClass({
 module.exports = ReactDOMOption;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362,"./warning":459,"_process":296}],352:[function(require,module,exports){
+},{"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363,"./warning":460,"_process":297}],353:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -10516,7 +12381,7 @@ var ReactDOMInput = ReactClass.createClass({
 module.exports = ReactDOMInput;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":306,"./DOMPropertyOperations":315,"./LinkedValueUtils":328,"./Object.assign":331,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362,"./ReactMount":375,"./ReactUpdates":392,"./invariant":440,"_process":296}],328:[function(require,module,exports){
+},{"./AutoFocusMixin":307,"./DOMPropertyOperations":316,"./LinkedValueUtils":329,"./Object.assign":332,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363,"./ReactMount":376,"./ReactUpdates":393,"./invariant":441,"_process":297}],329:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -10672,7 +12537,7 @@ var LinkedValueUtils = {
 module.exports = LinkedValueUtils;
 
 }).call(this,require('_process'))
-},{"./ReactPropTypes":383,"./invariant":440,"_process":296}],383:[function(require,module,exports){
+},{"./ReactPropTypes":384,"./invariant":441,"_process":297}],384:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11021,7 +12886,7 @@ function getPreciseType(propValue) {
 
 module.exports = ReactPropTypes;
 
-},{"./ReactElement":362,"./ReactFragment":368,"./ReactPropTypeLocationNames":381,"./emptyFunction":419}],351:[function(require,module,exports){
+},{"./ReactElement":363,"./ReactFragment":369,"./ReactPropTypeLocationNames":382,"./emptyFunction":420}],352:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11067,7 +12932,7 @@ var ReactDOMImg = ReactClass.createClass({
 
 module.exports = ReactDOMImg;
 
-},{"./EventConstants":319,"./LocalEventTrapMixin":329,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362}],350:[function(require,module,exports){
+},{"./EventConstants":320,"./LocalEventTrapMixin":330,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363}],351:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11112,7 +12977,7 @@ var ReactDOMIframe = ReactClass.createClass({
 
 module.exports = ReactDOMIframe;
 
-},{"./EventConstants":319,"./LocalEventTrapMixin":329,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362}],348:[function(require,module,exports){
+},{"./EventConstants":320,"./LocalEventTrapMixin":330,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363}],349:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11161,7 +13026,7 @@ var ReactDOMForm = ReactClass.createClass({
 
 module.exports = ReactDOMForm;
 
-},{"./EventConstants":319,"./LocalEventTrapMixin":329,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362}],329:[function(require,module,exports){
+},{"./EventConstants":320,"./LocalEventTrapMixin":330,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363}],330:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -11218,7 +13083,7 @@ var LocalEventTrapMixin = {
 module.exports = LocalEventTrapMixin;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserEventEmitter":335,"./accumulateInto":410,"./forEachAccumulated":425,"./invariant":440,"_process":296}],346:[function(require,module,exports){
+},{"./ReactBrowserEventEmitter":336,"./accumulateInto":411,"./forEachAccumulated":426,"./invariant":441,"_process":297}],347:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11282,7 +13147,7 @@ var ReactDOMButton = ReactClass.createClass({
 
 module.exports = ReactDOMButton;
 
-},{"./AutoFocusMixin":306,"./ReactBrowserComponentMixin":334,"./ReactClass":338,"./ReactElement":362,"./keyMirror":445}],306:[function(require,module,exports){
+},{"./AutoFocusMixin":307,"./ReactBrowserComponentMixin":335,"./ReactClass":339,"./ReactElement":363,"./keyMirror":446}],307:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11309,7 +13174,7 @@ var AutoFocusMixin = {
 
 module.exports = AutoFocusMixin;
 
-},{"./focusNode":424}],424:[function(require,module,exports){
+},{"./focusNode":425}],425:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -11338,7 +13203,7 @@ function focusNode(node) {
 
 module.exports = focusNode;
 
-},{}],334:[function(require,module,exports){
+},{}],335:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11369,7 +13234,7 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 
-},{"./findDOMNode":422}],422:[function(require,module,exports){
+},{"./findDOMNode":423}],423:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -11442,7 +13307,7 @@ function findDOMNode(componentOrElement) {
 module.exports = findDOMNode;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":344,"./ReactInstanceMap":372,"./ReactMount":375,"./invariant":440,"./isNode":442,"./warning":459,"_process":296}],330:[function(require,module,exports){
+},{"./ReactCurrentOwner":345,"./ReactInstanceMap":373,"./ReactMount":376,"./invariant":441,"./isNode":443,"./warning":460,"_process":297}],331:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11500,7 +13365,7 @@ var MobileSafariClickEventPlugin = {
 
 module.exports = MobileSafariClickEventPlugin;
 
-},{"./EventConstants":319,"./emptyFunction":419}],327:[function(require,module,exports){
+},{"./EventConstants":320,"./emptyFunction":420}],328:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11711,7 +13576,7 @@ var HTMLDOMPropertyConfig = {
 
 module.exports = HTMLDOMPropertyConfig;
 
-},{"./DOMProperty":314,"./ExecutionEnvironment":325}],318:[function(require,module,exports){
+},{"./DOMProperty":315,"./ExecutionEnvironment":326}],319:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11851,7 +13716,7 @@ var EnterLeaveEventPlugin = {
 
 module.exports = EnterLeaveEventPlugin;
 
-},{"./EventConstants":319,"./EventPropagators":324,"./ReactMount":375,"./SyntheticMouseEvent":404,"./keyOf":446}],404:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPropagators":325,"./ReactMount":376,"./SyntheticMouseEvent":405,"./keyOf":447}],405:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11932,7 +13797,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
 
-},{"./SyntheticUIEvent":406,"./ViewportMetrics":409,"./getEventModifierState":429}],429:[function(require,module,exports){
+},{"./SyntheticUIEvent":407,"./ViewportMetrics":410,"./getEventModifierState":430}],430:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11979,7 +13844,7 @@ function getEventModifierState(nativeEvent) {
 
 module.exports = getEventModifierState;
 
-},{}],406:[function(require,module,exports){
+},{}],407:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12041,7 +13906,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
 
-},{"./SyntheticEvent":400,"./getEventTarget":430}],317:[function(require,module,exports){
+},{"./SyntheticEvent":401,"./getEventTarget":431}],318:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12080,7 +13945,7 @@ var DefaultEventPluginOrder = [
 
 module.exports = DefaultEventPluginOrder;
 
-},{"./keyOf":446}],312:[function(require,module,exports){
+},{"./keyOf":447}],313:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12105,7 +13970,7 @@ var ClientReactRootIndex = {
 
 module.exports = ClientReactRootIndex;
 
-},{}],311:[function(require,module,exports){
+},{}],312:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12487,7 +14352,7 @@ var ChangeEventPlugin = {
 
 module.exports = ChangeEventPlugin;
 
-},{"./EventConstants":319,"./EventPluginHub":321,"./EventPropagators":324,"./ExecutionEnvironment":325,"./ReactUpdates":392,"./SyntheticEvent":400,"./isEventSupported":441,"./isTextInputElement":443,"./keyOf":446}],443:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPluginHub":322,"./EventPropagators":325,"./ExecutionEnvironment":326,"./ReactUpdates":393,"./SyntheticEvent":401,"./isEventSupported":442,"./isTextInputElement":444,"./keyOf":447}],444:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12530,7 +14395,7 @@ function isTextInputElement(elem) {
 
 module.exports = isTextInputElement;
 
-},{}],307:[function(require,module,exports){
+},{}],308:[function(require,module,exports){
 /**
  * Copyright 2013-2015 Facebook, Inc.
  * All rights reserved.
@@ -13025,7 +14890,7 @@ var BeforeInputEventPlugin = {
 
 module.exports = BeforeInputEventPlugin;
 
-},{"./EventConstants":319,"./EventPropagators":324,"./ExecutionEnvironment":325,"./FallbackCompositionState":326,"./SyntheticCompositionEvent":398,"./SyntheticInputEvent":402,"./keyOf":446}],402:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPropagators":325,"./ExecutionEnvironment":326,"./FallbackCompositionState":327,"./SyntheticCompositionEvent":399,"./SyntheticInputEvent":403,"./keyOf":447}],403:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13071,7 +14936,7 @@ SyntheticEvent.augmentClass(
 
 module.exports = SyntheticInputEvent;
 
-},{"./SyntheticEvent":400}],398:[function(require,module,exports){
+},{"./SyntheticEvent":401}],399:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13116,7 +14981,7 @@ SyntheticEvent.augmentClass(
 
 module.exports = SyntheticCompositionEvent;
 
-},{"./SyntheticEvent":400}],400:[function(require,module,exports){
+},{"./SyntheticEvent":401}],401:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13282,7 +15147,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.threeArgumentPooler);
 
 module.exports = SyntheticEvent;
 
-},{"./Object.assign":331,"./PooledClass":332,"./emptyFunction":419,"./getEventTarget":430}],430:[function(require,module,exports){
+},{"./Object.assign":332,"./PooledClass":333,"./emptyFunction":420,"./getEventTarget":431}],431:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13313,7 +15178,7 @@ function getEventTarget(nativeEvent) {
 
 module.exports = getEventTarget;
 
-},{}],326:[function(require,module,exports){
+},{}],327:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13404,7 +15269,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
 
-},{"./Object.assign":331,"./PooledClass":332,"./getTextContentAccessor":435}],435:[function(require,module,exports){
+},{"./Object.assign":332,"./PooledClass":333,"./getTextContentAccessor":436}],436:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13441,7 +15306,7 @@ function getTextContentAccessor() {
 
 module.exports = getTextContentAccessor;
 
-},{"./ExecutionEnvironment":325}],324:[function(require,module,exports){
+},{"./ExecutionEnvironment":326}],325:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -13583,7 +15448,7 @@ var EventPropagators = {
 module.exports = EventPropagators;
 
 }).call(this,require('_process'))
-},{"./EventConstants":319,"./EventPluginHub":321,"./accumulateInto":410,"./forEachAccumulated":425,"_process":296}],356:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPluginHub":322,"./accumulateInto":411,"./forEachAccumulated":426,"_process":297}],357:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13700,7 +15565,7 @@ assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 
-},{"./DOMPropertyOperations":315,"./Object.assign":331,"./ReactComponentBrowserEnvironment":340,"./ReactDOMComponent":347,"./escapeTextContentForBrowser":421}],347:[function(require,module,exports){
+},{"./DOMPropertyOperations":316,"./Object.assign":332,"./ReactComponentBrowserEnvironment":341,"./ReactDOMComponent":348,"./escapeTextContentForBrowser":422}],348:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -14208,7 +16073,7 @@ ReactDOMComponent.injection = {
 module.exports = ReactDOMComponent;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":309,"./DOMProperty":314,"./DOMPropertyOperations":315,"./Object.assign":331,"./ReactBrowserEventEmitter":335,"./ReactComponentBrowserEnvironment":340,"./ReactMount":375,"./ReactMultiChild":376,"./ReactPerf":380,"./escapeTextContentForBrowser":421,"./invariant":440,"./isEventSupported":441,"./keyOf":446,"./warning":459,"_process":296}],376:[function(require,module,exports){
+},{"./CSSPropertyOperations":310,"./DOMProperty":315,"./DOMPropertyOperations":316,"./Object.assign":332,"./ReactBrowserEventEmitter":336,"./ReactComponentBrowserEnvironment":341,"./ReactMount":376,"./ReactMultiChild":377,"./ReactPerf":381,"./escapeTextContentForBrowser":422,"./invariant":441,"./isEventSupported":442,"./keyOf":447,"./warning":460,"_process":297}],377:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14638,7 +16503,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 
-},{"./ReactChildReconciler":336,"./ReactComponentEnvironment":341,"./ReactMultiChildUpdateTypes":377,"./ReactReconciler":386}],336:[function(require,module,exports){
+},{"./ReactChildReconciler":337,"./ReactComponentEnvironment":342,"./ReactMultiChildUpdateTypes":378,"./ReactReconciler":387}],337:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -14765,7 +16630,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 
-},{"./ReactReconciler":386,"./flattenChildren":423,"./instantiateReactComponent":439,"./shouldUpdateReactComponent":456}],423:[function(require,module,exports){
+},{"./ReactReconciler":387,"./flattenChildren":424,"./instantiateReactComponent":440,"./shouldUpdateReactComponent":457}],424:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -14823,7 +16688,7 @@ function flattenChildren(children) {
 module.exports = flattenChildren;
 
 }).call(this,require('_process'))
-},{"./traverseAllChildren":458,"./warning":459,"_process":296}],340:[function(require,module,exports){
+},{"./traverseAllChildren":459,"./warning":460,"_process":297}],341:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14870,7 +16735,7 @@ var ReactComponentBrowserEnvironment = {
 
 module.exports = ReactComponentBrowserEnvironment;
 
-},{"./ReactDOMIDOperations":349,"./ReactMount":375}],349:[function(require,module,exports){
+},{"./ReactDOMIDOperations":350,"./ReactMount":376}],350:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -15038,7 +16903,7 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 module.exports = ReactDOMIDOperations;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":309,"./DOMChildrenOperations":313,"./DOMPropertyOperations":315,"./ReactMount":375,"./ReactPerf":380,"./invariant":440,"./setInnerHTML":453,"_process":296}],375:[function(require,module,exports){
+},{"./CSSPropertyOperations":310,"./DOMChildrenOperations":314,"./DOMPropertyOperations":316,"./ReactMount":376,"./ReactPerf":381,"./invariant":441,"./setInnerHTML":454,"_process":297}],376:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -15929,7 +17794,7 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 module.exports = ReactMount;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":314,"./ReactBrowserEventEmitter":335,"./ReactCurrentOwner":344,"./ReactElement":362,"./ReactElementValidator":363,"./ReactEmptyComponent":364,"./ReactInstanceHandles":371,"./ReactInstanceMap":372,"./ReactMarkupChecksum":374,"./ReactPerf":380,"./ReactReconciler":386,"./ReactUpdateQueue":391,"./ReactUpdates":392,"./containsNode":414,"./emptyObject":420,"./getReactRootElementInContainer":434,"./instantiateReactComponent":439,"./invariant":440,"./setInnerHTML":453,"./shouldUpdateReactComponent":456,"./warning":459,"_process":296}],439:[function(require,module,exports){
+},{"./DOMProperty":315,"./ReactBrowserEventEmitter":336,"./ReactCurrentOwner":345,"./ReactElement":363,"./ReactElementValidator":364,"./ReactEmptyComponent":365,"./ReactInstanceHandles":372,"./ReactInstanceMap":373,"./ReactMarkupChecksum":375,"./ReactPerf":381,"./ReactReconciler":387,"./ReactUpdateQueue":392,"./ReactUpdates":393,"./containsNode":415,"./emptyObject":421,"./getReactRootElementInContainer":435,"./instantiateReactComponent":440,"./invariant":441,"./setInnerHTML":454,"./shouldUpdateReactComponent":457,"./warning":460,"_process":297}],440:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -16067,7 +17932,7 @@ function instantiateReactComponent(node, parentCompositeType) {
 module.exports = instantiateReactComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./ReactCompositeComponent":342,"./ReactEmptyComponent":364,"./ReactNativeComponent":378,"./invariant":440,"./warning":459,"_process":296}],342:[function(require,module,exports){
+},{"./Object.assign":332,"./ReactCompositeComponent":343,"./ReactEmptyComponent":365,"./ReactNativeComponent":379,"./invariant":441,"./warning":460,"_process":297}],343:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -16965,7 +18830,7 @@ var ReactCompositeComponent = {
 module.exports = ReactCompositeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./ReactComponentEnvironment":341,"./ReactContext":343,"./ReactCurrentOwner":344,"./ReactElement":362,"./ReactElementValidator":363,"./ReactInstanceMap":372,"./ReactLifeCycle":373,"./ReactNativeComponent":378,"./ReactPerf":380,"./ReactPropTypeLocationNames":381,"./ReactPropTypeLocations":382,"./ReactReconciler":386,"./ReactUpdates":392,"./emptyObject":420,"./invariant":440,"./shouldUpdateReactComponent":456,"./warning":459,"_process":296}],456:[function(require,module,exports){
+},{"./Object.assign":332,"./ReactComponentEnvironment":342,"./ReactContext":344,"./ReactCurrentOwner":345,"./ReactElement":363,"./ReactElementValidator":364,"./ReactInstanceMap":373,"./ReactLifeCycle":374,"./ReactNativeComponent":379,"./ReactPerf":381,"./ReactPropTypeLocationNames":382,"./ReactPropTypeLocations":383,"./ReactReconciler":387,"./ReactUpdates":393,"./emptyObject":421,"./invariant":441,"./shouldUpdateReactComponent":457,"./warning":460,"_process":297}],457:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -17069,7 +18934,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 }).call(this,require('_process'))
-},{"./warning":459,"_process":296}],341:[function(require,module,exports){
+},{"./warning":460,"_process":297}],342:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -17130,7 +18995,7 @@ var ReactComponentEnvironment = {
 module.exports = ReactComponentEnvironment;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],434:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],435:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17165,7 +19030,7 @@ function getReactRootElementInContainer(container) {
 
 module.exports = getReactRootElementInContainer;
 
-},{}],414:[function(require,module,exports){
+},{}],415:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17209,7 +19074,7 @@ function containsNode(outerNode, innerNode) {
 
 module.exports = containsNode;
 
-},{"./isTextNode":444}],444:[function(require,module,exports){
+},{"./isTextNode":445}],445:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17234,7 +19099,7 @@ function isTextNode(object) {
 
 module.exports = isTextNode;
 
-},{"./isNode":442}],442:[function(require,module,exports){
+},{"./isNode":443}],443:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17261,7 +19126,7 @@ function isNode(object) {
 
 module.exports = isNode;
 
-},{}],374:[function(require,module,exports){
+},{}],375:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17309,7 +19174,7 @@ var ReactMarkupChecksum = {
 
 module.exports = ReactMarkupChecksum;
 
-},{"./adler32":411}],411:[function(require,module,exports){
+},{"./adler32":412}],412:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17343,7 +19208,7 @@ function adler32(data) {
 
 module.exports = adler32;
 
-},{}],364:[function(require,module,exports){
+},{}],365:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -17438,7 +19303,7 @@ var ReactEmptyComponent = {
 module.exports = ReactEmptyComponent;
 
 }).call(this,require('_process'))
-},{"./ReactElement":362,"./ReactInstanceMap":372,"./invariant":440,"_process":296}],335:[function(require,module,exports){
+},{"./ReactElement":363,"./ReactInstanceMap":373,"./invariant":441,"_process":297}],336:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17791,7 +19656,7 @@ var ReactBrowserEventEmitter = assign({}, ReactEventEmitterMixin, {
 
 module.exports = ReactBrowserEventEmitter;
 
-},{"./EventConstants":319,"./EventPluginHub":321,"./EventPluginRegistry":322,"./Object.assign":331,"./ReactEventEmitterMixin":366,"./ViewportMetrics":409,"./isEventSupported":441}],441:[function(require,module,exports){
+},{"./EventConstants":320,"./EventPluginHub":322,"./EventPluginRegistry":323,"./Object.assign":332,"./ReactEventEmitterMixin":367,"./ViewportMetrics":410,"./isEventSupported":442}],442:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17856,7 +19721,7 @@ function isEventSupported(eventNameSuffix, capture) {
 
 module.exports = isEventSupported;
 
-},{"./ExecutionEnvironment":325}],409:[function(require,module,exports){
+},{"./ExecutionEnvironment":326}],410:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17885,7 +19750,7 @@ var ViewportMetrics = {
 
 module.exports = ViewportMetrics;
 
-},{}],366:[function(require,module,exports){
+},{}],367:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17935,7 +19800,7 @@ var ReactEventEmitterMixin = {
 
 module.exports = ReactEventEmitterMixin;
 
-},{"./EventPluginHub":321}],321:[function(require,module,exports){
+},{"./EventPluginHub":322}],322:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18213,7 +20078,7 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":322,"./EventPluginUtils":323,"./accumulateInto":410,"./forEachAccumulated":425,"./invariant":440,"_process":296}],425:[function(require,module,exports){
+},{"./EventPluginRegistry":323,"./EventPluginUtils":324,"./accumulateInto":411,"./forEachAccumulated":426,"./invariant":441,"_process":297}],426:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18244,7 +20109,7 @@ var forEachAccumulated = function(arr, cb, scope) {
 
 module.exports = forEachAccumulated;
 
-},{}],410:[function(require,module,exports){
+},{}],411:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -18310,7 +20175,7 @@ function accumulateInto(current, next) {
 module.exports = accumulateInto;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],322:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],323:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18590,7 +20455,7 @@ var EventPluginRegistry = {
 module.exports = EventPluginRegistry;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],313:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],314:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18728,7 +20593,7 @@ var DOMChildrenOperations = {
 module.exports = DOMChildrenOperations;
 
 }).call(this,require('_process'))
-},{"./Danger":316,"./ReactMultiChildUpdateTypes":377,"./invariant":440,"./setTextContent":454,"_process":296}],454:[function(require,module,exports){
+},{"./Danger":317,"./ReactMultiChildUpdateTypes":378,"./invariant":441,"./setTextContent":455,"_process":297}],455:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18770,7 +20635,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setTextContent;
 
-},{"./ExecutionEnvironment":325,"./escapeTextContentForBrowser":421,"./setInnerHTML":453}],453:[function(require,module,exports){
+},{"./ExecutionEnvironment":326,"./escapeTextContentForBrowser":422,"./setInnerHTML":454}],454:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18859,7 +20724,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setInnerHTML;
 
-},{"./ExecutionEnvironment":325}],377:[function(require,module,exports){
+},{"./ExecutionEnvironment":326}],378:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18892,7 +20757,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 
 module.exports = ReactMultiChildUpdateTypes;
 
-},{"./keyMirror":445}],316:[function(require,module,exports){
+},{"./keyMirror":446}],317:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19079,7 +20944,7 @@ var Danger = {
 module.exports = Danger;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":325,"./createNodesFromMarkup":417,"./emptyFunction":419,"./getMarkupWrap":432,"./invariant":440,"_process":296}],417:[function(require,module,exports){
+},{"./ExecutionEnvironment":326,"./createNodesFromMarkup":418,"./emptyFunction":420,"./getMarkupWrap":433,"./invariant":441,"_process":297}],418:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19169,7 +21034,7 @@ function createNodesFromMarkup(markup, handleScript) {
 module.exports = createNodesFromMarkup;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":325,"./createArrayFromMixed":415,"./getMarkupWrap":432,"./invariant":440,"_process":296}],432:[function(require,module,exports){
+},{"./ExecutionEnvironment":326,"./createArrayFromMixed":416,"./getMarkupWrap":433,"./invariant":441,"_process":297}],433:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19286,7 +21151,7 @@ function getMarkupWrap(nodeName) {
 module.exports = getMarkupWrap;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":325,"./invariant":440,"_process":296}],415:[function(require,module,exports){
+},{"./ExecutionEnvironment":326,"./invariant":441,"_process":297}],416:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19372,7 +21237,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 
-},{"./toArray":457}],457:[function(require,module,exports){
+},{"./toArray":458}],458:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -19444,7 +21309,7 @@ function toArray(obj) {
 module.exports = toArray;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],309:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],310:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19626,7 +21491,7 @@ var CSSPropertyOperations = {
 module.exports = CSSPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./CSSProperty":308,"./ExecutionEnvironment":325,"./camelizeStyleName":413,"./dangerousStyleValue":418,"./hyphenateStyleName":438,"./memoizeStringOnly":448,"./warning":459,"_process":296}],448:[function(require,module,exports){
+},{"./CSSProperty":309,"./ExecutionEnvironment":326,"./camelizeStyleName":414,"./dangerousStyleValue":419,"./hyphenateStyleName":439,"./memoizeStringOnly":449,"./warning":460,"_process":297}],449:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19659,7 +21524,7 @@ function memoizeStringOnly(callback) {
 
 module.exports = memoizeStringOnly;
 
-},{}],438:[function(require,module,exports){
+},{}],439:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19700,7 +21565,7 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 
-},{"./hyphenate":437}],437:[function(require,module,exports){
+},{"./hyphenate":438}],438:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19733,7 +21598,7 @@ function hyphenate(string) {
 
 module.exports = hyphenate;
 
-},{}],418:[function(require,module,exports){
+},{}],419:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19791,7 +21656,7 @@ function dangerousStyleValue(name, value) {
 
 module.exports = dangerousStyleValue;
 
-},{"./CSSProperty":308}],413:[function(require,module,exports){
+},{"./CSSProperty":309}],414:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -19833,7 +21698,7 @@ function camelizeStyleName(string) {
 
 module.exports = camelizeStyleName;
 
-},{"./camelize":412}],412:[function(require,module,exports){
+},{"./camelize":413}],413:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19865,7 +21730,7 @@ function camelize(string) {
 
 module.exports = camelize;
 
-},{}],308:[function(require,module,exports){
+},{}],309:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19990,7 +21855,7 @@ var CSSProperty = {
 
 module.exports = CSSProperty;
 
-},{}],315:[function(require,module,exports){
+},{}],316:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20182,7 +22047,7 @@ var DOMPropertyOperations = {
 module.exports = DOMPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":314,"./quoteAttributeValueForBrowser":452,"./warning":459,"_process":296}],452:[function(require,module,exports){
+},{"./DOMProperty":315,"./quoteAttributeValueForBrowser":453,"./warning":460,"_process":297}],453:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20210,7 +22075,7 @@ function quoteAttributeValueForBrowser(value) {
 
 module.exports = quoteAttributeValueForBrowser;
 
-},{"./escapeTextContentForBrowser":421}],421:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":422}],422:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20250,7 +22115,7 @@ function escapeTextContentForBrowser(text) {
 
 module.exports = escapeTextContentForBrowser;
 
-},{}],314:[function(require,module,exports){
+},{}],315:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20549,7 +22414,7 @@ var DOMProperty = {
 module.exports = DOMProperty;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],345:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],346:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20727,7 +22592,7 @@ var ReactDOM = mapObject({
 module.exports = ReactDOM;
 
 }).call(this,require('_process'))
-},{"./ReactElement":362,"./ReactElementValidator":363,"./mapObject":447,"_process":296}],447:[function(require,module,exports){
+},{"./ReactElement":363,"./ReactElementValidator":364,"./mapObject":448,"_process":297}],448:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20780,7 +22645,7 @@ function mapObject(object, callback, context) {
 
 module.exports = mapObject;
 
-},{}],338:[function(require,module,exports){
+},{}],339:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21726,7 +23591,7 @@ var ReactClass = {
 module.exports = ReactClass;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./ReactComponent":339,"./ReactCurrentOwner":344,"./ReactElement":362,"./ReactErrorUtils":365,"./ReactInstanceMap":372,"./ReactLifeCycle":373,"./ReactPropTypeLocationNames":381,"./ReactPropTypeLocations":382,"./ReactUpdateQueue":391,"./invariant":440,"./keyMirror":445,"./keyOf":446,"./warning":459,"_process":296}],446:[function(require,module,exports){
+},{"./Object.assign":332,"./ReactComponent":340,"./ReactCurrentOwner":345,"./ReactElement":363,"./ReactErrorUtils":366,"./ReactInstanceMap":373,"./ReactLifeCycle":374,"./ReactPropTypeLocationNames":382,"./ReactPropTypeLocations":383,"./ReactUpdateQueue":392,"./invariant":441,"./keyMirror":446,"./keyOf":447,"./warning":460,"_process":297}],447:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21762,7 +23627,7 @@ var keyOf = function(oneKeyObj) {
 
 module.exports = keyOf;
 
-},{}],365:[function(require,module,exports){
+},{}],366:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21794,7 +23659,7 @@ var ReactErrorUtils = {
 
 module.exports = ReactErrorUtils;
 
-},{}],339:[function(require,module,exports){
+},{}],340:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21930,7 +23795,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactComponent;
 
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":391,"./invariant":440,"./warning":459,"_process":296}],391:[function(require,module,exports){
+},{"./ReactUpdateQueue":392,"./invariant":441,"./warning":460,"_process":297}],392:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -22229,7 +24094,7 @@ var ReactUpdateQueue = {
 module.exports = ReactUpdateQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./ReactCurrentOwner":344,"./ReactElement":362,"./ReactInstanceMap":372,"./ReactLifeCycle":373,"./ReactUpdates":392,"./invariant":440,"./warning":459,"_process":296}],392:[function(require,module,exports){
+},{"./Object.assign":332,"./ReactCurrentOwner":345,"./ReactElement":363,"./ReactInstanceMap":373,"./ReactLifeCycle":374,"./ReactUpdates":393,"./invariant":441,"./warning":460,"_process":297}],393:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22511,7 +24376,7 @@ var ReactUpdates = {
 module.exports = ReactUpdates;
 
 }).call(this,require('_process'))
-},{"./CallbackQueue":310,"./Object.assign":331,"./PooledClass":332,"./ReactCurrentOwner":344,"./ReactPerf":380,"./ReactReconciler":386,"./Transaction":408,"./invariant":440,"./warning":459,"_process":296}],408:[function(require,module,exports){
+},{"./CallbackQueue":311,"./Object.assign":332,"./PooledClass":333,"./ReactCurrentOwner":345,"./ReactPerf":381,"./ReactReconciler":387,"./Transaction":409,"./invariant":441,"./warning":460,"_process":297}],409:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22752,7 +24617,7 @@ var Transaction = {
 module.exports = Transaction;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],386:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],387:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22876,7 +24741,7 @@ var ReactReconciler = {
 module.exports = ReactReconciler;
 
 }).call(this,require('_process'))
-},{"./ReactElementValidator":363,"./ReactRef":387,"_process":296}],387:[function(require,module,exports){
+},{"./ReactElementValidator":364,"./ReactRef":388,"_process":297}],388:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22947,7 +24812,7 @@ ReactRef.detachRefs = function(instance, element) {
 
 module.exports = ReactRef;
 
-},{"./ReactOwner":379}],379:[function(require,module,exports){
+},{"./ReactOwner":380}],380:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23059,7 +24924,7 @@ var ReactOwner = {
 module.exports = ReactOwner;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],363:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],364:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -23524,7 +25389,7 @@ var ReactElementValidator = {
 module.exports = ReactElementValidator;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":344,"./ReactElement":362,"./ReactFragment":368,"./ReactNativeComponent":378,"./ReactPropTypeLocationNames":381,"./ReactPropTypeLocations":382,"./getIteratorFn":431,"./invariant":440,"./warning":459,"_process":296}],382:[function(require,module,exports){
+},{"./ReactCurrentOwner":345,"./ReactElement":363,"./ReactFragment":369,"./ReactNativeComponent":379,"./ReactPropTypeLocationNames":382,"./ReactPropTypeLocations":383,"./getIteratorFn":432,"./invariant":441,"./warning":460,"_process":297}],383:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -23548,7 +25413,7 @@ var ReactPropTypeLocations = keyMirror({
 
 module.exports = ReactPropTypeLocations;
 
-},{"./keyMirror":445}],381:[function(require,module,exports){
+},{"./keyMirror":446}],382:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23576,7 +25441,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactPropTypeLocationNames;
 
 }).call(this,require('_process'))
-},{"_process":296}],378:[function(require,module,exports){
+},{"_process":297}],379:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -23683,7 +25548,7 @@ var ReactNativeComponent = {
 module.exports = ReactNativeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./invariant":440,"_process":296}],380:[function(require,module,exports){
+},{"./Object.assign":332,"./invariant":441,"_process":297}],381:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23787,7 +25652,7 @@ function _noMeasure(objName, fnName, func) {
 module.exports = ReactPerf;
 
 }).call(this,require('_process'))
-},{"_process":296}],310:[function(require,module,exports){
+},{"_process":297}],311:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23887,7 +25752,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 module.exports = CallbackQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./PooledClass":332,"./invariant":440,"_process":296}],373:[function(require,module,exports){
+},{"./Object.assign":332,"./PooledClass":333,"./invariant":441,"_process":297}],374:[function(require,module,exports){
 /**
  * Copyright 2015, Facebook, Inc.
  * All rights reserved.
@@ -23924,7 +25789,7 @@ var ReactLifeCycle = {
 
 module.exports = ReactLifeCycle;
 
-},{}],372:[function(require,module,exports){
+},{}],373:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -23973,7 +25838,7 @@ var ReactInstanceMap = {
 
 module.exports = ReactInstanceMap;
 
-},{}],337:[function(require,module,exports){
+},{}],338:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24126,7 +25991,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 }).call(this,require('_process'))
-},{"./PooledClass":332,"./ReactFragment":368,"./traverseAllChildren":458,"./warning":459,"_process":296}],458:[function(require,module,exports){
+},{"./PooledClass":333,"./ReactFragment":369,"./traverseAllChildren":459,"./warning":460,"_process":297}],459:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24379,7 +26244,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 
 }).call(this,require('_process'))
-},{"./ReactElement":362,"./ReactFragment":368,"./ReactInstanceHandles":371,"./getIteratorFn":431,"./invariant":440,"./warning":459,"_process":296}],431:[function(require,module,exports){
+},{"./ReactElement":363,"./ReactFragment":369,"./ReactInstanceHandles":372,"./getIteratorFn":432,"./invariant":441,"./warning":460,"_process":297}],432:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -24423,7 +26288,7 @@ function getIteratorFn(maybeIterable) {
 
 module.exports = getIteratorFn;
 
-},{}],371:[function(require,module,exports){
+},{}],372:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24759,7 +26624,7 @@ var ReactInstanceHandles = {
 module.exports = ReactInstanceHandles;
 
 }).call(this,require('_process'))
-},{"./ReactRootIndex":388,"./invariant":440,"_process":296}],388:[function(require,module,exports){
+},{"./ReactRootIndex":389,"./invariant":441,"_process":297}],389:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -24790,7 +26655,7 @@ var ReactRootIndex = {
 
 module.exports = ReactRootIndex;
 
-},{}],368:[function(require,module,exports){
+},{}],369:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -24975,7 +26840,7 @@ var ReactFragment = {
 module.exports = ReactFragment;
 
 }).call(this,require('_process'))
-},{"./ReactElement":362,"./warning":459,"_process":296}],362:[function(require,module,exports){
+},{"./ReactElement":363,"./warning":460,"_process":297}],363:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -25283,7 +27148,7 @@ ReactElement.isValidElement = function(object) {
 module.exports = ReactElement;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./ReactContext":343,"./ReactCurrentOwner":344,"./warning":459,"_process":296}],344:[function(require,module,exports){
+},{"./Object.assign":332,"./ReactContext":344,"./ReactCurrentOwner":345,"./warning":460,"_process":297}],345:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25317,7 +27182,7 @@ var ReactCurrentOwner = {
 
 module.exports = ReactCurrentOwner;
 
-},{}],343:[function(require,module,exports){
+},{}],344:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25395,7 +27260,7 @@ var ReactContext = {
 module.exports = ReactContext;
 
 }).call(this,require('_process'))
-},{"./Object.assign":331,"./emptyObject":420,"./warning":459,"_process":296}],459:[function(require,module,exports){
+},{"./Object.assign":332,"./emptyObject":421,"./warning":460,"_process":297}],460:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -25458,7 +27323,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":419,"_process":296}],419:[function(require,module,exports){
+},{"./emptyFunction":420,"_process":297}],420:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25492,7 +27357,7 @@ emptyFunction.thatReturnsArgument = function(arg) { return arg; };
 
 module.exports = emptyFunction;
 
-},{}],420:[function(require,module,exports){
+},{}],421:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25516,7 +27381,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = emptyObject;
 
 }).call(this,require('_process'))
-},{"_process":296}],332:[function(require,module,exports){
+},{"_process":297}],333:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25632,7 +27497,7 @@ var PooledClass = {
 module.exports = PooledClass;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],331:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],332:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -25681,7 +27546,7 @@ function assign(target, sources) {
 
 module.exports = assign;
 
-},{}],325:[function(require,module,exports){
+},{}],326:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25725,7 +27590,7 @@ var ExecutionEnvironment = {
 
 module.exports = ExecutionEnvironment;
 
-},{}],323:[function(require,module,exports){
+},{}],324:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25946,7 +27811,7 @@ var EventPluginUtils = {
 module.exports = EventPluginUtils;
 
 }).call(this,require('_process'))
-},{"./EventConstants":319,"./invariant":440,"_process":296}],319:[function(require,module,exports){
+},{"./EventConstants":320,"./invariant":441,"_process":297}],320:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -26018,7 +27883,7 @@ var EventConstants = {
 
 module.exports = EventConstants;
 
-},{"./keyMirror":445}],445:[function(require,module,exports){
+},{"./keyMirror":446}],446:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26073,7 +27938,7 @@ var keyMirror = function(obj) {
 module.exports = keyMirror;
 
 }).call(this,require('_process'))
-},{"./invariant":440,"_process":296}],440:[function(require,module,exports){
+},{"./invariant":441,"_process":297}],441:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26130,1775 +27995,4 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":296}],15:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; // Comment so this file is not identical to studio/controls.html.ejs 
-; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((6,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((12,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');19; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((22,  assetUrl('media/1x1.gif') )), '">', escape((22,  msg.finish() )), '\n    </button>\n  </div>\n');25; } ; buf.push('\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../locale":129,"ejs":302}],13:[function(require,module,exports){
-/**
- * CodeOrgApp: Applab
- *
- * Copyright 2014-2015 Code.org
- *
- */
-'use strict';
-
-var msg = require('./locale');
-var commonMsg = require('../locale');
-var codegen = require('../codegen');
-var utils = require('../utils');
-var _ = utils.getLodash();
-
-var RANDOM_VALUE = 'random';
-var HIDDEN_VALUE = '"hidden"';
-var CLICK_VALUE = '"click"';
-var VISIBLE_VALUE = '"visible"';
-
-var generateSetterCode = function (opts) {
-  var value = opts.ctx.getTitleValue('VALUE');
-  if (value === RANDOM_VALUE) {
-    var possibleValues =
-      _(opts.ctx.VALUES)
-        .map(function (item) { return item[1]; })
-        .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
-    value = 'Applab.randomFromArray([' + possibleValues + '])';
-  }
-
-  return 'Applab.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
-    (opts.extraParams ? opts.extraParams + ', ' : '') + value + ');\n';
-};
-
-// Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
-  var skin = blockInstallOptions.skin;
-  var isK1 = blockInstallOptions.isK1;
-  var generator = blockly.Generator.get('JavaScript');
-  blockly.JavaScript = generator;
-
-  generator.applab_eventHandlerPrologue = function() {
-    return '\n';
-  };
-
-  installContainer(blockly, generator, blockInstallOptions);
-};
-
-function installContainer(blockly, generator, blockInstallOptions) {
-  blockly.Blocks.applab_container = {
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput().appendTitle(msg.container());
-      this.appendValueInput('ID');
-      this.appendValueInput('HTML');
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.containerTooltip());
-    }
-  };
-
-  generator.applab_container = function() {
-    var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
-        Blockly.JavaScript.ORDER_NONE) || '';
-    var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
-        Blockly.JavaScript.ORDER_NONE) || '';
-    return 'Applab.container(\'block_id_' + this.id +
-               '\', ' + idParam + ', ' + htmlParam + ');\n';
-  };
-}
-
-
-},{"../codegen":84,"../locale":129,"../utils":292,"./locale":40}],40:[function(require,module,exports){
-// locale for applab
-
-module.exports = window.blockly.applab_locale;
-
-
-},{}],11:[function(require,module,exports){
-'use strict';
-
-/* global dashboard */
-
-/**
- * Namespace for app storage.
- */
-var AppStorage = module.exports;
-
-// TODO(dave): remove once all applab data levels are associated with
-// a project.
-AppStorage.tempChannelId =
-    window.location.hostname.split('.')[0] === 'localhost' ?
-        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
-
-AppStorage.getChannelId = function() {
-  // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
-  return id || AppStorage.tempChannelId;
-};
-
-/**
- * Reads the value associated with the key, accessible to all users of the app.
- * @param {string} key The name of the key.
- * @param {function(Object)} onSuccess Function to call on success with the
-       value retrieved from storage.
- * @param {function(string)} onError Function to call on error with error msg.
- */
-AppStorage.getKeyValue = function(key, onSuccess, onError) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
-  req.open('GET', url, true);
-  req.send();
-};
-
-var handleGetKeyValue = function(onSuccess, onError) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (this.readyState !== done) {
-    return;
-  }
-  if (this.status === 404) {
-    onSuccess(undefined);
-    return;
-  }
-  if (this.status < 200 || this.status >= 300) {
-    onError('error reading value: unexpected http status ' + this.status);
-    return;
-  }
-  var value = JSON.parse(this.responseText);
-  onSuccess(value);
-};
-
-/**
- * Saves the value associated with the key, accessible to all users of the app.
- * @param {string} key The name of the key.
- * @param {Object} value The value to associate with the key.
- * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call on error with error msg.
- */
-AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
-  req.open('POST', url, true);
-  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-  req.send(JSON.stringify(value));
-};
-
-var handleSetKeyValue = function(onSuccess, onError) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (this.readyState !== done) {
-    return;
-  }
-  if (this.status < 200 || this.status >= 300) {
-    onError('error writing value: unexpected http status ' + this.status);
-    return;
-  }
-  onSuccess();
-};
-
-/**
- * Creates a new record in the specified table, accessible to all users.
- * @param {string} tableName The name of the table to read from.
- * @param {Object} record Object containing other properties to store
- *     on the record.
- * @param {function(Object)} onSuccess Function to call with the new record.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
- */
-AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
-  if (!tableName) {
-    onError('error creating record: missing required parameter "tableName"');
-    return;
-  }
-  if (record.id) {
-    onError('error creating record: record must not have an "id" property');
-    return;
-  }
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
-  req.open('POST', url, true);
-  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-  req.send(JSON.stringify(record));
-};
-
-var handleCreateRecord = function(onSuccess, onError) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (this.readyState !== done) {
-    return;
-  }
-  if (this.status < 200 || this.status >= 300) {
-    onError('error creating record: unexpected http status ' + this.status);
-    return;
-  }
-  var record = JSON.parse(this.responseText);
-  onSuccess(record);
-};
-
-/**
- * Reads records which match the searchParams specified by the user,
- * and passes them to onSuccess.
- * @param {string} tableName The name of the table to read from.
- * @param {string} searchParams.id Optional id of record to read.
- * @param {Object} searchParams Other search criteria. Only records
- *     whose contents match all criteria will be returned.
- * @param {function(Array)} onSuccess Function to call with an array of record
-       objects.
- * @param {function(string)} onError Function to call with an error message
- *     in case of failure.
- */
-AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
-  if (!tableName) {
-    onError('error reading records: missing required parameter "tableName"');
-    return;
-  }
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleReadRecords.bind(req,
-      searchParams, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
-  req.open('GET', url, true);
-  req.send();
-  
-};
-
-var handleReadRecords = function(searchParams, onSuccess, onError) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (this.readyState !== done) {
-    return;
-  }
-  if (this.status < 200 || this.status >= 300) {
-    onError('error reading records: unexpected http status ' + this.status);
-    return;
-  }
-  var records = JSON.parse(this.responseText);
-  records = records.filter(function(record) {
-    for (var prop in searchParams) {
-      if (record[prop] !== searchParams[prop]) {
-        return false;
-      }
-    }
-    return true;
-  });
-  onSuccess(records);
-};
-
-/**
- * Updates a record in a table, accessible to all users.
- * @param {string} tableName The name of the table to update.
- * @param {string} record.id The id of the row to update.
- * @param {Object} record Object containing other properites to update
- *     on the record.
- * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
- */
-AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
-  if (!tableName) {
-    onError('error updating record: missing required parameter "tableName"');
-    return;
-  }
-  var recordId = record.id;
-  if (!recordId) {
-    onError('error updating record: missing required property "id"');
-    return;
-  }
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
-      tableName + '/' + recordId;
-  req.open('POST', url, true);
-  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-  req.send(JSON.stringify(record));
-};
-
-var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (this.readyState !== done) {
-    return;
-  }
-  if (this.status === 404) {
-    onError('error updating record: could not find record id ' + record.id +
-            ' in table ' + tableName);
-    return;
-  }
-  if (this.status < 200 || this.status >= 300) {
-    onError('error updating record: unexpected http status ' + this.status);
-    return;
-  }
-  onSuccess(record);
-};
-
-/**
- * Deletes a record from the specified table.
- * @param {string} tableName The name of the table to delete from.
- * @param {string} record.id The id of the record to delete.
- * @param {Object} record Object whose other properties are ignored.
- * @param {function()} onSuccess Function to call on success.
- * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
- */
-AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
-  if (!tableName) {
-    onError('error deleting record: missing required parameter "tableName"');
-    return;
-  }
-  var recordId = record.id;
-  if (!recordId) {
-    onError('error deleting record: missing required property "id"');
-    return;
-  }
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
-      tableName + '/' + recordId + '/delete';
-  req.open('POST', url, true);
-  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-  req.send(JSON.stringify(record));
-};
-
-var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
-  var done = XMLHttpRequest.DONE || 4;
-  if (this.readyState !== done) {
-    return;
-  }
-  if (this.status === 404) {
-    onError('error deleting record: could not find record id ' + record.id +
-        ' in table ' + tableName);
-    return;
-  }
-  if (this.status < 200 || this.status >= 300) {
-    onError('error deleting record: unexpected http status ' + this.status);
-    return;
-  }
-  onSuccess();
-};
-
-
-},{}],10:[function(require,module,exports){
-
-exports.randomFromArray = function (values) {
-  var key = Math.floor(Math.random() * values.length);
-  return values[key];
-};
-
-// APIs needed for blockly (must include blockId) (keep in sync with api.js):
-
-exports.container = function (blockId, elementId, html) {
-  return Applab.executeCmd(blockId,
-                          'container',
-                          {'elementId': elementId,
-                           'html': html });
-};
-
-exports.write = function (blockId, html) {
-  return Applab.executeCmd(blockId,
-                          'write',
-                          {'html': html });
-};
-
-exports.innerHTML = function (blockId, elementId, html) {
-  return Applab.executeCmd(blockId,
-                          'innerHTML',
-                          {'elementId': elementId,
-                           'html': html });
-};
-
-exports.deleteElement = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'deleteElement',
-                          {'elementId': elementId });
-};
-
-exports.showElement = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'showElement',
-                          {'elementId': elementId });
-};
-
-exports.hideElement = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'hideElement',
-                          {'elementId': elementId });
-};
-
-exports.button = function (blockId, elementId, text) {
-  return Applab.executeCmd(blockId,
-                          'button',
-                          {'elementId': elementId,
-                           'text': text });
-};
-
-exports.image = function (blockId, elementId, src) {
-  return Applab.executeCmd(blockId,
-                          'image',
-                          {'elementId': elementId,
-                           'src': src });
-};
-
-exports.setPosition = function (blockId, elementId, left, top, width, height) {
-  return Applab.executeCmd(blockId,
-                          'setPosition',
-                          {'elementId': elementId,
-                           'left': left,
-                           'top': top,
-                           'width': width,
-                           'height': height });
-};
-
-exports.getXPosition = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'getXPosition',
-                          {'elementId': elementId });
-};
-
-exports.getYPosition = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'getYPosition',
-                          {'elementId': elementId });
-};
-
-exports.createCanvas = function (blockId, elementId, width, height) {
-  return Applab.executeCmd(blockId,
-                          'createCanvas',
-                          {'elementId': elementId,
-                           'width': width,
-                           'height': height });
-};
-
-exports.setActiveCanvas = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'setActiveCanvas',
-                          {'elementId': elementId  });
-};
-
-exports.line = function (blockId, x1, y1, x2, y2) {
-  return Applab.executeCmd(blockId,
-                          'line',
-                          {'x1': x1,
-                           'y1': y1,
-                           'x2': x2,
-                           'y2': y2 });
-};
-
-exports.circle = function (blockId, x, y, radius) {
-  return Applab.executeCmd(blockId,
-                          'circle',
-                          {'x': x,
-                           'y': y,
-                           'radius': radius });
-};
-
-exports.rect = function (blockId, x, y, width, height) {
-  return Applab.executeCmd(blockId,
-                          'rect',
-                          {'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.setStrokeWidth = function (blockId, width) {
-  return Applab.executeCmd(blockId,
-                          'setStrokeWidth',
-                          {'width': width });
-};
-
-exports.setStrokeColor = function (blockId, color) {
-  return Applab.executeCmd(blockId,
-                          'setStrokeColor',
-                          {'color': color });
-};
-
-exports.setFillColor = function (blockId, color) {
-  return Applab.executeCmd(blockId,
-                          'setFillColor',
-                          {'color': color });
-};
-
-exports.clearCanvas = function (blockId) {
-  return Applab.executeCmd(blockId, 'clearCanvas');
-};
-
-exports.drawImage = function (blockId, imageId, x, y, width, height) {
-  return Applab.executeCmd(blockId,
-                          'drawImage',
-                          {'imageId': imageId,
-                           'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.getImageData = function (blockId, x, y, width, height) {
-  return Applab.executeCmd(blockId,
-                          'getImageData',
-                          {'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.putImageData = function (blockId, imageData, x, y) {
-  return Applab.executeCmd(blockId,
-                          'putImageData',
-                          {'imageData': imageData,
-                           'x': x,
-                           'y': y });
-};
-
-exports.textInput = function (blockId, elementId, text) {
-  return Applab.executeCmd(blockId,
-                          'textInput',
-                          {'elementId': elementId,
-                           'text': text });
-};
-
-exports.textLabel = function (blockId, elementId, text, forId) {
-  return Applab.executeCmd(blockId,
-                          'textLabel',
-                          {'elementId': elementId,
-                           'text': text,
-                           'forId': forId });
-};
-
-exports.checkbox = function (blockId, elementId, checked) {
-  return Applab.executeCmd(blockId,
-                          'checkbox',
-                          {'elementId': elementId,
-                           'checked': checked });
-};
-
-exports.radioButton = function (blockId, elementId, checked, name) {
-  return Applab.executeCmd(blockId,
-                          'radioButton',
-                          {'elementId': elementId,
-                           'checked': checked,
-                           'name': name });
-};
-
-exports.getChecked = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'getChecked',
-                          {'elementId': elementId });
-};
-
-exports.setChecked = function (blockId, elementId, checked) {
-  return Applab.executeCmd(blockId,
-                          'setChecked',
-                          {'elementId': elementId,
-                           'checked': checked });
-};
-
-exports.dropdown = function (blockId, elementId) {
-  var optionsArray = Array.prototype.slice.call(arguments, 2);
-  return Applab.executeCmd(blockId,
-                          'dropdown',
-                          {'elementId': elementId,
-                           'optionsArray': optionsArray });
-};
-
-exports.getAttribute = function(blockId, elementId, attribute) {
-  return Applab.executeCmd(blockId,
-                           'getAttribute',
-                           {elementId: elementId,
-                            attribute: attribute});
-};
-
-exports.setAttribute = function(blockId, elementId, attribute, value) {
-  return Applab.executeCmd(blockId,
-                           'setAttribute',
-                           {elementId: elementId,
-                            attribute: attribute,
-                            value: value});
-};
-
-exports.getText = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'getText',
-                          {'elementId': elementId });
-};
-
-exports.setText = function (blockId, elementId, text) {
-  return Applab.executeCmd(blockId,
-                          'setText',
-                          {'elementId': elementId,
-                           'text': text });
-};
-
-exports.getImageURL = function (blockId, elementId) {
-  return Applab.executeCmd(blockId,
-                          'getImageURL',
-                          {'elementId': elementId });
-};
-
-exports.setImageURL = function (blockId, elementId, src) {
-  return Applab.executeCmd(blockId,
-                          'setImageURL',
-                          {'elementId': elementId,
-                           'src': src });
-};
-
-exports.imageUploadButton = function (blockId, elementId, text) {
-  return Applab.executeCmd(blockId,
-                           'imageUploadButton',
-                           {'elementId': elementId,
-                            'text': text });
-};
-
-exports.setParent = function (blockId, elementId, parentId) {
-  return Applab.executeCmd(blockId,
-                          'setParent',
-                          {'elementId': elementId,
-                           'parentId': parentId });
-};
-
-exports.setStyle = function (blockId, elementId, style) {
-  return Applab.executeCmd(blockId,
-                           'setStyle',
-                           {'elementId': elementId,
-                           'style': style });
-};
-
-exports.onEvent = function (blockId, elementId, eventName, func) {
-  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
-  return Applab.executeCmd(blockId,
-                          'onEvent',
-                          {'elementId': elementId,
-                           'eventName': eventName,
-                           'func': func,
-                           'extraArgs': extraArgs});
-};
-
-exports.startWebRequest = function (blockId, url, func) {
-  return Applab.executeCmd(blockId,
-                          'startWebRequest',
-                          {'url': url,
-                           'func': func });
-};
-
-exports.setTimeout = function (blockId, func, milliseconds) {
-  return Applab.executeCmd(blockId,
-                          'setTimeout',
-                          {'func': func,
-                           'milliseconds': milliseconds });
-};
-
-exports.clearTimeout = function (blockId, timeoutId) {
-  return Applab.executeCmd(blockId,
-                           'clearTimeout',
-                           {'timeoutId': timeoutId });
-};
-
-exports.setInterval = function (blockId, func, milliseconds) {
-  return Applab.executeCmd(blockId,
-                          'setInterval',
-                          {'func': func,
-                           'milliseconds': milliseconds });
-};
-
-exports.clearInterval = function (blockId, intervalId) {
-  return Applab.executeCmd(blockId,
-                           'clearInterval',
-                           {'intervalId': intervalId });
-};
-
-exports.playSound = function (blockId, url) {
-  return Applab.executeCmd(blockId,
-                          'playSound',
-                          {'url': url});
-};
-
-exports.getKeyValue = function(blockId, key, onSuccess, onError) {
-  return Applab.executeCmd(blockId,
-                           'getKeyValue',
-                           {'key':key,
-                            'onSuccess': onSuccess,
-                            'onError': onError});
-};
-
-exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
-  return Applab.executeCmd(blockId,
-                           'setKeyValue',
-                           {'key':key,
-                            'value': value,
-                            'onSuccess': onSuccess,
-                            'onError': onError});
-};
-
-exports.createRecord = function (blockId, table, record, onSuccess, onError) {
-  return Applab.executeCmd(blockId,
-                          'createRecord',
-                          {'table': table,
-                           'record': record,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.readRecords = function (blockId, table, searchParams, onSuccess, onError) {
-  return Applab.executeCmd(blockId,
-                          'readRecords',
-                          {'table': table,
-                           'searchParams': searchParams,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.updateRecord = function (blockId, table, record, onSuccess, onError) {
-  return Applab.executeCmd(blockId,
-                          'updateRecord',
-                          {'table': table,
-                           'record': record,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
-  return Applab.executeCmd(blockId,
-                          'deleteRecord',
-                          {'table': table,
-                           'record': record,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.getUserId = function (blockId) {
-  return Applab.executeCmd(blockId,
-                          'getUserId',
-                          {});
-};
-
-exports.moveForward = function (blockId, distance) {
-  return Applab.executeCmd(blockId,
-                          'moveForward',
-                          {'distance': distance });
-};
-
-exports.moveBackward = function (blockId, distance) {
-  return Applab.executeCmd(blockId,
-                          'moveBackward',
-                          {'distance': distance });
-};
-
-exports.move = function (blockId, x, y) {
-  return Applab.executeCmd(blockId,
-                          'move',
-                          {'x': x,
-                           'y': y });
-};
-
-exports.moveTo = function (blockId, x, y) {
-  return Applab.executeCmd(blockId,
-                          'moveTo',
-                          {'x': x,
-                           'y': y });
-};
-
-exports.turnRight = function (blockId, degrees) {
-  return Applab.executeCmd(blockId,
-                          'turnRight',
-                          {'degrees': degrees });
-};
-
-exports.turnLeft = function (blockId, degrees) {
-  return Applab.executeCmd(blockId,
-                          'turnLeft',
-                          {'degrees': degrees });
-};
-
-exports.turnTo = function (blockId, direction) {
-  return Applab.executeCmd(blockId,
-                           'turnTo',
-                           {'direction': direction });
-};
-
-exports.arcRight = function (blockId, degrees, radius) {
-  return Applab.executeCmd(blockId,
-                           'arcRight',
-                           {'degrees': degrees,
-                            'radius': radius });
-};
-
-exports.arcLeft = function (blockId, degrees, radius) {
-  return Applab.executeCmd(blockId,
-                           'arcLeft',
-                           {'degrees': degrees,
-                            'radius': radius });
-};
-
-exports.dot = function (blockId, radius) {
-  return Applab.executeCmd(blockId,
-                           'dot',
-                           {'radius': radius });
-};
-
-exports.getX = function (blockId) {
-  return Applab.executeCmd(blockId, 'getX');
-};
-
-exports.getY = function (blockId) {
-  return Applab.executeCmd(blockId, 'getY');
-};
-
-exports.getDirection = function (blockId) {
-  return Applab.executeCmd(blockId, 'getDirection');
-};
-
-exports.penUp = function (blockId) {
-  return Applab.executeCmd(blockId, 'penUp');
-};
-
-exports.penDown = function (blockId) {
-  return Applab.executeCmd(blockId, 'penDown');
-};
-
-exports.show = function (blockId) {
-  return Applab.executeCmd(blockId, 'show');
-};
-
-exports.hide = function (blockId) {
-  return Applab.executeCmd(blockId, 'hide');
-};
-
-exports.speed = function (blockId, percent) {
-  return Applab.executeCmd(blockId,
-                           'speed',
-                           {'percent': percent});
-};
-
-exports.penWidth = function (blockId, width) {
-  return Applab.executeCmd(blockId,
-                          'penWidth',
-                          {'width': width });
-};
-
-exports.penColor = function (blockId, color) {
-  return Applab.executeCmd(blockId,
-                          'penColor',
-                          {'color': color });
-};
-
-exports.penRGB = function (blockId, r, g, b, a) {
-  return Applab.executeCmd(blockId,
-                          'penRGB',
-                          {'r': r,
-                           'g': g,
-                           'b': b,
-                           'a': a });
-};
-
-exports.insertItem = function (blockId, array, index, item) {
-  return Applab.executeCmd(blockId,
-                          'insertItem',
-                          {'array': array,
-                           'index': index,
-                           'item': item });
-};
-
-exports.appendItem = function (blockId, array, item) {
-  return Applab.executeCmd(blockId,
-                          'appendItem',
-                          {'array': array,
-                           'item': item });
-};
-
-exports.removeItem = function (blockId, array, index) {
-  return Applab.executeCmd(blockId,
-                          'removeItem',
-                          {'array': array,
-                           'index': index });
-};
-
-
-
-},{}],8:[function(require,module,exports){
-/* global ace */
-
-var dropletConfig = require('../dropletConfig');
-var dropletUtils = require('../../dropletUtils');
-var annotationList = require('./annotationList');
-
-// define ourselves for ace, so that it knows where to get us
-ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
-
-var oop = acerequire("ace/lib/oop");
-var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
-var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
-var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
-var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
-var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
-var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
-
-var Mode = function() {
-    this.HighlightRules = JavaScriptHighlightRules;
-    this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
-    this.foldingRules = new CStyleFoldMode();
-};
-oop.inherits(Mode, JavaScriptMode);
-
-(function() {
-
-  // A set of keywords we don't want to autocomplete
-  var excludedKeywords = [
-    'ArrayBuffer',
-    'Collator',
-    'EvalError',
-    'Float32Array',
-    'Float64Array',
-    'Intl',
-    'Int16Array',
-    'Int32Array',
-    'Int8Array',
-    'Iterator',
-    'NumberFormat',
-    'Object',
-    'QName',
-    'RangeError',
-    'ReferenceError',
-    'StopIteration',
-    'SyntaxError',
-    'TypeError',
-    'Uint16Array',
-    'Uint32Array',
-    'Uint8Array',
-    'Uint8ClampedArra',
-    'URIError'
-  ];
-
-  // Manually create our highlight rules so that we can modify it
-  this.$highlightRules = new JavaScriptHighlightRules();
-
-  excludedKeywords.forEach(function (keywordToRemove) {
-    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
-    if (keywordIndex > 0) {
-      this.$highlightRules.$keywordList.splice(keywordIndex);
-    }
-  }, this);
-
-  this.createWorker = function(session) {
-    var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
-    worker.attachToDocument(session.getDocument());
-    var newOptions = {
-      unused: true,
-      undef: true,
-      predef: {
-      }
-    };
-    // Mark all of our blocks as predefined so that linter doesnt complain about
-    // using undefined variables
-    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
-      newOptions.predef[block.func] = false;
-    });
-
-    annotationList.attachToSession(session);
-
-    worker.send("changeOptions", [newOptions]);
-
-    worker.on("jslint", annotationList.setJSLintAnnotations);
-
-    worker.on("terminate", function() {
-      session.clearAnnotations();
-    });
-
-    return worker;
-  };
-
-  this.cleanup = function () {
-    annotationList.detachFromSession();
-  };
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-});
-
-
-},{"../../dropletUtils":88,"../dropletConfig":36,"./annotationList":6}],36:[function(require,module,exports){
-var api = require('./api');
-
-var COLOR_LIGHT_GREEN = '#D3E965';
-var COLOR_BLUE = '#19C3E1';
-var COLOR_RED = '#F78183';
-var COLOR_CYAN = '#4DD0E1';
-var COLOR_YELLOW = '#FFF176';
-
-module.exports.blocks = [
-  {'func': 'onEvent', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','type','callback'], 'params': ['"id"', '"click"', "function(event) {\n  \n}"], 'dropdown': { 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
-  {'func': 'button', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
-  {'func': 'textInput', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
-  {'func': 'textLabel', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text','forId'], 'params': ['"id"', '"text"'] },
-  {'func': 'dropdown', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','option1','etc'], 'params': ['"id"', '"option1"', '"etc"'] },
-  {'func': 'getText', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setText', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','text'], 'params': ['"id"', '"text"'] },
-  {'func': 'checkbox', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false"], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'radioButton', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false", '"group"'], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'getChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "true"], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'image', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'getImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'playSound', 'parent': api, 'category': 'UI controls', 'paletteParams': ['url'], 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
-  {'func': 'showElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
-  {'func': 'hideElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
-  {'func': 'deleteElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
-  {'func': 'setPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','x','y','width','height'], 'params': ['"id"', "0", "0", "100", "100"] },
-  {'func': 'write', 'parent': api, 'category': 'UI controls', 'paletteParams': ['text'], 'params': ['"text"'] },
-  {'func': 'getXPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'getYPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-
-  {'func': 'createCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','width','height'], 'params': ['"id"', "320", "480"] },
-  {'func': 'setActiveCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id'], 'params': ['"id"'] },
-  {'func': 'line', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x1','y1','x2','y2'], 'params': ["0", "0", "160", "240"] },
-  {'func': 'circle', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','radius'], 'params': ["160", "240", "100"] },
-  {'func': 'rect', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','width','height'], 'params': ["80", "120", "160", "240"] },
-  {'func': 'setStrokeWidth', 'parent': api, 'category': 'Canvas', 'paletteParams': ['width'], 'params': ["3"] },
-  {'func': 'setStrokeColor', 'parent': api, 'category': 'Canvas', 'paletteParams': ['color'], 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
-  {'func': 'setFillColor', 'parent': api, 'category': 'Canvas', 'paletteParams': ['color'], 'params': ['"yellow"'], 'dropdown': { 0: [ '"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"' ] } },
-  {'func': 'drawImage', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','x','y'], 'params': ['"id"', "0", "0"] },
-  {'func': 'getImageData', 'parent': api, 'category': 'Canvas', 'paletteParams': ['x','y','width','height'], 'params': ["0", "0", "320", "480"], 'type': 'value' },
-  {'func': 'putImageData', 'parent': api, 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"] },
-  {'func': 'clearCanvas', 'parent': api, 'category': 'Canvas', },
-  {'func': 'getRed', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'getGreen', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'getBlue', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'getAlpha', 'category': 'Canvas', 'paletteParams': ['imgData','x','y'], 'params': ["imgData", "0", "0"], 'type': 'value', 'dontMarshal': true },
-  {'func': 'setRed', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','r'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setGreen', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','g'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setBlue', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','b'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setAlpha', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','a'], 'params': ["imgData", "0", "0", "255"], 'dontMarshal': true },
-  {'func': 'setRGB', 'category': 'Canvas', 'paletteParams': ['imgData','x','y','r','g','b'], 'params': ["imgData", "0", "0", "255", "255", "255"], 'dontMarshal': true },
-
-  {'func': 'startWebRequest', 'parent': api, 'category': 'Data', 'paletteParams': ['url','callback'], 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
-  {'func': 'setKeyValue', 'parent': api, 'category': 'Data', 'paletteParams': ['key','value','callback'], 'params': ['"key"', '"value"', "function () {\n  \n}"] },
-  {'func': 'getKeyValue', 'parent': api, 'category': 'Data', 'paletteParams': ['key','callback'], 'params': ['"key"', "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
-  {'func': 'readRecords', 'parent': api, 'category': 'Data', 'paletteParams': ['table','terms','callback'], 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
-  {'func': 'deleteRecord', 'parent': api, 'category': 'Data', 'paletteParams': ['table','record','callback'], 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
-  {'func': 'getUserId', 'parent': api, 'category': 'Data', type: 'value' },
-
-  {'func': 'moveForward', 'parent': api, 'category': 'Turtle', 'paletteParams': ['pixels'], 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
-  {'func': 'moveBackward', 'parent': api, 'category': 'Turtle', 'paletteParams': ['pixels'], 'params': ["25"], 'dropdown': { 0: [ "25", "50", "100", "200" ] } },
-  {'func': 'move', 'parent': api, 'category': 'Turtle', 'paletteParams': ['x','y'], 'params': ["25", "25"], 'dropdown': { 0: [ "25", "50", "100", "200" ], 1: [ "25", "50", "100", "200" ] } },
-  {'func': 'moveTo', 'parent': api, 'category': 'Turtle', 'paletteParams': ['x','y'], 'params': ["0", "0"] },
-  {'func': 'dot', 'parent': api, 'category': 'Turtle', 'paletteParams': ['radius'], 'params': ["5"], 'dropdown': { 0: [ "1", "5", "10" ] } },
-  {'func': 'turnRight', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
-  {'func': 'turnLeft', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["90"], 'dropdown': { 0: [ "30", "45", "60", "90" ] } },
-  {'func': 'turnTo', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle'], 'params': ["0"], 'dropdown': { 0: [ "0", "90", "180", "270" ] } },
-  {'func': 'arcRight', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle','radius'], 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
-  {'func': 'arcLeft', 'parent': api, 'category': 'Turtle', 'paletteParams': ['angle','radius'], 'params': ["90", "25"], 'dropdown': { 0: [ "30", "45", "60", "90" ], 1: [ "25", "50", "100", "200" ] } },
-  {'func': 'getX', 'parent': api, 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getY', 'parent': api, 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getDirection', 'parent': api, 'category': 'Turtle', 'type': 'value' },
-  {'func': 'penUp', 'parent': api, 'category': 'Turtle' },
-  {'func': 'penDown', 'parent': api, 'category': 'Turtle' },
-  {'func': 'penWidth', 'parent': api, 'category': 'Turtle', 'paletteParams': ['width'], 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
-  {'func': 'penColor', 'parent': api, 'category': 'Turtle', 'paletteParams': ['color'], 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
-  {'func': 'penRGB', 'parent': api, 'category': 'Turtle', 'paletteParams': ['r','g','b'], 'params': ["120", "180", "200"] },
-  {'func': 'show', 'parent': api, 'category': 'Turtle' },
-  {'func': 'hide', 'parent': api, 'category': 'Turtle' },
-  {'func': 'speed', 'parent': api, 'category': 'Turtle', 'paletteParams': ['value'], 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },
-
-  {'func': 'setTimeout', 'parent': api, 'category': 'Control', 'type': 'either', 'paletteParams': ['callback','ms'], 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearTimeout', 'parent': api, 'category': 'Control', 'paletteParams': ['__'], 'params': ["__"] },
-  {'func': 'setInterval', 'parent': api, 'category': 'Control', 'type': 'either', 'paletteParams': ['callback','ms'], 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearInterval', 'parent': api, 'category': 'Control', 'paletteParams': ['__'], 'params': ["__"] },
-
-  {'func': 'console.log', 'category': 'Variables', 'paletteParams': ['message'], 'params': ['"message"'] },
-  {'func': 'declareAssign_str_hello_world', 'block': 'var str = "Hello World";', 'category': 'Variables', 'noAutocomplete': true },
-  {'func': 'substring', 'blockPrefix': 'str.substring', 'category': 'Variables', 'paletteParams': ['start','end'], 'params': ["6", "11"], 'modeOptionName': '*.substring' },
-  {'func': 'indexOf', 'blockPrefix': 'str.indexOf', 'category': 'Variables', 'paletteParams': ['searchValue'], 'params': ['"World"'], 'modeOptionName': '*.indexOf' },
-  {'func': 'length', 'block': 'str.length', 'category': 'Variables', 'modeOptionName': '*.length' },
-  {'func': 'toUpperCase', 'blockPrefix': 'str.toUpperCase', 'category': 'Variables', 'modeOptionName': '*.toUpperCase' },
-  {'func': 'toLowerCase', 'blockPrefix': 'str.toLowerCase', 'category': 'Variables', 'modeOptionName': '*.toLowerCase' },
-  {'func': 'declareAssign_list_abde', 'block': 'var list = ["a", "b", "d", "e"];', 'category': 'Variables', 'noAutocomplete': true },
-  {'func': 'listLength', 'block': 'list.length', 'category': 'Variables', 'noAutocomplete': true },
-  {'func': 'insertItem', 'category': 'Variables', 'paletteParams': ['list','index','item'], 'params': ["list", "2", '"c"'], 'dontMarshal': true },
-  {'func': 'appendItem', 'category': 'Variables', 'paletteParams': ['list','item'], 'params': ["list", '"f"'], 'dontMarshal': true },
-  {'func': 'removeItem', 'category': 'Variables', 'paletteParams': ['list','index'], 'params': ["list", "0"], 'dontMarshal': true },
-
-  {'func': 'imageUploadButton', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"text"'] },
-  {'func': 'container', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"html"'] },
-  {'func': 'innerHTML', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"html"'] },
-  {'func': 'setParent', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
-  {'func': 'setStyle', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
-  {'func': 'getAttribute', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
-  {'func': 'setAttribute', 'parent': api, 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
-];
-
-module.exports.categories = {
-  'UI controls': {
-    'color': 'yellow',
-    'rgb': COLOR_YELLOW,
-    'blocks': []
-  },
-  'Canvas': {
-    'color': 'red',
-    'rgb': COLOR_RED,
-    'blocks': []
-  },
-  'Data': {
-    'color': 'lightgreen',
-    'rgb': COLOR_LIGHT_GREEN,
-    'blocks': []
-  },
-  'Turtle': {
-    'color': 'cyan',
-    'rgb': COLOR_CYAN,
-    'blocks': []
-  },
-  'Advanced': {
-    'color': 'blue',
-    'rgb': COLOR_BLUE,
-    'blocks': []
-  },
-};
-
-
-},{"./api":9}],9:[function(require,module,exports){
-// APIs needed for droplet (keep in sync with apiBlockly.js):
-
-exports.container = function (elementId, html) {
-  return Applab.executeCmd(null,
-                          'container',
-                          {'elementId': elementId,
-                           'html': html });
-};
-
-exports.write = function (html) {
-  return Applab.executeCmd(null,
-                          'write',
-                          {'html': html });
-};
-
-exports.innerHTML = function (elementId, html) {
-  return Applab.executeCmd(null,
-                          'innerHTML',
-                          {'elementId': elementId,
-                           'html': html });
-};
-
-exports.deleteElement = function (elementId) {
-  return Applab.executeCmd(null,
-                          'deleteElement',
-                          {'elementId': elementId });
-};
-
-exports.showElement = function (elementId) {
-  return Applab.executeCmd(null,
-                          'showElement',
-                          {'elementId': elementId });
-};
-
-exports.hideElement = function (elementId) {
-  return Applab.executeCmd(null,
-                          'hideElement',
-                          {'elementId': elementId });
-};
-
-exports.button = function (elementId, text) {
-  return Applab.executeCmd(null,
-                          'button',
-                          {'elementId': elementId,
-                           'text': text });
-};
-
-exports.image = function (elementId, src) {
-  return Applab.executeCmd(null,
-                          'image',
-                          {'elementId': elementId,
-                           'src': src });
-};
-
-exports.setPosition = function (elementId, left, top, width, height) {
-  return Applab.executeCmd(null,
-                          'setPosition',
-                          {'elementId': elementId,
-                           'left': left,
-                           'top': top,
-                           'width': width,
-                           'height': height });
-};
-
-exports.getXPosition = function (elementId) {
-  return Applab.executeCmd(null,
-                          'getXPosition',
-                          {'elementId': elementId });
-};
-
-exports.getYPosition = function (elementId) {
-  return Applab.executeCmd(null,
-                          'getYPosition',
-                          {'elementId': elementId });
-};
-
-exports.createCanvas = function (elementId, width, height) {
-  return Applab.executeCmd(null,
-                          'createCanvas',
-                          {'elementId': elementId,
-                           'width': width,
-                           'height': height });
-};
-
-exports.setActiveCanvas = function (elementId) {
-  return Applab.executeCmd(null,
-                          'setActiveCanvas',
-                          {'elementId': elementId  });
-};
-
-exports.line = function (x1, y1, x2, y2) {
-  return Applab.executeCmd(null,
-                          'line',
-                          {'x1': x1,
-                           'y1': y1,
-                           'x2': x2,
-                           'y2': y2 });
-};
-
-exports.circle = function (x, y, radius) {
-  return Applab.executeCmd(null,
-                          'circle',
-                          {'x': x,
-                           'y': y,
-                           'radius': radius });
-};
-
-exports.rect = function (x, y, width, height) {
-  return Applab.executeCmd(null,
-                          'rect',
-                          {'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.setStrokeWidth = function (width) {
-  return Applab.executeCmd(null,
-                          'setStrokeWidth',
-                          {'width': width });
-};
-
-exports.setStrokeColor = function (color) {
-  return Applab.executeCmd(null,
-                          'setStrokeColor',
-                          {'color': color });
-};
-
-exports.setFillColor = function (color) {
-  return Applab.executeCmd(null,
-                          'setFillColor',
-                          {'color': color });
-};
-
-exports.clearCanvas = function () {
-  return Applab.executeCmd(null, 'clearCanvas');
-};
-
-exports.drawImage = function (imageId, x, y, width, height) {
-  return Applab.executeCmd(null,
-                          'drawImage',
-                          {'imageId': imageId,
-                           'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.getImageData = function (x, y, width, height) {
-  return Applab.executeCmd(null,
-                          'getImageData',
-                          {'x': x,
-                           'y': y,
-                           'width': width,
-                           'height': height });
-};
-
-exports.putImageData = function (imageData, x, y) {
-  return Applab.executeCmd(null,
-                          'putImageData',
-                          {'imageData': imageData,
-                           'x': x,
-                           'y': y });
-};
-
-exports.textInput = function (elementId, text) {
-  return Applab.executeCmd(null,
-                          'textInput',
-                          {'elementId': elementId,
-                           'text': text });
-};
-
-exports.textLabel = function (elementId, text, forId) {
-  return Applab.executeCmd(null,
-                          'textLabel',
-                          {'elementId': elementId,
-                           'text': text,
-                           'forId': forId });
-};
-
-exports.checkbox = function (elementId, checked) {
-  return Applab.executeCmd(null,
-                          'checkbox',
-                          {'elementId': elementId,
-                           'checked': checked });
-};
-
-exports.radioButton = function (elementId, checked, name) {
-  return Applab.executeCmd(null,
-                          'radioButton',
-                          {'elementId': elementId,
-                           'checked': checked,
-                           'name': name });
-};
-
-exports.getChecked = function (elementId) {
-  return Applab.executeCmd(null,
-                          'getChecked',
-                          {'elementId': elementId });
-};
-
-exports.setChecked = function (elementId, checked) {
-  return Applab.executeCmd(null,
-                          'setChecked',
-                          {'elementId': elementId,
-                           'checked': checked });
-};
-
-exports.dropdown = function (elementId) {
-  var optionsArray = Array.prototype.slice.call(arguments, 1);
-  return Applab.executeCmd(null,
-                          'dropdown',
-                          {'elementId': elementId,
-                           'optionsArray': optionsArray });
-};
-
-exports.getAttribute = function(elementId, attribute) {
-  return Applab.executeCmd(null,
-                           'getAttribute',
-                           {elementId: elementId,
-                            attribute: attribute});
-};
-
-exports.setAttribute = function(elementId, attribute, value) {
-  return Applab.executeCmd(null,
-                           'setAttribute',
-                           {elementId: elementId,
-                            attribute: attribute,
-                            value: value});
-};
-
-exports.getText = function (elementId) {
-  return Applab.executeCmd(null,
-                          'getText',
-                          {'elementId': elementId });
-};
-
-exports.setText = function (elementId, text) {
-  return Applab.executeCmd(null,
-                          'setText',
-                          {'elementId': elementId,
-                           'text': text });
-};
-
-exports.getImageURL = function (elementId) {
-  return Applab.executeCmd(null,
-                          'getImageURL',
-                          {'elementId': elementId });
-};
-
-exports.setImageURL = function (elementId, src) {
-  return Applab.executeCmd(null,
-                          'setImageURL',
-                          {'elementId': elementId,
-                           'src': src });
-};
-
-exports.imageUploadButton = function (elementId, text) {
-  return Applab.executeCmd(null,
-                           'imageUploadButton',
-                           {'elementId': elementId,
-                            'text': text });
-};
-
-exports.setParent = function (elementId, parentId) {
-  return Applab.executeCmd(null,
-                          'setParent',
-                          {'elementId': elementId,
-                           'parentId': parentId });
-};
-
-exports.setStyle = function (elementId, style) {
-  return Applab.executeCmd(null,
-                           'setStyle',
-                           {'elementId': elementId,
-                           'style': style });
-};
-
-exports.onEvent = function (elementId, eventName, func) {
-  var extraArgs = Array.prototype.slice.call(arguments).slice(3);
-  return Applab.executeCmd(null,
-                          'onEvent',
-                          {'elementId': elementId,
-                           'eventName': eventName,
-                           'func': func,
-                           'extraArgs': extraArgs});
-};
-
-exports.startWebRequest = function (url, func) {
-  return Applab.executeCmd(null,
-                          'startWebRequest',
-                          {'url': url,
-                           'func': func });
-};
-
-exports.setTimeout = function (func, milliseconds) {
-  return Applab.executeCmd(null,
-                          'setTimeout',
-                          {'func': func,
-                           'milliseconds': milliseconds });
-};
-
-exports.clearTimeout = function (timeoutId) {
-  return Applab.executeCmd(null,
-                           'clearTimeout',
-                           {'timeoutId': timeoutId });
-};
-
-exports.setInterval = function (func, milliseconds) {
-  return Applab.executeCmd(null,
-                          'setInterval',
-                          {'func': func,
-                           'milliseconds': milliseconds });
-};
-
-exports.clearInterval = function (intervalId) {
-  return Applab.executeCmd(null,
-                           'clearInterval',
-                           {'intervalId': intervalId });
-};
-
-exports.playSound = function (url) {
-  return Applab.executeCmd(null,
-                          'playSound',
-                          {'url': url});
-};
-
-exports.getKeyValue = function(key, onSuccess, onError) {
-  return Applab.executeCmd(null,
-                           'getKeyValue',
-                           {'key':key,
-                            'onSuccess': onSuccess,
-                            'onError': onError});
-};
-
-exports.setKeyValue = function(key, value, onSuccess, onError) {
-  return Applab.executeCmd(null,
-                           'setKeyValue',
-                           {'key':key,
-                            'value': value,
-                            'onSuccess': onSuccess,
-                            'onError': onError});
-};
-
-exports.createRecord = function (table, record, onSuccess, onError) {
-  return Applab.executeCmd(null,
-                          'createRecord',
-                          {'table': table,
-                           'record': record,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.readRecords = function (table, searchParams, onSuccess, onError) {
-  return Applab.executeCmd(null,
-                          'readRecords',
-                          {'table': table,
-                           'searchParams': searchParams,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.updateRecord = function (table, record, onSuccess, onError) {
-  return Applab.executeCmd(null,
-                          'updateRecord',
-                          {'table': table,
-                           'record': record,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.deleteRecord = function (table, record, onSuccess, onError) {
-  return Applab.executeCmd(null,
-                          'deleteRecord',
-                          {'table': table,
-                           'record': record,
-                           'onSuccess': onSuccess,
-                           'onError': onError});
-};
-
-exports.getUserId = function () {
-  return Applab.executeCmd(null,
-                          'getUserId',
-                          {});
-};
-
-exports.moveForward = function (distance) {
-  return Applab.executeCmd(null,
-                          'moveForward',
-                          {'distance': distance });
-};
-
-exports.moveBackward = function (distance) {
-  return Applab.executeCmd(null,
-                          'moveBackward',
-                          {'distance': distance });
-};
-
-exports.move = function (x, y) {
-  return Applab.executeCmd(null,
-                          'move',
-                          {'x': x,
-                           'y': y });
-};
-
-exports.moveTo = function (x, y) {
-  return Applab.executeCmd(null,
-                          'moveTo',
-                          {'x': x,
-                           'y': y });
-};
-
-exports.turnRight = function (degrees) {
-  return Applab.executeCmd(null,
-                          'turnRight',
-                          {'degrees': degrees });
-};
-
-exports.turnLeft = function (degrees) {
-  return Applab.executeCmd(null,
-                          'turnLeft',
-                          {'degrees': degrees });
-};
-
-exports.turnTo = function (direction) {
-  return Applab.executeCmd(null,
-                           'turnTo',
-                           {'direction': direction });
-};
-
-exports.arcRight = function (degrees, radius) {
-  return Applab.executeCmd(null,
-                           'arcRight',
-                           {'degrees': degrees,
-                            'radius': radius });
-};
-
-exports.arcLeft = function (degrees, radius) {
-  return Applab.executeCmd(null,
-                           'arcLeft',
-                           {'degrees': degrees,
-                            'radius': radius });
-};
-
-exports.dot = function (radius) {
-  return Applab.executeCmd(null,
-                           'dot',
-                           {'radius': radius });
-};
-
-exports.getX = function () {
-  return Applab.executeCmd(null, 'getX');
-};
-
-exports.getY = function () {
-  return Applab.executeCmd(null, 'getY');
-};
-
-exports.getDirection = function () {
-  return Applab.executeCmd(null, 'getDirection');
-};
-
-exports.penUp = function () {
-  return Applab.executeCmd(null, 'penUp');
-};
-
-exports.penDown = function () {
-  return Applab.executeCmd(null, 'penDown');
-};
-
-exports.show = function () {
-  return Applab.executeCmd(null, 'show');
-};
-
-exports.hide = function () {
-  return Applab.executeCmd(null, 'hide');
-};
-
-exports.speed = function (percent) {
-  return Applab.executeCmd(null,
-                           'speed',
-                           {'percent': percent});
-};
-
-exports.penWidth = function (width) {
-  return Applab.executeCmd(null,
-                          'penWidth',
-                          {'width': width });
-};
-
-exports.penColor = function (color) {
-  return Applab.executeCmd(null,
-                          'penColor',
-                          {'color': color });
-};
-
-exports.penRGB = function (r, g, b, a) {
-  return Applab.executeCmd(null,
-                          'penRGB',
-                          {'r': r,
-                           'g': g,
-                           'b': b,
-                           'a': a });
-};
-
-exports.insertItem = function (array, index, item) {
-  return Applab.executeCmd(null,
-                          'insertItem',
-                          {'array': array,
-                           'index': index,
-                           'item': item });
-};
-
-exports.appendItem = function (array, item) {
-  return Applab.executeCmd(null,
-                          'appendItem',
-                          {'array': array,
-                           'item': item });
-};
-
-exports.removeItem = function (array, index) {
-  return Applab.executeCmd(null,
-                          'removeItem',
-                          {'array': array,
-                           'index': index });
-};
-
-
-
-},{}],6:[function(require,module,exports){
-var errorMapper = require('./errorMapper');
-
-var annotations = [];
-var aceSession;
-
-/**
- * Update gutter with our annotation list
- * @private
- */
-function updateGutter() {
-  if (!aceSession) {
-    return;
-  }
-  aceSession.setAnnotations(annotations);
-}
-
-/**
- * Object for tracking annotations placed in gutter. General design is as
- * follows:
- * When jslint runs (i.e. code changes) display just jslint errors
- * When code runs, display jslint errors and runtime errors. Runtime errors will
- * go away the next time jstlint gets run (when code changes)
- */
-module.exports = {
-  detachFromSession: function () {
-    aceSession = null;
-  },
-  
-  attachToSession: function (session) {
-    if (aceSession && session !== aceSession) {
-      throw new Error('Already attached to ace session');
-    }
-    aceSession = session;
-  },
-
-  setJSLintAnnotations: function (jslintResults) {
-    errorMapper.processResults(jslintResults);
-    // clone annotations in case anyone else has a reference to data
-    annotations = jslintResults.data.slice();
-    updateGutter();
-  },
-
-  /**
-   * @param {string} level
-   * @param {number} lineNumber One index line number
-   * @param {string} text Error string
-   */
-  addRuntimeAnnotation: function (level, lineNumber, text) {
-    var annotation = {
-      row: lineNumber - 1,
-      col: 0,
-      raw: text,
-      text: text,
-      type: level.toLowerCase()
-    };
-    annotations.push(annotation);
-    updateGutter();
-  },
-};
-
-
-},{"./errorMapper":7}],7:[function(require,module,exports){
-var errorMap = [
-  {
-    original: /Assignment in conditional expression/,
-    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
-  },
-  {
-    original: /(.*)\sis defined but never used./,
-    replacement: "$1 is defined, but it's not called in your program."
-  },
-  {
-    original: /(.*)\sis not defined./,
-    replacement: "$1 hasn't been declared yet."
-  }
-];
-
-/**
- * Takes the results of a JSLint pass, and modifies the error text according to
- * our mapping. Note this makes changes in place to the passed in results
- * object.
- */
-module.exports.processResults = function (results) {
-  results.data.forEach(function (item) {
-    if (item.type === 'info') {
-      item.type = 'warning';
-    }
-
-    errorMap.forEach(function (errorMapping) {
-      if (!errorMapping.original.test(item.text)) {
-        return;
-      }
-
-      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
-    });
-  });
-};
-
-
-},{}]},{},[41]);
+},{"_process":297}]},{},[42]);
