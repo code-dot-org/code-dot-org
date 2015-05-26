@@ -870,7 +870,7 @@ Applab.init = function(config) {
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: true
+    finishButton: !level.isProjectLevel
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -1019,7 +1019,9 @@ Applab.init = function(config) {
   }
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+  }
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
@@ -1548,7 +1550,9 @@ Applab.runButtonClick = function() {
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
-    shareCell.className = 'share-cell-enabled';
+    if (shareCell) {
+      shareCell.className = 'share-cell-enabled';
+    }
   }
 };
 
