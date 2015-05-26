@@ -22,7 +22,11 @@ var currentlyEditedElement = null;
  * @param event
  */
 designMode.onDivApplabClick = function (event) {
+<<<<<<< HEAD
   if (!Applab.isInDesignMode() ||
+=======
+  if (Applab.isInDesignMode() ||
+>>>>>>> reactive design/code mode toggle
       $('#resetButton').is(':visible')) {
     return;
   }
