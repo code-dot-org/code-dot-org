@@ -759,7 +759,6 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  *        dependency.
  */
 NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory) {
-  logger.info("Router " + this.entityID + " initializing simulation");
   this.simulateForSender_ = nodeID;
   this.nodeFactory_ = nodeFactory;
   this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
@@ -769,22 +768,18 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory)
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
     this.nodeChangeKey_ = nodeChangeEvent.register(nodeChangeHandler);
-    logger.info("Router registered for nodeTable tableChange");
     
     var wireChangeEvent = this.shard_.wireTable.tableChange;
     var wireChangeHandler = this.onWireTableChange_.bind(this);
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
-    logger.info("Router registered for wireTable tableChange");
 
     var logChangeEvent = this.shard_.logTable.tableChange;
     var logChangeHandler = this.onLogTableChange_.bind(this);
     this.logChangeKey_ = logChangeEvent.register(logChangeHandler);
-    logger.info("Router registered for logTable tableChange");
 
     var newMessageEvent = this.shard_.messageTable.tableChange;
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
-    logger.info("Router registered for messageTable tableChange");
 
     // Populate router log cache with initial data
     this.shard_.logTable.readAll(function (err, rows) {
@@ -802,33 +797,28 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory)
  * was observing.
  */
 NetSimRouterNode.prototype.stopSimulation = function () {
-  logger.info("Router " + this.entityID + " stopping simulation");
   if (this.nodeChangeKey_ !== undefined) {
     var nodeChangeEvent = this.shard_.messageTable.tableChange;
     nodeChangeEvent.unregister(this.nodeChangeKey_);
     this.nodeChangeKey_ = undefined;
-    logger.info("Router unregistered from nodeTable tableChange");
   }
   
   if (this.wireChangeKey_ !== undefined) {
     var wireChangeEvent = this.shard_.messageTable.tableChange;
     wireChangeEvent.unregister(this.wireChangeKey_);
     this.wireChangeKey_ = undefined;
-    logger.info("Router unregistered from wireTable tableChange");
   }
 
   if (this.logChangeKey_ !== undefined) {
     var logChangeEvent = this.shard_.messageTable.tableChange;
     logChangeEvent.unregister(this.logChangeKey_);
     this.logChangeKey_ = undefined;
-    logger.info("Router unregistered from logTable tableChange");
   }
 
   if (this.newMessageEventKey_ !== undefined) {
     var newMessageEvent = this.shard_.messageTable.tableChange;
     newMessageEvent.unregister(this.newMessageEventKey_);
     this.newMessageEventKey_ = undefined;
-    logger.info("Router unregistered from messageTable tableChange");
   }
 };
 
@@ -1203,7 +1193,6 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
 
   if (destinationNode) {
     if (destinationNode.getNodeType() === NodeType.ROUTER) {
-      logger.info("  send to router: " + destinationNode.entityID);
       return destinationNode;
     }
     // How do I find the destination node's router?
@@ -1213,7 +1202,6 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
         return node.entityID === destinationWire.remoteNodeID;
       });
       if (remoteRouter !== undefined) {
-        logger.info("  send through router: " + remoteRouter.entityID);
         return remoteRouter;
       }
     }
@@ -1447,7 +1435,6 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
 
     var levelConfig = netsimGlobals.getLevelConfig();
     if (levelConfig.broadcastMode) {
-      logger.info("Forwarding to all");
       this.forwardMessageToAll_(message, onComplete);
     } else {
       this.forwardMessageToRecipient_(message, onComplete);
@@ -1529,7 +1516,6 @@ NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
  * @private
  */
 NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onComplete) {
-  logger.info("  Router " + this.entityID + " forwardMessageToRecipient");
   var toAddress;
   var routerNodeID = this.entityID;
 
@@ -1551,7 +1537,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
-  } else if (destinationNode === this) {
+  } else if (destinationNode === this && toAddress === this.getAddress()) {
     // This router IS the packet's destination, it's done.
     logger.warn("Packet stopped at router.");
     this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
