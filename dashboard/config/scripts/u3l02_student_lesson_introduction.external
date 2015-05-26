@@ -1,0 +1,26 @@
+name 'U3L02 Student Lesson Introduction'
+title 'Programming with Simple Commands - Getting Started'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 02 - Programming with Simple Commands
+
+# Background
+
+The “building blocks” of a programming language are the most basic commands the programming language can describe, but do not need to be at the "digital" level. They vary from programming language to programming language to fit the purpose of the language.
+
+# Lesson
+
+* Learn to use the AppLab programming environment
+.
+* Write a program that uses basic “building blocks” to draw an image in AppLab 
+
+
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1gNiURUD2KWqvBDrexgeJ3TRoM7Y2INdWfJEcaljRlfY" target="_blank">
+Drawing with Simple Commands
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

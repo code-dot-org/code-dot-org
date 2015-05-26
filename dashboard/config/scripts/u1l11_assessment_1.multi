@@ -1,11 +1,12 @@
 name 'U1L11 Assessment 1'
 title 'Assessment: Sending Formatted Text'
-description 'Question #1'
-question 'What is ASCII text?'
-wrong 'American Strict Conformance of Internet Interchange'
-wrong 'Authentication Standards for Commerce in Interstate Information'
-right 'American Standard Code for Information Interchange'
-wrong 'Automatic Serial Coding for Interface Interchange'
+description ''
+question 'How many bits are required to store the number "150" in ASCII?'
+wrong '3 bits'
+right '8 bits'
+wrong '15 bits'
+wrong '21 bits'
+wrong '30 bits'
 
 
 markdown <<MARKDOWN
