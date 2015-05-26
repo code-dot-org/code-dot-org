@@ -34,12 +34,16 @@ MOOC_DEV=1 grunt build
   ```
 
 1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
-```
-  > ls -l dashboard/public/blockly                                                                                  ```
+
+  ```
+  > ls -l dashboard/public/blockly                                                                                    ```
+
 and look for something like:
-```
+
+  ```
   lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps-package
-```
+  ```
+
 1. If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 
 ### Building during development
