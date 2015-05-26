@@ -13,7 +13,7 @@ This repository contains the source code for the apps [Blockly](https://code.goo
 ### Installing Blockly
 
 ```
-cd blockly
+cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
@@ -26,19 +26,20 @@ MOOC_DEV=1 grunt build
 
 ### Seeing your development version of Blockly in Dashboard
 
-1. To make your changes show up in dashboard, run the following after the first time you build blockly:
+1. To make your changes show up in dashboard, run the following after the first time you build blockly: [has this been replaced with locals.yml?]
   ```
   cd ../dashboard
   bundle exec rake 'blockly:dev[../blockly]'
-  cd ../blockly
+  cd ../apps
   ```
 
 1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
-  ```
-  git status
-  ```
-and look for something like `public/blockly -> apps-package` in the output. [NEEDS VALIDATION].
-
+```
+  > ls -l dashboard/public/blockly                                                                                  ```
+and look for something like:
+```
+  lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps-package
+```
 1. If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 
 ### Building during development
