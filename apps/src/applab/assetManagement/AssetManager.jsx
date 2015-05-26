@@ -115,9 +115,9 @@ module.exports = React.createClass({
       );
     }
 
-    var title = this.props.assetChosen
-        ? <p className="dialog-title">Choose Assets</p>
-        : <p className="dialog-title">Manage Asset</p>;
+    var title = this.props.assetChosen ?
+        <p className="dialog-title">Choose Assets</p> :
+        <p className="dialog-title">Manage Asset</p>;
     var accept = (this.props.typeFilter || '*') + '/*';
 
     return (
@@ -128,7 +128,8 @@ module.exports = React.createClass({
             style={{display: 'none'}} onChange={this.upload}/>
         <button onClick={this.fileUploadClicked} className="share">
           <i className="fa fa-upload"></i>
-          Upload File</button>
+          &nbsp; Upload File
+        </button>
         <span id="uploadStatus" style={{margin: '0 10px'}}>
           {this.state.uploadStatus}
         </span>
