@@ -1,4 +1,4 @@
-// TODO (brent) - hook up linter somewhere
+/* global $ */
 
 var React = require('react');
 
