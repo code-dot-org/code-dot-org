@@ -20,39 +20,41 @@ module.exports = React.createClass({
   getInitialState: function () {
     return {
       assets: null,
-      uploadStatus: ''
+      statusMessage: ''
     };
   },
 
   componentWillMount: function () {
     // TODO: Use Dave's client api when it's finished.
-    AssetsApi.ajax('GET', '', function (xhr) {
-      var assets = JSON.parse(xhr.responseText);
-      if (this.props.typeFilter) {
-        assets = assets.filter(function (asset) {
-          return asset.category === this.props.typeFilter;
-        }.bind(this));
-      }
-      this.setState({assets: assets});
-    }.bind(this), function (xhr) {
-      this.setState({uploadStatus: 'Error loading asset list: ' +
-          getErrorMessage(xhr.status)});
-    }.bind(this));
+    AssetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
+  },
+
+  onAssetListReceived: function (xhr) {
+    var assets = JSON.parse(xhr.responseText);
+    if (this.props.typeFilter) {
+      assets = assets.filter(function (asset) {
+        return asset.category === this.props.typeFilter;
+      }.bind(this));
+    }
+    this.setState({assets: assets});
+  },
+
+  onAssetListFailure: function (xhr) {
+    this.setState({statusMessage: 'Error loading asset list: ' +
+        getErrorMessage(xhr.status)});
   },
 
   fileUploadClicked: function () {
-    var uploader = document.querySelector('#uploader');
+    var uploader = React.findDOMNode(this.refs.uploader);
     uploader.click();
   },
 
   upload: function () {
-    var file = document.querySelector('#uploader').files[0];
-    var uploadStatus = document.querySelector('#uploadStatus');
-
+    var file = React.findDOMNode(this.refs.uploader).files[0];
     if (file.type && this.props.typeFilter) {
       var type = file.type.split('/')[0];
       if (type !== this.props.typeFilter) {
-        this.setState({uploadStatus: 'Only ' + this.props.typeFilter +
+        this.setState({statusMessage: 'Only ' + this.props.typeFilter +
           ' assets can be used here.'});
         return;
       }
@@ -61,14 +63,14 @@ module.exports = React.createClass({
     // TODO: Use Dave's client api when it's finished.
     AssetsApi.ajax('PUT', file.name, function (xhr) {
       this.state.assets.push(JSON.parse(xhr.responseText));
-      this.setState({uploadStatus: 'File "' + file.name +
+      this.setState({statusMessage: 'File "' + file.name +
           '" successfully uploaded!'});
     }.bind(this), function (xhr) {
-      this.setState({uploadStatus: 'Error uploading file: ' +
+      this.setState({statusMessage: 'Error uploading file: ' +
           getErrorMessage(xhr.status)});
     }.bind(this), file);
 
-    this.setState({uploadStatus: 'Uploading...'});
+    this.setState({statusMessage: 'Uploading...'});
   },
 
   deleteAssetRow: function (name) {
@@ -77,7 +79,7 @@ module.exports = React.createClass({
         return asset.filename !== name;
       })
     });
-    this.setState({uploadStatus: 'File "' + name + '" successfully deleted!'});
+    this.setState({statusMessage: 'File "' + name + '" successfully deleted!'});
   },
 
   render: function () {
@@ -106,8 +108,8 @@ module.exports = React.createClass({
                     this.props.assetChosen.bind(this, path);
 
                 return <AssetRow key={asset.filename} name={asset.filename}
-                    type={asset.category} size={asset.size} choose={choose}
-                    delete={this.deleteAssetRow.bind(this, asset.filename)}/>;
+                    type={asset.category} size={asset.size} onChoose={choose}
+                    onDelete={this.deleteAssetRow.bind(this, asset.filename)}/>;
               }.bind(this))}
             </tbody>
           </table>
@@ -124,14 +126,14 @@ module.exports = React.createClass({
       <div className="modal-content" style={{margin: 0}}>
         {title}
         {assetList}
-        <input type="file" accept={accept} id="uploader"
+        <input ref="uploader" type="file" accept={accept}
             style={{display: 'none'}} onChange={this.upload}/>
         <button onClick={this.fileUploadClicked} className="share">
           <i className="fa fa-upload"></i>
-          &nbsp; Upload File
+          &nbsp;Upload File
         </button>
-        <span id="uploadStatus" style={{margin: '0 10px'}}>
-          {this.state.uploadStatus}
+        <span style={{margin: '0 10px'}}>
+          {this.state.statusMessage}
         </span>
       </div>
     );

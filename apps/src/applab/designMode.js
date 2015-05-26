@@ -298,7 +298,6 @@ designMode.showAssetManager = function(assetChosen, typeFilter) {
   var dialog = studioApp.createModalDialog({
     Dialog: Dialog,
     contentDiv: codeDiv,
-    icon: studioApp.icon,
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
   });

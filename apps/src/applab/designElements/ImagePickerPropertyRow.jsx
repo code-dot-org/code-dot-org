@@ -18,6 +18,12 @@ var PropertyRow = React.createClass({
   },
 
   handleButtonClick: function () {
+    // TODO: This isn't the pure-React way of referencing the AssetManager
+    // component. Ideally we'd be able to `require` it directly without needing
+    // to know about `designMode`.
+    //
+    // However today the `createModalDialog` function and `Dialog` component
+    // are intertwined with `StudioApp` which is why we have this direct call.
     designMode.showAssetManager(this.changeImage, 'image');
   },
 

@@ -37,8 +37,8 @@ module.exports = React.createClass({
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired,
     size: React.PropTypes.number,
-    choose: React.PropTypes.func.isRequired,
-    delete: React.PropTypes.func.isRequired
+    onChoose: React.PropTypes.func.isRequired,
+    onDelete: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -60,7 +60,7 @@ module.exports = React.createClass({
     this.setState({action: 'deleting', actionText: ''});
 
     // TODO: Use Dave's client api when it's finished.
-    AssetsApi.ajax('DELETE', this.props.name, this.props.delete, function () {
+    AssetsApi.ajax('DELETE', this.props.name, this.props.onDelete, function () {
       this.setState({action: 'confirming delete',
           actionText: 'Error deleting file.'});
     }.bind(this));
@@ -69,8 +69,8 @@ module.exports = React.createClass({
   render: function () {
     var actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
-    if (this.props.choose) {
-      flex = <button onClick={this.props.choose}>Set as Image</button>;
+    if (this.props.onChoose) {
+      flex = <button onClick={this.props.onChoose}>Set as Image</button>;
     } else {
       var size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
@@ -78,7 +78,7 @@ module.exports = React.createClass({
 
     switch (this.state.action) {
       case 'normal':
-        var src = '/v3/assets/' + dashboard.project.current.id + '/' + this.props.name;
+        var src = AssetsApi.basePath(this.props.name);
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}

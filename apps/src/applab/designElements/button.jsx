@@ -67,7 +67,6 @@ var ButtonProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
-        {/* eventually this will be a ImageChooserPropertyRow */ }
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
