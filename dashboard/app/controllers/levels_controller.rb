@@ -4,6 +4,7 @@ require "naturally"
 EMPTY_XML = '<xml></xml>'
 
 class LevelsController < ApplicationController
+  include ApplicationHelper
   include LevelsHelper
   include ActiveSupport::Inflector
   before_filter :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
