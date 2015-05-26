@@ -33,10 +33,6 @@ var DEFAULT_TOOLTIP_CONFIG = {
  * @param {Editor} dropletEditor
  */
 DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
   var aceEditor = dropletEditor.aceEditor;
 
   this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);

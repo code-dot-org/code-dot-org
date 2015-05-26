@@ -1,6 +1,6 @@
 {
-  "ACTUAL": "コール",
-  "ADD": "ついか",
+  "ACTUAL": "呼び出す",
+  "ADD": "追加",
   "ADD_COMMENT": "コメントを追加",
   "ADD_PARAMETER": "パラメータを追加します。",
   "CHANGE_VALUE_TITLE": "値の変更:",
@@ -196,7 +196,7 @@
   "MATH_ARITHMETIC_HELPURL": "http://en.wikipedia.org/wiki/Arithmetic",
   "MATH_ARITHMETIC_TOOLTIP_ADD": "2 つの数の合計を返します。",
   "MATH_ARITHMETIC_TOOLTIP_DIVIDE": "2 つの数の商を返します。",
-  "MATH_ARITHMETIC_TOOLTIP_MINUS": "2 つの数の差を返します。",
+  "MATH_ARITHMETIC_TOOLTIP_MINUS": "二つの数値の差分を返します",
   "MATH_ARITHMETIC_TOOLTIP_MULTIPLY": "2 つの数の積を返します。",
   "MATH_ARITHMETIC_TOOLTIP_POWER": "最初の数を2 番目の値で累乗した結果を返します。",
   "MATH_CHANGE_HELPURL": "http://en.wikipedia.org/wiki/Programming_idiom#Incrementing_a_counter",

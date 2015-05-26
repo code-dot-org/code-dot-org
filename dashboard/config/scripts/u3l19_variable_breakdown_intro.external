@@ -6,12 +6,9 @@ markdown <<MARKDOWN
 
 Now, everything we've done so far might seem straightforward enough, and at the very root of it, like all things in programming, it is. 
 
-However, there are a few things that early programmers need to watch out for because some of the terminology and code used might make you think one thing is happening when really it’s another. 
+However, there are a few things that early programmers need to watch out for because some of the terminology and code might make you think one thing is happening when really it’s another. 
 
-So we’re going to make sure to start you off right so that you don’t fall into some **typical beginner traps**.
-
-
-So let’s take a minute to break down these very early lines of code.
+We’re going to make sure to start you off right so that you don’t fall into some **typical beginner traps** - let’s take a minute to break down these very early lines of code.
 
 Welcome to the **Variable Breakdown**...
 
