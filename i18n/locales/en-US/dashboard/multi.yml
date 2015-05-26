@@ -85,8 +85,7 @@ en:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: crwdns7585:0crwdne7585:0
         Choose an algorithm for the image provided.: crwdns36017:0crwdne36017:0
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: crwdns9005:0crwdne9005:0
-        0: crwdns23632:0crwdne23632:0
-        1: crwdns23633:0crwdne23633:0
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: crwdns38714:0crwdne38714:0
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: crwdns23634:0crwdne23634:0
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: crwdns23635:0crwdne23635:0
       2-3 Algorithms Multi 2:
@@ -160,11 +159,11 @@ en:
         a string: crwdns35759:0crwdne35759:0
         boolean: crwdns35760:0crwdne35760:0
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: crwdns38272:0__________crwdne38272:0
-        a image: crwdns38273:0crwdne38273:0
-        a number: crwdns38274:0crwdne38274:0
-        a string: crwdns38275:0crwdne38275:0
-        boolean: crwdns38276:0crwdne38276:0
+        Green colored blocks are associated with __________ ?: crwdns38709:0__________crwdne38709:0
+        a image: crwdns38710:0crwdne38710:0
+        a number: crwdns38711:0crwdne38711:0
+        a string: crwdns38712:0crwdne38712:0
+        boolean: crwdns38713:0crwdne38713:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -331,6 +330,12 @@ en:
         3 - 7: crwdns38482:0crwdne38482:0
         3+1: crwdns38483:0crwdne38483:0
         3+4: crwdns38484:0crwdne38484:0
+      Choose 2 Test:
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: crwdns38715:0crwdne38715:0
+        Line 2: crwdns38716:0crwdne38716:0
+        Line 3: crwdns38717:0crwdne38717:0
+        Line 4: crwdns38718:0crwdne38718:0
+        Line 5: crwdns38719:0crwdne38719:0
       Coordinates Multi 1:
         Video game Coordinates: crwdns24898:0crwdne24898:0
         Ninjacat Demo Embed.level: crwdns24899:0crwdne24899:0
@@ -339,7 +344,12 @@ en:
         The unicorn moves across the screen: crwdns24901:0crwdne24901:0
         The unicorn's y value changes: crwdns24902:0crwdne24902:0
         The unicorn moves to the left: crwdns24903:0crwdne24903:0
-        The unicorn's x value decreases: crwdns36249:0crwdne36249:0
+        The unicorn's x value increases: crwdns38720:0crwdne38720:0
+      ECSPD2 question:
+        title: crwdns38721:0crwdne38721:0
+        Question: crwdns38722:0crwdne38722:0
+        wrong answer: crwdns38723:0crwdne38723:0
+        right answer: crwdns38724:0crwdne38724:0
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: crwdns36465:0crwdne36465:0
         How can we use praise to encourage Growth Mindset in our students?: crwdns36466:0crwdne36466:0
@@ -688,7 +698,7 @@ en:
       Multi Strings Images 1:
         Strings and Images Multiple Choice: crwdns27304:0crwdne27304:0
         "http://staging.studio.code.org/script_assets/msm/green-rect.png": crwdns36250:0crwdne36250:0
-        Which of these Evaluation Blocks will draw the image: crwdns27306:0crwdne27306:0
+        Which of these Evaluation Blocks will draw the image on the left?: crwdns38725:0crwdne38725:0
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: crwdns36047:0crwdne36047:0
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns36048:0crwdne36048:0
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: crwdns36049:0crwdne36049:0
@@ -698,7 +708,7 @@ en:
         I have read and agree to the Attendance Policy: crwdns37781:0crwdne37781:0
       PDAlg Blocks Video:
         Intro to Evaluation Blocks: crwdns37782:0crwdne37782:0
-        In which are of the screen do you click blocks together to write a program?: crwdns37783:0crwdne37783:0
+        In which area of the screen do you click blocks together to write a program?: crwdns38664:0crwdne38664:0
         Play Area: crwdns37784:0crwdne37784:0
         Toolbox: crwdns37785:0crwdne37785:0
         Workspace: crwdns37786:0crwdne37786:0
@@ -1021,9 +1031,18 @@ en:
         3 bits: crwdns38496:0crwdne38496:0
         2 bits: crwdns38497:0crwdne38497:0
         1 bit: crwdns38498:0crwdne38498:0
+      U1L4 Multiple Choice:
+        "Multiple Choice: Coordination and Binary Messages": crwdns38665:0crwdne38665:0
+        0: crwdns38666:0crwdne38666:0
+        1: crwdns38667:0crwdne38667:0
+        ABAB: crwdns38668:0crwdne38668:0
+        AABB: crwdns38669:0crwdne38669:0
+        AAAA: crwdns38670:0crwdne38670:0
+        BBBB: crwdns38671:0crwdne38671:0
+        ABBB: crwdns38672:0crwdne38672:0
       U1L6 Assessment multiple choice:
         "Multiple Choice: Number Systems": crwdns36278:0crwdne36278:0
-        If you just had a circle and a square, how many 3-shape rows could you make?: crwdns36279:0crwdne36279:0
+        If you just had a circle and a square, how many 3-shape permutations could you make?: crwdns38726:0crwdne38726:0
         4: crwdns36280:0crwdne36280:0
         6: crwdns36281:0crwdne36281:0
         8: crwdns36282:0crwdne36282:0
@@ -1041,10 +1060,10 @@ en:
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: crwdns38378:0crwdne38378:0
         What happens when two buttons are given the same id?: crwdns38379:0crwdne38379:0
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: crwdns38380:0crwdne38380:0
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: crwdns38727:0crwdne38727:0
         A warning message will appear for the second button that that id is already in use: crwdns38381:0crwdne38381:0
         The first button created with the id will work, the other will not: crwdns38382:0crwdne38382:0
-        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: crwdns38383:0crwdne38383:0
+        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: crwdns38728:0crwdne38728:0
         Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: crwdns38499:0crwdne38499:0
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: crwdns38385:0crwdne38385:0
@@ -1089,6 +1108,15 @@ en:
         conditional: crwdns38528:0crwdne38528:0
         variable: crwdns38529:0crwdne38529:0
         both: crwdns38530:0crwdne38530:0
+      U3L19 - MC what are values of abc:
+        So, what's the answer?: crwdns38729:0crwdne38729:0
+        Choose the best answer: crwdns38730:0crwdne38730:0
+        "a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8": crwdns38731:0crwdne38731:0
+        "a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13": crwdns38732:0crwdne38732:0
+        "a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7": crwdns38733:0crwdne38733:0
+        "a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16": crwdns38734:0crwdne38734:0
+        "a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21": crwdns38735:0crwdne38735:0
+        Code does not execute due to error: crwdns38736:0crwdne38736:0
       U3L21 Assessment 1:
         More Variables Question 1: crwdns38531:0crwdne38531:0
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: crwdns38532:0crwdne38532:0

@@ -1,9 +1,9 @@
 {
   "continue":"Fortfahren",
-  "nextLevel":"Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen.",
+  "nextLevel":"Herzlichen Glückwunsch! Du hast diese Aufgabe abgeschlossen.",
   "no":"Nein",
-  "numBlocksNeeded":"Dieses Puzzle kann mit %1 Bausteinen gelöst werden.",
-  "reinfFeedbackMsg":"Du kannst den \"Versuche erneut\"-Button drücken, um weiterzuspielen.",
+  "numBlocksNeeded":"Diese Aufgabe kann mit %1 Bausteinen gelöst werden.",
+  "reinfFeedbackMsg":"Du kannst den \"Erneut versuchen\"-Button drücken, um weiterzuspielen.",
   "share":"Teilen",
   "shareGame":"Teile dein Spiel:",
   "yes":"Ja"

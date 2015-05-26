@@ -155,10 +155,10 @@ p:function(d,k,o,l,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:(k=jigsaw_lo
 s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).jigsaw_locale = {
 "continue":function(d){return "Fortfahren"},
-"nextLevel":function(d){return "Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen."},
+"nextLevel":function(d){return "Herzlichen Glückwunsch! Du hast diese Aufgabe abgeschlossen."},
 "no":function(d){return "Nein"},
-"numBlocksNeeded":function(d){return "Dieses Puzzle kann mit %1 Bausteinen gelöst werden."},
-"reinfFeedbackMsg":function(d){return "Du kannst den \"Versuche erneut\"-Button drücken, um weiterzuspielen."},
+"numBlocksNeeded":function(d){return "Diese Aufgabe kann mit %1 Bausteinen gelöst werden."},
+"reinfFeedbackMsg":function(d){return "Du kannst den \"Erneut versuchen\"-Button drücken, um weiterzuspielen."},
 "share":function(d){return "Teilen"},
 "shareGame":function(d){return "Teile dein Spiel:"},
 "yes":function(d){return "Ja"}};

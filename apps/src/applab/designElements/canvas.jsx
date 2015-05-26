@@ -1,11 +1,13 @@
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
+var ZOrderRow = require('./ZOrderRow.jsx');
 
 var CanvasProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
@@ -41,6 +43,9 @@ var CanvasProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <ZOrderRow
+          element={this.props.element}
+          onDepthChange={this.props.onDepthChange}/>
       </table>);
 
     // TODO (brent):

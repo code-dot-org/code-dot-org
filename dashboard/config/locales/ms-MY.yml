@@ -553,6 +553,8 @@
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Penyelesaian salah
     wrong_body: Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!

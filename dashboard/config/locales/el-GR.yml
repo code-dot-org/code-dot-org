@@ -40,7 +40,7 @@
   of: του
   more: ΠΕΡΙΣΣΟΤΕΡΑ
   less: ΛΙΓΟΤΕΡΑ
-  beta: beta
+  beta: βήτα
   try_hoc: Δοκίμασε την Ώρα του Κώδικα, κάνε κλικ εδώ >> 
   try_k8intro: Δοκιμάστε το εισαγωγικό μάθημα K-8, στο Μάθημα της Επιστήμης Υπολογιστών
     (15-25 ώρες)
@@ -66,8 +66,8 @@
     need_confirmation: Δεν έλαβες τις οδηγίες επιβεβαίωσης;
     need_unlock: Δεν έλαβες τις οδηγίες ξεκλειδώματος;
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} μαθητές έχουν ήδη εγγραφεί.'
+    teacher_count: '%{count} καθηγητές έχουν ήδη εγγραφεί.'
     overview_student: Δημιουργήστε λογαριασμό για να βλέπετε την πρόοδό σας. Το email
       σας χρησιμοποιείται κυρίως για να σας επιτρέπει να συνδέεστε και για την ανάκτηση
       του κωδικού. Για περισσότερες πληροφορίες δείτε την <a href="http://code.org/privacy">Πολιτική
@@ -275,7 +275,7 @@
         artist: Ζωγραφίστε κάτι
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
-      district_dashboard: District Dashboard
+      district_dashboard: Περιοχή Ταμπλό
       label: Γεια σου %{username}
       stats: Η πρόοδός μου
       settings: Ο λογαριασμός μου
@@ -285,7 +285,7 @@
       signup: Εγγραφή
       already_registered: Έχετε εγγραφεί ήδη;
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: πρόοδος του %{name}
       progress: Η πρόοδός σου
       lines: 'Συνολικές γραμμές κώδικα: %{lines}'
       close: ΚΛΕΙΣΙΜΟ
@@ -363,9 +363,9 @@
     student_teacher_disassociated: Ο %{teacher_name} αφαιρέθηκε από τους δασκάλους
       του %{student_name}
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Εμφάνιση Απαντήσεων
       student: φοιτητής/μαθητής
-      try_it_yourself: Try it yourself
+      try_it_yourself: Δοκίμασέ το μόνος σου
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
@@ -378,8 +378,8 @@
     delete: Διαγράψτε τον λογαριασμό σας
     delete_text: Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό
       σας.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
+    delete_text_teacher_note: 'Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα
+      διαγραφεί ο λογαριασμός των μαθητών σας.'
     delete_confirm: Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?
   user_level:
     completed: Ολοκληρώθηκε
@@ -390,7 +390,7 @@
     classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ'
     all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
     lesson_plans: Σχέδια μαθήματος
     signin_message: Ήδη εγγεγραμμένος; %{link}
@@ -434,7 +434,7 @@
     heading_apps: <h2>Διασκέδαση για</h2><h1>όλους</h1>
     heading_legacy: <h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>
     your_gallery: Συλλογή φωτογραφιών
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -582,6 +582,8 @@
       ξανά!
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Λανθασμένη λύση
     wrong_body: Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
@@ -590,18 +592,18 @@
     correct_body: Αυτή είναι η σωστή απάντηση.
   contract_match:
     wrong_title: Λανθασμένη απάντηση
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badname: Η σύμβασή σας έχει λανθασμένο όνομα.
+    badname_case: Τα ονόματα των συναρτήσεων κάνουν διάκριση πεζών-κεφαλαίων. Δοκίμασε
+      να αλλάξεις τα πεζά ή τα κεφαλαία του ονόματος της σύμβασή σου.
+    badrange: Η σύμβασή σου έχει λάθος περιοχή.
+    baddomainsize: Η σύμβασή σου δεν έχει το σωστό πλήθος αντικειμένων στον τομέα.
+    baddomainname: Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο όνομα.
+    baddomaintype: Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο τύπο
+      ή είναι σε λάθος σειρά.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Ευχαριστούμε
+    open_response_body: Ευχαριστούμε για την απάντησή σου!
   dialog:
     ok: OΚ
   time:
@@ -617,7 +619,7 @@
             και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
             τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
         Hour of Code:
-          title: Ώρα του Κώδικα
+          title: Ώρα του Κώδικα 2013
           description: ''
         edit-code:
           title: Επεξεργασία κώδικα
@@ -656,48 +658,48 @@
     χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει
     μαζί μας.
   progress:
-    not_started: not started
+    not_started: δεν έχει ξεκινήσει
     in_progress: σε εξέλιξη
     completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
-    assessment: assessment
+    assessment: αξιολόγηση
   studio:
     courses_working_on: Μαθήματα τα οποία παρακολουθείτε
     completed_courses: Μαθήματα που ολοκληρώσατε
     all_courses: Όλα τα μαθήματα
   project:
-    projects: Projects
+    projects: Έργα
     create: Δημιουργία Έργου
-    create_a_project: 'Create a new project:'
-    new: Create New
+    create_a_project: 'Δημιουργία ενός νέου έργου:'
+    new: Δημιουργία Νέου
     rename: Μετονομασία
     save: αποθήκευση
     delete: Διαγραφή
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Επιστροφή στο Μάθημα
+    my_projects: Τα Έργα μου
     share: Μοιράσου
-    share_title: Share your project
+    share_title: Μοιράσου το έργο σου
     share_copy_link: 'Αντιγραφή του συνδέσμου:'
     close: Κλείσιμο
     more: Περισσότερα
     name: Όνομα
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
+    updated: Ενημερωμένο
+    project_type: Τύπος Έργου
+    help_text: Κάνε κλικ στο <strong>Φτιάξε μία Εφαρμογή</strong> ή στο <strong>Σχεδίασε
+      Κάτι</strong> παρακάτω να δημιουργήσεις ένα νέο έργο Play Lab ή Καλλιτέχνης!<br/>
+      Μπορείς να επιστρέψεις και να εργαστείς στα έργα σου οποιαδήποτε στιγμή.
     need_help: Χρειάζεστε βοήθεια για να ξεκινήσετε?
     really_delete: Διαγραφή;
     delete_yes: Ναι
     delete_no: Όχι
     saved: Αποθηκευμένο
-    not_saved: Not saved
+    not_saved: Δεν έχει αποθηκευτεί
     cancel: Άκυρο
     delete_confirm_title: Είστε σίγουροι οτι θέλετε να διαγράψετε αυτό το έργο?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    delete_confirm_text: Η διαγραφή του έργου σου θα το διαγράψει για πάντα από τον
+      κατάλογο Τα Έργα Μου. Οποιοσδήποτε με τον οποίο έχεις μοιραστεί τον σύνδεσμό
+      του δε θα μπορεί να δει το έργο σου.
+    view_all: Δείξε τα Έργα μου
+    remix: Μιξάρισμα
+    click_to_remix: Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!
