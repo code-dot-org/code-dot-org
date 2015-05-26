@@ -24,6 +24,8 @@ var MIN_VISUALIZATION_WIDTH = 200;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
+var ENGLISH_LOCALE = 'en_us';
+
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
@@ -46,7 +48,7 @@ var StudioApp = function () {
   /**
   * The current locale code.
   */
-  this.LOCALE = 'en_us';
+  this.LOCALE = ENGLISH_LOCALE;
 
   this.enableShowCode = true;
   this.editCode = false;
@@ -715,7 +717,7 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
-  if (marked && level.markdownInstructions) {
+  if (marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
   }
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
