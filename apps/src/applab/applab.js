@@ -1037,51 +1037,18 @@ Applab.init = function(config) {
       var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
-    var designModeButton = document.getElementById('designModeButton');
-    if (designModeButton) {
-      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
-    }
-    var codeModeButton = document.getElementById('codeModeButton');
-    if (codeModeButton) {
-      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
-    }
+
+    designMode.configureDesignToggleRow();
+
+    // Start out in regular mode. Eventually likely want this to be a level setting
+    designMode.toggleDesignMode(false);
+
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, designMode.onClear);
     }
 
-    // Allow elements to be dragged and dropped from the design mode
-    // element tray to the play space.
-    $('.new-design-element').draggable({
-      containment:"#codeApp",
-      helper:"clone",
-      appendTo:"#codeApp",
-      revert: 'invalid',
-      zIndex: 2,
-      start: function() {
-        studioApp.resetButtonClick();
-      }
-    });
-    var GRID_SIZE = 5;
-    $('#visualization').droppable({
-      accept: '.new-design-element',
-      drop: function (event, ui) {
-        var elementType = ui.draggable[0].dataset.elementType;
-
-        var div = document.getElementById('divApplab');
-        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-
-        var left = ui.position.left / xScale;
-        var top = ui.position.top / yScale;
-
-        // snap top-left corner to nearest location in the grid
-        left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-        top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-        designMode.createElement(elementType, left, top);
-      }
-    });
+    designMode.configureDragAndDrop();
   }
 };
 
@@ -1220,11 +1187,11 @@ Applab.reset = function(first) {
     turtleSetVisibility(true);
   }
 
-  var isDesignMode = $('#codeModeButton').is(':visible');
 
-  var allowDragging = isDesignMode && !Applab.isRunning();
+
+  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  if (isDesignMode) {
+  if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(allowDragging);
   }
@@ -3115,4 +3082,8 @@ var getPegasusHost = function() {
           return null;
       }
   }
+};
+
+Applab.isInDesignMode = function () {
+  return $('#designModeBox').is(':visible');
 };
