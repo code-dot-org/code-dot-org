@@ -187,13 +187,14 @@
   homepage_hero_text_student2: "&ldquo;Non ho mai visto i miei alunni \ncosì entusiasti
     di imparare.&rdquo; \nMichele, insegnante\n"
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+    &ldquo;Non puoi sapere se ti piace l'informatica o meno prima di provarla.&rdquo;
+    Jackson, 6° Grado
+  homepage_hero_text_student4: |
+    &ldquo; Puoi fare qualsiasi cosa la tua mente riesca ad immaginare con la programmazione.&rdquo;
+    Maya, 2° grado
+  homepage_hero_text_student5: |
+    &ldquo;Informatica non è per qualcun altro. È per te, qui, ora.&rdquo;
+    Geraldo, insegnante
   homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
     &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
   homepage_hero_text_teacher2: |
