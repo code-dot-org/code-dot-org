@@ -292,6 +292,13 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
+/**
+ * Display the "Manage Assets" modal.
+ * @param assetChosen {Function} Called when the user chooses an asset. The
+ *   "Choose" button in the UI only appears if this optional param is provided.
+ * @param typeFilter {String} The type of assets to show and allow to be
+ *   uploaded.
+ */
 designMode.showAssetManager = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';

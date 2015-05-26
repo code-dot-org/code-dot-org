@@ -4,13 +4,17 @@ var AssetRow = require('./AssetRow.jsx');
 
 var errorMessages = {
   415: 'This type of file is not supported.',
-  500: 'The server responded with an error.'
+  500: 'The server responded with an error.',
+  unknown: 'An unknown error occurred.'
 };
 
 function getErrorMessage(status) {
-  return errorMessages[status] || 'An unknown error occurred.';
+  return errorMessages[status] || errorMessages.unknown;
 }
 
+/**
+ * A component for managing hosted assets.
+ */
 module.exports = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
@@ -29,6 +33,11 @@ module.exports = React.createClass({
     AssetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
   },
 
+  /**
+   * Called after the component mounts, when the server responds with the
+   * current list of assets.
+   * @param xhr
+   */
   onAssetListReceived: function (xhr) {
     var assets = JSON.parse(xhr.responseText);
     if (this.props.typeFilter) {
@@ -39,16 +48,29 @@ module.exports = React.createClass({
     this.setState({assets: assets});
   },
 
+  /**
+   * Called after the component mounts, if the server responds with an error
+   * when loading the current list of assets.
+   * @param xhr
+   */
   onAssetListFailure: function (xhr) {
     this.setState({statusMessage: 'Error loading asset list: ' +
         getErrorMessage(xhr.status)});
   },
 
+  /**
+   * We've hidden the <input type="file"/> and replaced it with a big button.
+   * Forward clicks on the button to the hidden file input.
+   */
   fileUploadClicked: function () {
     var uploader = React.findDOMNode(this.refs.uploader);
     uploader.click();
   },
 
+  /**
+   * Uploads the current file selected by the user.
+   * TODO: HTML5 File API isn't available in IE9, need a fallback.
+   */
   upload: function () {
     var file = React.findDOMNode(this.refs.uploader).files[0];
     if (file.type && this.props.typeFilter) {
@@ -84,6 +106,9 @@ module.exports = React.createClass({
 
   render: function () {
     var assetList;
+    // If `this.state.assets` is null, the asset list is still loading. If it's
+    // empty, the asset list has loaded and there are no assets in the current
+    // channel (matching the `typeFilter`, if one was provided).
     if (this.state.assets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>

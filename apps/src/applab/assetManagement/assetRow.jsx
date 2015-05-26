@@ -8,6 +8,13 @@ var defaultIcons = {
   unknown: 'fa fa-question'
 };
 
+/**
+ * Creates a thumbnail (the image itself for images, or an icon representing the
+ * filetype).
+ * @param type {String} The asset type (e.g. 'audio').
+ * @param name {String} The name of the asset.
+ * @returns {XML}
+ */
 function getThumbnail(type, name) {
   switch (type) {
     case 'image':
@@ -32,6 +39,9 @@ function getThumbnail(type, name) {
   }
 }
 
+/**
+ * A single row in the AssetManager, describing one asset.
+ */
 module.exports = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
@@ -48,14 +58,24 @@ module.exports = React.createClass({
     };
   },
 
+  /**
+   * Confirm the user actually wants to delete this asset.
+   */
   confirmDelete: function () {
     this.setState({action: 'confirming delete', actionText: ''});
   },
 
+  /**
+   * This user didn't want to delete this asset.
+   */
   cancelDelete: function () {
     this.setState({action: 'normal', actionText: ''});
   },
 
+  /**
+   * Delete this asset and notify the parent to remove this row. If the delete
+   * fails, flip back to 'confirming delete' and display a message.
+   */
   handleDelete: function () {
     this.setState({action: 'deleting', actionText: ''});
 
