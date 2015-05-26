@@ -101,9 +101,9 @@ module.exports = React.createClass({
           <table style={{width: '100%'}}>
             <tbody>
               {this.state.assets.map(function (asset) {
+                var path = AssetsApi.basePath(asset.filename);
                 var choose = this.props.assetChosen &&
-                    this.props.assetChosen.bind(this, AssetsApi.basePath + '/' +
-                    asset.filename);
+                    this.props.assetChosen.bind(this, path);
 
                 return <AssetRow key={asset.filename} name={asset.filename}
                     type={asset.category} size={asset.size} choose={choose}
