@@ -1,4 +1,5 @@
 var React = require('react');
+var designMode = require('../designMode');
 
 var PropertyRow = React.createClass({
   propTypes: {
@@ -17,7 +18,7 @@ var PropertyRow = React.createClass({
   },
 
   handleButtonClick: function () {
-    Applab.onDesignModeManageAssets(this.changeImage, 'image');
+    designMode.showManageAssets(this.changeImage, 'image');
   },
 
   changeImage: function (filename) {
