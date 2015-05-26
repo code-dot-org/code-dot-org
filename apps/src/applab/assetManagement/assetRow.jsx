@@ -4,20 +4,31 @@ var AssetsApi = require('./clientApi');
 var defaultIcons = {
   image: 'fa fa-picture-o',
   audio: 'fa fa-music',
-  video: 'fa fa-video-camera'
+  video: 'fa fa-video-camera',
+  unknown: 'fa fa-question'
 };
 
 function getThumbnail(type, name) {
   switch (type) {
     case 'image':
       var src = '/v3/assets/' + dashboard.project.current.id + '/' + name;
-      return <img src={src} style={{
-        width: 'auto', maxWidth: '100%', height: 'auto', maxHeight: '100%',
-        zoom: 2, marginTop: '50%', transform: 'translateY(-50%)'
-      }}/>;
+      var assetThumbnailStyle = {
+        width: 'auto',
+        maxWidth: '100%',
+        height: 'auto',
+        maxHeight: '100%',
+        zoom: 2,
+        marginTop: '50%',
+        transform: 'translateY(-50%)'
+      };
+      return <img src={src} style={assetThumbnailStyle}/>;
     default:
-      return <i className={defaultIcons[type] || 'fa fa-question'}
-          style={{margin: '15px 0', fontSize: '32px'}}></i>;
+      var icon = defaultIcons[type] || defaultIcons.unknown;
+      var assetIconStyle = {
+        margin: '15px 0',
+        fontSize: '32px'
+      };
+      return <i className={icon} style={assetIconStyle}></i>;
   }
 }
 
