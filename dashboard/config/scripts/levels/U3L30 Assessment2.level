@@ -1,0 +1,37 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-23T00:57:00.220Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the index of the third element in an array?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "2",
+        "correct": true
+      },
+      {
+        "text": "3",
+        "correct": false
+      },
+      {
+        "text": "4",
+        "correct": false
+      },
+      {
+        "text": "Cannot be determined",
+        "correct": false
+      }
+    ],
+    "title": "Arrays: Question 2",
+    "type": "Multi",
+    "dsl_text": "name 'U3L30 Assessment2'\r\ntitle 'Arrays: Question 2'\r\n\r\nquestion 'What is the index of the third element in an array?'\r\nright '2'\r\nwrong '3'\r\nwrong '4'\r\nwrong 'Cannot be determined'\r\n\r\n<<MARKDOWN\r\n\r\nMARKDOWN\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</Multi>
