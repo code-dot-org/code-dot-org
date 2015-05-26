@@ -1071,6 +1071,7 @@ describe("NetSimRouterNode", function () {
       beforeEach(function () {
         router.setDnsMode(DnsMode.AUTOMATIC);
         router.tick({time: 0});
+        NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.VERBOSE);
       });
 
       it ("can round-trip to auto-DNS service and back",function () {
@@ -1252,6 +1253,7 @@ describe("NetSimRouterNode", function () {
       ];
       netsimGlobals.getLevelConfig().addressFormat = addressFormat;
       netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
+      netsimGlobals.getLevelConfig().connectedRouters = true;
       encoder = new Packet.Encoder(addressFormat, 0, packetHeaderSpec);
 
       // Make routers
@@ -1283,6 +1285,35 @@ describe("NetSimRouterNode", function () {
       routerB.tick({time: 0});
     });
 
+    it ("inter-router message is dropped when 'connectedRouters' are disabled",
+        function () {
+      netsimGlobals.getLevelConfig().connectedRouters = false;
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: clientB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('wop'));
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+
+      // t=1; router A picks up message, drops it because it won't route
+      //   out of local subnet
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      var logRow = getLatestLogRow();
+      assertEqual(routerA.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.DROPPED, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 0);
+    });
+
     it ("can send a message to client on another router", function () {
       var logRow;
 
@@ -1300,7 +1331,6 @@ describe("NetSimRouterNode", function () {
             fromAddress: clientA.getAddress()
           }),
           dataConverters.asciiToBinary('wop'));
-      console.log("Send message " + packetBinary.length);
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet

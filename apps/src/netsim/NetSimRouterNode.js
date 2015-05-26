@@ -1165,8 +1165,6 @@ NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
  * @private
  */
 NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
-  logger.info("  getNextNodeTowardAddress");
-
   // Is it us?
   if (address === this.getAddress()) {
     return this;
@@ -1190,6 +1188,12 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
     if (localClient !== undefined) {
       return localClient;
     }
+  }
+
+  // In levels where routers are not connected, this is as far as we go.
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (!levelConfig.connectedRouters) {
+    return undefined;
   }
 
   // Is it another node?
@@ -1565,7 +1569,6 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   }
 
   // Create a new message with a new payload.
-  logger.info("    Sending from Router " + this.entityID + " to " + destinationNode.entityID);
   NetSimMessage.send(
       this.shard_,
       routerNodeID,
@@ -1573,7 +1576,6 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
       simulatingNodeID,
       message.payload,
       function (err, result) {
-        logger.info("    Sent from Router " + this.entityID + " to " + destinationNode.entityID);
         this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
         onComplete(err, result);
       }.bind(this)
