@@ -162,11 +162,19 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-browser_features = $browsers.product Dir.glob('features/*.feature')
+features =
+  if $options.feature
+    [$options.feature]
+  else
+    Dir.glob('features/*.feature')
+  end
+
+browser_features = $browsers.product features
 
 Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
+  feature_name = feature.gsub('features/', '').gsub('.feature', '')
   browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_name = "#{browser_name} #{feature}"
+  test_run_name = "#{browser_name} #{feature_name}"
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{browser_name}</b> (changes detected)"
@@ -218,7 +226,7 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " --format html --out #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --format html --out #{browser_name}_#{feature_name}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
   def output_synopsis(output_text)

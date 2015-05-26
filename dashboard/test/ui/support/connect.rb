@@ -76,7 +76,9 @@ browser.manage.timeouts.implicit_wait = 25
 Before do
   @browser = browser
   @browser.manage.delete_all_cookies
-  @browser.navigate.to "https://test-studio.code.org"
+
+  sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + sauce_session_id
 end
 
 at_exit do
