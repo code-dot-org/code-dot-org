@@ -15,7 +15,7 @@ var OptionsSelectRow = React.createClass({
     }
     return {
       value: value
-    }
+    };
   },
 
   handleChangeInternal: function(event) {

@@ -9,7 +9,7 @@ var BooleanPropertyRow = React.createClass({
   getInitialState: function () {
     return {
       isChecked: this.props.initialValue
-    }
+    };
   },
 
   handleChangeInternal: function(event) {
@@ -17,7 +17,7 @@ var BooleanPropertyRow = React.createClass({
     this.props.handleChange(value);
     this.setState({isChecked: value});
   },
-  
+
   render: function() {
     return (
       <tr>
