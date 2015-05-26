@@ -65,8 +65,8 @@
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} учнів вже зареєструвались.'
+    teacher_count: '%{count} вчителів вже зареєструвались.'
     overview_student: Зареєструйтесь для відстеження свого навчання. Ваша скринька
       буде використовуватись для входу на сайт та відновлення забутого паролю. Більше
       інформації у <a href="http://code.org/privacy">Політиці конфіденційності</a>.
@@ -260,7 +260,7 @@
         artist: Намалювати
     user:
       classroom: Домашня сторінка вчителя
-      district_dashboard: District Dashboard
+      district_dashboard: Панель району
       label: Привіт %{username}
       stats: Мій прогрес
       settings: Мій профіль
@@ -270,7 +270,7 @@
       signup: Зареєструватися
       already_registered: Вже зареєстровані?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
       lines: 'Усього рядків коду: %{lines}'
       close: ЗАКРИТИ
@@ -345,9 +345,9 @@
       бо ви не реєстрували адресу електронної пошти
     student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Перегляд відповідей
       student: учень
-      try_it_yourself: Try it yourself
+      try_it_yourself: Спробуйте самі
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -370,7 +370,7 @@
     classroom_activity: Безмашинна вправа
   home:
     title: Студія коду
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} РЯДКІВ КОДУ, ЯКІ НАПИСАЛИ УЧНІ'
     all_courses: Огляд курсів, 1, 2 і 3
     lesson_plans: Плани уроків
     signin_message: Вже зареєстровані? %{link}
@@ -413,7 +413,7 @@
     heading_apps: <h2>Цікавинки</h2><h1>для усіх</h1>
     heading_legacy: <h2>Загальний курс</h2><h1>для будь-якого віку</h1>
     your_gallery: Галерея
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Спробуйте курс Студії коду
   gender:
     male: Чоловік
     female: Жінка
@@ -515,8 +515,9 @@
     frozen:
       title: Крижане серце
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Ігрова лабораторія Infiinty
+      body: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів
+        Діснея Infiinty.
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!
@@ -548,6 +549,8 @@
     wrong_body: Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!
     correct_title: Правильно
     correct_body: Це правильна відповідь.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Неправильне рішення
     wrong_body: Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!
@@ -555,18 +558,18 @@
     correct_body: Це правильна відповідь.
   contract_match:
     wrong_title: Неправильна відповідь
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badname: Ваша функція має неправильне ім'я.
+    badname_case: Імена функцій чутливі до регістру. Спробуйте змінити регістр назви
+      функції.
+    badrange: Ваша функція має неправильний діапазон.
+    baddomainsize: Ваша функція має неправильну кількість елементів у домені.
+    baddomainname: Один або кілька елементів домену мають неправильне ім'я.
+    baddomaintype: Один або кілька елементів домену мають неправильний тип, або перебувають
+      у неправильному порядку.
   text_match:
     placeholder: Введіть свою відповідь тут
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Дякуємо
+    open_response_body: Дякуємо за вашу відповідь!
   dialog:
     ok: Гаразд
   time:
@@ -620,48 +623,47 @@
     не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв'язатися
     з нами.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: не розпочато
+    in_progress: триває
     completed_too_many_blocks: завершено, забагато блоків
     completed_perfect: виконано, ідеально
     furthest_level_attempted: останній відкритий рівень
-    assessment: assessment
+    assessment: оцінювання
   studio:
     courses_working_on: Відкриті курси
     completed_courses: Завершені курси
     all_courses: Всі курси
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Проекти
+    create: Створити проект
+    create_a_project: 'Створити новий проект:'
+    new: Створити новий
+    rename: Перейменувати
     save: зберегти
     delete: Видалити
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Повернутися до курсу
+    my_projects: Мої проекти
     share: Поділитися
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Поділитися своїм проектом
+    share_copy_link: 'Скопіювати посилання:'
+    close: Закрити
     more: Більше
     name: Ім’я
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Оновлено
+    project_type: Тип проекту
+    help_text: Клацніть кнопки <strong>Створити програму</strong> або <strong>Намалювати</strong>,
+      щоб увійти в Ігрову лабораторію або створити проект Художника!<br/>Ви зможете
+      повернутись до роботи над проектом в будь-який час.
+    need_help: Потрібна допомога щоб розпочати?
     really_delete: Видалити?
     delete_yes: Так
     delete_no: Ні
-    saved: Saved
-    not_saved: Not saved
+    saved: Збережено
+    not_saved: Не збережено
     cancel: Скасувати
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    delete_confirm_title: Ви дійсно бажаєте видалити цей проект?
+    delete_confirm_text: Видалення проекту назавжди видалить його зі списку Мої проекти.
+      Якщо ви поділились посиланням на перегляд проекту, воно більше не працюватиме.
+    view_all: Переглянути мої проекти
+    remix: Ремікс
+    click_to_remix: Клацніть 'Ремікс' щоб створити власну версію на основі цієї!

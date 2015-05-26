@@ -66,8 +66,8 @@
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count}öğrenciler çoktan giriş yaptı.'
+    teacher_count: '%{count}öğrenciler zaten giriş yaptı.'
     overview_student: İlerleme durumunuzu takip etmek için kayıt olun. Giriş işlemleri
       için ve şifrenizi unuttuğunuzda E-posta adresiniz kullanılacaktır. Daha fazla
       bilgi için <a href="http://code.org/privacy">gizlilik politikamızı</a> tıklayınız.
@@ -266,7 +266,7 @@
       signup: Kaydol
       already_registered: Zaten hesabınız var mı?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name}''ın işleniyor'
       progress: İlerlemeniz
       lines: 'Toplam kod satırı: %{lines}'
       close: kapat
@@ -342,9 +342,9 @@
     student_teacher_disassociated: '% {teacher_name},  % {student_name} ''in öğretmeni
       olmaktan kaldırıldı'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: cevap gözlemleyicisi
       student: öğrenci
-      try_it_yourself: Try it yourself
+      try_it_yourself: kendini dene
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -366,7 +366,7 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count}öğrenci tarafından yazılan kod satırları'
     all_courses: 1, 2 ve 3 nolu derslerine genel bakış
     lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
@@ -548,6 +548,8 @@
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
     correct_title: Doğru
     correct_body: İşte bu doğru cevap.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Yanlış çözüm
     wrong_body: Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!
@@ -559,14 +561,14 @@
     badname_case: Fonksiyon isimleri büyük-küçük harfe duyarlıdır. Fonksiyon gövdesindeki
       ismin büyüklüğünü   değiştirmeyi deneyin.
     badrange: Senin sözleşmen yanlış bir diziye sahip.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    baddomainsize: sözleşmeniz içerikteki elemanların doğru numaralarını içermiyor.
+    baddomainname: 1 veya daha fazla senin öğelerin hatalı.
     baddomaintype: One or more of your domain items has the wrong type, or they are
       in the wrong order.
   text_match:
     placeholder: Cevabınızı buraya girin
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: teşekkürler
+    open_response_body: cevabınız için teşekkürler!
   dialog:
     ok: TAMAM
   time:
@@ -661,5 +663,6 @@
     delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır.
       Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
     view_all: Projelerimi görüntüle
-    remix: Remix
+    remix: |
+      karıştır.
     click_to_remix: Click 'Remix' to spin-off your own version!

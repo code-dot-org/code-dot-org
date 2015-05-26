@@ -56,21 +56,21 @@ ru:
         one: '1 ошибка запрещает сохранить %{resource} :'
         other: '%{count} ошибок запрещают сохранить %{resource}:'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: 'Приглашение было выслано на адрес %{email}.'
+      invitation_token_invalid: Предоставленный токен приглашения не действителен!
+      updated: Ваш пароль был успешно изменен. Теперь вы вошли.
+      no_invitations_remaining: Приглашений не осталось
+      invitation_removed: Ваше приглашение было удалено.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Отправить приглашение
+        submit_button: Отправить приглашение
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Установите свой пароль
+        submit_button: Задать свой пароль
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Инструкции по приглашению
+        hello: 'Привет %{email}'
+        someone_invited_you: 'Кто-то пригласил вас на %{url}, вы можете принять приглашение через ссылку ниже.'
+        accept: Принять приглашение
+        ignore: 'Если вы не хотите принимать приглашение, пожалуйста проигнорируйте это письмо. <br />Ваша запись не будет создана до тех пор, пока вы не перейдете по этой ссылке и не установите свой пароль.'

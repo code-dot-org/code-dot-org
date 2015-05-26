@@ -551,12 +551,26 @@ schafer@pd.code.org
 <br />
 <a id="ks"></a>
 ## Kansas
+[col-33]
 ### Jessica Asbury
 Kansas City, KS
 
 Asbury@pd.code.org
 
-<br />
+[/col-33]
+
+[col-33]
+
+### Kelley McCall
+Wichita, KS
+
+mccall@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+
 <a id="ky"></a>
 ## Kentucky
 ### Mark Lorence
@@ -706,6 +720,15 @@ sjones@pd.code.org
 Durham, NC
 
 astrachan@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### April Thomas
+Cary, NC
+
+thomas@pd.code.org
 
 [/col-33]
 
@@ -933,6 +956,15 @@ puckett@pd.code.org
 <a id="tn"></a>
 ## Tennessee
 [col-33]
+### Jennifer Jackson
+Memphis, TN
+
+Jjackson@pd.code.org
+
+[/col-33]
+
+[col-33]
+
 ### Herman Nelson
 Murfreesboro, TN
 
@@ -992,6 +1024,14 @@ Dallas, TX
 
 lane@pd.code.org
 
+<br />
+### **San Antonio**
+### Susan Reeves
+San Antonio, TX
+
+reeves@pd.code.org
+
+<br />
 ### **Houston**
 [col-33]
 ### Ruth Hanson

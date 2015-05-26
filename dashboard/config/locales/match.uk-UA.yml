@@ -73,8 +73,8 @@
       2-3 Big Event Match 1:
         Matching: Зіставлення
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Порівняй комбінацію кнопок
-          для танцювальних рухів.
+        Match the button combination to the dance moves.: Встановіть відповідність
+          між комбінаціями кнопок та танцювальними рухами.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -99,7 +99,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Зіставлення
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Встановіть відповідність сітки та програми.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -284,8 +284,8 @@
       K-1 Big Event Match 1:
         Matching: Зіставлення
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Порівняй комбінацію кнопок
-          для танцювальних рухів.
+        Match the button combination to the dance moves.: Встановіть відповідність
+          між комбінаціями кнопок та танцювальними рухами.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -448,11 +448,11 @@
         0: '? Match the phases of PD with their descriptions below. Feel free to look
           back at the Program Commitment details on the previous page (you can get
           back to the last level by clicking above on the small circle immediately
-          to the left of the number 3).'
+          to the left of the number 5).'
         1: ': Match the phases of PD with their descriptions below. Feel free to look
           back at the Program Commitment details on the previous page (you can get
           back to the last level by clicking above on the small circle immediately
-          to the left of the number 3).'
+          to the left of the number 5).'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3
@@ -521,6 +521,17 @@
         salt: сіль
         Van Minnen: Ван Мінен
         Sydney: Сидней
+      U1L5 Matching Assessment:
+        'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment:
+          Sending Bits in the Real World'
+        Match the bit sending technology with the underlying system: Match the bit
+          sending technology with the underlying system
+        Copper Wire: Copper Wire
+        Radio Wave: Radio Wave
+        Fiber Optic Cable: Fiber Optic Cable
+        Electric Voltage: Electric Voltage
+        Alternating Frequencies: Alternating Frequencies
+        Beam of Light: Beam of Light
       U3L13 Assessment Matching:
         'Matching: Buttons on the Screen': 'Matching: Buttons on the Screen'
         elements: elements
@@ -545,8 +556,8 @@
         Event triggers: Event triggers
         Match the event type name with the description of what triggers it.: Match
           the event type name with the description of what triggers it.
-        Triggers constantly while hovering over a button.: Triggers constantly while
-          hovering over a button.
+        Triggers constantly while moving over a button.: Triggers constantly while
+          moving over a button.
         Triggers once, the instant mouse hovers over the button: Triggers once, the
           instant mouse hovers over the button
         Triggers when mouse button is clicked once: Triggers when mouse button is
@@ -558,3 +569,28 @@
         click: click
         mouseup: mouseup
         mousedown: mousedown
+      U3L19 - MATCH what are values of abc:
+        title: назва
+        description here: опис тут
+        a: a
+        b: b
+        c: c
+        8: '8'
+        13: '13'
+        21: '21'
+        7: '7'
+        3: '3'
+        5: '5'
+        16: '16'
+        12: '12'
+        10: '10'
+        15: '15'
+      U3L19 - MC what are values of abc:
+        title: назва
+        description here: опис тут
+        What are the values of the variables a, b and c after all of the code has executed?: What
+          are the values of the variables a, b and c after all of the code has executed?
+        Answer 1: Answer 1
+        Answer 2: Answer 2
+        Answer 3: Answer 3
+        Answer 4: Answer 4

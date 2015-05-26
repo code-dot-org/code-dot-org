@@ -8,8 +8,8 @@
   "catText": "Text",
   "catVariables": "Premenné",
   "continue": "Pokračovať",
-  "container": "create container",
-  "containerTooltip": "Creates a division container and sets its inner HTML.",
+  "container": "Vytvor kontajner",
+  "containerTooltip": "Vytvorí oddelený kontajner (<div>) v HTML.",
   "finalLevel": "Gratulujem! Vyriešili ste posledné puzzle.",
   "nextLevel": "Gratulujem! Vyriešil si hádanku.",
   "no": "Nie",
@@ -22,8 +22,8 @@
   "shareApplabTwitter": "Pozri sa na aplikáciu, ktorú som urobil. Napísal som to sám s @codeorg",
   "shareGame": "Zdieľaj svoju aplikáciu:",
   "stepIn": "Krok do",
-  "stepOver": "Krok ponad",
+  "stepOver": "Krok cez",
   "stepOut": "Krok von",
-  "viewData": "zobraz údaje",
+  "viewData": "Zobraz údaje",
   "yes": "Áno"
 }

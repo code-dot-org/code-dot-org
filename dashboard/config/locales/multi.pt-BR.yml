@@ -104,12 +104,11 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Comece
           com um quadrado<br/>Coloque um triângulo acima do quadrado<br/>Coloque um
           triângulo abaixo do quadrado
-        0: '? Comece com um quadrado<br/>Coloque um triângulo à direita do quadrado<br/>Coloque
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Comece com um quadrado<br/>Coloque um triângulo à direita do quadrado<br/>Coloque
           um paralelogramo abaixo do quadrado<br/>Coloque um triângulo à direita do
-          paralelogramo'
-        1: ': Comece com um quadrado<br/>Coloque um triângulo à direita do quadrado<br/>Coloque
-          um paralelogramo abaixo do quadrado<br/>Coloque um triângulo à direita do
-          paralelogramo'
+          paralelogramo
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Comece
           com um quadrado<br/>Coloque um paralelogramo acima do quadrado<br/>Coloque
           um triângulo à direita do paralelogramo
@@ -379,9 +378,9 @@
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou, <br/>Lou,
           Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.
-        2: '? Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou,
-          Lou, pule para o Lou, <br/>Pule para o Lou, minha querida.<br/><br/><p>A
-          mosca está na manteiga, <br/>Xô, mosca, xô,'
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
         3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
           buttermilk, <br/>Shoo, fly, shoo,'
@@ -401,16 +400,25 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Baker test of multi can delete:
-        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: There
-          are two answers here that are correct.  Looks like you can choose either
-          one and be right.
-        What is 2 + 2?: What is 2 + 2?
+        Test of 2 correct answer multi choice: Teste de múltipla escolha com 2 respostas
+          corretas
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: Há
+          duas respostas corretas aqui. Parece que você pode escolher qualquer uma
+          delas e estar certo.
+        What is 2 + 2?: Quanto é 2 + 2?
         2+3: 2+3
         5-1: 5-1
         3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
+      Choose 2 Test:
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
+          lines of code should be removed so the program will work as intended? Select
+          <u>two</u> answers
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
@@ -421,7 +429,12 @@
         The unicorn moves across the screen: O unicórnio se movimenta pela tela
         The unicorn's y value changes: O valor de y do unicórnio muda
         The unicorn moves to the left: O unicórnio se move para a esquerda
-        The unicorn's x value decreases: O valor de x do unicórnio diminui
+        The unicorn's x value increases: The unicorn's x value increases
+      ECSPD2 question:
+        title: título
+        Question: Pergunta
+        wrong answer: resposta errada
+        right answer: resposta certa
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Mentalidade de crescimento na sala de aula
         How can we use praise to encourage Growth Mindset in our students?: Como podemos
@@ -453,12 +466,12 @@
           \nquestão\""
         1: ": \"Com base no vídeo ao qual você acabou de assistir, responda à seguinte
           \nquestão\""
-        2: '? Que problemas Ben Wellington abordou em sua palestra TED que estavam
-          relacionados às barreiras apresentadas por pessoas que querem acessar e
-          analisar grandes dados?'
-        3: ': Que problemas Ben Wellington abordou em sua palestra TED que estavam
-          relacionados às barreiras apresentadas por pessoas que querem acessar e
-          analisar grandes dados?'
+        2: '? Que problemas Ben Wellington abordou em sua palestra no TED talks que
+          estavam relacionados às barreiras apresentadas por pessoas que querem acessar
+          e analisar Big Data?'
+        3: ': Que problemas Ben Wellington abordou em sua palestra no TED talks que
+          estavam relacionados às barreiras apresentadas por pessoas que querem acessar
+          e analisar Big Data?'
         data stored in ways that makes it difficult to analyze it: dados armazenados
           de formas que dificultam sua análise
         data is technically available, but often not posted online: dados que estão
@@ -831,8 +844,8 @@
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Imagens e strings - Múltipla escolha
         http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
-        Which of these Evaluation Blocks will draw the image: Qual desses blocos de
-          cálculo vai desenhar a imagem
+        Which of these Evaluation Blocks will draw the image on the left?: Which of
+          these Evaluation Blocks will draw the image on the left?
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
@@ -848,8 +861,8 @@
           de atendimento
       PDAlg Blocks Video:
         Intro to Evaluation Blocks: Introdução aos blocos de avaliação
-        In which are of the screen do you click blocks together to write a program?: Em
-          que parte da tela você clica e junta os blocos para escrever um programa?
+        In which area of the screen do you click blocks together to write a program?: In
+          which area of the screen do you click blocks together to write a program?
         Play Area: Área de jogo
         Toolbox: Caixa de ferramentas
         Workspace: Área de trabalho
@@ -1080,7 +1093,7 @@
       sciPD complex adaptive 2:
         Examples of Complex Adaptive Systems: Exemplos de sistemas adaptativos complexos
         Which of the following is NOT an example of a complex adaptive system?: Qual
-          dos seguintes exemplos não é um exemplo de um sistema adaptativo complexo?
+          dos seguintes exemplos NÃO é um exemplo de um sistema adaptativo complexo?
         a bee hive: uma colmeia de abelhas
         a wall clock: um relógio de parede
         a traffic jam: um engarrafamento
@@ -1102,14 +1115,14 @@
           das seguintes características são comuns tanto aos experimentos de laboratório
           quanto aos experimentos de ciência computacional?
         automation of experiments is easy: a automação dos experimentos é fácil
-        changing physical properties like the gravitational constant: alterar propriedades
+        changing physical properties like the gravitational constant: altera propriedades
           físicas, como a constante gravitacional
-        sweeping a set of variables: varrer um conjunto de variáveis
+        sweeping a set of variables: varre um conjunto de variáveis
         the need for controlled experiments: a necessidade de experimentos controlados
       sciPD culture 1:
         Multiple Choice - Getting Unstuck: Múltipla escolha - Desempacando
         Which of the following was NOT suggested as a way to get unstuck?: Qual das
-          seguintes opções não foi sugerida como uma forma de desempacar?
+          seguintes opções NÃO foi sugerida como uma forma de desempacar?
         taking a break: fazer uma pausa
         meditating: meditar
         looking at other similar pieces of code: olhar para outros trechos de código
@@ -1118,8 +1131,8 @@
       sciPD culture 2:
         Multiple Choice - Role Of Teacher: Múltipla escolha - O papel do professor
         What role for a teacher incorporating models and simulations into the classroom was proposed?: Qual
-          papel para um professor incorporar modelos e simulações na sala de aula
-          foi proposto?
+          papel foi proposto para um professor incorporar modelos e simulações na
+          sala de aula?
         engaging lecturer: palestrante envolvente
         learning coach or guide: guia ou tutor de ensino
         expert in a computer language: expert em uma linguagem de computador
@@ -1173,9 +1186,9 @@
         'No': Não
       sciPD PreQ 2:
         Pre-Survey Question 2: Pesquisa prévia - Questão 2
-        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Antes,
-          você já tinha feito algum curso on-line (em uma plataforma como Coursera,
-          edX, Udacity, Khan Academy, etc.)?
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Você
+          já fez algum curso on-line antes (em uma plataforma como Coursera, edX,
+          Udacity, Khan Academy, etc.)?
         'Yes': Sim
         'No': Não
       test multi image:
@@ -1267,34 +1280,50 @@
         8 bytes: 8 bytes
         16 bytes: 16 bytes
       U1L2 Multiple Choice Assessment Question:
-        'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary
-          Messages'
-        'A binary question is defined as:': 'A binary question is defined as:'
-        A piece of information that is sent in pairs: A piece of information that
-          is sent in pairs
-        Two questions which share the same answer: Two questions which share the same
-          answer
-        A message which has two possible states: A message which has two possible
-          states
-        A question which can be answered in only one of two possible ways: A question
-          which can be answered in only one of two possible ways
+        'Multiple Choice: Sending Binary Messages': 'Múltipla escolha: envio de mensagens
+          binárias'
+        'A binary question is defined as:': 'Uma questão binária é definida como:'
+        A piece of information that is sent in pairs: Um trecho de informação que
+          é enviado em pares
+        Two questions which share the same answer: Duas questões que compartilham
+          a mesma resposta
+        A message which has two possible states: Uma mensagem que tem dois estados
+          possíveis
+        A question which can be answered in only one of two possible ways: Uma questão
+          que pode ser respondida de apenas uma entre duas formas possíveis
       U1L3 Multiple Choice:
-        'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex
-          Messages'
+        'Multiple Choice: Sending Complex Messages': 'Múltipla escolha: envio de mensagens
+          complexas'
         0: '? When sending a response to a question with four possible answers, the
           most efficient method will require no more than what number of bits?'
-        1: ': When sending a response to a question with four possible answers, the
-          most efficient method will require no more than what number of bits?'
+        1: ': Ao enviar uma resposta a uma questão com quatro respostas possíveis,
+          o método mais eficiente não vai requerer mais do que qual número de bits?'
         5 bits: 5 bits
         4 bits: 4 bits
         3 bits: 3 bits
         2 bits: 2 bits
         1 bit: 1 bit
+      U1L4 Multiple Choice:
+        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination
+          and Binary Messages'
+        0: '? A binary message consisting of four bits was sent to you by a friend.
+          The message was supposed to be ABAB. Unfortunately, your friend sent the
+          message at 1/2 the bit rate you agreed upon. What message did you receive
+          instead?'
+        1: ': A binary message consisting of four bits was sent to you by a friend.
+          The message was supposed to be ABAB. Unfortunately, your friend sent the
+          message at 1/2 the bit rate you agreed upon. What message did you receive
+          instead?'
+        ABAB: ABAB
+        AABB: AABB
+        AAAA: AAAA
+        BBBB: BBBB
+        ABBB: ABBB
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Múltipla escolha: Sistemas numéricos'
-        If you just had a circle and a square, how many 3-shape rows could you make?: Se
-          você tivesse apenas um círculo e um quadrado, quantas fileiras de 3 formas
-          você poderia fazer?
+        If you just had a circle and a square, how many 3-shape permutations could you make?: If
+          you just had a circle and a square, how many 3-shape permutations could
+          you make?
         4: '4'
         6: '6'
         8: '8'
@@ -1309,7 +1338,7 @@
         Application Primary Interactions are fundamental to programming: A aplicação
           de interações primárias é fundamental na programação
         To make programming more complex for those without experience: Para tornar
-          a programação mais complexa para os que não possuem experiência
+          a programação mais complexa para os que não têm experiência
         Programs won't run without good API documentation: Os programas não serão
           executados sem uma boa documentação de API
         To provide high-level functionality that simplifies complex programming tasks: Para
@@ -1321,103 +1350,113 @@
         Buttons and Ids: Botões e ids
         What happens when two buttons are given the same id?: O que acontece quando
           dois botões têm o mesmo id?
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript
-          é flexível. Dois botões com o mesmo id vão responder a um único manipulador
-          de eventos associado a esse id.
-        A warning message will appear for the second button that that id is already in use: Um
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript
+          is flexible. Two buttons with same id will respond to a single event handler
+          associated with that id
+        A warning message will appear for the second button that that id is already in use: Uma
           mensagem de alerta vai aparecer para o segundo botão informando que esse
           id já está em uso
         The first button created with the id will work, the other will not: O primeiro
           botão criado com o id vai funcionar, o segundo não
-        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: A
-          API JavaScript para MVC permite a duplicação de ids enquanto o HTML for
-          compatível com o CSS
-        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two
-          buttons with same id are linked during the running of the program. Clicking
-          one is just like clicking the other
+        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The
+          JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS
+          compliant
+        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Dois
+          botões com o mesmo id são conectados durante a execução do programa. Clicar
+          em um é o mesmo que clicar no outro
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Botões e manipuladores de eventos
         Does order matter when adding a button and its event handler to your code?: A
-          ordem importa quando você adiciona um botão e seu manipulador de evento
+          ordem importa quando você adiciona um botão e seu manipulador de eventos
           ao seu código?
         The button, with its id, must appear in the code AFTER the event handler: O
-          botão e seu id devem aparecer no código APÓS o manipulador de evento
+          botão e seu id devem aparecer no código APÓS o manipulador de eventos
         JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript
-          é flexível. O botão e seu manipulador de evento podem aparecer em qualquer
+          é flexível. O botão e seu manipulador de eventos podem aparecer em qualquer
           ordem no código
         The button, with its id, must appear in the code BEFORE the event handler: O
-          botão e seu id devem aparecer no código ANTES do manipulador de evento
+          botão e seu id devem aparecer no código ANTES do manipulador de eventos
         JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: O
           JavaScript força você a desacoplar a visão e o controlador. Você deve declarar
           botões em uma API separada
       U3L18 Controlling Memory and Program Flow:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select
-          the programming technique that best fits the described game feature.
+        Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
+        Select the programming technique that best fits the described game feature.: Selecione
+          a técnica de programação que melhor se adequa à característica do jogo descrita.
         1. You want to see additional random images displayed that are worth different points when clicked.: 1.
-          You want to see additional random images displayed that are worth different
-          points when clicked.
-        conditional: conditional
-        variable: variable
-        both: both
+          Você quer ver mais imagens aleatórias exibidas que valem pontos diferentes
+          quando clicadas.
+        conditional: condicional
+        variable: variável
+        both: ambos
       U3L18 Controlling Memory and Program Flow 2:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select
-          the programming technique that best fits the described game feature.
+        Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
+        Select the programming technique that best fits the described game feature.: Selecione
+          a técnica de programação que melhor se adequa à característica do jogo descrita.
         2. You want to see various motivational messages based upon the score.: 2.
-          You want to see various motivational messages based upon the score.
-        conditional: conditional
-        variable: variable
-        both: both
+          Você quer ver várias mensagens motivacionais com base na pontuação.
+        conditional: condicional
+        variable: variável
+        both: ambos
       U3L18 Controlling Memory and Program Flow 3:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select
-          the programming technique that best fits the described game feature.
-        3. You want to see the elapsed time.: 3. You want to see the elapsed time.
-        conditional: conditional
-        variable: variable
-        both: both
+        Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
+        Select the programming technique that best fits the described game feature.: Selecione
+          a técnica de programação que melhor se adequa à característica do jogo descrita.
+        3. You want to see the elapsed time.: 3. Você quer ver o tempo decorrido.
+        conditional: condicional
+        variable: variável
+        both: ambos
       U3L18 Controlling Memory and Program Flow 4:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select
-          the programming technique that best fits the described game feature.
+        Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
+        Select the programming technique that best fits the described game feature.: Selecione
+          a técnica de programação que melhor se adequa à característica do jogo descrita.
         4. You want to change the size of the images when a certain score is reached.: 4.
-          You want to change the size of the images when a certain score is reached.
-        conditional: conditional
-        variable: variable
-        both: both
+          Você quer alterar o tamanho das imagens quando uma determinada pontuação
+          for atingida.
+        conditional: condicional
+        variable: variável
+        both: ambos
       U3L18 Controlling Memory and Program Flow 5:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select the programming technique that best fits the described game feature.: Select
-          the programming technique that best fits the described game feature.
+        Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
+        Select the programming technique that best fits the described game feature.: Selecione
+          a técnica de programação que melhor se adequa à característica do jogo descrita.
         0: '? 5. You want to change the size of the image based upon its location
           on the screen (i.e. the higher it is on the screen the smaller it appears).'
-        1: ': 5. You want to change the size of the image based upon its location
-          on the screen (i.e. the higher it is on the screen the smaller it appears).'
-        conditional: conditional
-        variable: variable
-        both: both
+        1: ': 5. Você quer alterar o tamanho da imagem com base em sua localização
+          na tela (isto é, quanto mais alto ela estiver na tela, menor ela parece).'
+        conditional: condicional
+        variable: variável
+        both: ambos
+      U3L19 - MC what are values of abc:
+        So, what's the answer?: So, what's the answer?
+        Choose the best answer: Choose the best answer
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13
+        a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7: a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
+        Code does not execute due to error: Code does not execute due to error
       U3L21 Assessment 1:
-        More Variables Question 1: More Variables Question 1
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED
-          TO FIX Which of the following is a numeric value that can be assigned to
-          a variable?
+        More Variables Question 1: Mais variáveis - questão 1
+        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: É
+          PRECISO ARRUMAR Qual dos seguintes valores é um valor numérico que pode
+          ser atribuído a uma variável?
         56*61\3+2: 56*61\3+2
-        fifteen: fifteen
+        fifteen: quinze
       U3L21 Assessment 2:
-        More Variables Question 2: More Variables Question 2
-        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which
-          of the following is NOT a reason for giving variables meaningful, readable,
-          descriptive names?
-        Meaningful variable names make code easier to debug: Meaningful variable names
-          make code easier to debug
-        The literary quality of variable names is an important attribute of successful programs: The
-          literary quality of variable names is an important attribute of successful
-          programs
-        Readable variable names makes it easier to understand the program logic: Readable
-          variable names makes it easier to understand the program logic
-        Descriptive names makes it easier for other programmers to understand the program: Descriptive
-          names makes it easier for other programmers to understand the program
+        More Variables Question 2: Mais variáveis - questão 2
+        Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Quais
+          das seguintes razões NÃO é uma razão para dar nomes legíveis, descritivos
+          e significativos às variáveis?
+        Meaningful variable names make code easier to debug: Nomes de variáveis significativos
+          tornam o código mais fácil de depurar
+        The literary quality of variable names is an important attribute of successful programs: A
+          qualidade literal dos nomes de variáveis é um atributo importante de programas
+          bem-sucedidos
+        Readable variable names makes it easier to understand the program logic: Nomes
+          de variáveis legíveis tornam a lógica do programa mais fácil de entender
+        Descriptive names makes it easier for other programmers to understand the program: Nomes
+          descritivos tornam a compreensão do programa mais fácil para outros programadores
       unique level name here:
         title: título
         description here: descrição aqui

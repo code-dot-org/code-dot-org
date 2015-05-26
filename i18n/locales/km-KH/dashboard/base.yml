@@ -475,6 +475,8 @@ km:
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: ដំណោះស្រាយ​មិន​ត្រឹមត្រូវ
     wrong_body: ដំណោះស្រាយ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!

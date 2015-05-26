@@ -474,6 +474,8 @@ is:
     wrong_body: Svarið sem þú gafst er ekki rétt. Vinsamlegast reyndu aftur!
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Ófullnægjandi lausn
     wrong_body: Lausnin sem þú gafst er ekki fullnægjandi. Vinsamlegast reyndu aftur!

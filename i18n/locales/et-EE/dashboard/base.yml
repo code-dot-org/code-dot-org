@@ -467,6 +467,8 @@ et:
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
     correct_title: Õige
     correct_body: See on õige vastus.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!

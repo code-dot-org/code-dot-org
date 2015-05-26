@@ -100,17 +100,16 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: Opción Múltiple
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image
-          provided.
+        Choose an algorithm for the image provided.: Elige un algoritmo para la imagen
+          provista.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Comienza
           con un cuadrado<br/>Coloca un triángulo sobre cuadrado<br/>Coloca un triángulo
           debajo del cuadrado
-        0: '? Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado
-          <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a
-          la derecha del paralelogramo'
-        1: ': Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado
-          <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a
-          la derecha del paralelogramo'
+        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram
+        : Comienza con un cuadrado<br/>Pon un triángulo a la derecha del cuadrado<br/>Pon
+          un paralelogramo debajo del cuadrado<br/>Pon un triángulo a la derecha del
+          paralelogramo
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Comienza
           con un cuadrado <br/> Pon un paralelogramo sobre el cuadrado <br/> Pon un
           triángulo a la derecha del paralelogramo
@@ -176,35 +175,35 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
         ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
-          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
-          <br> size block'
-        Blue colored blocks are associated with __________ ?: Blue colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+          bloque <br> - bloque <br> / bloque <br> * bloque <br> 0 # bloque <br> ???
+          # bloque <br> tamaño de bloque'
+        Blue colored blocks are associated with __________ ?: ¿Bloques coloreados
+          de azul se asocian con __________?
+        a image: una imagen
+        a number: un número
+        a string: una cadena
+        boolean: Boolean
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Purple colored blocks are associated with __________ ?: ¿Bloques coloreados
+          de púrpura se asocian con __________ ?
+        a image: una imagen
+        a number: un número
+        a string: una cadena
+        boolean: Boolean
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Teal colored blocks are associated with __________ ?: ¿Bloques coloreados
+          se asocian con __________ ?
+        a image: una imagen
+        a number: un número
+        a string: una cadena
+        boolean: Boolean
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Green colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Green colored blocks are associated with __________ ?: ¿los bloques coloreados
+          de verde se asocian con __________ ?
+        a image: una imagen
+        a number: un número
+        a string: una cadena
+        boolean: Boolean
       4-5 artist multi 1:
         Artist Multiple Choice: El Artista - Opción Múltiple
         Which blocks draw a rectangle with a perimeter of 100?: ¿Qué bloques dibujan
@@ -310,10 +309,10 @@
         Multiple Choice: Opción Múltiple
         Which one of these items is hardest to describe an algorithm for?: ¿Cuál de
           estos ítems es más difícil de describir con un algoritmo?
-        Brushing your teeth: Brushing your teeth
-        Baking cookies: Baking cookies
-        Shopping from a grocery list: Shopping from a grocery list
-        Banana: Banana
+        Brushing your teeth: Cepillarte los dientes
+        Baking cookies: Horneando galletas
+        Shopping from a grocery list: Comprando de una lista de compras
+        Banana: Plátano
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Opción Múltiple
         0: '? Aquí hay tres frases. ¿Cuál de las plantillas que están debajo abstrae
@@ -323,11 +322,12 @@
           correctamente de tal forma que las tres frases coincidan con el mismo patrón
           que la plantilla?'
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        _____ is a _____ city.: _____ is a _____ city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        Eugene is a _____ city.: Eugene is a _____ city.
+          es una gran ciudad. <br/> Eugene es una ciudad mediana <br/> Hillview es
+          una ciudad pequeña.
+        Seattle _____ a _____ _____.: Seattle _____ una _____ _____.
+        _____ is a _____ city.: _____ es una _____ ciudad.
+        _____ is _____ a _____.: _____ es una _____  _____.
+        Eugene is a _____ city.: Eugene es una _____ ciudad.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Opción Múltiple
         Which of these pictures best represents crowdsourcing?: ¿Cual de estas imagenes
@@ -338,18 +338,18 @@
         Multiple Choice: Opción Múltiple
         Which one of these activities would be best for practicing crowdsourcing?: ¿Cual
           de estas actividades sería mejor para usar crowdsourcing?
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Brushing your hair: Brushing your hair
-        Washing your face: Washing your face
+        Cleaning your room: Limpiando tu cuarto
+        Eating your dessert: Comiendo tu postre
+        Brushing your hair: Peinandote
+        Washing your face: Lavandote la cara
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Opción Múltiple
         Which piece of information listed below is okay to share on the internet?: ¿Qué
           parte de la información listada más abajo está bien compartir en internet?
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your address: Your address
-        Your parent's credit card number: Your parent's credit card number
+        Your birthday: Tu cumpleaños
+        Your favorite food: Tu comida favorita
+        Your address: Tu dirección
+        Your parent's credit card number: El número de tarjeta de crédito de tus padres
       4-5 Internet Multi 1:
         Multiple Choice: Opción Múltiple
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
@@ -398,9 +398,9 @@
       4-5 Suncatchers Multi 1:
         Multiple Choice: Opción Múltiple
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: ¿Cuál
+          de los programas de abajo <em>no</em> hacen la secuencia exacta que programa
+          1?
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -415,6 +415,14 @@
         3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
+      Choose 2 Test:
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
+          lines of code should be removed so the program will work as intended? Select
+          <u>two</u> answers
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de videojuego
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
@@ -428,7 +436,12 @@
           pantalla
         The unicorn's y value changes: El  valor "y" del unicornio cambia
         The unicorn moves to the left: El unicornio se mueve hacia la izquierda
-        The unicorn's x value decreases: The unicorn's x value decreases
+        The unicorn's x value increases: The unicorn's x value increases
+      ECSPD2 question:
+        title: Título
+        Question: Pregunta
+        wrong answer: Respuesta incorrecta
+        right answer: Respuesta correcta
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can
@@ -839,8 +852,8 @@
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Texto e imágenes de opción múltiple
         http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
-        Which of these Evaluation Blocks will draw the image: Cuál de estos bloques
-          de evaluación dibujará la imagen
+        Which of these Evaluation Blocks will draw the image on the left?: Which of
+          these Evaluation Blocks will draw the image on the left?
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
@@ -857,8 +870,8 @@
           Attendance Policy
       PDAlg Blocks Video:
         Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        In which are of the screen do you click blocks together to write a program?: In
-          which are of the screen do you click blocks together to write a program?
+        In which area of the screen do you click blocks together to write a program?: In
+          which area of the screen do you click blocks together to write a program?
         Play Area: Play Area
         Toolbox: Caja de Herramientas
         Workspace: Workspace
@@ -1284,10 +1297,27 @@
         3 bits: 3 bits
         2 bits: 2 bits
         1 bit: 1 bit
+      U1L4 Multiple Choice:
+        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination
+          and Binary Messages'
+        0: '? A binary message consisting of four bits was sent to you by a friend.
+          The message was supposed to be ABAB. Unfortunately, your friend sent the
+          message at 1/2 the bit rate you agreed upon. What message did you receive
+          instead?'
+        1: ': A binary message consisting of four bits was sent to you by a friend.
+          The message was supposed to be ABAB. Unfortunately, your friend sent the
+          message at 1/2 the bit rate you agreed upon. What message did you receive
+          instead?'
+        ABAB: ABAB
+        AABB: AABB
+        AAAA: AAAA
+        BBBB: BBBB
+        ABBB: ABBB
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
-        If you just had a circle and a square, how many 3-shape rows could you make?: If
-          you just had a circle and a square, how many 3-shape rows could you make?
+        If you just had a circle and a square, how many 3-shape permutations could you make?: If
+          you just had a circle and a square, how many 3-shape permutations could
+          you make?
         4: '4'
         6: '6'
         8: '8'
@@ -1313,16 +1343,16 @@
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two
           buttons are given the same id?
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript
           is flexible. Two buttons with same id will respond to a single event handler
-          associated with that id.
+          associated with that id
         A warning message will appear for the second button that that id is already in use: A
           warning message will appear for the second button that that id is already
           in use
         The first button created with the id will work, the other will not: The first
           button created with the id will work, the other will not
-        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The
-          JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS
+        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The
+          JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS
           compliant
         Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two
           buttons with same id are linked during the running of the program. Clicking
@@ -1388,6 +1418,15 @@
         conditional: conditional
         variable: variable
         both: both
+      U3L19 - MC what are values of abc:
+        So, what's the answer?: So, what's the answer?
+        Choose the best answer: Choose the best answer
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13
+        a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7: a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7
+        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
+        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
+        Code does not execute due to error: Code does not execute due to error
       U3L21 Assessment 1:
         More Variables Question 1: More Variables Question 1
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED

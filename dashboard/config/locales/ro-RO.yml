@@ -566,6 +566,8 @@
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Soluţie incorectă
     wrong_body: Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!
