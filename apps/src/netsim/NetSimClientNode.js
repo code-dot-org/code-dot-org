@@ -95,7 +95,7 @@ NetSimClientNode.prototype.getAddress = function () {
 
 /**
  * Based on cached wire data, retrieve this node's outgoing wire.
- * @returns {NetSimWire} null if wire does not exist.
+ * @returns {NetSimWire|null} null if wire does not exist.
  */
 NetSimClientNode.prototype.getOutgoingWire = function () {
   var cachedWireRows = this.shard_.wireTable.readAllCached();
