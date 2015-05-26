@@ -6,6 +6,7 @@ var React = require('react');
 var DesignProperties = require('./designProperties.jsx');
 var ManageAssets = require('./manageAssets.jsx');
 var elementLibrary = require('./designElements/library');
+var studioApp = require('../StudioApp').singleton;
 
 var designMode = module.exports;
 
@@ -291,7 +292,7 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
-designMode.onManageAssets = function(assetChosen, typeFilter) {
+designMode.showManageAssets = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
