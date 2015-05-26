@@ -1048,7 +1048,7 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(designModeClear, designMode.onClear);
     }
 
-    designMode.configureDragAnDrop();
+    designMode.configureDragAndDrop();
   }
 };
 
