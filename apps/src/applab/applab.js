@@ -276,6 +276,8 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
+  // TODO (brent) - use enum?
+  designMode.createElement('SCREEN', 0, 0);
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
@@ -777,7 +779,13 @@ Applab.reset = function(first) {
 
   var divApplab = document.getElementById('divApplab');
 
-  while (divApplab.firstChild) {
+  // $(".screen").each(function () {
+  //   var screenDiv = this;
+  //   while (screenDiv.firstChild) {
+  //     screenDiv.removeChild(screenDiv.firstChild);
+  //   }
+  // });
+   while (divApplab.firstChild) {
     divApplab.removeChild(divApplab.firstChild);
   }
 
@@ -1301,6 +1309,7 @@ Applab.callCmd = function (cmd) {
   }
   return retVal;
 };
+
 /*
 var onWaitComplete = function (opts) {
   if (!opts.complete) {

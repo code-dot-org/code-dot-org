@@ -4,6 +4,7 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var OptionsSelectRow = require('./OptionsSelectRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 
 var elementUtils = require('./elementUtils');
@@ -52,6 +53,14 @@ var DropdownProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <ColorPickerPropertyRow
+          desc={'text color'}
+          initialValue={elementUtils.rgb2hex(element.style.color)}
+          handleChange={this.props.handleChange.bind(this, 'textColor')} />
+        <ColorPickerPropertyRow
+          desc={'background color'}
+          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <PropertyRow
           desc={'font size (px)'}
           isNumber={true}
