@@ -1,5 +1,5 @@
-Blockly.Msg.ACTUAL = "コール";
-Blockly.Msg.ADD = "ついか";
+Blockly.Msg.ACTUAL = "呼び出す";
+Blockly.Msg.ADD = "追加";
 Blockly.Msg.ADD_COMMENT = "コメントを追加";
 Blockly.Msg.ADD_PARAMETER = "パラメータを追加します。";
 Blockly.Msg.CHANGE_VALUE_TITLE = "値の変更:";
@@ -195,7 +195,7 @@ Blockly.Msg.MATH_ADDITION_SYMBOL = "+";
 Blockly.Msg.MATH_ARITHMETIC_HELPURL = "http://en.wikipedia.org/wiki/Arithmetic";
 Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_ADD = "2 つの数の合計を返します。";
 Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_DIVIDE = "2 つの数の商を返します。";
-Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_MINUS = "2 つの数の差を返します。";
+Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_MINUS = "二つの数値の差分を返します";
 Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_MULTIPLY = "2 つの数の積を返します。";
 Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_POWER = "最初の数を2 番目の値で累乗した結果を返します。";
 Blockly.Msg.MATH_CHANGE_HELPURL = "http://en.wikipedia.org/wiki/Programming_idiom#Incrementing_a_counter";

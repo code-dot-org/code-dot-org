@@ -1,12 +1,17 @@
 name 'U3L18 Controlling Memory and Program Flow 3'
 title 'Controlling Memory and Control Quiz'
-description 'Select the programming technique that best fits the described game feature.'
+type 'multi2'
+description ''
 
-question '3. You want to see the elapsed time.'
-wrong 'conditional'
-right 'variable'
-wrong 'both'
+question 'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. '
+right ‘Remember things during play’
+wrong ‘Make decisions’
+right ‘Make calculations’
+right ‘track of time’
+wrong ‘store information permanently’
 
 markdown <<MARKDOWN
+### Desired program behavior
 
+Show how long it took to click 10 times.
 MARKDOWN

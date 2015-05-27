@@ -5,25 +5,34 @@
   "properties": {
     "questions": [
       {
-        "text": "2. You want to see various motivational messages based upon the score."
+        "text": "Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. "
       }
     ],
     "answers": [
       {
-        "text": "conditional",
-        "correct": false
-      },
-      {
-        "text": "variable",
-        "correct": false
-      },
-      {
-        "text": "both",
+        "text": "Remember things during play",
         "correct": true
+      },
+      {
+        "text": "Make decisions",
+        "correct": true
+      },
+      {
+        "text": "Make calculations",
+        "correct": false
+      },
+      {
+        "text": "Track of time",
+        "correct": false
+      },
+      {
+        "text": "Store information permanently",
+        "correct": false
       }
     ],
     "title": "Controlling Memory and Control Quiz",
-    "content1": "Select the programming technique that best fits the described game feature."
+    "type": "multi2",
+    "markdown": "### Desired program feature\n\nYou want to see various motivational messages based upon the score.\n\n"
   }
 }]]></config>
 </Multi>

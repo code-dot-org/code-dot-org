@@ -1,3 +1,4 @@
+@import '../common';
 @import "colpick.css";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
@@ -460,7 +461,7 @@ button.arrow:focus {
 }
 
 .new-design-element {
-  width: 100px;
+  width: 120px;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -474,6 +475,27 @@ button.arrow:focus {
 
 #designModeBox td {
   vertical-align: top;
+}
+
+#design-manage-assets {
+  float: right;
+}
+
+#manageAssetsModal {
+  width: 800px;
+  margin-left: -400px;
+}
+
+.assetRow {
+  border-bottom: 1px solid #999;
+}
+
+.assetRow:last-child {
+  border-bottom: none;
+}
+
+.assetRow:hover {
+  background: $lighter_purple;
 }
 
 #divApplab {
@@ -505,9 +527,13 @@ button.arrow:focus {
 
 .design-mode-hidden {
   visibility: hidden;
+
+  .divApplabDesignMode & {
+    visibility: visible;
+    opacity: 0.3;
+  }
 }
 
-.divApplabDesignMode .design-mode-hidden {
-  visibility: visible;
-  opacity: 0.3;
+.divApplabDesignMode canvas {
+  background-color: #eee;
 }

@@ -211,6 +211,19 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   return code;
 };
 
+function buildFunctionPrototype(prefix, params) {
+  var proto = prefix + "(";
+  if (params) {
+    for (var i = 0; i < params.length; i++) {
+      if (i !== 0) {
+        proto += ", ";
+      }
+      proto += params[i];
+    }
+  }
+  return proto + ")";
+}
+
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
@@ -219,22 +232,20 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
                                                  dropletConfig,
                                                  standardConfig);
-  var i, j;
-
-  for (i = 0; i < mergedFunctions.length; i++) {
+  for (var i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
     var block = cf.block;
+    var expansion;
     if (!block) {
-      block = (cf.blockPrefix || cf.func) + "(";
-      if (cf.params) {
-        for (j = 0; j < cf.params.length; j++) {
-          if (j !== 0) {
-            block += ", ";
-          }
-          block += cf.params[j];
-        }
+      var prefix = cf.blockPrefix || cf.func;
+      var paletteParams = cf.paletteParams || cf.params;
+      block = buildFunctionPrototype(prefix, paletteParams);
+      if (paletteParams) {
+        // If paletteParams were specified and used for the 'block', then use
+        // the regular params for the 'expansion' which appears when the block
+        // is dragged out of the palette:
+        expansion = buildFunctionPrototype(prefix, cf.params);
       }
-      block += ")";
     }
 
     /**
@@ -243,6 +254,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
      */
     var blockPair = {
       block: block,
+      expansion: expansion,
       title: cf.func
     };
     mergedCategories[cf.category].blocks.push(blockPair);

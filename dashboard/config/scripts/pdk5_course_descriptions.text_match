@@ -2,6 +2,8 @@ name 'PDK5 Course Descriptions'
 title 'Course Structure'
 success_title "Awesome!"
 success_body "Thanks for your response"
+skip_sound true
+css 'unpplugged'
 height '200'
 
 markdown <<MARKDOWN

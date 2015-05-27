@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-23T20:46:59.643Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "Arrays - Photo Album",
+    "markdown": "## Unit 3: Lesson 31 - Arrays-Photo Album\n\n# Background\n\nData -- including images -- can be stored and manipulated in an array. An array is the perfect form for creating a cloud-based photo collection that will enable the user to add new images, access individual images, and navigate through the collection.\n\n# Lesson\n\n* Write a program to create an array to store images.\n* Employ a variety of array processing techniques to manipulate the array. \n\n# Resources\n* Activity: <a href=\"https://docs.google.com/document/d/1LZnUHVum37l0_RzXvWJ9IfeADIjl2GlFU27kRSWJe9Q\" target=\"_blank\">\n Photo Album Project\n</a>\n\n* Rubric: <a href=\"https://docs.google.com/document/d/13sCGYxu4Wsn-0UUoDaRuvpUb6GTy4z3aIUkC8tTb6GI\" target=\"_blank\">\n Photo Album Project\n</a>\n\n  \n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "dsl_text": "name 'U3L31 Student Lesson Introduction'\r\ntitle 'Arrays - Photo Album'\r\n\r\nmarkdown <<MARKDOWN\r\n## Unit 3: Lesson 31 - Arrays-Photo Album\r\n\r\n# Background\r\n\r\nData – including images – can be stored and manipulated in an array. An array is the perfect form for creating a cloud-based photo collection that will enable the user to add new images, access individual images, and navigate through the collection.\r\n\r\n# Lesson\r\n\r\n* Write a program to create an array to store images.\r\n* Employ a variety of array processing techniques to manipulate the array. \r\n\r\n# Resources\r\n* Activity: <a href=\"https://docs.google.com/document/d/1LZnUHVum37l0_RzXvWJ9IfeADIjl2GlFU27kRSWJe9Q\" target=\"_blank\">\r\n Photo Album Project\r\n</a>\r\n\r\n* Rubric: <a href=\"https://docs.google.com/document/d/13sCGYxu4Wsn-0UUoDaRuvpUb6GTy4z3aIUkC8tTb6GI\" target=\"_blank\">\r\n Photo Album Project\r\n</a>\r\n\r\n  \r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

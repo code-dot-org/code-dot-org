@@ -5,25 +5,34 @@
   "properties": {
     "questions": [
       {
-        "text": "5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears)."
+        "text": "Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. "
       }
     ],
     "answers": [
       {
-        "text": "conditional",
+        "text": "Remember things during play",
         "correct": true
       },
       {
-        "text": "variable",
+        "text": "Make decisions",
+        "correct": true
+      },
+      {
+        "text": "Make calculations",
+        "correct": true
+      },
+      {
+        "text": "track of time",
         "correct": false
       },
       {
-        "text": "both",
-        "correct": false
+        "text": "store information permanently",
+        "correct": true
       }
     ],
     "title": "Controlling Memory and Control Quiz",
-    "content1": "Select the programming technique that best fits the described game feature."
+    "type": "multi2",
+    "markdown": "### Desired program behavior\n\nKeep track of all time high score\n"
   }
 }]]></config>
 </Multi>

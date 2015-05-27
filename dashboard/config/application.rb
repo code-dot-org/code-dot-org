@@ -12,6 +12,7 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 
+require 'cdo/rack/upgrade_insecure_requests'
 require 'bootstrap-sass'
 require 'cdo/hash'
 
@@ -31,6 +32,11 @@ module Dashboard
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites
+    end
+
+    unless Rails.env.production?
+      config.middleware.use ::Rack::UpgradeInsecureRequests
+      config.middleware.use ::Rack::ContentLength
     end
 
     config.encoding = 'utf-8'
@@ -87,6 +93,7 @@ module Dashboard
       react.js
       jquery.handsontable.full.css
       jquery.handsontable.full.js
+      video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
     )
     config.react.variant = :development
     config.react.addons = true

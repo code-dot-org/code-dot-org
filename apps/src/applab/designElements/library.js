@@ -18,7 +18,12 @@ var ElementType = {
   BUTTON: 'BUTTON',
   LABEL: 'LABEL',
   TEXT_INPUT: 'TEXT_INPUT',
-  CHECKBOX: 'CHECKBOX'
+  CHECKBOX: 'CHECKBOX',
+  DROPDOWN: 'DROPDOWN',
+  RADIO_BUTTON: 'RADIO_BUTTON',
+  TEXT_AREA: 'TEXT_AREA',
+  IMAGE: 'IMAGE',
+  CANVAS: 'CANVAS'
 };
 
 var elements = {};
@@ -26,6 +31,11 @@ elements[ElementType.BUTTON] = require('./button.jsx');
 elements[ElementType.LABEL] = require('./label.jsx');
 elements[ElementType.TEXT_INPUT] = require('./textInput.jsx');
 elements[ElementType.CHECKBOX] = require('./checkbox.jsx');
+elements[ElementType.DROPDOWN] = require('./dropdown.jsx');
+elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
+elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
+elements[ElementType.IMAGE] = require('./image.jsx');
+elements[ElementType.CANVAS] = require('./canvas.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -84,16 +94,30 @@ module.exports = {
    */
   getElementType: function (element) {
     var tagname = element.tagName.toLowerCase();
+
     switch (tagname) {
       case 'button':
         return ElementType.BUTTON;
       case 'label':
         return ElementType.LABEL;
+      case 'select':
+        return ElementType.DROPDOWN;
+      case 'div':
+        return ElementType.TEXT_AREA;
+      case 'img':
+        return ElementType.IMAGE;
+      case 'canvas':
+        return ElementType.CANVAS;
       case 'input':
-        if (element.getAttribute('type') === 'checkbox') {
-          return ElementType.CHECKBOX;
+        switch (element.getAttribute('type')) {
+          case 'checkbox':
+            return ElementType.CHECKBOX;
+          case 'radio':
+            return ElementType.RADIO_BUTTON;
+          default:
+            return ElementType.TEXT_INPUT;
         }
-        return ElementType.TEXT_INPUT;
+        break;
     }
     throw new Error('unknown element type');
   },

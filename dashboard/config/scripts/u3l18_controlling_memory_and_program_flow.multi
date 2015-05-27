@@ -1,13 +1,19 @@
 name 'U3L18 Controlling Memory and Program Flow'
 title 'Controlling Memory and Control Quiz'
-description 'Select the programming technique that best fits the described game feature.'
+type 'multi2'
+description ''
 
-question '1. You want to see additional random images displayed that are worth different points when clicked.'
-wrong 'conditional'
-right 'variable'
-wrong 'both'
+question 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
+right ‘Remember things during play’
+wrong ‘Make decisions’
+right ‘Make calculations’
+wrong ‘track of time’
+wrong ‘store information permanently’
+
 
 
 markdown <<MARKDOWN
+### Desired program feature
 
+You want multiple images displayed that add different amounts to the the total points when clicked.
 MARKDOWN

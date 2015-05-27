@@ -13,6 +13,7 @@ require 'base64'
 require 'cgi'
 require 'json'
 require 'uri'
+require 'cdo/rack/upgrade_insecure_requests'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -59,6 +60,7 @@ class Documents < Sinatra::Base
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
+  use Rack::UpgradeInsecureRequests unless rack_env?(:production)
 
   configure do
     dir = pegasus_dir('sites.v3')

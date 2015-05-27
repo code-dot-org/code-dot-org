@@ -7,14 +7,14 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "true",
-    "instructions": "NetSim: Variant 1 playground: UNDER CONSTRUCTION: Variant 1 is not yet functional because P2P connections have not been implemented. Variant 1 allows students to manually work out the timing of sending bits back and forth.",
+    "instructions": "Send a message by setting the state of the wire to A or B.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",
     "show_add_packet_button": "false",
     "show_packet_size_control": "false",
     "default_packet_size_limit": "Infinity",
-    "show_tabs": "[\"instructions\"]",
+    "show_tabs": "[\"instructions\",\"my_device\"]",
     "default_tab_index": "0",
     "default_enabled_encodings": "[\"a_and_b\"]",
     "show_router_bandwidth_control": "false",
@@ -34,7 +34,20 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "can_connect_to_clients": "true",
+    "can_connect_to_routers": "false",
+    "message_granularity": "bits",
+    "automatic_receive": "false",
+    "broadcast_mode": "false",
+    "show_hostname_in_graph": "false",
+    "show_pulse_rate_slider": "true",
+    "show_metronome": "true",
+    "show_bit_rate_control": "false",
+    "lock_bit_rate_control": "false",
+    "show_chunk_size_control": "false",
+    "lock_chunk_size_control": "false",
+    "default_bit_rate_bits_per_second": "0.5"
   },
   "md5": "4f6c2be7a81200975d6f6540230868a7"
 }]]></config>

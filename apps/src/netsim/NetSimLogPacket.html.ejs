@@ -1,9 +1,12 @@
 <%
   var netsimConstants = require('./netsimConstants');
+  var netsimGlobals = require('./netsimGlobals');
   var dataConverters = require('./dataConverters');
   var i18n = require('./locale');
   var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
   var Packet = require('./Packet');
+
+  var level = netsimGlobals.getLevelConfig();
 
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;
@@ -17,14 +20,18 @@
   var binaryToHex = dataConverters.binaryToHex;
   var binaryToDecimal = dataConverters.binaryToDecimal;
   var binaryToAscii = dataConverters.binaryToAscii;
+  var binaryToAddressString = function (binaryString) {
+    return dataConverters.binaryToAddressString(binaryString, level.addressFormat);
+  };
+  var formatBinaryForAddressHeader = function (binaryString) {
+    return dataConverters.formatBinaryForAddressHeader(binaryString, level.addressFormat);
+  };
 
   /** @type {Packet} */
   var packet = new Packet(packetSpec, packetBinary);
 
   /** @type {Packet.HeaderType[]} */
-  var headerFields = packetSpec.map(function (headerField) {
-    return headerField.key;
-  });
+  var headerFields = packetSpec;
 
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
@@ -117,8 +124,8 @@
       <tbody>
       <%
         logRow(EncodingType.ASCII,
-            binaryToInt(toAddress),
-            binaryToInt(fromAddress),
+            binaryToAddressString(toAddress),
+            binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
               x: binaryToInt(packetIndex),
               y: binaryToInt(packetCount)
@@ -126,8 +133,8 @@
             binaryToAscii(message, chunkSize));
 
         logRow(EncodingType.DECIMAL,
-            binaryToInt(toAddress),
-            binaryToInt(fromAddress),
+            binaryToAddressString(toAddress),
+            binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
               x: binaryToInt(packetIndex),
               y: binaryToInt(packetCount)
@@ -144,15 +151,15 @@
             formatHex(binaryToHex(message), chunkSize));
 
         logRow(EncodingType.BINARY,
-            formatBinary(toAddress, 4),
-            formatBinary(fromAddress, 4),
-            formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+            formatBinaryForAddressHeader(toAddress, 4),
+            formatBinaryForAddressHeader(fromAddress, 4),
+            formatBinary(packetIndex + packetCount, level.packetCountBitWidth),
             formatBinary(message, chunkSize));
 
         logRow(EncodingType.A_AND_B,
             binaryToAB(toAddress),
             binaryToAB(fromAddress),
-            binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+            formatAB(binaryToAB(packetIndex + packetCount), level.packetCountBitWidth),
             formatAB(binaryToAB(message), chunkSize));
        %>
       </tbody>

@@ -1,0 +1,32 @@
+name 'U3L19 - done with variables finally'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Variable school graduation
+
+## Congratulations
+Whew!  That was a long trek through learning about how to control the computer's memory.
+
+It was a lot to learn in order to do something seemingly simple like count the number of times the user clicked an image in your app, but as you can see, there is a lot happening below the surface once you need to start controlling the computer's memory.
+
+Completing this lesson represents a big step for you as a coder.  Understanding how variables work is in a nutshell also understanding how computers themselves work.  You should now have better mental models for how things work and you also have acquired a whole bunch of new programming and problem solving techniques that you need to write better and better programs.
+
+Let's recap everything you learned:
+
+* Control a computer's memory by using variables
+* Variables in computer science ARE NOT LIKE VARIABLES IN MATH
+* Debug your programs by using write and console.log statements to show yourself the value of variables as they change.
+* Use setText to change the value displayed in onscreen components, rather than continuously adding text to the screen
+* The + operator does math on variables but only if those variables contain numbers
+* values in quotes "" represent strings of text which can also be stored in variables.
+* The + operator concatenates strings together
+* A variable's scope (global or local) depends on where it was created
+* More?
+
+You are now ready to move on...
+
+<a class="btn btn-large btn-primary next-stage submitButton">Back to your clicker game!</a>
+
+
+
+MARKDOWN

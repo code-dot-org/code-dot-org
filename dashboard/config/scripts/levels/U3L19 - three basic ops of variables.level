@@ -27,7 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true"
+    "free_play": "true",
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(foo);"
   }
 }]]></config>
   <blocks/>

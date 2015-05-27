@@ -1,0 +1,9 @@
+name 'U3L26 Free Response Wrap Up'
+title 'String and Substring: Wrap Up'
+
+
+markdown <<MARKDOWN
+Think about word-related games you have played either electronically or as old-fashion board games (Scrabble, etc.). 
+
+Select one game and describe how string functions are involved in the game play.
+MARKDOWN

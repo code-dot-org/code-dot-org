@@ -12,6 +12,7 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+require('jquery-ui');
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
@@ -42,12 +43,14 @@ describe('Level tests', function() {
     .then(function () { return loadSource('http://localhost:8001/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('http://localhost:8001/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('http://localhost:8001/droplet/droplet-full.js'); })
+    .then(function () { return loadSource('http://localhost:8001/tooltipster/jquery.tooltipster.js'); })
     .then(function () {
       assert(window.requirejs);
       done();
     });
 
     window.jQuery = $;
+    window.$ = $;
   });
 
   beforeEach(function () {

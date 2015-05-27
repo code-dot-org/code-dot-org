@@ -58,7 +58,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Mini-Project.  The Quick Double-Click game.  In this simple game an object (an image) moves around, or pops up randomly on the screen, as the user clicks it.  The goal of our game will be to try to double-click the object before it moves.  Part of the challenge (and fun) here is creating this app from scratch.  You can look back at your previous work for examples, but it's fun to create something from scratch, too.  Try it!  For more details see the Activity guide for this lesson. GIF:U3L16 - quickDoubleClick.gif",
+    "instructions": "Mini-Project.  The Quick Double-Click game.  In this simple game an object (an image) moves around, or pops up randomly on the screen, as the user clicks it.  The goal of our game will be to try to double-click the object before it moves.  Part of the challenge (and fun) here is creating this app from scratch.  You can look back at your previous work for examples, but it's fun to create something from scratch, too.  Try it!  For more details see the Activity guide for this lesson.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -76,7 +76,8 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - quickDoubleClick.gif"
   },
   "md5": "5b1b88db941b15bd8105e35271f10b3a"
 }]]></config>

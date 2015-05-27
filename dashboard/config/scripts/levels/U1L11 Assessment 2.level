@@ -5,33 +5,36 @@
   "properties": {
     "questions": [
       {
-        "text": "How many bytes are used to encode a single ASCII character?"
+        "text": "The word \"Apple\" translated into its ASCII number equivalent is:"
       }
     ],
     "answers": [
       {
-        "text": "1 byte",
+        "text": "097 112 112 108 101",
+        "correct": false
+      },
+      {
+        "text": "097 108 108 111 119",
+        "correct": false
+      },
+      {
+        "text": "065 112 112 108 101",
+        "correct": false
+      },
+      {
+        "text": "065 110 110 105 101",
+        "correct": false
+      },
+      {
+        "text": "065 108 108 111 119",
         "correct": true
-      },
-      {
-        "text": "2 bytes",
-        "correct": false
-      },
-      {
-        "text": "4 bytes",
-        "correct": false
-      },
-      {
-        "text": "8 bytes",
-        "correct": false
-      },
-      {
-        "text": "16 bytes",
-        "correct": false
       }
     ],
     "title": "Assessment: Sending Formatted Text",
-    "content1": "Question #2"
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "687ef80bbfaf702decbb371a4540779f"
 }]]></config>

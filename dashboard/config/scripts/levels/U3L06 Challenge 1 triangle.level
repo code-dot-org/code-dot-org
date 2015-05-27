@@ -29,7 +29,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Check out the extended Turtle palette now made available to you. These new commands accept parameters, allowing you to specify precisely how the function operates rather than only being able to move or turn a predetermined amount. Make use of these functions to draw the triangle as shown.\r\nPNG: U3L06-challenge1.png",
+    "instructions": "Check out the extended Turtle palette now made available to you. These new commands accept parameters, allowing you to specify precisely how the function operates rather than only being able to move or turn a predetermined amount. Make use of these functions to draw the triangle as shown.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.0",

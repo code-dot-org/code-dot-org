@@ -58,7 +58,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "ou are given some starting code that puts an image and two buttons on the screen.  The image is initially hidden. Add two new event handlers: one for each button, that when clicked hide and show the image. GIF: U3L16 - hideAndShowExample.gif",
+    "instructions": "You are given some starting code that puts an image and two buttons on the screen.  The image is initially hidden. Add two new event handlers: one for each button, that when clicked hide and show the image.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -77,7 +77,8 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - hideAndShowExample.gif"
   },
   "md5": "5b1b88db941b15bd8105e35271f10b3a"
 }]]></config>

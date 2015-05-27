@@ -1,0 +1,37 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-23T16:51:15.154Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "16",
+        "correct": true
+      },
+      {
+        "text": "14",
+        "correct": false
+      },
+      {
+        "text": "13",
+        "correct": false
+      },
+      {
+        "text": "10",
+        "correct": false
+      }
+    ],
+    "title": "Sending Numbers: Multiple Choice Assessment",
+    "type": "Multi",
+    "dsl_text": "name 'U1L8 Multiple Choice'\r\ntitle 'Sending Numbers: Multiple Choice Assessment'\r\ndescription ''\r\nquestion 'You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?'\r\nright '16'\r\nwrong '14'\r\nwrong '13'\r\nwrong '10'\r\n",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</Multi>

@@ -15,6 +15,19 @@ require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
 
 /**
+ * @typedef {string} addressHeaderFormat
+ * A string indicating the parts of an address field in the packet header,
+ * their respective byte-widths, and the separators to be used when converting
+ * binary to a readable format.
+ * Examples:
+ * "4" indicates a single 4-byte number, e.g. 5 / 0101
+ * "8.4" indicates an 8-byte number followed by a 4-byte number, separated
+ *   by a period, e.g. 1.1 / 000000010001 or 18.9 / 00010010 1001
+ * "8.8.8.8" would be an IPv4 address, e.g.
+ *   127.0.0.1 / 01111111 00000000 00000000 00000001
+ */
+
+/**
  * Converts an As and Bs string into its most compact representation, forced
  * to uppercase.
  * @param {string} abString
@@ -339,4 +352,104 @@ exports.binaryToAscii = function (binaryString, byteSize) {
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
+};
+
+/**
+ * Converts binary to an address string using the provided address format.
+ * @param {string} binaryString
+ * @param {addressHeaderFormat} addressFormat
+ * @returns {string}
+ */
+exports.binaryToAddressString = function (binaryString, addressFormat) {
+  var binary = exports.minifyBinary(binaryString);
+  if (binary.length === 0) {
+    return '';
+  }
+
+  var indexIntoBinary = 0;
+
+  // Parentheses in the split() regex cause the dividing elements to be captured
+  // and also included in the return value.
+  return addressFormat.split(/(\D+)/).map(function (formatPart) {
+    var bitWidth = parseInt(formatPart, 10);
+    if (isNaN(bitWidth)) {
+      // Pass non-number parts of the format through, so we use the original
+      // entered characters/layout for formatting.
+      return formatPart;
+    }
+
+    var binarySlice = binary.substr(indexIntoBinary, bitWidth);
+    var intVal = binarySlice.length > 0 ?
+        exports.binaryToInt(binarySlice) : 0;
+    indexIntoBinary += bitWidth;
+    return intVal.toString();
+  }).join('');
+};
+
+/**
+ * Converts a formatted address string (decimal numbers with separators) into
+ * binary with bit-widths for each part matching the given format.
+ * @param {string} addressString
+ * @param {addressHeaderFormat} addressFormat
+ * @returns {string}
+ */
+exports.addressStringToBinary = function (addressString, addressFormat) {
+  if (addressString.length === 0) {
+    return '';
+  }
+
+  // Actual user input, converted to a number[]
+  var addressParts = addressString.toString().split(/\D+/).map(function (stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  // Format, converted to a number[] where the numbers are bit-widths
+  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var partValue;
+  var binary = '';
+  for (var i = 0; i < partWidths.length; i++) {
+    partValue = i < addressParts.length ? addressParts[i] : 0;
+    binary = binary + exports.intToBinary(partValue, partWidths[i]);
+  }
+  return binary;
+};
+
+/**
+ * Convert a binary string to a formatted representation, with chunks that
+ * correspond to the parts of the address header.
+ * @param {string} binaryString
+ * @param {addressHeaderFormat} addressFormat
+ */
+exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
+  var binary = exports.minifyBinary(binaryString);
+
+  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+    return parseInt(stringPart, 10);
+  }).filter(function (numberPart) {
+    return !isNaN(numberPart);
+  });
+
+  var chunks = [];
+  var index = 0;
+  partWidths.forEach(function (bitWidth) {
+    var next = binary.substr(index, bitWidth);
+    if (next.length > 0) {
+      chunks.push(next);
+    }
+    index += bitWidth;
+  });
+
+  var next = binary.substr(index);
+  if (next.length > 0) {
+    chunks.push(next);
+  }
+
+  return chunks.join(' ');
 };

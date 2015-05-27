@@ -1,0 +1,68 @@
+name 'CSPPD PD Phases'
+title 'CSPPD PD Phases'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## CSP PD Phases
+
+These features described on the previous level run through each phase of the PD experience, which are described below: 
+
+### Phase 1: Online introduction
+**Overview:** The first phase of professional development is focused on providing an introduction to the Code.org program, giving participants a space for getting familiar with the curriculum, the platform, and the tools that will be used in the course. This two-hour online introduction is an opportunity for teachers to come into the in-person workshop with a firm understanding of the course they will be teaching and the resources that Code.org has created for that course.
+
+<details>
+<summary>Click here to see participant takeaways for phase 1</summary>
+<ul><li> I have created my Code Studio teacher account.</li>
+<li> I know what CSP is, specifically Code.org’s CSP course.</li>
+<li> I am familiar with the Code.org PD tools. </li>
+<li> I am excited to go to Phase 2!</li> </ul>
+</details>
+
+### Phase 2: Blended summer study
+**Overview:** The second phase of professional development is blended, with one piece in-person and a follow-up online experience.
+
+* **In-person workshop:** The in-person, week-long, workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, dive into the College Board requirements that come with an AP course, and build a local community of teachers who are using this curriculum. Participants will work with the curriculum and other resources designed for this course, planning teaching and learning directly from the course materials. By spending practical time working with the curriculum, participants will leave the workshop with both an understanding of how to effectively use the materials and with a strong sense of the types of pedagogical strategies that are part of any effective computer science classroom.
+
+* **Online follow-up:** The online, eight hour follow-up experience provides space for planning for the beginning of the academic year, getting deeper into the curriculum, and experiencing tools and widgets that students will use in the class. This online piece gives teachers an opportunity to start their online professional learning community of collaboration, which will be an important tool for the duration of their time teaching this course.
+
+<details>
+<summary>Click here to see participant takeaways for phase 2</summary>
+<ul><li>I know where to find resources and supports I need to teach this class.</li>
+<li>I understand the AP pieces of the course and I feel like I will be able to help my students with them.</li>
+<li>I am part of a professional learning community of teachers.</li>
+<li>I know how to use the tools/can figure out how to do what I don’t already know how to do.</li> 
+<li>I am learning how to teach CS in a way that broadens participation.</li>
+<li>I am confident I can teach this course. My students and I can learn this content together… and it will be ok.</li>
+<li>I understand the educational philosophy behind the CSP curriculum. </li>
+<li>I have thought about and discussed the things to look out for in the CS classroom (equity issues, etc). </li>
+<li>I have thought about and discussed how the Code.org materials will work in the classroom and am ready for the first week.</li> </ul>
+</details>
+
+### Phase 3: Blended academic year development
+**Overview:** The third phase of the professional development is blended, with ongoing quarterly in-person meetings as well as monthly online activities.
+
+* **In-person quarterly workshops:** The in-person quarterly meetings are focused on continuing to build pedagogical strategies while also exploring the essential elements of this course, such as: using the AP performance tasks in your course, teaching new content and units, and keeping the classroom environment equitable and engaging for all students.
+* **Online monthly activities:** The online monthly activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further exploration of the curriculum.
+
+<details>
+<summary>Click here to see participant takeaways for phase 3</summary>
+<ul><li>My professional learning community is a good place for me to turn for support, both in and out of PD.</li>
+<li> I have a better idea of the curriculum because I’ve had a chance to explore it more deeply with my professional learning community.</li>
+<li> I have even more ideas about leading an engaging and equitable ECS classroom.</li></ul>
+</details>
+
+### Phase 4: Summer wrap-up
+**Overview:** The fourth phase of professional development is an in-person workshop focused on revisiting content and material was difficult to teach the first time, taking a deeper look at what success in an AP course looks like, recruiting diverse groups of students, and empowering the teacher to take ownership of the curriculum by making adjustments and changes to the curriculum to meet the needs of each classroom. This experience takes the same form as the workshop in the second phase of PD, with teachers diving into the curricular materials with an eye for how they will do things as a teacher as well as what their students will experience as learners.
+
+<details>
+<summary>Click here to see participant takeaways for phase 4</summary>
+<ul><li>I look forward to teaching the course again based on my reflection of the past year.</li>
+<li>I am comfortable with all of the AP assessments in the course and can support my students through them.</li>
+<li>I am more comfortable with the material that I struggled with the first time teaching this course.</li>
+<li>I understand how to make changes to the Code.org curriculum in order to meet my local needs and fit into my context.</li></ul>
+</details>
+
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

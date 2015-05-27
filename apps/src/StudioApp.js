@@ -708,6 +708,10 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
+StudioApp.prototype.createModalDialog = function(options) {
+  return this.feedback_.createModalDialog(options);
+};
+
 StudioApp.prototype.createModalDialogWithIcon = function(options) {
   return this.feedback_.createModalDialogWithIcon(options);
 };
@@ -1152,9 +1156,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
 // Overwritten by applab.
 StudioApp.prototype.runButtonClickWrapper = function (callback) {
-  if (window.$) {
-    $(window).trigger('run_button_pressed');
-  }
+  $(window).trigger('run_button_pressed');
   callback();
 };
 
@@ -1339,6 +1341,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     if (options.startBlocks) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+      // Reset ace Undo stack:
+      var UndoManager = window.ace.require("ace/undomanager").UndoManager;
+      this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
     }
 
     if (options.afterEditorReady) {

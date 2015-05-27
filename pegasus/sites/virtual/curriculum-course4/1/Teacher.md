@@ -84,7 +84,7 @@ Here are some questions that you can ask in review:
 
 - Did you think of any questions after the lesson that you want to ask?
 
-- What was your favorite part of the last lesson??  
+- What was your favorite part of the last lesson?  
 
 [tip]
 
@@ -153,7 +153,7 @@ Play through this several times, with images of increasing difficulty.
 
 - What did we learn today?
 - Was it easier or harder than you thought it would be to describe an image to one another?
-- Did any group end up having drawings that all matched?
+- Did any group end up having arrangements that all matched?
 - Can you share some tricks that you came up with that helped your group match the Image Card exactly?
 
 ### <a name="Shmocab"></a>6) Vocab Shmocab
@@ -165,6 +165,8 @@ You can choose to do these as a class, or have the students discuss with an elbo
 > "An algorithm that has been coded into something that can be run by a machine"<br/>
 > "Finding and fixing problems in your algorithm or program"<br/>
 
+<!--
+
 - Do you remember the definition of the word "debugging"?
 
 > "A list of steps that you can follow to finish a task"<br/>
@@ -173,6 +175,7 @@ You can choose to do these as a class, or have the students discuss with an elbo
 
 - And what is the word for the last definition in that list? (Program)
 
+-->
 
 ## Assessment (10 min)
 ### <a name="Assessment"></a>7) [Algorithm Assessment](Assessment1-Tangrams.pdf) <br/><br/>

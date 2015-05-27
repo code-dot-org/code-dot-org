@@ -1,17 +1,20 @@
-// TODO (brent) - hook up linter somewhere
+/* global $ */
 
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
+var ZOrderRow = require('./ZOrderRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
 var ButtonProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
@@ -33,18 +36,22 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
           desc={'x position (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')} />
         <PropertyRow
           desc={'y position (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ColorPickerPropertyRow
@@ -57,10 +64,10 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <PropertyRow
           desc={'font size (px)'}
+          isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
-        {/* eventually this will be a ImageChooserPropertyRow */ }
-        <PropertyRow
+        <ImagePickerPropertyRow
           desc={'image'}
           initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
           handleChange={this.props.handleChange.bind(this, 'image')} />
@@ -68,6 +75,9 @@ var ButtonProperties = React.createClass({
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
+        <ZOrderRow
+          element={this.props.element}
+          onDepthChange={this.props.onDepthChange}/>
       </table>);
 
     // TODO (brent):
@@ -85,9 +95,9 @@ module.exports = {
     var element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
-    element.style.margin = '2px';
-    element.style.height = '36px';
-    element.style.width = '76px';
+    element.style.margin = '0px';
+    element.style.height = '40px';
+    element.style.width = '80px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '#eeeeee';

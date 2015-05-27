@@ -1,0 +1,61 @@
+name 'U3L19 - variable scope explanation pt3'
+title 'U3L19 - variable scope explanation pt3'
+description 'description here'
+
+markdown <<MARKDOWN
+## Understanding variable scope
+
+So in the previous program you saw an example of a variable being created inside a function and how code outside of the function couldn't see it or use it.  
+
+In fact, the variable created inside the function is totally invisible to all code outside the function, it's like it doesn't even exist.
+
+This is different from variables we saw earlier which were "global variables" - global variables are created outside of all functions and can be seen and updated by any code.
+
+Variables created inside a function are called "local variables" - they are "local" to the function itself.  They can't be seen by any other code.  They get created when the function is run, and they get destroyed (seriously) when last line of code in the function has executed.  If the function gets run again, then the variable is created again.
+
+The generic term that describes whether a variable is local or global is the variable's **scope**.  
+
+## Why have global and local variables?
+
+The reason is actually to make programming easier.  If all variables were global then you'd have to come up with unique and different names for every variable you wanted to use regardless of what you wanted to use it for.
+
+Often we need to use variables only temporarily - a place in memory to store something quickly while performing a calculation.  Or to accumulate a value over several lines of code.  Once we've got the value we display it, or use it for something else, and then we don't need it anymore.
+
+We also frequently have sets of functions that do similar but different things and it's convenient to be able re-use variable names since coming up with good descriptive variable names is hard.
+
+## Function Parameters are local variables
+You have seen local variables before in the form of function parameters.  Remember back when we were making art with the turtle you may have written functions like this:
+
+<pre style=“display: inline-block”>
+
+drawSquare(100);
+drawDots(25);
+
+function drawSquare(size){
+  for(var i=0; i<4; i++){
+     <strong>moveForward(size);</strong>
+     turnLeft(90);
+  }
+}
+
+function drawDots(size){
+  for(var i=0; i<10; i++){
+     moveTo(randomNumber(300), randomNumber(400));
+     <strong>dot(size);</strong>
+  }
+}
+</pre>
+    
+First you can see here a reason why you want variables to be local to functions -- both these functions use a variable called 'size'.  It's a perfectly good variable name, and the functions only need to use it temporarily to draw the thing they need to draw.  
+
+Second **function parameters are local variables which get assigned a value by calling the function**.
+So a call to <span style="font-family: monospace">drawSquare(100);</span> is like saying <span style="font-family: monospace">var size=100</span> *inside* the function.
+
+Function parameters are a handy way for us to *pass values into a function* without having to use global variables. The same effect could technically be achieved by remembering to set a global variable before calling a function that uses it, but when programs have lots and lots of global variables it can get confusing, and the likelihood that you'd make a mistake somewhere is very high.  
+
+<a class="btn btn-large btn-primary next-stage submitButton">You are now ready to graduate...</a>
+
+
+
+
+MARKDOWN

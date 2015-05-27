@@ -13,7 +13,7 @@ This repository contains the source code for the apps [Blockly](https://code.goo
 ### Installing Blockly
 
 ```
-cd blockly
+cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
@@ -26,20 +26,22 @@ MOOC_DEV=1 grunt build
 
 ### Seeing your development version of Blockly in Dashboard
 
-1. To make your changes show up in dashboard, run the following after the first time you build blockly:
+1. To make your changes show up in dashboard, run the following after the first time you build blockly: [has this been replaced with locals.yml?]
   ```
   cd ../dashboard
   bundle exec rake 'blockly:dev[../blockly]'
-  cd ../blockly
+  cd ../apps
   ```
 
 1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
-  ```
-  git status
-  ```
-and look for something like `public/blockly -> apps-package` in the output. [NEEDS VALIDATION].
-
-1. If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
+```
+> ls -l dashboard/public/blockly                                                                                    
+```
+and look for something like:
+```
+lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps-package
+```
+If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 
 ### Building during development
 
@@ -100,25 +102,16 @@ To run an individual test, use the `--grep` option to target a file or Mocha `de
 grunt mochaTest --grep myTestName # e.g., 2_11, or requiredBlockUtils
 ```
 
-To debug tests using the node-inspector Chrome-like debugger:
+To debug tests using the webkit inspector, just add a `--debug` flag. This will launch a new browser window with a debugger attached.
+Unfortunately, this is also before bundle.js has been loaded, making it difficult to set breakpoints. The best solutions I've found
+thus far are to add debugger; statements in your code, or to have your debugger break on caught exceptions, which will generally result
+it breaking in some jquery code before running tests (at which point you can go set your breakpoints).
 
 ```
-npm install -g node-inspector
-node-inspector &
-# open debugger URL, i.e. http://127.0.0.1:8080/debug?port=5858
-node --debug-brk $(which grunt) mochaTest --grep='testname'
-# This will breakpoint your inspector at the beginning of that test
-```
-Not there are two classes of mochaTests we have. The first class run in the same process as grunt, and the above commands will work a expected.
-For the second class, we launch a new node process, which your debugger will not have broken on. To debug this second class, we added a --dbg
-command that will break the debugger on the node process launch on port 5859.
-```
-grunt mochaTest --grep='testname' --dbg
-# open debugger URL on port 5859, i.e. http://127.0.0.1:8080/debug?port=5859
+grunt mochaTest --grep='testname' --debug
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
-- Blockly tests typically target built files in the `build/js` folder
 
 
 #### Full build with blockly-core changes

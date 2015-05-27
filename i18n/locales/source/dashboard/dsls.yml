@@ -73,6 +73,8 @@ en:
         : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Rocket Contract 1:
+        ? A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
+        : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
     external:
@@ -80,6 +82,9 @@ en:
         Before you move on...: Before you move on...
       App Lab Feedback:
         App Lab Feedback: App Lab Feedback
+        description here: description here
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
@@ -389,6 +394,42 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U2L1 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L11 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L2 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L4 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L6 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L7 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L8 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U2L9 Student Lesson Introduction:
+        description here: description here
+        title: title
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -412,17 +453,26 @@ en:
         Beyond Buttons: Beyond Buttons
       U3L18 Student Lesson Introduction:
         Controlling Memory and Program Flow: Controlling Memory and Program Flow
+      U3L19 - Arithmetic v Concatenation:
+        U3L19 - Arithmetic v Concatenation: U3L19 - Arithmetic v Concatenation
+        description here: description here
       U3L19 - Intro to variables:
         U3L19 - Intro to variables: U3L19 - Intro to variables
         description here: description here
       U3L19 - concatenate string with var:
         U3L19 - concatenate string with var: U3L19 - concatenate string with var
         description here: description here
+      U3L19 - done with variables finally:
+        description here: description here
+        title: title
       U3L19 - explanation diff between string and var name:
         U3L19 - explanation diff between string and var name: U3L19 - explanation diff between string and var name
         description here: description here
       U3L19 - misconception variable assignment order pt1:
         U3L19 - misconception variable assignment order pt1: U3L19 - misconception variable assignment order pt1
+        description here: description here
+      U3L19 - misconception variable assignment order pt2:
+        U3L19 - misconception variable assignment order pt2: U3L19 - misconception variable assignment order pt2
         description here: description here
       U3L19 - variable breakdown - Assigning a value:
         U3L19 - variable breakdown - Assigning a value: U3L19 - variable breakdown - Assigning a value
@@ -442,6 +492,15 @@ en:
       U3L19 - variable breakdown intro:
         U3L19 - variable breakdown intro: U3L19 - variable breakdown intro
         description here: description here
+      U3L19 - variable scope explanation:
+        U3L19 - variable scope explanation: U3L19 - variable scope explanation
+        description here: description here
+      U3L19 - variable scope explanation pt2:
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
+      U3L19 - variable scope explanation pt3:
+        U3L19 - variable scope explanation pt3: U3L19 - variable scope explanation pt3
+        description here: description here
       U3L19 Student Lesson Intro:
         Clicker V.1: Clicker V.1
       U3L20 Student Lesson Introduction:
@@ -452,6 +511,14 @@ en:
         Permanent Data Storage: Permanent Data Storage
       U3L23 Student Lesson Introduction:
         Natural Language Processing: Natural Language Processing
+      U3L24 Student Lesson Introduction:
+        Chained Conditionals: Chained Conditionals
+      U3L25 Student Lesson Introduction:
+        Compound Conditionals: Compound Conditionals
+      U3L26 Student Lesson Introduction:
+        Strings and Substrings: Strings and Substrings
+      U3L28 Student Lesson Introduction:
+        While Loop Basics: While Loop Basics
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -527,6 +594,48 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
+      sciPD2 discussion:
+        Phase 2 Discussion: Phase 2 Discussion
+      sciPD2 discussion lesson1:
+        Lesson 1 Discussion: Lesson 1 Discussion
+      sciPD2 discussion lesson2:
+        Lesson 1 Discussion: Lesson 1 Discussion
+      sciPD2 discussion lesson3:
+        Lesson 3 Discussion: Lesson 3 Discussion
+      sciPD2 discussion lesson4:
+        Lesson 4 Discussion: Lesson 4 Discussion
+      sciPD2 discussion lesson5:
+        Lesson 5 Discussion: Lesson 5 Discussion
+      sciPD2 discussion wrapup:
+        Wrap-Up Discussion: Wrap-Up Discussion
+      sciPD2 eval:
+        Phase 2 Evaluation: Phase 2 Evaluation
+      sciPD2 implement:
+        Implementation Planning: Implementation Planning
+      sciPD2 resource common:
+        Phase 2 Common Forms: Phase 2 Common Forms
+      sciPD2 resource module1:
+        Phase 2 Resources: Phase 2 Resources
+      sciPD2 resource module2:
+        Phase 2 Module 2: Phase 2 Module 2
+      sciPD2 resource module3:
+        Phase 2 Module 3: Phase 2 Module 3
+      sciPD2 resource module4:
+        Phase 2 Module 4: Phase 2 Module 4
+      sciPD2 resource reference:
+        Phase 2 Guides and Resources: Phase 2 Guides and Resources
+      sciPD3 intro:
+        Welcome to Phase 3: Welcome to Phase 3
+      sciPD3 logistics:
+        Details and Logistics: Details and Logistics
+      sciPD3 resource module1:
+        Phase 3 Module 1: Phase 3 Module 1
+      sciPD3 resource module2:
+        Phase 3 Module 2: Phase 3 Module 2
+      sciPD3 resource module3:
+        Phase 3 Module 3: Phase 3 Module 3
+      sciPD3 resource module4:
+        Phase 3 Module 4: Phase 3 Module 4
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -658,6 +767,9 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
+      Glossary O:
+        ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+        : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
@@ -693,6 +805,8 @@ en:
         Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.
         Your thoughts here: Your thoughts here
       PDK5 Impact 3:
+        ? Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.
+        : Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.
         Real-world applications for Students: Real-world applications for Students
         Your thoughts here: Your thoughts here
       PDK5 Loops 2:
@@ -761,7 +875,7 @@ en:
         Enter your reflection here.: Enter your reflection here.
         Reflect on this lesson: Reflect on this lesson
       U1L4 Free response reflection question:
-        'Assessment: Coordination on the Internet': 'Assessment: Coordination on the Internet'
+        'Assessment: Coordination and Binary Messages': 'Assessment: Coordination and Binary Messages'
         Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
         Enter your reflection here.: Enter your reflection here.
       U1L5 Free Response Assessment:
@@ -787,6 +901,16 @@ en:
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
       U1L9 Free Response Assessment:
         'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+      U3L03 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L04 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L05 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L06 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
+      U3L07 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '
@@ -810,6 +934,8 @@ en:
         Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
       U3L18 Free Response Wrap Up:
         Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
+      U3L2 Free Response Reflection:
+        Free Response Reflection: Free Response Reflection
       U3L20 Free Response Getting Started:
         'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
       U3L20 Free Response Wrap Up:
@@ -822,6 +948,26 @@ en:
         'Permanent Data Storage: Getting Started': 'Permanent Data Storage: Getting Started'
       U3L22 Reflection:
         The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
+      U3L23 Free Response Getting Started:
+        NLP Getting Started: NLP Getting Started
+      U3L23 Free Response Wrap Up:
+        Natural Language Processing: Natural Language Processing
+      U3L24 Assessment 3:
+        Question 3: Question 3
+      U3L25 Assessment:
+        'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
+      U3L25 Free Response Getting Started:
+        'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
+      U3L25 Free Response Wrap Up:
+        'Compound Conditionals: Wrap Up': 'Compound Conditionals: Wrap Up'
+      U3L26 Free Response Getting Started:
+        'String and Substring: Getting Started': 'String and Substring: Getting Started'
+      U3L26 Free Response Wrap Up:
+        'String and Substring: Wrap Up': 'String and Substring: Wrap Up'
+      U3L28 Free Response Getting Started:
+        'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
+      U3L28 Free Response Wrap Up:
+        'While Loop Basics: Wrap Up': 'While Loop Basics: Wrap Up'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7

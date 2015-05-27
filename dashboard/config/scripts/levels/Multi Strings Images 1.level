@@ -5,7 +5,7 @@
   "properties": {
     "questions": [
       {
-        "text": "Which of these Evaluation Blocks will draw the image"
+        "text": "Which of these Evaluation Blocks will draw the image on the left?"
       }
     ],
     "answers": [

@@ -1,0 +1,26 @@
+name 'U3L27 Student Lesson Introduction'
+title 'Chatbot Challenge'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 27 - Chatbot Challenge
+
+# Background
+
+Creating a chatbot highlights the differences between what is easy for a computer to do and what is easy for a human to do. While computers are good at abstract pattern recognition, they don’t very well understanding of the meaning of the patterns. String manipulation and analysis of conditional expressions are key components of writing a successful chatbot.
+
+# Lesson
+
+* Design and program a chatbot.
+* Reflect upon and critique the chatbot project. 
+
+
+# Resources 
+* Activity: <a href="https://docs.google.com/document/d/1iKO9A_ezRk5kiWL33zdTa9OW3MIFfg1H1TBPvNbZNok" target="_blank">
+ Building a Chatbot
+</a>
+* Rubric: <a href="https://docs.google.com/document/d/1b67I4OQfqvngxXBGnV7S29WjZ37UOMa632MNHZfVOvk" target="_blank">
+ Building a Chatbot
+</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

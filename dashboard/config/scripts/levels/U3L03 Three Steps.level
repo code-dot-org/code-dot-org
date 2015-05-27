@@ -38,12 +38,15 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "app_width": "300",
     "app_height": "300",
     "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-ThreeSteps.gif"
-  }
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-ThreeSteps.gif",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false"
+  },
+  "md5": "a74604cad7de55e1114cb25fed775cf0"
 }]]></config>
   <blocks/>
 </Applab>

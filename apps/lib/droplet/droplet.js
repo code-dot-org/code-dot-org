@@ -8583,7 +8583,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-controller',['droplet-helper', 'droplet-coffee', 'droplet-javascript', 'droplet-draw', 'droplet-model', 'droplet-view'], function(helper, coffee, javascript, draw, model, view) {
-    var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, editorBindings, escapeString, exports, extend_, getAtChar, getCharactersTo, getOffsetLeft, getOffsetTop, getSocketAtChar, hook, isOSX, isValidCursorPosition, j, key, last_, len, modes, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection;
+    var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, editorBindings, escapeString, exports, extend_, getAtChar, getCharactersTo, getOffsetLeft, getOffsetTop, getSocketAtChar, hook, isOSX, isValidCursorPosition, j, key, last_, len, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection;
     modes = {
       'coffeescript': coffee,
       'coffee': coffee,
@@ -8875,13 +8875,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
       Editor.prototype.resizeBlockMode = function() {
         this.resizeTextMode();
-        this.dropletElement.style.height = this.wrapperElement.offsetHeight + "px";
+        this.dropletElement.style.height = this.wrapperElement.clientHeight + "px";
         if (this.paletteEnabled) {
           this.dropletElement.style.left = this.paletteElement.offsetWidth + "px";
-          this.dropletElement.style.width = (this.wrapperElement.offsetWidth - this.paletteWrapper.offsetWidth) + "px";
+          this.dropletElement.style.width = (this.wrapperElement.clientWidth - this.paletteWrapper.offsetWidth) + "px";
         } else {
           this.dropletElement.style.left = "0px";
-          this.dropletElement.style.width = this.wrapperElement.offsetWidth + "px";
+          this.dropletElement.style.width = this.wrapperElement.clientWidth + "px";
         }
         this.resizeGutter();
         this.mainCanvas.height = this.dropletElement.offsetHeight;
@@ -9342,7 +9342,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     hook('populate', 0, function() {
       this.clickedPoint = null;
       this.clickedBlock = null;
-      this.clickedBlockIsPaletteBlock = false;
+      this.clickedBlockPaletteEntry = null;
       this.draggingBlock = null;
       this.draggingOffset = null;
       this.lastHighlight = null;
@@ -9398,7 +9398,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (hitTestResult != null) {
         this.setTextInputFocus(null);
         this.clickedBlock = hitTestResult;
-        this.clickedBlockIsPaletteBlock = false;
+        this.clickedBlockPaletteEntry = null;
         this.moveCursorTo(this.clickedBlock.start.next);
         this.clickedPoint = point;
         return state.consumedHitTest = true;
@@ -9417,12 +9417,19 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return !this.lastHighlight && !((this.mainCanvas.width + this.scrollOffsets.main.x > (ref1 = mainPoint.x) && ref1 > this.scrollOffsets.main.x) && (this.mainCanvas.height + this.scrollOffsets.main.y > (ref2 = mainPoint.y) && ref2 > this.scrollOffsets.main.y)) || ((this.paletteCanvas.width + this.scrollOffsets.palette.x > (ref3 = palettePoint.x) && ref3 > this.scrollOffsets.palette.x) && (this.paletteCanvas.height + this.scrollOffsets.palette.y > (ref4 = palettePoint.y) && ref4 > this.scrollOffsets.palette.y));
     };
     hook('mousemove', 1, function(point, event, state) {
-      var acceptLevel, bound, draggingBlockView, dropPoint, head, j, len, line, mainPoint, position, ref1, viewNode;
+      var acceptLevel, bound, draggingBlockView, dropPoint, expansion, head, j, len, line, mainPoint, position, ref1, viewNode;
       if (!state.capturedPickup && (this.clickedBlock != null) && point.from(this.clickedPoint).magnitude() > MIN_DRAG_DISTANCE) {
         this.draggingBlock = this.clickedBlock;
-        if (this.clickedBlockIsPaletteBlock) {
+        if (this.clickedBlockPaletteEntry) {
           this.draggingOffset = this.view.getViewNodeFor(this.draggingBlock).bounds[0].upperLeftCorner().from(this.trackerPointToPalette(this.clickedPoint));
-          this.draggingBlock = this.draggingBlock.clone();
+          expansion = this.clickedBlockPaletteEntry.expansion;
+          if ('function' === typeof expansion) {
+            expansion = expansion();
+          }
+          if (expansion) {
+            expansion = parseBlock(this.mode, expansion);
+          }
+          this.draggingBlock = (expansion || this.draggingBlock).clone();
         } else {
           mainPoint = this.trackerPointToMain(this.clickedPoint);
           viewNode = this.view.getViewNodeFor(this.draggingBlock);
@@ -9481,7 +9488,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.dragCanvas.style.top = (position.y + getOffsetTop(this.dropletElement)) + "px";
         this.dragCanvas.style.left = (position.x + getOffsetLeft(this.dropletElement)) + "px";
         this.clickedPoint = this.clickedBlock = null;
-        this.clickedBlockIsPaletteBlock = false;
+        this.clickedBlockPaletteEntry = null;
         this.begunTrash = this.wouldDelete(position);
         return this.redrawMain();
       }
@@ -9840,6 +9847,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.paletteWrapper.appendChild(this.paletteHeader);
       return this.setPalette(this.paletteGroups);
     });
+    parseBlock = (function(_this) {
+      return function(mode, code) {
+        var block;
+        block = mode.parse(code).start.next.container;
+        block.spliceOut();
+        block.parent = null;
+        return block;
+      };
+    })(this);
     Editor.prototype.setPalette = function(paletteGroups) {
       var fn1, i, j, len, paletteGroup, paletteHeaderRow, ref1;
       this.paletteHeader.innerHTML = '';
@@ -9850,7 +9866,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       ref1 = this.paletteGroups;
       fn1 = (function(_this) {
         return function(paletteGroup, i) {
-          var clickHandler, data, k, len1, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, ref2, updatePalette;
+          var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, ref2, updatePalette;
           if (i % 2 === 0) {
             paletteHeaderRow = document.createElement('div');
             paletteHeaderRow.className = 'droplet-palette-header-row';
@@ -9870,11 +9886,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           ref2 = paletteGroup.blocks;
           for (k = 0, len1 = ref2.length; k < len1; k++) {
             data = ref2[k];
-            newBlock = _this.mode.parse(data.block).start.next.container;
-            newBlock.spliceOut();
-            newBlock.parent = null;
+            newBlock = parseBlock(_this.mode, data.block);
+            expansion = data.expansion || null;
             newPaletteBlocks.push({
               block: newBlock,
+              expansion: expansion,
               title: data.title,
               id: data.id
             });
@@ -9929,14 +9945,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             this.setTextInputFocus(null);
             this.clickedBlock = entry.block;
             this.clickedPoint = point;
-            this.clickedBlockIsPaletteBlock = true;
+            this.clickedBlockPaletteEntry = entry;
             state.consumedHitTest = true;
             this.fireEvent('pickblock', [entry.id]);
             return;
           }
         }
       }
-      return this.clickedBlockIsPaletteBlock = false;
+      return this.clickedBlockPaletteEntry = null;
     });
     hook('populate', 1, function() {
       this.paletteHighlightCanvas = document.createElement('canvas');
@@ -10108,12 +10124,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     });
     Editor.prototype.resizeAceElement = function() {
       var width;
-      width = this.wrapperElement.offsetWidth;
+      width = this.wrapperElement.clientWidth;
       if (this.showPaletteInTextMode && this.paletteEnabled) {
         width -= this.paletteElement.offsetWidth;
       }
       this.aceElement.style.width = width + "px";
-      return this.aceElement.style.height = this.wrapperElement.offsetHeight + "px";
+      return this.aceElement.style.height = this.wrapperElement.clientHeight + "px";
     };
     last_ = function(array) {
       return array[array.length - 1];
@@ -10675,7 +10691,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if ((this.lassoSegment != null) && (this.hitTest(this.trackerPointToMain(point), this.lassoSegment) != null)) {
         this.setTextInputFocus(null);
         this.clickedBlock = this.lassoSegment;
-        this.clickedBlockIsPaletteBlock = false;
+        this.clickedBlockPaletteEntry = null;
         this.clickedPoint = point;
         state.consumedHitTest = true;
         return state.clickedLassoSegment = true;
@@ -11312,7 +11328,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           this.mainScroller.style.overflowX = 'hidden';
         }
         this.mainScroller.style.overflowY = 'hidden';
-        this.dropletElement.style.width = this.wrapperElement.offsetWidth + 'px';
+        this.dropletElement.style.width = this.wrapperElement.clientWidth + 'px';
         this.currentlyUsingBlocks = false;
         this.currentlyAnimating = this.currentlyAnimating_suppressRedraw = true;
         ref1 = this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
@@ -11391,7 +11407,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
             _this.aceElement.style.top = '0px';
             if (_this.showPaletteInTextMode && _this.paletteEnabled) {
-              _this.aceElement.style.left = _this.paletteWrapper.style.width;
+              _this.aceElement.style.left = _this.paletteWrapper.offsetWidth + "px";
             } else {
               _this.aceElement.style.left = '0px';
             }
@@ -11452,7 +11468,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           return function() {
             var aceScrollTop, bottom, div, el, fn1, fn2, i, j, k, l, len, len1, line, lineHeight, paletteAppearingWithFreeze, ref1, ref2, ref3, ref4, textElement, textElements, top, translatingElements, translationVectors, treeView;
             _this.mainScroller.style.overflow = 'hidden';
-            _this.dropletElement.style.width = _this.wrapperElement.offsetWidth + 'px';
+            _this.dropletElement.style.width = _this.wrapperElement.clientWidth + 'px';
             _this.redrawMain({
               noText: true
             });
@@ -11466,7 +11482,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               _this.paletteHeader.style.zIndex = 0;
             }
             _this.dropletElement.style.top = "0px";
-            if (_this.paletteEnabled) {
+            if (_this.paletteEnabled && !paletteAppearingWithFreeze) {
               _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
             } else {
               _this.dropletElement.style.left = "0px";
