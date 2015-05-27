@@ -11,7 +11,7 @@ module Ops
       sign_in @admin
 
       @attendance = create(:attendance)
-      @cohort = @attendance.segment.workshop.cohort
+      @cohort = @attendance.segment.workshop.cohorts.first
       @cohort_district = create :cohorts_district, cohort: @cohort
       @cohort = @cohort.reload
     end
@@ -25,7 +25,7 @@ module Ops
       district = cohort.districts.first
       sign_in district.contact
 
-      get :cohort, cohort_id: @attendance.segment.workshop.cohort.id
+      get :cohort, cohort_id: @attendance.segment.workshop.cohorts.first.id
       assert_response :success
       response = JSON.parse(@response.body)
       assert_equal 'present', response['workshops'].first['segments'].last['attendances'].first['status']
@@ -81,7 +81,7 @@ module Ops
 
       teacher = create(:teacher)
       teacher2 = create(:teacher)
-      cohort = @attendance.segment.workshop.cohort
+      cohort = @attendance.segment.workshop.cohorts.first
       cohort.teachers << teacher
       cohort.teachers << teacher2
       cohort.save!
@@ -138,7 +138,7 @@ module Ops
       assert_routing({ path: "#{API}/segments/1/attendance", method: :post }, { controller: 'ops/workshop_attendance', segment_id: '1', action: 'create' })
 
       teacher = create(:teacher)
-      cohort = @attendance.segment.workshop.cohort
+      cohort = @attendance.segment.workshop.cohorts.first
       cohort.teachers << teacher
       cohort.save!
 
