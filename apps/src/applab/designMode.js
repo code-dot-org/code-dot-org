@@ -1,4 +1,5 @@
-/* global $ */
+/* global $, Dialog */
+// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests

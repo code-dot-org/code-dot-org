@@ -18,7 +18,7 @@ var defaultIcons = {
 function getThumbnail(type, name) {
   switch (type) {
     case 'image':
-      var src = '/v3/assets/' + dashboard.project.current.id + '/' + name;
+      var src = AssetsApi.basePath(name);
       var assetThumbnailStyle = {
         width: 'auto',
         maxWidth: '100%',

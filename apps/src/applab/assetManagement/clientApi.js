@@ -1,6 +1,8 @@
+/* global dashboard */
+// TODO: The client API should be instantiated with the channel ID, instead of
+// grabbing it from the `dashboard.project` global.
+
 module.exports = {
-  // TODO: The client API should be instantiated with the channel ID, instead of
-  // grabbing it from the `dashboard.project` global.
   basePath: function (path) {
     return '/v3/assets/' + dashboard.project.current.id + (path ? '/' + path : '');
   },
