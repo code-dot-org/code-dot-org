@@ -10,11 +10,7 @@
       "skip_sound": true
     },
     "height": "200",
-    "markdown": "What are your goals or intentions for integrating Code.org in your classroom?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "What are your goals or intentions for integrating Code.org in your classroom?\n"
   },
   "md5": "550207af7ffa4c8fceeb0028011451f5"
 }]]></config>
