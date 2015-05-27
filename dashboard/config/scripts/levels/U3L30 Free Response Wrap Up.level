@@ -4,11 +4,7 @@
   "created_at": "2015-05-23T01:01:23.000Z",
   "properties": {
     "title": "Arrays: Wrap Up",
-    "markdown": "Complete the following sentence:\n\nToday I learned three things about coding arrays __________, ____________, and __________. \n \nBut the most important thing I learned about planning an arrays is _____________________.\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Complete the following sentence:\n\nToday I learned three things about coding arrays __________, ____________, and __________. \n \nBut the most important thing I learned about planning an arrays is _____________________.\n"
   }
 }]]></config>
 </TextMatch>

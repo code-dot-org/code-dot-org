@@ -1,0 +1,25 @@
+name 'U3L06 Student Lesson Introduction'
+title 'APIs and Function Parameters'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 06 - APIs and Function Parameters 
+
+# Background
+
+An API (Application Programming Interface) is a collection of commands that can be used in a programming language to carry out a variety of processes. These commands are the “interface” that the programmer will use to build applications in that language. Some API functions require additional information (parameters) from the program.
+
+# Lesson
+
+* Explore the AppLab API to learn to use new commands.
+* Create more complex drawings using the API functions and parameters. 
+
+
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1PvpUeeEsGM8oZHtbSknFH9j0Qq-sbj0R5RHADizBOMs" target="_blank">
+APIs and Function Parameters
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
