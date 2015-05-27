@@ -132,9 +132,13 @@ module.exports = React.createClass({
                 var choose = this.props.assetChosen &&
                     this.props.assetChosen.bind(this, path);
 
-                return <AssetRow key={asset.filename} name={asset.filename}
-                    type={asset.category} size={asset.size} onChoose={choose}
-                    onDelete={this.deleteAssetRow.bind(this, asset.filename)}/>;
+                return <AssetRow
+                    key={asset.filename}
+                    name={asset.filename}
+                    type={asset.category}
+                    size={asset.size}
+                    onChoose={choose}
+                    onDelete={this.deleteAssetRow.bind(this, asset.filename)} />;
               }.bind(this))}
             </tbody>
           </table>
@@ -151,8 +155,12 @@ module.exports = React.createClass({
       <div className="modal-content" style={{margin: 0}}>
         {title}
         {assetList}
-        <input ref="uploader" type="file" accept={accept}
-            style={{display: 'none'}} onChange={this.upload}/>
+        <input
+            ref="uploader"
+            type="file"
+            accept={accept}
+            style={{display: 'none'}}
+            onChange={this.upload} />
         <button onClick={this.fileUploadClicked} className="share">
           <i className="fa fa-upload"></i>
           &nbsp;Upload File

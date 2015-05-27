@@ -28,7 +28,7 @@ function getThumbnail(type, name) {
         marginTop: '50%',
         transform: 'translateY(-50%)'
       };
-      return <img src={src} style={assetThumbnailStyle}/>;
+      return <img src={src} style={assetThumbnailStyle} />;
     default:
       var icon = defaultIcons[type] || defaultIcons.unknown;
       var assetIconStyle = {
@@ -102,7 +102,9 @@ module.exports = React.createClass({
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <a href={src} target="_blank" style={{backgroundColor: 'transparent'}}>
+            <a href={src}
+                target="_blank"
+                style={{backgroundColor: 'transparent'}}>
               <button><i className="fa fa-eye"></i></button>
             </a>
             <button className="btn-danger" onClick={this.confirmDelete}>
@@ -126,8 +128,10 @@ module.exports = React.createClass({
       case 'deleting':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <i className="fa fa-spinner fa-spin"
-                style={{fontSize: '32px', marginRight: '15px'}}></i>
+            <i className="fa fa-spinner fa-spin" style={{
+              fontSize: '32px',
+              marginRight: '15px'
+            }}></i>
           </td>
         );
         break;
@@ -137,8 +141,12 @@ module.exports = React.createClass({
       <tr className="assetRow">
         <td width="80">
           <div className="assetThumbnail" style={{
-            width: '60px', height: '60px', margin: '10px auto',
-            background: '#eee', border: '1px solid #ccc', textAlign: 'center'
+            width: '60px',
+            height: '60px',
+            margin: '10px auto',
+            background: '#eee',
+            border: '1px solid #ccc',
+            textAlign: 'center'
           }}>
             {getThumbnail(this.props.type, this.props.name)}
           </div>
