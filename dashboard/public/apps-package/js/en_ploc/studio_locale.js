@@ -55,7 +55,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }

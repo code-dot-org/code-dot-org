@@ -55,7 +55,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -188,11 +188,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_addOperator_signatureOverride":function(d){return "اضافه کردن اپراتور"},
 "dropletBlock_andOperator_description":function(d){return "تنها در حالتی که هر دو عبارت صحیح یا هردو غلط باشند نتیجه صحیح بازمی گرداند"},
 "dropletBlock_andOperator_signatureOverride":function(d){return "عملگر بولی AND"},
-"dropletBlock_appendItem_description":function(d){return "Append the item to the end of the array"},
+"dropletBlock_appendItem_description":function(d){return "افزودن مورد به انتهای آرایه"},
 "dropletBlock_appendItem_param0":function(d){return "فهرست"},
-"dropletBlock_appendItem_param0_description":function(d){return "The array to be modified."},
+"dropletBlock_appendItem_param0_description":function(d){return "آرایه تغییر داده می شود."},
 "dropletBlock_appendItem_param1":function(d){return "مورد"},
-"dropletBlock_appendItem_param1_description":function(d){return "The item to add to the end of the array."},
+"dropletBlock_appendItem_param1_description":function(d){return "مورد اضافه کردن به انتهای آرایه."},
 "dropletBlock_arcLeft_description":function(d){return "لاکپشت را به سمت جلو و چپ در یک مسیر قوس دار ملایم حرکت میدهد"},
 "dropletBlock_arcLeft_param0":function(d){return "زاویه"},
 "dropletBlock_arcLeft_param0_description":function(d){return "The angle along the circle to move."},
@@ -402,7 +402,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_innerHTML_description":function(d){return "Set the inner HTML for the element with the specified id"},
 "dropletBlock_insertItem_description":function(d){return "Insert the item into the array at the specified position"},
 "dropletBlock_insertItem_param0":function(d){return "فهرست"},
-"dropletBlock_insertItem_param0_description":function(d){return "The array to be modified."},
+"dropletBlock_insertItem_param0_description":function(d){return "آرایه تغییر داده می شود."},
 "dropletBlock_insertItem_param1":function(d){return "index"},
 "dropletBlock_insertItem_param1_description":function(d){return "The position to insert the item into the array."},
 "dropletBlock_insertItem_param2":function(d){return "مورد"},
@@ -530,7 +530,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_rect_param3_description":function(d){return "The vertical height in pixels of the rectangle."},
 "dropletBlock_removeItem_description":function(d){return "Remove the item at the specified position from the array"},
 "dropletBlock_removeItem_param0":function(d){return "فهرست"},
-"dropletBlock_removeItem_param0_description":function(d){return "The array to be modified."},
+"dropletBlock_removeItem_param0_description":function(d){return "آرایه تغییر داده می شود."},
 "dropletBlock_removeItem_param1":function(d){return "index"},
 "dropletBlock_removeItem_param1_description":function(d){return "The position of the item to remove from the array."},
 "dropletBlock_return_description":function(d){return "Return a value from a function"},

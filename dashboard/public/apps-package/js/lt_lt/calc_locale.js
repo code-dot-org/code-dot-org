@@ -55,7 +55,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -154,7 +154,7 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Your program results in division by zero."},
+"divideByZeroError":function(d){return "Tavo programos rezultatas yra dalyba iš nulio."},
 "emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį."},
 "evaluate":function(d){return "įvertinti"},
@@ -163,7 +163,7 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "goal":function(d){return "Tikslas:"},
 "levelIncompleteError":function(d){return "Jūsų reiškinys nesutampa su tikslu."},
 "missingFunctionError":function(d){return "Jūs turite apibūdinti funkciją pavadinimu "+calc_locale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Jūsų reiškinyje trūsta kintamojo "+calc_locale.v(d,"var")+"."},
+"missingVariableX":function(d){return "Jūsų reiškinyje trūksta kintamojo "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Štai jūsų sprendinys! Tęskite skaičiavimą arba pradėkite naują galvosūkį!"},
 "yourExpression":function(d){return "Tavo reiškinys:"},
 "wrongInput":function(d){return "You are calling your function with the wrong value."},

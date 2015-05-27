@@ -55,7 +55,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -157,7 +157,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Вы использовали неправильную строку цвета: "+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "Вы использовали неправильную строку стиля: "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "круг (радиус, стиль, цвет)"},
-"displayBlockTitle":function(d){return "проверить"},
+"displayBlockTitle":function(d){return "оценить"},
 "ellipseBlockTitle":function(d){return "эллипс (ширина, высота, стиль, цвет)"},
 "extraTopBlocks":function(d){return "У вас есть не присоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
 "infiniteRecursionError":function(d){return "Ваша функция вызывает сама себя. Мы вынуждены это остановить, иначе она бы вызывала себя постоянно."},

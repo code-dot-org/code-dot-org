@@ -55,7 +55,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -157,7 +157,7 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "divideByZeroError":function(d){return "Ваша программа приводит к делению на ноль."},
 "emptyComputeBlock":function(d){return "Вам необходимо присоединить блок к блоку «оценить»."},
 "equivalentExpression":function(d){return "Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение."},
-"evaluate":function(d){return "проверить"},
+"evaluate":function(d){return "оценить"},
 "extraTopBlocks":function(d){return "У вас есть не присоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
 "failedInput":function(d){return "Ваша процедура возвращает неверный результат для некоторых значений."},
 "goal":function(d){return "Цель:"},

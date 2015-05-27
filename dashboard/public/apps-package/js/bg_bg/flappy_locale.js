@@ -55,7 +55,7 @@ var flappy_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -276,7 +276,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenClick":function(d){return "при кликване"},
 "whenClickTooltip":function(d){return "При всяко кликване, компютърът ще изпълни действията, изброени под този блок."},
 "whenCollideGround":function(d){return "при сблъсък с терена"},
-"whenCollideGroundTooltip":function(d){return "Когато героят се сблъска със земната повърхност, компютърът ще изпълни изброените под този блок действия."},
+"whenCollideGroundTooltip":function(d){return "Когато героят се сблъска  с терена, компютърът ще изпълни изброените под този блок действия."},
 "whenCollideObstacle":function(d){return "при сблъсък с препятствие"},
 "whenCollideObstacleTooltip":function(d){return "Когато героят се сблъска с препятствие, компютърът ще изпълни изброените под този блок действия."},
 "whenEnterObstacle":function(d){return "при преминато препятствие"},

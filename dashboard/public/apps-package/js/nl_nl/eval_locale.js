@@ -55,7 +55,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -165,7 +165,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "plaats-afbeelding (x, y, afbeelding)"},
 "offsetBlockTitle":function(d){return "offset (x, y, beeld)"},
 "rectangleBlockTitle":function(d){return "rechthoek (breedte, hoogte, stijl, kleur)"},
-"reinfFeedbackMsg":function(d){return "Klik op \"blijf spelen\" om je tekening te bewerken."},
+"reinfFeedbackMsg":function(d){return "Je kunt op de de \"Blijf Spelen\" knop klikken om je programma te bewerken."},
 "rotateImageBlockTitle":function(d){return "draaien (graden, afbeelding)"},
 "scaleImageBlockTitle":function(d){return "schaal (factor, afbeelding)"},
 "squareBlockTitle":function(d){return "vierkant (grootte, stijl, kleur)"},

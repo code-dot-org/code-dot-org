@@ -55,7 +55,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -281,7 +281,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySprite":function(d){return "という"},
 "saySpriteN":function(d){return "と、スプライト "+studio_locale.v(d,"spriteIndex")+" が言う"},
 "saySpriteTooltip":function(d){return "指定した俳優から会話気泡と関連の原文がポップアップする"},
-"saySpriteChoices_0":function(d){return "こんにちは"},
+"saySpriteChoices_0":function(d){return "こんにちは、みんな！"},
 "saySpriteChoices_1":function(d){return "みなさん、こんにちは"},
 "saySpriteChoices_2":function(d){return "お元気ですか"},
 "saySpriteChoices_3":function(d){return "おはとうございます"},

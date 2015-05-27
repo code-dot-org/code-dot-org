@@ -55,7 +55,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -156,16 +156,16 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Резултатът от Вашата програма за делене на нула."},
 "emptyComputeBlock":function(d){return "Трябва да прикачите блок към блока за \"оценка\"."},
-"equivalentExpression":function(d){return "Опитайте пренареждане на аргументите, за да получите точно един и същи израз."},
+"equivalentExpression":function(d){return "Опитайте пренареждане на аргументите, за да получите точно същия израз."},
 "evaluate":function(d){return "Оценка"},
 "extraTopBlocks":function(d){return "Имате несвързани блокове. Искате ли да ги свържете към блока за \"оценка\"?"},
-"failedInput":function(d){return "Вашата функция не връща правилният резултат за всички стойности."},
+"failedInput":function(d){return "Вашата функция не връща правилния резултат за всички стойности."},
 "goal":function(d){return "Цел:"},
 "levelIncompleteError":function(d){return "Вашият израз не съответства на целта."},
 "missingFunctionError":function(d){return "Трябва да дефинирате функция, наречена "+calc_locale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Във Вашият израз липсва променлива "+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!"},
+"reinfFeedbackMsg":function(d){return "Ето вашето изчисление! Продължете работата по него, или преминете към следващия пъзел!"},
 "yourExpression":function(d){return "Вашият израз:"},
 "wrongInput":function(d){return "Вие извикахте функция с грешна стойност."},
-"wrongOtherValuesX":function(d){return "Вашият резултат от израза води има грешна стойност ако ние варираме "+calc_locale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Вашият резултат от изразите води до грешна стойност ако ние варираме "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Вашият израз не връща правилния резултат."}};
