@@ -23,7 +23,8 @@ var ElementType = {
   RADIO_BUTTON: 'RADIO_BUTTON',
   TEXT_AREA: 'TEXT_AREA',
   IMAGE: 'IMAGE',
-  CANVAS: 'CANVAS'
+  CANVAS: 'CANVAS',
+  SCREEN: 'SCREEN'
 };
 
 var elements = {};
@@ -36,6 +37,7 @@ elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
 elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
 elements[ElementType.IMAGE] = require('./image.jsx');
 elements[ElementType.CANVAS] = require('./canvas.jsx');
+elements[ElementType.SCREEN] = require('./screen.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -77,9 +79,13 @@ module.exports = {
 
     // Stuff that's common across all elements
     element.id = this.getUnusedElementId(elementType.toLowerCase());
-    element.style.position = 'absolute';
-    element.style.left = left + 'px';
-    element.style.top = top + 'px';
+
+    // TODO - better way to differentiate screen?
+    if (elementType !== ElementType.SCREEN) {
+      element.style.position = 'absolute';
+      element.style.left = left + 'px';
+      element.style.top = top + 'px';
+    }
 
     return element;
   },
@@ -103,6 +109,9 @@ module.exports = {
       case 'select':
         return ElementType.DROPDOWN;
       case 'div':
+        if (element.getAttribute('class').split(' ').indexOf('screen') !== -1) {
+          return ElementType.SCREEN;
+        }
         return ElementType.TEXT_AREA;
       case 'img':
         return ElementType.IMAGE;

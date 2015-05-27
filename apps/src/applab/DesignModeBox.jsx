@@ -59,6 +59,7 @@ module.exports = React.createClass({
           <div data-element-type="DROPDOWN" className="new-design-element">dropdown</div>
           <div data-element-type="IMAGE" className="new-design-element">image</div>
           <div data-element-type="CANVAS" className="new-design-element">canvas</div>
+          <div data-element-type="SCREEN" class="new-design-element">screen</div>
           <button id="designModeClear" className="share">Clear</button><br/>
         </div>
         <div id="design-properties" style={styles.designProperties}>
