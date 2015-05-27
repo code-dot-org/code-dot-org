@@ -1080,7 +1080,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
 };
 
 /**
- *
+ * Show a modal dialog with an icon.
  */
 FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
@@ -1090,7 +1090,7 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 };
 
 /**
- *
+ * Show a modal dialog without an icon.
  */
 FeedbackUtils.prototype.createModalDialog = function(options, icon) {
   var modalBody = document.createElement('div');
