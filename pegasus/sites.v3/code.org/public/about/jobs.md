@@ -7,13 +7,12 @@ nav: about_nav
 
 - [Evaluation Manager](#Eval)	
 - [K-5 Affiliate Program Manager](#K-5-PM)
-- [High School Program Manager](#HS-PM)
-- [Regional Program Manager (New York City, Ft. Lauderdale/Miami area)](#reg-PM)
+- [District Manager (New York City)](#reg-PM)
 - [Data Engineer](#data-engineer)
-- [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
 
-## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA)</a>
+## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
+
 **Job Summary:**
 
 The Evaluation Manager plays a critical role in managing and directing the evaluation of Code.org programs including the relationship with Code.org’s external evaluator. Candidates considered for this role must have direct experience in evaluation of a high-scale K-12 educational program. Responsibilities of the position include:
@@ -79,35 +78,32 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="reg-PM" href="#reg-PM">District Manager (New York City)</a>
 
+**Job Summary:** 
 
-
-## <a name="HS-PM" href="#HS-PM">High School Program Manager (Seattle, WA preferred)</a> 
-**Job Summary:**
-
-Code.org is looking for a High School Program Manager to work with and support the goals of Code.org’s Education team through the development of high school computer science curriculum and related professional development.
-
-Code.org’s Education team designs and develops original computer science curriculum, while also supporting existing curricular projects in partnership with others.  While each Education member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
-
-Responsibilities of the position include: 
-
-- Working closely with the high school education team members to design, develop, write, and “go to market” with original curricular materials 
-- Helping to plan and design curricular supports such as assessments, online tools, videos and a highly-scalable professional development model for educators
-- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements
-- Collaborating with Product team to develop curriculum-specific technology tools
+Code.org is recruiting for a District Manager in New York City to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
 
 **Qualifications:**
 
-The ideal candidate has related experience working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. 
+- At least a Bachelor's degree, preferably in Education or Computer Science
+- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
+- Advanced organization and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+ 
+Additional desired strengths include:
 
-The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+- Experience working with New York school districts in a project implementation capacity
+- Established relationship or prior experience with the Department of Education   
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
 
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. Please highlight relevant experience in working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. You may also choose to include a LinkedIn or related online profile.
+Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
-**Location:** Seattle is preferred, but remote work is possible.
+Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 
 ## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
@@ -153,34 +149,8 @@ Ideally the position is in Seattle, but for an exceptional candidate working rem
 Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="reg-PM" href="#reg-PM">Regional Program Manager (New York City, Ft. Lauderdale/Miami area)</a>
 
-**Job Summary:** 
-
-Code.org is recruiting for Regional Program Managers in New York City and Ft. Lauderdale/Miami areas to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
-
-**Qualifications:**
-
-- At least a Bachelor's degree, preferably in Education or Computer Science
-- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
-- Advanced organization and problem solving skills
-- Understanding of and passion for equity in computer science and K-12 education
- 
-Additional desired strengths include:
-
-- Experience working with school districts in a project implementation capacity
-- For New York applicants, established relationship or prior experience with the Department of Education    
-- Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
-
-Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-Ability and willingness to travel up to 25% of the time is required.
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="ops-dev" href="#ops-dev">Operations/Developer (Seattle)</a>
+## <a name="ops-dev" href="#ops-dev">Operations/Developer (Seattle, WA)</a>
 
 **Job Summary:** 
 
@@ -194,7 +164,7 @@ Code.org is recruiting for an operations-focused Ruby developer to run and enhan
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
+## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
