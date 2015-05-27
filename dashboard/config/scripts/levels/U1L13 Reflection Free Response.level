@@ -5,11 +5,7 @@
   "properties": {
     "title": "Conclusion 3: Text Compression",
     "content1": "If you send a compressed segment of text would your friend will be able to read it?  ",
-    "markdown": "Why is the dictionary important?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Why is the dictionary important?\n"
   },
   "md5": "bd7b44d76daff8033d0945d57bcf6bc5"
 }]]></config>

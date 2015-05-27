@@ -711,6 +711,16 @@ en:
       unique level name here:
         description here: description here
         title: title
+    multi:
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        Left(45): Left(45)
+        Left(90): Left(90)
+        ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        forward100( ): forward100( )
+        forward283( ): forward283( )
+        forward50( ): forward50( )
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)

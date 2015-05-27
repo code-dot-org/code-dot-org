@@ -1102,6 +1102,15 @@ en:
         Show examples of programming statements: Show examples of programming statements
         Auto-correct common programming errors: Auto-correct common programming errors
         Simplify complex programming tasks: Simplify complex programming tasks
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
