@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 # Background
 
-All programming languages are based on, and built up from, a small subset of commands. Understanding the most fundamental actions performed by a computer enables the programmer to create complex programs with global impact by merely combining the basics. In this lesson, you will begin the journey of converting human language to algorithms and computer directions.
+When you were first learning to talk, you started with sounds. Then you learned to combine sounds into words and words into sentences. Once you learned how to talk, you could take any thought, no matter how complex, and communicate it to someone else. Programming is similar to talking – a programming language is built from a small subset of commands. By combining these commands, a programmer can create complex programs with global impact. In this lesson, you will begin the journey of converting human language to a language the computer will understand.
 
 # Lesson
 

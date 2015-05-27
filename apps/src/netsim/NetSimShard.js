@@ -26,7 +26,7 @@ var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
 if (window &&
     window.location &&
     window.location.hostname &&
-    window.location.hostname.split('.')[0] === 'localhost') {
+    window.location.hostname.substr(0, 9) === 'localhost') {
   CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
 }
 

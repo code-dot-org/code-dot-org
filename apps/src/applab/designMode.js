@@ -1,12 +1,13 @@
-/* global $ */
+/* global $, Dialog */
+// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
 var DesignProperties = require('./designProperties.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
+var AssetManager = require('./assetManagement/AssetManager.jsx');
 var elementLibrary = require('./designElements/library');
-
 var studioApp = require('../StudioApp').singleton;
 
 var designMode = module.exports;
@@ -291,6 +292,33 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 
 designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+/**
+ * Display the "Manage Assets" modal.
+ * @param assetChosen {Function} Called when the user chooses an asset. The
+ *   "Choose" button in the UI only appears if this optional param is provided.
+ * @param typeFilter {String} The type of assets to show and allow to be
+ *   uploaded.
+ */
+designMode.showAssetManager = function(assetChosen, typeFilter) {
+  var codeDiv = document.createElement('div');
+  var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
+  var dialog = studioApp.createModalDialog({
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    defaultBtnSelector: 'again-button',
+    id: 'manageAssetsModal'
+  });
+  React.render(React.createElement(AssetManager, {
+    typeFilter : typeFilter,
+    assetChosen: showChoseImageButton ? function (fileWithPath) {
+      dialog.hide();
+      assetChosen(fileWithPath);
+    } : null
+  }), codeDiv);
+
+  dialog.show();
 };
 
 function toggleDragging (enable) {
