@@ -26,11 +26,7 @@
       }
     ],
     "title": "Programming Efficiency Question 1",
-    "content1": "What does it mean to write efficient code? Match the concepts with their meanings.",
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "content1": "What does it mean to write efficient code? Match the concepts with their meanings."
   }
 }]]></config>
 </Match>
