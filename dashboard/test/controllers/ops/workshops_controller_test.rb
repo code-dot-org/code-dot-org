@@ -9,7 +9,7 @@ module Ops
       @admin = create(:admin)
       sign_in @admin
       @workshop = create(:workshop)
-      @cohort = @workshop.cohorts.first
+      @cohort = @workshop.cohort
       @cohort_district = create(:cohorts_district, cohort: @cohort)
       @cohort = @cohort.reload
       @district = @cohort_district.district
@@ -32,7 +32,7 @@ module Ops
       assert_equal 1, JSON.parse(@response.body).length
     end
 
-    test "Facilitators can list all teachers in their workshop's cohorts" do
+    test "Facilitators can list all teachers in their workshop's cohort" do
       #87055150 (part 2)
       # first name, last name, email, district, gender and any workshop details that are available for teachers
       assert_routing({ path: "#{API}/workshops/1/teachers", method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
@@ -40,21 +40,12 @@ module Ops
       sign_in @workshop.facilitators.first
       get :teachers, id: @workshop.id
       assert_response :success
-      assert_equal @cohort.teachers.count, assigns(:workshop).teachers.count
+
     end
 
     test "Facilitators can add teachers the day of a workshop" do
       #87055064
       # todo
-    end
-
-    test 'Ops team can add multiple cohorts to a workshop' do
-      another_cohort = create(:cohort)
-      workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "segments"=>nil, "facilitators"=>nil, "teachers"=>nil}
-      patch :update, id: @workshop.id, workshop: workshop_params
-      assert_response :success
-      @workshop.reload
-      assert_equal [@cohort, another_cohort], @workshop.cohorts
     end
 
     test 'District contacts can view all workshops in all cohorts in their district' do
@@ -83,7 +74,7 @@ module Ops
                          {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
 
       assert_creates(Workshop, User) do
-        post :create, workshop: {name: 'test workshop', program_type: '1', cohorts: [@cohort], facilitators:facilitator_params}
+        post :create, workshop: {name: 'test workshop', program_type: '1', cohort_id: @cohort, facilitators:facilitator_params}
       end
       assert_response :success
 
