@@ -10,6 +10,8 @@
   "continue": "Continue",
   "container": "create container",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
+  "designToolboxDescription": "Drag the elements into your app!",
+  "designWorkspaceDescription": "Click on an element to edit its properties.",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "No",

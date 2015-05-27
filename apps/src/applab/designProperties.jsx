@@ -1,5 +1,5 @@
 var React = require('react');
-
+var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
 
 var DesignProperties = module.exports = React.createClass({
@@ -13,7 +13,7 @@ var DesignProperties = module.exports = React.createClass({
 
   render: function() {
     if (!this.props.element) {
-      return <p>Click on an element to edit its properties.</p>;
+      return <p>{applabMsg.designWorkspaceDescription}</p>;
     }
 
     var elementType = elementLibrary.getElementType(this.props.element);
@@ -34,6 +34,7 @@ var DesignProperties = module.exports = React.createClass({
     // TODO (brent) - it appears the wrong element sometimes gets deleted
     return (
       <div key={this.props.element.id}>
+        <p>{applabMsg.designWorkspaceDescription}</p>
         {propertiesElement}
         <button
           id="donePropertiesButton"

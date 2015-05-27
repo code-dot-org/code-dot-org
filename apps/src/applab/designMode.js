@@ -3,6 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
+var DesignModeBox = require('./DesignModeBox.jsx');
 var DesignProperties = require('./designProperties.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var elementLibrary = require('./designElements/library');
@@ -315,7 +316,9 @@ designMode.toggleDesignMode = function(enable) {
   var codeTextbox = document.getElementById('codeTextbox');
   codeTextbox.style.display = enable ? 'none' : 'block';
   var designModeBox = document.getElementById('designModeBox');
-  designModeBox.style.display = enable ? 'block' : 'none';
+  if (designModeBox) {
+    designModeBox.style.display = enable ? 'block' : 'none';
+  }
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
@@ -371,16 +374,6 @@ function makeDraggable (jq) {
 designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
-  $('.new-design-element').draggable({
-    containment:"#codeApp",
-    helper:"clone",
-    appendTo:"#codeApp",
-    revert: 'invalid',
-    zIndex: 2,
-    start: function() {
-      studioApp.resetButtonClick();
-    }
-  });
   var GRID_SIZE = 5;
   $('#visualization').droppable({
     accept: '.new-design-element',
@@ -420,3 +413,17 @@ designMode.configureDesignToggleRow = function () {
     designToggleRow
   );
 };
+designMode.configureDesignModeBox = function() {
+  var designModeBox = document.getElementById('designModeBox');
+  if (!designModeBox) {
+    return;
+  }
+
+  var props = {
+    handleDragStart: function() {
+      studioApp.resetButtonClick();
+    }
+  };
+  React.render(React.createElement(DesignModeBox, props), designModeBox)
+};
+

@@ -872,7 +872,6 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designModeBox = require('./designModeBox.html.ejs')({});
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -889,7 +888,6 @@ Applab.init = function(config) {
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
       hasDesignMode: user.isAdmin,
-      designModeBox: designModeBox
     }
   });
 
@@ -965,6 +963,8 @@ Applab.init = function(config) {
   Applab.levelHtml = level.levelHtml || "";
 
   studioApp.init(config);
+
+  designMode.configureDesignModeBox();
 
   var viz = document.getElementById('visualization');
   var vizCol = document.getElementById('visualizationColumn');
