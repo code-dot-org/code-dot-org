@@ -64,6 +64,14 @@ module.exports = {
   },
 
   /**
+   * Resets the next element id for all prefixes to be 1. Called after clearing
+   * all design mode elements
+   */
+  resetIds: function () {
+    nextElementIdMap = {};
+  },
+
+  /**
    * Create a new element of the specified type
    * @param {ElementType} elementType Type of element to create
    * @param {number} left Position from left.
