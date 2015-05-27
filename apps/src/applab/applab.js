@@ -966,6 +966,8 @@ Applab.init = function(config) {
 
   designMode.configureDesignModeBox();
 
+  designMode.configureDesignModeHeaders();
+
   var viz = document.getElementById('visualization');
   var vizCol = document.getElementById('visualizationColumn');
 

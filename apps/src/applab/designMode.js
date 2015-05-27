@@ -4,6 +4,7 @@
 // works in our grunt build, but not in tests
 var React = require('react');
 var DesignModeBox = require('./DesignModeBox.jsx');
+var DesignModeHeaders = require('./DesignModeHeaders.jsx');
 var DesignProperties = require('./designProperties.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var elementLibrary = require('./designElements/library');
@@ -425,5 +426,15 @@ designMode.configureDesignModeBox = function() {
     }
   };
   React.render(React.createElement(DesignModeBox, props), designModeBox)
+};
+
+designMode.configureDesignModeHeaders = function() {
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  if (!designModeHeaders) {
+    return;
+  }
+
+  var props = {};
+  React.render(React.createElement(DesignModeHeaders, props), designModeHeaders)
 };
 
