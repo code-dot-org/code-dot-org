@@ -6778,7 +6778,9 @@ function getThumbnail(type, name) {
         maxHeight: '100%',
         zoom: 2,
         marginTop: '50%',
-        transform: 'translateY(-50%)'
+        transform: 'translateY(-50%)',
+        msTransform: 'translateY(-50%)',
+        webkitTransform: 'translateY(-50%)'
       };
       return React.createElement("img", {src: src, style: assetThumbnailStyle});
     default:
