@@ -8,6 +8,7 @@ testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
+var assertThrows = testUtils.assertThrows;
 var assertWithinRange = testUtils.assertWithinRange;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
@@ -238,28 +239,30 @@ describe("NetSimRouterNode", function () {
   describe("address assignment rules", function () {
     var router, wire1, wire2, wire3;
 
+    function makeWire(nodeIDOffset) {
+      var newWire;
+      NetSimWire.create(testShard, router.entityID + nodeIDOffset,
+          router.entityID, function (e, w) {
+        newWire = w;
+      });
+      return newWire;
+    }
+
     beforeEach(function () {
       NetSimRouterNode.create(testShard, function (e, r) {
         router = r;
       });
 
-      NetSimWire.create(testShard, router.entityID + 1, router.entityID, function (e, w) {
-        wire1 = w;
-      });
-
-      NetSimWire.create(testShard, router.entityID + 2, router.entityID, function (e, w) {
-        wire2 = w;
-      });
-
-      NetSimWire.create(testShard, router.entityID + 3, router.entityID, function (e, w) {
-        wire3 = w;
-      });
+      wire1 = makeWire(1);
+      wire2 = makeWire(2);
+      wire3 = makeWire(3);
 
       assertTableSize(testShard, 'wireTable', 3);
     });
 
     describe("requesting three addresses in simple four-bit format", function () {
       beforeEach(function () {
+        netsimGlobals.setRandomSeed('address assignment test');
         netsimGlobals.getLevelConfig().addressFormat = '4';
         router.requestAddress(wire1, 'client1', function () {});
         router.requestAddress(wire2, 'client2', function () {});
@@ -273,8 +276,8 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("assigns single-number addresses when using single-number address format", function () {
-        assertEqual('1', wire1.localAddress);
-        assertEqual('2', wire2.localAddress);
+        assertEqual('11', wire1.localAddress);
+        assertEqual('1', wire2.localAddress);
         assertEqual('3', wire3.localAddress);
       });
 
@@ -294,6 +297,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in two-part format", function () {
       beforeEach(function () {
+        netsimGlobals.setRandomSeed('another assignment test');
         netsimGlobals.getLevelConfig().addressFormat = '4.4';
         router.requestAddress(wire1, 'client1', function () {});
         router.requestAddress(wire2, 'client2', function () {});
@@ -301,9 +305,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("assigns two-part addresses where first part is router number", function () {
-        assertEqual(router.entityID + '.1', wire1.localAddress);
-        assertEqual(router.entityID + '.2', wire2.localAddress);
-        assertEqual(router.entityID + '.3', wire3.localAddress);
+        assertEqual(router.entityID + '.2', wire1.localAddress);
+        assertEqual(router.entityID + '.6', wire2.localAddress);
+        assertEqual(router.entityID + '.7', wire3.localAddress);
       });
 
       it ("assigns own two-part address (router#.0) as remote address on all wires", function () {
@@ -316,6 +320,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in four-part format", function () {
       beforeEach(function () {
+        netsimGlobals.setRandomSeed('a third assignment test');
         netsimGlobals.getLevelConfig().addressFormat = '8.8.8.8';
         router.requestAddress(wire1, 'client1', function () {});
         router.requestAddress(wire2, 'client2', function () {});
@@ -323,9 +328,11 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses zeros for all except last two parts", function () {
-        assertEqual('0.0.' + router.entityID + '.1', wire1.localAddress);
-        assertEqual('0.0.' + router.entityID + '.2', wire2.localAddress);
-        assertEqual('0.0.' + router.entityID + '.3', wire3.localAddress);
+        // You get higher random addresses here, because of the larger
+        // addressable space.
+        assertEqual('0.0.' + router.entityID + '.20', wire1.localAddress);
+        assertEqual('0.0.' + router.entityID + '.210', wire2.localAddress);
+        assertEqual('0.0.' + router.entityID + '.133', wire3.localAddress);
       });
 
       it ("assigns own four-part address (0.0.router#.0) as remote address", function () {
@@ -416,6 +423,167 @@ describe("NetSimRouterNode", function () {
       });
     });
 
+    describe("random address assignment order", function () {
+      var wire4, wire5, wire6, wire7, wire8, wire9, wire10, wire11, wire12,
+          wire13, wire14, wire15;
+
+      beforeEach(function () {
+        // We need a lot more wires for these tests
+        wire4 = makeWire(4);
+        wire5 = makeWire(5);
+        wire6 = makeWire(6);
+        wire7 = makeWire(7);
+        wire8 = makeWire(8);
+        wire9 = makeWire(9);
+        wire10 = makeWire(10);
+        wire11 = makeWire(11);
+        wire12 = makeWire(12);
+        wire13 = makeWire(13);
+        wire14 = makeWire(14);
+        wire15 = makeWire(15);
+      });
+
+      it ("assigns every address in addressable space", function () {
+        netsimGlobals.setRandomSeed('Coverage!');
+        netsimGlobals.getLevelConfig().addressFormat = '4';
+        // Addressable space is 0-15
+        // 0 is reserved for the router
+        // 15 is reserved for the auto-DNS
+        router.requestAddress(wire1, 'client1', function () {});
+        assertEqual('1', wire1.localAddress);
+        
+        router.requestAddress(wire2, 'client2', function () {});
+        assertEqual('2', wire2.localAddress);
+        
+        router.requestAddress(wire3, 'client3', function () {});
+        assertEqual('3', wire3.localAddress);
+
+        router.requestAddress(wire4, 'client4', function () {});
+        assertEqual('5', wire4.localAddress);
+
+        router.requestAddress(wire5, 'client5', function () {});
+        assertEqual('12', wire5.localAddress);
+
+        router.requestAddress(wire6, 'client6', function () {});
+        assertEqual('11', wire6.localAddress);
+
+        router.requestAddress(wire7, 'client7', function () {});
+        assertEqual('14', wire7.localAddress);
+
+        router.requestAddress(wire8, 'client8', function () {});
+        assertEqual('13', wire8.localAddress);
+
+        router.requestAddress(wire9, 'client9', function () {});
+        assertEqual('7', wire9.localAddress);
+
+        router.requestAddress(wire10, 'client10', function () {});
+        assertEqual('6', wire10.localAddress);
+
+        router.requestAddress(wire11, 'client11', function () {});
+        assertEqual('4', wire11.localAddress);
+
+        router.requestAddress(wire12, 'client12', function () {});
+        assertEqual('8', wire12.localAddress);
+
+        router.requestAddress(wire13, 'client13', function () {});
+        assertEqual('10', wire13.localAddress);
+
+        router.requestAddress(wire14, 'client14', function () {});
+        assertEqual('9', wire14.localAddress);
+
+        // At this point we've exhausted the address space,
+        // so the address is left "undefined"
+        // Might want a different behavior in the future for this,
+        // but low router capacity limits mean this won't happen in
+        // production, for now.
+        router.requestAddress(wire15, 'client15', function () {});
+        assertEqual(undefined, wire15.localAddress);
+      });
+
+      it ("can assign addresses in a different order", function () {
+        netsimGlobals.setRandomSeed('Variety');
+        netsimGlobals.getLevelConfig().addressFormat = '4';
+
+        router.requestAddress(wire1, 'client1', function () {});
+        assertEqual('4', wire1.localAddress);
+
+        router.requestAddress(wire2, 'client2', function () {});
+        assertEqual('10', wire2.localAddress);
+
+        router.requestAddress(wire3, 'client3', function () {});
+        assertEqual('2', wire3.localAddress);
+
+        router.requestAddress(wire4, 'client4', function () {});
+        assertEqual('1', wire4.localAddress);
+
+        router.requestAddress(wire5, 'client5', function () {});
+        assertEqual('3', wire5.localAddress);
+
+        router.requestAddress(wire6, 'client6', function () {});
+        assertEqual('9', wire6.localAddress);
+
+        router.requestAddress(wire7, 'client7', function () {});
+        assertEqual('11', wire7.localAddress);
+
+        router.requestAddress(wire8, 'client8', function () {});
+        assertEqual('6', wire8.localAddress);
+
+        router.requestAddress(wire9, 'client9', function () {});
+        assertEqual('13', wire9.localAddress);
+
+        router.requestAddress(wire10, 'client10', function () {});
+        assertEqual('14', wire10.localAddress);
+
+        router.requestAddress(wire11, 'client11', function () {});
+        assertEqual('12', wire11.localAddress);
+
+        router.requestAddress(wire12, 'client12', function () {});
+        assertEqual('5', wire12.localAddress);
+
+        router.requestAddress(wire13, 'client13', function () {});
+        assertEqual('8', wire13.localAddress);
+
+        router.requestAddress(wire14, 'client14', function () {});
+        assertEqual('7', wire14.localAddress);
+      });
+
+      it ("shrinks addressable space according to address format", function () {
+        netsimGlobals.setRandomSeed('Variety');
+        netsimGlobals.getLevelConfig().addressFormat = '2';
+
+        // Two-bit addresses, so four options, and "00" is used by the router.
+
+        router.requestAddress(wire1, 'client1', function () { });
+        assertEqual('1', wire1.localAddress);
+
+        router.requestAddress(wire2, 'client2', function () { });
+        assertEqual('3', wire2.localAddress);
+
+        router.requestAddress(wire3, 'client3', function () { });
+        assertEqual('2', wire3.localAddress);
+
+        // No more room!
+        router.requestAddress(wire4, 'client4', function () {});
+        assertEqual(undefined, wire4.localAddress);
+      });
+
+      it ("grows addressable space according to address format", function () {
+        netsimGlobals.setRandomSeed('Variety');
+        netsimGlobals.getLevelConfig().addressFormat = '8';
+
+        // 8-bit addresses, so they go up to 255
+        // We won't try to show every case.
+
+        router.requestAddress(wire1, 'client1', function () { });
+        assertEqual('69', wire1.localAddress);
+
+        router.requestAddress(wire2, 'client2', function () { });
+        assertEqual('173', wire2.localAddress);
+
+        router.requestAddress(wire3, 'client3', function () { });
+        assertEqual('29', wire3.localAddress);
+      });
+    });
 
   });
 
