@@ -23,16 +23,41 @@ template: none
 %select.form-control{'ng-model' => 'workshop.program_type'}
   %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
     {{program_type.long_name}}
-%h3
-  Assigned Cohort
-%select.form-control{'ng-model' => 'workshop.cohort_id', 'ng-disabled' => '!workshop.program_type'}
-  %option{'ng-repeat' => 'cohort in cohorts | matchingProgramType:workshop.program_type', 'value' => '{{cohort.id}}'}
-    {{cohort.name}}
 %br
 %button#btn-save.btn.btn-default{type: 'submit', 'ng-click' => 'save(workshop)'} Save
 %p#save-confirmation{style:'display:none'}
   Saved!
 %hr
+
+%h2
+  Cohorts
+%button.btn.btn-white{"ng-click" => "workshop.cohorts.unshift({editing: true})", 'ng-show' => 'workshop.id', style:'margin-bottom:10px'}
+  Add Cohort
+%div.jumbotron{'ng-show' => 'workshop.cohorts <= 0 && !segment.addition'}
+  There are currently no cohorts associated with this workshop.
+%table{'ng-hide' => 'workshop.cohorts <= 0 && !segment.addition'}
+  %tr
+    %th
+      Name
+    %th
+      %a.btn.btn-primary{"ng-click" => "save(workshop)"}
+        Save All
+  %tr{"ng-repeat" => "workshop_cohort in workshop.cohorts", "ng-hide" => "workshop_cohort._destroy == 1"}
+    %td
+      %div{"ng-hide" => "workshop_cohort.editing == true", "ng-model" => "workshop_cohort.id"}
+        {{workshop_cohort.name}}
+      %div{"ng-show" => "workshop_cohort.editing == true", "ng-model" => "workshop_cohort.id"}
+        %select{"ng-options"=>"cohort.id as cohort.name for cohort in cohorts | matchingProgramType:workshop.program_type | orderBy:'name'", 'ng-model' => 'workshop_cohort.id'}
+    %td
+      %a.btn.btn-white.btn-xs{"ng-click" => "workshop_cohort.deletion = true", "ng-hide" => "workshop_cohort.deletion == true || workshop_cohort.editing == true"}
+        Delete
+      %a.btn.btn-white.btn-xs{"ng-click" => "workshop_cohort._destroy = 1; save(workshop)", "ng-show" => "workshop_cohort.deletion == true"}
+        Yes
+      %a.btn.btn-white.btn-xs{"ng-click" => "workshop_cohort.deletion = false", "ng-show" => "workshop_cohort.deletion == true"}
+        No
+      %a.btn.btn-white.btn-xs{"ng-click" => "workshop.cohorts.splice(workshop.cohorts.indexOf(workshop_cohort), 1)", "ng-show" => "workshop_cohort.editing == true"}
+        Cancel
+
 %h2{'ng-show' => 'workshop.id'}
   Workshop segments
 %button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id', style:'margin-bottom:10px;'}
