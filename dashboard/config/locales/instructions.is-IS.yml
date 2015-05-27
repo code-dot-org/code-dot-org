@@ -1377,9 +1377,6 @@
         10 sinnum, mun teikna þessa mynd?
       Course 4 Binary 6_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum,
         mun teikna þessa mynd?
-      Course 4 Binary 7 (copy 1)_instruction: Þú getir teiknað mestalla myndina með
-        því að endurtaka 5 bita tvíundartölu. Síðan þarftu eina 4 bita tölu í viðbót
-        til að komast í hornið neðst til hægri.
       Course 4 Binary 7_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum,
         mun teikna þessa mynd?
       Course 4 Binary 8_instruction: Þú getir teiknað mestalla myndina með því að
@@ -1396,17 +1393,10 @@
         kubbum?
       Course 4 Play Lab For Loops 2_instruction: Nú skulum við reyna að telja í oddatölum
         frá 1 til 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: Hér er fallið "stökkva" sem
-        lætur leikmann stökkva upp 100 díla. Notaðu fallið til að safna öllum flöggunum.
       Course 4 Play Lab Params 1_instruction: Hér er fallið "stökkva" sem lætur leikmann
         stökkva upp 100 díla. Notaðu fallið til að safna öllum flöggunum.
       Course 4 Play Lab Params 10_instruction: |
         Hér færðu síðasta fallið til að nota. Forritaðu leikinn svo hann kalli á fallið "næsta_borð" ef "stig_leikmanns" > 10. Spilaðu leikinn og náðu að ljúka borði 4 til að fara í næstu þraut.
-      Course 4 Play Lab Params 2 (copy 1)_instruction: Nú höfum við flögg sem eru
-        of hátt uppi fyrir stökkið sem við höfum nú! Við skulum bæta stikanum "hæð"
-        við stökkfallið. Örvarlykillinn upp ætti að stökkva um 100 díla, en örvarlykillinn
-        niður ætti að stökkva upp um 300 díla. Gættu þess að rekast ekki á <future
-        barrier above lower flags>!
       Course 4 Play Lab Params 2_instruction: Nú höfum við flögg sem eru of hátt uppi
         fyrir núverandi stökk! Við skulum bæta stikanum "hæð" við stökkfallið. Örvarlykillinn
         upp ætti að stökkva um 100 díla, en örvarlykillinn niður ætti að stökkva upp
@@ -1438,9 +1428,6 @@
       Course 4 Play Lab Vars 2_instruction: Þetta kapp var ekki sanngjarnt! Breyttu
         breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri flöggum
         en kötturinn. Sá, sem fyrst safnar 10, vinnur leikinn!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: Hér er ný tegund af leik! Notaðu
-        vinstri og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu
-        að safna öllum flöggunum.
       Course 4 Play Lab Vars 3_instruction: Hér ný tegund af leik! Notaðu vinstri
         og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu að safna
         öllum flöggunum.
@@ -1461,10 +1448,6 @@
         með eldhnetti. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að
         uppfæra skorið. Þú uppfærir breytuna með "stig = stig + 1". Komdu skorinu
         upp í 10 (um 1 í einu) til að klára borðið.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: Fínt, en nú skulum við tryggja
-        að leikurinn sé ekki of auðveldur - í hvert sinn sem eldhnöttur hittir þig
-        ættir þú að tapa stigi. Við skulum samt byrja með 10 stig svo að þetta sé
-        ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára borðið.
       Course 4 Play Lab Vars 7_instruction: Fínt en nú skulum við tryggja að leikurinn
         sé ekki of auðveldur - í hvert sinn sem eldhnöttur hittir hundinn (leikmann
         1) ættir þú að tapa stigi. Byrjaðu með 10 stig svo að þetta sé ekki of erfitt.
@@ -1494,10 +1477,6 @@
       Course 4 Play Labs For Loops 3_instruction: Ef við teljum í stærri tölum, getum
         við talið enn hærra á sama tíma. Prófaðu að láta hundinn telja frá 10 til
         1000 um 10 í einu.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: Nú höfum við breytt aukanum
-        sem talningin breytist um, en talningin er enn línuleg (aukinn er alltaf eins).
-        Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju
-        óbreytta, en látið hana telja 1, 4, 9, 16, 25... (teljarinn í öðru veldi)?
       Course 4 Play Labs For Loops 4_instruction: Nú höfum við breytt aukanum sem
         talning breytist um, en talningin er enn línuleg (aukinn er alltaf eins).
         Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju
@@ -2166,8 +2145,6 @@
       NEW Course 4 Bee For Loops 9_instruction: Ef lykkja telur niður, er aukinn dreginn
         frá teljarabreytunni í hverri umferð. Hver ætti aukinn að vera til að safna
         9, síðan 6 og svo 3 af blómasafa?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: 'Frjáls æfing! Skemmtu
-        þér við að nota alla kubbana í verkfærakassanum. '
       NEW Course 4 Play Lab Params 11_instruction: 'Frjáls æfing! Skemmtu þér við
         að nota alla kubbana í verkfærakassanum. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Settu inn stikann "leikmaður"
@@ -2372,9 +2349,8 @@
         því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur
         þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: leikvöllur tilbrigðis 1: Í SMÍÐUM:
-        Tilbrigði 1 er enn ekki virkt því að ekki er búið að útfæra P2P jafningjatengingar.
-        Í tilbrigði 1 geta nemendur handvirkt fundið út tímasetningar við að senda bita fram og aftur.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -2598,6 +2574,13 @@
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

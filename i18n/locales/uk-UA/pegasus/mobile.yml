@@ -383,7 +383,7 @@ uk-UA:
   dashboard_login_none: Електронна пошта
   dashboard_new_password: новий пароль
   dashboard_progress_not_started: не розпочато
-  dashboard_progress_in_progress: триває
+  dashboard_progress_in_progress: в процесі
   dashboard_progress_not_completed: не завершено
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально

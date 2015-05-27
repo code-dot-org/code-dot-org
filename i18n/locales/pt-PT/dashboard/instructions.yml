@@ -1,120 +1,46 @@
 pt:
   data:
     instructions:
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: |
-        Give the stop sign a border by making an octagon
-        with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
-        What is 360 divided by 8?) 
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: |
-        This house has a half-finished wall. Each side
-        is 100, but the half-finished wall is only 50. Complete the wall. 
+      2-3 _instruction: Flores roxas podem conter 1 ou 0 de néctar. Tem cuidado para não recolher o néctar de uma flor roxa se não tiver nenhum.
+      2-3 Artist 1 new_instruction: Olá, eu sou um artista. Tu podes escrever código, para eu desenhar desenhar quase tudo. Usa alguns bloco para me fazeres desenhar sobre as linhas cinzentas na imagem. (Cada linha são 100 pixeis longos)
+      2-3 Artist 11_instruction: 'Dá o sinal de stop a uma borda, fazendo um octógono com 8 lados, cada um com 100 pixels de comprimento. Quantos graus tu deves virar? (Dica: Quanto é 360 dividido por 8?) '
+      2-3 Artist 12_instruction: 'Define o bloco "repeat times" para que ele cria um "círculo", para terminar o globo ocular. Se cada movimento virá á direita um grau, quantas vezes precisa repetir para completar o círculo? 180? 360? 500?'
+      2-3 Artist 2 new_instruction: 'Esta casa tem uma parede de semi-acabada. Cada lado é 100, mas a parede semi-acabada é apenas 50. Complete a parede. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
-      2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
+      2-3 Artist 3.4_instruction: O bloco de salto move o artista sem desenhar. Desenha a linha tracejada usando ambos o bloco de salto e de desenhar.
+      2-3 Artist 3_instruction: Este chapéu é de 100 pixels de altura. Desenha um chapéu que tem 70 pixeis a menos.
       2-3 Artist 3new_instruction: |
         The red hat is 100 pixels tall. Finish drawing
         a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
+      2-3 Artist 4_instruction: Ajuda-me a completar a casa para este gato.
+      2-3 Artist 5_instruction: 'Substitui este código com um bloco "repeat times", para desenhar a mesma casa usando apenas 3 blocos.'
+      2-3 Artist 6_instruction: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica: os três lados têm o mesmo comprimento.'
+      2-3 Artist 7_instruction: 'Acaba de desenhar a metade direita da última janela. Cada quadrado da janela é de 25 pixeis. '
+      2-3 Artist 8_instruction: Completa os quartos para cada um dos animais dividindo o retângulo em 2 quadrados de tamanho igual. O retângulo é de 200 pixeis de largura e 100 pixeis de altura.
+      2-3 Artist 9_instruction: Termina este papagaio
+      2-3 Artist Assessment 1_instruction: 'Avaliação: Termina o desenho, o último dente, 25 pixeis de largura e 25 pixeis de altura.'
+      2-3 Artist Debugging 1_instruction: Consegues fazer este chapéu com um comprimento máximo de 100?
+      2-3 Artist Debugging 10_instruction: 'O pad de direção do meu controlo é muito estreito.  Dica: Amplia-o 10 pixeis.'
+      2-3 Artist Debugging 11_instruction: 'Ajuda-me a terminar o meu lindo floco de neve. Quantas vezes preciso fazer "repeat" para terminá-lo?'
+      2-3 Artist Debugging 12_instruction: É suposto adicionar uma onda do mar a esta cena. Podes ajudar-me?
+      2-3 Artist Debugging 2_instruction: 'O código para os três bigodes que estás a ver está errado. Dica: cada bigode tem 75 pixels de comprimento. Corrige o código para desenhar os bigodes.'
+      2-3 Artist Debugging 3_instruction: 'O meu barco tem um buraco!  Podes corrigi-lo, alterando o ângulo da linha? Dica: o último ângulo está mal por 15 graus.'
+      2-3 Artist Debugging 4_instruction: Qual é a imagem que estamos a tenta desenhar? Acaba de ligar os pontos usando as linhas e ângulos apropriados.
+      2-3 Artist Debugging 5_instruction: 'O código para a perna e pé que vês está errado. Dica: O pé é muito longo, pode ser preciso excluir um passo (trocadilhos)'
+      2-3 Artist Debugging 6_instruction: Parece que estou sentado numa cadeira que falta uma perna. Edita os blocos para desenhar a perna.
+      2-3 Artist Debugging 7_instruction: Parece que o C no código está desenhado para trás. Consegues fazer parecer um C?
+      2-3 Artist Debugging 8_instruction: Meu cata-vento não está terminado. Quantas vezes preciso de repetir para terminá-lo?
+      2-3 Artist Debugging 9_instruction: 'O código para esta haste está incorreto. Dica: O ângulo está errado por 60 graus'
+      2-3 Artist Debugging Assessment 1_instruction: 'Esta forma é muito pequena. Consegue  fazê-lo maior? Dica: deve ser 75 pixeis mais longer em cada lado.'
+      2-3 Artist Free Play_instruction: Diverte-te! Desenha qualquer coisa que gostes.
+      2-3 Artist Functions 1_instruction: 'Olá. Eu artista de zumbi. Eu amo desenho! ajuda-me a desenhar os óculos quadrados.  Dica: a ponte entre os óculos é menor do que o comprimento quadrado de 25 pixels.'
+      2-3 Artist Functions 10_instruction: Aqui estão duas funções, uma para desenhar uma engrenagem grande e outra para desenhar uma engrenagem pequena. Usa-as para desenhar o interior de uma máquina!
+      2-3 Artist Functions 11.5_instruction: 'Aqui está a mesma função de "Desenhar um hexágono". O que acontece se só virares 60 graus cada vez que você executar um loop?'
+      2-3 Artist Functions 11_instruction: 'Nós demos outro nome para a função "desenhar um quadrado" para "desenhar um hexágono", mas  ainda só desenha quadrados! Você pode modificar a função de "desenhar um hexágono" para desenhar um hexágono com 50 lados de pixel e desenhar a imagem usando a função?'
+      2-3 Artist Functions 12_instruction: 'As funções são ótimas para desenhar coisas complexas várias vezes. Podes usar a função "desenhar uma flor" para preencher o restante da caixa ? (Dica: as plantas são todas separadas por comprimento de 100 pixeis)  '
+      2-3 Artist Functions 13_instruction: 'Fornecemos-te com quatro funções. Usa-as como quiseres dentro de um ou mais loops para fazer fotos que  podes compartilhar com os teus amigos. Pressiona executar para ver um exemplo.'
       2-3 Artist Functions 2_instruction: |
         Functions let you define new blocks! We've
         moved the blocks to draw a square into a function called "draw a square".
@@ -1845,10 +1771,6 @@ pt:
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1869,10 +1791,6 @@ pt:
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1882,12 +1800,6 @@ pt:
         you to use. Program your game to call the "level_up" function if "player_points"
         > 10. Play the game, and make it past level 4 to move to the next puzzle.
         
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1931,10 +1843,6 @@ pt:
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1960,11 +1868,6 @@ pt:
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -2003,12 +1906,6 @@ pt:
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2707,9 +2604,6 @@ pt:
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: |
-        It's Free Play time!
-        Have fun with all the blocks in your tool box. 
       NEW Course 4 Play Lab Params 11_instruction: |
         It's Free Play time! Have fun
         with all the blocks in your tool box. 
@@ -2957,10 +2851,8 @@ pt:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3189,6 +3081,13 @@ pt:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

@@ -78,68 +78,56 @@
         ca să desenaţi interiorul unui mecanism!
       2-3 Artist Functions 11.5_instruction: Aveţi aici aceeaşi funcţie "Desenaţi
         un hexagon". Ce se întamplă dacă intoarceţi cate 60 grade la fiecare buclă?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
+      2-3 Artist Functions 11_instruction: Am redenumit funcția "desenează un pătrat"
+        în "desenează un hexagon", dar încă desenează pătrate! Poți să modifici funcția
+        "desenează un hexagon" astfel încât să deseneze un hexagon cu laturile de
+        60 de pixeli, și apoi să desenezi imaginea folosind această funcție?
+      2-3 Artist Functions 12_instruction: 'Funcţiile sunt foarte utile pentru a desena
+        de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare"
+        pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este
+        de 100 de pixeli)  '
+      2-3 Artist Functions 13_instruction: Aveți la dispoziție patru functii. Folositi-le
+        orice mod doriţi, în interiorul uneia sau mai multor bucle, pentru a face
+        fotografii care aveţi posibilitatea să partajaţi cu prietenii dvs. Apăsaţi
+        "rulează" pentru a vedea un exemplu.
+      2-3 Artist Functions 2_instruction: Funcțiile îțî permit să construiești blocuri
+        noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează
+        un pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele
+        au 75 de pixeli între ele.
+      2-3 Artist Functions 3_instruction: Editaţi funcţia pentru a desena un pătrat
+        cu latura de 115 şi pentru a desena ochelari mai mari. Distanța dintre pătrate
+        este acum de 45 de pixeli.
+      2-3 Artist Functions 4_instruction: Utilizaţi blocul "repetă" pentru a desena
+        aceste trei pătrate.
+      2-3 Artist Functions 7_instruction: 'Folosește funcţia "desenează o casă" pentru
+        a desena două case folosind doi parametri diferiți. (Sugestie: prima casă
+        are 100 de pixeli).'
+      2-3 Artist Functions 9_instruction: Aici este o funcţie care desenează un fulg
+        de nea. Experimentează cu aceasta pentru a crea o scenă de iarnă! În acest
+        nivel te poți juca liber, așa că nu există nici un puzzle de rezolvat. Distracţie
+        plăcută!
+      2-3 Artist Loops 1_instruction: Puteţi face un hexagon cu laturile de 100 pixeli
+        , pentru a termina celula? Amintește-ți, asta înseamnă că va trebui să te
+        rotești doar 60 de grade!
+      2-3 Artist Loops 10_instruction: Ce se întâmplă cu designul atunci când facem
+        ca pasul final spre înainte să fie doar pe jumătate de lung?
+      2-3 Artist Loops 11_instruction: Acum hai sa punem *altă* buclă în jurul întreagii
+        noastre creaţii!  Nu uita să adăugi un unghi la sfârşitul buclei exterioare.
+      2-3 Artist Loops 2_instruction: Utilizează acum un bloc "repetă" pentru a-i
+        face celulei un inveliș.
+      2-3 Artist Loops 4_instruction: Vrei să vezi ce se întâmplă atunci când vom
+        repeta acea formă de mai multe ori, folosind o buclă?
+      2-3 Artist Loops 5_instruction: Acum hai să facem o mică modificare la bucla
+        şi să vedem cât de mult se schimbă imaginea noastră.
+      2-3 Artist Loops 6_instruction: Adaugă încă o mișcare (move) și o rotație (turn)
+        în interiorul buclei şi vezi cum se schimbă design-ul.
+      2-3 Artist Loops 7_instruction: Putem folosi bucle pentru a face tot felul de
+        poligoane.  Poţi crea un romb în interiorul acest hexagon?
       2-3 Artist Loops 8_instruction: Hai sa punem ambele elemente in interiorul unei
         bucle.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
+      2-3 Artist Loops 9_instruction: "Vom bucla aceleaşi elemente, dar acum am de
+        gând să adăug unele distante dintre ele. \r Utilizează acelaşi cod ca înainte,
+        dar adaugă un pas înainte la sfârşitul buclei din exterior."
       2-3 Artist Loops New 1_instruction: |
         Let's draw this robot's head! Can you
         make a square with sides that are 100 pixels?
@@ -1808,10 +1796,6 @@
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1832,10 +1816,6 @@
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1844,12 +1824,6 @@
         We've added one last function for
         you to use. Program your game to call the "level_up" function if "player_points"
         > 10. Play the game, and make it past level 4 to move to the next puzzle.
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1890,10 +1864,6 @@
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1918,11 +1888,6 @@
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -1961,12 +1926,6 @@
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2816,8 +2775,6 @@
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: "It's Free Play time!\nHave
-        fun with all the blocks in your tool box. \n"
       NEW Course 4 Play Lab Params 11_instruction: "It's Free Play time! Have fun\nwith
         all the blocks in your tool box. \n"
       NEW Course 4 Play Lab Params 5 5_instruction: "Fill in actor parameter inputs\nwith
@@ -2855,11 +2812,10 @@
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: Funcțiile îțî permit să construiești blocuri noi!
+        Am mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează
+        un pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele
+        au 75 de pixeli între ele.
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -3075,10 +3031,8 @@
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3324,6 +3278,13 @@
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

@@ -5,7 +5,7 @@ bs:
       send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
       send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
-      already_authenticated: You are already signed in.
+      already_authenticated: Već ste prijavljeni.
       inactive: Your account was not activated yet.
       invalid: Invalid email or password.
       invalid_token: Invalid authentication token.
@@ -66,7 +66,7 @@ bs:
         submit_button: Send an invitation
       edit:
         header: Set your password
-        submit_button: Set my password
+        submit_button: Postavi lozinku
     mailer:
       invitation_instructions:
         subject: Invitation instructions

@@ -33,7 +33,7 @@
   "CONTROLS_FOREACH_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#for_each",
   "CONTROLS_FOREACH_INPUT_INLIST":"ในรายการ",
   "CONTROLS_FOREACH_INPUT_INLIST_TAIL":"",
-  "CONTROLS_FOREACH_INPUT_ITEM":"สำหรับแต่ละ",
+  "CONTROLS_FOREACH_INPUT_ITEM":"สำหรับแต่ละอัน",
   "CONTROLS_FOREACH_TOOLTIP":"สำหรับแต่ละสิ่งในรายการ ตั้งค่าตัวแปร '%1' เป็นสิ่งนั้น แล้วทำข้อความสั่งบางอย่าง",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
   "CONTROLS_FOR_INPUT_FROM_TO_BY":"จาก %1 ถึง %2 ทีละ %3",

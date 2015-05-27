@@ -71,24 +71,24 @@
         one: '1 feil forhindret denne %{resource} fra å bli reddet:'
         other: '%{count} feil forhindret denne %{resource} fra å bli reddet:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
+      send_instructions: En invitasjon e-post er sendt til %{email}.
       invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      updated: Passordet ble endret. Du er nå logget på.
+      no_invitations_remaining: Ingen gjenværende invitasjoner
+      invitation_removed: Din invitasjon ble fjernet.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Send invitasjon
+        submit_button: Send en invitasjon
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Angi ditt passord
+        submit_button: Angi passordet
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
+        subject: Invitasjon instruksjoner
+        hello: Hei %{email}
+        someone_invited_you: Noen har invitert deg til %{url}, du kan godta det gjennom
+          lenken nedenfor.
+        accept: Godta invitasjon
         ignore: If you don't want to accept the invitation, please ignore this email.<br
           />Your account won't be created until you access the link above and set
           your password.

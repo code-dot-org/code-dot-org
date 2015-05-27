@@ -222,7 +222,7 @@ ca:
           Utilitzant com a exemple "dibuixar un quadrat", afegeix una dada d'entrada anomenada "longitud" per a "dibuixar un triangle". A continuació, dibuixa triangles de diferents tamanys. (Pista: clica en l'estrella per afegir una dada d'entrada a la funció)
         turtle_3_7: |-
           Afegeix una dada d'entrada anomenada "longitud" per a "dibuixar una casa" i construir una gran casa per a l'elefant (amb vores de 150 píxels de llarg)
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Modifica "dibuixa una casa" de manera que jo acabi al cantó de baix a la dreta després de dibuixar una nova casa. Usa aquesta funció modificada per dibuixar tres cases.'
         turtle_3_9: 'Pots tornar a crear la funció "dibuixar una casa" sense ajuda? Intenta-ho, i després dibuixa una fila de cases.'
         turtle_3_10: Has après molt! Ara utilitza-ho per a dibuixar el que vulguis. Intenta dibuixar una estrella, o una espiral, o un floc de neu amb un toc de fantasia.
         maze_karel_debug_seq_1: "Benvingut a la correcció d'errors! El meu codi no funciona bé. Pots detectar el problema i solucionar-ho per a que pugui aplanar el meu camp i deixar-lo llest per a sembrar?"

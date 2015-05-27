@@ -1,6 +1,6 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "您使用了無效的顏色字串: {val}",
+  "badStyleStringError": "您使用了無效樣式字串: {val}",
   "circleBlockTitle": "圓(半徑、 樣式、 顏色)",
   "displayBlockTitle": "計算",
   "ellipseBlockTitle": "橢圓(寬度,高度,樣式, 顏色)",
@@ -27,5 +27,5 @@
   "string": "字串",
   "stringMismatchError": "您有一個大小寫錯誤的字串.",
   "userCodeException": "您的代碼在執行時出現了一個錯誤.",
-  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
+  "wrongBooleanError": "您的區塊計算出錯誤的布林值"
 }
