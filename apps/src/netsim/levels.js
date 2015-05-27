@@ -44,6 +44,11 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           into "rooms" and makes it so every message sent in the room
  *           will be received by every other person in that room.
  *
+ * @property {boolean} connectedRouters - When false (default), each router or
+ *           room exists in isolation and will have no contact with other routers
+ *           or rooms.  When true, it is possible for messages to travel between
+ *           routers, connecting the whole shard.
+ *
  * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
  *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
@@ -168,6 +173,7 @@ levels.custom = {
   messageGranularity: MessageGranularity.BITS,
   automaticReceive: false,
   broadcastMode: false,
+  connectedRouters: false,
 
   // Packet header specification
   addressFormat: '4',

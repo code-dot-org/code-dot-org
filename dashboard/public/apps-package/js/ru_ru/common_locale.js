@@ -55,7 +55,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -211,7 +211,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_assign_x_signatureOverride":function(d){return "Задайте переменную"},
 "dropletBlock_button_description":function(d){return "Создает кликабельную кнопку. На кнопке будет отображаться введенный текст и ссылка на нее будет идти через заданный id"},
 "dropletBlock_button_param0":function(d){return "buttonId"},
-"dropletBlock_button_param0_description":function(d){return "A unique identifier for the button. The id is used for referencing the created button. For example, to assign event handlers."},
+"dropletBlock_button_param0_description":function(d){return "Уникальный идентификатор кнопки. Идентификатор используется для ссылки на созданную кнопку. Например, чтобы назначить обработчики событий."},
 "dropletBlock_button_param1":function(d){return "текст"},
 "dropletBlock_button_param1_description":function(d){return "Текст, отображаемый в кнопке."},
 "dropletBlock_callMyFunction_description":function(d){return "Вызывает указанную функцию, которая не принимает никаких параметров"},
@@ -232,13 +232,13 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_clearCanvas_description":function(d){return "Очистить все данные на активном холсте"},
 "dropletBlock_clearInterval_description":function(d){return "Очистить существующий интервал таймера, указав значение, которое возвращает setInterval()"},
 "dropletBlock_clearInterval_param0":function(d){return "Интервал"},
-"dropletBlock_clearInterval_param0_description":function(d){return "The value returned by the setInterval function to clear."},
+"dropletBlock_clearInterval_param0_description":function(d){return "Значение, возвращаемое функцией setInterval для очистки."},
 "dropletBlock_clearTimeout_description":function(d){return "Очистите существующее измерение времени возвращающееся из setTimeout ()"},
 "dropletBlock_clearTimeout_param0":function(d){return "время ожидания"},
-"dropletBlock_clearTimeout_param0_description":function(d){return "The value returned by the setTimeout function to cancel."},
+"dropletBlock_clearTimeout_param0_description":function(d){return "Значение, возвращаемое функцией setTimeout для отмены."},
 "dropletBlock_console.log_description":function(d){return "Отображает строку или переменную на дисплее консоля"},
 "dropletBlock_console.log_param0":function(d){return "сообщение"},
-"dropletBlock_console.log_param0_description":function(d){return "The message string to display in the console."},
+"dropletBlock_console.log_param0_description":function(d){return "Строка сообщения для отображения в консоли."},
 "dropletBlock_container_description":function(d){return "Создайте разделение контейнера с указанным элементом идентификации (ID), и, по не обходимости, установите его внутренний HTML ( Язык Гипертекстовой Разметки )"},
 "dropletBlock_createCanvas_description":function(d){return "Создать холст с указанным идентификатором, и, если возможно, установить параметры ширины и высоты"},
 "dropletBlock_createCanvas_param0":function(d){return "холстидентификация"},

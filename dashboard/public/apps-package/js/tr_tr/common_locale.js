@@ -55,7 +55,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -380,9 +380,9 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_hideElement_param0_description":function(d){return "The id of the element to hide."},
 "dropletBlock_hide_description":function(d){return "Hide the turtle image"},
 "dropletBlock_ifBlock_description":function(d){return "Do something only if a condition is true"},
-"dropletBlock_ifBlock_signatureOverride":function(d){return "if statement"},
+"dropletBlock_ifBlock_signatureOverride":function(d){return "eğer ifadesi"},
 "dropletBlock_ifElseBlock_description":function(d){return "Do something if a condition is true, otherwise do something else"},
-"dropletBlock_ifElseBlock_signatureOverride":function(d){return "if/else statement"},
+"dropletBlock_ifElseBlock_signatureOverride":function(d){return "eğer/değilse ifadesi"},
 "dropletBlock_imageUploadButton_description":function(d){return "Create an image upload button and assign it an element id"},
 "dropletBlock_image_description":function(d){return "Create an image and assign it an element id"},
 "dropletBlock_image_param0":function(d){return "id"},
@@ -414,7 +414,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_lessThanOperator_param0_description":function(d){return "İlk değer karşılaştırma için kullanılacak."},
 "dropletBlock_lessThanOperator_param1":function(d){return "y"},
 "dropletBlock_lessThanOperator_param1_description":function(d){return "İkinci değer karşılaştırma için kullanılacak."},
-"dropletBlock_lessThanOperator_signatureOverride":function(d){return "Less than operator"},
+"dropletBlock_lessThanOperator_signatureOverride":function(d){return "Operatörden daha az"},
 "dropletBlock_line_description":function(d){return "Draw a line on the active canvas from x1, y1 to x2, y2"},
 "dropletBlock_line_param0":function(d){return "x1"},
 "dropletBlock_line_param0_description":function(d){return "The x position in pixels of the beginning of the line."},

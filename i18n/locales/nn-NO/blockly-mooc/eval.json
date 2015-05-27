@@ -4,13 +4,13 @@
   "circleBlockTitle":"sirkel (radius, stil, farge)",
   "displayBlockTitle":"beregn",
   "ellipseBlockTitle":"ellipse (breidd, høyde, stil, farge)",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "extraTopBlocks":"Du har løse blokker. Mente du å feste disse til \"evaluere\" blokk?",
   "infiniteRecursionError":"Funksjonen kaller seg selv. Vi har stoppet den, ellers ville den ha fortsatt å kalle seg selv til evig tid.",
   "overlayBlockTitle":"overlegg (topp, botn)",
   "placeImageBlockTitle":"plasser-bilde(x,y,bilde)",
   "offsetBlockTitle":"forskyving (x, y, bilde)",
   "rectangleBlockTitle":"rektangel (breidd, høgde, stil, farge)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
+  "reinfFeedbackMsg":"Du kan trykke \"Fortsett å spille\" knappen for å redigere programmet.",
   "rotateImageBlockTitle":"roter (grader, bilde)",
   "scaleImageBlockTitle":"skaler (faktor, bilde)",
   "squareBlockTitle":"kvadrat (størrelse, stil, farge)",
@@ -25,7 +25,7 @@
   "outline":"ramme",
   "solid":"heil",
   "string":"tekst",
-  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "stringMismatchError":"Du har en streng med feil aktivering.",
   "userCodeException":"Det oppsto en feil under utføring av koden.",
-  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
+  "wrongBooleanError":"Blokkene dine evaluerer til en feil booleanverdi."
 }

@@ -1828,10 +1828,6 @@
       Course 4 Binary 6_instruction: |
         Qual string binária, repetida 10 vezes, vai
         desenhar essa imagem?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        Você pode completar a maior parte dessa
-        imagem repetindo um número binário de 5 bits - então você vai precisar de mais um número
-        de 4 bits para completar o canto inferior direito.
       Course 4 Binary 7_instruction: |
         Qual string binária, repetida 10 vezes, vai
         desenhar essa imagem?
@@ -1852,10 +1848,6 @@
       Course 4 Play Lab For Loops 2_instruction: |
         Dessa vez, vamos tentar contar
         os números ímpares de 1 até 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Aqui temos uma função chamada
-        "pule" que faz seu personagem principal pular 100 pixels. Use a função pule
-        para coletar todas as bandeiras.
       Course 4 Play Lab Params 1_instruction: |
         Aqui temos uma função chamada "pule"
         que faz seu personagem principal pular 100 pixels. Use a função pule
@@ -1864,12 +1856,6 @@
         Adicionamos uma última função para
         que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
         > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Agora temos bandeiras que
-        estão muito altas para nosso pulo atual! Vamos adicionar um parâmetro para nossa função pule
-        chamado "altura". A seta para cima deve pular 100 pixels, mas a seta para baixo
-        deve pular 300 pixels. Cuidado, você não quer bater na <barreira futura
-        acima as bandeiras de baixo>!
       Course 4 Play Lab Params 2_instruction: |
         Agora temos bandeiras que estão altas demais
         para nosso pulo atual! Vamos adicionar um parâmetro à função pule chamado
@@ -1911,10 +1897,6 @@
         Essa corrida não foi muito justa! Altere
         a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Temos aqui um novo tipo de jogo!
-        Use as setas para a esquerda e para a direita para se mover e a seta para cima para pular. Veja se
-        você consegue coletar todas as bandeiras.
       Course 4 Play Lab Vars 3_instruction: |
         Temos aqui um novo tipo de jogo! Use as
         setas para a esquerda e para a direita para se mover e a seta para cima para pular. Veja se você
@@ -1940,11 +1922,6 @@
         Use o evento "quando o personagem 2 tocar alguma coisa" para disparar uma atualização em
         sua pontuação. Você pode incrementar sua variável definindo "pontos = pontos +1".
         Faça sua pontuação chegar até 10 (aumentando um ponto por vez!) para passar de nível.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Legal, agora vamos garantir
-        que esse jogo não seja muito fácil - sempre que você for atingido por uma bola de fogo, você deve
-        perder um ponto. Também vamos começar com 10 pontos, para que ele não seja muito difícil.
-        Faça sua pontuação cair de 10 para 0 para passar de nível.
       Course 4 Play Lab Vars 7_instruction: |
         Legal, agora vamos garantir que esse jogo
         não seja muito fácil - sempre que o cão (personagem 1) for atingido por uma bola de fogo,
@@ -1983,12 +1960,6 @@
         Se contarmos usando números maiores,
         podemos contar até números ainda maiores no mesmo intervalo de tempo. Tente fazer o cão
         contar de 10 até 1000, contando de 10 em 10.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Alterar o incremento
-        pode ser útil, mas ainda estamos contando linearmente (cada número está separado
-        pela mesma distância do anterior). E se eu quisesse contar exponencialmente? Sem alterar
-        as configurações desse laço para, você pode contar 1, 4, 9 , 16, 25... (contador
-        ao quadrado)?
       Course 4 Play Labs For Loops 4_instruction: |
         Alterar o incremento pode ser
         útil, mas ainda estamos contando linearmente (cada número está separado pela mesma
@@ -2696,8 +2667,8 @@
         NetSim: Variante 3: Conecta grupos de 2 a 6 alunos
         com um roteador e explora questões sobre roteamento e DNS
       New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
+        Desenhe algo incrível! Seu código é salvo
+        como um projeto e você pode retornar a ele a qualquer momento.
       NEW Course 4 Artist Functions 1_instruction: |
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -2872,8 +2843,6 @@
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
         seu incremento para coletar 9, então 6, e então 3 néctares?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: "É hora da atividade livre!\nDivirta-se
-        com todos os blocos da sua caixa de ferramentas. \n"
       NEW Course 4 Play Lab Params 11_instruction: "É hora da atividade livre! Divirta-se\ncom
         todos os blocos da sua caixa de ferramentas. \n"
       NEW Course 4 Play Lab Params 5 5_instruction: "Preencha as entradas de parâmetro\ndos
@@ -3132,10 +3101,8 @@
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
         outro padrão comum para comprimir ainda mais o poema?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variante 1 - parque de diversões: EM CONSTRUÇÃO:
-        A variante 1 ainda não é funcional porque as conexões P2P não foram implementadas.
-        A variante 1 permite que os alunos elaborem manualmente o tempo de envio de bits
-        para trás e para a frente.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3380,6 +3347,13 @@
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

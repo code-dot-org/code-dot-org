@@ -8703,9 +8703,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     exports.Editor = Editor = (function() {
       function Editor(wrapperElement, options) {
-        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4;
+        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4, useBlockMode;
         this.wrapperElement = wrapperElement;
         this.options = options;
+        this.readOnly = false;
         this.paletteGroups = this.options.palette;
         this.showPaletteInTextMode = (ref1 = this.options.showPaletteInTextMode) != null ? ref1 : false;
         this.paletteEnabled = (ref2 = this.options.enablePaletteAtStart) != null ? ref2 : true;
@@ -8845,9 +8846,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.resizeBlockMode();
         this.redrawMain();
         this.rebuildPalette();
-        if (this.mode == null) {
-          this.setEditorState(false);
-        }
+        useBlockMode = (this.mode != null) && !this.options.textModeAtStart;
+        this.setEditorState(useBlockMode);
         return this;
       }
 
@@ -8866,6 +8866,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
       Editor.prototype.getMode = function() {
         return this.options.mode;
+      };
+
+      Editor.prototype.setReadOnly = function(readOnly) {
+        this.readOnly = readOnly;
+        return this.aceEditor.setReadOnly(readOnly);
+      };
+
+      Editor.prototype.getReadOnly = function() {
+        return this.readOnly;
       };
 
       Editor.prototype.resizeTextMode = function() {
@@ -9129,6 +9138,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     Editor.prototype.trackerPointIsInElement = function(point, element) {
       var gbr;
+      if (this.readOnly) {
+        return false;
+      }
       if (element.offsetParent == null) {
         return false;
       }
@@ -9149,6 +9161,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     Editor.prototype.hitTest = function(point, block) {
       var head, seek;
+      if (this.readOnly) {
+        return null;
+      }
       head = block.start;
       seek = block.end;
       while (head !== seek) {
@@ -10218,6 +10233,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (selectionEnd == null) {
         selectionEnd = null;
       }
+      if (this.readOnly) {
+        return;
+      }
       if ((focus != null ? focus.id : void 0) in this.extraMarks) {
         delete this.extraMarks[focus != null ? focus.id : void 0];
       }
@@ -11056,6 +11074,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     hook('keydown', 0, function(event, state) {
+      if (this.readOnly) {
+        return;
+      }
       if (event.which !== BACKSPACE_KEY) {
         return;
       }
@@ -11093,6 +11114,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     });
     hook('keydown', 0, function(event, state) {
       var head, newBlock, newSocket, ref1;
+      if (this.readOnly) {
+        return;
+      }
       if (event.which === ENTER_KEY) {
         if ((this.textFocus == null) && !event.shiftKey) {
           this.setTextInputFocus(null);
@@ -11117,6 +11141,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     hook('keyup', 0, function(event, state) {
+      if (this.readOnly) {
+        return;
+      }
       if (event.which === ENTER_KEY) {
         if (this.newHandwrittenSocket != null) {
           this.setTextInputFocus(this.newHandwrittenSocket);
@@ -11958,11 +11985,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return event in this.bindings && (this.bindings[event] != null);
     };
     Editor.prototype.setEditorState = function(useBlocks) {
-      var oldScrollTop;
+      var oldScrollTop, paletteVisibleInNewState;
       if (useBlocks) {
         this.setValue(this.getAceValue());
-        this.dropletElement.style.top = this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
-        this.dropletElement.style.left = this.paletteWrapper.offsetWidth + "px";
+        this.dropletElement.style.top = '0px';
+        if (this.paletteEnabled) {
+          this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
+          this.dropletElement.style.left = this.paletteWrapper.offsetWidth + "px";
+        } else {
+          this.paletteWrapper.style.top = this.paletteWrapper.style.left = '-9999px';
+          this.dropletElement.style.left = '0px';
+        }
         this.aceElement.style.top = this.aceElement.style.left = '-9999px';
         this.currentlyUsingBlocks = true;
         this.lineNumberWrapper.style.display = 'block';
@@ -11970,12 +12003,23 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.resizeBlockMode();
         return this.redrawMain();
       } else {
+        paletteVisibleInNewState = this.paletteEnabled && this.showPaletteInTextMode;
         oldScrollTop = this.aceEditor.session.getScrollTop();
         this.setAceValue(this.getValue());
         this.aceEditor.resize(true);
         this.aceEditor.session.setScrollTop(oldScrollTop);
-        this.dropletElement.style.top = this.dropletElement.style.left = this.paletteWrapper.style.top = this.paletteWrapper.style.left = '-9999px';
-        this.aceElement.style.top = this.aceElement.style.left = '0px';
+        this.dropletElement.style.top = this.dropletElement.style.left = '-9999px';
+        if (paletteVisibleInNewState) {
+          this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
+        } else {
+          this.paletteWrapper.style.top = this.paletteWrapper.style.left = '-9999px';
+        }
+        this.aceElement.style.top = '0px';
+        if (paletteVisibleInNewState) {
+          this.aceElement.style.left = this.paletteWrapper.offsetWidth + "px";
+        } else {
+          this.aceElement.style.left = '0px';
+        }
         this.currentlyUsingBlocks = false;
         this.lineNumberWrapper.style.display = 'none';
         this.mainCanvas.opacity = this.highlightCanvas.opacity = 0;
@@ -12320,6 +12364,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.copyPasteInput.addEventListener('input', (function(_this) {
         return function() {
           var blocks, e, j, len, line, minIndent, ref1, ref2, str;
+          if (_this.readOnly) {
+            return;
+          }
           if (pressedVKey) {
             try {
               str = _this.copyPasteInput.value;

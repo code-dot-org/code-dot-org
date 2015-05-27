@@ -420,6 +420,22 @@ button.arrow:focus {
 #designModeBox td {
   vertical-align: top; }
 
+#design-manage-assets {
+  float: right; }
+
+#manageAssetsModal {
+  width: 800px;
+  margin-left: -400px; }
+
+.assetRow {
+  border-bottom: 1px solid #999; }
+
+.assetRow:last-child {
+  border-bottom: none; }
+
+.assetRow:hover {
+  background: #cfc9de; }
+
 #divApplab {
   box-sizing: border-box;
   padding: 2px; }

@@ -18,12 +18,15 @@ var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var ObservableEvent = require('../ObservableEvent');
 
-var MessageGranularity = require('./netsimConstants').MessageGranularity;
-
 var logger = NetSimLogger.getSingleton();
+var netsimConstants = require('./netsimConstants');
 var netsimGlobals = require('./netsimGlobals');
+var netsimNodeFactory = require('./netsimNodeFactory');
+
+var MessageGranularity = netsimConstants.MessageGranularity;
 
 /**
  * Client model of node being simulated on the local client.
@@ -62,6 +65,13 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {NetSimRouterNode}
    */
   this.myRouter = null;
+
+  /**
+   * Set of router controllers enabled for simulation by this node.
+   * @type {NetSimRouterNode[]}
+   * @private
+   */
+  this.routers_ = [];
 
   /**
    * Widget where we will post sent messages.
@@ -156,11 +166,16 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.receivedLog_ = receivedLog;
 
   // Subscribe to table changes
+  this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
+      this.onNodeTableChange_.bind(this));
   this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
       this.onWireTableChange_.bind(this));
   this.eventKeys.messageTable = this.shard_.messageTable.tableChange.register(
       this.onMessageTableChange_.bind(this));
   this.eventKeys.registeredOnShard = this.shard_;
+
+  // Set up initial state from cached rows
+  this.onNodeTableChange_(this.shard_.nodeTable.readAllCached());
 };
 
 /**
@@ -169,6 +184,8 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
  */
 NetSimLocalClientNode.prototype.stopSimulation = function () {
   if (this.eventKeys.registeredOnShard) {
+    this.eventKeys.registeredOnShard.nodeTable.tableChange.unregister(
+        this.eventKeys.nodeTable);
     this.eventKeys.registeredOnShard.wireTable.tableChange.unregister(
         this.eventKeys.wireTable);
     this.eventKeys.registeredOnShard.messageTable.tableChange.unregister(
@@ -184,9 +201,9 @@ NetSimLocalClientNode.prototype.stopSimulation = function () {
  */
 NetSimLocalClientNode.prototype.tick = function (clock) {
   this.heartbeat.tick(clock);
-  if (this.myRouter) {
-    this.myRouter.tick(clock);
-  }
+  this.routers_.forEach(function (router) {
+    router.tick(clock);
+  });
 };
 
 /**
@@ -285,8 +302,9 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
       return;
     }
 
+    // TODO: Unify this with the set of simulating routers
     this.myRouter = router;
-    this.myRouter.initializeSimulation(this.entityID);
+    this.myRouter.initializeSimulation(this.entityID, netsimNodeFactory);
 
     router.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
@@ -499,6 +517,41 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
 
     this.sendMessages(payloads.slice(1), onComplete);
   }.bind(this));
+};
+
+/**
+ * Whenever the node table changes, make needed changes to our collection of
+ * routers configured to simulate for the local node.
+ * @param {Array} nodeRows
+ * @private
+ */
+NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
+  // 1. Remove simulating routers that have vanished from remote storage.
+  this.routers_ = this.routers_.filter(function (simulatingRouter) {
+    var stillExists = nodeRows.some(function (row) {
+      return row.id === simulatingRouter.entityID;
+    });
+    if (!stillExists) {
+      simulatingRouter.stopSimulation();
+      return false;
+    }
+    return true;
+  });
+
+  // 2. Create and simulate new routers
+  nodeRows.filter(function (row) {
+    return row.type === netsimConstants.NodeType.ROUTER;
+  }).forEach(function (row) {
+    var alreadySimulating = this.routers_.some(function (simulatingRouter) {
+      return row.id === simulatingRouter.entityID;
+    });
+
+    if (!alreadySimulating) {
+      var newRouter = new NetSimRouterNode(this.shard_, row);
+      newRouter.initializeSimulation(this.entityID, netsimNodeFactory);
+      this.routers_.push(newRouter);
+    }
+  }, this);
 };
 
 /**

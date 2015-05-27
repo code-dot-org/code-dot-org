@@ -276,7 +276,7 @@
       signup: Inscriure's
       already_registered: Ja estàs registrat?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: Progrés de %{name}
       progress: El teu progrés
       lines: 'Línies totals de codi: %{lines}'
       close: TANCA
@@ -353,9 +353,9 @@
     student_teacher_disassociated: '%{teacher_name} s''ha esborrat com a mestre de
       %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Visualitzador de respostes
       student: estudiant
-      try_it_yourself: Try it yourself
+      try_it_yourself: Prova-ho tu
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
@@ -423,7 +423,7 @@
     heading_apps: <h2>Diversió per a</h2><h1>Tothom</h1>
     heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
     your_gallery: Galeria
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Intenta un curs a Code Studio
   gender:
     male: Home
     female: Dona
@@ -587,8 +587,8 @@
       in the wrong order.
   text_match:
     placeholder: Introdueix la teva resposta aquí
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Gràcies
+    open_response_body: Gràcies per la resposta!
   dialog:
     ok: OK
   time:
@@ -669,9 +669,9 @@
     name: Nom
     updated: Actualitzat
     project_type: Tipus de projecte
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
+    help_text: Clica <strong>Fer una App</strong> o <strong>Dibuixa quelcom</strong>
+      a sota per a fer un nou projecte de Play Lab o d'Artist!<br/> Pots tornar i
+      continuar els projectes en qualsevol moment.
     need_help: Necessita ajuda per començar?
     really_delete: Vols suprimir?
     delete_yes: Sí

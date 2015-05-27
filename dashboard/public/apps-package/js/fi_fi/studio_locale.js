@@ -55,7 +55,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -311,8 +311,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySpriteChoices_27":function(d){return "Minun on mentävä."},
 "saySpriteChoices_28":function(d){return "Haluavat olla ystäviä?"},
 "saySpriteChoices_29":function(d){return "Hyvää työtä!"},
-"saySpriteChoices_30":function(d){return "Woo hoo!"},
-"saySpriteChoices_31":function(d){return "Yay!"},
+"saySpriteChoices_30":function(d){return "Jihuu!"},
+"saySpriteChoices_31":function(d){return "Jes!"},
 "saySpriteChoices_32":function(d){return "Hauska tutustua."},
 "saySpriteChoices_33":function(d){return "Kaikki hyvin!"},
 "saySpriteChoices_34":function(d){return "Kiitos"},
@@ -335,8 +335,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySpriteChoices_51":function(d){return "Au!"},
 "saySpriteChoices_52":function(d){return "Pahoittelut!"},
 "saySpriteChoices_53":function(d){return "Varovasti!"},
-"saySpriteChoices_54":function(d){return "Whoa!"},
-"saySpriteChoices_55":function(d){return "Oops!"},
+"saySpriteChoices_54":function(d){return "Oho!"},
+"saySpriteChoices_55":function(d){return "Hupsis!"},
 "saySpriteChoices_56":function(d){return "Melkein sait minut!"},
 "saySpriteChoices_57":function(d){return "Hyvä yritys!"},
 "saySpriteChoices_58":function(d){return "Etpä saa kiinni!"},

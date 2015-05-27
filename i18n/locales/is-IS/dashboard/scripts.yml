@@ -556,6 +556,14 @@ is:
         CSPPD:
           new stage: nýr áfangi
           Introduction to PD: Kynning á PD
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: Sýnishorn CSP kennslustunda
           description_short: sýnishorn kennslustunda fyrir csp
@@ -821,6 +829,13 @@ is:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Þjöppun texta
+          Pixelation: Dílamynstur
         algebraPD2b:
           title: 'Tölvunarfræði í algebru - fagmenntun'
           description: Kenna fallmiðaða forritun í gegnum algebru
