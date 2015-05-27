@@ -522,7 +522,6 @@ ActiveRecord::Schema.define(version: 20150527001533) do
     t.string   "instructions"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "time_zone"
   end
 
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
