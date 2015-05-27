@@ -336,6 +336,48 @@ describe("NetSimRouterNode", function () {
       });
     });
 
+    describe("keeping multipart addresses within addressable space", function () {
+      function makeRouter() {
+        var newRouter;
+        NetSimRouterNode.create(testShard, function (e, r) {
+          newRouter = r;
+        });
+        return newRouter;
+      }
+
+      it ("Wraps router addresses/IDs by taking entityID modulo addressable space", function () {
+        // Four possible router addresses
+        netsimGlobals.getLevelConfig().addressFormat = '2.8';
+
+        // Initial node starts at entityID 1
+        assertEqual(1, router.entityID);
+        assertEqual("Router 1", router.getDisplayName());
+        assertEqual("1.0", router.getAddress());
+
+        var r2 = makeRouter();
+        assertEqual(2, r2.entityID);
+        assertEqual("Router 2", r2.getDisplayName());
+        assertEqual("2.0", r2.getAddress());
+
+        var r3 = makeRouter();
+        assertEqual(3, r3.entityID);
+        assertEqual("Router 3", r3.getDisplayName());
+        assertEqual("3.0", r3.getAddress());
+
+        // At 4 (our assignable space) router number and address wrap to zero
+        var r4 = makeRouter();
+        assertEqual(4, r4.entityID);
+        assertEqual("Router 0", r4.getDisplayName());
+        assertEqual("0.0", r4.getAddress());
+
+        // Collisions are possible
+        var r5 = makeRouter();
+        assertEqual(5, r5.entityID);
+        assertEqual("Router 1", r5.getDisplayName());
+        assertEqual("1.0", r5.getAddress());
+      });
+    });
+
 
   });
 
