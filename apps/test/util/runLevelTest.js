@@ -60,7 +60,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
     }
   };
 
-  runLevel(app, skinId, level, validateResult, testData.runBeforeClick);
+  runLevel(app, skinId, level, validateResult, testData);
 };
 
 function logError(msg) {
@@ -106,7 +106,7 @@ function ಠ_ಠ() {
   require('@cdo/apps/applab/main');
 }
 
-function runLevel (app, skinId, level, onAttempt, beforeClick) {
+function runLevel (app, skinId, level, onAttempt, testData) {
   require('@cdo/apps/' + app + '/main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -132,20 +132,30 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
     Dialog: StubDialog,
     isAdmin: true,
     onInitialize: function() {
-      // Click the run button!
-      if (beforeClick) {
-        beforeClick(assert);
+      var clickRunButton = function () {
+        // we have a race condition for loading our editor. give it another 500ms
+        // to load if it hasnt already
+        var timeout = 0;
+        if (level.editCode && !studioApp.editor) {
+          timeout = 500;
+        }
+        setTimeout(function () {
+          studioApp.runButtonClick();
+        }, timeout);
       }
 
-      // we have a race condition for loading our editor. give it another 500ms
-      // to load if it hasnt already
-      var timeout = 0;
-      if (level.editCode && !studioApp.editor) {
-        timeout = 500;
+      if (testData.runBeforeClickAsync) {
+        // Async version lets the before click function to specify when it's
+        // done
+        testData.runBeforeClickAsync(assert, clickRunButton);
+      } else {
+        if (testdata.runBeforeClick) {
+          testdata.runBeforeClick(assert);
+        }
+        clickRunButton();
       }
-      setTimeout(function () {
-        studioApp.runButtonClick();
-      }, timeout);
+
+
       // waitLong();
     },
     onAttempt: onAttempt

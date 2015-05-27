@@ -23,8 +23,12 @@ function httpServer(port, callback) {
     if (p !== -1) {
       url = url.substring(0, p);
     }
-    var filepath = __dirname + '/../../lib' + url;
+
+    // navigate from root
+    var filepath = filepath = __dirname + '/../../..' + url;
+    console.log(filepath);
     if (!fs.existsSync(filepath)) {
+      console.log('404: ' + filepath);
       res.writeHead(404);
       res.end();
     } else {
