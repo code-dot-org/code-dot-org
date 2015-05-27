@@ -1562,6 +1562,52 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 0);
     });
 
+    it ("can send a message to another router", function () {
+      var logRow;
+
+      // This test reads better with slower routing.
+      // It lets you see each step, when with Infinite bandwidth you get
+      // several things happening on one tick, depending on how simulating
+      // routers are registered with each client.
+      routerA.setBandwidth(50); // Requires 1 second for routing
+      routerB.setBandwidth(25); // Requires 2 seconds for routing, buts starts
+                                // on first tick
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: routerB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('flop'));
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+
+      // t=1; router A picks up message, forwards to router B
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      logRow = getLatestLogRow();
+      assertEqual(routerA.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerA.entityID);
+      assertFirstMessageProperty('toNodeID', routerB.entityID);
+
+      // t=2; router B picks up message, consumes it
+      clientA.tick({time: 2000});
+      assertTableSize(testShard, 'logTable', 2);
+      logRow = getLatestLogRow();
+      assertEqual(routerB.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 0);
+    });
+
     it ("can send a message to client on another router", function () {
       var logRow;
 
