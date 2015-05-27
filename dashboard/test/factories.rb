@@ -204,7 +204,9 @@ FactoryGirl.define do
     facilitators {[
       create(:facilitator).tap{|f| f.permission = 'facilitator'}
     ]}
-    cohort
+    cohorts {[
+        create(:cohort)
+    ]}
     after :create do |workshop, _|
       create_list :segment, 1, workshop: workshop
     end
