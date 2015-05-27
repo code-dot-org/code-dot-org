@@ -1165,6 +1165,22 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   if (wireRow !== undefined) {
     return wireRow.localAddress;
   }
+
+  // If we don't have connected routers, this is as far as the auto-DNS can see.
+  if (!netsimGlobals.getLevelConfig().connectedRouters) {
+    return undefined;
+  }
+
+  // Is it some node elsewhere on the shard?
+  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAllCached());
+  var node = _.find(nodes, function (node) {
+    return node.getHostname() === hostname;
+  });
+  if (node) {
+    return node.getAddress();
+  }
+
   return undefined;
 };
 
