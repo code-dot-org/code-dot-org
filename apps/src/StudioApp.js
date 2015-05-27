@@ -353,6 +353,7 @@ StudioApp.prototype.init = function(config) {
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject,
+      readOnly: config.readonlyWorkspace,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
@@ -1290,7 +1291,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: fullDropletPalette,
-      showPaletteInTextMode: true
+      showPaletteInTextMode: true,
+      enablePaletteAtStart: !options.readOnly
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
@@ -1339,17 +1341,28 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     if (options.startBlocks) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+      // Reset droplet Undo stack:
+      this.editor.clearUndoStack();
       // Reset ace Undo stack:
       var UndoManager = window.ace.require("ace/undomanager").UndoManager;
       this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
     }
 
+    if (options.readOnly) {
+      // When in readOnly mode, show source, but do not allow editing,
+      // disable the palette, and hide the UI to show the palette:
+      this.editor.setReadOnly(true);
+      showToolboxHeader.style.display = 'none';
+    }
+
+    // droplet may now be in code mode if it couldn't parse the code into
+    // blocks, so update the UI based on the current state:
+    this.onDropletToggle_();
+
+    this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
+
     if (options.afterEditorReady) {
-      // droplet may come in code mode if it couldn't parse the code into
-      // blocks, so update the UI based on the current state:
-      this.onDropletToggle_();
       options.afterEditorReady();
-      this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
 
     // Since the droplet editor loads asynchronously, we must call onInitialize
