@@ -1,6 +1,6 @@
 module Ops
   class WorkshopsController < OpsControllerBase
-    before_filter :convert_facilitators, only: [:create, :update]
+    before_filter :convert_facilitators, :convert_cohorts, only: [:create, :update]
 
     load_and_authorize_resource
 
@@ -26,7 +26,7 @@ module Ops
           Workshop.all
         elsif current_user.permission?('district_contact')
           # For district contacts, list all workshops in all cohorts in their district.
-          Workshop.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
+          Workshop.includes(cohorts: :districts).where(districts: {contact_id: current_user.try(:id)})
         elsif current_user.permission?('facilitator')
           # For facilitators, list all workshops they're facilitating.
           current_user.workshops_as_facilitator
@@ -68,7 +68,7 @@ module Ops
         :program_type,
         :location,
         :instructions,
-        :cohort_id,
+        cohorts: [:id, :_destroy],
         facilitators: [:ops_first_name, :ops_last_name, :email]
       )
     end
@@ -82,6 +82,21 @@ module Ops
         next if facilitator_params[:email].blank?
 
         User.find_or_create_facilitator(facilitator_params, current_user)
+      end
+    end
+
+    def convert_cohorts
+      return unless params[:workshop]
+      cohort_params_list = params[:workshop].delete :cohorts
+      return unless cohort_params_list
+
+      params[:workshop][:workshop_cohorts_attributes] = cohort_params_list.map do |cohort_params|
+        {cohort_id: cohort_params[:id],
+         _destroy: cohort_params[:_destroy]}.tap do |workshops_cohorts_attrs|
+          if params[:id] && existing = WorkshopCohort.find_by(cohort_id: cohort_params[:id], workshop_id: params[:id])
+            workshops_cohorts_attrs[:id] = existing.id
+          end
+        end
       end
     end
   end
