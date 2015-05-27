@@ -708,55 +708,9 @@ en:
         testing: testing
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      u3L05 Student Lesson Introduction:
-        Layers of Abstraction: Layers of Abstraction
       unique level name here:
         description here: description here
         title: title
-    match:
-      CSPPD unit matching:
-        Matching Units with Descriptions: Matching Units with Descriptions
-        Unit 1: Unit 1
-        Unit 2: Unit 2
-        Unit 3: Unit 3
-        Unit 4: Unit 4
-        Unit 5: Unit 5
-        data extraction, modeling, and processing: data extraction, modeling, and processing
-        foundations in the digital representation of information: foundations in the digital representation of information
-        planning, organizing, and completion of performance tasks: planning, organizing, and completion of performance tasks
-        programming principles and javascript: programming principles and javascript
-        structure and design of the internet: structure and design of the internet
-      PDK5 Pair programming match:
-        Driver: Driver
-        Match the definitions to the words you were introduced to in the last video.: Match the definitions to the words you were introduced to in the last video.
-        Navigator: Navigator
-        Pair programming: Pair programming
-        Pair programming match: Pair programming match
-        The student who controls the keyboard, mouse, or touch screen: The student who controls the keyboard, mouse, or touch screen
-        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The student who thinks about the big-picture and looks for potential mistakes or misunderstandings
-        When two students work at one computer to write a program together: When two students work at one computer to write a program together
-      U3L05 Assessment1:
-        Effort: Effort
-        Programming Efficiency Question 1: Programming Efficiency Question 1
-        Space: Space
-        The amount of labor it takes to write the code: The amount of labor it takes to write the code
-        The number of "turtle moves" it takes to complete the task: The number of "turtle moves" it takes to complete the task
-        The number of lines of code: The number of lines of code
-        Time: Time
-        What does it mean to write efficient code? Match the concepts with their meanings.: What does it mean to write efficient code? Match the concepts with their meanings.
-    multi:
-      U3L06-API-multichoice:
-        APIs and Parameters Question 1: APIs and Parameters Question 1
-        Auto-correct common programming errors: Auto-correct common programming errors
-        Explain the functionality of a programming statements: Explain the functionality of a programming statements
-        List the commands and functions of a programming language: List the commands and functions of a programming language
-        Prevent the programmer from having to memorize the language commands: Prevent the programmer from having to memorize the language commands
-        Prevents the programmer from having to memorize all of the language commands: Prevents the programmer from having to memorize all of the language commands
-        Select the best answer: Select the best answer
-        Show examples of programming statements: Show examples of programming statements
-        Simplify complex programming tasks: Simplify complex programming tasks
-        To avoid having to memorize all of the language commands: To avoid having to memorize all of the language commands
-        What is NOT the purpose of an API in a programming language?: What is NOT the purpose of an API in a programming language?
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -966,15 +920,11 @@ en:
         'Reflection: Data Storage': 'Reflection: Data Storage'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 Assessment 1:
-        'Assessment 1: Text Compression': 'Assessment 1: Text Compression'
         'Conclusion 1: Text Compression': 'Conclusion 1: Text Compression'
         Consider your heuristic and those of your classmates.: Consider your heuristic and those of your classmates.
-        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write (in the space below) a segment of text that should compress effectively and efficiently.
       U1L13 Assessment 2:
-        'Assessment 2: Text Compression': 'Assessment 2: Text Compression'
         'Conclusion 2: Text Compression': 'Conclusion 2: Text Compression'
         'Is there a way to know that a compressed piece of text is compressed the most possible? ': 'Is there a way to know that a compressed piece of text is compressed the most possible? '
-        Write (in the space below) a segment of text that will not compress well.: Write (in the space below) a segment of text that will not compress well.
       U1L13 Reflection 1:
         'Reflection: Text Compression': 'Reflection: Text Compression'
         What made compressing text hard to do?: What made compressing text hard to do?
@@ -984,8 +934,6 @@ en:
       U1L13 Reflection Free Response:
         'Conclusion 3: Text Compression': 'Conclusion 3: Text Compression'
         'If you send a compressed segment of text would your friend will be able to read it?  ': 'If you send a compressed segment of text would your friend will be able to read it?  '
-        'Reflection: Text Compression': 'Reflection: Text Compression'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L16 Reflection Free Response:
         'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -1074,10 +1022,8 @@ en:
       U3L05 Free Response Getting Started:
         'Programming Efficiency: Getting Started': 'Programming Efficiency: Getting Started'
       U3L05 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
         'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
       U3L06 Assessment:
-        APIs and Function Parameters Question: APIs and Function Parameters Question
         APIs and Parameters Question 2: APIs and Parameters Question 2
       U3L06 Free Response Getting Started:
         APIs and Function Parameters: APIs and Function Parameters
