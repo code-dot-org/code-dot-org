@@ -276,7 +276,7 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
+  designMode.onClear();
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {

@@ -293,6 +293,9 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 
 designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+  elementLibrary.resetIds();
+  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
+  designMode.changeScreen('screen1');
 };
 
 function toggleDragging (enable) {
@@ -480,6 +483,8 @@ designMode.changeScreen = function (screenId) {
   );
 
   designMode.serializeToLevelHtml();
+
+  designMode.editElementProperties(document.getElementById(screenId));
 };
 designMode.renderDesignModeBox = function(element) {
   var designModeBox = document.getElementById('designModeBox');
