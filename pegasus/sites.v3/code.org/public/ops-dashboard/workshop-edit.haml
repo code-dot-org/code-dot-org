@@ -23,11 +23,6 @@ template: none
 %select.form-control{'ng-model' => 'workshop.program_type'}
   %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
     {{program_type.long_name}}
-%h3
-  Assigned Cohort
-%select.form-control{'ng-model' => 'workshop.cohort_id', 'ng-disabled' => '!workshop.program_type'}
-  %option{'ng-repeat' => 'cohort in cohorts | matchingProgramType:workshop.program_type', 'value' => '{{cohort.id}}'}
-    {{cohort.name}}
 %br
 %button#btn-save.btn.btn-default{type: 'submit', 'ng-click' => 'save(workshop)'} Save
 %p#save-confirmation{style:'display:none'}

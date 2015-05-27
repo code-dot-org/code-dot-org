@@ -1,8 +1,8 @@
 # A Cohort is a group of teachers
 class Cohort < ActiveRecord::Base
   # A Workshop is associated with one or more Cohorts
-  has_many :workshops_cohorts, inverse_of: :cohort, dependent: :destroy
-  has_many :workshops, through: :workshops_cohorts
+  has_many :workshop_cohorts, inverse_of: :cohort, dependent: :destroy
+  has_many :workshops, through: :workshop_cohorts
 
   # A Cohort is associated with one or more Districts
   has_many :cohorts_districts, inverse_of: :cohort, dependent: :destroy

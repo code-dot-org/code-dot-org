@@ -90,10 +90,10 @@ module Ops
       cohort_params_list = params[:workshop].delete :cohorts
       return unless cohort_params_list
 
-      params[:workshop][:workshops_cohorts_attributes] = cohort_params_list.map do |cohort_params|
+      params[:workshop][:workshop_cohorts_attributes] = cohort_params_list.map do |cohort_params|
         {cohort_id: cohort_params[:id],
          _destroy: cohort_params[:_destroy]}.tap do |workshops_cohorts_attrs|
-          if params[:id] && existing = WorkshopsCohort.find_by(cohort_id: cohort_params[:id], workshop_id: params[:id])
+          if params[:id] && existing = WorkshopCohort.find_by(cohort_id: cohort_params[:id], workshop_id: params[:id])
             workshops_cohorts_attrs[:id] = existing.id
           end
         end
