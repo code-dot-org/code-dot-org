@@ -1783,10 +1783,6 @@ zh:
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1807,10 +1803,6 @@ zh:
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1820,12 +1812,6 @@ zh:
         you to use. Program your game to call the "level_up" function if "player_points"
         > 10. Play the game, and make it past level 4 to move to the next puzzle.
         
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1869,10 +1855,6 @@ zh:
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1898,11 +1880,6 @@ zh:
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -1941,12 +1918,6 @@ zh:
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2774,9 +2745,6 @@ zh:
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: |
-        It's Free Play time!
-        Have fun with all the blocks in your tool box. 
       NEW Course 4 Play Lab Params 11_instruction: |
         It's Free Play time! Have fun
         with all the blocks in your tool box. 
@@ -3037,10 +3005,8 @@ zh:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3269,6 +3235,13 @@ zh:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

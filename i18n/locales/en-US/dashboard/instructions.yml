@@ -576,7 +576,6 @@ en:
       Course 4 Binary 5_instruction: crwdns34400:0crwdne34400:0
       Course 4 Binary 6 (copy 1)_instruction: crwdns34401:0crwdne34401:0
       Course 4 Binary 6_instruction: crwdns34402:0crwdne34402:0
-      Course 4 Binary 7 (copy 1)_instruction: crwdns34403:0crwdne34403:0
       Course 4 Binary 7_instruction: crwdns34404:0crwdne34404:0
       Course 4 Binary 8_instruction: crwdns34405:0crwdne34405:0
       Course 4 Maze 1_instruction: crwdns30808:0crwdne30808:0
@@ -586,10 +585,8 @@ en:
       Course 4 Maze 5_instruction: crwdns34406:0crwdne34406:0
       Course 4 Maze 6_instruction: crwdns34407:0crwdne34407:0
       Course 4 Play Lab For Loops 2_instruction: crwdns34408:0crwdne34408:0
-      Course 4 Play Lab Params 1 (copy 1)_instruction: crwdns34409:0crwdne34409:0
       Course 4 Play Lab Params 1_instruction: crwdns34410:0crwdne34410:0
       Course 4 Play Lab Params 10_instruction: crwdns34411:0crwdne34411:0
-      Course 4 Play Lab Params 2 (copy 1)_instruction: crwdns34412:0crwdne34412:0
       Course 4 Play Lab Params 2_instruction: crwdns34413:0crwdne34413:0
       Course 4 Play Lab Params 3_instruction: crwdns34414:0crwdne34414:0
       Course 4 Play Lab Params 4_instruction: crwdns34415:0crwdne34415:0
@@ -600,13 +597,11 @@ en:
       Course 4 Play Lab Params 9_instruction: crwdns34420:0crwdne34420:0
       Course 4 Play Lab Vars 1_instruction: crwdns34422:0crwdne34422:0
       Course 4 Play Lab Vars 2_instruction: crwdns34423:0crwdne34423:0
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: crwdns34424:0crwdne34424:0
       Course 4 Play Lab Vars 3_instruction: crwdns34425:0crwdne34425:0
       Course 4 Play Lab Vars 4_instruction: crwdns34426:0crwdne34426:0
       Course 4 Play Lab Vars 5_instruction: crwdns34427:0crwdne34427:0
       Course 4 Play Lab Vars 6 (copy 1)_instruction: crwdns34428:0crwdne34428:0
       Course 4 Play Lab Vars 6_instruction: crwdns34429:0crwdne34429:0
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: crwdns34430:0crwdne34430:0
       Course 4 Play Lab Vars 7_instruction: crwdns34431:0crwdne34431:0
       Course 4 Play Lab Vars 8 (copy 1)_instruction: crwdns34432:0crwdne34432:0
       Course 4 Play Lab Vars 8_instruction: crwdns34433:0crwdne34433:0
@@ -615,7 +610,6 @@ en:
       Course 4 Play Labs For Loops 1_instruction: crwdns36003:0crwdne36003:0
       Course 4 Play Labs For Loops 2_instruction: crwdns34437:0crwdne34437:0
       Course 4 Play Labs For Loops 3_instruction: crwdns34438:0crwdne34438:0
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: crwdns34439:0crwdne34439:0
       Course 4 Play Labs For Loops 4_instruction: crwdns34440:0crwdne34440:0
       Course 4 Play Labs For Loops 5_instruction: crwdns34441:0crwdne34441:0
       Course 4 Play Labs For Loops 6_instruction: crwdns34442:0crwdne34442:0
@@ -914,7 +908,6 @@ en:
       NEW Course 4 Bee For Loops 7_instruction: crwdns34640:0crwdne34640:0
       NEW Course 4 Bee For Loops 8_instruction: crwdns34641:0crwdne34641:0
       NEW Course 4 Bee For Loops 9_instruction: crwdns34642:0crwdne34642:0
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: crwdns35009:0crwdne35009:0
       NEW Course 4 Play Lab Params 11_instruction: crwdns34643:0crwdne34643:0
       NEW Course 4 Play Lab Params 5 5_instruction: crwdns34644:0crwdne34644:0
       NEW Course 4 Play Lab Vars 4 5_instruction: crwdns34645:0crwdne34645:0
@@ -979,7 +972,7 @@ en:
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
       Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
-      U1L4 NetSim SendAB_instruction: crwdns36458:0crwdne36458:0
+      U1L4 NetSim SendAB_instruction: crwdns38964:0crwdne38964:0
       U2L10 NetSim Automatic DNS_instruction: 'crwdns38742:0[hostname]crwdne38742:0'
       U2L10 NetSim Manual DNS_instruction: crwdns38743:0crwdne38743:0
       U2L2 NetSim Hub Mode_instruction: crwdns38744:0crwdne38744:0
@@ -1029,6 +1022,7 @@ en:
       U3L16 - text labels_instruction: crwdns38355:0crwdne38355:0
       U3L16 - textInput getText write_instruction: crwdns38356:0crwdne38356:0
       U3L16 - use images_instruction: crwdns38755:0crwdne38755:0
+      U3L19 - Clicker Game Freeplay Area_instruction: crwdns38965:0crwdne38965:0
       U3L19 - Debugging with consoleLog_instruction: crwdns38756:0crwdne38756:0
       U3L19 - DEMO up down count practice app_instruction: crwdns38757:0crwdne38757:0
       U3L19 - do concatenate string with var_instruction: crwdns38455:0crwdne38455:0

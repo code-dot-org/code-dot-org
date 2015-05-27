@@ -1,5 +1,5 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "divideByZeroError": "Tavo programos rezultatas yra dalyba iš nulio.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį.",
   "evaluate": "įvertinti",
@@ -8,7 +8,7 @@
   "goal": "Tikslas:",
   "levelIncompleteError": "Jūsų reiškinys nesutampa su tikslu.",
   "missingFunctionError": "Jūs turite apibūdinti funkciją pavadinimu {functionName}.",
-  "missingVariableX": "Jūsų reiškinyje trūsta kintamojo {var}.",
+  "missingVariableX": "Jūsų reiškinyje trūksta kintamojo {var}.",
   "reinfFeedbackMsg": "Štai jūsų sprendinys! Tęskite skaičiavimą arba pradėkite naują galvosūkį!",
   "yourExpression": "Tavo reiškinys:",
   "wrongInput": "You are calling your function with the wrong value.",

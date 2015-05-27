@@ -813,7 +813,6 @@ bs:
       Course 4 Binary 5_instruction: Koji će binarni niz, ponovljen 10 puta, nacrtati ovu sliku?
       Course 4 Binary 6 (copy 1)_instruction: Koji će binarni niz, ponovljen 10 puta, nacrtati ovu sliku?
       Course 4 Binary 6_instruction: Koji će binarni niz, ponovljen 10 puta, nacrtati ovu sliku?
-      Course 4 Binary 7 (copy 1)_instruction: Možeš dovršiti većinu ove slike tako što ćeš pomoću petlje prolaziti kroz 5-bitni binarni broj. Zatim ćeš trebati još jedan 4-bitni broj da dođeš do donjeg desnog ugla.
       Course 4 Binary 7_instruction: Koji će binarni niz, ponovljen 10 puta, nacrtati ovu sliku?
       Course 4 Binary 8_instruction: Možeš dovršiti većinu ove slike tako što ćeš pomoću petlje prolaziti kroz 5-bitni binarni broj. Zatim ćeš trebati još jedan 4-bitni broj da dođeš do donjeg desnog ugla.
       Course 4 Maze 1_instruction: Dovedi ljutu pticu do svinje!
@@ -823,14 +822,10 @@ bs:
       Course 4 Maze 5_instruction: Možeš li riješiti ovaj zadatak korištenjem što manjeg broja blokova?
       Course 4 Maze 6_instruction: Možeš li riješiti ovaj zadatak korištenjem što manjeg broja blokova?
       Course 4 Play Lab For Loops 2_instruction: Hajde da ovaj putpokušamo brojati neparne brojeve od 1 do 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: 'Evo funkcija pod nazivom "skoči" koja čini da tvoj glavni lik skače za 100 piksela. Upotrijebi funkciju za skakanje za sakupljanje svih zastava.'
       Course 4 Play Lab Params 1_instruction: 'Evo funkcija pod nazivom "skoči" koja čini da tvoj glavni lik skače za 100 piksela. Upotrijebi funkciju za skakanje za sakupljanje svih zastava.'
       Course 4 Play Lab Params 10_instruction: |
         Dodali smo još jednu zadnju funkciju za tvoje korištenje. Isprogramiraj tvoju igricu da zove "viši nivo" funkciju kada je "broj_poena"> 10. Da bi prešao/la na novi zadatak, igraj igricu, i načini da prođe nivo 4.
         
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Sada imamo zastave koje su previsoke za naš trenutni skok! Hajde da dodamo parametar "visina" našoj funkciji za skakanje. Kada se pritisne strelica gore dolazi do skoka od 100 piksela, ali sa pritiskom na strelicu dole dolazi do skoka od 300 piksela. Pazi, ne želiš da se udari u <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: 'Sada imamo zastave koje su previsoke za naš trenutni skok! Hajde da dodamo parametar "visina" našoj funkciji za skakanje. Kada se pritisne strelica gore dolazi do skoka od 100 piksela, ali sa pritiskom na strelicu dole dolazi do skoka od 300 piksela. Klikni na "preuredi" na funkciji za skakanje i promijeni je tako da koristi parametar za visinu, umjesto što samo skače za 100 piksela.'
       Course 4 Play Lab Params 3_instruction: 'Hajde da dodamo još jedan parametar našoj funkciji za skakanje tako da je možemo koristiti sa drugim likovima. Svaki lik je predstavljen sa brojem, počevši od jedan. Preuredi "skoči" funkciju tako da njena definicija uključuje "lik" parametar. '
       Course 4 Play Lab Params 4_instruction: 'Evo funkcija pod nazivom "izvidnica". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.'
@@ -841,13 +836,11 @@ bs:
       Course 4 Play Lab Params 9_instruction: 'Evo jedna od igrica na kojoj smo radili prije. Dodali smo funkciju "daj_bodove" koja uzima "bodovi" kao parametar. Preuredi funkciju tako da je parametar "bodovi" dodan na varijablu "bodovi_igrača". Prije nego pređeš na slijedeći zadatak, neka Pas dobije 10 poena. '
       Course 4 Play Lab Vars 1_instruction: 'Ne moraš pisati nikakav kod, samo pritisni na "pokreni" i igraj igricu! U ovoj igrici, ti si Pas koji pokušava da sakupi više zastava od Mačke. Upotrijebi strelicu prema dole za kontrolisanje Psa. Pritisni na "Završi" kada želiš prestati igrati.'
       Course 4 Play Lab Vars 2_instruction: 'Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!'
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: Evo nova vrsta igrice! Koristi strelicu za lijevo i desno za kretanje, i strelicu na gore za skakanje. Vidi ako možeš prikupiti sve zastave.
       Course 4 Play Lab Vars 3_instruction: Evo nova vrsta igrice! Koristi strelicu za lijevo i desno za kretanje, i strelicu na gore za skakanje. Vidi ako možeš prikupiti sve zastave.
       Course 4 Play Lab Vars 4_instruction: 'Sada koristimo varijablu pod nazivom "visina" za kontrolisanje koliko visoko će pas skočiti. Promijeni "visina" varijablu tako da pas može skočiti dovoljno visoko da bi dohvatio sve zastave. Savjet: nove zastave su na visini od 200 piksela.'
       Course 4 Play Lab Vars 5_instruction: 'Hajde da napravimo igricu! Prvo ćemo trebati oznaku za rezultat. Upotrijebi "postavi bodove na" blok da bi se postavio rezultat na 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Cool! Sada imamo varijablu za rezultat, ali kako ćemo je upotrijebiti? Šta misliš o dodavanju tvojoj rezultat varijabli svaki put kada pogodiš neprijatelja sa vatrenom kuglom? Upotrijebi "kada lik 2 dodirne nešto" događaj koji će prouzrokovati promjenu rezultata kada vatrena kugla udari u mačku. Možeš povećati rezultat postavljajući rezultat=rezultat+1. Dovedi rezultat do 10 (jedan po jedan!) da bi prošao ovaj nivo.'
       Course 4 Play Lab Vars 6_instruction: 'Kako bimo trebali bodovati u našoj igrici? Dodaj 1 svojoj "bodovi" varijabli svaki put kada Pas pogodi Mačku sa vatrenom kuglom. Upotrijebi "kada lik 2 dodirne nešto" događaj da bi se promijenio rezultat. Možeš povećati svoju varijablu postavljajući "bodovi=bodovi+1". Dovedi svoj rezultat do 10 (bod po bod!) da bi prošao/la ovaj nivo.'
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: Super. Hajde sada da se pobrinemo da ova igrice na bude baš prelagana. Svaki put kada si pogođen/a vatrenom kuglom, trebao/la bi izgubiti poen. Hajde da počnemo sa 10 poena tako da ne bude preteško. Neka tvoj rezultat padne sa 10 na 0 da bi prošao/la ovaj nivo.
       Course 4 Play Lab Vars 7_instruction: Super. Hajde sada da se pobrinemo da ova igrice na bude baš prelagana. Svaki put kada Pas (lik 1) bude pogođen sa vatrenom kuglom, ti bi trebao/la izgubiti poen. Hajde da počnemo sa 10 poena tako da ne bude preteško. Neka tvoj rezultat padne sa 10 na 0 da bi prošao/la ovaj nivo.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'Dobro, još jedna zadnja stvar. Hajde da postavimo da igrač može pobijediti (ili izgubiti). Koristi beskonačnu petlju da provjeriš vrijednost rezultata. Ako je rezultat veći od 20, neka neprijatelj nestane. Ako je rezultat manji od 0, neka igrač nestane. Klikni na "Završi" kada igra radi ono što ti želiš.'
       Course 4 Play Lab Vars 8_instruction: 'Hajde da postaivmo ovu igru tako Pas može pobijediti (ili izgubiti). Upotrijebi beskonačnu petlju za provjeru vrijednosti rezultata. Ako je rezultat veći od 20, neka neprijatelj (Mačka) nestane. Ako je rezultat manji od 0, neka igrač (Pas) nestane. Klikni na "Završi" kada igrica radi ono što ti želiš.'
@@ -859,7 +852,6 @@ bs:
         variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: Hajde da ovaj putpokušamo brojati neparne brojeve od 1 do 100.
       Course 4 Play Labs For Loops 3_instruction: Ako računamo sa većim korakom, brojimo još više za isto vrijeme. Pokušaj napraviti da pas broji od 10 do 1000, sa korakom od 10.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: Promjena priraštaja može biti korisna, ali još uvijek brojimo linearno (svaki broj je udaljen za istu vrijednost od posljednjeg broja). Šta ako želim brojati eksponencijalno? Bez mijenjanja postavke u ovoj petlji, možeš li brojati 1, 4, 9, 16, 25... (kvadrat brojač varijable)?
       Course 4 Play Labs For Loops 4_instruction: Promjena priraštaja može biti korisna, ali još uvijek brojimo linearno (svaki broj je udaljen za istu vrijednost od posljednjeg broja). Šta ako želim brojati eksponencijalno? Bez mijenjanja postavke u ovoj petlji, možeš li brojati 1, 4, 9, 16, 25... (kvadrat brojač varijable)?
       Course 4 Play Labs For Loops 5_instruction: 'U zadnjoj fazi smo računali kvadrat svakog broja. Pokušaj promijeniti "brojač ^ 2" na "brojač ^ 3" da bi računao kub svakog broja (1, 8, 27, 64, 125, 216, 343….)'
       Course 4 Play Labs For Loops 6_instruction: 'Sigurno se sjećaš da je prost broj bilo koji cijeli broj koji je djeljiv samo sa sobom i 1. Upotrijebi funkciju "da_li_je_prost_broj" da bi pronašao/la proste brojeve od 1 do 100.'
@@ -1322,7 +1314,6 @@ bs:
       NEW Course 4 Bee For Loops 7_instruction: 'Je si li se navikao/la na "od-do" petlje? Ovo je slično posljednjem zadatku, ali moraš sakupiti 2,4,6,8,10 nektar. Dali smo ti početni kod kojem nedostaju brojevi u brojač petljama. Hajde da sakupimo nešto nektra!'
       NEW Course 4 Bee For Loops 8_instruction: "Ako tvoja petlja broji prema gore, prirast je dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi sakupio/la 3, 6, 9 nektara?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Ako tvoja petlja broji prema dole, korak za povećanje se pri svakom prolazu kroz petlju oduzima od trenutne vrijednosti tvoje brojač varijable. Koliki bi trebao biti korak povećanja da bi se sakupilo 9, onda 6, i 3 nektra?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: 'Vrijeme je za slobodno igranje! Zabavi se sa svim blokovima u tvojoj alatnoj traci. '
       NEW Course 4 Play Lab Params 11_instruction: 'Vrijeme je za slobodno igranje! Zabavi se sa svim blokovima u tvojoj alatnoj traci. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Popuni ulazne parametre za lika sa brojevima (1, 2, i 3) da bi napravio/la da ovi likovi izviđaju. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Šta misliš da će učinii ovaj kod? Klikni na "Pokreni" da vidiš šta će se desiti".'
@@ -1548,10 +1539,8 @@ bs:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -1780,6 +1769,13 @@ bs:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

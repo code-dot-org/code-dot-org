@@ -44,8 +44,8 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForeverTooltip":function(d){return "Executa les accions en aquest bloc repetidament mentre l'app s'està executant."},
 "shareApplabTwitter":function(d){return "Comprova l'app que he fet. Vaig crear-la jo amb @codeorg"},
 "shareGame":function(d){return "Comparteix la teva app:"},
-"stepIn":function(d){return "ficar-se"},
-"stepOver":function(d){return "esquivar"},
-"stepOut":function(d){return "Abandonar"},
+"stepIn":function(d){return "Pas a pas"},
+"stepOver":function(d){return "Funcions pas a pas"},
+"stepOut":function(d){return "Executa la resta del codi"},
 "viewData":function(d){return "Veure dades"},
 "yes":function(d){return "Sí"}};

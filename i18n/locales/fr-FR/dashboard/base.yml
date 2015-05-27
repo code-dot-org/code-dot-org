@@ -64,8 +64,8 @@ fr:
     need_confirmation: "Vous n'avez pas reçu les instructions de confirmation ?"
     need_unlock: "Vous n'avez pas reçu les instructions de déverrouillage ?"
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} étudiants ont déjà signé.'
+    teacher_count: '%{count} enseignants ont déjà signé.'
     overview_student: |-
       Inscrivez-vous pour un compte pour suivre vos progrès. Votre email est utilisé principalement pour vous permettre de vous connecter et pour récupérer votre mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique de confidentialité</a>.
     overview_teacher: "Enseigner l'informatique à votre salle de classe en vous inscrivant pour un compte. <p/> Vous pourrez ajouter vos élèves et suivre leurs progrès."
@@ -234,7 +234,7 @@ fr:
       signup: S’inscrire
       already_registered: Déjà inscrit ?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'progrès de %{name}'
       progress: Votre progression
       lines: 'Nombre de lignes de code : %{lines}'
       close: FERMER
@@ -303,9 +303,9 @@ fr:
     cant_remove_teacher_no_email: "%{teacher_name} ne peut être retiré de votre liste d'enseignants car vous n'avez pas enregistré d'adresse de messagerie"
     student_teacher_disassociated: "%{teacher_name} n'est plus considéré comme l'enseignant de %{student_name}"
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Visualisation des réponses
       student: Elève
-      try_it_yourself: Try it yourself
+      try_it_yourself: Essayez-le vous-même
   user:
     email_confirm_needed: "L'adresse de messagerie n'a pas été confirmée :"
     email_confirm_needed_required: "Votre addresse email %{email} n'a pas été confirmée :"
@@ -326,7 +326,7 @@ fr:
     classroom_activity: Activité manuelle
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} LIGNES DE CODE ÉCRIT PAR DES ÉTUDIANTS'
     all_courses: Présentation des cours 1, 2 et 3
     lesson_plans: Plans des cours
     signin_message: 'Déjà inscrit ? %{link}'
@@ -494,8 +494,8 @@ fr:
     baddomaintype: Un ou plusieurs items de votre domaine ont le mauvais type ou sont dans le mauvais ordre.
   text_match:
     placeholder: Entrez votre réponse ici
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Merci
+    open_response_body: Merci pour votre réponse !
   dialog:
     ok: OK
   time:

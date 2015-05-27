@@ -556,6 +556,14 @@ id:
         CSPPD:
           new stage: tahap baru
           Introduction to PD: Pengantar PD
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Dampak dari Ilmu Komputer
+          Growth Mindset: pertumbuhan Pola pikir
+          Teaching Strategies: Strategi pengajaran
+          Preparing for in-person PD: Bersiap-siap untuk di-orang PD
         CSPLessonSamples:
           title: sampel pelajaran CSP
           description_short: sampel pelajaran untuk csp
@@ -821,6 +829,13 @@ id:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: kompresi Teks
+          Pixelation: Pixelation / pikselasi
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar

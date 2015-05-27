@@ -611,6 +611,14 @@
         CSPPD:
           new stage: new stage
           Introduction to PD: Uvod u Profesionalni Razvoj
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: Studio Kodiranja Primjeri za Lekciju
           description_short: primjeri lekcije za studio kodiranja
@@ -893,6 +901,13 @@
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pikselizacija
         algebraPD2b:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru

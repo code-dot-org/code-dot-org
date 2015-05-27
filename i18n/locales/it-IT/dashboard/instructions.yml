@@ -337,18 +337,13 @@ it:
         Scrivete una funzione all'interno del blocco chiamato "controlla il fiore per fare il miele."  
         La vostra funzione deve controllare quanto nettare ha il
         fiore viola e raccoglierlo, andare avanti, e poi fare il miele.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+      4-5 Bee Conditionals Assessment 1_instruction: 'Valutazione: Questo codice è sbagliato. Completa la funzione "ottieni il nettare o produci il miele", poi chiamala per raccogliere tutto il nettare e il miele. Ricorda che i fiori viola possono avere 3, 2 o 1 dosi di nettare.'
+      4-5 Bee Debugging 1_instruction: Questi blocchi sono pieni di errori. Riesci a sistemarli?
       4-5 Bee Debugging 10_instruction: Trova gli errori e correggili.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
+      4-5 Bee Debugging 11_instruction: Sta effettuando il conteggio correttamente?
+      4-5 Bee Debugging 2_instruction: "Aiuta l'ape a ottenere il nettare e produrre il miele."
       4-5 Bee Debugging 3_instruction: Trova gli errori e correggili.
-      4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
+      4-5 Bee Debugging 4_instruction: Questi blocchi non funzionano. Qual è la figura?
       4-5 Bee Debugging 5_instruction: Qualcosa non è corretto qui...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
@@ -408,10 +403,7 @@ it:
         solve a more complex maze? If you do it right, I can walk any curvy path no
         matter the length.
       4-5 Maze Conditionals 2_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
+      4-5 Maze Conditionals 3_instruction: 'Utilizza il blocco "se" per farmi decidere quando svoltare. Suggerimento: hai bisogno di un solo ulteriore blocco, ma impara da come lo abbiamo impostato noi in modo tale che, la prossima volta, tu riesca a farlo per conto tuo.'
       4-5 Maze Conditionals 4_instruction: |
         Ok, this is just like the last puzzle,
         but you need to remember how you used the "if" block and the "repeat"
@@ -457,12 +449,8 @@ it:
       4-5 Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the triangle
         code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 7_instruction: 'Ripeti questo disegno 10 volte. Di quanto devi ruotare ogni volta che ripeti il ciclo? (Suggerimento: quanto fa 360 diviso 10?)'
+      4-5 Nested Loops 8_instruction: 'Ripeti questo disegno 6 volte. Di quanto devi ruotare ogni volta che ripeti il ciclo? (Suggerimento: quanto fa 360 diviso 6?)'
       4-5 Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       4-5 Nested Loops Assessment 1_instruction: |
         Use a nested loop to complete the
@@ -978,12 +966,7 @@ it:
         Loop this design 10 times and make sure to
         turn in between each shape that's drawn. Here's a hint for how much you
         have to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1_instruction: |
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to turn on the go from left
-        to right, top to bottom, filling in the squares when it sees a 1 and ignoring
-        it when it sees a 0. Run this code to see how the artist uses binary to draw
-        this pattern.
+      Course 4 Artist Binary 1_instruction: "Ecco una funzione che riceve una stringa binaria, cioè fatta di 1 e 0, e istruisce l'artista su come muoversi da sinistra a destra e dall'alto al basso riempendo i quadratini quando incontra un 1 e ignorandoli quando invece incontra uno 0. Esegui il codice per vedere come l'artista usa gli elementi binari 1 e 0 per disegnare la figura."
       Course 4 Artist Binary 2_instruction: |
         Which of these binary strings could
         you loop 8 times to draw this image?
@@ -1369,7 +1352,6 @@ it:
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: "Puoi completare la maggior parte di questa immagine impostando un ciclo con un numero binario a 5 bit - poi avrai bisogno di un altro numero a 4 bit per ottenere l'angolo in basso a destra."
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1384,22 +1366,12 @@ it:
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
         to collect all of the flags.
       Course 4 Play Lab Params 10_instruction: |-
         Abbiamo aggiunto un'ultima funzione che puoi usare. Programma il tuo gioco per chiamare la funzione "su di un livello" se "punti_giocatore">10. Gioca e supera il livello 4 per passare al gioco successivo.
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1443,10 +1415,6 @@ it:
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1472,11 +1440,6 @@ it:
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -1515,7 +1478,6 @@ it:
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: Cambiare il passo può essere utile, ma stiamo ancora contando in modo lineare (la distanza tra due valori successivi è sempre la stessa). Come potremmo fare se volessimo contare in modo esponenziale? Senza cambiare le impostazioni del ciclo con contatore, riesci a contare 1, 4, 9, 16, 25... (il contatore al quadrato)?
       Course 4 Play Labs For Loops 4_instruction: Cambiare il passo può essere utile, ma stiamo ancora contando in modo lineare (la distanza tra due valori successivi è sempre la stessa). Come potremmo fare se volessimo contare in modo esponenziale? Senza cambiare le impostazioni del ciclo con contatore, riesci a contare 1, 4, 9, 16, 25... (il contatore al quadrato)?
       Course 4 Play Labs For Loops 5_instruction: |-
         Nell'ultima fase abbiamo contato il quadrato di ogni numero. Prova a cambiare "contatore ^ 2" in "contatore ^ 3" per contare il cubo di ogni numero (1, 8, 27, 64, 125, 216, 343….)
@@ -2224,9 +2186,6 @@ it:
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: |
-        It's Free Play time!
-        Have fun with all the blocks in your tool box. 
       NEW Course 4 Play Lab Params 11_instruction: |
         It's Free Play time! Have fun
         with all the blocks in your tool box. 
@@ -2465,10 +2424,8 @@ it:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -2697,6 +2654,13 @@ it:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how
