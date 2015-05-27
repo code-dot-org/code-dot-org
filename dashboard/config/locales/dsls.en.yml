@@ -395,6 +395,9 @@ en:
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         U1L13 Text Compression: U1L13 Text Compression
+      U1L14 Student Lesson Summary:
+        description here: description here
+        title: title
       U1L16 Student Lesson Introduction:
         description here: description here
         title: title
@@ -474,6 +477,8 @@ en:
         Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
       U3L06 Student Lesson Introduction:
         APIs and Function Parameters: APIs and Function Parameters
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -711,16 +716,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    multi:
-      U3L06 Assessment2:
-        APIs and Parameters Question 3: APIs and Parameters Question 3
-        Left(45): Left(45)
-        Left(90): Left(90)
-        ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
-        : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
-        forward100( ): forward100( )
-        forward283( ): forward283( )
-        forward50( ): forward50( )
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -944,6 +939,11 @@ en:
       U1L13 Reflection Free Response:
         'Conclusion 3: Text Compression': 'Conclusion 3: Text Compression'
         'If you send a compressed segment of text would your friend will be able to read it?  ': 'If you send a compressed segment of text would your friend will be able to read it?  '
+      U1L14 - Assessment 2:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+      U1L14 Assessment 1:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+        'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? ': 'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? '
       U1L16 Reflection Free Response:
         'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -1041,8 +1041,11 @@ en:
         Free Response Reflection: Free Response Reflection
       U3L06 Free Response Wrap Up:
         APIs and Function Parameters Wrap Up: APIs and Function Parameters Wrap Up
+      U3L07 Free Response Getting Started:
+        'Looping and Random Numbers: Getting Started': 'Looping and Random Numbers: Getting Started'
       U3L07 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+        'Looping and Random Numbers: Reflection': 'Looping and Random Numbers: Reflection'
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '
