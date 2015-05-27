@@ -481,6 +481,8 @@ sv:
     wrong_body: 'Svaret du angett är inte korrekt.  Försök igen!'
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Fel lösning
     wrong_body: 'Din lösning är inte rätt.  Försök pånytt!'

@@ -472,6 +472,8 @@ bg:
     wrong_body: 'Отговорът, който сте въвели не е правилен.  Моля опитайте отново!'
     correct_title: Правилно
     correct_body: Това е верният отговор.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Неправилно решение
     wrong_body: 'Решението, което сте въвели не е правилно.  Моля опитайте отново!'

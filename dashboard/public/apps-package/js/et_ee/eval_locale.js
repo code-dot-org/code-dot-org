@@ -157,7 +157,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "ring (raadius, stiil, värv)"},
-"displayBlockTitle":function(d){return "näita"},
+"displayBlockTitle":function(d){return "Hinda"},
 "ellipseBlockTitle":function(d){return "ellips (laius, kõrgus, stiil, värv)"},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"kuva\" klotsi külge?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},

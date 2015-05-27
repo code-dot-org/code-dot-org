@@ -2,7 +2,7 @@
   hello: Hallo Welt
   select_language: Bitte wähle Deine Sprache
   computer_science: Informatik
-  computer_science_edweek: Computer Science Education Week
+  computer_science_edweek: Informatik-Bildungswoche
   csedweek_dates: 8. - 14. Dezember, 2014
   csedweek_banner_hoc: 'Die <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Stunde des Code</a> kommt näher. Dies ist ein Aufruf an alle
@@ -70,13 +70,13 @@
     Kursen</a> weitermachen oder lass Dir zeigen, <a href='/learn/beyond'>was du nach
     der ersten Lernstunde noch alles anstellen kannst</a>.
   thanks_for_submitting: Danke für's Mitmachen!
-  if_you_enjoyed: Wenn Ihnen das Lernen Spaß gemacht hat, Fragen Sie Freunde, es zu
-    versuchen!  Wir wollen die ganze Welt zum lernen bringen.
+  if_you_enjoyed: Wenn dir das Lernen Spass gemacht hat, erzähle deinen Freunden davon.
+    Wir möchten, dass die ganze Welt Programmieren lernt.
   personalize_certificate: Personalisiere dein Zertifikat
   share_achievement: Teile deinen Erfolg
   beyond_hour_message: Mache nun mit<a href='http://studio.code.org'> anderen Kursen</a>
-    weiter oder finde heraus, <a href='/learn/beyond'> was du nach der Ersten Programmierstunde
-    alles anstellen kannst</a>.
+    weiter, oder finde heraus was du <a href='/learn/beyond'> nach der ersten Programmierstunde</a>
+    alles noch tun kannst.
   leaderboards_for_hoc: Rangliste zur Programmierstunde.
   support_url: http://support.code.org/
   country: Land
@@ -88,17 +88,17 @@
   girls_team: Mädchenteam
   boys_team: Jungsteam
   tell_the_world: Sage es der Welt!
-  thanks_for_voting: Vielen Dank für die Abstimmung!
+  thanks_for_voting: Vielen Dank für die Bewertung!
   share_on_facebook: Auf Facebook teilen
-  share_on_twitter: Über Twitter teilen
+  share_on_twitter: Auf Twitter teilen
   beyond_an_hour: Über eine Stunde Code
   get_started: Start
   i_agree: Ich stimme zu
   participant_select: '- Auswählen -'
   participant_student: Schüler
-  participant_parent: Eltern
+  participant_parent: Elternteil
   participant_educator: Lehrer
-  participant_engineer: informatiker
+  participant_engineer: Informatiker
   participant_other: Keine der Aussagen trifft zu
   print_all: Alles drucken
   print_ice_art: Drucke Deine Eis Kunst
@@ -110,8 +110,8 @@
   privacy_practices_children: Siehe unsere Datenschutzbestimmungen für Kinder
   petition_thankyou: Vielen Dank für das Unterzeichnen der Petition
   continue_learning_header: Lerne über die Erste Lernstunde hinaus
-  continue_learning_body: Es gibt viele Möglichkeiten. Du kannst online lernen, oder
-    an deiner örtlichen Schule, oder in einem Sommercamp.
+  continue_learning_body: Es gibt viele Möglichkeiten. Du kannst online lernen oder
+    an deiner Schule vor Ort oder während einer Sommerfreizeit.
   learn_next_level: Weiter zum nächsten Level
   learn_online: Versuche andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
@@ -215,7 +215,7 @@
   homepage_slot_text_link_host: Organisiere eine Hour of Code
   homepage_slot_text_link_hocserved: '# bedient'
   homepage_slot_text_title_students: Schüler
-  homepage_slot_text_blurb_students: Entdecken Sie all unsere Tutorials
+  homepage_slot_text_blurb_students: Entdecke all unsere Tutorials
   homepage_slot_text_link_codestudio: Probiere Code Studio aus
   homepage_slot_text_link_local: Finde Unterricht vor Ort
   homepage_slot_text_link_othercourses: Andere Onlinekurse
@@ -231,7 +231,7 @@
   homepage_slot_text_link_donate: Spende
   homepage_header_codestudio: Kreationen der Schüler im Code Studio
   homepage_header_donors: Code.org dankt seinen Unterstützern
-  homepage_donors_seall: Sieh alle
+  homepage_donors_seall: Alle anzeigen
   homepage_donors_donate: Spenden
   contact_form_topic_student: Ich bin ein Schüler
   contact_form_topic_parent: Ich bin ein Elternteil
@@ -426,7 +426,7 @@
   dashboard_glossary: Glossar
   dashboard_classroom_strategies: Lernstrategien für Lehrkräfte
   dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Lösen von Puzzles:'
+  dashboard_puzzle_solving: 'Lösen von Aufgaben:'
   dashboard_student_worksheet: Schüler Arbeitsblatt
   dashboard_teacher_worksheet: Lehrer Arbeitsblatt
   dashboard_grade_k: Kindergarten
@@ -449,12 +449,12 @@
   dashboard_sections_email_question: Haben alle Schüler eine gültige E-Mail Adresse?
   dashboard_sections_account_creation_question: Wer richtet die Zugänge für die Schüler
     ein?
-  dashboard_sections_password_question: Welche Passwörter verwenden die Studenten?
+  dashboard_sections_password_question: Welche Passwörter verwenden die Schüler?
   dashboard_sections_picture_account_creation: Ein von Code.org zugeordnetes Bild
   dashboard_sections_word_account_creation: Ein von Code.org zugeordnetes einfaches
     Wort
   dashboard_sections_sign_in_question: Wo melden sich die Schüler an?
-  dashboard_sections_sign_in_unique: Einzelne Webseiten werden in dem "Verwalte Studenten"
+  dashboard_sections_sign_in_unique: Einzelne Webseiten werden in dem "Verwalte Schüler"
     Reiter dargestellt
   dashboard_sections_sign_in_main: http://code.org und klicke auf "Anmelden"
   dashboard_sections_password_account_creation: Vom Schüler erstelltes Passwort
@@ -626,8 +626,8 @@
   khanhe_shortdescription: Lerne Zeichnen in JavaScript
   khanfr_shortdescription: Lerne Zeichnen in JavaScript
   khanpl_shortdescription: Lerne Zeichnen in JavaScript
-  tynker_shortdescription: Lerne durch das Lösen von lustigen Rätseln zu programmieren
-    und baue deine eigenen Handy-Spiele.
+  tynker_shortdescription: Lerne durch das Lösen von spaßigen Rätseln zu programmieren
+    und erstelle deine eigenen Handy-Spiele.
   scratch_shortdescription: Erstelle interaktive Spiele, Geschichten und Animationen.
   lightbot_shortdescription: Programmiere den Roboter "Lightbot" mit Schleifen und
     Abläufen, um Rätsel zu lösen!
@@ -649,7 +649,7 @@
   codespark_shortdescription: '"Foos" ist ein Spiel, das Spass macht und bei dem Kinder
     das Programmieren lernen.'
   kodable_shortdescription: Ein lustiges iPad-Spiel vermittelt Methoden der Programmierung
-  tynkerapp_shortdescription: Lerne programmieren durch das lösen von spaßigen Codierungsrätseln.
+  tynkerapp_shortdescription: 'Lerne programmieren durch das Lösen von spaßigen Programmierungs-Rätseln. '
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickele Dein eigenes Spiel, z.B. Flappy Bird, Shark
     oder Submarine
@@ -704,9 +704,9 @@
     Deinen Namen zu verwandeln, eine Weihnachtskarte zu erstellen oder ein Spiel zu
     entwickeln.
   lightbot_longdescription: Steuere Deinen Roboter "Lightbot" um alle blauen Kacheln
-    aufleuchten zu lassen. "Lightbot" ist ein Puzzle, das Dir spielerisch das Programmieren
+    aufleuchten zu lassen. "Lightbot" ist ein Rätsel Spiel, das Dir das Programmieren
     beibringt. Lerne es, Programmabläufe zu erstellen, Funktionen zu programmieren
-    und nutze Schleifen, um die verschiedenen Levels zu absolvieren. Ideal für alle
+    und nutze Schleifen, um die verschiedenen Level zu absolvieren. Ideal für alle
     Altersgruppen.
   thinkersmith_longdescription: Durch ein vorbereitetes "Roboter Vokubular" lernen
     die Schüler gemeinsam spezifische Probleme zu lösen, ohne sie zunächst ausgiebig
@@ -750,13 +750,13 @@
     die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig
     mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der
     Programmierung Übungen helfen. '
-  groklearning_longdescription: Verwenden Sie die Programmiersprache Python, um ein
-    Chatbot namens "Eliza" als ein Roboter-Psychotherapeut handeln zu erstellen. Sie
-    werden Eliza Lehren, wie man spricht und das richtige zu sagen. Können sie Ihre
-    Freunde täuschen zu denken sie ist ein Mensch und keinen Computer?
-  quorum_longdescription: Dieses Tutorial ist für die Sehbehinderten zugänglich und
-    arbeitet mit Screenreader. Begleiten Sie Maria auf eine Tour, wie sie einem Biologielabor
-    als Programmierer beitritt und die Quorum Programmiersprache lernt. Dieses Tutorial
+  groklearning_longdescription: Verwende die Programmiersprache Python, um ein Chatbot
+    namens "Eliza" der wie ein Roboter-Psychotherapeut handelt zu erstellen. Sie werden
+    Eliza Lehren, wie man spricht und das richtige zu sagen. Kannst du deine Freunde
+    täuschen und sie dazu bringen zu denken sie ist ein Mensch und kein Computer?
+  quorum_longdescription: Dieses Tutorial ist für Sehbehinderte zugänglich und funktioniert
+    mit Screenreadern. Begleite Maria auf ihrer Tour wenn sie einem Biologielabor
+    als Programmierer beitritt und die Programmiersprache Quorum lernt. Dieses Tutorial
     ist Schüler-geführt mit online-Beispiel-Aktivitäten.
   codespark_longdescription: '"Foos" ist ein spannender und kindgerechter Ansatz,
     Programmiersprachen zu erlernen. Die Schüler programmieren ihre Figuren und bringen
@@ -765,38 +765,36 @@
   kodable_longdescription: '"Kodable" ist ein iPad Spiel für das Selbststudium, das
     über 5-jährige an das Programmieren heranführt. Dabei kann ein Lehrer oder Elternteil
     unterstützen, muss es aber nicht.'
-  tynkerapp_longdescription: Lerne zu programmieren, indem du lustige Quellcode- Puzzleteile
-    zusammensetzt. Mühelos entwirfst du Spiele und Geschichten unter Verwendung von
-    thematischen Grafiken, 10+ Spiele- Bausätzen und vielseitig verwendbaren Figuren.
-    Eine Internetverbindung ist nicht notwendig. Du kannst auf deine Entwürfe auch
-    über das Internet zugreifen.
+  tynkerapp_longdescription: Lerne zu Programmieren, indem du spielerisch Programmierungs-Rätsel
+    löst. Mühelos entwirfst du Spiele und Geschichten unter Verwendung von thematischen
+    Grafiken, 10+ Spiele- Bausätzen und vielseitig verwendbaren Figuren. Eine Internetverbindung
+    ist nicht notwendig. Du kannst auf deine Kreationen auch über das Internet zugreifen.
   robomindnl_longdescription: 'Schüler lernen die Grundlagen der Programmierung durch
     die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig
     mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der
     Programmierung Übungen helfen. '
-  flappy_longdescription: Verwenden Sie Drag-and-Drop Programmierung um eigene Flappy
-    Bird Spiel zu machen, und machen Sie diese verschieden (Flappy Shark, Flappy Santa).
-    Fügen Sie das Spiel mit einem Klick auf ihr Handy.
-  bitsbox_longdescription: Passen Sie Ihr eigenes virtuelles Tablet an, programmieren
-    Sie dann eine Reihe von Apps zum Spielen und Teilen. Einfache Anleitungen machen
-    es möglich, dass sogar junge Kinder  echtes Javascript programmieren, und je fortgeschrittener
-    Sie sind, desto weiter werden Sie gehen.
+  flappy_longdescription: Verwende Drag-and-Drop Programmierung um ein eigenes Flappy
+    Bird Spiel zu erstellen und dieses zu verändern (z.B. Flappy Shark, Flappy Santa).
+    Lade das Spiel mit einem Klick auf dein Handy.
+  bitsbox_longdescription: Passe dein eigenes virtuelles Tablet an, programmiere dann
+    eine Reihe von Apps zum Spielen und Teilen. Einfache Anleitungen machen es möglich,
+    dass sogar junge Kinder  echtes Javascript programmieren, und je fortgeschrittener
+    du sind, desto weiter wirst du es schaffen.
   makegameswithus_longdescription: Lerne zu programmieren indem du ein iPhone-Spiel
     entwickelst welches eine neue und anfängerfreundliche Programkiersprache benutzt,
     genannt Swift! Kreiere ein Pok&eacute;mon inspiriertes Action Spiel und schreibe
     Programmierzeilen um deinem Monster neue Bewegungen beizubringen. Du wirst lernen
     wie man Variablen, Methoden und Objekte benutzt um deinem Monster beim gewinnen
     zu helfen!
-  touchdevelop_longdescription: 'Der touch freundliche Editor wird dich beim kreieren
-    von Pixel Art, beim lösen des Bär Puzzles oder beim entwickeln von deinem eigenem
-    springenden Vogel Spiel behilflich sein leiten. '
-  appinventor_longdescription: Unterhaltsam und schnelle video-Tutorials führen Sie
-    durch den Bau von drei einfache Apps für Ihr Android-Handy oder Tablet. Für Anfänger
-    und Experten gleichermaßen entwickelt, wird dieser Stunde des Codes Sie breit
-    zum starten machen um Ihre eigenen Anwendungen zu erstellen, bevor du dich versiehst.
-    Stellen Sie  Ihre eigene App-Kreationen her, die Sie mit Ihren Freunden teilen
-    können! Diese Aktivitäten eignen sich für Einzelpersonen und für Lehrer um die
-    mit Klassen durch zu führen.
+  touchdevelop_longdescription: 'Der touch-freundliche Editor wird dir beim Erstellen
+    von Pixel Art, beim Lösen des Bären Rätsels oder beim Entwickeln deines eigenen
+    FlappyBird Spiels behilflich sein. '
+  appinventor_longdescription: Unterhaltsame und schnelle Video-Anleitungen führen
+    dich durch die Entwicklung von drei einfachen Apps für dein Android-Handy oder
+    Tablet. Ob Anfänger oder Experte, diese Hour of Code bereitet dich darauf vor
+    deine eigenen Anwendungen zu erstellen. Stelle dir vor deine eigenen Apps mit
+    deinen Freunden teilen zu können! Diese Kurse eignen sich für Einzelpersonen,
+    aber auch für Lehrer mit ihren Klassen.
   blockly_longdescription: Haben Sie PCs mit langsamen (oder nicht Existent)-Internet-Zugang?
     Downloade die Blockly Tutorials, die der Vorläufer der Code.org Tutorials wurden
     - eine einzelne 3MB ZIP-Datei kann auf jedem Computer geladen oder von einem Memorystick
@@ -914,7 +912,7 @@
     von Geräten
   codehs_beyond_platformtext: Moderne Internet-Browser (kostenpflichtig)
   udemy_beyond_platformtext: Web-basiert
-  lynda_beyond_platformtext: Webb-basiert (kostenpflichtig)
+  lynda_beyond_platformtext: Web-basiert (kostenpflichtig)
   edx_beyond_platformtext: Moderne Internet-Browser
   coursera_beyond_platformtext: Moderne Internet-Browser
   udacity_beyond_platformtext: Moderne Internet-Browser
@@ -1020,9 +1018,9 @@
   hopscotch_beyond_longdescription: Schüler-geführte Tutorial, das iPad mit der Hopscotch
     Programmiersprache. Schüler werden Spiele und Apps für ihr iPad auf ihre iPad
     aufbauen. Schüler können individuell oder mit Freunden (max. 3 pro iPad) arbeiten.
-  pocketcode_beyond_longdescription: Erstellen Sie Ihr eigenes Spiel auf Ihrem Smartphone
-    mit Pocket-Code! Hilfe Fallschirmspringer Steve seine Parzellen zu liefern. Sie
-    können es mit Freunden und anderen Nutzern zum versuchen teilen!
+  pocketcode_beyond_longdescription: Erstelle dein eigenes Spiel auf deinem Smartphone
+    mit Pocket-Code! Hilf Fallschirmspringer Steve seine Pakete abzuliefern. Du kannst
+    es mit Freunden und anderen Nutzern zum Testen teilen!
   groklearning_beyond_longdescription: Ein Einführungskurs, in die Programmiersprache
     Python für Menschen mit keinerlei Programmiererfahrung. Unsere einzigartige Mischung
     aus einleitende Inhalte und Herausforderungen bringt Sie einem gründlichem Verständnis
@@ -1045,13 +1043,12 @@
     kannst Du das Spiel mit Deinen Freunden auf Facebook teilen. Du brauchst keine
     iPhone Programmierkenntnisse, solltest aber wissen, was Variable, Methoden und
     Objekte sind.
-  appinventor_beyond_longdescription: Unterhaltsam und schnelle video-Tutorials führen
-    Sie durch den Bau von drei einfache Apps für Ihr Android-Handy oder Tablet. Für
-    Anfänger und Experten gleichermaßen entwickelt, wird dieser Stunde des Codes Sie
-    breit zum starten machen um Ihre eigenen Anwendungen zu erstellen, bevor du dich
-    versiehst. Stellen Sie  Ihre eigene App-Kreationen her, die Sie mit Ihren Freunden
-    teilen können! Diese Aktivitäten eignen sich für Einzelpersonen und für Lehrer
-    um die mit Klassen durch zu führen.
+  appinventor_beyond_longdescription: Unterhaltsame und schnelle Video-Anleitungen
+    führen dich durch die Entwicklung von drei einfachen Apps für dein Android-Handy
+    oder Tablet. Ob Anfänger oder Experte, diese Hour of Code bereitet dich darauf
+    vor deine eigenen Anwendungen zu erstellen. Stelle dir vor deine eigenen Apps
+    mit deinen Freunden teilen zu können! Diese Kurse eignen sich für Einzelpersonen,
+    aber auch für Lehrer mit ihren Klassen.
   touchdevelop_beyond_longdescription: TouchDevelop ermöglicht die Erstellung von
     Apps auf iPad, iPhone, Android, PC, Mac, Windows Phone. Mit unserem Touch-freundlich-Editor
     macht coding-Spaß, auch auf Ihrem Handy oder Tablet!

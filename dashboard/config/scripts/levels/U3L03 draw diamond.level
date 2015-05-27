@@ -38,12 +38,13 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "app_width": "300",
     "app_height": "300",
     "slider_speed": "0.1",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-DrawDiamond.gif"
-  }
+  },
+  "md5": "5493fecaacc623b091f7decdce8b1ec4"
 }]]></config>
   <blocks/>
 </Applab>

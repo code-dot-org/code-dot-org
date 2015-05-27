@@ -65,8 +65,8 @@
     need_confirmation: Не получили письмо для подтверждения?
     need_unlock: Не получили письмо-инструкцию для разблокировки?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: 'Зарегистрировано учеников: %{count}.'
+    teacher_count: 'Зарегистрировано учителей: %{count}.'
     overview_student: Зарегистрироваться, чтобы отслеживать свои успехи. Ваш электронный
       адрес используется, главным образом, для  входа в систему и для восстановления
       пароля. Дополнительную информацию смотрите в наших <a href="http://code.org/privacy">Правилах  конфиденциальности</a>.
@@ -261,7 +261,7 @@
       signup: Зарегистрироваться
       already_registered: Уже зарегистрированы?
     popup:
-      progress_for_user: '%{name} прогресс'
+      progress_for_user: прогресс студента %{name}
       progress: Ваши результаты
       lines: 'Всего строк кода: %{lines}'
       close: ЗАКРЫТЬ
@@ -363,7 +363,7 @@
     classroom_activity: Урок без компьютера
   home:
     title: Студия кода
-    lines_of_code: '%{lines_count} СТРОК КОДА, НАПИСАННЫЕ СТУДЕНТАМИ'
+    lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: Уже зарегистрированы? %{link}
@@ -549,6 +549,8 @@
       раз!
     correct_title: Верно
     correct_body: Это правильный ответ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Неправильное решение
     wrong_body: Твоё решение неверно.  Пожалуйста, попробуй еще раз!

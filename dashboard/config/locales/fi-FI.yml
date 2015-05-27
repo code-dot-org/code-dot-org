@@ -540,6 +540,8 @@
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!
     correct_title: Oikein
     correct_body: Tämä on oikea vastaus.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!

@@ -39,20 +39,12 @@ DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropl
 };
 
 DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
   if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
     this.installTooltipsForCurrentCategoryBlocks();
   }
 };
 
 DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
       return;
@@ -80,10 +72,6 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
  * overlay as-is. Hide the tooltip on block picking explicitly.
  */
 DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (dropletEditor) {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
   dropletEditor.on('pickblock', function () {
     $('.tooltipstered').tooltipster('hide');
   });

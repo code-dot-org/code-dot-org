@@ -721,7 +721,8 @@
           Clicker Variable Basics: Clicker - Noções básicas de variáveis
           Events Unplugged: Eventos offline
           Beyond Buttons Toward Apps: Além dos botões para aplicativos
-          Improving the Clicker Game: Improving the Clicker Game
+          Improving the Clicker Game: Melhorando o jogo Clicker
+          Chatbot Challenge: Chatbot Challenge
         algebraPD3:
           title: DP - Fase 3
           description: Ensine álgebra com programação funcional com base em blocos
@@ -844,7 +845,93 @@
           Big Game: Grande jogo
         sciencePD2:
           Phase 2 Summer Workshop: Workshop de verão - Fase 2
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
         sciencePD3:
           new stage: nova fase
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
         Testing:
-          Testing: Testing
+          Testing: Testando
+        cspunit2:
+          title: CSP Unit 2 - The Internet
+          description_short: A Internet
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+        algebraPD2a:
+          title: Ciência da computação em álgebra PD
+          description: Ensine programação funcional com álgebra
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Defining Variables: Definir variáveis
+          Big Game - Variables: Big Game - Variables
+          'Play Lab: Defining Functions': 'Laboratório: definição de funções'
+          The Design Recipe: A receita de design
+          Big Game - Animation: Big Game - Animation
+          Booleans: Booleanos
+          Sam the Bat: O morcego Sam
+          Big Game - Booleans: Big Game - Booleans
+          Luigi's Pizza: Pizzaria do Luigi
+          Big Game - Player Movement: Big Game - Player Movement
+          Big GAme - Collision Detection: Big GAme - Collision Detection
+          Rocket-Height: Altura do foguete
+          Big Game - Collision Detection: Big Game - Collision Detection
+        allthethings:
+          Jigsaw: Quebra-cabeça
+          Maze: Labirinto
+          Artist: Artista
+          Bee: Abelha
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy bird
+          Bounce: Pingue-pongue
+          Multi: Multi
+          Match: Correspondência
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+        algebraPD2b:
+          title: Ciência da computação em álgebra PD
+          description: Ensine programação funcional com álgebra
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Writing Contracts: Escrevendo contratos
+          Defining Variables: Definir variáveis
+          Defining Functions: Definir funções
+          Rocket-Height: Altura do foguete
+          Booleans: Booleanos
+          'Eval: Conditionals': 'Eval: Condicionais'
+          Next Steps: Próximas etapas
+        Calc Define Funcs 5 - multiply 1:
+          'Eval: Defining Functions': 'Eval: definição de funções'

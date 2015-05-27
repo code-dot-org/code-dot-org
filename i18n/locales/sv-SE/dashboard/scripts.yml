@@ -636,6 +636,7 @@ sv:
           Events Unplugged: Events Unplugged
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -747,7 +748,93 @@ sv:
           Big Game: Big Game
         sciencePD2:
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
         sciencePD3:
           new stage: ny etapp
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+        cspunit2:
+          title: 'CSP Unit 2 - The Internet'
+          description_short: Internet
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+        algebraPD2a:
+          title: Datavetenskap i Algebra PD
+          description: Lär ut funktionell programmering genom algebra
+          Evaluation Blocks: Utvärderingsblock
+          Strings and Images: Strängar och bilder
+          Defining Variables: Definiera variabler
+          Big Game - Variables: 'Big Game - Variables'
+          "Play Lab: Defining Functions": 'Play lab: Definiera funktioner'
+          The Design Recipe: Design recept
+          Big Game - Animation: 'Big Game - Animation'
+          Booleans: Booleska värden
+          Sam the Bat: Sam Bat
+          Big Game - Booleans: 'Big Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          Big Game - Player Movement: 'Big Game - Player Movement'
+          Big GAme - Collision Detection: 'Big GAme - Collision Detection'
+          Rocket-Height: Rakethöjd
+          Big Game - Collision Detection: 'Big Game - Collision Detection'
+        allthethings:
+          Jigsaw: Pussel
+          Maze: Labyrint
+          Artist: Artist
+          Bee: Bee
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Studsa
+          Multi: Multi
+          Match: Matcha
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+        algebraPD2b:
+          title: Datavetenskap i Algebra PD
+          description: Lär ut funktionell programmering genom algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Datavetenskapens pedagogik
+          Teacher Dashboard: Lärare Dashboard
+          Evaluation Blocks: Utvärderingsblock
+          Strings and Images: Strängar och bilder
+          Writing Contracts: Skriva kontrakt
+          Defining Variables: Definiera variabler
+          Defining Functions: Definiera funktioner
+          Rocket-Height: Rakethöjd
+          Booleans: Booleska värden
+          "Eval: Conditionals": 'Eval: villkorssatser'
+          Next Steps: Nästa steg
+        Calc Define Funcs 5 - multiply 1:
+          "Eval: Defining Functions": 'Eval: Definiera funktioner'

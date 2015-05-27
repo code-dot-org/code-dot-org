@@ -268,7 +268,10 @@
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Tietokonepelit ja koordinaattitasot
-        desc: Tietokonepelit ja koordinaattiavaruus -oppitunnin kuvaus
+        desc: Tutustu miten rakastamasi videopelit perustuvat matematiikkaan. Tutki
+          kuinka matemaattiset lausekkeet ja koordinaattitaso auttavat ymmärtämään
+          videopelien toimintaa. Sitten voit alkaa suunnitella videopeliä, jonka tulet
+          tekemään.
         video: alg_11_coordinate_plane
       Contracts:
         title: Sopimukset
@@ -279,14 +282,19 @@
         desc: Suunnitteluresepti-oppitunnin kuvaus
         video: alg_8_design_recipe
       Booleans:
-        title: Totuusarvot
-        desc: 'Totuusarvot: oppitunnin kuvaus'
+        title: Totuusarvot ja logiikka
+        desc: Totuusarvot ovat neljäs ja viimeinen tietotyyppi, jonka opit tällä kurssilla.
+          Tässä harjoituksessa opit mitä totuusarvot ovat, ja kuinka ne auttavat kirjoittamaan
+          loogisesti toimivia funktioita
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
         desc: Ehtolauseet ja osittaiset funktiot -oppitunnin kuvaus
         video: alg_10_conditionals
       CollisionDetection:
-        title: Törmäyksen tunnistaminen
-        desc: Törmäyksen tunnistaminen -oppitunnin kuvaus
+        title: Törmäyksentunnistus ja Pythagoraan lause
+        desc: Näytöllä olevien kohteiden toisiinsa osumisen tunnistus on tärkeä osa
+          useimmissa peleissä. Tällä oppitunnilla katsomme kuinka Pythagoraan lausetta
+          ja etäisyysfunktiota voidaan käyttää mittaamaan kahden pisteen välinen etäisyys
+          tasolla, ja sitten päätellä koskevatko nämä pisteet (tai pelin hahmot) toisiaan.
         video: alg_16_biggame_collision_detection

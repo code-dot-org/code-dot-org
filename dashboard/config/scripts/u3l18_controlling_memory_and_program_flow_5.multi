@@ -1,12 +1,17 @@
 name 'U3L18 Controlling Memory and Program Flow 5'
 title 'Controlling Memory and Control Quiz'
-description 'Select the programming technique that best fits the described game feature.'
+type 'multi2'
+description ''
 
-question '5. You want to change the size of the image based upon its location on the screen (i.e. the higher it is on the screen the smaller it appears).'
-right 'conditional'
-wrong 'variable'
-wrong 'both'
+question 'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. '
+right ‘Remember things during play’
+right ‘Make decisions’
+right ‘Make calculations’
+wrong ‘track of time’
+right ‘store information permanently’
 
 markdown <<MARKDOWN
+### Desired program behavior
 
+Keep track of all time high score
 MARKDOWN

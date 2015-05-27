@@ -1,0 +1,10 @@
+name 'U3L03 Free Response Getting Started'
+title 'Creating Procedures Part 1: Getting Started'
+
+markdown <<MARKDOWN
+If you could add one drawing primitive to use in drawing the 3X3 grid from the previous class challenge easier, what would it be? 
+
+Why would you want to add this primitive? 
+
+Are there other drawing primitives you might want to add?
+MARKDOWN

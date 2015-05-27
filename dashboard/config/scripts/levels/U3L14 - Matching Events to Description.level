@@ -5,7 +5,7 @@
   "properties": {
     "questions": [
       {
-        "text": "Triggers constantly while hovering over a button."
+        "text": "Triggers constantly while moving over a button."
       },
       {
         "text": "Triggers once, the instant mouse hovers over the button"

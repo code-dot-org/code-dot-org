@@ -1,0 +1,19 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-22T22:40:44.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "CSP PD Overview",
+    "markdown": "## CSP PD Overview\n\nThe Code.org PD program supports teachers with diverse teaching backgrounds. Whether you are new to teaching computer science (CS) or you have experience teaching other CS courses, the PD program is designed to promote growth in your teaching practice, providing space for you to become comfortable with the curricular materials and associated teaching strategies.\n\n### Program features that facilitate growth:\n\n+ **Professional Development and Curriculum:** The Code.org CSP program is built with professional development (PD) and curriculum that flow together seamlessly, representing one cohesive set of resources that empowers teachers to deliver the course with confidence. Since the PD program lives both in-person and online, participants are supported throughout their first year of teaching CSP with PD that is \"job embedded.\" Many of the supports are available through the Code Studio Teacher Dashboard, which means teachers are able to go between the curricular and PD materials all in the same place.\n\n+ **Teaching and Learning in Context:** Our PD model focuses on classroom teaching and learning in context, enabling participant to engage with the curriculum both as learners and as teachers. By experiencing content as an active learner, participants have important insight into the experiences their students will have during the academic year. By interacting with content as instructors, participants gain essential experience with using the curricular materials and resources to plan and deliver lessons. In both cases, this method of diving into the curriculum better prepares teachers to deliver the course to their students, giving them experience with the content by using the classroom materials, which can directly inform their instruction.\n\n+ **A collaborative, participant-centric approach:** Workshops and activities are built to encourage participants and facilitators to share their expertise from the field, and to bring the strategies they've used in other classes to CSP. Our PD program provides an opportunity to learn from everyone in the room--- with facilitators modeling behavior and pedagogical approaches, participants sharing their own approaches by planning and delivering lessons, and with small and whole group discussions about what works in the classroom. Using a participant--centric approach, this PD does not frame workshop leaders as gurus, rather they are facilitators that guide participants through the process of preparing to deliver this course. \n\n<br />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  },
+  "md5": "c8d580510cdac12f8438ff6ae0c3f6ab"
+}]]></config>
+</External>

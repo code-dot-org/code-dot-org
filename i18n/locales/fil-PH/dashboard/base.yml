@@ -477,6 +477,8 @@ fil:
     wrong_body: Ang sagot na iyong ipinasok ay hindi tama. Pakisubukang uli!
     correct_title: Tama
     correct_body: Iyon ay ang tamang sagot.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"

@@ -117,7 +117,7 @@ nl:
         if_else: Als-anders blok
         loop_times: Herhaal Keer blok
         loop_until: Herhaal Totdat Blok
-        loop_while: Terwijl Blok
+        loop_while: Zolang blok
         loop_for: Teller Blok
         function: Functies
         parameters: Functies met Parameters
@@ -444,24 +444,24 @@ nl:
         csp_pixelation_color_3: 'Kleur pixelation widget - Deel 3'
         csp_pixelation_bw: Zwart-wit pixelation widget
         csp_U1L14_tipstricks: 'Deel 1 Les 14 Tips & Trucs voor de Leraar'
-        csp_textcompression: Text compression widget
-        alg_1_intro: 'CS in Algebra - Introduction'
-        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
-        alg_3_pemdas: 'CS in Algebra - Order of Operations'
-        alg_4_data_types: 'CS in Algebra - Data Types'
-        alg_5_contracts: 'CS in Algebra - Contracts'
-        alg_6_variables: 'CS in Algebra - Variables'
-        alg_7_function: 'CS in Algebra - Functions'
-        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
-        alg_9_booleans: 'CS in Algebra - Booleans'
-        alg_10_conditionals: 'CS in Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        csp_textcompression: Tekst compressie widget
+        alg_1_intro: 'CS in de Algebra - Inleiding'
+        alg_2_eval_block: 'CS in de Algebra - evaluatie blokken'
+        alg_3_pemdas: 'CS in de Algebra - volgorde van bewerkingen'
+        alg_4_data_types: 'CS in de Algebra - gegevenstypen'
+        alg_5_contracts: 'CS in de Algebra - contracten'
+        alg_6_variables: 'CS in de Algebra - variabelen'
+        alg_7_function: 'CS in de Algebra - functies'
+        alg_8_design_recipe: 'CS in de Algebra - ontwerp recept'
+        alg_9_booleans: 'CS in de Algebra - Booleans'
+        alg_10_conditionals: 'CS in de Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in de Algebra - coördinaat vliegtuig'
+        alg_12_biggame_variables: 'CS in de Algebra - Big Game variabelen'
+        alg_13_biggame_animation: 'CS in de Algebra - Big Game animatie'
+        alg_14_biggame_booleans: 'CS in de Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in de Algebra - Big Game Update speler'
+        alg_16_biggame_collision_detection: 'CS in de Algebra - Big Game botsingdetectie'
+        alg_17_sambat_compound_booleans: 'CS in de Algebra - samengestelde Booleans'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'
@@ -530,6 +530,6 @@ nl:
         name_function: Schrijf hier de naam van je functie
         Infinity_move_right_runbutton: Voeg hier een verplaats blok toe
         Infinity_move_directions_callout: Welk blok zal Baymax omhoog laten gaan wanneer de pijl naar boven is ingedrukt?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Gebruik deze pijlen om te sturen
         Infinity_move_collide_callout: Speel een geluid af wanneer deze gebeurtenis plaatsvindt.
         Infinity_repeat_callout: Zet hierin verplaats blokken

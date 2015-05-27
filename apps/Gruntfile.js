@@ -388,7 +388,7 @@ config.jshint = {
   all: [
     'Gruntfile.js',
     'tasks/**/*.js',
-    'src/**/*.js',
+    'src/**/*.js*',
     'test/**/*.js',
     '!src/hammer.js',
     '!src/lodash.js',

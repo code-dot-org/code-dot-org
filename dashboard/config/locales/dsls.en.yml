@@ -83,6 +83,9 @@ en:
       App Lab Feedback:
         App Lab Feedback: App Lab Feedback
         description here: description here
+      AppLab Level U3L19 - variable re-assignment challenge pt1:
+        AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
+        description here: description here
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -94,6 +97,37 @@ en:
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
+      CSPPD PD Phases:
+        CSPPD PD Phases: CSPPD PD Phases
+      CSPPD PD overview:
+        CSP PD Overview: CSP PD Overview
+      CSPPD PT description:
+        Performance Tasks: Performance Tasks
+        description of the CSP PT: description of the CSP PT
+      CSPPD Welcome Video:
+        Welcome Video: Welcome Video
+        Welcome to Online PD for CSP: Welcome to Online PD for CSP
+      CSPPD curriculum overview:
+        CSP Curriculum Overview: CSP Curriculum Overview
+        Overview of Curriculum: Overview of Curriculum
+      CSPPD end of p1:
+        CSPPD end of p1: CSPPD end of p1
+      CSPPD facilitators: {}
+      CSPPD forum introduction:
+        CSP Forum Introductions: CSP Forum Introductions
+        Forum Introductions: Forum Introductions
+      CSPPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: description here
+      CSPPD instructional materials:
+        CSPPD instructional materials: CSPPD instructional materials
+      CSPPD postsurvey: {}
+      CSPPD presurvey: {}
+      CSPPD program overview:
+        CSP Program Overview: CSP Program Overview
+        Overview of CSP Program: Overview of CSP Program
+      CSPPD teaching strategies video:
+        CSPPD teaching strategies video: CSPPD teaching strategies video
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -142,6 +176,9 @@ en:
       Hour of Code test content: {}
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
+      K5PD tour:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       Mixing Colors:
         description here: description here
         title: title
@@ -427,6 +464,12 @@ en:
       U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      U3L02 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      U3L03 Student Lesson Introduction:
+        Creating Procedures Part 1: Creating Procedures Part 1
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -450,14 +493,23 @@ en:
         Beyond Buttons: Beyond Buttons
       U3L18 Student Lesson Introduction:
         Controlling Memory and Program Flow: Controlling Memory and Program Flow
+      U3L19 - Arithmetic v Concatenation:
+        U3L19 - Arithmetic v Concatenation: U3L19 - Arithmetic v Concatenation
+        description here: description here
       U3L19 - Intro to variables:
         U3L19 - Intro to variables: U3L19 - Intro to variables
         description here: description here
       U3L19 - concatenate string with var:
         U3L19 - concatenate string with var: U3L19 - concatenate string with var
         description here: description here
+      U3L19 - done with variables finally:
+        description here: description here
+        title: title
       U3L19 - explanation diff between string and var name:
         U3L19 - explanation diff between string and var name: U3L19 - explanation diff between string and var name
+        description here: description here
+      U3L19 - improve your clicker game:
+        U3L19 - improve your clicker game: U3L19 - improve your clicker game
         description here: description here
       U3L19 - misconception variable assignment order pt1:
         U3L19 - misconception variable assignment order pt1: U3L19 - misconception variable assignment order pt1
@@ -483,6 +535,15 @@ en:
       U3L19 - variable breakdown intro:
         U3L19 - variable breakdown intro: U3L19 - variable breakdown intro
         description here: description here
+      U3L19 - variable scope explanation:
+        U3L19 - variable scope explanation: U3L19 - variable scope explanation
+        description here: description here
+      U3L19 - variable scope explanation pt2:
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
+      U3L19 - variable scope explanation pt3:
+        U3L19 - variable scope explanation pt3: U3L19 - variable scope explanation pt3
+        description here: description here
       U3L19 Student Lesson Intro:
         Clicker V.1: Clicker V.1
       U3L20 Student Lesson Introduction:
@@ -495,6 +556,26 @@ en:
         Natural Language Processing: Natural Language Processing
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
+      U3L25 Student Lesson Introduction:
+        Compound Conditionals: Compound Conditionals
+      U3L26 Student Lesson Introduction:
+        Strings and Substrings: Strings and Substrings
+      U3L27 Student Lesson Introduction:
+        Chatbot Challenge: Chatbot Challenge
+      U3L28 Student Lesson Introduction:
+        While Loop Basics: While Loop Basics
+      U3L29 Student Lesson Introduction:
+        While Loops and Counting: While Loops and Counting
+      U3L30 Student Lesson Introduction:
+        An Introduction to Arrays: An Introduction to Arrays
+      U3L31 Student Lesson Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      U3L32 Student Lesson Introduction:
+        Images are Arrays: Images are Arrays
+      U3L33 Student Lesson Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      U3L34 Student Lesson Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -570,6 +651,48 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
+      sciPD2 discussion:
+        Phase 2 Discussion: Phase 2 Discussion
+      sciPD2 discussion lesson1:
+        Lesson 1 Discussion: Lesson 1 Discussion
+      sciPD2 discussion lesson2:
+        Lesson 1 Discussion: Lesson 1 Discussion
+      sciPD2 discussion lesson3:
+        Lesson 3 Discussion: Lesson 3 Discussion
+      sciPD2 discussion lesson4:
+        Lesson 4 Discussion: Lesson 4 Discussion
+      sciPD2 discussion lesson5:
+        Lesson 5 Discussion: Lesson 5 Discussion
+      sciPD2 discussion wrapup:
+        Wrap-Up Discussion: Wrap-Up Discussion
+      sciPD2 eval:
+        Phase 2 Evaluation: Phase 2 Evaluation
+      sciPD2 implement:
+        Implementation Planning: Implementation Planning
+      sciPD2 resource common:
+        Phase 2 Common Forms: Phase 2 Common Forms
+      sciPD2 resource module1:
+        Phase 2 Resources: Phase 2 Resources
+      sciPD2 resource module2:
+        Phase 2 Module 2: Phase 2 Module 2
+      sciPD2 resource module3:
+        Phase 2 Module 3: Phase 2 Module 3
+      sciPD2 resource module4:
+        Phase 2 Module 4: Phase 2 Module 4
+      sciPD2 resource reference:
+        Phase 2 Guides and Resources: Phase 2 Guides and Resources
+      sciPD3 intro:
+        Welcome to Phase 3: Welcome to Phase 3
+      sciPD3 logistics:
+        Details and Logistics: Details and Logistics
+      sciPD3 resource module1:
+        Phase 3 Module 1: Phase 3 Module 1
+      sciPD3 resource module2:
+        Phase 3 Module 2: Phase 3 Module 2
+      sciPD3 resource module3:
+        Phase 3 Module 3: Phase 3 Module 3
+      sciPD3 resource module4:
+        Phase 3 Module 4: Phase 3 Module 4
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -579,6 +702,8 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      u3L04 Student Lesson Introduction:
+        Creating Procedures Part 2: Creating Procedures Part 2
       unique level name here:
         description here: description here
         title: title
@@ -689,6 +814,16 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSPPD PD goals:
+        Documenting Your PD Goals: Documenting Your PD Goals
+      CSPPD course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
+      CSPPD impact in program:
+        Impact of Computing: Impact of Computing
+      CSPPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and PD
+      CSPPD strategies:
+        Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -767,11 +902,13 @@ en:
         Enter prompt here: Enter prompt here
         Enter title here: Enter title here
       U1L10 Assessment Free Response:
-        'A follow-up to the Assessment Question #2:': 'A follow-up to the Assessment Question #2:'
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
         'Free Response: Encoding Text': 'Free Response: Encoding Text'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+      U1L11 Collaboration Reflection:
+        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
+        What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?: What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L11 Reflection Free Response:
         'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -831,14 +968,41 @@ en:
         'Getting Started: Sending Numbers ': 'Getting Started: Sending Numbers '
         Respond to the following question.: Respond to the following question.
       U1L8 Free Response Reflection:
-        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete the Sending Numbers Checklist and then respond to the following prompt.
+        Complete the Sending Numbers Rubric and then respond to the following prompt.: Complete the Sending Numbers Rubric and then respond to the following prompt.
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
+      U1L8 Free Response2:
+        How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
+        'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
-        'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+        'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+      U3L01 Assessment1:
+        Why Programming? Question 1: Why Programming? Question 1
+      U3L01 Assessment3:
+        Why Programming? Question 3: Why Programming? Question 3
+      U3L01 Free Response Getting Started:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      U3L01 Free Response Wrap Up:
+        Why Programming? Wrap Up: Why Programming? Wrap Up
+      U3L02 Assessment:
+        Assessment Question: Assessment Question
+      U3L02 Free Response Getting Started:
+        'Programming with Simple Commands: Getting Started': 'Programming with Simple Commands: Getting Started'
+      U3L02 Free Response Wrap Up:
+        'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
+      U3L03 Free Response Getting Started:
+        'Creating Procedures Part 1: Getting Started': 'Creating Procedures Part 1: Getting Started'
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L03 Free Response Wrap Up:
+        Creating Procedures Part 1 Wrap Up: Creating Procedures Part 1 Wrap Up
+      U3L04 Assessment1:
+        'Creating Procedures Part 1: Question 1': 'Creating Procedures Part 1: Question 1'
+      U3L04 Free Response Getting Started:
+        'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
       U3L04 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L04 Free Response Wrap Up:
+        'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
       U3L05 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L06 Free Response Reflection:
@@ -868,8 +1032,21 @@ en:
         Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
       U3L18 Free Response Wrap Up:
         Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
+      U3L19 - final prompt:
+        Final writing prompt: Final writing prompt
+        Respond to your teacher's prompt below: Respond to your teacher's prompt below
       U3L2 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L20 Assessment4:
+        Conditional Basics Question 4: Conditional Basics Question 4
+      U3L20 Assessment5:
+        Conditional Basics Question 5: Conditional Basics Question 5
+      U3L20 Assessment6:
+        Conditional Basics Question 6: Conditional Basics Question 6
+      U3L20 Assessment7:
+        Conditional Basics Question 7: Conditional Basics Question 7
+      U3L20 Assessment8:
+        Conditional Basics Question 8: Conditional Basics Question 8
       U3L20 Free Response Getting Started:
         'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
       U3L20 Free Response Wrap Up:
@@ -888,6 +1065,50 @@ en:
         Natural Language Processing: Natural Language Processing
       U3L24 Assessment 3:
         Question 3: Question 3
+      U3L25 Assessment:
+        'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
+      U3L25 Free Response Getting Started:
+        'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
+      U3L25 Free Response Wrap Up:
+        'Compound Conditionals: Wrap Up': 'Compound Conditionals: Wrap Up'
+      U3L26 Free Response Getting Started:
+        'String and Substring: Getting Started': 'String and Substring: Getting Started'
+      U3L26 Free Response Wrap Up:
+        'String and Substring: Wrap Up': 'String and Substring: Wrap Up'
+      U3L27 Assessment1:
+        Chatbot Challenge Reflection 1: Chatbot Challenge Reflection 1
+      U3L27 Assessment2:
+        Chatbot Challenge Reflection 2: Chatbot Challenge Reflection 2
+      U3L27 Assessment3:
+        'Chatbot Challenge Reflection 3 ': 'Chatbot Challenge Reflection 3 '
+      U3L27 Free Response Getting Started:
+        Chatbot Challenge Getting Started: Chatbot Challenge Getting Started
+      U3L28 Free Response Getting Started:
+        'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
+      U3L28 Free Response Wrap Up:
+        'While Loop Basics: Wrap Up': 'While Loop Basics: Wrap Up'
+      U3L29 Free Response Getting Started:
+        'While Loops and Counting: Getting Started': 'While Loops and Counting: Getting Started'
+      U3L29 Free Response Wrap Up:
+        'While Loops and Counting: Wrap Up': 'While Loops and Counting: Wrap Up'
+      U3L30 Free Response Getting Started:
+        'Arrays: Getting Started': 'Arrays: Getting Started'
+      U3L30 Free Response Wrap Up:
+        'Arrays: Wrap Up': 'Arrays: Wrap Up'
+      U3L31 Assessment1:
+        'Photo Album: Question 1': 'Photo Album: Question 1'
+      U3L31 Assessment2:
+        'Photo Album: Question 2': 'Photo Album: Question 2'
+      U3L31 Assessment3:
+        'Photo Album: Question 3': 'Photo Album: Question 3'
+      U3L31 Free Response Getting Started:
+        'Photo Album: Getting Started': 'Photo Album: Getting Started'
+      U3L32 Free Response Getting Started:
+        'Images are Arrays: Getting Started': 'Images are Arrays: Getting Started'
+      U3L33 Free Response Getting Started:
+        'Altering Images: Getting Started': 'Altering Images: Getting Started'
+      U3L34 Free Response Getting Started:
+        'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7

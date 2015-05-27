@@ -1,0 +1,15 @@
+name 'sciPD3 logistics'
+title 'Details and Logistics'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### What to Expect
+
+<br /><br />
+Phase 3, the Academic Year Professional Development program consists of two one day workshops and an online portion. The primary focus during the academic year program will be on building teachers’ repertoire of modeling and simulation modules and confidence in integrating modeling and simulation activities leading up to the culminating activity: classroom implementation. <br /><br />
+**Fall workshop:** Learn and practice teaching a new module that you didn’t learn in Phase 2. Share implementation plans. Review math basics for modeling.<br /><br />
+**Online portion:** Learn the remaining module. Customize/modify the model and run your own experiments. Upload a link to your project. Review two other participant’s projects. <br /><br />
+**Spring workshop:** Practice coding with challenge activities and review CS concepts. Then hear lessons learned from teachers who have implemented, and take time to modify your own implementation plans. Lastly, practice model observation, data collection from models, and analysis using model generated data.
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

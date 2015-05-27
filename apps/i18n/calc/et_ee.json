@@ -2,7 +2,7 @@
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "Sa pead siduma ploki \"arvuta\" plokiga.",
   "equivalentExpression": "Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis.",
-  "evaluate": "evaluate",
+  "evaluate": "Hinda",
   "extraTopBlocks": "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Eesmärk:",
@@ -11,7 +11,7 @@
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Teie arvutus on siin! Jätka selle kallal töötamist või liigu järgmise pusle juurde!",
   "yourExpression": "Sinu avaldis:",
-  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongInput": "Sa kutsud oma funktsiooni vale väärtusega.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Sinu avaldis ei tagasta õiget tulemust."
 }

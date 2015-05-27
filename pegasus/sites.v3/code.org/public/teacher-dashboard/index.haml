@@ -411,7 +411,8 @@ angular: teacherDashboard
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.progress = sectionsService.progress({id: $routeParams.id});
-    $scope.tab = 'progress'
+    $scope.tab = 'progress';
+    $scope.page = {zoom: false};
 
     // error handling
     $scope.genericError = function(result) {
@@ -429,13 +430,15 @@ angular: teacherDashboard
       }
     );
 
+    $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
 
     $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
+    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
       $scope.mergeProgress();
+      $scope.progressLoadedFirst = true;
       $scope.progressLoaded = true;
     });
 
@@ -443,11 +446,15 @@ angular: teacherDashboard
       $scope.progressLoaded = false;
       $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: scriptId});
 
-      $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
+      $scope.progress.$promise.then(function(){
         $scope.mergeProgress();
         $scope.progressLoaded = true;
       });
     };
+
+    $scope.progressWidth = function() {
+      return $scope.page.zoom ? Math.max(34 * $scope.progress.script.levels_count, 770) : 770;
+    }
 
     // refresh progress every 30s
     // TODO: 'update' progress instead of replacing it
@@ -466,12 +473,28 @@ angular: teacherDashboard
     //   });
     // }, 30 * 1000);
 
+    $scope.scrollToStage = function($event){
+      var doScroll = function() {
+        var element = $( $event.currentTarget );
+        var wrapper = $('.table-wrapper');
+        var LEFT_COLUMN_WIDTH = 200; // scrolling the entire table not just this col, so we have to know about the left col width
+        var LEFT_OFFSET = 20; // a little offset so we can see the previous stage
+        wrapper.animate({scrollLeft: (element.position().left - wrapper.position().left + wrapper.scrollLeft() - LEFT_COLUMN_WIDTH - LEFT_OFFSET)}, 500);
+      }
+
+      if ($scope.page.zoom) {
+        doScroll();
+      } else {
+        // if we weren't already zoomed we need to zoom and then wait for the zoom to finish
+        $scope.page.zoom = true;
+        $timeout(doScroll, 500);
+      }
+    };
+
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
       $scope.course_id = $scope.progress.script.id;
       // calculate width of each level in the progress bar assuming the overall width is 780 px
-      $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
-      $scope.progress.table_width = $scope.progress.bar_width * $scope.progress.script.levels_count;
 
       // Takes the level's position in the script, and returns its level number in its stage
       var getLevelNumberInStage = function(overallLevel) {
@@ -482,7 +505,6 @@ angular: teacherDashboard
           else
             overallLevel -= stage.length;
         }
-
         return 0;
       }
 
@@ -506,7 +528,7 @@ angular: teacherDashboard
               var delayedSetHighestLevel = function(student, l) {
                 student.highest_level = l;
                 student.highest_level_in_stage = getLevelNumberInStage(l);
-              }
+              };
               $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
               break;
             }

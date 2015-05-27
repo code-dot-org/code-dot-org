@@ -580,6 +580,8 @@
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
     correct_title: Molto bene!
     correct_body: Questa risposta è corretta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Riprova!
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!

@@ -1,9 +1,6 @@
 pt-BR:
   data:
     instructions:
-      10A_instruction: |
-        Certo, vamos completar esse desafio com um quadrado verde que
-        tem 175 pixels de tamanho.
       2-3 _instruction: Flores roxas podem ter 1 ou 0 néctar. Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum néctar.
       2-3 Artist 1 new_instruction: Oi, eu sou um artista. Você pode escrever códigos para me fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
       2-3 Artist 11_instruction: |
@@ -342,15 +339,27 @@ pt-BR:
       2-3 Bee Loops 12_instruction: |
         Use laços enquanto para coletar todo o néctar
         das flores desse campo.
+      2-3 Bee Loops 13_instruction: |
+        Avaliação: use o bloco repita para coletar
+        todo o néctar.
+      2-3 Bee Loops 1A_instruction: |
+        Olá, eu sou uma abelha. Você pode me ajudar a coletar
+        o néctar dessas flores? 
       2-3 Bee Loops 2_instruction: |
         Use um laço para coletar o néctar e produzir o
         mel.
+      2-3 Bee Loops 2A_instruction: |
+        Você consegue realizar a mesma tarefa mais facilmente
+        com um laço?
       2-3 Bee Loops 3_instruction: |
         Colete o néctar de cada flor e produza mel
         em cada colmeia.
+      2-3 Bee Loops 3A_instruction: Você consegue usar um laço para coletar todo o néctar?
+      2-3 Bee Loops 3B_instruction: Agora, use o novo bloco repita para coletar todo o néctar e produzir todo o mel.
       2-3 Bee Loops 4_instruction: |
         Use um laço parecido com o do último desafio, mas realize
         uma ação de virar dentro dele.
+      2-3 Bee Loops 4A_instruction: O que acontece se você repetir esta sequência 3 vezes? Não se esqueça de fazer o mel no final!
       2-3 Bee Loops 5_instruction: |
         Use um laço para descer as escadas e coletar o
         néctar.
@@ -415,6 +424,7 @@ pt-BR:
       2-3 Maze 7_instruction: Leve-me até a maldade verde! (Cuidado com a dinamite)
       2-3 Maze 8_instruction: Leve-me até o porco!
       2-3 Maze 9_instruction: Leve-me até a maldade verde! (Cuidado com a dinamite)
+      2-3 Maze Loops 1_instruction: Você pode me levar até o porco usando 5 blocos?
       2-3 Maze Loops 17_instruction: Leve-me até o girassol!
       2-3 Maze Loops 18_instruction: Leve-me até o girassol!
       2-3 Maze Loops 19_instruction: Leve-me até o girassol!
@@ -530,9 +540,6 @@ pt-BR:
       4-5 Artist For Loops 4_instruction: |
         Complete o bloco "para" para que ele
         conte de 1 até 10, de 1 em 1.
-      4-5 Artist For Loops 5_instruction: |
-        Edite esses blocos de forma que as retas sejam
-        o dobro do que eram antes.
       4-5 Artist For Loops 6_instruction: |
         Desenhe quadrados com lados de 50, 60, 70,
         80 e 90 pixels. Você vai precisar usar a função "desenhe um quadrado" cinco
@@ -851,43 +858,68 @@ pt-BR:
       4-5 Maze Conditionals Assessment 1_instruction: |
         Use um bloco "repita até" e
         um bloco "se-senão" para me levar até o girassol no menor número de blocos possível.
-      A test level ArtistArtist_instruction: Um nível de teste ArtistaArtista
-      add 2_instruction: |
-        Belo trabalho no último desafio, vamos tentar novamente.
-        Desta vez, vamos fazer esse design bacana com hexágonos de 60 pixels.
-      Alice Test_instruction: Veja aqui algumas instruções!
-      All green everything_instruction: clique e arraste os blocos
-      Alpha 2-3 Artist Loops New 3_instruction: |
-        Agora, vamos desenhar 6 quadrados, cada
-        um com uma cor aleatória. Que ângulo devemos usar para virar entre cada quadrado para
-        fazer um círculo completo de quadrados?
-      Alpha Course 3 Artist Functions 5_instruction: |
-        Atualize a função "desenhe um quadrado"
-        para que ela desenhe um quadrado usando o parâmetro "comprimento". Então, desenhe um
-        quadrado com 100 pixels de comprimento de lado.
-      Alpha Course 3 Artist Functions 6_instruction: |
-        A função "desenhe um quadrado"
-        com parâmetro está pronta para que você adicione os blocos corretos e altere o valor
-        de zero para deixá-lo do tamanho correto. Dica: os lados do quadrado têm 100 pixels.
-      Alpha Course 3 Artist Functions 7_instruction: |
-        Use as funções "desenhe um triângulo"
-        e "desenhe um quadrado" em conjunto para desenhar duas casas. (Dica: as casas
-        são separadas por 50 pixels)
-      Alpha Course 3 Artist Loops 3_instruction: |
-        Quer ver o que acontece quando
-        repetimos essa forma várias vezes usando um laço?
-      Alpha Course 3 Artist Nested Loops 4_instruction: |
-        Substitua os blocos por
-        um laço aninhado.
-      Alpha Course 3 Bee Conditionals 10_instruction: |
-        Crie uma função que vai
-        verificar se algo é uma flor roxa e coletar todo o néctar dela, ou se
-        é uma colmeia e produzir mel.  
-      Alpha Course 3 Bee Conditionals 9_instruction: |
-        Colete néctar usando a função
-        "verifique a flor roxa".
-      applab_test2_sarah_instruction: Esse é painel de instruções para o nível 2
-      Arbitrary_instruction: Faça uma reta
+      4-5 Nested Loops 1_instruction: |
+        Complete o código para desenhar esses triângulos. O
+        primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
+      4-5 Nested Loops 10_instruction: |
+        Desenhe a última linha de estrelas nessa bandeira
+        repetindo os blocos fornecidos. As estrelas estão separadas por 50 pixels, mas lembre-se
+        que elas têm 30 pixels de largura.
+      4-5 Nested Loops 11_instruction: |
+        Você pode desenhar esses 10 quadrados dessa
+        calçada usando um laço aninhado? Cada quadrado tem 30 pixels.
+      4-5 Nested Loops 12_instruction: |
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
+      4-5 Nested Loops 2_instruction: |
+        Agora, aninhe esse laço dentro de outro laço para desenhar
+        10 triângulos. Isso se chama laço aninhado. Dica: todos os 10 triângulos completam
+        uma rotação de 360 graus.  
+      4-5 Nested Loops 3_instruction: "Crie um sol aninhando o código inicial\ndentro de outro laço. Chamamos isso de laço aninhado.\r\n"
+      4-5 Nested Loops 5_instruction: Repita o código dado para criar um moinho de vento.
+      4-5 Nested Loops 6_instruction: |
+        Você pode desenhar um hexágono repetindo o
+        código do triângulo?
+      4-5 Nested Loops 7_instruction: |
+        Repita esse design 10 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
+      4-5 Nested Loops 8_instruction: |
+        Repita esse design 6 vezes. Quanto
+        você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)
+      4-5 Nested Loops 9_instruction: Desenhe o dente na boca do crocodilo!
+      4-5 Nested Loops Assessment 1_instruction: |
+        Use um laço aninhado para completar
+        o design.
+      4-5 While Loops 1_instruction: |
+        Mova-me para o buraco e preencha-o com
+        duas pás de terra, usando o bloco "preencha".
+      4-5 While Loops 2_instruction: |
+        Mova-me para o monte de terra e remova-o
+        com 5 pás de terra, usando o bloco "remova".
+      4-5 While Loops 3_instruction: |
+        Mova-me para o monte e remova toda a
+        terra, então mova-me para o buraco e preencha-o completamente. Dica: use o menor número de
+        blocos possível.
+      4-5 While Loops 4_instruction: |
+        Uau, eu encontrei um buraco realmente fundo! Eu não
+        sei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o
+        até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
+      4-5 While Loops 5_instruction: |
+        Uau, agora há dois buracos profundos! Você
+        pode escrever um programa que os preencha até o que o solo fique nivelado?
+      4-5 While Loops 6_instruction: |
+        Uau, agora há um grande monte de terra!
+        Você pode escrever um programa que remova a terra até que o solo fique nivelado?
+      4-5 While Loops 7_instruction: |
+        Uau, agora há três grandes montes de terra!
+        Você pode escrever um programa que remova cada um deles até que o solo fique nivelado?
+      4-5 While Loops 8_instruction: |2
+         Há um buraco realmente fundo e um monte de terra
+        realmente grande. Quantas pás de terra são necessárias para
+        tornar o solo plano? Dica: use o laço enquanto para ambos.
+      4-5 While Loops Assessment 1_instruction: |
+        Há um monte de buracos e
+        montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       Artist - Nested Loops 1_instruction: |
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
@@ -910,10 +942,6 @@ pt-BR:
       Artist - Nested Loops 6_instruction: |
         Você pode desenhar um hexágono repetindo o
         código do triângulo?
-      Artist - Nested Loops 7 (copy 1)_instruction: |
-        Loop this design 10 times. How
-        much do you have to turn each time you loop? (Hint: What is 360 divided by
-        10?)
       Artist - Nested Loops 7_instruction: |
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
@@ -924,129 +952,6 @@ pt-BR:
       Artist - Nested Loops Assessment 1_instruction: |
         Use um laço aninhado para completar
         o design.
-      Artist Artist Artist Artist _instruction: 'Artista Artista Artista Artista '
-      Artist For  Functions 11_instruction: |
-        Vamos acelerar um pouco. Você consegue
-        desenhar uma forma de estrela usando a função "desenhe uma linha de quadrados"? Boa sorte!
-      Artist Functions 11_instruction: |
-        É hora da atividade livre! Use suas novas funções
-        para desenhar uma imagem incrível. Divirta-se!
-      Artist Functions 2.0_instruction: |
-        Você pode desenhar 3 quadrados separados por 20 pixels
-        uns dos outros? Dica: cada quadrado tem 100 pixels de tamanho
-      Artist Functions 3.0_instruction: |
-        Temos aqui um novo tipo de bloco. Ele é chamado de
-        um "bloco de função". Clique em "Executar" para ver o que ele pode fazer. 
-      Artist Functions 4.0_instruction: |
-        Demos a você a maior parte do código para criar
-        uma função. Contudo, parece que há algo faltando. Você pode
-        completar esse bloco de função?
-      Artist Functions 5.0_1_instruction: |
-        Você está pronto para criar seu próprio "bloco
-        de função"? Clique no bloco "Funções" na caixa de ferramentas, nomeie-o como "desenhe
-        um triângulo", e então crie um triângulo como você fez anteriormente com os blocos de ação
-        e de laços. Então, clique em Salvar e Fechar no canto superior
-        direito. Dica: crie um triângulo que tenha 100 pixels de comprimento.
-      Artist Functions 5.0_2_instruction: |
-        Crie seu próprio bloco de função. Clique
-        no bloco "Funções" na caixa de ferramentas e clique em "crie uma função".
-        Dê um nome ao seu bloco de função e então crie um quadro de 40 pixels como você fez
-        anteriormente com os blocos de ação e de laços. Clique em "Salvar e Fechar"
-        no canto superior direito. Dica: não se esqueça de arrastar seu novo bloco
-        de função da caixa de ferramentas para o bloco "Quando executar".
-      Artist Functions 5.0v1_instruction: |
-        Crie seu próprio bloco de função. Clique
-        no bloco "Funções" na caixa de ferramentas e clique em "crie uma função".
-        Dê um nome ao seu bloco de função e então crie um quadro de 40 pixels como você fez
-        anteriormente com os blocos de ação e de laços. Clique em "Salvar e Fechar"
-        no canto superior direito. Dica: não se esqueça de arrastar seu novo bloco
-        de função da caixa de ferramentas para o bloco "Quando executar".
-      Artist Functions 5.0v2_instruction: |
-        Você está pronto para criar seu próprio "bloco
-        de função"? Clique no bloco "Funções" na caixa de ferramentas, nomeie-o como "desenhe
-        um triângulo", e então crie um triângulo como você fez anteriormente com os blocos de ação
-        e de laços. Então, clique em Salvar e Fechar no canto superior
-        direito. Dica: crie um triângulo que tenha 100 pixels de comprimento.
-      Artist Functions 6_instruction: |
-        Crie a função casa que chama as funções
-        triângulo e quadrado
-      Artist Functions 7_instruction: Repita a função quadrado para desenhar uma reta
-      Artist Functions 8_instruction: |
-        Você consegue criar uma nova função chamada "desenhe
-        uma linha de quadrados"?
-      Artist Functions free play_instruction: |
-        É hora da atividade livre! Use suas novas
-        funções para desenhar uma imagem incrível. Divirta-se!
-      Artist level 10_instruction: |
-        É hora da atividade livre! Eu decidi incluir todas as
-        funções novas que você criou. Divirta-se e desenhe o que você quiser. 
-      Artist Nested Loops_instruction: |
-        Agora, aninhe esse laço dentro de outro laço para
-        desenhar 6 triângulos. Isso é chamado de laço aninhado. Dica: todos os 6 triângulos completam
-        uma rotação de 60 graus. 
-      Artist Params 10_instruction: |
-        Você pode chamar funções dentro de outras funções!
-        Usando sua função "forma" como base, crie uma nova função "casa" que
-        recebe um parâmetro "comprimento"
-      Artist Params 11_instruction: |
-        Que tal uma função chamada "cata-vento" que
-        recebe três parâmetros - "lados," "comprimento" e "repita"? Sua função
-        deve desenhar um cata-vento de "repita" formas de "lados" e "comprimento".
-        Você pode calcular quanto virar após cada forma usando os mesmos cálculos que você
-        usou para descobrir as ações de virar para uma forma de "lados"
-      Artist Params 12_instruction: |
-        Use sua função "cata-vento" para desenhar cada
-        uma dessas formas. O comprimento do lado para cada imagem é de 50 pixels.
-      Artist Params 13_instruction: |
-        Atividade livre: aqui estão as funções que você escreveu
-        e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
-      Artist Params 2_instruction: |
-        Essa função triângulo seria muito mais
-        útil se ela pudesse desenhar triângulos de tamanhos diferentes. Foi adicionado um parâmetro
-        para o comprimento da reta, mas ele ainda não faz coisa alguma. Você pode atualizar a função
-        para que ela use o parâmetro "comprimento" para desenhar cada lado?
-      Artist Params 3_instruction: |
-        Incrível, você pode desenhar cada um desses triângulos
-        com essa nova função? O primeiro tem 25 pixels de comprimento, o segundo tem 50 e
-        o terceiro tem 75. (Se você for realmente esperto, você pode usar um laço para isso!)
-      Artist Params 4_instruction: |
-        Você pode adicionar uma nova função chamada quadrado? Ela
-        também deve receber um parâmetro comprimento, como na função triângulo.
-      Artist Params 5_instruction: Use suas duas novas funções para desenhar esta imagem
-      Artist Params 6_instruction: |
-        Lembra-se de como usamos uma variável para definir o número
-        de lados de uma forma? Por que termos duas funções separadas, para "triângulo" e
-        "quadrado", quando poderíamos ter uma função "forma" que recebe dois parâmetros
-        - "lados" e "comprimento"?
-      Artist Params 7_instruction: |
-        Desenhe várias formas e combinações de formas
-        usando a função genérica forma.
-      Artist Params 8_instruction: |
-        Você pode descobrir como desenhar dois triângulos?
-        Temos aqui uma dica: crie 2 novas funções para cada triângulo.
-      Artist Params 9_instruction: |
-        Você consegue desenhar dois quadrados, um dentro do outro,
-        que estão separados por 20 pixels e têm comprimento de 200 pixels e 160 pixels?
-      Artist Variables level 9_instruction: |
-        Aqui está o algoritmo para desenhar um triângulo.
-        Modifique-o para que ele use a variável "lados". Substitua o número 3
-        pela variável "lados". Dica: lembre-se de usar o bloco "defina os lados para".
-      Artist Variables level 9a_instruction: |
-        Aqui está o algoritmo para desenhar um triângulo.
-        Modifique-o para que ele use a variável "lados". Substitua o número 3
-        pela variável "lados". Dica: lembre-se de usar o bloco "defina os lados para".
-      Artist Vars "height" block_instruction: |
-        Agora eu quero fazer um retângulo que
-        tem a largura duas vezes maior que sua altura. Temos uma variável chamada "altura"
-        que está definida como 100. Você pode usar o bloco matemático para completar o código? 
-      Artist Vars height block_instruction: |
-        Agora eu quero fazer um retângulo que
-        tem a largura duas vezes maior que sua altura. Temos uma variável chamada "altura"
-        que está definida como 100. Você pode usar o bloco matemático para completar o código? 
-      artist_test_brian_instruction: Teste do artista
-      Basic_instruction: Sem instruções
-      Bee procedures demo_instruction: Colete néctar de todas as flores
-      bee-test-1_instruction: Leve a abelha até o néctar
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1137,7 +1042,7 @@ pt-BR:
         A função "distância" retorna a distância
         entre dois objetos. Complete a função "colisão?" para que ela retorne
         verdadeiro se a distância entre dois pontos for menor que 100 pixels. Se
-        a completar corretamente, seus objetos vão colidir instantaneamente - por que você
+        completá-la corretamente, seus objetos vão colidir instantaneamente - por que você
         acha que isso acontece?
       Big Game Complete (copy 1)_instruction: |
         Uma demonstração do projeto Grande Jogo
@@ -1202,16 +1107,7 @@ pt-BR:
         o jogador, o alvo e o inimigo. Fique à vontade para brincar com todas as variáveis
         e assim deixar seu jogo do jeito que você quer. Clique em "Concluir"
         quando você terminar.
-      BowShoot1_instruction: Use o bloco repita para coletar todo o néctar!
-      Brendan Artist work_instruction: nenhum
-      Brendan Test Maze 1_instruction: Aqui está meu primeiro labirinto.
-      Brian Test Karel_instruction: UAU, esse é um buraco de tamanho desconhecido!
-      Brian Testing Again_instruction: Novamente o teste de Brian
       Building a Foundation Assessment_instruction: |
-        Construa uma pirâmide de três níveis.
-        Não há outras instruções, então simplesmente brinque com as peças até
-        conseguir!
-      building_a_foundation_assessment_instruction: |
         Construa uma pirâmide de três níveis.
         Não há outras instruções, então simplesmente brinque com as peças até
         conseguir!
@@ -1245,7 +1141,6 @@ pt-BR:
       C3-Farmer While Loops Assessment 1_instruction: |
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
-      C3-Farmer While Loops Multi Pics_instruction: Múltipla Escolha
       Calc Circles of Eval .1_instruction: |
         Você vai escrever um tipo de código chamado
         Bloco de cálculo, porque cada bloco de código retorna um único valor.
@@ -1267,7 +1162,7 @@ pt-BR:
         de cálculo.
       Calc Circles of Eval 1_instruction: |
         Todo operador matemático (+, -, *,
-        /, e assim por diante) podem ser representados por um bloco de cálculo. Altere o
+        /, e assim por diante) pode ser representado por um bloco de cálculo. Altere o
         bloco de cálculo para associá-lo à expressão.
       Calc Circles of Eval 2 (copy 1)_instruction: |
         Converta essa instrução para <alguma_forma>
@@ -1321,6 +1216,11 @@ pt-BR:
         Escreva uma função chamada "metade" que recebe
         um número "x" e retorna metade desse número. Quando você escrever a função,
         use-a para calcular metade(21)
+      Calc Define Funcs 5 - multiply 1_instruction: |
+        Oh no! We lost our multiply
+        block! We'll have to create a function to multiply for us. To start off,
+        write a function "f" that takes a parameter "x" and returns x*5. Test
+        your function using f(3).
       Calc Design Recipe 1_instruction: |
         Vamos usar a receita de design para criar uma
         função chamada "cubo" - essa função deve ter um domínio de número, uma imagem
@@ -1371,10 +1271,6 @@ pt-BR:
         Também podemos definir variáveis usando outras variáveis.
         Vamos supor que você tenha um irmão que é dois anos mais novo que você - você pode
         definir uma nova variável "idade-irmão" usando sua variável "idade"?
-      Code Logo v3_instruction: ""
-      Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
-        Draw the line.
-        It is 200 pixels long. 
       Code Studio Puzzle Challenge 1 - Artist_instruction: |
         Desenhe a reta. Ela tem
         200 pixels de comprimento. 
@@ -1396,19 +1292,12 @@ pt-BR:
       Code Studio Puzzle Challenge 11b - Artist_instruction: |
         Desenhe um quadrado usando
         a variável comprimento fornecida.
-      Code Studio Puzzle Challenge 12 - Artist (copy 1)_instruction: |
-        O código fornecido desenha
-        um triângulo. Faça uma adição a ele para desenhar triângulos em um padrão de hexágono.
       Code Studio Puzzle Challenge 12 - Artist_instruction: |
         O código fornecido desenha
         um triângulo. Faça uma adição para que ele desenhe triângulos em um padrão de hexágono.
       Code Studio Puzzle Challenge 12a - Artist_instruction: |
         O código fornecido desenha
         um triângulo. Faça uma adição para que ele desenhe triângulos em um padrão de hexágono.
-      Code Studio Puzzle Challenge 13 - Artist (copy 1)_instruction: |
-        This is just
-        like a "for" loop. Complete the loop to draw six lines that grow from 50,
-        60, 70, 80, 90, to 100 pixels long. 
       Code Studio Puzzle Challenge 13 - Artist_instruction: |
         Isso é como um
         laço "para". Complete o código para desenhar seis retas que crescem de 50, 60, 70,
@@ -1463,16 +1352,10 @@ pt-BR:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Desenhe uma reta usando
         uma variável "comprimento" definida como 180.
-      copy 1_instruction: 'Experimente o bloco "repita" para usar menos blocos...'
       course 1 artist 1 level 10_instruction: |
         Desenhe a reta tracejada usando
         os blocos pule e desenhe
       course 1 artist 1 level 9_instruction: Faça o desenho usando três retas
-      Course 2 Assessment Smiley_instruction: "Imagem: espaço de execução com desenho inacabado.\r\nAvaliação:\ntermine de desenhar o último dente."
-      Course 2 Bee Functions 1_instruction: |
-        Funções são blocos de código que realizam
-        uma tarefa. Use a função "obtenha 2 néctares" para coletar o néctar
-        de cada flor.
       Course 2 Bee Loops 1_instruction: |
         Olá, eu sou uma abelha. Você pode me ajudar a coletar
         o néctar dessas flores? 
@@ -1492,12 +1375,6 @@ pt-BR:
         O que acontece se você repetir esta sequência 3
         vezes? Não se esqueça de fazer o mel no final!
       Course 2 Maze Loops 1_instruction: Você pode me levar até o porco usando 5 blocos?
-      Course 3 Farmer Test_instruction: Use um laço enquanto.
-      Course 3_instruction: |
-        Temos aqui uma função que recebe uma string binária de 1's
-        e 0's e instrui o artista a mover-se da esquerda para a direita, de cima
-        para baixo, passando pelos quadrados nos quais o número tem um zero. Execute esse código
-        para ver como o artista usa números binários para desenhar este padrão.
       Course 4 2_instruction: |
         Agora a abelha só quer néctar. Lembre-se, nem
         todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
@@ -1534,20 +1411,12 @@ pt-BR:
         Repita esse design 10 vezes e certifique-se de virar
         a cada figura desenhada. Uma dica sobre o quanto você
         precisa virar: quanto é 360 dividido por 10?
-      Course 4 Artist Binary 1 (copy 1)_instruction: |
-        Temos aqui uma função que recebe
-        uma string binária de 1's e 0's e instrui o artista a mover-se da
-        esquerda para a direita, de cima para baixo, passando pelos quadrados nos quais o número
-        tem um zero. Execute esse código para ver como o artista usa números binários para desenhar este padrão.
       Course 4 Artist Binary 1_instruction: |
         Temos aqui uma função que recebe uma string
         binária de 1's e 0's e instrui o artista a mover-se da esquerda para
         a direita, de cima para baixo, preenchendo os quadrados nos quais ele vê um 1 e ignorando
         os que têm um 0. Execute esse código para ver como o artista usa números binários para desenhar
         este padrão.
-      Course 4 Artist Binary 2 (copy 1)_instruction: |
-        Você consegue desenhar esse padrão usando
-        a repetição de uma única string binária?
       Course 4 Artist Binary 2_instruction: |
         Qual dessas strings binárias você poderia
         repetir 8 vezes para desenhar esta imagem?
@@ -1564,11 +1433,7 @@ pt-BR:
       Course 4 Artist Binary 6_instruction: |
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
-      Course 4 Artist Binary 7 (copy 1)_instruction: Termine o desenho.
       Course 4 Artist Binary 7_instruction: Termine o desenho.
-      Course 4 Artist Binary Free Play (copy 1)_instruction: |
-        Atividade livre: desenhe o que quiser
-        com números binários!
       Course 4 Artist Binary Free Play 2_instruction: |
         Atividade livre: aqui temos uma tela de maior
         resolução para desenhar - 16 bits por 16 bits!
@@ -1717,7 +1582,6 @@ pt-BR:
       Course 4 Artist Params 13_instruction: |
         Atividade livre: aqui estão as funções que você escreveu
         e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
-      Course 4 Artist Params 2 new_instruction: 'Crie uma "função que desenha um triângulo com lados de 50 pixels" desde o início.'
       Course 4 Artist Params 2_instruction: |
         Essa função triângulo seria muito mais útil
         se pudesse desenhar triângulos de tamanhos diferentes. Foi adicionado
@@ -2131,28 +1995,9 @@ pt-BR:
       Course 4 Play Labs For Loops 8_instruction: |
         Qual laço me faria falar
         19, 27, 35, 43, 51?
-      Course Maze 2_instruction: Leve o zumbi até o girassol, mas desvie da carnívora!
       Course1BeePuzzle12_instruction: Obtenha três néctares e então fabrique duas unidades de mel
       Course1MazeAssessment1_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco"
       Course1MazeAssessment2_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco."
-      course3 Maze 1_instruction: Querida pessoa. Mim zumbi. Precisa... chegar... girassol.
-      Coursen 4 Artist Functions 11_instruction: |
-        Você pode criar uma nova função que
-        vai desenhar uma forma cúbica?
-      CUBE 1_instruction: |
-        Verifique esse código que desenha um cubo - você pode movê-lo
-        para uma função chamada "desenhe um cubo"?
-      CUBE_instruction: |
-        Vamos acelerar um pouco. Você pode desenhar uma forma de estrela usando
-        a função "desenhe uma reta de quadrados"? Boa sorte!
-      diamond snowflake_instruction: |
-        Você sabia que cada floco de neve tem uma forma diferente?
-        Vamos criar um novo floco de neve usando o bloco repita e repetindo
-        o diamante 10 vezes, virando 36 graus à direita entre cada diamante.
-      diamond_instruction: |
-        Vamos criar um diamante. Ele é como um quadrado, mas
-        tem ângulos diferentes: ângulos de 120 e 60 graus ao invés de ângulos de 90 graus.
-      Embed Studio_instruction: Instruções aqui
       Eval Booleans 1_instruction: |
         Operadores booleanos (como >, <, =) nos permitem
         comparar valores diferentes, retornando "verdadeiro" ou "falso". Clique em "Executar"
@@ -2258,7 +2103,7 @@ pt-BR:
         Confira a função "rotacione" - você pode
         usá-la para rotacionar esse quadrado verde de 90 pixels em 45 graus?
       Eval Contracts E_instruction: |
-        Experimente usar a função "texto" para escrever esse
+        Experimente usar a função "texto" para escrever
         "Olá, mundo!" na cor azul e com tamanho 40.
       Eval Contracts shrink_instruction: |
         Você pode completar essa imagem usando o bloco
@@ -2345,10 +2190,10 @@ pt-BR:
         strings e retorna uma única string combinada. Adicione uma string "universo"
         ao segundo argumento de "acrescentar-string".
       Eval Strings Images 1_instruction: |
-        O terceiro tipo de dados que vamos
-        usar é uma imagem. Essa função "estrela" recebe um número e duas strings
-        e retorna uma imagem. Use essa função para criar uma estrela vermelha sólida com
-        raio 100.
+        The third type of data we're going to
+        use is an Image. This "star" function takes in a Number and two Strings,
+        and it evaluates to an Image. Use this function to make a solid red star with
+        radius of 100.
       Eval Strings Images 2_instruction: |
         Atividade livre: todos os blocos de cálculo estão identificados por cores
         para que você saiba que tipo de dados eles retornam e que tipo de dados eles precisam para seus
@@ -2381,11 +2226,6 @@ pt-BR:
       Eval Strings Images Free Play_instruction: |
         Atividade livre: explore os blocos disponíveis
         para criar algo interessante. Lembre-se de compartilhar suas criações favoritas.
-      Examples 4_instruction: Função de encolhimento
-      frozen circle function (copy 1)_instruction: |
-        Use o novo bloco "crie um círculo"
-        para criar 10 círculos sobrepostos. Não se esqueça de avançar entre os
-        círculos
       frozen circle function in circle_instruction: |
         Agora vamos criar 20 círculos
         sobrepostos, virando 18 graus entre cada círculo.
@@ -2399,9 +2239,6 @@ pt-BR:
       frozen circle_instruction: |
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?
-      frozen cross rotate (copy 1)_instruction: |
-        Agora tente repetir isso 10 vezes. Quantos
-        graus você precisa virar entre cada reta?
       frozen cross rotate dense_instruction: |
         Vamos repetir isso 90 vezes! Quantas
         vezes 90 cabe em 360? Dica: é um número realmente pequeno.
@@ -2416,11 +2253,6 @@ pt-BR:
         uma forma diferente? Vamos criar um novo floco de neve usando o bloco "repita"
         para repetir um paralelogramo 4 vezes, virando 90 graus à direita entre cada
         paralelogramo.
-      frozen diamond snowflake (copy 1)_instruction: |
-        Você sabia que cada floco de neve
-        tem uma forma diferente? Vamos criar um novo floco de neve usando o bloco repita
-        e repetindo o diamante 10 vezes, virando 36 graus à direita entre cada
-        diamante.
       frozen diamond snowflake_instruction: |
         Agora, vamos criar um novo floco de neve
         usando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus
@@ -2429,9 +2261,6 @@ pt-BR:
         Vamos criar um paralelogramo. Ele é como
         um quadrado, mas tem ângulos diferentes: ângulos de 60 e de 120 graus ao invés de
         ângulos de 90 graus.
-      frozen freeplay (copy 1)_instruction: |
-        Você se tornou oficialmente um artista mestre!
-        Crie um país das maravilhas de gelo.
       frozen freeplay_instruction: |
         Você se tornou oficialmente um artista mestre! Crie
         um país das maravilhas de gelo.
@@ -2466,26 +2295,6 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
-      Function Block 1_instruction: |
-        Temos aqui um novo tipo de bloco. Ele é chamado de
-        "bloco de função". Clique em "Executar" para ver o que ele pode fazer. 
-      Function Block 2_instruction: |
-        Como o bloco "desenhe um quadrado" sabia quais
-        comandos executar? Clique em "editar" no bloco de função "desenhe um quadrado".
-        Os blocos no editor da função são os comandos que formam "desenhe um quadrado".
-        Quando você terminar de analisar, clique em "Salvar e Fechar" no canto superior
-        direito. Clique em "Executar" quando você estiver pronto para seguir para o próximo nível.
-        
-      Function Block 3.0_instruction: |
-        Temos aqui um novo tipo de bloco. Ele é chamado de
-        um "bloco de função". Clique em "Executar" para ver o que ele pode fazer. 
-      Function Block_instruction: |
-        Temos aqui um novo tipo de bloco. Ele é chamado de "bloco
-        de função". Clique em "Executar" para ver o que ele pode fazer. 
-      function_instruction: |
-        Use o novo bloco "crie um círculo" para criar dois
-        círculos
-      Go Up Artist_instruction: Subir o artista
       Infinity_catch_instruction: |
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -2521,6 +2330,8 @@ pt-BR:
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
+      K-1 artist 1 level 10_instruction: Desenhe as linhas tracejadas usando os blocos pule e desenhe
+      K-1 artist 1 level 9_instruction: Faça o desenho usando três retas
       K-1 Artist Loops 1_instruction: Desenhe esta reta usando o movimento para o leste 4 vezes.
       K-1 Artist Loops 2_instruction: Você pode desenhar a mesma reta usando um laço?
       K-1 Artist Loops 3_instruction: Você pode repetir esses blocos para desenhar 6 retas?
@@ -2619,6 +2430,11 @@ pt-BR:
         Obtenha néctar para produzir mel e use laços
         para mover!
       K-1 Bee Loops Assessment 2_instruction: Colete néctar para fabricar mel usando laços!
+      K-1 Bee Puzzle 12_instruction: Obtenha três néctares e então fabrique duas unidades de mel
+      K-1 Building a Foundation Assessment_instruction: |
+        Construa uma pirâmide de três níveis.
+        Não há outras instruções, então simplesmente brinque com as peças até
+        conseguir!
       k-1 maze 1_instruction: Você pode me mover para o oeste para chegar até o porco?
       K-1 Maze 10_instruction: 'Desvie do TNT para me levar até o porco! '
       K-1 Maze 11_instruction: |
@@ -2688,12 +2504,8 @@ pt-BR:
         até o poco!
       K-1 Maze Multi 14_instruction: Avaliação de nível
       K-1 Maze Multi 15_instruction: Avaliação de nível
-      k1_Artist2_1_instruction: Desenhe um pequeno quadrado ABAIXO do triângulo
-      k1_Artist2_2_instruction: Pule e desenhe um quadrado grande PRÓXIMO à casa
-      k1_Artist2_3_instruction: Desenhe um quadrado grande ACIMA do outro quadrado
-      k1_Artist2_6_instruction: Desenhe um retângulo para completar a ponte!
-      k1_Artist2_7_instruction: Desenhe um retângulo para completar os suportes da ponte!
-      line_instruction: Oi! Eu sou a Elsa de Arendelle. Você pode me ajudar a criar uma reta?
+      K-1 Maze Sequence Assessment 1_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco"
+      K-1 Maze Sequence Assessment 2_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco."
       Luigi's Pizza 1_instruction: |
         Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,
         digite o nome de um sabor na função "custo" e vamos retornar o
@@ -2722,8 +2534,6 @@ pt-BR:
         mais deles por sabores que normalmente não oferecemos? Vamos cobrar R$10.000
         por um sabor que não está disponível.
       Luigi's Pizza 4_instruction: "Atividade livre: o que você pode fazer para deixar a função de custo do Luigi\nainda melhor? Tente usar uma (ou mais) das seguintes opções:\r\n- Mostrar uma\nimagem da pizza escolhida\r\n- Permitir a combinação de vários sabores\r\n-\nPermitir o pedido de várias pizzas\r\n- Adicionar um cupom com código para um desconto de 50%"
-      maze level test_instruction: Faça isso!
-      Maze screenshot Work_instruction: Testar instruções
       MSM Big Game Empty_instruction: |
         Todas as variáveis e funções atualmente são
         campos vazios. A progressão de cada desafio será concentrada na definição e em vários
@@ -2783,7 +2593,6 @@ pt-BR:
         Variáveis também podem ser usadas para controlar
         a velocidade de jogadores em um jogo. Defina a velocidade do jogador e do inimigo e veja
         como os movimentos mudam. A velocidade pode ficar entre 2 e 12.
-      Neat Eval Functions_instruction: Confira essas doces funções.
       NetSim_AddressingMessages_instruction: |
         Nessa versão do simulador, você vai
         se conectar a um roteador ao invés de se conectar diretamente a outro aluno. Insira um
@@ -2823,15 +2632,9 @@ pt-BR:
       NetSim_Variant3_instruction: |
         NetSim: Variante 3: Conecta grupos de 2 a 6 alunos
         com um roteador e explora questões sobre roteamento e DNS
-      NEW Artist Artist Functions 3_instruction: |
-        Temos aqui um novo tipo de bloco. Ele
-        é chamado de "bloco de função". Clique em "Executar" para ver o que ele pode fazer. 
       New Artist Project_instruction: |
-        Desenhe algo incrível! Seu código está salvo
-        como um projeto para o qual você pode retornar a qualquer hora.
-      NEW Course 2 Artist Functions 12_instruction: |
-        Você consegue criar uma nova função
-        chamada "desenhe uma linha de quadrados"?
+        Draw something awesome! Your code is saved
+        as a project that you can return to at any time.
       NEW Course 4 Artist Functions 1_instruction: |
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -3063,10 +2866,6 @@ pt-BR:
         Temos aqui outro desafio para praticar o uso de laços. O que acontece
         se você usar o bloco repita para executar o código fornecido na área de trabalho
         4 vezes?
-      perpendicular_instruction: |
-        Agora, vamos ver se podemos criar duas retas perpendiculares.
-        Retas perpendiculares são duas retas que se interceptam em um ângulo de 90 graus,
-        ou ângulo reto.
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
         Algo aconteceu com
         os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits
@@ -3144,26 +2943,6 @@ pt-BR:
         Atividade livre: faça uma experiência com sua função altura-foguete
         para fazer o foguete voar de formas diferentes. Clique em "Concluir" quando você
         terminar.
-      Play Labs For Loops 3_instruction: |
-        Se contarmos usando números maiores podemos
-        ir ainda mais longe. Tente fazer o cachorro contar de 10 até 1000, de 10 em 10.
-      Play Labs For Loops 4_instruction: |
-        Alterar o incremento pode ser útil,
-        mas ainda estamos contando linearmente (a distância entre um número e o anterior
-        é a mesma). E se eu quisesse contar exponencialmente? Sem alterar as configurações
-        do laço para, você consegue contar (contador * 2)?
-      Play Labs For Loops 5_instruction: |
-        Na última etapa, contamos o quadrado
-        de cada número (contador * contador). Tente mudar de contador ^ 2 para contador ^
-        3 para contar o cubo de cada número (contador * contador * contador)
-      Play Labs For Loops 7_instruction: |
-        Você consegue usar um laço "para" para me ajudar a falar
-        a sequência 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Play Labs For Loops 8_instruction: |
-        Qual laço para me faria falar 19, 27,
-        35, 43, 51?
-      Puzzle One_instruction: Faça o Angry Bird chegar até o porco
-      RossAniGifLevel1_instruction: Faça um vídeo deste nível para um gif animado
       Sam the Butterfly 1 (copy 1)_instruction: |
         Essa borboleta se chama Sam e
         a área do jogo é o quintal de Sam. O quintal de Sam tem 400 pixels de largura por 400 de
@@ -3243,38 +3022,9 @@ pt-BR:
         Você consegue adicionar somente 3 blocos para me ajudar a resolver um labirinto mais
         complexo? Se você fizer isso corretamente, eu posso percorrer qualquer caminho cheio de curvas,
         não importa o comprimento. Depressa! O gelo está derretendo!
-      shrink_instruction: |
-        Você consegue completar esse desafio escrevendo "Olá, mundo!"
-        em um texto vermelho sólido com tamanho de 40 pixels?
-      snowflake base_instruction: Crie essas 3 retas que estão separadas por 45 graus
-      snowflake branch_instruction: |
-        Agora, vamos fazer cada reta com 30 pixels de comprimento. Crie
-        a primeira ramificação de um floco de neve repetindo três vezes o padrão de 3 linhas.
-      snowflake full_instruction: |
-        Crie um floco de neve repetindo uma ramificação do floco de neve
-        8 vezes
-      snowflower pattern_instruction: |
-        Que belas flores de neve! Vamos criar flores de neve
-        menores para cobrir todo o ringue de patinação.
-      snowflower_instruction: |
-        Padrões complexos podem ser criados na neve apenas com
-        formas simples, como círculos pequenos e grandes. Você consegue criar um padrão
-        com um círculo de 5 pixels e um de 10 pixels, repetindo-os 5 vezes em um círculo? 
       SpecialFrozenLevel_instruction: |
         Você se tornou oficialmente um artista mestre!
         Crie um país das maravilhas de gelo.
-      square iterative_instruction: |
-        Parece que estamos na metade do caminho para fazer um quadrado.
-        Crie 4 retas para desenhar um quadrado.
-      square loop_instruction: |
-        Há mais de uma forma de fazer um quadrado. Você consegue
-        usar o bloco repita para criar o quadrado novamente, mas com menos blocos?
-        Qual padrão se repete para que você possa colocar dentro do bloco repita?
-      square snowflake_instruction: |
-        Como você já sabe fazer uma forma simples, como
-        um quadrado, você pode usá-la para desenhar belos flocos de neve. Você consegue criar um floco de
-        neve usando o bloco repita para desenhar um quadrado 10 vezes, virando 36 graus entre
-        cada quadrado?
       Standalone_Artist_1_instruction: |
         Bem-vindo ao Artista! Primeiro, vamos tentar
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
@@ -3319,36 +3069,34 @@ pt-BR:
         Bem-vindo ao Artista! Primeiro, vamos tentar
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
         Cada lado deve medir 100 pixels.
-      temp_for_ross_instruction: |
-        Esse porco está me irritando. Ajude-me a
-        encontrá-lo!
-      Test Artist Level_instruction: Este é um nível de teste do artista
-      test camel_instruction: Camelo
-      Test down solution_instruction: Testar a solução
-      Test Level Brian Maze_instruction: Testar nível
-      Test Studio Embed Free Play_instruction: |
-        ATIVIDADE LIVRE: clique em executar e jogue o jogo.
-        Ajude o cão a chegar até o gato.
-      Test-Karel-k1_instruction: Mova para o leste para remover os montes
-      test123_instruction: Desenhe uma reta
-      test4_instruction: Olá
-      Testing Brian Level_instruction: Testar o nível de Brian
-      testing_instruction: Testar nível
-      TestK1-1_instruction: |
-        Desenhe três quadrados parcialmente sobrepostos usando o bloco
-        repita
       Text Compression Peter Piper_instruction: |
         Esse poema foi comprimido com
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
         outro padrão comum para comprimir ainda mais o poema?
-      the terps_instruction: Dê o seu melhor para chegar ao porco verde!!!
-      the yolo maze_instruction: Coloque o bloco no lugar correto
-      toby-test5-16-1_instruction: dafsfas
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variante 1 - parque de diversões: EM CONSTRUÇÃO:
         A variante 1 ainda não é funcional porque as conexões P2P não foram implementadas.
         A variante 1 permite que os alunos elaborem manualmente o tempo de envio de bits
         para trás e para a frente.
+      U2L10 NetSim Automatic DNS_instruction: |
+        In this version of the simulator a
+        DNS service is provided for you. Send a message in the form GET [hostname]
+        to the DNS service at address 15 to get a student's address.
+      U2L10 NetSim Manual DNS_instruction: |
+        In this version of the simulator you
+        can't see the other students' addresses.  Instead, one of you must act as
+        a name service, to help share addresses with each other.
+      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame you just played in person, but this time using the Internet Simulator.\nJoin a room to be connected to your group, and then follow the instructions\non the worksheet handed out by your teacher.\r\n"
+      U2L3 NetSim Hub Mode_instruction: |
+        With your group, invent a standard addressing
+        scheme for the "Game of Messages" game, and try it out using the Internet
+        Simulator. 
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L7 NetSim Need for Packets_instruction: |
+        Transfer your favicon to a partner
+        across a network in which the larger a packet grows, the more likely it is
+        to be dropped.
       U313 Two Buttons with Ids_instruction: |
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -3358,7 +3106,7 @@ pt-BR:
         sobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente).
       U3L03 choose your own drawing_instruction: |
         Agora escolha o seu!  Escolha um dos
-        três desenhos mostrados aqui e ente criá-lo você mesmo, tomando decisões
+        três desenhos mostrados aqui e tente criá-lo você mesmo, tomando decisões
         inteligentes sobre como dividir o problema em funções reutilizáveis.  Você vai revisar seu
         trabalho com um colega usando os "procedimentos para a rubrica de revisão em pares".
         Verifique os procedimentos para ver os requisitos.  GIF: U3L3-ProceduresChooseOne.png
@@ -3369,13 +3117,12 @@ pt-BR:
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito.
       U3L03 define turnRight and draw a rectangle_instruction: |
-        Crie uma função virarDireita()
-        e desenhe um retângulo com a altura duas vezes maior que sua largura fazendo a tartaruga
-        navegar em sentido horário para desenhar o retângulo. Lembre-se de comentar sua função
-        como mostrado na função virar(). 
+        Create a turnRight()
+        function and draw a rectangle twice as tall as it is wide by having the turtle
+        navigate clockwise to draw the rectangle. 
       U3L03 Draw a T using turnAround_instruction: |
-        Agora a  função "virar" é 
-        fornecida no código.  Use a função virar() para desenhar um T conforme
+        Agora a função "virar" é 
+        fornecida no código. Use a função virar() para desenhar um T conforme
         descrito.
       U3L03 draw diamond_instruction: "Use qualquer função que você escreveu\nantes para fazer uma forma de \"diamante\" conforme mostrado na imagem.\r\n\r\nOBSERVAÇÃO:\nessa é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra função que desenha um lado do diamante. "
       U3L03 Three Steps_instruction: |
@@ -3384,19 +3131,19 @@ pt-BR:
         que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
       U3L04 choose your own drawing_instruction: |
         Agora escolha o seu!  Escolha um dos
-        três desenhos mostrados aqui e ente criá-lo você mesmo, tomando decisões
+        três desenhos mostrados aqui e tente criá-lo você mesmo, tomando decisões
         inteligentes sobre como dividir o problema em funções reutilizáveis.  Você vai revisar seu
         trabalho com um colega usando os "procedimentos para a rubrica de revisão em pares".
         Verifique os procedimentos para ver os requisitos.
       U3L04 diamond solution_instruction: |
         Estude essa solução para o problema da função desenharDiamante
-        Observe que todo o programa começa chamando desenharDiamante() no
+        Observe que todo programa começa chamando desenharDiamante() no
         começo.  Então, o programa segue uma cadeia de chamadas. Você pode acompanhar
-        o que está acontecendo no código para ver se a função ser reutilizada.  Também é fácil
+        o que está acontecendo no código para ver as funções reutilizadas.  Também é fácil
         de ler porque os nomes das funções descrevem o comportamento esperado.
       U3L05_3x3GridEfficiencyChallenge_instruction: |
         Vamos revisitar o problema da grade 3x3
-        que você resolveu algumas lições atrás.  Desta vez o desafio é programar a
+        que você resolveu algumas lições atrás.  Desta vez o desafio é programar
         a solução da forma "mais eficiente possível".  Agora que você sabe como escrever
         funções, deve ser mais fácil dividir o problema e seu código deve ser
         mais fácil de ler e depurar. Veja a rubrica para mais detalhes sobre os requisitos
@@ -3407,7 +3154,12 @@ pt-BR:
         OBSERVAÇÃO: esse problema é bastante desafiador. Você deve precisar passar um tempo
         resolvendo-o e ajustando-o. Você também deve considerar usar lápis e papel para esboçar
         suas ideias.
-      U3L06 Challenge 1 triangle_instruction: "Dê uma olhada na paleta estendida da tartaruga que\nagora está disponível para você. Esses novos comandos aceitam parâmetros, que permitem que\nvocê especifique precisamente como a função opera, ao invés de somente poder\nmover ou virar de acordo com um valor predeterminado. Use essas funções para\ndesenhar o triângulo como mostrado.\r\nPNG: U3L06-challenge1.png"
+      U3L06 Challenge 1 triangle_instruction: |
+        Check out the extended Turtle palette
+        now made available to you. These new commands accept parameters, allowing
+        you to specify precisely how the function operates rather than only being
+        able to move or turn a predetermined amount. Make use of these functions to
+        draw the triangle as shown.
       U3L06 Challenge 2 purple square_instruction: |
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
@@ -3422,12 +3174,12 @@ pt-BR:
         Vamos tentar mais uma vez.
         Desta vez as cores NÃO são chamadas pelo nome - você precisa usar o número hexadecimal
         cor para defini-la. Assim, para que você não fique tentando adivinhar aleatoriamente, vamos
-        lhe dar uma dica -- cada uma das cores mostradas na imagem alvo é uma das
+        lhe dar uma dica -- cada uma das cores mostradas na imagem-alvo é uma das
         cinco listadas a seguir:  #00ABDC, #CC4400, #1188CC, #006699,
-        #11CC00  Você deve acertar o palpite se você aplicar o que você sabe sobre
+        #11CC00  Você deve acertar o palpite se aplicar o que sabe sobre
         cores RGB.
       U3L06 Challenge 5 overlapping circles_instruction: |
-        Essa imagem é criada apenas
+        Esta imagem é criada apenas
         usando ponto() e corCaneta(), mas como vamos fazer esses círculos ficarem
         transparentes? Se você ainda não recebeu a dica: leia a documentação!
       U3L06 Challenge 6 squiggles_instruction: |
@@ -3444,7 +3196,7 @@ pt-BR:
         Use as ferramentas que você aprendeu
         hoje para criar um desenho próprio. Se você tiver tempo, desafie seus
         amigos para ver se eles conseguem duplicar sua imagem. Vamos mostrar para você os
-        desenhos que nós mesmos fizemos. Você pode tentar duplicá-los se você quiser.
+        desenhos que nós mesmos fizemos. Você pode tentar duplicá-los, se quiser.
         Caso não queira, divirta-se criando o seu próprio desenho!
       U3L07 - Free Play Loops and Random_instruction: |
         Atividade livre! Use o que você aprendeu
@@ -3455,52 +3207,52 @@ pt-BR:
         mostrada aqui. Fornecemos um código inicial para gerar o chão e o céu
         (apenas dois pontos gigantes) e você vai adicionar código a esse projeto para fazer as
         estrelas, a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,
-        linhas e cores da tartaruga.  Para começar, siga a série de etapas sugeridas na
+        linhas e cores da tartaruga.  Para começar, siga a série de etapas sugerida na
         planilha de acompanhamento. 
       U3L08 - Enchantment Under the Sea_instruction: |
-        Fornecemos a você um código
-        inicial para uma cena "Subaquática" que inclui três funções,
-        para a estrela-do-mar, para a grama e para o peixe. Crie versões dessas funções
-        que aceitam parâmetros que permitam que você adicione mais variações à cena. A
-        planilha do aluno fornece mais detalhes e instruções. GIF: U3L08-UnderTheSea.gif
+        You have been provided with
+        starter code for an “Under the Sea” scene which includes three functions,
+        one each for the starfish, sea grass, and fish. Create versions of these functions
+        which accept parameters to allow you to add more variation to your scene.  The
+        student worksheet provides more details and guidance.
       U3L13 - Button with ID_instruction: |
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
         o botão.
-      U3L13 - Debug Id plus logic problem_instruction: "O último problema foi um exemplo\nde erro de sintaxe. O laboratório de aplicativo não entendeu qual objeto ele deveria ouvir \npara um evento \"clique\", então ele mostrou uma mensagem de erro no console para lhe\ninformar. Outro tipo de erro é um erro lógico - o programa é válido,\nmas não faz o que você quer que ele faça.\r\n\r\nEsse programa tem dois erros.\nUm erro de sintaxe (complicado) e um erro lógico.  Encontre-os, conserte-os e faça\no programa funcionar como esperado."
+      U3L13 - Debug Id plus logic problem_instruction: "O último problema foi um exemplo\nde erro de sintaxe. O laboratório de aplicativo não entendeu qual objeto ele deveria ouvir \npara um evento \"clique\", então ele mostrou uma mensagem de erro no console para\ninformá-lo. Outro tipo de erro é um erro lógico - o programa é válido,\nmas não faz o que você quer que ele faça.\r\n\r\nEsse programa tem dois erros.\nUm erro de sintaxe (complicado) e um erro lógico.  Encontre-os, conserte-os e faça\no programa funcionar como esperado."
       U3L13 - Debug Id Problem_instruction: |
         Esse programa tem um problema! Você pode descobrir
         qual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
-        que faça o programa funcionar como esperado.
+        que permita que o programa funcione como esperado.
       U3L13 - Turtle Driver Project_instruction: |
         Desafio: crie uma "tartaruga motorista"
         com pelo menos três botões na tela para mover a tartaruga para a frente e
-        virá-la para a direita e para a esquerda. Você pode copiar/colar de um nível anterior
-        se você quiser, mas você vai exercitar seus músculos em programação se você criar
-        esse pequeno programa desde o início. Se você tiver tempo, adicione botões extras! Você
+        virá-la para a direita e para a esquerda. Se quiser, você pode copiar/colar de um nível anterior,
+        mas você vai exercitar seus músculos de programação se criar
+        esse pequeno programa desde o início. Se tiver tempo, adicione botões extras! Você
         também pode se divertir alterando os parâmetros nas funções da tartaruga, usando cores,
         etc.
       U3L13 - Turtle move with button_instruction: |
         Arraste um botão para fora da tela e
-        defina seu texto como "Vá em frente!". Adicione um manipular de evento para o botão que
+        defina seu texto como "Vá em frente!". Adicione um manipulador de eventos para o botão que
         faz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. 
       U3L14 - Unfortunate Events Free Play_instruction: |
         Siga a planilha de "Eventos
         infelizes" e insira seu código aqui para testá-lo. Carregamos previamente
         o código que você precisa para começar.
-      U3L16 - challenge say hi app_instruction: "Nesse desafio, demos a você o código\ninicial que estabelece todos os elementos na tela. Você precisa fazer\no seguinte:\r\nAdicionar um manipulador de evento a textInput com o tipo de evento \"input\" que mostra\no botão \"Diga olá\" quando o evento ocorre.\r\nAdicione um manipulador de evento ao botão\npara que, ao ser clicado, ele escreva uma saudação na tela e oculte o textInput\ne o botão. GIF: U3L16 - sayHiApp.gif"
+      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button."
       U3L16 - hideAndShow_instruction: |
         Introdução de textInput, getText e write.  Primeiro,
         execute o código inicial várias vezes. Tente alterar o que é escrito na
         tela quando o botão for clicado. Então, use getText para escrever na tela
         o que o usuário digitou na caixa de texto. GIF: U3L16 - useGetText.gif
       U3L16 - hideAndShowPractice_instruction: |
-        é fornecido um código inicial que
-        coloca uma imagem e dois botões na tela. A imagem está inicialmente oculta.
-        Adicione dois novos manipuladores de evento: um para cada botão que, quando clicados,
-        ocultam e mostram a imagem. GIF: U3L16 - hideAndShowExample.gif
+        You are given some starting code
+        that puts an image and two buttons on the screen.  The image is initially
+        hidden. Add two new event handlers: one for each button, that when clicked
+        hide and show the image.
       U3L16 - image and text labels_instruction: |
         Introdução do comando setPosition!  Substitua
         o moveTo no manipulador de eventos de clique do botão para usar setPosition para mover o
@@ -3510,7 +3262,7 @@ pt-BR:
         botões! - textLabels e imagens.  Primeiro, tente substituir seu botão por um
         textLabel.  O texto vai responder a eventos da mesma forma que o botão?  Tente conectá-lo
         a um manipulador de eventos. Fornecemos um código inicial similar ao resultado do
-        último nível, então você pode copiar o código do último nível aqui se você
+        último nível, então você pode copiar o código do último nível aqui se
         preferir. 
       U3L16 - images_instruction: |
         Introdução de imagens. Tente substituir o textLabel
@@ -3519,14 +3271,13 @@ pt-BR:
         ao resultado do último nível, então você pode copiar o código do último nível
         aqui se você preferir. 
       U3L16 - quick double click_instruction: |
-        Mini projeto. O jogo do clique duplo
-        rápido.  Nesse jogo simples, um objeto (uma imagem) se move, ou aparece aleatoriamente
-        na tela, quando o usuário clicar. O objetivo do nosso jogo é tentar clicar
-        duas vezes no objeto antes dele se mover.  Parte do desafio (e da diversão)
-        é criar esse aplicativo desde o início. Você pode olhar em seus trabalhos anteriores para
-        ver exemplos, mas também é divertido criar algo do início.
-        Tente! Para mais detalhes, veja o guia de atividade para essa lição. GIF:U3L16 -
-        quickDoubleClick.gif
+        Mini-Project.  The Quick Double-Click
+        game.  In this simple game an object (an image) moves around, or pops up randomly
+        on the screen, as the user clicks it.  The goal of our game will be to try
+        to double-click the object before it moves.  Part of the challenge (and fun)
+        here is creating this app from scratch.  You can look back at your previous
+        work for examples, but it's fun to create something from scratch, too.  Try
+        it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
@@ -3534,7 +3285,7 @@ pt-BR:
       U3L16 - setPositionMoveButton_instruction: Use setPosition para moveButton
       U3L16 - setupMoveToRandom_instruction: |
         Vamos nos basear em alguns códigos
-        iniciais simples para essa lição. Sua primeira tarefa: use moveTo e randomNumber
+        iniciais simples para esta lição. Sua primeira tarefa: use moveTo e randomNumber
         para fazer a tartaruga se mover para uma posição aleatória a cada clique do botão. Fornecemos
         a você o código inicial para nossa configuração comum: um botão que move a tartaruga
         quando é clicado. Você deve modificar esse código.  
@@ -3550,21 +3301,86 @@ pt-BR:
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
       U3L16 - use images_instruction: |
-        Introdução de imagens. Tente substituir o textLabel
-        por uma imagem. A imagem vai responder aos eventos como o botão respondia? Tente 
-        conectá-la a um manipulador de eventos. Fornecemos um código inicial similar
-        ao resultado do último nível, então você pode copiar o código do último nível
-        aqui se você preferir. GIF: U3L16 - useImage.gif
-      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
-      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe error and get the program to run.  Also note the error message since it\nmight come up at some point later in your life.\r\n\r\n"
-      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou the three lines of code shown in the previous page.  Add three lines of\ncode just below the ones shown here to make your own variable, assign it a\nvalue and write it to the screen.  NOTE: change the variable name from the\ndefault x to something else.\r\n"
+        Introducing Images.  Try replacing the textLabel
+        with an image..  Will the image respond to events just like the button?  Try
+        connecting an event handler to it.  We've started you out with code similar
+        to the result of the last level, you can copy your code from that level into
+        here if you prefer.
+      U3L19 - Debugging with consoleLog_instruction: |
+        This example shows how you
+        might insert console.log statements in your code to verify for yourself how
+        the values in the variables change during the running of the code.  This is
+        an important debugging technique to use when each line in your program doesn't
+        have a visual effect on the app that you can see to verify things are working
+        right.  Run the code to see the output in the console.
+      U3L19 - DEMO up down count practice app_instruction: |
+        This is a demonstration
+        of a simple App that uses variables, arithmetic and setText.  Play with it
+        a little bit here to see what it does.  You can also come back to experiment
+        if you want.  You are going to try to create this app yourself on the next
+        screen.  Don't worry, we'll start you out with some of the code and leave
+        the rest for you to complete.
+      U3L19 - do concatenate string with var_instruction: "Demos a você um trecho\nde código da tela anterior. Tente alterar o valor atribuído a foo\npara ver a string ser alterada. \r\nFaça o seguinte: \r\n1. Tente alterar o valor atribuído\na foo para ver a string ser alterada. \r\n2. Modificando apenas as linhas de código\nque lhe foram dadas, tente fazer a saída ser: “O valor de foo é:\n9.  Quem achar diferente que prove.” \r\n"
+      U3L19 - fix the var name syntax error_instruction: "Demos a você um trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte\no erro e execute o programa. Observe também a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\r\n\r\n"
+      U3L19 - practice with setText_instruction: |
+        We've started you out with the
+        code shown on the previous screen.  First experiment with the app.  Identify
+        where setText is being used.  CHALLENGE: modify the code to also use setText
+        to change the text on the button itself when it's clicked.  GIF: U3L19 -
+        setTextOfButton.gif
+      U3L19 - Target Clicker App_instruction: "# A motivating example\r\n\r\nHere\nis an example of the kind of app we want to make.  Study this for the elements\ncontained in the app rather than what it is or does.  Things to investigate:\n\r\n\r\n1. what happens when you click on the Code.org logo? \r\n2. What happens\nwhen you click somewhere else? \r\n3. Try the reset button.   \r\n\r\nThe\nelements contained in this app appear to be simple, and they are in some ways.\nHowever, the computing principles involved - controlling and keeping track\nof things in memory while the program is running - get into some deeper issues\nof programming and computer science in general.  There are some devilish details\nand paths that can lead to misunderstanding if you're not careful.\r\n\r\nSo,\nkeep this app in mind as you go through the different levels in this lesson.  It\nmight seem like you need to learn a lot in order to get this simple thing\nworking.  But it's worth taking the time to understand at a deeper level\nwhat is going on.  Because this one topic: controlling memory leads to many\npossible misunderstandings about coding, and how computers work.  We want\nto make sure you get it right from the outset.  \r\n\r\nSo take your time.  Work\nthrough the issues.  Read the explanations.  You'll come out on the other\nside a better programmer with much deeper knowledge and understanding of how\nthings work.  \r\n\r\nAre you ready?  Click 'finish' to move to the next\npage and start the lesson."
+      U3L19 - test reassignment of two vars_instruction: |
+        Why is this happening?
+        The code given here is the same as the example from the previous page where
+        we asked you to make a prediction about what will happen.  Run this code to
+        find out if you were right.  If you weren't, that's okay.  You might experiment  a
+        little if you want to, but bon't spend too much time here. We'll explain
+        more on the next page.
+      U3L19 - three basic ops of variables_instruction: "Faça o seguinte:\r\nDemos a você\ntrês linhas de código mostradas na página anterior. Adicione três linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável, atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome da variável de\nx para alguma outra coisa.\r\n"
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - up down count practice app_instruction: |
+        This app is only SLIGHTLY
+        different from the previous one, but much more dynamic.  See if you can figure
+        out how and why the count is going up.  Once you've figured it out then you
+        should be able to DO THIS: add a button to the app that when clicked makes
+        the count go down, and updates the label.  When you're done the app should
+        work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+      U3L19 - updating variables pt1_instruction: |
+        This app is only SLIGHTLY different
+        from the previous one, but much more dynamic.  See if you can figure out how
+        and why the count is going up.  Once you've figured it out then you should
+        be able to DO THIS: add a button to the app that when clicked makes the count
+        go down, and updates the label.  When you're done the app should work as
+        shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+      U3L19 - variable reassignment challenge pt2_instruction: |
+        We've given you
+        the code from the previous page.  Right now, because the code only sets the
+        values of variables, the app doesn't display anything. DO THIS: insert write
+        or console.log statements into the code to figure out what the values of a,
+        b, and c are after the code has executed.  You should have first made a prediction
+        to see if your mental model of how the computer works is correct.  We'll
+        ask for the answer on the next page.
+      U3L19 - variable scope problem 2_instruction: |
+        First run the program to see
+        the problem.  You don't need to write code to solve any problem here.  But
+        you do need to investigate the code and come up with an explanation for WHY
+        what's happening is happening.  Why aren't 3 things being written to the
+        screen?  Why does the variable foo seem to exist once but not the other times?  If
+        you switch to code mode you'll see some warning messages next to two lines
+        of code -- why do you get those messages?  Once you think you have a good
+        answer, continue to the next page.
+      U3L19 - variable scoping problem debugging_instruction: |
+        Here is the code from
+        previous page that has a subtle problem with it.  FIRST: run the app and try
+        it to see the problem. NOTE: NaN stands for "Not a Number".   DO THIS: figure
+        out what's happening, where, and fix the problem.  We'll explain the issue
+        on the next page. 
       U3L19 - write var and string with same name_instruction: |
-        Now look at this
-        example. We’ve added another write statement.  Before you run the code, see
-        if you can predict what the output will be.  Seriously, write it down. THEN
-        run the code, mess with it if you like, and continue to the next page for
-        an explanation.
+        Agora, veja este
+        exemplo. Adicionamos outra declaração de escrita. Antes de executar o código, veja
+        se você consegue prever qual será a saída. É sério, anote sua previsão. DEPOIS,
+        execute o código, mexa nele, se quiser, e vá para a próxima página para
+        ver uma explicação.
       U3L2 Using Simple Commands_instruction: |
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
@@ -3577,6 +3393,6 @@ pt-BR:
         suas ideias.
       U3L2_TurtleSquare_right_instruction: |
         Desenhe um quadrado usando apenas avance
-        e vireEsquerda, mas desta vez faça o quadrado aparecer ACIMA e À DIREITA
+        e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
         da posição inicial.
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes de unidade

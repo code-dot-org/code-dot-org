@@ -1,0 +1,9 @@
+name 'U3L02 Free Response Getting Started'
+title 'Programming with Simple Commands: Getting Started'
+
+markdown <<MARKDOWN
+Today, you will give the computer simple commands to draw basic geometric shapes on the screen. 
+Think about giving someone instructions to draw shapes in the sand by marching on the beach. 
+
+What commands you would need to include in a set of basic statements that would instruct the person to create simple geometric shapes in the sand?
+MARKDOWN

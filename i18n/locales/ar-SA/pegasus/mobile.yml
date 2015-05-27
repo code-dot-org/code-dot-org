@@ -384,8 +384,8 @@ ar-SA:
   dashboard_login_picture: الصورة
   dashboard_login_none: البريد الإلكتروني
   dashboard_new_password: كلمة مرور جديدة
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: لم تبدأ
+  dashboard_progress_in_progress: في طور التقدم
   dashboard_progress_not_completed: غير مكتمل
   dashboard_progress_completed_too_many_blocks: أكملت، كتل كثيرة جداً
   dashboard_progress_completed_perfect: مكتمل, ممتاز

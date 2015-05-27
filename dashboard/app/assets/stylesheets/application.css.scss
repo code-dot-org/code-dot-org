@@ -1430,6 +1430,16 @@ a.download-video {
   }
 }
 
+.text-match {
+  #markdown {
+    // By default, nothing in the page body is selectable.
+    // On text-match levels there may be a reason to paste part of the
+    // level markdown (the question) into the answer box, so we want it
+    // to be selectable.
+    @include selectable;
+  }
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {

@@ -164,7 +164,7 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "levelIncompleteError":function(d){return "Dein Ausdruck erfüllt nicht das Ziel."},
 "missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Bei deinem Ausdruck fehlt die Variable "+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!"},
+"reinfFeedbackMsg":function(d){return "Hier ist deine Berechnung! Arbeite weiter oder gehe zur nächsten Aufgabe!"},
 "yourExpression":function(d){return "Dein Ausdruck:"},
 "wrongInput":function(d){return "Du rufst deine Funktion mit einem falschen Wert auf."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},

@@ -76,24 +76,24 @@
         one: '1 error impidió que este %{resource} se guardara:'
         other: '%{count} errores impiden que este %{resource} sea guardado:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
+      send_instructions: Se ha enviado un email de  invitación a %{email}.
+      invitation_token_invalid: El token de invitación proporcionado no es válido!
+      updated: La contraseña se estableció con éxito. Ahora estas firmado.
+      no_invitations_remaining: No hay invitaciones restantes
       invitation_removed: Su invitación ha sido removida.
       new:
         header: Enviar invitación
         submit_button: Enviar una invitación
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Establece tu contraseña
+        submit_button: Establecer mi contraseña
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Instrucciones de la invitación
+        hello: Hola %{email}
+        someone_invited_you: Alguien te ha invitado a %{url}, lo puedes aceptar mediante
+          el enlace de más abajo.
+        accept: Aceptar invitación
+        ignore: Si no quieres aceptar la invitación, por favor ignore este email.<br
+          />Tu cuenta no sera creada hasta que acceda al enlace anterior y configurar
+          su contraseña.

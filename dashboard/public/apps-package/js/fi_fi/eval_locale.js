@@ -159,7 +159,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "ympyrä (säde, tyyli, väri)"},
 "displayBlockTitle":function(d){return "arvioi"},
 "ellipseBlockTitle":function(d){return "ellipsi (leveys, korkeus, tyyli, väri)"},
-"extraTopBlocks":function(d){return "Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näytä\" lohkoon?"},
+"extraTopBlocks":function(d){return "Sinulla on irrallisia lohkoja. Oliko tarkoituksesi liittää nämä \"arvioi\"-lohkoon?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "peitto (ylhäältä, alhaalta)"},
 "placeImageBlockTitle":function(d){return "aseta kuva (x, y, kuva)"},

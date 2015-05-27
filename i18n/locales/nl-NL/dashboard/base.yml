@@ -64,8 +64,8 @@ nl:
     need_confirmation: Geen bevestigingsinstructies ontvangen?
     need_unlock: Nog geen unlock instructies ontvangen?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} studenten hebben al ondertekend.'
+    teacher_count: '%{count} leraren hebben al ondertekend.'
     overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid </a>.'
     overview_teacher: 'Geef les in Informatica in je klaslokaal, maak een gebruikersnaam aan. <p/> Je kunt je leerlingen toevoegen en hun voortgang zien.'
     no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
@@ -231,7 +231,7 @@ nl:
       signup: Meld je aan
       already_registered: Al geregistreerd?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: '%{name} de vooruitgang'
       progress: Je voortgang
       lines: 'Totaal aantal regels code: %{lines}'
       close: SLUITEN
@@ -300,9 +300,9 @@ nl:
     cant_remove_teacher_no_email: '%{teacher_name} kan niet worden verwijderd als je leraar omdat je geen emailadres hebt opgegeven'
     student_teacher_disassociated: '%{teacher_name} is verwijderd als een leraar voor %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Antwoord Viewer
       student: Leerling
-      try_it_yourself: Try it yourself
+      try_it_yourself: Probeer het zelf
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -323,7 +323,7 @@ nl:
     classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} LIJNEN CODE DIE GESCHREVEN DOOR STUDENTEN'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: 'Al geregistreerd? %{link}'
@@ -475,6 +475,8 @@ nl:
     wrong_body: 'Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!'
     correct_title: Juist
     correct_body: Dat is het juiste antwoord.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Onjuist antwoord
     wrong_body: 'De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!'
@@ -487,11 +489,11 @@ nl:
     badrange: Je ontwerp heeft het verkeerde bereik.
     baddomainsize: Je ontwerp heeft niet het juiste aantal variabeletypen.
     baddomainname: Een of meer van je variabeletypen heeft een verkeerde naam.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: Één of meer van de items van uw domein heeft het verkeerde type, of ze zijn in de verkeerde volgorde.
   text_match:
     placeholder: Voer uw antwoord hier in
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Bedankt
+    open_response_body: Bedankt voor uw reactie!
   dialog:
     ok: OK
   time:

@@ -1,0 +1,37 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-23T00:59:13.059Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "There are 20 elements in an array. What is the index of the last element?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "20",
+        "correct": false
+      },
+      {
+        "text": "21",
+        "correct": false
+      },
+      {
+        "text": "19",
+        "correct": true
+      },
+      {
+        "text": "Cannot be determined",
+        "correct": false
+      }
+    ],
+    "title": "Arrays: Question 3",
+    "type": "Multi",
+    "dsl_text": "name 'U3L30 Assessment3'\r\ntitle 'Arrays: Question 3'\r\n\r\nquestion 'There are 20 elements in an array. What is the index of the last element?'\r\nwrong '20'\r\nwrong '21'\r\nright '19'\r\nwrong 'Cannot be determined'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</Multi>

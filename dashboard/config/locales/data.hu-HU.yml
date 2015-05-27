@@ -272,7 +272,7 @@
         turtle_2_8: Ez egy kicsit trükkös lesz. Használd a "rajzolj egy hóembert"
           blokkot, és az új "ugrás előre" blokkot (a műveletek kategóriából). A 3
           hóember legyen különböző színű, és 100 képpont távolságra legyenek egymástól.
-        turtle_2_9: A "számolja a számlálót" hurok segítségével rajzolj egy hóember
+        turtle_2_9: A "számolja a számlálót" ciklus segítségével rajzolj egy hóember
           családot 110, 100, 90, 80, 70 képpontos magasságokkal. A hóemberek legyenek
           60 képpontra egymástól.
         turtle_2_10: Itt van egy kód, hogy különböző spirálokkal kísérletezz.  Mi
@@ -294,14 +294,14 @@
         maze_karel_2_6: Használd a két új függvényt, a "temesd be 8"-at és a "távolítsd
           el 8"-at, hogy el tudjam tüntetni az összes kupacot és fel tudjam tölteni
           az összes lyukat.
-        maze_karel_2_7: A földemen van egy tehén! Írj egy új funkciót, amely segít
-          kikerülni a tehenet, és ellapátolni a halmot. Tedd mindezt egy új funkció
+        maze_karel_2_7: A földemen van egy tehén! Írj egy új függvényt, amely segít
+          kikerülni a tehenet, és ellapátolni a halmot. Tedd mindezt az új függvény
           blokkba.
         maze_karel_2_8: Használja ezt a függvényt, "kerüld ki a tehenet, és tüntess
           el 1", hogy segítsen nekem eltávolítani a kupacokat.
-        maze_karel_2_9: OK, itt van egy függvény, amely eltávolít a 4 kupac földet
-          egy függőleges oszlopban. Próbálja ki ez a funkciót egy ciklus belsejében,
-          hogy eltávolítsa az összes kupacot, csak néhány új blokkok segítségével.
+        maze_karel_2_9: Rendben, itt van egy függvény, amely eltávolít 4 kupac földet
+          egy függőleges oszlopban. Próbáld ki ez a függvényt egy ciklus belsejében,
+          hogy az összes blokk eltávolításához csak néhány blokkot kelljen felhasználnod.
         maze_karel_2_10: Mozgass a mezőn, és a két függvény segítségével segíts nekem
           eltakarítani a földkupacokat, és feltölteni a lyukakat.
         turtle_3_1: Ez a játék bemutatja, hogyan határoztuk meg a "rajzoljon egy négyzetet"
@@ -693,19 +693,19 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
+        alg_1_intro: Számítógép-tudomány az algebrában - bevezetés
+        alg_2_eval_block: Számítógép-tudomány az algebrában - kiértékelő blokkok
+        alg_3_pemdas: Számítógép-tudomány az algebrában - a műveletek sorrendje
+        alg_4_data_types: Számítógép-tudomány az algebrában - adat típusok
+        alg_5_contracts: Számítógép-tudomány az algebrában - megkötések
+        alg_6_variables: Számítógép-tudomány az algebrában - változók
+        alg_7_function: Számítógép-tudomány az algebrában - függvények
         alg_8_design_recipe: CS in Algebra - Design Recipe
         alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_10_conditionals: Számítógép-tudomány az algebrában - feltételek
         alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_12_biggame_variables: Számítógép-tudomány az algebrában - Nagy Játék változók
+        alg_13_biggame_animation: Számítógép-tudomány az algebrában - Nagy Játék animáció
         alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection

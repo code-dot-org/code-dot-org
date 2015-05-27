@@ -155,14 +155,14 @@ p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Ohjelmasi johtaa nollalla jakamiseen."},
-"emptyComputeBlock":function(d){return "Liitä lohko \"laske\"-lohkoon."},
+"emptyComputeBlock":function(d){return "Sinun pitää liittää lohko \"arvioi\"-lohkoon."},
 "equivalentExpression":function(d){return "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen."},
 "evaluate":function(d){return "arvioi"},
-"extraTopBlocks":function(d){return "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?"},
+"extraTopBlocks":function(d){return "Sinulla on irrallisia lohkoja. Oliko tarkoituksesi liittää nämä \"arvioi\"-lohkoon?"},
 "failedInput":function(d){return "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla."},
 "goal":function(d){return "Tavoite:"},
 "levelIncompleteError":function(d){return "Lausekkeesi ei vastaa tavoitetta."},
-"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Sinun pitää määritellä funktio nimeltä "+calc_locale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Lausekkeestasi puuttuu muuttuja "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Tässä on laskelmasi! Jatka sen työstämistä tai siirry  seuraavaan tehtävään!"},
 "yourExpression":function(d){return "Lausekkeesi:"},

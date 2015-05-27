@@ -474,6 +474,8 @@ cs:
     wrong_body: 'Odpověď, kterou jste zadali, není správné.  Opakujte akci!'
     correct_title: Správně
     correct_body: To je správná odpověď.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nesprávné řešení
     wrong_body: 'Řešení, které jste zadali, není správné.  Opakujte akci!'

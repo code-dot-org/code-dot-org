@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create a turnRight() function and draw a rectangle twice as tall as it is wide by having the turtle navigate clockwise to draw the rectangle. Make sure to comment your function as shown in the turnAround() function. ",
+    "instructions": "Create a turnRight() function and draw a rectangle twice as tall as it is wide by having the turtle navigate clockwise to draw the rectangle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -38,12 +38,15 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "app_width": "300",
     "app_height": "300",
     "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif"
-  }
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false"
+  },
+  "md5": "a920b1ee21ee5a71b1be1d8e936e2c10"
 }]]></config>
   <blocks/>
 </Applab>

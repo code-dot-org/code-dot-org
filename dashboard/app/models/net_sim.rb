@@ -8,6 +8,8 @@ class NetSim < Blockly
     message_granularity
     automatic_receive
     broadcast_mode
+    address_format
+    packet_count_bit_width
     router_expects_packet_header
     client_initial_packet_header
     show_hostname_in_graph

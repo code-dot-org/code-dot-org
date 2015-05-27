@@ -168,4 +168,4 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "yourExpression":function(d){return "Tu expresión:"},
 "wrongInput":function(d){return "Estas llamando tu función con el valor incorrecto."},
 "wrongOtherValuesX":function(d){return "Su expresión da como resultado un valor incorrecto si variamos "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Su expresión no devuelve el resultado correcto."}};
+"wrongResult":function(d){return "Tu expresión no devuelve un resultado correcto."}};

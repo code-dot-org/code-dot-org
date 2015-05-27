@@ -506,6 +506,8 @@
     wrong_body: 정답이 안닙니다. 다시 시도해 보세요.
     correct_title: 정답
     correct_body: 정답입니다.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: 정답이 아닌 답안
     wrong_body: 제출한 답안은 정답이 아닙니다. 다시 시도해 보세요.

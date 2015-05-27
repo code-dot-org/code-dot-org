@@ -573,6 +573,8 @@
     wrong_body: La réponse que vous avez entrée n'est pas correcte. Veuillez réessayer !
     correct_title: Correct
     correct_body: C'est la bonne réponse.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solution incorrecte
     wrong_body: La solution que vous avez entrée est incorrecte. Veuillez réessayer !

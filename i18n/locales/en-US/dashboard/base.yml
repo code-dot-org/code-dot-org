@@ -467,6 +467,8 @@ en:
     wrong_body: crwdns5097:0crwdne5097:0
     correct_title: crwdns5342:0crwdne5342:0
     correct_body: crwdns5343:0crwdne5343:0
+    toofew_title: crwdns38737:0crwdne38737:0
+    toofew_body: crwdns38738:0crwdne38738:0
   match:
     wrong_title: crwdns5098:0crwdne5098:0
     wrong_body: crwdns5099:0crwdne5099:0

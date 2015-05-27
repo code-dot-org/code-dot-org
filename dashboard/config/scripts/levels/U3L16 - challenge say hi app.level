@@ -58,7 +58,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "In this challenge we give you starter code that lays all the elements out on the screen.  Here’s what you need to do:\r\nAdd event handler to textInput with the event type ‘input’ that shows the “Say hi” button when that event occurs.\r\nAdd event handler to button so that on click, it writes a hello message to the screen and hides the textInput and button. GIF: U3L16 - sayHiApp.gif",
+    "instructions": "In this challenge we give you starter code that lays all the elements out on the screen.  Here’s what you need to do:\r\nAdd event handler to textInput with the event type ‘input’ that shows the “Say hi” button when that event occurs.\r\nAdd event handler to button so that on click, it writes a hello message to the screen and hides the textInput and button.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -77,7 +77,8 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - sayHiApp.gif"
   },
   "md5": "5b1b88db941b15bd8105e35271f10b3a"
 }]]></config>

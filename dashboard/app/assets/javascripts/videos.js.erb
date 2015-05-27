@@ -1,5 +1,6 @@
 
 function createVideoWithFallback(options, width, height) {
+  upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
   setupVideoFallback(options, width, height);
@@ -19,6 +20,7 @@ function createVideo(options) {
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
 function showVideoDialog(options) {
+  upgradeInsecureOptions(options);
   var widthRatio = .8;
   var heightRatio = .8;
   var aspectRatio = 16 / 9;
@@ -208,4 +210,14 @@ function getShowNotes(key, container) {
     url: '/notes/' + key,
     success: callback
   });
+}
+
+// Convert http:// video urls to protocol-relative // urls to prevent mixed-content loads on https pages.
+function upgradeInsecureOptions(options) {
+  if(options.src) {
+    options.src = options.src.replace(/^http:\/\//, '//');
+  }
+  if (options.download) {
+    options.download = options.download.replace(/^http:\/\//, '//');
+  }
 }

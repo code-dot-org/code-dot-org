@@ -157,7 +157,7 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "Sa pead siduma ploki \"arvuta\" plokiga."},
 "equivalentExpression":function(d){return "Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "Hinda"},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Eesmärk:"},
@@ -166,6 +166,6 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Teie arvutus on siin! Jätka selle kallal töötamist või liigu järgmise pusle juurde!"},
 "yourExpression":function(d){return "Sinu avaldis:"},
-"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongInput":function(d){return "Sa kutsud oma funktsiooni vale väärtusega."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Sinu avaldis ei tagasta õiget tulemust."}};

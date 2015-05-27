@@ -56,6 +56,7 @@ var nodeToRowMetadata = function (node) {
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
     status: node.getStatus(),
+    isFull: (node.getNodeType() === NodeType.ROUTER) && node.isFull(),
     canConnectToNode: controller.canConnectToNode(node)
   };
 };
@@ -150,6 +151,8 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
             markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
           } else if (buttonType === 'cancel-button') {
             markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+          } else if (buttonType === 'full-button') {
+            markup = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
           }
         %>
         <%- markup %>
@@ -169,8 +172,12 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
         writeHeader(i18n.lobby());
         lobbyRows.forEach(function (row) {
           var buttonType;
-          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
-            buttonType = 'join-button';
+          if (!controller.hasOutgoingRequest()) {
+            if (row.isFull) {
+              buttonType = 'full-button';
+            } else if (row.canConnectToNode) {
+              buttonType = 'join-button';
+            }
           }
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });

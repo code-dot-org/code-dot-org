@@ -1,0 +1,24 @@
+name 'U3L28 Student Lesson Introduction'
+title 'While Loop Basics'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 28 - While Loop Basics
+
+# Background
+
+While loops occur frequently in every-day lives. That makes it easy to conceptualize how they work as a modification of the conditional statement. An iterator variable or a counter is used to keep track of the number of times a loop executes.
+
+# Lesson
+
+* Design a flowchart of an every-day while loop.
+* Create while loops in App Lab. 
+
+
+# Resources 
+* Activity: <a href="https://docs.google.com/document/d/1NnfQVHDb_zkaj_08KstjT2U8LMXfXgQs-mfSGI0CLWc" target="_blank">
+Real-world Loops
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

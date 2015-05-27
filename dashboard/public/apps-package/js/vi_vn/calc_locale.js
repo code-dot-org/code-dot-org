@@ -154,8 +154,8 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Your program results in division by zero."},
-"emptyComputeBlock":function(d){return "Bạn phải gắn một khối vào một khối \"tính toán\"."},
+"divideByZeroError":function(d){return "Kết quả lập trình của bạn trong phân khu bằng không (0)"},
+"emptyComputeBlock":function(d){return "Bạn phải đính kèm một khối vào khối \"đánh giá\" này"},
 "equivalentExpression":function(d){return "Hãy thử sắp xếp lại những lý lẽ của bạn để có được sự diễn tả giống nhất."},
 "evaluate":function(d){return "đánh giá"},
 "extraTopBlocks":function(d){return "Bạn có những khối chưa đính vào. Bạn có muốn đính những khối này vào khối \"đánh giá\" ?"},
@@ -163,9 +163,9 @@ s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "goal":function(d){return "Mục tiêu:"},
 "levelIncompleteError":function(d){return "Cách diễn tả của bạn không phù hợp với mục tiêu. \n"},
 "missingFunctionError":function(d){return "Bạn phải định nghĩa một hàm tên là "+calc_locale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"missingVariableX":function(d){return "Diễn đạt của bạn thiếu biến tố "+calc_locale.v(d,"var")},
 "reinfFeedbackMsg":function(d){return "Đây là sự tính toán của bạn! Tiếp tục làm việc với nó, hoặc chuyển sang câu đố tiếp theo!"},
 "yourExpression":function(d){return "Cách diễn tả của bạn:"},
 "wrongInput":function(d){return "Bạn đang gọi chức năng của mình với giá trị sai."},
-"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongOtherValuesX":function(d){return "Kết quả diến đạt của bạn trong giá trị này sai nếu chúng tôi thay đổi biến tố "+calc_locale.v(d,"var")},
+"wrongResult":function(d){return "Diễn đạt của bạn không mang lại kết quả đúng"}};

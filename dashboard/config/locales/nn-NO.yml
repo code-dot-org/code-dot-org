@@ -547,6 +547,8 @@
     wrong_body: Svaret du har gitt er ikkje rett.  Prøv på nytt!
     correct_title: Rett
     correct_body: Det er rett svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Feil løysing
     wrong_body: Løysinga du har gitt er ikkje rett.  Prøv på nytt!

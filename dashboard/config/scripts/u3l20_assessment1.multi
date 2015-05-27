@@ -1,0 +1,14 @@
+name 'U3L20 Assessment1'
+title 'Conditional Basics Question 1'
+type 'multi2'
+
+question 'Which two of the following programming statements did you use when you wrote turtle drawing programs?'
+right 'sequential statements'
+right 'function calls	'
+wrong 'event handlers'
+wrong 'conditionals'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

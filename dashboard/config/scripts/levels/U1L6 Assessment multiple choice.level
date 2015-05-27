@@ -5,7 +5,7 @@
   "properties": {
     "questions": [
       {
-        "text": "If you just had a circle and a square, how many 3-shape rows could you make?"
+        "text": "If you just had a circle and a square, how many 3-shape permutations could you make?"
       }
     ],
     "answers": [

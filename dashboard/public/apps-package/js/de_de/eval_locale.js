@@ -165,7 +165,7 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "Ort-Bild (x, y, Bild)"},
 "offsetBlockTitle":function(d){return "versatz (x,y,Bild)"},
 "rectangleBlockTitle":function(d){return "Rechteck (Breite, Höhe, Stil, Farbe)"},
-"reinfFeedbackMsg":function(d){return "Um Deine Zeichnung zu überarbeiten, drücke auf den \"Try again\"-Button"},
+"reinfFeedbackMsg":function(d){return "Du kannst \"Weiterspielen\" drücken, um dein Programm zu ändern."},
 "rotateImageBlockTitle":function(d){return "Drehen (Grad, Bild)"},
 "scaleImageBlockTitle":function(d){return "Maßstab (Faktor, Bild)"},
 "squareBlockTitle":function(d){return "Quadrat (Größe, Stil, Farbe)"},
@@ -181,5 +181,5 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "fest"},
 "string":function(d){return "String"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."},
+"userCodeException":function(d){return "Beim Ausführen deines Codes ist ein Fehler aufgetreten."},
 "wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

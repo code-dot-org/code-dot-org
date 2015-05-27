@@ -719,7 +719,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Підказка:"},
 "hintRequest":function(d){return "Подивитись підказку"},
 "hintTitle":function(d){return "Підказка:"},
-"infinity":function(d){return "Нескінченність"},
+"infinity":function(d){return "Infiinty"},
 "jump":function(d){return "стрибок"},
 "keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Використано усі необхідні типи блоків, але у неправильному порядку."},

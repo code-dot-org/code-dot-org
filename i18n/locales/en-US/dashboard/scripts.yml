@@ -636,6 +636,7 @@ en:
           Events Unplugged: crwdns38394:0crwdne38394:0
           Beyond Buttons Toward Apps: crwdns38395:0crwdne38395:0
           Improving the Clicker Game: crwdns38543:0crwdne38543:0
+          Chatbot Challenge: crwdns38798:0crwdne38798:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -747,7 +748,88 @@ en:
           Big Game: crwdns38398:0crwdne38398:0
         sciencePD2:
           Phase 2 Summer Workshop: crwdns38075:0crwdne38075:0
+          Welcome: crwdns38799:0crwdne38799:0
+          Resources: crwdns38800:0crwdne38800:0
+          Discussion Forums: crwdns38801:0crwdne38801:0
+          Discussion Forum: crwdns38802:0crwdne38802:0
+          Evaluation: crwdns38803:0crwdne38803:0
+          Implementation Planning: crwdns38804:0crwdne38804:0
+          Curricular Modules: crwdns38805:0crwdne38805:0
+          Common Forms: crwdns38806:0crwdne38806:0
+          Guides and Resources: crwdns38807:0crwdne38807:0
         sciencePD3:
           new stage: crwdns38076:0crwdne38076:0
+          Welcome: crwdns38808:0crwdne38808:0
+          Curricular Modules: crwdns38809:0crwdne38809:0
+          Common Forms: crwdns38810:0crwdne38810:0
+          Guides and Resources: crwdns38811:0crwdne38811:0
+          Discussion Forums: crwdns38812:0crwdne38812:0
         Testing:
           Testing: crwdns38544:0crwdne38544:0
+        cspunit2:
+          title: crwdns38675:0crwdne38675:0
+          description_short: crwdns38676:0crwdne38676:0
+          description: crwdns38677:0crwdne38677:0
+          Beyond Sending Bits: crwdns38678:0crwdne38678:0
+          The Need for Addressing: crwdns38679:0crwdne38679:0
+          Invent an Addressing Protocol: crwdns38680:0crwdne38680:0
+          Routers and Addresses: crwdns38681:0crwdne38681:0
+          Classroom Internet: crwdns38682:0crwdne38682:0
+          Algorithms in Networking: crwdns38683:0crwdne38683:0
+          The Need for Packets: crwdns38684:0crwdne38684:0
+          Packets in the Real World: crwdns38685:0crwdne38685:0
+          The Need for DNS: crwdns38686:0crwdne38686:0
+          DNS Simulation: crwdns38687:0crwdne38687:0
+          How HTTP Works: crwdns38688:0crwdne38688:0
+          IP and DNS in the Real World: crwdns38689:0crwdne38689:0
+        algebraPD2a:
+          title: crwdns38690:0crwdne38690:0
+          description: crwdns38691:0crwdne38691:0
+          Evaluation Blocks: crwdns38692:0crwdne38692:0
+          Strings and Images: crwdns38693:0crwdne38693:0
+          Defining Variables: crwdns38694:0crwdne38694:0
+          Big Game - Variables: crwdns38695:0crwdne38695:0
+          "Play Lab: Defining Functions": crwdns38696:0crwdne38696:0
+          The Design Recipe: crwdns38697:0crwdne38697:0
+          Big Game - Animation: crwdns38698:0crwdne38698:0
+          Booleans: crwdns38699:0crwdne38699:0
+          Sam the Bat: crwdns38700:0crwdne38700:0
+          Big Game - Booleans: crwdns38701:0crwdne38701:0
+          Luigi's Pizza: crwdns38702:0crwdne38702:0
+          Big Game - Player Movement: crwdns38703:0crwdne38703:0
+          Big GAme - Collision Detection: crwdns38704:0crwdne38704:0
+          Rocket-Height: crwdns38813:0crwdne38813:0
+          Big Game - Collision Detection: crwdns38814:0crwdne38814:0
+        allthethings:
+          Jigsaw: crwdns38815:0crwdne38815:0
+          Maze: crwdns38816:0crwdne38816:0
+          Artist: crwdns38817:0crwdne38817:0
+          Bee: crwdns38818:0crwdne38818:0
+          PlayLab: crwdns38819:0crwdne38819:0
+          Farmer: crwdns38820:0crwdne38820:0
+          Flappy: crwdns38821:0crwdne38821:0
+          Bounce: crwdns38822:0crwdne38822:0
+          Multi: crwdns38823:0crwdne38823:0
+          Match: crwdns38824:0crwdne38824:0
+          TextMatch: crwdns38825:0crwdne38825:0
+          CSinA: crwdns38826:0crwdne38826:0
+          Netsim: crwdns38827:0crwdne38827:0
+          applab: crwdns38828:0crwdne38828:0
+          online pd?: crwdns38829:0crwdne38829:0
+        algebraPD2b:
+          title: crwdns38830:0crwdne38830:0
+          description: crwdns38831:0crwdne38831:0
+          Course Overview: crwdns38832:0crwdne38832:0
+          Computer Science Pedagogy: crwdns38833:0crwdne38833:0
+          Teacher Dashboard: crwdns38834:0crwdne38834:0
+          Evaluation Blocks: crwdns38835:0crwdne38835:0
+          Strings and Images: crwdns38836:0crwdne38836:0
+          Writing Contracts: crwdns38837:0crwdne38837:0
+          Defining Variables: crwdns38838:0crwdne38838:0
+          Defining Functions: crwdns38839:0crwdne38839:0
+          Rocket-Height: crwdns38840:0crwdne38840:0
+          Booleans: crwdns38841:0crwdne38841:0
+          "Eval: Conditionals": crwdns38842:0crwdne38842:0
+          Next Steps: crwdns38843:0crwdne38843:0
+        Calc Define Funcs 5 - multiply 1:
+          "Eval: Defining Functions": crwdns38844:0crwdne38844:0

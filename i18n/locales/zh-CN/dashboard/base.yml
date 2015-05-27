@@ -471,6 +471,8 @@ zh:
     wrong_body: 你已输入的答案不是正确的。请再试一次 ！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: 不正确的解决方案
     wrong_body: 您输入的解决方案不是正确的。请再试一次 ！

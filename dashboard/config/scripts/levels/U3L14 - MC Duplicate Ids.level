@@ -10,7 +10,7 @@
     ],
     "answers": [
       {
-        "text": "JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.",
+        "text": "JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id",
         "correct": false
       },
       {
@@ -22,7 +22,7 @@
         "correct": true
       },
       {
-        "text": "The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant",
+        "text": "The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant",
         "correct": false
       },
       {

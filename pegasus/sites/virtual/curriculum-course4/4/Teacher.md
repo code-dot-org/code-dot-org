@@ -193,8 +193,8 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ### What's in the box?
 
-- Draw boxes on a piece of paper with simple mathematic operators between them.
-  - For instance  |_ + _| = |_|
+- Draw boxes on a piece of paper with simple mathematical operators between them.
+  - For instance  [] + [] = []
 - Have similar size squares with numbers between 1 & 20.
 - Ask one student to come create a true equation, using the numbers provided.
 - Once the student has finished (and the class verifies the equation) exchange one of the numbers with another one, then remove a second number entirely.

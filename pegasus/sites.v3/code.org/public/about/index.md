@@ -15,7 +15,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 
 **Code.org's work covered by CBS This Morning:**
 
-<embed src="http://www.cbsnews.com/common/video/cbsnews_player.swf" scale="noscale" salign="lt" type="application/x-shockwave-flash" background="#000000" width="375" height="246" allowFullScreen="true" allowScriptAccess="always" FlashVars="pType=embed&si=254&pid=cGUsG_QQ1U_t&url=http://www.cbsnews.com/videos/cracking-the-code-push-to-teach-computer-science-in-classrooms" />
+<embed src="//www.cbsnews.com/common/video/cbsnews_player.swf" scale="noscale" salign="lt" type="application/x-shockwave-flash" background="#000000" width="375" height="246" allowFullScreen="true" allowScriptAccess="always" FlashVars="pType=embed&si=254&pid=cGUsG_QQ1U_t&url=//www.cbsnews.com/videos/cracking-the-code-push-to-teach-computer-science-in-classrooms" />
 
 [/col-50]
 
@@ -38,7 +38,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
 | Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
-| Prep new CS teachers | We've prepared 8,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
+| Prep new CS teachers | We've prepared 9,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
 | Change school district curriculum | We've partnered with [70+ of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 30+ languages, used in all 180+ countries. |

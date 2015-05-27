@@ -14,6 +14,7 @@
 require('../utils'); // For Function.prototype.inherits()
 var i18n = require('./locale');
 var markup = require('./NetSimLogPanel.html.ejs');
+var Packet = require('./Packet');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
@@ -74,14 +75,14 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
  * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
- * @param {packetHeaderSpec} options.packetSpec
+ * @param {Packet.HeaderType[]} options.packetSpec
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
 var NetSimLogPanel = module.exports = function (rootDiv, options) {
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = options.packetSpec;
@@ -219,7 +220,7 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
  * @param {Object} options
- * @param {packetHeaderSpec} options.packetSpec
+ * @param {Packet.HeaderType[]} options.packetSpec
  * @param {EncodingType[]} options.encodings - which display style to use initially
  * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
@@ -236,7 +237,7 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.packetBinary_ = packetBinary;
 
   /**
-   * @type {packetHeaderSpec}
+   * @type {Packet.HeaderType[]}
    * @private
    */
   this.packetSpec_ = options.packetSpec;
@@ -293,6 +294,7 @@ NetSimLogPacket.prototype.render = function () {
     isMinimized: this.isMinimized
   });
   var jQueryWrap = $(rawMarkup);
+  NetSimLogPanel.adjustHeaderColumnWidths(jQueryWrap);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
   this.rootDiv_.find('.expander').click(this.toggleMinimized.bind(this));
@@ -305,6 +307,52 @@ NetSimLogPacket.prototype.render = function () {
  */
 NetSimLogPacket.prototype.getRoot = function () {
   return this.rootDiv_;
+};
+
+/**
+ * Beneath the given root element, adjust widths of packet header columns
+ * and fields to match the level's configured packet format.
+ * @param {jQuery} rootElement
+ */
+NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
+  var level = netsimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(
+      level.addressFormat,
+      level.packetCountBitWidth,
+      level.clientInitialPacketHeader);
+  var addressBitWidth = encoder.getFieldBitWidth(
+      Packet.HeaderType.TO_ADDRESS);
+  var packetInfoBitWidth = encoder.getFieldBitWidth(
+      Packet.HeaderType.PACKET_COUNT);
+
+  // Adjust width of address columns
+  // For columns, 50px is sufficient for 4 bits
+  var PX_PER_BIT = 50 / 4;
+  var addressColumnWidthInPx = PX_PER_BIT * addressBitWidth;
+
+  // Adjust width of address columns
+  rootElement.find('td.toAddress, th.toAddress, td.fromAddress, th.fromAddress')
+      .css('width', addressColumnWidthInPx + 'px');
+
+
+  // Adjust width of address input fields
+  // For inputs, 3em is sufficient for 4 bits
+  var EMS_PER_BIT = 3 / 4;
+  var addressFieldWidthInEms = EMS_PER_BIT * addressBitWidth;
+  rootElement.find('td.toAddress input, td.fromAddress input')
+      .css('width', addressFieldWidthInEms + 'em');
+
+
+  // Adjust width of packet info column
+  // Packet info column uses two fields and an extra 21px for " of "
+  var packetInfoColumnWidthInPx = (2 * PX_PER_BIT * packetInfoBitWidth) + 21;
+  rootElement.find('td.packetInfo, th.packetInfo')
+      .css('width', packetInfoColumnWidthInPx + 'px');
+
+  // Adjust width of packet info fields
+  var packetInfoFieldWidthInEms = EMS_PER_BIT * packetInfoBitWidth;
+  rootElement.find('td.packetInfo input')
+      .css('width', packetInfoFieldWidthInEms + 'em');
 };
 
 /**

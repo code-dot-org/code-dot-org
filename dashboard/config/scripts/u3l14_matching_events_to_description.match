@@ -1,7 +1,7 @@
 name 'U3L14 - Matching Events to Description'
 title 'Event triggers'
 description 'Match the event type name with the description of what triggers it.'
-question 'Triggers constantly while hovering over a button.'
+question 'Triggers constantly while moving over a button.'
 answer 'mousemove'
 question 'Triggers once, the instant mouse hovers over the button'
 answer 'mouseover'

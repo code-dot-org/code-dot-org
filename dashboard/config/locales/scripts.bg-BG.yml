@@ -713,6 +713,7 @@
           Events Unplugged: Ънплъгд събития
           Beyond Buttons Toward Apps: Отвъд бутоните към приложения
           Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -832,7 +833,93 @@
           Big Game: Голямата игра
         sciencePD2:
           Phase 2 Summer Workshop: Фаза 2 Летен семинар
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
         sciencePD3:
           new stage: нов етап
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+        cspunit2:
+          title: CSP Unit 2 - The Internet
+          description_short: Интернет
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+        algebraPD2a:
+          title: Компютърни науки в алгебрата
+          description: Научете функционално програмиране чрез алгебра
+          Evaluation Blocks: Блокове за оценка
+          Strings and Images: Стрингове и изображения
+          Defining Variables: Дефиниране на променливите
+          Big Game - Variables: Big Game - Variables
+          'Play Lab: Defining Functions': 'Театрална лаборатория: Дефиниране на функции'
+          The Design Recipe: Рецепта за дизайн
+          Big Game - Animation: Big Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Сам прилепът
+          Big Game - Booleans: Big Game - Booleans
+          Luigi's Pizza: Луиджи пица
+          Big Game - Player Movement: Big Game - Player Movement
+          Big GAme - Collision Detection: Big GAme - Collision Detection
+          Rocket-Height: Ракетна височина
+          Big Game - Collision Detection: Big Game - Collision Detection
+        allthethings:
+          Jigsaw: Мозайката
+          Maze: Лабиринт
+          Artist: Художник
+          Bee: Пчела
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Скачане
+          Multi: Мулти
+          Match: свързване
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+        algebraPD2b:
+          title: Компютърни науки в алгебрата
+          description: Научете функционално програмиране чрез алгебра
+          Course Overview: Преглед на курса
+          Computer Science Pedagogy: Педагогика на Компютърните науки
+          Teacher Dashboard: Учителско табло
+          Evaluation Blocks: Блокове за оценка
+          Strings and Images: Стрингове и изображения
+          Writing Contracts: Писане на Договори
+          Defining Variables: Дефиниране на променливите
+          Defining Functions: Дефиниране на функции
+          Rocket-Height: Ракетна височина
+          Booleans: Booleans
+          'Eval: Conditionals': 'Оценка: Условия'
+          Next Steps: Следващи стъпки
+        Calc Define Funcs 5 - multiply 1:
+          'Eval: Defining Functions': 'Оценка: Дефиниране на функции'

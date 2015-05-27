@@ -21,7 +21,7 @@ de:
         text: Das Ziel deines ersten Programmes ist es Angry Bird durch ein Laybrinth zum grünen Schwein zu führen.
       7:
         image: notes/hoc1_7.jpg
-        text: Die linke Seite ist das Labybrinth wo dein Programm ausgeführt wird. Die Anweisungen für jedes Puzzle findest du unter dem Laybrinth.
+        text: Die linke Seite ist das Labybrinth wo dein Programm ausgeführt wird. Die Anweisungen für jede Aufgabe findest du unter dem Laybrinth.
       8:
         image: notes/hoc1_8.jpg
         text: Der mittlere Werkzeugkasten enthält die Befehlsbausteine für den Vogel. Verwende sie, um das Programm zu erstellen.
@@ -36,7 +36,7 @@ de:
         text: Um mehr als eine Handlung ausführen zu lassen, kannst du viele Bausteine auf deinen Arbeitsplatz ziehen und aneinandersetzen. Der Vogel wird die Anweisungen von oben nach unten ausführen.
       12:
         image: notes/hoc1_12.jpg
-        text: 'Wenn Du ein Programm reparieren und es nochmals versuchen möchtest, dann drücke den "Zurücksetzen" Knopf.'
+        text: 'Wenn Du ein Programm reparieren und es nochmals versuchen möchtest, dann drücke den "Neu Starten" Knopf.'
       13:
         image: notes/hoc1_13.jpg
         text: Holen wir die Schweine!
@@ -46,67 +46,67 @@ de:
         text: Hallo, ich heiße JR! Jedes Autorennteam braucht Computerspezialisten, um erfolgreich zu sein. Sie analysieren die Messdaten des Autos, um es noch schneller zu machen.
       2:
         image: notes/stage5_2.jpg
-        text: In diesen Rätseln bist du ein Künstler, der überall wo er hin geht, eine Linie hinter sich zeichnet.
+        text: In diesen Aufgaben bist du ein Künstler, der überall wohin er geht, eine Linie hinter sich zeichnet.
       3:
         image: notes/stage5_3.jpg
         text: 'Dieser Baustein sagt "Bewege dich 100 Pixel nach vorne". Pixel sind sehr kleine Punkte auf dem Bildschirm.'
       4:
         image: notes/stage5_4.jpg
-        text: Dieser Block bedeutet „um 90 Grad nach rechts drehen.“ Damit dreht sich die Künstlerfigur, genau wie beim „Drehen“-Baustein in den Labyrinth-Puzzles.
+        text: Dieser Block bedeutet „um 90 Grad nach rechts drehen.“ Damit dreht sich die Künstlerfigur, genau wie beim „Drehen“-Baustein in den Labyrinth-Aufgaben.
       5:
         image: notes/stage5_5.jpg
         text: Klicke auf den Pfeil in den Bausteinen, um zu verändern, wie weit sich die Künstlerfigur nach vorne läuft oder in welche Richtung sie sich dreht. Spiele etwas mit diesen Bausteinen herum, um mit ihnen vertraut zu werden.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hallo, bin ich Paola! In diesen Rätseln sind Sie ein Bauer, der sein Feld völlig flach bekommen muss, um mit dem Anpflanzen zu beginnen.
+        text: Hallo, bin ich Paola! In dieser Aufgabe bist du ein Bauer, der sein Feld völlig flach bekommen muss, um mit dem Anpflanzen zu beginnen.
       2:
         image: notes/stage9_2.jpg
         text: Du musst ihr helfen alle Erdhaufen zu entfernen und alle Löcher zu füllen.
       3:
         image: notes/stage9_3.jpg
-        text: Die neuen Bausteine entferne eine Schauel voll Erde von einem Haufen und fülle eine Schaufel voll Erde in ein Loch.
+        text: Die neuen Bausteine entfernen eine Schauel Erde von einem Haufen und füllen eine Schaufel voll Erde in ein Loch.
       4:
         image: notes/stage9_4.jpg
         text: Die Haufen und Löcher sind unterschiedlich groß, weshalb du dem Bauer sagen musst, wie viele Schaufeln er benutzen muss.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hallo, ich bin Katie! Etwas vom Interessantesten an der Informatik ist, dass ein Computerprogramm interaktiv sein kann.
+        text: Hallo, ich bin Katie! Am Interessantesten an der Informatik ist, dass ein Computerprogramm interaktiv sein kann.
       2:
         image: notes/flappy02.jpg
         text: Jedes Mal, wenn jemand auf einem Computer oder Smartphone klickt, den Bildschirm berührt oder tippt, wird ein Event erzeugt und Code wird ausgeführt, der entscheidet was bei diesem Event zu tun ist.
       3:
         image: notes/flappy03.jpg
-        text: 'Zum Beispiel könntest du einen Event-Handler haben, der sagt: "Wenn mit der Maus geklickt wird, spiele einen Ton" '
+        text: 'Zum Beispiel könntest du einen "Ereignis-Verarbeiter" haben, der sagt: "Wenn mit der Maus geklickt wird, spiele einen Ton" '
       4:
         image: notes/flappy04.jpg
-        text: Hast du schon von FlappyBird gehört? Durch Benutzen von Event-Handlern werden wir eine eigene Version von FlappyBird programmieren!
+        text: 'Hast du schon von FlappyBird gehört? Durch Benutzen von "Ereignis-Verarbeitern" werden wir eine eigene Version von FlappyBird programmieren!'
       5:
         image: notes/flappy05.jpg
-        text: Den Code wirst du durch Drag-and-drop von Blöcken schreiben, die Kommandos für den Computer sind. Unter der Haube steht jeder dieser Blöcke für wirklichen Code.
+        text: Den Code wirst du durch Drag-and-drop von Bausteinen schreiben, die Befehle für den Computer sind. Unter der Haube steht jeder dieser Blöcke für wirklichen Code.
       6:
         image: notes/flappy06.jpg
-        text: 'Wenn du einen Blick auf den Arbeitsbereich wirfst, siehst du einige grüne Blöcke, die für dich eingefügt wurden - das sind "Event-Handler" '
+        text: 'Wenn du einen Blick auf den Arbeitsbereich wirfst, siehst du einige grüne Blöcke, die für dich eingefügt wurden - das sind "Ereignis-Verarbeiter" '
       7:
         image: notes/flappy07.jpg
-        text: 'Wenn du den Vogel beim Mausklick mit den Flügeln schlagen lassen willst, kannst du das durch Anhängen des "FLAP"-Blocks an den passenden Event-Handler erreichen. Nun wird der Vogel jedes Mal seine Flügel bewegen, wenn mit der Maus geklickt wird.'
+        text: 'Wenn du den Vogel beim Mausklick mit den Flügeln schlagen lassen willst, kannst du das durch Anhängen des "flattern"-Bausteins an den passenden "Ereignis-Verarbeiter" erreichen. Nun wird der Vogel jedes Mal seine Flügel bewegen, wenn mit der Maus geklickt wird.'
       8:
         image: notes/flappy08.jpg
-        text: In jedem Puzzle dieser Übung werden wir neue Typen von Events als grüne Blocks im Arbeitsbereich einfügen und du kannst die passenden Blöcke für Events auswählen.
+        text: In jeder Aufgabe dieser Übung werden wir neue Typen von Events als grüne Blocks im Arbeitsbereich einfügen und du kannst die passenden bausteine für Events auswählen.
       9:
         image: notes/flappy09.jpg
         text: 'Wenn du einen Dropdown-Pfeil wie diesen siehst, kannst du die Einstellungen ändern - zum Beispiel, was für ein Ton abgespielt werden soll, wenn der Vogel den Boden berührt.'
       10:
         image: notes/flappy10.jpg
-        text: Im letzten Puzzle wirst du dein eigenes Spiel erstellen und deinen Freunden zeigen können. Viel Spass!
+        text: Im der letzten Aufgabe wirst du dein eigenes Spiel erstellen und deinen Freunden zeigen können. Viel Spaß!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
         text: Hi, ich bin Mark! Lass uns etwas über Schleifen lernen. Wenn Du Schleifen verwendest, kannst du dem Computer befehlen, dass er jede beliebige Anweisung wieder und wieder, tausendmal oder sogar milliardenmal, wiederholen soll.
       2:
         image: notes/hoc2_2.jpg
-        text: In diesem Puzzle möchten wir, dass sich der Vogel 5 Schritte nach vorne zum Schwein bewegt.
+        text: In dieser Aufgabe möchten wir, dass sich der Vogel 5 Schritte nach vorne zum Schwein bewegt.
       3:
         image: notes/hoc2_3.jpg
         text: 'Wir können den neuen "Wiederholen"-Block verwenden, um uns zu helfen.'
@@ -254,7 +254,7 @@ de:
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Herzlichen Glückwunsch! Mit dem letzten Rätsel, das du gerade gelöst hast, hast du ein Prgramm geschrieben, das JEDER Roboter dazu verwenden kann, um seinen Weg durch nicht-verzweigte Labyrinthe oder Tunnel aller Längen zu finden. Ganz egal ob es ein Zombie, ein Vogel, ein Mars-Rover, oder sogar ein selbstfahrendes Auto ist.
+        text: Herzlichen Glückwunsch! Mit der letzten Aufgabe, das du gerade gelöst hast, hast du ein Prgramm geschrieben, das JEDER Roboter dazu verwenden kann, um seinen Weg durch nicht-verzweigte Labyrinthe oder Tunnel aller Längen zu finden. Ganz egal ob es ein Zombie, ein Vogel, ein Mars-Rover, oder sogar ein selbstfahrendes Auto ist.
       2:
         image: notes/hoc6_2.jpg
         text: Die grundlegenden Konzepte, die du verwendet hast, sind das Herzstück jedes Programms. Wir haben etwas über Schleifen, Wiederholungen, Wenn-Dann-Befehle und Wenn-Ansonsten gelernt.
@@ -277,7 +277,7 @@ de:
         text: Du wirst Schneeflocken und Muster erschaffen während du Schlittschuh fährst und ein Winterwunderland erstellst, das du mit deinen Freunden teilen kannst.
       3:
         image: notes/frozen1_3.jpg
-        text: In der nächsten Stunde wirst du die grundlegenden Fähigkeiten zum Programmieren kennenlernen. Traditionell ist Programmieren text-basiert, aber wir werden heute Blockly benutzen; damit kannst du mithilfe von visuellen Bausteinen, die du mit der Maus anordnen kannst, Programme erstellen, auch wenn es auf den ersten Blick nicht so erscheinen mag. So lernen selbst Universitätsstudenten die Basics.
+        text: In der nächsten Stunde wirst du die grundlegenden Fähigkeiten zum Programmieren kennenlernen. Traditionell ist Programmieren Text-basiert, aber wir werden heute Blockly benutzen; damit kannst du mithilfe von visuellen Bausteinen, die du mit der Maus anordnen kannst, Programme erstellen, auch wenn es auf den ersten Blick nicht so erscheinen mag. So lernen selbst Universitätsstudenten die Grundlagen.
       4:
         image: notes/frozen1_4.jpg
         text: Ein Programm ist eine Zusammenstellung von Instruktionen, die dem Computer vorgeben, was er tun soll. Lass uns ein Programm schreiben, mit dem wir Elsa helfen, einen einfachen Satz zu erstellen. Wir werden das später brauchen, um komplexere Strukturen zu programmieren.
@@ -295,7 +295,7 @@ de:
         text: 'Hier, der Baustein "vorwärts bewegen" besagt, "bewege um 100 Pixel vorwärts". Wenn wir "ausführen" drücken, was passiert? Elsa bewegt sich um eine bestimmte Länge vorwärts, und zwar genau 100 Pixel. Pixel sind im Grunde sehr kleine Quadrate auf dem Bildschirm deines Computers.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'Der andere Baustein in diesem Puzzle sagt "nach rechts um 90 Grad drehen." Und wenn wir diesen "Nach rechts drehen"-Baustein benutzen, dann dreht sich Elsa um eine bestimmte Weite. Du kannst selber ausprobieren, wie weit du Elsa drehen willst. Der Winkel basiert auf dem Pfad, der direkt vor Elsa liegt. Also ist das eine 90-Grad-Drehung. Und das ist eine 120-Grad-Drehung.'
+        text: 'Der andere Baustein in dieser Aufgabe sagt "nach rechts um 90 Grad drehen." Und wenn wir diesen "Nach rechts drehen"-Baustein benutzen, dann dreht sich Elsa um eine bestimmte Weite. Du kannst selber ausprobieren, wie weit du Elsa drehen willst. Der Winkel basiert auf dem Pfad, der direkt vor Elsa liegt. Also ist das eine 90-Grad-Drehung. Und das ist eine 120-Grad-Drehung.'
       10:
         image: notes/frozen1_10.jpg
         text: Denk dran, du kannst die Anzahl der Pixel und die Weite der Drehung ändern, indem du auf die Pfeile direkt daneben drückst.
@@ -305,7 +305,7 @@ de:
         text: Hallo, ich bin Paola! Computer sind wirklich gut, wenn es um Sachen geht, die sich wiederholen. Du kannst bis 10, 20 oder 100 zählen. Aber ein Computer kann bis zu einer Milliarde oder einer Billion zählen. Einem Computer wird nie langweilig und er braucht nur ein paar Sekunden. Ob es um zählen, malen oder etwas anderes geht--Computer können Dinge hundert oder sogar millarden mal wiederholen.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In der Programmierung nennen wir sowas eine Schleide. Mit einer Schleife kannst du Code wiederholen, so oft du willst. Für das nächste Puzzle ist es deine Aufgabe, Anna zu helfen mit dem "Wiederholen"-Baustein ein Quadrat zu erstellen.'
+        text: 'In der Programmierung nennen wir sowas eine Schleife. Mit einer Schleife kannst du Code wiederholen, so oft du willst. Für die nächste Aufgabe ist es dein Ziel, Anna zu helfen mit dem "Wiederholen"-Baustein ein Quadrat zu erstellen.'
       3:
         image: notes/frozen2_3.jpg
         text: 'Alle Codeblöcke, die du in den "Repeat"-Block setzt, werden der Reihe nach wiederholt, so oft du willst.'

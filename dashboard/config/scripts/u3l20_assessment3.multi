@@ -1,0 +1,11 @@
+name 'U3L20 Assessment3'
+title 'Conditional Basics Question 3'
+question 'Which programming statement executes different code based upon the true or false results?'
+wrong 'sequential statements'
+wrong 'function calls'
+wrong 'event handlers'
+right 'conditionals'
+
+markdown <<MARKDOWN
+
+MARKDOWN

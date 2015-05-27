@@ -534,6 +534,8 @@
     wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Neteisingas sprendimas
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!

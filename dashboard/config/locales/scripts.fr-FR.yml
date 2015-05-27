@@ -708,6 +708,7 @@
           Events Unplugged: Events Unplugged
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -830,7 +831,93 @@
           Big Game: Big Game
         sciencePD2:
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
         sciencePD3:
           new stage: nouvelle étape
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+        cspunit2:
+          title: CSP Unit 2 - The Internet
+          description_short: La Toile
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+        algebraPD2a:
+          title: Informatique en DP d'algèbre
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          Evaluation Blocks: Blocs d'évaluation
+          Strings and Images: Textes et Images
+          Defining Variables: Définition de Variables
+          Big Game - Variables: Big Game - Variables
+          'Play Lab: Defining Functions': 'Labo : Définition de fonctions'
+          The Design Recipe: La Recette de la Conception
+          Big Game - Animation: Big Game - Animation
+          Booleans: Booléens
+          Sam the Bat: Sam la chauve-souris
+          Big Game - Booleans: Big Game - Booleans
+          Luigi's Pizza: Luigi Pizza
+          Big Game - Player Movement: Big Game - Player Movement
+          Big GAme - Collision Detection: Big GAme - Collision Detection
+          Rocket-Height: Hauteur de la fusée
+          Big Game - Collision Detection: Big Game - Collision Detection
+        allthethings:
+          Jigsaw: Pièces de Puzzle
+          Maze: Labyrinthe
+          Artist: Artiste
+          Bee: Abeille
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Rebond
+          Multi: Multi
+          Match: Correspondance
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+        algebraPD2b:
+          title: Informatique en DP d'algèbre
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Pédagogie des sciences informatiques
+          Teacher Dashboard: Tableau de bord enseignant
+          Evaluation Blocks: Blocs d'évaluation
+          Strings and Images: Textes et Images
+          Writing Contracts: Rédaction de contrats
+          Defining Variables: Définition de Variables
+          Defining Functions: Définition de fonctions
+          Rocket-Height: Hauteur de la fusée
+          Booleans: Booléens
+          'Eval: Conditionals': 'Evaluation : instructions conditionnelles'
+          Next Steps: Prochaines étapes
+        Calc Define Funcs 5 - multiply 1:
+          'Eval: Defining Functions': 'Eval : Définition de fonctions'

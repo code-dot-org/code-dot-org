@@ -349,31 +349,29 @@ el:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Θα δημιουργήσουμε παιχνίδια χρησιμοποιώντας την εφαρμογή Play Lab. Τα καλά παιχνίδια έχουν μια ιστορία και κάθε ιστορία έχει ηθοποιούς. Θα μάθουμε πώς να κάνουμε τους ηθοποιούς μας να μοιάζουν με μάγισσες, εξωγήινους και ζώα που μιλούν, κινούνται και αλληλεπιδρούν μεταξύ τους. Στο τέλος αυτού του σεμιναρίου, θα μπορείς να δημιουργείς τα δικά σου παιχνίδια και να τα μοιράζεσαι με τους φίλους σου.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Η οθόνη σου είναι χωρισμένη σε τρία κύρια μέρη. Στα αριστερά είναι ο χώρος του παιχνιδιού όπου το πρόγραμμά σου εκτελείται. Οι εντολές για κάθε επίπεδο είναι γραμμένες από κάτω.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Η μεσαία περιοχή είναι η εργαλειοθήκη και καθένα από αυτά τα πλακίδια είναι ένα κομμάτι κώδικα. Η άσπρη περιοχή στα δεξιά καλείται χώρος εργασίας και σε αυτή θα δημιουργήσουμε το πρόγραμμά μας.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Για να ξεκινήσεις, θα χρειαστεί να συνδέσεις τα πλακίδιά σου με το πορτοκαλί πλακίδιο "όταν εκτελείται". Μπορείς να συνδέσεις πολλαπλά πλακίδια μαζί σέρνοντάς τα έως ότου δεις την κίτρινη γραμμή και τότε αυτά θα ενωθούν απότομα μαζί.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'Σε αυτό το πρώτο πάζλ, ο ηθοποιός μας είναι ένας πιγκουίνος και θα τον κάνουμε να πει "Γεια σας" σέρνοντας το πλακίδιο "πες", ενώνοντάς το με το πλακίδιο "όταν εκτελείται" και πληκτρολογώντας "Γεια σας". Μπορούμε επίσης να κάνουμε τον πιγκουίνο να κινηθεί χρησιμοποιώντας τα πλακίδια "κινήσου δεξιά" και "κινήσου αριστερά". Μόλις βάλεις όλα τα πλακίδια στη θέση τους πάτησε το κουμπί "Εκτέλεση" ώστε να δεις τι προγραμμάτισες.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Ξεκίνησε και στο τέλος θα μπορείς να δημιουργήσεις τα δικά σου παιχνίδια με όλα τα είδη παικτών που θα μπορούν να αλληλεπιδρούν, να είναι χαρούμενοι ή λυπημένοι, να κερδίζουν βαθμούς, ή να δημιουργούν εκρήξεις ή ακόμα να εξαφανίζουν ο ένας τον άλλον. Όλα εξαρτώνται από σένα και το παιχνίδι που θέλεις να φτιάξεις.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Τώρα, θα μάθουμε κάτι το οποίο όλοι οι προγραμματιστές παιχνιδιών χρησιμοποιούν καθημερινά. Θα μιλήσουμε για τα γεγονότα. Ένα γεγονός λέει στο πρόγραμμά σου να ακούει πότε συμβαίνει κάτι. Όταν αυτό το γεγονός συμβεί, τότε εκτελεί μια ενέργεια.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Μερικά παραδείγματα γεγονότων είναι άκουσε για ένα κλικ του ποντικιού, για ένα πάτημα βέλους, ή ένα άγγιγμα στην οθόνη.
       3:
         image: notes/playlab_events_3.png
         text: |-

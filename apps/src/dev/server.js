@@ -1,6 +1,7 @@
 var url = require('url');
 var express = require('express');
 var ejs = require('ejs');
+var fs = require('fs');
 
 var app = express();
 
@@ -15,6 +16,8 @@ var baseUrl = function(req) {
 app.get('/', function(req, res) {
   res.render('index');
 });
+
+app.use('/node_modules', express.static(__dirname + '/../../node_modules'));
 
 var renderApp = function(app, req, res) {
   ['locale', 'level', 'skin', 'dir'].forEach(function(key) {

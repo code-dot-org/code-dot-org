@@ -1,7 +1,6 @@
 bg:
   data:
     instructions:
-      10A_instruction: Добре, нека да завършим този пъзел със зелен квадрат, чиито страни са 175 пиксела.
       2-3 _instruction: Лилавите цветя могат да имат 1 или 0 нектар. Бъдете внимателни и не събирайте нектар от лилаво цвете, което няма такъв.
       2-3 Artist 1 new_instruction: Здравейте аз съм художник. Можете да напишете код, с който да ме накарате да нарисувам почти всичко. Използвайте няколко блока за да довърша сивите линии в картината. (Всеки ред е дълъг 100 пиксела)
       2-3 Artist 11_instruction: 'Дайте на знак стоп тяло, като начертаете осмоъгълник със страни по 100 пиксела дължина. На колко градуса трябва да ме завъртите? (Съвет: Какво е 360 делено на 8?) '
@@ -126,9 +125,17 @@ bg:
       2-3 Bee Loops 10_instruction: 'Можете ли да използвате "докато" повторение(цикъл) вътре в две други повторения(цикъла), за да съберете всичкия нектар?'
       2-3 Bee Loops 11_instruction: 'Използвайте "докато" повторения(цикли), за да съберeтe всичкия нектар от цветята в това поле.'
       2-3 Bee Loops 12_instruction: 'Използвайте "докато" повторения(цикли), за да съберeтe всичкия нектар от цветята в това поле.'
+      2-3 Bee Loops 13_instruction: |
+        Assessment: Use the repeat block to collect
+        all of the nectar.
+      2-3 Bee Loops 1A_instruction: 'Здравейте аз съм пчела. Можете ли да ми помогнете да събера нектар от тези цветя? '
       2-3 Bee Loops 2_instruction: Използвайте повторение(цикъл), за да съберете нектар и направете мед.
+      2-3 Bee Loops 2A_instruction: Можете ли да направите същото, но по-лесно с един цикъл?
       2-3 Bee Loops 3_instruction: Съберете нектар от всеки цвят и направете мед на всяка пита.
+      2-3 Bee Loops 3A_instruction: Можете ли да използвате повторение, за да се събера всичкия нектар?
+      2-3 Bee Loops 3B_instruction: Сега, използвайте новият блок за повторение за да се събере всичкия нектар и да се направи всичко на мед.
       2-3 Bee Loops 4_instruction: Използвайте подобно повторение(цикъл) като при последната загадка, но сложете един завой в него.
+      2-3 Bee Loops 4A_instruction: Какво става ако повторите тази последователност три пъти? Не забравяйте да направите мед в края!
       2-3 Bee Loops 5_instruction: Използвайте повторение(цикъл), за да отидете надолу по стъпките и съберете нектара.
       2-3 Bee Loops 6_instruction: |
         Използвайте повторение(цикъл), за да съберете нектар от всяко цвете и направете мед на всяка пита.
@@ -162,6 +169,7 @@ bg:
       2-3 Maze 7_instruction: Заведи ме до зелената лошотия! (Внимавай за динамит)
       2-3 Maze 8_instruction: Заведи ме до прасето!
       2-3 Maze 9_instruction: Заведи ме до зелената лошотия! (Внимавай за динамит)
+      2-3 Maze Loops 1_instruction: Можеш ли да ме заведеш до прасето с 5 блока?
       2-3 Maze Loops 17_instruction: Заведи ме до слънчогледа!
       2-3 Maze Loops 18_instruction: Заведи ме до слънчогледа!
       2-3 Maze Loops 19_instruction: Заведи ме до слънчогледа!
@@ -208,7 +216,6 @@ bg:
       4-5 Artist For Loops 2_instruction: 'Това е "за" блок. Вместо да въвеждате 1,2,3... 10, "за" блока може да повтаря блокове, които са вътре в него и да преброява  числата за вас. Поставете 10 в раздела "да" на "за" блока.'
       4-5 Artist For Loops 3_instruction: 'Как може да преброим от 1 до 50? Редактирайте "за" блока.'
       4-5 Artist For Loops 4_instruction: 'Завършете "за" блока, така че той да брои от 1 до 10 през 1.'
-      4-5 Artist For Loops 5_instruction: Редактирайте тези блокове, така че редовете са двойно повече, от колкото са сега.
       4-5 Artist For Loops 6_instruction: 'Начертайте квадрат със страни от 50, 60, 70, 80 и 90 пиксела. Трябва да използвате функцията "начертава квадрат" пет пъти.'
       4-5 Artist For Loops 7_instruction: 'Начертайте същите квадрати, но използвайте  блок брояч за промяна на размерите. Поставете блока брояч във функцията "начертава квадрат". Съвет: Тя е в категорията променливи.'
       4-5 Artist For Loops 8_instruction: 'Може ли да завършите програмата чрез поставяне на блокове в "за" блока, който да брои от 10 до 200 през 10? Можете да намерите на "за" блока в категорията цикъл.'
@@ -246,10 +253,7 @@ bg:
       4-5 Artist Patterns 7_instruction: 'Нека променим кода от последната загадка да направим този по-сложен модел. Забележете как диамантите се припокриват сега, опитайте се да промените първото "скочи назад" от 100 до 50 (наполовината) - сега докъде трябва да отиде художника във второто "скочи назад"?'
       4-5 Artist Patterns 8_instruction: Използвайте повторение(цикъл), за да нарисувате този шестоъгълник с 40 пикселови страни и 60 градусови ъгли.
       4-5 Artist Patterns 9.5_instruction: Направи повторение(цикъл) на този код, за да начертаеш два реда шестоъгълници. Забележете как нашият втори ред се измества надясно.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
+      4-5 Artist Patterns 9_instruction: Сега, повторете кода 3 пъти, за да начертаете на целия ред. Съвет:, всеки шестоъгълник е на 80 пиксела отдалечен от наляво надясно.
       4-5 Artist Patterns Free Play_instruction: 'Безплатна игра - опитай да направиш твой собствен модел!'
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
@@ -334,20 +338,27 @@ bg:
       4-5 Maze Conditionals 8_instruction: 'Блоковете "ако-иначе"  проверяват условие, и след това правя едно нещо ИЛИ другото. За да ме  заведеш до слънчогледа опитай да използваш този нов блок.'
       4-5 Maze Conditionals 9_instruction: 'Още една практика на блока "ако-иначе", можеш ли да го напрвиш правилно още на първия си опит?'
       4-5 Maze Conditionals Assessment 1_instruction: 'Използвай "повтаряй докато" и "ако-иначе" блок, за да ме заведеш към слънчогледа с възможно най-малко блокове.'
-      A test level ArtistArtist_instruction: A test level ArtistArtist
-      add 2_instruction: Чудесна работа в последната загадка, нека опитаме отново; този път направи този страхотен дизайн със 60 пикселов шестоъгълник.
-      Alice Test_instruction: Ето и някои инструкции!
-      All green everything_instruction: click and drag the blocks
-      Alpha 2-3 Artist Loops New 3_instruction: 'Сега, нарисувай 6 квадрата, всеки в случаен цвят.  Под какъв ъгъл трябва да се обърнем между всеки квадрат, за да се направи пълен кръг от квадрати?'
-      Alpha Course 3 Artist Functions 5_instruction: 'Актуализирай функцията "нарисувай квадрат", така че тя да чертае квадрат с помощта на параметъра "дължина". След това начертай квадрат с дължина на страната 100 пиксела.'
-      Alpha Course 3 Artist Functions 6_instruction: 'Функцията  с параметър "нарисувай квадрат" е готова за теб, за да добавиш правилните блокове и да промениш стойността от нула към правилния размер.  Допълнителна информация: Страните на квадрата са 100 пиксела.'
-      Alpha Course 3 Artist Functions 7_instruction: 'Използвайте заедно функциите "нарисувай триъгълник" и "нарисувай квадрат", за да нарисувате две къщи. (Упътване: къщите са на 50 пиксела една от друга)'
-      Alpha Course 3 Artist Loops 3_instruction: Искате ли да видите какво се случва, когато повтаряме тази фигура отново и отново, като използвате цикъл?
-      Alpha Course 3 Artist Nested Loops 4_instruction: Замени блоковете с вложени повторения(цикли).
-      Alpha Course 3 Bee Conditionals 10_instruction: 'Създай функция, която ще провери дали нещо е лилаво цвете и тогава събери всичкия нектар или ако е медена пита - направи мед.  '
-      Alpha Course 3 Bee Conditionals 9_instruction: 'Съберете нектар, като използвате функцията "провери лилаво цвете".'
-      applab_test2_sarah_instruction: This is the instructions panel for level 2
-      Arbitrary_instruction: Направи линия.
+      4-5 Nested Loops 1_instruction: 'Допълнете кода, за да нарисувате тези триъгълници.  Първият е направен за теб.  Упътване: 3 триъгълника в 360 градусово завъртане.'
+      4-5 Nested Loops 10_instruction: Начертайте последния ред на звездите на този флаг като повторите предоставените блокове. Звездите са на 50 пиксела разстояние една от друга, но не забравяйте, че самите звезди са 30 пиксела широки.
+      4-5 Nested Loops 11_instruction: Можете ли да начертаете тези 10 квадрата на този тротоар, използвайки цикъл? Всеки квадрат е 30 пиксела.
+      4-5 Nested Loops 12_instruction: Можеш ли да начертаеш тези 36 триъгълници с помощта на вложено повторение(цикъл)?
+      4-5 Nested Loops 2_instruction: 'Сега постави в този цикъл друг цикъл за да начертаем 10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници правят 360 градуса завъртане.  '
+      4-5 Nested Loops 3_instruction: "Създайте слънцето чрез влагане на първоначалния код в цикъл. Това се нарича вложен цикъл. \r\n"
+      4-5 Nested Loops 5_instruction: 'Направи  повторение(цикъл) на дадения код за да създаде вятърна мелница.'
+      4-5 Nested Loops 6_instruction: Може ли да начертаете шестоъгълник като повторите кода на триъгълника?
+      4-5 Nested Loops 7_instruction: 'Повторете този дизайн 10 пъти. Колко ли трябва да се завъртате всеки път след повторение? (Съвет: Колко е 360 делено на 10?)'
+      4-5 Nested Loops 8_instruction: 'Повторете този дизайн 6 пъти. Колко ли трябва да се завъртате всеки път след повторение? (Съвет: Колко е 360, разделено на 6?)'
+      4-5 Nested Loops 9_instruction: Начертайте зъбите в устата на алигатора!
+      4-5 Nested Loops Assessment 1_instruction: Използвайте вложен цикъл, за да завършите дизайна.
+      4-5 While Loops 1_instruction: Премести ме до ямата за да я напълня с две лопати пръст, с помощта на блок за запълване.
+      4-5 While Loops 2_instruction: Ме местят към купчината за да я премахна с 5 лопати с помощта на блок за премахване.
+      4-5 While Loops 3_instruction: 'Премести ме към купчината за да я изравня, след това ме премести до ямата за да я запълня  Съвет: Използвайте по-малко блокове ако е възможно.'
+      4-5 While Loops 4_instruction: 'Уау, аз намерих наистина дълбока яма! Не знам с колко лопати да я запълня.  Можете ли да напишете програма, която ще запълва с колкото лопати е нужно?  Съвет: Опитайте се да използвате "докато" повторение.'
+      4-5 While Loops 5_instruction: Уау, сега има две дълбоки ями! Можете ли да напишете програма, която да ги изпълва и двете?
+      4-5 While Loops 6_instruction: Уау, сега там има голяма купчина! Можете ли да напишете програма, която да премахва излишната почва, докато земята се заравни?
+      4-5 While Loops 7_instruction: Уау, сега има три купчини! Можете ли да напишете програма, която премахва всяка от тях, докато се заравни земята?
+      4-5 While Loops 8_instruction: 'Това е наистина дълбока яма и наистина голяма купчина пръст.  Колко лопати ще трябват  за да се заравни земята?  Съвет: Използвайте цикъл и за двете.'
+      4-5 While Loops Assessment 1_instruction: 'Има много ями и купчини.  Помогнете ми да ги запълня и премахна излишната почва, за да заравня земята.'
       Artist - Nested Loops 1_instruction: 'Допълнете кода, за да нарисувате тези триъгълници.  Първият е направен за теб.  Упътване: 3 триъгълника в 360 градусово завъртане.'
       Artist - Nested Loops 10_instruction: Начертайте последния ред от звезди на този флаг с повторение(цикъл) на предоставените блокове. Звездите са 50 пиксела една от друга, но запомнете, че самите звезди са 30 пиксела.
       Artist - Nested Loops 11_instruction: Можеш ли да начертаеш тези 10 квадрата на този тротоар, с вложени повторения(цикли)? Всеки квадрат е 30 пиксела.
@@ -356,51 +367,10 @@ bg:
       Artist - Nested Loops 3_instruction: 'Създай слънцето чрез влагането на начален код в друго повторение(цикъл). Това се нарича вложено(вътрешно)  повторение(цикъл).  '
       Artist - Nested Loops 5_instruction: 'Направи  повторение(цикъл) на дадения код и създавай вятърна мелница.'
       Artist - Nested Loops 6_instruction: Може ли да начертаете шестоъгълник като повторяте кода на триъгълника?
-      Artist - Nested Loops 7 (copy 1)_instruction: 'Повторете този дизайн 10 пъти. Колко ли трябва да се завъртаме всеки път след цикъл? (Съвет: Колко е 360 делено на 10?)'
       Artist - Nested Loops 7_instruction: 'Повторете този дизайн 10 пъти. Колко ли трябва да се завъртаме всеки път след повторение? (Съвет: Колко е 360 делено на 10?)'
       Artist - Nested Loops 8_instruction: 'Повторете този дизайн 6 пъти. Колко ли трябва да се завъртаме всеки път след повторение? (Съвет: Колко е 360, разделено на 6?)'
       Artist - Nested Loops 9_instruction: Начертайте зъбите в устата на алигатора!
       Artist - Nested Loops Assessment 1_instruction: Използвайте цикъл, за да завършите дизайна.
-      Artist Artist Artist Artist _instruction: 'Artist Artist Artist Artist '
-      Artist For  Functions 11_instruction: 'Нека да го увеличим малко, може ли да направите звезда  с помощта на функцията "Нарисувате квадрат с линия"? На добър час!'
-      Artist Functions 11_instruction: Време е за свободна игра! Използвайте новите функции, за да начертаете една страхотна картина. Забавлявайте се!
-      Artist Functions 2.0_instruction: 'Можете ли да чертаете 3 квадрата на 20 пиксела отдалечени един от друг? Съвет: всеки квадрат има страни по 100 пиксела'
-      Artist Functions 3.0_instruction: 'Тук е нов тип блок. Той се нарича "Функция блок". Щракнете върху "Изпълни", за да видите какво може да направи. '
-      Artist Functions 4.0_instruction: Ние ти дадохме повечето от кода, за да създадеш функция. Въпреки това изглежда, че нещо липсва. Можеш ли да направиш тази блок функция пълен?
-      Artist Functions 5.0_1_instruction: |
-        Готов ли си да създадеш своя собствена "функция блок"? Щракнете върху блока "функция" в полето за инструменти, наименувай я "нарисувай триъгълник", след това създай триъгълник, както направи преди това с блоковете за Действие и повторение(цикъл). След това щракнете върху Запиши и Затвори в горния десен ъгъл. 
-        Съвет: Създай триъгълник, който е 100 пиксела по дължина.
-      Artist Functions 5.0_2_instruction: 'Създай свой собствен блок за функция. Щракнете върху "Функции" в кутията за инструменти и щракнете върху "създаване на функция". Дай име на твоя блока за функция, след което създай 40 пикселов квадрат, както направи преди с блоковете за Действия и  повторения(цикли). Щракни върху "Запиши и Затвори" в горния десен ъгъл. Съвет: Не забравяй да плъзнете вашия нов блок за функция от полето инструмент към блока "при изпълнение".'
-      Artist Functions 5.0v1_instruction: 'Създай свой собствен блок за функция. Щракнете върху "Функции" в кутията за инструменти и щракнете върху "създаване на функция". Дай име на твоя блока за функция, след което създай 40 пикселов квадрат, както направи преди с блоковете за Действия и  повторения(цикли). Щракни върху "Запиши и Затвори" в горния десен ъгъл. Съвет: Не забравяй да плъзнете вашия нов блок за функция от полето инструмент към блока "при изпълнение".'
-      Artist Functions 5.0v2_instruction: |
-        Готов ли си да създадеш своя собствена "функция блок"? Щракнете върху блока "функция" в полето за инструменти, наименувай я "нарисувай триъгълник", след това създай триъгълник, както направи преди това с блоковете за Действие и повторение(цикъл). След това щракнете върху Запиши и Затвори в горния десен ъгъл. 
-        Съвет: Създай триъгълник, който е 100 пиксела по дължина.
-      Artist Functions 6_instruction: Създайте функция за къща, която извиква функцията триъгълник и квадрат
-      Artist Functions 7_instruction: Направи повторение(цикъл) на квадратна функция, за да начертаеш линия
-      Artist Functions 8_instruction: 'Можеш ли да създадеш нова функция, наречена "Нарисувай квадратна линия"?'
-      Artist Functions free play_instruction: Време е за безплатна игра! Използвай новите си функции, за да начертаеш една страхотна картина. Забавлявай се!
-      Artist level 10_instruction: 'Време е за безплатна игра! Включил съм всички нови функции, изградени от теб. Забавлявайте се и нарисувай всичко, което искаш. '
-      Artist Nested Loops_instruction: 'Сега преместете този цикъл вътре в друг цикъл да начертаете 6 триъгълника. Това се нарича вложен цикъл. Съвет: При 6 триъгълника трябва да се завърта на 60 градуса. '
-      Artist Params 10_instruction: 'Можете да извикате функции от вътрешността на други функции! Използвайки функцията за "форма" като база, създаваме нова функция за "къща", която има за параметър "дължина"'
-      Artist Params 11_instruction: 'Какво мислиш за функция "колело", която има три параметъра - "брой страни", "дължина" и "брой повторения". Твоята функция ще трябва да начертае колело от "повторени" фигури с  "брой страни" и  "дължина". Ще сметнеш по колко да се завърташ след всяка фигура, използвайки същите изчисления, които използва, за да намериш завъртанията за фигура с "брой страни"'
-      Artist Params 12_instruction: 'Използвайте вашата "колело" функция, за да се изчертае всяка от тези фигури. Дължината на страната на всяко изображение е 50.'
-      Artist Params 13_instruction: 'ФрийПлей: Тук са функциите, които сте написали и още няколко за да си поиграете с тях. Начертайте нещо страхотно!'
-      Artist Params 2_instruction: 'Тази функция ще бъде много по-полезна, ако тя може да чертае триъгълници с различни размери. Аз бих добавил параметър за дължина на линията, но тя не прави нищо все още. Можете ли да актуализирате функцията така, че тя да използва параметъра "дължина" при изчертаване на всяка страна?'
-      Artist Params 3_instruction: Страхотно, може ли да начертаете всеки един от тези триъгълници с тази нова функция? Първият е дълъг 25 пиксела, вторият е 50, а третият е 75. (Ако сте наистина умни, можете да използвате цикъл за това!)
-      Artist Params 4_instruction: Можете ли да добавите нова функция, наречена квадрат? Тя трябва да взима параметър за дължина, точно като функцията за триъгълника.
-      Artist Params 5_instruction: Използвайте и двете си нови функции за да начертаете тази картина
-      Artist Params 6_instruction: 'Спомняте ли си как ние използвахме променлива за да зададем броя на страните за фигура? Защо да има две отделни функции за "триъгълник" и "квадрат", когато може да има една функция, наречена "форма", която да има два параметъра - "страни" и "дължина"?'
-      Artist Params 7_instruction: Начертайте няколко фигури и комбинации от фигури, като използвате функцията за обща форма.
-      Artist Params 8_instruction: 'Може ли да разберете как да нарисувате два триъгълника? Ето един съвет: Създайте 2 нови функции за всеки триъгълник.'
-      Artist Params 9_instruction: Може ли да чертаете два квадрата, единият вътре в другия? Вътрешният е на 20 пиксела от външния и дължината на страните на квадратите е 200 пиксела и 160 пиксела.
-      Artist Variables level 9_instruction: 'Това е алгоритъм, с който да нарисувате триъгълник, да го промените, така че да използва променлива "страни". Заменете цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава страни" блок.'
-      Artist Variables level 9a_instruction: 'Това е алгоритъм, с който да нарисувате триъгълник, да го промените, така че да използва променлива "страни". Заменете цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава страни" блок.'
-      Artist Vars "height" block_instruction: 'Сега искам да направим правоъгълник, който е два пъти по-широк, отколкото е висок. Имаме променлива, наречена "височина", която се определя на 100. Можете ли да използвате математическия блок, за да завършите кода? '
-      Artist Vars height block_instruction: 'Сега искам да направим правоъгълник, който е два пъти по-широк, отколкото е висок. Имаме променлива, наречена "височина", която се определя на 100. Можете ли да използвате математическия блок, за да завършите кода? '
-      artist_test_brian_instruction: Artist test
-      Basic_instruction: No instructions please
-      Bee procedures demo_instruction: Събири нектар от всяко цвете
-      bee-test-1_instruction: Заведете пчелата до нектара
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -497,16 +467,7 @@ bg:
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
-      BowShoot1_instruction: Use the repeat block to collect all the nectar!
-      Brendan Artist work_instruction: няма
-      Brendan Test Maze 1_instruction: "Here's my first maze."
-      Brian Test Karel_instruction: "WOW that's a hole of unknown size!"
-      Brian Testing Again_instruction: Brian Testing Again
       Building a Foundation Assessment_instruction: |
-        Build a three level pyramid,
-        there are no other directions, so just play with the pieces until you get
-        it!
-      building_a_foundation_assessment_instruction: |
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
@@ -540,7 +501,6 @@ bg:
       C3-Farmer While Loops Assessment 1_instruction: |
         There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
-      C3-Farmer While Loops Multi Pics_instruction: избор от множество отговори
       Calc Circles of Eval .1_instruction: |
         You’ll be writing a kind of code called
         Evaluation Blocks, because each block of code evaluates to a single value.
@@ -616,6 +576,11 @@ bg:
         Write a function called 'half' that takes
         a number 'x' and returns half that number. Once you've written the function,
         use it to calculate half(21)
+      Calc Define Funcs 5 - multiply 1_instruction: |
+        Oh no! We lost our multiply
+        block! We'll have to create a function to multiply for us. To start off,
+        write a function "f" that takes a parameter "x" and returns x*5. Test
+        your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
         function called "cube" - this function should have a domain of Number, range
@@ -666,10 +631,6 @@ bg:
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
-      Code Logo v3_instruction: ""
-      Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
-        Draw the line.
-        It is 200 pixels long. 
       Code Studio Puzzle Challenge 1 - Artist_instruction: |
         Draw the line. It is
         200 pixels long. 
@@ -691,19 +652,12 @@ bg:
       Code Studio Puzzle Challenge 11b - Artist_instruction: |
         Draw a square by using
         the variable length provided.
-      Code Studio Puzzle Challenge 12 - Artist (copy 1)_instruction: |
-        The code provided
-        draws one triangle. Add to it to draw triangles in a hexagon pattern.
       Code Studio Puzzle Challenge 12 - Artist_instruction: |
         The code provided draws
         one triangle. Add to it to draw triangles in a hexagon pattern.
       Code Studio Puzzle Challenge 12a - Artist_instruction: |
         The code provided draws
         one triangle. Add to it to draw triangles in a hexagon pattern.
-      Code Studio Puzzle Challenge 13 - Artist (copy 1)_instruction: |
-        This is just
-        like a "for" loop. Complete the loop to draw six lines that grow from 50,
-        60, 70, 80, 90, to 100 pixels long. 
       Code Studio Puzzle Challenge 13 - Artist_instruction: |
         This is just like a
         "for" loop. Complete the code to draw six lines that grow from 50, 60, 70,
@@ -760,16 +714,10 @@ bg:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      copy 1_instruction: 'Опитай блока "повтаряй", за да използваш по-малко блокове...'
       course 1 artist 1 level 10_instruction: |
         Draw the dashed line by using both
         the jump and draw blocks
       course 1 artist 1 level 9_instruction: Draw this using three lines
-      Course 2 Assessment Smiley_instruction: "Image: run space with unfinished drawing.\r\nAssessment:\nFinish drawing the last tooth."
-      Course 2 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectars" function to collect the nectar from each
-        flower.
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -788,668 +736,219 @@ bg:
       Course 2 Bee Loops 4_instruction: |
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      Course 3 Farmer Test_instruction: Use a while loop.
-      Course 3_instruction: |
-        Here's a function that takes a binary string of 1's
-        and 0's and instructs the artist to turn on the go from left to right, top
-        to bottom, turning on the squares where the number has a zero. Run this code
-        to see how the artist uses binary to draw this pattern.
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is
-        300 pixels long) 
-      Course 4 Artist 10_instruction: |
-        It's Free Play time! Have fun and draw anything
-        you would like. 
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
-      Course 4 Artist 3_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
-      Course 4 Artist 6_instruction: |
-        Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
-      Course 4 Artist 7_instruction: |
-        Now nest this loop inside another loop to draw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete
-        a 360 degree rotation.  
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code 12 times.
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1 (copy 1)_instruction: |
-        Here's a function that takes
-        a binary string of 1's and 0's and instructs the artist to turn on the go
-        from left to right, top to bottom, turning on the squares where the number
-        has a zero. Run this code to see how the artist uses binary to draw this pattern.
-      Course 4 Artist Binary 1_instruction: |
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to turn on the go from left
-        to right, top to bottom, filling in the squares when it sees a 1 and ignoring
-        it when it sees a 0. Run this code to see how the artist uses binary to draw
-        this pattern.
-      Course 4 Artist Binary 2 (copy 1)_instruction: |
-        Can you draw this pattern by
-        looping a single binary string?
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
-      Course 4 Artist Binary 5_instruction: |
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
-      Course 4 Artist Binary 7 (copy 1)_instruction: Finish this drawing.
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
-      Course 4 Artist Binary Free Play (copy 1)_instruction: |
-        Free Play: Draw whatever
-        you like with binary!
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a higher
-        resolution canvas to draw on - 16 bits by 16 bits!
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
+      Course 2 Maze Loops 1_instruction: Можеш ли да ме заведеш до прасето с 5 блока?
+      Course 4 2_instruction: Пчелата иска нектар точно сега. Не забравяйте, не всички обекти са цветя, така че проверете цветята за събиране на нектар.
+      Course 4 Artist 1_instruction: 'Помогнете ми да завърша моята кутия. (Всеки ред е дълъг 300 пиксела) '
+      Course 4 Artist 10_instruction: 'Сега е време за импровизации! Забавлявайте се и направете това, което Ви харесва. '
+      Course 4 Artist 2_instruction: Можете ли да повторите този код, за да начертаете Сивите контури на квадрата?
+      Course 4 Artist 3_instruction: 'Добре, опитайте се да разберете какво ще стане ако стартирате този код (или натиснете "Старт", за да го пробвате). След това го повторете достатъчно време за да завършите чертежа.'
+      Course 4 Artist 4_instruction: 'Колко градуса има една окръжност?  Попълнете блокът за повторение с такова число, че да се създаде кръг от цветове.'
+      Course 4 Artist 5_instruction: Начертайте другата половина на този дизайн така, че да е симетричен. Триъгълниците са равностранни и с дължина 50 пиксела.
+      Course 4 Artist 6_instruction: 'Попълнете кода, за да начертаете тези триъгълници. Съвет: 3 триъгълници за 360 градуса завъртане.'
+      Course 4 Artist 7_instruction: 'Сега, внесете този цикъл в друг за да начертаете 10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници образуват окръжност от 360 градуса.  '
+      Course 4 Artist 8_instruction: Начертайте това слънце като повторите този цял блок от код 12 пъти.
+      Course 4 Artist 9_instruction: 'Повторете този дизайн 10 пъти и се уверете, че ще се завъртате между всяка фигура, от която е съставен. Ето един съвет на колко градуса ще се завъртате: Колко е 360 делено на 10?'
+      Course 4 Artist Binary 1_instruction: 'Това е функция, която взема двоичен низ от 1 и 0 и възлага на художника да се движи отляво надясно, отгоре надолу, като попълва квадратчета, когато вижда 1 и ги прескача, когато  вижда 0. Изпълнете този код, за да видите как художникът използва бинарния код за да изготви този модел.'
+      Course 4 Artist Binary 2_instruction: Кои от тези двоични низове трябва да повторите 8 пъти за да изготвите това изображение?
+      Course 4 Artist Binary 3_instruction: Можете ли да начертаете този модел като повторите трицифровия двоичен низ?
+      Course 4 Artist Binary 4_instruction: Всеки бинарен низ представлява един ред от тази картина. Можете ли да ги подредите, така че тя прилича на усмихнато,а не на намръщено лице?
+      Course 4 Artist Binary 5_instruction: Кои 6-цифрен двоичен низ, повторен11 пъти, ще изготви това изображение?
+      Course 4 Artist Binary 6_instruction: Кой е най-краткия двоичен низ, който можете да повторите за да се изготви това изображение?
+      Course 4 Artist Binary 7_instruction: Завърши този чертеж.
+      Course 4 Artist Binary Free Play 2_instruction: 'Свободна игра: Тук резолюцията на платното е по-висока - 16 бита на 16 бита!'
+      Course 4 Artist Binary Free Play_instruction: 'Свободна игра: Нарисувате каквото си искате с двоичен код!'
       Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
+        Нека го настроим малко
+        можеш ли да нарисуваш звездна форма, използвайки фукнцията "Нарисувай квадратна линия"? 
+        Успех!
       Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        in size. Hint: use a repeat block.
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
-        and adds one side at a time until it draws a decagon (10 sides). Each side
-        should be 100 pixels long. Hint: 360 divided by the number of sides a shape
-        has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 12_instruction: |
-        That looked pretty cool, but now
-        I'd like to draw each shape next to the last one. This time each side is
-        20 pixels. Use a jump block to jump forward 40 pixels after each shape. 
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14 _instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using For Loops. We've added a few generic variables for you
-        to use as well.
-      Course 4 Artist For Loops 2_instruction: |
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10. Take a look at
-        how I built the code then click on "Run" when you are ready to see it in
-        action. 
+        Нека го настроим малко
+        можеш ли да нарисуваш звездна форма, използвайки фукнцията "Нарисувай квадратна линия"? 
+        Успех!
+      Course 4 Artist For Loops 1_instruction: 'Нарисувай триъгълник, който е с размер 50 пиксела. Подсказка: използвай блок за повторение.'
+      Course 4 Artist For Loops 10_instruction: Време е за свободна игра! Забавлявай се, нарисувай каквото искаш с блоковете, които си научил как да използваш
+      Course 4 Artist For Loops 11_instruction: 'Помните ли когато използвахме променливи за да контролираме броя на страните в геометрична форма? Тази форма започва като триъгълник като допълва по една страна докато не се получи десетоъгълник ( 10 страни). Всяка страна трябва да бъде 100 пиксела дълга. Съвет: Разделете 360 на страните на фигурата за да получите ъгъла на завъртане.'
+      Course 4 Artist For Loops 12_instruction: 'Това изглеждаше много готино, но сега бих искал да начертаем всяка фигура до последната. Този път всяка страна е 20 пиксела. Използвайте "скок" блок за да скачате напред 40 пиксела след всяка фигура. '
+      Course 4 Artist For Loops 13_instruction: 'Хммм , тези фигури стават все по -големи всеки път! Но нерешихме ли тези задачи вече използвайки променливи? Как да използваме бройните променливи за да умалим страните на многоъгълника? Вместо да се премествате напред на точна величина , опитайте да разделите  величината първо на 100 пиксела.'
+      Course 4 Artist For Loops 14 _instruction: 'Ако когато чертаете фигура  завъртите малко повече или по-малко от обикновено,ще получите фигура близка до оригиналната .Опитайте да завъртите на 89 градуса за да полъчите тази сложна спирала.'
+      Course 4 Artist For Loops 14_instruction: 'Ако когато чертаете фигура  завъртите малко повече или по-малко от обикновено,ще получите фигура близка до оригиналната .Опитайте да завъртите на 89 градуса за да полъчите тази сложна спирала.'
+      Course 4 Artist For Loops 15_instruction: 'Свободно чертане: Опитайте да начертаете нещо като използвате функцията за цикли. Добавихме няколко общи променливи които може да използвате.'
+      Course 4 Artist For Loops 2_instruction: 'Сложих кода за изчертаване на триъгълника вътре във функцията за цикли която брой от 50 до 100 през десет . Разгледайте кода и натиснете "Тръгни" когато сте готови да видите как работи. '
       Course 4 Artist For Loops 3_instruction: Страните на малкия триъгълник имат 20 пиксела дължина, а на най-големия 200 пиксела, всеки триъгълник е с 20 пиксела по-голям от предходния. Актуализирайте цикъла, за да начертаете тези триъгълници.
-      Course 4 Artist For Loops 4_instruction: |
-        Use a for loop to draw these squares.
-        They start at 50 pixels long, the largest is 300 pixels long, and each square
-        is 25 pixels larger than the last. I have given you almost all the code you
-        will need - you're missing one block, which one is it?
-      Course 4 Artist For Loops 5_instruction: |
-        Good job on the last puzzle! Let's
-        use that "counter" variable block again to draw this cool picture. 
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is a 20 pixels longer than the
-        last.
-      Course 4 Artist For Loops 8_instruction: |
-        The smallest line of this square
-        spiral is 10, the largest is 200, and each line is 10 pixels longer than the
-        last. Can you fill in the missing blocks to complete this awesome picture?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
+      Course 4 Artist For Loops 4_instruction: Използвайте цикли за да начертаете квадратчета. Най-малкото е 50 пиксела, а най-голямото е 300 пиксела, като всеки квадрат е с 25 пиксела по-голям от предходния. Дал съм ви почти целия код -един блок липсва, кой ?
+      Course 4 Artist For Loops 5_instruction: 'Свъпшихте добра работа с последния пъзел. Нека да използваме блока "бройни" променливи отново за да нарисуваме тази страхотна картина. '
+      Course 4 Artist For Loops 6_instruction: Свободно чертане! Опитайте да начертаете уголемяваща се фигура използвайки цикл и собствен дизайн.
+      Course 4 Artist For Loops 7_instruction: 'Какво ще стане ако премахнете "Повтори 3" от алгоритъма , оставите блоковете "премести" и " завий" ? В този спираловиден триъгълник всяка от страните е 20 пиксела по-дълга от предишната.'
+      Course 4 Artist For Loops 8_instruction: Най-малката линия от тази квадратна спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от предходната. Можете ли да подпълните липсващите блокове за да завършите тази страхотна картина?
+      Course 4 Artist For Loops 9_instruction: Можете ли да направите спирала? Преместете се на пред от 1 до 75 пиксела, като увеличавате с 1 пиксел всеки път.
+      Course 4 Artist Functions 1_instruction: Можете ли да начертаете квадрат от 100 пиксела каро използвате цикл?
+      Course 4 Artist Functions 10_instruction: Кой блок трябва да използвате за да поставите триъгълника на върха на квадрата?
+      Course 4 Artist Functions 11_instruction: 'Проверете този код който изчертава куб- можете ли да го преместите във функцията наречена" Начертай Куб"'
       Course 4 Artist Functions 12_instruction: Направи повторение(цикъл) на квадратна функция, за да начертаеш линия
-      Course 4 Artist Functions 13_instruction: |
-        Check it out we have a new function
-        called "draw a line of squares". Feel free to take a look inside the function
-        block to see how we built it. Click on "Run" when your are ready for the
-        next puzzle.
-      Course 4 Artist Functions 14_instruction: |
-        You're doing great! Let's use
-        your new "Draw a line of squares" function to draw a Square shape. Remember
-        each square is 40 pixels in length.
-      Course 4 Artist Functions 15_instruction: |
-        Let's Step it up a little, can
-        you draw a star shape using the "draw a line of squares" function? Good
-        luck! Hint: you may have to turn 144 degrees
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 4_instruction: |
-        Are you ready to create your own
-        "Function Block"? Click on the "Functions" block in the tool box, name
-        it "draw a triangle", then create a triangle as you have done before with
-        the Action and Loops blocks. Then click on the Save and Close in the upper
-        right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
-        luck!
-      Course 4 Artist Functions 5 OLD_instruction: |
-        Let's try to use our two functions
-        to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 7_instruction: |
-        Can you draw a line of squares using
-        a Square function? Each square is 40 pixel's in length.
-      Course 4 Artist Functions 8_instruction: |
-        Are you getting the hang of how to
-        use function blocks? Let's modify this square so that it is 200 pixels in
-        size. Hint: click on "edit" to change the size of the "draw a square"
-        function editor. Remember to click on "save and close" to get out of the
-        function editor. 
-      Course 4 Artist Functions 9_instruction: |
-        We have given you most of the code
-        to create a function. However there seems to be something missing. Can you
-        make this function block complete?
-      Course 4 Artist Params 1_instruction: |
-        Let's edit a function that draws a
-        square with 50 pixel sides
-      Course 4 Artist Params 10_instruction: |
-        You can call functions from inside
-        other functions! Using your "shape" function as a base, create 3 house shapes
-        each 20 pixels larger than the last starting at 50 pixels in length. Using
-        a counter loop might be helpful. 
+      Course 4 Artist Functions 13_instruction: 'Вижте имаме нова функция наречена " начертай линия от квадратчета". Погледнете в блока за да разгледате как сме го направили. Щракнете на "Тръгни" когато сте готови да започнете следващия пъзел.'
+      Course 4 Artist Functions 14_instruction: 'Вие се справяте страхотно! Нека да използвате вашата нова "Начертайте линия от квадрати" функция да начертаете квадратна форма. Не забравяйте, всеки квадрат има 40 пиксела дължина.'
+      Course 4 Artist Functions 15_instruction: 'Нека да ускорим нещата малко, можете ли да направите звезда форма, като използвате функцията "начертайте линия от квадрати"? На добър час! Съвет: може да се наложи да завивате на 144 градуса'
+      Course 4 Artist Functions 2_instruction: 'Можете ли да начертаете 3 квадрата на разсточние 20 пиксела един от друг? Съвет: всеки квадрат е 100 пиксела'
+      Course 4 Artist Functions 3_instruction: "Можете ли да начертаете тази картина използвайки блока \"начертай квадрат\" ?Съвет: всеки квадрат е на 20 пиксела от предходния.\r\n"
+      Course 4 Artist Functions 4_instruction: 'Готови ли сте да направите своя собствена функция? Щракнете на блока " Функция", наименувайте я "начертай триъгълник", после направете триъгълник с блоковете Действие и Цикли .После щракнете на Запиши и Затвори в горния десен ъгъл.Съвет: Направете триъгълник от 100 пиксела. На добър час!'
+      Course 4 Artist Functions 5 OLD_instruction: 'Нека опитаме да използваме двете функции за начертаването на  къща- как  да се поправи кода за правилни изчертаване?'
+      Course 4 Artist Functions 5_instruction: "Можете ли да начертаете тази картина използвайки блока \"начертай квадрат\" ?Съвет: всеки квадрат е на 20 пиксела от предходния.\r\n"
+      Course 4 Artist Functions 6_instruction: Кой блок трябва да използвате за да поставите триъгълника на върха на квадрата?
+      Course 4 Artist Functions 7_instruction: Можете ли да чертаете линия на квадратчета с помощта на квадратна функция? Всеки квадрат е 40 пиксела дължина.
+      Course 4 Artist Functions 8_instruction: 'Разбрахте ли как се използва блока функция? Нека да промениме квадрата на 200 пиксела.Съвет:щракнете на "Редактиране" да промените размера в блока" начертай квадрат". Незабравяйте да  щракнете на "запиши затвори" за да излезете от редктирането на функции меню. '
+      Course 4 Artist Functions 9_instruction: Направили сме по-голямата част от кода за направа на функция. Обаче, има нещо което липсва. Можете ли да допълните този блок за функции?
+      Course 4 Artist Params 1_instruction: Да редактираме функция която изчертава квадрат от 50 пиксела
+      Course 4 Artist Params 10_instruction: |-
+        Можете да извикате функция която се намира в друга функция! Използвайте функция "фигура' и начертайте 3 къщи като всяка е ц 20 пиксела по-голяма , първата е 50пиксела. Помогнете ис като изолзвате цикл "бройни" . 
       Course 4 Artist Params 11_instruction: |
         How about a function called "pinwheel"
         that takes three parameters - "sides," "length" and "repeat." You can
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
-      Course 4 Artist Params 2 new_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch.
+      Course 4 Artist Params 12_instruction: 'Използвайте функцията "колело" за да начертаете тези фигури. Дължината на всяка от страните е 50 .'
+      Course 4 Artist Params 13_instruction: 'Допълнително: Това са функциите които написахте и няколко допълнителни. Начертайте нещо страхотно!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: |
-        Awesome, can you draw each of these
-        triangles with that new function? The first is 25 pixels long, the second
-        is 50, and the third is 75. 
-      Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+      Course 4 Artist Params 3_instruction: 'Страхотно можете ли да начертаете всеки от тези триъгълници с новата функция?Първият е 25 пиксела, вторият е 50, и третият е 75. '
+      Course 4 Artist Params 4_instruction: 'Можеш ли да добавиш нова функция наречена квадрат(square)?Трябва да определите дължината , също като при триъгълника.Този път начертайте 3 квадрата 25,50 и 75 пиксила, раздалечени на  100 пиксела.'
       Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
+        Използвайте двете нови функции да начертаете тази фигура. За улеснение използвайте цикли и параметъра "бройни".
         
       Course 4 Artist Params 6_instruction: |
-        Let's edit this "draw a shape" function.
-        It already has a "length" parameter. Now, let's edit the function to also
-        add a "sides" parameter. Remember the angle to turn for a given shape is
-        360 divided by the sides it has. Hint: lengths for each shape are the triangle
-        is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels. 
+        Нека редактираме функцията "начертай фигура".
+        Тя вече има "дължина". Сега нека променим функцията така, че да добави и "ширина".
+        Запомнете, че ъгълът на една фигура е 360 разделен на страните му.
+        Съвет:Дължините на всяка триъгълна фигура са 100 пиксела, на всеки шестоъгълник е 25 пиксела, а на всеки квадрат 50 пиксела. 
       Course 4 Artist Params 7_instruction: |
-        Can you draw these shapes by filling
-        in the "???" The square and triangle are 100 pixels in size while the hexagon
-        is 75 pixels in size. 
-      Course 4 Artist Params 8_instruction: |
-        Can you figure out how to draw this
-        shape? Here's a hint create a new function with 6 sides called a hexagon.
-        
-      Course 4 Artist Params 9_instruction: |
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
+        Можете ли да начертаете тези фигури като запълните "???" пространството?
+        Квадратът и триъгълникът са 100 пиксела по размер, докато шестоъгълникът е 75 пиксела по размер. 
+      Course 4 Artist Params 8_instruction: |2
+        Можеш ли да разгадаеш как да начертаеш тази фигура?
+        Ето съвет. Създай нова функция с 6 страни наречена "шестоъгълник" (hexagon). 
+         
+      Course 4 Artist Params 9_instruction: 'Помните ли коогато използвахме бройни цикли но премахнахме внедрения цикъл?Хайде да се позабавляваме като използваме функцията "начертай фигура" със зададени "параметри" и "дължина". Можете ли да начертаете тези фигури? За квадрата задайте бройните 5/100/5, за триъгълника 10/100/10 и за шестоъгълника 2/100/2.'
       Course 4 Artist Var 9_instruction: 'Това е алгоритъм, с който да нарисувате триъгълник, да го промените, така че да използва променлива "страни". Заменете цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава страни" блок.'
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw a triangle? It's
-        100 pixels long on each side.
+      Course 4 Artist Vars 1_instruction: Ще ми помогнете ли да начертая триъгълник? Всяка от страните е 100 пиксела.
       Course 4 Artist Vars 10_instruction: |
-        Here's an algorithm that draws a triangle
-        out of smaller triangles. Can you modify it so that it uses the "sides"
-        variable to draw each triangle? Look through the code, and every time you
-        see the number 3, replace it with your "sides" variable. Remember to use
-        the "set sides" block.
-      Course 4 Artist Vars 11_instruction: |
-        Here's the same algorithm that we came
-        up with for the last puzzle - what should you set the "sides" variable to
-        in order to draw this picture of squares?
-      Course 4 Artist Vars 12_instruction: |
-        Let's set the "sides" variable to
-        5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: |
-        The more sides a shape has, the shorter
-        each side needs to be in order for the whole pattern to fit on the screen.
-        Instead of manually setting the "length" variable, let's use the "sides"
-        variable and a math block to set the "length." Choose the correct equation
-        from the toolbox to set the "length" variable, and also update the "sides"
-        variable.
-      Course 4 Artist Vars 14_instruction: |
-        Free Play: Check it out, now your algorithm
-        is nested within one more loop. Experiment with changing the values of the
-        your two variables to draw cool patterns.
-      Course 4 Artist Vars 2_instruction: |
-        Instead of "moving forward by 100,"
-        the "move" block is now referencing the variable "length." Can you set
-        "length" to 150 to draw this new triangle?
-      Course 4 Artist Vars 3_instruction: |
-        Here's a loop that draws a square, but
-        something's missing. Can you fix it so that it uses the variable "length"
-        to figure out how long each side should be? 
-      Course 4 Artist Vars 4_instruction: |
-        Now I want to make a rectangle that is
-        twice as tall as it is wide. We've got a variable called "width" that is
-        set to 100. Can you use the math blocks to complete the code?
-      Course 4 Artist Vars 5_instruction: |
-        Use the variable "sides" to control
-        how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
-      Course 4 Artist Vars 7_instruction: |
-        Can you modify the "sides" variable
-        to help me draw this hexagon?
-      Course 4 Artist Vars 8_instruction: |
-        Free Play: Experiment with the number
-        of sides this shape has. Can you change the algorithm so that the overall
-        size of the shape stays the same, no matter how many sides it has? Hint: You
-        might have to use your math blocks (360 divided by "sides" in two places
-        this time) 
-      Course 4 Artist Vars 9_instruction: |
-        Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
-      Course 4 Bee 1_instruction: |
-        The bee can't tell if this is a flower or a honeycomb.
-        Check first if it is a flower or a honeycomb, and then only gather nectar
-        from it if it is a flower. 
-      Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
-      Course 4 Bee 3_instruction: |
-        The unknown object is either a flower or a honeycomb.
-        Use the if/else block to collect nectar if it is a flower, else make honey
-        (because then it would be a honeycomb).
-      Course 4 Bee 4_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Here an if-else block is combined with another if-else block to create
-        an if, else-if, else block. Complete the solution to collect the unknown amount
-        of nectar.
-      Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar from
-        each flower.
-      Course 4 Bee For Loops 10_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
-      Course 4 Bee For Loops 2_instruction: |
-        Here's a new kind of loop, called the
-        "for" loop. This particular for loop will count from 1 to 5 by 1, and run
-        the contents of the loop each time it counts. Help the Bee get the nectar.
-      Course 4 Bee For Loops 3_instruction: |
-        You can solve this puzzle by using a
-        for loop to count from 1 to 3 by 1. Now let's go get some nectar!
-      Course 4 Bee For Loops 4_instruction: |
-        Collect all of the nectar from these
-        flowers. I wonder if there's an easier way to do this...
-      Course 4 Bee For Loops 5_instruction: |
-        Ah, the for loop makes this much easier!
-        Using the "counter" variable from the for loop to loop the "get nectar"
-        block the same number of times as the loop. Whew! That's a lot of loops.
-        All the code you need it there, take a look at how it is put together then
-        click on Run and see how it works. 
-      Course 4 Bee For Loops 6_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      Course 4 Bee For Loops 7_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      Course 4 Bee For Loops 8_instruction: |
-        Can you use the loop variable to control
-        movement and nectar collection?
-      Course 4 Bee For Loops 9_instruction: |
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
-      Course 4 Bee Params 2_instruction: |
-        Modify the "get 3 nectar" function so
-        it makes me turn right instead of left to the flowers.
-      Course 4 Bee Params 3 (copy 1)_instruction: |
-        Now there are flowers on both
-        sides! Maybe you can use a parameter so that the same function works for flowers
-        on either side. I've added a parameter called "direction" to the function.
-        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
-        turn right.
-      Course 4 Bee Params 3_instruction: |
-        Now there are flowers on both sides! I've
-        added a parameter called "direction" to the function. Use the "left" and
-        "right" variables to control direction. Fill in the rest of the function
-        definition and then click "Save and Close."
-      Course 4 Bee Params 4 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
-      Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |
-        Try using your new function to collect
-        all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 5_instruction: |
-        Let's start from scratch - can you create
-        a new function called "get 5 nectar" with a direction parameter?
-      Course 4 Bee Params 6 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 6_instruction: |
-        Wouldn't it be nice if we could collect
-        all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectars" to control the amount of nectar to collect.
-        You'll probably want to rename the function too!
-      Course 4 Bee Params 7 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 7_instruction: |
-        Try using your new function to collect
-        all of this nectar.
-      Course 4 Bee Params 8_instruction: |
-        Oooh, now there's honey to deal with too!
-        How could you update your function to either get nectar or make honey.
-      Course 4 Binary 1_instruction: |
-        Here's a function that takes a binary string
-        of 1's and 0's and instructs the farmer to turn on the go from left to right,
-        top to bottom, turning on the squares where the number has a zero. Run the
-        code provided to see how the farmers uses binary to draw an image.
-      Course 4 Binary 2_instruction: |
-        What binary string could you loop 8 times to
-        draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
-      Course 4 Binary 7_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 8_instruction: |
-        You can complete the most of this image by
-        looping a 5 bit binary number - then you'll need one more 4 bit number to
-        get the bottom right-hand corner.
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
+        Ето алгоритъм който ще начертае триъгълник от по-малки триъгълници.
+        Можеш ли да го промениш (модифицираш) така, че да използва страните си променливо, начертавайки всеки триъгълнк? Прегледай кодът и всеки път когато видиш числото 3, замени го със своите променливи страни. Незабравяй да използваш блокчето "задай страни".
+      Course 4 Artist Vars 11_instruction: 'Това е  алгоритъма който използвахме в последния пъзел- какво число трябва да напишете в блока "страни" за да начертаете тази картина от квадрати?'
+      Course 4 Artist Vars 12_instruction: 'Да зададем 5 на променливата в блок "страни".Колкото повече страни  толкова по голяма фигур ще получим. Да добавим нова променлива "дължина" и я използваме там където имаме блок" премести напред"Задайте на променливта в блока" дължина" 75.'
+      Course 4 Artist Vars 13_instruction: 'Колкото повече страни има фигурата толкова по-къси трябва да са,за да може цялата фигура да се побере на екрана.Вместо да задаваме всеки път дължината, да използваме променлива и математическа формула .Използвайте правилното уравнение от кутията с инструменти да зададете стойност на променливата в блок "дължина" и актуализирайте блока"страни".'
+      Course 4 Artist Vars 14_instruction: 'Допълнително: Вижте, сега вашият алгоритм е внедрен в още един цикъл. Екцпериментирайте да начертаете нови модели като променяте двете променливи.'
+      Course 4 Artist Vars 2_instruction: 'Блока"премести напред с 100" е заменен с променливата в блок "дължина".Можете ли да и зададете стойност 150 и начертаете нов триъгълник?'
+      Course 4 Artist Vars 3_instruction: 'Това е цикъл за изчертаване на квадрат,но нещо липсва.Можете ли да го поправите да използва променливта "дължина" за да определите дължината на всяка страна.'
+      Course 4 Artist Vars 4_instruction: 'Искам да направя правоъгълник,два пъти по висок отколкото широк.Имаме променливата "ширина" със стойност 100.Можете ли да използвате математически блокове и завършите кода?'
+      Course 4 Artist Vars 5_instruction: 'Използвайте променливата "страни" да контролирате повторенията на цикъла.'
+      Course 4 Artist Vars 6_instruction: 'Хмм опитах се променя променливата "страни" на 4 от кода в последната загадка, но тя все още прилича на триъгълник. Можете ли да използвате променливата на "страни" (заедно с математическия блок) за да сте сигурни, че се обърна нужното количество пъти? Съвет: 360, разделен на броя на страните ще ви даде броят градуси за завъртане.'
+      Course 4 Artist Vars 7_instruction: 'Променете променливата "страни" и ми помогнете да начертая този шестоъгълник.'
+      Course 4 Artist Vars 8_instruction: 'Допълнително:Експеримент със страните на фигурата. Можете ли да промените алгоритъма така че големината на фигурата е постоянна независимо от броя на страните? Помощ: Може да използвате математическите  блокове (на две места разделете 360 на блока "страни") '
+      Course 4 Artist Vars 9_instruction: 'Променете алгоритъма да използва променливата "страни" вместо статично число за начертаване на триъгълник. Заместете числото 3 със "страни" и използвайте блока "задай страните".'
+      Course 4 Bee 1_instruction: 'Пчелата не може да прецени да ли това е цвете или медена пита.Провери първо да ли е цвете или пита, и всеми нектар ако е цвете. '
+      Course 4 Bee 2_instruction: Провери всеки обект да ли е цвете , ако е тогава вземи нектар.
+      Course 4 Bee 3_instruction: Неизвестния обект е или цвете или медена пита. Използвай блока Ако-Иначе да вземеш нектар ако е цвете, иначе направи мед ( защото това значи че е медена пита).
+      Course 4 Bee 4_instruction: Това лилаво цвете може да има 3, 2 или 1 нектар. Тук ако-иначе блок е комбиниран с друг ако-иначе блок, за да създадете ако, иначе-ако, иначе блок. Завършете решението, за да съберете неизвестното количество нектар.
+      Course 4 Bee For Loops 1_instruction: Използвайте цикъл за да съберете нектар от всяко цвете.
+      Course 4 Bee For Loops 10_instruction: Ако цикъла е намаляващ, стъпката е се движи с намаляващ ред във всеки цикъл.Каква трябва да е стъпката за да съберете нектар от 9, 6 и накрая 3?
+      Course 4 Bee For Loops 2_instruction: 'Това е един нов вид цикъл наречен " за цикъл". Той ще преброи от 1 до 5 ( многократно събиране на числото 1) и ще повтаря цикъла от начало .Помогнете на пчелата да вземе нектара.'
+      Course 4 Bee For Loops 3_instruction: 'Може да решите пъзела като използвате  блока " за цикъл" да преброите от 1до 3.Хайде да съберем нектара!'
+      Course 4 Bee For Loops 4_instruction: Съберете всичкия нектар от цветятя . Чудя се няма ли по лесен начин от този...
+      Course 4 Bee For Loops 5_instruction: 'С блока " за цикъл" става по- лесно! Използвайте променливата "бройни" от блока " за цикъл" за да повторите  блока "вземи нектар" толкова пъти колкото е цикъла . Оу! Толкова много цикли.Целия код е даден погледнете как е направен и натиснете "Започни" за да видите как работи. '
+      Course 4 Bee For Loops 6_instruction: 'Можете също да използвате " за цикъл" за да броите наобратно.Пробвайте да вземете нектар като броите от 5 до 1 , намалявайте с единица.'
+      Course 4 Bee For Loops 7_instruction: 'Използвайте променливата "брояч" от "за цикъл" да контролирате колко далече да отидете хоризонтално.'
+      Course 4 Bee For Loops 8_instruction: Можете ли да използвате променливи в цикъла да конртолирате преместване и събиране на нектар?
+      Course 4 Bee For Loops 9_instruction: 'Последното число от цикъла "за цикъл" се нарича "стъпка" и всеки път когато цикъла се повтаря водещата променлива нараства със "стъпката". Опитайте се да суберете нектара от цветята като използвате стъпка=2.'
+      Course 4 Bee Params 1_instruction: 'Използвайте функцията " вземи нектар 3" завийте, преместете се да вземете нектара и се върнете в изходан позиция. Напишете последователността за събирането на нектар с "вземи нектар 3"'
+      Course 4 Bee Params 2_instruction: 'Променете функциаята "вземи нектар 3" такаче да ме премести на дясно, вместо на ляво.'
+      Course 4 Bee Params 3 (copy 1)_instruction: 'Сега цветята са от двете страни! Може би ще използвате параметър така чеда използвате една функция за двете страни.Добавих параметъра " посока" към функциата . Ако параметара  в "посока" е равен на 0 трябва да завия на ляво, ако е равен на 1, трябва да завия на дясно.'
+      Course 4 Bee Params 3_instruction: |-
+        Има цветя от двете страни! Добавих параметъра "посока". Използвайте променливите "ляво' и 'дясно" да контролирате посоката. Подълнете останалата част от функцията а натиснете" запомни" и "затвори"
+      Course 4 Bee Params 4 (copy 1)_instruction: Опитайте се да използвате новата функция да съберете всички цветя. Запомнете , 0=ляво и 1=дясно.
+      Course 4 Bee Params 4 backup_instruction: 'Няма ли да е по добре ако можехме да съберем целия нектар с една функция? Опитайте се да добавите нов параметър "нектари" за да контролирате количеството на събрания нектар. Вероятно ще искате да преименувате функцията също!'
+      Course 4 Bee Params 4_instruction: Опитайте се да използвате новата функция за събиране на цветя. Запомнете да използвате променливите ляво и дясно.
+      Course 4 Bee Params 5_instruction: 'Хайде да започнем от начало- можете ли да създадете нова функция наречена " вземи 5 нектара" с параметър на посока?'
+      Course 4 Bee Params 6 (copy 1)_instruction: Опитайте да използвате новата функция и да съберете целия нектар.
+      Course 4 Bee Params 6_instruction: 'Няма ли да е по добре ако можехме да съберем целия нектар с една функция? Опитайте се да добавите нов параметър "нектари" за да контролирате количеството на събрания нектар. Вероятно ще искате да преименувате функцията също!'
+      Course 4 Bee Params 7 (copy 1)_instruction: Опитайте да използвате новата функция и да съберете целия нектар.
+      Course 4 Bee Params 7_instruction: Опитайте се да използвате новата функция за да съберете целия нектар.
+      Course 4 Bee Params 8_instruction: Ох, сега трябва да се справим и с меда!Как можете да актуализарате вашата функция за да получите нектар или мед.
+      Course 4 Binary 1_instruction: Това е функция която използва доичена бройна система съставена от числата 1 и 0 и инструктира фермера да се движи от ляво на дясно от долу на горе, обръщайки квадрадите със 0. Активирайте предоставения код за да видите как феремра използва двоичната система за да начертае картина.
+      Course 4 Binary 2_instruction: 'Кой двоичен низ може да повторите 8 пъти за да начертаете тази картина? Помощ: числото "1"  запълва дупка.'
+      Course 4 Binary 3_instruction: Можете ли да начертаете този модел като повторите един двоичен низ?
+      Course 4 Binary 5 (copy 1)_instruction: Кой двоичен низ повторен 10 пъти ще начертае тази картина?
+      Course 4 Binary 5_instruction: Кой двоичен низ повторен 10 пъти ще начертае тази картина?
+      Course 4 Binary 6 (copy 1)_instruction: Кой двоичен низ повторен 10 пъти ще начертае тази картина?
+      Course 4 Binary 6_instruction: Кой двоичен низ повторен 10 пъти ще начертае тази картина?
+      Course 4 Binary 7 (copy 1)_instruction: 'Можете да довършите  това изображение като повторите 5 битовия двоичен номер - тогава ти ще нужен и още един 4 битов номер за да се получи долния десен ъгъл.'
+      Course 4 Binary 7_instruction: Кой двоичен низ повторен 10 пъти ще начертае тази картина?
+      Course 4 Binary 8_instruction: 'Може да довършите по голяма част от картината като повторите  5 байтено двоично число - след това ви трябва 4 байтно двоично число за да стигнете до долен -десен ъгъл.'
+      Course 4 Maze 1_instruction: Преместете ядосаната птица до прасето!
+      Course 4 Maze 2_instruction: Избягвайте тротила!
+      Course 4 Maze 3_instruction: 'Прграмирайте ядосаната птица да стигне до прасето. '
       Course 4 Maze 4_instruction: 'Опитай блока "повтаряй", за да използваш по-малко блокове...'
       Course 4 Maze 5_instruction: Можеш ли да решиш този пъзел, с помощта на възможно най-малък брой блокове?
       Course 4 Maze 6_instruction: Можеш ли да решиш този пъзел, с помощта на възможно най-малък брой блокове?
-      Course 4 Play Lab For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
-      Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
+      Course 4 Play Lab For Loops 2_instruction: Този пит нека да опитаме д апреброим нечетните числа от 1 до 100.
+      Course 4 Play Lab Params 1 (copy 1)_instruction: 'Това е функция наречена "скок" която прави вашият герой да скочи 100 пиксела. Използвайте я за да съберете знамената.'
+      Course 4 Play Lab Params 1_instruction: 'Това е функция наречена "скок" която прави вашият герой да скочи 100 пиксела. Използвайте я за да съберете знамената.'
       Course 4 Play Lab Params 10_instruction: |
-        We've added one last function for
-        you to use. Program your game to call the "level_up" function if "player_points"
-        > 10. Play the game, and make it past level 4 to move to the next puzzle.
+        Добавихме още една последна функция за вас. Програмирайте вашата игра да отвори фyнкцията  " едно ниво по нагоре" ако " играча има >10 точки". Ако преминете 4-то ниво може да се преместите на следващият пъзел.
         
       Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
+        Сега знамената са високи за достигане! Нека сложим нов параметър към нашата функция "скок" наречен "височина'. Стрелката нагоре трябва да скочи 100 пиксела , стрелката надолу 300 пиксела. Внимавайте , нетрябва да ударите  <future barrier
         above lower flags>!
-      Course 4 Play Lab Params 2_instruction: |
-        Now we've got flags that are too
-        high for our current jump! Let's add a parameter to our jump function called
-        "height." The up arrow should jump 200 pixels, but the down arrow should
-        jump 100 pixels. Click "edit" on the jump function and update it so that
-        it uses the height parameter instead of just jumping 100 pixels.
-      Course 4 Play Lab Params 3_instruction: |
-        Let's add another parameter to the
-        jump function so that we can use it with other actors. Each actor is represented
-        by a number, starting from one. Edit the "jump" function so that the definition
-        includes the "actor" parameter. 
+      Course 4 Play Lab Params 2_instruction: |-
+        Сега знамената са високи за достигане! Нека сложим нов параметър към нашата функция "скок" наречен "височина'. Стрелката нагоре трябва да скочи 200 пиксела , стрелката надолу 100 пиксела. Щракнете на "редактирай" във функцията 'скок" и промени така че да използва параметира за височина вместо просто да скача 100 пиксела.
+      Course 4 Play Lab Params 3_instruction: |-
+        Хайде да добавим нов параметър във функциата скок, така че да я използваме с други актьори. Всеки актьор е представен с номер , започващ от 1. Редактирайте функцията 'скок" така че да включва параметъра "актьор". 
       Course 4 Play Lab Params 4_instruction: |
-        Here's a function called "patrol."
-        Edit it to move the Cat up 400 pixels and then down 400 pixels.
-      Course 4 Play Lab Params 5_instruction: |
-        Fill in the "actor" parameter input
-        so that we can call the "patrol" function for each of the actors. Remember,
-        the actors correspond to numbers 1, 2, and 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Use a "set speed" block with the new "speed"
-        parameter.
-      Course 4 Play Lab Params 7_instruction: |
-        Use the arrow keys to control the
-        Dog and collect all of the flags.
-      Course 4 Play Lab Params 8_instruction: |
-        Use a "when touching" block to send
-        the Dog back to the top-left if the Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: |
-        Here's one of the games we were working
-        on earlier. We've added a function called "score_points" that takes a parameter
-        "points." Edit the function so that the "points" parameter is added to
-        the "player_points" variable. Have the Dog score 10 points to move on to
-        the next puzzle. 
-      Course 4 Play Lab Vars 1_instruction: |
-        You don't have to write any code, just
-        hit "run" to play the game! In this game, you're the Dog who is trying
-        to collect more flags than the Cat. Use the down arrow to control the Dog.
-        Press "Finish" when you're done playing.
-      Course 4 Play Lab Vars 2_instruction: |
-        That race wasn't very fair! Change
-        the "dog_speed" variable to make sure you can collect more flags than the
-        Cat. The first to collect 10 flags wins!
+        Тази функция се нарича "патрул". 
+        Редактирайте я за да преместите котката с 400 пиксела нагоре или надолу.
+      Course 4 Play Lab Params 5_instruction: |-
+        Подпълнете параметъра за 'актьор" зад а извикаме  функцията "патрул" за всеки от актьорите. Запомнете , актьорите отговарят на числата 1,2, и 3.
+      Course 4 Play Lab Params 6_instruction: |-
+        Добавете нов параметър "скорост" към функцията 'патрул". Използвайте блок "зададена скорост" със нов параметър във "скорост".
+      Course 4 Play Lab Params 7_instruction: Използвайте стрелките на клавиатурата за да контролирате Кучето и съберете всички знамена.
+      Course 4 Play Lab Params 8_instruction: 'Използвайте блока " когато докосна" да изпратите Кучето обратно в горния ляв ъгъл ако то докосне някои от актьорите.'
+      Course 4 Play Lab Params 9_instruction: |-
+        В една от игрите над които работихме по рано добавихме функцията "спечели_точки" която използва параметъра 'точки". Редактирайте функцията така че параметъра "точки" да се добави към променливата "играч_точки"Като Кучето спечели 10 точки ще се премести на следващият пъзел. 
+      Course 4 Play Lab Vars 1_instruction: 'Не трябва да пишете никакъв код , просто натиснете "Започни" за да игарете!Тук вие сте Кучето което се опитва да събере повече знамена от Котката. Използвайте стрелката надолу за да го нконтролирате. Натиснете " Завърших" когато сте готови.'
+      Course 4 Play Lab Vars 2_instruction: 'Това състезание не е много честно!Променете променливата "куче_скорост" за да сте сигурни че ще съберет повече знамена от Котката. Първият който събере 10 знамена печели!'
       Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
+        Ето една нова игра!
+        Използвайте лявата и дясна стрелка да се премествате , и стрелката нагоре да скачате. Вижте, ако може да съберете всички знамена.
       Course 4 Play Lab Vars 3_instruction: |
-        Here's a new kind of game! Use the
-        left and right arrows to move, and the up arrow to jump. See if you can collect
-        all of the flags.
-      Course 4 Play Lab Vars 4_instruction: |
-        Now we're using a variable called "height"
-        to control how high the dog can jump. Update the "height" variable so that
-        the dog can jump high enough to reach all the flags. Hint: the new flags are
-        200 pixels high.
-      Course 4 Play Lab Vars 5_instruction: |
-        Let's build a game! First we'll need
-        a score. Use the "set points to" block to set the score to 10. 
-      Course 4 Play Lab Vars 6 (copy 1)_instruction: |
-        Cool, now we've got our score
-        variable, but how are we going to make it useful? How about adding to your
-        score variable each time you hit the enemy with a fireball? Use the "when
-        actor 2 touches anything" event to trigger an update to your score when your
-        fireballs hit the cat. You can increment the score by setting score = score
-        + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: |
-        In our game, how should we score points?
-        Add 1 to your "points" variable each time the Dog hits the Cat with a fireball.
-        Use the "when actor 2 touches anything" event to trigger an update to your
-        score. You can increment your variable by setting "points = points + 1."
-        Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
-      Course 4 Play Lab Vars 7_instruction: |
-        Nice, now let's make sure this game
-        isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
-        lose a point. Start with 10 points so it's not too hard. Let your score drop
-        down from 10 to 0 to pass the level.
-      Course 4 Play Lab Vars 8 (copy 1)_instruction: |
-        Alright, one last thing for
-        this game - let's set it up so the player can win (or lose). Use a forever
-        loop to check the value of score - if score is ever greater that 20, make
-        the enemy vanish. If the score is every less than 0, make the player vanish.
-        Click "Finish" when the game works like you'd like it to.
-      Course 4 Play Lab Vars 8_instruction: |
-        Let's set up this game so the Dog can
-        win (or lose). Use a forever loop to check the value of score - if score is
-        ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
-        less than 0, make the player (the Dog) vanish. Click "Finish" when the game
-        works like you'd like it to.
-      Course 4 Play Lab Vars 9_instruction: |
-        Free Play time! Here are all of the
-        variables we've played with so far, as well as a few more in case you want
-        them. Make a game or story that uses these variables. Hint: scroll down to
-        see all the commands in the work space.
-      Course 4 Play Lab Vars_instruction: |
-        Alright, one last thing for this game
-        - let's set it up so the player can win (or lose). Use a forever loop to
-        check the value of score - if score is ever greater that 20, make the emeny
-        vanish. If the score is every less than 0, make the player vanish.
-      Course 4 Play Labs For Loops 1_instruction: |
-        Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
-      Course 4 Play Labs For Loops 3_instruction: |
-        If we count by larger numbers,
-        we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
-      Course 4 Play Labs For Loops 4_instruction: |
-        Changing the increment can be
-        helpful, but we're still counting linearly (each number is the same distance
-        from the last) What if I wanted to count exponentially? Without changing the
-        settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
-      Course 4 Play Labs For Loops 5_instruction: |
-        In the last stage we counted the
-        square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343….)
-      Course 4 Play Labs For Loops 6_instruction: |
-        You may recall that a prime number
-        is any whole number that is only divisible by itself and 1. Use the "is_prime"
-        function to speak out only the prime numbers from 1 to 100.
-      Course 4 Play Labs For Loops 7_instruction: |
-        Could you use a for loop to help
-        me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
+        Ето една нова игра!
+        Използвайте лявата и дясна стрелка да се премествате , и стрелката нагоре да скачате. Вижте, ако може да съберете всички знамена.
+      Course 4 Play Lab Vars 4_instruction: 'Сега използваме променливата наречена "височина" за да контролираме колко високо ще скочи кучето. Променете променливата във "височина" така че кучето да ксочи достатъчно високо.Помощ: новите знамена са на височина 200 пиксела.'
+      Course 4 Play Lab Vars 5_instruction: 'Хайде да направим игра!Първо ще ни трябва резултат. Използвайте блока " достигане на точки до" за да зададете резултат до 10. '
+      Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Браво, сега имаме променлива за резултата , но как да я изпозваме ?Какво ще кажете да добвяме всеки път към променливата щом ударим противника с огнено кълбо? Използвайте събитието" когато актьор 2 пипне нещо" да предизвикате актуализация на резултата когато ударите котката с огнено кълбо. Можете да увеличавате резултата като зададете резултат+резултат+1. Достигнете до 10 ( ъвеличавайки с 1) за да преминете нивото.'
+      Course 4 Play Lab Vars 6_instruction: 'Как да печелим точки в нашата игра? Прибавете 1 към променливата "точки" всеки път когато Кучето удари котката с огнено кълбо. Използвайте събитието "когато актьор 2 докосне нещо" да задейства актуализация на резултата. Можете да увеличавате променливите като зададете "точки=точки+1." Достигнете до резултат 10 ( точка по точка) за да преминете нивото.'
+      Course 4 Play Lab Vars 7 (copy 1)_instruction: 'Хубаво, нека сме сигурни че играта не е мнхого лесна - всеки път като ви ударят с огнено кълбо , ще губите точка.Нека започнем с 10 точки за по-лесно. За дапремините нивото трябва да стигнете от 10 до 0.'
+      Course 4 Play Lab Vars 7_instruction: 'Хубаво, нека сме сигурни че играта не е мнхого лесна - всеки път като Кучето ( актьор 1) е ударен  с огнено кълбо , ще губите точка.Нека започнем с 10 точки за по-лесно. За дапремините нивото трябва да стигнете от 10 до 0.'
+      Course 4 Play Lab Vars 8 (copy 1)_instruction: 'Добре, последно за таи игра - нека да направим така че играча да губи (или печели). Използвайте цикъл за винаги, за да проверите стойността на резултата- ако е някога по голям  от 20 , направете противника да изчезне.Ако е някога по-малък от 0 , противника изчезва. Щракнете "Готово" когато играта работи така както искате.'
+      Course 4 Play Lab Vars 8_instruction: 'Нека да направим така че Кучето да губи (или печели). Използвайте цикъл за винаги, за да проверите стойността на резултата- ако е някога по голям  от 20 , направете противника (Котката)да изчезне.Ако е някога по-малък от 0 , играча ( Кучето) изчезва. Щракнете "Готово" когато играта работи така както искате.'
+      Course 4 Play Lab Vars 9_instruction: Допълнително!Това са всичките променливи които използвахме до момента , и още няколко ако искате да ги използвате.Направете игра или история като ги използвате. Помощ:превъртете надолу за да видите всички команди в работното пространство.
+      Course 4 Play Lab Vars_instruction: 'Добре, последно за таи игра - нека да направим така че играча да губи (или печели). Използвайте цикъл за винаги, за да проверите стойността на резултата- ако е някога по голям  от 20 , направете противника да изчезне.Ако е някога по-малък от 0 , противника изчезва.'
+      Course 4 Play Labs For Loops 1_instruction: 'Хайде да накараме кучето да казва всяко число от 1 до 100. Използвайте "за цикъл" и блока "брояч" за произнасяне на променливите всеки път като се завърти цикъла.'
+      Course 4 Play Labs For Loops 2_instruction: Този пит нека да опитаме д апреброим нечетните числа от 1 до 100.
+      Course 4 Play Labs For Loops 3_instruction: Ако броим с по големи числа ще преброим много повече за същото време. Опитайте да направите кучето да брои от 10 до 1000 , през 10.
+      Course 4 Play Labs For Loops 4 (copy 1)_instruction: 'Нарастването на стъпката е полезно, но ние все още броим линейно ( всяко число е на еднаква дистанция от предходното. Виж Линейна Алгебра/математика) . Какво ще стане ако например започнем да броим експоненциално  ? Без да променяме настройките на функцията "за цикъл" , можете ли да избройте  1,4,9,16,25....( в квадратно броене)?'
+      Course 4 Play Labs For Loops 4_instruction: 'Нарастването на стъпката  е полезно, но ние все още броим линейно ( всяко число е на еднаква дистанция от предходното. Виж Линейна Алгебра/математика) . Какво ще стане ако например започнем да броим експоненциално  ? Без да променяме настройките на функцията за цикличност , можете ли да избройте  1,4,9,16,25....( в квадратно броене)?'
+      Course 4 Play Labs For Loops 5_instruction: 'В предишното ниво използвахме броене втора степен. Опитайте да броите на трета степен като промените "counter^2" със "counter^3" за да изброите третата степен на всяко число ( 1,8,27,64,125,216,343..)'
+      Course 4 Play Labs For Loops 6_instruction: 'Може би си спомняте че просто число е всяко число което се дели на себеси и на едно.Използвайте функцията "е_просто число" да изкажете само простите числа от 1 до 100.'
+      Course 4 Play Labs For Loops 7_instruction: "Можете ли да използвате функцията  'за цикъл' и да ми помогнете да разбера тази последователност 1,4,7,10,13,16,19,22,25?"
       Course 4 Play Labs For Loops 8_instruction: |
-        What for loop would make me speak
-        19, 27, 35, 43, 51?
-      Course Maze 2_instruction: |
-        Get the zombie to the sunflower, but avoid the
-        chomper!
+        Коя функция ще изрази тази последователност ?
+        19,27,35,43,51?
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      course3 Maze 1_instruction: Скъпи човеко. Аз зомби. Трябва... отиде... до слънчогледа.
-      Coursen 4 Artist Functions 11_instruction: |
-        Can you create a new function that
-        will draw a cube shape?
-      CUBE 1_instruction: |
-        Check out this code that draws a cube - can you move it
-        into a function called "Draw a Cube"
-      CUBE_instruction: |
-        Let's Step it up a little, can you draw a Star shape using
-        the "Draw a Square Line" function? Good luck!
-      diamond snowflake_instruction: |
-        Did you know every snowflake is a different
-        shape?  Let's create a new snowflake by using the repeat block and repeating
-        the diamond 10 times, turning right by 36 degrees between each diamond.
-      diamond_instruction: |
-        Let's create a diamond. It's just like a square but
-        has different angles: 120 and 60 degree angles instead of 90 degree angles.
-      Embed Studio_instruction: Instructions go here
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
         compare different values, returning either "true" or "false." Click "Run"
@@ -1645,8 +1144,8 @@ bg:
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
         use is an Image. This "star" function takes in a Number and two Strings,
-        and it outputs an Image. Use this function to make a solid red star with radius
-        of 100.
+        and it evaluates to an Image. Use this function to make a solid red star with
+        radius of 100.
       Eval Strings Images 2_instruction: |
         Free Play: Every Evaluation Block is color-coded
         to let you know which data type it returns and which types it needs for its
@@ -1679,109 +1178,26 @@ bg:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      Examples 4_instruction: Shrink function
-      frozen circle function (copy 1)_instruction: |
-        Use the new 'create a circle'
-        block to create 10 overlapping circles. Don't forget to jump forward between
-        circles
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate (copy 1)_instruction: |
-        Now try repeating it 10 times. How
-        many degrees do you need to turn between each line?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake (copy 1)_instruction: |
-        Did you know every snowflake
-        is a different shape?  Let's create a new snowflake by using the repeat block
-        and repeating the diamond 10 times, turning right by 36 degrees between each
-        diamond.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay (copy 1)_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
-      Function Block 1_instruction: |
-        Here is a new type of Block. It is called a
-        "Function block." Click on "RUN" to see what it can do. 
-      Function Block 2_instruction: |
-        How did the "draw a square" block know what
-        commands to run? Click on "edit" in the "draw a square" function block.
-        The blocks in the function editor are the commands that make up "draw a square."
-        When you're done looking around, click "Save and Close" in the upper right
-        hand corner. Click on "Run" when you're ready to move to the next level.
-        
-      Function Block 3.0_instruction: 'Тук е нов тип блок. Той се нарича "Функция блок". Щракнете върху "Изпълни", за да видите какво може да направи. '
-      Function Block_instruction: |
-        Here is a new type of Block. It is called a "Function
-        block." Click on "RUN" to see what it can do. 
-      function_instruction: |
-        Use the new 'create a circle' block to create two
-        circles
-      Go Up Artist_instruction: Go Up Artist
+      frozen circle function in circle_instruction: Сега, нека да създадем 20 частично застъпващи се кръгове като се завъртаме на 18 градуса след всеки кръг.
+      frozen circle function with parameter_instruction: 'Тук е "Създайте кръг" блока, който може да направи кръгове с различни размери. Можете ли да използвате това, за да се създаде малък кръг с размери 5 и по-голям кръг от размер 10?'
+      frozen circle function_instruction: 'Използвайте новия "създайте кръг" блок, за да създадете 10 припокриващи се кръгове. Не забравяйте да скочи напред между кръговете.'
+      frozen circle_instruction: Кръгът е специална форма. Можете ли да разберете с какво число да замените въпросителните знаци, за да начертаете кръг?
+      frozen cross rotate dense_instruction: 'Нека да повторим това 90 пъти! Колко пъти 90 се съдържа в 360? Съвет: Това е малка стойност.'
+      frozen cross rotate_instruction: Сега повторете това 10 пъти. На колко градуса трябва да се завъртате между всеки ред?
+      frozen cross_instruction: 'Използвайте  блок за повторение, за да създадете знак плюс. Забелязахте ли, че Елза може да се движи напред и назад?'
+      frozen diamond mini snowflake_instruction: Знаете ли, че всяка снежинка е различна форма? Нека създадем нова снежинка с помощта на блок за повторение като повторим успоредника 4 пъти, и завиваме надясно на 90 градуса между всеки успоредник.
+      frozen diamond snowflake_instruction: Сега, нека създадем нова снежинка с помощта на блок за повторение като повторим успоредника 10 пъти и завиваме надясно на 36 градуса между всеки от тях.
+      frozen diamond_instruction: 'Нека да начертаем ромб. Той е подобен на квадрата, но има различни ъгли: 60 и 120 градуса  вместо 90 градуса.'
+      frozen freeplay_instruction: Вие официално сте главен художник! Създайте зимна приказка и я споделете с приятелите си.
+      frozen line_instruction: Здравейте! Аз съм Елза от Арендейл. Помогнете ми да създам отсечка.
+      frozen perpendicular_instruction: Сега, нека да видим дали можем да създадем две линии, които образуват 90 градуса ъгъл помежду си. Ще трябва да използвате блок за завъртане, както и на блок за преместване.
+      frozen snowflake branch_instruction: 'Опитайте да използвате "създаване клонче на снежинка" блока за да създадем три клончета, които започват да изглеждат като снежинка.'
+      frozen snowflake full_instruction: Сега, нека да повторим 8 пъти за да се получи красива снежинка!
+      frozen snowflower_instruction: Сложните снежни модели могат да бъдат създадени от много прости форми. Можете ли да направите модел от повтарящи се 5 кръгчета от размер 5 и 5 кръгчета с размер 10?
+      frozen square iterative_instruction: Изглежда, че ние направихме половинката на квадрат. Нека съединим 4-те линии заедно, за да създадем квадрат.
+      frozen square loop 3x_instruction: Нека създадем три квадрата, като след всеки се завъртаме под ъгъл от 120 градуса.
+      frozen square loop_instruction: 'Здравейте аз съм Анна от Арендел! Нека направим квадрат с блок за повторение, който ни позволява да ползваме по-малко блокове. Колко пъти (?) трябва да повторим действието в  блока за повторение за да начертаем квадрат?'
+      frozen square snowflake_instruction: 'Можете ли да създадете снежинка с помощта на  блок за повторение? Повторете квадрата 10 пъти и се завъртайте на 36 градуса между всеки квадрат.'
       Infinity_catch_instruction: 'Можете ли да накарате Елза ("актьор 2"), използвайки клавишите със стрелки, да достигне Анна?'
       Infinity_finale_instruction: 'Създайте нещо, което ви харесва и  го споделете!'
       Infinity_move_collide_instruction: 'Хиро е "актьор 1".  Преместете го към Баумах и когато те се докоснат трябва да се възпроизведе звук.'
@@ -1791,186 +1207,124 @@ bg:
       Infinity_say_instruction: 'Накарайте Анна да каже "Здрасти." с помощта на блок за текст.'
       Infinity_shoot_instruction: 'Баумаx е "актьор 2".  Накарай Баумах да хвърля ракета по Хиро.'
       Infinity_shoot_directions_instruction: 'Хиро е "актьор 3".  Накарайте Хиро да хвърли ракета по всеки от четирите героя.  Изчаквайте по една секунда между всяко хвърляне.'
-      Infinity_test_instruction: This is a test Infinity level.
+      Infinity_test_instruction: Това е тест на Infinity ниво.
       Infinity_touch_faster_instruction: Докоснете още повече снежинки!
       Infinity_touch_four_instruction: Премести Анна, нагоре, надолу наляво и надясно, за да докосне всяка от четирите снежинки.
       Infinity_touch_score_instruction: 'Направете така, че Анна да получава точка, когато докосне снежинка.  След това щракнете върху бутона "Старт" и я направлявайте да докосне всяка снежинка по веднъж.'
-      K-1 Artist 1 Assessment 1_instruction: |
-        Draw a short line up and a long one
-        to the right!
-      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
-      K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
-      K-1 Artist Loops 4_instruction: |
-        Could a loop help us draw the top of this
-        castle?
-      K-1 Artist Loops 5_instruction: What can you loop 4 times to draw these stairs?
-      K-1 Artist Loops 6_instruction: |
-        This one needs two loops: one to go up the
-        stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
-      K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
-      K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
-      K-1 Artist1 1_instruction: Draw the foot of the man with one line
-      K-1 Artist1 10_instruction: |
-        Draw and Jump to make the dashed path to the treasure
-        X
-      K-1 Artist1 2_instruction: Draw the whisker on the cat with two lines!
-      K-1 Artist1 3_instruction: |
-        Draw two lines east and two lines north to finish
-        the house!
-      K-1 Artist1 4_instruction: Draw lines up, over, and down to complete the castle!
-      K-1 Artist1 5.5_instruction: |
-        Complete the third tower of the castle using
-        short lines
-      K-1 Artist1 5_instruction: Draw the stem of this flower with two lines!
-      K-1 Artist1 6_instruction: Finish the picture by using a jump block!
-      K-1 Artist1 7_instruction: |
-        Use the jump block to move without drawing. Jump
-        up and draw a line.
-      K-1 Artist1 8_instruction: |
-        Draw the dashed line by using both the jump and
-        draw blocks
-      K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
-      K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
-      K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
-      K-1 Artist2 1_instruction: Draw a square below the triangle.
-      K-1 Artist2 2_instruction: Jump and draw a square next to the house.
-      K-1 Artist2 3_instruction: Draw a square above the other square
-      K-1 Artist2 4_instruction: Draw a rectangle to complete the bridge.
-      K-1 Artist2 5_instruction: Draw a rectangle to complete the bridge supports
-      K-1 Artist2 6_instruction: Draw two squares to make a rectangle!
-      K-1 Artist2 Assessment1_instruction: |
-        Assessment: Draw a square next to the
-        other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
-      K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
-      K-1 Bee 1_instruction: |
-        Move me to the flower, get the nectar, then move me
-        to the honeycomb, and make honey
-      K-1 Bee 10_instruction: Get four nectar and then make two honey!
-      K-1 Bee 11.5_instruction: Get four nectar to make four honey!
-      K-1 Bee 11_instruction: Get three nectar and then make one honey
-      K-1 Bee 12_instruction: Get three nectar and then make two honey!
-      K-1 Bee 13_instruction: Get three nectar and then make one honey!
-      K-1 Bee 14_instruction: |
-        Get me to the nectar, pick it up, get me to the honey,
-        and make honey
-      K-1 Bee 15_instruction: Get two nectar to make two honey!
-      K-1 Bee 2_instruction: |
-        Move me to the flower, get the nectar, then move me
-        to the honeycomb, and make honey
-      K-1 Bee 3_instruction: |
-        Move me to the flower, get the nectar, then move me
-        to the honeycomb, and make honey
-      K-1 Bee 4_instruction: Get two nectar and then make two honey!
-      K-1 Bee 5_instruction: Get three nectar and then make three honey!
-      K-1 Bee 6_instruction: Get two nectar and then make two honey!
-      K-1 Bee 7_instruction: Get three nectar and then make two honey!
-      K-1 Bee 8_instruction: Get two nectar and then make two honey!
-      K-1 Bee 9_instruction: Get two nectar and then make two honey!
-      K-1 Bee Assessment 1_instruction: Get nectar to make honey!
-      K-1 Bee Assessment 2_instruction: Get nectar to make honey!
-      K-1 Bee Loops 1_instruction: Get the nectar to make honey!
-      K-1 Bee Loops 10_instruction: Use loops to get the nectar, honey, and to move!
-      K-1 Bee Loops 11_instruction: |
-        Assessment: Use loops and get the nectar and
-        honey!
-      K-1 Bee Loops 12_instruction: |
-        Assessment: Use loops to get the nectar, honey,
-        and to move!
-      K-1 Bee Loops 2_instruction: |
-        Use a loop to move and then get the nectar and
-        make honey!
-      K-1 Bee Loops 3_instruction: Use loops to get the nectar and make honey!
-      K-1 Bee Loops 4_instruction: |
-        Use loops to get the nectar, make honey, and
-        to move!
-      K-1 Bee Loops 5_instruction: Use loops to get the nectar and honey!
-      K-1 Bee Loops 6_instruction: Use loops to get the nectar, honey, and to move!
-      K-1 Bee Loops 7_instruction: Use loops to get the nectar and make honey!
-      K-1 Bee Loops 8_instruction: Use loops to get the nectar and honey!
-      K-1 Bee Loops 9_instruction: Use loops to get the nectar, honey, and to move!
-      K-1 Bee Loops Assessment 1_instruction: |
-        Get nectar to make honey and use loops
-        to move!
-      K-1 Bee Loops Assessment 2_instruction: Get nectar to make honey using loops!
-      k-1 maze 1_instruction: Can you make me move West to get to the pig?
-      K-1 Maze 10_instruction: 'Go around the TNT to get me to the pig! '
-      K-1 Maze 11_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
-      K-1 Maze 5_instruction: Move me East to get me to the pig!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze Assessment 1_instruction: 'Assessment -- Get me to the pig!'
-      K-1 Maze Assessment 12_instruction: Assessment Level
-      K-1 Maze Assessment 13_instruction: Assessment Level
-      K-1 Maze Assessment 2_instruction: 'Assessment -- Get me to the pig!'
-      K-1 maze debug 1_instruction: Change the code to get me to the pig!
-      K-1 maze debug 10_instruction: |
-        Debug this level by rearranging and adding
-        blocks to get me to the pig!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand adding blocks to get me to the pig"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Figure out what is missing and then REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
-      K-1 maze debug 5_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 6_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 7_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 8_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 9_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 Maze debug Assessment 1_instruction: |
-        Assessment -- Debug this level by
-        rearranging and adding blocks to get me to the pig!
+      K-1 Artist 1 Assessment 1_instruction: 'Начертай къса линия нагоре и дълга  вдясно!'
+      K-1 artist 1 level 10_instruction: 'Начертай пунктирана линия с помощта на  блокове за скок и чертане'
+      K-1 artist 1 level 9_instruction: Начертай това с три линии
+      K-1 Artist Loops 1_instruction: Направи тази линия чрез преместване на изток 4 пъти.
+      K-1 Artist Loops 2_instruction: Може ли да начертаете същата линия с цикъл?
+      K-1 Artist Loops 3_instruction: Можете ли да повторите тези блокове за да начертаете 6 линии?
+      K-1 Artist Loops 4_instruction: 'Може ли с повторение да начертаеш  горната част на този замък?'
+      K-1 Artist Loops 5_instruction: Какво ще повторите 4 пъти, за да нарисувате тези стълбища?
+      K-1 Artist Loops 6_instruction: 'Тук се нуждаете от два цикъла: един за качване нагоре по стълбите и един за слизане.'
+      K-1 Artist Loops 7_instruction: Можете ли да завършите този модел с два цикъла?
+      K-1 Artist Loops 8_instruction: Това стълбище има по-широки стъпала.
+      K-1 Artist Loops 9_instruction: 'Оценка: Използвайте цикъл за да начертаете стълбите'
+      K-1 Artist Loops Free Play_instruction: Свободна игра, начертайте нещо забавно!
+      K-1 Artist1 1_instruction: Начертайте стъпалото на човек с една линия
+      K-1 Artist1 10_instruction: Чертай и скочи по пунктираната пътя към съкровището X
+      K-1 Artist1 2_instruction: Начертайте мустаците котката с две линии!
+      K-1 Artist1 3_instruction: Начертай две линии на изток и две на север за да довършиш къщата!
+      K-1 Artist1 4_instruction: 'Начертай линии нагоре, отгоре и  надолу за да довършиш замъка!'
+      K-1 Artist1 5.5_instruction: Завърши третата кула на замъка, използвайки къси линии
+      K-1 Artist1 5_instruction: Начертай стъблото на това цвете с две линии!
+      K-1 Artist1 6_instruction: 'Завърши картината с помощта на "скок" блок!'
+      K-1 Artist1 7_instruction: 'Използвайте "скок" блока за да се движите без чертане. Скочете и начертайте линия.'
+      K-1 Artist1 8_instruction: 'Начертай пунктирана линия с помощта на  блокове за скок и чертане'
+      K-1 Artist1 9_instruction: Чертай и скачай за да направиш пунктирана линия
+      K-1 Artist1 Assessment 1_instruction: Начертай къси и дълги линии!
+      K-1 Artist1 Assessment 2_instruction: Начертай къси пунктирани линии!
+      K-1 Artist2 1_instruction: Начертайте квадрат под триъгълника.
+      K-1 Artist2 2_instruction: Скочи и начертай квадрат до къщата.
+      K-1 Artist2 3_instruction: Начертайте квадрат над другия квадрат
+      K-1 Artist2 4_instruction: Начертайте правоъгълник за завършване на моста.
+      K-1 Artist2 5_instruction: Начертайте правоъгълник за завършване на крепежа на моста
+      K-1 Artist2 6_instruction: Начертайте два квадрата за да направим един правоъгълник!
+      K-1 Artist2 Assessment1_instruction: 'Оценка: Начертайте квадрат до другите квадрати.'
+      K-1 Artist2 Free Draw_instruction: Начертайте нещо!
+      K-1 Artist2_7_instruction: Начертайте правоъгълник да дадете на скрина горно чекмедже!
+      K-1 Bee 1_instruction: Премести ме до цветето, вземи нектар, тогава ме премести в медената пита и направи мед
+      K-1 Bee 10_instruction: Вземи четири нектара и след това направи два пъти мед!
+      K-1 Bee 11.5_instruction: 'Вземи четири нектара и направи четири  пъти мед!'
+      K-1 Bee 11_instruction: Получи три нектара и след това направи един път мед
+      K-1 Bee 12_instruction: Получи три нектара и след това направи един път мед!
+      K-1 Bee 13_instruction: Получи три нектара и след това направи един път мед!
+      K-1 Bee 14_instruction: 'Заведи ме до нектара,  вземи го, заведи ме до меда и направи мед'
+      K-1 Bee 15_instruction: Вземи две нектара за да направиш два пъти мед!
+      K-1 Bee 2_instruction: Премести ме до цветето, вземи нектар, тогава ме премести в медената пита и направи мед
+      K-1 Bee 3_instruction: Премести ме до цветето, вземи нектар, тогава ме премести в медената пита и направи мед
+      K-1 Bee 4_instruction: Получи две нектара и след това направи два пъти мед!
+      K-1 Bee 5_instruction: Получи три нектара и след това направи три пъти мед!
+      K-1 Bee 6_instruction: Получи две нектара и след това направи два пъти мед!
+      K-1 Bee 7_instruction: Получи три нектара и след това направи един път мед!
+      K-1 Bee 8_instruction: Получи две нектара и след това направи два пъти мед!
+      K-1 Bee 9_instruction: Получи две нектара и след това направи два пъти мед!
+      K-1 Bee Assessment 1_instruction: Вземи нектар да направиш мед!
+      K-1 Bee Assessment 2_instruction: Вземи нектар да направиш мед!
+      K-1 Bee Loops 1_instruction: Вземи нектара да направиш мед!
+      K-1 Bee Loops 10_instruction: Използвай функция за цикличност( повторения) за да вземеш нектар, направиш мед , и да продължиш!
+      K-1 Bee Loops 11_instruction: Задача! Използвай функция за цикиличност и вземи нектара и направи мед!
+      K-1 Bee Loops 12_instruction: Задача! Използвай функция за цикличност да вземеш меда, направиш мед , и продължиш!
+      K-1 Bee Loops 2_instruction: Използвай функция за цикличност да се преместиш, вземеш нектар и направиш мед!
+      K-1 Bee Loops 3_instruction: Използвай цикиличност да вземеш нектар и направиш мед!
+      K-1 Bee Loops 4_instruction: Използвай цикличност , да вземеш нектар, направиш мед и се преместиш!
+      K-1 Bee Loops 5_instruction: Използвай цикиличност да вземеш нектар и направиш мед!
+      K-1 Bee Loops 6_instruction: Използвай функция за цикличност( повторения) за да вземеш нектар, направиш мед , и да продължиш!
+      K-1 Bee Loops 7_instruction: Използвай цикиличност да вземеш нектар и направиш мед!
+      K-1 Bee Loops 8_instruction: Използвай цикиличност да вземеш нектар и направиш мед!
+      K-1 Bee Loops 9_instruction: Използвай функция за цикличност( повторения) за да вземеш нектар, направиш мед , и да продължиш!
+      K-1 Bee Loops Assessment 1_instruction: Вземи нектар да направиш мед и използвай цикличност да се преместиш!
+      K-1 Bee Loops Assessment 2_instruction: За да вземете нектар и направите мед използвайте цикиличност!
+      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Building a Foundation Assessment_instruction: Нправете пирамида от три нива, няма никакви условия так че играйте с отделните части докато не я сглобите правилно!
+      k-1 maze 1_instruction: Можеш ли да направиш така че, да отида на Запад и достигна прасето?
+      K-1 Maze 10_instruction: 'Заобиколи ТНТ за да мога да стигна  до прасето!'
+      K-1 Maze 11_instruction: 'Проследи пътя и ме заведи до прасето. Стой далече от динамита ( TNT) или ще хвърчи перушина! Подсказване: той е на Юг от мен.'
+      K-1 Maze 2_instruction: Премести ме на Изток за да стигна до прасето!
+      K-1 Maze 3_instruction: Премести ме на Юг за да стигна до праето!
+      K-1 Maze 4_instruction: Премести ме на Север за са стигна до прасето!
+      K-1 Maze 5_instruction: Премести ме на Изток за да стигна до прасето!
+      K-1 Maze 6_instruction: Премести ме в една посока , после в друга за да стигна до прасето!
+      K-1 Maze 7_instruction: Премести ме в една посока , после в друга за да стигна до прасето!
+      K-1 Maze 8_instruction: Премести ме в една посока , после в друга за да стигна до прасето!
+      K-1 Maze 9_instruction: Премести ме в една посока , после в друга за да стигна до прасето!
+      K-1 Maze Assessment 1_instruction: 'Задача- Заведи ме до прасето!'
+      K-1 Maze Assessment 12_instruction: Ниво със оценки
+      K-1 Maze Assessment 13_instruction: Ниво със оценки
+      K-1 Maze Assessment 2_instruction: 'Задача- Заведи ме до прасето!'
+      K-1 maze debug 1_instruction: Промени кода за да ме заведеш до прасето!
+      K-1 maze debug 10_instruction: Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
+      K-1 maze debug 11_instruction: "Така се тестват различни функции \"test!\r\"\nКорегирай нивото като преместваш и добавяш блокове за да достигна до прасето."
+      K-1 maze debug 2_instruction: Отгатнете какво липсва и добавете необходимите блокове за да стигна до прасето!
+      K-1 maze debug 3_instruction: 'Отгатнете какво липсва и премахмете  излишните  блокове за да стигна до прасето!'
+      K-1 maze debug 4_instruction: Прегледайте блоковете и ги поправете! Мисля , че отивам в неправилната посока.
+      K-1 maze debug 5_instruction: Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
+      K-1 maze debug 6_instruction: Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
+      K-1 maze debug 7_instruction: Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
+      K-1 maze debug 8_instruction: Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
+      K-1 maze debug 9_instruction: Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
+      K-1 Maze debug Assessment 1_instruction: Задача-Корегирай нивото като преместваш и добавяш блокове за да достигна до прасето!
       K-1 Maze Loops 1_instruction: Заведи ме до прасето!
-      K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
-      K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 10_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
+      K-1 Maze Loops 11_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
+      K-1 Maze Loops 12_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
+      K-1 Maze Loops 2_instruction: Използвай Повтори Блока функция за да стигна до прасето !
+      K-1 Maze Loops 3_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
       K-1 Maze Loops 4_instruction: Заведи ме до прасето!
-      K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 5_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
+      K-1 Maze Loops 6_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
+      K-1 Maze Loops 7_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
+      K-1 Maze Loops 8_instruction: Заведи ме до прасето! Използвай повтарящ се цикл.
       K-1 Maze Loops 9_instruction: Заведи ме до прасето!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Multi 14_instruction: Assessment Level
-      K-1 Maze Multi 15_instruction: Assessment Level
-      k1_Artist2_1_instruction: Draw a short square BELOW the triangle
-      k1_Artist2_2_instruction: Jump and draw a long square NEXT TO the house
-      k1_Artist2_3_instruction: Draw a long square ABOVE the other square
-      k1_Artist2_6_instruction: Draw a rectangle to complete the bridge!
-      k1_Artist2_7_instruction: Draw a rectangle to complete the bridge supports!
-      line_instruction: Здравейте! Аз съм Елза от Арендейл. Помогнете ми да създам отсечка.
+      K-1 Maze Loops Assessment 1_instruction: 'Задача- Използвай цикли за да стигна до прасето!'
+      K-1 Maze Loops Assessment 2_instruction: 'Задача- Използвай цикли за да стигна до прасето!'
+      K-1 Maze Multi 14_instruction: Ниво със оценки
+      K-1 Maze Multi 15_instruction: Ниво със оценки
+      K-1 Maze Sequence Assessment 1_instruction: "Така се тестват различни функции \"test!\r\"\nПремести ме в една посока,\nпосле в друга за да стигна до прасето"
+      K-1 Maze Sequence Assessment 2_instruction: "Така се тестват различни функции \"test!\r\"\nПремести ме в една посока,\nпосле в друга за да стигна до прасето"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the "cost" function, and we'll return the
@@ -1999,8 +1353,6 @@ bg:
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
       Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
-      maze level test_instruction: Do this!
-      Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2058,7 +1410,6 @@ bg:
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
-      Neat Eval Functions_instruction: Check out these sweet functions.
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2098,210 +1449,70 @@ bg:
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      NEW Artist Artist Functions 3_instruction: |
-        Here is a new type of Block. It
-        is called a "Function block." Click on "RUN" to see what it can do. 
       New Artist Project_instruction: |
         Draw something awesome! Your code is saved
         as a project that you can return to at any time.
-      NEW Course 2 Artist Functions 12_instruction: |
-        Can you create a new function
-        called "draw a line of squares" function?
-      NEW Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is
-        100 pixels in length, using a loop?
-      NEW Course 4 Artist Functions 10_instruction: |
-        Click "edit" to fill out the
-        blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: |
-        We have a new function called
-        "draw a line of squares." Feel free to take a look inside the function block
-        to see how we built it. Click on "Run" when your are ready for the next
-        puzzle.
-      NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: you may have to move forward
-        60 pixels and  turn 144 degrees
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      NEW Course 4 Artist Functions 3_instruction: |
-        Here is a new type of Block.
-        It is called a "Function block." Click "Run" to see what it can do. 
-      NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
-      NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
-      NEW Course 4 Artist Functions 7_instruction: |
-        Are you getting the hang of how
-        to use function blocks? Let's modify this square so that it is 200 pixels
-        in size. Hint: click on "edit" to change the size of the "draw a square"
-        function editor. Remember to click on "save and close" to get out of the
-        function editor. 
-      NEW Course 4 Artist Functions 8_instruction: |
-        We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
-      NEW Course 4 Artist Functions 9_instruction: |
-        Which block do you need to add
-        to get the triangle to sit on top of the square?
-      New Course 4 Artist Functions Level 4_instruction: |
-        Use the "draw a square"
-        function to draw this pattern.
-      NEW Course 4 Artist Params 1_instruction: |
-        Let's define this function to draw
-        a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: |
-        Create a "draw a hexagon" function
-        block with a length parameter. Hint: this hexagon is 100 pixels in size. 
-      NEW Course 4 Artist Params 11_instruction: |
-        Can you figure out how to draw
-        this shape? Edit the function to use the "sides" parameter.
-      NEW Course 4 Artist Params 12_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
+      NEW Course 4 Artist Functions 1_instruction: Можете ли да начертаете квадрат с дължина на страните 100 пиксела като използвате цикъл?
+      NEW Course 4 Artist Functions 10_instruction: 'Щракнете върху "Редактиране" за да подпълните блокчетата във функцията и направите квадрат от 40 пиксела.'
+      NEW Course 4 Artist Functions 11_instruction: 'Имаме нова функция, наречена "начертайте линия от квадрати." Чувствайте се свободни да погледнете вътре в блока на функцията за да видите как сме я построили. Щракнете върху "Старт", когато сте готови за следващия пъзел.'
+      NEW Course 4 Artist Functions 12_instruction: 'Използвайте функцията "начертайте линия от квадрати" от последната загадка, за да нарисувате този модел."'
+      NEW Course 4 Artist Functions 13_instruction: 'Можете ли да начертаете звезда като използвате функцията " начертай линия от квадрати"? Съвет: можете да се преместите напред с 60 пиксела и завъртите на 144 градуса'
+      NEW Course 4 Artist Functions 14_instruction: 'Свободно време за игра! '
+      NEW Course 4 Artist Functions 2_instruction: 'Можете ли да начертаете 3 квадрата на разсточние 20 пиксела един от друг? Съвет: всеки квадрат е 100 пиксела'
+      NEW Course 4 Artist Functions 3_instruction: 'Това е нов тип блок. Той се нарича "функционален блок". Щракнете върху "Старт", за да видите какво може да направи. '
+      NEW Course 4 Artist Functions 4_instruction: 'Използвайте функцията "начертава квадрат", за да изготвите този модел. Съвет: Вие ще трябва да използвате "завърти надясно на 120 градуса" блока след всеки квадрат.'
+      NEW Course 4 Artist Functions 5_instruction: 'Как "начертава квадрат" блокът знае какви команди да изпълни? Щракнете върху "Редактиране" в блока "начертава квадрат" функцията. Блоковете в редактора на функцията определят какво ще направи "начертава квадрат." Когато сте готови с огледа, щракнете върху "Запиши и затвори" и след това "Старт."'
+      NEW Course 4 Artist Functions 6_instruction: "С помощта на \"чертае квадрат\" функционалния блок можете ли да нарисувате тази картина? Съвет: всеки квадрат е на 20 пиксела от другия. \r\n"
+      NEW Course 4 Artist Functions 7_instruction: 'Разбрахте ли как се използва блока функция? Нека да променим страните на квадрата на 200 пиксела. Съвет:щракнете на "Редактиране" да промените размера в блока" начертай квадрат". Не забравяйте да  щракнете на "запиши затвори" за да излезете от менюто за редактиране на функции. '
+      NEW Course 4 Artist Functions 8_instruction: Ние сме приготвили повечето от кода, за да се създаде функция. Въпреки това изглежда, че нещо липсва. Можете ли да редактирате дефиницията на функцията и да нарисувате триъгълника?
+      NEW Course 4 Artist Functions 9_instruction: Кой блок трябва да се добави, за да се постави триъгълник върху квадрата?
+      New Course 4 Artist Functions Level 4_instruction: 'Използвайте функцията "чертае квадрат", за да изготвите този модел.'
+      NEW Course 4 Artist Params 1_instruction: 'Нека да дефинираме тази функция, която ще чертае квадрат със страни 50 пиксела. Щракнете върху "Редактиране", за да започнете.'
+      NEW Course 4 Artist Params 10_instruction: 'Създайте "начертава шестоъгълник" функция с параметър "дължина". Съвет: Страната на този шестоъгълник е 100 пиксела. '
+      NEW Course 4 Artist Params 11_instruction: 'Може ли да разберете как се прави тази форма? Редактирайте функцията, за да използвате параметъра "страни".'
+      NEW Course 4 Artist Params 12_instruction: Можете ли да завършите тази рисунка? Страните на всички фигури са дълги 100 пиксела.
       NEW Course 4 Artist Params 13_instruction: |
-        Let's edit this "draw a shape"
-        function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
-      NEW Course 4 Artist Params 14_instruction: |
-        Can you recreate these shapes?
-        Drag the "length" parameter into the function definition. 
-      NEW Course 4 Artist Params 15_instruction: |
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
-      NEW Course 4 Artist Params 2 _instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
-      NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3 triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
-      NEW Course 4 Artist Params 4_instruction: |
-        Do you notice anything different
-        about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: |
-        Fill in the ??? in the length parameter
-        input block. Hint: The pentagon is 100 pixels in size. 
-      NEW Course 4 Artist Params 6_instruction: |
-        Fill in the "length" parameter
-        to draw these shapes by replacing the "???" with the right numbers. The
-        square and triangle are 100 pixels in size while the hexagon is 75 pixels
-        in size.
-      NEW Course 4 Artist Params 7_instruction: |
-        Can you complete this drawing? Hint:
-        each triangle is 25 pixels larger than the last.  The first triangle is 25
-        pixels in size.
-      NEW Course 4 Artist Params 8_instruction: |
-        Can you draw each of these triangles
-        with that new function? The first is 25 pixels long, the second is 50, and
-        the third is 75. Hint: start by clicking on "edit" on your function block.
-      NEW Course 4 Artist Params 9_instruction: |
-        Click "edit" to fill in the function
-        definition of "draw a square" and add a parameter. It should take a length
-        parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
-        pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Vars 1.5_instruction: |
-        Take a look at the code, can you
-        see how the "set length" block and "length" block works together? Click
-        on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 12_instruction: |
-        Modify this algorithm so it uses
-        the "sides" variable instead of a fixed number to draw a pentagon. Replace
-        the number 5 with the "sides" variable, and use the "set sides to" block.
-      NEW Course 4 Artist Vars 2.5_instruction: |
-        Take a look at the code, can you
-        see how the "set length" block and "length" block works together? Click
-        on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 2_instruction: |
-        Drag a number block to the "set length"
-        block to draw a set of 50 pixel triangles. 
-      NEW Course 4 Artist Vars 4 5_instruction: |
-        Awesome job on the last puzzle,
-        let's try it again this time let's make this cool design with with 60 pixel
-        hexagon's.
-      NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Now, let's make
-        this cool design with with 60 pixel hexagons.
-      NEW Course 4 Artist Vars 6_instruction: |
-        Can you help me draw this cool pattern
-        by dropping in the "length" variable block into the correct places?
-      NEW Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar
-        from each flower.
-      NEW Course 4 Bee For Loops 10_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      NEW Course 4 Bee For Loops 11_instruction: |
-        Can you use the loop variable to
-        control movement and nectar collection?
-      NEW Course 4 Bee For Loops 2_instruction: |
-        Add the code necessary to make sure
-        the bee collects all the nectar. Look at how much code you need for this puzzle!
-        (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_instruction: |
-        Ah, the for loop makes this much
-        easier! All the code you need is there, take a look at how it is put together
-        then click "Run" to see how it works. 
-      NEW Course 4 Bee For Loops 4 4_instruction: |
-        Can you help the Bee collect the
-        rest of the honey using this for loop? 
-      NEW Course 4 Bee For Loops 4_instruction: |
-        Replace the ??? in the for loop
-        with the largest amount of nectar the bee has to collect. 
-      NEW Course 4 Bee For Loops 5 5_instruction: |
-        Are you getting the hang of using
-        the for loop? Let's help the bee get the rest of the nectar.
-      NEW Course 4 Bee For Loops 5_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      NEW Course 4 Bee For Loops 6_instruction: |
-        The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of for
-        Loops? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
-        You’re given the starter code except for the numbers in the counter loops.
-        Let's collect some nectar!
-      NEW Course 4 Bee For Loops 8_instruction: "If your loop is counting up, the\nincrement is added to your counter variable each loop. What should your increment\nbe to collect 3, 6, 9 nectar?\r\n"
-      NEW Course 4 Bee For Loops 9_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: |
-        It's Free Play time!
-        Have fun with all the blocks in your tool box. 
-      NEW Course 4 Play Lab Params 11_instruction: |
-        It's Free Play time! Have fun
-        with all the blocks in your tool box. 
-      NEW Course 4 Play Lab Params 5 5_instruction: |
-        Fill in actor parameter inputs
-        with numbers (1, 2, and 3) to make these actors patrol. 
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
-        It's Free Play
-        time, have fun with all the blocks in your tool box. 
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+        Нека редактираме функцията "начертай фигура".
+        Тя вече има "дължина". Сега нека променим функцията така, че да се добави и "ширина".
+        Запомнете, че големината на ъглите на всяка фигура се получават като разделим 360 градуса страните ѝ.
+        Съвет:Страните на триъгълника са 100 пиксела, на шестоъгълника 25 пиксела, а на квадрата- 50 пиксела.
+      NEW Course 4 Artist Params 14_instruction: 'Можете ли отново да пресъздадете тези фигури? Плъзнете параметърът "дължина" в дефиницията на функцията. '
+      NEW Course 4 Artist Params 15_instruction: 'ФрийПлей: Тук са функциите, които сте написали. Начертайте нещо страхотно!'
+      NEW Course 4 Artist Params 2 _instruction: 'Създайте " функция за начертаване на триъгълник със страни 50 пиксела"'
+      NEW Course 4 Artist Params 2_instruction: 'Създайте " функция за начертаване на триъгълник със страни 50 пиксела"'
+      NEW Course 4 Artist Params 3_instruction: "Сега, нека да използваме функцията да начертае 3-те триъгълника от последната загадка в един ред. Съвет: всеки триъгълник е на 50 пиксела от другия. \r "
+      NEW Course 4 Artist Params 4_instruction: 'Забелязвате ли нещо различно в тези функционални блокове? Щракнете върху "Старт", за да видите какво се случва.'
+      NEW Course 4 Artist Params 5_instruction: 'Запълнете  полето с ??? в параметъра за "дължина" . Съвет: Страните на пентагона са 100 пиксела дължина. '
+      NEW Course 4 Artist Params 6_instruction: 'Попълнете параметъра "дължина", за да повтори тези фигури като замените "???" с правилния номер. Квадратът и триъгълникът са с дължина на страните 100 пиксела, докато на шестоъгълника е 75 пиксела.'
+      NEW Course 4 Artist Params 7_instruction: 'Можете ли да завършите тази рисунка? Съвет: всеки триъгълник е 25 пиксела по-голям от предходния.  Първия триъгълник е със страни от 25 пиксела.'
+      NEW Course 4 Artist Params 8_instruction: 'Можете ли да начертаете всеки един от тези триъгълници с тази нова функция? Страните на първия са дълги 25 пиксела, на втория 50, а на третия- 75. Съвет: започнете, като щракнете върху "Редактиране" в блока на функцията.'
+      NEW Course 4 Artist Params 9_instruction: 'Щракнете върху "Редактиране", за да попълните в дефиницията на функцията на "чертае квадрат" и добавете параметъра. Тя трябва да вземе параметър за дължина, точно като триъгълника. Този път, начертайте 3 квадрата със страни: 25, 50 и 75 пиксела, всеки е на 100 пиксела от другия.'
+      NEW Course 4 Artist Vars 1.5_instruction: 'Погледнете в кода, можете ли да разберете как "поставя дължина" блока и "дължина" блока работят заедно? Щракнете върху "Старт", за да го видите в действие. '
+      NEW Course 4 Artist Vars 12_instruction: 'Промени този алгоритъм, така че той да използва "страни" променливата вместо фиксирано число, за да нарисувате петоъгълник. Заместете числото 5 с променлива "страни" и използвате "Задаване страни" блока.'
+      NEW Course 4 Artist Vars 2.5_instruction: 'Погледнете в кода, можете ли да разберете как "поставя дължина" блока и "дължина" блока работят заедно? Щракнете върху "Старт", за да го видите в действие. '
+      NEW Course 4 Artist Vars 2_instruction: 'Плъзнете блок за номер към "поставям дължина" блок, за да нарисувате няколко триъгълника със страни 50 пиксела. '
+      NEW Course 4 Artist Vars 4 5_instruction: Страхотна работа свършихме в последната загадка, нека да пробваме отново, този път нека да направим този страхотен дизайн със шестоъгълници. Страната на всеки е 60 пиксела.
+      NEW Course 4 Artist Vars 4_instruction: 'Нека да  опитаме отново. Сега, нека да направим този страхотен дизайн от шестоъгълници със страна 60 пиксела.'
+      NEW Course 4 Artist Vars 6_instruction: 'Можете ли да ми помогнете да изготвя този готин модел като поставите блокът на променливата "дължина"  на правилните места?'
+      NEW Course 4 Bee For Loops 1_instruction: Използвайте цикъл, за да събера нектар от всяко цвете.
+      NEW Course 4 Bee For Loops 10_instruction: 'Използвайте вашата променлива за  "брояч" на повторенията да контролира колко далеч да се движи хоризонтално.'
+      NEW Course 4 Bee For Loops 11_instruction: Можете ли да използвате променливата на цикъла за контрол на движението и събирането на нектар?
+      NEW Course 4 Bee For Loops 2_instruction: Добавете код, необходим за да се уверите, че пчелата събира нектар. Погледнете колко код Ви трябва за този пъзел! (Ние ще Ви научим на по-прост начин в следващия пъзел.)
+      NEW Course 4 Bee For Loops 3_instruction: 'Ах, с цикъл това се прави много по-лесно! Всичкият код, който трябва е там, погледнете как той е обединен и след това щракнете върху "Старт", за да видите как работи. '
+      NEW Course 4 Bee For Loops 4 4_instruction: 'Можете ли да помогнете на пчелата в събирането на останалата част от меда, ползвайки това за повторение? '
+      NEW Course 4 Bee For Loops 4_instruction: 'Замени??? в цикъла с най-голямото количество нектар, който пчелите трябва да съберат. '
+      NEW Course 4 Bee For Loops 5 5_instruction: Можа ли да разбереш как се използва цикъла? Нека да помогнем на пчелата с останалата част от нектара.
+      NEW Course 4 Bee For Loops 5_instruction: 'Можете също да използвате " за цикъл" за да броите наобратно.Пробвайте да вземете нектар като броите от 5 до 1 , намалявайте с единица.'
+      NEW Course 4 Bee For Loops 6_instruction: 'Последното число в цикъла се нарича "стъпка", и всеки път цикъла се управлява променливата "брояч", която се променя от стъпката. Опитайте да съберете тези цветя, като използвате стъпка с 2.'
+      NEW Course 4 Bee For Loops 7_instruction: Разбрахте ли как работят циклите ? Подобно е последният пъзел, но сега трябва да вземете нектарите 2,4,6,8,10. Кода е започнат с изключение на числата във циклите за броене!
+      NEW Course 4 Bee For Loops 8_instruction: "Ако вашият цикъл брои с възходяща стъпка, то стъпката се добавя към вашия брояч, който се променя след всяко действие. Каква трябва да е стъпката ви за да съберете 3, 6, 9 нектара? \r "
+      NEW Course 4 Bee For Loops 9_instruction: Ако цикъла е намаляващ, стъпката е се движи с намаляващ ред във всеки цикъл.Каква трябва да е стъпката за да съберете нектар от 9, 6 и накрая 3?
+      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: 'Сега е време за игра! Забавлявайте се с всички блокове на вашата кутия с инструменти. '
+      NEW Course 4 Play Lab Params 11_instruction: 'Сега е време за игра! Забавлявайте се с всички блокове на вашата кутия с инструменти. '
+      NEW Course 4 Play Lab Params 5 5_instruction: 'Попълнете параметъра на актьора с въвеждане на числа (1, 2 и 3), за да накара тези участници да патрулират. '
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"Какво мислите, че прави този код? Натиснете "Старт", за да видите какво се случва."'
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Сега е време за игра! Забавлявайте се с всички блокове на вашата кутия с инструменти. '
+      New Play Lab Project_instruction: Създайте своя собствена история или игра! Вашият код се записва като проект, към който можете да върнете по всяко време.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -2335,10 +1546,6 @@ bg:
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      perpendicular_instruction: |
-        Now let's see if we can create two perpendicular
-        lines. Perpendicular lines are two lines that intersect at a right, or 90
-        degree, angle.
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
         Something happened
         to the bits in this image!  Find error and fix it!  Hint: a few extra bits
@@ -2416,26 +1623,6 @@ bg:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
-      Play Labs For Loops 3_instruction: |
-        If we count by larger numbers we could
-        go even higher. Try making the dog count from 10 up to 1000 10 at a time.
-      Play Labs For Loops 4_instruction: |
-        Changing the increment can be helpful,
-        but we're still counting linearly (each number is the same distance from
-        the last) What if I wanted to count exponentially? Without changing the settings
-        in this for loop, can you count (counter * 2)?
-      Play Labs For Loops 5_instruction: |
-        In the last stage we counted the square
-        of each number (counter * counter). Try changing counter ^ 2 to counter ^
-        3 to count the cube of each number (counter * counter * counter)
-      Play Labs For Loops 7_instruction: |
-        Could you use a for loop to help me speak
-        the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Play Labs For Loops 8_instruction: |
-        What for loop would make me speak 19, 27,
-        35, 43, 51?
-      Puzzle One_instruction: Make the angry bird get to the pig
-      RossAniGifLevel1_instruction: Take video of this level for ani gif
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
         the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels
@@ -2489,122 +1676,58 @@ bg:
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: 'Жълъд!Жълъд!Жълъд! Използвайте "Ако" блок за да отидете до жълъда с най-малко  на брой блокове.'
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: 'Добре, хаиде да го направим още веднъж - не е много трудно , но внимавайте за стената!'
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 18_instruction: '"Ако-Иначе "  блока е проверява едно  условие , и след това прави едно или дгруго нещо взависимост от условието. За да отидете до жълъда опитайте да използвате този блок.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
-      shrink_instruction: |
-        Can you complete this puzzle by writing out "Hello World!"
-        in solid red text that is 40 pixels in size?
-      snowflake base_instruction: Create these 3 lines that are 45 degrees apart
-      snowflake branch_instruction: |
-        Now let's make each line 30 pixels long. Create
-        the first branch of a snowflake by repeating the 3 line pattern three times.
-      snowflake full_instruction: |
-        Create a snowflake by repeating a snowflake branch
-        8 times
-      snowflower pattern_instruction: Какви красиви слънчогледи! Нека направим по-малки слънчогледи за покриване на цялата ледена пързалка.
-      snowflower_instruction: 'Можеш да създадеш сложни модели в снега само с прости фигури като малки и големи кръгове. Можете ли да създадете един модел с 5 пикселов и 10 пикселов кръг, като ги повтаряте 5 пъти в кръг? '
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
-      square iterative_instruction: Изглежда, че ние сме по средата на създаване на квадрат. Създайте 4 линии, за да нарисувате квадрат.
-      square loop_instruction: Има повече от един начин да се направи квадрат. Може ли да използваш блока за повторение, за да създадеш отново квадрат, но с по-малко блокове? Какъв модел виждаш да се повтаря, който можеш да поставиш във вътрешността на блока?
-      square snowflake_instruction: |
-        Once you know how to make a simple shape like
-        a square, you can use it to draw beautiful snow flakes. Can you create a snowflake
-        using the repeat block to draw a square 10 times, turning 36 degrees between
-        each square?
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
-      Standalone_Artist_5.5_instruction: |
-        Notice how we simplified the diamond code
-        by turning it into a loop. You can loop that whole sequence 12 times to draw
-        the flower. Hint: You'll need to turn 30 degrees after your diamond loop
-        so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
-      Standalone_Artist_6_instruction: |
-        Loop this hexagon code 6 times to create
-        the design. How many degrees will you need to turn each time? Hint: divide
-        the number of degrees in a circle by the number of times you are looping.
-      Standalone_Artist_7_instruction: |
-        A function is another programming tool to
-        help you avoid repeating yourself. This function draws a flower, so you can
-        use it any time you want to draw a flower. Use this and the new jump block
-        to draw these flowers. Hint: The flowers are 150 pixels apart
-      Standalone_Artist_8_instruction: |
-        Here's a function called "Draw a shape"
-        that we've programmed to draw hexagons. Run the code to see what it does
-        and then experiment with the function to see what happens. Can you make it
-        draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      temp_for_ross_instruction: Това прасе ми лази по нервите. Помогнете ми да го намеря!
-      Test Artist Level_instruction: This is a test artist level
-      test camel_instruction: Camel
-      Test down solution_instruction: Test down solution
-      Test Level Brian Maze_instruction: Test level
-      Test Studio Embed Free Play_instruction: 'Свободна игра: Щракни "Старт" и играй играта. Помогни на кучето да хване котката.'
-      Test-Karel-k1_instruction: Премести на изток, за да премахнеш купчините
-      test123_instruction: Нарисувай линия
-      test4_instruction: Hey Ho
-      Testing Brian Level_instruction: Test Brian Level Nice
-      testing_instruction: Test level
-      TestK1-1_instruction: Нарисувайте три частично покриващи се квадрата, с помощта на блок за повторение
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
-      the terps_instruction: Try your best to get to the green pig!!!
-      the yolo maze_instruction: Put the block in the right place
-      toby-test5-16-1_instruction: dafsfas
+      scrat 19_instruction: 'Още веднъж да упражним използването на блок "ако-иначе". Можете да се справите правилно от първия опит?'
+      scrat 20_instruction: Можете ли да добавите само 3 блока, за да ми помогнете да реша този по-сложен лабиринт? Ако го направите, аз ще мога да ходя по всяка крива независимо от дължината. Побързайте! Ледът се топи!
+      SpecialFrozenLevel_instruction: Вие официално сте главен художник! Създайте зимна приказка и я споделете с приятелите си.
+      Standalone_Artist_1_instruction: Добре дошли при Художника! Първо, нека се опитаме да направим прост квадрат с помощта на блок за завъртане надясно и блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
+      Standalone_Artist_2_instruction: Начертайте този диамант с 120 и 60 градуса ъгли и 150 пиксела дълги страни.
+      Standalone_Artist_3_instruction: Можете ли да начертаете този шестоъгълник със 100 пиксела дълги страни и завои на 60 градуса ?
+      Standalone_Artist_4_instruction: Сега имаш нов блок, с който да си играеш и повтаряш. Той ще повтаря набор от команди. Какво става ако повторите тези команди 6 пъти?
+      Standalone_Artist_5.5_instruction: 'Забележете как ние опростихме кода на диаманта, като го превърнахме в една линия. Можете ли да повторите линията 12 пъти, за да нарисувате цвете. Съвет: Трябва да се завъртате на 30 градуса след всеки диамант. Така няма да чертаете върху предишния диамант.'
+      Standalone_Artist_5_instruction: Колко пъти трябва да повторите този диамант, за да нарисувате цвете?
+      Standalone_Artist_6_instruction: 'Повторете кода за този шестоъгълник 6 пъти за създаване на дизайн. На колко градуса ще ще се завъртате всеки път? Съвет: разделете броя градуси в окръжността от броя повторения.'
+      Standalone_Artist_7_instruction: 'Функцията е друг програмен инструмент, който ви помага да избегнете повторното писане на един и същи код. С тази функция правим цвете, така че да го използвате всеки път, когато искате да нарисувате цвете. Използвайте това и новият скок блок, за да нарисувате тези цветя. Съвет: Цветята са отдалечени на 150 пиксела едно от друго'
+      Standalone_Artist_8_instruction: 'Това е функция, наречена "начертай фигура", която ние сме програмирани да нарисувате шестоъгълници. Стартирайте кода, за да видите какво прави той и след това експериментирайте с функцията за да видите промените. Можете ли да я накарате да чертае модел на квадрати, триъгълници или осмоъгълници?'
+      Standalone_Artist_9_instruction: Сега, върви напред и направи картина, каквато искаш! Дори имаш празна функция, която може да направи каквото си поискаш!
+      Standalone_Artist_v2_instruction: Добре дошли при Художника! Първо, нека се опитаме да направим прост квадрат с помощта на блок за завъртане надясно и блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
+      Text Compression Peter Piper_instruction: Това стихотворение е компресирано чрез замяна на две общи фрази със символи в речника. Можете ли да посочите друг общ модел за допълнително компресиране на поемата?
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U2L10 NetSim Automatic DNS_instruction: |
+        In this version of the simulator a
+        DNS service is provided for you. Send a message in the form GET [hostname]
+        to the DNS service at address 15 to get a student's address.
+      U2L10 NetSim Manual DNS_instruction: |
+        In this version of the simulator you
+        can't see the other students' addresses.  Instead, one of you must act as
+        a name service, to help share addresses with each other.
+      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame you just played in person, but this time using the Internet Simulator.\nJoin a room to be connected to your group, and then follow the instructions\non the worksheet handed out by your teacher.\r\n"
+      U2L3 NetSim Hub Mode_instruction: |
+        With your group, invent a standard addressing
+        scheme for the "Game of Messages" game, and try it out using the Internet
+        Simulator. 
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
+      U2L7 NetSim Need for Packets_instruction: |
+        Transfer your favicon to a partner
+        across a network in which the larger a packet grows, the more likely it is
+        to be dropped.
       U313 Two Buttons with Ids_instruction: |
         Now you try it! We've given you some
         starting code with two buttons and two event handlers on the screen, but we've
@@ -2627,8 +1750,7 @@ bg:
       U3L03 define turnRight and draw a rectangle_instruction: |
         Create a turnRight()
         function and draw a rectangle twice as tall as it is wide by having the turtle
-        navigate clockwise to draw the rectangle. Make sure to comment your function
-        as shown in the turnAround() function. 
+        navigate clockwise to draw the rectangle. 
       U3L03 Draw a T using turnAround_instruction: |
         The turnAround function is now
         provided for you in the code.  Use the turnAround() function to draw a T as
@@ -2663,7 +1785,12 @@ bg:
         NOTE: This is a very challenging problem.  You may need to play with it for
         a while and tweak it.  You might also consider using pencil and paper to sketch
         your ideas.
-      U3L06 Challenge 1 triangle_instruction: "Check out the extended Turtle palette\nnow made available to you. These new commands accept parameters, allowing\nyou to specify precisely how the function operates rather than only being\nable to move or turn a predetermined amount. Make use of these functions to\ndraw the triangle as shown.\r\nPNG: U3L06-challenge1.png"
+      U3L06 Challenge 1 triangle_instruction: |
+        Check out the extended Turtle palette
+        now made available to you. These new commands accept parameters, allowing
+        you to specify precisely how the function operates rather than only being
+        able to move or turn a predetermined amount. Make use of these functions to
+        draw the triangle as shown.
       U3L06 Challenge 2 purple square_instruction: |
         This time we're going to learn
         a little bit about changing the turtle's pen. Read through the documentation
@@ -2718,7 +1845,7 @@ bg:
         starter code for an “Under the Sea” scene which includes three functions,
         one each for the starfish, sea grass, and fish. Create versions of these functions
         which accept parameters to allow you to add more variation to your scene.  The
-        student worksheet provides more details and guidance. GIF: U3L08-UnderTheSea.gif
+        student worksheet provides more details and guidance.
       U3L13 - Button with ID_instruction: |
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
@@ -2746,17 +1873,17 @@ bg:
         Follow the "Unfortunate
         Events" Worksheet and enter your code here to experiment.  We've pre-loaded
         the code you need to start.
-      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button. GIF: U3L16 - sayHiApp.gif"
+      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button."
       U3L16 - hideAndShow_instruction: |
         Introducing textInput, getText and write.  First
         run the starter code several times.  Try to change what's written to the
         screen when the button is clicked. Then use getText to write to the screen
         what the user entered in the text box. GIF: U3L16 - useGetText.gif
       U3L16 - hideAndShowPractice_instruction: |
-        ou are given some starting code that
-        puts an image and two buttons on the screen.  The image is initially hidden.
-        Add two new event handlers: one for each button, that when clicked hide and
-        show the image. GIF: U3L16 - hideAndShowExample.gif
+        You are given some starting code
+        that puts an image and two buttons on the screen.  The image is initially
+        hidden. Add two new event handlers: one for each button, that when clicked
+        hide and show the image.
       U3L16 - image and text labels_instruction: |
         Introducing the setPosition command!  Replace
         the moveTo in the button-click event handler to use setPosition to move the
@@ -2781,8 +1908,7 @@ bg:
         to double-click the object before it moves.  Part of the challenge (and fun)
         here is creating this app from scratch.  You can look back at your previous
         work for examples, but it's fun to create something from scratch, too.  Try
-        it!  For more details see the Activity guide for this lesson. GIF:U3L16 -
-        quickDoubleClick.gif
+        it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
         command!  Replace the moveTo in the button-click event handler to use setPosition
@@ -2810,11 +1936,76 @@ bg:
         with an image..  Will the image respond to events just like the button?  Try
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
-        here if you prefer. GIF: U3L16 - useImage.gif
+        here if you prefer.
+      U3L19 - Debugging with consoleLog_instruction: |
+        This example shows how you
+        might insert console.log statements in your code to verify for yourself how
+        the values in the variables change during the running of the code.  This is
+        an important debugging technique to use when each line in your program doesn't
+        have a visual effect on the app that you can see to verify things are working
+        right.  Run the code to see the output in the console.
+      U3L19 - DEMO up down count practice app_instruction: |
+        This is a demonstration
+        of a simple App that uses variables, arithmetic and setText.  Play with it
+        a little bit here to see what it does.  You can also come back to experiment
+        if you want.  You are going to try to create this app yourself on the next
+        screen.  Don't worry, we'll start you out with some of the code and leave
+        the rest for you to complete.
       U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
       U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe error and get the program to run.  Also note the error message since it\nmight come up at some point later in your life.\r\n\r\n"
+      U3L19 - practice with setText_instruction: |
+        We've started you out with the
+        code shown on the previous screen.  First experiment with the app.  Identify
+        where setText is being used.  CHALLENGE: modify the code to also use setText
+        to change the text on the button itself when it's clicked.  GIF: U3L19 -
+        setTextOfButton.gif
+      U3L19 - Target Clicker App_instruction: "# A motivating example\r\n\r\nHere\nis an example of the kind of app we want to make.  Study this for the elements\ncontained in the app rather than what it is or does.  Things to investigate:\n\r\n\r\n1. what happens when you click on the Code.org logo? \r\n2. What happens\nwhen you click somewhere else? \r\n3. Try the reset button.   \r\n\r\nThe\nelements contained in this app appear to be simple, and they are in some ways.\nHowever, the computing principles involved - controlling and keeping track\nof things in memory while the program is running - get into some deeper issues\nof programming and computer science in general.  There are some devilish details\nand paths that can lead to misunderstanding if you're not careful.\r\n\r\nSo,\nkeep this app in mind as you go through the different levels in this lesson.  It\nmight seem like you need to learn a lot in order to get this simple thing\nworking.  But it's worth taking the time to understand at a deeper level\nwhat is going on.  Because this one topic: controlling memory leads to many\npossible misunderstandings about coding, and how computers work.  We want\nto make sure you get it right from the outset.  \r\n\r\nSo take your time.  Work\nthrough the issues.  Read the explanations.  You'll come out on the other\nside a better programmer with much deeper knowledge and understanding of how\nthings work.  \r\n\r\nAre you ready?  Click 'finish' to move to the next\npage and start the lesson."
+      U3L19 - test reassignment of two vars_instruction: |
+        Why is this happening?
+        The code given here is the same as the example from the previous page where
+        we asked you to make a prediction about what will happen.  Run this code to
+        find out if you were right.  If you weren't, that's okay.  You might experiment  a
+        little if you want to, but bon't spend too much time here. We'll explain
+        more on the next page.
       U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou the three lines of code shown in the previous page.  Add three lines of\ncode just below the ones shown here to make your own variable, assign it a\nvalue and write it to the screen.  NOTE: change the variable name from the\ndefault x to something else.\r\n"
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - up down count practice app_instruction: |
+        This app is only SLIGHTLY
+        different from the previous one, but much more dynamic.  See if you can figure
+        out how and why the count is going up.  Once you've figured it out then you
+        should be able to DO THIS: add a button to the app that when clicked makes
+        the count go down, and updates the label.  When you're done the app should
+        work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+      U3L19 - updating variables pt1_instruction: |
+        This app is only SLIGHTLY different
+        from the previous one, but much more dynamic.  See if you can figure out how
+        and why the count is going up.  Once you've figured it out then you should
+        be able to DO THIS: add a button to the app that when clicked makes the count
+        go down, and updates the label.  When you're done the app should work as
+        shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+      U3L19 - variable reassignment challenge pt2_instruction: |
+        We've given you
+        the code from the previous page.  Right now, because the code only sets the
+        values of variables, the app doesn't display anything. DO THIS: insert write
+        or console.log statements into the code to figure out what the values of a,
+        b, and c are after the code has executed.  You should have first made a prediction
+        to see if your mental model of how the computer works is correct.  We'll
+        ask for the answer on the next page.
+      U3L19 - variable scope problem 2_instruction: |
+        First run the program to see
+        the problem.  You don't need to write code to solve any problem here.  But
+        you do need to investigate the code and come up with an explanation for WHY
+        what's happening is happening.  Why aren't 3 things being written to the
+        screen?  Why does the variable foo seem to exist once but not the other times?  If
+        you switch to code mode you'll see some warning messages next to two lines
+        of code -- why do you get those messages?  Once you think you have a good
+        answer, continue to the next page.
+      U3L19 - variable scoping problem debugging_instruction: |
+        Here is the code from
+        previous page that has a subtle problem with it.  FIRST: run the app and try
+        it to see the problem. NOTE: NaN stands for "Not a Number".   DO THIS: figure
+        out what's happening, where, and fix the problem.  We'll explain the issue
+        on the next page. 
       U3L19 - write var and string with same name_instruction: |
         Now look at this
         example. We’ve added another write statement.  Before you run the code, see

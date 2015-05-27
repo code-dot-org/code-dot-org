@@ -703,24 +703,25 @@
         csp_pixelation_color_3: Reproductor Color pixelación - parte 3
         csp_pixelation_bw: Blanco y negro pixelados reproductor
         csp_U1L14_tipstricks: Unidad 1 lección 14 consejos para profesor & trucos
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_textcompression: Widget de compresión de texto
+        alg_1_intro: CS en álgebra - introducción
+        alg_2_eval_block: CS en álgebra - bloques de evaluación
+        alg_3_pemdas: CS en álgebra - orden de operaciones
+        alg_4_data_types: CS en álgebra - tipos de datos
+        alg_5_contracts: CS en álgebra - contratos
+        alg_6_variables: CS en álgebra - Variables
+        alg_7_function: CS en álgebra - funciones
+        alg_8_design_recipe: CS en álgebra - receta del diseño
+        alg_9_booleans: CS en álgebra - booleanos
+        alg_10_conditionals: CS en álgebra - condicionales
+        alg_11_coordinate_plane: CS en álgebra - plano de carteciano
+        alg_12_biggame_variables: CS en álgebra - Big Game Variables
+        alg_13_biggame_animation: CS en álgebra - Big Game Animación
+        alg_14_biggame_booleans: CS en álgebra - Big Game booleanos
+        alg_15_biggame_update_player: CS en álgebra - Big Game Actualización de jugador
+        alg_16_biggame_collision_detection: CS en álgebra - Big Game detección de
+          colisiones
+        alg_17_sambat_compound_booleans: CS en álgebra - compuestos booleanos
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
@@ -826,7 +827,7 @@
         Infinity_move_right_runbutton: Añadir movimiento bloque aquí
         Infinity_move_directions_callout: ¿Qué bloque hará Baymax subir cuando se
           presiona la flecha hacia arriba?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Utilice las flechas para dirigir
         Infinity_move_collide_callout: Reproducir un sonido cuando se produce este
           evento.
         Infinity_repeat_callout: Lugar para mover bloques dentro de aquí

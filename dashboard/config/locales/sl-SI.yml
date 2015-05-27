@@ -1,7 +1,7 @@
 "sl":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Prosim popravite sledeče napake:'
   activerecord:
     errors:
       messages:
@@ -65,8 +65,8 @@
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} študentov se je že prijavilo.'
+    teacher_count: '%{count} učiteljev se je že prijavilo.'
     overview_student: Registrirajte se, če želite spremljati svoj napredek. Vaš email
       bo služil za ponovni vpis ali novo geslo, če ga pozabite. Če želite več informacij,
       si oglejte našo <a href="http://code.org/privacy"> Politiko zasebnosti</a>.
@@ -544,6 +544,8 @@
     wrong_body: Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!
     correct_title: Pravilno
     correct_body: To je pravilen odgovor.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nepravilna rešitev
     wrong_body: Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!

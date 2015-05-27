@@ -123,7 +123,7 @@ fi-FI:
   studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
   studiobar_donate_title: Lahjoita
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
-  studiobar_shop_title: Myymälä
+  studiobar_shop_title: Verkkokauppa
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
@@ -182,7 +182,7 @@ fi-FI:
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Kaikki oppituntimme
   homepage_slot_text_course4: Kurssi 4
-  homepage_slot_text_shop: Myymälä
+  homepage_slot_text_shop: Verkkokauppa
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Katso video
   homepage_action_text_teachervideo: Katso video
@@ -190,7 +190,7 @@ fi-FI:
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: 'Allekirjoita vetoomuksemme &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Lue lisää
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia

@@ -298,7 +298,7 @@ hu:
     panel:
       answer_viewer: Answer Viewer
       student: Diák
-      try_it_yourself: Try it yourself
+      try_it_yourself: Próbáld ki magad
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -470,6 +470,8 @@ hu:
     wrong_body: 'A megadott válasz nem megfelelő.  Próbáld újra!'
     correct_title: Helyes
     correct_body: Ez a helyes válasz.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: 'A megadott megoldás nem megfelelő.  Próbáld újra.'
@@ -477,16 +479,16 @@ hu:
     correct_body: Ez a helyes válasz.
   contract_match:
     wrong_title: Helytelen válasz
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
+    badname: A megkötés elnevezése nem megfelelő.
+    badname_case: A függvények elnevezése érzékeny a kis-és nagybetűkre. Próbáld újra elnevezni a megkötést.
+    badrange: A megkötésednek nem megfelelő a tartománya.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: A tartomány elemek közül egy vagy több nem megfelelő típusú, vagy rossz sorrendben vannak.
   text_match:
     placeholder: Itt add meg a válaszod
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Köszönjük
+    open_response_body: Köszönjük a választ!
   dialog:
     ok: OK
   time:

@@ -214,13 +214,13 @@ hu:
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Szia én Trina vagyok, és a Pixar-nál dolgozom. Már egy csomó filmen dolgoztam, beleértve a Shrek.
+        text: Szia én Trina vagyok, és a Pixar-nál dolgozom. Már egy csomó filmen dolgoztam, beleértve a Shreket.
       2:
         image: notes/stage11_2.jpg
         text: Ez az új számlálós ciklus. Ez végrehajtja a feladatait újra és újra, minden alkalommal egy kicsit másképp.
       3:
         image: notes/stage11_3.jpg
-        text: 'Ebben a példában a mi "counter"/"számláló" ciklusunk azt mondja: "Számolj a számlálóval 50-től 90-ig 10-essével", és a cikluson belül van a "négyzet rajzoló" blokk. Húzd a "számláló"-t  "Változók" közül a  "hossza" helyére.'
+        text: 'Ebben a példában a mi "számláló" ciklusunk azt mondja: "Számolj a számlálóval 50-től 90-ig 10-esével", és a cikluson belül van a "rajzoljon egy négyzetet" blokk. Húzd a "számláló" blokkot a  "Változók" közül a  "hossza" helyére.'
       4:
         image: notes/stage11_4.jpg
         text: 'Ez azt jelenti, hogy a művészünk rajzol egy 50 képpontos négyzetet, majd hozzáad  10-et, és rajzol egy 60 képpontosat,. Majd újra hozzáad 10-et és rajzol egy négyzetet, amíg eléri a 90-et. Végül lesz 50, 60, 70, 80 és 90 oldalú négyzetünk.'

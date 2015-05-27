@@ -26,7 +26,7 @@ The course and lesson numbers after each term indicate the unplugged lessons in 
 ## Vocabulary
 
 #### abstraction
-Pulling out specific differences to make one solution work for multiple problems students.
+Pulling out specific differences to make one solution work for multiple problems.
 
 _(Course 3: Lesson 1)_
 
@@ -106,7 +106,7 @@ An action that causes something to happen.
 _(Course 1: Lesson 15  |  Course 2: Lesson 15)_
 
 #### event-handler
-An action or event that is being constantly monitored for by the computer. When you write code for the computer to perform after that an action occurs, that code, the event-handler, will run every time the action is performed without having to put the commands inside of a loop. Many event-handlers are human-initiated. For example: an event handler might respond when the user clicks the mouse by making the bird flap its wings. “When the mouse is clicked" is an event-handler.
+A monitor for a specific event or action on a computer. When you write code for an event handler, it will be executed every time that event or action occurs. Many event-handlers respond to human actions such as mouse clicks.
 _(Course 1: Lesson 15  |  Course 2: Lesson 15)_
 
 #### fiber optic cable
@@ -146,11 +146,11 @@ Trying again and again, even when something is very hard.
 _(Course 1: Lesson 9)_
 
 #### program
-A program is an algorithm that has been coded into something that can be run by a machine. 
+An algorithm that has been coded into something that can be run by a machine. 
 _(Course 1: Lesson 2  |  Course 2: Lesson 1  |  Course 3: Lesson 10)_
 
 #### run program
-To have the computer execute the commands you've written in your program.
+Cause the computer to execute the commands you've written in your program.
 _(Course 1: Lesson 4)_
 
 #### servers
@@ -181,6 +181,10 @@ _(Course 3: Lesson 18)_
 The white area on the right side of Code.org's online learning system where you drag and drop commands to build your program.
 _(Course 1: Lesson 4)_
 
+
+
+<br/>
+<br/>
 
 [/content]
 

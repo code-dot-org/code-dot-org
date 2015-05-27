@@ -83,10 +83,9 @@ zh:
       2-3 Algorithms Multi 1:
         Multiple Choice: 多项选择
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
+        Choose an algorithm for the image provided.: 为这个图像选择一种算法
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: '从一个正方形开始<br/>在正方形上放置一个三角形<br/>再在正方形下放置一个三角形'
-        0: '？从一个正方形开始<br/>在正方形右边放置一个三角形<br/>在正方形下面放置一个平行四边形<br/>再在平行四边形右边放置一个三角形'
-        1: '：从一个正方形开始<br/>在正方形右边放置一个三角形<br/>在正方形下面放置一个平行四边形<br/>在平行四边形右边放置一个三角形'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: '从一个正方形开始<br/>在正方形右边放置一个三角形<br/>在正方形下面放置一个平行四边形<br/>在平行四边形右边放置一个三角形'
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: '从一个正方形开始<br/>在正方形上面放置一个平行四边形<br/>在平行四边形右边放置一个三角形'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: '从一个正方形开始<br/>在正方形下面放置一个三角形<br/>在三角形右边放置一个平行四边形'
       2-3 Algorithms Multi 2:
@@ -331,6 +330,12 @@ zh:
         3 - 7: '3 - 7'
         3+1: 3+1
         3+4: 3+4
+      Choose 2 Test:
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+        Line 2: Line 2
+        Line 3: Line 3
+        Line 4: Line 4
+        Line 5: Line 5
       Coordinates Multi 1:
         Video game Coordinates: 视频游戏坐标
         Ninjacat Demo Embed.level: 忍者猫 演示 Embed.level
@@ -339,7 +344,12 @@ zh:
         The unicorn moves across the screen: 独角兽在屏幕上移动
         The unicorn's y value changes: 独角兽的Y轴坐标值在变化。
         The unicorn moves to the left: 独角兽移动到左边
-        The unicorn's x value decreases: "The unicorn's x value decreases"
+        The unicorn's x value increases: "The unicorn's x value increases"
+      ECSPD2 question:
+        title: 标题
+        Question: 问题
+        wrong answer: 错误的答案
+        right answer: 正确的答案
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
@@ -688,7 +698,7 @@ zh:
       Multi Strings Images 1:
         Strings and Images Multiple Choice: 字符串和图像多项选择
         "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
-        Which of these Evaluation Blocks will draw the image: 这些求值模块将绘制图像
+        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
@@ -698,7 +708,7 @@ zh:
         I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
       PDAlg Blocks Video:
         Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
+        In which area of the screen do you click blocks together to write a program?: In which area of the screen do you click blocks together to write a program?
         Play Area: Play Area
         Toolbox: Toolbox
         Workspace: Workspace
@@ -1021,9 +1031,18 @@ zh:
         3 bits: 3 bits
         2 bits: 2 bits
         1 bit: 1 bit
+      U1L4 Multiple Choice:
+        "Multiple Choice: Coordination and Binary Messages": 'Multiple Choice: Coordination and Binary Messages'
+        0: '? A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?'
+        1: ': A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?'
+        ABAB: ABAB
+        AABB: AABB
+        AAAA: AAAA
+        BBBB: BBBB
+        ABBB: ABBB
       U1L6 Assessment multiple choice:
         "Multiple Choice: Number Systems": 'Multiple Choice: Number Systems'
-        If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
+        If you just had a circle and a square, how many 3-shape permutations could you make?: If you just had a circle and a square, how many 3-shape permutations could you make?
         4: "4"
         6: "6"
         8: "8"
@@ -1041,10 +1060,10 @@ zh:
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id
         A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
         The first button created with the id will work, the other will not: The first button created with the id will work, the other will not
-        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant
+        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant
         Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Buttons and Event Handlers
@@ -1089,6 +1108,15 @@ zh:
         conditional: conditional
         variable: variable
         both: both
+      U3L19 - MC what are values of abc:
+        So, what's the answer?: "So, what's the answer?"
+        Choose the best answer: Choose the best answer
+        "a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8": 'a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8'
+        "a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13": 'a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13'
+        "a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7": 'a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7'
+        "a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16": 'a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16'
+        "a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21": 'a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21'
+        Code does not execute due to error: Code does not execute due to error
       U3L21 Assessment 1:
         More Variables Question 1: More Variables Question 1
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?

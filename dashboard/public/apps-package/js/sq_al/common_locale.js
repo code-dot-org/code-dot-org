@@ -177,7 +177,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Vazhdo"},
 "defaultTwitterText":function(d){return "Shiko se çfarë bëra"},
 "designMode":function(d){return "Dizajni"},
-"designModeHeader":function(d){return "Design Mode"},
+"designModeHeader":function(d){return "dan is a masive dick- "},
 "dialogCancel":function(d){return "Anulo"},
 "dialogOK":function(d){return "Ne rregull"},
 "directionEastLetter":function(d){return "E"},
