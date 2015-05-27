@@ -853,9 +853,9 @@ function handleExecutionError(err, lineNumber) {
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
-  if (!level.freePlay) {
-    Applab.onPuzzleComplete();
-  }
+
+  // Call onPuzzleComplete() here if we want to create levels that end
+  // automatically without requiring a press of the Finish button:
 }
 
 Applab.getCode = function () {
@@ -1601,11 +1601,10 @@ Applab.runButtonClick = function() {
   studioApp.attempts++;
   Applab.execute();
 
-  if (level.freePlay && !studioApp.hideSource) {
-    var shareCell = document.getElementById('share-cell');
-    if (shareCell) {
-      shareCell.className = 'share-cell-enabled';
-    }
+  // Enable the Finish button if is present:
+  var shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
   }
 };
 
@@ -1937,28 +1936,12 @@ Applab.onCodeModeButton = function() {
 };
 
 Applab.onPuzzleComplete = function() {
-  if (Applab.executionError) {
-    Applab.result = ResultType.ERROR;
-  } else if (level.freePlay) {
-    Applab.result = ResultType.SUCCESS;
-  }
+  // Submit all results as success / freePlay
+  Applab.result = ResultType.SUCCESS;
+  Applab.testResults = TestResults.FREE_PLAY;
 
   // Stop everything on screen
   Applab.clearEventHandlersKillTickLoop();
-
-  // If the current level is a free play, always return the free play result
-  if (level.freePlay) {
-    Applab.testResults = TestResults.FREE_PLAY;
-  } else {
-    var levelComplete = (Applab.result === ResultType.SUCCESS);
-    Applab.testResults = studioApp.getTestResults(levelComplete);
-  }
-
-  if (Applab.testResults >= TestResults.FREE_PLAY) {
-    studioApp.playAudio('win');
-  } else {
-    studioApp.playAudio('failure');
-  }
 
   var program;
 
