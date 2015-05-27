@@ -235,7 +235,7 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   for (var i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
     var block = cf.block;
-    var expansion;
+    var expansion = null;
     if (!block) {
       var prefix = cf.blockPrefix || cf.func;
       var paletteParams = cf.paletteParams || cf.params;

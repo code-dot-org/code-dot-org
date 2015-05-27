@@ -1080,16 +1080,24 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
 };
 
 /**
- *
+ * Show a modal dialog with an icon.
  */
 FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
   var imageDiv = document.createElement('img');
   imageDiv.className = "modal-image";
   imageDiv.src = options.icon;
+  return this.createModalDialog(options, imageDiv);
+};
 
+/**
+ * Show a modal dialog without an icon.
+ */
+FeedbackUtils.prototype.createModalDialog = function(options, icon) {
   var modalBody = document.createElement('div');
-  modalBody.appendChild(imageDiv);
-  options.contentDiv.className += ' modal-content';
+  if (icon) {
+    modalBody.appendChild(icon);
+    options.contentDiv.className += ' modal-content';
+  }
   modalBody.appendChild(options.contentDiv);
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);

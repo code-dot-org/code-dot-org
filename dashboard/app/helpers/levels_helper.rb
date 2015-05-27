@@ -1,7 +1,7 @@
 require 'digest/sha1'
 
 module LevelsHelper
-  include ViewOptionsHelper
+  include ApplicationHelper
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
@@ -173,6 +173,7 @@ module LevelsHelper
     # User/session-dependent options
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || app_options[:embed]
     app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && @current_user && @current_user.admin?)
     app_options[:report] = {
