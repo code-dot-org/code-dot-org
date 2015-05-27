@@ -11,6 +11,8 @@
  */
 'use strict';
 
+var seedrandom = require('seedrandom');
+
 /**
  * Reference to root StudioApp controller
  * @type {StudioApp}
@@ -24,6 +26,14 @@ var studioApp_ = null;
  * @private
  */
 var netsim_ = null;
+
+/**
+ * Replacable pseudo-random number generator function that lets us set a global
+ * random seed if we wish.
+ * @type {function}
+ * @private
+ */
+var pseudoRandomNumberFunction_ = Math.random;
 
 /**
  * Provide singleton access to global simulation settings
@@ -59,6 +69,25 @@ module.exports = {
    */
   updateLayout: function () {
     netsim_.updateLayout();
+  },
+
+  /**
+   * Reseed the random number generator.  If this is never called, the default
+   * Math.random function is used as the generator.
+   * @param {string} newSeed
+   */
+  setRandomSeed: function (newSeed) {
+    pseudoRandomNumberFunction_ = seedrandom(newSeed);
+  },
+
+  /**
+   * Get a random integer in the given range.
+   * @param {number} low inclusive lower end of range
+   * @param {number} high exclusive upper end of range
+   * @returns {number}
+   */
+  randomIntInRange: function (low, high) {
+    return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
   }
 
 };

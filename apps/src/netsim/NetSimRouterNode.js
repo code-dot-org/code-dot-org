@@ -87,6 +87,15 @@ var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
 var PACKET_MAX_LIFETIME_MS = 10 * 60 * 1000;
 
 /**
+ * To avoid calculating a totally unreasonable number of addresses, this is
+ * the most addresses we will consider when picking one for a new host.
+ * This means full support up to a 12-bit address part, which should be more
+ * than enough.
+ * @type {number}
+ */
+var ADDRESS_OPTION_LIMIT = 4096;
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -1016,16 +1025,31 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
       return wire.localAddress;
     });
 
-    // Find the lowest unused integer address starting at 2
-    // Non-optimal, but should be okay since our address list should not exceed 10.
-    var newAddressPart = 1;
-    var localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
-    while (contains(addressList, localNetworkAddress)) {
-      newAddressPart++;
-      localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
+    // Generate a list of unused addresses in the addressable space (to a limit)
+    var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+    var addressPartSizes = addressFormat.split(/\D+/).filter(function (part) {
+      return part.length > 0;
+    }).map(function (part) {
+      return parseInt(part, 10);
+    }).reverse();
+    var maxLocalAddresses = Math.min(Math.pow(2, addressPartSizes[0]),
+        ADDRESS_OPTION_LIMIT);
+
+    var possibleAddresses = [];
+    var nextAddress;
+    for (var i = 0; i < maxLocalAddresses; i++) {
+      nextAddress = this.makeLocalNetworkAddress_(i);
+      // Verify that the address in question is not taken already.
+      if (!(nextAddress === this.getAddress() ||
+          nextAddress === this.getAutoDnsAddress() ||
+          contains(addressList, nextAddress))) {
+        possibleAddresses.push(nextAddress);
+      }
     }
 
-    wire.localAddress = localNetworkAddress;
+    // Pick one randomly from the list of possible addresses
+    var randomIndex = netsimGlobals.randomIntInRange(0, possibleAddresses.length);
+    wire.localAddress = possibleAddresses[randomIndex];
     wire.localHostname = hostname;
     wire.remoteAddress = self.getAddress();
     wire.remoteHostname = self.getHostname();
