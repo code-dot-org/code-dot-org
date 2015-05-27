@@ -105,6 +105,24 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var uploadButton = (
+      <div>
+        <input
+            ref="uploader"
+            type="file"
+            accept={(this.props.typeFilter || '*') + '/*'}
+            style={{display: 'none'}}
+            onChange={this.upload} />
+        <button onClick={this.fileUploadClicked} className="share">
+          <i className="fa fa-upload"></i>
+          &nbsp;Upload File
+        </button>
+        <span style={{margin: '0 10px'}}>
+          {this.state.statusMessage}
+        </span>
+      </div>
+    );
+
     var assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
     // empty, the asset list has loaded and there are no assets in the current
@@ -117,31 +135,38 @@ module.exports = React.createClass({
       )
     } else if (this.state.assets.length === 0) {
       assetList = (
-        <div style={{margin: '1em 0'}}>
-          Your assets will appear here. Click "Upload File" to add a new asset
-          for this project.
+        <div>
+          <div style={{margin: '1em 0'}}>
+            Your assets will appear here. Click "Upload File" to add a new asset
+            for this project.
+          </div>
+          {uploadButton}
         </div>
       );
     } else {
-      assetList = (
-        <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
-          <table style={{width: '100%'}}>
-            <tbody>
-              {this.state.assets.map(function (asset) {
-                var path = AssetsApi.basePath(asset.filename);
-                var choose = this.props.assetChosen &&
-                    this.props.assetChosen.bind(this, path);
+      var rows = this.state.assets.map(function (asset) {
+        var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
+            AssetsApi.basePath(asset.filename));
 
-                return <AssetRow
-                    key={asset.filename}
-                    name={asset.filename}
-                    type={asset.category}
-                    size={asset.size}
-                    onChoose={choose}
-                    onDelete={this.deleteAssetRow.bind(this, asset.filename)} />;
-              }.bind(this))}
-            </tbody>
-          </table>
+        return <AssetRow
+            key={asset.filename}
+            name={asset.filename}
+            type={asset.category}
+            size={asset.size}
+            onChoose={choose}
+            onDelete={this.deleteAssetRow.bind(this, asset.filename)} />;
+      }.bind(this));
+
+      assetList = (
+        <div>
+          <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
+            <table style={{width: '100%'}}>
+              <tbody>
+                {rows}
+              </tbody>
+            </table>
+          </div>
+          {uploadButton}
         </div>
       );
     }
@@ -149,25 +174,11 @@ module.exports = React.createClass({
     var title = this.props.assetChosen ?
         <p className="dialog-title">Choose Assets</p> :
         <p className="dialog-title">Manage Asset</p>;
-    var accept = (this.props.typeFilter || '*') + '/*';
 
     return (
       <div className="modal-content" style={{margin: 0}}>
         {title}
         {assetList}
-        <input
-            ref="uploader"
-            type="file"
-            accept={accept}
-            style={{display: 'none'}}
-            onChange={this.upload} />
-        <button onClick={this.fileUploadClicked} className="share">
-          <i className="fa fa-upload"></i>
-          &nbsp;Upload File
-        </button>
-        <span style={{margin: '0 10px'}}>
-          {this.state.statusMessage}
-        </span>
       </div>
     );
   }

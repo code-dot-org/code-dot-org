@@ -47,7 +47,7 @@ module.exports = React.createClass({
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired,
     size: React.PropTypes.number,
-    onChoose: React.PropTypes.func.isRequired,
+    onChoose: React.PropTypes.func,
     onDelete: React.PropTypes.func.isRequired
   },
 
