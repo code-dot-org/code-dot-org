@@ -354,6 +354,7 @@ StudioApp.prototype.init = function(config) {
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject,
       readOnly: config.readonlyWorkspace,
+      textModeAtStart: config.level.textModeAtStart,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
@@ -1294,7 +1295,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: fullDropletPalette,
       showPaletteInTextMode: true,
-      enablePaletteAtStart: !options.readOnly
+      enablePaletteAtStart: !options.readOnly,
+      textModeAtStart: options.textModeAtStart
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
