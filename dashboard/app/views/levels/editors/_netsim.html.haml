@@ -63,6 +63,15 @@
       %td
         Turns routers into "rooms" where any packets sent will go to everyone
         present in the room. (Recommended to hide the Router tab when using this)
+    %tr
+      %td= boolean_check_box f, :connected_routers
+      %td(nowrap)= f.label :connected_routers, 'Connected routers'
+      %td
+        When unchecked, each router or room exists in isolation and will have
+        no contact with other routers or rooms.  When checked, it is possible
+        for messages to travel between routers, connecting the whole shard.
+        Messages with a toAddress not found in the local subnet will be sent
+        toward the first matching node found elsewhere on the shard.
 
 %h3 Packet Headers
 .field
