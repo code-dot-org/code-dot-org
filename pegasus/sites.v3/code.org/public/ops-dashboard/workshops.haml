@@ -24,9 +24,9 @@ template: none
 
 %table{style:'width:970px; layout:fixed; margin-top:20px;', 'ng-hide' => 'workshops.length <= 0'}
   %colgroup
-    %col{width: "90"}/
-    %col{width: "70"}/
-    %col{width: "80"}/
+    %col{width: "50"}/
+    %col{width: "40"}/
+    %col{width: "140"}/
     %col{width: "80"}/
     %col{width: "150"}/
     %col{width: "90"}/
@@ -40,7 +40,7 @@ template: none
         Program
     %th.manage-th
       %span
-        Cohort
+        Cohorts
     %th.manage-th
       %span
         Facilitators
@@ -61,9 +61,13 @@ template: none
     %td
       %span
         {{program_types[workshop.program_type].short_name}}
+    -#%td
+    -#  %span
+    -#    {{cohortNamecohort.id)}}
     %td
-      %span
-        {{cohortName(workshop.cohort_id)}}
+      %ul{style:'margin:0'}
+        %li{'ng-repeat' => 'cohort in workshop.cohorts | orderBy:"start"'}
+          {{cohortName(cohort.id)}}
     %td
       %ul{style:'margin:0'}
         %li{'ng-repeat' => 'facilitator in workshop.facilitators'}
