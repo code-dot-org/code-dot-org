@@ -10,8 +10,8 @@ module.exports = React.createClass({
       <div id="designModeBoxContainer" width="100%">
         <table width="100%">
           <colgroup>
-            <col width="50%"/>
-            <col width="50%"/>
+            <col width="270px"/>
+            <col/>
           </colgroup>
           <tr>
             <td>
