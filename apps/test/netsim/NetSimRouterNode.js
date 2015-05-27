@@ -36,6 +36,7 @@ describe("NetSimRouterNode", function () {
   var testShard;
 
   beforeEach(function () {
+    NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     netsimTestUtils.initializeGlobalsToDefaultValues();
     netsimGlobals.getLevelConfig().broadcastMode = false;
 
@@ -1319,7 +1320,6 @@ describe("NetSimRouterNode", function () {
       beforeEach(function () {
         router.setDnsMode(DnsMode.AUTOMATIC);
         router.tick({time: 0});
-        NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.VERBOSE);
       });
 
       it ("can round-trip to auto-DNS service and back",function () {
@@ -1722,6 +1722,42 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'messageTable', 1);
         assertFirstMessageAsciiBody(
             clientB.getHostname() + ':' + clientB.getAddress());
+      });
+
+      it ("can query another router's Auto-DNS", function () {
+        // Client B should send a request to router A's auto-dns and
+        // get a response
+        sendToAutoDnsA(clientB, 'GET ' + clientA.getHostname());
+
+        // Note: With unlimited router bandwidth, these operations sometimes
+        //       collapse into a single tick depending on the order in which
+        //       routers are ticked by the client.
+
+        // 1. Initial message from client B to router B
+        assertFirstMessageProperty('fromNodeID', clientB.entityID);
+        assertFirstMessageProperty('toNodeID', routerB.entityID);
+
+        // 2. Message forwarded from router B to router A
+        clientB.tick({time: 1});
+        assertFirstMessageProperty('fromNodeID', routerB.entityID);
+        assertFirstMessageProperty('toNodeID', routerA.entityID);
+
+
+        // 3. Message forwarded from router A to auto-DNS A
+        // 4. Auto-DNS A generates response back to router A
+        clientB.tick({time: 2});
+        assertFirstMessageProperty('fromNodeID', routerA.entityID);
+        assertFirstMessageProperty('toNodeID', routerA.entityID);
+        assertFirstMessageAsciiBody(
+            clientA.getHostname() + ':' + clientA.getAddress());
+
+        // 5. Message forwarded from router A to router B
+        // 6. And forwarded from router B to client B
+        clientB.tick({time: 3});
+        assertFirstMessageProperty('fromNodeID', routerB.entityID);
+        assertFirstMessageProperty('toNodeID', clientB.entityID);
+        assertFirstMessageAsciiBody(
+            clientA.getHostname() + ':' + clientA.getAddress());
       });
     });
   });
