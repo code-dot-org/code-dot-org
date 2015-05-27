@@ -68,7 +68,6 @@ module Ops
         :program_type,
         :location,
         :instructions,
-        :cohort_id,
         cohorts: [:id, :_destroy],
         facilitators: [:ops_first_name, :ops_last_name, :email]
       )
