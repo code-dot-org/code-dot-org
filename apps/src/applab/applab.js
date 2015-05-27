@@ -37,6 +37,8 @@ var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
+var elementLibrary = require('./designElements/library');
+
 var vsprintf = require('./sprintf').vsprintf;
 
 var ResultType = studioApp.ResultType;
@@ -46,8 +48,6 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
-
-
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -276,8 +276,7 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-  // TODO (brent) - use enum?
-  designMode.createElement('SCREEN', 0, 0);
+  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
