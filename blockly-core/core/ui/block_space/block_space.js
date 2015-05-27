@@ -657,11 +657,11 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   // When dragging within this distance, we directly fade in the trash can.
   // When dragging from beyond this distance, we fade a little until we reach
   // this distance, and then we fade in the rest of the way from there.
-  var innerTrashDistance = 100;
+  var INNER_TRASH_DISTANCE = 100;
 
-  // The intensity when at the innerTrashDistance during a long drag.
-  var innerTrashNormalIntensity = 0.8;
-  var innerTrashTrashcanIntensity = 1 - innerTrashNormalIntensity;
+  // The intensity when at the INNER_TRASH_DISTANCE during a long drag.
+  var INNER_TRASH_NORMAL_INTENSITY = 0.8;
+  var INNER_TRASH_TRASHCAN_INTENSITY = 1 - INNER_TRASH_NORMAL_INTENSITY;
 
   if (pastThreshold) {
     if (xDifference <= 0) {
@@ -671,26 +671,26 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
       trashcan.setOpen_(false);
       if (xDifference >= trashZoneWidth) {
         normalIntensity = 1;
-      } else if (trashZoneWidth < innerTrashDistance) {
+      } else if (trashZoneWidth < INNER_TRASH_DISTANCE) {
         // Short drag, just do a regular scale.
         normalIntensity = xDifference / trashZoneWidth;
       } else {
         // Long drag...
-        if (xDifference < innerTrashDistance)
+        if (xDifference < INNER_TRASH_DISTANCE)
         {
           // Last part of the drag:
           // fade normal blocks from mostly-visible to invisible.
-          normalIntensity = xDifference / innerTrashDistance *
-            innerTrashNormalIntensity;
+          normalIntensity = xDifference / INNER_TRASH_DISTANCE *
+            INNER_TRASH_NORMAL_INTENSITY;
         }
         else
         {
           // Initial part of the drag:
           // fade normal blocks from fully-visible to mostly-visible.
-          normalIntensity = innerTrashNormalIntensity + 
-            (xDifference-innerTrashDistance) / 
-            (trashZoneWidth - innerTrashDistance) * 
-            innerTrashTrashcanIntensity;
+          normalIntensity = INNER_TRASH_NORMAL_INTENSITY + 
+            (xDifference - INNER_TRASH_DISTANCE) / 
+            (trashZoneWidth - INNER_TRASH_DISTANCE) * 
+            INNER_TRASH_TRASHCAN_INTENSITY;
         }
       }
     }
@@ -698,12 +698,12 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   var trashIntensity = 1 - normalIntensity;
 
-  var regularGrey = 0xdd;
-  var trashGrey = 0xaa;
+  var REGULAR_GREY = 0xdd;
+  var TRASH_GREY = 0xaa;
 
-  var r = Math.floor(trashIntensity * trashGrey + normalIntensity * regularGrey);
-  var g = Math.floor(trashIntensity * trashGrey + normalIntensity * regularGrey);
-  var b = Math.floor(trashIntensity * trashGrey + normalIntensity * regularGrey);
+  var r = Math.floor(trashIntensity * TRASH_GREY + normalIntensity * REGULAR_GREY);
+  var g = Math.floor(trashIntensity * TRASH_GREY + normalIntensity * REGULAR_GREY);
+  var b = Math.floor(trashIntensity * TRASH_GREY + normalIntensity * REGULAR_GREY);
   var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
 
   // Fade towards the new backround color.
