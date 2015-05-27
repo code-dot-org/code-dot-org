@@ -463,8 +463,15 @@ designMode.configureDesignToggleRow = function () {
 };
 
 designMode.changeScreen = function (screenId) {
-  var screenIds = [];
+  // TODO (brent) - may end up wanting to share some of this code with our
+  // API that allows changing the screen. or at the least come up with a good
+  // name to indicate how this and the api function are different
+  // Ignore screen changes while running
+  if (Applab.isRunning()) {
+    return;
+  }
 
+  var screenIds = [];
   $('.screen').each(function () {
     screenIds.push(this.id);
     $(this).toggle(this.id === screenId);

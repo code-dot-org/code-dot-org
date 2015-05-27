@@ -777,14 +777,7 @@ Applab.reset = function(first) {
   apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
-
-  // $(".screen").each(function () {
-  //   var screenDiv = this;
-  //   while (screenDiv.firstChild) {
-  //     screenDiv.removeChild(screenDiv.firstChild);
-  //   }
-  // });
-   while (divApplab.firstChild) {
+  while (divApplab.firstChild) {
     divApplab.removeChild(divApplab.firstChild);
   }
 
@@ -798,10 +791,12 @@ Applab.reset = function(first) {
 
   var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
+  designMode.changeScreen('screen1');
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(allowDragging);
   }
+
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
 
