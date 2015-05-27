@@ -3,6 +3,7 @@ title 'Problem Solving Methods'
 success_title "Awesome!"
 success_body "Thanks for your response"
 height '200'
+skip_sound true
 placeholder 'I could integrate this in my classroom by...'
 
 markdown <<MARKDOWN

@@ -824,7 +824,7 @@ en:
         Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
         All of the above: All of the above
       PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
+        Computer Science is More than Programming: Computer Science is More than Programming
         'A computer program, or "code," is:': 'A computer program, or "code," is:'
         a part inside of a computer: a part inside of a computer
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
@@ -987,7 +987,6 @@ en:
         right answer: right answer
       U1L10 Assessment 1:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
-        'Question #1': 'Question #1'
         What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
         2 bits: 2 bits
         3 bits: 3 bits
@@ -996,9 +995,14 @@ en:
         6 bits: 6 bits
       U1L10 Assessment 2:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
-        'Question # 2': 'Question # 2'
-        ? "The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
-        : "The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
@@ -1006,21 +1010,20 @@ en:
         7 bits: 7 bits
       U1L11 Assessment 1:
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        'Question #1': 'Question #1'
-        What is ASCII text?: What is ASCII text?
-        American Strict Conformance of Internet Interchange: American Strict Conformance of Internet Interchange
-        Authentication Standards for Commerce in Interstate Information: Authentication Standards for Commerce in Interstate Information
-        American Standard Code for Information Interchange: American Standard Code for Information Interchange
-        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding for Interface Interchange
+        How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
+        3 bits: 3 bits
+        8 bits: 8 bits
+        15 bits: 15 bits
+        21 bits: 21 bits
+        30 bits: 30 bits
       U1L11 Assessment 2:
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        'Question #2': 'Question #2'
-        How many bytes are used to encode a single ASCII character?: How many bytes are used to encode a single ASCII character?
-        1 byte: 1 byte
-        2 bytes: 2 bytes
-        4 bytes: 4 bytes
-        8 bytes: 8 bytes
-        16 bytes: 16 bytes
+        'The word "Apple" translated into its ASCII number equivalent is:': 'The word "Apple" translated into its ASCII number equivalent is:'
+        097 112 112 108 101: 097 112 112 108 101
+        097 108 108 111 119: 097 108 108 111 119
+        065 112 112 108 101: 065 112 112 108 101
+        065 110 110 105 101: 065 110 110 105 101
+        065 108 108 111 119: 065 108 108 111 119
       U1L2 Multiple Choice Assessment Question:
         'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary Messages'
         'A binary question is defined as:': 'A binary question is defined as:'
@@ -1054,6 +1057,41 @@ en:
         '8': '8'
         '10': '10'
         '12': '12'
+      U1L8 Multiple Choice:
+        'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
+        ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+        : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+        '16': '16'
+        '14': '14'
+        '13': '13'
+        '10': '10'
+      U3L01 Assessment2:
+        Why Programming? Question 2: Why Programming? Question 2
+        ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
+        : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
+        Place slices of bread face side up: Place slices of bread face side up
+        Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
+        Spread 1 slice with jelly: Spread 1 slice with jelly
+        Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the other, faces together
+        Serve with soup: Serve with soup
+      U3L03 Assessment:
+        'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
+        Which of the following is NOT an advantage of using well-designed procedures and functions?: Which of the following is NOT an advantage of using well-designed procedures and functions?
+        They create shorter algorithms that sound like spoken language.: They create shorter algorithms that sound like spoken language.
+        There are fewer lines in the program to debug.: There are fewer lines in the program to debug.
+        The "spoken-language style" makes errors more logically recognizable.: The "spoken-language style" makes errors more logically recognizable.
+        They reduce the level of program abstraction.: They reduce the level of program abstraction.
+        It is easier to divide the work among several programmers.: It is easier to divide the work among several programmers.
+        Logical names make the program code more intuitive/understandable.: Logical names make the program code more intuitive/understandable.
+      U3L04 Assessment2:
+        'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
+        ? Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
+        : Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
+        The name of the function: The name of the function
+        What it does: What it does
+        The pre-state: The pre-state
+        The name of program it was originally designed for: The name of program it was originally designed for
+        The post-state: The post-state
       U3L06-API-multichoice:
         Multiple Choice: Multiple Choice
         Choose the option that best answers the question.: Choose the option that best answers the question.
@@ -1170,6 +1208,27 @@ en:
         The literary quality of variable names is an important attribute of successful programs: The literary quality of variable names is an important attribute of successful programs
         Readable variable names makes it easier to understand the program logic: Readable variable names makes it easier to understand the program logic
         Descriptive names makes it easier for other programmers to understand the program: Descriptive names makes it easier for other programmers to understand the program
+      U3L30 Assessment1:
+        'Arrays: Question 1': 'Arrays: Question 1'
+        The last index of an array is 7. How many elements are in the array?: The last index of an array is 7. How many elements are in the array?
+        '7': '7'
+        '6': '6'
+        '8': '8'
+        Cannot be determined: Cannot be determined
+      U3L30 Assessment2:
+        'Arrays: Question 2': 'Arrays: Question 2'
+        What is the index of the third element in an array?: What is the index of the third element in an array?
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        Cannot be determined: Cannot be determined
+      U3L30 Assessment3:
+        'Arrays: Question 3': 'Arrays: Question 3'
+        There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
+        '20': '20'
+        '21': '21'
+        '19': '19'
+        Cannot be determined: Cannot be determined
       unique level name here:
         title: title
         description here: description here
