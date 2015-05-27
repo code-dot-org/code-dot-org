@@ -545,8 +545,6 @@ function handleExecutionError(err, lineNumber) {
 
   // Call onPuzzleComplete() here if we want to create levels that end
   // automatically without requiring a press of the Finish button:
-
-  //  Applab.onPuzzleComplete();
 }
 
 Applab.getCode = function () {
