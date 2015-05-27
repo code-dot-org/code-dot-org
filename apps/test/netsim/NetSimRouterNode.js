@@ -598,6 +598,36 @@ describe("NetSimRouterNode", function () {
       return rows;
     };
 
+    var assertFirstMessageHeader = function (headerType, expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      var headerValue;
+      if (Packet.isAddressField(headerType)) {
+        headerValue = encoder.getHeaderAsAddressString(headerType, messages[0].payload);
+      } else {
+        headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
+      }
+
+      assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
+      headerType + " header to be " + expectedValue + ", but got " +
+      headerValue);
+    };
+
+    var assertFirstMessageAsciiBody = function (expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
+
+      assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
+      "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
+    };
+
     var assertFirstMessageProperty = function (propertyName, expectedValue) {
       var messages = getRows(testShard, 'messageTable');
       if (messages.length === 0) {
@@ -1277,36 +1307,6 @@ describe("NetSimRouterNode", function () {
       // Reserved auto-dns address, for now.
       var autoDnsAddress = '15';
 
-      var assertFirstMessageHeader = function (headerType, expectedValue) {
-        var messages = getRows(testShard, 'messageTable');
-        if (messages.length === 0) {
-          throw new Error("No rows in message table, unable to check first message.");
-        }
-
-        var headerValue;
-        if (Packet.isAddressField(headerType)) {
-          headerValue = encoder.getHeaderAsAddressString(headerType, messages[0].payload);
-        } else {
-          headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
-        }
-
-        assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
-            headerType + " header to be " + expectedValue + ", but got " +
-            headerValue);
-      };
-
-      var assertFirstMessageAsciiBody = function (expectedValue) {
-        var messages = getRows(testShard, 'messageTable');
-        if (messages.length === 0) {
-          throw new Error("No rows in message table, unable to check first message.");
-        }
-
-        var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
-
-        assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
-            "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
-      };
-
       var sendToAutoDns = function (fromNode, asciiPayload) {
         var payload = encoder.concatenateBinary({
           toAddress: addressStringToBinary(autoDnsAddress, netsimGlobals.getLevelConfig().addressFormat),
@@ -1470,6 +1470,18 @@ describe("NetSimRouterNode", function () {
         rows = result;
       });
       return rows;
+    };
+
+    var assertFirstMessageAsciiBody = function (expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
+
+      assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
+      "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
     };
 
     var assertFirstMessageProperty = function (propertyName, expectedValue) {
@@ -1654,6 +1666,63 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);
+    });
+
+    describe ("full-shard Auto-DNS", function () {
+
+      var sendToAutoDnsA = function (fromNode, asciiPayload) {
+        var payload = encoder.concatenateBinary({
+          toAddress: addressStringToBinary(routerA.getAutoDnsAddress(),
+              netsimGlobals.getLevelConfig().addressFormat),
+          fromAddress: addressStringToBinary(fromNode.getAddress(),
+              netsimGlobals.getLevelConfig().addressFormat)
+        },  asciiToBinary(asciiPayload, BITS_PER_BYTE));
+        fromNode.sendMessage(payload, function () {});
+      };
+
+      beforeEach(function () {
+        routerA.setDnsMode(DnsMode.AUTOMATIC);
+      });
+
+      it ("cannot get addresses out of subnet when whole-shard routing is disabled", function () {
+        netsimGlobals.getLevelConfig().connectedRouters = false;
+        sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname() + ' ' +
+        clientB.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        clientA.tick({time: 1});
+        clientA.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            routerB.getHostname() + ':NOT_FOUND ' +
+            clientB.getHostname() + ':NOT_FOUND');
+      });
+
+      it ("can get remote router hostname and address", function () {
+        sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        clientA.tick({time: 1});
+        clientA.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            routerB.getHostname() + ':' + routerB.getAddress());
+      });
+
+
+      it ("can look up remote client addresses by hostname", function () {
+        sendToAutoDnsA(clientA, 'GET ' + clientB.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        clientA.tick({time: 1});
+        clientA.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            clientB.getHostname() + ':' + clientB.getAddress());
+      });
     });
   });
 });
