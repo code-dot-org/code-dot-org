@@ -614,13 +614,39 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 NetSimRouterNode.prototype.getDisplayName = function () {
   if (netsimGlobals.getLevelConfig().broadcastMode) {
     return i18n.roomNumberX({
-      x: this.entityID
+      x: this.getRouterNumber()
     });
   }
 
   return i18n.routerNumberX({
-    x: this.entityID
+    x: this.getRouterNumber()
   });
+};
+
+/**
+ * Helper that prevents the router's display number or address from being beyond
+ * the representable size of the the router part in the address format (if
+ * two-part addresses are being used).
+ * Does not do anything special to prevent collisions, just returns entityID
+ * modulo the assignable address space - but this will be better than having
+ * non-conflicting routers you can never address at all.
+ * @returns {number}
+ */
+NetSimRouterNode.prototype.getRouterNumber = function () {
+  var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+  // If two or more parts, limit our router number to the maximum value of
+  // the second-to-last address part.
+  var addressFormatParts = addressFormat.split(/\D+/).filter(function (part) {
+    return part.length > 0;
+  }).map(function (part) {
+    return parseInt(part, 10);
+  }).reverse();
+
+  if (addressFormatParts.length >= 2) {
+    var assignableAddressValues = Math.pow(2, addressFormatParts[1]);
+    return this.entityID % assignableAddressValues;
+  }
+  return this.entityID;
 };
 
 /**
@@ -1035,7 +1061,7 @@ NetSimRouterNode.prototype.makeLocalNetworkAddress_ = function (lastPart) {
 
     if (!usedRouterID) {
       usedRouterID = true;
-      return this.entityID.toString();
+      return this.getRouterNumber().toString();
     }
 
     return '0';
