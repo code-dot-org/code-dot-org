@@ -509,8 +509,8 @@ ActiveRecord::Schema.define(version: 20150527001533) do
   add_index "workshop_attendance", ["teacher_id"], name: "index_workshop_attendance_on_teacher_id", using: :btree
 
   create_table "workshop_cohorts", force: true do |t|
-    t.integer  "workshop_id"
-    t.integer  "cohort_id"
+    t.integer  "workshop_id", null: false
+    t.integer  "cohort_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

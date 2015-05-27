@@ -1,0 +1,10 @@
+name 'U1L14 Assessment 1'
+title 'Assessment: Encoding B&W Images'
+content1 'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? '
+
+
+markdown <<MARKDOWN
+How many total bits would there be in the the largest possible image we could make with the pixelation widget?
+
+How many bits would it take to represent the smallest possible image (i.e. an image with one pixel)?
+MARKDOWN

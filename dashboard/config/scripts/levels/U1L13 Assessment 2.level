@@ -5,11 +5,7 @@
   "properties": {
     "title": "Conclusion 2: Text Compression",
     "content1": "Is there a way to know that a compressed piece of text is compressed the most possible? ",
-    "markdown": "If yes, describe how you could determine it. If no, why not?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "If yes, describe how you could determine it. If no, why not?\n"
   },
   "md5": "1209cb1a6e880ffd6a2bfe671cb9ad4a"
 }]]></config>
