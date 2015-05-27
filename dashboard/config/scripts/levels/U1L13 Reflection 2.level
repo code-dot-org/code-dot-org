@@ -1,15 +1,10 @@
 <TextMatch>
   <config><![CDATA[{
   "game_id": 38,
-  "created_at": "2015-05-27T13:35:51.947Z",
+  "created_at": "2015-05-27T13:35:51.000Z",
   "properties": {
     "title": "Reflection: Text Compression",
-    "content1": "Describe the thinking process you used in solving this challenge.",
-    "type": "TextMatch",
-    "dsl_text": "name 'U1L13 Reflection 2'\r\ntitle 'Reflection: Text Compression'\r\ncontent1 'Describe the thinking process you used in solving this challenge.'\r\n\r\n",
-    "concept_ids": [
-      ""
-    ]
+    "content1": "Describe the thinking process you used in solving this challenge."
   }
 }]]></config>
 </TextMatch>

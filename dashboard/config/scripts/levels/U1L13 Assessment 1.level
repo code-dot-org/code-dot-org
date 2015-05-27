@@ -5,11 +5,7 @@
   "properties": {
     "title": "Conclusion 1: Text Compression",
     "content1": "Consider your heuristic and those of your classmates.",
-    "markdown": "Do you think it's possible to describe (or write) a specific set of instructions that a person could follow that would always result in better text compression than your heuristic? Why or why not?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Do you think it's possible to describe (or write) a specific set of instructions that a person could follow that would always result in better text compression than your heuristic? Why or why not?\n"
   },
   "md5": "508a991ba499c43e55a9dde231c2e998"
 }]]></config>
