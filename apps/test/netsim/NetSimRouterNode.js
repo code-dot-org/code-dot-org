@@ -345,7 +345,45 @@ describe("NetSimRouterNode", function () {
         return newRouter;
       }
 
-      it ("Wraps router addresses/IDs by taking entityID modulo addressable space", function () {
+      it ("leaves router number unchanged for one-part addresses", function () {
+        // Four possible router addresses
+        netsimGlobals.getLevelConfig().addressFormat = '4';
+
+        var newRouter;
+        for (var i = 0; i < 128; i++) {
+          newRouter = makeRouter();
+          assertEqual(router.entityID, router.getRouterNumber());
+        }
+      });
+
+      it ("Constrains router number to addressable space", function () {
+        // Four possible router addresses
+        netsimGlobals.getLevelConfig().addressFormat = '2.8';
+
+        // Initial node starts at entityID 1
+        assertEqual(1, router.entityID);
+        assertEqual(1, router.getRouterNumber());
+
+        var r2 = makeRouter();
+        assertEqual(2, r2.entityID);
+        assertEqual(2, r2.getRouterNumber());
+
+        var r3 = makeRouter();
+        assertEqual(3, r3.entityID);
+        assertEqual(3, r3.getRouterNumber());
+
+        // At 4 (our assignable space) router number wraps to zero
+        var r4 = makeRouter();
+        assertEqual(4, r4.entityID);
+        assertEqual(0, r4.getRouterNumber());
+
+        // Collisions are possible
+        var r5 = makeRouter();
+        assertEqual(5, r5.entityID);
+        assertEqual(1, r5.getRouterNumber());
+      });
+
+      it ("Wraps router names/IDs to match the router number", function () {
         // Four possible router addresses
         netsimGlobals.getLevelConfig().addressFormat = '2.8';
 
