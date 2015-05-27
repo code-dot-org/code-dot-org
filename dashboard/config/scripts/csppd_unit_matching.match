@@ -1,5 +1,5 @@
 name 'CSPPD unit matching'
-title 'Matching Unit Descriptions and Numbers'
+title 'Matching Units with Descriptions'
 skip_sound true
 hide_submit true
 

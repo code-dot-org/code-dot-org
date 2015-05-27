@@ -8,11 +8,7 @@
     "options": {
       "skip_sound": true
     },
-    "markdown": "\n#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of CSP that you learned about earlier?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "\n#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of CSP that you learned about earlier?\n"
   },
   "md5": "cde1c8da298821b258a62f59bc68ab80"
 }]]></config>

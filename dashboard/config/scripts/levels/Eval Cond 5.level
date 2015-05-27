@@ -20,7 +20,7 @@
     "default_num_example_blocks": "2",
     "contract_highlight": "false",
     "contract_collapse": "true",
-    "examples_highlight": "false",
+    "examples_highlight": "true",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
