@@ -618,7 +618,7 @@ NetSim.prototype.isConnectedToRouter = function () {
  */
 NetSim.prototype.getConnectedRouter = function () {
   if (this.isConnectedToShard()) {
-    return this.myNode.myRouter;
+    return this.myNode.getMyRouter();
   }
   return null;
 };
@@ -858,10 +858,10 @@ NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
  */
 NetSim.prototype.becomeDnsNode = function () {
   this.setIsDnsNode(true);
-  if (this.myNode && this.myNode.myRouter) {
+  if (this.myNode && this.myNode.getMyRouter()) {
     // STATE IS THE ROOT OF ALL EVIL
     var myNode = this.myNode;
-    var router = myNode.myRouter;
+    var router = myNode.getMyRouter();
     router.dnsNodeID = myNode.entityID;
     router.update();
   }
@@ -7560,11 +7560,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.myRemoteClient = null;
 
   /**
-   * Client nodes can be connected to a router, which they will
-   * help to simulate.
-   * @type {NetSimRouterNode}
+   * ID of the router this client node is connected to.  Undefined if
+   * not connected to a router.
+   * @type {number|undefined}
+   * @private
    */
-  this.myRouter = null;
+  this.myRouterID_ = undefined;
 
   /**
    * Set of router controllers enabled for simulation by this node.
@@ -7802,19 +7803,37 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
       return;
     }
 
-    // TODO: Unify this with the set of simulating routers
-    this.myRouter = router;
-    this.myRouter.initializeSimulation(this.entityID, netsimNodeFactory);
+    this.myRouterID_ = router.entityID;
+    var myRouter = this.getMyRouter();
+    // Copy the heartbeat reference over to the router instance
+    // in our simulating routers collection.
+    myRouter.heartbeat = router.heartbeat;
 
-    router.requestAddress(wire, this.getHostname(), function (err) {
+    myRouter.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
         this.disconnectRemote(onComplete);
         return;
       }
 
-      this.remoteChange.notifyObservers(this.myWire, this.myRouter);
+      this.remoteChange.notifyObservers(this.myWire, myRouter);
       onComplete(null);
     }.bind(this));
+  }.bind(this));
+};
+
+/**
+ * Helper/accessor for router controller instance for the router that this
+ * client is directly connected to.
+ * @returns {NetSimRouterNode|null} Router we are connected to or null if not
+ *          connected to a router at all.
+ */
+NetSimLocalClientNode.prototype.getMyRouter = function () {
+  if (this.myRouterID_ === undefined) {
+    return null;
+  }
+
+  return _.find(this.routers_, function (router) {
+    return router.entityID === this.myRouterID_;
   }.bind(this));
 };
 
@@ -7824,7 +7843,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
  */
 NetSimLocalClientNode.prototype.synchronousDestroy = function () {
   // If connected to remote, synchronously disconnect
-  if (this.myRemoteClient || this.myRouter) {
+  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
     this.synchronousDisconnectRemote();
   }
 
@@ -7851,7 +7870,7 @@ NetSimLocalClientNode.prototype.synchronousDestroy = function () {
  */
 NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   // If connected to remote, asynchronously disconnect then try destroy again.
-  if (this.myRemoteClient || this.myRouter) {
+  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
     this.disconnectRemote(function (err) {
       if (err) {
         onComplete(err);
@@ -7900,12 +7919,13 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
     this.myWire = null;
   }
 
-  if (this.myRouter) {
-    this.myRouter.stopSimulation();
+  var myRouter = this.getMyRouter();
+  if (myRouter) {
+    myRouter.stopSimulation();
   }
 
   this.myRemoteClient = null;
-  this.myRouter = null;
+  this.myRouterID_ = undefined;
   this.remoteChange.notifyObservers(null, null);
 };
 
@@ -7925,13 +7945,14 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
       logger.info("Error while disconnecting: " + err.message);
     }
 
-    if (this.myRouter) {
-      this.myRouter.stopSimulation();
+    var myRouter = this.getMyRouter();
+    if (myRouter) {
+      myRouter.stopSimulation();
     }
 
     this.myWire = null;
     this.myRemoteClient = null;
-    this.myRouter = null;
+    this.myRouterID_ = undefined;
     this.remoteChange.notifyObservers(null, null);
     onComplete(null);
   }.bind(this));
@@ -7988,7 +8009,7 @@ NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (localNodeID,
     // In simplex wire mode, the local node cleans up its own messages
     // when it knows they are no longer current.
     return localNodeID;
-  } else if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
+  } else if (this.myRouterID_ !== undefined && this.myRouterID_ === remoteNodeID) {
     // If sending to a router, we will do our own simulation on the router's
     // behalf
     return localNodeID;
@@ -10183,6 +10204,22 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   if (wireRow !== undefined) {
     return wireRow.localAddress;
   }
+
+  // If we don't have connected routers, this is as far as the auto-DNS can see.
+  if (!netsimGlobals.getLevelConfig().connectedRouters) {
+    return undefined;
+  }
+
+  // Is it some node elsewhere on the shard?
+  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAllCached());
+  var node = _.find(nodes, function (node) {
+    return node.getHostname() === hostname;
+  });
+  if (node) {
+    return node.getAddress();
+  }
+
   return undefined;
 };
 
@@ -10256,7 +10293,8 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
 
   // Is it another node?
   var destinationNode = _.find(nodes, function (node) {
-    return address === node.getAddress();
+    return address === node.getAddress() ||
+        (node.getNodeType() === NodeType.ROUTER && address === node.getAutoDnsAddress());
   });
 
   if (destinationNode) {
@@ -10676,8 +10714,8 @@ NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
 };
 
 /**
- *
  * @param {messageRow} messageRow
+ * @return {boolean}
  */
 NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   var packet, toAddress;
