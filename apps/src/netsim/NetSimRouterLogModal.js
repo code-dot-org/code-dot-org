@@ -11,7 +11,9 @@
 /* global $ */
 'use strict';
 
+var NetSimLogEntry = require('./NetSimLogEntry');
 var markup = require('./NetSimRouterLogModal.html.ejs');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Generator and controller for contents of modal dialog that reveals
@@ -35,10 +37,10 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.shard_ = null;
 
   /**
-   * @type {logEntryRow[]}
+   * @type {NetSimLogEntry[]}
    * @private
    */
-  this.logRows_ = [];
+  this.logEntries_ = [];
 
   /**
    * Tracking information for which events we're registered to, so we can
@@ -56,7 +58,7 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
  */
 NetSimRouterLogModal.prototype.render = function () {
   var renderedMarkup = $(markup({
-    logRows: this.logRows_
+    logEntries: this.logEntries_
   }));
   this.rootDiv_.html(renderedMarkup);
 };
@@ -87,6 +89,9 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
  * @private
  */
 NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
-  this.logRows_ = logRows;
+  var headerSpec = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  this.logEntries_ = logRows.map(function (row) {
+    return new NetSimLogEntry(this.shard_, row, headerSpec);
+  }, this);
   this.render();
 };
