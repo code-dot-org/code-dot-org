@@ -613,15 +613,27 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   var blockGroup;
   var trashcan;
   var trashcanElement;
+  var blockGroup2 = null;
+
+  // When in the function editor, we will rely on the grey rectangle and
+  // trashcan image provided by the main blockspace underneath.
+  var blockSpaceEditor = this.blockSpaceEditor.hideGreyRect_ ?
+    Blockly.mainBlockSpaceEditor : this.blockSpaceEditor;
 
   if (this.blockSpaceEditor.toolbox) {
-    var toolbox = this.blockSpaceEditor.toolbox;
-    background = this.blockSpaceEditor.svgBackground_;
+    var toolbox = blockSpaceEditor.toolbox;
+    background = blockSpaceEditor.svgBackground_;
     blockGroup = toolbox.tree_.element_;
     trashcan = toolbox.trashcan;
     trashcanElement = toolbox.trashcanHolder;
+
+    // When in the function editor there is a second copy of the
+    // toolbox category names shown simultaneously.  We'll fade that too.
+    if (this.blockSpaceEditor.hideGreyRect_) {
+      blockGroup2 = this.blockSpaceEditor.toolbox.tree_.element_;
+    }
   } else {
-    var flyout = this.blockSpaceEditor.flyout_;
+    var flyout = blockSpaceEditor.flyout_;
     background = flyout.svgBackground_;
     blockGroup = flyout.blockSpace_.svgGroup_;
     trashcan = flyout.trashcan;
@@ -642,7 +654,7 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   if (Blockly.RTL) {
     pastThreshold = x > startDragX + dragBuffer;
-    var editorWidth = this.blockSpaceEditor.svg_.getBoundingClientRect().width;
+    var editorWidth = blockSpaceEditor.svg_.getBoundingClientRect().width;
     var canvasAreaWidth = editorWidth - toolbarWidth;
     xDifference = canvasAreaWidth - x;
     trashZoneWidth = canvasAreaWidth - startDragX - dragBuffer;
@@ -711,6 +723,10 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   // Fade out the blocks in the flyout area.
   blockGroup.style["opacity"] = normalIntensity;
+  
+  if (blockGroup2) {
+    blockGroup2.style["opacity"] = normalIntensity;
+  }
 
   // Fade in the trash can.
   var trashcanDisplay = trashIntensity == 0 ? "none" : "block";

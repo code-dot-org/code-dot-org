@@ -159,11 +159,13 @@ Blockly.Toolbox.prototype.position_ = function(blockSpaceEditor) {
     this.width -= 1;
   }
 
-  // Update the toolbox background rectangle location/dimension to match the div.
-  var rectX = Blockly.RTL ? (svgSize.width - treeDiv.offsetWidth) : 0;
-  blockSpaceEditor.svgBackground_.setAttribute("x", rectX);
-  blockSpaceEditor.svgBackground_.setAttribute("width", treeDiv.offsetWidth);
-  blockSpaceEditor.svgBackground_.setAttribute("height", svgSize.height);
+  if (!blockSpaceEditor.hideGreyRect_) {
+    // Update the toolbox background rectangle location/dimension to match the div.
+    var rectX = Blockly.RTL ? (svgSize.width - treeDiv.offsetWidth) : 0;
+    blockSpaceEditor.svgBackground_.setAttribute("x", rectX);
+    blockSpaceEditor.svgBackground_.setAttribute("width", treeDiv.offsetWidth);
+    blockSpaceEditor.svgBackground_.setAttribute("height", svgSize.height);
+  }
 };
 
 /**
