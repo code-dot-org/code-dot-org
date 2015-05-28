@@ -70,7 +70,7 @@ designMode.clearProperties = function () {
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
-  $('#design-elements .new-design-element').each(function() {
+  $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
   var designModeClear = document.getElementById('designModeClear');
