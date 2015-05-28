@@ -9,6 +9,7 @@ var DesignToggleRow = require('./DesignToggleRow.jsx');
 var AssetManager = require('./assetManagement/AssetManager.jsx');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
+var _ = require('../utils').getLodash();
 
 var designMode = module.exports;
 
@@ -437,12 +438,17 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
+  // Simulate a run button click, to load the channel id.
+  var designModeClick = studioApp.runButtonClickWrapper.bind(
+      studioApp, Applab.onDesignModeButton);
+  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
   // TODO (brent) - still need logic to generate list of screens, and rerender
   // DesignToggleRow on changes
   React.render(
     React.createElement(DesignToggleRow, {
       screens: ['screen1'],
-      onDesignModeButton: Applab.onDesignModeButton,
+      onDesignModeButton: throttledDesignModeClick,
       onCodeModeButton: Applab.onCodeModeButton
     }),
     designToggleRow
