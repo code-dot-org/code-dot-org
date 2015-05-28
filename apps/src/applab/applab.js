@@ -706,7 +706,6 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designModeBox = require('./designModeBox.html.ejs')({});
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -722,8 +721,7 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: Applab.user.isAdmin,
-      designModeBox: designModeBox
+      hasDesignMode: Applab.user.isAdmin
     }
   });
 
@@ -874,6 +872,12 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    designMode.renderDesignModeBox();
+
+    // TODO(dave): make DesignModeHeaders and DesignModeBox share a
+    // parent component.
+    designMode.configureDesignModeHeaders();
+
     designMode.configureDesignToggleRow();
 
     // Start out in regular mode. Eventually likely want this to be a level setting
@@ -882,10 +886,6 @@ Applab.init = function(config) {
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, designMode.onClear);
-    }
-    var designModeManageAssets = document.getElementById('design-manage-assets');
-    if (designModeManageAssets) {
-      dom.addClickTouchEvent(designModeManageAssets, designMode.showAssetManager);
     }
 
     designMode.configureDragAndDrop();
