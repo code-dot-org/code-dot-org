@@ -590,7 +590,7 @@ NetSim.prototype.isConnectedToRouter = function () {
  */
 NetSim.prototype.getConnectedRouter = function () {
   if (this.isConnectedToShard()) {
-    return this.myNode.myRouter;
+    return this.myNode.getMyRouter();
   }
   return null;
 };
@@ -830,10 +830,10 @@ NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
  */
 NetSim.prototype.becomeDnsNode = function () {
   this.setIsDnsNode(true);
-  if (this.myNode && this.myNode.myRouter) {
+  if (this.myNode && this.myNode.getMyRouter()) {
     // STATE IS THE ROOT OF ALL EVIL
     var myNode = this.myNode;
-    var router = myNode.myRouter;
+    var router = myNode.getMyRouter();
     router.dnsNodeID = myNode.entityID;
     router.update();
   }
