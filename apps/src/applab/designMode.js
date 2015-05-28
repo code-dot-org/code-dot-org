@@ -457,6 +457,6 @@ designMode.configureDesignModeHeaders = function() {
     return;
   }
 
-  React.render(React.createElement(DesignModeHeaders), designModeHeaders)
+  React.render(React.createElement(DesignModeHeaders), designModeHeaders);
 };
 

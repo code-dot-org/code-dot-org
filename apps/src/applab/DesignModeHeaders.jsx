@@ -1,5 +1,5 @@
-var React = require('react')
-var applabMsg = require('./locale')
+var React = require('react');
+var applabMsg = require('./locale');
 
 module.exports = React.createClass({
   render: function() {
@@ -20,6 +20,6 @@ module.exports = React.createClass({
           <span>{applabMsg.designWorkspaceHeader()}</span>
         </div>
       </div>
-    )
+    );
   }
 });
