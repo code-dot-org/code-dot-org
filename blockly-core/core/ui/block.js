@@ -637,6 +637,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
       this.startDragMouseX = e.clientX;
       this.startDragMouseY = e.clientY;
     }
+
     Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_INSIDE_STICKY_RADIUS;
     Blockly.Block.onMouseUpWrapper_ = Blockly.bindEvent_(document,
         'mouseup', this, this.onMouseUp_);
@@ -688,7 +689,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     }
   } else if (Blockly.selected &&
       Blockly.selected.areBlockAndDescendantsDeletable() &&
-      thisBlockSpace.isDeleteArea(e)) {
+      thisBlockSpace.isDeleteArea(e, this.startDragMouseX)) {
     // The ordering of the statement above is important because isDeleteArea()
     // has a side effect of opening the trash can.
     var trashcan = thisBlockSpace.trashcan;
@@ -705,6 +706,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     Blockly.highlightedConnection_.unhighlight();
     Blockly.highlightedConnection_ = null;
   }
+  thisBlockSpace.hideDelete();
   thisBlockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
 };
 
@@ -1037,6 +1039,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
   Blockly.removeAllRanges();
   var dx = e.clientX - this.startDragMouseX;
   var dy = e.clientY - this.startDragMouseY;
+
   if (Blockly.Block.dragMode_ == Blockly.Block.DRAG_MODE_INSIDE_STICKY_RADIUS) {
     // Still dragging within the sticky DRAG_RADIUS.
     var dr = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
@@ -1097,7 +1100,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     // Provide visual indication of whether the block will be
     // deleted if dropped here.
     if (this.areBlockAndDescendantsDeletable()) {
-      this.blockSpace.isDeleteArea(e);
+      this.blockSpace.isDeleteArea(e, this.startDragMouseX);
     }
   }
   // This event has been handled.  No need to bubble up to the document.
