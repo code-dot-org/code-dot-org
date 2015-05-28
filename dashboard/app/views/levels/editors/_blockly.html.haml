@@ -12,7 +12,6 @@
 .field
   = f.label :instructions
   = f.text_area :instructions, placeholder: 'Instructions', rows: 4
-= render partial: 'levels/editors/md_instructions', locals: {f: f}
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
