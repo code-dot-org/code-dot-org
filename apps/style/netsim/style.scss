@@ -55,6 +55,11 @@ $wide-column-width: 121px;
     width: 90%;
     margin-left: -45%;
 
+    .modal-body {
+      max-height: 450px;
+      overflow-y: auto;
+    }
+
     th {
       cursor: pointer;
     }
