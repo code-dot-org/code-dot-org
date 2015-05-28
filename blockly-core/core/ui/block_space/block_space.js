@@ -618,11 +618,11 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   var blockGroup;
   var trashcan;
   var trashcanElement;
-  var blockGroup2 = null;
+  var blockGroupForeground = null;
 
   // When in the function editor, we will rely on the grey rectangle and
   // trashcan image provided by the main blockspace underneath.
-  var blockSpaceEditor = this.blockSpaceEditor.hideGreyRect_ ?
+  var blockSpaceEditor = this.blockSpaceEditor.hideTrashRect_ ?
     Blockly.mainBlockSpaceEditor : this.blockSpaceEditor;
 
   if (this.blockSpaceEditor.toolbox) {
@@ -633,9 +633,10 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
     trashcanElement = toolbox.trashcanHolder;
 
     // When in the function editor there is a second copy of the
-    // toolbox category names shown simultaneously.  We'll fade that too.
-    if (this.blockSpaceEditor.hideGreyRect_) {
-      blockGroup2 = this.blockSpaceEditor.toolbox.tree_.element_;
+    // toolbox category names shown simultaneously.  It's in the foreground
+    // and owned by the function editor's blockspace.  We'll fade that one too.
+    if (this.blockSpaceEditor.hideTrashRect_) {
+      blockGroupForeground = this.blockSpaceEditor.toolbox.tree_.element_;
     }
   } else {
     var flyout = blockSpaceEditor.flyout_;
@@ -729,8 +730,8 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   // Fade out the blocks in the flyout area.
   blockGroup.style["opacity"] = normalIntensity;
 
-  if (blockGroup2) {
-    blockGroup2.style["opacity"] = normalIntensity;
+  if (blockGroupForeground) {
+    blockGroupForeground.style["opacity"] = normalIntensity;
   }
 
   // Fade in the trash can.
