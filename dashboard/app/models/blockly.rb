@@ -4,6 +4,7 @@ class Blockly < Level
     level_url
     skin
     instructions
+    markdown_instructions
     start_blocks
     toolbox_blocks
     required_blocks

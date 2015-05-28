@@ -108,6 +108,8 @@ Dashboard::Application.routes.draw do
     post 'clone', to: 'levels#clone'
   end
 
+  post 'level_assets/upload', to: 'level_assets#upload'
+
   resources :scripts, path: '/s/' do
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false do
