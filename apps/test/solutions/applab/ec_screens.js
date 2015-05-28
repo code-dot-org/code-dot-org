@@ -19,7 +19,6 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-
         // We have an applab div with a single screen inside it
         var divApplab = document.getElementById('divApplab');
         assert(divApplab);
@@ -65,47 +64,38 @@ module.exports = {
       editCode: true,
       timeout: 15000,
       xml: '',
-      runBeforeClickAsync: function (assert, callback) {
+      runBeforeClick: function (assert) {
+        // click toggle
+        $("#designModeToggle").click();
+        assert.equal(designModeToggle.textContent, 'Code');
+        var screenSelector = document.getElementById('screenSelector');
+
+        // console.log('do drag');
+        // debugger;
+        // drag a new screen in
+        $("[data-element-type='SCREEN']").simulate("drag", {
+          handle: 'corner',
+          x: $("#divApplab").position().left + 10,
+          y: $("#divApplab").position().top + 10,
+          ignoreTouchMapppings: true
+        });
+
+        assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
+        assert.equal(screenSelector.options.length, 2);
+        assert.equal($(screenSelector).val(), 'screen2');
+
+        // design properties table with contents of screen 2
+        assert.equal($("#design-properties table").length, 1);
+
+        var firstNonHeaderRow = $("#design-properties table tr").eq(1);
+        assert.equal(firstNonHeaderRow.children(0).text(), "id");
+        // second col has an input with val screen 2
+        assert.equal(firstNonHeaderRow.children(1).children(0).val(), 'screen2');
+
+        // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
-          var divApplab = document.getElementById('divApplab');
-
-          // click toggle
-          $(designModeToggle).click();
-          assert.equal(designModeToggle.textContent, 'Code');
-          var screenSelector = document.getElementById('screenSelector');
-
-          // drag a new screen in
-          debugger;
-          console.log('presimulate');
-          var foo = $("[data-element-type='SCREEN']");
-          foo.simulate("drag", {
-            handle: 'corner',
-            x: 0,
-            y: 0
-          });
-
-          assert.equal(divApplab.children.length, 2);
-          assert.equal(screenSelector.options.length, 1);
-          assert.equal($(ScreenSelector).val(), 'screen2');
-
-          // design properties table with contents of screen 2
-          assert.equal($("#design-properties table").length, 1);
-
-          var firstNonHeaderRow = $("#design-properties table tr").eq(1);
-          assert.equal(firstNonHeaderRow.children(0).text(), "id");
-          // second col has an input with val screen 2
-          assert.equal(firstNonHeaderRow.children(1).children(0).val(), 'screen2');
-          done();
-        }, 5000);
-
-
-        function done() {
-          callback();
-          // add a completion on timeout since this is a freeplay level
-          setTimeout(function () {
-            Applab.onPuzzleComplete();
-          }, 1);
-        }
+          Applab.onPuzzleComplete();
+        }, 1);
       },
       expected: {
         result: true,

@@ -132,30 +132,20 @@ function runLevel (app, skinId, level, onAttempt, testData) {
     Dialog: StubDialog,
     isAdmin: true,
     onInitialize: function() {
-      var clickRunButton = function () {
-        // we have a race condition for loading our editor. give it another 500ms
-        // to load if it hasnt already
-        var timeout = 0;
-        if (level.editCode && !studioApp.editor) {
-          timeout = 500;
-        }
-        setTimeout(function () {
-          studioApp.runButtonClick();
-        }, timeout);
+      // Click the run button!
+      if (testData.runBeforeClick) {
+        testData.runBeforeClick(assert);
       }
 
-      if (testData.runBeforeClickAsync) {
-        // Async version lets the before click function to specify when it's
-        // done
-        testData.runBeforeClickAsync(assert, clickRunButton);
-      } else {
-        if (testdata.runBeforeClick) {
-          testdata.runBeforeClick(assert);
-        }
-        clickRunButton();
+      // we have a race condition for loading our editor. give it another 500ms
+      // to load if it hasnt already
+      var timeout = 0;
+      if (level.editCode && !studioApp.editor) {
+        timeout = 500;
       }
-
-
+      setTimeout(function () {
+        studioApp.runButtonClick();
+      }, timeout);
       // waitLong();
     },
     onAttempt: onAttempt

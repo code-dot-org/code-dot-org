@@ -324,18 +324,19 @@ $.extend( $.simulate.prototype, {
       moves = options.moves || 3;
 
     // Note that this is not an ideal simulation since we are not generating all the
-    // "legacy" mouse events, as described in #1 at 
+    // "legacy" mouse events, as described in #1 at
     // http://www.html5rocks.com/en/mobile/touchandmouse/.  This is because the blockly-core
     // code calls preventDefault on that set after it handles one, but there's not an easy
     // way to handle this kind of cancellation from this simulator.
     function simulateEvent(obj, target, name, param)
     {
-      if (name in touchMappings)
+      if (name in touchMappings && !options.ignoreTouchMapppings)
       {
         name = touchMappings[name];
       }
       obj.simulateEvent(target, name, param);
     }
+
     simulateEvent(this, target, "mousedown", coord);
 
     for ( ; i < moves ; i++ ) {

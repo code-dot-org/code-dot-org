@@ -2,6 +2,8 @@
 
 // TODO (brent) - make sure you consider transition to screens from no screens
 
+// TODO (brent) - currently get invariant violation when not logged in
+
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
