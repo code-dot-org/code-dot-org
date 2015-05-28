@@ -1,14 +1,41 @@
-<div class="modal-dialog">
-  <div class="modal-content">
+<div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <h4 class="modal-title">All Router Logs</h4>
     </div>
-    <div class="modal-body">  
-      <p><%= JSON.stringify(logRows) %></p>
+    <div class="modal-body">
+      <table>
+        <thead>
+          <tr>
+            <td>Time</td>
+            <td>Logged By</td>
+            <td>Status</td>
+            <td>From</td>
+            <td>To</td>
+            <td>Packet</td>
+            <td>Message</td>
+          </tr>
+        </thead>
+        <tbody>
+          <%
+            logRows.forEach(function (row) {
+              %>
+              <tr>
+                <td><%= row.timestamp %></td>
+                <td><%= row.nodeID %></td>
+                <td><%= row.status %></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><%= row.binary %></td>
+              </tr>
+              <%
+            });
+          %>
+        </tbody>
+      </table>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     </div>
-  </div>
 </div>
