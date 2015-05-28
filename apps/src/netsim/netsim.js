@@ -31,6 +31,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimLogPanel = require('./NetSimLogPanel');
+var NetSimRouterLogModal = require('./NetSimRouterLogModal');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
@@ -337,6 +338,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
         expireHeartbeat: this.expireHeartbeat.bind(this)
       });
 
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -987,6 +989,8 @@ NetSim.prototype.render = function () {
     this.lobby_.render();
   }
 
+  this.routerLogModal_.render();
+
   this.updateLayout();
 };
 
@@ -1011,6 +1015,9 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
         this.onRemoteChange_.bind(this));
     this.eventKeys.registeredWithLocalNode = localNode;
   }
+
+  // Update the log viewer's shard reference so it can get current data.
+  this.routerLogModal_.setShard(shard);
 
   // Shard changes almost ALWAYS require a re-render
   this.render();
