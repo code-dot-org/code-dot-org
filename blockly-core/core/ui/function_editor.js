@@ -407,7 +407,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
-        goog.bind(this.calculateMetrics_, this));
+        goog.bind(this.calculateMetrics_, this), false, true);
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
   Blockly.modalBlockSpace = this.modalBlockSpace;

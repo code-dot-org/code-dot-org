@@ -33,12 +33,15 @@ goog.require('goog.style');
  * and certain focus/mouse handling operations for itself
  * @constructor
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
+Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideGreyRect) {
   if (opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics;
   }
   if (opt_setMetrics) {
     this.setBlockSpaceMetrics_ = opt_setMetrics;
+  }
+  if (opt_hideGreyRect) {
+    this.hideGreyRect_ = opt_hideGreyRect;
   }
   /**
    * @type {Blockly.BlockSpace}
@@ -206,7 +209,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // it here so that blocks can be dragged over the top of it.  The HTML div
   // appears over the blocks, meaning that blocks dragged to it would appear
   // underneath it, if it had a background color, which wouldn't look as good.
-  if (!Blockly.readOnly && Blockly.hasCategories) {
+  if (!this.hideGreyRect_ && !Blockly.readOnly && Blockly.hasCategories) {
     this.svgBackground_ = Blockly.createSvgElement('rect',
       {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
       this.svg_);
