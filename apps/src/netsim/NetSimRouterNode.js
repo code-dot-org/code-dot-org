@@ -1255,7 +1255,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
   // Is it another node?
   var destinationNode = _.find(nodes, function (node) {
     return address === node.getAddress() ||
-        (node instanceof NetSimRouterNode && address === node.getAutoDnsAddress());
+        (node.getNodeType() === NodeType.ROUTER && address === node.getAutoDnsAddress());
   });
 
   if (destinationNode) {
