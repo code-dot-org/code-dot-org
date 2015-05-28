@@ -50,6 +50,11 @@ $wide-column-width: 121px;
   left: 0;
   right: 0;
 
+  #router-log-modal {
+    width: 90%;
+    margin-left: -45%;
+  }
+
   #netsim-disconnected {
     display: block;
     position: relative;
