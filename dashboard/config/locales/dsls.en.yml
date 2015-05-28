@@ -479,6 +479,8 @@ en:
         APIs and Function Parameters: APIs and Function Parameters
       U3L07 Student Lesson Introduction:
         Looping and Random Numbers: Looping and Random Numbers
+      U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Creating Functions with Parameters
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -585,6 +587,9 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      a bit about pixels:
+        kevin systrom pixel video: kevin systrom pixel video
+        pixel video: pixel video
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -716,6 +721,30 @@ en:
       unique level name here:
         description here: description here
         title: title
+    multi:
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting the right answer
+        praise students for their intelligence: praise students for their intelligence
+        praise the process that students use to solve problems: praise the process that students use to solve problems
+      U3L08 Assessment1:
+        'Functions with Parameters: Question 1': 'Functions with Parameters: Question 1'
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Parameters generalize the solution of a specific problem.: Parameters generalize the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters need not be provided to a function in any particular order.
+        Which of the following are true?: Which of the following are true?
+      U3L08 Assessment3:
+        'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
+        There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
+        for(var i = 0; i < 4; i++){: for(var i = 0; i < 4; i++){
+        function square() {: function square() {
+        moveForward(length);: moveForward(length);
+        penDown();: penDown();
+        penUp();: penUp();
+        square();: square();
+        turnLeft(90); }: turnLeft(90); }
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -1046,6 +1075,12 @@ en:
       U3L07 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
         'Looping and Random Numbers: Reflection': 'Looping and Random Numbers: Reflection'
+      U3L08 Assessment2:
+        'Functions with Parameters: Question 2': 'Functions with Parameters: Question 2'
+      U3L08 Free Response Getting Started:
+        'Functions with Parameters: Getting Started': 'Functions with Parameters: Getting Started'
+      U3L08 Free Response Wrap Up:
+        'Functions with Parameters: Wrap Up': 'Functions with Parameters: Wrap Up'
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '
