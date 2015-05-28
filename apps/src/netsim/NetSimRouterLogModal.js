@@ -12,6 +12,7 @@
 'use strict';
 
 var NetSimLogEntry = require('./NetSimLogEntry');
+var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
 var netsimGlobals = require('./netsimGlobals');
 
@@ -50,17 +51,98 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    */
   this.eventKeys_ = {};
 
+  /**
+   * Sorting key, changed by user interaction, which determines which sort
+   * we use on render.
+   * @type {string}
+   * @private
+   */
+  this.sortBy_ = 'timestamp';
+
   this.render();
+};
+
+function makeStringSorter(logEntryToSortString) {
+  return function (logEntries) {
+    var sortProxy = logEntries.map(function (entry, index) {
+      return {
+        index: index,
+        sortValue: logEntryToSortString(entry)
+      };
+    });
+
+    sortProxy.sort(function (a, b) {
+      return a.sortValue.localeCompare(b.sortValue);
+    });
+
+    return sortProxy.map(function (proxy) {
+      return logEntries[proxy.index];
+    });
+  };
+}
+
+NetSimRouterLogModal.sortOperations = {
+
+  'timestamp': function (logEntries) {
+    logEntries.sort(function (a, b) {
+      return a.timestamp - b.timestamp;
+    });
+    return logEntries;
+  },
+
+  'logged-by': makeStringSorter(function (logEntry) {
+    return logEntry.getOriginNode().getDisplayName();
+  }),
+
+  'status': makeStringSorter(function (logEntry) {
+    return logEntry.getLocalizedStatus();
+  }),
+
+  'from-address': makeStringSorter(function (logEntry) {
+    return logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS);
+  }),
+
+  'to-address': makeStringSorter(function (logEntry) {
+    return logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS);
+  }),
+
+  'packet-info': makeStringSorter(function (logEntry) {
+    return logEntry.getLocalizedPacketInfo();
+  }),
+
+  'message': makeStringSorter(function (logEntry) {
+    return logEntry.getMessageAscii();
+  })
+
 };
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
 NetSimRouterLogModal.prototype.render = function () {
+
+  // Sort before rendering
+  var sortOperation = NetSimRouterLogModal.sortOperations[this.sortBy_];
+  var sortedLogEntries = sortOperation(this.logEntries_);
+
   var renderedMarkup = $(markup({
-    logEntries: this.logEntries_
+    logEntries: sortedLogEntries
   }));
   this.rootDiv_.html(renderedMarkup);
+
+  this.rootDiv_.find('th').click(function (event) {
+    console.log("Clicked!");
+    this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
+  }.bind(this));
+};
+
+NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
+  if (!sortKey) {
+    return;
+  }
+
+  this.sortBy_ = sortKey;
+  this.render();
 };
 
 /**
