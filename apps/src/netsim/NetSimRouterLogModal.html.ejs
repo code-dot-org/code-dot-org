@@ -1,22 +1,42 @@
 <%
 var Packet = require('./Packet');
+var i18n = require('./locale');
+var netsimGlobals = require('./netsimGlobals');
+
+var headerFields = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+
+/** @type {boolean} */
+var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+    headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 %>
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title">All Router Logs</h4>
+      <h4 class="modal-title"><%= i18n.logBrowserHeader() %></h4>
     </div>
     <div class="modal-body">
       <table>
         <thead>
           <tr>
-            <th>Time</th>
-            <th>Logged By</th>
-            <th>Status</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Packet</th>
-            <th>Message</th>
+            <th><%= i18n.time() %></th>
+            <th><%= i18n.loggedByNode() %></th>
+            <th><%= i18n.status() %></th>
+            <% if (showFromAddress) { %>
+              <th><%= i18n.from() %></th>
+            <% } %>
+            <% if (showToAddress) { %>
+              <th><%= i18n.to() %></th>
+            <% } %>
+            <% if (showPacketInfo) { %>
+              <th><%= i18n.packet() %></th>
+            <% } %>
+            <th><%= i18n.message() %></th>
           </tr>
         </thead>
         <tbody>
@@ -28,9 +48,15 @@ var Packet = require('./Packet');
                 <td><%= entry.getTimeString() %></td>
                 <td><%= originNode ? originNode.getDisplayName() : entry.nodeID %></td>
                 <td><%= entry.getLocalizedStatus() %></td>
-                <td><%= entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) %></td>
-                <td><%= entry.getHeaderField(Packet.HeaderType.TO_ADDRESS) %></td>
-                <td><%= entry.getLocalizedPacketInfo() %></td>
+                <% if (showFromAddress) { %>
+                  <td><%= entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) %></td>
+                <% } %>
+                <% if (showToAddress) { %>
+                  <td><%= entry.getHeaderField(Packet.HeaderType.TO_ADDRESS) %></td>
+                <% } %>
+                <% if (showPacketInfo) { %>
+                  <td><%= entry.getLocalizedPacketInfo() %></td>
+                <% } %>
                 <td><%= entry.getMessageAscii() %></td>
               </tr>
               <%
