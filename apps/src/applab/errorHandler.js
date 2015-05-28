@@ -40,8 +40,23 @@ function outputError(warning, level, lineNum) {
   }
 }
 
+function handleError(opts, message) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onError && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onError,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
+}
+
+
 module.exports = {
   ErrorLevel: ErrorLevel,
   outputApplabConsole: outputApplabConsole,
-  outputError: outputError
+  outputError: outputError,
+  handleError: handleError
 };
