@@ -561,6 +561,11 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 * @return {boolean} True if event is in a delete area.
 */
 Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
+  // If there is no toolbox and no flyout then there is no trash area.
+  if (!Blockly.languageTree) {
+    return false;
+  }
+
   var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
@@ -723,7 +728,7 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
 
   // Fade out the blocks in the flyout area.
   blockGroup.style["opacity"] = normalIntensity;
-  
+
   if (blockGroup2) {
     blockGroup2.style["opacity"] = normalIntensity;
   }
