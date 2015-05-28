@@ -67,11 +67,9 @@ module.exports = {
       runBeforeClick: function (assert) {
         // click toggle
         $("#designModeToggle").click();
-        assert.equal(designModeToggle.textContent, 'Code');
+        assert.equal($("#designModeToggle").text(), 'Code');
         var screenSelector = document.getElementById('screenSelector');
 
-        // console.log('do drag');
-        // debugger;
         // drag a new screen in
         $("[data-element-type='SCREEN']").simulate("drag", {
           handle: 'corner',
