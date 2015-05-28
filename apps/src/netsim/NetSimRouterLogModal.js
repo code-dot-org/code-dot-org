@@ -126,12 +126,12 @@ NetSimRouterLogModal.prototype.render = function () {
   var sortedLogEntries = sortOperation(this.logEntries_);
 
   var renderedMarkup = $(markup({
-    logEntries: sortedLogEntries
+    logEntries: sortedLogEntries,
+    sortBy: this.sortBy_
   }));
   this.rootDiv_.html(renderedMarkup);
 
   this.rootDiv_.find('th').click(function (event) {
-    console.log("Clicked!");
     this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
   }.bind(this));
 };

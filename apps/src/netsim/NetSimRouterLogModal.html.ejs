@@ -14,6 +14,13 @@ var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
 /** @type {boolean} */
 var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
     headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+
+function sortMarkupFor(sortKey) {
+  if (sortKey === sortBy) {
+    return '<i class="fa fa-sort-asc"></i>';
+  }
+  return '';
+}
 %>
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
@@ -24,19 +31,19 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
       <table>
         <thead>
           <tr>
-            <th data-sort-key="timestamp"><%= i18n.time() %></th>
-            <th data-sort-key="logged-by"><%= i18n.loggedByNode() %></th>
-            <th data-sort-key="status"><%= i18n.status() %></th>
+            <th data-sort-key="timestamp"><%= i18n.time() %> <%- sortMarkupFor('timestamp') %></th>
+            <th data-sort-key="logged-by"><%= i18n.loggedByNode() %> <%- sortMarkupFor('logged-by') %></th>
+            <th data-sort-key="status"><%= i18n.status() %> <%- sortMarkupFor('status') %></th>
             <% if (showFromAddress) { %>
-              <th data-sort-key="from-address"><%= i18n.from() %></th>
+              <th data-sort-key="from-address"><%= i18n.from() %> <%- sortMarkupFor('from-address') %></th>
             <% } %>
             <% if (showToAddress) { %>
-              <th data-sort-key="to-address"><%= i18n.to() %></th>
+              <th data-sort-key="to-address"><%= i18n.to() %> <%- sortMarkupFor('to-address') %></th>
             <% } %>
             <% if (showPacketInfo) { %>
-              <th data-sort-key="packet-info"><%= i18n.packet() %></th>
+              <th data-sort-key="packet-info"><%= i18n.packet() %> <%- sortMarkupFor('packet-info') %></th>
             <% } %>
-            <th data-sort-key="message"><%= i18n.message() %></th>
+            <th data-sort-key="message"><%= i18n.message() %> <%- sortMarkupFor('message') %></th>
           </tr>
         </thead>
         <tbody>
