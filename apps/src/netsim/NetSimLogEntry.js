@@ -134,7 +134,7 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
 };
 
 /**
- * Get requested packet header field as a number.  Returns empty string
+ * Get requested packet header field as a string.  Returns empty string
  * if the requested field is not in the current packet format.
  * @param {Packet.HeaderType} field
  * @returns {string}
@@ -161,6 +161,9 @@ NetSimLogEntry.prototype.getMessageAscii = function () {
   return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
 };
 
+/**
+ * @returns {string} Localized packet status, "success" or "dropped"
+ */
 NetSimLogEntry.prototype.getLocalizedStatus = function () {
   if (this.status === NetSimLogEntry.LogStatus.SUCCESS) {
     return i18n.logStatus_success();
@@ -168,4 +171,14 @@ NetSimLogEntry.prototype.getLocalizedStatus = function () {
     return i18n.logStatus_dropped();
   }
   return '';
+};
+
+/**
+ * @returns {string} Localized "X of Y" packet count info for this entry.
+ */
+NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
+  return i18n.xOfYPackets({
+    x: this.getHeaderField(Packet.HeaderType.PACKET_INDEX),
+    y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT)
+  });
 };
