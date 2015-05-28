@@ -12,9 +12,11 @@
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
+var netsimNodeFactory = require('./netsimNodeFactory');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
@@ -181,4 +183,32 @@ NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
     x: this.getHeaderField(Packet.HeaderType.PACKET_INDEX),
     y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT)
   });
+};
+
+/**
+ * @returns {string} 12-hour short time
+ */
+NetSimLogEntry.prototype.getTimeString = function () {
+  var date = new Date(this.timestamp);
+  var hours = date.getHours() % 12;
+  var hourString = (hours === 0 ? '12' : hours.toString());
+  var minuteString = ('0' + date.getMinutes()).substr(-2);
+  return hourString + ':' + minuteString;
+};
+
+/**
+ * Get a controller for the node that generated this log entry
+ * @returns {NetSimClientNode|NetSimRouterNode|null}
+ */
+NetSimLogEntry.prototype.getOriginNode = function () {
+  var nodeRows = this.shard_.nodeTable.readAllCached();
+  var originNodeRow = _.find(nodeRows, function (row) {
+    return row.id === this.nodeID;
+  }.bind(this));
+
+  if (!originNodeRow) {
+    return null;
+  }
+
+  return netsimNodeFactory.nodeFromRow(this.shard_, originNodeRow);
 };

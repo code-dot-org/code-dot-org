@@ -10,22 +10,23 @@ var Packet = require('./Packet');
       <table>
         <thead>
           <tr>
-            <td>Time</td>
-            <td>Logged By</td>
-            <td>Status</td>
-            <td>From</td>
-            <td>To</td>
-            <td>Packet</td>
-            <td>Message</td>
+            <th>Time</th>
+            <th>Logged By</th>
+            <th>Status</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Packet</th>
+            <th>Message</th>
           </tr>
         </thead>
         <tbody>
           <%
             logEntries.forEach(function (entry) {
+              var originNode = entry.getOriginNode();
               %>
               <tr>
-                <td><%= entry.timestamp %></td>
-                <td><%= entry.nodeID %></td>
+                <td><%= entry.getTimeString() %></td>
+                <td><%= originNode ? originNode.getDisplayName() : entry.nodeID %></td>
                 <td><%= entry.getLocalizedStatus() %></td>
                 <td><%= entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) %></td>
                 <td><%= entry.getHeaderField(Packet.HeaderType.TO_ADDRESS) %></td>

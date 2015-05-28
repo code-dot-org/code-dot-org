@@ -76,9 +76,11 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
     this.eventKeys_.registeredWithShard = null;
   }
 
-  this.eventKeys_.logTableChange = newShard.logTable.tableChange.register(
-      this.onLogTableChange_.bind(this));
-  this.eventKeys_.registeredWithShard = newShard;
+  if (newShard) {
+    this.eventKeys_.logTableChange = newShard.logTable.tableChange.register(
+        this.onLogTableChange_.bind(this));
+    this.eventKeys_.registeredWithShard = newShard;
+  }
 
   this.shard_ = newShard;
 };
