@@ -1,0 +1,27 @@
+name 'U3L01 Student Lesson Introduction'
+title 'Why Programming and Programming Languages?'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 01 - Why Programming and Programming Languages?
+
+# Background
+
+When you were first learning to talk, you started with sounds. Then you learned to combine sounds into words and words into sentences. Once you learned how to talk, you could take any thought, no matter how complex, and communicate it to someone else. Programming is similar to talking – a programming language is built from a small subset of commands. By combining these commands, a programmer can create complex programs with global impact. In this lesson, you will begin the journey of converting human language to a language the computer will understand.
+
+# Lesson
+
+* Create instructions using only words to construct a specific arrangement of toy blocks.
+* Brainstorm ways we can use specific language to improve algorithms. 
+* Identify the most basic commands of building a block sculpture. 
+
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1co3nP1pRZEFBnAYz5fvbUyfUMogfxjMhMZuJAwTpq_w" target="_blank">
+Sculpture Algorithm</a> 
+
+
+* Rubric: <a href="https://docs.google.com/document/d/1UlhUQv3h_MBiD2AoQNPb5j_GGjTpaAkIzzBRImtMsv8" target="_blank">
+Sculpture Rubric</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

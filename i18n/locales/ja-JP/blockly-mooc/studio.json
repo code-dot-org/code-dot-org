@@ -126,7 +126,7 @@
   "saySprite":"という",
   "saySpriteN":"と、スプライト {spriteIndex} が言う",
   "saySpriteTooltip":"指定した俳優から会話気泡と関連の原文がポップアップする",
-  "saySpriteChoices_0":"こんにちは",
+  "saySpriteChoices_0":"こんにちは、みんな！",
   "saySpriteChoices_1":"みなさん、こんにちは",
   "saySpriteChoices_2":"お元気ですか",
   "saySpriteChoices_3":"おはとうございます",

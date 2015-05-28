@@ -402,8 +402,7 @@
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: Introduksjonskurs i informatikk for elever opp til 8. klasse (15-25
-            timer)
+          title: 20-timers introduksjonskurs
           description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk
             og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men
             det er morsomt å lære for alle aldersgrupper.
@@ -608,6 +607,14 @@
         CSPPD:
           new stage: new stage
           Introduction to PD: Introduction to PD
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
@@ -890,6 +897,13 @@
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pixelation
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra

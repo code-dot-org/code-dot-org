@@ -10,7 +10,7 @@ template: none
 %h1
   PD Workshops
 - if dashboard_user[:admin]
-  %a.btn.btn-white{href:'#/workshops/new'}
+  %a.btn.btn-white{'ng-href' => '#/workshops/new'}
     Create New PD Workshop
 
 %div.jumbotron{'ng-show' => 'workshops.length <= 0'}
@@ -24,9 +24,9 @@ template: none
 
 %table{style:'width:970px; layout:fixed; margin-top:20px;', 'ng-hide' => 'workshops.length <= 0'}
   %colgroup
-    %col{width: "90"}/
-    %col{width: "70"}/
-    %col{width: "80"}/
+    %col{width: "50"}/
+    %col{width: "40"}/
+    %col{width: "140"}/
     %col{width: "80"}/
     %col{width: "150"}/
     %col{width: "90"}/
@@ -40,7 +40,7 @@ template: none
         Program
     %th.manage-th
       %span
-        Cohort
+        Cohorts
     %th.manage-th
       %span
         Facilitators
@@ -56,14 +56,18 @@ template: none
     %td
       %p
         {{workshop.name}}
-      %a{href:'#/workshops/{{workshop.id}}/attendance'}
+      %a{'ng-href' => '#/workshops/{{workshop.id}}/attendance'}
         Attendance
     %td
       %span
         {{program_types[workshop.program_type].short_name}}
+    -#%td
+    -#  %span
+    -#    {{cohortNamecohort.id)}}
     %td
-      %span
-        {{cohortName(workshop.cohort_id)}}
+      %ul{style:'margin:0'}
+        %li{'ng-repeat' => 'cohort in workshop.cohorts | orderBy:"start"'}
+          {{cohortName(cohort.id)}}
     %td
       %ul{style:'margin:0'}
         %li{'ng-repeat' => 'facilitator in workshop.facilitators'}
@@ -83,7 +87,7 @@ template: none
         {{workshop.location}}
     - if dashboard_user[:admin]
       %td
-        %a.btn.btn-white.btn-xs{href:'#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'}
+        %a.btn.btn-white.btn-xs{'ng-href' => '#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'}
           Edit
         %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'}
           Delete

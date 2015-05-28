@@ -877,39 +877,14 @@ nl:
       Course 4 Artist For  Functions 11_instruction: 'En nu een stapje verder, kan je de stervorm maken met de "teken een vierkant" functie? Succes!'
       Course 4 Artist For Loops 1_instruction: 'Teken deze driehoek van 50 pixels groot. Hint: gebruik een herhaal blok.'
       Course 4 Artist For Loops 10_instruction: Vrije speelruimte! Veel plezier, je kan tekenen wat je wilt met de blokken die je hebt geleerd te gebruiken
-      Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
-        and adds one side at a time until it draws a decagon (10 sides). Each side
-        should be 100 pixels long. Hint: 360 divided by the number of sides a shape
-        has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 12_instruction: |
-        That looked pretty cool, but now
-        I'd like to draw each shape next to the last one. This time each side is
-        20 pixels. Use a jump block to jump forward 40 pixels after each shape. 
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14 _instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using For Loops. We've added a few generic variables for you
-        to use as well.
-      Course 4 Artist For Loops 2_instruction: |
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10. Take a look at
-        how I built the code then click on "Run" when you are ready to see it in
-        action. 
+      Course 4 Artist For Loops 11_instruction: 'Weet je nog dat we een variabele gebruikte om de aantal zijden in een figuur te bepalen? Dit patroon begint met een driehoek en voegt daarbij één zijde per keer totdat het een tienhoek (10 zijden) vormt. Elke zijde moet 100 pixels lang zijn. Tip:  360 gedeeld door het aantal zijden dat een figuur heeft, is het aantal graden dat je zal willen draaien.'
+      Course 4 Artist For Loops 12_instruction: 'Dat zag er vet uit, maar nu wil ik een figuur tekenen naast de laatste. Deze keer is elke zijde 20 pixels. Gebruik een spring blok om 40 pixels vooruit te springen na elke figuur. '
+      Course 4 Artist For Loops 13_instruction: Hmmm, de figuren worden iedere keer groter! Hebben we dit probleem niet eerder al opgelost met variabelen? Hoe kunnen we de teller gebruiken van de variabelen om de zijden kleiner te maken omdat daar meer van zijn? In plaats van vooruit te gaan met een vaste hoeveelheid, gaan we (100/teller) pixels vooruit.
+      Course 4 Artist For Loops 14 _instruction: Als je iets meer of minder draait dan je normaal zou doen voor een figuur, geeft dat een nette effect. Probeer eens 89 graden te draaien om deze gedraaide vierkante spiraal te vormen.
+      Course 4 Artist For Loops 14_instruction: Als je iets meer of minder draait dan je normaal zou doen voor een figuur, geeft dat een nette effect. Probeer eens 89 graden te draaien om deze gedraaide vierkante spiraal te vormen.
+      Course 4 Artist For Loops 15_instruction: 'Vrij Spel: Probeer eens wat tekeningen van jezelf te maken met For Loops. We hebben een paar algemene variabelen toegevoegd om te gebruiken.'
+      Course 4 Artist For Loops 2_instruction: |-
+        Ik heb de code voor het tekenen van een driehoek in een 'for'-lus (tellergestuurde lus) opgenomen die van 50 tot 100 telt in stappen van 10. Bekijk hoe ik de code heb gebouwd en klik vervolgens op "Uitvoeren" wanneer je klaar bent om het in actie te zien. 
       Course 4 Artist For Loops 3_instruction: |
         The smallest triangle has 20 pixel
         sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
@@ -952,14 +927,8 @@ nl:
         called "draw a line of squares". Feel free to take a look inside the function
         block to see how we built it. Click on "Run" when your are ready for the
         next puzzle.
-      Course 4 Artist Functions 14_instruction: |
-        You're doing great! Let's use
-        your new "Draw a line of squares" function to draw a Square shape. Remember
-        each square is 40 pixels in length.
-      Course 4 Artist Functions 15_instruction: |
-        Let's Step it up a little, can
-        you draw a star shape using the "draw a line of squares" function? Good
-        luck! Hint: you may have to turn 144 degrees
+      Course 4 Artist Functions 14_instruction: 'Je doet het geweldig! Laten we onze nieuwe "Teken een lijn van vierkanten" functie gebruiken om een Rechthoekige vorm te tekenen. Vergeet niet dat elk vierkant 40 pixels lang is.'
+      Course 4 Artist Functions 15_instruction: 'Laten we de uitdaging iets groter maken, kun je een ster vorm tekenen door de functie "teken een lijn van vierkanten" te gebruiken? Succes! Tip: je moet wellicht 144 graden draaien'
       Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
@@ -978,9 +947,7 @@ nl:
       Course 4 Artist Functions 6_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?
-      Course 4 Artist Functions 7_instruction: |
-        Can you draw a line of squares using
-        a Square function? Each square is 40 pixel's in length.
+      Course 4 Artist Functions 7_instruction: Kun je een lijn van vierkanten tekenen door gebruik te maken van de Vierkant functie? Elk vierkant is 40 pixels lang.
       Course 4 Artist Functions 8_instruction: |
         Are you getting the hang of how to
         use function blocks? Let's modify this square so that it is 200 pixels in
@@ -1097,12 +1064,7 @@ nl:
       Course 4 Artist Vars 5_instruction: |
         Use the variable "sides" to control
         how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
+      Course 4 Artist Vars 6_instruction: 'Hmmm, ik heb geprobeerd de "zijkanten" variabele aan te passen naar 4 in de code van de laatste puzzle, maar dit tekent nog steeds een driehoek. Kun je de "zijkanten" variabele (samen met een wiskunde blok) gebruiken om ervoor te zorgen dat ik ook de juiste hoeveelheid draai? Tip: 360 gedeeld door het aantal zijkanten geeft je het aantal graden dat je moet draaien.'
       Course 4 Artist Vars 7_instruction: |
         Can you modify the "sides" variable
         to help me draw this hexagon?
@@ -1239,10 +1201,6 @@ nl:
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1259,10 +1217,6 @@ nl:
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1272,12 +1226,6 @@ nl:
         you to use. Program your game to call the "level_up" function if "player_points"
         > 10. Play the game, and make it past level 4 to move to the next puzzle.
         
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1321,10 +1269,6 @@ nl:
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1350,11 +1294,6 @@ nl:
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -1393,12 +1332,6 @@ nl:
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -1759,17 +1692,17 @@ nl:
       K-1 Maze 3_instruction: Beweeg me naar het Zuiden om bij het varken te komen!
       K-1 Maze 4_instruction: Beweeg me naar het Noorden om bij het varken te komen!
       K-1 Maze 5_instruction: Beweeg me naar het Oosten om bij het varken te komen!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze Assessment 1_instruction: 'Assessment -- Get me to the pig!'
-      K-1 Maze Assessment 12_instruction: Assessment Level
-      K-1 Maze Assessment 13_instruction: Assessment Level
-      K-1 Maze Assessment 2_instruction: 'Assessment -- Get me to the pig!'
+      K-1 Maze 6_instruction: Beweeg de ene kant op, en dan de andere om me bij het varken te krijgen!
+      K-1 Maze 7_instruction: Beweeg de ene kant op, en dan de andere om me bij het varken te krijgen!
+      K-1 Maze 8_instruction: Beweeg de ene kant op, en dan de andere om me bij het varken te krijgen!
+      K-1 Maze 9_instruction: Beweeg de ene kant op, en dan de andere om me bij het varken te krijgen!
+      K-1 Maze Assessment 1_instruction: 'Test -- Breng me naar het varken!'
+      K-1 Maze Assessment 12_instruction: Test Niveau
+      K-1 Maze Assessment 13_instruction: Test Niveau
+      K-1 Maze Assessment 2_instruction: 'Test -- Breng me naar het varken!'
       K-1 maze debug 1_instruction: Pas de code aan om me naar het varken te brengen!
       K-1 maze debug 10_instruction: Los de fouten in dit level op door de blokken op de juiste volgorde te zetten en blokken toe te voegen!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand adding blocks to get me to the pig"
+      K-1 maze debug 11_instruction: "Dit is een test!\r\nLos de fouten in dit level op door blokken te herschikken en toe te voegen om me naar het varken te brengen"
       K-1 maze debug 2_instruction: Zoek uit wat er mist en voeg dan de missende blokken toe, zodat ik dat varken kan pakken!
       K-1 maze debug 3_instruction: Zoek uit wat er mis is en VERWIJDER blokken om me naar het varken te brengen!
       K-1 maze debug 4_instruction: Controleer de blokken en los de fouten op! Ik denk dat ik de verkeerde kant op ga.
@@ -1793,10 +1726,10 @@ nl:
       K-1 Maze Loops 9_instruction: Breng me naar het varken!
       K-1 Maze Loops Assessment 1_instruction: 'Test: Gebruik lussen om me naar het varken te brengen!'
       K-1 Maze Loops Assessment 2_instruction: 'Test: Gebruik lussen om me naar het varken te brengen!'
-      K-1 Maze Multi 14_instruction: Assessment Level
-      K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig."
+      K-1 Maze Multi 14_instruction: Test Niveau
+      K-1 Maze Multi 15_instruction: Test Niveau
+      K-1 Maze Sequence Assessment 1_instruction: "Dit is een test!\r\nBeweeg een kant op,\nen vervolgens de andere kant op om me naar het varken te brengen"
+      K-1 Maze Sequence Assessment 2_instruction: "Dit is een test!\r\nBeweeg een kant op,\nen vervolgens de andere kant op om me naar het varken te brengen."
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the "cost" function, and we'll return the
@@ -2093,9 +2026,6 @@ nl:
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: |
-        It's Free Play time!
-        Have fun with all the blocks in your tool box. 
       NEW Course 4 Play Lab Params 11_instruction: |
         It's Free Play time! Have fun
         with all the blocks in your tool box. 
@@ -2339,10 +2269,8 @@ nl:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -2564,6 +2492,13 @@ nl:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

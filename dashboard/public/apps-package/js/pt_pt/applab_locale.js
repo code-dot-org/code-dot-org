@@ -55,7 +55,7 @@ var applab_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -103,7 +103,7 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "no":function(d){return "Não"},
 "numBlocksNeeded":function(d){return "Este puzzle pode ser resolvido com blocos de %1."},
 "pause":function(d){return "pausa"},
-"reinfFeedbackMsg":function(d){return "Você pode pressionar o botão \"Try Again\" para voltar a executar o seu aplicativo."},
+"reinfFeedbackMsg":function(d){return "Você pode pressionar o botão \"Tentar Novamente\" para voltar a executar o seu aplicativo."},
 "repeatForever":function(d){return "repeat forever"},
 "repeatDo":function(d){return "fazer"},
 "repeatForeverTooltip":function(d){return "Executar as ações neste bloco repetidamente enquanto o aplicativo está sendo executado."},

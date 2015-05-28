@@ -1,13 +1,7 @@
 name 'U1L13 Assessment 1'
-title 'Assessment 1: Text Compression'
-content1 'Write (in the space below) a segment of text that should compress effectively and efficiently.'
+title 'Conclusion 1: Text Compression'
+content1 'Consider your heuristic and those of your classmates.'
 
 markdown <<MARKDOWN
-Return to the Text Compression Tool. Compress the text. 
-
-Calculate the compression rate. 
-
-Record your results here. Explain why you would rate this as a "good" compression.
-
-What are the characteristics of the text that resulted in a "good" compression?
+Do you think it’s possible to describe (or write) a specific set of instructions that a person could follow that would always result in better text compression than your heuristic? Why or why not?
 MARKDOWN

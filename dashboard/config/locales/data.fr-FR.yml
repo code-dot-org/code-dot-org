@@ -858,6 +858,6 @@
         Infinity_move_right_runbutton: Ajouter déplacer bloc ici
         Infinity_move_directions_callout: Quel bloc fera déplacer Baymax  vers le
           haut lorsque vous appuyez sur la flèche vers le haut ?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Utilisez ces flèches pour vous diriger
         Infinity_move_collide_callout: Jouer un son lorsque cet événement se produit.
         Infinity_repeat_callout: Place un bloc de déplacement à l'intérieur d'ici

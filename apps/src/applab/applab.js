@@ -542,9 +542,9 @@ function handleExecutionError(err, lineNumber) {
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
-  if (!level.freePlay) {
-    Applab.onPuzzleComplete();
-  }
+
+  // Call onPuzzleComplete() here if we want to create levels that end
+  // automatically without requiring a press of the Finish button:
 }
 
 Applab.getCode = function () {
@@ -865,7 +865,7 @@ Applab.init = function(config) {
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: true
+    finishButton: !level.isProjectLevel
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -1014,7 +1014,9 @@ Applab.init = function(config) {
   }
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+  }
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
@@ -1037,51 +1039,22 @@ Applab.init = function(config) {
       var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
-    var designModeButton = document.getElementById('designModeButton');
-    if (designModeButton) {
-      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
-    }
-    var codeModeButton = document.getElementById('codeModeButton');
-    if (codeModeButton) {
-      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
-    }
+
+    designMode.configureDesignToggleRow();
+
+    // Start out in regular mode. Eventually likely want this to be a level setting
+    designMode.toggleDesignMode(false);
+
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, designMode.onClear);
     }
+    var designModeManageAssets = document.getElementById('design-manage-assets');
+    if (designModeManageAssets) {
+      dom.addClickTouchEvent(designModeManageAssets, designMode.showAssetManager);
+    }
 
-    // Allow elements to be dragged and dropped from the design mode
-    // element tray to the play space.
-    $('.new-design-element').draggable({
-      containment:"#codeApp",
-      helper:"clone",
-      appendTo:"#codeApp",
-      revert: 'invalid',
-      zIndex: 2,
-      start: function() {
-        studioApp.resetButtonClick();
-      }
-    });
-    var GRID_SIZE = 5;
-    $('#visualization').droppable({
-      accept: '.new-design-element',
-      drop: function (event, ui) {
-        var elementType = ui.draggable[0].dataset.elementType;
-
-        var div = document.getElementById('divApplab');
-        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-
-        var left = ui.position.left / xScale;
-        var top = ui.position.top / yScale;
-
-        // snap top-left corner to nearest location in the grid
-        left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-        top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-        designMode.createElement(elementType, left, top);
-      }
-    });
+    designMode.configureDragAndDrop();
   }
 };
 
@@ -1220,11 +1193,11 @@ Applab.reset = function(first) {
     turtleSetVisibility(true);
   }
 
-  var isDesignMode = $('#codeModeButton').is(':visible');
 
-  var allowDragging = isDesignMode && !Applab.isRunning();
+
+  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  if (isDesignMode) {
+  if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(allowDragging);
   }
@@ -1317,8 +1290,9 @@ Applab.runButtonClick = function() {
   studioApp.attempts++;
   Applab.execute();
 
-  if (level.freePlay && !studioApp.hideSource) {
-    var shareCell = document.getElementById('share-cell');
+  // Enable the Finish button if is present:
+  var shareCell = document.getElementById('share-cell');
+  if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
 };
@@ -1651,28 +1625,12 @@ Applab.onCodeModeButton = function() {
 };
 
 Applab.onPuzzleComplete = function() {
-  if (Applab.executionError) {
-    Applab.result = ResultType.ERROR;
-  } else if (level.freePlay) {
-    Applab.result = ResultType.SUCCESS;
-  }
+  // Submit all results as success / freePlay
+  Applab.result = ResultType.SUCCESS;
+  Applab.testResults = TestResults.FREE_PLAY;
 
   // Stop everything on screen
   Applab.clearEventHandlersKillTickLoop();
-
-  // If the current level is a free play, always return the free play result
-  if (level.freePlay) {
-    Applab.testResults = TestResults.FREE_PLAY;
-  } else {
-    var levelComplete = (Applab.result === ResultType.SUCCESS);
-    Applab.testResults = studioApp.getTestResults(levelComplete);
-  }
-
-  if (Applab.testResults >= TestResults.FREE_PLAY) {
-    studioApp.playAudio('win');
-  } else {
-    studioApp.playAudio('failure');
-  }
 
   var program;
 
@@ -3115,4 +3073,8 @@ var getPegasusHost = function() {
           return null;
       }
   }
+};
+
+Applab.isInDesignMode = function () {
+  return $('#designModeBox').is(':visible');
 };

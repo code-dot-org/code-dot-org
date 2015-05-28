@@ -1,0 +1,8 @@
+name 'U3L01 Assessment1'
+title 'Why Programming? Question 1'
+
+markdown <<MARKDOWN
+One way we can make it easier to give someone instructions is to break a complex activity down into its simplest steps. Consider building the block sculpture. 
+
+List the simplest ‘actions’ that could be included and combined in an instruction set that would enable someone to construct ANY of your classmates’ designs?
+MARKDOWN

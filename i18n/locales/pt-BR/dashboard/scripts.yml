@@ -556,6 +556,14 @@ pt-BR:
         CSPPD:
           new stage: nova fase
           Introduction to PD: Introdução ao DP
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impacto da ciência da computação
+          Growth Mindset: Mentalidade de crescimento
+          Teaching Strategies: Estratégias de ensino
+          Preparing for in-person PD: Preparação presencial para o DP
         CSPLessonSamples:
           title: Exemplos de lição para CSP
           description_short: exemplos de lição para csp
@@ -821,6 +829,13 @@ pt-BR:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Compressão de texto
+          Pixelation: Pixelização
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: Ensine programação funcional com álgebra

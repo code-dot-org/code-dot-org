@@ -55,7 +55,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -190,9 +190,9 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_andOperator_signatureOverride":function(d){return "EN booleaanse operator"},
 "dropletBlock_appendItem_description":function(d){return "Het item toevoegen aan het einde van de array"},
 "dropletBlock_appendItem_param0":function(d){return "lijst"},
-"dropletBlock_appendItem_param0_description":function(d){return "The array to be modified."},
+"dropletBlock_appendItem_param0_description":function(d){return "De reeks om te wijzigen."},
 "dropletBlock_appendItem_param1":function(d){return "onderdeel"},
-"dropletBlock_appendItem_param1_description":function(d){return "The item to add to the end of the array."},
+"dropletBlock_appendItem_param1_description":function(d){return "Het onderdeel om toe te voegen aan het einde van de reeks."},
 "dropletBlock_arcLeft_description":function(d){return "Beweegt de schildpad naar voren en naar links in een soepele ronde boog"},
 "dropletBlock_arcLeft_param0":function(d){return "hoek"},
 "dropletBlock_arcLeft_param0_description":function(d){return "The angle along the circle to move."},
@@ -202,16 +202,16 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_arcRight_param0":function(d){return "hoek"},
 "dropletBlock_arcRight_param0_description":function(d){return "The angle along the circle to move."},
 "dropletBlock_arcRight_param1":function(d){return "straal"},
-"dropletBlock_arcRight_param1_description":function(d){return "The radius of the circle that is placed right of the turtle. Must be >= 0."},
+"dropletBlock_arcRight_param1_description":function(d){return "De straal van de cirkel dat is geplaatst rechts van de schildpad. Moet zijn >=0."},
 "dropletBlock_assign_x_description":function(d){return "Geeft een waarde aan een bestaande variabele. Bijvoorbeeld: x = 0;"},
 "dropletBlock_assign_x_param0":function(d){return "x"},
-"dropletBlock_assign_x_param0_description":function(d){return "The variable name being assigned to"},
+"dropletBlock_assign_x_param0_description":function(d){return "De naam van de variabele wordt toegewezen aan"},
 "dropletBlock_assign_x_param1":function(d){return "waarde"},
-"dropletBlock_assign_x_param1_description":function(d){return "The value the variable is being assigned to."},
+"dropletBlock_assign_x_param1_description":function(d){return "De waarde van de variabele wordt toegewezen aan."},
 "dropletBlock_assign_x_signatureOverride":function(d){return "Een variabele toewijzen"},
 "dropletBlock_button_description":function(d){return "Maakt een knop waar je op kan klikken. De knop zal de gegeven tekst laten zien en kan gerefereerd worden door het gegeven id"},
 "dropletBlock_button_param0":function(d){return "buttonId"},
-"dropletBlock_button_param0_description":function(d){return "A unique identifier for the button. The id is used for referencing the created button. For example, to assign event handlers."},
+"dropletBlock_button_param0_description":function(d){return "Een unieke herkenner voor de knop. De herkenner wordt gebruikt om te verwijzen naar de gemaakte knop. Bijvoorbeeld, om gebeurtenis verwerkers toe te wijzen."},
 "dropletBlock_button_param1":function(d){return "tekst"},
 "dropletBlock_button_param1_description":function(d){return "De tekst weergegeven in de knop."},
 "dropletBlock_callMyFunction_description":function(d){return "Roept een functie aan die geen parameters verwacht"},
@@ -402,7 +402,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_innerHTML_description":function(d){return "Binnenste HTML-code instellen voor het element met de opgegeven id"},
 "dropletBlock_insertItem_description":function(d){return "Insert the item into the array at the specified position"},
 "dropletBlock_insertItem_param0":function(d){return "lijst"},
-"dropletBlock_insertItem_param0_description":function(d){return "The array to be modified."},
+"dropletBlock_insertItem_param0_description":function(d){return "De reeks om te wijzigen."},
 "dropletBlock_insertItem_param1":function(d){return "index"},
 "dropletBlock_insertItem_param1_description":function(d){return "The position to insert the item into the array."},
 "dropletBlock_insertItem_param2":function(d){return "onderdeel"},
@@ -530,7 +530,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_rect_param3_description":function(d){return "The vertical height in pixels of the rectangle."},
 "dropletBlock_removeItem_description":function(d){return "Remove the item at the specified position from the array"},
 "dropletBlock_removeItem_param0":function(d){return "lijst"},
-"dropletBlock_removeItem_param0_description":function(d){return "The array to be modified."},
+"dropletBlock_removeItem_param0_description":function(d){return "De reeks om te wijzigen."},
 "dropletBlock_removeItem_param1":function(d){return "index"},
 "dropletBlock_removeItem_param1_description":function(d){return "The position of the item to remove from the array."},
 "dropletBlock_return_description":function(d){return "Geef een waarde terug uit een functie"},

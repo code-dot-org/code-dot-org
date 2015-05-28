@@ -55,7 +55,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -155,17 +155,17 @@ p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Programmet gir deling med null."},
-"emptyComputeBlock":function(d){return "Du må feste en brikke til \"beregn\"-blokken."},
+"emptyComputeBlock":function(d){return "Du må legge til en blokk til \"evaluere\"-blokken."},
 "equivalentExpression":function(d){return "Prøv å endre rekkjefylga på argumenta dine for å få nøyaktig same uttrykk."},
 "evaluate":function(d){return "beregn"},
-"extraTopBlocks":function(d){return "Du har ledige blokker. Meinte du knyte desse til \"regn ut\"-blokka?"},
+"extraTopBlocks":function(d){return "Du har løse blokker. Mente du å feste disse til \"evaluere\" blokk?"},
 "failedInput":function(d){return "Funksjonen returnerer ikke riktig resultat for alle verdier."},
 "goal":function(d){return "Mål:"},
 "levelIncompleteError":function(d){return "Uttrykket ditt stemmer ikke med målet."},
-"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Du må definere en funksjonen kalt "+calc_locale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Uttrykket mangler variabel "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Her er utregningen din! Fortsett å jobbe på den eller gå videre til neste oppgave!"},
 "yourExpression":function(d){return "Uttrykket ditt:"},
 "wrongInput":function(d){return "Du kaller funksjonen din med feil verdi."},
 "wrongOtherValuesX":function(d){return "Uttrykket resulterer i feil verdi hvis vi varierer "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Ditt uttrykk returnere ikke riktig resultat."}};

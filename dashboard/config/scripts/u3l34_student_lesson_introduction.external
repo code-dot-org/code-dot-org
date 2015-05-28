@@ -1,0 +1,22 @@
+name 'U3L34 Student Lesson Introduction'
+title 'Arrays and Loops: Hidden Images'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 34 - Arrays and Loops: Hidden Images
+
+# Background
+
+Arrays and loops can be used to uncover hidden images. To reconstruct the original image, use loops to access individual pixels of an image and the relative position of indices.
+
+# Lesson
+
+* Design an program to reveal a hidden image.
+* Design an program to scramble an image or create a visual effect. 
+
+
+# Resources
+None at this time...needs an activity doc and rubric (?)
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

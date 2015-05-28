@@ -610,8 +610,7 @@
         right_arrow_fireball: 파이어볼을 쏘기 위해 오른쪽 방향키를 사용하세요.
         name_function: 함수의 이름을 여기에 작성하세요.
         Infinity_move_right_runbutton: 이곳에 이동 블록을 추가합니다.
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout: 어느 블록이 '위쪽 화살표'가 눌렸을 때 Baymax를 위로 움직이게 할까요?
+        Infinity_move_directions_callout_arrow: 이 화살표를 이용해서 조정하세요
         Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요

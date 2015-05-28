@@ -55,7 +55,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -159,13 +159,13 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "sirkel (radius, stil, farge)"},
 "displayBlockTitle":function(d){return "beregn"},
 "ellipseBlockTitle":function(d){return "ellipse (breidd, høyde, stil, farge)"},
-"extraTopBlocks":function(d){return "Du har ledige blokker. Meinte du å knyte desse til \"Vis\"-blokka?"},
+"extraTopBlocks":function(d){return "Du har løse blokker. Mente du å feste disse til \"evaluere\" blokk?"},
 "infiniteRecursionError":function(d){return "Funksjonen kaller seg selv. Vi har stoppet den, ellers ville den ha fortsatt å kalle seg selv til evig tid."},
 "overlayBlockTitle":function(d){return "overlegg (topp, botn)"},
 "placeImageBlockTitle":function(d){return "plasser-bilde(x,y,bilde)"},
 "offsetBlockTitle":function(d){return "forskyving (x, y, bilde)"},
 "rectangleBlockTitle":function(d){return "rektangel (breidd, høgde, stil, farge)"},
-"reinfFeedbackMsg":function(d){return "Du kan trykke knappen \"Forsøk igjen\" for å redigere tegningen."},
+"reinfFeedbackMsg":function(d){return "Du kan trykke \"Fortsett å spille\" knappen for å redigere programmet."},
 "rotateImageBlockTitle":function(d){return "roter (grader, bilde)"},
 "scaleImageBlockTitle":function(d){return "skaler (faktor, bilde)"},
 "squareBlockTitle":function(d){return "kvadrat (størrelse, stil, farge)"},
@@ -180,6 +180,6 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "outline":function(d){return "ramme"},
 "solid":function(d){return "heil"},
 "string":function(d){return "tekst"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"stringMismatchError":function(d){return "Du har en streng med feil aktivering."},
 "userCodeException":function(d){return "Det oppsto en feil under utføring av koden."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"wrongBooleanError":function(d){return "Blokkene dine evaluerer til en feil booleanverdi."}};

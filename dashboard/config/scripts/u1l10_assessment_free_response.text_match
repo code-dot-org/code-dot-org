@@ -1,11 +1,6 @@
 name 'U1L10 Assessment Free Response'
 title 'Assessment: Encoding Text'
-content1 'A follow-up to the Assessment Question #2:'
+content1 ''
 markdown <<MARKDOWN
-
-Do you have any “extra bits” left over from the number required for the QWERTY keyboard question? How many?
-
-If so, what else you might want to encode with those bits?
-
-Why did you select those elements?
+Many languages do not use the characters of U.S. English. Suppose you wanted to be able to encode the characters of every language on earth within a single protocol. Guess how many characters would need to be encoded and calculate the number of bits that would be required per character. Then discuss the benefits and drawbacks of using this single unified system.
 MARKDOWN

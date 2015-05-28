@@ -25,132 +25,63 @@ fa-AF:
       2-3 Artist Debugging 12_instruction: قراره که من یک موج اقیانوس به این صحنه اضافه کنم. میتونی کمکم کنی؟
       2-3 Artist Debugging 2_instruction: 'کد این 3 سبیل که میبینی اشتباه است. راهنما : هر سبیل 75 پیکسل ظول داره. برای کشیدن سبیل ها این کد رو تعمیر کن.'
       2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
+        قایق من سوراخ است! می‌توانی با استفاده از تغییر زاویه‌ی خط آن را درست کنی؟
+        راهنمایی: آخرین زاویه ۱۵ درجه است.
       2-3 Artist Debugging 4_instruction: چه تصویری رو داریم تلاش میکنیم بکشیم؟ وصل کردن نقطه ها را با استفاده از خطوط و زوایای مناسب کامل کنید.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
+      2-3 Artist Debugging 5_instruction: 'کد برای دست و پایی که شما می‌بینید اشتباه است. راهنمایی: پا خیلی بلند است، شاید لازم باشد یک قدم را پاک کنیم.'
       2-3 Artist Debugging 6_instruction: بنظ میرسه که من روی صندلی ای نشستم که یک پایه نداره. بلوک ها را برای رسم پا ویرایش کن.
       2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
+        به نظر می‌رسد C در کد برعکس کشیده شده.
+        می‌توانی آن را به شکل C در بیاوری؟
       2-3 Artist Debugging 8_instruction: فرفره من هنوز تموم نشده. چند بار لازمه تکرارش کنم تا کامل شه؟
       2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
+        کد برای این ریشه درست نیست.
+        راهنمایی: زاویه کمتر از ۶۰ درجه است
       2-3 Artist Debugging Assessment 1_instruction: 'این شکل خیلی کوچیکه. میتونی بزرگترش کنی؟ راهنما : باید در هر سمت 75 پیکسل بزرگتر باشه.'
       2-3 Artist Free Play_instruction: بازی آزاد! هرچیزی که دوست داری رسم کن.
       2-3 Artist Functions 1_instruction: 'سلام. من زامبی نقاشم. من عاشق نقاشی کشیدنم! به من کمک کن تا عینک های مربعی بکشم. راهنما : پل بین عینک ها 25 پیکسل کوچکتر از طول مربع است.'
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
+      2-3 Artist Functions 10_instruction: دو دستورالعمل داریم، یکی برای کشیدن چرخ دنده‌ی بزرگ و یکی برای کشیدن چرخ دنده‌ی کوچک. از آن‌ها برای کشیدن داخل یک ماشین استفاده کن!
+      2-3 Artist Functions 11.5_instruction: این مثل همان تابع «رسم شش گوش» است. چه می‌شود اگر تو هر دفعه داخل حلقه فقط ۶۰ درجه بچرخی؟
+      2-3 Artist Functions 11_instruction: اسم تابع «رسم مربع» را به «رسم شش ضلعی» تغییر داده‌ایم، ولی هنوز مربع می‌کشد! می‌توانی تابع «رسم شش ضلعی» را طوری تغییر دهی تا شش ضلعی‌ای با ضلع‌های ۵۰ پیکسل بکشد، و شکل را با استفاده از آن رسم بکشی؟
+      2-3 Artist Functions 12_instruction: 'دستورالعمل (تابع) ها واقعا برای چند بار رسم کردن شکل‌های پیچیده عالی هستند. می‌توانی از تابع «رسم گل» برای پر کردن بقیه‌ی جعبه‌ی کشاورز استفاده کنی؟ (راهنمایی: همه‌ی گیاه‌ها با ۱۰۰ پیکسل فاصله از هم جدا شده‌اند)  '
+      2-3 Artist Functions 13_instruction: ما چهار تابع برای تو آماده کرده‌ایم. از آن‌ها هر طور دوست داری استفاده کن، داخل یک یا چند حلقه تا عکس‌هایی بسازی که بتوانی با دوستانت به اشتراک بگذاری. برای دیدن یک نمونه «اجرا» را فشار بده.
+      2-3 Artist Functions 2_instruction: تابع‌ها به تو امکان تعریف بلوک‌های جدید را می‌دهند! ما بلوک‌های رسم مربع را داخل تابع «رسم مربع» جابجا کردیم. می‌توانی از این تابع استفاده کنی و عینک را بسازی؟ مربع‌ها ۷۵ پیکسل فاصله دارند.
+      2-3 Artist Functions 3_instruction: تابع را ویرایش کن تا مربعی با طول ضلع ۱۱۵ بکشد و عینک بزرگ‌تر را بکش. حالا مربع‌ها ۴۵ پیکسل فاصله دارند.
       2-3 Artist Functions 4_instruction: 'بلوک "تکرار" را برای رسم این 3 مربع استفاده کنید.'
       2-3 Artist Functions 7_instruction: 'عملکرد " یک خانه رسم کن" را برای رسم دو خانه استفاده کن با استفاده از دو پارامتر مختلف. (راهنما: خانه اول 100 پیکسل است).'
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
+      2-3 Artist Functions 9_instruction: یک تابع دانه برف داریم. با آن آزمایش کن تا یک صحنه‌ی زمستانی بسازی! این یک مرحله بازی آزاد است، بنابرین هیچ مساله‌ای برای حل کردن نیست. خوش بگذران!
+      2-3 Artist Loops 1_instruction: می‌توانی یک شش ضلعی با ضلع‌های ۱۰۰ پیکسلی درست کنی تا سلول کامل شود؟ یادت باشد، این یعنی لازم است تو فقط ۶۰ درجه بچرخی!
+      2-3 Artist Loops 10_instruction: وقتی مرحله‌ی آخر را نصف مقدار جلو برویم، برای شکل چه اتفاقی می‌افتد؟
+      2-3 Artist Loops 11_instruction: حالا بیا یک حلقه‌ی تکرار دیگر دور کل ساختارمان بگذاریم! یادت نرود آخر حلقه‌ی بیرونی یک زاویه اضافه کنی.
+      2-3 Artist Loops 2_instruction: حالا یک بلوک تکرار استفاده کن تا سلول را به پوست تبدیل کنی.
       2-3 Artist Loops 4_instruction: میخوای ببینی چه اتفاقی میفته اگر با استفاده از یک حلقه اون شکل رو بارها و بارها تکرار کنیم؟
       2-3 Artist Loops 5_instruction: الان بیایید یک تغییر کوچک در حلقه ایجاد کنیم و ببینیم تصاویر چه قدر متفاوت میشوند.
       2-3 Artist Loops 6_instruction: یک حرکت و چرخش دیگر درون حلقه اضافه کنید و ببینید چگونه طراحی شما تغییر میکند.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "Let's put both elements inside a loop."
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
+      2-3 Artist Loops 7_instruction: ما می‌توانیم از حلقه‌ها برای ساختن همه‌ی انواع چند ضلعی‌ها استفاده کنیم. می‌توانی یک لوزی داخل این شش ضلعی بسازی؟
+      2-3 Artist Loops 8_instruction: بیا هر دو عنصر را داخل یک حلقه‌ی تکرار بگذاریم.
+      2-3 Artist Loops 9_instruction: "ما می‌خواهیم همان عناصر را داخل حلقه بگذاریم، اما این‌بار مقداری فاصله بین آن‌ها قرار می‌دهیم.\r\nاز همان کد قبلی استفاده کن، ولی آخر حلقه‌ی بیرونی یک قدم به جلو اضافه کن."
       2-3 Artist Loops New 1_instruction: بیایید برای سر این ربات را رسم کنیم! یک مربع با اضلاعی که 100 پیکسل هستند بساز؟
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops New 10_instruction: حالا بیا یک دسته از V ها را به هم وصل کنیم، آن‌ها را داخل حلقه رسم کنیم.
+      2-3 Artist Loops New 11_instruction: بیا این‌بار آن را ۲۴ بار بکشیم. یک چرخش ۳۰ درجه به چپ به این کد اضافه کن، و همه را داخل یک بلوک تکرار بگذار.
       2-3 Artist Loops New 12_instruction: یک الماس با اضلاع 100 پیکسل بساز.
       2-3 Artist Loops New 13_instruction: الآن الماس را 3 بار در یک حلقه رسم کن.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
+      2-3 Artist Loops New 14_instruction: حالا بیا الماس را ۱۰ بار رسم کنیم. ولی بین هر الماس ۹۰ درجه بچرخ.
       2-3 Artist Loops New 15_instruction: چیزی جالب بکش.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
+      2-3 Artist Loops New 2_instruction: این مقداری از آن کدی‌است که برای کشیدن مربع استفاده کردی. چه اتفاقی می‌‌افتد اگر با استفاده از بلوک تکرار این کد را ۴ بار تکرار کنی؟
+      2-3 Artist Loops New 9_instruction: یک V ساده بکش که هر دو طرفش ۵۰ پیکسل است تا پیکان کامل شود.
+      2-3 Artist Match Hex Pic_instruction: 'مسابقه: کمک کن تا شش ضلعی کامل شود.'
+      2-3 Artist Match Rho Pic_instruction: 'مسابقه: کد از دست رفته را کامل کن.'
+      2-3 Artist Match Sq Pic_instruction: 'مسابقه: کد از دست رفته را کامل کن'
+      2-3 Artist Match Tri pic_instruction: 'مسابقه: کد جا افتاده را پر کن.'
+      2-3 Artist Nested Loops 1_instruction: "تو قبلا از حلقه‌های تکرار برای رسم شکل‌ها استفاده کرده‌ای،\nولی می‌دانستی که می‌توانی یک حلقه را داخل یک حلقه‌ی دیگر بگذاری؟\r\nکل این بلوک کد را ۳ بار داخل حلقه تکرار کن تا طرح را رسم کنی."
+      2-3 Artist Nested Loops 10_instruction: این کد را ۱۲ بار تکرار کن تا طرح را کامل کنی.
+      2-3 Artist Nested Loops 11_instruction: این کد را ۴ بار تکرار کن تا طرح را کامل کنی، بعد از هر دایره ۹۰ درجه بچرخ.
+      2-3 Artist Nested Loops 12_instruction: این کد را ۱۲ بار تکرار کن تا حلقه‌ها کامل شوند.
+      2-3 Artist Nested Loops 2_instruction: حالا مثلث را ۶ بار تکرار کن. بعد از هر مثلث، لازم داری قبل از کشیدن بعدی ۶۰ درجه بچرخی.
+      2-3 Artist Nested Loops 3_instruction: برای کشیدن این طرح لازم داری مثلث را ۱۲ بار تکرار کنی. تعداد زاویه‌های داخل دایره (۳۶۰) را به تعداد شکل‌هایی که داری می‌کشی (۱۲) تقسیم کن تا بفهمی بعد از هر شکل چقدر بچرخی.
+      2-3 Artist Nested Loops 4_instruction: 'این الماس را ۱۲ بار تکرار کن تا یک گل بکشی. راهنمایی: ۱۲ الماس دقیقا مثل ۱۲ مثلثی است که انجام دادی - چقدر بعد از هر شکل چرخیدی؟'
+      2-3 Artist Nested Loops 5_instruction: پنجره‌های این خانه را با یک حلقه‌ی تو در تو پر کن. طول پنجره‌ها ۲۰ پیکسل است و ۲۰ پیکسل از هم فاصله دارند.
+      2-3 Artist Nested Loops 6_instruction: این دایناسور ۸ تیغ بزرگ روی دمش دارد، هر تیغ ۳۰ پیکسل طول دارد. ۸ بار مثلث را تکرار کن، اما مطمئن شو که بعد از هر کدام جلو بروی.
       2-3 Artist Nested Loops 7_instruction: |
         Loop this triangle 10 times to draw
         the sun. You'll need to move and turn after each triangle. You can figure
@@ -1781,10 +1712,6 @@ fa-AF:
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1805,10 +1732,6 @@ fa-AF:
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1818,12 +1741,6 @@ fa-AF:
         you to use. Program your game to call the "level_up" function if "player_points"
         > 10. Play the game, and make it past level 4 to move to the next puzzle.
         
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1867,10 +1784,6 @@ fa-AF:
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1896,11 +1809,6 @@ fa-AF:
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -1939,12 +1847,6 @@ fa-AF:
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2782,9 +2684,6 @@ fa-AF:
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: |
-        It's Free Play time!
-        Have fun with all the blocks in your tool box. 
       NEW Course 4 Play Lab Params 11_instruction: |
         It's Free Play time! Have fun
         with all the blocks in your tool box. 
@@ -2824,11 +2723,7 @@ fa-AF:
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: تابع‌ها به تو امکان تعریف بلوک‌های جدید را می‌دهند! ما بلوک‌های رسم مربع را داخل تابع «رسم مربع» جابجا کردیم. می‌توانی از این تابع استفاده کنی و عینک را بسازی؟ مربع‌ها ۷۵ پیکسل فاصله دارند.
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -3045,10 +2940,8 @@ fa-AF:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3277,6 +3170,13 @@ fa-AF:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

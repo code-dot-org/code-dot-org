@@ -200,8 +200,10 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     }
     this.localNode.setIsLocalNode();
   } else {
-    this.localNode.kill();
-    this.localNode = null;
+    if (this.localNode) {
+      this.localNode.kill();
+      this.localNode = null;
+    }
   }
   this.pullElementsToForeground();
 };

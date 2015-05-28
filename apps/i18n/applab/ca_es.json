@@ -21,9 +21,9 @@
   "repeatForeverTooltip": "Executa les accions en aquest bloc repetidament mentre l'app s'està executant.",
   "shareApplabTwitter": "Comprova l'app que he fet. Vaig crear-la jo amb @codeorg",
   "shareGame": "Comparteix la teva app:",
-  "stepIn": "ficar-se",
-  "stepOver": "esquivar",
-  "stepOut": "Abandonar",
+  "stepIn": "Pas a pas",
+  "stepOver": "Funcions pas a pas",
+  "stepOut": "Executa la resta del codi",
   "viewData": "Veure dades",
   "yes": "Sí"
 }

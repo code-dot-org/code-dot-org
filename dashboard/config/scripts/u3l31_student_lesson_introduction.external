@@ -1,0 +1,27 @@
+name 'U3L31 Student Lesson Introduction'
+title 'Arrays - Photo Album'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 31 - Arrays-Photo Album
+
+# Background
+
+Data – including images – can be stored and manipulated in an array. An array is the perfect form for creating a cloud-based photo collection that will enable the user to add new images, access individual images, and navigate through the collection.
+
+# Lesson
+
+* Write a program to create an array to store images.
+* Employ a variety of array processing techniques to manipulate the array. 
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1LZnUHVum37l0_RzXvWJ9IfeADIjl2GlFU27kRSWJe9Q" target="_blank">
+ Photo Album Project
+</a>
+
+* Rubric: <a href="https://docs.google.com/document/d/13sCGYxu4Wsn-0UUoDaRuvpUb6GTy4z3aIUkC8tTb6GI" target="_blank">
+ Photo Album Project
+</a>
+
+  
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

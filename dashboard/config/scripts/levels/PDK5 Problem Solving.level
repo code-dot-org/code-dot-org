@@ -6,7 +6,8 @@
     "title": "Problem Solving Methods",
     "options": {
       "success_title": "Awesome!",
-      "success_body": "Thanks for your response"
+      "success_body": "Thanks for your response",
+      "skip_sound": true
     },
     "height": "200",
     "placeholder": "I could integrate this in my classroom by...",

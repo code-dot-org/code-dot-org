@@ -6,6 +6,7 @@
     "title": "Strategies for Teaching Computer Science",
     "options": {
       "css": "unplugged",
+      "skip_sound": true,
       "success_title": "Awesome!",
       "success_body": "Thanks for your response"
     },

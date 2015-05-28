@@ -818,7 +818,7 @@ en:
         Because the commands are listed in a menu rather than having to remember them yourself: crwdns36482:0crwdne36482:0
         All of the above: crwdns35279:0crwdne35279:0
       PDK5 What is CS:
-        What is Computer Science?: crwdns35280:0crwdne35280:0
+        Computer Science is More than Programming: crwdns38845:0crwdne38845:0
         "A computer program, or \"code,\" is:": crwdns37809:0crwdne37809:0
         a part inside of a computer: crwdns35282:0crwdne35282:0
         a set of instructions a person gives a computer to execute: crwdns35283:0crwdne35283:0
@@ -981,7 +981,6 @@ en:
         right answer: crwdns34812:0crwdne34812:0
       U1L10 Assessment 1:
         "Assessment: Encoding Text": crwdns36483:0crwdne36483:0
-        "Question #1": crwdns36484:0crwdne36484:0
         What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: crwdns36485:0crwdne36485:0
         2 bits: crwdns36486:0crwdne36486:0
         3 bits: crwdns36487:0crwdne36487:0
@@ -990,9 +989,8 @@ en:
         6 bits: crwdns36490:0crwdne36490:0
       U1L10 Assessment 2:
         "Assessment: Encoding Text": crwdns36491:0crwdne36491:0
-        "Question # 2": crwdns36492:0crwdne36492:0
-        0: crwdns36493:0crwdne36493:0
-        1: crwdns36494:0crwdne36494:0
+        0: crwdns38846:0crwdne38846:0
+        1: crwdns38847:0crwdne38847:0
         3 bits: crwdns36495:0crwdne36495:0
         4 bits: crwdns36496:0crwdne36496:0
         5 bits: crwdns36497:0crwdne36497:0
@@ -1000,21 +998,20 @@ en:
         7 bits: crwdns36499:0crwdne36499:0
       U1L11 Assessment 1:
         "Assessment: Sending Formatted Text": crwdns36500:0crwdne36500:0
-        "Question #1": crwdns36501:0crwdne36501:0
-        What is ASCII text?: crwdns36502:0crwdne36502:0
-        American Strict Conformance of Internet Interchange: crwdns36503:0crwdne36503:0
-        Authentication Standards for Commerce in Interstate Information: crwdns36504:0crwdne36504:0
-        American Standard Code for Information Interchange: crwdns36505:0crwdne36505:0
-        Automatic Serial Coding for Interface Interchange: crwdns36506:0crwdne36506:0
+        How many bits are required to store the number "150" in ASCII?: crwdns38848:0crwdne38848:0
+        3 bits: crwdns38849:0crwdne38849:0
+        8 bits: crwdns38850:0crwdne38850:0
+        15 bits: crwdns38851:0crwdne38851:0
+        21 bits: crwdns38852:0crwdne38852:0
+        30 bits: crwdns38853:0crwdne38853:0
       U1L11 Assessment 2:
         "Assessment: Sending Formatted Text": crwdns36507:0crwdne36507:0
-        "Question #2": crwdns36508:0crwdne36508:0
-        How many bytes are used to encode a single ASCII character?: crwdns36509:0crwdne36509:0
-        1 byte: crwdns36510:0crwdne36510:0
-        2 bytes: crwdns36511:0crwdne36511:0
-        4 bytes: crwdns36512:0crwdne36512:0
-        8 bytes: crwdns36513:0crwdne36513:0
-        16 bytes: crwdns36514:0crwdne36514:0
+        "The word \"Apple\" translated into its ASCII number equivalent is:": crwdns38854:0crwdne38854:0
+        097 112 112 108 101: crwdns38855:0crwdne38855:0
+        097 108 108 111 119: crwdns38856:0crwdne38856:0
+        065 112 112 108 101: crwdns38857:0crwdne38857:0
+        065 110 110 105 101: crwdns38858:0crwdne38858:0
+        065 108 108 111 119: crwdns38859:0crwdne38859:0
       U1L2 Multiple Choice Assessment Question:
         "Multiple Choice: Sending Binary Messages": crwdns38485:0crwdne38485:0
         "A binary question is defined as:": crwdns38486:0crwdne38486:0
@@ -1048,6 +1045,41 @@ en:
         8: crwdns36282:0crwdne36282:0
         10: crwdns36283:0crwdne36283:0
         12: crwdns36284:0crwdne36284:0
+      U1L8 Multiple Choice:
+        "Sending Numbers: Multiple Choice Assessment": crwdns38860:0crwdne38860:0
+        0: crwdns38861:0crwdne38861:0
+        1: crwdns38862:0crwdne38862:0
+        16: crwdns38863:0crwdne38863:0
+        14: crwdns38864:0crwdne38864:0
+        13: crwdns38865:0crwdne38865:0
+        10: crwdns38866:0crwdne38866:0
+      U3L01 Assessment2:
+        Why Programming? Question 2: crwdns38867:0crwdne38867:0
+        0: crwdns38868:0crwdne38868:0
+        1: crwdns38869:0crwdne38869:0
+        Place slices of bread face side up: crwdns38870:0crwdne38870:0
+        Spread 1 slice with peanut butter: crwdns38871:0crwdne38871:0
+        Spread 1 slice with jelly: crwdns38872:0crwdne38872:0
+        Fit 1 slice on top of the other, faces together: crwdns38873:0crwdne38873:0
+        Serve with soup: crwdns38874:0crwdne38874:0
+      U3L03 Assessment:
+        "Creating Procedures Part 1: Assessment": crwdns38875:0crwdne38875:0
+        Which of the following is NOT an advantage of using well-designed procedures and functions?: crwdns38876:0crwdne38876:0
+        They create shorter algorithms that sound like spoken language.: crwdns38877:0crwdne38877:0
+        There are fewer lines in the program to debug.: crwdns38878:0crwdne38878:0
+        The "spoken-language style" makes errors more logically recognizable.: crwdns38879:0crwdne38879:0
+        They reduce the level of program abstraction.: crwdns38880:0crwdne38880:0
+        It is easier to divide the work among several programmers.: crwdns38881:0crwdne38881:0
+        Logical names make the program code more intuitive/understandable.: crwdns38882:0crwdne38882:0
+      U3L04 Assessment2:
+        "Creating Procedures Part 2: Question 2": crwdns38883:0crwdne38883:0
+        0: crwdns38884:0crwdne38884:0
+        1: crwdns38885:0crwdne38885:0
+        The name of the function: crwdns38886:0crwdne38886:0
+        What it does: crwdns38887:0crwdne38887:0
+        The pre-state: crwdns38888:0crwdne38888:0
+        The name of program it was originally designed for: crwdns38889:0crwdne38889:0
+        The post-state: crwdns38890:0crwdne38890:0
       U3L06-API-multichoice:
         Multiple Choice: crwdns37904:0crwdne37904:0
         Choose the option that best answers the question.: crwdns37905:0crwdne37905:0
@@ -1074,40 +1106,44 @@ en:
         JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: crwdns38390:0crwdne38390:0
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: crwdns38500:0crwdne38500:0
-        Select the programming technique that best fits the described game feature.: crwdns38501:0crwdne38501:0
-        1. You want to see additional random images displayed that are worth different points when clicked.: crwdns38502:0crwdne38502:0
-        conditional: crwdns38503:0crwdne38503:0
-        variable: crwdns38504:0crwdne38504:0
-        both: crwdns38505:0crwdne38505:0
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. : crwdns38891:0crwdne38891:0
+        Remember things during play: crwdns38892:0crwdne38892:0
+        Make decisions: crwdns38893:0crwdne38893:0
+        Make calculations: crwdns38894:0crwdne38894:0
+        track of time: crwdns38895:0crwdne38895:0
+        store information permanently: crwdns38896:0crwdne38896:0
       U3L18 Controlling Memory and Program Flow 2:
         Controlling Memory and Control Quiz: crwdns38506:0crwdne38506:0
-        Select the programming technique that best fits the described game feature.: crwdns38507:0crwdne38507:0
-        2. You want to see various motivational messages based upon the score.: crwdns38508:0crwdne38508:0
-        conditional: crwdns38509:0crwdne38509:0
-        variable: crwdns38510:0crwdne38510:0
-        both: crwdns38511:0crwdne38511:0
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. : crwdns38897:0crwdne38897:0
+        Remember things during play: crwdns38898:0crwdne38898:0
+        Make decisions: crwdns38899:0crwdne38899:0
+        Make calculations: crwdns38900:0crwdne38900:0
+        Track of time: crwdns38901:0crwdne38901:0
+        Store information permanently: crwdns38902:0crwdne38902:0
       U3L18 Controlling Memory and Program Flow 3:
         Controlling Memory and Control Quiz: crwdns38512:0crwdne38512:0
-        Select the programming technique that best fits the described game feature.: crwdns38513:0crwdne38513:0
-        3. You want to see the elapsed time.: crwdns38514:0crwdne38514:0
-        conditional: crwdns38515:0crwdne38515:0
-        variable: crwdns38516:0crwdne38516:0
-        both: crwdns38517:0crwdne38517:0
+        Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. : crwdns38903:0crwdne38903:0
+        Remember things during play: crwdns38904:0crwdne38904:0
+        Make decisions: crwdns38905:0crwdne38905:0
+        Make calculations: crwdns38906:0crwdne38906:0
+        track of time: crwdns38907:0crwdne38907:0
+        store information permanently: crwdns38908:0crwdne38908:0
       U3L18 Controlling Memory and Program Flow 4:
         Controlling Memory and Control Quiz: crwdns38518:0crwdne38518:0
-        Select the programming technique that best fits the described game feature.: crwdns38519:0crwdne38519:0
-        4. You want to change the size of the images when a certain score is reached.: crwdns38520:0crwdne38520:0
-        conditional: crwdns38521:0crwdne38521:0
-        variable: crwdns38522:0crwdne38522:0
-        both: crwdns38523:0crwdne38523:0
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. : crwdns38909:0crwdne38909:0
+        Remember things during play: crwdns38910:0crwdne38910:0
+        Make decisions: crwdns38911:0crwdne38911:0
+        Make calculations: crwdns38912:0crwdne38912:0
+        track of time: crwdns38913:0crwdne38913:0
+        store information permanently: crwdns38914:0crwdne38914:0
       U3L18 Controlling Memory and Program Flow 5:
         Controlling Memory and Control Quiz: crwdns38524:0crwdne38524:0
-        Select the programming technique that best fits the described game feature.: crwdns38525:0crwdne38525:0
-        0: crwdns38526:0crwdne38526:0
-        1: crwdns38527:0crwdne38527:0
-        conditional: crwdns38528:0crwdne38528:0
-        variable: crwdns38529:0crwdne38529:0
-        both: crwdns38530:0crwdne38530:0
+        Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. : crwdns38915:0crwdne38915:0
+        Remember things during play: crwdns38916:0crwdne38916:0
+        Make decisions: crwdns38917:0crwdne38917:0
+        Make calculations: crwdns38918:0crwdne38918:0
+        track of time: crwdns38919:0crwdne38919:0
+        store information permanently: crwdns38920:0crwdne38920:0
       U3L19 - MC what are values of abc:
         So, what's the answer?: crwdns38729:0crwdne38729:0
         Choose the best answer: crwdns38730:0crwdne38730:0
@@ -1117,6 +1153,30 @@ en:
         "a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16": crwdns38734:0crwdne38734:0
         "a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21": crwdns38735:0crwdne38735:0
         Code does not execute due to error: crwdns38736:0crwdne38736:0
+      U3L20 Assessment1:
+        Conditional Basics Question 1: crwdns38921:0crwdne38921:0
+        Which two of the following programming statements did you use when you wrote turtle drawing programs?: crwdns38922:0crwdne38922:0
+        sequential statements: crwdns38923:0crwdne38923:0
+        function calls\t: crwdns38924:0crwdne38924:0
+        event handlers: crwdns38925:0crwdne38925:0
+        conditionals: crwdns38926:0crwdne38926:0
+      U3L20 Assessment2:
+        Conditional Basics Question 2: crwdns38927:0crwdne38927:0
+        Which program statement reacts to actions by the user?: crwdns38928:0crwdne38928:0
+        sequential statements: crwdns38929:0crwdne38929:0
+        function calls: crwdns38930:0crwdne38930:0
+        event handlers: crwdns38931:0crwdne38931:0
+        conditionals: crwdns38932:0crwdne38932:0
+      U3L20 Assessment3:
+        Conditional Basics Question 3: crwdns38933:0crwdne38933:0
+        Which programming statement executes different code based upon the true or false results?: crwdns38934:0crwdne38934:0
+        sequential statements: crwdns38935:0crwdne38935:0
+        function calls: crwdns38936:0crwdne38936:0
+        event handlers: crwdns38937:0crwdne38937:0
+        conditionals: crwdns38938:0crwdne38938:0
+      U3L20 Assessment9:
+        Conditional Basics Question 9: crwdns38939:0crwdne38939:0
+        Which of the following are not valid operators in Boolean expressions?: crwdns38940:0crwdne38940:0
       U3L21 Assessment 1:
         More Variables Question 1: crwdns38531:0crwdne38531:0
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: crwdns38532:0crwdne38532:0
@@ -1129,6 +1189,27 @@ en:
         The literary quality of variable names is an important attribute of successful programs: crwdns38540:0crwdne38540:0
         Readable variable names makes it easier to understand the program logic: crwdns38541:0crwdne38541:0
         Descriptive names makes it easier for other programmers to understand the program: crwdns38542:0crwdne38542:0
+      U3L30 Assessment1:
+        "Arrays: Question 1": crwdns38946:0crwdne38946:0
+        The last index of an array is 7. How many elements are in the array?: crwdns38947:0crwdne38947:0
+        7: crwdns38948:0crwdne38948:0
+        6: crwdns38949:0crwdne38949:0
+        8: crwdns38950:0crwdne38950:0
+        Cannot be determined: crwdns38951:0crwdne38951:0
+      U3L30 Assessment2:
+        "Arrays: Question 2": crwdns38952:0crwdne38952:0
+        What is the index of the third element in an array?: crwdns38953:0crwdne38953:0
+        2: crwdns38954:0crwdne38954:0
+        3: crwdns38955:0crwdne38955:0
+        4: crwdns38956:0crwdne38956:0
+        Cannot be determined: crwdns38957:0crwdne38957:0
+      U3L30 Assessment3:
+        "Arrays: Question 3": crwdns38958:0crwdne38958:0
+        There are 20 elements in an array. What is the index of the last element?: crwdns38959:0crwdne38959:0
+        20: crwdns38960:0crwdne38960:0
+        21: crwdns38961:0crwdne38961:0
+        19: crwdns38962:0crwdne38962:0
+        Cannot be determined: crwdns38963:0crwdne38963:0
       unique level name here:
         title: crwdns36515:0crwdne36515:0
         description here: crwdns21784:0crwdne21784:0

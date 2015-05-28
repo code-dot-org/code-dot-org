@@ -309,9 +309,9 @@ ko:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: '디즈니  무한 반복 플레이 랩'
+          description_short: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
+          description: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
           Play Lab: Play Lab
           Infinity: 무한
         algebrademo:
@@ -364,7 +364,7 @@ ko:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
+          title: 20 시간 소개 과정
           description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
           Introduction to Computer Science: 컴퓨터과학(Computer Science, 정보과학) 소개
           The Maze: 미로 퍼즐
@@ -556,6 +556,14 @@ ko:
         CSPPD:
           new stage: new stage
           Introduction to PD: Introduction to PD
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
@@ -821,6 +829,13 @@ ko:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pixelation
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
