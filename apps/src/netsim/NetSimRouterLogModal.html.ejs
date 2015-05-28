@@ -17,7 +17,11 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
 
 function sortMarkupFor(sortKey) {
   if (sortKey === sortBy) {
-    return '<i class="fa fa-sort-asc"></i>';
+    if (sortDescending) {
+      return '<i class="fa fa-sort-desc"></i>';
+    } else {
+      return '<i class="fa fa-sort-asc"></i>';
+    }
   }
   return '';
 }

@@ -59,6 +59,13 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    */
   this.sortBy_ = 'timestamp';
 
+  /**
+   * Whether currently using a descending sort.
+   * @type {boolean}
+   * @private
+   */
+  this.sortDescending_ = true;
+
   this.render();
 };
 
@@ -124,10 +131,14 @@ NetSimRouterLogModal.prototype.render = function () {
   // Sort before rendering
   var sortOperation = NetSimRouterLogModal.sortOperations[this.sortBy_];
   var sortedLogEntries = sortOperation(this.logEntries_);
+  if (this.sortDescending_) {
+    sortedLogEntries.reverse();
+  }
 
   var renderedMarkup = $(markup({
     logEntries: sortedLogEntries,
-    sortBy: this.sortBy_
+    sortBy: this.sortBy_,
+    sortDescending: this.sortDescending_
   }));
   this.rootDiv_.html(renderedMarkup);
 
@@ -141,7 +152,12 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
     return;
   }
 
-  this.sortBy_ = sortKey;
+  if (this.sortBy_ === sortKey) {
+    this.sortDescending_ = !this.sortDescending_;
+  } else {
+    this.sortBy_ = sortKey;
+    this.sortDescending_ = false;
+  }
   this.render();
 };
 
