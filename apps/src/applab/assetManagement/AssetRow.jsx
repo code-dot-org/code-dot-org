@@ -28,7 +28,7 @@ function getThumbnail(type, name) {
         marginTop: '50%',
         transform: 'translateY(-50%)',
         msTransform: 'translateY(-50%)',
-        webkitTransform: 'translateY(-50%)'
+        WebkitTransform: 'translateY(-50%)'
       };
       return <img src={src} style={assetThumbnailStyle} />;
     default:
