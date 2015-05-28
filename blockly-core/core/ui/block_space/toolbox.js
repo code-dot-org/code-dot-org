@@ -77,12 +77,24 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   this.HtmlDiv.setAttribute('dir', Blockly.RTL ? 'RTL' : 'LTR');
   goog.dom.insertSiblingBefore(this.HtmlDiv, svg);
 
+  // Add a trashcan inside a holder svg element.
+  this.trashcanHolder = Blockly.createSvgElement('svg', {
+    id: 'trashcanHolder',
+    width: 70,
+    height: 90,
+    style: 'display: none; position: absolute'
+  }, this.HtmlDiv);
+  this.trashcan = new Blockly.Trashcan(this);
+  this.svgTrashcan = this.trashcan.createDom();
+  this.svgTrashcan.setAttribute('transform', 'translate(0, 10)');
+  this.trashcanHolder.appendChild(this.svgTrashcan);
+
   /**
    * @type {!Blockly.Flyout}
    * @private
    */
   this.flyout_ = new Blockly.Flyout(this.blockSpaceEditor_);
-  svg.appendChild(this.flyout_.createDom());
+  svg.appendChild(this.flyout_.createDom(true));
 
   // Clicking on toolbox closes popups.
   Blockly.bindEvent_(this.HtmlDiv, 'mousedown', this,
@@ -145,6 +157,20 @@ Blockly.Toolbox.prototype.position_ = function(blockSpaceEditor) {
     // For some reason the LTR toolbox now reports as 1px too wide.
     this.width -= 1;
   }
+
+  if (!blockSpaceEditor.hideTrashRect_) {
+    // Update the toolbox background rectangle location/dimension to match the div.
+    var rectX = Blockly.RTL ? (svgSize.width - treeDiv.offsetWidth) : 0;
+    blockSpaceEditor.svgBackground_.setAttribute("x", rectX);
+    blockSpaceEditor.svgBackground_.setAttribute("width", treeDiv.offsetWidth);
+    blockSpaceEditor.svgBackground_.setAttribute("height", svgSize.height);
+  }
+
+  // Center the trashcan.
+  var toolboxWidth = treeDiv.offsetWidth;
+  var trashcanWidth = this.trashcanHolder.getAttribute("width");
+  var trashcanX = Math.round(toolboxWidth / 2 - trashcanWidth / 2);
+  this.trashcanHolder.style["left"] = trashcanX + 'px';
 };
 
 /**
