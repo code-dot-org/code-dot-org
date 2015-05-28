@@ -80,15 +80,14 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   // Add a trashcan inside a holder svg element.
   this.trashcanHolder = Blockly.createSvgElement('svg', {
     id: 'trashcanHolder',
-    width: 114,
+    width: 70,
     height: 90,
     style: 'display: none; position: absolute'
   }, this.HtmlDiv);
-  var trashcan = new Blockly.Trashcan(this);
-  var svgTrashcan = trashcan.createDom();
-  svgTrashcan.setAttribute('transform', 'translate(20, 10)');
-  this.trashcanHolder.appendChild(svgTrashcan);
-  this.trashcan = trashcan;
+  this.trashcan = new Blockly.Trashcan(this);
+  this.svgTrashcan = this.trashcan.createDom();
+  this.svgTrashcan.setAttribute('transform', 'translate(0, 10)');
+  this.trashcanHolder.appendChild(this.svgTrashcan);
 
   /**
    * @type {!Blockly.Flyout}
@@ -166,6 +165,12 @@ Blockly.Toolbox.prototype.position_ = function(blockSpaceEditor) {
     blockSpaceEditor.svgBackground_.setAttribute("width", treeDiv.offsetWidth);
     blockSpaceEditor.svgBackground_.setAttribute("height", svgSize.height);
   }
+
+  // Center the trashcan.
+  var toolboxWidth = treeDiv.offsetWidth;
+  var trashcanWidth = this.trashcanHolder.getAttribute("width");
+  var trashcanX = Math.round(toolboxWidth / 2 - trashcanWidth / 2);
+  this.trashcanHolder.style["left"] = trashcanX + 'px';
 };
 
 /**

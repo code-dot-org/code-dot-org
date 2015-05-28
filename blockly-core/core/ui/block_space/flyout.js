@@ -139,12 +139,11 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
 
   // Add a trashcan.
   if (!insideToolbox) {
-    var trashcan = new Blockly.Trashcan(this);
-    var svgTrashcan = trashcan.createDom();
-    svgTrashcan.setAttribute("style", "opacity: 0");
-    svgTrashcan.setAttribute('transform', 'translate(50, 20)');
-    this.svgGroup_.appendChild(svgTrashcan);
-    this.trashcan = trashcan;
+    this.trashcan = new Blockly.Trashcan(this);
+    this.svgTrashcan_ = this.trashcan.createDom();
+    this.svgTrashcan_.setAttribute("style", "opacity: 0");
+    this.svgTrashcan_.setAttribute('transform', 'translate(0, 20)');
+    this.svgGroup_.appendChild(this.svgTrashcan_);
   }
 
   return this.svgGroup_;
@@ -323,6 +322,14 @@ Blockly.Flyout.prototype.position_ = function() {
   // Update the scrollbar (if one exists).
   if (this.scrollbar_) {
     this.scrollbar_.resize();
+  }
+
+  // Center the trashcan
+  if (this.svgTrashcan_) {
+    var flyoutWidth = this.svgGroup_.getBoundingClientRect().width;
+    var trashcanWidth = this.svgTrashcan_.getBoundingClientRect().width;
+    var trashcanX = Math.round(flyoutWidth / 2 - trashcanWidth / 2);
+    this.svgTrashcan_.setAttribute('transform', 'translate(' + trashcanX + ', 20)');
   }
 };
 
