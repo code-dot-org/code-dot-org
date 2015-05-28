@@ -1,3 +1,5 @@
+Please see the new dev of the day doc in the wiki: http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist
+
 # Dev of the Week Overview
 
 So you want to learn about Dev of the Week!  Maybe it's your first time as DotW, or it's been a few months and you want a refresher on everything you need to cover.  This document is written as a TODO list, with items look at 2-3x per week or in response to alerts (usually in the Developer HipChat room).
