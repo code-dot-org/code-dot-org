@@ -211,7 +211,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " --format html --out #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --format html --out #{browser['name']}_#{$options.run_eyes_tests ? 'eyes_' : ''}output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
   def output_synopsis(output_text)
