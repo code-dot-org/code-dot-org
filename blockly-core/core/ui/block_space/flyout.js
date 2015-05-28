@@ -122,19 +122,30 @@ Blockly.Flyout.prototype.onResizeWrapper_ = null;
 
 /**
  * Creates the flyout's DOM.  Only needs to be called once.
+ * @type {boolean} insideToolbox Whether this flyout is in a toolbox.
  * @return {!Element} The flyout's SVG group.
  */
-Blockly.Flyout.prototype.createDom = function() {
+Blockly.Flyout.prototype.createDom = function(insideToolbox) {
   /*
   <g>
     <path class="blocklyFlyoutBackground"/>
     <g></g>
   </g>
   */
-  this.svgGroup_ = Blockly.createSvgElement('g', {}, null);
+  this.svgGroup_ = Blockly.createSvgElement('g', {'class': 'svgFlyoutGroup'}, null);
   this.svgBackground_ = Blockly.createSvgElement('path',
       {'class': 'blocklyFlyoutBackground'}, this.svgGroup_);
   this.svgGroup_.appendChild(this.blockSpace_.createDom());
+
+  // Add a trashcan.
+  if (!insideToolbox) {
+    this.trashcan = new Blockly.Trashcan(this);
+    this.svgTrashcan_ = this.trashcan.createDom();
+    this.svgTrashcan_.setAttribute("style", "opacity: 0");
+    this.svgTrashcan_.setAttribute('transform', 'translate(0, 20)');
+    this.svgGroup_.appendChild(this.svgTrashcan_);
+  }
+
   return this.svgGroup_;
 };
 
@@ -311,6 +322,14 @@ Blockly.Flyout.prototype.position_ = function() {
   // Update the scrollbar (if one exists).
   if (this.scrollbar_) {
     this.scrollbar_.resize();
+  }
+
+  // Center the trashcan
+  if (this.svgTrashcan_) {
+    var flyoutWidth = this.svgGroup_.getBoundingClientRect().width;
+    var trashcanWidth = this.svgTrashcan_.getBoundingClientRect().width;
+    var trashcanX = Math.round(flyoutWidth / 2 - trashcanWidth / 2);
+    this.svgTrashcan_.setAttribute('transform', 'translate(' + trashcanX + ', 20)');
   }
 };
 

@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, requirejs */
+/* global Blockly, ace:true, $, requirejs, marked */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -24,6 +24,8 @@ var MIN_VISUALIZATION_WIDTH = 200;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
+var ENGLISH_LOCALE = 'en_us';
+
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
@@ -46,7 +48,7 @@ var StudioApp = function () {
   /**
   * The current locale code.
   */
-  this.LOCALE = 'en_us';
+  this.LOCALE = ENGLISH_LOCALE;
 
   this.enableShowCode = true;
   this.editCode = false;
@@ -354,6 +356,7 @@ StudioApp.prototype.init = function(config) {
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject,
       readOnly: config.readonlyWorkspace,
+      textModeAtStart: config.level.textModeAtStart,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
@@ -719,7 +722,19 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
+  var renderedMarkdown;
+  if (marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
+    renderedMarkdown = marked(level.markdownInstructions);
+  }
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+    puzzleTitle: msg.puzzleTitle({
+      stage_total: level.stage_total,
+      puzzle_number: level.puzzle_number
+    }),
+    instructions: level.instructions,
+    renderedMarkdown: renderedMarkdown,
+    aniGifURL: level.aniGifURL
+  });
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -1294,7 +1309,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: fullDropletPalette,
       showPaletteInTextMode: true,
-      enablePaletteAtStart: !options.readOnly
+      enablePaletteAtStart: !options.readOnly,
+      textModeAtStart: options.textModeAtStart
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
