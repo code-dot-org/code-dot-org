@@ -1,6 +1,8 @@
-var React = require('react')
-var applabMsg = require('./locale')
-var DesignProperties = require('./designProperties.jsx')
+/* global $ */
+
+var React = require('react');
+var applabMsg = require('./locale');
+var DesignProperties = require('./designProperties.jsx');
 
 module.exports = React.createClass({
   propTypes: {
@@ -68,7 +70,7 @@ module.exports = React.createClass({
             onDelete={this.props.onDelete} />
         </div>
       </div>
-    )
+    );
   },
   componentDidMount: function () {
     this.makeDraggable();
