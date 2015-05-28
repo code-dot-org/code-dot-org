@@ -610,7 +610,6 @@ if (appOptions.droplet) {
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
-  .then(loadSource('marked/marked'))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))
   .then(initApp);

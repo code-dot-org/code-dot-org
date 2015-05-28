@@ -5711,7 +5711,7 @@ function installWhenRun(blockly, skin, isK1) {
 
 
 },{"./locale":134}],4:[function(require,module,exports){
-/* global Blockly, ace:true, $, requirejs, marked */
+/* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -5737,8 +5737,6 @@ var MIN_VISUALIZATION_WIDTH = 200;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
-var ENGLISH_LOCALE = 'en_us';
-
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
@@ -5761,7 +5759,7 @@ var StudioApp = function () {
   /**
   * The current locale code.
   */
-  this.LOCALE = ENGLISH_LOCALE;
+  this.LOCALE = 'en_us';
 
   this.enableShowCode = true;
   this.editCode = false;
@@ -6435,19 +6433,7 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  var renderedMarkdown;
-  if (marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
-    renderedMarkdown = marked(level.markdownInstructions);
-  }
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
-    puzzleTitle: msg.puzzleTitle({
-      stage_total: level.stage_total,
-      puzzle_number: level.puzzle_number
-    }),
-    instructions: level.instructions,
-    renderedMarkdown: renderedMarkdown,
-    aniGifURL: level.aniGifURL
-  });
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -8781,7 +8767,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; if (locals.renderedMarkdown) {; buf.push('  ', (2,  locals.renderedMarkdown ), '\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n<p class=\'dialog-title\'>', escape((3,  msg.puzzleTitle(locals) )), '</p>\n');4; if (locals.instructions) {; buf.push('  <p>', escape((4,  locals.instructions )), '</p>\n');5; };; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; };; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8789,7 +8775,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],269:[function(require,module,exports){
+},{"../locale":134,"ejs":468}],269:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
