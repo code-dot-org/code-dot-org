@@ -420,9 +420,6 @@ button.arrow:focus {
 #designModeBox td {
   vertical-align: top; }
 
-#design-manage-assets {
-  float: right; }
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px; }
@@ -466,3 +463,9 @@ button.arrow:focus {
 
 .divApplabDesignMode canvas {
   background-color: #eee; }
+
+#designModeBox {
+  position: absolute;
+  top: 40px;
+  bottom: 0px;
+  width: 100%; }
