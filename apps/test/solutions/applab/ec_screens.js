@@ -2,11 +2,25 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 var $ = require('jquery');
+var React = require('react');
+require('react/addons')
+var ReactTestUtils = React.addons.TestUtils;
 
-// TODO (brent) - i'd like this test to not run through level tests, which has
-// a lot of hacks, but this is the easiest approach for now. hopefully at some
-// point in the (nearish) future, we have a better approach and this code can
-// be moved without too much difficulty
+// i'd like this test to not run through level tests, which has a lot of hacks,
+// but this is the easiest approach for now. hopefully at some point in the
+// (nearish) future, we have a better approach and this code can be moved
+// without too much difficulty
+
+function validatePropertyRow(index, label, value, assert) {
+  var table = $("#design-properties table")[0];
+  assert(table);
+
+  var tableRow = $("#design-properties table tr").eq(index);
+  assert.equal(tableRow.children(0).text(), label);
+  // second col has an input with val screen 2
+  assert.equal(tableRow.children(1).children(0).val(), value);
+
+}
 
 module.exports = {
   app: "applab",
@@ -65,7 +79,7 @@ module.exports = {
       timeout: 15000,
       xml: '',
       runBeforeClick: function (assert) {
-        // click toggle
+        // enter design mode
         $("#designModeToggle").click();
         assert.equal($("#designModeToggle").text(), 'Code');
         var screenSelector = document.getElementById('screenSelector');
@@ -79,16 +93,30 @@ module.exports = {
         });
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 2);
+        assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
-        // design properties table with contents of screen 2
-        assert.equal($("#design-properties table").length, 1);
+        validatePropertyRow(1, 'id', 'screen2', assert);
 
-        var firstNonHeaderRow = $("#design-properties table tr").eq(1);
-        assert.equal(firstNonHeaderRow.children(0).text(), "id");
-        // second col has an input with val screen 2
-        assert.equal(firstNonHeaderRow.children(1).children(0).val(), 'screen2');
+        // drag a button onto our new screen
+        $("[data-element-type='BUTTON']").simulate("drag", {
+          handle: 'corner',
+          x: $("#divApplab").position().left + 10,
+          y: $("#divApplab").position().top + 10,
+          ignoreTouchMapppings: true
+        });
+
+        validatePropertyRow(1, 'id', 'button1', assert);
+        var buttonElement = document.getElementById('button1');
+        var buttonParent = buttonElement.parentNode;
+        assert.equal(buttonParent.getAttribute('id'), 'screen2');
+
+        // Change to screen1 using dropdown
+        ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
+          { target: { value: 'screen1' } });
+
+        validatePropertyRow(1, 'id', 'screen1', assert);
+        assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
