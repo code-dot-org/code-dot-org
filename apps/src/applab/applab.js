@@ -33,6 +33,7 @@ var _ = utils.getLodash();
 var apiTimeoutList = require('../timeoutList');
 var annotationList = require('./acemode/annotationList');
 var designMode = require('./designMode');
+var turtle = require('./turtle');
 
 var vsprintf = require('./sprintf').vsprintf;
 
@@ -44,19 +45,12 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
-// TODO (brent) - could give commands it's own namespace so this weirdness isnt
-// required
-require('./commands').init(Applab);
+require('./commands').loadCommands(Applab);
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
-
-var turtle = require('./turtle');
-var getTurtleContext = turtle.getTurtleContext;
-var updateTurtleImage = turtle.updateTurtleImage;
-var turtleSetVisibility = turtle.turtleSetVisibility;
 
 var level;
 var skin;
@@ -1029,7 +1023,7 @@ Applab.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   if (level.showTurtleBeforeRun) {
-    turtleSetVisibility(true);
+    turtle.turtleSetVisibility(true);
   }
 
   var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
