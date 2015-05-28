@@ -426,7 +426,8 @@ designMode.configureDesignToggleRow = function () {
     React.createElement(DesignToggleRow, {
       screens: ['screen1'],
       onDesignModeButton: Applab.onDesignModeButton,
-      onCodeModeButton: Applab.onCodeModeButton
+      onCodeModeButton: Applab.onCodeModeButton,
+      handleManageAssets: designMode.showAssetManager
     }),
     designToggleRow
   );
