@@ -14,7 +14,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div id="design-mode-container">
-        <div id="design-elements">
+        <div id="design-elements" ref="designElements">
           <p>{applabMsg.designToolboxDescription()}</p>
           {/* TODO (brent) better approach than storing this as a data on the element? */}
           <div data-element-type="BUTTON" className="new-design-element">button</div>
@@ -46,8 +46,7 @@ module.exports = React.createClass({
     this.makeDraggable();
   },
   makeDraggable: function() {
-    // TODO(dave): apply only to elements inside this component
-    $('.new-design-element').draggable({
+    $(this.getDOMNode()).find(".new-design-element").draggable({
       containment:"#codeApp",
       helper:"clone",
       appendTo:"#codeApp",
