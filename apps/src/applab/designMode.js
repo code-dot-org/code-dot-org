@@ -2,8 +2,6 @@
 
 // TODO (brent) - make sure you consider transition to screens from no screens
 
-// TODO (brent) - currently get invariant violation when not logged in
-
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
@@ -67,6 +65,11 @@ designMode.createElement = function (elementType, left, top) {
 };
 
 designMode.editElementProperties = function(element) {
+  var designPropertiesElement = document.getElementById('design-properties');
+  if (!designPropertiesElement) {
+    // design-properties won't exist when !user.isAdmin
+    return;
+  }
   currentlyEditedElement = element;
   designMode.renderDesignModeBox(element);
 };
@@ -310,10 +313,16 @@ function toggleDragging (enable) {
 }
 
 designMode.toggleDesignMode = function(enable) {
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  if (!designModeHeaders) {
+    // Currently we don't run design mode in some circumstances (i.e. user is
+    // not an admin)
+    return;
+  }
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
   var codeModeHeaders = document.getElementById('codeModeHeaders');
   codeModeHeaders.style.display = enable ? 'none' : 'block';
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  designModeHeaders.style.display = enable ? 'block' : 'none';
 
   var codeTextbox = document.getElementById('codeTextbox');
   codeTextbox.style.display = enable ? 'none' : 'block';
@@ -479,17 +488,21 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(this.id === screenId);
   });
 
-  React.render(
-    React.createElement(DesignToggleRow, {
-      initialScreen: screenId,
-      screens: screenIds,
-      onDesignModeButton: Applab.onDesignModeButton,
-      onCodeModeButton: Applab.onCodeModeButton,
-      handleManageAssets: showAssetManager,
-      onScreenChange: designMode.changeScreen
-    }),
-    document.getElementById('designToggleRow')
-  );
+  var designToggleRow = document.getElementById('designToggleRow');
+
+  if (designToggleRow) {
+    React.render(
+      React.createElement(DesignToggleRow, {
+        initialScreen: screenId,
+        screens: screenIds,
+        onDesignModeButton: Applab.onDesignModeButton,
+        onCodeModeButton: Applab.onCodeModeButton,
+        handleManageAssets: showAssetManager,
+        onScreenChange: designMode.changeScreen
+      }),
+      designToggleRow
+    );
+  }
 
   designMode.serializeToLevelHtml();
 
