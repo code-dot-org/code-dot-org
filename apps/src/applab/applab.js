@@ -34,6 +34,7 @@ var apiTimeoutList = require('../timeoutList');
 var annotationList = require('./acemode/annotationList');
 var designMode = require('./designMode');
 var turtle = require('./turtle');
+var applabCommands = require('./commands');
 
 var vsprintf = require('./sprintf').vsprintf;
 
@@ -45,7 +46,7 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
-require('./commands').loadCommands(Applab);
+
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -1506,19 +1507,27 @@ Applab.onPuzzleComplete = function() {
   }
 };
 
-Applab.handleError = function(opts, message) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onError && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onError,
-      'arguments': [message]
-    });
-  } else {
-    outputApplabConsole(message);
-  }
+Applab.executeCmd = function (id, name, opts) {
+  var cmd = {
+    'id': id,
+    'name': name,
+    'opts': opts
+  };
+  return Applab.callCmd(cmd);
 };
 
+//
+// Execute an API command
+//
+
+Applab.callCmd = function (cmd) {
+  var retVal = false;
+  if (applabCommands[cmd.name] instanceof Function) {
+    studioApp.highlight(cmd.id);
+    retVal = applabCommands[cmd.name](cmd.opts);
+  }
+  return retVal;
+};
 /*
 var onWaitComplete = function (opts) {
   if (!opts.complete) {
