@@ -141,6 +141,7 @@ if (appOptions.droplet) {
   loadStyle('droplet/droplet.min');
   loadStyle('tooltipster/tooltipster.min');
   promise = loadSource('jsinterpreter/acorn_interpreter')()
+      .then(loadSource('marked/marked'))
       .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
@@ -150,12 +151,12 @@ if (appOptions.droplet) {
       .then(dashboard.project.load);
 } else {
   promise = loadSource('blockly')()
+      .then(loadSource('marked/marked'))
       .then(loadSource(appOptions.locale + '/blockly_locale'))
       .then(dashboard.project.load);
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
-  .then(loadSource('marked/marked'))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))
   .then(initApp);
