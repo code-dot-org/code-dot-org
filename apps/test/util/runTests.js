@@ -26,7 +26,6 @@ function httpServer(port, callback) {
 
     // navigate from root
     var filepath = filepath = __dirname + '/../../..' + url;
-    console.log(filepath);
     if (!fs.existsSync(filepath)) {
       console.log('404: ' + filepath);
       res.writeHead(404);
