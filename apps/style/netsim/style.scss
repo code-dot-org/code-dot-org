@@ -63,6 +63,14 @@ $wide-column-width: 121px;
     th {
       cursor: pointer;
     }
+
+    td {
+      font-family: monospace;
+      white-space: pre-wrap;
+      // Make sure table text can be selected and copied
+      @include user_select(text);
+    }
+
   }
 
   #netsim-disconnected {
