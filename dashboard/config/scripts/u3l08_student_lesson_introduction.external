@@ -1,0 +1,23 @@
+name 'U3L08 Student Lesson Introduction'
+title 'Creating Functions with Parameters'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 08 - Creating Functions with Parameters
+
+# Background
+
+You can include more than one parameter in a single function. The order of the parameters is important. You can name parameters anything, but a good name will clearly indicate how the value is used in the program.
+
+# Lesson
+
+* Identify situations for creating functions with parameters.
+* Incorporate functions with parameters into an “Under the Sea” digital scene. 
+
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1Y3BHdaYG2jMjn8VHD2kfkxuoZrtNVsvphfjH2UJoNhk" target="_blank">
+Parameters: Under the Sea </a> 
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
