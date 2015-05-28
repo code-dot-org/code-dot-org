@@ -180,4 +180,7 @@ describe("NetSimLocalClientNode", function () {
       assertEqual('constantine1', testLocalNode.getHostname());
     });
   });
+
+  // TODO: A test that covers connecting to a router and then disconnecting
+  //       and ensures we end up in a consistent state.
 });
