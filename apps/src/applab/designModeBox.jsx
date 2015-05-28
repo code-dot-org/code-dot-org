@@ -1,9 +1,15 @@
 var React = require('react')
 var applabMsg = require('./locale')
+var DesignProperties = require('./designProperties.jsx')
 
 module.exports = React.createClass({
   propTypes: {
-    handleDragStart: React.PropTypes.func
+    handleDragStart: React.PropTypes.func,
+    element: React.PropTypes.instanceOf(HTMLElement),
+    handleChange: React.PropTypes.func.isRequired,
+    onDepthChange: React.PropTypes.func.isRequired,
+    onDone: React.PropTypes.func.isRequired,
+    onDelete: React.PropTypes.func.isRequired
   },
   render: function() {
     return (
@@ -23,6 +29,12 @@ module.exports = React.createClass({
           <button id="designModeClear" className="share">Clear</button><br/>
         </div>
         <div id="design-properties">
+          <DesignProperties
+            element={this.props.element}
+            handleChange={this.props.handleChange}
+            onDepthChange={this.props.onDepthChange}
+            onDone={this.props.onDone}
+            onDelete={this.props.onDelete} />
         </div>
       </div>
     )
@@ -41,7 +53,7 @@ module.exports = React.createClass({
       appendTo:"#codeApp",
       revert: 'invalid',
       zIndex: 2,
-      start: this.props.handleDragStart()
+      start: this.props.handleDragStart
     });
   }
 });
