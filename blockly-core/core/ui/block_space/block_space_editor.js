@@ -30,18 +30,23 @@ goog.require('goog.style');
 /**
  * Class for a top-level block editing blockSpace.
  * Handles constructing a top-level SVG element, and positioning, sizing,
- * and certain focus/mouse handling operations for itself
+ * and certain focus/mouse handling operations for itself.
  * @constructor
+ * @param {boolean} opt_hideTrashRect The trash rectangle is a dark grey 
+ * rectangle covering the entire toolbox area, and is faded in when the user 
+ * drags a block towards the toolbox to delete it.  However, when creating a 
+ * blockspace for something like the function editor, we don't want to create
+ * an additional one, relying on the main blockspace editor's one instead.
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideGreyRect) {
+Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect) {
   if (opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics;
   }
   if (opt_setMetrics) {
     this.setBlockSpaceMetrics_ = opt_setMetrics;
   }
-  if (opt_hideGreyRect) {
-    this.hideGreyRect_ = opt_hideGreyRect;
+  if (opt_hideTrashRect) {
+    this.hideTrashRect_ = opt_hideTrashRect;
   }
   /**
    * @type {Blockly.BlockSpace}
@@ -209,7 +214,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // it here so that blocks can be dragged over the top of it.  The HTML div
   // appears over the blocks, meaning that blocks dragged to it would appear
   // underneath it, if it had a background color, which wouldn't look as good.
-  if (!this.hideGreyRect_ && !Blockly.readOnly && Blockly.hasCategories) {
+  if (!this.hideTrashRect_ && !Blockly.readOnly && Blockly.hasCategories) {
     this.svgBackground_ = Blockly.createSvgElement('rect',
       {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
       this.svg_);
