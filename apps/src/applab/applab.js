@@ -964,10 +964,6 @@ Applab.init = function(config) {
 
   studioApp.init(config);
 
-  designMode.renderDesignModeBox();
-
-  designMode.configureDesignModeHeaders();
-
   var viz = document.getElementById('visualization');
   var vizCol = document.getElementById('visualizationColumn');
 
@@ -1039,6 +1035,12 @@ Applab.init = function(config) {
       var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
+
+    designMode.renderDesignModeBox();
+
+    // TODO(dave): make DesignModeHeaders and DesignModeBox share a
+    // parent component.
+    designMode.configureDesignModeHeaders();
 
     designMode.configureDesignToggleRow();
 

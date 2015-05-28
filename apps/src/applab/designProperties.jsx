@@ -13,7 +13,7 @@ var DesignProperties = module.exports = React.createClass({
 
   render: function() {
     if (!this.props.element) {
-      return <p>{applabMsg.designWorkspaceDescription}</p>;
+      return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }
 
     var elementType = elementLibrary.getElementType(this.props.element);
@@ -34,7 +34,7 @@ var DesignProperties = module.exports = React.createClass({
     // TODO (brent) - it appears the wrong element sometimes gets deleted
     return (
       <div key={this.props.element.id}>
-        <p>{applabMsg.designWorkspaceDescription}</p>
+        <p>{applabMsg.designWorkspaceDescription()}</p>
         {propertiesElement}
         <button
           id="donePropertiesButton"

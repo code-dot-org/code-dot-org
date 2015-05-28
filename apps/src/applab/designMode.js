@@ -308,9 +308,7 @@ designMode.toggleDesignMode = function(enable) {
   var codeTextbox = document.getElementById('codeTextbox');
   codeTextbox.style.display = enable ? 'none' : 'block';
   var designModeBox = document.getElementById('designModeBox');
-  if (designModeBox) {
-    designModeBox.style.display = enable ? 'block' : 'none';
-  }
+  designModeBox.style.display = enable ? 'block' : 'none';
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
@@ -430,7 +428,6 @@ designMode.configureDesignModeHeaders = function() {
     return;
   }
 
-  var props = {};
-  React.render(React.createElement(DesignModeHeaders, props), designModeHeaders)
+  React.render(React.createElement(DesignModeHeaders), designModeHeaders)
 };
 
