@@ -16,7 +16,6 @@ module.exports = React.createClass({
       <div id="design-mode-container">
         <div id="design-elements" ref="designElements">
           <p>{applabMsg.designToolboxDescription()}</p>
-          {/* TODO (brent) better approach than storing this as a data on the element? */}
           <div data-element-type="BUTTON" className="new-design-element">button</div>
           <div data-element-type="LABEL" className="new-design-element">label</div>
           <div data-element-type="TEXT_INPUT" className="new-design-element">input</div>
