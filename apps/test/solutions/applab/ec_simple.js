@@ -136,6 +136,21 @@ module.exports = {
         assert.equal(debugOutput.textContent, "");
         return true;
       },
+    {
+      description: "button",
+      editCode: true,
+      xml: "button('my_button_id', 'my_button_text');",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          var button = document.getElementById('my_button_id');
+          assert(button);
+          assert.equal(button.textContent, 'my_button_text');
+          assert.equal(button.parentNode.id, 'screen1');
+
+          Applab.onPuzzleComplete();
+        }, 100);
+      },
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
@@ -187,7 +202,6 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-    },
-
+    }
   ]
 };
