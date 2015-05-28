@@ -171,7 +171,7 @@ class DashboardSection
   end
 
   def self.load_valid_courses
-    return {} unless DASHBOARD_DB[:scripts].count rescue nil # don't crash when loading environment before database has been created
+    return {} unless (DASHBOARD_DB[:scripts].count rescue nil) # don't crash when loading environment before database has been created
     Hash[
          DASHBOARD_DB[:scripts].
            where("hidden = 0").

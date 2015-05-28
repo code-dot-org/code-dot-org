@@ -235,13 +235,12 @@ namespace :install do
     end
   end
 
-
   task :dashboard do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        create_database CDO.dashboard_db_writer
-        RakeUtils.rake 'db:migrate'
+        puts CDO.dashboard_db_writer
+        RakeUtils.rake 'db:setup_or_migrate'
         RakeUtils.rake 'seed:all'
       end
     end
