@@ -1,0 +1,23 @@
+name 'CSPPD PT description'
+title 'Performance Tasks'
+description 'description of the CSP PT'
+
+
+markdown <<MARKDOWN
+### CSP Performance Tasks
+
+The Performance Tasks require students to complete specific tasks in two different areas titled "Create" and "Explore." These comprise the through-course assessment for AP CSP. The [details] (media.collegeboard.com/digitalServices/pdf/ap/ap-computer-science-principles-performance-assessment.pdf) and [rubric] (media.collegeboard.com/digitalServices/pdf/ap/ap-computer-science-principles-draft-rubrics-sep-2014.pdf) of the performance tasks are summarized below. The other part of the AP CSP assessment is an objectively-scored exam, given at the end of the course.
+
+<br/>
+<strong>Performance Task: Create - Applications from Ideas</strong>
+
+Students are required to create two programs - one individually and one in a two-person team - that demonstrate their understanding of abstraction and algorithms. For each program, they will be required to submit a pdf document of their source code as well as a video or text annotation that displays the successful running of the program. You will need to give them 12 hours of class time to complete these programs.
+
+<br/>
+<strong>Performance Task: Explore - Impact of Computing Innovations</strong>
+
+Students are required to research the positive and negative effects of a single computing innovation. They must then write about the innovation, the population it impacted, and its social, cultural, or economic impact. Their submission must also include one visual artifact they created using a computer as well as 2-5 sources. You will need to give them 8 hours of class time to complete this task.
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

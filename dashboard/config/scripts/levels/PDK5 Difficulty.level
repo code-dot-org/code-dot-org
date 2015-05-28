@@ -6,7 +6,8 @@
     "title": "Degree of Difficulty",
     "options": {
       "success_title": "Awesome!",
-      "success_body": "Thanks for your response"
+      "success_body": "Thanks for your response",
+      "skip_sound": true
     },
     "height": "200",
     "content1": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",

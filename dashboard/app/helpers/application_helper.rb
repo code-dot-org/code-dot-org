@@ -7,7 +7,6 @@ module ApplicationHelper
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
-  include LevelsHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 

@@ -42,6 +42,7 @@ locales = {
   'Macedonian (FYROM)' => 'mk-MK',
   'Malay' => 'ms-MY',
   'Maltese' => 'mt-MT',
+  'Marathi' => 'mr-IN',
   'Nepali' => 'ne-NP',
   'Norwegian' => 'no-NO',
   'Norwegian Nynorsk' => 'nn-NO',

@@ -1,0 +1,13 @@
+name 'CSPPD impact of CS'
+title 'Impact of Computer Science'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+## Considering the Impact of Computer Science
+
+We often hear people talk about computer science having more and more impact on society at large and our lives as individuals, but what does that actually mean? On the following levels you'll see a couple of videos that demonstrate how computing is shaping our lives both in obvious and unexpected ways. These videos help to motivate some of the core CS concepts that we see in the Computer Science Principles course. 
+
+**After watching the videos, you'll have space to write your impressions about them, and note any connections you think might exist between the ideas covered in the videos and the units of CSP that you learned about earlier.**
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
