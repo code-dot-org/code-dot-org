@@ -1053,10 +1053,6 @@ Applab.init = function(config) {
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, designMode.onClear);
     }
-    var designModeManageAssets = document.getElementById('design-manage-assets');
-    if (designModeManageAssets) {
-      dom.addClickTouchEvent(designModeManageAssets, designMode.showAssetManager);
-    }
 
     designMode.configureDragAndDrop();
   }
