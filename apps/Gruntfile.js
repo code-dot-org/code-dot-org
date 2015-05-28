@@ -94,8 +94,7 @@ config.clean = {
 };
 
 var ace_suffix = DEV ? '' : '-min';
-var droplet_suffix = DEV ? '' : '.min';
-var tooltipster_suffix = DEV ? '' : '.min';
+var dotMinIfNotDev = DEV ? '' : '.min';
 var requirejs_dir = DEV ? 'full' : 'min';
 
 config.copy = {
@@ -160,7 +159,7 @@ config.copy = {
       {
         expand: true,
         cwd: 'lib/droplet',
-        src: ['droplet-full' + droplet_suffix + '.js'],
+        src: ['droplet-full' + dotMinIfNotDev + '.js'],
         dest: 'build/package/js/droplet/',
         rename: function (src, dest) {
           // dest name should be the same, whether or not minified
@@ -176,8 +175,18 @@ config.copy = {
       {
         expand: true,
         cwd: 'lib/tooltipster',
-        src: ['jquery.tooltipster' + tooltipster_suffix + '.js'],
+        src: ['jquery.tooltipster' + dotMinIfNotDev + '.js'],
         dest: 'build/package/js/tooltipster/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
+      },
+      {
+        expand: true,
+        cwd: 'lib/marked',
+        src: ['marked' + dotMinIfNotDev + '.js'],
+        dest: 'build/package/js/marked/',
         rename: function (src, dest) {
           // dest name should be the same, whether or not minified
           return src + dest.replace(/\.min.js$/, '.js');
