@@ -488,7 +488,7 @@ designMode.changeScreen = function (screenId) {
       handleManageAssets: showAssetManager,
       onScreenChange: designMode.changeScreen
     }),
-    designToggleRow
+    document.getElementById('designToggleRow')
   );
 
   designMode.serializeToLevelHtml();
