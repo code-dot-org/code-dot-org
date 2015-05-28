@@ -36,6 +36,7 @@ describe("NetSimRouterNode", function () {
   var testShard;
 
   beforeEach(function () {
+    NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     netsimTestUtils.initializeGlobalsToDefaultValues();
     netsimGlobals.getLevelConfig().broadcastMode = false;
 
@@ -596,6 +597,36 @@ describe("NetSimRouterNode", function () {
         rows = result;
       });
       return rows;
+    };
+
+    var assertFirstMessageHeader = function (headerType, expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      var headerValue;
+      if (Packet.isAddressField(headerType)) {
+        headerValue = encoder.getHeaderAsAddressString(headerType, messages[0].payload);
+      } else {
+        headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
+      }
+
+      assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
+      headerType + " header to be " + expectedValue + ", but got " +
+      headerValue);
+    };
+
+    var assertFirstMessageAsciiBody = function (expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
+
+      assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
+      "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
     };
 
     var assertFirstMessageProperty = function (propertyName, expectedValue) {
@@ -1277,36 +1308,6 @@ describe("NetSimRouterNode", function () {
       // Reserved auto-dns address, for now.
       var autoDnsAddress = '15';
 
-      var assertFirstMessageHeader = function (headerType, expectedValue) {
-        var messages = getRows(testShard, 'messageTable');
-        if (messages.length === 0) {
-          throw new Error("No rows in message table, unable to check first message.");
-        }
-
-        var headerValue;
-        if (Packet.isAddressField(headerType)) {
-          headerValue = encoder.getHeaderAsAddressString(headerType, messages[0].payload);
-        } else {
-          headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
-        }
-
-        assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
-            headerType + " header to be " + expectedValue + ", but got " +
-            headerValue);
-      };
-
-      var assertFirstMessageAsciiBody = function (expectedValue) {
-        var messages = getRows(testShard, 'messageTable');
-        if (messages.length === 0) {
-          throw new Error("No rows in message table, unable to check first message.");
-        }
-
-        var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
-
-        assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
-            "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
-      };
-
       var sendToAutoDns = function (fromNode, asciiPayload) {
         var payload = encoder.concatenateBinary({
           toAddress: addressStringToBinary(autoDnsAddress, netsimGlobals.getLevelConfig().addressFormat),
@@ -1319,7 +1320,6 @@ describe("NetSimRouterNode", function () {
       beforeEach(function () {
         router.setDnsMode(DnsMode.AUTOMATIC);
         router.tick({time: 0});
-        NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.VERBOSE);
       });
 
       it ("can round-trip to auto-DNS service and back",function () {
@@ -1472,6 +1472,18 @@ describe("NetSimRouterNode", function () {
       return rows;
     };
 
+    var assertFirstMessageAsciiBody = function (expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
+
+      assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
+      "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
+    };
+
     var assertFirstMessageProperty = function (propertyName, expectedValue) {
       var messages = getRows(testShard, 'messageTable');
       if (messages.length === 0) {
@@ -1562,6 +1574,52 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 0);
     });
 
+    it ("can send a message to another router", function () {
+      var logRow;
+
+      // This test reads better with slower routing.
+      // It lets you see each step, when with Infinite bandwidth you get
+      // several things happening on one tick, depending on how simulating
+      // routers are registered with each client.
+      routerA.setBandwidth(50); // Requires 1 second for routing
+      routerB.setBandwidth(25); // Requires 2 seconds for routing, buts starts
+                                // on first tick
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: routerB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('flop'));
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+
+      // t=1; router A picks up message, forwards to router B
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      logRow = getLatestLogRow();
+      assertEqual(routerA.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerA.entityID);
+      assertFirstMessageProperty('toNodeID', routerB.entityID);
+
+      // t=2; router B picks up message, consumes it
+      clientA.tick({time: 2000});
+      assertTableSize(testShard, 'logTable', 2);
+      logRow = getLatestLogRow();
+      assertEqual(routerB.entityID, logRow.nodeID);
+      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assertEqual(packetBinary, logRow.binary);
+      assertTableSize(testShard, 'messageTable', 0);
+    });
+
     it ("can send a message to client on another router", function () {
       var logRow;
 
@@ -1608,6 +1666,99 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);
+    });
+
+    describe ("full-shard Auto-DNS", function () {
+
+      var sendToAutoDnsA = function (fromNode, asciiPayload) {
+        var payload = encoder.concatenateBinary({
+          toAddress: addressStringToBinary(routerA.getAutoDnsAddress(),
+              netsimGlobals.getLevelConfig().addressFormat),
+          fromAddress: addressStringToBinary(fromNode.getAddress(),
+              netsimGlobals.getLevelConfig().addressFormat)
+        },  asciiToBinary(asciiPayload, BITS_PER_BYTE));
+        fromNode.sendMessage(payload, function () {});
+      };
+
+      beforeEach(function () {
+        routerA.setDnsMode(DnsMode.AUTOMATIC);
+      });
+
+      it ("cannot get addresses out of subnet when whole-shard routing is disabled", function () {
+        netsimGlobals.getLevelConfig().connectedRouters = false;
+        sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname() + ' ' +
+        clientB.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        clientA.tick({time: 1});
+        clientA.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            routerB.getHostname() + ':NOT_FOUND ' +
+            clientB.getHostname() + ':NOT_FOUND');
+      });
+
+      it ("can get remote router hostname and address", function () {
+        sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        clientA.tick({time: 1});
+        clientA.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            routerB.getHostname() + ':' + routerB.getAddress());
+      });
+
+
+      it ("can look up remote client addresses by hostname", function () {
+        sendToAutoDnsA(clientA, 'GET ' + clientB.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        clientA.tick({time: 1});
+        clientA.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            clientB.getHostname() + ':' + clientB.getAddress());
+      });
+
+      it ("can query another router's Auto-DNS", function () {
+        // Client B should send a request to router A's auto-dns and
+        // get a response
+        sendToAutoDnsA(clientB, 'GET ' + clientA.getHostname());
+
+        // Note: With unlimited router bandwidth, these operations sometimes
+        //       collapse into a single tick depending on the order in which
+        //       routers are ticked by the client.
+
+        // 1. Initial message from client B to router B
+        assertFirstMessageProperty('fromNodeID', clientB.entityID);
+        assertFirstMessageProperty('toNodeID', routerB.entityID);
+
+        // 2. Message forwarded from router B to router A
+        clientB.tick({time: 1});
+        assertFirstMessageProperty('fromNodeID', routerB.entityID);
+        assertFirstMessageProperty('toNodeID', routerA.entityID);
+
+
+        // 3. Message forwarded from router A to auto-DNS A
+        // 4. Auto-DNS A generates response back to router A
+        clientB.tick({time: 2});
+        assertFirstMessageProperty('fromNodeID', routerA.entityID);
+        assertFirstMessageProperty('toNodeID', routerA.entityID);
+        assertFirstMessageAsciiBody(
+            clientA.getHostname() + ':' + clientA.getAddress());
+
+        // 5. Message forwarded from router A to router B
+        // 6. And forwarded from router B to client B
+        clientB.tick({time: 3});
+        assertFirstMessageProperty('fromNodeID', routerB.entityID);
+        assertFirstMessageProperty('toNodeID', clientB.entityID);
+        assertFirstMessageAsciiBody(
+            clientA.getHostname() + ':' + clientA.getAddress());
+      });
     });
   });
 });
