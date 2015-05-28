@@ -431,7 +431,9 @@ designMode.configureDragAndDrop = function () {
     revert: 'invalid',
     zIndex: 2,
     start: function() {
-      studioApp.resetButtonClick();
+      if ($('#resetButton').is(':visible')) {
+        studioApp.resetButtonClick();
+      }
     }
   });
   $('#visualization').droppable({
