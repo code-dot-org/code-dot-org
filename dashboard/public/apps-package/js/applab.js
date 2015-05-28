@@ -4149,6 +4149,7 @@ var DesignToggleRow = require('./DesignToggleRow.jsx');
 var AssetManager = require('./assetManagement/AssetManager.jsx');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
+var _ = require('../utils').getLodash();
 
 var designMode = module.exports;
 
@@ -4577,12 +4578,17 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
+  // Simulate a run button click, to load the channel id.
+  var designModeClick = studioApp.runButtonClickWrapper.bind(
+      studioApp, Applab.onDesignModeButton);
+  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
   // TODO (brent) - still need logic to generate list of screens, and rerender
   // DesignToggleRow on changes
   React.render(
     React.createElement(DesignToggleRow, {
       screens: ['screen1'],
-      onDesignModeButton: Applab.onDesignModeButton,
+      onDesignModeButton: throttledDesignModeClick,
       onCodeModeButton: Applab.onCodeModeButton
     }),
     designToggleRow
@@ -4590,7 +4596,7 @@ designMode.configureDesignToggleRow = function () {
 };
 
 
-},{"../StudioApp":4,"./DesignToggleRow.jsx":6,"./assetManagement/AssetManager.jsx":14,"./designElements/library":33,"./designProperties.jsx":39,"react":626}],39:[function(require,module,exports){
+},{"../StudioApp":4,"../utils":297,"./DesignToggleRow.jsx":6,"./assetManagement/AssetManager.jsx":14,"./designElements/library":33,"./designProperties.jsx":39,"react":626}],39:[function(require,module,exports){
 var React = require('react');
 
 var elementLibrary = require('./designElements/library');
@@ -6767,7 +6773,7 @@ function getThumbnail(type, name) {
         marginTop: '50%',
         transform: 'translateY(-50%)',
         msTransform: 'translateY(-50%)',
-        webkitTransform: 'translateY(-50%)'
+        WebkitTransform: 'translateY(-50%)'
       };
       return React.createElement("img", {src: src, style: assetThumbnailStyle});
     default:
