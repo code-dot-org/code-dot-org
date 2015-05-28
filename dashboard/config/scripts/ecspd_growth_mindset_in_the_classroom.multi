@@ -10,7 +10,7 @@ right 'praise the process that students use to solve problems'
 wrong 'praise students for their intelligence'
 
 markdown <<MARKDOWN
-Learn more about Mindset in this Ted Talk by Carol Dweck from September 2014
+Learn more about Mindset in this Ted Talk by Carol Dweck from September 2014. <em>NOTE: you can speed up the video by first clicking play, and then clicking the settings menu, which is the gear icon at the bottom of the video player. The speed setting is the second from the top.</em> 
 
-<iframe width="426" height="260" src="https://www.youtube.com/embed/_X0mgOOSpLU" frameborder="0" allowfullscreen></iframe>
+<iframe width="426" height="260" src="https://www.youtube.com/embed/_X0mgOOSpLU?rel=0" frameborder="0" allowfullscreen></iframe>
 MARKDOWN
