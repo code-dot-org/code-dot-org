@@ -46,7 +46,11 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
-
+//console history (probably not the best way to store?)
+Applab.dc = {
+  'hist': [],
+  'i': 0
+};
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -302,7 +306,10 @@ function queueOnTick() {
 
 function onDebugInputKeyDown(e) {
   if (e.keyCode == KeyCodes.ENTER) {
+    e.preventDefault();
     var input = e.target.textContent;
+    Applab.dc.i = Applab.dc.hist.length + 1;
+    Applab.dc.hist[Applab.dc.i - 1] = input;
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.interpreter) {
@@ -335,6 +342,26 @@ function onDebugInputKeyDown(e) {
       }
     } else {
       outputApplabConsole('< (not running)');
+    }
+  }
+  if (e.keyCode == KeyCodes.UP) {
+    if (Applab.dc.i > 0) {
+      Applab.dc.i -= 1;
+    }
+    if (typeof Applab.dc.hist[Applab.dc.i] !== 'undefined') {
+      e.target.textContent = Applab.dc.hist[Applab.dc.i];
+    }
+  }
+  if (e.keyCode == KeyCodes.DOWN) {
+    if (Applab.dc.i < Applab.dc.hist.length) {
+      Applab.dc.i += 1;
+    }
+    if (Applab.dc.i == Applab.dc.hist.length &&
+        e.target.textContent == Applab.dc.hist[Applab.dc.i - 1]) {
+      e.target.textContent = '';
+    }
+    if (typeof Applab.dc.hist[Applab.dc.i] !== 'undefined') {
+      e.target.textContent = Applab.dc.hist[Applab.dc.i];
     }
   }
 }
