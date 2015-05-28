@@ -24,19 +24,19 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
       <table>
         <thead>
           <tr>
-            <th><%= i18n.time() %></th>
-            <th><%= i18n.loggedByNode() %></th>
-            <th><%= i18n.status() %></th>
+            <th data-sort-key="timestamp"><%= i18n.time() %></th>
+            <th data-sort-key="logged-by"><%= i18n.loggedByNode() %></th>
+            <th data-sort-key="status"><%= i18n.status() %></th>
             <% if (showFromAddress) { %>
-              <th><%= i18n.from() %></th>
+              <th data-sort-key="from-address"><%= i18n.from() %></th>
             <% } %>
             <% if (showToAddress) { %>
-              <th><%= i18n.to() %></th>
+              <th data-sort-key="to-address"><%= i18n.to() %></th>
             <% } %>
             <% if (showPacketInfo) { %>
-              <th><%= i18n.packet() %></th>
+              <th data-sort-key="packet-info"><%= i18n.packet() %></th>
             <% } %>
-            <th><%= i18n.message() %></th>
+            <th data-sort-key="message"><%= i18n.message() %></th>
           </tr>
         </thead>
         <tbody>

@@ -51,8 +51,13 @@ $wide-column-width: 121px;
   right: 0;
 
   #router-log-modal {
+    display: none; // Initial state
     width: 90%;
     margin-left: -45%;
+
+    th {
+      cursor: pointer;
+    }
   }
 
   #netsim-disconnected {
