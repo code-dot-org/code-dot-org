@@ -395,6 +395,9 @@ en:
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         U1L13 Text Compression: U1L13 Text Compression
+      U1L14 Student Lesson Summary:
+        description here: description here
+        title: title
       U1L16 Student Lesson Introduction:
         description here: description here
         title: title
@@ -470,6 +473,12 @@ en:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       U3L03 Student Lesson Introduction:
         Creating Procedures Part 1: Creating Procedures Part 1
+      U3L05 Student Lesson Introduction:
+        Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+      U3L06 Student Lesson Introduction:
+        APIs and Function Parameters: APIs and Function Parameters
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -916,14 +925,25 @@ en:
         'Reflection: Data Storage': 'Reflection: Data Storage'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 Assessment 1:
-        'Assessment 1: Text Compression': 'Assessment 1: Text Compression'
-        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write (in the space below) a segment of text that should compress effectively and efficiently.
+        'Conclusion 1: Text Compression': 'Conclusion 1: Text Compression'
+        Consider your heuristic and those of your classmates.: Consider your heuristic and those of your classmates.
       U1L13 Assessment 2:
-        'Assessment 2: Text Compression': 'Assessment 2: Text Compression'
-        Write (in the space below) a segment of text that will not compress well.: Write (in the space below) a segment of text that will not compress well.
-      U1L13 Reflection Free Response:
+        'Conclusion 2: Text Compression': 'Conclusion 2: Text Compression'
+        'Is there a way to know that a compressed piece of text is compressed the most possible? ': 'Is there a way to know that a compressed piece of text is compressed the most possible? '
+      U1L13 Reflection 1:
         'Reflection: Text Compression': 'Reflection: Text Compression'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        What made compressing text hard to do?: What made compressing text hard to do?
+      U1L13 Reflection 2:
+        Describe the thinking process you used in solving this challenge.: Describe the thinking process you used in solving this challenge.
+        'Reflection: Text Compression': 'Reflection: Text Compression'
+      U1L13 Reflection Free Response:
+        'Conclusion 3: Text Compression': 'Conclusion 3: Text Compression'
+        'If you send a compressed segment of text would your friend will be able to read it?  ': 'If you send a compressed segment of text would your friend will be able to read it?  '
+      U1L14 - Assessment 2:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+      U1L14 Assessment 1:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+        'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? ': 'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? '
       U1L16 Reflection Free Response:
         'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -1003,12 +1023,28 @@ en:
         Free Response Reflection: Free Response Reflection
       U3L04 Free Response Wrap Up:
         'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
+      U3L05 Assessment2:
+        Programming Efficiency Question 2: Programming Efficiency Question 2
+      U3L05 Assessment3:
+        Programming Efficiency Question 3: Programming Efficiency Question 3
+      U3L05 Assessment4:
+        Programming Efficiency Question 4: Programming Efficiency Question 4
+      U3L05 Free Response Getting Started:
+        'Programming Efficiency: Getting Started': 'Programming Efficiency: Getting Started'
       U3L05 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
+        'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
+      U3L06 Assessment:
+        APIs and Parameters Question 2: APIs and Parameters Question 2
+      U3L06 Free Response Getting Started:
+        APIs and Function Parameters: APIs and Function Parameters
       U3L06 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L06 Free Response Wrap Up:
+        APIs and Function Parameters Wrap Up: APIs and Function Parameters Wrap Up
+      U3L07 Free Response Getting Started:
+        'Looping and Random Numbers: Getting Started': 'Looping and Random Numbers: Getting Started'
       U3L07 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
+        'Looping and Random Numbers: Reflection': 'Looping and Random Numbers: Reflection'
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '

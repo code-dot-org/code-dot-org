@@ -3,6 +3,9 @@
   "game_id": 30,
   "created_at": "2015-03-10T20:52:37.000Z",
   "properties": {
+    "options": {
+      "skip_sound": true
+    },
     "questions": [
       {
         "text": "Pair programming"

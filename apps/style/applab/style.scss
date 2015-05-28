@@ -1,3 +1,4 @@
+@import "color";
 @import "colpick.css";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
@@ -474,6 +475,27 @@ button.arrow:focus {
 
 #designModeBox td {
   vertical-align: top;
+}
+
+#design-manage-assets {
+  float: right;
+}
+
+#manageAssetsModal {
+  width: 800px;
+  margin-left: -400px;
+}
+
+.assetRow {
+  border-bottom: 1px solid #999;
+}
+
+.assetRow:last-child {
+  border-bottom: none;
+}
+
+.assetRow:hover {
+  background: $lighter_purple;
 }
 
 #divApplab {

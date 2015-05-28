@@ -355,7 +355,7 @@
           description: Използвайте "Игрална лаборатория", за да създадете история
             или игра с участието на героите от Дисни Инфинити.
           Play Lab: Театрална лаборатория
-          Infinity: Безкрайност
+          Infinity: Инфинити
         algebrademo:
           title: Алгебра демо
           description_short: Една шепа  пъзели, за демонстриране на  средата и езика
@@ -410,33 +410,33 @@
           Pixelation: Пикселизация
         20-hour:
           title: 20-часов въвеждащ курс
-          description: Този 20-часов курс, представя основните компютърни науки, концепции
+          description: Този 20-часов курс представя основните компютърни науки, концепции
             и термини в програмирането. Курсът е предназначен най-вече за използване
             в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
           Introduction to Computer Science: Въведение в компютърните науки
-          The Maze: Лабиринтът
+          The Maze: Лабиринт
           Computational Thinking: Изчислително мислене
           Graph Paper Programming: Програмиране на милиметрова хартия
           The Artist: Художникът
           Algorithms: Алгоритми
-          The Artist 2: Художника 2
+          The Artist 2: Художникът 2
           Functions: Функции
-          The Farmer: Фермера
+          The Farmer: Фермерът
           Conditionals: Условия
-          The Artist 3: Художника 3
+          The Artist 3: Художникът 3
           Song Writing: Писане на песен
-          The Farmer 2: Фермера 2
+          The Farmer 2: Фермерът 2
           Abstraction: Абстракция
-          The Artist 4: Художника 4
-          Relay Programming: Поеми програмирането
-          The Farmer 3: Фермера 3
+          The Artist 4: Художникът 4
+          Relay Programming: Щафетно програмиране
+          The Farmer 3: Фермерът 3
           The Internet: Интернет
-          The Artist 5: Художника 5
+          The Artist 5: Художникът 5
           Wrap-up: Заключение
         edit-code:
           title: Редактиране на кода
           description: ''
-          The Maze: Лабиринтът
+          The Maze: Лабиринт
           Applab: Лаборатория за приложения
           The Artist: Художникът
           Play Lab: Театрална лаборатория
@@ -453,9 +453,9 @@
             Опитайте нашите Flappy код уроци!
           Flappy Code: Flappy код
         jigsaw:
-          title: Мозайката
+          title: Мозайка
           description: ''
-          Jigsaw: Мозайката
+          Jigsaw: Мозайка
         step:
           title: Стъпка
           description: ''
@@ -623,6 +623,14 @@
         CSPPD:
           new stage: нов етап
           Introduction to PD: Въведение в PD
+          title: Computer Science Principles PD
+          description: Online Introduction to CSP
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Въздействието на компютърните науки
+          Growth Mindset: Нагласи за разтеж
+          Teaching Strategies: Стратегии за преподаване
+          Preparing for in-person PD: Подготовка за лично PD
         CSPLessonSamples:
           title: CSP пробни уроци
           description_short: пробни уроци за csp
@@ -891,7 +899,7 @@
           Rocket-Height: Ракетна височина
           Big Game - Collision Detection: Big Game - Collision Detection
         allthethings:
-          Jigsaw: Мозайката
+          Jigsaw: Мозайка
           Maze: Лабиринт
           Artist: Художник
           Bee: Пчела
@@ -906,6 +914,13 @@
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Компресия на текста
+          Pixelation: Пикселизация
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра

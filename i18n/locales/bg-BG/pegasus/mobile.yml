@@ -347,7 +347,7 @@ bg-BG:
   dashboard_progress_in_progress: в ход
   dashboard_progress_not_completed: не е завършено
   dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове
-  dashboard_progress_completed_perfect: завършен, перфектно
+  dashboard_progress_completed_perfect: завършено, перфектно
   dashboard_progress_furthest_level_attempted: последното пробвано ниво
   stats_hoc_2013_heading: Невероятната статистика от миналата година за Часът на кодирането. Само за една седмица
   stats_hoc_2013_image_alt: Статистика Часът на кодирането от 2013

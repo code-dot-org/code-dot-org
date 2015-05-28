@@ -55,7 +55,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -154,8 +154,8 @@ v:function(d,k){eval_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
-"badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
-"badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
+"badColorStringError":function(d){return "您使用了無效的顏色字串: "+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "您使用了無效樣式字串: "+eval_locale.v(d,"val")},
 "circleBlockTitle":function(d){return "圓(半徑、 樣式、 顏色)"},
 "displayBlockTitle":function(d){return "計算"},
 "ellipseBlockTitle":function(d){return "橢圓(寬度,高度,樣式, 顏色)"},
@@ -182,4 +182,4 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "string":function(d){return "字串"},
 "stringMismatchError":function(d){return "您有一個大小寫錯誤的字串."},
 "userCodeException":function(d){return "您的代碼在執行時出現了一個錯誤."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"wrongBooleanError":function(d){return "您的區塊計算出錯誤的布林值"}};

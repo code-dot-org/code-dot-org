@@ -168,16 +168,16 @@ no-NO:
   homepage_slot_text_flappy: Flappy kode
   homepage_action_text_codevideo: Se videoen
   homepage_action_text_teachervideo: Se videoen
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Begynne å lære
   homepage_action_text_signpetition: Signér oppropet
   homepage_signpetition_dropdown: Signér vår underskriftskampanje ▾
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: Code.org og College Board danner en allianse for å øke mangfoldet i informatikk.
+  homepage_banner_text_link: Lær mer
   homepage_slot_text_title_hoc: Hour of Code (kodetimen)
   homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
   homepage_slot_text_link_hoc: Prøv Kodetimen
   homepage_slot_text_link_host: Bli vertskap for Kodetimen
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: '# servert'
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Utforsk alle våre opplæringsprogrammer
   homepage_slot_text_link_codestudio: Prøv Code Studio
@@ -187,13 +187,13 @@ no-NO:
   homepage_slot_text_blurb_educators: Lær opp elevene dine
   homepage_slot_text_link_k5: Kurs for barnehage til 5.trinn
   homepage_slot_text_link_fullcurriculum: Se vår fullstendige læreplan
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_link_pd: Profesjonell utvikling
+  homepage_slot_text_title_advocates: Advokat
   homepage_slot_text_blurb_advocates: Støtt vårt arbeid
   homepage_slot_text_link_stats: Se statistikken
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: Bli involvert
   homepage_slot_text_link_donate: Gi et bidrag
-  homepage_header_codestudio: Code Studio student creations
+  homepage_header_codestudio: Code Studio student kreasjoner
   homepage_header_donors: Code.org takker sine støttespillere
   homepage_donors_seall: Se alt
   homepage_donors_donate: Gi bidrag

@@ -4,9 +4,9 @@
       2-3 _instruction: Фиолетовые цветы могут иметь 1 или 0 нектара. Будьте осторожны,
         не собирайте нектар с фиолетового цветка, если в нем его нет.
       2-3 Artist 1 new_instruction: Привет, я художник. Ты можешь написать код, чтобы
-        заставить меня рисовать почти что угодно. Используй несколько блоков, чтобы
-        заставить меня рисовать над серыми линиями на картинке. (Каждая линия длиной
-        в 100 пикселей)
+        заставить меня рисовать почти все, что угодно. Используй несколько блоков,
+        чтобы заставить меня рисовать над серыми линиями на картинке. (Каждая линия
+        длиной в 100 пикселей)
       2-3 Artist 11_instruction: 'Сделайте оправу для стоп-знака, нарисовав восьмиугольник,
         с длиной каждой стороны в 100 пикселей. На сколько градусов вам надо будет
         поворачивать каждый раз? (Подсказка: сколько будет 360 разделить на 8?) '
@@ -34,7 +34,7 @@
       2-3 Artist 7_instruction: 'Закончите рисунок, дорисовав правую половину последнего
         окна. Размер каждого квадрата окна 25 пикселей. '
       2-3 Artist 8_instruction: Закончите комнаты для каждого животного разделив прямоугольник
-        на два одинаковых квадрата. Высота прямоугольника 200 пикселей, а его высота
+        на два одинаковых квадрата. Ширина прямоугольника 200 пикселей, а его высота
         - 100 пикселей.
       2-3 Artist 9_instruction: Завершите воздушного змея
       2-3 Artist Assessment 1_instruction: 'Тест: Закончите рисунок последнего зуба,
@@ -49,7 +49,7 @@
         рисунок. Вы можете мне помочь?
       2-3 Artist Debugging 2_instruction: 'Код для рисования усов, которые вы видите,
         содержит ошибки. Подсказка: длина каждого из усиков должна быть 75 пикселей.
-        Усправьте этот код, чтобы нарисовать усы.'
+        Исправьте этот код, чтобы нарисовать усы.'
       2-3 Artist Debugging 3_instruction: 'В моей лодке дырка! Вы можете это исправить,
         изменив угол линии? Подсказка: последний угол отклонён на 15 градусов.'
       2-3 Artist Debugging 4_instruction: Какой рисунок вы пытаетесь нарисовать? Соедините
@@ -103,8 +103,8 @@
         с ней, чтобы нарисовать зимний пейзаж. Это свободная игра и здесь нет головоломки.
         Приятного рисования!
       2-3 Artist Loops 1_instruction: Можете нарисовать шестиугольник со сторонами
-        в 100 пикселей, чтобы закончить секцию? Это значит вы должны поворачивать
-        только на 60 градусов!
+        в 100 пикселей, чтобы закончить секцию? Помните, вы должны поворачивать только
+        на 60 градусов!
       2-3 Artist Loops 10_instruction: Что произойдёт с дизайном, когда мы сделаем
         последний шаг в два раза короче?
       2-3 Artist Loops 11_instruction: Теперь давайте добавим *другой* цикл вокруг
@@ -119,10 +119,10 @@
         и посмотрите как изменится ваш рисунок.
       2-3 Artist Loops 7_instruction: Вы можете использовать циклы для создания любых
         многоугольников. Можете создать ромб внутри шестиугольника?
-      2-3 Artist Loops 8_instruction: Давайте добавим оба элемента в середину цикла.
+      2-3 Artist Loops 8_instruction: Давайте добавим оба элемента в цикл.
       2-3 Artist Loops 9_instruction: "Мы собираемся использовать цикл с теми же элементами,
-        но теперь мы несколько отдалим их друг от друга.\r\nИспользуй тот же код,
-        что и раньше, но добавь шаг вперёд в конце внешнего цикла."
+        но теперь мы несколько отдалим их друг от друга.\r\nИспользуйте тот же код,
+        что и раньше, но добавьте шаг вперёд в конце внешнего цикла."
       2-3 Artist Loops New 1_instruction: Давайте нарисуем голову этого робота! Вы
         можете нарисовать квадрат со сторонами в 100 пикселей?
       2-3 Artist Loops New 10_instruction: Теперь соединим кучу V вместе, рисуя их
@@ -367,15 +367,15 @@
       2-3 maze sq12_instruction: Можешь заменить предыдущее решение циклом, используя
         блок "повторить...раз"?
       2-3 maze sq13_instruction: Дорогой человек. Я зомби. Должен...добраться...до
-        подсолнуха. Создай цикл с блоком "повторять пока не".
-      2-3 maze sq14_instruction: Можешь добраться до подсолнечника, используя только
+        подсолнуха. Создай цикл с блоком "повторять до".
+      2-3 maze sq14_instruction: Можешь добраться до подсолнуха, используя только
         четыре блока?
-      2-3 maze sq15_instruction: Можешь добраться до подсолнечника, используя только
+      2-3 maze sq15_instruction: Можешь добраться до подсолнуха, используя только
         пять блоков?
       2-3 maze sq16_instruction: Окей, это задание похоже на предыдущее, но есть маленькое
         отличие. Можешь выполнить его, используя только пять блоков?
-      2-3 Maze sq2_instruction: Проследуй путь и приведи меня к глупому поросенку.
-        Избегай TNT, иначе перья полетят!
+      2-3 Maze sq2_instruction: Проложи путь и приведи меня к глупому поросенку. Избегай
+        TNT, иначе перья полетят!
       2-3 Maze sq3_instruction: Проведи меня к зелёному чудищу! (Остерегайся взрывчатки)
       2-3 Maze sq4_instruction: Сохраняй спокойствие и помоги мне найти поросенка.
         Иначе я могу рассердиться!
@@ -419,7 +419,7 @@
       4-5 Artist 9_instruction: Нарисуй вторую половинку так, чтобы рисунок получился
         симметричным. Треугольники имеют равные стороны длинной в 50 точек.
       4-5 Artist Assessment 1_instruction: 'Тест: используй цикл, чтобы нарисовать
-        равносторонний треугольник. Длина сторон - 300 точек.'
+        равносторонний треугольник. Длина сторон - 300.'
       4-5 Artist For Loops 1_instruction: Введи числа от 1 до 10 в широкие блоки и
         запустите код.
       4-5 Artist For Loops 11_instruction: Заполни блок "для" так, чтобы его значения
@@ -430,58 +430,45 @@
       4-5 Artist For Loops 13_instruction: 'Этот проект начат без цикла «для» и занимает
         слишком много блоков!  Используйте блок «для», чтобы завершить спираль.  Подсказка:  длина
         последней строки составляет 250 пикселей.'
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
+      4-5 Artist For Loops 14_instruction: 'Кто-то создал код, но потом понял, что
+        его можно укоротить! Используйте блок "повторить" для замены блоков и завершения
+        треугольной спирали. (Подсказка: длина последней строки составляет 300 пикселей).'
+      4-5 Artist For Loops 15_instruction: 'Кто-то создал код, но затем понял, что
+        его можно укоротить! Используй блок "повторить", чтобы заменить блоки и завершить
+        шестиугольную спираль. (Подсказка: длина последней строки составляет 200 пикселей).'
+      4-5 Artist For Loops 2_instruction: Это блок "Повторить". Вместо того, чтобы
+        вводить 1, 2, 3..., 10, блок "повторить" может повторять всё, что внутри него
+        и считать числа за вас. Введите 10 в окно "до" в блоке "повторить".
+      4-5 Artist For Loops 3_instruction: Сможем посчитать от 1 до 50? Отредактируйте
+        блок "повторить".
+      4-5 Artist For Loops 4_instruction: Заполните блок "повторить", чтобы посчитать
+        от 1 до 10 по 1.
+      4-5 Artist For Loops 6_instruction: Нарисуйте квадраты со сторонами 50, 60,
+        70, 80 и 90 пикселей. Вам необходимо воспользоваться блоком "Нарисовать квадрат"
+        5 раз.
+      4-5 Artist For Loops 7_instruction: 'Нарисуй такие же квадраты, но используй
+        при этом блок "цикл по" для того, чтобы изменить их размеры. Вставь блок "счетчик"
+        в функцию "нарисуй квадрат". Подсказка: его можно найти в категории "Переменные".'
+      4-5 Artist For Loops 8_instruction: Можешь ли завершить программу, разместив
+        блоки внутри цикла со счетчиком, который считает от 10 до 200 с шагом 10?
+        Цикл со счетчиком ты можешь найти в категории "Циклы".
+      4-5 Artist For Loops 9_instruction: 'Эти круги имеют следующие размеры: 5, 10,
+        15, 20, 25, 30 и 35. Нарисуй их, используя цикл со счетчиком.'
       4-5 Artist Free Draw 1_instruction: Свободная тема! Рисуй все, что захочется.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
+      4-5 Artist Functions 1_instruction: Используйте цикл повторить, чтоб нарисовать
+        треугольник.
+      4-5 Artist Functions 10a_instruction: Поместите эту программу в процедуру "нарисовать
+        снежинку" и замените число 50 параметром "размер". Процедура уже задана таким
+        образом, чтобы нарисовать снежинку размером 100 точек.
+      4-5 Artist Functions 10b_instruction: 'Используйте процедуру "нарисовать снежинку"
+        для того, чтобы создать снежинки разных размеров. Подсказка: первая снежинка
+        имеет 25 точек в длину, а каждая последующая снежинка в два раза больше предыдущей.'
+      4-5 Artist Functions 11_instruction: 'Процедура "нарисовать шестиугольник" использует
+        процедуру "нарисовать треугольник". Заверши процедуру рисования шестиугольника.
+        (Подсказка: у шестиугольника 6 сторон, каждая длиной 100 точек)'
+      4-5 Artist Functions 12_instruction: 'Заверши процедуру "нарисовать волны".
+        Каждая волна состоит из одной верхней и одной нижней волны. Подсказка: нарисуй
+        5 синих волн.'
       4-5 Artist Functions 13 Free play_instruction: |
         Here are some functions to
         draw planets, stars, rockets, and robots. Use them any way you like to make
@@ -650,7 +637,7 @@
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
       4-5 Bee Debugging 3_instruction: Find the errors and fix them.
       4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
-      4-5 Bee Debugging 5_instruction: Something isn't right here...
+      4-5 Bee Debugging 5_instruction: Что-то пошло не так...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
@@ -671,7 +658,7 @@
       4-5 Bee Nested Loops 5_instruction: |
         Collect all of the nectar by creating
         a nested loop.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
+      4-5 Bee Nested Loops 6_instruction: Соберите нектар.
       4-5 Bee Nested Loops 7_instruction: |
         Put this loop inside another loop to create
         a nested loop and collect all of the nectar from the flowers.
@@ -691,8 +678,8 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Можешь добраться до подсолнечника, используя только
-        четыре блока?
+      4-5 Maze 10_instruction: Можешь добраться до подсолнуха, используя только четыре
+        блока?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -1709,10 +1696,6 @@
       Course 4 Binary 6_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
-      Course 4 Binary 7 (copy 1)_instruction: |
-        You can complete the most of this
-        image by looping a 5 bit binary number - then you'll need one more 4 bit
-        number to get the bottom right-hand corner.
       Course 4 Binary 7_instruction: |
         Which binary string, repeated 10 times, will
         draw this image?
@@ -1733,10 +1716,6 @@
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: |
-        Here's a function called
-        "jump" that causes your main character to jump up 100 pixels. Use the jump
-        function to collect all of the flags.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1745,12 +1724,6 @@
         We've added one last function for
         you to use. Program your game to call the "level_up" function if "player_points"
         > 10. Play the game, and make it past level 4 to move to the next puzzle.
-      Course 4 Play Lab Params 2 (copy 1)_instruction: |
-        Now we've got flags that
-        are too high for our current jump! Let's add a parameter to our jump function
-        called "height." The up arrow should jump 100 pixels, but the down arrow
-        should jump 300 pixels. Watch out, you don't want to hit the <future barrier
-        above lower flags>!
       Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's add a parameter to our jump function called
@@ -1791,10 +1764,6 @@
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: |
-        Here's a new kind of game!
-        Use the left and right arrows to move, and the up arrow to jump. See if you
-        can collect all of the flags.
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1819,11 +1788,6 @@
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: |
-        Nice, now let's make sure
-        this game isn't too easy - any time you get hit by a fireball, you should
-        lose a point. Let's also start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
@@ -1862,12 +1826,6 @@
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
         from 10 up to 1000, by 10 at a time.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: |
-        Changing the increment
-        can be helpful, but we're still counting linearly (each number is the same
-        distance from the last) What if I wanted to count exponentially? Without changing
-        the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter
-        squared)?
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2134,7 +2092,7 @@
         to create something interesting. Make sure to share your favorite creations.
       frozen circle function in circle_instruction: Теперь создадим 20 пересекающихся
         кругов, поворачивая на 18 градусов после каждого круга.
-      frozen circle function with parameter_instruction: Вот блок блока «Создать круг»,
+      frozen circle function with parameter_instruction: Вот блок «Создать круг»,
         который рисует круги разных размеров. Сможете использовать его для создания
         маленького круга размером 5 и большого круга размером 10?
       frozen circle function_instruction: Используйте новый блок "Создать круг" для
@@ -2151,8 +2109,8 @@
         имеет уникальный узор? Давайте создадим новую снежинку с помощью блока «Повторить».
         Для этого нужно нарисовать 4 параллелограмма, после каждого поворачивая вправо
         на 90 градусов.
-      frozen diamond snowflake_instruction: Теперь давайте создадим новую снежинку
-        повторив параллелограмм 10 раз и поворачивая на 36 градусов после каждого
+      frozen diamond snowflake_instruction: Теперь давайте создадим новую снежинку,
+        повторив параллелограмм 10 раз, и поворачивая на 36 градусов после каждого
         из них.
       frozen diamond_instruction: 'Давайте создадим параллелограмм. Он похож на квадрат,
         но имеет другие углы: 60 и 120 градусов вместо 90 градусов.'
@@ -2178,13 +2136,13 @@
         квадрат используя блок «Повторить», в который вложим другие блоки. Какое число
         (???) надо указать в блоке «Повторить», чтобы получился квадрат?
       frozen square snowflake_instruction: Вы можете создать снежинку, используя блок
-        «Повторить» чтобы сделать квадрат 10 раз, и блок «Повернуть», чтобы повернуть
+        «Повторить», чтобы сделать квадрат 10 раз, и блок «Повернуть», чтобы повернуть
         на 36 градусов после каждого квадрата?
       Infinity_catch_instruction: Используя клавиши со стрелками, можете сделать так,
         чтобы Эльза ("персонаж 2") догнала Анну?
       Infinity_finale_instruction: Создайте что хотите и поделитесь этим с друзьями!
       Infinity_move_collide_instruction: Хиро это "персонаж 1". Подвиньте его вправо
-        к Баймаксу и воспроизведите звук, когда они прикоснутся.
+        к Баймаксу и воспроизведите звук, когда они соприкоснутся.
       Infinity_move_directions_instruction: Баймакс это "персонаж 2". Добавьте блоки
         "двигаться" и передвигайте его с помощью стрелок. Сделайте так, чтобы он дотронулся
         до других двух героев.
@@ -2202,16 +2160,15 @@
       Infinity_touch_faster_instruction: Прикоснитесь ещё к нескольким снежинкам!
       Infinity_touch_four_instruction: Передвиньте Анну вверх, вниз, влево, и вправо,
         чтобы она дотронулась до каждой из четырёх снежинок.
-      Infinity_touch_score_instruction: Зарабатывайте очки, когда Анна докоснётся
-        до снежинок. Нажмите "Выполнить" и докоснитесь до каждой снежинки по одному
-        разу.
+      Infinity_touch_score_instruction: Зарабатывайте очки, когда Анна коснётся снежинок.
+        Нажмите "Выполнить" и коснитесь каждой снежинки по одному разу.
       K-1 Artist 1 Assessment 1_instruction: Нарисуйте короткую линию вверх и длинную
         вправо!
       K-1 artist 1 level 10_instruction: Нарисуйте пунктирную линию с помощью блоков
         рисования и прыжка
       K-1 artist 1 level 9_instruction: Draw this using three lines
       K-1 Artist Loops 1_instruction: Нарисуйте эту линию двигаясь на восток 4 раза.
-      K-1 Artist Loops 2_instruction: Можете нарисовать ту же самую линию используя
+      K-1 Artist Loops 2_instruction: Можете нарисовать ту же самую линию, используя
         цикл?
       K-1 Artist Loops 3_instruction: Можете поместить эти блоки в цикл, чтобы нарисовать
         6 линий?
@@ -2276,9 +2233,9 @@
       K-1 Bee 7_instruction: Возьмите три нектара и сделайте два меда!
       K-1 Bee 8_instruction: Возьмите два нектара и сделайте два меда!
       K-1 Bee 9_instruction: Возьмите два нектара и сделайте два меда!
-      K-1 Bee Assessment 1_instruction: Возьмите нектар чтобы сделать мед!
-      K-1 Bee Assessment 2_instruction: Возьмите нектар чтобы сделать мед!
-      K-1 Bee Loops 1_instruction: Возьмите нектар чтобы сделать мед!
+      K-1 Bee Assessment 1_instruction: Возьмите нектар, чтобы сделать мед!
+      K-1 Bee Assessment 2_instruction: Возьмите нектар, чтобы сделать мед!
+      K-1 Bee Loops 1_instruction: Возьмите нектар, чтобы сделать мед!
       K-1 Bee Loops 10_instruction: Используйте циклы, чтобы получить нектар, мед
         и чтобы двигаться!
       K-1 Bee Loops 11_instruction: 'Оценка: Используйте циклы, чтобы получить нектар
@@ -2562,17 +2519,15 @@
       New Course 4 Artist Functions Level 4_instruction: |
         Use the "draw a square"
         function to draw this pattern.
-      NEW Course 4 Artist Params 1_instruction: |
-        Let's define this function to draw
-        a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a \"draw a hexagon\" function\nblock
-        with a length parameter. Hint: this hexagon is 100 pixels in size. \n"
-      NEW Course 4 Artist Params 11_instruction: |
-        Can you figure out how to draw
-        this shape? Edit the function to use the "sides" parameter.
-      NEW Course 4 Artist Params 12_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
+      NEW Course 4 Artist Params 1_instruction: Давайте обозначим эту функцию для
+        рисования квадрата со стороной 50 пикселей. Нажмите "редактировать" для начала
+        работы.
+      NEW Course 4 Artist Params 10_instruction: 'создайте блок "нарисовать шестиугольник"
+        с параметром длины. Подсказка: размер шестиугольника 100 пикселей.'
+      NEW Course 4 Artist Params 11_instruction: Вы можете понять, как нарисовать
+        эту фигуру? Изменяйте параметр "длина стороны".
+      NEW Course 4 Artist Params 12_instruction: Вы можете закончить этот рисунок?
+        Длины сторон всех фигур - 100 пикселей.
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
@@ -2626,10 +2581,9 @@
         \"Run\" to see it in action. \n"
       NEW Course 4 Artist Vars 2_instruction: "Drag a number block to the \"set length\"\nblock
         to draw a set of 50 pixel triangles. \n"
-      NEW Course 4 Artist Vars 4 5_instruction: |
-        Awesome job on the last puzzle,
-        let's try it again this time let's make this cool design with with 60 pixel
-        hexagon's.
+      NEW Course 4 Artist Vars 4 5_instruction: Вы замечательно справились в прошлый
+        раз, давайте попробуем ещё раз! На этот раз создадим крутой дизайн с 60-ти
+        пиксельными шестиугольниками.
       NEW Course 4 Artist Vars 4_instruction: |
         Let's try it again. Now, let's make
         this cool design with with 60 pixel hexagons.
@@ -2679,8 +2633,6 @@
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: "It's Free Play time!\nHave
-        fun with all the blocks in your tool box. \n"
       NEW Course 4 Play Lab Params 11_instruction: "It's Free Play time! Have fun\nwith
         all the blocks in your tool box. \n"
       NEW Course 4 Play Lab Params 5 5_instruction: "Fill in actor parameter inputs\nwith
@@ -2860,18 +2812,18 @@
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
       scrat 16_instruction: Желудь! Желудь! Желудь! Используйте блок «Если», чтобы
-        привести меня туда используя наименьшее количество блоков.
+        привести меня туда, используя наименьшее количество блоков.
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
       scrat 17_instruction: Хорошо, давайте сделаем это снова для тренировки - почти
-        тоже самое, но берегитесь стены!
+        то же самое, но берегитесь стены!
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
       scrat 18_instruction: Блок «Если-Иначе» проверяет условие, и затем выполняет
-        первое действие или второе. Попробуйте использовать этот новый блок чтобы
+        первое действие или второе. Попробуйте использовать этот новый блок, чтобы
         переместить меня к желудю.
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
@@ -2879,8 +2831,8 @@
       scrat 19_instruction: Еще одно задание для блока «Если-Иначе». У вас получится
         с первой попытки?
       scrat 20_instruction: Вы можете добавить только 3 блока, чтобы помочь мне решить
-        более сложный лабиринт? Если вы сделаете это правильно то я смогу ходить по
-        любому извилистому пути независимо от его длины. Спешите! Лед тает!
+        более сложный лабиринт? Если вы сделаете это правильно, то я смогу ходить
+        по любому извилистому пути независимо от его длины. Спешите! Лед тает!
       SpecialFrozenLevel_instruction: Теперь вы - настоящий художник! Создайте зимнюю
         Страну чудес и покажите ее друзьям.
       Standalone_Artist_1_instruction: |
@@ -2932,10 +2884,8 @@
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3181,6 +3131,13 @@
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

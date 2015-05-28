@@ -660,7 +660,6 @@ is:
       Course 4 Binary 5_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum, mun teikna þessa mynd?
       Course 4 Binary 6 (copy 1)_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum, mun teikna þessa mynd?
       Course 4 Binary 6_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum, mun teikna þessa mynd?
-      Course 4 Binary 7 (copy 1)_instruction: Þú getir teiknað mestalla myndina með því að endurtaka 5 bita tvíundartölu. Síðan þarftu eina 4 bita tölu í viðbót til að komast í hornið neðst til hægri.
       Course 4 Binary 7_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum, mun teikna þessa mynd?
       Course 4 Binary 8_instruction: Þú getir teiknað mestalla myndina með því að endurtaka 5 bita tvíundartölu. Síðan þarftu eina 4 bita tölu í viðbót til að komast í hornið neðst til hægri.
       Course 4 Maze 1_instruction: Láttu reiða fuglinn ná svíninu!
@@ -670,12 +669,10 @@ is:
       Course 4 Maze 5_instruction: Getur þú leyst þessa þraut með sem allra fæstum kubbum?
       Course 4 Maze 6_instruction: Getur þú leyst þessa þraut með sem allra fæstum kubbum?
       Course 4 Play Lab For Loops 2_instruction: Nú skulum við reyna að telja í oddatölum frá 1 til 100.
-      Course 4 Play Lab Params 1 (copy 1)_instruction: 'Hér er fallið "stökkva" sem lætur leikmann stökkva upp 100 díla. Notaðu fallið til að safna öllum flöggunum.'
       Course 4 Play Lab Params 1_instruction: 'Hér er fallið "stökkva" sem lætur leikmann stökkva upp 100 díla. Notaðu fallið til að safna öllum flöggunum.'
       Course 4 Play Lab Params 10_instruction: |
         Hér færðu síðasta fallið til að nota. Forritaðu leikinn svo hann kalli á fallið "næsta_borð" ef "stig_leikmanns" > 10. Spilaðu leikinn og náðu að ljúka borði 4 til að fara í næstu þraut.
         
-      Course 4 Play Lab Params 2 (copy 1)_instruction: 'Nú höfum við flögg sem eru of hátt uppi fyrir stökkið sem við höfum nú! Við skulum bæta stikanum "hæð" við stökkfallið. Örvarlykillinn upp ætti að stökkva um 100 díla, en örvarlykillinn niður ætti að stökkva upp um 300 díla. Gættu þess að rekast ekki á <future barrier above lower flags>!'
       Course 4 Play Lab Params 2_instruction: 'Nú höfum við flögg sem eru of hátt uppi fyrir núverandi stökk! Við skulum bæta stikanum "hæð" við stökkfallið. Örvarlykillinn upp ætti að stökkva um 100 díla, en örvarlykillinn niður ætti að stökkva upp um 200 díla. Smelltu á "breyta" á stökkfallinu og uppfærðu það svo að það noti hæðarstikann í stað þess að stökkva alltaf 100 díla.'
       Course 4 Play Lab Params 3_instruction: 'Bætum öðrum stika við stökkfallið svo við getum notað það fyrir aðra leikmenn. Hver leikmaður er táknaður með tölu, talið frá 1. Breyttu fallinu "stökkva" svo að skilgreininginn innihaldi breytuna "leikmaður". '
       Course 4 Play Lab Params 4_instruction: 'Hér er fallið "rása". Breyttu því til að kisi færist upp 400 díla og svo niður 400.'
@@ -686,13 +683,11 @@ is:
       Course 4 Play Lab Params 9_instruction: 'Hér er einn af leikjunum sem við unnum með fyrr. Nú hefur bæst við fallið "skora_stig" sem hefur stikann "stig". Breyttu fallinu svo að stikanum "stig" sé bætt við breytuna "stig_leikmanns". Láttu hundinn þurfa að skora 10 stig til að komast í næstu þraut. '
       Course 4 Play Lab Vars 1_instruction: 'Þú þarft ekki að búa til neinn kóða heldur bara ýta á "Keyra" til að spila leikinn! Í leiknum stjórnar þú hundinum sem reynir að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn niður til að stjórna hundinum. Ýttu á "Ljúka" þegar þú vilt hætta.'
       Course 4 Play Lab Vars 2_instruction: 'Þetta kapp var ekki sanngjarnt! Breyttu breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri flöggum en kötturinn. Sá, sem fyrst safnar 10, vinnur leikinn!'
-      Course 4 Play Lab Vars 3 (copy 1)_instruction: Hér er ný tegund af leik! Notaðu vinstri og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
       Course 4 Play Lab Vars 3_instruction: Hér ný tegund af leik! Notaðu vinstri og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
       Course 4 Play Lab Vars 4_instruction: 'Nú notum við breytuna "hæð" til að stjórna hve hátt hundurinn getur stokkið. Uppfærðu breytuna "hæð" svo að hundurinn geti stokkið nógu hátt til að ná öllum flöggunum. Vísbending: Nýju flöggin eru í 200 díla hæð.'
       Course 4 Play Lab Vars 5_instruction: 'Búum til leik! Fyrst þurfum við stigaskor. Notaðu kubbinn "stilla stig" til að setja skorið á 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Nú erum við með breytu fyrir skorið, en hvernig getum við nýtt hana? Hvernig væri að bæta við skorbreytuna í hvert skipti sem þú hittir óvininn með eldhnetti? Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að uppfæra skorið þegar eldhnöttur rekst á köttinn. Skorið er hækkað með skor = skor + 1. Komdu skorinu upp í 10 (hækkað um 1 í hvert sinn) til að ljúka borðinu.'
       Course 4 Play Lab Vars 6_instruction: 'Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hittir köttinn með eldhnetti. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að uppfæra skorið. Þú uppfærir breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu) til að klára borðið.'
-      Course 4 Play Lab Vars 7 (copy 1)_instruction: 'Fínt, en nú skulum við tryggja að leikurinn sé ekki of auðveldur - í hvert sinn sem eldhnöttur hittir þig ættir þú að tapa stigi. Við skulum samt byrja með 10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára borðið.'
       Course 4 Play Lab Vars 7_instruction: 'Fínt en nú skulum við tryggja að leikurinn sé ekki of auðveldur - í hvert sinn sem eldhnöttur hittir hundinn (leikmann 1) ættir þú að tapa stigi. Byrjaðu með 10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára borðið.'
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'Enn ein breyting á leiknum - látum spilarinn geta unnið (eða tapað). Notaðu endalausa lykkju til að athuga skorið - ef skorið fer upp fyrir 20, á óvinurinn að hverfa. Ef skorið fer niður fyrir 0, á leikmaðurinn að hverfa. Smelltu á "Ljúka" þegar leikurinn virkar eins og þú vilt.'
       Course 4 Play Lab Vars 8_instruction: 'Stillum upp leiknum svo hundurinn geti unnið (eða tapað). Notaðu endalausa lykkju til að athuga skorið - ef skorið fer upp fyrir 20, á óvinurinn (kötturinn) að hverfa. Ef skorið fer undir 0, á leikmaðurinn (hundurinn) að hverfa. Smelltu á "Ljúka" þegar leikurinn virkar eins og þú vilt.'
@@ -701,7 +696,6 @@ is:
       Course 4 Play Labs For Loops 1_instruction: 'Við skulum láta hundinn segja hverja tölu frá 1 til 100. Notaðu "frá" lykkju og teljarakubbinn til að segja teljarann í hverri umferð lykkjunnar.'
       Course 4 Play Labs For Loops 2_instruction: Nú skulum við reyna að telja í oddatölum frá 1 til 100.
       Course 4 Play Labs For Loops 3_instruction: Ef við teljum í stærri tölum, getum við talið enn hærra á sama tíma. Prófaðu að láta hundinn telja frá 10 til 1000 um 10 í einu.
-      Course 4 Play Labs For Loops 4 (copy 1)_instruction: Nú höfum við breytt aukanum sem talningin breytist um, en talningin er enn línuleg (aukinn er alltaf eins). Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju óbreytta, en látið hana telja 1, 4, 9, 16, 25... (teljarinn í öðru veldi)?
       Course 4 Play Labs For Loops 4_instruction: Nú höfum við breytt aukanum sem talning breytist um, en talningin er enn línuleg (aukinn er alltaf eins). Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju óbreytta, en látið hana telja 1, 4, 9, 16, 25... (teljarinn í öðru veldi)?
       Course 4 Play Labs For Loops 5_instruction: 'Í síðustu þraut töldum við með teljaranum í öðru veldi. Breyttu nú "teljari ^ 2" í "teljari ^3" til að telja með teljaranum í þriðja veldi (1, 8, 27, 64, 125, 216, 343...)'
       Course 4 Play Labs For Loops 6_instruction: 'Þú manst ef vill að prímtala er sérhver heil tala sem er deilanleg aðeins með sjálfri sér og 1. Notaðu fallið "er_prímtala" til að segja aðeins prímtölur frá 1 til 100.'
@@ -1021,7 +1015,6 @@ is:
       NEW Course 4 Bee For Loops 7_instruction: 'Ertu farinn að skilja hvernig á að nota "frá" lykkjur? Þessi þraut er lík þeirri síðustu, en hér þarft þú að sækja 2,4,6,8,10 af blómasafa. Þú færð kóða til að byrja með nema tölurnar fyrir teljarann. Sækjum nú þennan safa!'
       NEW Course 4 Bee For Loops 8_instruction: "Ef lykkjan þín telur upp á við, er aukanum bætt við teljarabreytuna í hverri umferð. Hver ætti aukinn að vera til að safna 3, 6, 9 af safa?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Ef lykkja telur niður, er aukinn dreginn frá teljarabreytunni í hverri umferð. Hver ætti aukinn að vera til að safna 9, síðan 6 og svo 3 af blómasafa?
-      NEW Course 4 Play Lab Params 11 (copy 1)_instruction: 'Frjáls æfing! Skemmtu þér við að nota alla kubbana í verkfærakassanum. '
       NEW Course 4 Play Lab Params 11_instruction: 'Frjáls æfing! Skemmtu þér við að nota alla kubbana í verkfærakassanum. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Settu inn stikann "leikmaður" með tölum (1, 2 og 3) til að láta þessa leikmenn rása fram og aftur. '
       NEW Course 4 Play Lab Vars 4 5_instruction: 'Hvað heldur þú að þessi kóði muni gera? Smelltu á "Keyra" til að komast að því.'
@@ -1107,9 +1100,8 @@ is:
       Standalone_Artist_v2_instruction: 'Velkominn til listamannsins! Byrjum á að búa til einfaldan ferning með "snúa hægri" og "færa áfram" kubbunum. Hver hlið á að vera 100 díla löng.'
       Text Compression Peter Piper_instruction: Þessu ljóði hefur verið þjappað með því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
       U1L4 NetSim SendAB_instruction: |
-        NetSim: leikvöllur tilbrigðis 1: Í SMÍÐUM:
-        Tilbrigði 1 er enn ekki virkt því að ekki er búið að útfæra P2P jafningjatengingar.
-        Í tilbrigði 1 geta nemendur handvirkt fundið út tímasetningar við að senda bita fram og aftur.
+        Send a message by setting the state of the
+        wire to A or B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -1251,6 +1243,13 @@ is:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
+      U3L19 - Clicker Game Freeplay Area_instruction: |
+        Use this App Lab area to improve
+        your clicker game.  You should start by copy/pasting the code from your old
+        game here.  We're showing a more full set of blocks in the toolbox - some
+        of the things you might not have used yet.  Feel free to explore then and
+        experiment if you want to.  Everything else you need should be shown.  Have
+        fun!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

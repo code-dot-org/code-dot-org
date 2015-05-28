@@ -1,21 +1,21 @@
 th:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: จำเป็น
     attributes:
       user:
-        name: Display Name
+        name: ชื่อที่ใช้แสดง
         email: อีเมล
         username: ชื่อผู้ใช้
         password: รหัสผ่าน
         password_confirmation: ยืนยันรหัสผ่าน
         current_password: รหัสผ่านปัจจุบัน
         locale: ภาษา
-        age: Age
+        age: อายุ
         gender: เพศ
         edit_header: แก้ไขรายละเอียดบัญชี
         error:
@@ -25,29 +25,29 @@ th:
   submit: เสนอ
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'เพิ่มครู:'
+      placeholder: ส่วนรหัส (ABCDEF)
     submit: เพิ่มครู
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
     submit: เพิ่มคำแนะนำ
   appname: Code.org
   stage: ขั้นตอน
-  stage_number: 'Stage %{number}'
+  stage_number: 'ขั้นตอน %{number}'
   puzzle: ปริศนา
   trophies: ถ้วยรางวัล
   courses: คอร์ส
   of: ของ
   more: เพิ่มเติม
   less: น้อย
-  beta: beta
+  beta: Beta
   try_hoc: 'ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>'
   try_k8intro: 'ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)'
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
   already_started: 'พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้'
   demos: 'Admin: ตัวสาธิตทั้งหมด'
   continue: ต่อไป
-  prize: prize
+  prize: รางวัล
   more_info: ข้อมูลเพิ่มเติม
   auth:
     sign_in_with: 'ลงทะเบียนด้วย %{provider}'
@@ -79,7 +79,7 @@ th:
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
-    age: Age
+    age: อายุ
     user_type: Are you a student or teacher?
     submit: สมัครสมาชิก
     teacher: คุณเป็นครูหรือ

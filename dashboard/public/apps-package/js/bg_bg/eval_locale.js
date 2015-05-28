@@ -55,7 +55,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -172,14 +172,14 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "starBlockTitle":function(d){return "звезда (радиус, стил, цвят)"},
 "radialStarBlockTitle":function(d){return "радиално-звезда (точки, вътрешна, външна, стил, цвят)"},
 "polygonBlockTitle":function(d){return "многоъгълник (страни, дължина, стил, цвят)"},
-"stringAppendBlockTitle":function(d){return "Добавяне на поредица (първо, второ)"},
-"stringLengthBlockTitle":function(d){return "дължина на поредицата (поредно)"},
+"stringAppendBlockTitle":function(d){return "Добавяне на низ (първо, второ)"},
+"stringLengthBlockTitle":function(d){return "дължина на низа (низ)"},
 "textBlockTitle":function(d){return "текст (поредност, размер, цвят)"},
 "triangleBlockTitle":function(d){return "триъгълник (размер, стил, цвят)"},
 "underlayBlockTitle":function(d){return "подложка (отдолу, отгоре)"},
 "outline":function(d){return "контур"},
 "solid":function(d){return "твърд"},
-"string":function(d){return "поредица"},
-"stringMismatchError":function(d){return "Имате стринг с грешен капитализация."},
+"string":function(d){return "низ"},
+"stringMismatchError":function(d){return "Имате низ с грешни главни букви."},
 "userCodeException":function(d){return "Възникна грешка при изпълнение на вашия код."},
 "wrongBooleanError":function(d){return "Вашите блокове дават грешна булева стойност."}};

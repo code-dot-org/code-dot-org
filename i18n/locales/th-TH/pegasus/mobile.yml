@@ -262,7 +262,7 @@ th-TH:
   volunteer_engineer_submission_experience_unspecified: ไม่ได้ระบุไว้
   volunteer_engineer_submission_experience_university_student_or_researcher: นักศึกษามหาวิทยาลัย (หรือ นักวิจัย)
   volunteer_engineer_submission_experience_software_professional: ผู้เชี่ยวชาญด้านซอฟต์แวร์
-  petition_age: Age
+  petition_age: อายุ
   dashboard_landing_title: หน้าแรกของคุณครู
   dashboard_landing_welcome: ยินดีต้อนรับสู่แดชบอร์ดรูปแบบใหม่ ของคุณครู
   dashboard_landing_video: ชมวิดีโอนี้
@@ -334,7 +334,7 @@ th-TH:
   dashboard_students_placeholder_name: ชื่อนักเรียน
   dashboard_students_name: ชื่อ
   dashboard_students_progress: ความคืบหน้า
-  dashboard_students_age: Age
+  dashboard_students_age: อายุ
   dashboard_students_gender: เพศ
   dashboard_students_male: Male
   dashboard_students_female: Female

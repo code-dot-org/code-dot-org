@@ -65,8 +65,8 @@
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: Jau yra užsiregistravę %{count} mokinių(-iai).
+    teacher_count: Jau yra užsiregistravę %{count} mokytojų(-ai).
     overview_student: Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas
       bus naudojamas, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau
       informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.
@@ -255,7 +255,7 @@
       signup: Užsiregistruoti
       already_registered: Jau užsiregistravote?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name} pažanga'
       progress: Jūsų pažanga
       lines: 'Iš viso kodo eilučių: %{lines}'
       close: UŽDARYTI
@@ -330,9 +330,9 @@
       su savo el. pašto adresu'
     student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Atsakymų apžvalga
       student: Mokinys
-      try_it_yourself: Try it yourself
+      try_it_yourself: Išmėginkite patys
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
@@ -354,7 +354,7 @@
     classroom_activity: Vaizdo įrašas mokytojams
   home:
     title: Programavimo kursai
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} KODO EILUČIŲ PARAŠĖ MOKINIAI'
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: Jau užsiregistravote? %{link}
@@ -396,7 +396,7 @@
     heading_apps: <h2>Smagumynai</h2><h1>visiems</h1>
     heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
     your_gallery: Galerija
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Išmėginkite Kodavimo Studijos kursus
   gender:
     male: Vyras
     female: Moteris
@@ -543,18 +543,18 @@
     correct_body: Tai yra teisingas atsakymas.
   contract_match:
     wrong_title: Neteisingas atsakymas
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badname: Jūsų funkcijoje yra netinkamas vardas.
+    badname_case: Funkcijų pavadinimai reaguoja į didžiąsias ir mažąsias raides. Pamėginkite
+      pakeisti pavadinimą.
+    badrange: Jūsų funkcijoje yra netinkamas skaičius.
+    baddomainsize: Jūsų funkcijoje yra netinkamas elementų skaičius.
+    baddomainname: Vienas arba daugiau elementų turi netinkamą pavadinimą.
+    baddomaintype: Vienas arba daugiau elementų yra netinkamo tipo arba jų eiliškumas
+      yra netinkamas.
   text_match:
     placeholder: Įveskite savo atsakymą čia
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Ačiū
+    open_response_body: Ačiū už atsakymą!
   dialog:
     ok: gerai
   time:

@@ -35,7 +35,6 @@ goog.require('goog.math.Rect');
  */
 Blockly.Trashcan = function(blockSpace) {
   this.blockSpace_ = blockSpace;
-  this.extraYOffset_ = 0;
 };
 
 /**
@@ -164,15 +163,6 @@ Blockly.Trashcan.prototype.createDom = function() {
   return this.svgGroup_;
 };
 
-/**
- * Initialize the trash can.
- */
-Blockly.Trashcan.prototype.init = function() {
-  this.setOpen_(false);
-  this.position_();
-  // If the document resizes, reposition the trash can.
-  Blockly.bindEvent_(window, 'resize', this, this.position_);
-};
 
 /**
  * Dispose of this trash can.
@@ -188,38 +178,6 @@ Blockly.Trashcan.prototype.dispose = function() {
   this.blockSpace_ = null;
 };
 
-/**
- * Move the trash can to the top-right corner of its containing BlockSpace.
- * @private
- */
-Blockly.Trashcan.prototype.position_ = function() {
-  var metrics = this.blockSpace_.getMetrics();
-  if (!metrics) {
-    // There are no metrics available (blockSpace is probably not visible).
-    return;
-  }
-  if (Blockly.RTL) {
-    this.left_ = Blockly.Trashcan.MARGIN_SIDE_;
-  } else {
-    this.left_ = metrics.viewWidth - Blockly.Trashcan.WIDTH_ - Blockly.Trashcan.MARGIN_SIDE_;
-  }
-  this.top_ = Blockly.Trashcan.MARGIN_TOP_ + this.extraYOffset_;
-  this.svgGroup_.setAttribute('transform',
-      'translate(' + this.left_ + ',' + this.top_ + ')');
-};
-
-/**
- * Repositions trashcan a given number of pixels below the top of its containing BlockSpace
- * @param pixelOffset
- */
-Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
-  this.extraYOffset_ = pixelOffset;
-  this.position_();
-};
-
-Blockly.Trashcan.prototype.repositionBelowBlockSpaceTop = function(pixelOffset) {
-  this.setYOffset(pixelOffset - Blockly.Trashcan.MARGIN_TOP_);
-};
 
 /**
  * Returns the trashcan's current height in pixels
@@ -228,19 +186,6 @@ Blockly.Trashcan.prototype.getHeight = function() {
   return Blockly.Trashcan.HEIGHT_;
 };
 
-/**
-* Return the deletion rectangle for this trashcan.
-* @return {goog.math.Rect} Rectangle in which to delete.
-*/
-Blockly.Trashcan.prototype.getRect = function() {
-  var trashXY = Blockly.getSvgXY_(this.svgGroup_,
-    this.blockSpace_.blockSpaceEditor.svg_);
-  return new goog.math.Rect(
-    trashXY.x - Blockly.Trashcan.MARGIN_HOTSPOT_,
-    trashXY.y - Blockly.Trashcan.MARGIN_HOTSPOT_,
-    Blockly.Trashcan.WIDTH_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_,
-    Blockly.Trashcan.HEIGHT_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_);
-  };
 
 /**
  * Flip the lid open or shut.

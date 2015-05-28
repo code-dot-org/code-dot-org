@@ -55,7 +55,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -268,7 +268,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileRandom":function(d){return "atsitiktinis"},
 "projectileAnna":function(d){return "kablys"},
 "projectileElsa":function(d){return "žibėti"},
-"projectileHiro":function(d){return "Hiro"},
+"projectileHiro":function(d){return "mikro robotai"},
 "projectileBaymax":function(d){return "raketa"},
 "projectileRapunzel":function(d){return "puodas"},
 "projectileCherry":function(d){return "vyšnia"},
