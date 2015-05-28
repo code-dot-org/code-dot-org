@@ -1165,6 +1165,22 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   if (wireRow !== undefined) {
     return wireRow.localAddress;
   }
+
+  // If we don't have connected routers, this is as far as the auto-DNS can see.
+  if (!netsimGlobals.getLevelConfig().connectedRouters) {
+    return undefined;
+  }
+
+  // Is it some node elsewhere on the shard?
+  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAllCached());
+  var node = _.find(nodes, function (node) {
+    return node.getHostname() === hostname;
+  });
+  if (node) {
+    return node.getAddress();
+  }
+
   return undefined;
 };
 
@@ -1238,7 +1254,8 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
 
   // Is it another node?
   var destinationNode = _.find(nodes, function (node) {
-    return address === node.getAddress();
+    return address === node.getAddress() ||
+        (node.getNodeType() === NodeType.ROUTER && address === node.getAutoDnsAddress());
   });
 
   if (destinationNode) {
@@ -1658,8 +1675,8 @@ NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
 };
 
 /**
- *
  * @param {messageRow} messageRow
+ * @return {boolean}
  */
 NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   var packet, toAddress;

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({46:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({48:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -17,7 +17,7 @@ window.applabMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":13,"./blocks":17,"./levels":44,"./skins":48}],48:[function(require,module,exports){
+},{"../appMain":5,"./applab":13,"./blocks":17,"./levels":46,"./skins":50}],50:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -37,7 +37,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":249}],44:[function(require,module,exports){
+},{"../skins":252}],46:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -308,7 +308,7 @@ levels.full_sandbox =  {
 };
 
 
-},{"../block_utils":59,"../utils":297,"./locale":45}],13:[function(require,module,exports){
+},{"../block_utils":62,"../utils":300,"./locale":47}],13:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -341,11 +341,11 @@ var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
-var keyEvent = require('./keyEvent');
 var apiTimeoutList = require('../timeoutList');
-var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
 var designMode = require('./designMode');
+var turtle = require('./turtle');
+var applabCommands = require('./commands');
 
 var vsprintf = require('./sprintf').vsprintf;
 
@@ -357,9 +357,15 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
+
+
+var errorHandler = require('./errorHandler');
+var outputApplabConsole = errorHandler.outputApplabConsole;
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
+
 var level;
 var skin;
-var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -382,11 +388,6 @@ var StepType = {
   IN:   1,
   OVER: 2,
   OUT:  3,
-};
-
-var ErrorLevel = {
-  WARNING: 'WARNING',
-  ERROR: 'ERROR'
 };
 
 var MIN_DEBUG_AREA_HEIGHT = 70;
@@ -594,187 +595,20 @@ var drawDiv = function () {
   divApplab.style.height = Applab.appHeight + "px";
 };
 
-function stepSpeedFromSliderSpeed(sliderSpeed) {
+Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
   return 300 * Math.pow(1 - sliderSpeed, 2);
-}
+};
 
 function getCurrentTickLength() {
   var stepSpeed = Applab.scale.stepSpeed;
   if (Applab.speedSlider) {
-    stepSpeed = stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
+    stepSpeed = Applab.stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
   }
   return stepSpeed;
 }
 
 function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
-}
-
-function outputApplabConsole(output) {
-  // first pass through to the real browser console log if available:
-  if (console.log) {
-    console.log(output);
-  }
-  // then put it in the applab console visible to the user:
-  var debugOutput = document.getElementById('debug-output');
-  if (debugOutput) {
-    if (debugOutput.textContent.length > 0) {
-      debugOutput.textContent += '\n' + output;
-    } else {
-      debugOutput.textContent = output;
-    }
-    debugOutput.scrollTop = debugOutput.scrollHeight;
-  }
-}
-
-/**
- * Output error to console and gutter as appropriate
- * @param {string} warning Text for warning
- * @param {ErrorLevel} level
- * @param {number} lineNum One indexed line number
- */
-function outputError(warning, level, lineNum) {
-  var text = level + ': ';
-  if (lineNum !== undefined) {
-    text += 'Line: ' + lineNum + ': ';
-  }
-  text += warning;
-  outputApplabConsole(text);
-  if (lineNum !== undefined) {
-    annotationList.addRuntimeAnnotation(level, lineNum, warning);
-  }
-}
-
-var OPTIONAL = true;
-
-/**
- * @param value
- * @returns {boolean} true if value is a string, number, boolean, undefined or null.
- *     returns false for other values, including instances of Number or String.
- */
-function isPrimitiveType(value) {
-  switch (typeof value) {
-    case 'string':
-    case 'number':
-    case 'boolean':
-    case 'undefined':
-      return true;
-    case 'object':
-      return (value === null);
-    default:
-      return false;
-  }
-}
-
-function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  if (typeof opts[validatedTypeKey] === 'undefined') {
-    var properType;
-    if (expectedType === 'color') {
-      // Special handling for colors, must be a string and a valid RGBColor:
-      properType = (typeof varValue === 'string');
-      if (properType) {
-        var color = new RGBColor(varValue);
-        properType = color.ok;
-      }
-    } else if (expectedType === 'uistring') {
-      properType = (typeof varValue === 'string') ||
-                   (typeof varValue === 'number') ||
-                   (typeof varValue === 'boolean');
-    } else if (expectedType === 'function') {
-      // Special handling for functions, it must be an interpreter function:
-      properType = (typeof varValue === 'object') && (varValue.type === 'function');
-    } else if (expectedType === 'number') {
-      properType = (typeof varValue === 'number' ||
-                    (typeof varValue === 'string' && !isNaN(varValue)));
-    } else if (expectedType === 'primitive') {
-      properType = isPrimitiveType(varValue);
-      if (!properType) {
-        // Ensure a descriptive error message is displayed.
-        expectedType = 'string, number, boolean, undefined or null';
-      }
-    } else if (expectedType === 'array') {
-      properType = Array.isArray(varValue);
-    } else {
-      properType = (typeof varValue === expectedType);
-    }
-    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
-    if (!properType) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
-      var errorString = funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not a " + expectedType + ".";
-      outputError(errorString, ErrorLevel.WARNING, line);
-    }
-    opts[validatedTypeKey] = properType;
-  }
-}
-
-function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
-  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
-    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
-    if (inRange) {
-      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
-    }
-    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
-    if (!inRange) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
-      var errorString = funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not in the expected range.";
-      outputError(errorString, ErrorLevel.WARNING, line);
-    }
-    opts[validatedRangeKey] = inRange;
-  }
-}
-
-function apiValidateActiveCanvas(opts, funcName) {
-  var validatedActiveCanvasKey = 'validated_active_canvas';
-  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
-    var activeCanvas = Boolean(Applab.activeCanvas);
-    if (!activeCanvas) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
-      var errorString = funcName + "() called without an active canvas. Call " +
-        "createCanvas() first.";
-      outputError(errorString, ErrorLevel.WARNING, line);
-    }
-    if (opts) {
-      opts[validatedActiveCanvasKey] = activeCanvas;
-    }
-  }
-}
-
-function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  var validatedDomKey = 'validated_id_' + varName;
-  apiValidateType(opts, funcName, varName, id, 'string');
-  if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
-    var element = document.getElementById(id);
-    var exists = Boolean(element && divApplab.contains(element));
-    var valid = exists == shouldExist;
-    if (!valid) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
-      var errorString = funcName + "() " + varName +
-        " parameter refers to an id (" +id + ") which " +
-        (exists ? "already exists." : "does not exist.");
-      outputError(errorString, ErrorLevel.WARNING, line);
-    }
-    opts[validatedDomKey] = valid;
-  }
 }
 
 function onDebugInputKeyDown(e) {
@@ -1150,7 +984,7 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
-  user = {
+  Applab.user = {
     applabUserId: config.applabUserId,
     isAdmin: (config.isAdmin === true)
   };
@@ -1199,7 +1033,7 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: user.isAdmin,
+      hasDesignMode: Applab.user.isAdmin,
       designModeBox: designModeBox
     }
   });
@@ -1501,10 +1335,8 @@ Applab.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   if (level.showTurtleBeforeRun) {
-    turtleSetVisibility(true);
+    turtle.turtleSetVisibility(true);
   }
-
-
 
   var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
@@ -2001,1302 +1833,12 @@ Applab.executeCmd = function (id, name, opts) {
 
 Applab.callCmd = function (cmd) {
   var retVal = false;
-  if (Applab[cmd.name] instanceof Function) {
+  if (applabCommands[cmd.name] instanceof Function) {
     studioApp.highlight(cmd.id);
-    retVal = Applab[cmd.name](cmd.opts);
+    retVal = applabCommands[cmd.name](cmd.opts);
   }
   return retVal;
 };
-
-Applab.container = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
-  var newDiv = document.createElement("div");
-  if (typeof opts.elementId !== "undefined") {
-    newDiv.id = opts.elementId;
-  }
-  newDiv.innerHTML = opts.html;
-
-  return Boolean(divApplab.appendChild(newDiv));
-};
-
-Applab.write = function (opts) {
-  apiValidateType(opts, 'write', 'text', opts.html, 'uistring');
-  return Applab.container(opts);
-};
-
-Applab.button = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
-  // PARAMNAME: button: id vs. buttonId
-  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
-  apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
-
-  var newButton = document.createElement("button");
-  var textNode = document.createTextNode(opts.text);
-  newButton.id = opts.elementId;
-
-  return Boolean(newButton.appendChild(textNode) &&
-                 divApplab.appendChild(newButton));
-};
-
-Applab.image = function (opts) {
-  apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
-  apiValidateType(opts, 'image', 'url', opts.src, 'string');
-
-  var divApplab = document.getElementById('divApplab');
-
-  var newImage = document.createElement("img");
-  newImage.src = opts.src;
-  newImage.id = opts.elementId;
-
-  return Boolean(divApplab.appendChild(newImage));
-};
-
-Applab.imageUploadButton = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
-  // To avoid showing the ugly fileupload input element, we create a label
-  // element with an img-upload class that will ensure it looks like a button
-  var newLabel = document.createElement("label");
-  var textNode = document.createTextNode(opts.text);
-  newLabel.id = opts.elementId;
-  newLabel.className = 'img-upload';
-
-  // We then create an offscreen input element and make it a child of the new
-  // label element
-  var newInput = document.createElement("input");
-  newInput.type = "file";
-  newInput.accept = "image/*";
-  newInput.capture = "camera";
-  newInput.style.position = "absolute";
-  newInput.style.left = "-9999px";
-
-  return Boolean(newLabel.appendChild(newInput) &&
-                 newLabel.appendChild(textNode) &&
-                 divApplab.appendChild(newLabel));
-};
-
-// These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
-var TURTLE_WIDTH = 24;
-var TURTLE_HEIGHT = 24;
-var TURTLE_ROTATION_OFFSET = -45;
-
-function getTurtleContext() {
-  var canvas = document.getElementById('turtleCanvas');
-
-  if (!canvas) {
-    // If there is not yet a turtleCanvas, create it:
-    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
-    canvas = document.getElementById('turtleCanvas');
-
-    // And create the turtle (defaults to visible):
-    Applab.turtle.visible = true;
-    var divApplab = document.getElementById('divApplab');
-    var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
-    turtleImage.id = 'turtleImage';
-    updateTurtleImage(turtleImage);
-    turtleImage.ondragstart = function () { return false; };
-    divApplab.appendChild(turtleImage);
-  }
-
-  return canvas.getContext("2d");
-}
-
-function updateTurtleImage(turtleImage) {
-  if (!turtleImage) {
-    turtleImage = document.getElementById('turtleImage');
-  }
-  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
-  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
-  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
-  var transform = 'rotate(' + heading + 'deg)';
-  turtleImage.style.transform = transform;
-  turtleImage.style.msTransform = transform;
-  turtleImage.style.webkitTransform = transform;
-}
-
-function turtleSetVisibility (visible) {
-  // call this first to ensure there is a turtle (in case this is the first API)
-  getTurtleContext();
-  var turtleImage = document.getElementById('turtleImage');
-  turtleImage.style.visibility = visible ? 'visible' : 'hidden';
-}
-
-Applab.show = function (opts) {
-  turtleSetVisibility(true);
-};
-
-Applab.hide = function (opts) {
-  turtleSetVisibility(false);
-};
-
-Applab.moveTo = function (opts) {
-  apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
-  apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
-  var ctx = getTurtleContext();
-  if (ctx) {
-    ctx.beginPath();
-    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
-    Applab.turtle.x = opts.x;
-    Applab.turtle.y = opts.y;
-    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
-    ctx.stroke();
-    updateTurtleImage();
-  }
-};
-
-Applab.move = function (opts) {
-  apiValidateType(opts, 'move', 'x', opts.x, 'number');
-  apiValidateType(opts, 'move', 'y', opts.y, 'number');
-  opts.x += Applab.turtle.x;
-  opts.y += Applab.turtle.y;
-  Applab.moveTo(opts);
-};
-
-Applab.moveForward = function (opts) {
-  apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number', OPTIONAL);
-  var newOpts = {};
-  var distance = 25;
-  if (typeof opts.distance !== 'undefined') {
-    distance = opts.distance;
-  }
-  newOpts.x = Applab.turtle.x +
-    distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
-  newOpts.y = Applab.turtle.y -
-    distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
-  Applab.moveTo(newOpts);
-};
-
-Applab.moveBackward = function (opts) {
-  apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number', OPTIONAL);
-  var distance = -25;
-  if (typeof opts.distance !== 'undefined') {
-    distance = -opts.distance;
-  }
-  Applab.moveForward({'distance': distance });
-};
-
-Applab.turnRight = function (opts) {
-  apiValidateType(opts, 'turnRight', 'angle', opts.degrees, 'number', OPTIONAL);
-  // call this first to ensure there is a turtle (in case this is the first API)
-  getTurtleContext();
-
-  var degrees = 90;
-  if (typeof opts.degrees !== 'undefined') {
-    degrees = opts.degrees;
-  }
-
-  Applab.turtle.heading += degrees;
-  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
-  updateTurtleImage();
-};
-
-Applab.turnLeft = function (opts) {
-  apiValidateType(opts, 'turnLeft', 'angle', opts.degrees, 'number', OPTIONAL);
-  var degrees = -90;
-  if (typeof opts.degrees !== 'undefined') {
-    degrees = -opts.degrees;
-  }
-  Applab.turnRight({'degrees': degrees });
-};
-
-Applab.turnTo = function (opts) {
-  apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
-  var degrees = opts.direction - Applab.turtle.heading;
-  Applab.turnRight({'degrees': degrees });
-};
-
-// Turn along an arc with a specified radius (by default, turn clockwise, so
-// the center of the arc is 90 degrees clockwise of the current heading)
-// if opts.counterclockwise, the center point is 90 degrees counterclockwise
-
-Applab.arcRight = function (opts) {
-  apiValidateType(opts, 'arcRight', 'angle', opts.degrees, 'number');
-  apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
-
-  // call this first to ensure there is a turtle (in case this is the first API)
-  var centerAngle = opts.counterclockwise ? -90 : 90;
-  var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
-  var ctx = getTurtleContext();
-  if (ctx) {
-    var centerX = Applab.turtle.x +
-      opts.radius * Math.sin(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
-    var centerY = Applab.turtle.y -
-      opts.radius * Math.cos(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
-
-    var startAngle =
-      2 * Math.PI * (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180)) / 360;
-    var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees / 360);
-
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, opts.radius, startAngle, endAngle, opts.counterclockwise);
-    ctx.stroke();
-
-    Applab.turtle.heading = (Applab.turtle.heading + clockwiseDegrees + 360) % 360;
-    var xMovement = opts.radius * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
-    var yMovement = opts.radius * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
-    Applab.turtle.x = centerX + (opts.counterclockwise ? xMovement : -xMovement);
-    Applab.turtle.y = centerY + (opts.counterclockwise ? yMovement : -yMovement);
-    updateTurtleImage();
-  }
-};
-
-Applab.arcLeft = function (opts) {
-  apiValidateType(opts, 'arcLeft', 'angle', opts.degrees, 'number');
-  apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
-
-  opts.counterclockwise = true;
-  Applab.arcRight(opts);
-};
-
-Applab.getX = function (opts) {
-  var ctx = getTurtleContext();
-  return Applab.turtle.x;
-};
-
-Applab.getY = function (opts) {
-  var ctx = getTurtleContext();
-  return Applab.turtle.y;
-};
-
-Applab.getDirection = function (opts) {
-  var ctx = getTurtleContext();
-  return Applab.turtle.heading;
-};
-
-Applab.dot = function (opts) {
-  apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
-  var ctx = getTurtleContext();
-  if (ctx && opts.radius > 0) {
-    ctx.beginPath();
-    if (Applab.turtle.penUpColor) {
-      // If the pen is up and the color has been changed, use that color:
-      ctx.strokeStyle = Applab.turtle.penUpColor;
-    }
-    var savedLineWidth = ctx.lineWidth;
-    ctx.lineWidth = 1;
-    ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.stroke();
-    if (Applab.turtle.penUpColor) {
-      // If the pen is up, reset strokeStyle back to transparent:
-      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
-    }
-    ctx.lineWidth = savedLineWidth;
-    return true;
-  }
-
-};
-
-Applab.penUp = function (opts) {
-  var ctx = getTurtleContext();
-  if (ctx) {
-    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
-      Applab.turtle.penUpColor = ctx.strokeStyle;
-      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
-    }
-  }
-};
-
-Applab.penDown = function (opts) {
-  var ctx = getTurtleContext();
-  if (ctx && Applab.turtle.penUpColor) {
-    ctx.strokeStyle = Applab.turtle.penUpColor;
-    delete Applab.turtle.penUpColor;
-  }
-};
-
-Applab.penWidth = function (opts) {
-  apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
-  var ctx = getTurtleContext();
-  if (ctx) {
-    ctx.lineWidth = opts.width;
-  }
-};
-
-Applab.penColorInternal = function (rgbstring) {
-  var ctx = getTurtleContext();
-  if (ctx) {
-    if (Applab.turtle.penUpColor) {
-      // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = rgbstring;
-    } else {
-      ctx.strokeStyle = rgbstring;
-    }
-    ctx.fillStyle = rgbstring;
-  }
-};
-
-Applab.penColor = function (opts) {
-  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
-  Applab.penColorInternal(opts.color);
-};
-
-Applab.penRGB = function (opts) {
-  // PARAMNAME: penRGB: red vs. r
-  // PARAMNAME: penRGB: green vs. g
-  // PARAMNAME: penRGB: blue vs. b
-  apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'penRGB', 'a', opts.a, 'number', 0, 1, OPTIONAL);
-  var alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
-  var rgbstring = "rgba(" + opts.r + "," + opts.g + "," + opts.b + "," + alpha + ")";
-  Applab.penColorInternal(rgbstring);
-};
-
-Applab.speed = function (opts) {
-  // DOCBUG: range is 0-100, not 1-100
-  apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
-  if (opts.percent >= 0 && opts.percent <= 100) {
-    var sliderSpeed = opts.percent / 100;
-    if (Applab.speedSlider) {
-      Applab.speedSlider.setValue(sliderSpeed);
-    }
-    Applab.scale.stepSpeed = stepSpeedFromSliderSpeed(sliderSpeed);
-  }
-};
-
-Applab.createCanvas = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: createCanvas: id vs. canvasId
-  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
-  apiValidateType(opts, 'createCanvas', 'width', width, 'number', OPTIONAL);
-  apiValidateType(opts, 'createCanvas', 'height', height, 'number', OPTIONAL);
-
-  var newElement = document.createElement("canvas");
-  var ctx = newElement.getContext("2d");
-  if (newElement && ctx) {
-    newElement.id = opts.elementId;
-    // default width/height if params are missing
-    var width = opts.width || Applab.appWidth;
-    var height = opts.height || Applab.appHeight;
-    newElement.width = width;
-    newElement.height = height;
-    newElement.style.width = width + 'px';
-    newElement.style.height = height + 'px';
-    if (!opts.turtleCanvas) {
-      // set transparent fill by default (unless it is the turtle canvas):
-      ctx.fillStyle = "rgba(255, 255, 255, 0)";
-    }
-    ctx.lineCap = "round";
-
-    if (!Applab.activeCanvas && !opts.turtleCanvas) {
-      // If there is no active canvas and this isn't the turtleCanvas,
-      // we'll make this the active canvas for subsequent API calls:
-      Applab.activeCanvas = newElement;
-    }
-
-    return Boolean(divApplab.appendChild(newElement));
-  }
-  return false;
-};
-
-Applab.setActiveCanvas = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: setActiveCanvas: id vs. canvasId
-  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
-  var canvas = document.getElementById(opts.elementId);
-  if (divApplab.contains(canvas)) {
-    Applab.activeCanvas = canvas;
-    return true;
-  }
-  return false;
-};
-
-Applab.line = function (opts) {
-  apiValidateActiveCanvas(opts, 'line');
-  apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
-  apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
-  apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
-  apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.beginPath();
-    ctx.moveTo(opts.x1, opts.y1);
-    ctx.lineTo(opts.x2, opts.y2);
-    ctx.stroke();
-    return true;
-  }
-  return false;
-};
-
-Applab.circle = function (opts) {
-  apiValidateActiveCanvas(opts, 'circle');
-  // PARAMNAME: circle: centerX vs. x
-  // PARAMNAME: circle: centerY vs. y
-  apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
-  apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
-  apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.beginPath();
-    ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.stroke();
-    return true;
-  }
-  return false;
-};
-
-Applab.rect = function (opts) {
-  apiValidateActiveCanvas(opts, 'rect');
-  // PARAMNAME: rect: upperLeftX vs. x
-  // PARAMNAME: rect: upperLeftY vs. y
-  apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
-  apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
-  apiValidateType(opts, 'rect', 'width', opts.width, 'number');
-  apiValidateType(opts, 'rect', 'height', opts.height, 'number');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.beginPath();
-    ctx.rect(opts.x, opts.y, opts.width, opts.height);
-    ctx.fill();
-    ctx.stroke();
-    return true;
-  }
-  return false;
-};
-
-Applab.setStrokeWidth = function (opts) {
-  apiValidateActiveCanvas(opts, 'setStrokeWidth');
-  apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.lineWidth = opts.width;
-    return true;
-  }
-  return false;
-};
-
-Applab.setStrokeColor = function (opts) {
-  apiValidateActiveCanvas(opts, 'setStrokeColor');
-  apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.strokeStyle = String(opts.color);
-    return true;
-  }
-  return false;
-};
-
-Applab.setFillColor = function (opts) {
-  apiValidateActiveCanvas(opts, 'setFillColor');
-  apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.fillStyle = String(opts.color);
-    return true;
-  }
-  return false;
-};
-
-Applab.clearCanvas = function (opts) {
-  apiValidateActiveCanvas(opts, 'clearCanvas');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    ctx.clearRect(0,
-                  0,
-                  Applab.activeCanvas.width,
-                  Applab.activeCanvas.height);
-    return true;
-  }
-  return false;
-};
-
-Applab.drawImage = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: drawImage: imageId vs. id
-  apiValidateActiveCanvas(opts, 'drawImage');
-  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'id', opts.imageId, true);
-  apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
-  apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
-  var image = document.getElementById(opts.imageId);
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx && divApplab.contains(image)) {
-    var xScale, yScale;
-    xScale = yScale = 1;
-    if (typeof opts.width !== 'undefined') {
-      apiValidateType(opts, 'drawImage', 'width', opts.width, 'number');
-      xScale = xScale * (opts.width / image.width);
-    }
-    if (typeof opts.height !== 'undefined') {
-      apiValidateType(opts, 'drawImage', 'height', opts.height, 'number');
-      yScale = yScale * (opts.height / image.height);
-    }
-    ctx.save();
-    ctx.setTransform(xScale, 0, 0, yScale, opts.x, opts.y);
-    ctx.drawImage(image, 0, 0);
-    ctx.restore();
-    return true;
-  }
-  return false;
-};
-
-Applab.getImageData = function (opts) {
-  apiValidateActiveCanvas(opts, 'getImageData');
-  // PARAMNAME: getImageData: all params + doc bugs
-  apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
-  apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
-  apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
-  apiValidateType(opts, 'getImageData', 'height', opts.height, 'number');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
-  }
-};
-
-Applab.putImageData = function (opts) {
-  apiValidateActiveCanvas(opts, 'putImageData');
-  // PARAMNAME: putImageData: imageData vs. imgData
-  // PARAMNAME: putImageData: startX vs. x
-  // PARAMNAME: putImageData: startY vs. y
-  apiValidateType(opts, 'putImageData', 'imgData', opts.imageData, 'object');
-  apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
-  apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
-  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
-  if (ctx) {
-    // Create tmpImageData and initialize it because opts.imageData is not
-    // going to be a real ImageData object if it came from the interpreter
-    var tmpImageData = ctx.createImageData(opts.imageData.width,
-                                           opts.imageData.height);
-    tmpImageData.data.set(opts.imageData.data);
-    return ctx.putImageData(tmpImageData, opts.x, opts.y);
-  }
-};
-
-Applab.textInput = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: textInput: id vs. inputId
-  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
-
-  var newInput = document.createElement("input");
-  newInput.value = opts.text;
-  newInput.id = opts.elementId;
-
-  return Boolean(divApplab.appendChild(newInput));
-};
-
-Applab.textLabel = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: textLabel: id vs. labelId
-  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
-  if (typeof opts.forId !== 'undefined') {
-    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, true);
-  }
-
-  var newLabel = document.createElement("label");
-  var textNode = document.createTextNode(opts.text);
-  newLabel.id = opts.elementId;
-  var forElement = document.getElementById(opts.forId);
-  if (forElement && divApplab.contains(forElement)) {
-    newLabel.setAttribute('for', opts.forId);
-  }
-
-  return Boolean(newLabel.appendChild(textNode) &&
-                 divApplab.appendChild(newLabel));
-};
-
-Applab.checkbox = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: checkbox: id vs. checkboxId
-  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
-  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
-
-  var newCheckbox = document.createElement("input");
-  newCheckbox.setAttribute("type", "checkbox");
-  newCheckbox.checked = opts.checked;
-  newCheckbox.id = opts.elementId;
-
-  return Boolean(divApplab.appendChild(newCheckbox));
-};
-
-Applab.radioButton = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
-  // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
-  apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
-
-  var newRadio = document.createElement("input");
-  newRadio.setAttribute("type", "radio");
-  newRadio.name = opts.name;
-  newRadio.checked = opts.checked;
-  newRadio.id = opts.elementId;
-
-  return Boolean(divApplab.appendChild(newRadio));
-};
-
-Applab.dropdown = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: dropdown: id vs. dropdownId
-  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
-
-  var newSelect = document.createElement("select");
-
-  if (opts.optionsArray) {
-    for (var i = 0; i < opts.optionsArray.length; i++) {
-      var option = document.createElement("option");
-      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'uistring');
-      option.text = opts.optionsArray[i];
-      newSelect.add(option);
-    }
-  }
-  newSelect.id = opts.elementId;
-
-  return Boolean(divApplab.appendChild(newSelect));
-};
-
-Applab.getAttribute = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var element = document.getElementById(opts.elementId);
-  var attribute = String(opts.attribute);
-  return divApplab.contains(element) ? element[attribute] : false;
-};
-
-// Whitelist of HTML Element attributes which can be modified, to
-// prevent DOM manipulation which would violate the sandbox.
-Applab.mutableAttributes = ['innerHTML', 'scrollTop'];
-
-Applab.setAttribute = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var element = document.getElementById(opts.elementId);
-  var attribute = String(opts.attribute);
-  if (divApplab.contains(element) &&
-      Applab.mutableAttributes.indexOf(attribute) !== -1) {
-    element[attribute] = opts.value;
-    return true;
-  }
-  return false;
-};
-
-Applab.getText = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
-
-  var element = document.getElementById(opts.elementId);
-  if (divApplab.contains(element)) {
-    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
-      return String(element.value);
-    } else if (element.tagName === 'IMG') {
-      return String(element.alt);
-    } else {
-      return element.innerText;
-    }
-  }
-  return false;
-};
-
-Applab.setText = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
-
-  var element = document.getElementById(opts.elementId);
-  if (divApplab.contains(element)) {
-    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
-      element.value = opts.text;
-    } else if (element.tagName === 'IMG') {
-      element.alt = opts.text;
-    } else {
-      element.innerText = opts.text;
-    }
-    return true;
-  }
-  return false;
-};
-
-Applab.getChecked = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
-
-  var element = document.getElementById(opts.elementId);
-  if (divApplab.contains(element) && element.tagName === 'INPUT') {
-    return element.checked;
-  }
-  return false;
-};
-
-Applab.setChecked = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
-  // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
-
-  var element = document.getElementById(opts.elementId);
-  if (divApplab.contains(element) && element.tagName === 'INPUT') {
-    element.checked = opts.checked;
-    return true;
-  }
-  return false;
-};
-
-Applab.getImageURL = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // PARAMNAME: getImageURL: id vs. imageId
-  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
-
-  var element = document.getElementById(opts.elementId);
-  if (divApplab.contains(element)) {
-    // We return a URL if it is an IMG element or our special img-upload label
-    if (element.tagName === 'IMG') {
-      return element.src;
-    } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
-      var fileObj = element.children[0].files[0];
-      if (fileObj) {
-        return window.URL.createObjectURL(fileObj);
-      }
-    }
-  }
-};
-
-Applab.setImageURL = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setImageURL', 'url', opts.src, 'string');
-
-  var element = document.getElementById(opts.elementId);
-  if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = opts.src;
-    return true;
-  }
-  return false;
-};
-
-Applab.playSound = function (opts) {
-  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
-
-  if (studioApp.cdoSounds) {
-    studioApp.cdoSounds.playURL(opts.url,
-                               {volume: 1.0,
-                                forceHTML5: true,
-                                allowHTML5Mobile: true
-    });
-  }
-};
-
-Applab.innerHTML = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.innerHTML = opts.html;
-    return true;
-  }
-  return false;
-};
-
-Applab.deleteElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    // Special check to see if the active canvas is being deleted
-    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
-      delete Applab.activeCanvas;
-    }
-    return Boolean(div.parentElement.removeChild(div));
-  }
-  return false;
-};
-
-Applab.showElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'visible';
-    return true;
-  }
-  return false;
-};
-
-Applab.hideElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'hidden';
-    return true;
-  }
-  return false;
-};
-
-Applab.setStyle = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.cssText += opts.style;
-    return true;
-  }
-  return false;
-};
-
-Applab.setParent = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  var div = document.getElementById(opts.elementId);
-  var divNewParent = document.getElementById(opts.parentId);
-  if (divApplab.contains(div) && divApplab.contains(divNewParent)) {
-    return Boolean(div.parentElement.removeChild(div) &&
-                   divNewParent.appendChild(div));
-  }
-  return false;
-};
-
-Applab.setPosition = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setPosition', 'x', opts.left, 'number');
-  apiValidateType(opts, 'setPosition', 'y', opts.top, 'number');
-
-  var el = document.getElementById(opts.elementId);
-  if (divApplab.contains(el)) {
-    el.style.position = 'absolute';
-    el.style.left = opts.left + 'px';
-    el.style.top = opts.top + 'px';
-    var setWidthHeight = false;
-    // don't set width/height if
-    // (1) both parameters are undefined AND
-    // (2) width/height already specified OR IMG element with width/height attributes
-    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
-        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-            setWidthHeight = true;
-        }
-    } else {
-        setWidthHeight = true;
-    }
-    if (setWidthHeight) {
-        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
-        el.style.width = opts.width + 'px';
-        el.style.height = opts.height + 'px';
-    }
-    return true;
-  }
-  return false;
-};
-
-Applab.getXPosition = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    var x = div.offsetLeft;
-    while (div !== divApplab) {
-      div = div.offsetParent;
-      x += div.offsetLeft;
-    }
-    return x;
-  }
-  return 0;
-};
-
-Applab.getYPosition = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    var y = div.offsetTop;
-    while (div !== divApplab) {
-      div = div.offsetParent;
-      y += div.offsetTop;
-    }
-    return y;
-  }
-  return 0;
-};
-
-Applab.onEventFired = function (opts, e) {
-  if (typeof e != 'undefined') {
-    var div = document.getElementById('divApplab');
-    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-    var xOffset = 0;
-    var yOffset = 0;
-    while (div) {
-      xOffset += div.offsetLeft;
-      yOffset += div.offsetTop;
-      div = div.offsetParent;
-    }
-
-    var applabEvent = {};
-    // Pass these properties through to applabEvent:
-    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
-      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = e[prop];
-        }
-      });
-    // Convert x coordinates and then pass through to applabEvent:
-    ['clientX', 'pageX', 'x'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = (e[prop] - xOffset) / xScale;
-        }
-      });
-    // Convert y coordinates and then pass through to applabEvent:
-    ['clientY', 'pageY', 'y'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = (e[prop] - yOffset) / yScale;
-        }
-      });
-    // Replace DOM elements with IDs and then add them to applabEvent:
-    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
-      'toElement'].forEach(
-      function (prop) {
-        if (e[prop]) {
-          applabEvent[prop + "Id"] = e[prop].id;
-        }
-      });
-    // Attempt to populate key property (not yet supported in Chrome/Safari):
-    //
-    // keyup/down has no charCode and can be translated with the keyEvent[] map
-    // keypress can use charCode
-    //
-    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
-    if (typeof keyProp !== 'undefined') {
-      applabEvent.key = keyProp;
-    }
-
-    // Push a function call on the queue with an array of arguments consisting
-    // of the applabEvent parameter (and any extraArgs originally supplied)
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [applabEvent].concat(opts.extraArgs)
-    });
-  } else {
-    Applab.eventQueue.push({'fn': opts.func});
-  }
-  if (Applab.interpreter) {
-    // Execute the interpreter and if a return value is sent back from the
-    // interpreter's event handler, pass that back in the native world
-
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the native side
-    // will just see 'undefined' as the return value. The rest of the interpreter
-    // event handler will run in the next onTick(), but the return value will
-    // no longer have any effect.
-    Applab.executeInterpreter(true);
-    return Applab.lastCallbackRetVal;
-  }
-};
-
-Applab.onEvent = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  // Special case the id of 'body' to mean the app's container (divApplab)
-  // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
-  if (opts.elementId === 'body') {
-    opts.elementId = 'divApplab';
-  } else {
-    apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
-  }
-  apiValidateType(opts, 'onEvent', 'type', opts.eventName, 'string');
-  // PARAMNAME: onEvent: callback vs. callbackFunction
-  apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
-  var domElement = document.getElementById(opts.elementId);
-  if (divApplab.contains(domElement)) {
-    switch (opts.eventName) {
-      /*
-      Check for a specific set of Hammer v1 event names (full set below) and if
-      we find a match, instantiate Hammer on that element
-
-      TODO (cpirich): review the following:
-      * whether using Hammer v1 events is the right choice
-      * choose the specific list of events
-      * consider instantiating Hammer just once per-element or on divApplab
-      * review use of preventDefault
-
-      case 'hold':
-      case 'tap':
-      case 'doubletap':
-      case 'swipe':
-      case 'swipeup':
-      case 'swipedown':
-      case 'swipeleft':
-      case 'swiperight':
-      case 'rotate':
-      case 'release':
-      case 'gesture':
-      case 'pinch':
-      case 'pinchin':
-      case 'pinchout':
-        var hammerElement = new Hammer(divApplab, { 'preventDefault': true });
-        hammerElement.on(opts.eventName,
-                         Applab.onEventFired.bind(this, opts));
-        break;
-      */
-      case 'click':
-      case 'change':
-      case 'keyup':
-      case 'mousemove':
-      case 'dblclick':
-      case 'mousedown':
-      case 'mouseup':
-      case 'mouseover':
-      case 'mouseout':
-      case 'keydown':
-      case 'keypress':
-      case 'input':
-        // For now, we're not tracking how many of these we add and we don't allow
-        // the user to detach the handler. We detach all listeners by cloning the
-        // divApplab DOM node inside of reset()
-        domElement.addEventListener(
-            opts.eventName,
-            Applab.onEventFired.bind(this, opts));
-        break;
-      default:
-        return false;
-    }
-    return true;
-  }
-  return false;
-};
-
-Applab.onHttpRequestEvent = function (opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.interpreter === Applab.interpreter) {
-    if (this.readyState === 4) {
-      Applab.eventQueue.push({
-        'fn': opts.func,
-        'arguments': [
-          Number(this.status),
-          String(this.getResponseHeader('content-type')),
-          String(this.responseText)]
-      });
-    }
-  }
-};
-
-Applab.startWebRequest = function (opts) {
-  apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
-  apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
-  opts.interpreter = Applab.interpreter;
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
-  req.open('GET', opts.url, true);
-  req.send();
-};
-
-Applab.onTimerFired = function (opts) {
-  // ensure that this event came from the active interpreter instance:
-  Applab.eventQueue.push({
-    'fn': opts.func
-  });
-  // NOTE: the interpreter will not execute forever, if the event handler
-  // takes too long, executeInterpreter() will return and the rest of the
-  // user's code will execute in the next onTick()
-  Applab.executeInterpreter(true);
-};
-
-Applab.setTimeout = function (opts) {
-  // PARAMNAME: setTimeout: callback vs. function
-  // PARAMNAME: setTimeout: ms vs. milliseconds
-  apiValidateType(opts, 'setTimeout', 'callback', opts.func, 'function');
-  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
-
-  return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
-};
-
-Applab.clearTimeout = function (opts) {
-  apiValidateType(opts, 'clearTimeout', 'timeout', opts.timeoutId, 'number');
-  // NOTE: we do not currently check to see if this is a timer created by
-  // our Applab.setTimeout() function
-  apiTimeoutList.clearTimeout(opts.timeoutId);
-};
-
-Applab.setInterval = function (opts) {
-  // PARAMNAME: setInterval: callback vs. function
-  // PARAMNAME: setInterval: ms vs. milliseconds
-  apiValidateType(opts, 'setInterval', 'callback', opts.func, 'function');
-  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
-
-  return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
-};
-
-Applab.clearInterval = function (opts) {
-  apiValidateType(opts, 'clearInterval', 'interval', opts.intervalId, 'number');
-  // NOTE: we do not currently check to see if this is a timer created by
-  // our Applab.setInterval() function
-  apiTimeoutList.clearInterval(opts.intervalId);
-};
-
-Applab.createRecord = function (opts) {
-  // PARAMNAME: createRecord: table vs. tableName
-  // PARAMNAME: createRecord: callback vs. callbackFunction
-  apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
-  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
-  apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
-  apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleCreateRecord.bind(this, opts);
-  var onError = Applab.handleError.bind(this, opts);
-  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
-};
-
-Applab.handleCreateRecord = function(opts, record) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [record]
-    });
-  }
-};
-
-Applab.handleError = function(opts, message) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onError && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onError,
-      'arguments': [message]
-    });
-  } else {
-    outputApplabConsole(message);
-  }
-};
-
-Applab.getKeyValue = function(opts) {
-  // PARAMNAME: getKeyValue: callback vs. callbackFunction
-  apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
-  apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
-  apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleReadValue.bind(this, opts);
-  var onError = Applab.handleError.bind(this, opts);
-  AppStorage.getKeyValue(opts.key, onSuccess, onError);
-};
-
-Applab.handleReadValue = function(opts, value) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [value]
-    });
-  }
-};
-
-Applab.setKeyValue = function(opts) {
-  // PARAMNAME: setKeyValue: callback vs. callbackFunction
-  apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
-  apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
-  apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
-  apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleSetKeyValue.bind(this, opts);
-  var onError = Applab.handleError.bind(this, opts);
-  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
-};
-
-Applab.handleSetKeyValue = function(opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': []
-    });
-  }
-};
-
-Applab.readRecords = function (opts) {
-  // PARAMNAME: readRecords: table vs. tableName
-  // PARAMNAME: readRecords: callback vs. callbackFunction
-  // PARAMNAME: readRecords: terms vs. searchTerms
-  apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
-  apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
-  apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
-  apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleReadRecords.bind(this, opts);
-  var onError = Applab.handleError.bind(this, opts);
-  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
-};
-
-Applab.handleReadRecords = function(opts, records) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [records]
-    });
-  }
-};
-
-Applab.updateRecord = function (opts) {
-  // PARAMNAME: updateRecord: table vs. tableName
-  // PARAMNAME: updateRecord: callback vs. callbackFunction
-  apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
-  apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
-  apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleUpdateRecord.bind(this, opts);
-  var onError = Applab.handleError.bind(this, opts);
-  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
-};
-
-Applab.handleUpdateRecord = function(opts, record) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [record]
-    });
-  }
-};
-
-Applab.deleteRecord = function (opts) {
-  // PARAMNAME: deleteRecord: table vs. tableName
-  // PARAMNAME: deleteRecord: callback vs. callbackFunction
-  apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
-  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
-  apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
-  apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleDeleteRecord.bind(this, opts);
-  var onError = Applab.handleError.bind(this, opts);
-  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
-};
-
-Applab.handleDeleteRecord = function(opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': []
-    });
-  }
-};
-
-Applab.getUserId = function (opts) {
-  if (!user.applabUserId) {
-    throw new Error("User ID failed to load.");
-  }
-  return user.applabUserId;
-};
-
 /*
 var onWaitComplete = function (opts) {
   if (!opts.complete) {
@@ -3391,7 +1933,7 @@ Applab.isInDesignMode = function () {
 };
 
 
-},{"../StudioApp":4,"../codegen":89,"../constants":91,"../dom":92,"../dropletUtils":93,"../locale":134,"../skins":249,"../slider":250,"../templates/page.html.ejs":275,"../timeoutList":281,"../utils":297,"../xml":298,"./acemode/annotationList":7,"./acemode/mode-javascript_codeorg":9,"./api":10,"./apiBlockly":11,"./appStorage":12,"./blocks":17,"./controls.html.ejs":19,"./designMode":37,"./designModeBox.html.ejs":38,"./dontMarshalApi":40,"./dropletConfig":41,"./extraControlRows.html.ejs":42,"./keyEvent":43,"./locale":45,"./rgbcolor.js":47,"./sprintf":49,"./visualization.html.ejs":50}],50:[function(require,module,exports){
+},{"../StudioApp":4,"../codegen":92,"../constants":94,"../dom":95,"../dropletUtils":96,"../locale":137,"../skins":252,"../slider":253,"../templates/page.html.ejs":278,"../timeoutList":284,"../utils":300,"../xml":301,"./acemode/annotationList":7,"./acemode/mode-javascript_codeorg":9,"./api":10,"./apiBlockly":11,"./appStorage":12,"./blocks":17,"./commands":19,"./controls.html.ejs":20,"./designMode":38,"./designModeBox.html.ejs":39,"./dontMarshalApi":41,"./dropletConfig":42,"./errorHandler":43,"./extraControlRows.html.ejs":44,"./locale":47,"./sprintf":51,"./turtle":52,"./visualization.html.ejs":53}],53:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3411,7 +1953,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],49:[function(require,module,exports){
+},{"ejs":471}],51:[function(require,module,exports){
 /*jshint asi:true */
 /*jshint -W064 */
 
@@ -3603,381 +2145,7 @@ module.exports = {
 };
 
 
-},{}],47:[function(require,module,exports){
-/**
- * A class to parse color values
- * @author Stoyan Stefanov <sstoo@gmail.com>
- * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
- * @license Use it if you like it
- */
-
- // hex regular expressions updated to require [0-9a-f] (cpirich)
- // channels declared as local variable to avoid conflicts (cpirich)
- // cleanup jshint errors (cpirich)
- // add rgba support (davidsbailey)
- 
-module.exports = function(color_string)
-{
-    this.ok = false;
-
-    // strip any leading #
-    if (color_string.charAt(0) == '#') { // remove # if any
-        color_string = color_string.substr(1,6);
-    }
-
-    color_string = color_string.replace(/ /g,'');
-    color_string = color_string.toLowerCase();
-
-    // before getting into regexps, try simple matches
-    // and overwrite the input
-    var simple_colors = {
-        aliceblue: 'f0f8ff',
-        antiquewhite: 'faebd7',
-        aqua: '00ffff',
-        aquamarine: '7fffd4',
-        azure: 'f0ffff',
-        beige: 'f5f5dc',
-        bisque: 'ffe4c4',
-        black: '000000',
-        blanchedalmond: 'ffebcd',
-        blue: '0000ff',
-        blueviolet: '8a2be2',
-        brown: 'a52a2a',
-        burlywood: 'deb887',
-        cadetblue: '5f9ea0',
-        chartreuse: '7fff00',
-        chocolate: 'd2691e',
-        coral: 'ff7f50',
-        cornflowerblue: '6495ed',
-        cornsilk: 'fff8dc',
-        crimson: 'dc143c',
-        cyan: '00ffff',
-        darkblue: '00008b',
-        darkcyan: '008b8b',
-        darkgoldenrod: 'b8860b',
-        darkgray: 'a9a9a9',
-        darkgreen: '006400',
-        darkkhaki: 'bdb76b',
-        darkmagenta: '8b008b',
-        darkolivegreen: '556b2f',
-        darkorange: 'ff8c00',
-        darkorchid: '9932cc',
-        darkred: '8b0000',
-        darksalmon: 'e9967a',
-        darkseagreen: '8fbc8f',
-        darkslateblue: '483d8b',
-        darkslategray: '2f4f4f',
-        darkturquoise: '00ced1',
-        darkviolet: '9400d3',
-        deeppink: 'ff1493',
-        deepskyblue: '00bfff',
-        dimgray: '696969',
-        dodgerblue: '1e90ff',
-        feldspar: 'd19275',
-        firebrick: 'b22222',
-        floralwhite: 'fffaf0',
-        forestgreen: '228b22',
-        fuchsia: 'ff00ff',
-        gainsboro: 'dcdcdc',
-        ghostwhite: 'f8f8ff',
-        gold: 'ffd700',
-        goldenrod: 'daa520',
-        gray: '808080',
-        green: '008000',
-        greenyellow: 'adff2f',
-        honeydew: 'f0fff0',
-        hotpink: 'ff69b4',
-        indianred : 'cd5c5c',
-        indigo : '4b0082',
-        ivory: 'fffff0',
-        khaki: 'f0e68c',
-        lavender: 'e6e6fa',
-        lavenderblush: 'fff0f5',
-        lawngreen: '7cfc00',
-        lemonchiffon: 'fffacd',
-        lightblue: 'add8e6',
-        lightcoral: 'f08080',
-        lightcyan: 'e0ffff',
-        lightgoldenrodyellow: 'fafad2',
-        lightgrey: 'd3d3d3',
-        lightgreen: '90ee90',
-        lightpink: 'ffb6c1',
-        lightsalmon: 'ffa07a',
-        lightseagreen: '20b2aa',
-        lightskyblue: '87cefa',
-        lightslateblue: '8470ff',
-        lightslategray: '778899',
-        lightsteelblue: 'b0c4de',
-        lightyellow: 'ffffe0',
-        lime: '00ff00',
-        limegreen: '32cd32',
-        linen: 'faf0e6',
-        magenta: 'ff00ff',
-        maroon: '800000',
-        mediumaquamarine: '66cdaa',
-        mediumblue: '0000cd',
-        mediumorchid: 'ba55d3',
-        mediumpurple: '9370d8',
-        mediumseagreen: '3cb371',
-        mediumslateblue: '7b68ee',
-        mediumspringgreen: '00fa9a',
-        mediumturquoise: '48d1cc',
-        mediumvioletred: 'c71585',
-        midnightblue: '191970',
-        mintcream: 'f5fffa',
-        mistyrose: 'ffe4e1',
-        moccasin: 'ffe4b5',
-        navajowhite: 'ffdead',
-        navy: '000080',
-        oldlace: 'fdf5e6',
-        olive: '808000',
-        olivedrab: '6b8e23',
-        orange: 'ffa500',
-        orangered: 'ff4500',
-        orchid: 'da70d6',
-        palegoldenrod: 'eee8aa',
-        palegreen: '98fb98',
-        paleturquoise: 'afeeee',
-        palevioletred: 'd87093',
-        papayawhip: 'ffefd5',
-        peachpuff: 'ffdab9',
-        peru: 'cd853f',
-        pink: 'ffc0cb',
-        plum: 'dda0dd',
-        powderblue: 'b0e0e6',
-        purple: '800080',
-        red: 'ff0000',
-        rosybrown: 'bc8f8f',
-        royalblue: '4169e1',
-        saddlebrown: '8b4513',
-        salmon: 'fa8072',
-        sandybrown: 'f4a460',
-        seagreen: '2e8b57',
-        seashell: 'fff5ee',
-        sienna: 'a0522d',
-        silver: 'c0c0c0',
-        skyblue: '87ceeb',
-        slateblue: '6a5acd',
-        slategray: '708090',
-        snow: 'fffafa',
-        springgreen: '00ff7f',
-        steelblue: '4682b4',
-        tan: 'd2b48c',
-        teal: '008080',
-        thistle: 'd8bfd8',
-        tomato: 'ff6347',
-        turquoise: '40e0d0',
-        violet: 'ee82ee',
-        violetred: 'd02090',
-        wheat: 'f5deb3',
-        white: 'ffffff',
-        whitesmoke: 'f5f5f5',
-        yellow: 'ffff00',
-        yellowgreen: '9acd32'
-    };
-    for (var key in simple_colors) {
-        if (color_string == key) {
-            color_string = simple_colors[key];
-        }
-    }
-    // emd of simple type-in colors
-
-    // array of color definition objects
-    var color_defs = [
-        {
-            re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/,
-            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1]),
-                    parseInt(bits[2]),
-                    parseInt(bits[3])
-                ];
-            }
-        },
-        {
-          re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*((?:\d+(?:\.\d+)?)|(?:\.\d+))\s*\)$/,
-          example: ['rgba(123, 234, 45, .33)', 'rgba(255,234,245,1)'],
-          process: function (bits){
-            return [
-              parseInt(bits[1]),
-              parseInt(bits[2]),
-              parseInt(bits[3]),
-              parseInt(bits[4])
-            ];
-          }
-        },
-        {
-            re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
-            example: ['#00ff00', '336699'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1], 16),
-                    parseInt(bits[2], 16),
-                    parseInt(bits[3], 16)
-                ];
-            }
-        },
-        {
-            re: /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})$/,
-            example: ['#fb0', 'f0f'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1] + bits[1], 16),
-                    parseInt(bits[2] + bits[2], 16),
-                    parseInt(bits[3] + bits[3], 16)
-                ];
-            }
-        }
-    ];
-
-    // search through the definitions to find a match
-    for (var i = 0; i < color_defs.length; i++) {
-        var re = color_defs[i].re;
-        var processor = color_defs[i].process;
-        var bits = re.exec(color_string);
-        if (bits) {
-            var channels = processor(bits);
-            this.r = channels[0];
-            this.g = channels[1];
-            this.b = channels[2];
-            this.a = channels[3];
-            this.ok = true;
-        }
-
-    }
-
-    // validate/cleanup values
-    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
-    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
-    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
-    this.a = (this.a < 0) ? 0 : ((this.a > 1 || isNaN(this.a)) ? 1 : this.a);
-
-    // some getters
-    this.toRGB = function () {
-        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
-    };
-    this.toRGBA = function () {
-      return 'rgba(' + this.r + ', ' + this.g + ', ' + this.b + ', ' + this.a + ')';
-    };
-    this.toHex = function () {
-        var r = this.r.toString(16);
-        var g = this.g.toString(16);
-        var b = this.b.toString(16);
-        if (r.length == 1) { r = '0' + r; }
-        if (g.length == 1) { g = '0' + g; }
-        if (b.length == 1) { b = '0' + b; }
-        return '#' + r + g + b;
-    };
-};
-
-
-},{}],43:[function(require,module,exports){
-// Table provided by https://www.jabcreations.com/blog/polyfill-for-event.key
-
-module.exports = {
-  '65':'a',
-  '66':'b',
-  '67':'c',
-  '68':'d',
-  '69':'e',
-  '70':'f',
-  '71':'g',
-  '72':'h',
-  '73':'i',
-  '74':'j',
-  '75':'k',
-  '76':'l',
-  '77':'m',
-  '78':'n',
-  '79':'o',
-  '80':'p',
-  '81':'q',
-  '82':'r',
-  '83':'s',
-  '84':'t',
-  '85':'u',
-  '86':'v',
-  '87':'w',
-  '88':'x',
-  '89':'y',
-  '90':'z',
-  '8':'Backspace',
-  '9':'Tab',
-  '13':'Enter',
-  '16':'Shift',
-  '17':'Control',
-  '18':'Alt',
-  '20':'CapsLock',
-  '27':'Esc',
-  '32':' ',
-  '33':'PageUp',
-  '34':'PageDown',
-  '35':'End',
-  '36':'Home',
-  '37':'Left',
-  '38':'Up',
-  '39':'Right',
-  '40':'Down',
-  '45':'Insert',
-  '46':'Del',
-  '48':'0',
-  '49':'1',
-  '50':'2',
-  '51':'3',
-  '52':'4',
-  '53':'5',
-  '54':'6',
-  '55':'7',
-  '56':'8',
-  '57':'9',
-  '91':'OS',
-  '92':'OS',
-  '93':'Menu',
-  '96':'0',
-  '97':'1',
-  '98':'2',
-  '99':'3',
-  '100':'4',
-  '101':'5',
-  '102':'6',
-  '103':'7',
-  '104':'8',
-  '105':'9',
-  '106':'*',
-  '107':'+',
-  '109':'-',
-  '110':'.',
-  '111':'/',
-  '112':'F1',
-  '113':'F2',
-  '114':'F3',
-  '115':'F4',
-  '116':'F5',
-  '117':'F6',
-  '118':'F7',
-  '119':'F8',
-  '120':'F9',
-  '121':'F10',
-  '122':'F11',
-  '123':'F12',
-  '144':'NumLock',
-  '145':'ScrollLock',
-  '186':':',
-  '187':'=',
-  '188':',',
-  '189':'-',
-  '190':'.',
-  '191':'/',
-  '192':'`',
-  '219':'[',
-  '220':'\\',
-  '221':']',
-  '222':'\''
- };
-
-
-},{}],42:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3997,7 +2165,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"./locale":45,"ejs":468}],40:[function(require,module,exports){
+},{"../locale":137,"./locale":47,"ejs":471}],41:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -4117,7 +2285,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 };
 
 
-},{"./applab":13}],38:[function(require,module,exports){
+},{"./applab":13}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4137,7 +2305,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],37:[function(require,module,exports){
+},{"ejs":471}],38:[function(require,module,exports){
 /* global $, Dialog */
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
@@ -4149,6 +2317,7 @@ var DesignToggleRow = require('./DesignToggleRow.jsx');
 var AssetManager = require('./assetManagement/AssetManager.jsx');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
+var _ = require('../utils').getLodash();
 
 var designMode = module.exports;
 
@@ -4577,12 +2746,17 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
+  // Simulate a run button click, to load the channel id.
+  var designModeClick = studioApp.runButtonClickWrapper.bind(
+      studioApp, Applab.onDesignModeButton);
+  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
   // TODO (brent) - still need logic to generate list of screens, and rerender
   // DesignToggleRow on changes
   React.render(
     React.createElement(DesignToggleRow, {
       screens: ['screen1'],
-      onDesignModeButton: Applab.onDesignModeButton,
+      onDesignModeButton: throttledDesignModeClick,
       onCodeModeButton: Applab.onCodeModeButton
     }),
     designToggleRow
@@ -4590,7 +2764,7 @@ designMode.configureDesignToggleRow = function () {
 };
 
 
-},{"../StudioApp":4,"./DesignToggleRow.jsx":6,"./assetManagement/AssetManager.jsx":14,"./designElements/library":33,"./designProperties.jsx":39,"react":626}],39:[function(require,module,exports){
+},{"../StudioApp":4,"../utils":300,"./DesignToggleRow.jsx":6,"./assetManagement/AssetManager.jsx":14,"./designElements/library":34,"./designProperties.jsx":40,"react":629}],40:[function(require,module,exports){
 var React = require('react');
 
 var elementLibrary = require('./designElements/library');
@@ -4644,7 +2818,7 @@ var DesignProperties = module.exports = React.createClass({displayName: "exports
 });
 
 
-},{"./designElements/library":33,"react":626}],33:[function(require,module,exports){
+},{"./designElements/library":34,"react":629}],34:[function(require,module,exports){
 /* global $ */
 
 var utils = require('../../utils');
@@ -4782,7 +2956,7 @@ module.exports = {
 };
 
 
-},{"../../utils":297,"./button.jsx":26,"./canvas.jsx":27,"./checkbox.jsx":28,"./dropdown.jsx":29,"./image.jsx":31,"./label.jsx":32,"./radioButton.jsx":34,"./textInput.jsx":35,"./textarea.jsx":36}],36:[function(require,module,exports){
+},{"../../utils":300,"./button.jsx":27,"./canvas.jsx":28,"./checkbox.jsx":29,"./dropdown.jsx":30,"./image.jsx":32,"./label.jsx":33,"./radioButton.jsx":35,"./textInput.jsx":36,"./textarea.jsx":37}],37:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -4899,7 +3073,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"./elementUtils":30,"react":626}],35:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"./elementUtils":31,"react":629}],36:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -4995,7 +3169,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"./elementUtils":30,"react":626}],34:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"./elementUtils":31,"react":629}],35:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5092,7 +3266,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"react":626}],32:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"react":629}],33:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5197,7 +3371,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"./elementUtils":30,"react":626}],31:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"./elementUtils":31,"react":629}],32:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -5289,7 +3463,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"./elementUtils":30,"react":626}],29:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"./elementUtils":31,"react":629}],30:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5380,7 +3554,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./OptionsSelectRow.jsx":23,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"./elementUtils":30,"react":626}],23:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./OptionsSelectRow.jsx":24,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"./elementUtils":31,"react":629}],24:[function(require,module,exports){
 var React = require('react');
 
 var OptionsSelectRow = React.createClass({displayName: "OptionsSelectRow",
@@ -5428,7 +3602,7 @@ var OptionsSelectRow = React.createClass({displayName: "OptionsSelectRow",
 module.exports = OptionsSelectRow;
 
 
-},{"react":626}],28:[function(require,module,exports){
+},{"react":629}],29:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5522,7 +3696,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"react":626}],27:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"react":629}],28:[function(require,module,exports){
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
@@ -5597,7 +3771,7 @@ module.exports = {
 };
 
 
-},{"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"react":626}],26:[function(require,module,exports){
+},{"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"react":629}],27:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -5707,7 +3881,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":20,"./ColorPickerPropertyRow.jsx":21,"./ImagePickerPropertyRow.jsx":22,"./PropertyRow.jsx":24,"./ZOrderRow.jsx":25,"./elementUtils":30,"react":626}],30:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":21,"./ColorPickerPropertyRow.jsx":22,"./ImagePickerPropertyRow.jsx":23,"./PropertyRow.jsx":25,"./ZOrderRow.jsx":26,"./elementUtils":31,"react":629}],31:[function(require,module,exports){
 // Taken from http://stackoverflow.com/a/3627747/2506748
 module.exports.rgb2hex = function (rgb) {
   if (rgb === '') {
@@ -5726,7 +3900,7 @@ module.exports.extractImageUrl = function (str) {
 };
 
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 var React = require('react');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
@@ -5800,7 +3974,7 @@ var ZOrderRow = React.createClass({displayName: "ZOrderRow",
 module.exports = ZOrderRow;
 
 
-},{"react":626}],24:[function(require,module,exports){
+},{"react":629}],25:[function(require,module,exports){
 var React = require('react');
 
 var PropertyRow = React.createClass({displayName: "PropertyRow",
@@ -5858,7 +4032,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"react":626}],22:[function(require,module,exports){
+},{"react":629}],23:[function(require,module,exports){
 var React = require('react');
 var designMode = require('../designMode');
 
@@ -5913,7 +4087,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"../designMode":37,"react":626}],21:[function(require,module,exports){
+},{"../designMode":38,"react":629}],22:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5986,7 +4160,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"../colpick":18,"react":626}],18:[function(require,module,exports){
+},{"../colpick":18,"react":629}],18:[function(require,module,exports){
 /*
 colpick Color Picker
 Copyright 2013 Jose Vargas. Licensed under GPL license. Based on Stefan Petre's Color Picker www.eyecon.ro, dual licensed under the MIT and GPL licenses
@@ -6509,7 +4683,7 @@ For usage and examples: colpick.com/plugin
 })(jQuery);
 
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 var React = require('react');
 
 var BooleanPropertyRow = React.createClass({displayName: "BooleanPropertyRow",
@@ -6548,7 +4722,7 @@ var BooleanPropertyRow = React.createClass({displayName: "BooleanPropertyRow",
 module.exports = BooleanPropertyRow;
 
 
-},{"react":626}],14:[function(require,module,exports){
+},{"react":629}],14:[function(require,module,exports){
 var React = require('react');
 var AssetsApi = require('./clientApi');
 var AssetRow = require('./AssetRow.jsx');
@@ -6736,7 +4910,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"./AssetRow.jsx":15,"./clientApi":16,"react":626}],15:[function(require,module,exports){
+},{"./AssetRow.jsx":15,"./clientApi":16,"react":629}],15:[function(require,module,exports){
 var React = require('react');
 var AssetsApi = require('./clientApi');
 
@@ -6767,7 +4941,7 @@ function getThumbnail(type, name) {
         marginTop: '50%',
         transform: 'translateY(-50%)',
         msTransform: 'translateY(-50%)',
-        webkitTransform: 'translateY(-50%)'
+        WebkitTransform: 'translateY(-50%)'
       };
       return React.createElement("img", {src: src, style: assetThumbnailStyle});
     default:
@@ -6900,7 +5074,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"./clientApi":16,"react":626}],16:[function(require,module,exports){
+},{"./clientApi":16,"react":629}],16:[function(require,module,exports){
 /* global dashboard */
 // TODO: The client API should be instantiated with the channel ID, instead of
 // grabbing it from the `dashboard.project` global.
@@ -6928,7 +5102,7 @@ module.exports = {
 };
 
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6949,7 +5123,1887 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],17:[function(require,module,exports){
+},{"../locale":137,"ejs":471}],19:[function(require,module,exports){
+var studioApp = require('../StudioApp').singleton;
+var AppStorage = require('./appStorage');
+var apiTimeoutList = require('../timeoutList');
+var RGBColor = require('./rgbcolor.js');
+var codegen = require('../codegen');
+var keyEvent = require('./keyEvent');
+
+var errorHandler = require('./errorHandler');
+var outputApplabConsole = errorHandler.outputApplabConsole;
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
+
+var turtle = require('./turtle');
+var getTurtleContext = turtle.getTurtleContext;
+var updateTurtleImage = turtle.updateTurtleImage;
+var turtleSetVisibility = turtle.turtleSetVisibility;
+
+var OPTIONAL = true;
+
+var applabCommands = module.exports;
+
+/**
+ * @param value
+ * @returns {boolean} true if value is a string, number, boolean, undefined or null.
+ *     returns false for other values, including instances of Number or String.
+ */
+function isPrimitiveType(value) {
+  switch (typeof value) {
+    case 'string':
+    case 'number':
+    case 'boolean':
+    case 'undefined':
+      return true;
+    case 'object':
+      return (value === null);
+    default:
+      return false;
+  }
+}
+
+function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  if (typeof opts[validatedTypeKey] === 'undefined') {
+    var properType;
+    if (expectedType === 'color') {
+      // Special handling for colors, must be a string and a valid RGBColor:
+      properType = (typeof varValue === 'string');
+      if (properType) {
+        var color = new RGBColor(varValue);
+        properType = color.ok;
+      }
+    } else if (expectedType === 'uistring') {
+      properType = (typeof varValue === 'string') ||
+                   (typeof varValue === 'number') ||
+                   (typeof varValue === 'boolean');
+    } else if (expectedType === 'function') {
+      // Special handling for functions, it must be an interpreter function:
+      properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else if (expectedType === 'number') {
+      properType = (typeof varValue === 'number' ||
+                    (typeof varValue === 'string' && !isNaN(varValue)));
+    } else if (expectedType === 'primitive') {
+      properType = isPrimitiveType(varValue);
+      if (!properType) {
+        // Ensure a descriptive error message is displayed.
+        expectedType = 'string, number, boolean, undefined or null';
+      }
+    } else if (expectedType === 'array') {
+      properType = Array.isArray(varValue);
+    } else {
+      properType = (typeof varValue === expectedType);
+    }
+    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
+    if (!properType) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not a " + expectedType + ".";
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    opts[validatedTypeKey] = properType;
+  }
+}
+
+function apiValidateTypeAndRange(opts, funcName, varName, varValue,
+                                 expectedType, minValue, maxValue, opt) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedRangeKey = 'validated_range_' + varName;
+  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
+  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
+    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
+    if (inRange) {
+      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
+    }
+    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
+    if (!inRange) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.";
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    opts[validatedRangeKey] = inRange;
+  }
+}
+
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() called without an active canvas. Call " +
+        "createCanvas() first.";
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
+  }
+}
+
+function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedDomKey = 'validated_id_' + varName;
+  apiValidateType(opts, funcName, varName, id, 'string');
+  if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
+    var element = document.getElementById(id);
+    var exists = Boolean(element && divApplab.contains(element));
+    var valid = exists == shouldExist;
+    if (!valid) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName +
+        " parameter refers to an id (" +id + ") which " +
+        (exists ? "already exists." : "does not exist.");
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    opts[validatedDomKey] = valid;
+  }
+}
+
+applabCommands.container = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  var newDiv = document.createElement("div");
+  if (typeof opts.elementId !== "undefined") {
+    newDiv.id = opts.elementId;
+  }
+  newDiv.innerHTML = opts.html;
+
+  return Boolean(divApplab.appendChild(newDiv));
+};
+
+applabCommands.write = function (opts) {
+  apiValidateType(opts, 'write', 'text', opts.html, 'uistring');
+  return Applab.container(opts);
+};
+
+applabCommands.button = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  // PARAMNAME: button: id vs. buttonId
+  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
+  apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
+
+  var newButton = document.createElement("button");
+  var textNode = document.createTextNode(opts.text);
+  newButton.id = opts.elementId;
+
+  return Boolean(newButton.appendChild(textNode) &&
+                 divApplab.appendChild(newButton));
+};
+
+applabCommands.image = function (opts) {
+  apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'image', 'url', opts.src, 'string');
+
+  var divApplab = document.getElementById('divApplab');
+
+  var newImage = document.createElement("img");
+  newImage.src = opts.src;
+  newImage.id = opts.elementId;
+
+  return Boolean(divApplab.appendChild(newImage));
+};
+
+applabCommands.imageUploadButton = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  // To avoid showing the ugly fileupload input element, we create a label
+  // element with an img-upload class that will ensure it looks like a button
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+  newLabel.className = 'img-upload';
+
+  // We then create an offscreen input element and make it a child of the new
+  // label element
+  var newInput = document.createElement("input");
+  newInput.type = "file";
+  newInput.accept = "image/*";
+  newInput.capture = "camera";
+  newInput.style.position = "absolute";
+  newInput.style.left = "-9999px";
+
+  return Boolean(newLabel.appendChild(newInput) &&
+                 newLabel.appendChild(textNode) &&
+                 divApplab.appendChild(newLabel));
+};
+
+
+
+applabCommands.show = function (opts) {
+  turtleSetVisibility(true);
+};
+
+applabCommands.hide = function (opts) {
+  turtleSetVisibility(false);
+};
+
+applabCommands.moveTo = function (opts) {
+  apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
+  apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
+    Applab.turtle.x = opts.x;
+    Applab.turtle.y = opts.y;
+    ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
+    ctx.stroke();
+    updateTurtleImage();
+  }
+};
+
+applabCommands.move = function (opts) {
+  apiValidateType(opts, 'move', 'x', opts.x, 'number');
+  apiValidateType(opts, 'move', 'y', opts.y, 'number');
+  opts.x += Applab.turtle.x;
+  opts.y += Applab.turtle.y;
+  applabCommands.moveTo(opts);
+};
+
+applabCommands.moveForward = function (opts) {
+  apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number', OPTIONAL);
+  var newOpts = {};
+  var distance = 25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = opts.distance;
+  }
+  newOpts.x = Applab.turtle.x +
+    distance * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+  newOpts.y = Applab.turtle.y -
+    distance * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+  applabCommands.moveTo(newOpts);
+};
+
+applabCommands.moveBackward = function (opts) {
+  apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number', OPTIONAL);
+  var distance = -25;
+  if (typeof opts.distance !== 'undefined') {
+    distance = -opts.distance;
+  }
+  applabCommands.moveForward({'distance': distance });
+};
+
+applabCommands.turnRight = function (opts) {
+  apiValidateType(opts, 'turnRight', 'angle', opts.degrees, 'number', OPTIONAL);
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
+
+  var degrees = 90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = opts.degrees;
+  }
+
+  Applab.turtle.heading += degrees;
+  Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
+  updateTurtleImage();
+};
+
+applabCommands.turnLeft = function (opts) {
+  apiValidateType(opts, 'turnLeft', 'angle', opts.degrees, 'number', OPTIONAL);
+  var degrees = -90;
+  if (typeof opts.degrees !== 'undefined') {
+    degrees = -opts.degrees;
+  }
+  Applab.turnRight({'degrees': degrees });
+};
+
+applabCommands.turnTo = function (opts) {
+  apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
+  var degrees = opts.direction - Applab.turtle.heading;
+  Applab.turnRight({'degrees': degrees });
+};
+
+// Turn along an arc with a specified radius (by default, turn clockwise, so
+// the center of the arc is 90 degrees clockwise of the current heading)
+// if opts.counterclockwise, the center point is 90 degrees counterclockwise
+
+applabCommands.arcRight = function (opts) {
+  apiValidateType(opts, 'arcRight', 'angle', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
+
+  // call this first to ensure there is a turtle (in case this is the first API)
+  var centerAngle = opts.counterclockwise ? -90 : 90;
+  var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
+  var ctx = getTurtleContext();
+  if (ctx) {
+    var centerX = Applab.turtle.x +
+      opts.radius * Math.sin(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
+    var centerY = Applab.turtle.y -
+      opts.radius * Math.cos(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
+
+    var startAngle =
+      2 * Math.PI * (Applab.turtle.heading + (opts.counterclockwise ? 0 : 180)) / 360;
+    var endAngle = startAngle + (2 * Math.PI * clockwiseDegrees / 360);
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, opts.radius, startAngle, endAngle, opts.counterclockwise);
+    ctx.stroke();
+
+    Applab.turtle.heading = (Applab.turtle.heading + clockwiseDegrees + 360) % 360;
+    var xMovement = opts.radius * Math.cos(2 * Math.PI * Applab.turtle.heading / 360);
+    var yMovement = opts.radius * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
+    Applab.turtle.x = centerX + (opts.counterclockwise ? xMovement : -xMovement);
+    Applab.turtle.y = centerY + (opts.counterclockwise ? yMovement : -yMovement);
+    updateTurtleImage();
+  }
+};
+
+applabCommands.arcLeft = function (opts) {
+  apiValidateType(opts, 'arcLeft', 'angle', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
+
+  opts.counterclockwise = true;
+  applabCommands.arcRight(opts);
+};
+
+applabCommands.getX = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.x;
+};
+
+applabCommands.getY = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.y;
+};
+
+applabCommands.getDirection = function (opts) {
+  var ctx = getTurtleContext();
+  return Applab.turtle.heading;
+};
+
+applabCommands.dot = function (opts) {
+  apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
+  var ctx = getTurtleContext();
+  if (ctx && opts.radius > 0) {
+    ctx.beginPath();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up and the color has been changed, use that color:
+      ctx.strokeStyle = Applab.turtle.penUpColor;
+    }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
+    ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up, reset strokeStyle back to transparent:
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
+    ctx.lineWidth = savedLineWidth;
+    return true;
+  }
+
+};
+
+applabCommands.penUp = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
+  }
+};
+
+applabCommands.penDown = function (opts) {
+  var ctx = getTurtleContext();
+  if (ctx && Applab.turtle.penUpColor) {
+    ctx.strokeStyle = Applab.turtle.penUpColor;
+    delete Applab.turtle.penUpColor;
+  }
+};
+
+applabCommands.penWidth = function (opts) {
+  apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
+  var ctx = getTurtleContext();
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+  }
+};
+
+applabCommands.penColorInternal = function (rgbstring) {
+  var ctx = getTurtleContext();
+  if (ctx) {
+    if (Applab.turtle.penUpColor) {
+      // pen is currently up, store this color for pen down
+      Applab.turtle.penUpColor = rgbstring;
+    } else {
+      ctx.strokeStyle = rgbstring;
+    }
+    ctx.fillStyle = rgbstring;
+  }
+};
+
+applabCommands.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+  applabCommands.penColorInternal(opts.color);
+};
+
+applabCommands.penRGB = function (opts) {
+  // PARAMNAME: penRGB: red vs. r
+  // PARAMNAME: penRGB: green vs. g
+  // PARAMNAME: penRGB: blue vs. b
+  apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'a', opts.a, 'number', 0, 1, OPTIONAL);
+  var alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  var rgbstring = "rgba(" + opts.r + "," + opts.g + "," + opts.b + "," + alpha + ")";
+  applabCommands.penColorInternal(rgbstring);
+};
+
+applabCommands.speed = function (opts) {
+  // DOCBUG: range is 0-100, not 1-100
+  apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
+  if (opts.percent >= 0 && opts.percent <= 100) {
+    var sliderSpeed = opts.percent / 100;
+    if (Applab.speedSlider) {
+      Applab.speedSlider.setValue(sliderSpeed);
+    }
+    Applab.scale.stepSpeed = Applab.stepSpeedFromSliderSpeed(sliderSpeed);
+  }
+};
+
+applabCommands.createCanvas = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: createCanvas: id vs. canvasId
+  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
+  apiValidateType(opts, 'createCanvas', 'width', width, 'number', OPTIONAL);
+  apiValidateType(opts, 'createCanvas', 'height', height, 'number', OPTIONAL);
+
+  var newElement = document.createElement("canvas");
+  var ctx = newElement.getContext("2d");
+  if (newElement && ctx) {
+    newElement.id = opts.elementId;
+    // default width/height if params are missing
+    var width = opts.width || Applab.appWidth;
+    var height = opts.height || Applab.appHeight;
+    newElement.width = width;
+    newElement.height = height;
+    newElement.style.width = width + 'px';
+    newElement.style.height = height + 'px';
+    if (!opts.turtleCanvas) {
+      // set transparent fill by default (unless it is the turtle canvas):
+      ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    }
+    ctx.lineCap = "round";
+
+    if (!Applab.activeCanvas && !opts.turtleCanvas) {
+      // If there is no active canvas and this isn't the turtleCanvas,
+      // we'll make this the active canvas for subsequent API calls:
+      Applab.activeCanvas = newElement;
+    }
+
+    return Boolean(divApplab.appendChild(newElement));
+  }
+  return false;
+};
+
+applabCommands.setActiveCanvas = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: setActiveCanvas: id vs. canvasId
+  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
+  var canvas = document.getElementById(opts.elementId);
+  if (divApplab.contains(canvas)) {
+    Applab.activeCanvas = canvas;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
+  apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
+  apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
+  apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
+  apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(opts.x1, opts.y1);
+    ctx.lineTo(opts.x2, opts.y2);
+    ctx.stroke();
+    return true;
+  }
+  return false;
+};
+
+applabCommands.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
+  // PARAMNAME: circle: centerX vs. x
+  // PARAMNAME: circle: centerY vs. y
+  apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
+  apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
+  apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.beginPath();
+    ctx.arc(opts.x, opts.y, opts.radius, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+    return true;
+  }
+  return false;
+};
+
+applabCommands.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
+  // PARAMNAME: rect: upperLeftX vs. x
+  // PARAMNAME: rect: upperLeftY vs. y
+  apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
+  apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
+  apiValidateType(opts, 'rect', 'width', opts.width, 'number');
+  apiValidateType(opts, 'rect', 'height', opts.height, 'number');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.beginPath();
+    ctx.rect(opts.x, opts.y, opts.width, opts.height);
+    ctx.fill();
+    ctx.stroke();
+    return true;
+  }
+  return false;
+};
+
+applabCommands.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
+  apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.lineWidth = opts.width;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
+  apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.strokeStyle = String(opts.color);
+    return true;
+  }
+  return false;
+};
+
+applabCommands.setFillColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setFillColor');
+  apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.fillStyle = String(opts.color);
+    return true;
+  }
+  return false;
+};
+
+applabCommands.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    ctx.clearRect(0,
+                  0,
+                  Applab.activeCanvas.width,
+                  Applab.activeCanvas.height);
+    return true;
+  }
+  return false;
+};
+
+applabCommands.drawImage = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: drawImage: imageId vs. id
+  apiValidateActiveCanvas(opts, 'drawImage');
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'id', opts.imageId, true);
+  apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
+  apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
+  var image = document.getElementById(opts.imageId);
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx && divApplab.contains(image)) {
+    var xScale, yScale;
+    xScale = yScale = 1;
+    if (typeof opts.width !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'width', opts.width, 'number');
+      xScale = xScale * (opts.width / image.width);
+    }
+    if (typeof opts.height !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'height', opts.height, 'number');
+      yScale = yScale * (opts.height / image.height);
+    }
+    ctx.save();
+    ctx.setTransform(xScale, 0, 0, yScale, opts.x, opts.y);
+    ctx.drawImage(image, 0, 0);
+    ctx.restore();
+    return true;
+  }
+  return false;
+};
+
+applabCommands.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
+  // PARAMNAME: getImageData: all params + doc bugs
+  apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
+  apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
+  apiValidateType(opts, 'getImageData', 'height', opts.height, 'number');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
+  }
+};
+
+applabCommands.putImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'putImageData');
+  // PARAMNAME: putImageData: imageData vs. imgData
+  // PARAMNAME: putImageData: startX vs. x
+  // PARAMNAME: putImageData: startY vs. y
+  apiValidateType(opts, 'putImageData', 'imgData', opts.imageData, 'object');
+  apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
+  var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+  if (ctx) {
+    // Create tmpImageData and initialize it because opts.imageData is not
+    // going to be a real ImageData object if it came from the interpreter
+    var tmpImageData = ctx.createImageData(opts.imageData.width,
+                                           opts.imageData.height);
+    tmpImageData.data.set(opts.imageData.data);
+    return ctx.putImageData(tmpImageData, opts.x, opts.y);
+  }
+};
+
+applabCommands.textInput = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: textInput: id vs. inputId
+  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
+
+  var newInput = document.createElement("input");
+  newInput.value = opts.text;
+  newInput.id = opts.elementId;
+
+  return Boolean(divApplab.appendChild(newInput));
+};
+
+applabCommands.textLabel = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: textLabel: id vs. labelId
+  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
+  if (typeof opts.forId !== 'undefined') {
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, true);
+  }
+
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+  var forElement = document.getElementById(opts.forId);
+  if (forElement && divApplab.contains(forElement)) {
+    newLabel.setAttribute('for', opts.forId);
+  }
+
+  return Boolean(newLabel.appendChild(textNode) &&
+                 divApplab.appendChild(newLabel));
+};
+
+applabCommands.checkbox = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: checkbox: id vs. checkboxId
+  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
+
+  var newCheckbox = document.createElement("input");
+  newCheckbox.setAttribute("type", "checkbox");
+  newCheckbox.checked = opts.checked;
+  newCheckbox.id = opts.elementId;
+
+  return Boolean(divApplab.appendChild(newCheckbox));
+};
+
+applabCommands.radioButton = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
+  apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
+
+  var newRadio = document.createElement("input");
+  newRadio.setAttribute("type", "radio");
+  newRadio.name = opts.name;
+  newRadio.checked = opts.checked;
+  newRadio.id = opts.elementId;
+
+  return Boolean(divApplab.appendChild(newRadio));
+};
+
+applabCommands.dropdown = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: dropdown: id vs. dropdownId
+  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
+
+  var newSelect = document.createElement("select");
+
+  if (opts.optionsArray) {
+    for (var i = 0; i < opts.optionsArray.length; i++) {
+      var option = document.createElement("option");
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'uistring');
+      option.text = opts.optionsArray[i];
+      newSelect.add(option);
+    }
+  }
+  newSelect.id = opts.elementId;
+
+  return Boolean(divApplab.appendChild(newSelect));
+};
+
+applabCommands.getAttribute = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  return divApplab.contains(element) ? element[attribute] : false;
+};
+
+// Whitelist of HTML Element attributes which can be modified, to
+// prevent DOM manipulation which would violate the sandbox.
+var MUTABLE_ATTRIBUTES = ['innerHTML', 'scrollTop'];
+
+applabCommands.setAttribute = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var element = document.getElementById(opts.elementId);
+  var attribute = String(opts.attribute);
+  if (divApplab.contains(element) &&
+      MUTABLE_ATTRIBUTES.indexOf(attribute) !== -1) {
+    element[attribute] = opts.value;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.getText = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
+
+  var element = document.getElementById(opts.elementId);
+  if (divApplab.contains(element)) {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
+      return String(element.value);
+    } else if (element.tagName === 'IMG') {
+      return String(element.alt);
+    } else {
+      return element.innerText;
+    }
+  }
+  return false;
+};
+
+applabCommands.setText = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
+
+  var element = document.getElementById(opts.elementId);
+  if (divApplab.contains(element)) {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
+      element.value = opts.text;
+    } else if (element.tagName === 'IMG') {
+      element.alt = opts.text;
+    } else {
+      element.innerText = opts.text;
+    }
+    return true;
+  }
+  return false;
+};
+
+applabCommands.getChecked = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
+
+  var element = document.getElementById(opts.elementId);
+  if (divApplab.contains(element) && element.tagName === 'INPUT') {
+    return element.checked;
+  }
+  return false;
+};
+
+applabCommands.setChecked = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
+  // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
+
+  var element = document.getElementById(opts.elementId);
+  if (divApplab.contains(element) && element.tagName === 'INPUT') {
+    element.checked = opts.checked;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.getImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // PARAMNAME: getImageURL: id vs. imageId
+  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
+
+  var element = document.getElementById(opts.elementId);
+  if (divApplab.contains(element)) {
+    // We return a URL if it is an IMG element or our special img-upload label
+    if (element.tagName === 'IMG') {
+      return element.src;
+    } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
+      var fileObj = element.children[0].files[0];
+      if (fileObj) {
+        return window.URL.createObjectURL(fileObj);
+      }
+    }
+  }
+};
+
+applabCommands.setImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setImageURL', 'url', opts.src, 'string');
+
+  var element = document.getElementById(opts.elementId);
+  if (divApplab.contains(element) && element.tagName === 'IMG') {
+    element.src = opts.src;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.playSound = function (opts) {
+  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.playURL(opts.url,
+                               {volume: 1.0,
+                                forceHTML5: true,
+                                allowHTML5Mobile: true
+    });
+  }
+};
+
+applabCommands.innerHTML = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.innerHTML = opts.html;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.deleteElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    // Special check to see if the active canvas is being deleted
+    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+      delete Applab.activeCanvas;
+    }
+    return Boolean(div.parentElement.removeChild(div));
+  }
+  return false;
+};
+
+applabCommands.showElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'visible';
+    return true;
+  }
+  return false;
+};
+
+applabCommands.hideElement = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.visibility = 'hidden';
+    return true;
+  }
+  return false;
+};
+
+applabCommands.setStyle = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    div.style.cssText += opts.style;
+    return true;
+  }
+  return false;
+};
+
+applabCommands.setParent = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  var div = document.getElementById(opts.elementId);
+  var divNewParent = document.getElementById(opts.parentId);
+  if (divApplab.contains(div) && divApplab.contains(divNewParent)) {
+    return Boolean(div.parentElement.removeChild(div) &&
+                   divNewParent.appendChild(div));
+  }
+  return false;
+};
+
+applabCommands.setPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setPosition', 'x', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'y', opts.top, 'number');
+
+  var el = document.getElementById(opts.elementId);
+  if (divApplab.contains(el)) {
+    el.style.position = 'absolute';
+    el.style.left = opts.left + 'px';
+    el.style.top = opts.top + 'px';
+    var setWidthHeight = false;
+    // don't set width/height if
+    // (1) both parameters are undefined AND
+    // (2) width/height already specified OR IMG element with width/height attributes
+    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
+        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
+        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
+            setWidthHeight = true;
+        }
+    } else {
+        setWidthHeight = true;
+    }
+    if (setWidthHeight) {
+        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+        el.style.width = opts.width + 'px';
+        el.style.height = opts.height + 'px';
+    }
+    return true;
+  }
+  return false;
+};
+
+applabCommands.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+applabCommands.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
+};
+
+applabCommands.onEventFired = function (opts, e) {
+  if (typeof e != 'undefined') {
+    var div = document.getElementById('divApplab');
+    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+    var xOffset = 0;
+    var yOffset = 0;
+    while (div) {
+      xOffset += div.offsetLeft;
+      yOffset += div.offsetTop;
+      div = div.offsetParent;
+    }
+
+    var applabEvent = {};
+    // Pass these properties through to applabEvent:
+    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
+      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = e[prop];
+        }
+      });
+    // Convert x coordinates and then pass through to applabEvent:
+    ['clientX', 'pageX', 'x'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - xOffset) / xScale;
+        }
+      });
+    // Convert y coordinates and then pass through to applabEvent:
+    ['clientY', 'pageY', 'y'].forEach(
+      function (prop) {
+        if (typeof e[prop] !== 'undefined') {
+          applabEvent[prop] = (e[prop] - yOffset) / yScale;
+        }
+      });
+    // Replace DOM elements with IDs and then add them to applabEvent:
+    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
+      'toElement'].forEach(
+      function (prop) {
+        if (e[prop]) {
+          applabEvent[prop + "Id"] = e[prop].id;
+        }
+      });
+    // Attempt to populate key property (not yet supported in Chrome/Safari):
+    //
+    // keyup/down has no charCode and can be translated with the keyEvent[] map
+    // keypress can use charCode
+    //
+    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
+    if (typeof keyProp !== 'undefined') {
+      applabEvent.key = keyProp;
+    }
+
+    // Push a function call on the queue with an array of arguments consisting
+    // of the applabEvent parameter (and any extraArgs originally supplied)
+    Applab.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [applabEvent].concat(opts.extraArgs)
+    });
+  } else {
+    Applab.eventQueue.push({'fn': opts.func});
+  }
+  if (Applab.interpreter) {
+    // Execute the interpreter and if a return value is sent back from the
+    // interpreter's event handler, pass that back in the native world
+
+    // NOTE: the interpreter will not execute forever, if the event handler
+    // takes too long, executeInterpreter() will return and the native side
+    // will just see 'undefined' as the return value. The rest of the interpreter
+    // event handler will run in the next onTick(), but the return value will
+    // no longer have any effect.
+    Applab.executeInterpreter(true);
+    return Applab.lastCallbackRetVal;
+  }
+};
+
+applabCommands.onEvent = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // Special case the id of 'body' to mean the app's container (divApplab)
+  // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
+  if (opts.elementId === 'body') {
+    opts.elementId = 'divApplab';
+  } else {
+    apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
+  }
+  apiValidateType(opts, 'onEvent', 'type', opts.eventName, 'string');
+  // PARAMNAME: onEvent: callback vs. callbackFunction
+  apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
+  var domElement = document.getElementById(opts.elementId);
+  if (divApplab.contains(domElement)) {
+    switch (opts.eventName) {
+      /*
+      Check for a specific set of Hammer v1 event names (full set below) and if
+      we find a match, instantiate Hammer on that element
+
+      TODO (cpirich): review the following:
+      * whether using Hammer v1 events is the right choice
+      * choose the specific list of events
+      * consider instantiating Hammer just once per-element or on divApplab
+      * review use of preventDefault
+
+      case 'hold':
+      case 'tap':
+      case 'doubletap':
+      case 'swipe':
+      case 'swipeup':
+      case 'swipedown':
+      case 'swipeleft':
+      case 'swiperight':
+      case 'rotate':
+      case 'release':
+      case 'gesture':
+      case 'pinch':
+      case 'pinchin':
+      case 'pinchout':
+        var hammerElement = new Hammer(divApplab, { 'preventDefault': true });
+        hammerElement.on(opts.eventName,
+                         Applab.onEventFired.bind(this, opts));
+        break;
+      */
+      case 'click':
+      case 'change':
+      case 'keyup':
+      case 'mousemove':
+      case 'dblclick':
+      case 'mousedown':
+      case 'mouseup':
+      case 'mouseover':
+      case 'mouseout':
+      case 'keydown':
+      case 'keypress':
+      case 'input':
+        // For now, we're not tracking how many of these we add and we don't allow
+        // the user to detach the handler. We detach all listeners by cloning the
+        // divApplab DOM node inside of reset()
+        domElement.addEventListener(
+            opts.eventName,
+            applabCommands.onEventFired.bind(this, opts));
+        break;
+      default:
+        return false;
+    }
+    return true;
+  }
+  return false;
+};
+
+applabCommands.onHttpRequestEvent = function (opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.interpreter === Applab.interpreter) {
+    if (this.readyState === 4) {
+      Applab.eventQueue.push({
+        'fn': opts.func,
+        'arguments': [
+          Number(this.status),
+          String(this.getResponseHeader('content-type')),
+          String(this.responseText)]
+      });
+    }
+  }
+};
+
+applabCommands.startWebRequest = function (opts) {
+  apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
+  apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
+  opts.interpreter = Applab.interpreter;
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
+  req.open('GET', opts.url, true);
+  req.send();
+};
+
+applabCommands.onTimerFired = function (opts) {
+  // ensure that this event came from the active interpreter instance:
+  Applab.eventQueue.push({
+    'fn': opts.func
+  });
+  // NOTE: the interpreter will not execute forever, if the event handler
+  // takes too long, executeInterpreter() will return and the rest of the
+  // user's code will execute in the next onTick()
+  Applab.executeInterpreter(true);
+};
+
+applabCommands.setTimeout = function (opts) {
+  // PARAMNAME: setTimeout: callback vs. function
+  // PARAMNAME: setTimeout: ms vs. milliseconds
+  apiValidateType(opts, 'setTimeout', 'callback', opts.func, 'function');
+  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
+
+  return apiTimeoutList.setTimeout(applabCommands.onTimerFired.bind(this, opts), opts.milliseconds);
+};
+
+applabCommands.clearTimeout = function (opts) {
+  apiValidateType(opts, 'clearTimeout', 'timeout', opts.timeoutId, 'number');
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our applabCommands.setTimeout() function
+  apiTimeoutList.clearTimeout(opts.timeoutId);
+};
+
+applabCommands.setInterval = function (opts) {
+  // PARAMNAME: setInterval: callback vs. function
+  // PARAMNAME: setInterval: ms vs. milliseconds
+  apiValidateType(opts, 'setInterval', 'callback', opts.func, 'function');
+  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
+
+  return apiTimeoutList.setInterval(applabCommands.onTimerFired.bind(this, opts), opts.milliseconds);
+};
+
+applabCommands.clearInterval = function (opts) {
+  apiValidateType(opts, 'clearInterval', 'interval', opts.intervalId, 'number');
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our applabCommands.setInterval() function
+  apiTimeoutList.clearInterval(opts.intervalId);
+};
+
+applabCommands.createRecord = function (opts) {
+  // PARAMNAME: createRecord: table vs. tableName
+  // PARAMNAME: createRecord: callback vs. callbackFunction
+  apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
+  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
+  apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
+};
+
+applabCommands.handleCreateRecord = function(opts, record) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onSuccess,
+      'arguments': [record]
+    });
+  }
+};
+
+applabCommands.getKeyValue = function(opts) {
+  // PARAMNAME: getKeyValue: callback vs. callbackFunction
+  apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
+  apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleReadValue.bind(this, opts);
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
+};
+
+applabCommands.handleReadValue = function(opts, value) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onSuccess,
+      'arguments': [value]
+    });
+  }
+};
+
+applabCommands.setKeyValue = function(opts) {
+  // PARAMNAME: setKeyValue: callback vs. callbackFunction
+  apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
+  apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleSetKeyValue.bind(this, opts);
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+};
+
+applabCommands.handleSetKeyValue = function(opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onSuccess,
+      'arguments': []
+    });
+  }
+};
+
+applabCommands.readRecords = function (opts) {
+  // PARAMNAME: readRecords: table vs. tableName
+  // PARAMNAME: readRecords: callback vs. callbackFunction
+  // PARAMNAME: readRecords: terms vs. searchTerms
+  apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
+  apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
+  apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
+  apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = Applab.handleReadRecords.bind(this, opts);
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
+};
+
+applabCommands.handleReadRecords = function(opts, records) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onSuccess,
+      'arguments': [records]
+    });
+  }
+};
+
+applabCommands.updateRecord = function (opts) {
+  // PARAMNAME: updateRecord: table vs. tableName
+  // PARAMNAME: updateRecord: callback vs. callbackFunction
+  apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = applabCommands.handleUpdateRecord.bind(this, opts);
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
+};
+
+applabCommands.handleUpdateRecord = function(opts, record) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onSuccess,
+      'arguments': [record]
+    });
+  }
+};
+
+applabCommands.deleteRecord = function (opts) {
+  // PARAMNAME: deleteRecord: table vs. tableName
+  // PARAMNAME: deleteRecord: callback vs. callbackFunction
+  apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
+  opts.interpreter = Applab.interpreter;
+  var onSuccess = applabCommands.handleDeleteRecord.bind(this, opts);
+  var onError = errorHandler.handleError.bind(this, opts);
+  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
+};
+
+applabCommands.handleDeleteRecord = function(opts) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onSuccess,
+      'arguments': []
+    });
+  }
+};
+
+applabCommands.getUserId = function (opts) {
+  if (!Applab.user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return Applab.user.applabUserId;
+};
+
+
+},{"../StudioApp":4,"../codegen":92,"../timeoutList":284,"./appStorage":12,"./errorHandler":43,"./keyEvent":45,"./rgbcolor.js":49,"./turtle":52}],52:[function(require,module,exports){
+var studioApp = require('../StudioApp').singleton;
+
+// These offset are used to ensure that the turtle image is centered over
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_WIDTH = 24;
+var TURTLE_HEIGHT = 24;
+var TURTLE_ROTATION_OFFSET = -45;
+
+function getTurtleContext() {
+  var canvas = document.getElementById('turtleCanvas');
+
+  if (!canvas) {
+    // If there is not yet a turtleCanvas, create it:
+    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
+    canvas = document.getElementById('turtleCanvas');
+
+    // And create the turtle (defaults to visible):
+    Applab.turtle.visible = true;
+    var divApplab = document.getElementById('divApplab');
+    var turtleImage = document.createElement("img");
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
+    turtleImage.id = 'turtleImage';
+    updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
+    divApplab.appendChild(turtleImage);
+  }
+
+  return canvas.getContext("2d");
+}
+
+function updateTurtleImage(turtleImage) {
+  if (!turtleImage) {
+    turtleImage = document.getElementById('turtleImage');
+  }
+  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
+  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
+  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
+  var transform = 'rotate(' + heading + 'deg)';
+  turtleImage.style.transform = transform;
+  turtleImage.style.msTransform = transform;
+  turtleImage.style.webkitTransform = transform;
+}
+
+function turtleSetVisibility (visible) {
+  // call this first to ensure there is a turtle (in case this is the first API)
+  getTurtleContext();
+  var turtleImage = document.getElementById('turtleImage');
+  turtleImage.style.visibility = visible ? 'visible' : 'hidden';
+}
+
+module.exports = {
+  getTurtleContext: getTurtleContext,
+  updateTurtleImage: updateTurtleImage,
+  turtleSetVisibility: turtleSetVisibility
+};
+
+
+},{"../StudioApp":4}],49:[function(require,module,exports){
+/**
+ * A class to parse color values
+ * @author Stoyan Stefanov <sstoo@gmail.com>
+ * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
+ * @license Use it if you like it
+ */
+
+ // hex regular expressions updated to require [0-9a-f] (cpirich)
+ // channels declared as local variable to avoid conflicts (cpirich)
+ // cleanup jshint errors (cpirich)
+ // add rgba support (davidsbailey)
+ 
+module.exports = function(color_string)
+{
+    this.ok = false;
+
+    // strip any leading #
+    if (color_string.charAt(0) == '#') { // remove # if any
+        color_string = color_string.substr(1,6);
+    }
+
+    color_string = color_string.replace(/ /g,'');
+    color_string = color_string.toLowerCase();
+
+    // before getting into regexps, try simple matches
+    // and overwrite the input
+    var simple_colors = {
+        aliceblue: 'f0f8ff',
+        antiquewhite: 'faebd7',
+        aqua: '00ffff',
+        aquamarine: '7fffd4',
+        azure: 'f0ffff',
+        beige: 'f5f5dc',
+        bisque: 'ffe4c4',
+        black: '000000',
+        blanchedalmond: 'ffebcd',
+        blue: '0000ff',
+        blueviolet: '8a2be2',
+        brown: 'a52a2a',
+        burlywood: 'deb887',
+        cadetblue: '5f9ea0',
+        chartreuse: '7fff00',
+        chocolate: 'd2691e',
+        coral: 'ff7f50',
+        cornflowerblue: '6495ed',
+        cornsilk: 'fff8dc',
+        crimson: 'dc143c',
+        cyan: '00ffff',
+        darkblue: '00008b',
+        darkcyan: '008b8b',
+        darkgoldenrod: 'b8860b',
+        darkgray: 'a9a9a9',
+        darkgreen: '006400',
+        darkkhaki: 'bdb76b',
+        darkmagenta: '8b008b',
+        darkolivegreen: '556b2f',
+        darkorange: 'ff8c00',
+        darkorchid: '9932cc',
+        darkred: '8b0000',
+        darksalmon: 'e9967a',
+        darkseagreen: '8fbc8f',
+        darkslateblue: '483d8b',
+        darkslategray: '2f4f4f',
+        darkturquoise: '00ced1',
+        darkviolet: '9400d3',
+        deeppink: 'ff1493',
+        deepskyblue: '00bfff',
+        dimgray: '696969',
+        dodgerblue: '1e90ff',
+        feldspar: 'd19275',
+        firebrick: 'b22222',
+        floralwhite: 'fffaf0',
+        forestgreen: '228b22',
+        fuchsia: 'ff00ff',
+        gainsboro: 'dcdcdc',
+        ghostwhite: 'f8f8ff',
+        gold: 'ffd700',
+        goldenrod: 'daa520',
+        gray: '808080',
+        green: '008000',
+        greenyellow: 'adff2f',
+        honeydew: 'f0fff0',
+        hotpink: 'ff69b4',
+        indianred : 'cd5c5c',
+        indigo : '4b0082',
+        ivory: 'fffff0',
+        khaki: 'f0e68c',
+        lavender: 'e6e6fa',
+        lavenderblush: 'fff0f5',
+        lawngreen: '7cfc00',
+        lemonchiffon: 'fffacd',
+        lightblue: 'add8e6',
+        lightcoral: 'f08080',
+        lightcyan: 'e0ffff',
+        lightgoldenrodyellow: 'fafad2',
+        lightgrey: 'd3d3d3',
+        lightgreen: '90ee90',
+        lightpink: 'ffb6c1',
+        lightsalmon: 'ffa07a',
+        lightseagreen: '20b2aa',
+        lightskyblue: '87cefa',
+        lightslateblue: '8470ff',
+        lightslategray: '778899',
+        lightsteelblue: 'b0c4de',
+        lightyellow: 'ffffe0',
+        lime: '00ff00',
+        limegreen: '32cd32',
+        linen: 'faf0e6',
+        magenta: 'ff00ff',
+        maroon: '800000',
+        mediumaquamarine: '66cdaa',
+        mediumblue: '0000cd',
+        mediumorchid: 'ba55d3',
+        mediumpurple: '9370d8',
+        mediumseagreen: '3cb371',
+        mediumslateblue: '7b68ee',
+        mediumspringgreen: '00fa9a',
+        mediumturquoise: '48d1cc',
+        mediumvioletred: 'c71585',
+        midnightblue: '191970',
+        mintcream: 'f5fffa',
+        mistyrose: 'ffe4e1',
+        moccasin: 'ffe4b5',
+        navajowhite: 'ffdead',
+        navy: '000080',
+        oldlace: 'fdf5e6',
+        olive: '808000',
+        olivedrab: '6b8e23',
+        orange: 'ffa500',
+        orangered: 'ff4500',
+        orchid: 'da70d6',
+        palegoldenrod: 'eee8aa',
+        palegreen: '98fb98',
+        paleturquoise: 'afeeee',
+        palevioletred: 'd87093',
+        papayawhip: 'ffefd5',
+        peachpuff: 'ffdab9',
+        peru: 'cd853f',
+        pink: 'ffc0cb',
+        plum: 'dda0dd',
+        powderblue: 'b0e0e6',
+        purple: '800080',
+        red: 'ff0000',
+        rosybrown: 'bc8f8f',
+        royalblue: '4169e1',
+        saddlebrown: '8b4513',
+        salmon: 'fa8072',
+        sandybrown: 'f4a460',
+        seagreen: '2e8b57',
+        seashell: 'fff5ee',
+        sienna: 'a0522d',
+        silver: 'c0c0c0',
+        skyblue: '87ceeb',
+        slateblue: '6a5acd',
+        slategray: '708090',
+        snow: 'fffafa',
+        springgreen: '00ff7f',
+        steelblue: '4682b4',
+        tan: 'd2b48c',
+        teal: '008080',
+        thistle: 'd8bfd8',
+        tomato: 'ff6347',
+        turquoise: '40e0d0',
+        violet: 'ee82ee',
+        violetred: 'd02090',
+        wheat: 'f5deb3',
+        white: 'ffffff',
+        whitesmoke: 'f5f5f5',
+        yellow: 'ffff00',
+        yellowgreen: '9acd32'
+    };
+    for (var key in simple_colors) {
+        if (color_string == key) {
+            color_string = simple_colors[key];
+        }
+    }
+    // emd of simple type-in colors
+
+    // array of color definition objects
+    var color_defs = [
+        {
+            re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/,
+            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1]),
+                    parseInt(bits[2]),
+                    parseInt(bits[3])
+                ];
+            }
+        },
+        {
+          re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*((?:\d+(?:\.\d+)?)|(?:\.\d+))\s*\)$/,
+          example: ['rgba(123, 234, 45, .33)', 'rgba(255,234,245,1)'],
+          process: function (bits){
+            return [
+              parseInt(bits[1]),
+              parseInt(bits[2]),
+              parseInt(bits[3]),
+              parseInt(bits[4])
+            ];
+          }
+        },
+        {
+            re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
+            example: ['#00ff00', '336699'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[2], 16),
+                    parseInt(bits[3], 16)
+                ];
+            }
+        },
+        {
+            re: /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})$/,
+            example: ['#fb0', 'f0f'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1] + bits[1], 16),
+                    parseInt(bits[2] + bits[2], 16),
+                    parseInt(bits[3] + bits[3], 16)
+                ];
+            }
+        }
+    ];
+
+    // search through the definitions to find a match
+    for (var i = 0; i < color_defs.length; i++) {
+        var re = color_defs[i].re;
+        var processor = color_defs[i].process;
+        var bits = re.exec(color_string);
+        if (bits) {
+            var channels = processor(bits);
+            this.r = channels[0];
+            this.g = channels[1];
+            this.b = channels[2];
+            this.a = channels[3];
+            this.ok = true;
+        }
+
+    }
+
+    // validate/cleanup values
+    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
+    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
+    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+    this.a = (this.a < 0) ? 0 : ((this.a > 1 || isNaN(this.a)) ? 1 : this.a);
+
+    // some getters
+    this.toRGB = function () {
+        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+    };
+    this.toRGBA = function () {
+      return 'rgba(' + this.r + ', ' + this.g + ', ' + this.b + ', ' + this.a + ')';
+    };
+    this.toHex = function () {
+        var r = this.r.toString(16);
+        var g = this.g.toString(16);
+        var b = this.b.toString(16);
+        if (r.length == 1) { r = '0' + r; }
+        if (g.length == 1) { g = '0' + g; }
+        if (b.length == 1) { b = '0' + b; }
+        return '#' + r + g + b;
+    };
+};
+
+
+},{}],45:[function(require,module,exports){
+// Table provided by https://www.jabcreations.com/blog/polyfill-for-event.key
+
+module.exports = {
+  '65':'a',
+  '66':'b',
+  '67':'c',
+  '68':'d',
+  '69':'e',
+  '70':'f',
+  '71':'g',
+  '72':'h',
+  '73':'i',
+  '74':'j',
+  '75':'k',
+  '76':'l',
+  '77':'m',
+  '78':'n',
+  '79':'o',
+  '80':'p',
+  '81':'q',
+  '82':'r',
+  '83':'s',
+  '84':'t',
+  '85':'u',
+  '86':'v',
+  '87':'w',
+  '88':'x',
+  '89':'y',
+  '90':'z',
+  '8':'Backspace',
+  '9':'Tab',
+  '13':'Enter',
+  '16':'Shift',
+  '17':'Control',
+  '18':'Alt',
+  '20':'CapsLock',
+  '27':'Esc',
+  '32':' ',
+  '33':'PageUp',
+  '34':'PageDown',
+  '35':'End',
+  '36':'Home',
+  '37':'Left',
+  '38':'Up',
+  '39':'Right',
+  '40':'Down',
+  '45':'Insert',
+  '46':'Del',
+  '48':'0',
+  '49':'1',
+  '50':'2',
+  '51':'3',
+  '52':'4',
+  '53':'5',
+  '54':'6',
+  '55':'7',
+  '56':'8',
+  '57':'9',
+  '91':'OS',
+  '92':'OS',
+  '93':'Menu',
+  '96':'0',
+  '97':'1',
+  '98':'2',
+  '99':'3',
+  '100':'4',
+  '101':'5',
+  '102':'6',
+  '103':'7',
+  '104':'8',
+  '105':'9',
+  '106':'*',
+  '107':'+',
+  '109':'-',
+  '110':'.',
+  '111':'/',
+  '112':'F1',
+  '113':'F2',
+  '114':'F3',
+  '115':'F4',
+  '116':'F5',
+  '117':'F6',
+  '118':'F7',
+  '119':'F8',
+  '120':'F9',
+  '121':'F10',
+  '122':'F11',
+  '123':'F12',
+  '144':'NumLock',
+  '145':'ScrollLock',
+  '186':':',
+  '187':'=',
+  '188':',',
+  '189':'-',
+  '190':'.',
+  '191':'/',
+  '192':'`',
+  '219':'[',
+  '220':'\\',
+  '221':']',
+  '222':'\''
+ };
+
+
+},{}],43:[function(require,module,exports){
+var annotationList = require('./acemode/annotationList');
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
+};
+
+function outputApplabConsole(output) {
+  // first pass through to the real browser console log if available:
+  if (console.log) {
+    console.log(output);
+  }
+  // then put it in the applab console visible to the user:
+  var debugOutput = document.getElementById('debug-output');
+  if (debugOutput) {
+    if (debugOutput.textContent.length > 0) {
+      debugOutput.textContent += '\n' + output;
+    } else {
+      debugOutput.textContent = output;
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
+  }
+}
+
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  outputApplabConsole(text);
+  if (lineNum !== undefined) {
+    annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
+
+function handleError(opts, message) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.onError && opts.interpreter === Applab.interpreter) {
+    Applab.eventQueue.push({
+      'fn': opts.onError,
+      'arguments': [message]
+    });
+  } else {
+    outputApplabConsole(message);
+  }
+}
+
+
+module.exports = {
+  ErrorLevel: ErrorLevel,
+  outputApplabConsole: outputApplabConsole,
+  outputError: outputError,
+  handleError: handleError
+};
+
+
+},{"./acemode/annotationList":7}],17:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -7023,7 +7077,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
 }
 
 
-},{"../codegen":89,"../locale":134,"../utils":297,"./locale":45}],45:[function(require,module,exports){
+},{"../codegen":92,"../locale":137,"../utils":300,"./locale":47}],47:[function(require,module,exports){
 // locale for applab
 
 module.exports = window.blockly.applab_locale;
@@ -7927,7 +7981,7 @@ exports.Mode = Mode;
 });
 
 
-},{"../../dropletUtils":93,"../dropletConfig":41,"./annotationList":7}],41:[function(require,module,exports){
+},{"../../dropletUtils":96,"../dropletConfig":42,"./annotationList":7}],42:[function(require,module,exports){
 var api = require('./api');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -8771,10 +8825,10 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"../locale":134,"react":626}],626:[function(require,module,exports){
+},{"../locale":137,"react":629}],629:[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":499}],499:[function(require,module,exports){
+},{"./lib/React":502}],502:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -8926,7 +8980,7 @@ React.version = '0.13.2';
 module.exports = React;
 
 }).call(this,require('_process'))
-},{"./EventPluginUtils":489,"./ExecutionEnvironment":491,"./Object.assign":497,"./ReactChildren":503,"./ReactClass":504,"./ReactComponent":505,"./ReactContext":509,"./ReactCurrentOwner":510,"./ReactDOM":511,"./ReactDOMTextComponent":522,"./ReactDefaultInjection":525,"./ReactElement":528,"./ReactElementValidator":529,"./ReactInstanceHandles":537,"./ReactMount":541,"./ReactPerf":546,"./ReactPropTypes":549,"./ReactReconciler":552,"./ReactServerRendering":555,"./findDOMNode":588,"./onlyChild":615,"_process":447}],615:[function(require,module,exports){
+},{"./EventPluginUtils":492,"./ExecutionEnvironment":494,"./Object.assign":500,"./ReactChildren":506,"./ReactClass":507,"./ReactComponent":508,"./ReactContext":512,"./ReactCurrentOwner":513,"./ReactDOM":514,"./ReactDOMTextComponent":525,"./ReactDefaultInjection":528,"./ReactElement":531,"./ReactElementValidator":532,"./ReactInstanceHandles":540,"./ReactMount":544,"./ReactPerf":549,"./ReactPropTypes":552,"./ReactReconciler":555,"./ReactServerRendering":558,"./findDOMNode":591,"./onlyChild":618,"_process":450}],618:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -8966,7 +9020,7 @@ function onlyChild(children) {
 module.exports = onlyChild;
 
 }).call(this,require('_process'))
-},{"./ReactElement":528,"./invariant":606,"_process":447}],555:[function(require,module,exports){
+},{"./ReactElement":531,"./invariant":609,"_process":450}],558:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -9048,7 +9102,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./ReactElement":528,"./ReactInstanceHandles":537,"./ReactMarkupChecksum":540,"./ReactServerRenderingTransaction":556,"./emptyObject":586,"./instantiateReactComponent":605,"./invariant":606,"_process":447}],556:[function(require,module,exports){
+},{"./ReactElement":531,"./ReactInstanceHandles":540,"./ReactMarkupChecksum":543,"./ReactServerRenderingTransaction":559,"./emptyObject":589,"./instantiateReactComponent":608,"./invariant":609,"_process":450}],559:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -9161,7 +9215,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 
-},{"./CallbackQueue":476,"./Object.assign":497,"./PooledClass":498,"./ReactPutListenerQueue":550,"./Transaction":574,"./emptyFunction":585}],525:[function(require,module,exports){
+},{"./CallbackQueue":479,"./Object.assign":500,"./PooledClass":501,"./ReactPutListenerQueue":553,"./Transaction":577,"./emptyFunction":588}],528:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -9320,7 +9374,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./BeforeInputEventPlugin":473,"./ChangeEventPlugin":477,"./ClientReactRootIndex":478,"./DefaultEventPluginOrder":483,"./EnterLeaveEventPlugin":484,"./ExecutionEnvironment":491,"./HTMLDOMPropertyConfig":493,"./MobileSafariClickEventPlugin":496,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactComponentBrowserEnvironment":506,"./ReactDOMButton":512,"./ReactDOMComponent":513,"./ReactDOMForm":514,"./ReactDOMIDOperations":515,"./ReactDOMIframe":516,"./ReactDOMImg":517,"./ReactDOMInput":518,"./ReactDOMOption":519,"./ReactDOMSelect":520,"./ReactDOMTextComponent":522,"./ReactDOMTextarea":523,"./ReactDefaultBatchingStrategy":524,"./ReactDefaultPerf":526,"./ReactElement":528,"./ReactEventListener":533,"./ReactInjection":535,"./ReactInstanceHandles":537,"./ReactMount":541,"./ReactReconcileTransaction":551,"./SVGDOMPropertyConfig":559,"./SelectEventPlugin":560,"./ServerReactRootIndex":561,"./SimpleEventPlugin":562,"./createFullPageComponent":582,"_process":447}],582:[function(require,module,exports){
+},{"./BeforeInputEventPlugin":476,"./ChangeEventPlugin":480,"./ClientReactRootIndex":481,"./DefaultEventPluginOrder":486,"./EnterLeaveEventPlugin":487,"./ExecutionEnvironment":494,"./HTMLDOMPropertyConfig":496,"./MobileSafariClickEventPlugin":499,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactComponentBrowserEnvironment":509,"./ReactDOMButton":515,"./ReactDOMComponent":516,"./ReactDOMForm":517,"./ReactDOMIDOperations":518,"./ReactDOMIframe":519,"./ReactDOMImg":520,"./ReactDOMInput":521,"./ReactDOMOption":522,"./ReactDOMSelect":523,"./ReactDOMTextComponent":525,"./ReactDOMTextarea":526,"./ReactDefaultBatchingStrategy":527,"./ReactDefaultPerf":529,"./ReactElement":531,"./ReactEventListener":536,"./ReactInjection":538,"./ReactInstanceHandles":540,"./ReactMount":544,"./ReactReconcileTransaction":554,"./SVGDOMPropertyConfig":562,"./SelectEventPlugin":563,"./ServerReactRootIndex":564,"./SimpleEventPlugin":565,"./createFullPageComponent":585,"_process":450}],585:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -9382,7 +9436,7 @@ function createFullPageComponent(tag) {
 module.exports = createFullPageComponent;
 
 }).call(this,require('_process'))
-},{"./ReactClass":504,"./ReactElement":528,"./invariant":606,"_process":447}],562:[function(require,module,exports){
+},{"./ReactClass":507,"./ReactElement":531,"./invariant":609,"_process":450}],565:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -9810,7 +9864,7 @@ var SimpleEventPlugin = {
 module.exports = SimpleEventPlugin;
 
 }).call(this,require('_process'))
-},{"./EventConstants":485,"./EventPluginUtils":489,"./EventPropagators":490,"./SyntheticClipboardEvent":563,"./SyntheticDragEvent":565,"./SyntheticEvent":566,"./SyntheticFocusEvent":567,"./SyntheticKeyboardEvent":569,"./SyntheticMouseEvent":570,"./SyntheticTouchEvent":571,"./SyntheticUIEvent":572,"./SyntheticWheelEvent":573,"./getEventCharCode":593,"./invariant":606,"./keyOf":612,"./warning":625,"_process":447}],573:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPluginUtils":492,"./EventPropagators":493,"./SyntheticClipboardEvent":566,"./SyntheticDragEvent":568,"./SyntheticEvent":569,"./SyntheticFocusEvent":570,"./SyntheticKeyboardEvent":572,"./SyntheticMouseEvent":573,"./SyntheticTouchEvent":574,"./SyntheticUIEvent":575,"./SyntheticWheelEvent":576,"./getEventCharCode":596,"./invariant":609,"./keyOf":615,"./warning":628,"_process":450}],576:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9871,7 +9925,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
 
-},{"./SyntheticMouseEvent":570}],571:[function(require,module,exports){
+},{"./SyntheticMouseEvent":573}],574:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9919,7 +9973,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
 
-},{"./SyntheticUIEvent":572,"./getEventModifierState":595}],569:[function(require,module,exports){
+},{"./SyntheticUIEvent":575,"./getEventModifierState":598}],572:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10006,7 +10060,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
 
-},{"./SyntheticUIEvent":572,"./getEventCharCode":593,"./getEventKey":594,"./getEventModifierState":595}],594:[function(require,module,exports){
+},{"./SyntheticUIEvent":575,"./getEventCharCode":596,"./getEventKey":597,"./getEventModifierState":598}],597:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10111,7 +10165,7 @@ function getEventKey(nativeEvent) {
 
 module.exports = getEventKey;
 
-},{"./getEventCharCode":593}],593:[function(require,module,exports){
+},{"./getEventCharCode":596}],596:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10163,7 +10217,7 @@ function getEventCharCode(nativeEvent) {
 
 module.exports = getEventCharCode;
 
-},{}],567:[function(require,module,exports){
+},{}],570:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10202,7 +10256,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
 
-},{"./SyntheticUIEvent":572}],565:[function(require,module,exports){
+},{"./SyntheticUIEvent":575}],568:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10241,7 +10295,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
 
-},{"./SyntheticMouseEvent":570}],563:[function(require,module,exports){
+},{"./SyntheticMouseEvent":573}],566:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10286,7 +10340,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
 
-},{"./SyntheticEvent":566}],561:[function(require,module,exports){
+},{"./SyntheticEvent":569}],564:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10317,7 +10371,7 @@ var ServerReactRootIndex = {
 
 module.exports = ServerReactRootIndex;
 
-},{}],560:[function(require,module,exports){
+},{}],563:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10512,7 +10566,7 @@ var SelectEventPlugin = {
 
 module.exports = SelectEventPlugin;
 
-},{"./EventConstants":485,"./EventPropagators":490,"./ReactInputSelection":536,"./SyntheticEvent":566,"./getActiveElement":592,"./isTextInputElement":609,"./keyOf":612,"./shallowEqual":621}],621:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPropagators":493,"./ReactInputSelection":539,"./SyntheticEvent":569,"./getActiveElement":595,"./isTextInputElement":612,"./keyOf":615,"./shallowEqual":624}],624:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10556,7 +10610,7 @@ function shallowEqual(objA, objB) {
 
 module.exports = shallowEqual;
 
-},{}],559:[function(require,module,exports){
+},{}],562:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10648,7 +10702,7 @@ var SVGDOMPropertyConfig = {
 
 module.exports = SVGDOMPropertyConfig;
 
-},{"./DOMProperty":480}],551:[function(require,module,exports){
+},{"./DOMProperty":483}],554:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10824,7 +10878,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 
-},{"./CallbackQueue":476,"./Object.assign":497,"./PooledClass":498,"./ReactBrowserEventEmitter":501,"./ReactInputSelection":536,"./ReactPutListenerQueue":550,"./Transaction":574}],550:[function(require,module,exports){
+},{"./CallbackQueue":479,"./Object.assign":500,"./PooledClass":501,"./ReactBrowserEventEmitter":504,"./ReactInputSelection":539,"./ReactPutListenerQueue":553,"./Transaction":577}],553:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10880,7 +10934,7 @@ PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 module.exports = ReactPutListenerQueue;
 
-},{"./Object.assign":497,"./PooledClass":498,"./ReactBrowserEventEmitter":501}],536:[function(require,module,exports){
+},{"./Object.assign":500,"./PooledClass":501,"./ReactBrowserEventEmitter":504}],539:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11015,7 +11069,7 @@ var ReactInputSelection = {
 
 module.exports = ReactInputSelection;
 
-},{"./ReactDOMSelection":521,"./containsNode":580,"./focusNode":590,"./getActiveElement":592}],592:[function(require,module,exports){
+},{"./ReactDOMSelection":524,"./containsNode":583,"./focusNode":593,"./getActiveElement":595}],595:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11044,7 +11098,7 @@ function getActiveElement() /*?DOMElement*/ {
 
 module.exports = getActiveElement;
 
-},{}],521:[function(require,module,exports){
+},{}],524:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11257,7 +11311,7 @@ var ReactDOMSelection = {
 
 module.exports = ReactDOMSelection;
 
-},{"./ExecutionEnvironment":491,"./getNodeForCharacterOffset":599,"./getTextContentAccessor":601}],599:[function(require,module,exports){
+},{"./ExecutionEnvironment":494,"./getNodeForCharacterOffset":602,"./getTextContentAccessor":604}],602:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11332,7 +11386,7 @@ function getNodeForCharacterOffset(root, offset) {
 
 module.exports = getNodeForCharacterOffset;
 
-},{}],535:[function(require,module,exports){
+},{}],538:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11374,7 +11428,7 @@ var ReactInjection = {
 
 module.exports = ReactInjection;
 
-},{"./DOMProperty":480,"./EventPluginHub":487,"./ReactBrowserEventEmitter":501,"./ReactClass":504,"./ReactComponentEnvironment":507,"./ReactDOMComponent":513,"./ReactEmptyComponent":530,"./ReactNativeComponent":544,"./ReactPerf":546,"./ReactRootIndex":554,"./ReactUpdates":558}],533:[function(require,module,exports){
+},{"./DOMProperty":483,"./EventPluginHub":490,"./ReactBrowserEventEmitter":504,"./ReactClass":507,"./ReactComponentEnvironment":510,"./ReactDOMComponent":516,"./ReactEmptyComponent":533,"./ReactNativeComponent":547,"./ReactPerf":549,"./ReactRootIndex":557,"./ReactUpdates":561}],536:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11557,7 +11611,7 @@ var ReactEventListener = {
 
 module.exports = ReactEventListener;
 
-},{"./EventListener":486,"./ExecutionEnvironment":491,"./Object.assign":497,"./PooledClass":498,"./ReactInstanceHandles":537,"./ReactMount":541,"./ReactUpdates":558,"./getEventTarget":596,"./getUnboundedScrollPosition":602}],602:[function(require,module,exports){
+},{"./EventListener":489,"./ExecutionEnvironment":494,"./Object.assign":500,"./PooledClass":501,"./ReactInstanceHandles":540,"./ReactMount":544,"./ReactUpdates":561,"./getEventTarget":599,"./getUnboundedScrollPosition":605}],605:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11597,7 +11651,7 @@ function getUnboundedScrollPosition(scrollable) {
 
 module.exports = getUnboundedScrollPosition;
 
-},{}],486:[function(require,module,exports){
+},{}],489:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -11687,7 +11741,7 @@ var EventListener = {
 module.exports = EventListener;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":585,"_process":447}],526:[function(require,module,exports){
+},{"./emptyFunction":588,"_process":450}],529:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11953,7 +12007,7 @@ var ReactDefaultPerf = {
 
 module.exports = ReactDefaultPerf;
 
-},{"./DOMProperty":480,"./ReactDefaultPerfAnalysis":527,"./ReactMount":541,"./ReactPerf":546,"./performanceNow":617}],617:[function(require,module,exports){
+},{"./DOMProperty":483,"./ReactDefaultPerfAnalysis":530,"./ReactMount":544,"./ReactPerf":549,"./performanceNow":620}],620:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11981,7 +12035,7 @@ var performanceNow = performance.now.bind(performance);
 
 module.exports = performanceNow;
 
-},{"./performance":616}],616:[function(require,module,exports){
+},{"./performance":619}],619:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12009,7 +12063,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = performance || {};
 
-},{"./ExecutionEnvironment":491}],527:[function(require,module,exports){
+},{"./ExecutionEnvironment":494}],530:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12215,7 +12269,7 @@ var ReactDefaultPerfAnalysis = {
 
 module.exports = ReactDefaultPerfAnalysis;
 
-},{"./Object.assign":497}],524:[function(require,module,exports){
+},{"./Object.assign":500}],527:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12288,7 +12342,7 @@ var ReactDefaultBatchingStrategy = {
 
 module.exports = ReactDefaultBatchingStrategy;
 
-},{"./Object.assign":497,"./ReactUpdates":558,"./Transaction":574,"./emptyFunction":585}],523:[function(require,module,exports){
+},{"./Object.assign":500,"./ReactUpdates":561,"./Transaction":577,"./emptyFunction":588}],526:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -12428,7 +12482,7 @@ var ReactDOMTextarea = ReactClass.createClass({
 module.exports = ReactDOMTextarea;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":472,"./DOMPropertyOperations":481,"./LinkedValueUtils":494,"./Object.assign":497,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528,"./ReactUpdates":558,"./invariant":606,"./warning":625,"_process":447}],520:[function(require,module,exports){
+},{"./AutoFocusMixin":475,"./DOMPropertyOperations":484,"./LinkedValueUtils":497,"./Object.assign":500,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531,"./ReactUpdates":561,"./invariant":609,"./warning":628,"_process":450}],523:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12606,7 +12660,7 @@ var ReactDOMSelect = ReactClass.createClass({
 
 module.exports = ReactDOMSelect;
 
-},{"./AutoFocusMixin":472,"./LinkedValueUtils":494,"./Object.assign":497,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528,"./ReactUpdates":558}],519:[function(require,module,exports){
+},{"./AutoFocusMixin":475,"./LinkedValueUtils":497,"./Object.assign":500,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531,"./ReactUpdates":561}],522:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -12658,7 +12712,7 @@ var ReactDOMOption = ReactClass.createClass({
 module.exports = ReactDOMOption;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528,"./warning":625,"_process":447}],518:[function(require,module,exports){
+},{"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531,"./warning":628,"_process":450}],521:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -12835,7 +12889,7 @@ var ReactDOMInput = ReactClass.createClass({
 module.exports = ReactDOMInput;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":472,"./DOMPropertyOperations":481,"./LinkedValueUtils":494,"./Object.assign":497,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528,"./ReactMount":541,"./ReactUpdates":558,"./invariant":606,"_process":447}],494:[function(require,module,exports){
+},{"./AutoFocusMixin":475,"./DOMPropertyOperations":484,"./LinkedValueUtils":497,"./Object.assign":500,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531,"./ReactMount":544,"./ReactUpdates":561,"./invariant":609,"_process":450}],497:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -12991,7 +13045,7 @@ var LinkedValueUtils = {
 module.exports = LinkedValueUtils;
 
 }).call(this,require('_process'))
-},{"./ReactPropTypes":549,"./invariant":606,"_process":447}],549:[function(require,module,exports){
+},{"./ReactPropTypes":552,"./invariant":609,"_process":450}],552:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13340,7 +13394,7 @@ function getPreciseType(propValue) {
 
 module.exports = ReactPropTypes;
 
-},{"./ReactElement":528,"./ReactFragment":534,"./ReactPropTypeLocationNames":547,"./emptyFunction":585}],517:[function(require,module,exports){
+},{"./ReactElement":531,"./ReactFragment":537,"./ReactPropTypeLocationNames":550,"./emptyFunction":588}],520:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13386,7 +13440,7 @@ var ReactDOMImg = ReactClass.createClass({
 
 module.exports = ReactDOMImg;
 
-},{"./EventConstants":485,"./LocalEventTrapMixin":495,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528}],516:[function(require,module,exports){
+},{"./EventConstants":488,"./LocalEventTrapMixin":498,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531}],519:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13431,7 +13485,7 @@ var ReactDOMIframe = ReactClass.createClass({
 
 module.exports = ReactDOMIframe;
 
-},{"./EventConstants":485,"./LocalEventTrapMixin":495,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528}],514:[function(require,module,exports){
+},{"./EventConstants":488,"./LocalEventTrapMixin":498,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531}],517:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13480,7 +13534,7 @@ var ReactDOMForm = ReactClass.createClass({
 
 module.exports = ReactDOMForm;
 
-},{"./EventConstants":485,"./LocalEventTrapMixin":495,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528}],495:[function(require,module,exports){
+},{"./EventConstants":488,"./LocalEventTrapMixin":498,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531}],498:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -13537,7 +13591,7 @@ var LocalEventTrapMixin = {
 module.exports = LocalEventTrapMixin;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserEventEmitter":501,"./accumulateInto":576,"./forEachAccumulated":591,"./invariant":606,"_process":447}],512:[function(require,module,exports){
+},{"./ReactBrowserEventEmitter":504,"./accumulateInto":579,"./forEachAccumulated":594,"./invariant":609,"_process":450}],515:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13601,7 +13655,7 @@ var ReactDOMButton = ReactClass.createClass({
 
 module.exports = ReactDOMButton;
 
-},{"./AutoFocusMixin":472,"./ReactBrowserComponentMixin":500,"./ReactClass":504,"./ReactElement":528,"./keyMirror":611}],472:[function(require,module,exports){
+},{"./AutoFocusMixin":475,"./ReactBrowserComponentMixin":503,"./ReactClass":507,"./ReactElement":531,"./keyMirror":614}],475:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13628,7 +13682,7 @@ var AutoFocusMixin = {
 
 module.exports = AutoFocusMixin;
 
-},{"./focusNode":590}],590:[function(require,module,exports){
+},{"./focusNode":593}],593:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -13657,7 +13711,7 @@ function focusNode(node) {
 
 module.exports = focusNode;
 
-},{}],500:[function(require,module,exports){
+},{}],503:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13688,7 +13742,7 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 
-},{"./findDOMNode":588}],588:[function(require,module,exports){
+},{"./findDOMNode":591}],591:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -13761,7 +13815,7 @@ function findDOMNode(componentOrElement) {
 module.exports = findDOMNode;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":510,"./ReactInstanceMap":538,"./ReactMount":541,"./invariant":606,"./isNode":608,"./warning":625,"_process":447}],496:[function(require,module,exports){
+},{"./ReactCurrentOwner":513,"./ReactInstanceMap":541,"./ReactMount":544,"./invariant":609,"./isNode":611,"./warning":628,"_process":450}],499:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13819,7 +13873,7 @@ var MobileSafariClickEventPlugin = {
 
 module.exports = MobileSafariClickEventPlugin;
 
-},{"./EventConstants":485,"./emptyFunction":585}],493:[function(require,module,exports){
+},{"./EventConstants":488,"./emptyFunction":588}],496:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14030,7 +14084,7 @@ var HTMLDOMPropertyConfig = {
 
 module.exports = HTMLDOMPropertyConfig;
 
-},{"./DOMProperty":480,"./ExecutionEnvironment":491}],484:[function(require,module,exports){
+},{"./DOMProperty":483,"./ExecutionEnvironment":494}],487:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14170,7 +14224,7 @@ var EnterLeaveEventPlugin = {
 
 module.exports = EnterLeaveEventPlugin;
 
-},{"./EventConstants":485,"./EventPropagators":490,"./ReactMount":541,"./SyntheticMouseEvent":570,"./keyOf":612}],570:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPropagators":493,"./ReactMount":544,"./SyntheticMouseEvent":573,"./keyOf":615}],573:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14251,7 +14305,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
 
-},{"./SyntheticUIEvent":572,"./ViewportMetrics":575,"./getEventModifierState":595}],595:[function(require,module,exports){
+},{"./SyntheticUIEvent":575,"./ViewportMetrics":578,"./getEventModifierState":598}],598:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14298,7 +14352,7 @@ function getEventModifierState(nativeEvent) {
 
 module.exports = getEventModifierState;
 
-},{}],572:[function(require,module,exports){
+},{}],575:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14360,7 +14414,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
 
-},{"./SyntheticEvent":566,"./getEventTarget":596}],483:[function(require,module,exports){
+},{"./SyntheticEvent":569,"./getEventTarget":599}],486:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14399,7 +14453,7 @@ var DefaultEventPluginOrder = [
 
 module.exports = DefaultEventPluginOrder;
 
-},{"./keyOf":612}],478:[function(require,module,exports){
+},{"./keyOf":615}],481:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14424,7 +14478,7 @@ var ClientReactRootIndex = {
 
 module.exports = ClientReactRootIndex;
 
-},{}],477:[function(require,module,exports){
+},{}],480:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14806,7 +14860,7 @@ var ChangeEventPlugin = {
 
 module.exports = ChangeEventPlugin;
 
-},{"./EventConstants":485,"./EventPluginHub":487,"./EventPropagators":490,"./ExecutionEnvironment":491,"./ReactUpdates":558,"./SyntheticEvent":566,"./isEventSupported":607,"./isTextInputElement":609,"./keyOf":612}],609:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPluginHub":490,"./EventPropagators":493,"./ExecutionEnvironment":494,"./ReactUpdates":561,"./SyntheticEvent":569,"./isEventSupported":610,"./isTextInputElement":612,"./keyOf":615}],612:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14849,7 +14903,7 @@ function isTextInputElement(elem) {
 
 module.exports = isTextInputElement;
 
-},{}],473:[function(require,module,exports){
+},{}],476:[function(require,module,exports){
 /**
  * Copyright 2013-2015 Facebook, Inc.
  * All rights reserved.
@@ -15344,7 +15398,7 @@ var BeforeInputEventPlugin = {
 
 module.exports = BeforeInputEventPlugin;
 
-},{"./EventConstants":485,"./EventPropagators":490,"./ExecutionEnvironment":491,"./FallbackCompositionState":492,"./SyntheticCompositionEvent":564,"./SyntheticInputEvent":568,"./keyOf":612}],568:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPropagators":493,"./ExecutionEnvironment":494,"./FallbackCompositionState":495,"./SyntheticCompositionEvent":567,"./SyntheticInputEvent":571,"./keyOf":615}],571:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15390,7 +15444,7 @@ SyntheticEvent.augmentClass(
 
 module.exports = SyntheticInputEvent;
 
-},{"./SyntheticEvent":566}],564:[function(require,module,exports){
+},{"./SyntheticEvent":569}],567:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15435,7 +15489,7 @@ SyntheticEvent.augmentClass(
 
 module.exports = SyntheticCompositionEvent;
 
-},{"./SyntheticEvent":566}],566:[function(require,module,exports){
+},{"./SyntheticEvent":569}],569:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15601,7 +15655,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.threeArgumentPooler);
 
 module.exports = SyntheticEvent;
 
-},{"./Object.assign":497,"./PooledClass":498,"./emptyFunction":585,"./getEventTarget":596}],596:[function(require,module,exports){
+},{"./Object.assign":500,"./PooledClass":501,"./emptyFunction":588,"./getEventTarget":599}],599:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15632,7 +15686,7 @@ function getEventTarget(nativeEvent) {
 
 module.exports = getEventTarget;
 
-},{}],492:[function(require,module,exports){
+},{}],495:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15723,7 +15777,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
 
-},{"./Object.assign":497,"./PooledClass":498,"./getTextContentAccessor":601}],601:[function(require,module,exports){
+},{"./Object.assign":500,"./PooledClass":501,"./getTextContentAccessor":604}],604:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15760,7 +15814,7 @@ function getTextContentAccessor() {
 
 module.exports = getTextContentAccessor;
 
-},{"./ExecutionEnvironment":491}],490:[function(require,module,exports){
+},{"./ExecutionEnvironment":494}],493:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -15902,7 +15956,7 @@ var EventPropagators = {
 module.exports = EventPropagators;
 
 }).call(this,require('_process'))
-},{"./EventConstants":485,"./EventPluginHub":487,"./accumulateInto":576,"./forEachAccumulated":591,"_process":447}],522:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPluginHub":490,"./accumulateInto":579,"./forEachAccumulated":594,"_process":450}],525:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -16019,7 +16073,7 @@ assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 
-},{"./DOMPropertyOperations":481,"./Object.assign":497,"./ReactComponentBrowserEnvironment":506,"./ReactDOMComponent":513,"./escapeTextContentForBrowser":587}],513:[function(require,module,exports){
+},{"./DOMPropertyOperations":484,"./Object.assign":500,"./ReactComponentBrowserEnvironment":509,"./ReactDOMComponent":516,"./escapeTextContentForBrowser":590}],516:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -16527,7 +16581,7 @@ ReactDOMComponent.injection = {
 module.exports = ReactDOMComponent;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":475,"./DOMProperty":480,"./DOMPropertyOperations":481,"./Object.assign":497,"./ReactBrowserEventEmitter":501,"./ReactComponentBrowserEnvironment":506,"./ReactMount":541,"./ReactMultiChild":542,"./ReactPerf":546,"./escapeTextContentForBrowser":587,"./invariant":606,"./isEventSupported":607,"./keyOf":612,"./warning":625,"_process":447}],542:[function(require,module,exports){
+},{"./CSSPropertyOperations":478,"./DOMProperty":483,"./DOMPropertyOperations":484,"./Object.assign":500,"./ReactBrowserEventEmitter":504,"./ReactComponentBrowserEnvironment":509,"./ReactMount":544,"./ReactMultiChild":545,"./ReactPerf":549,"./escapeTextContentForBrowser":590,"./invariant":609,"./isEventSupported":610,"./keyOf":615,"./warning":628,"_process":450}],545:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -16957,7 +17011,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 
-},{"./ReactChildReconciler":502,"./ReactComponentEnvironment":507,"./ReactMultiChildUpdateTypes":543,"./ReactReconciler":552}],502:[function(require,module,exports){
+},{"./ReactChildReconciler":505,"./ReactComponentEnvironment":510,"./ReactMultiChildUpdateTypes":546,"./ReactReconciler":555}],505:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -17084,7 +17138,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 
-},{"./ReactReconciler":552,"./flattenChildren":589,"./instantiateReactComponent":605,"./shouldUpdateReactComponent":622}],589:[function(require,module,exports){
+},{"./ReactReconciler":555,"./flattenChildren":592,"./instantiateReactComponent":608,"./shouldUpdateReactComponent":625}],592:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -17142,7 +17196,7 @@ function flattenChildren(children) {
 module.exports = flattenChildren;
 
 }).call(this,require('_process'))
-},{"./traverseAllChildren":624,"./warning":625,"_process":447}],506:[function(require,module,exports){
+},{"./traverseAllChildren":627,"./warning":628,"_process":450}],509:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -17189,7 +17243,7 @@ var ReactComponentBrowserEnvironment = {
 
 module.exports = ReactComponentBrowserEnvironment;
 
-},{"./ReactDOMIDOperations":515,"./ReactMount":541}],515:[function(require,module,exports){
+},{"./ReactDOMIDOperations":518,"./ReactMount":544}],518:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -17357,7 +17411,7 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 module.exports = ReactDOMIDOperations;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":475,"./DOMChildrenOperations":479,"./DOMPropertyOperations":481,"./ReactMount":541,"./ReactPerf":546,"./invariant":606,"./setInnerHTML":619,"_process":447}],541:[function(require,module,exports){
+},{"./CSSPropertyOperations":478,"./DOMChildrenOperations":482,"./DOMPropertyOperations":484,"./ReactMount":544,"./ReactPerf":549,"./invariant":609,"./setInnerHTML":622,"_process":450}],544:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18248,7 +18302,7 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 module.exports = ReactMount;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":480,"./ReactBrowserEventEmitter":501,"./ReactCurrentOwner":510,"./ReactElement":528,"./ReactElementValidator":529,"./ReactEmptyComponent":530,"./ReactInstanceHandles":537,"./ReactInstanceMap":538,"./ReactMarkupChecksum":540,"./ReactPerf":546,"./ReactReconciler":552,"./ReactUpdateQueue":557,"./ReactUpdates":558,"./containsNode":580,"./emptyObject":586,"./getReactRootElementInContainer":600,"./instantiateReactComponent":605,"./invariant":606,"./setInnerHTML":619,"./shouldUpdateReactComponent":622,"./warning":625,"_process":447}],605:[function(require,module,exports){
+},{"./DOMProperty":483,"./ReactBrowserEventEmitter":504,"./ReactCurrentOwner":513,"./ReactElement":531,"./ReactElementValidator":532,"./ReactEmptyComponent":533,"./ReactInstanceHandles":540,"./ReactInstanceMap":541,"./ReactMarkupChecksum":543,"./ReactPerf":549,"./ReactReconciler":555,"./ReactUpdateQueue":560,"./ReactUpdates":561,"./containsNode":583,"./emptyObject":589,"./getReactRootElementInContainer":603,"./instantiateReactComponent":608,"./invariant":609,"./setInnerHTML":622,"./shouldUpdateReactComponent":625,"./warning":628,"_process":450}],608:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18386,7 +18440,7 @@ function instantiateReactComponent(node, parentCompositeType) {
 module.exports = instantiateReactComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./ReactCompositeComponent":508,"./ReactEmptyComponent":530,"./ReactNativeComponent":544,"./invariant":606,"./warning":625,"_process":447}],508:[function(require,module,exports){
+},{"./Object.assign":500,"./ReactCompositeComponent":511,"./ReactEmptyComponent":533,"./ReactNativeComponent":547,"./invariant":609,"./warning":628,"_process":450}],511:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19284,7 +19338,7 @@ var ReactCompositeComponent = {
 module.exports = ReactCompositeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./ReactComponentEnvironment":507,"./ReactContext":509,"./ReactCurrentOwner":510,"./ReactElement":528,"./ReactElementValidator":529,"./ReactInstanceMap":538,"./ReactLifeCycle":539,"./ReactNativeComponent":544,"./ReactPerf":546,"./ReactPropTypeLocationNames":547,"./ReactPropTypeLocations":548,"./ReactReconciler":552,"./ReactUpdates":558,"./emptyObject":586,"./invariant":606,"./shouldUpdateReactComponent":622,"./warning":625,"_process":447}],622:[function(require,module,exports){
+},{"./Object.assign":500,"./ReactComponentEnvironment":510,"./ReactContext":512,"./ReactCurrentOwner":513,"./ReactElement":531,"./ReactElementValidator":532,"./ReactInstanceMap":541,"./ReactLifeCycle":542,"./ReactNativeComponent":547,"./ReactPerf":549,"./ReactPropTypeLocationNames":550,"./ReactPropTypeLocations":551,"./ReactReconciler":555,"./ReactUpdates":561,"./emptyObject":589,"./invariant":609,"./shouldUpdateReactComponent":625,"./warning":628,"_process":450}],625:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19388,7 +19442,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 }).call(this,require('_process'))
-},{"./warning":625,"_process":447}],507:[function(require,module,exports){
+},{"./warning":628,"_process":450}],510:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -19449,7 +19503,7 @@ var ReactComponentEnvironment = {
 module.exports = ReactComponentEnvironment;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],600:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],603:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19484,7 +19538,7 @@ function getReactRootElementInContainer(container) {
 
 module.exports = getReactRootElementInContainer;
 
-},{}],580:[function(require,module,exports){
+},{}],583:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19528,7 +19582,7 @@ function containsNode(outerNode, innerNode) {
 
 module.exports = containsNode;
 
-},{"./isTextNode":610}],610:[function(require,module,exports){
+},{"./isTextNode":613}],613:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19553,7 +19607,7 @@ function isTextNode(object) {
 
 module.exports = isTextNode;
 
-},{"./isNode":608}],608:[function(require,module,exports){
+},{"./isNode":611}],611:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19580,7 +19634,7 @@ function isNode(object) {
 
 module.exports = isNode;
 
-},{}],540:[function(require,module,exports){
+},{}],543:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19628,7 +19682,7 @@ var ReactMarkupChecksum = {
 
 module.exports = ReactMarkupChecksum;
 
-},{"./adler32":577}],577:[function(require,module,exports){
+},{"./adler32":580}],580:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19662,7 +19716,7 @@ function adler32(data) {
 
 module.exports = adler32;
 
-},{}],530:[function(require,module,exports){
+},{}],533:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -19757,7 +19811,7 @@ var ReactEmptyComponent = {
 module.exports = ReactEmptyComponent;
 
 }).call(this,require('_process'))
-},{"./ReactElement":528,"./ReactInstanceMap":538,"./invariant":606,"_process":447}],501:[function(require,module,exports){
+},{"./ReactElement":531,"./ReactInstanceMap":541,"./invariant":609,"_process":450}],504:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20110,7 +20164,7 @@ var ReactBrowserEventEmitter = assign({}, ReactEventEmitterMixin, {
 
 module.exports = ReactBrowserEventEmitter;
 
-},{"./EventConstants":485,"./EventPluginHub":487,"./EventPluginRegistry":488,"./Object.assign":497,"./ReactEventEmitterMixin":532,"./ViewportMetrics":575,"./isEventSupported":607}],607:[function(require,module,exports){
+},{"./EventConstants":488,"./EventPluginHub":490,"./EventPluginRegistry":491,"./Object.assign":500,"./ReactEventEmitterMixin":535,"./ViewportMetrics":578,"./isEventSupported":610}],610:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20175,7 +20229,7 @@ function isEventSupported(eventNameSuffix, capture) {
 
 module.exports = isEventSupported;
 
-},{"./ExecutionEnvironment":491}],575:[function(require,module,exports){
+},{"./ExecutionEnvironment":494}],578:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20204,7 +20258,7 @@ var ViewportMetrics = {
 
 module.exports = ViewportMetrics;
 
-},{}],532:[function(require,module,exports){
+},{}],535:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20254,7 +20308,7 @@ var ReactEventEmitterMixin = {
 
 module.exports = ReactEventEmitterMixin;
 
-},{"./EventPluginHub":487}],487:[function(require,module,exports){
+},{"./EventPluginHub":490}],490:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20532,7 +20586,7 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":488,"./EventPluginUtils":489,"./accumulateInto":576,"./forEachAccumulated":591,"./invariant":606,"_process":447}],591:[function(require,module,exports){
+},{"./EventPluginRegistry":491,"./EventPluginUtils":492,"./accumulateInto":579,"./forEachAccumulated":594,"./invariant":609,"_process":450}],594:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20563,7 +20617,7 @@ var forEachAccumulated = function(arr, cb, scope) {
 
 module.exports = forEachAccumulated;
 
-},{}],576:[function(require,module,exports){
+},{}],579:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -20629,7 +20683,7 @@ function accumulateInto(current, next) {
 module.exports = accumulateInto;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],488:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],491:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20909,7 +20963,7 @@ var EventPluginRegistry = {
 module.exports = EventPluginRegistry;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],479:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],482:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21047,7 +21101,7 @@ var DOMChildrenOperations = {
 module.exports = DOMChildrenOperations;
 
 }).call(this,require('_process'))
-},{"./Danger":482,"./ReactMultiChildUpdateTypes":543,"./invariant":606,"./setTextContent":620,"_process":447}],620:[function(require,module,exports){
+},{"./Danger":485,"./ReactMultiChildUpdateTypes":546,"./invariant":609,"./setTextContent":623,"_process":450}],623:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21089,7 +21143,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setTextContent;
 
-},{"./ExecutionEnvironment":491,"./escapeTextContentForBrowser":587,"./setInnerHTML":619}],619:[function(require,module,exports){
+},{"./ExecutionEnvironment":494,"./escapeTextContentForBrowser":590,"./setInnerHTML":622}],622:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21178,7 +21232,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setInnerHTML;
 
-},{"./ExecutionEnvironment":491}],543:[function(require,module,exports){
+},{"./ExecutionEnvironment":494}],546:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21211,7 +21265,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 
 module.exports = ReactMultiChildUpdateTypes;
 
-},{"./keyMirror":611}],482:[function(require,module,exports){
+},{"./keyMirror":614}],485:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21398,7 +21452,7 @@ var Danger = {
 module.exports = Danger;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":491,"./createNodesFromMarkup":583,"./emptyFunction":585,"./getMarkupWrap":598,"./invariant":606,"_process":447}],583:[function(require,module,exports){
+},{"./ExecutionEnvironment":494,"./createNodesFromMarkup":586,"./emptyFunction":588,"./getMarkupWrap":601,"./invariant":609,"_process":450}],586:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21488,7 +21542,7 @@ function createNodesFromMarkup(markup, handleScript) {
 module.exports = createNodesFromMarkup;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":491,"./createArrayFromMixed":581,"./getMarkupWrap":598,"./invariant":606,"_process":447}],598:[function(require,module,exports){
+},{"./ExecutionEnvironment":494,"./createArrayFromMixed":584,"./getMarkupWrap":601,"./invariant":609,"_process":450}],601:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21605,7 +21659,7 @@ function getMarkupWrap(nodeName) {
 module.exports = getMarkupWrap;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":491,"./invariant":606,"_process":447}],581:[function(require,module,exports){
+},{"./ExecutionEnvironment":494,"./invariant":609,"_process":450}],584:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21691,7 +21745,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 
-},{"./toArray":623}],623:[function(require,module,exports){
+},{"./toArray":626}],626:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -21763,7 +21817,7 @@ function toArray(obj) {
 module.exports = toArray;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],475:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],478:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21945,7 +21999,7 @@ var CSSPropertyOperations = {
 module.exports = CSSPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./CSSProperty":474,"./ExecutionEnvironment":491,"./camelizeStyleName":579,"./dangerousStyleValue":584,"./hyphenateStyleName":604,"./memoizeStringOnly":614,"./warning":625,"_process":447}],614:[function(require,module,exports){
+},{"./CSSProperty":477,"./ExecutionEnvironment":494,"./camelizeStyleName":582,"./dangerousStyleValue":587,"./hyphenateStyleName":607,"./memoizeStringOnly":617,"./warning":628,"_process":450}],617:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21978,7 +22032,7 @@ function memoizeStringOnly(callback) {
 
 module.exports = memoizeStringOnly;
 
-},{}],604:[function(require,module,exports){
+},{}],607:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22019,7 +22073,7 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 
-},{"./hyphenate":603}],603:[function(require,module,exports){
+},{"./hyphenate":606}],606:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22052,7 +22106,7 @@ function hyphenate(string) {
 
 module.exports = hyphenate;
 
-},{}],584:[function(require,module,exports){
+},{}],587:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22110,7 +22164,7 @@ function dangerousStyleValue(name, value) {
 
 module.exports = dangerousStyleValue;
 
-},{"./CSSProperty":474}],579:[function(require,module,exports){
+},{"./CSSProperty":477}],582:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -22152,7 +22206,7 @@ function camelizeStyleName(string) {
 
 module.exports = camelizeStyleName;
 
-},{"./camelize":578}],578:[function(require,module,exports){
+},{"./camelize":581}],581:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22184,7 +22238,7 @@ function camelize(string) {
 
 module.exports = camelize;
 
-},{}],474:[function(require,module,exports){
+},{}],477:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22309,7 +22363,7 @@ var CSSProperty = {
 
 module.exports = CSSProperty;
 
-},{}],481:[function(require,module,exports){
+},{}],484:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22501,7 +22555,7 @@ var DOMPropertyOperations = {
 module.exports = DOMPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":480,"./quoteAttributeValueForBrowser":618,"./warning":625,"_process":447}],618:[function(require,module,exports){
+},{"./DOMProperty":483,"./quoteAttributeValueForBrowser":621,"./warning":628,"_process":450}],621:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22529,7 +22583,7 @@ function quoteAttributeValueForBrowser(value) {
 
 module.exports = quoteAttributeValueForBrowser;
 
-},{"./escapeTextContentForBrowser":587}],587:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":590}],590:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22569,7 +22623,7 @@ function escapeTextContentForBrowser(text) {
 
 module.exports = escapeTextContentForBrowser;
 
-},{}],480:[function(require,module,exports){
+},{}],483:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22868,7 +22922,7 @@ var DOMProperty = {
 module.exports = DOMProperty;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],511:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],514:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23046,7 +23100,7 @@ var ReactDOM = mapObject({
 module.exports = ReactDOM;
 
 }).call(this,require('_process'))
-},{"./ReactElement":528,"./ReactElementValidator":529,"./mapObject":613,"_process":447}],613:[function(require,module,exports){
+},{"./ReactElement":531,"./ReactElementValidator":532,"./mapObject":616,"_process":450}],616:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -23099,7 +23153,7 @@ function mapObject(object, callback, context) {
 
 module.exports = mapObject;
 
-},{}],504:[function(require,module,exports){
+},{}],507:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24045,7 +24099,7 @@ var ReactClass = {
 module.exports = ReactClass;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./ReactComponent":505,"./ReactCurrentOwner":510,"./ReactElement":528,"./ReactErrorUtils":531,"./ReactInstanceMap":538,"./ReactLifeCycle":539,"./ReactPropTypeLocationNames":547,"./ReactPropTypeLocations":548,"./ReactUpdateQueue":557,"./invariant":606,"./keyMirror":611,"./keyOf":612,"./warning":625,"_process":447}],612:[function(require,module,exports){
+},{"./Object.assign":500,"./ReactComponent":508,"./ReactCurrentOwner":513,"./ReactElement":531,"./ReactErrorUtils":534,"./ReactInstanceMap":541,"./ReactLifeCycle":542,"./ReactPropTypeLocationNames":550,"./ReactPropTypeLocations":551,"./ReactUpdateQueue":560,"./invariant":609,"./keyMirror":614,"./keyOf":615,"./warning":628,"_process":450}],615:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -24081,7 +24135,7 @@ var keyOf = function(oneKeyObj) {
 
 module.exports = keyOf;
 
-},{}],531:[function(require,module,exports){
+},{}],534:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -24113,7 +24167,7 @@ var ReactErrorUtils = {
 
 module.exports = ReactErrorUtils;
 
-},{}],505:[function(require,module,exports){
+},{}],508:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24249,7 +24303,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactComponent;
 
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":557,"./invariant":606,"./warning":625,"_process":447}],557:[function(require,module,exports){
+},{"./ReactUpdateQueue":560,"./invariant":609,"./warning":628,"_process":450}],560:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -24548,7 +24602,7 @@ var ReactUpdateQueue = {
 module.exports = ReactUpdateQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./ReactCurrentOwner":510,"./ReactElement":528,"./ReactInstanceMap":538,"./ReactLifeCycle":539,"./ReactUpdates":558,"./invariant":606,"./warning":625,"_process":447}],558:[function(require,module,exports){
+},{"./Object.assign":500,"./ReactCurrentOwner":513,"./ReactElement":531,"./ReactInstanceMap":541,"./ReactLifeCycle":542,"./ReactUpdates":561,"./invariant":609,"./warning":628,"_process":450}],561:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24830,7 +24884,7 @@ var ReactUpdates = {
 module.exports = ReactUpdates;
 
 }).call(this,require('_process'))
-},{"./CallbackQueue":476,"./Object.assign":497,"./PooledClass":498,"./ReactCurrentOwner":510,"./ReactPerf":546,"./ReactReconciler":552,"./Transaction":574,"./invariant":606,"./warning":625,"_process":447}],574:[function(require,module,exports){
+},{"./CallbackQueue":479,"./Object.assign":500,"./PooledClass":501,"./ReactCurrentOwner":513,"./ReactPerf":549,"./ReactReconciler":555,"./Transaction":577,"./invariant":609,"./warning":628,"_process":450}],577:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25071,7 +25125,7 @@ var Transaction = {
 module.exports = Transaction;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],552:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],555:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25195,7 +25249,7 @@ var ReactReconciler = {
 module.exports = ReactReconciler;
 
 }).call(this,require('_process'))
-},{"./ReactElementValidator":529,"./ReactRef":553,"_process":447}],553:[function(require,module,exports){
+},{"./ReactElementValidator":532,"./ReactRef":556,"_process":450}],556:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25266,7 +25320,7 @@ ReactRef.detachRefs = function(instance, element) {
 
 module.exports = ReactRef;
 
-},{"./ReactOwner":545}],545:[function(require,module,exports){
+},{"./ReactOwner":548}],548:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25378,7 +25432,7 @@ var ReactOwner = {
 module.exports = ReactOwner;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],529:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],532:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -25843,7 +25897,7 @@ var ReactElementValidator = {
 module.exports = ReactElementValidator;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":510,"./ReactElement":528,"./ReactFragment":534,"./ReactNativeComponent":544,"./ReactPropTypeLocationNames":547,"./ReactPropTypeLocations":548,"./getIteratorFn":597,"./invariant":606,"./warning":625,"_process":447}],548:[function(require,module,exports){
+},{"./ReactCurrentOwner":513,"./ReactElement":531,"./ReactFragment":537,"./ReactNativeComponent":547,"./ReactPropTypeLocationNames":550,"./ReactPropTypeLocations":551,"./getIteratorFn":600,"./invariant":609,"./warning":628,"_process":450}],551:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25867,7 +25921,7 @@ var ReactPropTypeLocations = keyMirror({
 
 module.exports = ReactPropTypeLocations;
 
-},{"./keyMirror":611}],547:[function(require,module,exports){
+},{"./keyMirror":614}],550:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25895,7 +25949,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactPropTypeLocationNames;
 
 }).call(this,require('_process'))
-},{"_process":447}],544:[function(require,module,exports){
+},{"_process":450}],547:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -26002,7 +26056,7 @@ var ReactNativeComponent = {
 module.exports = ReactNativeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./invariant":606,"_process":447}],546:[function(require,module,exports){
+},{"./Object.assign":500,"./invariant":609,"_process":450}],549:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26106,7 +26160,7 @@ function _noMeasure(objName, fnName, func) {
 module.exports = ReactPerf;
 
 }).call(this,require('_process'))
-},{"_process":447}],476:[function(require,module,exports){
+},{"_process":450}],479:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26206,7 +26260,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 module.exports = CallbackQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./PooledClass":498,"./invariant":606,"_process":447}],539:[function(require,module,exports){
+},{"./Object.assign":500,"./PooledClass":501,"./invariant":609,"_process":450}],542:[function(require,module,exports){
 /**
  * Copyright 2015, Facebook, Inc.
  * All rights reserved.
@@ -26243,7 +26297,7 @@ var ReactLifeCycle = {
 
 module.exports = ReactLifeCycle;
 
-},{}],538:[function(require,module,exports){
+},{}],541:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -26292,7 +26346,7 @@ var ReactInstanceMap = {
 
 module.exports = ReactInstanceMap;
 
-},{}],503:[function(require,module,exports){
+},{}],506:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26445,7 +26499,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 }).call(this,require('_process'))
-},{"./PooledClass":498,"./ReactFragment":534,"./traverseAllChildren":624,"./warning":625,"_process":447}],624:[function(require,module,exports){
+},{"./PooledClass":501,"./ReactFragment":537,"./traverseAllChildren":627,"./warning":628,"_process":450}],627:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26698,7 +26752,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 
 }).call(this,require('_process'))
-},{"./ReactElement":528,"./ReactFragment":534,"./ReactInstanceHandles":537,"./getIteratorFn":597,"./invariant":606,"./warning":625,"_process":447}],597:[function(require,module,exports){
+},{"./ReactElement":531,"./ReactFragment":537,"./ReactInstanceHandles":540,"./getIteratorFn":600,"./invariant":609,"./warning":628,"_process":450}],600:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -26742,7 +26796,7 @@ function getIteratorFn(maybeIterable) {
 
 module.exports = getIteratorFn;
 
-},{}],537:[function(require,module,exports){
+},{}],540:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27078,7 +27132,7 @@ var ReactInstanceHandles = {
 module.exports = ReactInstanceHandles;
 
 }).call(this,require('_process'))
-},{"./ReactRootIndex":554,"./invariant":606,"_process":447}],554:[function(require,module,exports){
+},{"./ReactRootIndex":557,"./invariant":609,"_process":450}],557:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -27109,7 +27163,7 @@ var ReactRootIndex = {
 
 module.exports = ReactRootIndex;
 
-},{}],534:[function(require,module,exports){
+},{}],537:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -27294,7 +27348,7 @@ var ReactFragment = {
 module.exports = ReactFragment;
 
 }).call(this,require('_process'))
-},{"./ReactElement":528,"./warning":625,"_process":447}],528:[function(require,module,exports){
+},{"./ReactElement":531,"./warning":628,"_process":450}],531:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -27602,7 +27656,7 @@ ReactElement.isValidElement = function(object) {
 module.exports = ReactElement;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./ReactContext":509,"./ReactCurrentOwner":510,"./warning":625,"_process":447}],510:[function(require,module,exports){
+},{"./Object.assign":500,"./ReactContext":512,"./ReactCurrentOwner":513,"./warning":628,"_process":450}],513:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -27636,7 +27690,7 @@ var ReactCurrentOwner = {
 
 module.exports = ReactCurrentOwner;
 
-},{}],509:[function(require,module,exports){
+},{}],512:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27714,7 +27768,7 @@ var ReactContext = {
 module.exports = ReactContext;
 
 }).call(this,require('_process'))
-},{"./Object.assign":497,"./emptyObject":586,"./warning":625,"_process":447}],625:[function(require,module,exports){
+},{"./Object.assign":500,"./emptyObject":589,"./warning":628,"_process":450}],628:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -27777,7 +27831,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":585,"_process":447}],585:[function(require,module,exports){
+},{"./emptyFunction":588,"_process":450}],588:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -27811,7 +27865,7 @@ emptyFunction.thatReturnsArgument = function(arg) { return arg; };
 
 module.exports = emptyFunction;
 
-},{}],586:[function(require,module,exports){
+},{}],589:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27835,7 +27889,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = emptyObject;
 
 }).call(this,require('_process'))
-},{"_process":447}],498:[function(require,module,exports){
+},{"_process":450}],501:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27951,7 +28005,7 @@ var PooledClass = {
 module.exports = PooledClass;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],497:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],500:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -28000,7 +28054,7 @@ function assign(target, sources) {
 
 module.exports = assign;
 
-},{}],491:[function(require,module,exports){
+},{}],494:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -28044,7 +28098,7 @@ var ExecutionEnvironment = {
 
 module.exports = ExecutionEnvironment;
 
-},{}],489:[function(require,module,exports){
+},{}],492:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -28265,7 +28319,7 @@ var EventPluginUtils = {
 module.exports = EventPluginUtils;
 
 }).call(this,require('_process'))
-},{"./EventConstants":485,"./invariant":606,"_process":447}],485:[function(require,module,exports){
+},{"./EventConstants":488,"./invariant":609,"_process":450}],488:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -28337,7 +28391,7 @@ var EventConstants = {
 
 module.exports = EventConstants;
 
-},{"./keyMirror":611}],611:[function(require,module,exports){
+},{"./keyMirror":614}],614:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -28392,7 +28446,7 @@ var keyMirror = function(obj) {
 module.exports = keyMirror;
 
 }).call(this,require('_process'))
-},{"./invariant":606,"_process":447}],606:[function(require,module,exports){
+},{"./invariant":609,"_process":450}],609:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -28449,4 +28503,4 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":447}]},{},[46]);
+},{"_process":450}]},{},[48]);
