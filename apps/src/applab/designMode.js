@@ -52,17 +52,8 @@ designMode.createElement = function (elementType, left, top) {
 };
 
 designMode.editElementProperties = function(element) {
-  var designPropertiesElement = document.getElementById('design-properties');
   currentlyEditedElement = element;
-  React.render(
-    React.createElement(DesignProperties, {
-        element: element,
-        handleChange: designMode.onPropertyChange.bind(this, element),
-        onDepthChange: designMode.onDepthChange,
-        onDone: designMode.onDonePropertiesButton,
-        onDelete: designMode.onDeletePropertiesButton.bind(this, element)}
-    ),
-    designPropertiesElement);
+  designMode.renderDesignModeBox(element);
 };
 
 /**
@@ -414,7 +405,7 @@ designMode.configureDesignToggleRow = function () {
     designToggleRow
   );
 };
-designMode.configureDesignModeBox = function() {
+designMode.renderDesignModeBox = function(element) {
   var designModeBox = document.getElementById('designModeBox');
   if (!designModeBox) {
     return;
@@ -423,9 +414,14 @@ designMode.configureDesignModeBox = function() {
   var props = {
     handleDragStart: function() {
       studioApp.resetButtonClick();
-    }
+    },
+    element: element || null,
+    handleChange: designMode.onPropertyChange.bind(this, element),
+    onDepthChange: designMode.onDepthChange,
+    onDone: designMode.onDonePropertiesButton,
+    onDelete: designMode.onDeletePropertiesButton.bind(this, element),
   };
-  React.render(React.createElement(DesignModeBox, props), designModeBox)
+  React.render(React.createElement(DesignModeBox, props), designModeBox);
 };
 
 designMode.configureDesignModeHeaders = function() {

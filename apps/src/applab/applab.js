@@ -964,7 +964,7 @@ Applab.init = function(config) {
 
   studioApp.init(config);
 
-  designMode.configureDesignModeBox();
+  designMode.renderDesignModeBox();
 
   designMode.configureDesignModeHeaders();
 
