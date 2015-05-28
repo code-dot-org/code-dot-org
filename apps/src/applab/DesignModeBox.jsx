@@ -12,9 +12,41 @@ module.exports = React.createClass({
     onDelete: React.PropTypes.func.isRequired
   },
   render: function() {
+    var styles = {
+      container: {
+        position: 'absolute',
+        width: '100%',
+        top: 0,
+        bottom: 0,
+        backgroundColor: 'white',
+        boxSizing: 'border-box',
+        borderLeft: '1px solid gray',
+        borderRight: '1px solid gray',
+        borderBottom: '1px solid gray'
+      },
+      designToolbox: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        width: 270,
+        boxSizing: 'border-box',
+        borderRight: '1px solid gray',
+        padding: 10
+      },
+      designProperties: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 270,
+        right: 0,
+        boxSizing: 'border-box',
+        padding: 10
+      }
+    };
+
     return (
-      <div id="design-mode-container">
-        <div id="design-elements" ref="designElements">
+      <div id="design-mode-container" style={styles.container}>
+        <div id="design-toolbox" style={styles.designToolbox}>
           <p>{applabMsg.designToolboxDescription()}</p>
           <div data-element-type="BUTTON" className="new-design-element">button</div>
           <div data-element-type="LABEL" className="new-design-element">label</div>
@@ -27,7 +59,7 @@ module.exports = React.createClass({
           <div data-element-type="CANVAS" className="new-design-element">canvas</div>
           <button id="designModeClear" className="share">Clear</button><br/>
         </div>
-        <div id="design-properties">
+        <div id="design-properties" style={styles.designProperties}>
           <DesignProperties
             element={this.props.element}
             handleChange={this.props.handleChange}

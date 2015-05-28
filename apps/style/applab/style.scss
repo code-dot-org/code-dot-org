@@ -538,47 +538,9 @@ button.arrow:focus {
   background-color: #eee;
 }
 
-#headers #design-toolbox-header {
-  width: 270px;
-  border-right: 1px solid gray;
-  float: left;
-}
-
 #designModeBox {
   position:absolute;
   top: 40px;
   bottom: 0px;
   width: 100%;
-}
-
-#design-mode-container {
-  position:absolute;
-  width: 100%;
-  top: 0px;
-  bottom: 0px;
-  background-color: white;
-  box-sizing: border-box;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  border-bottom: 1px solid gray;
-}
-
-#design-elements {
-  position:absolute;
-  top: 0px;
-  bottom: 0px;
-  width: 270px;
-  box-sizing: border-box;
-  border-right: 1px solid gray;
-  padding: 10px;
-}
-
-#design-properties {
-  position:absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 270px;
-  right: 0px;
-  box-sizing: border-box;
-  padding: 10px;
 }
