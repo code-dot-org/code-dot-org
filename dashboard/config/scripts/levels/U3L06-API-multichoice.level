@@ -5,34 +5,37 @@
   "properties": {
     "questions": [
       {
-        "text": "What is the primary purpose of an API in a programming language?"
+        "text": "What is NOT the purpose of an API in a programming language?"
       }
     ],
     "answers": [
       {
-        "text": "Application Primary Interactions are fundamental to programming",
+        "text": "List the commands and functions of a programming language",
         "correct": false
       },
       {
-        "text": "To make programming more complex for those without experience",
+        "text": "Explain the functionality of a programming statements",
         "correct": false
       },
       {
-        "text": "Programs won't run without good API documentation",
+        "text": "To avoid having to memorize all of the language commands",
         "correct": false
       },
       {
-        "text": "To provide high-level functionality that simplifies complex programming tasks",
+        "text": "Show examples of programming statements",
+        "correct": false
+      },
+      {
+        "text": "Auto-correct common programming errors",
         "correct": true
       },
       {
-        "text": "It is impossible to write a program without an API",
+        "text": "Simplify complex programming tasks",
         "correct": false
       }
     ],
-    "title": "Multiple Choice",
-    "content1": "Choose the option that best answers the question.",
-    "markdown": "# Multiple Choice\n\n\n"
+    "title": "APIs and Parameters Question 1",
+    "content1": "Select the best answer"
   },
   "md5": "1848fe7fca823597149939138316e90e"
 }]]></config>

@@ -1,5 +1,6 @@
 name 'PDK5 Pair programming match'
 title 'Pair programming match'
+skip_sound true
 description 'Match the definitions to the words you were introduced to in the last video.'
 height 100
 

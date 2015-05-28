@@ -1093,14 +1093,33 @@ en:
         The name of program it was originally designed for: The name of program it was originally designed for
         The post-state: The post-state
       U3L06-API-multichoice:
-        Multiple Choice: Multiple Choice
-        Choose the option that best answers the question.: Choose the option that best answers the question.
-        What is the primary purpose of an API in a programming language?: What is the primary purpose of an API in a programming language?
-        Application Primary Interactions are fundamental to programming: Application Primary Interactions are fundamental to programming
-        To make programming more complex for those without experience: To make programming more complex for those without experience
-        Programs won't run without good API documentation: Programs won't run without good API documentation
-        To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
-        It is impossible to write a program without an API: It is impossible to write a program without an API
+        APIs and Parameters Question 1: APIs and Parameters Question 1
+        Select the best answer: Select the best answer
+        What is NOT the purpose of an API in a programming language?: What is NOT the purpose of an API in a programming language?
+        List the commands and functions of a programming language: List the commands and functions of a programming language
+        Explain the functionality of a programming statements: Explain the functionality of a programming statements
+        To avoid having to memorize all of the language commands: To avoid having to memorize all of the language commands
+        Show examples of programming statements: Show examples of programming statements
+        Auto-correct common programming errors: Auto-correct common programming errors
+        Simplify complex programming tasks: Simplify complex programming tasks
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?

@@ -11,11 +11,7 @@
       "skip_sound": true
     },
     "height": "200",
-    "markdown": "In the last puzzle, you used a loop to get the bird to the pig with 2 blocks instead of using 5 \"move forward\" blocks. Why do you think it's important to write computer programs efficiently?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "In the last puzzle, you used a loop to get the bird to the pig with 2 blocks instead of using 5 \"move forward\" blocks. Why do you think it's important to write computer programs efficiently?\n"
   },
   "md5": "6a176a52f804b3e868d4260313e15acd"
 }]]></config>

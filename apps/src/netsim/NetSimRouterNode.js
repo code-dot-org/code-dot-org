@@ -87,6 +87,15 @@ var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
 var PACKET_MAX_LIFETIME_MS = 10 * 60 * 1000;
 
 /**
+ * To avoid calculating a totally unreasonable number of addresses, this is
+ * the most addresses we will consider when picking one for a new host.
+ * This means full support up to a 12-bit address part, which should be more
+ * than enough.
+ * @type {number}
+ */
+var ADDRESS_OPTION_LIMIT = 4096;
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -158,6 +167,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.simulateForSender_ = undefined;
+
+  /**
+   * Helper that converts node rows to correct node controllers.
+   * Injected to avoid circular dependency.
+   * @type {netsimNodeFactory}
+   * @private
+   */
+  this.nodeFactory_ = null;
 
   /**
    * Local cache of the last tick time in the local simulation.
@@ -314,11 +331,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
       router.heartbeat = heartbeat;
       router.heartbeat.setBeatInterval(12000);
 
-      // Always try and update router immediately, to set its DisplayName
-      // correctly.
-      router.update(function (err) {
-        onComplete(err, router);
-      });
+      onComplete(null, router);
     });
   });
 };
@@ -404,7 +417,9 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
  */
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
-  this.heartbeat.tick(clock);
+  if (this.heartbeat) {
+    this.heartbeat.tick(clock);
+  }
   this.routeOverdueMessages_(clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
@@ -608,13 +623,39 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 NetSimRouterNode.prototype.getDisplayName = function () {
   if (netsimGlobals.getLevelConfig().broadcastMode) {
     return i18n.roomNumberX({
-      x: this.entityID
+      x: this.getRouterNumber()
     });
   }
 
   return i18n.routerNumberX({
-    x: this.entityID
+    x: this.getRouterNumber()
   });
+};
+
+/**
+ * Helper that prevents the router's display number or address from being beyond
+ * the representable size of the the router part in the address format (if
+ * two-part addresses are being used).
+ * Does not do anything special to prevent collisions, just returns entityID
+ * modulo the assignable address space - but this will be better than having
+ * non-conflicting routers you can never address at all.
+ * @returns {number}
+ */
+NetSimRouterNode.prototype.getRouterNumber = function () {
+  var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+  // If two or more parts, limit our router number to the maximum value of
+  // the second-to-last address part.
+  var addressFormatParts = addressFormat.split(/\D+/).filter(function (part) {
+    return part.length > 0;
+  }).map(function (part) {
+    return parseInt(part, 10);
+  }).reverse();
+
+  if (addressFormatParts.length >= 2) {
+    var assignableAddressValues = Math.pow(2, addressFormatParts[1]);
+    return this.entityID % assignableAddressValues;
+  }
+  return this.entityID;
 };
 
 /**
@@ -749,9 +790,12 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
+ * @param {netsimNodeFactory} nodeFactory - injected to prevent circular
+ *        dependency.
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory) {
   this.simulateForSender_ = nodeID;
+  this.nodeFactory_ = nodeFactory;
   this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
   this.validatePacketSpec_(this.packetSpec_);
 
@@ -759,22 +803,18 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
     this.nodeChangeKey_ = nodeChangeEvent.register(nodeChangeHandler);
-    logger.info("Router registered for nodeTable tableChange");
     
     var wireChangeEvent = this.shard_.wireTable.tableChange;
     var wireChangeHandler = this.onWireTableChange_.bind(this);
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
-    logger.info("Router registered for wireTable tableChange");
 
     var logChangeEvent = this.shard_.logTable.tableChange;
     var logChangeHandler = this.onLogTableChange_.bind(this);
     this.logChangeKey_ = logChangeEvent.register(logChangeHandler);
-    logger.info("Router registered for logTable tableChange");
 
     var newMessageEvent = this.shard_.messageTable.tableChange;
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
-    logger.info("Router registered for messageTable tableChange");
 
     // Populate router log cache with initial data
     this.shard_.logTable.readAll(function (err, rows) {
@@ -796,28 +836,24 @@ NetSimRouterNode.prototype.stopSimulation = function () {
     var nodeChangeEvent = this.shard_.messageTable.tableChange;
     nodeChangeEvent.unregister(this.nodeChangeKey_);
     this.nodeChangeKey_ = undefined;
-    logger.info("Router unregistered from nodeTable tableChange");
   }
   
   if (this.wireChangeKey_ !== undefined) {
     var wireChangeEvent = this.shard_.messageTable.tableChange;
     wireChangeEvent.unregister(this.wireChangeKey_);
     this.wireChangeKey_ = undefined;
-    logger.info("Router unregistered from wireTable tableChange");
   }
 
   if (this.logChangeKey_ !== undefined) {
     var logChangeEvent = this.shard_.messageTable.tableChange;
     logChangeEvent.unregister(this.logChangeKey_);
     this.logChangeKey_ = undefined;
-    logger.info("Router unregistered from logTable tableChange");
   }
 
   if (this.newMessageEventKey_ !== undefined) {
     var newMessageEvent = this.shard_.messageTable.tableChange;
     newMessageEvent.unregister(this.newMessageEventKey_);
     this.newMessageEventKey_ = undefined;
-    logger.info("Router unregistered from messageTable tableChange");
   }
 };
 
@@ -989,16 +1025,31 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
       return wire.localAddress;
     });
 
-    // Find the lowest unused integer address starting at 2
-    // Non-optimal, but should be okay since our address list should not exceed 10.
-    var newAddressPart = 1;
-    var localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
-    while (contains(addressList, localNetworkAddress)) {
-      newAddressPart++;
-      localNetworkAddress = this.makeLocalNetworkAddress_(newAddressPart);
+    // Generate a list of unused addresses in the addressable space (to a limit)
+    var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+    var addressPartSizes = addressFormat.split(/\D+/).filter(function (part) {
+      return part.length > 0;
+    }).map(function (part) {
+      return parseInt(part, 10);
+    }).reverse();
+    var maxLocalAddresses = Math.min(Math.pow(2, addressPartSizes[0]),
+        ADDRESS_OPTION_LIMIT);
+
+    var possibleAddresses = [];
+    var nextAddress;
+    for (var i = 0; i < maxLocalAddresses; i++) {
+      nextAddress = this.makeLocalNetworkAddress_(i);
+      // Verify that the address in question is not taken already.
+      if (!(nextAddress === this.getAddress() ||
+          nextAddress === this.getAutoDnsAddress() ||
+          contains(addressList, nextAddress))) {
+        possibleAddresses.push(nextAddress);
+      }
     }
 
-    wire.localAddress = localNetworkAddress;
+    // Pick one randomly from the list of possible addresses
+    var randomIndex = netsimGlobals.randomIntInRange(0, possibleAddresses.length);
+    wire.localAddress = possibleAddresses[randomIndex];
     wire.localHostname = hostname;
     wire.remoteAddress = self.getAddress();
     wire.remoteHostname = self.getHostname();
@@ -1034,7 +1085,7 @@ NetSimRouterNode.prototype.makeLocalNetworkAddress_ = function (lastPart) {
 
     if (!usedRouterID) {
       usedRouterID = true;
-      return this.entityID.toString();
+      return this.getRouterNumber().toString();
     }
 
     return '0';
@@ -1146,6 +1197,70 @@ NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
 };
 
 /**
+ * Given a network address, finds the node ID of the node that is the next
+ * step along the shortest path from this router to that address.  Will return
+ * undefined if no path to the address is found.
+ * @param {string} address
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
+  // Is it us?
+  if (address === this.getAddress()) {
+    return this;
+  }
+
+  // Is it our Auto-DNS node?
+  if (this.dnsMode === DnsMode.AUTOMATIC && address === this.getAutoDnsAddress()) {
+    return this;
+  }
+
+  // Is it a local client?
+  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAllCached());
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localAddress === address;
+  });
+  if (wireRow !== undefined) {
+    var localClient = _.find(nodes, function (node) {
+      return node.entityID === wireRow.localNodeID;
+    });
+    if (localClient !== undefined) {
+      return localClient;
+    }
+  }
+
+  // In levels where routers are not connected, this is as far as we go.
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (!levelConfig.connectedRouters) {
+    return undefined;
+  }
+
+  // Is it another node?
+  var destinationNode = _.find(nodes, function (node) {
+    return address === node.getAddress();
+  });
+
+  if (destinationNode) {
+    if (destinationNode.getNodeType() === NodeType.ROUTER) {
+      return destinationNode;
+    }
+    // How do I find the destination node's router?
+    var destinationWire = destinationNode.getOutgoingWire();
+    if (destinationWire) {
+      var remoteRouter = _.find(nodes, function (node) {
+        return node.entityID === destinationWire.remoteNodeID;
+      });
+      if (remoteRouter !== undefined) {
+        return remoteRouter;
+      }
+    }
+  }
+
+  return undefined;
+};
+
+/**
  * When the node table changes, we check whether our own row has changed
  * and propagate those changes as appropriate.
  * @param rows
@@ -1158,7 +1273,10 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
   }.bind(this));
 
   if (myRow === undefined) {
-    throw new Error("Unable to find router node in node table listing.");
+    // This can happen now, to non-primary routers, because detection
+    // of the router's removal (stopping its simulation) in NetSimLocalClientNode
+    // and this method happen in an uncertain order.
+    return;
   }
 
   if (!_.isEqual(this.stateCache_, myRow)) {
@@ -1367,7 +1485,6 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
 
     var levelConfig = netsimGlobals.getLevelConfig();
     if (levelConfig.broadcastMode) {
-      logger.info("Forwarding to all");
       this.forwardMessageToAll_(message, onComplete);
     } else {
       this.forwardMessageToRecipient_(message, onComplete);
@@ -1463,17 +1580,16 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     return;
   }
 
-  if (toAddress === this.getAddress()) {
-    // This packet has reached its destination, it's done.
-    logger.warn("Packet stopped at router.");
-    this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
+  var destinationNode = this.getNextNodeTowardAddress_(toAddress);
+  if (destinationNode === undefined) {
+    // Can't find or reach the address within the simulation
+    logger.warn("Destination address not reachable");
+    this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
-  }
-
-  var destinationNodeID = this.getNodeIDForAddress_(toAddress);
-  if (destinationNodeID === undefined) {
-    logger.warn("Destination address not in local network");
+  } else if (destinationNode === this && toAddress === this.getAddress()) {
+    // This router IS the packet's destination, it's done.
+    logger.warn("Packet stopped at router.");
     this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(null);
     return;
@@ -1481,20 +1597,19 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
 
   // TODO: Handle bad state where more than one wire matches dest address?
 
-  // Normally the recipient simulates a message.
-  // If this message is on loopback (i.e. to or from auto-dns) then
-  // the simulator of the original message has to simulate this one too.
-  var simulatingNode = destinationNodeID;
-  if (destinationNodeID === this.entityID) {
-    simulatingNode = message.simulatedBy;
+  // The sender simulates a message until it reaches the final leg of its trip,
+  // when it's going to a client node.  At that point, the recipient takes over.
+  var simulatingNodeID = message.simulatedBy;
+  if (destinationNode.getNodeType() === NodeType.CLIENT) {
+    simulatingNodeID = destinationNode.entityID;
   }
 
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
       routerNodeID,
-      destinationNodeID,
-      simulatingNode,
+      destinationNode.entityID,
+      simulatingNodeID,
       message.payload,
       function (err, result) {
         this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);

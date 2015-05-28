@@ -32,7 +32,7 @@
         "text": "structure and design of the internet"
       },
       {
-        "text": "programming principles and javascript"
+        "text": "programming principles and JavaScript"
       },
       {
         "text": "data extraction, modeling, and processing"
@@ -41,11 +41,7 @@
         "text": "planning, organizing, and completion of performance tasks"
       }
     ],
-    "title": "Matching Unit Descriptions and Numbers",
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "title": "Matching Units with Descriptions"
   },
   "md5": "b5a8ba18e27f6457735fc24df237379e"
 }]]></config>

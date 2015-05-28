@@ -6,7 +6,8 @@
     "title": "Goals for using Code.org in your Classroom",
     "options": {
       "success_title": "Awesome!",
-      "success_body": "Thanks for your response"
+      "success_body": "Thanks for your response",
+      "skip_sound": true
     },
     "height": "200",
     "markdown": "What are your goals or intentions for integrating Code.org in your classroom?\n"

@@ -14,6 +14,12 @@ class LevelsHelperTest < ActionView::TestCase
   setup do
     @maze_data = {:game_id=>25, :user_id => 1, :name=>"__bob4", :level_num=>"custom", :skin=>"birds", :instructions=>"sdfdfs"}
     @level = Maze.create(@maze_data)
+
+    def request
+      OpenStruct.new(env: {}, headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
+      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
+    end
+
   end
 
   test "should parse maze level with non string array" do
@@ -159,10 +165,6 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in @user
     self.stubs(:current_user).returns @user
 
-    def request
-      OpenStruct.new(env: {})
-    end
-
     set_channel
     channel = @view_options[:channel]
     # Request it again, should get the same channel
@@ -179,10 +181,6 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in @user
     self.stubs(:current_user).returns @user
-
-    def request
-      OpenStruct.new(env: {})
-    end
 
     @level = create :applab
     assert_not_nil app_options['channel']

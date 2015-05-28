@@ -30,15 +30,23 @@ goog.require('goog.style');
 /**
  * Class for a top-level block editing blockSpace.
  * Handles constructing a top-level SVG element, and positioning, sizing,
- * and certain focus/mouse handling operations for itself
+ * and certain focus/mouse handling operations for itself.
  * @constructor
+ * @param {boolean} opt_hideTrashRect The trash rectangle is a dark grey 
+ * rectangle covering the entire toolbox area, and is faded in when the user 
+ * drags a block towards the toolbox to delete it.  However, when creating a 
+ * blockspace for something like the function editor, we don't want to create
+ * an additional one, relying on the main blockspace editor's one instead.
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
+Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect) {
   if (opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics;
   }
   if (opt_setMetrics) {
     this.setBlockSpaceMetrics_ = opt_setMetrics;
+  }
+  if (opt_hideTrashRect) {
+    this.hideTrashRect_ = opt_hideTrashRect;
   }
   /**
    * @type {Blockly.BlockSpace}
@@ -192,12 +200,25 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     'class': 'blocklySvg'
   }, null);
   this.svg_ = svg;
+
   container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
   var defs = Blockly.createSvgElement('defs', {
     id: 'blocklySvgDefs'
   }, svg);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
+
+  // If we're going to have a toolbox, create a rect which is the same
+  // location/dimensions as the HTML div that contains the rest of the toolbox.
+  // This new rect will have the grey shade of the toolbox background.  We create
+  // it here so that blocks can be dragged over the top of it.  The HTML div
+  // appears over the blocks, meaning that blocks dragged to it would appear
+  // underneath it, if it had a background color, which wouldn't look as good.
+  if (!this.hideTrashRect_ && !Blockly.readOnly && Blockly.hasCategories) {
+    this.svgBackground_ = Blockly.createSvgElement('rect',
+      {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
+      this.svg_);
+  }
 
   svg.appendChild(this.blockSpace.createDom());
 
@@ -246,7 +267,7 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
    */
   this.flyout_ = new Blockly.Flyout(this, true);
   var flyout = this.flyout_;
-  var flyoutSvg = flyout.createDom();
+  var flyoutSvg = flyout.createDom(false);
   flyout.init(this.blockSpace, true);
   flyout.autoClose = false;
   // Insert the flyout behind the blockSpace so that blocks appear on top.
@@ -372,8 +393,6 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.blockSpace);
     this.blockSpace.scrollbar.resize();
   }
-
-  this.blockSpace.addTrashcan();
 };
 
 Blockly.BlockSpaceEditor.prototype.detectBrokenControlPoints = function() {

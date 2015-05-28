@@ -5,11 +5,7 @@
   "properties": {
     "title": "Reflection: Sending Numbers ",
     "content1": "Complete the Sending Numbers Rubric and then respond to the following prompt.",
-    "markdown": "What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\n"
   },
   "md5": "02be49f03fe0b844f9b71a1d999227de"
 }]]></config>
