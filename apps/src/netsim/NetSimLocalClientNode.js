@@ -370,7 +370,7 @@ NetSimLocalClientNode.prototype.synchronousDestroy = function () {
  */
 NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   // If connected to remote, asynchronously disconnect then try destroy again.
-  if (this.myRemoteClient || this.myRouterID !== undefined) {
+  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
     this.disconnectRemote(function (err) {
       if (err) {
         onComplete(err);
@@ -425,7 +425,7 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   }
 
   this.myRemoteClient = null;
-  this.myRouterID_ = null;
+  this.myRouterID_ = undefined;
   this.remoteChange.notifyObservers(null, null);
 };
 
@@ -452,7 +452,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
 
     this.myWire = null;
     this.myRemoteClient = null;
-    this.myRouterID_ = null;
+    this.myRouterID_ = undefined;
     this.remoteChange.notifyObservers(null, null);
     onComplete(null);
   }.bind(this));
