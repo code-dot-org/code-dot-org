@@ -19,7 +19,35 @@ function validatePropertyRow(index, label, value, assert) {
   assert.equal(tableRow.children(0).text(), label);
   // second col has an input with val screen 2
   assert.equal(tableRow.children(1).children(0).val(), value);
+}
 
+/**
+ * jQuery.simulate was having issues in phantom, so I decided to roll my own
+ * drag simulation. May belong in a util file.
+ * @param {string} type
+ * @param {number} left Horizontal offset from top left of visualization to drop at
+ * @param {number} top Vertical offset from top left of visualization to drop at
+ */
+function dragToVisualization(type, left, top) {
+  // drag a new screen in
+  var element = $("[data-element-type='" + type + "']");
+  var screenOffset = element.offset();
+  var mousedown = jQuery.Event( "mousedown", {
+    which: 1,
+    pageX: screenOffset.left,
+    pageY: screenOffset.top
+  });
+  var drag = jQuery.Event("mousemove", {
+    pageX: $("#visualization").offset().left + left,
+    pageY: $("#visualization").offset().top + top
+  });
+  var mouseup = jQuery.Event('mouseup', {
+    pageX: $("#visualization").offset().left + left,
+    pageY: $("#visualization").offset().top + top
+  });
+  element.trigger(mousedown);
+  $(document).trigger(drag);
+  $(document).trigger(mouseup);
 }
 
 module.exports = {
@@ -72,7 +100,6 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-
     {
       description: "add a screen",
       editCode: true,
@@ -85,12 +112,7 @@ module.exports = {
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
-        $("[data-element-type='SCREEN']").simulate("drag", {
-          handle: 'corner',
-          x: $("#divApplab").position().left + 10,
-          y: $("#divApplab").position().top + 10,
-          ignoreTouchMapppings: true
-        });
+        dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
         assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
@@ -99,12 +121,7 @@ module.exports = {
         validatePropertyRow(1, 'id', 'screen2', assert);
 
         // drag a button onto our new screen
-        $("[data-element-type='BUTTON']").simulate("drag", {
-          handle: 'corner',
-          x: $("#divApplab").position().left + 10,
-          y: $("#divApplab").position().top + 10,
-          ignoreTouchMapppings: true
-        });
+        dragToVisualization('BUTTON', 10, 10);
 
         validatePropertyRow(1, 'id', 'button1', assert);
         var buttonElement = document.getElementById('button1');

@@ -48,7 +48,6 @@ describe('Level tests', function() {
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/droplet/droplet-full.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/tooltipster/jquery.tooltipster.js'); })
-    .then(function () { return loadSource('http://localhost:8001/dashboard/vendor/assets/javascripts/jquery.simulate.js'); })
     .then(function () {
       assert(window.requirejs);
       done();

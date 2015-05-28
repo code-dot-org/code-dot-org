@@ -330,7 +330,7 @@ $.extend( $.simulate.prototype, {
     // way to handle this kind of cancellation from this simulator.
     function simulateEvent(obj, target, name, param)
     {
-      if (name in touchMappings && !options.ignoreTouchMapppings)
+      if (name in touchMappings)
       {
         name = touchMappings[name];
       }
