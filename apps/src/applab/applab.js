@@ -797,7 +797,6 @@ Applab.reset = function(first) {
     designMode.resetElementTray(allowDragging);
   }
 
-
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
 
   // Reset goal successState:
