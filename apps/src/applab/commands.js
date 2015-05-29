@@ -1124,7 +1124,7 @@ applabCommands.onEvent = function (opts) {
       case 'pinchout':
         var hammerElement = new Hammer(divApplab, { 'preventDefault': true });
         hammerElement.on(opts.eventName,
-                         Applab.onEventFired.bind(this, opts));
+                         applabCommands.onEventFired.bind(this, opts));
         break;
       */
       case 'click':
@@ -1254,7 +1254,7 @@ applabCommands.getKeyValue = function(opts) {
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleReadValue.bind(this, opts);
+  var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
@@ -1277,7 +1277,7 @@ applabCommands.setKeyValue = function(opts) {
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleSetKeyValue.bind(this, opts);
+  var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
@@ -1302,7 +1302,7 @@ applabCommands.readRecords = function (opts) {
   apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
   opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleReadRecords.bind(this, opts);
+  var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
