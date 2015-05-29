@@ -201,7 +201,7 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     }
   ]
 };

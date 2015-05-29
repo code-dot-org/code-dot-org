@@ -3,7 +3,7 @@ var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 var $ = require('jquery');
 var React = require('react');
-require('react/addons')
+require('react/addons');
 var ReactTestUtils = React.addons.TestUtils;
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
@@ -32,16 +32,16 @@ function dragToVisualization(type, left, top) {
   // drag a new screen in
   var element = $("[data-element-type='" + type + "']");
   var screenOffset = element.offset();
-  var mousedown = jQuery.Event( "mousedown", {
+  var mousedown = $.Event("mousedown", {
     which: 1,
     pageX: screenOffset.left,
     pageY: screenOffset.top
   });
-  var drag = jQuery.Event("mousemove", {
+  var drag = $.Event("mousemove", {
     pageX: $("#visualization").offset().left + left,
     pageY: $("#visualization").offset().top + top
   });
-  var mouseup = jQuery.Event('mouseup', {
+  var mouseup = $.Event('mouseup', {
     pageX: $("#visualization").offset().left + left,
     pageY: $("#visualization").offset().top + top
   });
@@ -139,6 +139,62 @@ module.exports = {
         setTimeout(function () {
           Applab.onPuzzleComplete();
         }, 1);
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      // TODO (brent) - eventually will also want a test that changes the active screen
+      description: "ensure API based element creation puts element on active screen",
+      editCode: true,
+      xml:
+        'button("my_button", "my_button_text");' +
+        'image("my_image", "http://code.org/images/logo.png");' +
+        'createCanvas("my_canvas", 320, 480);' +
+        'container("my_container", "<div>FOO</div>");' +
+        'write("<div id=\'my_write\'>FOO</div>");' +
+        'imageUploadButton("my_image_upload", "text");' +
+        'textInput("my_text_input", "text");' +
+        'textLabel("my_text_label", "label");' +
+        'checkbox("my_checkbox", false);' +
+        'radioButton("my_radio_button", false, "group");' +
+        'dropdown("my_dropdown", "option1", "etc");'
+        ,
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          function idExistsOnScreen1(id) {
+            var element = document.getElementById(id);
+            assert(element);
+            assert.equal(element.parentNode.id, 'screen1');
+          }
+
+          debugger;
+
+          var button = document.getElementById('my_button');
+          assert.equal(button.textContent, 'my_button_text');
+          idExistsOnScreen1('my_button');
+
+          idExistsOnScreen1('my_image');
+          idExistsOnScreen1('my_canvas');
+          idExistsOnScreen1('my_container');
+
+          // write puts contents inside a div (so here we have a div inside a
+          // div inside our screen)
+          var write = document.getElementById('my_write');
+          assert(write);
+          assert.equal(write.parentNode.parentNode.id, 'screen1');
+
+          idExistsOnScreen1('my_image_upload');
+          idExistsOnScreen1('my_text_input');
+          idExistsOnScreen1('my_text_label');
+          idExistsOnScreen1('my_checkbox');
+          idExistsOnScreen1('my_dropdown');
+
+          Applab.onPuzzleComplete();
+        }, 100);
       },
       expected: {
         result: true,

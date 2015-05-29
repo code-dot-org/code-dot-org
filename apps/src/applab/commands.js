@@ -125,7 +125,8 @@ function apiValidateActiveCanvas(opts, funcName) {
   }
 }
 
-function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
+function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
+  var divApplab = document.getElementById('divApplab');
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedDomKey = 'validated_id_' + varName;
   apiValidateType(opts, funcName, varName, id, 'string');
@@ -147,16 +148,19 @@ function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shoul
   }
 }
 
-applabCommands.container = function (opts) {
-  var divApplab = document.getElementById('divApplab');
+// TODO (brent) - move this ?
+function activeScreen() {
+  return $('.screen').filter(':visible').first()[0];
+}
 
+applabCommands.container = function (opts) {
   var newDiv = document.createElement("div");
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
   newDiv.innerHTML = opts.html;
 
-  return Boolean(divApplab.appendChild(newDiv));
+  return Boolean(activeScreen().appendChild(newDiv));
 };
 
 applabCommands.write = function (opts) {
@@ -165,10 +169,8 @@ applabCommands.write = function (opts) {
 };
 
 applabCommands.button = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
   // PARAMNAME: button: id vs. buttonId
-  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'button', 'id', opts.elementId, false);
   apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
@@ -176,25 +178,21 @@ applabCommands.button = function (opts) {
   newButton.id = opts.elementId;
 
   return Boolean(newButton.appendChild(textNode) &&
-                 divApplab.appendChild(newButton));
+    activeScreen().appendChild(newButton));
 };
 
 applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
-  var divApplab = document.getElementById('divApplab');
-
   var newImage = document.createElement("img");
   newImage.src = opts.src;
   newImage.id = opts.elementId;
 
-  return Boolean(divApplab.appendChild(newImage));
+  return Boolean(activeScreen().appendChild(newImage));
 };
 
 applabCommands.imageUploadButton = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
   // To avoid showing the ugly fileupload input element, we create a label
   // element with an img-upload class that will ensure it looks like a button
   var newLabel = document.createElement("label");
@@ -213,7 +211,7 @@ applabCommands.imageUploadButton = function (opts) {
 
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
-                 divApplab.appendChild(newLabel));
+                 activeScreen().appendChild(newLabel));
 };
 
 
@@ -454,9 +452,8 @@ applabCommands.speed = function (opts) {
 };
 
 applabCommands.createCanvas = function (opts) {
-  var divApplab = document.getElementById('divApplab');
   // PARAMNAME: createCanvas: id vs. canvasId
-  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'createCanvas', 'canvasId', opts.elementId, false);
   apiValidateType(opts, 'createCanvas', 'width', width, 'number', OPTIONAL);
   apiValidateType(opts, 'createCanvas', 'height', height, 'number', OPTIONAL);
 
@@ -483,7 +480,7 @@ applabCommands.createCanvas = function (opts) {
       Applab.activeCanvas = newElement;
     }
 
-    return Boolean(divApplab.appendChild(newElement));
+    return Boolean(activeScreen().appendChild(newElement));
   }
   return false;
 };
@@ -491,7 +488,7 @@ applabCommands.createCanvas = function (opts) {
 applabCommands.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: setActiveCanvas: id vs. canvasId
-  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
     Applab.activeCanvas = canvas;
@@ -604,7 +601,7 @@ applabCommands.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: drawImage: imageId vs. id
   apiValidateActiveCanvas(opts, 'drawImage');
-  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'id', opts.imageId, true);
+  apiValidateDomIdExistence(opts, 'drawImage', 'id', opts.imageId, true);
   apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
   apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var image = document.getElementById(opts.imageId);
@@ -662,43 +659,40 @@ applabCommands.putImageData = function (opts) {
 };
 
 applabCommands.textInput = function (opts) {
-  var divApplab = document.getElementById('divApplab');
   // PARAMNAME: textInput: id vs. inputId
-  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'textInput', 'id', opts.elementId, false);
   apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
   newInput.id = opts.elementId;
 
-  return Boolean(divApplab.appendChild(newInput));
+  return Boolean(activeScreen().appendChild(newInput));
 };
 
 applabCommands.textLabel = function (opts) {
-  var divApplab = document.getElementById('divApplab');
   // PARAMNAME: textLabel: id vs. labelId
-  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'textLabel', 'id', opts.elementId, false);
   apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
   if (typeof opts.forId !== 'undefined') {
-    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, true);
+    apiValidateDomIdExistence(opts, 'textLabel', 'forId', opts.forId, true);
   }
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   var forElement = document.getElementById(opts.forId);
-  if (forElement && divApplab.contains(forElement)) {
+  if (forElement && activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
   }
 
   return Boolean(newLabel.appendChild(textNode) &&
-                 divApplab.appendChild(newLabel));
+                 activeScreen().appendChild(newLabel));
 };
 
 applabCommands.checkbox = function (opts) {
-  var divApplab = document.getElementById('divApplab');
   // PARAMNAME: checkbox: id vs. checkboxId
-  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'checkbox', 'id', opts.elementId, false);
   // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
   var newCheckbox = document.createElement("input");
@@ -706,12 +700,11 @@ applabCommands.checkbox = function (opts) {
   newCheckbox.checked = opts.checked;
   newCheckbox.id = opts.elementId;
 
-  return Boolean(divApplab.appendChild(newCheckbox));
+  return Boolean(activeScreen().appendChild(newCheckbox));
 };
 
 applabCommands.radioButton = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'radioButton', 'id', opts.elementId, false);
   // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
   apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
 
@@ -721,13 +714,12 @@ applabCommands.radioButton = function (opts) {
   newRadio.checked = opts.checked;
   newRadio.id = opts.elementId;
 
-  return Boolean(divApplab.appendChild(newRadio));
+  return Boolean(activeScreen().appendChild(newRadio));
 };
 
 applabCommands.dropdown = function (opts) {
-  var divApplab = document.getElementById('divApplab');
   // PARAMNAME: dropdown: id vs. dropdownId
-  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
+  apiValidateDomIdExistence(opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
 
@@ -741,7 +733,7 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
 
-  return Boolean(divApplab.appendChild(newSelect));
+  return Boolean(activeScreen().appendChild(newSelect));
 };
 
 applabCommands.getAttribute = function (opts) {
@@ -769,7 +761,7 @@ applabCommands.setAttribute = function (opts) {
 
 applabCommands.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'getText', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -786,7 +778,7 @@ applabCommands.getText = function (opts) {
 
 applabCommands.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setText', 'id', opts.elementId, true);
   apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
   var element = document.getElementById(opts.elementId);
@@ -805,7 +797,7 @@ applabCommands.setText = function (opts) {
 
 applabCommands.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'getChecked', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
@@ -816,7 +808,7 @@ applabCommands.getChecked = function (opts) {
 
 applabCommands.setChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setChecked', 'id', opts.elementId, true);
   // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
 
   var element = document.getElementById(opts.elementId);
@@ -830,7 +822,7 @@ applabCommands.setChecked = function (opts) {
 applabCommands.getImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: getImageURL: id vs. imageId
-  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'getImageURL', 'id', opts.elementId, true);
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -848,7 +840,7 @@ applabCommands.getImageURL = function (opts) {
 
 applabCommands.setImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setImageURL', 'id', opts.elementId, true);
   apiValidateType(opts, 'setImageURL', 'url', opts.src, 'string');
 
   var element = document.getElementById(opts.elementId);
@@ -883,7 +875,7 @@ applabCommands.innerHTML = function (opts) {
 
 applabCommands.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'deleteElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -898,7 +890,7 @@ applabCommands.deleteElement = function (opts) {
 
 applabCommands.showElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'showElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -910,7 +902,7 @@ applabCommands.showElement = function (opts) {
 
 applabCommands.hideElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'hideElement', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -943,7 +935,7 @@ applabCommands.setParent = function (opts) {
 
 applabCommands.setPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setPosition', 'id', opts.elementId, true);
   apiValidateType(opts, 'setPosition', 'x', opts.left, 'number');
   apiValidateType(opts, 'setPosition', 'y', opts.top, 'number');
 
@@ -977,7 +969,7 @@ applabCommands.setPosition = function (opts) {
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'getXPosition', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -1000,7 +992,7 @@ applabCommands.getXPosition = function (opts) {
 
 applabCommands.getYPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'getYPosition', 'id', opts.elementId, true);
 
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -1099,7 +1091,7 @@ applabCommands.onEvent = function (opts) {
   if (opts.elementId === 'body') {
     opts.elementId = 'divApplab';
   } else {
-    apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
+    apiValidateDomIdExistence(opts, 'onEvent', 'id', opts.elementId, true);
   }
   apiValidateType(opts, 'onEvent', 'type', opts.eventName, 'string');
   // PARAMNAME: onEvent: callback vs. callbackFunction
