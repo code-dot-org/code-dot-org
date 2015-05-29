@@ -723,14 +723,23 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
+  var headerElement;
+
+  var puzzleTitle = msg.puzzleTitle({
+    stage_total: level.stage_total,
+    puzzle_number: level.puzzle_number
+  });
+
   if (marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
+    instructionsDiv.className += ' markdown-instructions-container';
+    headerElement = document.createElement('h1');
+    headerElement.className = 'markdown-level-header-text';
+    headerElement.innerHTML = puzzleTitle;
   }
+
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
-    puzzleTitle: msg.puzzleTitle({
-      stage_total: level.stage_total,
-      puzzle_number: level.puzzle_number
-    }),
+    puzzleTitle: puzzleTitle,
     instructions: level.instructions,
     renderedMarkdown: renderedMarkdown,
     aniGifURL: level.aniGifURL
@@ -769,7 +778,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
-    onHidden: hideFn
+    onHidden: hideFn,
+    scrollContent: !!renderedMarkdown,
+    header: headerElement
   });
 
   if (autoClose) {
