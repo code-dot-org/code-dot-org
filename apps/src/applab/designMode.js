@@ -467,6 +467,9 @@ designMode.changeScreen = function (screenId) {
   // TODO (brent) - may end up wanting to share some of this code with our
   // API that allows changing the screen. or at the least come up with a good
   // name to indicate how this and the api function are different
+
+  // TODO (brent) - should changing the screen reset the active canvas?
+
   // Ignore screen changes while running
   if (Applab.isRunning()) {
     return;
