@@ -33,7 +33,7 @@ var _ = utils.getLodash();
 var apiTimeoutList = require('../timeoutList');
 var annotationList = require('./acemode/annotationList');
 var designMode = require('./designMode');
-var turtle = require('./turtle');
+var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 
 var vsprintf = require('./sprintf').vsprintf;
@@ -1024,7 +1024,7 @@ Applab.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   if (level.showTurtleBeforeRun) {
-    turtle.turtleSetVisibility(true);
+    applabTurtle.turtleSetVisibility(true);
   }
 
   var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
