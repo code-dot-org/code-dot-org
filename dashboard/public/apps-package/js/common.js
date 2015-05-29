@@ -5843,7 +5843,7 @@ var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 
 var elementUtils = require('./elementUtils');
@@ -5892,8 +5892,7 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           isNumber: true, 
           initialValue: parseInt(element.style.top, 10), 
           handleChange: this.props.handleChange.bind(this, 'top')}), 
-        /* eventually this will be a ImageChooserPropertyRow */ 
-        React.createElement(PropertyRow, {
+        React.createElement(ImagePickerPropertyRow, {
           desc: 'picture', 
           initialValue: element.getAttribute('src'), 
           handleChange: this.props.handleChange.bind(this, 'picture')}), 
@@ -5928,7 +5927,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],32:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":23,"./ImagePickerPropertyRow.jsx":25,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],32:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
