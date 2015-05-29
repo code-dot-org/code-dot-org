@@ -5228,7 +5228,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"./designProperties.jsx":41,"./locale":48,"react":630}],41:[function(require,module,exports){
+},{"./designProperties.jsx":42,"./locale":49,"react":630}],42:[function(require,module,exports){
 var React = require('react');
 var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
@@ -5283,7 +5283,7 @@ var DesignProperties = module.exports = React.createClass({displayName: "exports
 });
 
 
-},{"./designElements/library":36,"./locale":48,"react":630}],36:[function(require,module,exports){
+},{"./designElements/library":37,"./locale":49,"react":630}],37:[function(require,module,exports){
 /* global $ */
 
 var utils = require('../../utils');
@@ -5421,7 +5421,7 @@ module.exports = {
 };
 
 
-},{"../../utils":301,"./button.jsx":29,"./canvas.jsx":30,"./checkbox.jsx":31,"./dropdown.jsx":32,"./image.jsx":34,"./label.jsx":35,"./radioButton.jsx":37,"./textInput.jsx":38,"./textarea.jsx":39}],39:[function(require,module,exports){
+},{"../../utils":301,"./button.jsx":30,"./canvas.jsx":31,"./checkbox.jsx":32,"./dropdown.jsx":33,"./image.jsx":35,"./label.jsx":36,"./radioButton.jsx":38,"./textInput.jsx":39,"./textarea.jsx":40}],40:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5538,7 +5538,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],38:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ColorPickerPropertyRow.jsx":25,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"./elementUtils":34,"react":630}],39:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -5634,7 +5634,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],37:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ColorPickerPropertyRow.jsx":25,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"./elementUtils":34,"react":630}],38:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5731,7 +5731,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"react":630}],35:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ColorPickerPropertyRow.jsx":25,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"react":630}],36:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -5836,7 +5836,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],34:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ColorPickerPropertyRow.jsx":25,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"./elementUtils":34,"react":630}],35:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -5927,7 +5927,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ImagePickerPropertyRow.jsx":25,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],32:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ImagePickerPropertyRow.jsx":26,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"./elementUtils":34,"react":630}],33:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -6018,7 +6018,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./OptionsSelectRow.jsx":26,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],26:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./OptionsSelectRow.jsx":27,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"./elementUtils":34,"react":630}],27:[function(require,module,exports){
 var React = require('react');
 
 var OptionsSelectRow = React.createClass({displayName: "OptionsSelectRow",
@@ -6066,7 +6066,7 @@ var OptionsSelectRow = React.createClass({displayName: "OptionsSelectRow",
 module.exports = OptionsSelectRow;
 
 
-},{"react":630}],31:[function(require,module,exports){
+},{"react":630}],32:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -6160,7 +6160,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"react":630}],30:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ColorPickerPropertyRow.jsx":25,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"react":630}],31:[function(require,module,exports){
 var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
@@ -6235,7 +6235,7 @@ module.exports = {
 };
 
 
-},{"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"react":630}],29:[function(require,module,exports){
+},{"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"react":630}],30:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -6345,7 +6345,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":23,"./ColorPickerPropertyRow.jsx":24,"./ImagePickerPropertyRow.jsx":25,"./PropertyRow.jsx":27,"./ZOrderRow.jsx":28,"./elementUtils":33,"react":630}],33:[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":24,"./ColorPickerPropertyRow.jsx":25,"./ImagePickerPropertyRow.jsx":26,"./PropertyRow.jsx":28,"./ZOrderRow.jsx":29,"./elementUtils":34,"react":630}],34:[function(require,module,exports){
 // Taken from http://stackoverflow.com/a/3627747/2506748
 module.exports.rgb2hex = function (rgb) {
   if (rgb === '') {
@@ -6364,7 +6364,7 @@ module.exports.extractImageUrl = function (str) {
 };
 
 
-},{}],28:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 var React = require('react');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
@@ -6438,7 +6438,7 @@ var ZOrderRow = React.createClass({displayName: "ZOrderRow",
 module.exports = ZOrderRow;
 
 
-},{"react":630}],27:[function(require,module,exports){
+},{"react":630}],28:[function(require,module,exports){
 var React = require('react');
 
 var PropertyRow = React.createClass({displayName: "PropertyRow",
@@ -6496,7 +6496,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"react":630}],25:[function(require,module,exports){
+},{"react":630}],26:[function(require,module,exports){
 var React = require('react');
 var designMode = require('../designMode');
 
@@ -6551,7 +6551,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"../designMode":40,"react":630}],40:[function(require,module,exports){
+},{"../designMode":41,"react":630}],41:[function(require,module,exports){
 /* global $, Dialog */
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
@@ -7022,7 +7022,7 @@ designMode.configureDesignModeHeaders = function() {
 
 
 
-},{"../StudioApp":4,"../utils":301,"./DesignModeBox.jsx":6,"./DesignModeHeaders.jsx":7,"./DesignToggleRow.jsx":8,"./assetManagement/AssetManager.jsx":16,"./designElements/library":36,"./designProperties.jsx":41,"react":630}],16:[function(require,module,exports){
+},{"../StudioApp":4,"../utils":301,"./DesignModeBox.jsx":6,"./DesignModeHeaders.jsx":7,"./DesignToggleRow.jsx":8,"./assetManagement/AssetManager.jsx":17,"./designElements/library":37,"./designProperties.jsx":42,"react":630}],17:[function(require,module,exports){
 var React = require('react');
 var AssetsApi = require('./clientApi');
 var AssetRow = require('./AssetRow.jsx');
@@ -7210,7 +7210,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"./AssetRow.jsx":17,"./clientApi":18,"react":630}],17:[function(require,module,exports){
+},{"./AssetRow.jsx":18,"./clientApi":19,"react":630}],18:[function(require,module,exports){
 var React = require('react');
 var AssetsApi = require('./clientApi');
 
@@ -7374,7 +7374,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"./clientApi":18,"react":630}],18:[function(require,module,exports){
+},{"./clientApi":19,"react":630}],19:[function(require,module,exports){
 /* global dashboard */
 // TODO: The client API should be instantiated with the channel ID, instead of
 // grabbing it from the `dashboard.project` global.
@@ -7517,13 +7517,13 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"./locale":48,"react":630}],48:[function(require,module,exports){
+},{"./locale":49,"react":630}],49:[function(require,module,exports){
 // locale for applab
 
 module.exports = window.blockly.applab_locale;
 
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -7596,7 +7596,7 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 module.exports = PropertyRow;
 
 
-},{"../colpick":20,"react":630}],20:[function(require,module,exports){
+},{"../colpick":21,"react":630}],21:[function(require,module,exports){
 /*
 colpick Color Picker
 Copyright 2013 Jose Vargas. Licensed under GPL license. Based on Stefan Petre's Color Picker www.eyecon.ro, dual licensed under the MIT and GPL licenses
@@ -8119,7 +8119,7 @@ For usage and examples: colpick.com/plugin
 })(jQuery);
 
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 var React = require('react');
 
 var BooleanPropertyRow = React.createClass({displayName: "BooleanPropertyRow",
