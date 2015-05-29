@@ -1,3 +1,5 @@
+/* global $ */
+
 var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');

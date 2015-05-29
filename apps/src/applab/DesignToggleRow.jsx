@@ -12,10 +12,9 @@ module.exports = React.createClass({
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    handleManageAssets: React.PropTypes.func.isRequired
+    handleManageAssets: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired
   },
-
 
   getInitialState: function () {
     return {

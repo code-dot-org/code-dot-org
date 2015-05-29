@@ -424,18 +424,6 @@ function makeUndraggable(jq) {
 designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
-  $('.new-design-element').draggable({
-    containment:"#codeApp",
-    helper:"clone",
-    appendTo:"#codeApp",
-    revert: 'invalid',
-    zIndex: 2,
-    start: function() {
-      if ($('#resetButton').is(':visible')) {
-        studioApp.resetButtonClick();
-      }
-    }
-  });
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
@@ -518,7 +506,9 @@ designMode.renderDesignModeBox = function(element) {
 
   var props = {
     handleDragStart: function() {
-      studioApp.resetButtonClick();
+      if ($('#resetButton').is(':visible')) {
+        studioApp.resetButtonClick();
+      }
     },
     element: element || null,
     handleChange: designMode.onPropertyChange.bind(this, element),

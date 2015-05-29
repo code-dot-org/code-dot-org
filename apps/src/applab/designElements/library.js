@@ -88,7 +88,7 @@ module.exports = {
     // Stuff that's common across all elements
     element.id = this.getUnusedElementId(elementType.toLowerCase());
 
-    // TODO - better way to differentiate screen?
+    // TODO (brent) - better way to differentiate screen?
     if (elementType !== ElementType.SCREEN) {
       element.style.position = 'absolute';
       element.style.left = left + 'px';
