@@ -192,14 +192,16 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
               ['secondary']));
         }
 
-        buttons.push(buttonMarkup(
-            i18n.logBrowserButton(),
-            'show-router-log-modal',
-            ['secondary'],
-            {
-              'data-toggle':'modal',
-              'data-target':'#router-log-modal'
-            }));
+        if (levelConfig.showLogBrowserButton) {
+          buttons.push(buttonMarkup(
+              i18n.logBrowserButton(),
+              'show-router-log-modal',
+              ['secondary'],
+              {
+                'data-toggle':'modal',
+                'data-target':'#router-log-modal'
+              }));
+        }
 
         if (buttons.length > 0) {
           writeEmptyRow(buttons.join(' '));
