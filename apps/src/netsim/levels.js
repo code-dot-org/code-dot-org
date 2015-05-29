@@ -29,6 +29,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
+ * @property {boolean} showLogBrowserButton - Whether the "Log Browser" is
+ *           available.  Adds a button to the lobby and one to the bottom
+ *           of the router tab.
+ *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
  *           Should use 'bits' for variant 1 (levels about the coordination
@@ -168,6 +172,7 @@ levels.custom = {
   canConnectToClients: false,
   canConnectToRouters: false,
   showAddRouterButton: false,
+  showLogBrowserButton: false,
 
   // Simulator-wide setup
   messageGranularity: MessageGranularity.BITS,
