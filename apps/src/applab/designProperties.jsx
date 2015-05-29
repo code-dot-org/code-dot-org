@@ -43,6 +43,7 @@ var DesignProperties = module.exports = React.createClass({
         </button>
         <button
           id="deletePropertiesButton"
+          disabled={this.props.element.id === 'screen1'}
           onClick={this.props.onDelete}>
           Delete
         </button>
