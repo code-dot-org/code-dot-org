@@ -13,12 +13,18 @@ var ReactTestUtils = React.addons.TestUtils;
 
 function validatePropertyRow(index, label, value, assert) {
   var table = $("#design-properties table")[0];
-  assert(table);
+  assert(table, 'has design properties table');
 
   var tableRow = $("#design-properties table tr").eq(index);
   assert.equal(tableRow.children(0).text(), label);
   // second col has an input with val screen 2
   assert.equal(tableRow.children(1).children(0).val(), value);
+}
+
+function validationEmptyDesignProperties(assert) {
+  var designProperties = document.getElementById('design-properties');
+  assert.equal(designProperties.children.length, 1);
+  assert.equal(designProperties.children[0].tagName, 'P');
 }
 
 /**
@@ -146,6 +152,48 @@ module.exports = {
       },
     },
     {
+      description: "delete a screen",
+      editCode: true,
+      timeout: 15000,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeToggle").click();
+        assert.equal($("#designModeToggle").text(), 'Code');
+        var screenSelector = document.getElementById('screenSelector');
+
+        // drag a new screen in
+        dragToVisualization('SCREEN', 10, 10);
+
+        assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
+        assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
+        assert.equal($(screenSelector).val(), 'screen2');
+
+        validatePropertyRow(1, 'id', 'screen2', assert);
+
+        ReactTestUtils.Simulate.click(document.getElementById('deletePropertiesButton'));
+
+        validationEmptyDesignProperties(assert);
+        assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
+        assert.equal($(screenSelector).val(), 'screen1');
+
+        // click on screen 1 (use jquery instead of React since screen1 is not
+        // a react component)
+        $("#screen1").click();
+        validatePropertyRow(1, 'id', 'screen1', assert);
+        assert(document.getElementById('deletePropertiesButton').hasAttribute('disabled'));
+
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          Applab.onPuzzleComplete();
+        }, 1);
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       // TODO (brent) - eventually will also want a test that changes the active screen
       description: "ensure API based element creation puts element on active screen",
       editCode: true,
@@ -160,8 +208,7 @@ module.exports = {
         'textLabel("my_text_label", "label");' +
         'checkbox("my_checkbox", false);' +
         'radioButton("my_radio_button", false, "group");' +
-        'dropdown("my_dropdown", "option1", "etc");'
-        ,
+        'dropdown("my_dropdown", "option1", "etc");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
@@ -170,8 +217,6 @@ module.exports = {
             assert(element);
             assert.equal(element.parentNode.id, 'screen1');
           }
-
-          debugger;
 
           var button = document.getElementById('my_button');
           assert.equal(button.textContent, 'my_button_text');

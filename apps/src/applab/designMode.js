@@ -2,6 +2,8 @@
 
 // TODO (brent) - make sure you consider transition to screens from no screens
 
+// TODO (brent) - why is this code showing up in common.js
+
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
@@ -214,6 +216,9 @@ designMode.onDonePropertiesButton = function() {
 
 designMode.onDeletePropertiesButton = function(element, event) {
   element.parentNode.removeChild(element);
+  if ($(element).hasClass('screen')) {
+    designMode.changeScreen('screen1');
+  }
   designMode.serializeToLevelHtml();
   designMode.clearProperties();
 };
@@ -482,7 +487,6 @@ designMode.changeScreen = function (screenId) {
   });
 
   var designToggleRow = document.getElementById('designToggleRow');
-
   if (designToggleRow) {
     React.render(
       React.createElement(DesignToggleRow, {
