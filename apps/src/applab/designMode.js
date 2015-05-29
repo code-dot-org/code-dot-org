@@ -4,6 +4,8 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
+var DesignModeBox = require('./DesignModeBox.jsx');
+var DesignModeHeaders = require('./DesignModeHeaders.jsx');
 var DesignProperties = require('./designProperties.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var AssetManager = require('./assetManagement/AssetManager.jsx');
@@ -52,17 +54,8 @@ designMode.createElement = function (elementType, left, top) {
 };
 
 designMode.editElementProperties = function(element) {
-  var designPropertiesElement = document.getElementById('design-properties');
   currentlyEditedElement = element;
-  React.render(
-    React.createElement(DesignProperties, {
-        element: element,
-        handleChange: designMode.onPropertyChange.bind(this, element),
-        onDepthChange: designMode.onDepthChange,
-        onDone: designMode.onDonePropertiesButton,
-        onDelete: designMode.onDeletePropertiesButton.bind(this, element)}
-    ),
-    designPropertiesElement);
+  designMode.renderDesignModeBox(element);
 };
 
 /**
@@ -78,7 +71,7 @@ designMode.clearProperties = function () {
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
-  $('#design-elements .new-design-element').each(function() {
+  $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
   var designModeClear = document.getElementById('designModeClear');
@@ -400,16 +393,6 @@ function makeDraggable (jq) {
 designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
-  $('.new-design-element').draggable({
-    containment:"#codeApp",
-    helper:"clone",
-    appendTo:"#codeApp",
-    revert: 'invalid',
-    zIndex: 2,
-    start: function() {
-      studioApp.resetButtonClick();
-    }
-  });
   var GRID_SIZE = 5;
   $('#visualization').droppable({
     accept: '.new-design-element',
@@ -449,8 +432,37 @@ designMode.configureDesignToggleRow = function () {
     React.createElement(DesignToggleRow, {
       screens: ['screen1'],
       onDesignModeButton: throttledDesignModeClick,
-      onCodeModeButton: Applab.onCodeModeButton
+      onCodeModeButton: Applab.onCodeModeButton,
+      handleManageAssets: designMode.showAssetManager
     }),
     designToggleRow
   );
 };
+designMode.renderDesignModeBox = function(element) {
+  var designModeBox = document.getElementById('designModeBox');
+  if (!designModeBox) {
+    return;
+  }
+
+  var props = {
+    handleDragStart: function() {
+      studioApp.resetButtonClick();
+    },
+    element: element || null,
+    handleChange: designMode.onPropertyChange.bind(this, element),
+    onDepthChange: designMode.onDepthChange,
+    onDone: designMode.onDonePropertiesButton,
+    onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+  };
+  React.render(React.createElement(DesignModeBox, props), designModeBox);
+};
+
+designMode.configureDesignModeHeaders = function() {
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  if (!designModeHeaders) {
+    return;
+  }
+
+  React.render(React.createElement(DesignModeHeaders), designModeHeaders);
+};
+
