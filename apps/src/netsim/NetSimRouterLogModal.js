@@ -98,7 +98,11 @@ NetSimRouterLogModal.sortOperations = {
   },
 
   'logged-by': makeStringSorter(function (logEntry) {
-    return logEntry.getOriginNode().getDisplayName();
+    var originNode = logEntry.getOriginNode();
+    if (originNode) {
+      return originNode.getDisplayName();
+    }
+    return logEntry.nodeID.toString(10);
   }),
 
   'status': makeStringSorter(function (logEntry) {
