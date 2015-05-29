@@ -4,7 +4,7 @@ var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 
 var elementUtils = require('./elementUtils');
@@ -53,8 +53,7 @@ var ImageProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
-        {/* eventually this will be a ImageChooserPropertyRow */ }
-        <PropertyRow
+        <ImagePickerPropertyRow
           desc={'picture'}
           initialValue={element.getAttribute('src')}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
