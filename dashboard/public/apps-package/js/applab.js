@@ -2598,7 +2598,7 @@ applabCommands.container = function (opts) {
 
 applabCommands.write = function (opts) {
   apiValidateType(opts, 'write', 'text', opts.html, 'uistring');
-  return Applab.container(opts);
+  return applabCommands.container(opts);
 };
 
 applabCommands.button = function (opts) {
