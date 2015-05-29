@@ -721,30 +721,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    multi:
-      ECSPD growth mindset in the classroom:
-        Growth Mindset in the Classroom: Growth Mindset in the Classroom
-        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
-        praise students for getting the right answer: praise students for getting the right answer
-        praise students for their intelligence: praise students for their intelligence
-        praise the process that students use to solve problems: praise the process that students use to solve problems
-      U3L08 Assessment1:
-        'Functions with Parameters: Question 1': 'Functions with Parameters: Question 1'
-        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
-        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
-        Parameters generalize the solution of a specific problem.: Parameters generalize the solution of a specific problem.
-        Parameters need not be provided to a function in any particular order.: Parameters need not be provided to a function in any particular order.
-        Which of the following are true?: Which of the following are true?
-      U3L08 Assessment3:
-        'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
-        There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
-        for(var i = 0; i < 4; i++){: for(var i = 0; i < 4; i++){
-        function square() {: function square() {
-        moveForward(length);: moveForward(length);
-        penDown();: penDown();
-        penUp();: penUp();
-        square();: square();
-        turnLeft(90); }: turnLeft(90); }
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
