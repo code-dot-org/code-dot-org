@@ -260,7 +260,8 @@ designMode.serializeToLevelHtml = function () {
   // This clone isn't fully jQuery-ized, meaning we can't take advantage of
   // things like $().data or $().draggable('destroy'), so I just manually
   // remove the classes instead.
-  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
+  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle').remove('.ui-resizable-handle');
+  $(clone).find('.ui-resizable').unwrap().unwrap();
   return s.serializeToString(clone);
 };
 
@@ -353,7 +354,11 @@ designMode.toggleDesignMode = function(enable) {
  */
 function makeDraggable (jq) {
   var GRID_SIZE = 5;
-  jq.draggable({
+
+  var wrapper = jq.wrap('<div>').parent();
+  $(jq).resizable().parent().css('position', '');
+
+  wrapper.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
       // draggables are not compatible with CSS transform-scale,
@@ -387,7 +392,7 @@ function makeDraggable (jq) {
     stop: function(event, ui) {
       Applab.levelHtml = designMode.serializeToLevelHtml();
     }
-  });
+  }).css('position', 'absolute');
 }
 
 designMode.configureDragAndDrop = function () {
