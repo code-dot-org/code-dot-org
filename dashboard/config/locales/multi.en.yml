@@ -1120,6 +1120,23 @@ en:
         forward100( ): forward100( )
         Left(90): Left(90)
         forward283( ): forward283( )
+      U3L08 Assessment1:
+        'Functions with Parameters: Question 1': 'Functions with Parameters: Question 1'
+        Which of the following are true?: Which of the following are true?
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters generalize the solution of a specific problem.: Parameters generalize the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters need not be provided to a function in any particular order.
+      U3L08 Assessment3:
+        'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
+        There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
+        square();: square();
+        function square() {: function square() {
+        penDown();: penDown();
+        for(var i = 0; i < 4; i++){: for(var i = 0; i < 4; i++){
+        moveForward(length);: moveForward(length);
+        turnLeft(90); }: turnLeft(90); }
+        penUp();: penUp();
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
