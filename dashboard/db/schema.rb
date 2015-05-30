@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527001533) do
+ActiveRecord::Schema.define(version: 20150529230732) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -375,6 +375,14 @@ ActiveRecord::Schema.define(version: 20150527001533) do
 
   add_index "trophies", ["name"], name: "index_trophies_on_name", unique: true, using: :btree
 
+  create_table "unexpected_teachers_workshops", id: false, force: true do |t|
+    t.integer "workshop_id",           null: false
+    t.integer "unexpected_teacher_id", null: false
+  end
+
+  add_index "unexpected_teachers_workshops", ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
+  add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
+
   create_table "user_levels", force: true do |t|
     t.integer  "user_id",                     null: false
     t.integer  "level_id",                    null: false
@@ -522,6 +530,7 @@ ActiveRecord::Schema.define(version: 20150527001533) do
     t.string   "instructions"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time_zone"
   end
 
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
