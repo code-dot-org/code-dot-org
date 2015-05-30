@@ -16,8 +16,9 @@ template: none
       %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance"} Attendance
     %li
       %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance-info"} Teacher Information
+
   -if dashboard_user[:admin] || have_permission?('facilitator')
-    %button.btn.btn-white{'ng-click' => 'teacherAddition = true', 'ng-hide' => 'teacherAddition == true', style: "float:right"}
+    %button.btn.btn-white{'ng-click' => 'workshop.unexpected_teachers.unshift({editing: true})', style: "float:right"}
       Add a new teacher
 
 %div.jumbotron{'ng-show' => 'workshop.teachers.length <= 0'}
@@ -62,6 +63,78 @@ template: none
       %td{'ng-model' => 'workshop_attendance.teacher_id'}
         {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
       %td{'ng-repeat' => 'attendance in teacher.attendances'}
+        -if have_permission?('district_contact') &&  !dashboard_user[:admin]
+          %form
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', value:'present', disabled:'true'}
+              Attended
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', value:'absent', disabled:'true'}
+              Absent
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', value:'excused', disabled:'true'}
+              Excused absence
+            %br
+            %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', cols:'20', rows:'3', disabled:'true'}
+        -if have_permission?('facilitator') || dashboard_user[:admin]
+          %form
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'present'}
+              Attended
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'absent'}
+              Absent
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'excused'}
+              Excused absence
+            %input{style:'display:none', 'ng-model' => 'attendance.teacher_id', type:'text'}
+            %br
+            %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', 'ng-change' => 'save(attendance)', cols:'20', rows:'3'}
+            %br
+            %a.btn.btn-white.btn-xs{'ng-click' => 'clearAttendance(attendance)'}
+              Clear
+            %span{'ng-show' => 'attendance.saved'}
+              Saved!
+            %span{'ng-show' => 'attendance.cleared'}
+              Cleared!
+            %span{'ng-show' => 'attendance.updated'}
+              Updated!
+    %tr{'ng-show' => 'workshop.unexpected_teachers.length > 0'}
+      %th
+      %th
+        Unexpected Attendees
+      %th
+      %th
+    %tr{'ng-repeat' => 'unexpected_teacher in workshop.unexpected_teachers', 'ng-show' => 'workshop.unexpected_teachers.length > 0'}
+      %td{'ng-hide' => 'unexpected_teacher.editing == true'}
+        {{unexpected_teacher.ops_last_name}}, {{unexpected_teacher.ops_first_name}}
+      %td{'ng-show' => 'unexpected_teacher.editing == true'}
+        %form
+          %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'unexpected_teacher.ops_first_name'}
+          %br
+          %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'unexpected_teacher.ops_last_name'}
+          %br
+          %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'unexpected_teacher.email'}
+          %br
+          %input.form-control{type:'text', placeholder:'District', 'ng-model' => 'unexpected_teacher.district'}
+          %br
+          %select.form-control{'ng-model' => 'unexpected_teacher.gender'}
+            %option{value:'', disabled:'true', selected:'true'}
+              Gender
+            %option
+              Male
+            %option
+              Female
+          %br
+          %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+          %br
+          %button{'ng-click' => 'saveWorkshop(workshop)'}
+            Save
+      %td{'ng-repeat' => 'attendance in unexpected_teacher.attendances'}
         -if have_permission?('district_contact') &&  !dashboard_user[:admin]
           %form
             %label
