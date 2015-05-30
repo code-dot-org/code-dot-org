@@ -1,6 +1,6 @@
 module Ops
   class WorkshopsController < OpsControllerBase
-    before_filter :convert_facilitators, :convert_cohorts, only: [:create, :update]
+    before_filter :convert_facilitators, :convert_unexpected_teachers, :convert_cohorts, only: [:create, :update]
 
     load_and_authorize_resource
 
@@ -69,7 +69,8 @@ module Ops
         :location,
         :instructions,
         cohorts: [:id, :_destroy],
-        facilitators: [:ops_first_name, :ops_last_name, :email]
+        facilitators: [:ops_first_name, :ops_last_name, :email],
+        unexpected_teachers: [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
       )
     end
 
@@ -82,6 +83,24 @@ module Ops
         next if facilitator_params[:email].blank?
 
         User.find_or_create_facilitator(facilitator_params, current_user)
+      end
+    end
+
+    def convert_unexpected_teachers
+      return unless params[:workshop] && params[:workshop][:unexpected_teachers]
+      unexpected_teacher_param_list = params[:workshop].delete :unexpected_teachers
+      return unless unexpected_teacher_param_list
+
+      params[:workshop][:unexpected_teachers] = unexpected_teacher_param_list.map do |unexpected_teacher_params|
+        next if unexpected_teacher_params[:email].blank?
+
+        district_params = unexpected_teacher_params.delete :district
+        if district_params.is_a?(String)
+          unexpected_teacher_params[:district_id] = District.find_by!(name: district_params).id
+        elsif district_params.is_a?(Hash) && district_params[:id]
+          teacher_params[:district_id] = district_params[:id]
+        end
+        User.find_or_create_teacher(unexpected_teacher_params, current_user)
       end
     end
 
