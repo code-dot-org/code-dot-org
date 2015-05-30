@@ -24,32 +24,6 @@ template: none
 %div.jumbotron{'ng-show' => 'workshop.teachers.length <= 0'}
   No teachers registered for this workshop.
 
--if dashboard_user[:admin] || have_permission?('facilitator')
-  %form{'ng-show' => 'teacherAddition == true', style:'width:30%'}
-    %h2
-      New teacher information
-    %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'newTeacher.firstName'}
-    %br
-    %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'newTeacher.lastName'}
-    %br
-    %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'newTeacher.email'}
-    %br
-    %input.form-control{type:'text', placeholder:'District', 'ng-model' => 'newTeacher.district'}
-    %br
-    %select.form-control{'ng-model' => 'newTeacher.gender'}
-      %option{value:'', disabled:'true', selected:'true'}
-        Gender
-      %option
-        Male
-      %option
-        Female
-    %br
-    %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
-    %br
-    %a.btn.btn-success.btn-xs{'ng-click' =>''}
-      Save
-    %a.btn.btn-white.btn-xs{'ng-click' => 'teacherAddition = false'}
-      Cancel
 %div.table-wrapper{style:"width:970px; overflow-x:scroll; margin-top:10px"}
   %table{'ng-show' => 'workshop.teachers.length > 0'}
     %tr
@@ -110,30 +84,39 @@ template: none
       %th
       %th
     %tr{'ng-repeat' => 'unexpected_teacher in workshop.unexpected_teachers', 'ng-show' => 'workshop.unexpected_teachers.length > 0'}
-      %td{'ng-hide' => 'unexpected_teacher.editing == true'}
-        {{unexpected_teacher.ops_last_name}}, {{unexpected_teacher.ops_first_name}}
-      %td{'ng-show' => 'unexpected_teacher.editing == true'}
-        %form
-          %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'unexpected_teacher.ops_first_name'}
-          %br
-          %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'unexpected_teacher.ops_last_name'}
-          %br
-          %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'unexpected_teacher.email'}
-          %br
-          %input.form-control{type:'text', placeholder:'District', 'ng-model' => 'unexpected_teacher.district'}
-          %br
-          %select.form-control{'ng-model' => 'unexpected_teacher.gender'}
-            %option{value:'', disabled:'true', selected:'true'}
-              Gender
-            %option
-              Male
-            %option
-              Female
-          %br
-          %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
-          %br
-          %button{'ng-click' => 'saveWorkshop(workshop)'}
-            Save
+      -if dashboard_user[:admin] || have_permission?('facilitator')
+        %td{'ng-hide' => 'unexpected_teacher.editing == true'}
+          {{unexpected_teacher.ops_last_name}}, {{unexpected_teacher.ops_first_name}}
+        %td{'ng-show' => 'unexpected_teacher.editing == true', colspan:'{{workshop.segments.length + 1}}'}
+          %h3
+            Enter unexpected attendee's information
+          %form
+            %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'unexpected_teacher.ops_first_name'}
+            %br
+            %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'unexpected_teacher.ops_last_name'}
+            %br
+            %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'unexpected_teacher.email'}
+            %br
+            %select.form-control{"ng-model" => "unexpected_teacher.district"}
+              %option{value:'', disabled:'true', selected:'true'}
+                Select a district
+              %option{value:'{{district.name}}', 'ng-repeat' => 'district in districts | orderBy:"name"'}
+                {{district.name}}
+            %br
+            %select.form-control{'ng-model' => 'unexpected_teacher.gender'}
+              %option{value:'', disabled:'true', selected:'true'}
+                Gender
+              %option{value:'Male'}
+                Male
+              %option{value:'Female'}
+                Female
+            %br
+            %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+            %br
+            %button{'ng-click' => 'saveWorkshop(workshop)'}
+              Save
+            %button{"ng-click" => "workshop.unexpected_teachers.splice(workshop.unexpected_teachers.indexOf(unexpected_teacher), 1)"}
+              Cancel
       %td{'ng-repeat' => 'attendance in unexpected_teacher.attendances'}
         -if have_permission?('district_contact') &&  !dashboard_user[:admin]
           %form
