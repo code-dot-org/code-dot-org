@@ -51,6 +51,7 @@ module.exports = {
       // actor 1 throws a fireball to the right. it hits actor 2 and actor 2
       // vanishes
       editCode: true,
+      timeout: 12000,
       xml:
         "setSprite(0, 'witch');" +
         "setSprite(1, 'witch');" +
