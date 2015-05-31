@@ -54,9 +54,9 @@ template: none
     %tr
       %th
       %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
-        {{segment.start | date:'shortDate'}}
+        {{segment.start | utc | date:'shortDate'}}
         %br
-        {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+        {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
 
     %tr{'ng-repeat' => 'teacher in workshop.teachers | orderBy:"ops_last_name"'}
       %td{'ng-model' => 'workshop_attendance.teacher_id'}
