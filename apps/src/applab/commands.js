@@ -291,13 +291,13 @@ applabCommands.turnLeft = function (opts) {
   if (typeof opts.degrees !== 'undefined') {
     degrees = -opts.degrees;
   }
-  Applab.turnRight({'degrees': degrees });
+  applabCommands.turnRight({'degrees': degrees });
 };
 
 applabCommands.turnTo = function (opts) {
   apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
-  Applab.turnRight({'degrees': degrees });
+  applabCommands.turnRight({'degrees': degrees });
 };
 
 // Turn along an arc with a specified radius (by default, turn clockwise, so
@@ -981,6 +981,13 @@ applabCommands.getXPosition = function (opts) {
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
     while (div !== divApplab) {
+      // TODO (brent) using offsetParent may be ill advised:
+      // This property will return null on Webkit if the element is hidden
+      // (the style.display of this element or any ancestor is "none") or if the
+      // style.position of the element itself is set to "fixed".
+      // This property will return null on Internet Explorer (9) if the
+      // style.position of the element itself is set to "fixed".
+      // (Having display:none does not affect this browser.)
       div = div.offsetParent;
       x += div.offsetLeft;
     }
