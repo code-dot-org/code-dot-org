@@ -152,6 +152,20 @@ function activeScreen() {
   return $('.screen').filter(':visible').first()[0];
 }
 
+applabCommands.setScreen = function (opts) {
+  apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
+  var element = document.getElementById(opts.screenId);
+  var divApplab = document.getElementById('divApplab');
+  if (!divApplab.contains(element)) {
+    return;
+  }
+
+  // toggle all screens to be visible if equal to given id, hidden otherwise
+  $('.screen').each(function () {
+    $(this).toggle(this.id === opts.screenId);
+  });
+};
+
 applabCommands.container = function (opts) {
   var newDiv = document.createElement("div");
   if (typeof opts.elementId !== "undefined") {
