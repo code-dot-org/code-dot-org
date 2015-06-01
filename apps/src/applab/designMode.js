@@ -254,18 +254,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
-  divApplab.find('.ui-resizable.ui-draggable').each(function () {
-    var wrapper = $(this);
-    var elm = $(':first-child', wrapper);
-
-    wrapper.resizable('destroy').draggable('destroy');
-    elm.css({
-      top: wrapper.css('top'),
-      left: wrapper.css('left'),
-      position: 'absolute'
-    });
-    elm.unwrap();
-  });
+  makeUndraggable(divApplab.children());
   var s = new XMLSerializer().serializeToString(divApplab[0]);
   makeDraggable(divApplab.children());
   return s;
@@ -410,6 +399,25 @@ function makeDraggable (jq) {
     elm.css({
       position: ''
     })
+  });
+}
+
+/**
+ * Inverse of `makeDraggable`.
+ * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ */
+function makeUndraggable(jq) {
+  jq.each(function () {
+    var wrapper = $(this);
+    var elm = $(':first-child', wrapper);
+
+    wrapper.resizable('destroy').draggable('destroy');
+    elm.css({
+      top: wrapper.css('top'),
+      left: wrapper.css('left'),
+      position: 'absolute'
+    });
+    elm.unwrap();
   });
 }
 
