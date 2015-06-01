@@ -276,7 +276,10 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-  designMode.onClear();
+  if (Applab.levelHtml === '') {
+    // On clear gives us a fresh start
+    designMode.onClear();
+  }
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
@@ -557,7 +560,7 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = level.levelHtml || "";
+  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
 
   studioApp.init(config);
 
