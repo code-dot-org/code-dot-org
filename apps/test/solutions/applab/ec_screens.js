@@ -194,7 +194,6 @@ module.exports = {
       },
     },
     {
-      // TODO (brent) - eventually will also want a test that changes the active screen
       description: "ensure API based element creation puts element on active screen",
       editCode: true,
       xml:
@@ -238,6 +237,74 @@ module.exports = {
           idExistsOnScreen1('my_checkbox');
           idExistsOnScreen1('my_dropdown');
 
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "switching screens works",
+      editCode: true,
+      xml:
+        'button("button1", "my_button_text");' +
+        'setScreen("screen2");' +
+        'button("button2", "my_button_text");',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeToggle").click();
+
+        // drag a new screen in
+        dragToVisualization('SCREEN', 10, 10);
+        assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          assert.equal($('#screen1').is(':visible'), false);
+          assert.equal($('#screen2').is(':visible'), true);
+
+          assert.equal($('#button1').is(':visible'), false);
+          assert.equal($('#button2').is(':visible'), true);
+
+          assert.equal($('#button1').parent().attr('id'), 'screen1');
+          assert.equal($('#button2').parent().attr('id'), 'screen2');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "return to screen1 when entering code mode",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeToggle").click();
+        assert.equal($("#designModeToggle").text(), 'Code');
+
+        // add a screen
+        dragToVisualization('SCREEN', 10, 10);
+        validatePropertyRow(1, 'id', 'screen2', assert);
+        assert.equal($('#screen1').is(':visible'), false, 'screen 1 hidden');
+        assert.equal($('#screen2').is(':visible'), true, 'screen 2 visible');
+
+        // return to code mode
+        $("#designModeToggle").click();
+        assert.equal($("#designModeToggle").text(), 'Design');
+
+        // should be on screen 1
+        assert.equal($('#screen1').is(':visible'), true, 'screen 1 visible');
+        assert.equal($('#screen2').is(':visible'), false, 'screen 2 hidden');
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },

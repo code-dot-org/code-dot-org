@@ -2,7 +2,8 @@ var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales('applab');
 
-window.$ = require('jquery');
+var $ = require('jquery');
+window.$ = $;
 window.jQuery = window.$;
 
 window.Applab = {

@@ -1,7 +1,5 @@
 /* global $, Applab */
 
-// TODO (brent) - make sure you consider transition to screens from no screens
-
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
@@ -345,6 +343,7 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
+  designMode.changeScreen('screen1');
 };
 
 /**
@@ -554,4 +553,4 @@ designMode.addScreenIfNecessary = function(html) {
   rootDiv.append(screenElement);
 
   return rootDiv[0].outerHTML;
-}
+};
