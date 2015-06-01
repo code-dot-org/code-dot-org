@@ -37,14 +37,14 @@ exports.getTouchEventName = function(eventName) {
 };
 
 var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
       handler(e);
     }, false);
-  } else {
-    element.addEventListener(eventName, handler, false);
   }
 };
 
@@ -68,9 +68,9 @@ exports.addClickTouchEvent = function(element, handler) {
 var TOUCH_MAP = {
   //  Incomplete list, add as needed.
   click: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
   },
   mousedown: {
     standard: 'touchstart',
