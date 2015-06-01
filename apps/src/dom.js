@@ -37,14 +37,14 @@ exports.getTouchEventName = function(eventName) {
 };
 
 var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
       handler(e);
     }, false);
+  } else {
+    element.addEventListener(eventName, handler, false);
   }
 };
 
