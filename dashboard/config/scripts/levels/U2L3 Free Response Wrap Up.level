@@ -1,15 +1,10 @@
 <TextMatch>
   <config><![CDATA[{
   "game_id": 38,
-  "created_at": "2015-05-31T20:14:03.137Z",
+  "created_at": "2015-05-31T20:14:03.000Z",
   "properties": {
     "title": "Invent an Addressing Protocol: Wrap Up",
-    "markdown": "Why does it make more sense to use IP addresses for online accounts instead of users' real names?\n",
-    "type": "TextMatch",
-    "dsl_text": "name 'U2L3 Free Response Wrap Up'\r\ntitle 'Invent an Addressing Protocol: Wrap Up'\r\n\r\nmarkdown <<MARKDOWN\r\nWhy does it make more sense to use IP addresses for online accounts instead of users’ real names?\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Why does it make more sense to use IP addresses for online accounts instead of users' real names?\n"
   }
 }]]></config>
 </TextMatch>

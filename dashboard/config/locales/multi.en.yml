@@ -1065,6 +1065,20 @@ en:
         '14': '14'
         '13': '13'
         '10': '10'
+      U2L04 Assessment1:
+        'Routers and Addresses: Question 1': 'Routers and Addresses: Question 1'
+        What does IP stand for?: What does IP stand for?
+        Internet Processing: Internet Processing
+        Internet Protocol: Internet Protocol
+        Information Processing: Information Processing
+        Interstate Protocol: Interstate Protocol
+      U2L04 Assessment4:
+        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
+        Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.
+        IP addresses are hierarchical; each city has an assigned set of numbers.: IP addresses are hierarchical; each city has an assigned set of numbers.
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP addresses are based upon area codes because computers often use phone lines for transmission.
       U3L01 Assessment2:
         Why Programming? Question 2: Why Programming? Question 2
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"

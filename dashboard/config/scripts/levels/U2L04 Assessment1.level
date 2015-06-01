@@ -1,7 +1,7 @@
 <Multi>
   <config><![CDATA[{
   "game_id": 29,
-  "created_at": "2015-06-01T01:24:52.011Z",
+  "created_at": "2015-06-01T01:24:52.000Z",
   "properties": {
     "questions": [
       {
@@ -26,12 +26,7 @@
         "correct": false
       }
     ],
-    "title": "Routers and Addresses: Question 1",
-    "type": "Multi",
-    "dsl_text": "name 'U2L04 Assessment1'\r\ntitle 'Routers and Addresses: Question 1'\r\n\r\nquestion 'What does IP stand for?'\r\nwrong 'Internet Processing'\r\nright 'Internet Protocol'\r\nwrong 'Information Processing'   \r\nwrong 'Interstate Protocol'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "title": "Routers and Addresses: Question 1"
   }
 }]]></config>
 </Multi>

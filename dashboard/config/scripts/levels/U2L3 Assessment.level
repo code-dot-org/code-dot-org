@@ -1,7 +1,7 @@
 <Match>
   <config><![CDATA[{
   "game_id": 30,
-  "created_at": "2015-05-31T20:11:44.414Z",
+  "created_at": "2015-05-31T20:11:44.000Z",
   "properties": {
     "questions": [
       {
@@ -37,12 +37,7 @@
         "text": "IPv4 packet definition"
       }
     ],
-    "title": "Invent an Addressing Protocol: Question 1",
-    "type": "Match",
-    "dsl_text": "name 'U2L3 Assessment'\r\ntitle 'Invent an Addressing Protocol: Question 1'\r\nquestion 'protocol'\r\nanswer 'protocol definition'\r\nquestion 'datagram'\r\nanswer 'datagram definition'\r\nquestion 'packet'\r\nanswer 'packet definition'\r\nquestion 'Internet Protocol'\r\nanswer 'Internet protocol definition'\r\nquestion 'IPv4 packet'\r\nanswer 'IPv4 packet definition'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "title": "Invent an Addressing Protocol: Question 1"
   }
 }]]></config>
 </Match>
