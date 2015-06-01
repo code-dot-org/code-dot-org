@@ -45,6 +45,28 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
+
+    {
+      description: "button",
+      editCode: true,
+      xml: "button('my_button_id', 'my_button_text');",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        setTimeout(function () {
+          var button = document.getElementById('my_button_id');
+          assert(button);
+          assert.equal(button.textContent, 'my_button_text');
+          assert.equal(button.parentNode.id, 'screen1');
+
+          Applab.onPuzzleComplete();
+        }, 100);
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    
     // These exercise all of the blocks in UI controls (other than get/setText).
     // It does not validate that they behave correctly, just that we don't end
     // up with an errors
@@ -135,26 +157,7 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, "");
         return true;
-      },
-    {
-      description: "button",
-      editCode: true,
-      xml: "button('my_button_id', 'my_button_text');",
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
-          var button = document.getElementById('my_button_id');
-          assert(button);
-          assert.equal(button.textContent, 'my_button_text');
-          assert.equal(button.parentNode.id, 'screen1');
-
-          Applab.onPuzzleComplete();
-        }, 100);
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
+      }
     },
 
     // These exercise all of the blocks in Turtle category
