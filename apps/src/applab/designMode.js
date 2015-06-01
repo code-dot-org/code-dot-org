@@ -290,7 +290,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 
   children.appendTo(rootEl);
   if (allowDragging) {
-    makeDraggable(children);
+    // children are screens. make grandchildren draggable
+    makeDraggable(children.children());
   }
 
   children.each(function () {
