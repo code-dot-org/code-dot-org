@@ -17,7 +17,7 @@ $options.os_version = nil
 $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
-$options.dashboard_domain = 'test.studio.code.org'
+$options.dashboard_domain = 'test-studio.code.org'
 $options.tunnel = nil
 $options.local = nil
 $options.html = nil
@@ -283,7 +283,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
 
     if $options.html
-      link = "http://test.studio.code.org/ui_test/" + html_output_filename
+      link = "https://test-studio.code.org/ui_test/" + html_output_filename
       message += " <a href='#{link}'>&#x2601; html output</a>"
     end
     HipChat.log message, color:'red'
