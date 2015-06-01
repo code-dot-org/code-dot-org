@@ -68,7 +68,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
                                                     Applab.cumulativeLength,
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
@@ -92,7 +92,7 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
     }
     inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
                                                     Applab.cumulativeLength,
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
@@ -109,7 +109,7 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
                                                     Applab.cumulativeLength,
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
@@ -132,7 +132,7 @@ function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shoul
     var exists = Boolean(element && divApplab.contains(element));
     var valid = exists == shouldExist;
     if (!valid) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
                                                     Applab.cumulativeLength,
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
@@ -1076,7 +1076,7 @@ applabCommands.onEventFired = function (opts, e) {
   } else {
     Applab.eventQueue.push({'fn': opts.func});
   }
-  if (Applab.interpreter) {
+  if (Applab.JSInterpreter) {
     // Execute the interpreter and if a return value is sent back from the
     // interpreter's event handler, pass that back in the native world
 
@@ -1085,8 +1085,8 @@ applabCommands.onEventFired = function (opts, e) {
     // will just see 'undefined' as the return value. The rest of the interpreter
     // event handler will run in the next onTick(), but the return value will
     // no longer have any effect.
-    Applab.executeInterpreter(true);
-    return Applab.lastCallbackRetVal;
+    Applab.JSInterpreter.executeInterpreter(false, true);
+    return Applab.JSInterpreter.lastCallbackRetVal;
   }
 };
 
@@ -1164,7 +1164,7 @@ applabCommands.onEvent = function (opts) {
 applabCommands.onHttpRequestEvent = function (opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.interpreter === Applab.interpreter) {
+  if (opts.JSInterpreter === Applab.JSInterpreter) {
     if (this.readyState === 4) {
       Applab.eventQueue.push({
         'fn': opts.func,
@@ -1180,7 +1180,7 @@ applabCommands.onHttpRequestEvent = function (opts) {
 applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
   req.open('GET', opts.url, true);
@@ -1195,7 +1195,7 @@ applabCommands.onTimerFired = function (opts) {
   // NOTE: the interpreter will not execute forever, if the event handler
   // takes too long, executeInterpreter() will return and the rest of the
   // user's code will execute in the next onTick()
-  Applab.executeInterpreter(true);
+  Applab.JSInterpreter.executeInterpreter(false, true);
 };
 
 applabCommands.setTimeout = function (opts) {
@@ -1238,7 +1238,7 @@ applabCommands.createRecord = function (opts) {
   apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
   apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -1247,7 +1247,7 @@ applabCommands.createRecord = function (opts) {
 applabCommands.handleCreateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
     Applab.eventQueue.push({
       'fn': opts.onSuccess,
       'arguments': [record]
@@ -1260,7 +1260,7 @@ applabCommands.getKeyValue = function(opts) {
   apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
@@ -1269,7 +1269,7 @@ applabCommands.getKeyValue = function(opts) {
 applabCommands.handleReadValue = function(opts, value) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
     Applab.eventQueue.push({
       'fn': opts.onSuccess,
       'arguments': [value]
@@ -1283,7 +1283,7 @@ applabCommands.setKeyValue = function(opts) {
   apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
@@ -1292,7 +1292,7 @@ applabCommands.setKeyValue = function(opts) {
 applabCommands.handleSetKeyValue = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
     Applab.eventQueue.push({
       'fn': opts.onSuccess,
       'arguments': []
@@ -1308,7 +1308,7 @@ applabCommands.readRecords = function (opts) {
   apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
   apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
@@ -1317,7 +1317,7 @@ applabCommands.readRecords = function (opts) {
 applabCommands.handleReadRecords = function(opts, records) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
     Applab.eventQueue.push({
       'fn': opts.onSuccess,
       'arguments': [records]
@@ -1333,7 +1333,7 @@ applabCommands.updateRecord = function (opts) {
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
@@ -1342,7 +1342,7 @@ applabCommands.updateRecord = function (opts) {
 applabCommands.handleUpdateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
     Applab.eventQueue.push({
       'fn': opts.onSuccess,
       'arguments': [record]
@@ -1358,7 +1358,7 @@ applabCommands.deleteRecord = function (opts) {
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.interpreter = Applab.interpreter;
+  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
@@ -1367,7 +1367,7 @@ applabCommands.deleteRecord = function (opts) {
 applabCommands.handleDeleteRecord = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.interpreter === Applab.interpreter) {
+  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
     Applab.eventQueue.push({
       'fn': opts.onSuccess,
       'arguments': []
