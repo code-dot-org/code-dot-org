@@ -53,6 +53,11 @@ exec(command, function (err, stdout, stderr) {
     './test/calc/*.js',
     './test/netsim/*.js'
   ];
+
+  if (process.env.mocha_entry) {
+    globs = [process.env.mocha_entry];
+    console.log('restricting to entries: ' + globs);
+  }
   mochify(globs.join(' '), {
     grep: process.env.mocha_grep,
     debug: process.env.mocha_debug,

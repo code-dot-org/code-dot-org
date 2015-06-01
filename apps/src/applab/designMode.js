@@ -289,6 +289,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
+
+  if (children.length === 1 && !children.eq(0).hasClass('screen')) {
+    console.log('needs conversion');
+  }
+
   children.appendTo(rootEl);
   if (allowDragging) {
     makeDraggable(children);
@@ -300,7 +305,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 };
 
 designMode.onClear = function() {
-  // TODO (brent) - just this screen
+  // TODO (brent) - just this screen. Consider case where this gets called on
+  // load too (might need two separate funcs)
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
   elementLibrary.resetIds();
   designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
@@ -528,3 +534,24 @@ designMode.configureDesignModeHeaders = function() {
 
   React.render(React.createElement(DesignModeHeaders), designModeHeaders);
 };
+
+/**
+ * Early versions of applab didn't have screens, and instead all elements
+ * existed under the root div. If we find one of those, convert it to be a single
+ * screen app.
+ */
+designMode.addScreenIfNecessary = function(html) {
+  var rootDiv = $(html);
+  if (rootDiv.children().length === 0 ||
+      rootDiv.children().eq(0).hasClass('screen')) {
+    // no children, or first child is a screen
+    return html;
+  }
+
+  var screenElement = elementLibrary.createElement(
+    elementLibrary.ElementType.SCREEN);
+  rootDiv.children().appendTo(screenElement);
+  rootDiv.append(screenElement);
+
+  return rootDiv[0].outerHTML;
+}
