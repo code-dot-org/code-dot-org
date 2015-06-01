@@ -1,7 +1,7 @@
 <Multi>
   <config><![CDATA[{
   "game_id": 29,
-  "created_at": "2015-05-28T00:52:12.930Z",
+  "created_at": "2015-05-28T00:52:12.000Z",
   "properties": {
     "questions": [
       {
@@ -26,12 +26,7 @@
         "correct": false
       }
     ],
-    "title": "Functions with Parameters: Question 1",
-    "type": "Multi",
-    "dsl_text": "name 'U3L08 Assessment1'\r\ntitle 'Functions with Parameters: Question 1'\r\n\r\nquestion 'Which of the following are true?'\r\nwrong 'Parameters can only be used once within the body of a function.'\r\nright 'Functions with parameters can be used to prevent the creation of duplicated code.'\r\nwrong 'Parameters generalize the solution of a specific problem.'\r\nwrong 'Parameters need not be provided to a function in any particular order.'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "title": "Functions with Parameters: Question 1"
   }
 }]]></config>
 </Multi>

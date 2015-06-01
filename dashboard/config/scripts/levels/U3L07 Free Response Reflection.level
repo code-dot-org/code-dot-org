@@ -4,12 +4,7 @@
   "created_at": "2015-05-19T17:28:33.000Z",
   "properties": {
     "title": "Looping and Random Numbers: Reflection",
-    "markdown": "Why do you think looping and random number functions are such a powerful combination?\n\nWhat else have you seen, other than art, that you suspect might be the result of looping and random numbers?\n\n\n",
-    "type": "TextMatch",
-    "dsl_text": "name 'U3L07 Free Response Reflection'\r\ntitle 'Looping and Random Numbers: Reflection'\r\n\r\nmarkdown <<MARKDOWN\r\nWhy do you think looping and random number functions are such a powerful combination?\r\n\r\nWhat else have you seen, other than art, that you suspect might be the result of looping and random numbers?\r\n\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Why do you think looping and random number functions are such a powerful combination?\n\nWhat else have you seen, other than art, that you suspect might be the result of looping and random numbers?\n\n\n"
   }
 }]]></config>
 </TextMatch>
