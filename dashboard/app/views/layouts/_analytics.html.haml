@@ -29,7 +29,7 @@
     ga('send', 'event', category, action, label, value);
   }
 
-- if Rails.env.production?
+- if Rails.env.production? || Rails.env.test?
   :javascript
     // Fullstory snippet
     window['_fs_debug'] = false;
