@@ -30,7 +30,11 @@
         "correct": false
       }
     ],
-    "title": "Multiple Choice: Coordination and Binary Messages"
+    "title": "Multiple Choice: Coordination and Binary Messages",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Multi>

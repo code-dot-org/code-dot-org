@@ -1,29 +1,30 @@
 name 'U2L2 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'The Need for Addressing'
+
 css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 2 - The need for addressing
+## Unit 2: Lesson 2 - The Need for Addressing
 
 # Background
 
-Background goes here
+On a network, computers send requests to other computers and those computers send back data to answer those requests. There are potential drawbacks of using a “broadcast” system to communicate over the Internet – including security concerns. A system is needed to make it clear who is sending the message and the intended recipient. 
 
-# Vocabulary
 
-Vocabulary goes here
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Play Battleship unplugged
+* Play Battleship using an Internet simulator
+* Invent an communication system for use in the Battleship game
+
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Resource: <a href="https://docs.google.com/document/d/1Jswbpu9NVJQkHJLifyWRwJhXlkfCo2MUXjEwoVpUScs" target="_blank"> Battleship Rules </a>
+* Handout: <a href="https://docs.google.com/document/d/1ORSPjpWEPeJR0Ctwqug44vdPO5d7Mq0A5JF8rntgpWc" target="_blank"> Battleship Board </a>
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
