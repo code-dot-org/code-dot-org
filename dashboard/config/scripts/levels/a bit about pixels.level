@@ -9,11 +9,7 @@
     },
     "title": "pixel video",
     "content1": "kevin systrom pixel video",
-    "markdown": "## Video: A Little Bit About Pixels\n\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/15aqFQQVBWU?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## Video: A Little Bit About Pixels\n\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/15aqFQQVBWU?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   }
 }]]></config>
 </External>

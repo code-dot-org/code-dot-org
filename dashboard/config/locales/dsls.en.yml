@@ -121,6 +121,8 @@ en:
         description here: description here
       CSPPD instructional materials:
         CSPPD instructional materials: CSPPD instructional materials
+      CSPPD materials overview:
+        CSP materials walkthrough: CSP materials walkthrough
       CSPPD postsurvey: {}
       CSPPD presurvey: {}
       CSPPD program overview:
@@ -398,6 +400,9 @@ en:
       U1L14 Student Lesson Summary:
         description here: description here
         title: title
+      U1L15 Student Lesson Summary:
+        description here: description here
+        title: title
       U1L16 Student Lesson Introduction:
         description here: description here
         title: title
@@ -444,14 +449,11 @@ en:
         description here: description here
         title: title
       U2L2 Student Lesson Introduction:
-        description here: description here
-        title: title
+        The Need for Addressing: The Need for Addressing
       U2L3 Student Lesson Introduction:
-        description here: description here
-        title: title
+        Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       U2L4 Student Lesson Introduction:
-        description here: description here
-        title: title
+        U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
         description here: description here
         title: title
@@ -481,6 +483,12 @@ en:
         Looping and Random Numbers: Looping and Random Numbers
       U3L08 Student Lesson Introduction:
         Creating Functions with Parameters: Creating Functions with Parameters
+      U3L09 Student Lesson Introduction:
+        'Scene Design Part 1: Plan ': 'Scene Design Part 1: Plan '
+      U3L10 Student Lesson Introduction:
+        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+      U3L11 Student Lesson Introduction:
+        'Scene Design Part 3: Reflection ': 'Scene Design Part 3: Reflection '
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -721,6 +729,18 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      CSPPD AP quiz:
+        AP Assessment Matching: AP Assessment Matching
+        AP matching: AP matching
+        Create Task: Create Task
+        End-of-year exam, common with all AP courses: End-of-year exam, common with all AP courses
+        Explore Task: Explore Task
+        Fixed-response questions: Fixed-response questions
+        Programming projects that demonstrate student understanding of algorithms and abstraction: Programming projects that demonstrate student understanding of algorithms and abstraction
+        Written report about innovations in computing: Written report about innovations in computing
+        ap matching: ap matching
+        match the assessment-type with the description below: match the assessment-type with the description below
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -834,6 +854,10 @@ en:
         Documenting Your Course Goals: Documenting Your Course Goals
       CSPPD impact in program:
         Impact of Computing: Impact of Computing
+      CSPPD materials question1:
+        CSP curricular materials: CSP curricular materials
+        ? 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
+        : 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
       CSPPD program overlap:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
@@ -853,6 +877,8 @@ en:
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+      Matt Test Level:
+        Sending Bits:Getting Started: Sending Bits:Getting Started
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
@@ -914,6 +940,8 @@ en:
         Sending Numbers Free Response: Sending Numbers Free Response
       Test Markdown level:
         Enter prompt here: Enter prompt here
+        Enter title here: Enter title here
+      Trent Test Level:
         Enter title here: Enter title here
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
@@ -1000,6 +1028,26 @@ en:
         'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
         'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+      U2L02 Assessment1:
+        'The Need for Addressing: Question 1': 'The Need for Addressing: Question 1'
+      U2L02 Assessment2:
+        'The Need for Addressing: Question 2': 'The Need for Addressing: Question 2'
+      U2L02 Free Response Getting Started:
+        'The Need for Addressing: Getting Started': 'The Need for Addressing: Getting Started'
+      U2L02 Free Response Reflection:
+        'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
+      U2L04 Assessment2:
+        'Routers and Addresses: Question 2': 'Routers and Addresses: Question 2'
+      U2L04 Assessment3:
+        'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
+      U2L04 Free Response Wrap Up:
+        'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L3 Free Response Getting Started:
+        'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
+      U2L3 Free Response Wrap Up:
+        'Invent an Addressing Protocol: Wrap Up': 'Invent an Addressing Protocol: Wrap Up'
+      U2L4 Free Response Getting Started:
+        'Routers and Addresses: Getting Started': 'Routers and Addresses: Getting Started'
       U3L01 Assessment1:
         Why Programming? Question 1: Why Programming? Question 1
       U3L01 Assessment3:
@@ -1056,6 +1104,18 @@ en:
         'Functions with Parameters: Getting Started': 'Functions with Parameters: Getting Started'
       U3L08 Free Response Wrap Up:
         'Functions with Parameters: Wrap Up': 'Functions with Parameters: Wrap Up'
+      U3L09 Free Response Getting Started:
+        'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+      U3L09 Free Response Wrap Up:
+        'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+      U3L10 Free Response Getting Started:
+        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+      U3L10 Free Response Wrap Up:
+        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+      U3L11 Free Response Getting Started:
+        'Scene Design Part 3 Reflection: Getting Started': 'Scene Design Part 3 Reflection: Getting Started'
+      U3L11 Free Response Reflection:
+        'Scene Design Part 3: Reflection': 'Scene Design Part 3: Reflection'
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '

@@ -1,0 +1,12 @@
+name 'U2L04 Assessment4'
+title 'Routers and Addresses: Question 4'
+
+question 'Why does the IP address of every device at a particular location start with the same numbers?'
+wrong 'IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.'
+wrong 'IP addresses are hierarchical; each city has an assigned set of numbers.'
+right 'IP addresses are hierarchical; the first few fields identify the domain and subset.'
+wrong 'IP addresses are based upon area codes because computers often use phone lines for transmission.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
