@@ -1,0 +1,32 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-06-01T01:36:02.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Why does the IP address of every device at a particular location start with the same numbers?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.",
+        "correct": false
+      },
+      {
+        "text": "IP addresses are hierarchical; each city has an assigned set of numbers.",
+        "correct": false
+      },
+      {
+        "text": "IP addresses are hierarchical; the first few fields identify the domain and subset.",
+        "correct": true
+      },
+      {
+        "text": "IP addresses are based upon area codes because computers often use phone lines for transmission.",
+        "correct": false
+      }
+    ],
+    "title": "Routers and Addresses: Question 4"
+  }
+}]]></config>
+</Multi>

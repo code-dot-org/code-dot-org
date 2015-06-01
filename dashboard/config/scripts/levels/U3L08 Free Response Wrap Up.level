@@ -1,15 +1,10 @@
 <TextMatch>
   <config><![CDATA[{
   "game_id": 38,
-  "created_at": "2015-05-28T00:47:53.282Z",
+  "created_at": "2015-05-28T00:47:53.000Z",
   "properties": {
     "title": "Functions with Parameters: Wrap Up",
-    "markdown": "How are parameterized functions involved in the children's game \"Simon Says?\"\n",
-    "type": "TextMatch",
-    "dsl_text": "name 'U3L08 Free Response Wrap Up'\r\ntitle 'Functions with Parameters: Wrap Up'\r\n\r\n\r\nmarkdown <<MARKDOWN\r\nHow are parameterized functions involved in the children’s game “Simon Says?”\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "How are parameterized functions involved in the children's game \"Simon Says?\"\n"
   }
 }]]></config>
 </TextMatch>
