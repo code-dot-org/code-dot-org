@@ -97,9 +97,9 @@ module.exports = {
         assert.equal($("#design-properties table").length, 0);
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
-        }, 1);
+        });
       },
       expected: {
         result: true,
@@ -142,9 +142,9 @@ module.exports = {
         assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
-        }, 1);
+        });
       },
       expected: {
         result: true,
@@ -184,9 +184,9 @@ module.exports = {
         assert(document.getElementById('deletePropertiesButton').hasAttribute('disabled'));
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
-        }, 1);
+        });
       },
       expected: {
         result: true,
@@ -211,7 +211,7 @@ module.exports = {
         'dropdown("my_dropdown", "option1", "etc");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
           function idExistsOnScreen1(id) {
             var element = document.getElementById(id);
             assert(element);
@@ -239,7 +239,7 @@ module.exports = {
           idExistsOnScreen1('my_dropdown');
 
           Applab.onPuzzleComplete();
-        }, 100);
+        });
       },
       expected: {
         result: true,
