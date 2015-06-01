@@ -1,4 +1,7 @@
 var studioApp = require('../StudioApp').singleton;
+var applabCommands = require('./commands');
+
+var applabTurtle = module.exports;
 
 // These offset are used to ensure that the turtle image is centered over
 // its x,y coordinates. The image is currently 48x48, rendered at 24x24.
@@ -6,12 +9,12 @@ var TURTLE_WIDTH = 24;
 var TURTLE_HEIGHT = 24;
 var TURTLE_ROTATION_OFFSET = -45;
 
-function getTurtleContext() {
+applabTurtle.getTurtleContext = function () {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
     // If there is not yet a turtleCanvas, create it:
-    Applab.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
+    applabCommands.createCanvas({ 'elementId': 'turtleCanvas', 'turtleCanvas': true });
     canvas = document.getElementById('turtleCanvas');
 
     // And create the turtle (defaults to visible):
@@ -20,15 +23,15 @@ function getTurtleContext() {
     var turtleImage = document.createElement("img");
     turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
-    updateTurtleImage(turtleImage);
+    applabTurtle.updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
   return canvas.getContext("2d");
-}
+};
 
-function updateTurtleImage(turtleImage) {
+applabTurtle.updateTurtleImage = function (turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
@@ -39,17 +42,12 @@ function updateTurtleImage(turtleImage) {
   turtleImage.style.transform = transform;
   turtleImage.style.msTransform = transform;
   turtleImage.style.webkitTransform = transform;
-}
+};
 
-function turtleSetVisibility (visible) {
+applabTurtle.turtleSetVisibility = function (visible) {
   // call this first to ensure there is a turtle (in case this is the first API)
-  getTurtleContext();
+  applabTurtle.getTurtleContext();
   var turtleImage = document.getElementById('turtleImage');
   turtleImage.style.visibility = visible ? 'visible' : 'hidden';
-}
-
-module.exports = {
-  getTurtleContext: getTurtleContext,
-  updateTurtleImage: updateTurtleImage,
-  turtleSetVisibility: turtleSetVisibility
 };
+

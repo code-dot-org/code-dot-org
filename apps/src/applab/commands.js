@@ -9,11 +9,7 @@ var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
-
-var turtle = require('./turtle');
-var getTurtleContext = turtle.getTurtleContext;
-var updateTurtleImage = turtle.updateTurtleImage;
-var turtleSetVisibility = turtle.turtleSetVisibility;
+var applabTurtle = require('./applabTurtle');
 
 var OPTIONAL = true;
 
@@ -163,7 +159,7 @@ applabCommands.container = function (opts) {
 
 applabCommands.write = function (opts) {
   apiValidateType(opts, 'write', 'text', opts.html, 'uistring');
-  return Applab.container(opts);
+  return applabCommands.container(opts);
 };
 
 applabCommands.button = function (opts) {
@@ -221,17 +217,17 @@ applabCommands.imageUploadButton = function (opts) {
 
 
 applabCommands.show = function (opts) {
-  turtleSetVisibility(true);
+  applabTurtle.turtleSetVisibility(true);
 };
 
 applabCommands.hide = function (opts) {
-  turtleSetVisibility(false);
+  applabTurtle.turtleSetVisibility(false);
 };
 
 applabCommands.moveTo = function (opts) {
   apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
   apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     ctx.beginPath();
     ctx.moveTo(Applab.turtle.x, Applab.turtle.y);
@@ -239,7 +235,7 @@ applabCommands.moveTo = function (opts) {
     Applab.turtle.y = opts.y;
     ctx.lineTo(Applab.turtle.x, Applab.turtle.y);
     ctx.stroke();
-    updateTurtleImage();
+    applabTurtle.updateTurtleImage();
   }
 };
 
@@ -277,7 +273,7 @@ applabCommands.moveBackward = function (opts) {
 applabCommands.turnRight = function (opts) {
   apiValidateType(opts, 'turnRight', 'angle', opts.degrees, 'number', OPTIONAL);
   // call this first to ensure there is a turtle (in case this is the first API)
-  getTurtleContext();
+  applabTurtle.getTurtleContext();
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
@@ -286,7 +282,7 @@ applabCommands.turnRight = function (opts) {
 
   Applab.turtle.heading += degrees;
   Applab.turtle.heading = (Applab.turtle.heading + 360) % 360;
-  updateTurtleImage();
+  applabTurtle.updateTurtleImage();
 };
 
 applabCommands.turnLeft = function (opts) {
@@ -295,13 +291,13 @@ applabCommands.turnLeft = function (opts) {
   if (typeof opts.degrees !== 'undefined') {
     degrees = -opts.degrees;
   }
-  Applab.turnRight({'degrees': degrees });
+  applabCommands.turnRight({'degrees': degrees });
 };
 
 applabCommands.turnTo = function (opts) {
   apiValidateType(opts, 'turnTo', 'angle', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
-  Applab.turnRight({'degrees': degrees });
+  applabCommands.turnRight({'degrees': degrees });
 };
 
 // Turn along an arc with a specified radius (by default, turn clockwise, so
@@ -315,7 +311,7 @@ applabCommands.arcRight = function (opts) {
   // call this first to ensure there is a turtle (in case this is the first API)
   var centerAngle = opts.counterclockwise ? -90 : 90;
   var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     var centerX = Applab.turtle.x +
       opts.radius * Math.sin(2 * Math.PI * (Applab.turtle.heading + centerAngle) / 360);
@@ -335,7 +331,7 @@ applabCommands.arcRight = function (opts) {
     var yMovement = opts.radius * Math.sin(2 * Math.PI * Applab.turtle.heading / 360);
     Applab.turtle.x = centerX + (opts.counterclockwise ? xMovement : -xMovement);
     Applab.turtle.y = centerY + (opts.counterclockwise ? yMovement : -yMovement);
-    updateTurtleImage();
+    applabTurtle.updateTurtleImage();
   }
 };
 
@@ -348,23 +344,23 @@ applabCommands.arcLeft = function (opts) {
 };
 
 applabCommands.getX = function (opts) {
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.x;
 };
 
 applabCommands.getY = function (opts) {
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.y;
 };
 
 applabCommands.getDirection = function (opts) {
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.heading;
 };
 
 applabCommands.dot = function (opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx && opts.radius > 0) {
     ctx.beginPath();
     if (Applab.turtle.penUpColor) {
@@ -387,7 +383,7 @@ applabCommands.dot = function (opts) {
 };
 
 applabCommands.penUp = function (opts) {
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
       Applab.turtle.penUpColor = ctx.strokeStyle;
@@ -397,7 +393,7 @@ applabCommands.penUp = function (opts) {
 };
 
 applabCommands.penDown = function (opts) {
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
@@ -406,14 +402,14 @@ applabCommands.penDown = function (opts) {
 
 applabCommands.penWidth = function (opts) {
   apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
   }
 };
 
 applabCommands.penColorInternal = function (rgbstring) {
-  var ctx = getTurtleContext();
+  var ctx = applabTurtle.getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
       // pen is currently up, store this color for pen down
@@ -985,6 +981,13 @@ applabCommands.getXPosition = function (opts) {
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
     while (div !== divApplab) {
+      // TODO (brent) using offsetParent may be ill advised:
+      // This property will return null on Webkit if the element is hidden
+      // (the style.display of this element or any ancestor is "none") or if the
+      // style.position of the element itself is set to "fixed".
+      // This property will return null on Internet Explorer (9) if the
+      // style.position of the element itself is set to "fixed".
+      // (Having display:none does not affect this browser.)
       div = div.offsetParent;
       x += div.offsetLeft;
     }
@@ -1128,7 +1131,7 @@ applabCommands.onEvent = function (opts) {
       case 'pinchout':
         var hammerElement = new Hammer(divApplab, { 'preventDefault': true });
         hammerElement.on(opts.eventName,
-                         Applab.onEventFired.bind(this, opts));
+                         applabCommands.onEventFired.bind(this, opts));
         break;
       */
       case 'click':
@@ -1258,7 +1261,7 @@ applabCommands.getKeyValue = function(opts) {
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleReadValue.bind(this, opts);
+  var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
@@ -1281,7 +1284,7 @@ applabCommands.setKeyValue = function(opts) {
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleSetKeyValue.bind(this, opts);
+  var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
@@ -1306,7 +1309,7 @@ applabCommands.readRecords = function (opts) {
   apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
   opts.interpreter = Applab.interpreter;
-  var onSuccess = Applab.handleReadRecords.bind(this, opts);
+  var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };

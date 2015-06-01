@@ -199,6 +199,10 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
 
+  if $options.html
+    html_output_filename = "#{browser['name']}_#{$options.run_eyes_tests ? 'eyes_' : ''}output.html"
+  end
+
   arguments = ''
   arguments += "#{$options.feature}" if $options.feature
   arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
@@ -211,7 +215,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " --format html --out #{browser['name']}_#{$options.run_eyes_tests ? 'eyes_' : ''}output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --format html --out #{html_output_filename} -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
   def output_synopsis(output_text)
@@ -278,7 +282,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
 
     if $options.html
-      link = "http://test.studio.code.org/ui_test/#{browser['name']}_output.html"
+      link = "http://test.studio.code.org/ui_test/" + html_output_filename
       message += " <a href='#{link}'>&#x2601; html output</a>"
     end
     HipChat.log message, color:'red'
