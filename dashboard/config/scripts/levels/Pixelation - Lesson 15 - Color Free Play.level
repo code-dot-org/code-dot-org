@@ -11,7 +11,7 @@
     },
     "title": "Pixelation - Lesson 15 - Color Free Play",
     "content1": "description here",
-    "markdown": "# Personal Favicon\n**Requirements:**\n<img src = \"http://staging.code.org/images/cspunit1/code-pixel.png\" align=right width=50 hspace=20>\n\n* The icon must be 16x16 pixels. \n* You must use the Pixelation Widget to encode the bits of color information.\n* The image must be encoded with at least 3 bits per pixel.\n\n\n"
+    "markdown": "# Personal Favicon\n**Requirements:**\n<img src = \"http://staging.code.org/images/cspunit1/code-pixel.png\" align=right width=50 hspace=20>\n\n* The icon must be 16x16 pixels. \n* You must use the Pixelation Widget to encode the bits of color information.\n* The image must be encoded with at least 12 bits per pixel.\n\n\n"
   },
   "md5": "e190d1ecc31660741cb88396545f0043"
 }]]></config>

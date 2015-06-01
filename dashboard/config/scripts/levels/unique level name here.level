@@ -9,12 +9,7 @@
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "##Video: A Little Bit About Pixels\n\n\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/15aqFQQVBWU?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "dsl_text": "name 'unique level name here'\r\ntitle 'title'\r\ndescription 'description here'\r\nhref 'path/to/html/in/asset/folder'\r\nmarkdown <<MARKDOWN\r\n##Video: A Little Bit About Pixels\r\n\r\n\r\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/15aqFQQVBWU?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\r\n\r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "##Video: A Little Bit About Pixels\n\n\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/15aqFQQVBWU?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   },
   "md5": "37f5dfa8b13d699e0d81822c2ed8b1c4"
 }]]></config>

@@ -481,6 +481,18 @@ en:
         Electric Voltage: Electric Voltage
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
+      U2L3 Assessment:
+        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+        protocol: protocol
+        datagram: datagram
+        packet: packet
+        Internet Protocol: Internet Protocol
+        IPv4 packet: IPv4 packet
+        protocol definition: protocol definition
+        datagram definition: datagram definition
+        packet definition: packet definition
+        Internet protocol definition: Internet protocol definition
+        IPv4 packet definition: IPv4 packet definition
       U3L05 Assessment1:
         Programming Efficiency Question 1: Programming Efficiency Question 1
         What does it mean to write efficient code? Match the concepts with their meanings.: What does it mean to write efficient code? Match the concepts with their meanings.
