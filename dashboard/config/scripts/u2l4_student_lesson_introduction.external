@@ -1,6 +1,6 @@
 name 'U2L4 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'U2L04 Routers and Addresses'
+
 css 'unplugged'
 skip_dialog 'true'
 
@@ -9,21 +9,22 @@ markdown <<MARKDOWN
 
 # Background
 
-Background goes here
+Just like the post office uses standardized zip codes and addresses, the Internet uses a standardized numeric addressing system called Internet Protocol (IP) to route messages to specific locations.  Numeric IP addresses have a structure and hierarchy in much the same way that telephone numbers have a structure and hierarchy (with country and area codes first).
 
 # Vocabulary
 
-Vocabulary goes here
+ IP address: a unique string of numbers separated by periods that identifies each computer using the Internet Protocol to communicate over a network.
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Learn about Internet routing datagrams.
+* Send messages to classmates using numeric addressing protocol with the Internet Simulator.
+* Find the IP address of your local router and computer.
+
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Activity: <a href="https://docs.google.com/document/d/1TAcPCX3ubUt7qYeZMViFAZmzGpjV9ig8f0DeCW1oytM” target="_blank"> Real IP Addresses </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
