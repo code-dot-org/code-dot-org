@@ -354,10 +354,13 @@ function makeDraggable (jq) {
   jq.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
-      alsoResize: elm
+      alsoResize: elm,
+      stop: function () {
+        Applab.levelHtml = designMode.serializeToLevelHtml();
+      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
-      drag: function(event, ui) {
+      drag: function (event, ui) {
         // draggables are not compatible with CSS transform-scale,
         // so adjust the position in various ways here.
 
@@ -386,7 +389,7 @@ function makeDraggable (jq) {
         ui.position.left = newLeft;
         ui.position.top = newTop;
       },
-      stop: function(event, ui) {
+      stop: function () {
         Applab.levelHtml = designMode.serializeToLevelHtml();
       }
     }).css('position', 'absolute');
