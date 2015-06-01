@@ -30,7 +30,7 @@
     return null;
   }
 
-- if rack_env == :production
+- if [:production, :test].include? rack_env
   :javascript
     // Fullstory snippet
     window['_fs_debug'] = false;
