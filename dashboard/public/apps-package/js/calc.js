@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({85:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({86:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -12,7 +12,7 @@ window.calcMain = function(options) {
 };
 
 
-},{"../appMain":5,"../skins":253,"./blocks":75,"./calc":76,"./levels":83}],76:[function(require,module,exports){
+},{"../appMain":5,"../skins":254,"./blocks":76,"./calc":77,"./levels":84}],77:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1113,7 +1113,7 @@ Calc.__testonly__ = {
 /* end-test-block */
 
 
-},{"../StudioApp":4,"../block_utils":63,"../dom":96,"../locale":138,"../skins":253,"../templates/page.html.ejs":279,"../timeoutList":285,"../utils":301,"./controls.html.ejs":77,"./equation":78,"./equationSet":79,"./expressionNode":80,"./inputIterator":81,"./js-numbers/js-numbers.js":82,"./levels":83,"./locale":84,"./token":86,"./visualization.html.ejs":87,"lodash":475}],475:[function(require,module,exports){
+},{"../StudioApp":4,"../block_utils":64,"../dom":97,"../locale":139,"../skins":254,"../templates/page.html.ejs":280,"../timeoutList":286,"../utils":302,"./controls.html.ejs":78,"./equation":79,"./equationSet":80,"./expressionNode":81,"./inputIterator":82,"./js-numbers/js-numbers.js":83,"./levels":84,"./locale":85,"./token":87,"./visualization.html.ejs":88,"lodash":476}],476:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -7902,7 +7902,7 @@ Calc.__testonly__ = {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],87:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7922,7 +7922,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":84,"ejs":472}],83:[function(require,module,exports){
+},{"./locale":85,"ejs":473}],84:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -7962,7 +7962,7 @@ module.exports = {
 };
 
 
-},{"../block_utils":63,"./locale":84}],81:[function(require,module,exports){
+},{"../block_utils":64,"./locale":85}],82:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -8017,7 +8017,7 @@ InputIterator.prototype.remaining = function () {
 };
 
 
-},{}],79:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
@@ -8424,7 +8424,7 @@ EquationSet.__testonly__ = {
 /* end-test-block */
 
 
-},{"../utils":301,"./equation":78,"./expressionNode":80,"./js-numbers/js-numbers":82}],80:[function(require,module,exports){
+},{"../utils":302,"./equation":79,"./expressionNode":81,"./js-numbers/js-numbers":83}],81:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -9038,7 +9038,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
 };
 
 
-},{"../utils":301,"./js-numbers/js-numbers":82,"./token":86}],86:[function(require,module,exports){
+},{"../utils":302,"./js-numbers/js-numbers":83,"./token":87}],87:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -9156,7 +9156,7 @@ Token.numberWithCommas_ = function (x) {
 };
 
 
-},{"./js-numbers/js-numbers":82}],82:[function(require,module,exports){
+},{"./js-numbers/js-numbers":83}],83:[function(require,module,exports){
 // Scheme numbers.
 
 // NOTE: This top bit differs from the version at https://github.com/bootstrapworld/js-numbers/blob/master/src/js-numbers.js
@@ -13489,7 +13489,7 @@ module.exports = jsnums;
 })();
 
 
-},{}],78:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -13530,7 +13530,7 @@ Equation.prototype.clone = function () {
 };
 
 
-},{}],77:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13553,7 +13553,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":138,"./locale":84,"ejs":472}],75:[function(require,module,exports){
+},{"../locale":139,"./locale":85,"ejs":473}],76:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -13616,10 +13616,10 @@ function installCompute(blockly, generator, gensym) {
 }
 
 
-},{"../locale":138,"../sharedFunctionalBlocks":252,"./locale":84}],84:[function(require,module,exports){
+},{"../locale":139,"../sharedFunctionalBlocks":253,"./locale":85}],85:[function(require,module,exports){
 // locale for calc
 
 module.exports = window.blockly.calc_locale;
 
 
-},{}]},{},[85]);
+},{}]},{},[86]);
