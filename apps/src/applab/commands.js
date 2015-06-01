@@ -152,6 +152,8 @@ function activeScreen() {
   return $('.screen').filter(':visible').first()[0];
 }
 
+// (brent) We may in the future also provide a second option that allows you to
+// reset the state of the screen to it's original (design mode) state.
 applabCommands.setScreen = function (opts) {
   apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
   var element = document.getElementById(opts.screenId);
