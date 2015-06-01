@@ -121,6 +121,8 @@ en:
         description here: description here
       CSPPD instructional materials:
         CSPPD instructional materials: CSPPD instructional materials
+      CSPPD materials overview:
+        CSP materials walkthrough: CSP materials walkthrough
       CSPPD postsurvey: {}
       CSPPD presurvey: {}
       CSPPD program overview:
@@ -448,16 +450,10 @@ en:
         title: title
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
-        description here: description here
-        title: title
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
-        description here: description here
-        title: title
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
-        description here: description here
-        title: title
       U2L5 Student Lesson Introduction:
         description here: description here
         title: title
@@ -734,42 +730,17 @@ en:
         description here: description here
         title: title
     match:
-      U2L3 Assessment:
-        IPv4 packet: IPv4 packet
-        IPv4 packet definition: IPv4 packet definition
-        Internet Protocol: Internet Protocol
-        Internet protocol definition: Internet protocol definition
-        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
-        datagram: datagram
-        datagram definition: datagram definition
-        packet: packet
-        packet definition: packet definition
-        protocol: protocol
-        protocol definition: protocol definition
-    multi:
-      U1L4 Multiple Choice:
-        ? A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?
-        : A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?
-        AAAA: AAAA
-        AABB: AABB
-        ABAB: ABAB
-        ABBB: ABBB
-        BBBB: BBBB
-        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination and Binary Messages'
-      U2L04 Assessment1:
-        Information Processing: Information Processing
-        Internet Processing: Internet Processing
-        Internet Protocol: Internet Protocol
-        Interstate Protocol: Interstate Protocol
-        'Routers and Addresses: Question 1': 'Routers and Addresses: Question 1'
-        What does IP stand for?: What does IP stand for?
-      U2L04 Assessment4:
-        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP addresses are based upon area codes because computers often use phone lines for transmission.
-        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.
-        IP addresses are hierarchical; each city has an assigned set of numbers.: IP addresses are hierarchical; each city has an assigned set of numbers.
-        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
-        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
-        Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+      CSPPD AP quiz:
+        AP Assessment Matching: AP Assessment Matching
+        AP matching: AP matching
+        Create Task: Create Task
+        End-of-year exam, common with all AP courses: End-of-year exam, common with all AP courses
+        Explore Task: Explore Task
+        Fixed-response questions: Fixed-response questions
+        Programming projects that demonstrate student understanding of algorithms and abstraction: Programming projects that demonstrate student understanding of algorithms and abstraction
+        Written report about innovations in computing: Written report about innovations in computing
+        ap matching: ap matching
+        match the assessment-type with the description below: match the assessment-type with the description below
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -883,6 +854,10 @@ en:
         Documenting Your Course Goals: Documenting Your Course Goals
       CSPPD impact in program:
         Impact of Computing: Impact of Computing
+      CSPPD materials question1:
+        CSP curricular materials: CSP curricular materials
+        ? 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
+        : 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
       CSPPD program overlap:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
@@ -1058,7 +1033,6 @@ en:
       U2L02 Assessment2:
         'The Need for Addressing: Question 2': 'The Need for Addressing: Question 2'
       U2L02 Free Response Getting Started:
-        The Need for Addressing: The Need for Addressing
         'The Need for Addressing: Getting Started': 'The Need for Addressing: Getting Started'
       U2L02 Free Response Reflection:
         'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
