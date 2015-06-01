@@ -25,7 +25,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
-    @milestone_params = {user_id: @user, script_level_id: @script_level, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
+    @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
@@ -33,7 +33,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   # without having to update all existing test contracts.
   def assert_equal_expected_keys(expected, actual)
     expected.each do |key, value|
-      assert_equal value, actual.with_indifferent_access[key]
+      assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
     end
   end
 
@@ -775,7 +775,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     return unless CDO.webpurify_key
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('shit')
+      post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
     end
     assert_response :success
     expected_response = {
@@ -847,7 +847,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next stage in default script' do
     last_level_in_stage = @script_level.script.script_levels.select{|x|x.level.game.name == 'Artist'}.last
-    post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage)
+    post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal({'previous'=>{'name'=>'The Artist'}}, response['stage_changing'])
@@ -864,7 +864,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:levels]}.flatten)
 
     last_level_in_first_stage = script.stages.first.script_levels.last
-    post :milestone, @milestone_params.merge(script_level_id: last_level_in_first_stage)
+    post :milestone, @milestone_params.merge(script_level_id: last_level_in_first_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
 
@@ -892,11 +892,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_level_with_trophies = Script.where(trophies: true).first.script_levels.first
 
     @controller.expects(:trophy_check).never
-    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies)
+    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies.id)
     assert_response :success
 
     @controller.expects(:trophy_check).with(@user)
-    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies)
+    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
   end
 
