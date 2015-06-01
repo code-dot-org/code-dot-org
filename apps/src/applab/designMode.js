@@ -45,6 +45,7 @@ designMode.onDivApplabClick = function (event) {
  */
 designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
+  $(element).addClass('designModeElement');
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(element);
@@ -253,16 +254,25 @@ designMode.onDepthChange = function (element, depthDirection) {
 };
 
 designMode.serializeToLevelHtml = function () {
-  var s = new XMLSerializer();
-  var divApplab = document.getElementById('divApplab');
-  var clone = divApplab.cloneNode(true);
-  // Remove unwanted classes added by jQuery.draggable.
-  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
-  // things like $().data or $().draggable('destroy'), so I just manually
-  // remove the classes instead.
-  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle').remove('.ui-resizable-handle');
-  $(clone).find('.ui-resizable').unwrap().unwrap();
-  return s.serializeToString(clone);
+  var divApplab = $('#divApplab');
+  divApplab.find('.ui-resizable.ui-draggable').each(function () {
+    $(this).resizable('destroy').draggable('destroy');
+  });
+  divApplab.find('.designModeElement').each(function () {
+    var elm = $(this);
+    var wrapper = elm.parent();
+    elm.css({
+      top: wrapper.css('top'),
+      left: wrapper.css('left'),
+      position: 'absolute'
+    });
+    elm.unwrap();
+  });
+  var clone = divApplab.clone();
+  clone.find('.designModeElement').removeClass('designModeElement');
+  var s = new XMLSerializer().serializeToString(clone[0]);
+  makeDraggable(divApplab.children());
+  return s;
 };
 
 /**
@@ -355,44 +365,56 @@ designMode.toggleDesignMode = function(enable) {
 function makeDraggable (jq) {
   var GRID_SIZE = 5;
 
-  var wrapper = jq.wrap('<div>').parent();
-  $(jq).resizable().parent().css('position', '');
+  // For a non-div to be draggable & resizable it needs to be wrapped in a div.
+  jq.each(function () {
+    var elm = $(this);
+    var wrapper = elm.wrap('<div>').parent().resizable({
+      alsoResize: elm
+    }).draggable({
+      cancel: false,  // allow buttons and inputs to be dragged
+      drag: function(event, ui) {
+        // draggables are not compatible with CSS transform-scale,
+        // so adjust the position in various ways here.
 
-  wrapper.draggable({
-    cancel: false,  // allow buttons and inputs to be dragged
-    drag: function(event, ui) {
-      // draggables are not compatible with CSS transform-scale,
-      // so adjust the position in various ways here.
+        // dragging
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        var changeLeft = ui.position.left - ui.originalPosition.left;
+        var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
+        var changeTop = ui.position.top - ui.originalPosition.top;
+        var newTop = (ui.originalPosition.top + changeTop) / yScale;
 
-      // dragging
-      var div = document.getElementById('divApplab');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-      var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
-      var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / yScale;
+        // snap top-left corner to nearest location in the grid
+        newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-      // snap top-left corner to nearest location in the grid
-      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        // containment
+        var container = $('#divApplab');
+        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
+        newLeft = Math.min(newLeft, maxLeft);
+        newLeft = Math.max(newLeft, 0);
+        newTop = Math.min(newTop, maxTop);
+        newTop = Math.max(newTop, 0);
 
-      // containment
-      var container = $('#divApplab');
-      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-      newLeft = Math.min(newLeft, maxLeft);
-      newLeft = Math.max(newLeft, 0);
-      newTop = Math.min(newTop, maxTop);
-      newTop = Math.max(newTop, 0);
+        ui.position.left = newLeft;
+        ui.position.top = newTop;
+      },
+      stop: function(event, ui) {
+        Applab.levelHtml = designMode.serializeToLevelHtml();
+      }
+    }).css('position', 'absolute');
 
-      ui.position.left = newLeft;
-      ui.position.top = newTop;
-    },
-    stop: function(event, ui) {
-      Applab.levelHtml = designMode.serializeToLevelHtml();
-    }
-  }).css('position', 'absolute');
+    wrapper.css({
+      top: elm.css('top'),
+      left: elm.css('left')
+    });
+
+    elm.css({
+      position: ''
+    })
+  });
 }
 
 designMode.configureDragAndDrop = function () {
