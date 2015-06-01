@@ -7,11 +7,7 @@
       "skip_dialog": true,
       "css": "unplugged"
     },
-    "markdown": "## Post-Survey\n\nNow that you've completed the first phase of PD please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! (If you are having trouble viewing the form, click this [link](https://docs.google.com/a/code.org/forms/d/1B6M6IDvOCH5i7Stp58a7UQOLNeVBODOJBDLGHsj0-78/viewform?fbzx=524137008936076760) to access the form directly.)\n\n<iframe src=\"https://docs.google.com/forms/d/1B6M6IDvOCH5i7Stp58a7UQOLNeVBODOJBDLGHsj0-78/viewform?embedded=true\" width=\"760\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>\n<br>\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## Post-Survey\n\nNow that you've completed the first phase of PD please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! (If you are having trouble viewing the form, click this [link](https://docs.google.com/a/code.org/forms/d/1B6M6IDvOCH5i7Stp58a7UQOLNeVBODOJBDLGHsj0-78/viewform?fbzx=524137008936076760) to access the form directly.)\n\n<iframe src=\"https://docs.google.com/forms/d/1B6M6IDvOCH5i7Stp58a7UQOLNeVBODOJBDLGHsj0-78/viewform?embedded=true\" width=\"760\" height=\"500\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>\n<br>\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   },
   "md5": "27ebf3e381db2bd12afb924c794d26f8"
 }]]></config>
