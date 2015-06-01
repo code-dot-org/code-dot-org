@@ -2,8 +2,6 @@
 
 // TODO (brent) - make sure you consider transition to screens from no screens
 
-// TODO (brent) - why is this code showing up in common.js
-
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
@@ -302,6 +300,7 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 };
 
 designMode.onClear = function() {
+  // TODO (brent) - just this screen
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
   elementLibrary.resetIds();
   designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
@@ -474,11 +473,6 @@ designMode.changeScreen = function (screenId) {
   // name to indicate how this and the api function are different
 
   // TODO (brent) - should changing the screen reset the active canvas?
-
-  // Ignore screen changes while running
-  if (Applab.isRunning()) {
-    return;
-  }
 
   var screenIds = [];
   $('.screen').each(function () {

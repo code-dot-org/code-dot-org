@@ -66,7 +66,8 @@ module.exports = React.createClass({
           id="screenSelector"
           style={dropdownStyle}
           value={this.state.activeScreen}
-          onChange={this.handleScreenChange}>
+          onChange={this.handleScreenChange}
+          disabled={Applab.isRunning()}>
           {options}
         </select>
       );
