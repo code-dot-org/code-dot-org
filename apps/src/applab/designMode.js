@@ -45,7 +45,6 @@ designMode.onDivApplabClick = function (event) {
  */
 designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
-  $(element).addClass('designModeElement');
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(element);
@@ -256,11 +255,10 @@ designMode.onDepthChange = function (element, depthDirection) {
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
   divApplab.find('.ui-resizable.ui-draggable').each(function () {
-    $(this).resizable('destroy').draggable('destroy');
-  });
-  divApplab.find('.designModeElement').each(function () {
-    var elm = $(this);
-    var wrapper = elm.parent();
+    var wrapper = $(this);
+    var elm = $(':first-child', wrapper);
+
+    wrapper.resizable('destroy').draggable('destroy');
     elm.css({
       top: wrapper.css('top'),
       left: wrapper.css('left'),
@@ -268,9 +266,7 @@ designMode.serializeToLevelHtml = function () {
     });
     elm.unwrap();
   });
-  var clone = divApplab.clone();
-  clone.find('.designModeElement').removeClass('designModeElement');
-  var s = new XMLSerializer().serializeToString(clone[0]);
+  var s = new XMLSerializer().serializeToString(divApplab[0]);
   makeDraggable(divApplab.children());
   return s;
 };
