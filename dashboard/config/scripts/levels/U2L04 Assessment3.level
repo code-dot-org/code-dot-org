@@ -4,11 +4,7 @@
   "created_at": "2015-06-01T01:29:03.000Z",
   "properties": {
     "title": "Routers and Addresses: Question 3",
-    "markdown": "Why was the Internet changed from IPv4 to IPv6? How did this change affect IP addresses?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Why was the Internet changed from IPv4 to IPv6? How did this change affect IP addresses?\n"
   }
 }]]></config>
 </TextMatch>
