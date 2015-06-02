@@ -52,11 +52,20 @@ level 'U2L8 Student Lesson Introduction'
 
 stage 'The Need for DNS'
 level 'U2L9 Student Lesson Introduction'
+level 'U2L9 Free Response Getting started'  
+level 'U2L09 Assessment1'
+level 'U2L09 Assessment2'
+level 'U2L09 Free Response Wrap Up'  
 
 stage 'DNS Simulation'
 level 'U2L10 Student Lesson Introduction'
+level 'U2L10 Free Response Getting Started'
 level 'U2L10 NetSim Manual DNS'
 level 'U2L10 NetSim Automatic DNS'
+level 'U2L10 Assessment1'
+level 'U2L10 Assessment2'
+level 'U2L10 Assessment3'
+level 'U2L10 Free Response Wrap Up'
 
 
 stage 'How HTTP Works'
