@@ -625,10 +625,10 @@
         CSPPD:
           new stage: nueva etapa
           Introduction to PD: Introducción al DP
-          title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          What is CSP?: What is CSP?
-          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          title: Principios de Ciencia computacional PD
+          description: Introducción en linea de CSP
+          What is CSP?: ¿Que es CPS?
+          Exploring CSP Instructional Materials: Exploración de CSP, Materiales instructivos
           Impact of Computer Science: Impact of Computer Science
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -721,6 +721,9 @@
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -916,10 +919,10 @@
           applab: applab
           online pd?: online pd?
           AppLab: AppLab
-          Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          Online PD: PD en linea
+          title: ¡Todas las cosas!
+          description: Todos los tipos de niveles para pruebas UI
+          Odometer: Odometro
           Text Compression: Compresión de texto
           Pixelation: Pixelación
         algebraPD2b:

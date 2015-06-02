@@ -1,23 +1,25 @@
 mr-IN:
   hello: Hello world
-  select_language: Please select your language
-  computer_science: Computer Science
+  select_language: कृपया आपली भाषा निवडा
+  computer_science: संगणक विज्ञान
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: December 8-14, 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
+  csedweek_dates: ८-१४ डिसेंबर, २०१४
+  csedweek_banner_hoc: |
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">'आवर ऑफ कोड' - एक तास कोडींग साठी</a> येत आहे. सर्व शिक्षक आणि आयोजकांना  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">आवर ऑफ कोड च्या  नियोजना करिता</a> आमंत्रित करत आहोत. 
+    Calling all teachers and organizers, plan your Hour of Code
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Anybody can learn.
   learn_now: Learn Now
-  petition_message: Every student in every school should have the opportunity to learn computer science
+  petition_message: प्रत्येक शाळेतील प्रत्येक विद्यार्थ्याला संगणक शिकण्याची संधी मिळाली पाहिजे
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  name: Name
+  name: नाव
   email: Email
-  zipcode: ZIP code or country
+  zipcode: पोस्टल क्रमांक
   submit: Submit
-  twentyhours_heading: Try our Intro to Computer Science Course
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
+  twentyhours_heading: संगणक शास्त्राशी ओळख करून पहा
+  twentyhours_text: "'आवर ऑफ कोड' चा पहिला भाग संपला ? आमच्या पुढच्या आभ्यास्क्रमामध्ये संगणक शास्त्र आणि प्रोग्रामिंग च्या अजून संकल्पना शिका."
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
   hoc2014_students: Students
   hoc2014_try: Try it
@@ -54,23 +56,23 @@ mr-IN:
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
   support_url: http://support.code.org/
-  country: Country
-  city: City
+  country: देश
+  city: शहर
   gender: Gender
-  boys: Boys
-  girls: Girls
-  give_my_hour: 'Give my Hour to:'
-  girls_team: "Girls' Team"
-  boys_team: "Boys' Team"
-  tell_the_world: Tell the world!
-  thanks_for_voting: Thanks for voting!
+  boys: मुले
+  girls: मुली
+  give_my_hour: 'तुमचा एक तास द्या:'
+  girls_team: मुलींचा गट
+  boys_team: मुलांचा गट
+  tell_the_world: जगाला सांगा!
+  thanks_for_voting: मतदानाबद्दल आभारी आहोत.
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: I agree
   participant_select: '- Select -'
-  participant_student: Student
+  participant_student: विध्यार्थी
   participant_parent: Parent
   participant_educator: Educator
   participant_engineer: Software Engineer
@@ -80,7 +82,7 @@ mr-IN:
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: I am a
   never_spam: "We'll never spam you"
-  enter_country: Enter country if outside the United States
+  enter_country: जर तुम्ही अमेरिकेबाहेरील असाल तर तुमच्या देशाचे नाव
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Thank you for signing the petition
@@ -122,7 +124,7 @@ mr-IN:
   studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_donate_body: '- निवड करा -'
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: |
@@ -334,7 +336,7 @@ mr-IN:
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: Name
+  dashboard_students_name: नाव
   dashboard_students_progress: Progress
   dashboard_students_age: Age
   dashboard_students_gender: Gender
@@ -391,7 +393,7 @@ mr-IN:
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: Student
+  dashboard_student: विध्यार्थी
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: "Who creates the student's account?"
   dashboard_sections_password_question: 'What do students use as a "password"?'

@@ -168,7 +168,7 @@ hu:
         Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
         In-person wrap up to the first year of teaching the course: In-person wrap up to the first year of teaching the course
       CSPPD unit matching:
-        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Matching Units with Descriptions: Matching Units with Descriptions
         Unit 1: 1. rész
         Unit 2: 2. rész
         Unit 3: Unit 3
@@ -176,7 +176,7 @@ hu:
         Unit 5: Unit 5
         foundations in the digital representation of information: foundations in the digital representation of information
         structure and design of the internet: structure and design of the internet
-        programming principles and javascript: programming principles and javascript
+        programming principles and JavaScript: programming principles and JavaScript
         data extraction, modeling, and processing: data extraction, modeling, and processing
         planning, organizing, and completion of performance tasks: planning, organizing, and completion of performance tasks
       ECSPD phase matching:
@@ -480,6 +480,27 @@ hu:
         Electric Voltage: Electric Voltage
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
+      U2L3 Assessment:
+        "Invent an Addressing Protocol: Question 1": 'Invent an Addressing Protocol: Question 1'
+        protocol: protocol
+        datagram: datagram
+        packet: packet
+        Internet Protocol: Internet Protocol
+        IPv4 packet: IPv4 packet
+        protocol definition: protocol definition
+        datagram definition: datagram definition
+        packet definition: packet definition
+        Internet protocol definition: Internet protocol definition
+        IPv4 packet definition: IPv4 packet definition
+      U3L05 Assessment1:
+        Programming Efficiency Question 1: Programming Efficiency Question 1
+        What does it mean to write efficient code? Match the concepts with their meanings.: What does it mean to write efficient code? Match the concepts with their meanings.
+        Effort: Effort
+        Space: Space
+        Time: Time
+        The amount of labor it takes to write the code: The amount of labor it takes to write the code
+        The number of lines of code: The number of lines of code
+        The number of "turtle moves" it takes to complete the task: 'The number of "turtle moves" it takes to complete the task'
       U3L13 Assessment Matching:
         "Matching: Buttons on the Screen": 'Matching: Buttons on the Screen'
         elements: elements

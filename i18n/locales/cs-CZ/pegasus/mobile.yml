@@ -382,7 +382,7 @@ cs-CZ:
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
   dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_in_progress: rozpracováno
   dashboard_progress_not_completed: nedokončeno
   dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
   dashboard_progress_completed_perfect: dokončeno, perfektní

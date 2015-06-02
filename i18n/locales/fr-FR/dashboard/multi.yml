@@ -66,7 +66,7 @@ fr:
       2-3 maze multi 1:
         Maze Multiple Choice One: Labyrinthe Choix multiple Un
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Choisir la meilleure réponse.
+        Choose the best answer.: Choisis la meilleure réponse.
         Which blocks work?: Quels blocs fonctionnent?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
@@ -215,7 +215,7 @@ fr:
         Bee Debug Multiple Choice: Abeille Debogage Choix multiple
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Which version of the function will work?: Quelle version de la fonction fonctionnera ?
+        Which version of the function will work?: Quelle version de la fonction marchera ?
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
@@ -819,7 +819,7 @@ fr:
         Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
         All of the above: Toutes ces réponses
       PDK5 What is CS:
-        Computer Science is More than Programming: Computer Science is More than Programming
+        Computer Science is More than Programming: "L'informatique, c'est plus que programmer"
         "A computer program, or \"code,\" is:": 'A computer program, or "code," is:'
         a part inside of a computer: "une partie à l'intérieur d'un ordinateur"
         a set of instructions a person gives a computer to execute: "un ensemble d'instructions qu'une personne fait exécuter par un ordinateur"
@@ -991,14 +991,10 @@ fr:
         6 bits: 6 bits
       U1L10 Assessment 2:
         "Assessment: Encoding Text": 'Assessment: Encoding Text'
-        0: |
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
-          
-          How many bits would you need to encode everything that could be typed on this keyboard?
-        1: |
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
-          
-          How many bits would you need to encode everything that could be typed on this keyboard?
+        0: |-
+          Le clavier QWERTY standard a 47 touches qui peuvent afficher des caractères à l'écran. Chacune de ces touches peut également afficher un second caractères en maintenant la touche "Espace" enfoncée en même temps (On suppose que toutes les autres touches sont ignorées dans cette question). Combien de bits seraient nécessaires pour encoder tout ce qui pourrait être saisi sur ce clavier?
+        1: |-
+          Le clavier QWERTY standard a 47 touches qui peuvent afficher des caractères à l'écran. Chacune de ces touches peut également afficher un second caractères en maintenant la touche "Espace" enfoncée en même temps (On suppose que toutes les autres touches sont ignorées dans cette question). Combien de bits seraient nécessaires pour encoder tout ce qui pourrait être saisi sur ce clavier?
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
@@ -1006,7 +1002,7 @@ fr:
         7 bits: 7 bits
       U1L11 Assessment 1:
         "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
-        How many bits are required to store the number "150" in ASCII?: 'How many bits are required to store the number "150" in ASCII?'
+        How many bits are required to store the number "150" in ASCII?: 'Combien de bits sont nécessaires pour stocker le nombre "150" en ASCII?'
         3 bits: 3 bits
         8 bits: 8 bits
         15 bits: 15 bits
@@ -1014,7 +1010,7 @@ fr:
         30 bits: 30 bits
       U1L11 Assessment 2:
         "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
-        "The word \"Apple\" translated into its ASCII number equivalent is:": 'The word "Apple" translated into its ASCII number equivalent is:'
+        "The word \"Apple\" translated into its ASCII number equivalent is:": 'Le mot "Apple" traduit en son nombre ASCII équivalent est :'
         097 112 112 108 101: 097 112 112 108 101
         097 108 108 111 119: 097 108 108 111 119
         065 112 112 108 101: 065 112 112 108 101
@@ -1054,15 +1050,29 @@ fr:
         10: "10"
         12: "12"
       U1L8 Multiple Choice:
-        "Sending Numbers: Multiple Choice Assessment": 'Sending Numbers: Multiple Choice Assessment'
-        0: '? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?'
-        1: ': You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?'
+        "Sending Numbers: Multiple Choice Assessment": 'Envoyer des nombres : Évaluation de choix multiples'
+        0: '? Vous avez une grille de coordonnées 96 x 96. Quel est le nombre minimal de bits requis pour encoder une coordonnée dans cet espace?'
+        1: ': Vous avez une grille de coordonnées 96 x 96. Quel est le nombre minimal de bits requis pour encoder une coordonnée dans cet espace?'
         16: "16"
         14: "14"
         13: "13"
         10: "10"
+      U2L04 Assessment1:
+        "Routers and Addresses: Question 1": 'Routers and Addresses: Question 1'
+        What does IP stand for?: What does IP stand for?
+        Internet Processing: Internet Processing
+        Internet Protocol: Internet Protocol
+        Information Processing: Information Processing
+        Interstate Protocol: Interstate Protocol
+      U2L04 Assessment4:
+        "Routers and Addresses: Question 4": 'Routers and Addresses: Question 4'
+        Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.
+        IP addresses are hierarchical; each city has an assigned set of numbers.: IP addresses are hierarchical; each city has an assigned set of numbers.
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP addresses are based upon area codes because computers often use phone lines for transmission.
       U3L01 Assessment2:
-        Why Programming? Question 2: Why Programming? Question 2
+        Why Programming? Question 2: Pourquoi programmer? Question 2
         0: "? \"Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?\""
         1: ": \"Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?\""
         Place slices of bread face side up: Place slices of bread face side up
@@ -1080,7 +1090,7 @@ fr:
         It is easier to divide the work among several programmers.: It is easier to divide the work among several programmers.
         Logical names make the program code more intuitive/understandable.: Logical names make the program code more intuitive/understandable.
       U3L04 Assessment2:
-        "Creating Procedures Part 2: Question 2": 'Creating Procedures Part 2: Question 2'
+        "Creating Procedures Part 2: Question 2": 'Création de procédures Partie 2: Question 2'
         0: '? Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?'
         1: ': Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?'
         The name of the function: The name of the function
@@ -1089,14 +1099,50 @@ fr:
         The name of program it was originally designed for: The name of program it was originally designed for
         The post-state: The post-state
       U3L06-API-multichoice:
-        Multiple Choice: Questions à choix multiples
-        Choose the option that best answers the question.: Choose the option that best answers the question.
-        What is the primary purpose of an API in a programming language?: What is the primary purpose of an API in a programming language?
-        Application Primary Interactions are fundamental to programming: Application Primary Interactions are fundamental to programming
-        To make programming more complex for those without experience: To make programming more complex for those without experience
-        Programs won't run without good API documentation: "Programs won't run without good API documentation"
-        To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
-        It is impossible to write a program without an API: It is impossible to write a program without an API
+        APIs and Parameters Question 1: APIs and Parameters Question 1
+        Select the best answer: Select the best answer
+        What is NOT the purpose of an API in a programming language?: What is NOT the purpose of an API in a programming language?
+        List the commands and functions of a programming language: List the commands and functions of a programming language
+        Explain the functionality of a programming statements: Explain the functionality of a programming statements
+        To avoid having to memorize all of the language commands: To avoid having to memorize all of the language commands
+        Show examples of programming statements: Show examples of programming statements
+        Auto-correct common programming errors: Auto-correct common programming errors
+        Simplify complex programming tasks: Simplify complex programming tasks
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L08 Assessment1:
+        "Functions with Parameters: Question 1": 'Functions with Parameters: Question 1'
+        Which of the following are true?: Which of the following are true?
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters generalize the solution of a specific problem.: Parameters generalize the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters need not be provided to a function in any particular order.
+      U3L08 Assessment3:
+        "Functions with Parameters: Question 3": 'Functions with Parameters: Question 3'
+        There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
+        square();: square();
+        "function square() {": 'function square() {'
+        penDown();: penDown();
+        "for(var i = 0; i < 4; i++){": 'for(var i = 0; i < 4; i++){'
+        moveForward(length);: moveForward(length);
+        "turnLeft(90); }": 'turnLeft(90); }'
+        penUp();: penUp();
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
@@ -1182,14 +1228,6 @@ fr:
         function calls: function calls
         event handlers: event handlers
         conditionals: conditionals
-      U3L20 Assessment9:
-        Conditional Basics Question 9: Conditional Basics Question 9
-        Which of the following are not valid operators in Boolean expressions?: Which of the following are not valid operators in Boolean expressions?
-      U3L21 Assessment 1:
-        More Variables Question 1: More Variables Question 1
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?
-        56*61\3+2: '56*61\3+2'
-        fifteen: fifteen
       U3L21 Assessment 2:
         More Variables Question 2: More Variables Question 2
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?
@@ -1206,14 +1244,14 @@ fr:
         Cannot be determined: Cannot be determined
       U3L30 Assessment2:
         "Arrays: Question 2": 'Arrays: Question 2'
-        What is the index of the third element in an array?: What is the index of the third element in an array?
+        What is the index of the third element in an array?: "Quel est l'indice du troisième élément dans un tableau ?"
         2: "2"
         3: "3"
         4: "4"
         Cannot be determined: Cannot be determined
       U3L30 Assessment3:
-        "Arrays: Question 3": 'Arrays: Question 3'
-        There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
+        "Arrays: Question 3": 'Tableaux : Question 3'
+        There are 20 elements in an array. What is the index of the last element?: "Il y a 20 éléments dans un tableau. Quel est l'indice du dernier élément ?"
         20: "20"
         21: "21"
         19: "19"

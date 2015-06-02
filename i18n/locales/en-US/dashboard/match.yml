@@ -168,7 +168,7 @@ en:
         Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: crwdns38973:0crwdne38973:0
         In-person wrap up to the first year of teaching the course: crwdns38974:0crwdne38974:0
       CSPPD unit matching:
-        Matching Unit Descriptions and Numbers: crwdns38975:0crwdne38975:0
+        Matching Units with Descriptions: crwdns39003:0crwdne39003:0
         Unit 1: crwdns38976:0crwdne38976:0
         Unit 2: crwdns38977:0crwdne38977:0
         Unit 3: crwdns38978:0crwdne38978:0
@@ -176,7 +176,7 @@ en:
         Unit 5: crwdns38980:0crwdne38980:0
         foundations in the digital representation of information: crwdns38981:0crwdne38981:0
         structure and design of the internet: crwdns38982:0crwdne38982:0
-        programming principles and javascript: crwdns38983:0crwdne38983:0
+        programming principles and JavaScript: crwdns39004:0crwdne39004:0
         data extraction, modeling, and processing: crwdns38984:0crwdne38984:0
         planning, organizing, and completion of performance tasks: crwdns38985:0crwdne38985:0
       ECSPD phase matching:
@@ -480,6 +480,27 @@ en:
         Electric Voltage: crwdns38772:0crwdne38772:0
         Alternating Frequencies: crwdns38773:0crwdne38773:0
         Beam of Light: crwdns38774:0crwdne38774:0
+      U2L3 Assessment:
+        "Invent an Addressing Protocol: Question 1": crwdns39005:0crwdne39005:0
+        protocol: crwdns39006:0crwdne39006:0
+        datagram: crwdns39007:0crwdne39007:0
+        packet: crwdns39008:0crwdne39008:0
+        Internet Protocol: crwdns39009:0crwdne39009:0
+        IPv4 packet: crwdns39010:0crwdne39010:0
+        protocol definition: crwdns39011:0crwdne39011:0
+        datagram definition: crwdns39012:0crwdne39012:0
+        packet definition: crwdns39013:0crwdne39013:0
+        Internet protocol definition: crwdns39014:0crwdne39014:0
+        IPv4 packet definition: crwdns39015:0crwdne39015:0
+      U3L05 Assessment1:
+        Programming Efficiency Question 1: crwdns39016:0crwdne39016:0
+        What does it mean to write efficient code? Match the concepts with their meanings.: crwdns39017:0crwdne39017:0
+        Effort: crwdns39018:0crwdne39018:0
+        Space: crwdns39019:0crwdne39019:0
+        Time: crwdns39020:0crwdne39020:0
+        The amount of labor it takes to write the code: crwdns39021:0crwdne39021:0
+        The number of lines of code: crwdns39022:0crwdne39022:0
+        The number of "turtle moves" it takes to complete the task: crwdns39023:0crwdne39023:0
       U3L13 Assessment Matching:
         "Matching: Buttons on the Screen": crwdns38460:0crwdne38460:0
         elements: crwdns38461:0crwdne38461:0

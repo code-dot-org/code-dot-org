@@ -1059,6 +1059,20 @@ sr:
         14: "14"
         13: "13"
         10: "10"
+      U2L04 Assessment1:
+        "Routers and Addresses: Question 1": 'Routers and Addresses: Question 1'
+        What does IP stand for?: What does IP stand for?
+        Internet Processing: Internet Processing
+        Internet Protocol: Internet Protocol
+        Information Processing: Information Processing
+        Interstate Protocol: Interstate Protocol
+      U2L04 Assessment4:
+        "Routers and Addresses: Question 4": 'Routers and Addresses: Question 4'
+        Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.
+        IP addresses are hierarchical; each city has an assigned set of numbers.: IP addresses are hierarchical; each city has an assigned set of numbers.
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP addresses are based upon area codes because computers often use phone lines for transmission.
       U3L01 Assessment2:
         Why Programming? Question 2: Why Programming? Question 2
         0: "? \"Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?\""
@@ -1087,14 +1101,50 @@ sr:
         The name of program it was originally designed for: The name of program it was originally designed for
         The post-state: The post-state
       U3L06-API-multichoice:
-        Multiple Choice: Multiple Choice
-        Choose the option that best answers the question.: Choose the option that best answers the question.
-        What is the primary purpose of an API in a programming language?: What is the primary purpose of an API in a programming language?
-        Application Primary Interactions are fundamental to programming: Application Primary Interactions are fundamental to programming
-        To make programming more complex for those without experience: To make programming more complex for those without experience
-        Programs won't run without good API documentation: "Programs won't run without good API documentation"
-        To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
-        It is impossible to write a program without an API: It is impossible to write a program without an API
+        APIs and Parameters Question 1: APIs and Parameters Question 1
+        Select the best answer: Select the best answer
+        What is NOT the purpose of an API in a programming language?: What is NOT the purpose of an API in a programming language?
+        List the commands and functions of a programming language: List the commands and functions of a programming language
+        Explain the functionality of a programming statements: Explain the functionality of a programming statements
+        To avoid having to memorize all of the language commands: To avoid having to memorize all of the language commands
+        Show examples of programming statements: Show examples of programming statements
+        Auto-correct common programming errors: Auto-correct common programming errors
+        Simplify complex programming tasks: Simplify complex programming tasks
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L08 Assessment1:
+        "Functions with Parameters: Question 1": 'Functions with Parameters: Question 1'
+        Which of the following are true?: Which of the following are true?
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters generalize the solution of a specific problem.: Parameters generalize the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters need not be provided to a function in any particular order.
+      U3L08 Assessment3:
+        "Functions with Parameters: Question 3": 'Functions with Parameters: Question 3'
+        There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
+        square();: square();
+        "function square() {": 'function square() {'
+        penDown();: penDown();
+        "for(var i = 0; i < 4; i++){": 'for(var i = 0; i < 4; i++){'
+        moveForward(length);: moveForward(length);
+        "turnLeft(90); }": 'turnLeft(90); }'
+        penUp();: penUp();
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
@@ -1180,14 +1230,6 @@ sr:
         function calls: function calls
         event handlers: event handlers
         conditionals: conditionals
-      U3L20 Assessment9:
-        Conditional Basics Question 9: Conditional Basics Question 9
-        Which of the following are not valid operators in Boolean expressions?: Which of the following are not valid operators in Boolean expressions?
-      U3L21 Assessment 1:
-        More Variables Question 1: More Variables Question 1
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?
-        56*61\3+2: '56*61\3+2'
-        fifteen: fifteen
       U3L21 Assessment 2:
         More Variables Question 2: More Variables Question 2
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?
