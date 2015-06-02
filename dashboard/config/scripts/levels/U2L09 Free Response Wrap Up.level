@@ -1,0 +1,15 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-06-01T21:26:19.179Z",
+  "properties": {
+    "title": "The Need for DNS: Wrap Up",
+    "markdown": "Why don't we need to know the IP addresses for our favorite sites?\n",
+    "type": "TextMatch",
+    "dsl_text": "name 'U2L09 Free Response Wrap Up'\r\ntitle 'The Need for DNS: Wrap Up'\r\n\r\nmarkdown <<MARKDOWN\r\nWhy don’t we need to know the IP addresses for our favorite sites?\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</TextMatch>
