@@ -1,0 +1,15 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-06-01T21:36:31.418Z",
+  "properties": {
+    "title": "Assessment: Question 2",
+    "markdown": "Why do computers need to periodically check the DNS for websites you have already visited?\n",
+    "type": "TextMatch",
+    "dsl_text": "name 'U2L09 Assessment2'\r\ntitle 'Assessment: Question 2'\r\n\r\n\r\nmarkdown <<MARKDOWN\r\nWhy do computers need to periodically check the DNS for websites you have already visited?\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</TextMatch>
