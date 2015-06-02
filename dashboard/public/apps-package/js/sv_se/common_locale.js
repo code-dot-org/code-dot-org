@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Fortsätt"},
 "defaultTwitterText":function(d){return "Kolla vad jag gjorde"},
 "designMode":function(d){return "Design"},
-"designModeHeader":function(d){return "Växla till designläge"},
 "dialogCancel":function(d){return "Avbryt"},
 "dialogOK":function(d){return "Ok"},
 "directionEastLetter":function(d){return "Ö"},

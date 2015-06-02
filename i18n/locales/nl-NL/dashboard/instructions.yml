@@ -885,54 +885,24 @@ nl:
       Course 4 Artist For Loops 15_instruction: 'Vrij Spel: Probeer eens wat tekeningen van jezelf te maken met For Loops. We hebben een paar algemene variabelen toegevoegd om te gebruiken.'
       Course 4 Artist For Loops 2_instruction: |-
         Ik heb de code voor het tekenen van een driehoek in een 'for'-lus (tellergestuurde lus) opgenomen die van 50 tot 100 telt in stappen van 10. Bekijk hoe ik de code heb gebouwd en klik vervolgens op "Uitvoeren" wanneer je klaar bent om het in actie te zien. 
-      Course 4 Artist For Loops 3_instruction: |
-        The smallest triangle has 20 pixel
-        sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
-        than the last. Update the for loop to draw these triangles.
+      Course 4 Artist For Loops 3_instruction: De kleinste driehoek heeft zijden van 20 pixels lang, de grootste zijden van 200 pixels, en elke driehoek is 20 pixels groter dan de vorige. Update de for loop om deze driehoeken te tekenen.
       Course 4 Artist For Loops 4_instruction: |
-        Use a for loop to draw these squares.
-        They start at 50 pixels long, the largest is 300 pixels long, and each square
-        is 25 pixels larger than the last. I have given you almost all the code you
-        will need - you're missing one block, which one is it?
-      Course 4 Artist For Loops 5_instruction: |
-        Good job on the last puzzle! Let's
-        use that "counter" variable block again to draw this cool picture. 
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is a 20 pixels longer than the
-        last.
-      Course 4 Artist For Loops 8_instruction: |
-        The smallest line of this square
-        spiral is 10, the largest is 200, and each line is 10 pixels longer than the
-        last. Can you fill in the missing blocks to complete this awesome picture?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13_instruction: |
-        Check it out we have a new function
-        called "draw a line of squares". Feel free to take a look inside the function
-        block to see how we built it. Click on "Run" when your are ready for the
-        next puzzle.
+        Gebruik een 'for loop' om deze vierkanten te tekenen. 
+        Ze starten met een lengte van 50 pixels, de grootste is 300 pixels lang, en elk vierkant is 25 pixels groter dan de vorige. Ik heb je bijna alle code gegeven die je nodig hebt - er ontbreekt nog maar een blok, welke is dat?
+      Course 4 Artist For Loops 5_instruction: "Mooi werk bij die laatste puzzle! Nu gaan we die  variabele blok 'counter' nogmaals gebruiken om deze coole afbeelding te tekenen. "
+      Course 4 Artist For Loops 6_instruction: "Vrij spelen! Probeer met behulp van een 'for loop' een zelf bedacht patroon te tekenen dat steeds groter wordt."
+      Course 4 Artist For Loops 7_instruction: 'Wat gebeurt er als je "Repeat 3" uit dit algoritme haalt, en de "move" en "turn" blokken in de loop laat staan? In deze spiraalvormende driehoek is elke zijde 20 pixels langer dan de vorige.'
+      Course 4 Artist For Loops 8_instruction: De kortste lijn in deze spiraal van vierkanten is 10, de langste is 200, en elke lijn is 10 pixels korter dan de vorige. Kun jij deze te gekke afbeelding afmaken door de ontbrekende blokken plaatsen?
+      Course 4 Artist For Loops 9_instruction: Kun je een spiraal maken? Ga vooruit van 1 tot 75 pixels, elke loop komt er 1 pixel bij.
+      Course 4 Artist Functions 1_instruction: Kun je met behulp van een loop een vierkant tekenen dat 100 pixels lang is?
+      Course 4 Artist Functions 10_instruction: Welke blok moet je nog toevoegen om de driehoek bovenop het vierkant te krijgen?
+      Course 4 Artist Functions 11_instruction: 'Deze code tekent een kubus - plaats hem in een functie en noem die "Draw a Cube".'
+      Course 4 Artist Functions 12_instruction: Herhaal de square functie met behulp van een loop om een lijn te tekenen
+      Course 4 Artist Functions 13_instruction: 'Kijk aan, we hebben een nieuwe functie genaamd "draw a line of squares". Bekijk de functie maar eens van binnen om te ontdekken hoe we hem gebouwd hebben. Klik op "Run" als je klaar bent voor de volgende puzzle.'
       Course 4 Artist Functions 14_instruction: 'Je doet het geweldig! Laten we onze nieuwe "Teken een lijn van vierkanten" functie gebruiken om een Rechthoekige vorm te tekenen. Vergeet niet dat elk vierkant 40 pixels lang is.'
       Course 4 Artist Functions 15_instruction: 'Laten we de uitdaging iets groter maken, kun je een ster vorm tekenen door de functie "teken een lijn van vierkanten" te gebruiken? Succes! Tip: je moet wellicht 144 graden draaien'
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 2_instruction: 'Kun je 3 vierkanten tekenen die 20 pixels van elkaar vandaan staan? Hint: elk vierkant is 100 pixels groot'
+      Course 4 Artist Functions 3_instruction: "Kun je deze afbeelding tekenen door de \"draw a square\" functie te gebruiken? Hint: tussen elk vierkant zit 120 pixels.\r\n"
       Course 4 Artist Functions 4_instruction: |
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -943,10 +913,8 @@ nl:
       Course 4 Artist Functions 5 OLD_instruction: |
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
+      Course 4 Artist Functions 5_instruction: "Kun je deze afbeelding tekenen door de \"draw a square\" functie te gebruiken? Hint: tussen elk vierkant zit 120 pixels.\r\n"
+      Course 4 Artist Functions 6_instruction: Welke blok moet je nog toevoegen om de driehoek bovenop het vierkant te krijgen?
       Course 4 Artist Functions 7_instruction: Kun je een lijn van vierkanten tekenen door gebruik te maken van de Vierkant functie? Elk vierkant is 40 pixels lang.
       Course 4 Artist Functions 8_instruction: |
         Are you getting the hang of how to
@@ -989,40 +957,21 @@ nl:
         triangles with that new function? The first is 25 pixels long, the second
         is 50, and the third is 75. 
       Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+        Kun je een nieuwe functie 'vierkant' genoemd toevoegen?
+        Het heeft ook een lengteparameter nodig, net zoals de driehoek. Teken deze keer 3 vierkanten 25, 50 en 75 pixels in lengte, 100 pixels uit elkaar.
       Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
+        Gebruik beide nieuwe functies om dit beeld te schetsen. Om dit te vergemakkelijken gebruikt u een lus met een 'teller' parameter.
         
       Course 4 Artist Params 6_instruction: |
-        Let's edit this "draw a shape" function.
-        It already has a "length" parameter. Now, let's edit the function to also
-        add a "sides" parameter. Remember the angle to turn for a given shape is
-        360 divided by the sides it has. Hint: lengths for each shape are the triangle
-        is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels. 
-      Course 4 Artist Params 7_instruction: |
-        Can you draw these shapes by filling
-        in the "???" The square and triangle are 100 pixels in size while the hexagon
-        is 75 pixels in size. 
+        Laat ons deze functie 'een vorm tekenen' bewerken. 
+        Het heeft al een 'lengte' parameter. Laat ons nu de functie bewerken door ook een 'zijde' parameter toe te voegen. Vergeet niet dat de te draaien hoek voor een bepaalde vorm 360 gedeeld door de zijde is. Tip: de lengtes voor elke vorm zijn voor de driehoek 100 pixels, de zeshoek 25 pixels en het vierkant 5 pixels. 
+      Course 4 Artist Params 7_instruction: 'Kunt u deze vormen tekenen door de "???" in te vullen? Het vierkant en de driehoek zijn 100 pixels in grootte terwijl de zeshoek 75 pixels in grootte is. '
       Course 4 Artist Params 8_instruction: |
-        Can you figure out how to draw this
-        shape? Here's a hint create a new function with 6 sides called a hexagon.
+        Kunt u erachter komen hoe deze vorm te tekenen? Hier is een tip: maak een nieuwe functie met 6 zijden, een zeshoek genoemd.
         
-      Course 4 Artist Params 9_instruction: |
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw a triangle? It's
-        100 pixels long on each side.
+      Course 4 Artist Params 9_instruction: 'Weet je nog toen we de tellerlus gebruikten maar een lus erin verwijderden? Laten we eens wat leuks doen en de functie "teken een vorm"  gebruiken met "zijden" en "lengte" parameters. Kunt u deze vormen opnieuw maken? De vierkant teller dient 5/100/5 te zijn, de driehoek teller dient 10/100/10 te zijn en de zeshoek is 2/100/2.'
+      Course 4 Artist Var 9_instruction: 'Hier is het algoritme om een driehoek te tekenen, wijzig het zo dat het in plaats daarvan de variabele"zijden" gebruikt. Vervangen het nummer 3 door de variabele "zijden". Tip: Vergeet niet om het blok "zijden instellen" te gebruiken.'
+      Course 4 Artist Vars 1_instruction: Kunt u me helpen een driehoek te tekenen? Het is 100 pixels lang aan elke kant.
       Course 4 Artist Vars 10_instruction: |
         Here's an algorithm that draws a triangle
         out of smaller triangles. Can you modify it so that it uses the "sides"
@@ -1083,8 +1032,8 @@ nl:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -1854,34 +1803,16 @@ nl:
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
-      NEW Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is
-        100 pixels in length, using a loop?
-      NEW Course 4 Artist Functions 10_instruction: |
-        Click "edit" to fill out the
-        blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: |
-        We have a new function called
-        "draw a line of squares." Feel free to take a look inside the function block
-        to see how we built it. Click on "Run" when your are ready for the next
-        puzzle.
-      NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: you may have to move forward
-        60 pixels and  turn 144 degrees
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      NEW Course 4 Artist Functions 3_instruction: |
-        Here is a new type of Block.
-        It is called a "Function block." Click "Run" to see what it can do. 
+      New Artist Project_instruction: Tekenen iets geweldig! De code wordt opgeslagen als een project dat u op elk gewenst moment naar terug kunt keren.
+      NEW Course 4 Artist Functions 1_instruction: Kun je met behulp van een lus een vierkant tekenen dat 100 pixels lang is?
+      NEW Course 4 Artist Functions 10_instruction: "Klik op 'bewerken' om  de blokken in de functie in te vullen om een 40 pixel vierkant te maken."
+      NEW Course 4 Artist Functions 11_instruction: 'We hebben een nieuwe functie genaamd "teken een lijn van vierkanten." Voel je vrij om een kijkje te nemen in de functieblok om te zien hoe we het gebouwd hebben. Klik op "Ga" wanneer u bent klaar voor de volgende puzzel.'
+      NEW Course 4 Artist Functions 12_instruction: 'Gebruik de functie "teken een lijn van vierkanten" van de laatste puzzel om dit patroon te tekenen."'
+      NEW Course 4 Artist Functions 13_instruction: 'Kunt u een ster tekenen met behulp van de functie "teken een lijn van vierkanten"? Tip: u dient zich  wellicht 60 pixels naar voor te verplaatsen en 144 graden te draaien.'
+      NEW Course 4 Artist Functions 14_instruction: 'Vrije speeltijd! '
+      NEW Course 4 Artist Functions 2_instruction: 'Kun je 3 vierkanten tekenen die 20 pixels van elkaar vandaan staan? Hint: elk vierkant is 100 pixels groot'
+      NEW Course 4 Artist Functions 3_instruction: |-
+        Hier is een nieuw type blok. Het heet een "functie blok." Klik op 'Uitvoeren' om te zien wat het kan doen. 
       NEW Course 4 Artist Functions 4_instruction: |
         Use the "draw a square" function
         to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
@@ -2043,6 +1974,11 @@ nl:
         is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

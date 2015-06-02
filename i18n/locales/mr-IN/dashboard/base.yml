@@ -262,7 +262,7 @@ mr:
       no_section: No assigned section
       trophies: Trophies
     students:
-      name: Name
+      name: नाव
       username: Username
       password: Password
       manage: Manage students
@@ -301,7 +301,7 @@ mr:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
     panel:
       answer_viewer: Answer Viewer
-      student: Student
+      student: विध्यार्थी
       try_it_yourself: Try it yourself
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
@@ -364,7 +364,7 @@ mr:
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Student
+    student: विध्यार्थी
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
@@ -562,7 +562,7 @@ mr:
     share_copy_link: 'Copy the link:'
     close: Close
     more: More
-    name: Name
+    name: नाव
     updated: Updated
     project_type: Project Type
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'

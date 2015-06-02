@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tiếp tục"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "Thiết kế"},
-"designModeHeader":function(d){return "Chế độ thiết kế"},
 "dialogCancel":function(d){return "Huỷ"},
 "dialogOK":function(d){return "Đồng ý"},
 "directionEastLetter":function(d){return "Đông"},

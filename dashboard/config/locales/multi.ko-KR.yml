@@ -161,35 +161,34 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
         ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
-          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
-          <br> size block'
-        Blue colored blocks are associated with __________ ?: Blue colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+          블록 <br>-블록 <br>/블록<br> *블록 <br>0 # 블록 <br>??? # 블록<br>크기 블록'
+        Blue colored blocks are associated with __________ ?: 파란색 블록은 __________와
+          연관이 있는가?
+        a image: 이미지
+        a number: 숫자
+        a string: 문자열
+        boolean: 부울
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Purple colored blocks are associated with __________ ?: 보라색 블록은 __________와
+          연관이 있는가?
+        a image: 이미지
+        a number: 숫자
+        a string: 문자열
+        boolean: 부울
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Teal colored blocks are associated with __________ ?: 청록색 블록은 __________와
+          연관이 있는가?
+        a image: 이미지
+        a number: 숫자
+        a string: 문자열
+        boolean: 부울
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Green colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Green colored blocks are associated with __________ ?: 녹색 블록은 __________와
+          연관이 있는가?
+        a image: 이미지
+        a number: 숫자
+        a string: 문자열
+        boolean: 부울
       4-5 artist multi 1:
         Artist Multiple Choice: 예술가 객관식
         Which blocks draw a rectangle with a perimeter of 100?: 둘레의 길이가 100인 사각형을
@@ -290,20 +289,20 @@
         Multiple Choice: 객관식
         Which one of these items is hardest to describe an algorithm for?: 다음 중 알고리즘으로
           표현하기 가장 어려운 것은?
-        Brushing your teeth: Brushing your teeth
-        Baking cookies: Baking cookies
-        Shopping from a grocery list: Shopping from a grocery list
-        Banana: Banana
+        Brushing your teeth: 양치질
+        Baking cookies: 쿠키를 굽고
+        Shopping from a grocery list: 식료품 리스트를 쇼핑
+        Banana: 바나나
       4-5 Computational Thinking Multi 1:
         Multiple Choice: 객관식
         0: '? 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?'
         1: ': 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?'
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        _____ is a _____ city.: _____ is a _____ city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 시애틀은
+          대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
+        Seattle _____ a _____ _____.: 시애틀 _____ _____ _____입니다.
+        _____ is a _____ city.: _____은 _____ 도시입니다.
+        _____ is _____ a _____.: _____ _____는 _____입니다.
+        Eugene is a _____ city.: Eugene는 _____ 도시입니다.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: 객관식
         Which of these pictures best represents crowdsourcing?: 다음 크라우드 소싱을 가장 잘 표현하는
@@ -314,18 +313,18 @@
         Multiple Choice: 객관식
         Which one of these activities would be best for practicing crowdsourcing?: 클라우드소싱을
           연습하기에 가장 좋은 활동은?
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Brushing your hair: Brushing your hair
-        Washing your face: Washing your face
+        Cleaning your room: 방 청소
+        Eating your dessert: 디저트를 먹는
+        Brushing your hair: 머리를 빗질하는
+        Washing your face: 세수하는
       4-5 Digital Footprint Multi 1:
         Multiple Choice: 객관식
         Which piece of information listed below is okay to share on the internet?: 다음
           중 인터넷을 통해 공유하기 적당한 정보는?
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your address: Your address
-        Your parent's credit card number: Your parent's credit card number
+        Your birthday: 생일
+        Your favorite food: 좋아하는 음식
+        Your address: 주소
+        Your parent's credit card number: 부모의 신용 카드 번호
       4-5 Internet Multi 1:
         Multiple Choice: 객관식
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
@@ -368,9 +367,8 @@
       4-5 Suncatchers Multi 1:
         Multiple Choice: 객관식
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 아래
+          프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -1273,6 +1271,29 @@
         14: '14'
         13: '13'
         10: '10'
+      U2L04 Assessment1:
+        'Routers and Addresses: Question 1': 'Routers and Addresses: Question 1'
+        What does IP stand for?: What does IP stand for?
+        Internet Processing: Internet Processing
+        Internet Protocol: Internet Protocol
+        Information Processing: Information Processing
+        Interstate Protocol: Interstate Protocol
+      U2L04 Assessment4:
+        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
+        Why does the IP address of every device at a particular location start with the same numbers?: Why
+          does the IP address of every device at a particular location start with
+          the same numbers?
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP
+          addresses are based upon zip codes. All computers in a zip code start with
+          the same numbers.
+        IP addresses are hierarchical; each city has an assigned set of numbers.: IP
+          addresses are hierarchical; each city has an assigned set of numbers.
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP
+          addresses are hierarchical; the first few fields identify the domain and
+          subset.
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP
+          addresses are based upon area codes because computers often use phone lines
+          for transmission.
       U3L01 Assessment2:
         Why Programming? Question 2: Why Programming? Question 2
         0: "? \"Complex actions can have easy-to-follow directions if the most basic
@@ -1318,21 +1339,65 @@
           was originally designed for
         The post-state: The post-state
       U3L06-API-multichoice:
-        Multiple Choice: 객관식
-        Choose the option that best answers the question.: Choose the option that
-          best answers the question.
-        What is the primary purpose of an API in a programming language?: What is
-          the primary purpose of an API in a programming language?
-        Application Primary Interactions are fundamental to programming: Application
-          Primary Interactions are fundamental to programming
-        To make programming more complex for those without experience: To make programming
-          more complex for those without experience
-        Programs won't run without good API documentation: Programs won't run without
-          good API documentation
-        To provide high-level functionality that simplifies complex programming tasks: To
-          provide high-level functionality that simplifies complex programming tasks
-        It is impossible to write a program without an API: It is impossible to write
-          a program without an API
+        APIs and Parameters Question 1: APIs and Parameters Question 1
+        Select the best answer: Select the best answer
+        What is NOT the purpose of an API in a programming language?: What is NOT
+          the purpose of an API in a programming language?
+        List the commands and functions of a programming language: List the commands
+          and functions of a programming language
+        Explain the functionality of a programming statements: Explain the functionality
+          of a programming statements
+        To avoid having to memorize all of the language commands: To avoid having
+          to memorize all of the language commands
+        Show examples of programming statements: Show examples of programming statements
+        Auto-correct common programming errors: Auto-correct common programming errors
+        Simplify complex programming tasks: Simplify complex programming tasks
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L08 Assessment1:
+        'Functions with Parameters: Question 1': 'Functions with Parameters: Question
+          1'
+        Which of the following are true?: Which of the following are true?
+        Parameters can only be used once within the body of a function.: Parameters
+          can only be used once within the body of a function.
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions
+          with parameters can be used to prevent the creation of duplicated code.
+        Parameters generalize the solution of a specific problem.: Parameters generalize
+          the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters
+          need not be provided to a function in any particular order.
+      U3L08 Assessment3:
+        'Functions with Parameters: Question 3': 'Functions with Parameters: Question
+          3'
+        There is an error in one line of the following code. What line is it in?: There
+          is an error in one line of the following code. What line is it in?
+        square();: square();
+        function square() {: function square() {
+        penDown();: penDown();
+        for(var i = 0; i < 4; i++){: for(var i = 0; i < 4; i++){
+        moveForward(length);: moveForward(length);
+        turnLeft(90); }: turnLeft(90); }
+        penUp();: penUp();
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two
@@ -1450,17 +1515,6 @@
         function calls: function calls
         event handlers: event handlers
         conditionals: conditionals
-      U3L20 Assessment9:
-        Conditional Basics Question 9: Conditional Basics Question 9
-        Which of the following are not valid operators in Boolean expressions?: Which
-          of the following are not valid operators in Boolean expressions?
-      U3L21 Assessment 1:
-        More Variables Question 1: More Variables Question 1
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED
-          TO FIX Which of the following is a numeric value that can be assigned to
-          a variable?
-        56*61\3+2: 56*61\3+2
-        fifteen: fifteen
       U3L21 Assessment 2:
         More Variables Question 2: More Variables Question 2
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which

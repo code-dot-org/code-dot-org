@@ -274,7 +274,7 @@
       signup: Skráning
       already_registered: Þegar skráð/ur?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: Framvinda %{name}
       progress: Framvinda þín
       lines: 'Samtals línur af kóða: %{lines}'
       close: LOKA
@@ -351,9 +351,9 @@
     student_teacher_disassociated: '%{teacher_name} hefur verið fjarlægð(ur) sem kennari
       %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Skoða svör
       student: nemandi
-      try_it_yourself: Try it yourself
+      try_it_yourself: Prófaðu þetta
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'

@@ -780,7 +780,9 @@ bs:
       Course 4 Artist Vars 8_instruction: 'Vrijeme za slobodno igranje! Eksperimentiši sa brojem stranica koje oblik ima. Možeš li promijeniti algoritam tako da ukupna veličina oblika ostaje nepromijenjena, bez obzira na koliko stranica oblik ima? Savjet: Možda ćeš morati koristiti matematičke blokove (360 podijeljeno sa "stranice" na dva mjesta ovog puta) '
       Course 4 Artist Vars 9_instruction: 'Promijeni ovaj algoritam tako da on koristi varijablu "stranice" umjesto fiksnog broja pri crtanju trokuta. Zamijeni broj 3 sa "stranice" varijablom, i koristi "postavi stranice na" blok.'
       Course 4 Bee 1_instruction: 'Pčela ne može razaznati da li je ovo cvijet ili saće meda. Prvo provjeri da li je ovo cvijet ili saće meda, a zatim pokupi nektar samo ako je u pitanju cvijet. '
-      Course 4 Bee 2_instruction: 'Provjeri svaki objekat da vidiš da li je u pitanju cvijet - ako jeste, pokupi nektar.'
+      Course 4 Bee 2_instruction: |
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: Nepoznati objekat je ili cvijet ili saće meda. Upotrijebi ako/inače blok za sakupljanje nektra u pitanju cvijeta. Inače napravi med (jer je onda u pitanju saće meda).
       Course 4 Bee 4_instruction: Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za nektar. Ovje je ako-inače blok kombinovan sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra.
       Course 4 Bee For Loops 1_instruction: Upotrijebi petlju za sakupljanje nektra iz svakog cvijeta.
@@ -1321,6 +1323,11 @@ bs:
       New Play Lab Project_instruction: Napravi svoju vlastitu priču ili igru! Tvoj kod je spremljen kao projekat i možeš mu se vratiti u bilo koje vrijeme.
       Ninjacat Demo B (copy 1)_instruction: "\r\nHajde da počnemo istraživati jednostavnu video igricu, i da otkrijemo kako radi. Možeš koristiti tipke sa strelicama za kretanje ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

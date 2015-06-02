@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tęsti"},
 "defaultTwitterText":function(d){return "Pažiūrėkite, ką aš sukūriau"},
 "designMode":function(d){return "Dizainas"},
-"designModeHeader":function(d){return "Dizaino režimas"},
 "dialogCancel":function(d){return "Atšaukti"},
 "dialogOK":function(d){return "Gerai"},
 "directionEastLetter":function(d){return "R"},

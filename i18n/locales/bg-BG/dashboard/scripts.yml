@@ -556,10 +556,10 @@ bg:
         CSPPD:
           new stage: нов етап
           Introduction to PD: Въведение в PD
-          title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          What is CSP?: What is CSP?
-          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          title: ' PD принципите на Компютърни науки'
+          description: Онлайн въведение в ECS
+          What is CSP?: Какво е CSP?
+          Exploring CSP Instructional Materials: Проучване на CSP учебни материали
           Impact of Computer Science: Въздействието на компютърните науки
           Growth Mindset: Нагласи за разтеж
           Teaching Strategies: Стратегии за преподаване
@@ -645,6 +645,9 @@ bg:
           Beyond Buttons Toward Apps: Отвъд бутоните към приложения
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -829,11 +832,11 @@ bg:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
-          AppLab: AppLab
-          Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          AppLab: Лаборатория за приложения
+          Online PD: Онлайн PD
+          title: Всички неща!
+          description: Всички типове нива за тестване на потребителски интерфейс
+          Odometer: Километраж
           Text Compression: Компресия на текста
           Pixelation: Пикселизация
         algebraPD2b:
