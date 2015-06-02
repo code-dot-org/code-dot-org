@@ -16,9 +16,6 @@
   border-right: none;
   border-radius: 10px 0 0 10px;
 
-// these make the show/hide handle go away?
-//  overflow-x: hidden;
-//  overflow-y: auto;
   z-index: 100;
 
   .hide-handle,
@@ -108,12 +105,21 @@
   }
 
   .level {
+    text-align: center;
     margin: 10px 0;
   }
 
   .section {
     padding: 0 5px;
-    table, tr {
+
+    h4 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .section-students {
+    &, tr {
       border: 1px solid $light_cyan;
       border-collapse: collapse;
     }
@@ -122,11 +128,6 @@
       padding: 2.5px;
     }
 
-    h4 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
     .section-student {
       background-color: $lightest_gray;
       opacity: 1;
@@ -144,12 +145,20 @@
         text-decoration: none;
       }
 
-      &:hover,
+      &:hover {
+        background-color: $lighter_cyan;
+        font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+        a { color: white; }
+      }
       &.active {
         background-color: $light_cyan;
         font-family: 'Gotham 7r', sans-serif; font-weight: normal;
         a { color: white; }
       }
     }
+  }
+  .scrollable-wrapper {
+    overflow-y: auto;
+    padding: 0 5px;
   }
 }
