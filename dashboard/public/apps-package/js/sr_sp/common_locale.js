@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Настави"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "Dizajn"},
-"designModeHeader":function(d){return "Dizajn mod"},
 "dialogCancel":function(d){return "Откажи"},
 "dialogOK":function(d){return "У реду"},
 "directionEastLetter":function(d){return "Исток"},

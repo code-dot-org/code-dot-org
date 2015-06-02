@@ -1001,7 +1001,8 @@
           като командите са изброени в меню, не се налага да се запомнят
         All of the above: Всички от горните
       PDK5 What is CS:
-        Computer Science is More than Programming: Computer Science is More than Programming
+        Computer Science is More than Programming: Компютърните науки са повече от
+          програмиране
         'A computer program, or "code," is:': 'Компютърна програма, или код, е:'
         a part inside of a computer: част вътре в компютъра
         a set of instructions a person gives a computer to execute: набор от инструкции,
@@ -1226,14 +1227,16 @@
         6 bits: 6 бита
       U1L10 Assessment 2:
         'Assessment: Encoding Text': 'Оценка: Кодиране на текст'
-        0: |
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
-
-          How many bits would you need to encode everything that could be typed on this keyboard?
-        1: |
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
-
-          How many bits would you need to encode everything that could be typed on this keyboard?
+        0: Стандартната QWERTY клавиатура е 47 клавиша, с които изписвате символа
+          на екрана. Всеки един от тези клавиши може да показва и втори знак натискане
+          едновременно и задържане на клавиша "Shift" (Приеми, че всички други клавиши
+          се игнорират по този въпрос).  Колко бита трябват, за да се кодира всичко,
+          което може да се напише на тази клавиатура?
+        1: Стандартната QWERTY клавиатура е 47 клавиша, с които изписвате символа
+          на екрана. Всеки един от тези клавиши може да показва и втори знак натискане
+          едновременно и задържане на клавиша "Shift" (Приеми, че всички други клавиши
+          се игнорират по този въпрос).  Колко бита трябват, за да се кодира всичко,
+          което може да се напише на тази клавиатура?
         3 bits: 3 бита
         4 bits: 4 бита
         5 bits: 5 бита
@@ -1241,17 +1244,17 @@
         7 bits: 7 бита
       U1L11 Assessment 1:
         'Assessment: Sending Formatted Text': 'Оценка: Изпращане на форматиран текст'
-        How many bits are required to store the number "150" in ASCII?: How many bits
-          are required to store the number "150" in ASCII?
+        How many bits are required to store the number "150" in ASCII?: Колко бита
+          са необходими за съхранение на числото "150" в ASCII?
         3 bits: 3 бита
-        8 bits: 8 bits
-        15 bits: 15 bits
-        21 bits: 21 bits
-        30 bits: 30 bits
+        8 bits: 8 бита
+        15 bits: 15 бита
+        21 bits: 21 бита
+        30 bits: 30 бита
       U1L11 Assessment 2:
         'Assessment: Sending Formatted Text': 'Оценка: Изпращане на форматиран текст'
-        'The word "Apple" translated into its ASCII number equivalent is:': 'The word
-          "Apple" translated into its ASCII number equivalent is:'
+        'The word "Apple" translated into its ASCII number equivalent is:': 'Думата
+          Apple"(ябълка), преведена в число в ASCII еквивалент на:'
         097 112 112 108 101: 097 112 112 108 101
         097 108 108 111 119: 097 108 108 111 119
         065 112 112 108 101: 065 112 112 108 101
@@ -1308,76 +1311,145 @@
         10: '10'
         12: '12'
       U1L8 Multiple Choice:
-        'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple
-          Choice Assessment'
-        0: '? You have a coordinate grid that is 96 x 96. What is the minimum number
-          of  bits that you will need to encode a coordinate in that space?'
-        1: ': You have a coordinate grid that is 96 x 96. What is the minimum number
-          of  bits that you will need to encode a coordinate in that space?'
+        'Sending Numbers: Multiple Choice Assessment': 'Изпращане на числа: Избор
+          от множество отговори- оценка'
+        0: '? Имате координатна мрежа, която е 96 x 96. Какъв е минималният брой на
+          битовете, които ще трябва да кодират координа в това пространство?'
+        1: ': Имате координатна мрежа, която е 96 x 96. Какъв е минималният брой на
+          битовете, които ще трябва да  кодират координа в това пространство?'
         16: '16'
         14: '14'
         13: '13'
         10: '10'
+      U2L04 Assessment1:
+        'Routers and Addresses: Question 1': 'Routers and Addresses: Question 1'
+        What does IP stand for?: What does IP stand for?
+        Internet Processing: Internet Processing
+        Internet Protocol: Internet Protocol
+        Information Processing: Information Processing
+        Interstate Protocol: Interstate Protocol
+      U2L04 Assessment4:
+        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
+        Why does the IP address of every device at a particular location start with the same numbers?: Why
+          does the IP address of every device at a particular location start with
+          the same numbers?
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP
+          addresses are based upon zip codes. All computers in a zip code start with
+          the same numbers.
+        IP addresses are hierarchical; each city has an assigned set of numbers.: IP
+          addresses are hierarchical; each city has an assigned set of numbers.
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP
+          addresses are hierarchical; the first few fields identify the domain and
+          subset.
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP
+          addresses are based upon area codes because computers often use phone lines
+          for transmission.
       U3L01 Assessment2:
-        Why Programming? Question 2: Why Programming? Question 2
-        0: "? \"Complex actions can have easy-to-follow directions if the most basic
-          actions are identified in simple-to-understand terms. \nWhich of these is
-          the LEAST basic action in making a sandwich for lunch?\""
-        1: ": \"Complex actions can have easy-to-follow directions if the most basic
-          actions are identified in simple-to-understand terms. \nWhich of these is
-          the LEAST basic action in making a sandwich for lunch?\""
-        Place slices of bread face side up: Place slices of bread face side up
-        Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
-        Spread 1 slice with jelly: Spread 1 slice with jelly
-        Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the
-          other, faces together
-        Serve with soup: Serve with soup
+        Why Programming? Question 2: Защо за програмиране? Въпрос 2
+        0: "? \"Сложни действия могат да имат лесни за следване указания, ако най-основните
+          действия са определени в прости за разбиране условия. \nКое от листа е  основно
+          действие при правене на сандвич за обяд?\""
+        1: "? \"Сложни действия могат да имат лесни за следване указания, ако най-основните
+          действия са определени в прости за разбиране условия. \nКое от листа е  основно
+          действие при правене на сандвич за обяд?\""
+        Place slices of bread face side up: Поставете филията хляб с лицевата страна
+          нагоре
+        Spread 1 slice with peanut butter: Намажете 1 филия с фъстъчено масло
+        Spread 1 slice with jelly: Намажете 1 филия с желе
+        Fit 1 slice on top of the other, faces together: Поставят се едната филия
+          върху другата с  лицата една към друга
+        Serve with soup: Сервирай със супа
       U3L03 Assessment:
-        'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
-        Which of the following is NOT an advantage of using well-designed procedures and functions?: Which
-          of the following is NOT an advantage of using well-designed procedures and
-          functions?
-        They create shorter algorithms that sound like spoken language.: They create
-          shorter algorithms that sound like spoken language.
-        There are fewer lines in the program to debug.: There are fewer lines in the
-          program to debug.
-        The "spoken-language style" makes errors more logically recognizable.: The
-          "spoken-language style" makes errors more logically recognizable.
-        They reduce the level of program abstraction.: They reduce the level of program
-          abstraction.
-        It is easier to divide the work among several programmers.: It is easier to
-          divide the work among several programmers.
-        Logical names make the program code more intuitive/understandable.: Logical
-          names make the program code more intuitive/understandable.
+        'Creating Procedures Part 1: Assessment': 'Създаване на процедури част 1:
+          Оценка'
+        Which of the following is NOT an advantage of using well-designed procedures and functions?: Кое
+          от следните не е предимство за използването на добре разработени процедури
+          и функции?
+        They create shorter algorithms that sound like spoken language.: Те създават
+          по-кратки алгоритми, които звучат като говорим език.
+        There are fewer lines in the program to debug.: Има по-малко линии в програмата
+          за отстраняване на грешки.
+        The "spoken-language style" makes errors more logically recognizable.: '"Говор-
+          език- стил" прави грешките логично по-разпознаваеми.'
+        They reduce the level of program abstraction.: Те намаляват нивото на програмата
+          абстракция.
+        It is easier to divide the work among several programmers.: По-лесно е да
+          се раздели работата между няколко програмисти.
+        Logical names make the program code more intuitive/understandable.: Логическите
+          имена правят програмния код по-интуитивен/разбираемо.
       U3L04 Assessment2:
-        'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question
-          2'
-        0: '? Which of the following would be the LEAST IMPORTANT detail to provide
-          to a programmer who wanted to use a function that you created?'
-        1: ': Which of the following would be the LEAST IMPORTANT detail to provide
-          to a programmer who wanted to use a function that you created?'
-        The name of the function: The name of the function
-        What it does: What it does
-        The pre-state: The pre-state
-        The name of program it was originally designed for: The name of program it
-          was originally designed for
-        The post-state: The post-state
+        'Creating Procedures Part 2: Question 2': 'Създаване на процедури част 2:
+          Въпрос 2'
+        0: '? Кое от следните ще бъде най-малко важен детайл, за да се предостави
+          на един програмист функция, която сте създали?'
+        1: ': Кое от следните ще бъде най-малко важен детайл, за да се предостави
+          на един програмист функция, която сте създали?'
+        The name of the function: Името на функцията
+        What it does: Какво тя прави
+        The pre-state: Предварително състояние
+        The name of program it was originally designed for: Името на програмата, за
+          която първоначално е била създадена
+        The post-state: Състояние след (употреба)
       U3L06-API-multichoice:
-        Multiple Choice: избор от множество отговори
-        Choose the option that best answers the question.: Изберете опцията, която
-          най-добре отговаря на въпроса.
-        What is the primary purpose of an API in a programming language?: Каква е
-          основната цел на API в програмния език?
-        Application Primary Interactions are fundamental to programming: Application
-          Primary Interactions are fundamental to programming
-        To make programming more complex for those without experience: To make programming
-          more complex for those without experience
-        Programs won't run without good API documentation: Programs won't run without
-          good API documentation
-        To provide high-level functionality that simplifies complex programming tasks: To
-          provide high-level functionality that simplifies complex programming tasks
-        It is impossible to write a program without an API: It is impossible to write
-          a program without an API
+        APIs and Parameters Question 1: APIs and Parameters Question 1
+        Select the best answer: Select the best answer
+        What is NOT the purpose of an API in a programming language?: What is NOT
+          the purpose of an API in a programming language?
+        List the commands and functions of a programming language: List the commands
+          and functions of a programming language
+        Explain the functionality of a programming statements: Explain the functionality
+          of a programming statements
+        To avoid having to memorize all of the language commands: To avoid having
+          to memorize all of the language commands
+        Show examples of programming statements: Show examples of programming statements
+        Auto-correct common programming errors: Auto-correct common programming errors
+        Simplify complex programming tasks: Simplify complex programming tasks
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L08 Assessment1:
+        'Functions with Parameters: Question 1': 'Functions with Parameters: Question
+          1'
+        Which of the following are true?: Which of the following are true?
+        Parameters can only be used once within the body of a function.: Parameters
+          can only be used once within the body of a function.
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions
+          with parameters can be used to prevent the creation of duplicated code.
+        Parameters generalize the solution of a specific problem.: Parameters generalize
+          the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters
+          need not be provided to a function in any particular order.
+      U3L08 Assessment3:
+        'Functions with Parameters: Question 3': 'Functions with Parameters: Question
+          3'
+        There is an error in one line of the following code. What line is it in?: There
+          is an error in one line of the following code. What line is it in?
+        square();: square();
+        function square() {: function square() {
+        penDown();: penDown();
+        for(var i = 0; i < 4; i++){: for(var i = 0; i < 4; i++){
+        moveForward(length);: moveForward(length);
+        turnLeft(90); }: turnLeft(90); }
+        penUp();: penUp();
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Buttons and Ids
         What happens when two buttons are given the same id?: What happens when two
@@ -1412,54 +1484,54 @@
           in a separate API
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          feature of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Изберете
+          две (2) от програмните категории по-долу, които са най-годни за желаната
+          функция на играта, описана вляво. '
+        Remember things during play: Спомнете си нещата по време на игра
+        Make decisions: Вземане на решения
+        Make calculations: Изчисления
+        track of time: следене на времето
+        store information permanently: постоянно съхраняване на информация
       U3L18 Controlling Memory and Program Flow 2:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          feature of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        Track of time: Track of time
-        Store information permanently: Store information permanently
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Изберете
+          две (2) от програмните категории по-долу, които са най-годни за желаната
+          функция на играта, описана вляво. '
+        Remember things during play: Спомнете си нещата по време на игра
+        Make decisions: Вземане на решения
+        Make calculations: Изчисления
+        Track of time: следене на времето
+        Store information permanently: постоянно съхраняване на информация
       U3L18 Controlling Memory and Program Flow 3:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left.: 'Select
-          two (2) of the programming categories below that are the best fit for desired
-          behavior of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left.: 'Изберете
+          две (2) от категориите за програмиране по-долу, които са най-добре показват
+          желаното поведение на играта, описана в ляво. '
+        Remember things during play: Спомнете си нещата по време на игра
+        Make decisions: Вземане на решения
+        Make calculations: Изчисления
+        track of time: следене на времето
+        store information permanently: постоянно съхраняване на информация
       U3L18 Controlling Memory and Program Flow 4:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          feature of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Изберете
+          две (2) от програмните категории по-долу, които са най-годни за желаната
+          функция на играта, описана вляво. '
+        Remember things during play: Спомнете си нещата по време на игра
+        Make decisions: Вземане на решения
+        Make calculations: Изчисления
+        track of time: следене на времето
+        store information permanently: постоянно съхраняване на информация
       U3L18 Controlling Memory and Program Flow 5:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          behavior of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left.: 'Изберете
+          две (2) от програмните категории по-долу, които най-добрите подхождат на
+          желаното поведение на играта, описано в ляво. '
+        Remember things during play: Спомнете си нещата по време на игра
+        Make decisions: Вземане на решения
+        Make calculations: Изчисления
+        track of time: следене на времето
+        store information permanently: постоянно съхраняване на информация
       U3L19 - MC what are values of abc:
         So, what's the answer?: So, what's the answer?
         Choose the best answer: Choose the best answer
@@ -1470,42 +1542,30 @@
         a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
         Code does not execute due to error: Code does not execute due to error
       U3L20 Assessment1:
-        Conditional Basics Question 1: Conditional Basics Question 1
-        Which two of the following programming statements did you use when you wrote turtle drawing programs?: Which
-          two of the following programming statements did you use when you wrote turtle
-          drawing programs?
-        sequential statements: sequential statements
-        function calls\t: "function calls\t"
-        event handlers: event handlers
-        conditionals: conditionals
+        Conditional Basics Question 1: 'Условия: Основи  въпрос 1'
+        Which two of the following programming statements did you use when you wrote turtle drawing programs?: Кои
+          две от следните програмни отчети използвате когато пишете програми за костенурката?
+        sequential statements: последователни отчети
+        function calls\t: "функция calls\t"
+        event handlers: манипулатори на събития
+        conditionals: Условия
       U3L20 Assessment2:
-        Conditional Basics Question 2: Conditional Basics Question 2
-        Which program statement reacts to actions by the user?: Which program statement
-          reacts to actions by the user?
-        sequential statements: sequential statements
-        function calls: function calls
-        event handlers: event handlers
-        conditionals: conditionals
+        Conditional Basics Question 2: 'Условия: Основи - въпрос 2'
+        Which program statement reacts to actions by the user?: Кой програмен отчет
+          реагира на действия от страна на потребителя?
+        sequential statements: последователни отчети
+        function calls: Повиквания на функцията
+        event handlers: манипулатори на събития
+        conditionals: Условия
       U3L20 Assessment3:
-        Conditional Basics Question 3: Conditional Basics Question 3
-        Which programming statement executes different code based upon the true or false results?: Which
-          programming statement executes different code based upon the true or false
-          results?
-        sequential statements: sequential statements
-        function calls: function calls
-        event handlers: event handlers
-        conditionals: conditionals
-      U3L20 Assessment9:
-        Conditional Basics Question 9: Conditional Basics Question 9
-        Which of the following are not valid operators in Boolean expressions?: Which
-          of the following are not valid operators in Boolean expressions?
-      U3L21 Assessment 1:
-        More Variables Question 1: More Variables Question 1
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED
-          TO FIX Which of the following is a numeric value that can be assigned to
-          a variable?
-        56*61\3+2: 56*61\3+2
-        fifteen: fifteen
+        Conditional Basics Question 3: 'Условия: Основи - въпрос 3'
+        Which programming statement executes different code based upon the true or false results?: Кое
+          програмиране изпълнява различен код, въз основа на резултатите от вярно
+          или невярно?
+        sequential statements: последователни отчети
+        function calls: Повиквания на функцията
+        event handlers: манипулатори на събития
+        conditionals: Условия
       U3L21 Assessment 2:
         More Variables Question 2: More Variables Question 2
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which
@@ -1521,29 +1581,29 @@
         Descriptive names makes it easier for other programmers to understand the program: Descriptive
           names makes it easier for other programmers to understand the program
       U3L30 Assessment1:
-        'Arrays: Question 1': 'Arrays: Question 1'
-        The last index of an array is 7. How many elements are in the array?: The
-          last index of an array is 7. How many elements are in the array?
+        'Arrays: Question 1': 'Масиви: Въпрос 3'
+        The last index of an array is 7. How many elements are in the array?: Индексът
+          на масива е 7. Колко елементи има в масива?
         7: '7'
         6: '6'
         8: '8'
-        Cannot be determined: Cannot be determined
+        Cannot be determined: Не може да бъде определено
       U3L30 Assessment2:
-        'Arrays: Question 2': 'Arrays: Question 2'
-        What is the index of the third element in an array?: What is the index of
-          the third element in an array?
+        'Arrays: Question 2': 'Масиви: Въпрос 3'
+        What is the index of the third element in an array?: Какво представлява индексът
+          на третия елемент в масива?
         2: '2'
         3: '3'
         4: '4'
-        Cannot be determined: Cannot be determined
+        Cannot be determined: Не може да бъде определено
       U3L30 Assessment3:
-        'Arrays: Question 3': 'Arrays: Question 3'
-        There are 20 elements in an array. What is the index of the last element?: There
-          are 20 elements in an array. What is the index of the last element?
+        'Arrays: Question 3': 'Масиви: Въпрос 3'
+        There are 20 elements in an array. What is the index of the last element?: Има
+          20 елементи в масив. Какъв е индекса на последния елемент?
         20: '20'
         21: '21'
         19: '19'
-        Cannot be determined: Cannot be determined
+        Cannot be determined: Не може да бъде определено
       unique level name here:
         title: Заглавие
         description here: описание тук

@@ -1000,7 +1000,8 @@
           eles
         All of the above: Todas as anteriores
       PDK5 What is CS:
-        Computer Science is More than Programming: Computer Science is More than Programming
+        Computer Science is More than Programming: A ciência da computação é mais
+          que programação
         'A computer program, or "code," is:': 'Um programa de computador, ou "código",
           é:'
         a part inside of a computer: uma parte dentro de um computador
@@ -1235,13 +1236,13 @@
       U1L10 Assessment 2:
         'Assessment: Encoding Text': 'Avaliação: codificação de texto'
         0: |
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          O teclado QWERTY padrão tem 47 teclas que podem colocar caracteres na tela. Cada uma dessas teclas também pode exibir um segundo caractere, segurando a tecla "Shift" ao mesmo tempo (considere que todas as outras teclas são ignoradas nessa questão).
 
-          How many bits would you need to encode everything that could be typed on this keyboard?
+          Quantos bits você precisaria para codificar tudo que pode ser digitado nesse teclado?
         1: |
-          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+          O teclado QWERTY padrão tem 47 teclas que podem colocar caracteres na tela. Cada uma dessas teclas também pode exibir um segundo caractere, segurando a tecla "Shift" ao mesmo tempo (considere que todas as outras teclas são ignoradas nessa questão).
 
-          How many bits would you need to encode everything that could be typed on this keyboard?
+          Quantos bits você precisaria para codificar tudo que pode ser digitado nesse teclado?
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
@@ -1249,8 +1250,8 @@
         7 bits: 7 bits
       U1L11 Assessment 1:
         'Assessment: Sending Formatted Text': 'Avaliação: envio de texto formatado'
-        How many bits are required to store the number "150" in ASCII?: How many bits
-          are required to store the number "150" in ASCII?
+        How many bits are required to store the number "150" in ASCII?: Quantos bits
+          são necessários para armazenar o número "150" em ASCII?
         3 bits: 3 bits
         8 bits: 8 bits
         15 bits: 15 bits
@@ -1258,8 +1259,8 @@
         30 bits: 30 bits
       U1L11 Assessment 2:
         'Assessment: Sending Formatted Text': 'Avaliação: envio de texto formatado'
-        'The word "Apple" translated into its ASCII number equivalent is:': 'The word
-          "Apple" translated into its ASCII number equivalent is:'
+        'The word "Apple" translated into its ASCII number equivalent is:': 'A palavra
+          "Apple", traduzida para o seu número ASCII, equivale a:'
         097 112 112 108 101: 097 112 112 108 101
         097 108 108 111 119: 097 108 108 111 119
         065 112 112 108 101: 065 112 112 108 101
@@ -1316,77 +1317,145 @@
         10: '10'
         12: '12'
       U1L8 Multiple Choice:
-        'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple
-          Choice Assessment'
-        0: '? You have a coordinate grid that is 96 x 96. What is the minimum number
-          of  bits that you will need to encode a coordinate in that space?'
-        1: ': You have a coordinate grid that is 96 x 96. What is the minimum number
-          of  bits that you will need to encode a coordinate in that space?'
+        'Sending Numbers: Multiple Choice Assessment': 'Envio de números: Avaliação
+          de múltipla escolha'
+        0: '? Você tem uma grade de coordenadas de tamanho 96 x 96. Qual é o número
+          mínimo que você precisa para codificar uma coordenada nesse espaço?'
+        1: ': Você tem uma grade de coordenadas de tamanho 96 x 96. Qual é o número
+          mínimo que você precisa para codificar uma coordenada nesse espaço?'
         16: '16'
         14: '14'
         13: '13'
         10: '10'
+      U2L04 Assessment1:
+        'Routers and Addresses: Question 1': 'Routers and Addresses: Question 1'
+        What does IP stand for?: What does IP stand for?
+        Internet Processing: Internet Processing
+        Internet Protocol: Internet Protocol
+        Information Processing: Information Processing
+        Interstate Protocol: Interstate Protocol
+      U2L04 Assessment4:
+        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
+        Why does the IP address of every device at a particular location start with the same numbers?: Why
+          does the IP address of every device at a particular location start with
+          the same numbers?
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP
+          addresses are based upon zip codes. All computers in a zip code start with
+          the same numbers.
+        IP addresses are hierarchical; each city has an assigned set of numbers.: IP
+          addresses are hierarchical; each city has an assigned set of numbers.
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP
+          addresses are hierarchical; the first few fields identify the domain and
+          subset.
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP
+          addresses are based upon area codes because computers often use phone lines
+          for transmission.
       U3L01 Assessment2:
-        Why Programming? Question 2: Why Programming? Question 2
-        0: "? \"Complex actions can have easy-to-follow directions if the most basic
-          actions are identified in simple-to-understand terms. \nWhich of these is
-          the LEAST basic action in making a sandwich for lunch?\""
-        1: ": \"Complex actions can have easy-to-follow directions if the most basic
-          actions are identified in simple-to-understand terms. \nWhich of these is
-          the LEAST basic action in making a sandwich for lunch?\""
-        Place slices of bread face side up: Place slices of bread face side up
-        Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
-        Spread 1 slice with jelly: Spread 1 slice with jelly
-        Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the
-          other, faces together
-        Serve with soup: Serve with soup
+        Why Programming? Question 2: Por que programar? Questão 2
+        0: "? \"Ações complexas podem ter direções fáceis de seguir se as ações mais
+          básicas forem identificadas em termos simples de entender. \nQual dessas
+          é a ação MENOS básica para fazer um sanduíche para o almoço?\""
+        1: ": \"Ações complexas podem ter direções fáceis de seguir se as ações mais
+          básicas forem identificadas em termos simples de entender. \nQual dessas
+          é a ação MENOS básica para fazer um sanduíche para o almoço?\""
+        Place slices of bread face side up: Colocar as fatias de pão viradas para
+          cima
+        Spread 1 slice with peanut butter: Passar manteiga de amendoim em 1 fatia
+        Spread 1 slice with jelly: Passar geleia em 1 fatia
+        Fit 1 slice on top of the other, faces together: Colocar uma fatia sobre a
+          outra, na posição correta
+        Serve with soup: Servir com sopa
       U3L03 Assessment:
-        'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
-        Which of the following is NOT an advantage of using well-designed procedures and functions?: Which
-          of the following is NOT an advantage of using well-designed procedures and
-          functions?
-        They create shorter algorithms that sound like spoken language.: They create
-          shorter algorithms that sound like spoken language.
-        There are fewer lines in the program to debug.: There are fewer lines in the
-          program to debug.
-        The "spoken-language style" makes errors more logically recognizable.: The
-          "spoken-language style" makes errors more logically recognizable.
-        They reduce the level of program abstraction.: They reduce the level of program
-          abstraction.
-        It is easier to divide the work among several programmers.: It is easier to
-          divide the work among several programmers.
-        Logical names make the program code more intuitive/understandable.: Logical
-          names make the program code more intuitive/understandable.
+        'Creating Procedures Part 1: Assessment': 'Criação de procedimentos - Parte
+          1: Avaliação'
+        Which of the following is NOT an advantage of using well-designed procedures and functions?: Qual
+          das seguintes afirmativas NÃO é uma vantagem de usar funções e procedimentos
+          bem projetados?
+        They create shorter algorithms that sound like spoken language.: Eles criam
+          algoritmos menores que soam como uma língua falada.
+        There are fewer lines in the program to debug.: Há menos linhas para depurar
+          no programa.
+        The "spoken-language style" makes errors more logically recognizable.: O "estilo
+          de linguagem falada" torna os erros mais reconhecíveis logicamente.
+        They reduce the level of program abstraction.: Eles reduzem o nível de abstração
+          do programa.
+        It is easier to divide the work among several programmers.: É mais fácil dividir
+          o trabalho entre vários programadores.
+        Logical names make the program code more intuitive/understandable.: Nomes
+          lógicos tornam o código do programa mais intuitivo/compreensível.
       U3L04 Assessment2:
-        'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question
-          2'
-        0: '? Which of the following would be the LEAST IMPORTANT detail to provide
-          to a programmer who wanted to use a function that you created?'
-        1: ': Which of the following would be the LEAST IMPORTANT detail to provide
-          to a programmer who wanted to use a function that you created?'
-        The name of the function: The name of the function
-        What it does: What it does
-        The pre-state: The pre-state
-        The name of program it was originally designed for: The name of program it
-          was originally designed for
-        The post-state: The post-state
+        'Creating Procedures Part 2: Question 2': 'Criação de procedimentos - Parte
+          2: Questão 2'
+        0: '? Qual dos seguintes itens seria o detalhe MENOS IMPORTANTE a fornecer
+          a um programador que queira usar uma função criada por você?'
+        1: ': Qual dos seguintes itens seria o detalhe MENOS IMPORTANTE a fornecer
+          a um programador que queira usar uma função criada por você?'
+        The name of the function: O nome da função
+        What it does: O que ela faz
+        The pre-state: O pré-estado
+        The name of program it was originally designed for: O nome do programa para
+          o qual ela foi originalmente projetada
+        The post-state: O pós-estado
       U3L06-API-multichoice:
-        Multiple Choice: Múltipla Escolha
-        Choose the option that best answers the question.: Escolha a opção que melhor
-          responde à questão.
-        What is the primary purpose of an API in a programming language?: Qual é o
-          objetivo principal de uma API em uma linguagem de programação?
-        Application Primary Interactions are fundamental to programming: A aplicação
-          de interações primárias é fundamental na programação
-        To make programming more complex for those without experience: Para tornar
-          a programação mais complexa para os que não têm experiência
-        Programs won't run without good API documentation: Os programas não serão
-          executados sem uma boa documentação de API
-        To provide high-level functionality that simplifies complex programming tasks: Para
-          fornecer funcionalidades de alto nível que simplificam tarefas de programação
-          complexas
-        It is impossible to write a program without an API: É impossível escrever
-          um programa sem uma API
+        APIs and Parameters Question 1: APIs and Parameters Question 1
+        Select the best answer: Select the best answer
+        What is NOT the purpose of an API in a programming language?: What is NOT
+          the purpose of an API in a programming language?
+        List the commands and functions of a programming language: List the commands
+          and functions of a programming language
+        Explain the functionality of a programming statements: Explain the functionality
+          of a programming statements
+        To avoid having to memorize all of the language commands: To avoid having
+          to memorize all of the language commands
+        Show examples of programming statements: Show examples of programming statements
+        Auto-correct common programming errors: Auto-correct common programming errors
+        Simplify complex programming tasks: Simplify complex programming tasks
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: APIs and Parameters Question 3
+        0: '? Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        1: ': Parameterized functions allow for flexible code. They also prevent redundant
+          code. Which two of these functions illustrate non-redundancy?'
+        forward50( ): forward50( )
+        Left(45): Left(45)
+        forward100( ): forward100( )
+        Left(90): Left(90)
+        forward283( ): forward283( )
+      U3L08 Assessment1:
+        'Functions with Parameters: Question 1': 'Functions with Parameters: Question
+          1'
+        Which of the following are true?: Which of the following are true?
+        Parameters can only be used once within the body of a function.: Parameters
+          can only be used once within the body of a function.
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions
+          with parameters can be used to prevent the creation of duplicated code.
+        Parameters generalize the solution of a specific problem.: Parameters generalize
+          the solution of a specific problem.
+        Parameters need not be provided to a function in any particular order.: Parameters
+          need not be provided to a function in any particular order.
+      U3L08 Assessment3:
+        'Functions with Parameters: Question 3': 'Functions with Parameters: Question
+          3'
+        There is an error in one line of the following code. What line is it in?: There
+          is an error in one line of the following code. What line is it in?
+        square();: square();
+        function square() {: function square() {
+        penDown();: penDown();
+        for(var i = 0; i < 4; i++){: for(var i = 0; i < 4; i++){
+        moveForward(length);: moveForward(length);
+        turnLeft(90); }: turnLeft(90); }
+        penUp();: penUp();
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: Botões e ids
         What happens when two buttons are given the same id?: O que acontece quando
@@ -1422,54 +1491,54 @@
           botões em uma API separada
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
-        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          feature of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Selecione
+          duas (2) das categorias de programação abaixo que melhor servem para o recurso
+          desejado do jogo descrito à esquerda. '
+        Remember things during play: Lembrar coisas durante o jogo
+        Make decisions: Tomar decisões
+        Make calculations: Fazer cálculos
+        track of time: monitorar o tempo
+        store information permanently: armazenar informações permanentemente
       U3L18 Controlling Memory and Program Flow 2:
         Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
-        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          feature of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        Track of time: Track of time
-        Store information permanently: Store information permanently
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Selecione
+          duas (2) das categorias de programação abaixo que melhor servem para o recurso
+          desejado do jogo descrito à esquerda. '
+        Remember things during play: Lembrar coisas durante o jogo
+        Make decisions: Tomar decisões
+        Make calculations: Fazer cálculos
+        Track of time: Monitorar o tempo
+        Store information permanently: Armazenar informações permanentemente
       U3L18 Controlling Memory and Program Flow 3:
         Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
-        Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left.: 'Select
-          two (2) of the programming categories below that are the best fit for desired
-          behavior of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left.: 'Selecione
+          duas (2) das categorias de programação abaixo que melhor servem para o comportamento
+          desejado do jogo descrito à esquerda. '
+        Remember things during play: Lembrar coisas durante o jogo
+        Make decisions: Tomar decisões
+        Make calculations: Fazer cálculos
+        track of time: monitorar o tempo
+        store information permanently: armazenar informações permanentemente
       U3L18 Controlling Memory and Program Flow 4:
         Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
-        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          feature of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of programming categories below that are the best fit for desired feature of the game described at left.: 'Selecione
+          duas (2) das categorias de programação abaixo que melhor servem para o recurso
+          desejado do jogo descrito à esquerda. '
+        Remember things during play: Lembrar coisas durante o jogo
+        Make decisions: Tomar decisões
+        Make calculations: Fazer cálculos
+        track of time: monitorar o tempo
+        store information permanently: armazenar informações permanentemente
       U3L18 Controlling Memory and Program Flow 5:
         Controlling Memory and Control Quiz: Quiz sobre controlador de memória e controle
-        Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left.: 'Select
-          two (2) of programming categories below that are the best fit for desired
-          behavior of the game described at left. '
-        Remember things during play: Remember things during play
-        Make decisions: Make decisions
-        Make calculations: Make calculations
-        track of time: track of time
-        store information permanently: store information permanently
+        Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left.: 'Selecione
+          duas (2) das categorias de programação abaixo que melhor servem para o comportamento
+          desejado do jogo descrito à esquerda. '
+        Remember things during play: Lembrar coisas durante o jogo
+        Make decisions: Tomar decisões
+        Make calculations: Fazer cálculos
+        track of time: monitorar o tempo
+        store information permanently: armazenar informações permanentemente
       U3L19 - MC what are values of abc:
         So, what's the answer?: So, what's the answer?
         Choose the best answer: Choose the best answer
@@ -1480,42 +1549,31 @@
         a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
         Code does not execute due to error: Code does not execute due to error
       U3L20 Assessment1:
-        Conditional Basics Question 1: Conditional Basics Question 1
-        Which two of the following programming statements did you use when you wrote turtle drawing programs?: Which
-          two of the following programming statements did you use when you wrote turtle
-          drawing programs?
-        sequential statements: sequential statements
-        function calls\t: "function calls\t"
-        event handlers: event handlers
-        conditionals: conditionals
+        Conditional Basics Question 1: Noções básicas de condicionais - Questão 1
+        Which two of the following programming statements did you use when you wrote turtle drawing programs?: Que
+          duas, dentre as seguintes instruções de programação, você usou quando você
+          escreveu os programas de desenho da tartaruga?
+        sequential statements: instruções sequenciais
+        function calls\t: "chamadas de função\t"
+        event handlers: manipuladores de evento
+        conditionals: condicionais
       U3L20 Assessment2:
-        Conditional Basics Question 2: Conditional Basics Question 2
-        Which program statement reacts to actions by the user?: Which program statement
-          reacts to actions by the user?
-        sequential statements: sequential statements
-        function calls: function calls
-        event handlers: event handlers
-        conditionals: conditionals
+        Conditional Basics Question 2: Noções básicas de condicionais - Questão 2
+        Which program statement reacts to actions by the user?: Qual instrução do
+          programa reage a ações feitas pelo usuário?
+        sequential statements: instruções sequenciais
+        function calls: chamadas de função
+        event handlers: manipuladores de evento
+        conditionals: condicionais
       U3L20 Assessment3:
-        Conditional Basics Question 3: Conditional Basics Question 3
-        Which programming statement executes different code based upon the true or false results?: Which
-          programming statement executes different code based upon the true or false
-          results?
-        sequential statements: sequential statements
-        function calls: function calls
-        event handlers: event handlers
-        conditionals: conditionals
-      U3L20 Assessment9:
-        Conditional Basics Question 9: Conditional Basics Question 9
-        Which of the following are not valid operators in Boolean expressions?: Which
-          of the following are not valid operators in Boolean expressions?
-      U3L21 Assessment 1:
-        More Variables Question 1: Mais variáveis - questão 1
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: É
-          PRECISO ARRUMAR Qual dos seguintes valores é um valor numérico que pode
-          ser atribuído a uma variável?
-        56*61\3+2: 56*61\3+2
-        fifteen: quinze
+        Conditional Basics Question 3: Noções básicas de condicionais - Questão 3
+        Which programming statement executes different code based upon the true or false results?: Qual
+          instrução de programação executa um código diferente com base em resultados
+          verdadeiros ou falsos?
+        sequential statements: instruções sequenciais
+        function calls: chamadas de função
+        event handlers: manipuladores de evento
+        conditionals: condicionais
       U3L21 Assessment 2:
         More Variables Question 2: Mais variáveis - questão 2
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Quais
@@ -1531,29 +1589,29 @@
         Descriptive names makes it easier for other programmers to understand the program: Nomes
           descritivos tornam a compreensão do programa mais fácil para outros programadores
       U3L30 Assessment1:
-        'Arrays: Question 1': 'Arrays: Question 1'
-        The last index of an array is 7. How many elements are in the array?: The
-          last index of an array is 7. How many elements are in the array?
+        'Arrays: Question 1': 'Arrays: Questão 1'
+        The last index of an array is 7. How many elements are in the array?: O último
+          índice de um array é 7. Quantos elementos há no array?
         7: '7'
         6: '6'
         8: '8'
-        Cannot be determined: Cannot be determined
+        Cannot be determined: Não pode ser determinado
       U3L30 Assessment2:
-        'Arrays: Question 2': 'Arrays: Question 2'
-        What is the index of the third element in an array?: What is the index of
-          the third element in an array?
+        'Arrays: Question 2': 'Arrays: Questão 2'
+        What is the index of the third element in an array?: Qual é o índice do terceiro
+          elemento de um array?
         2: '2'
         3: '3'
         4: '4'
-        Cannot be determined: Cannot be determined
+        Cannot be determined: Não pode ser determinado
       U3L30 Assessment3:
-        'Arrays: Question 3': 'Arrays: Question 3'
-        There are 20 elements in an array. What is the index of the last element?: There
-          are 20 elements in an array. What is the index of the last element?
+        'Arrays: Question 3': 'Arrays: Questão 3'
+        There are 20 elements in an array. What is the index of the last element?: Há
+          20 elementos em um array. Qual é o índice do último elemento?
         20: '20'
         21: '21'
         19: '19'
-        Cannot be determined: Cannot be determined
+        Cannot be determined: Não pode ser determinado
       unique level name here:
         title: título
         description here: descrição aqui

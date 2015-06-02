@@ -92,20 +92,12 @@ sl:
         you make it bigger? Hint: it should be 75 pixels longer on each side.
       2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
       2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
+        Živio! Jaz Zombi umetnik. Jaz rad risati!
+        Pomagaj mi narisati kvadratna očala. Namig: Prehod med očali je 
+        25 pixlov krajši od dolžine kvadrata.
+      2-3 Artist Functions 10_instruction: Imamo dve funkciji, eno za risanje velikega zobnika, drugo pa za risanje malega zobnika. Uporabi funkciji za risanje notranjosti motorja!
+      2-3 Artist Functions 11.5_instruction: 'Tukaj je ista "Draw a hexagon" funkcija. Kaj se zgodi, če se pri vsaki ponovitvi obrneš za 60 stopinj?'
+      2-3 Artist Functions 11_instruction: 'Funkcijo  "draw a square"smo preimenovali v "draw a hexagon", vendar še vedno riše kvadrate! Ali lahko spremeniš funkcijo "draw a hexagon", da nariše hexagon s stranicami 50 pixlov in da narišeš lik z uporabo funkcije?'
       2-3 Artist Functions 12_instruction: |
         Functions are really great for drawing
         complex things multiple times. Can you use the "draw a flower" function
@@ -115,25 +107,13 @@ sl:
         We've provided you with four functions.
         Use them any way you like inside of one or more loops to make pictures that
         you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
+      2-3 Artist Functions 2_instruction: 'Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano "draw a square". Znaš uporabiti funkcijo, "draw a square" za risanje očal? Očala so razmaknjena za 75 pixlov.'
+      2-3 Artist Functions 3_instruction: Uredi funkcijo za risanje kvadrata s stranico dolžine 115, da narišeš večja očala. Očala so tokrat razmaknjena za 45 pixlov.
+      2-3 Artist Functions 4_instruction: 'Uporabi "Ponovi" bloke za risanje teh treh kvadratov.'
       2-3 Artist Functions 7_instruction: |
         Use the "draw a house" function to draw
         two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
+      2-3 Artist Functions 9_instruction: 'Imamo funkcijo "Snežinka". Eksperimentiraj z njo, da narišeš zimsko sceno! Ta level je prost, torej ni določene rešitve za nalogo. Zabavaj se!'
       2-3 Artist Loops 1_instruction: |
         Can you make a hexagon with sides that are
         100 pixels long to finish the cell? Remember, that means that you will only
@@ -1727,8 +1707,8 @@ sl:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2840,6 +2820,11 @@ sl:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2858,11 +2843,7 @@ sl:
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: 'Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano "draw a square". Znaš uporabiti funkcijo, "draw a square" za risanje očal? Očala so razmaknjena za 75 pixlov.'
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer

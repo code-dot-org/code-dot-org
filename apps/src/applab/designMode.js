@@ -1,5 +1,4 @@
-/* global $, Dialog */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
+/* global $ */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -8,7 +7,7 @@ var DesignModeBox = require('./DesignModeBox.jsx');
 var DesignModeHeaders = require('./DesignModeHeaders.jsx');
 var DesignProperties = require('./designProperties.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
-var AssetManager = require('./assetManagement/AssetManager.jsx');
+var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
@@ -253,15 +252,11 @@ designMode.onDepthChange = function (element, depthDirection) {
 };
 
 designMode.serializeToLevelHtml = function () {
-  var s = new XMLSerializer();
-  var divApplab = document.getElementById('divApplab');
-  var clone = divApplab.cloneNode(true);
-  // Remove unwanted classes added by jQuery.draggable.
-  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
-  // things like $().data or $().draggable('destroy'), so I just manually
-  // remove the classes instead.
-  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
-  return s.serializeToString(clone);
+  var divApplab = $('#divApplab');
+  makeUndraggable(divApplab.children());
+  var s = new XMLSerializer().serializeToString(divApplab[0]);
+  makeDraggable(divApplab.children());
+  return s;
 };
 
 /**
@@ -288,43 +283,12 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
-/**
- * Display the "Manage Assets" modal.
- * @param assetChosen {Function} Called when the user chooses an asset. The
- *   "Choose" button in the UI only appears if this optional param is provided.
- * @param typeFilter {String} The type of assets to show and allow to be
- *   uploaded.
- */
-designMode.showAssetManager = function(assetChosen, typeFilter) {
-  var codeDiv = document.createElement('div');
-  var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
-  var dialog = studioApp.createModalDialog({
-    Dialog: Dialog,
-    contentDiv: codeDiv,
-    defaultBtnSelector: 'again-button',
-    id: 'manageAssetsModal'
-  });
-  React.render(React.createElement(AssetManager, {
-    typeFilter : typeFilter,
-    assetChosen: showChoseImageButton ? function (fileWithPath) {
-      dialog.hide();
-      assetChosen(fileWithPath);
-    } : null
-  }), codeDiv);
-
-  dialog.show();
-};
-
 function toggleDragging (enable) {
   var children = $('#divApplab').children();
   if (enable) {
     makeDraggable(children);
   } else {
-    children.each(function() {
-      if ($(this).data('uiDraggable')) {
-        $(this).draggable('destroy');
-      }
-    });
+    makeUndraggable(children);
   }
 }
 
@@ -353,40 +317,83 @@ designMode.toggleDesignMode = function(enable) {
  */
 function makeDraggable (jq) {
   var GRID_SIZE = 5;
-  jq.draggable({
-    cancel: false,  // allow buttons and inputs to be dragged
-    drag: function(event, ui) {
-      // draggables are not compatible with CSS transform-scale,
-      // so adjust the position in various ways here.
 
-      // dragging
-      var div = document.getElementById('divApplab');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-      var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
-      var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / yScale;
+  // For a non-div to be draggable & resizable it needs to be wrapped in a div.
+  jq.each(function () {
+    var elm = $(this);
+    var wrapper = elm.wrap('<div>').parent().resizable({
+      alsoResize: elm,
+      stop: function () {
+        Applab.levelHtml = designMode.serializeToLevelHtml();
+      }
+    }).draggable({
+      cancel: false,  // allow buttons and inputs to be dragged
+      drag: function (event, ui) {
+        // draggables are not compatible with CSS transform-scale,
+        // so adjust the position in various ways here.
 
-      // snap top-left corner to nearest location in the grid
-      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        // dragging
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        var changeLeft = ui.position.left - ui.originalPosition.left;
+        var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
+        var changeTop = ui.position.top - ui.originalPosition.top;
+        var newTop = (ui.originalPosition.top + changeTop) / yScale;
 
-      // containment
-      var container = $('#divApplab');
-      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-      newLeft = Math.min(newLeft, maxLeft);
-      newLeft = Math.max(newLeft, 0);
-      newTop = Math.min(newTop, maxTop);
-      newTop = Math.max(newTop, 0);
+        // snap top-left corner to nearest location in the grid
+        newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-      ui.position.left = newLeft;
-      ui.position.top = newTop;
-    },
-    stop: function(event, ui) {
-      Applab.levelHtml = designMode.serializeToLevelHtml();
+        // containment
+        var container = $('#divApplab');
+        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
+        newLeft = Math.min(newLeft, maxLeft);
+        newLeft = Math.max(newLeft, 0);
+        newTop = Math.min(newTop, maxTop);
+        newTop = Math.max(newTop, 0);
+
+        ui.position.left = newLeft;
+        ui.position.top = newTop;
+      },
+      stop: function () {
+        Applab.levelHtml = designMode.serializeToLevelHtml();
+      }
+    }).css('position', 'absolute');
+
+    wrapper.css({
+      top: elm.css('top'),
+      left: elm.css('left')
+    });
+
+    elm.css({
+      position: ''
+    });
+  });
+}
+
+/**
+ * Inverse of `makeDraggable`.
+ * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ */
+function makeUndraggable(jq) {
+  jq.each(function () {
+    var wrapper = $(this);
+    var elm = $(':first-child', wrapper);
+
+    // Don't unwrap elements that aren't wrapped with a draggable div.
+    if (!wrapper.data('uiDraggable')) {
+      return;
     }
+
+    wrapper.resizable('destroy').draggable('destroy');
+    elm.css({
+      top: wrapper.css('top'),
+      left: wrapper.css('left'),
+      position: 'absolute'
+    });
+    elm.unwrap();
   });
 }
 
@@ -433,7 +440,7 @@ designMode.configureDesignToggleRow = function () {
       screens: ['screen1'],
       onDesignModeButton: throttledDesignModeClick,
       onCodeModeButton: Applab.onCodeModeButton,
-      handleManageAssets: designMode.showAssetManager
+      handleManageAssets: showAssetManager
     }),
     designToggleRow
   );

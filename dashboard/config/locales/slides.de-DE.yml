@@ -465,11 +465,12 @@
           nach wiederholt, so oft du willst.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Um ein Quadrat zu zeichen, kannst du den "vorwärts bewegen" und "nach
+          rechts drehen" Baustein 4 Mal benutzen. Aber der einfachere Weg ist es,
+          dem Computer einmal "vorwärts bewegen" und "Um 90 Grad nach rechts drehen"
+          zu sagen, und ihm dann zu sagen, dieses Aktionspaar 4 Mal zu wiederholen.
+          Dafür musst du den "vorwärts bewegen" und den "nach rechts drehen" Baustein
+          in einen "wiederholen" Baustein setzen.
       5:
         image: notes/frozen2_5.jpg
         text: Denk dran, du kannst die Zahl in dem "Wiederholen"-Baustein verändern,
@@ -482,10 +483,10 @@
           und ich habe in der Schule programmiert.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Eins der wichtigsten Konzepte in der Informatik ist das Definieren neuer
+          Befehle. Die meisten Computersprachen haben nur ungefähr 100 Wörter oder
+          Befehle. Und ehrlich gesagt, die Kunst und Magie liegt darin, deine eigenen
+          neuen Wörter aus diesen Bausteinen zu bauen.
       3:
         image: notes/frozen3_3.jpg
         text: Once you've taught a computer how to do an action once using this sequence

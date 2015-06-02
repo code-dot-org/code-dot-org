@@ -460,7 +460,8 @@
       2-3 maze sq13_instruction: |
         Dear person. Me zombie. Must... get... to sunflower.
         Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
+      2-3 maze sq14_instruction: Dokážeš se dostat ke slunečnici s použitím pouze
+        čtyř bloků?
       2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
       2-3 maze sq16_instruction: |
         Ok, this is similar, but slightly different. Can
@@ -484,40 +485,37 @@
         block when I need it?)
       2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
       2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) \n"
+      4-5 Artist 1_instruction: "Pomoz mi dokreslit mou krabičku. (Každá čára je 300\npixelů
+        dlouhá) \n"
       4-5 Artist 10_instruction: |
         Press "Run" to try the code. Then, repeat it
         enough times to complete the drawing. The colors will be different every time.
       4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
+        Dokonči zelené čáry. Čáry jsou 300 pixelů dlouhé
+        a 15 pixelů od sebe vzdálené.
+      4-5 Artist 2_instruction: Dokážeš opakovat tento kód k dokončení čtverce?
       4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+        Ok, zkus přijít na to, co se stane, když spustíš
+        tento kód (nebo to zkus stisknutím "Spustit"). Pak to opakuj tolikrát, aby
+        se kresba dokončila. Barvy budou (pravděpodobně) pokaždé jiné.
       4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
-      4-5 Artist 5_instruction: What angle do you use?
+        Tento obdélníkový záhon má obvod 600.
+        Dlouhá strana má délku 200. Nakresli obdélník.
+      4-5 Artist 4_instruction: Kolik stupňů je v kruhu? Opakuj bloky k vytvoření
+        kruhu z barev.
+      4-5 Artist 5_instruction: Jaký úhel použiješ?
       4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
+        Tento rovnostranný trojúhelník má úhly 60, 60,
+        a 60 stupňů. Každá strana má 200 pixelů. Dokonči kresbu.
+      4-5 Artist 7_instruction: "Tento pravoúhlý trojúhelník má úhly velikosti 30,
+        60 a 90 \nstupňů. Velikost šikmé strany je dvojnásobek výšky 100 pixelů. Dokonči\nkresbu.\n"
       4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
+        Středová čára na fotbalovém hřišti je kolmá na
+        pomezní čáry. Toto hřiště má obvod 800 pixelů a je 240 pixelů
+        dlouhé. Jak je široké? Nakresli pomezní čáry, brankové čáry a středovou čáru.
       4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
+        Nakresli druhou polovinu tak, aby byl obrazec souměrný.
+        Trojúhelníky jsou rovnostranné a jejich strany jsou 50 pixelů dlouhé.
       4-5 Artist Assessment 1_instruction: |
         Assessment: Use a loop to draw the equilateral
         triangle. Each side is 300 pixels.
@@ -568,9 +566,7 @@
       4-5 Artist For Loops 9_instruction: |
         These circles are size 5, 10, 15, 20,
         25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
+      4-5 Artist Free Draw 1_instruction: Volná kresba! Nakresli co tě napadne.
       4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
@@ -793,43 +789,41 @@
       4-5 Bee Nested Loops Rows_instruction: |
         Gather nectar from the rows of flowers!
         Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 1 (copy 1)_instruction: Drahý člověk. Já zombie. Muset ... dostat ...
+        ke slunečnice.
+      4-5 Maze 1_instruction: Drahý člověk. Já zombie. Muset ... dostat ... ke slunečnice.
+      4-5 Maze 10_instruction: Dokážeš se dostat ke slunečnici s použitím pouze čtyř
+        bloků?
+      4-5 Maze 11_instruction: Dokážeš se dostat ke slunečnici s použitím pouze šesti
+        bloků?
+      4-5 Maze 12_instruction: "Ok, tohle je trochu jiné. Dokážeš to \nv pouhých šesti
+        blocích?\n"
       4-5 Maze 13_instruction: Get me to the pig!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
+      4-5 Maze 2 (copy 1)_instruction: Dostaň zombie ke slunečnici, ale vyhni se masožravce!
+      4-5 Maze 2_instruction: Dostaň zombie ke slunečnici, ale vyhni se masožravce!
+      4-5 Maze 3 (copy 1)_instruction: Muset ... dostat ... ke slunečnice.
+      4-5 Maze 3_instruction: Muset ... dostat ... ke slunečnice.
+      4-5 Maze 4 (copy 1)_instruction: Zkus blok "opakovat", abys použil méně bloků...
+      4-5 Maze 4_instruction: Zkus blok "opakovat", abys použil méně bloků...
       4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+        Dokážeš vyřešit tuto hádanku s využitím
+        co nejmenšího počtu bloků?
       4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+        Dokážeš vyřešit tuto hádanku s využitím
+        co nejmenšího počtu bloků?
       4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+        Dokážeš vyřešit tuto hádanku s využitím
+        co nejmenšího počtu bloků?
       4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
+        Dokážeš vyřešit tuto hádanku s využitím
+        co nejmenšího počtu bloků?
+      4-5 Maze 7_instruction: Drahý člověk. Já zombie. Muset ... dostat ... ke slunečnice.
       4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
+        Použij blok "opakuj", abys dostal zombie ke
+        slunečnici. (Vyhni se masožrovkám!)
+      4-5 Maze 9_instruction: Vytvoř smyčku s blokem "opakovat do".
+      4-5 Maze Assessment 1_instruction: 'Zhodnocení: Dostaň se ke slunečnici.'
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -1383,8 +1377,8 @@
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: "Help me finish drawing my box. (Each line is\n300
-        pixels long) \n"
+      Course 4 Artist 1_instruction: "Pomoz mi dokreslit mou krabičku. (Každá čára
+        je 300\npixelů dlouhá) \n"
       Course 4 Artist 10_instruction: "It's Free Play time! Have fun and draw anything\nyou
         would like. \n"
       Course 4 Artist 2_instruction: |
@@ -1689,8 +1683,8 @@
         first if it is a flower or a honeycomb, and then only gather nectar\nfrom
         it if it is a flower. \n"
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -1818,13 +1812,13 @@
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
+      Course 4 Maze 4_instruction: Zkus blok "opakovat", abys použil méně bloků...
       Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+        Dokážeš vyřešit tuto hádanku s využitím
+        co nejmenšího počtu bloků?
       Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+        Dokážeš vyřešit tuto hádanku s využitím
+        co nejmenšího počtu bloků?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -2802,6 +2796,11 @@
         ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
         \ \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

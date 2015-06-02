@@ -58,12 +58,12 @@ zh:
         video: Unplug9
       Unplug10:
         title: 互联网
-        desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
+        desc: 在本课中，学生们会假装流通过互联网，都在学习有关 web 地址，ip 地址和 DNS。
         pdfs:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: 总结
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11

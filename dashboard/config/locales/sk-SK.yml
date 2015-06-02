@@ -22,7 +22,7 @@
           future: nemôže byť v buducnosti
   hello: Ahoj svet
   welcome_back: Vitajte späť, %{name}
-  submit: Potvrdiť
+  submit: Odoslať
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'
@@ -163,7 +163,7 @@
     error:
       access_denied: Nemáte prístup k štatistikám tejto osoby
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
+    title: 'Uplatní si vyhraté ceny: %{name}'
     provider: 'Poskytovateľ:'
     code: 'Kód:'
     redeem_header: 'Uplatniť:'
@@ -174,7 +174,7 @@
     error: Vaša cena nemôže byť uplatnená, prosím skúste to znova.
     error_us_only: Ponúkaná cena je len pre USA užívateľov.
     error_not_earned: Ešte si nezískal túto cenu.
-    error_already_redeemed: Your prize has already been redeemed.
+    error_already_redeemed: Táto cena už bola uplatnená.
     no_prizes_available: Ľutujeme, ale momentálne máme k dispozícii žiadne ceny.
     teacher_info_required: 'Učiteľské ceny vyžadujú informácie o názve a adrese školy:'
     teacher_email_required: 'Učiteľské ceny vyžadujú mať potvrdenú e-mailovú adresu:'
@@ -182,7 +182,7 @@
       title: Potvrďte prosím
       'no': Nie
       'yes': Áno
-      msg: Are you sure you want to claim the %{prize_name} prize?
+      msg: Naozaj si chcete uplatniť nárok na cenu %{prize_name}?
       msg_student: 'Poznámka: Môžete si vybrať iba jeden druh ceny.'
       msg_publicschool: Prosím potvrďte, že ste učiteľom americkej (USA) verejnej
         školy.
@@ -201,7 +201,7 @@
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: You have earned a prize! (U.S. students only)
+      earned: Získali ste cenu! (Iba študenti z USA)
       not_earned_title: Dokonči tutorial a získaj odmeny (iba USA študenti)
       not_earned: 'Nauč sa všetky pojmy počítačovej techniky, zhromažďuj trofeje %{num_trophies}
         a získaj reálne cien. Môžeš si vybrať medzi 10GB voľného priestoru Dropbox,
@@ -210,9 +210,9 @@
       teacher:
         earned: 15 a viac študentov zhromaždilo všetkých %{num_trophies} trofejí.
           Vyhrali ste cenu učiteľ! (Iba USA učitelia)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
+        not_earned_title: Učiť v triedu, zarob až 1.000 dolárov ako <a target="_blank"
+          href="http://DonorsChoose.org"> DonorsChoose.org</a> kredity (iba pre učiteľov
+          z USA)
         not_earned: To reward first-time computer science teachers, you can earn up
           to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits
           for guiding a classroom through the K-8 intro course. To qualify, you need
@@ -251,7 +251,7 @@
   nav:
     header:
       finished_hoc: Ukončil som svoju "Hodinu kódovania"
-      sign_in_to_save: Sign in to save progress
+      sign_in_to_save: Pre uloženie pokroku je nutné sa prihlásiť
       free_play:
         playlab: Vytvoriť aplikáciu
         artist: Nakresliť niečo
@@ -267,7 +267,7 @@
       signup: Zaregistrovať sa
       already_registered: Ste už zaregistrovaný?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: Pokrok pre užívateľa %{name}
       progress: Váš pokrok
       lines: 'Počet riadkov kódu: %{lines}'
       close: ZAVRIEŤ
@@ -354,17 +354,17 @@
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (leave blank if you don't want to change it)
     current_password_hint: (we need your current password to confirm your changes)
-    delete: Delete your account
+    delete: Zmazať svoj účet
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
   user_level:
-    completed: Completed
+    completed: Dokončené
     tried: Tried
   user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
+    recent_activity: Posledná aktivita
+    show_more: Zobraziť viac
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio

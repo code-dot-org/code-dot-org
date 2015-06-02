@@ -379,7 +379,7 @@
           you've written code to create a square.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 「正方形を作成」という関数として定義することができます。
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple
