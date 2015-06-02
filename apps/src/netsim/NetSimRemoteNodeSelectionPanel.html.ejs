@@ -189,7 +189,8 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           buttons.push(buttonMarkup(
               buttonText,
               'netsim-lobby-add-router',
-              ['secondary']));
+              ['secondary']
+          ));
         }
 
         if (levelConfig.showLogBrowserButton) {
@@ -200,7 +201,8 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
               {
                 'data-toggle':'modal',
                 'data-target':'#router-log-modal'
-              }));
+              }
+          ));
         }
 
         if (buttons.length > 0) {
