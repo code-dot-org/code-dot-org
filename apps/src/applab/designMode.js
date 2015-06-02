@@ -57,7 +57,6 @@ designMode.createElement = function (elementType, left, top) {
   parent.appendChild(element);
   makeDraggable($(element));
   designMode.editElementProperties(element);
-  designMode.serializeToLevelHtml();
 
   return element;
 };
@@ -208,7 +207,6 @@ designMode.onPropertyChange = function(element, name, value) {
     default:
       throw "unknown property name " + name;
   }
-  designMode.serializeToLevelHtml();
 };
 
 designMode.onDonePropertiesButton = function() {
@@ -220,7 +218,6 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if ($(element).hasClass('screen')) {
     designMode.changeScreen('screen1');
   }
-  designMode.serializeToLevelHtml();
   designMode.clearProperties();
 };
 
@@ -342,6 +339,8 @@ designMode.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  designMode.serializeToLevelHtml();
 
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
@@ -475,6 +474,11 @@ designMode.configureDesignToggleRow = function () {
   designMode.changeScreen(firstScreen);
 };
 
+/**
+ * Changes the active screen by toggling all screens to be non-visible, unless
+ * they match the provided screenId. Also updates our dropdown to reflect the
+ * change, and opens the element property editor for the new screen.
+ */
 designMode.changeScreen = function (screenId) {
   var screenIds = [];
   $('.screen').each(function () {
@@ -497,7 +501,6 @@ designMode.changeScreen = function (screenId) {
     );
   }
 
-  designMode.serializeToLevelHtml();
   designMode.editElementProperties(document.getElementById(screenId));
 };
 
