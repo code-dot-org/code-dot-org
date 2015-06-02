@@ -11,6 +11,7 @@
 /* global $ */
 'use strict';
 
+var _ = require('../utils').getLodash();
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
@@ -69,61 +70,39 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.render();
 };
 
-function makeStringSorter(logEntryToSortString) {
-  return function (logEntries) {
-    var sortProxy = logEntries.map(function (entry, index) {
-      return {
-        index: index,
-        sortValue: logEntryToSortString(entry)
-      };
-    });
+NetSimRouterLogModal.iterateeMap = {
 
-    sortProxy.sort(function (a, b) {
-      return a.sortValue.localeCompare(b.sortValue);
-    });
-
-    return sortProxy.map(function (proxy) {
-      return logEntries[proxy.index];
-    });
-  };
-}
-
-NetSimRouterLogModal.sortOperations = {
-
-  'timestamp': function (logEntries) {
-    logEntries.sort(function (a, b) {
-      return a.timestamp - b.timestamp;
-    });
-    return logEntries;
+  'timestamp': function (logEntry) {
+    return logEntry.timestamp;
   },
 
-  'logged-by': makeStringSorter(function (logEntry) {
+  'logged-by': function (logEntry) {
     var originNode = logEntry.getOriginNode();
     if (originNode) {
       return originNode.getDisplayName();
     }
     return logEntry.nodeID.toString(10);
-  }),
+  },
 
-  'status': makeStringSorter(function (logEntry) {
+  'status': function (logEntry) {
     return logEntry.getLocalizedStatus();
-  }),
+  },
 
-  'from-address': makeStringSorter(function (logEntry) {
+  'from-address': function (logEntry) {
     return logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS);
-  }),
+  },
 
-  'to-address': makeStringSorter(function (logEntry) {
+  'to-address': function (logEntry) {
     return logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS);
-  }),
+  },
 
-  'packet-info': makeStringSorter(function (logEntry) {
+  'packet-info': function (logEntry) {
     return logEntry.getLocalizedPacketInfo();
-  }),
+  },
 
-  'message': makeStringSorter(function (logEntry) {
+  'message': function (logEntry) {
     return logEntry.getMessageAscii();
-  })
+  }
 
 };
 
@@ -133,8 +112,8 @@ NetSimRouterLogModal.sortOperations = {
 NetSimRouterLogModal.prototype.render = function () {
 
   // Sort before rendering
-  var sortOperation = NetSimRouterLogModal.sortOperations[this.sortBy_];
-  var sortedLogEntries = sortOperation(this.logEntries_);
+  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
+  var sortedLogEntries = _.sortBy(this.logEntries_, iterateeFunction);
   if (this.sortDescending_) {
     sortedLogEntries.reverse();
   }
