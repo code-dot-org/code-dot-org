@@ -277,8 +277,9 @@ var drawDiv = function () {
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
   if (Applab.levelHtml === '') {
-    // On clear gives us a fresh start
+    // On clear gives us a fresh start, including our default screen.
     designMode.onClear();
+    designMode.serializeToLevelHtml();
   }
 };
 

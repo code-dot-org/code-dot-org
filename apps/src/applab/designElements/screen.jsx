@@ -42,7 +42,7 @@ module.exports = {
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
-    element.style.display = 'block';
+    element.style.display = 'inline';
     element.style.height = Applab.appHeight + 'px';
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';

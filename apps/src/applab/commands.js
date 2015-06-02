@@ -149,7 +149,9 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
 }
 
 function activeScreen() {
-  return $('.screen').filter(':visible').first()[0];
+  return $('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first()[0];
 }
 
 // (brent) We may in the future also provide a second option that allows you to
