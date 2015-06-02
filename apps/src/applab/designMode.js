@@ -316,11 +316,7 @@ function toggleDragging (enable) {
   if (enable) {
     makeDraggable(children);
   } else {
-    children.each(function() {
-      if ($(this).data('uiDraggable')) {
-        $(this).draggable('destroy');
-      }
-    });
+    makeUndraggable(children);
   }
 }
 
@@ -401,7 +397,7 @@ function makeDraggable (jq) {
 
     elm.css({
       position: ''
-    })
+    });
   });
 }
 
@@ -413,6 +409,11 @@ function makeUndraggable(jq) {
   jq.each(function () {
     var wrapper = $(this);
     var elm = $(':first-child', wrapper);
+
+    // Don't unwrap elements that aren't wrapped with a draggable div.
+    if (!wrapper.data('uiDraggable')) {
+      return;
+    }
 
     wrapper.resizable('destroy').draggable('destroy');
     elm.css({
