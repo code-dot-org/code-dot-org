@@ -186,8 +186,8 @@
   homepage_action_text_learn: התחל ללמוד
   homepage_action_text_signpetition: חתום על העצומה
   homepage_signpetition_dropdown: חתום על העצומה שלנו;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
+  homepage_banner_text_main: Code.org הנהלת המכללה יוצרים ברית לשפר את המגוון במדעי
+    המחשב.
   homepage_banner_text_link: למד עוד
   homepage_slot_text_title_hoc: שעה של קוד
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
@@ -287,7 +287,7 @@
   dashboard_landing_video_player: נסה את נגן הוידאו החדש שלנו בבית ספרך
   dashboard_landing_progress_title: התקדמות השיעור הראשי
   dashboard_landing_progress_biggest: . זאת ההתקדמות עבור מקטע הכי גדול שלך.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
+  dashboard_landing_view_progress: הצג התקדמות עבור %{biggest_section}
   dashboard_landing_available_title: קורסים זמינים
   dashboard_landing_available_courses: להלן הקורסים הזמינים כעת עבור התלמידים שלך
     ולך.
@@ -330,24 +330,21 @@
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: שם החלק
-  dashboard_sections_choose_secret: If you would like to provide accounts to your
-    students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
-  dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
-    each student.
-  dashboard_sections_secret_picture: A <b>picture</b> allows you to set a secret picture
-    for each student, ideal for younger students who can't yet type.
-  dashboard_sections_secret_none: If you would like your students to manage their
-    own accounts, including choosing their own passwords, choose a secret type of
-    <b>none</b>.
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing
-    account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
-  dashboard_students_new_section: You've created a new section! Now add your students
-    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_sections_choose_secret: אם ברצונך לספק חשבונות לתלמידיך, בחרו סוג הסודי
+    של <b>מילה</b> או <b>תמונה</b> עבור מקטע זה.
+  dashboard_sections_secret_word: <b>Word</b> מאפשר לך להגדיר מילה סודית עבור כל תלמיד.
+  dashboard_sections_secret_picture: <b>התמונה</b> מאפשר לך להגדיר תמונה סודית עבור
+    כל תלמיד, אידיאלי עבור תלמידים צעירים שעדיין לא יודעים להקליד.
+  dashboard_sections_secret_none: אם תרצו שהתלמידים שלכם ינהלו את החשבונות בעצמם,
+    כולל בחירת הסיסמאות שלהם, בחרו סוג הסודי של <b>none</b>.
+  dashboard_sections_print_secrets: ואז ניתן להדפיס גיליון של כרטיסים המכיל את פרטי
+    החשבון שיחולקו לסטודנטים שלך בנפרד.
+  dashboard_sections_switch_section: 'בורר מקטע:'
+  dashboard_students_add_student: הוסף תלמיד
+  dashboard_students_add_students: להוסיף מספר סטודנטים
+  dashboard_students_add_multiple: 'הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:'
+  dashboard_students_new_section: יצירת מקטע חדש! עכשיו , הוסף את התלמידים שלך באמצעות
+    הלחצנים <b>הוסף תלמיד</b>, <b>להוסיף מספר התלמידים</b> לעיל.
   dashboard_students_placeholder_name: שם תלמיד
   dashboard_students_name: שם
   dashboard_students_progress: התקדמות
@@ -357,26 +354,26 @@
   dashboard_students_female: אישה
   dashboard_students_secret: סוד
   dashboard_students_password: סיסמה
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_username: 'שם משתמש: %{student_username}'
+  dashboard_students_email: 'דוא"ל: %{student_email}'
   dashboard_students_completed_levels: שלבים שהושלמו
   dashboard_students_total_lines: שורות קוד
   dashboard_students_show_secret: הראה סוד
-  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_auto_generated: מחולל באופן אוטומטי
   dashboard_students_reset_secret: אפס סוד
   dashboard_students_reset_password: אפס סיסמה
   dashboard_students_share_section: 'שתף את חלק הכניסה עם התלמידים שלך:'
   dashboard_students_print_info: הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך.
   dashboard_students_secret_picture: תמונה סודית
-  dashboard_students_reset_picture: You may reset a student's secret picture at any
-    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
-    picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word: Secret Word
-  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
-    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
-    words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
+  dashboard_students_reset_picture: תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי
+    בחירת <b>הצג את סוד</b> ולאחר מכן <b>אפס את הסוד</b>. תמונה סודית חדשה תופק עבור
+    אותו תלמיד בה יוכל להשתמש בעת הכניסה.
+  dashboard_students_secret_word: המילה הסודית
+  dashboard_students_reset_word: 'תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי
+    בחירת <b>הצג את הסוד</b> ולאחר מכן <b>אפס את הסוד</b>. זוג חדש של מילים סודיות
+    יופק עבור אותו תלמיד בהם יוכל להשתמש בעת הכניסה. '
+  dashboard_students_join_link: הורה לתלמידיך ליצור חשבונות משלהם ולהצטרף לתחום שלך
+    ב
   dashboard_students_no_email: If your students do not have email addresses, or you
     would like to create accounts for them, change this section's secret type to <b>word</b>
     or <b>picture</b>.
@@ -413,21 +410,21 @@
   dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  stats_hoc_2013_image_alt: סטטיסטיקה של  Hour of Code 2013
   dashboard_teacher: מורה
   dashboard_student: תלמיד
   dashboard_sections_email_question: האם לכל התלמידים יש כתובת דואר תקינה?
-  dashboard_sections_account_creation_question: Who creates the student's account?
-  dashboard_sections_password_question: What do students use as a "password"?
-  dashboard_sections_picture_account_creation: A picture assigned by Code.org
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
-  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_account_creation_question: מי יוצר את החשבון של התלמיד?
+  dashboard_sections_password_question: במה תלמידים משתמשים בתור "סיסמה"?
+  dashboard_sections_picture_account_creation: תמונה שהוקצה על-ידי Code.org
+  dashboard_sections_word_account_creation: מילה פשוטה שהוקצה על-ידי Code.org
+  dashboard_sections_sign_in_question: מהיכן התלמידים מתחברים?
   dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
-  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
-  dashboard_sections_password_account_creation: Student-created text password
-  dashboard_sections_login_type_explanation: This table helps explain which of these
-    login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
+  dashboard_sections_sign_in_main: http://code.org ולחצו על "כניסה"
+  dashboard_sections_password_account_creation: סיסמת טקסט שנוצרה על-ידי התלמיד
+  dashboard_sections_login_type_explanation: טבלה זו עוזרת להסביר אילו מסוגי הכניסה,
+    <b>תמונה, מילה, או דוא"ל</b>, תרצה לבחור עבור אזור מסויים.
+  dashboard_faq: שאלות נפוצות
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: למד עוד
@@ -436,59 +433,59 @@
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: הדרכות בשפה שלך
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_domestic: הדרכות בשפה האנגלית
+  carousel_heading_beginners: הדרכות למתחילים
+  carousel_heading_javascript: הדרכות שמלמדות JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  how_to_teach_hoc: How to Teach an Hour of Code
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
+  carousel_heading_university: קורסים אוניברסיטאים באינטרנט
+  carousel_heading_webpages: למד ליצור דפי אינטרנט
+  carousel_heading_robots: למד לתכנת בעזרת רובוטים
+  carousel_heading_ide: פלטפורמות פופולריות בקרב מורים
+  educator_notes: הערות מורה
+  how_to_teach_hoc: כיצד ללמד "שעה של קוד"
+  more_resources_educators: משאבים נוספים עבור מורים ומחנכים
+  participants: משתתפים
+  teachers_notes: ההערות למורה
+  teachers_notes_hoc: 'מורים: לקרוא הערות מחנך חשובות כאן'
+  previous: הקודם
+  next: הבא
+  older_systems: הדרכות שעובדות על מערכות ישנות יותר
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  mobile_devices: הדרכות עבור התקנים ניידים
   frozen_name: Code with Anna and Elsa
   codeorg_name: כתוב את תוכנת המחשב הראשונה שלך
   codeintl_name: כתוב את תוכנת המחשב הראשונה שלך
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
-  khanpt_name: An introduction to JavaScript
-  khanhe_name: An introduction to JavaScript
-  khanfr_name: An introduction to JavaScript
-  khanpl_name: An introduction to JavaScript
-  tynker_name: Build your own game
-  scratch_name: Get creative with coding
+  khan_name: מבוא ל-JavaScript
+  khanes_name: מבוא ל-JavaScript
+  khanpt_name: מבוא ל-JavaScript
+  khanhe_name: מבוא ל-JavaScript
+  khanfr_name: מבוא ל-JavaScript
+  khanpl_name: מבוא ל-JavaScript
+  tynker_name: בנה משחק משלך
+  scratch_name: היה יצירתי עם קידוד
   lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
+  thinkersmith_name: חברי הרובוטיים
   condcards_name: Conditionals with Cards
   lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  codehs_name: למד לקודד עם קרל הכלב
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: Build a Game with JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: Eliza the Chatterbot Doctor
+  codeavengers_name: בנה משחק עם JavaScript
+  processing_name: לצייר בעזרת קוד
+  robomind_name: תכנת רובוט וירטואלי
+  groklearning_name: אלייזה הרופאה הרובו-דברנית
   quorum_name: Accessible programming (with screenreader support)
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable (pre-readers welcome)
   tynkerapp_name: Tynker - on tablets
-  robomindnl_name: Program a virtual robot
+  robomindnl_name: תכנת רובוט וירטואלי
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
   makegameswithus_name: Build an iPhone game in your browser!
@@ -509,11 +506,11 @@
   khanhe_gradelevel: Middle school +
   khanfr_gradelevel: Middle school +
   khanpl_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  tynker_gradelevel: גילאי 5-13
+  scratch_gradelevel: גילאי 8 +
   lightbot_gradelevel: כל הגילאים
   thinkersmith_gradelevel: כל הגילאים
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: גילאי 8-12
   lightbotintl_gradelevel: כל הגילאים
   codehs_gradelevel: בית ספר תיכון
   codecademy_gradelevel: בית ספר תיכון
@@ -521,24 +518,24 @@
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
   processing_gradelevel: בית ספר תיכון
-  robomind_gradelevel: Ages 8-13
+  robomind_gradelevel: גילאי 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
   codespark_gradelevel: בית ספר יסודי
   kodable_gradelevel: בית ספר יסודי
-  tynkerapp_gradelevel: Ages 5-13
-  robomindnl_gradelevel: Ages 8-13
+  tynkerapp_gradelevel: גילאי 5-13
+  robomindnl_gradelevel: גילאי 8-13
   flappy_gradelevel: גילאי 4-104
   bitsbox_gradelevel: בית ספר יסודי
   makegameswithus_gradelevel: בית ספר תיכון
   touchdevelop_gradelevel: בית ספר תיכון
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: כל הגילאים
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
+  thinkersmith2_gradelevel: גילאי 8 +
+  kodableunplugged_gradelevel: גילאי 8-13
+  projguts_gradelevel: גילאי 10-13
   hourofcode_gradelevel: גילאי 4-104
-  frozen_gradelevel: Ages 8+
+  frozen_gradelevel: גילאי 8 +
   playlab_gradelevel: גילאי 4-104
   codeorg_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
@@ -553,7 +550,7 @@
   scratch_platformtext: דפדפנים במחשב נייח בלבד (לא טבלטים)
   lightbot_platformtext: כל הדפדפנים ו iOS, אנדרואיד או קונסולת משחקים
   thinkersmith_platformtext: ללא חיבור
-  condcards_platformtext: Unuplugged
+  condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
   codehs_platformtext: דפדפנים מודרנים. (קורס ההמשך הנו בתשלום)
   codecademy_platformtext: Modern web browsers. iOS, Android apps
@@ -573,12 +570,12 @@
   makegameswithus_platformtext: Modern Web browsers
   touchdevelop_platformtext: Modern browsers, smartphones, all devices
   appinventor_platformtext: Modern browsers + Android
-  blockly_platformtext: Modern browsers only
+  blockly_platformtext: דפדפנים מודרניים בלבד
   thinkersmith2_platformtext: ללא חיבור
   kodableunplugged_platformtext: ללא חיבור
   projguts_platformtext: ללא חיבור
   hourofcode_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
-  frozen_platformtext: Modern browsers + tablets
+  frozen_platformtext: דפדפנים מודרניים + טאבלטים
   playlab_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   codeorg_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
   codeintl_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
@@ -592,11 +589,10 @@
   tynker_shortdescription: למד לכתוב קוד על ידי פתירת חידות מהנות ובנה משחקי מובייל
     משלך.
   scratch_shortdescription: Create interactive games, stories, and animations.
-  lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and
-    loops!
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: A game to teach coding concepts
+  lightbot_shortdescription: תכנת את Lightbot כדי לפתור חידות באמצעות פרוצדורות וחזרות!
+  thinkersmith_shortdescription: הדרכה לא מכוונת עבור קבוצה ללא התקנים
+  condcards_shortdescription: למד אלגוריתמים עם חפיסת קלפים
+  lightbotintl_shortdescription: משחק המלמד את עקרונות הקידוד
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro
     to programming!
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser
@@ -769,7 +765,7 @@
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Get creative with coding
+  scratch_beyond_name: היה יצירתי עם קידוד
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
@@ -778,11 +774,11 @@
   pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
+  robomind_beyond_name: תכנת רובוט וירטואלי
   makegameswithus_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hour of Code
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
+  codehs_beyond_name: למד לקודד עם קרל הכלב
   udemy_beyond_name: Online Programming Courses
   lynda_beyond_name: Online Programming Courses
   edx_beyond_name: Harvard CS50 class
@@ -805,8 +801,8 @@
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: גילאי 4-104
   khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  tynker_beyond_gradelevel: גילאי 5-13
+  scratch_beyond_gradelevel: גילאי 8 +
   lightbot_beyond_gradelevel: כל הגילאים
   codecademy_beyond_gradelevel: בית ספר תיכון
   kodable_beyond_gradelevel: בית ספר יסודי
@@ -815,7 +811,7 @@
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: בית ספר תיכון
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: גילאי 8-13
   makegameswithus_beyond_gradelevel: בית ספר תיכון
   appinventor_beyond_gradelevel: Middle school +
   touchdevelop_beyond_gradelevel: בית ספר תיכון
@@ -826,8 +822,8 @@
   coursera_beyond_gradelevel: University
   udacity_beyond_gradelevel: University
   teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
+  kodu_beyond_gradelevel: גילאי 8 +
+  cargobot_beyond_gradelevel: גילאי 8 +
   kidsruby_beyond_gradelevel: Ages 12+
   w3schools_beyond_gradelevel: Ages 12+
   codeavengers_beyond_gradelevel: Middle school +
@@ -835,11 +831,11 @@
   codecombat_beyond_gradelevel: Middle school +
   codea_beyond_gradelevel: High school +
   lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
+  finch_beyond_gradelevel: גילאי 8 +
   arduino_beyond_gradelevel: High school +
   processing_beyond_gradelevel: בית ספר תיכון
   alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
+  sphero_beyond_gradelevel: גילאי 8 +
   codeorg_beyond_platformtext: Modern browsers, tablets
   khan_beyond_platformtext: Modern Web browsers
   tynker_beyond_platformtext: Modern web browsers ($$ required)
@@ -882,7 +878,7 @@
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create interactive games, stories, and animations.
-  lightbot_beyond_shortdescription: A game to teach coding concepts
+  lightbot_beyond_shortdescription: משחק המלמד את עקרונות הקידוד
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
   scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
