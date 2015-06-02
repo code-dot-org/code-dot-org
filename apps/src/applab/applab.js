@@ -873,6 +873,7 @@ Applab.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
+  designMode.serializeToLevelHtml();
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);

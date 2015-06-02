@@ -336,7 +336,6 @@ $.extend( $.simulate.prototype, {
       }
       obj.simulateEvent(target, name, param);
     }
-
     simulateEvent(this, target, "mousedown", coord);
 
     for ( ; i < moves ; i++ ) {
