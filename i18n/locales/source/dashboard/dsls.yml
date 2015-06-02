@@ -121,6 +121,8 @@ en:
         description here: description here
       CSPPD instructional materials:
         CSPPD instructional materials: CSPPD instructional materials
+      CSPPD materials overview:
+        CSP materials walkthrough: CSP materials walkthrough
       CSPPD postsurvey: {}
       CSPPD presurvey: {}
       CSPPD program overview:
@@ -395,6 +397,12 @@ en:
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         U1L13 Text Compression: U1L13 Text Compression
+      U1L14 Student Lesson Summary:
+        description here: description here
+        title: title
+      U1L15 Student Lesson Summary:
+        description here: description here
+        title: title
       U1L16 Student Lesson Introduction:
         description here: description here
         title: title
@@ -441,14 +449,11 @@ en:
         description here: description here
         title: title
       U2L2 Student Lesson Introduction:
-        description here: description here
-        title: title
+        The Need for Addressing: The Need for Addressing
       U2L3 Student Lesson Introduction:
-        description here: description here
-        title: title
+        Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       U2L4 Student Lesson Introduction:
-        description here: description here
-        title: title
+        U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
         description here: description here
         title: title
@@ -470,6 +475,20 @@ en:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       U3L03 Student Lesson Introduction:
         Creating Procedures Part 1: Creating Procedures Part 1
+      U3L05 Student Lesson Introduction:
+        Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+      U3L06 Student Lesson Introduction:
+        APIs and Function Parameters: APIs and Function Parameters
+      U3L07 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
+      U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Creating Functions with Parameters
+      U3L09 Student Lesson Introduction:
+        'Scene Design Part 1: Plan ': 'Scene Design Part 1: Plan '
+      U3L10 Student Lesson Introduction:
+        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+      U3L11 Student Lesson Introduction:
+        'Scene Design Part 3: Reflection ': 'Scene Design Part 3: Reflection '
       U3L12 - Mission Unsortable:
         description here: description here
         title: title
@@ -576,6 +595,9 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      a bit about pixels:
+        kevin systrom pixel video: kevin systrom pixel video
+        pixel video: pixel video
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -707,6 +729,18 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      CSPPD AP quiz:
+        AP Assessment Matching: AP Assessment Matching
+        AP matching: AP matching
+        Create Task: Create Task
+        End-of-year exam, common with all AP courses: End-of-year exam, common with all AP courses
+        Explore Task: Explore Task
+        Fixed-response questions: Fixed-response questions
+        Programming projects that demonstrate student understanding of algorithms and abstraction: Programming projects that demonstrate student understanding of algorithms and abstraction
+        Written report about innovations in computing: Written report about innovations in computing
+        ap matching: ap matching
+        match the assessment-type with the description below: match the assessment-type with the description below
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -820,6 +854,10 @@ en:
         Documenting Your Course Goals: Documenting Your Course Goals
       CSPPD impact in program:
         Impact of Computing: Impact of Computing
+      CSPPD materials question1:
+        CSP curricular materials: CSP curricular materials
+        ? 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
+        : 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
       CSPPD program overlap:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
@@ -839,6 +877,8 @@ en:
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+      Matt Test Level:
+        Sending Bits:Getting Started: Sending Bits:Getting Started
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
@@ -901,6 +941,8 @@ en:
       Test Markdown level:
         Enter prompt here: Enter prompt here
         Enter title here: Enter title here
+      Trent Test Level:
+        Enter title here: Enter title here
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
@@ -916,14 +958,25 @@ en:
         'Reflection: Data Storage': 'Reflection: Data Storage'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 Assessment 1:
-        'Assessment 1: Text Compression': 'Assessment 1: Text Compression'
-        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write (in the space below) a segment of text that should compress effectively and efficiently.
+        'Conclusion 1: Text Compression': 'Conclusion 1: Text Compression'
+        Consider your heuristic and those of your classmates.: Consider your heuristic and those of your classmates.
       U1L13 Assessment 2:
-        'Assessment 2: Text Compression': 'Assessment 2: Text Compression'
-        Write (in the space below) a segment of text that will not compress well.: Write (in the space below) a segment of text that will not compress well.
-      U1L13 Reflection Free Response:
+        'Conclusion 2: Text Compression': 'Conclusion 2: Text Compression'
+        'Is there a way to know that a compressed piece of text is compressed the most possible? ': 'Is there a way to know that a compressed piece of text is compressed the most possible? '
+      U1L13 Reflection 1:
         'Reflection: Text Compression': 'Reflection: Text Compression'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        What made compressing text hard to do?: What made compressing text hard to do?
+      U1L13 Reflection 2:
+        Describe the thinking process you used in solving this challenge.: Describe the thinking process you used in solving this challenge.
+        'Reflection: Text Compression': 'Reflection: Text Compression'
+      U1L13 Reflection Free Response:
+        'Conclusion 3: Text Compression': 'Conclusion 3: Text Compression'
+        'If you send a compressed segment of text would your friend will be able to read it?  ': 'If you send a compressed segment of text would your friend will be able to read it?  '
+      U1L14 - Assessment 2:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+      U1L14 Assessment 1:
+        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
+        'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? ': 'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? '
       U1L16 Reflection Free Response:
         'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
@@ -975,6 +1028,26 @@ en:
         'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
         'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+      U2L02 Assessment1:
+        'The Need for Addressing: Question 1': 'The Need for Addressing: Question 1'
+      U2L02 Assessment2:
+        'The Need for Addressing: Question 2': 'The Need for Addressing: Question 2'
+      U2L02 Free Response Getting Started:
+        'The Need for Addressing: Getting Started': 'The Need for Addressing: Getting Started'
+      U2L02 Free Response Reflection:
+        'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
+      U2L04 Assessment2:
+        'Routers and Addresses: Question 2': 'Routers and Addresses: Question 2'
+      U2L04 Assessment3:
+        'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
+      U2L04 Free Response Wrap Up:
+        'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L3 Free Response Getting Started:
+        'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
+      U2L3 Free Response Wrap Up:
+        'Invent an Addressing Protocol: Wrap Up': 'Invent an Addressing Protocol: Wrap Up'
+      U2L4 Free Response Getting Started:
+        'Routers and Addresses: Getting Started': 'Routers and Addresses: Getting Started'
       U3L01 Assessment1:
         Why Programming? Question 1: Why Programming? Question 1
       U3L01 Assessment3:
@@ -1003,12 +1076,46 @@ en:
         Free Response Reflection: Free Response Reflection
       U3L04 Free Response Wrap Up:
         'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
+      U3L05 Assessment2:
+        Programming Efficiency Question 2: Programming Efficiency Question 2
+      U3L05 Assessment3:
+        Programming Efficiency Question 3: Programming Efficiency Question 3
+      U3L05 Assessment4:
+        Programming Efficiency Question 4: Programming Efficiency Question 4
+      U3L05 Free Response Getting Started:
+        'Programming Efficiency: Getting Started': 'Programming Efficiency: Getting Started'
       U3L05 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
+        'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
+      U3L06 Assessment:
+        APIs and Parameters Question 2: APIs and Parameters Question 2
+      U3L06 Free Response Getting Started:
+        APIs and Function Parameters: APIs and Function Parameters
       U3L06 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
+      U3L06 Free Response Wrap Up:
+        APIs and Function Parameters Wrap Up: APIs and Function Parameters Wrap Up
+      U3L07 Free Response Getting Started:
+        'Looping and Random Numbers: Getting Started': 'Looping and Random Numbers: Getting Started'
       U3L07 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
+        'Looping and Random Numbers: Reflection': 'Looping and Random Numbers: Reflection'
+      U3L08 Assessment2:
+        'Functions with Parameters: Question 2': 'Functions with Parameters: Question 2'
+      U3L08 Free Response Getting Started:
+        'Functions with Parameters: Getting Started': 'Functions with Parameters: Getting Started'
+      U3L08 Free Response Wrap Up:
+        'Functions with Parameters: Wrap Up': 'Functions with Parameters: Wrap Up'
+      U3L09 Free Response Getting Started:
+        'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+      U3L09 Free Response Wrap Up:
+        'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+      U3L10 Free Response Getting Started:
+        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+      U3L10 Free Response Wrap Up:
+        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+      U3L11 Free Response Getting Started:
+        'Scene Design Part 3 Reflection: Getting Started': 'Scene Design Part 3 Reflection: Getting Started'
+      U3L11 Free Response Reflection:
+        'Scene Design Part 3: Reflection': 'Scene Design Part 3: Reflection'
       U3L12 - Reflection - Mission Unsortable:
         Activity Reflection: Activity Reflection
         'Mission Unsortable ': 'Mission Unsortable '
