@@ -1,0 +1,6 @@
+name 'U2L10 Free Response Getting Started'
+title 'DNS in the Real World: Getting Started'
+
+markdown <<MARKDOWN
+List the details of a typical postal mailing address in a hierarchy from the largest, most general address element to the smallest, most unique address element. 
+MARKDOWN
