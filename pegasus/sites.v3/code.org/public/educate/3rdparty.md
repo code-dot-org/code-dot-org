@@ -39,7 +39,7 @@ nav: educate_nav
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
-| [Amplify](https://users-mooc.amplify.com/) | Year-long AP Computer Science course, FREE | Online, $2200/school |
+| [Amplify](https://mooc.amplify.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Computer science activities for algebra. FREE | 3-day workshops for schools and districts, $15/teacher/hour |
 | [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
