@@ -2,37 +2,37 @@
   hello: Ahoj svet
   select_language: Prosím, zvoľte si jazyk
   computer_science: Počítačová veda
-  computer_science_edweek: Počítačová veda Vzdelávací týždeň
-  csedweek_dates: 8. až 14. decembera 2014
+  computer_science_edweek: Vzdelávací týždeň počítačovej vedy
+  csedweek_dates: 8. až 14. Decembra 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hodina Kódu</a> sa blíži. Vyzývame všetkých učiteľov a organizátorov,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> naplánujte si svoju Hodinu Kódu</a>'
+    font-weight:bold">Hodina programovania</a> sa blíži. Vyzývame všetkých učiteľov
+    a organizátorov, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold"> naplánujte si svoju Hodinu programovania</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Učíte informatiku? Pozrite sa aj na ďalšie zdroje CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># </h3>
+  n_have_learned_an_hoc: <h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># poskytnutých</h3>
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Každý študent v každej škole by mal mať možnosť naučiť sa informatiku
-  petition_sign_message: 'Ak súhlasíš, zapíš svoje meno.  Zapoj # iných.'
+  petition_sign_message: 'Ak súhlasíš, zapíš svoje meno.  Pridaj sa k # iným.'
   petition_sign_message_support: 'Pokiaľ nás podporuješ, zapíš sa. Pridaj sa k  #
     ostatným.'
   name: Meno
   email: E-mail
-  zipcode: Poštové smerovacie číslo alebo krajina
-  submit: Potvrdiť
+  zipcode: ZIP (ak si v Spojených štátoch Amerických) alebo krajina
+  submit: Odoslať
   twentyhours_heading: Skúste náš úvod do kurzu Počítačovej vedy
-  twentyhours_text: Hotový s prvou Hour of Code? Nauč sa viac o základoch počítačovej
-    vedy a programovacích konceptoch  v tomto následujúcom kurze.
-  hoc2014_heading: Pripojte sa k <a href="http://hourofcode.com">Hodine Kódu</a> <br/>
-    8. až 14. decembra 2014 <br/>
+  twentyhours_text: Hotový s prvou Hodinou Programovania? Nauč sa viac o základoch
+    počítačovej vedy a programovacích konceptoch  v následujúcom kurze.
+  hoc2014_heading: Pridajte sa k <a href="http://hourofcode.com">Hodine Programovania</a>
+    <br/> 8. až 14. Decembra 2014 <br/>
   hoc2014_students: Študenti
   hoc2014_try: Skúste to
   hoc2014_teachers: Učitelia
   hoc2014_host: Zorganizujte ju
   hoc2014_everyone: Ktokoľvek
   hoc2014_support: Podporte ju &#x25BE;
-  hoc2014_whatishoc: Čo je to Hodina Kódu?
+  hoc2014_whatishoc: Čo je to Hodina Programovania?
   twentyhours_trynow: Skús teraz
   california_heading: Požiadajte svoju školu, aby vyučovala informatiku
   california_text: Každý učiteľ môže ponúknuť naše <a href='http://studio.code.org/'>
@@ -40,54 +40,54 @@
     vyučovať informatiku</a>. Požiadajte stredné školy, aby <a href = 'http://code.org/educate/districts'
     > sa k nám pripojili.
   california_button: Ďalšie informácie
-  flappy_heading: Všetko najlepšie Code.org
+  flappy_heading: Všetko najlepšie k narodeninám Code.org
   flappy_text: Code.org sa práve dožil 1 roku. <br/> <br/> Osláv to s nami vytvorením
-    vlastnej <b>Flappy</b> hry. Naprogramuj vlastné pravidlá, a zdieľaj s priateľmi!
-  view_english_site: Zobrazenie anglické stránky
+    vlastnej <b>Flappy</b> hry. Naprogramuj vlastné pravidlá a zdieľaj s priateľmi!
+  view_english_site: Zobraziť anglickú verziu
   non_english_tutorials: 'Návody preložené do viacerých jazykov:'
   write_your_first_program: Napíš svoj prvý počítačový program
-  learn_cs_concepts: Nauč sa základy z oblasti informatiky s drag a drop programovaním.
-    Toto je video lekcia, ktorou ťa bude sprevádzť Bill Gates, Mark Zuckerberg, Angry
+  learn_cs_concepts: Nauč sa základy z oblasti informatiky s "drag and drop" programovaním.
+    Toto je video lekcia, ktorou ťa bude sprevádzať Bill Gates, Mark Zuckerberg, Angry
     Birds a Plants vs Zombies. Nauč sa opakovacie slučky, if-then príkazy a základné
     algoritmy.
   all_ages: Všetky vekové kategórie
   beginner: Začiatočník
   n_participants: '# účastníkov'
-  go: Ísť
+  go: Spustiť
   thank_you_: Ďakujeme!
   congratulations: Gratulujem!
-  congratulations_on_completing_hoc: Gratulujeme ku absolvovaniu jednej Hodiny kódu
+  congratulations_on_completing_hoc: Gratulujeme ku absolvovaniu jednej Hodiny programovania
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
   enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
   get_a_certificate_message: Pošleme ti certifikát a informácie o tom, ako sa <a href='/learn/beyond'>učiť
     dlhšie ako jednu hodinu</a>
   get_a_certificate_message_after: Kliknite na certifikát, ktorý si chcete stiahnuť
-    nebo vytlačiť. Teraz pokračujte s našimi <a href='http://studio.code.org'> ďalšími
+    alebo vytlačiť. Teraz pokračujte s našimi <a href='http://studio.code.org'> ďalšími
     kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>Výučbe
     po prvej hodine</a>.
-  thanks_for_submitting: Ďakujeme za potvrdenie!
-  if_you_enjoyed: Ak sa ti páčilo učenie, opýtaj sa priateľov či to chcú skúsiť tiež!  Chceme,
-    aby sa celý svet mohol učiť.
-  personalize_certificate: Prispôsobenie certifikátu
+  thanks_for_submitting: Ďakujeme za odoslanie!
+  if_you_enjoyed: Ak sa ti výučba páčila, opýtaj sa priateľov či to chcú skúsiť tiež!
+    Chceme, aby sa celý svet mohol učiť.
+  personalize_certificate: Prispôsob si svoj certifikát
   share_achievement: Zdieľať svoj úspech
   beyond_hour_message: Pokračujte s našimi <a href='http://studio.code.org'>ďalšími
     kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>Výučbe
     po prvej hodine</a>.
-  leaderboards_for_hoc: Rebríčky pre Hour of Code.
+  leaderboards_for_hoc: Rebríčky Hodiny programovania.
   support_url: http://support.code.org/
   country: Krajina
   city: Mesto
   gender: Pohlavie
   boys: Chlapci
   girls: Dievčatá
-  give_my_hour: 'Daj moju hodinu:'
+  give_my_hour: 'Daruj moju hodinu:'
   girls_team: Dievčenský tím
   boys_team: Chlapčenský tím
   tell_the_world: Povedz to svetu!
   thanks_for_voting: Vďaka za hlasovanie!
   share_on_facebook: Zdieľať na Facebooku
   share_on_twitter: Zdieľať na Twitteri
-  beyond_an_hour: Viac ako Hodina kódu
+  beyond_an_hour: Po absolvovaní Hodiny programovania
   get_started: Spustiť
   i_agree: súhlasím
   participant_select: -Vyberte-
@@ -96,7 +96,7 @@
   participant_educator: Pedagóg
   participant_engineer: Softvérový inžinier
   participant_other: Nič z uvedeného
-  print_all: Všetko vytlačiť
+  print_all: Vytlačiť všetko
   print_ice_art: Vytlač svoje ľadové umenie
   create_art_with_zombie: alebo vytvor lepšie umenie so zombíkom
   i_am_a: Ja som
