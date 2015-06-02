@@ -31,9 +31,9 @@
             - if @ideal_level_source
               %h4= t('teacher.panel.viewing_solution')
             - else
-              = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : nil)) do
+              = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})) do
                 %button.btn.btn-info= t('reference_area.teacher')
-          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : nil) do
+          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
             %button.btn.btn-info= t('teacher.panel.try_it_yourself')
         - if @section
           .section
@@ -61,7 +61,7 @@
     function resizeScrollable() {
       var newHeight = $('.teacher-panel').innerHeight() -
           $('.teacher-panel h3').outerHeight() -
-          25 - /* magic... */
+          25 - // magic..
           $('.non-scrollable-wrapper').outerHeight();
       $('.scrollable-wrapper').css('max-height', newHeight);
     }
