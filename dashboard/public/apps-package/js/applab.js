@@ -2429,7 +2429,7 @@ function makeDraggable (jq) {
     });
 
     elm.css({
-      position: ''
+      position: 'static'
     });
   });
 }
@@ -7708,8 +7708,9 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
           React.createElement("input", {
             value: this.state.value, 
             onChange: this.handleChangeInternal}), 
-          React.createElement("button", {onClick: this.handleButtonClick}, 
-            React.createElement("i", {className: "fa fa-picture-o"})
+          " ", 
+          React.createElement("a", {onClick: this.handleButtonClick}, 
+            "Choose..."
           )
         )
       )
@@ -7918,7 +7919,7 @@ module.exports = React.createClass({displayName: "exports",
 
       assetList = (
         React.createElement("div", null, 
-          React.createElement("div", {style: {maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}, 
+          React.createElement("div", {style: {maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}, 
             React.createElement("table", {style: {width: '100%'}}, 
               React.createElement("tbody", null, 
                 rows
