@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ادامه بده"},
 "defaultTwitterText":function(d){return "آنچه من ساخته ام را امتحان کن "},
 "designMode":function(d){return "طراحی"},
-"designModeHeader":function(d){return "حالت طراحی"},
 "dialogCancel":function(d){return "لغو کن"},
 "dialogOK":function(d){return "باشه"},
 "directionEastLetter":function(d){return "شرق"},

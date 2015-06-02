@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tovább"},
 "defaultTwitterText":function(d){return "Nézd meg, mit csináltam"},
 "designMode":function(d){return "Megjelenés"},
-"designModeHeader":function(d){return "Tervező mód"},
 "dialogCancel":function(d){return "Mégsem"},
 "dialogOK":function(d){return "OK"},
 "directionEastLetter":function(d){return "Kelet"},

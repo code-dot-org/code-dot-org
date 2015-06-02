@@ -191,7 +191,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "insufficientNectar":function(d){return "אתה משתמש בכל הבלוקים הנכונים, אבל אתה צריך לאסוף את הכמות הנכונה של צוף."},
 "make":function(d){return "תעשה"},
 "moveBackward":function(d){return "זוז אחורה"},
-"moveEastTooltip":function(d){return "תזיז אותי משבצת אחת מערבה."},
+"moveEastTooltip":function(d){return "תזיז אותי משבצת אחת מזרחה."},
 "moveForward":function(d){return "לזוז קדימה"},
 "moveForwardTooltip":function(d){return "הזז אותי צעד אחד קדימה."},
 "moveNorthTooltip":function(d){return "תזיז אותי משבצת אחת צפונה."},

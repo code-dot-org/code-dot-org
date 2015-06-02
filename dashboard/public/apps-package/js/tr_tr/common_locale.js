@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Devam Et"},
 "defaultTwitterText":function(d){return "Ne yaptığıma bakın"},
 "designMode":function(d){return "Tasarım"},
-"designModeHeader":function(d){return "Tasarım Modu"},
 "dialogCancel":function(d){return "İptal"},
 "dialogOK":function(d){return "TAMAM"},
 "directionEastLetter":function(d){return "D"},
