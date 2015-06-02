@@ -116,7 +116,7 @@ module.exports = {
       case 'select':
         return ElementType.DROPDOWN;
       case 'div':
-        if (element.getAttribute('class').split(' ').indexOf('screen') !== -1) {
+        if ($(element).hasClass('screen')) {
           return ElementType.SCREEN;
         }
         return ElementType.TEXT_AREA;
