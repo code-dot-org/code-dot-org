@@ -1,5 +1,6 @@
 name 'ECSPD PD details'
 title 'ECSPD PD details'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## What's next? 
