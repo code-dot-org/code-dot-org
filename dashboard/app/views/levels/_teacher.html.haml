@@ -1,5 +1,5 @@
 - if current_user.try(:admin?) && @script_level # TODO: this should change to :teacher? when we want to ship this
-  .teacher-panel{class: @user || @ideal_level_source ? '' : 'hidden'}
+  .teacher-panel{class: @user || @section || @ideal_level_source ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
@@ -29,11 +29,11 @@
         .level
           - if @level && @level.ideal_level_source_id && @script
             - if @ideal_level_source
-              Viewing solution
+              %h4= t('teacher.panel.viewing_solution')
             - else
-              = link_to build_script_level_path(@script_level, solution: true) do
+              = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : nil)) do
                 %button.btn.btn-info= t('reference_area.teacher')
-          = link_to build_script_level_path(@script_level) do
+          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : nil) do
             %button.btn.btn-info= t('teacher.panel.try_it_yourself')
         - if @section
           .section
@@ -44,7 +44,7 @@
         .scrollable-wrapper
           %table.section-students
             - @section.students.order(:name).each do |student|
-              - active = 'active' if student.id == @user.id
+              - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
                 - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
                 %td.level_link{class: status}
@@ -59,11 +59,11 @@
                 %td.name= link_to student.name, build_script_level_path(@script_level, user_id: student.id, section_id: @section.id)
   :javascript
     function resizeScrollable() {
-      var newHeight = $('.teacher-panel').height() -
+      var newHeight = $('.teacher-panel').innerHeight() -
           $('.teacher-panel h3').outerHeight() -
           25 - /* magic... */
           $('.non-scrollable-wrapper').outerHeight();
       $('.scrollable-wrapper').css('max-height', newHeight);
     }
-    $(document).ready(debounce(resizeScrollable));
+    $(document).ready(resizeScrollable);
     $(window).resize(debounce(resizeScrollable, 250));
