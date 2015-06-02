@@ -1053,6 +1053,20 @@ en:
         14: crwdns38864:0crwdne38864:0
         13: crwdns38865:0crwdne38865:0
         10: crwdns38866:0crwdne38866:0
+      U2L04 Assessment1:
+        "Routers and Addresses: Question 1": crwdns39024:0crwdne39024:0
+        What does IP stand for?: crwdns39025:0crwdne39025:0
+        Internet Processing: crwdns39026:0crwdne39026:0
+        Internet Protocol: crwdns39027:0crwdne39027:0
+        Information Processing: crwdns39028:0crwdne39028:0
+        Interstate Protocol: crwdns39029:0crwdne39029:0
+      U2L04 Assessment4:
+        "Routers and Addresses: Question 4": crwdns39030:0crwdne39030:0
+        Why does the IP address of every device at a particular location start with the same numbers?: crwdns39031:0crwdne39031:0
+        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: crwdns39032:0crwdne39032:0
+        IP addresses are hierarchical; each city has an assigned set of numbers.: crwdns39033:0crwdne39033:0
+        IP addresses are hierarchical; the first few fields identify the domain and subset.: crwdns39034:0crwdne39034:0
+        IP addresses are based upon area codes because computers often use phone lines for transmission.: crwdns39035:0crwdne39035:0
       U3L01 Assessment2:
         Why Programming? Question 2: crwdns38867:0crwdne38867:0
         0: crwdns38868:0crwdne38868:0
@@ -1081,14 +1095,50 @@ en:
         The name of program it was originally designed for: crwdns38889:0crwdne38889:0
         The post-state: crwdns38890:0crwdne38890:0
       U3L06-API-multichoice:
-        Multiple Choice: crwdns37904:0crwdne37904:0
-        Choose the option that best answers the question.: crwdns37905:0crwdne37905:0
-        What is the primary purpose of an API in a programming language?: crwdns37906:0crwdne37906:0
-        Application Primary Interactions are fundamental to programming: crwdns37907:0crwdne37907:0
-        To make programming more complex for those without experience: crwdns37908:0crwdne37908:0
-        Programs won't run without good API documentation: crwdns37909:0crwdne37909:0
-        To provide high-level functionality that simplifies complex programming tasks: crwdns37910:0crwdne37910:0
-        It is impossible to write a program without an API: crwdns37911:0crwdne37911:0
+        APIs and Parameters Question 1: crwdns39036:0crwdne39036:0
+        Select the best answer: crwdns39037:0crwdne39037:0
+        What is NOT the purpose of an API in a programming language?: crwdns39038:0crwdne39038:0
+        List the commands and functions of a programming language: crwdns39039:0crwdne39039:0
+        Explain the functionality of a programming statements: crwdns39040:0crwdne39040:0
+        To avoid having to memorize all of the language commands: crwdns39041:0crwdne39041:0
+        Show examples of programming statements: crwdns39042:0crwdne39042:0
+        Auto-correct common programming errors: crwdns39043:0crwdne39043:0
+        Simplify complex programming tasks: crwdns39044:0crwdne39044:0
+      U3L06 Assessment2:
+        APIs and Parameters Question 3: crwdns39045:0crwdne39045:0
+        0: crwdns39046:0crwdne39046:0
+        1: crwdns39047:0crwdne39047:0
+        forward50( ): crwdns39048:0crwdne39048:0
+        Left(45): crwdns39049:0crwdne39049:0
+        forward100( ): crwdns39050:0crwdne39050:0
+        Left(90): crwdns39051:0crwdne39051:0
+        forward283( ): crwdns39052:0crwdne39052:0
+      U3L07 Assessment2:
+        APIs and Parameters Question 3: crwdns39053:0crwdne39053:0
+        0: crwdns39054:0crwdne39054:0
+        1: crwdns39055:0crwdne39055:0
+        forward50( ): crwdns39056:0crwdne39056:0
+        Left(45): crwdns39057:0crwdne39057:0
+        forward100( ): crwdns39058:0crwdne39058:0
+        Left(90): crwdns39059:0crwdne39059:0
+        forward283( ): crwdns39060:0crwdne39060:0
+      U3L08 Assessment1:
+        "Functions with Parameters: Question 1": crwdns39061:0crwdne39061:0
+        Which of the following are true?: crwdns39062:0crwdne39062:0
+        Parameters can only be used once within the body of a function.: crwdns39063:0crwdne39063:0
+        Functions with parameters can be used to prevent the creation of duplicated code.: crwdns39064:0crwdne39064:0
+        Parameters generalize the solution of a specific problem.: crwdns39065:0crwdne39065:0
+        Parameters need not be provided to a function in any particular order.: crwdns39066:0crwdne39066:0
+      U3L08 Assessment3:
+        "Functions with Parameters: Question 3": crwdns39067:0crwdne39067:0
+        There is an error in one line of the following code. What line is it in?: crwdns39068:0crwdne39068:0
+        square();: crwdns39069:0crwdne39069:0
+        "function square() {": crwdns39070:0crwdne39070:0
+        penDown();: crwdns39071:0crwdne39071:0
+        "for(var i = 0; i < 4; i++){": crwdns39072:0crwdne39072:0
+        moveForward(length);: crwdns39073:0crwdne39073:0
+        "turnLeft(90); }": crwdns39074:0crwdne39074:0
+        penUp();: crwdns39075:0crwdne39075:0
       U3L14 - MC Duplicate Ids:
         Buttons and Ids: crwdns38378:0crwdne38378:0
         What happens when two buttons are given the same id?: crwdns38379:0crwdne38379:0
@@ -1174,14 +1224,6 @@ en:
         function calls: crwdns38936:0crwdne38936:0
         event handlers: crwdns38937:0crwdne38937:0
         conditionals: crwdns38938:0crwdne38938:0
-      U3L20 Assessment9:
-        Conditional Basics Question 9: crwdns38939:0crwdne38939:0
-        Which of the following are not valid operators in Boolean expressions?: crwdns38940:0crwdne38940:0
-      U3L21 Assessment 1:
-        More Variables Question 1: crwdns38531:0crwdne38531:0
-        NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: crwdns38532:0crwdne38532:0
-        56*61\3+2: crwdns38534:0crwdne38534:0
-        fifteen: crwdns38536:0crwdne38536:0
       U3L21 Assessment 2:
         More Variables Question 2: crwdns38537:0crwdne38537:0
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: crwdns38538:0crwdne38538:0

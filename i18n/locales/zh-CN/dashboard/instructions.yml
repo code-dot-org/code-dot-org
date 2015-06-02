@@ -15,44 +15,25 @@ zh:
       2-3 Artist 3.4_instruction: |
         The jump block moves the artist without drawing.
         Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3_instruction: 这顶帽子的高度是 100 像素。请你画一顶高度为 70 像素的帽子。
+      2-3 Artist 3new_instruction: 红色的帽子高度是 100 像素。请绘制一顶高度小70 个像素的黑色帽子，帽子的宽度为 50 像素。
       2-3 Artist 4_instruction: 帮我为小猫盖好房子
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
+      2-3 Artist 5_instruction: 将这段代码用“重复次数”模块来代替，画出同样的房子只需要3块模块。
       2-3 Artist 6_instruction: Zhè fángzi xūyào yīgè wūdǐng! Huà yīgè sānjiǎoxíng. 提示：所有三面都具有相同的长度。
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
+      2-3 Artist 7_instruction: 请绘制最后一个窗口的右半部分。窗口的每个方块为 25 像素。
       2-3 Artist 8_instruction: |
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall.
       2-3 Artist 9_instruction: 完成这只风筝
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
+      2-3 Artist Assessment 1_instruction: 评价： 完成绘制最后一个齿, 宽度25 像素和高度 25 像素。
+      2-3 Artist Debugging 1_instruction: 你能制作一顶长为100 像素的帽子吗？
       2-3 Artist Debugging 10_instruction: |
         The direction pad on my game controller
         is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
+      2-3 Artist Debugging 11_instruction: 帮我完成我美丽的雪花。我需要重复多少次才能完成呢？
+      2-3 Artist Debugging 12_instruction: 我希望添加一片海浪到这一幕中。 你可以帮我吗？
+      2-3 Artist Debugging 2_instruction: 你看到的三条胡须的代码是错误的。提示： 每条胡须是 75 像素。请修改此代码来绘制胡须。
       2-3 Artist Debugging 3_instruction: |
         My boat has a hole! Can you fix it by
         changing the angle of the line? Hint: the last angle is off by 15 degrees.
@@ -79,16 +60,9 @@ zh:
         This shape is too small. Can
         you make it bigger? Hint: it should be 75 pixels longer on each side.
       2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
+      2-3 Artist Functions 1_instruction: 你好。我的僵尸艺术家。我爱画画 ！请帮我画副方形眼镜。 提示： 眼镜之间的桥梁比正方形边长短25 像素。
+      2-3 Artist Functions 10_instruction: 这里是两个功能，一个要绘制一个大齿轮，另一个要画一个小齿轮。使用它们来绘制一个机器内部 ！
+      2-3 Artist Functions 11.5_instruction: '在这里是那相同的"画一个六边形"功能。如果在循环中每次只转 60 度会发生什么呢？'
       2-3 Artist Functions 11_instruction: |
         We've renamed the "draw a square"
         function to "draw a hexagon," but it still only draws squares! Can you modify
@@ -1691,8 +1665,8 @@ zh:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2786,6 +2760,11 @@ zh:
         is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

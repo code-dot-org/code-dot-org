@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Turpināt"},
 "defaultTwitterText":function(d){return "Apskaties, ko esmu izveidojis"},
 "designMode":function(d){return "Design"},
-"designModeHeader":function(d){return "Design Mode"},
 "dialogCancel":function(d){return "Atcelt"},
 "dialogOK":function(d){return "Labi"},
 "directionEastLetter":function(d){return "A"},

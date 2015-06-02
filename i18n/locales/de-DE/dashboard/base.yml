@@ -248,9 +248,9 @@ de:
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
-    remove: (entfernen Lehrername)
+    remove: (entferne Lehrer)
     confirm:
-      remove: Bist du sicher, dass Du diesen Lehrernamen entfernen möchtest?
+      remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
     tools: Werkzeuge für Lehrer
     followers:
       section: 'Abschnitt:'
@@ -460,7 +460,7 @@ de:
     activity_count: 'In den vergangenen <b>%{days}</b> Tage, haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> apps und Bilder gemacht. Klicken Sie auf die Bilder und Screenshots, jedes Programm um es in Aktion zu sehen.'
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: 'Mehr &rarr;'
-    caption_by_name_age: 'Von%{name}, Alter %{age}'
+    caption_by_name_age: 'Von %{name}, Alter %{age}'
     caption_time_ago: '%{time_ago} früher'
     header: Galerie
     header_playlab: Play Lab
@@ -509,7 +509,7 @@ de:
           title: Einführung in die Informatik (15-25 Stunden)
           description: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
         Hour of Code:
-          title: Programmierstunde 2013
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Code bearbeiten

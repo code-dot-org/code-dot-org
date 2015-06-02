@@ -257,7 +257,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "positionBottomRight":function(d){return "במיקום תחתון ימני"},
 "positionBottomOutRight":function(d){return "במיקום תחתון ימני חיצוני"},
 "positionOutBottomLeft":function(d){return "במיקום תחתון שמאלי למטה"},
-"positionOutBottomRight":function(d){return "to the below bottom right position"},
+"positionOutBottomRight":function(d){return "למיקום התחתון הימני"},
 "positionRandom":function(d){return "למיקום אקראי"},
 "projectileBlueFireball":function(d){return "כדור-אש כחול"},
 "projectilePurpleFireball":function(d){return "כדור-אש סגול"},

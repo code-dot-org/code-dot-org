@@ -413,9 +413,9 @@ de:
           description: ""
           Step: Schritt
         Hour of Code:
-          title: Programmierstunde 2013
+          title: Hour of Code 2013
           description: ""
-          Hour of Code 2013: Programmierstunde 2013
+          Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -645,6 +645,9 @@ de:
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming

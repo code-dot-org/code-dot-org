@@ -10,76 +10,32 @@ vi:
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
       2-3 Artist 3.4_instruction: Khối nhảy di chuyển người nghệ sĩ mà không vẽ. Lập nét đứt bằng cách sử dụng hai khối nhảy và vẽ.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
+      2-3 Artist 3_instruction: Mũ này cao 100 pixels. Vẽ một cái mũ cao ít hơn 70 pixels.
       2-3 Artist 3new_instruction: |
         The red hat is 100 pixels tall. Finish drawing
         a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
+      2-3 Artist 4_instruction: Giúp tôi hoàn thành nhà cho con mèo này.
+      2-3 Artist 5_instruction: 'Thay mã này với khối "lặp lại nhiều lần" để vẽ một ngôi nhà như thế mà chỉ dùng 3 khối.'
+      2-3 Artist 6_instruction: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý: Cả 3 cạnh đều dài như nhau.'
+      2-3 Artist 7_instruction: 'Hoàn thành vẽ nửa bên phải của cửa sổ cuối. Mỗi ô vuông của cửa sổ dài 25 pixels. '
+      2-3 Artist 8_instruction: Hoàn thành các phòng cho mỗi động vật qua việc tách hình chữ nhật thành 2 hình vuông có kích thước bằng nhau. Hình chữ nhật rộng 200 pixels và cao 100 pixels.
+      2-3 Artist 9_instruction: Hoàn thành diều này
+      2-3 Artist Assessment 1_instruction: 'Đánh giá: Hoàn thành bản vẽ chiếc răng cuối, rộng 25 pixels và cao 25 pixels.'
+      2-3 Artist Debugging 1_instruction: Bạn có thể làm mũ này với chiều dài 100?
+      2-3 Artist Debugging 10_instruction: 'Các phím hướng trên bộ điều khiển trò chơi của tôi là quá hẹp. Gợi ý: Làm cho nó rộng hơn 10 pixels'
+      2-3 Artist Debugging 11_instruction: 'Giúp tôi hoàn thành bông tuyết xinh đẹp này. Tôi cần "lặp lại" bao nhiêu lần để hoàn thành nó?'
+      2-3 Artist Debugging 12_instruction: 'Tôi phải thêm một làn sóng ở cảnh này.  Bạn có thể giúp tôi không?'
+      2-3 Artist Debugging 2_instruction: 'Mã cho ba bộ râu mà bạn nhìn thấy là sai. Gợi ý: Mỗi bộ râu dài 75 pixels. Sửa mã này để vẽ bộ râu.'
+      2-3 Artist Debugging 3_instruction: 'Thuyền của tôi có một lỗ! Bạn có thể sửa chữa nó bằng cách thay đổi góc của dòng? Gợi ý: góc cuối cùng là 15 độ.'
+      2-3 Artist Debugging 4_instruction: 'Hình ảnh mà chúng tôi đang cố gắng để vẽ là gì? Nối các dấu chấm còn lại, sử dụng dòng và góc thích hợp. '
+      2-3 Artist Debugging 5_instruction: 'Mã cho chân và bàn chân mà bạn nhìn thấy là sai. Gợi ý: Chân quá dài, chúng ta cần phải xóa một bước (ý định chơi chữ)'
+      2-3 Artist Debugging 6_instruction: Có vẻ như tôi đang ngồi trên một cái ghế thiếu một chân. Chỉnh sửa khối để vẽ chân.
+      2-3 Artist Debugging 7_instruction: Hình như C trong mã vẽ ngược. Bạn có thể làm cho nó trông giống C?
+      2-3 Artist Debugging 8_instruction: Chong chóng của tôi chưa hoàn thành. Tôi cần lặp lại bao nhiêu lần để hoàn thành nó?
+      2-3 Artist Debugging 9_instruction: 'Mã cho thân này không chính xác. Gợi ý: Góc theo 60 độ'
+      2-3 Artist Debugging Assessment 1_instruction: 'Hình dạng này quá nhỏ. Bạn có thể làm cho nó lớn hơn? Gợi ý: nó nên dài thêm 75 pixels mỗi bên.'
+      2-3 Artist Free Play_instruction: Chơi miễn phí! Vẽ bất cứ điều gì bạn muốn.
+      2-3 Artist Functions 1_instruction: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn so với độ dài cạnh vuông.'
       2-3 Artist Functions 10_instruction: |
         Here's two functions, one to draw a
         big gear and one to draw a small gear. Use them to draw the inside of a machine!
@@ -1712,8 +1668,8 @@ vi:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2715,6 +2671,11 @@ vi:
         is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

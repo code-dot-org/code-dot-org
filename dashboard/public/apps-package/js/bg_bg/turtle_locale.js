@@ -221,7 +221,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penUp":function(d){return "молив нагоре"},
 "reinfFeedbackMsg":function(d){return "Тук е вашата рисунка! Продължете да работите върху нея или преминете към следващия пъзел."},
 "setColour":function(d){return "задава цвят"},
-"setPattern":function(d){return "определен шаблон"},
+"setPattern":function(d){return "задава шаблон"},
 "setWidth":function(d){return "задава дебелина"},
 "shareDrawing":function(d){return "Споделете вашата рисунка:"},
 "showMe":function(d){return "Покажи ми"},

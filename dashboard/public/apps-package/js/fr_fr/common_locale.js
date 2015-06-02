@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuer"},
 "defaultTwitterText":function(d){return "Découvre ce que j'ai fait"},
 "designMode":function(d){return "Design"},
-"designModeHeader":function(d){return "Mode création"},
 "dialogCancel":function(d){return "Annuler"},
 "dialogOK":function(d){return "OK"},
 "directionEastLetter":function(d){return "E"},

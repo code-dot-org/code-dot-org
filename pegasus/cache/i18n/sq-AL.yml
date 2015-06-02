@@ -437,8 +437,8 @@
   dashboard_login_picture: Figurë
   dashboard_login_none: Email
   dashboard_new_password: fjalëkalim i ri
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: Pa nisur
+  dashboard_progress_in_progress: Në punë e sipër
   dashboard_progress_not_completed: e papërfunduar
   dashboard_progress_completed_too_many_blocks: e përfunduar, shumë blloqe
   dashboard_progress_completed_perfect: e përfunduar, perfekte
