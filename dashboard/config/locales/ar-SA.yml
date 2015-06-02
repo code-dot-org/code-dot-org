@@ -636,9 +636,9 @@
     name: الاسم
     updated: تحديث
     project_type: نوع المشروع
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
+    help_text: اضغط<strong> اصنع تطبيق</strong> أو <strong>ارسم شيئاً</strong> في
+      الأسفل لتبدأ مشروع مختبر لعب أو رسام جديد<br/>بإمكانك العودة والعمل على مشروعك
+      في أي وقت.
     need_help: هل أنت بحاجة إلى المساعدة لتبدأ؟
     really_delete: حذف؟
     delete_yes: نعم

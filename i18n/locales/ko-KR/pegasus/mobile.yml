@@ -194,7 +194,7 @@ ko-KR:
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
   homepage_slot_text_link_hoc: Hour of Code 해보기
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Hour of Code의 주인
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: 학생들
   homepage_slot_text_blurb_students: Explore all of our tutorials
@@ -207,7 +207,7 @@ ko-KR:
   homepage_slot_text_link_fullcurriculum: 우리의 전체 커리큘럼을 참고하세요
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_blurb_advocates: 우리의 작업을 지원
   homepage_slot_text_link_stats: 통계 보기
   homepage_slot_text_link_buy: 함께 참여하세요!
   homepage_slot_text_link_donate: 기부하기

@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ดำเนินการต่อไป"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "ออกแบบ"},
-"designModeHeader":function(d){return "สถานะการออกแบบ"},
 "dialogCancel":function(d){return "ยกเลิก"},
 "dialogOK":function(d){return "ตกลง"},
 "directionEastLetter":function(d){return "E"},

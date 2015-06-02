@@ -35,7 +35,8 @@ var annotationList = require('./acemode/annotationList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
-
+var JSInterpreter = require('../JSInterpreter');
+var StepType = JSInterpreter.StepType;
 var vsprintf = require('./sprintf').vsprintf;
 
 var ResultType = studioApp.ResultType;
@@ -70,13 +71,6 @@ Applab.scale = {
 var twitterOptions = {
   text: applabMsg.shareApplabTwitter(),
   hashtag: "ApplabCode"
-};
-
-var StepType = {
-  RUN:  0,
-  IN:   1,
-  OVER: 2,
-  OUT:  3,
 };
 
 var MIN_DEBUG_AREA_HEIGHT = 70;
@@ -305,8 +299,8 @@ function onDebugInputKeyDown(e) {
     var input = e.target.textContent;
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
-    if (Applab.interpreter) {
-      var currentScope = Applab.interpreter.getScope();
+    if (Applab.JSInterpreter) {
+      var currentScope = Applab.JSInterpreter.interpreter.getScope();
       var evalInterpreter = new window.Interpreter(input);
       // Set console scope to the current scope of the running program
 
@@ -324,7 +318,7 @@ function onDebugInputKeyDown(e) {
       ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
         'UNDEFINED'].forEach(
         function (prop) {
-          evalInterpreter[prop] = Applab.interpreter[prop];
+          evalInterpreter[prop] = Applab.JSInterpreter.interpreter[prop];
         });
       try {
         evalInterpreter.run();
@@ -368,8 +362,8 @@ function handleExecutionError(err, lineNumber) {
     // this while executing (in which case, it would already have been selected)
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Applab.interpreter) {
-    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+  if (!lineNumber && Applab.JSInterpreter) {
+    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
                                                     Applab.cumulativeLength,
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
@@ -397,8 +391,8 @@ Applab.onTick = function() {
   Applab.tickCount++;
   queueOnTick();
 
-  if (Applab.interpreter) {
-    Applab.executeInterpreter();
+  if (Applab.JSInterpreter) {
+    Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
   } else {
     Applab.executeNativeJS();
   }
@@ -411,238 +405,6 @@ Applab.onTick = function() {
 Applab.executeNativeJS = function () {
   if (Applab.tickCount === 1) {
     try { Applab.whenRunFunc(studioApp, apiBlockly, Applab.Globals); } catch (e) { }
-  }
-};
-
-function safeStepInterpreter() {
-  try {
-    Applab.interpreter.step();
-  } catch (err) {
-    return err;
-  }
-}
-
-Applab.executeInterpreter = function (runUntilCallbackReturn) {
-  Applab.runUntilCallbackReturn = runUntilCallbackReturn;
-  if (runUntilCallbackReturn) {
-    delete Applab.lastCallbackRetVal;
-  }
-  Applab.seenEmptyGetCallbackDuringExecution = false;
-  Applab.seenReturnFromCallbackDuringExecution = false;
-
-  var atInitialBreakpoint = Applab.paused &&
-                            Applab.nextStep === StepType.IN &&
-                            Applab.tickCount === 1;
-  var atMaxSpeed = getCurrentTickLength() === 0;
-
-  if (Applab.paused) {
-    switch (Applab.nextStep) {
-      case StepType.RUN:
-        // Bail out here if in a break state (paused), but make sure that we still
-        // have the next tick queued first, so we can resume after un-pausing):
-        return;
-      case StepType.OUT:
-        // If we haven't yet set stepOutToStackDepth, work backwards through the
-        // history of callExpressionSeenAtDepth until we find the one we want to
-        // step out to - and store that in stepOutToStackDepth:
-        if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
-          Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
-            if (Applab.callExpressionSeenAtDepth[i]) {
-              Applab.stepOutToStackDepth = i;
-              break;
-            }
-          }
-        }
-        break;
-    }
-  }
-
-  var doneUserLine = false;
-  var reachedBreak = false;
-  var unwindingAfterStep = false;
-  var inUserCode;
-  var userCodeRow;
-  var session = studioApp.editor.aceEditor.getSession();
-
-  // In each tick, we will step the interpreter multiple times in a tight
-  // loop as long as we are interpreting code that the user can't see
-  // (function aliases at the beginning, getCallback event loop at the end)
-  for (var stepsThisTick = 0;
-       (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
-       stepsThisTick++) {
-    // Re-check this because the speed may have changed...
-    atMaxSpeed = getCurrentTickLength() === 0;
-    // NOTE: when running with no source visible or at max speed, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
-
-    if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
-        Applab.seenEmptyGetCallbackDuringExecution ||
-        (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
-      // stop stepping the interpreter and wait until the next tick once we:
-      // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code and are are done unwinding
-      //     (while not running atMaxSpeed) OR
-      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
-      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
-      break;
-    }
-    userCodeRow = selectCodeFunc(Applab.interpreter,
-                                 Applab.cumulativeLength,
-                                 Applab.userCodeStartOffset,
-                                 Applab.userCodeLength,
-                                 studioApp.editor);
-    inUserCode = (-1 !== userCodeRow);
-    // Check to see if we've arrived at a new breakpoint:
-    //  (1) should be in user code
-    //  (2) should never happen while unwinding
-    //  (3) requires either
-    //   (a) atInitialBreakpoint OR
-    //   (b) isAceBreakpointRow() AND not still at the same line number where
-    //       we have already stopped from the last step/breakpoint
-    if (inUserCode && !unwindingAfterStep &&
-        (atInitialBreakpoint ||
-         (userCodeRow !== Applab.stoppedAtBreakpointRow &&
-          codegen.isAceBreakpointRow(session, userCodeRow)))) {
-      // Yes, arrived at a new breakpoint:
-      if (Applab.paused) {
-        // Overwrite the nextStep value. (If we hit a breakpoint during a step
-        // out or step over, this will cancel that step operation early)
-        Applab.nextStep = StepType.RUN;
-        Applab.updatePauseUIState();
-      } else {
-        Applab.onPauseContinueButton();
-      }
-      // Store some properties about where we stopped:
-      Applab.stoppedAtBreakpointRow = userCodeRow;
-      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-
-      // Mark reachedBreak to stop stepping, and start unwinding if needed:
-      reachedBreak = true;
-      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-      continue;
-    }
-    // If we've moved past the place of the last breakpoint hit without being
-    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-    if (inUserCode &&
-        userCodeRow !== Applab.stoppedAtBreakpointRow &&
-        Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
-      delete Applab.stoppedAtBreakpointRow;
-      delete Applab.stoppedAtBreakpointStackDepth;
-    }
-    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
-    // to ensure that we have the right properties stored when the unwind completes:
-    if (inUserCode && unwindingAfterStep) {
-      Applab.stoppedAtBreakpointRow = userCodeRow;
-      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-    }
-    var err = safeStepInterpreter();
-    if (!err) {
-      doneUserLine = doneUserLine ||
-        (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
-
-      var stackDepth = Applab.interpreter.stateStack.length;
-      // Remember the stack depths of call expressions (so we can implement 'step out')
-
-      // Truncate any history of call expressions seen deeper than our current stack position:
-      for (var depth = stackDepth + 1;
-            depth <= Applab.maxValidCallExpressionDepth;
-            depth++) {
-        Applab.callExpressionSeenAtDepth[depth] = false;
-      }
-      Applab.maxValidCallExpressionDepth = stackDepth;
-
-      if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[stackDepth] = true;
-      }
-
-      if (Applab.paused) {
-        // Store the first call expression stack depth seen while in this step operation:
-        if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-          if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = stackDepth;
-          }
-        }
-        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
-        // though the the stateStack doesn't have "done" set, so that stepping in the
-        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
-        var nodeType = Applab.interpreter.stateStack[0].node.type;
-        doneUserLine = doneUserLine ||
-          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
-
-        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-        if (!doneUserLine &&
-            inUserCode &&
-            Applab.nextStep === StepType.IN &&
-            stackDepth > Applab.firstCallStackDepthThisStep) {
-          reachedBreak = true;
-        }
-        // After the interpreter says a node is "done" (meaning it is time to stop), we will
-        // advance a little further to the start of the next statement. We achieve this by
-        // continuing to set unwindingAfterStep to true to keep the loop going:
-        if (doneUserLine || reachedBreak) {
-          var wasUnwinding = unwindingAfterStep;
-          // step() additional times if we know it to be safe to get us to the next statement:
-          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-          if (wasUnwinding && !unwindingAfterStep) {
-            // done unwinding.. select code that is next to execute:
-            userCodeRow = selectCodeFunc(Applab.interpreter,
-                                         Applab.cumulativeLength,
-                                         Applab.userCodeStartOffset,
-                                         Applab.userCodeLength,
-                                         studioApp.editor);
-            inUserCode = (-1 !== userCodeRow);
-            if (!inUserCode) {
-              // not in user code, so keep unwinding after all...
-              unwindingAfterStep = true;
-            }
-          }
-        }
-
-        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-          if (Applab.nextStep === StepType.OUT &&
-              stackDepth > Applab.stepOutToStackDepth) {
-            // trying to step out, but we didn't get out yet... continue on.
-          } else if (Applab.nextStep === StepType.OVER &&
-              typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              stackDepth > Applab.firstCallStackDepthThisStep) {
-            // trying to step over, and we're in deeper inside a function call... continue next onTick
-          } else {
-            // Our step operation is complete, reset nextStep to StepType.RUN to
-            // return to a normal 'break' state:
-            Applab.nextStep = StepType.RUN;
-            Applab.updatePauseUIState();
-            if (inUserCode) {
-              // Store some properties about where we stopped:
-              Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = stackDepth;
-            }
-            delete Applab.stepOutToStackDepth;
-            delete Applab.firstCallStackDepthThisStep;
-            document.getElementById('spinner').style.visibility = 'hidden';
-            break;
-          }
-        }
-      }
-    } else {
-      handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
-      return;
-    }
-  }
-  if (reachedBreak && atMaxSpeed) {
-    // If we were running atMaxSpeed and just reached a breakpoint, the
-    // code may not be selected in the editor, so do it now:
-    codegen.selectCurrentCode(Applab.interpreter,
-                              Applab.cumulativeLength,
-                              Applab.userCodeStartOffset,
-                              Applab.userCodeLength,
-                              studioApp.editor);
   }
 };
 
@@ -1042,14 +804,6 @@ Applab.reset = function(first) {
   }
 
   if (level.editCode) {
-    Applab.paused = false;
-    Applab.nextStep = StepType.RUN;
-    delete Applab.stepOutToStackDepth;
-    delete Applab.firstCallStackDepthThisStep;
-    delete Applab.stoppedAtBreakpointRow;
-    delete Applab.stoppedAtBreakpointStackDepth;
-    Applab.maxValidCallExpressionDepth = 0;
-    Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
@@ -1082,6 +836,7 @@ Applab.reset = function(first) {
   Applab.Globals = {};
   Applab.eventQueue = [];
   Applab.executionError = null;
+  Applab.JSInterpreter = null;
   Applab.interpreter = null;
 };
 
@@ -1189,7 +944,7 @@ var defineProcedures = function (blockType) {
 var nativeGetCallback = function () {
   var retVal = Applab.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    Applab.seenEmptyGetCallbackDuringExecution = true;
+    Applab.JSInterpreter.seenEmptyGetCallbackDuringExecution = true;
   }
   return retVal;
 };
@@ -1198,8 +953,8 @@ var nativeSetCallbackRetVal = function (retVal) {
   if (Applab.eventQueue.length === 0) {
     // If nothing else is in the event queue, then store this return value
     // away so it can be returned in the native event handler
-    Applab.seenReturnFromCallbackDuringExecution = true;
-    Applab.lastCallbackRetVal = retVal;
+    Applab.JSInterpreter.seenReturnFromCallbackDuringExecution = true;
+    Applab.JSInterpreter.lastCallbackRetVal = retVal;
   }
   // Provide warnings to the user if this function has been called with a
   // meaningful return value while we are no longer in the native event handler
@@ -1207,8 +962,8 @@ var nativeSetCallbackRetVal = function (retVal) {
   // TODO (cpirich): Check to see if the DOM event object was modified
   // (preventDefault(), stopPropagation(), returnValue) and provide a similar
   // warning since these won't work as expected unless running atMaxSpeed
-  if (!Applab.runUntilCallbackReturn &&
-      typeof Applab.lastCallbackRetVal !== 'undefined') {
+  if (!Applab.JSInterpreter.runUntilCallbackReturn &&
+      typeof Applab.JSInterpreter.lastCallbackRetVal !== 'undefined') {
     outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
     if (getCurrentTickLength() !== 0) {
       outputApplabConsole("  (try moving the speed slider to its maximum value)");
@@ -1221,7 +976,7 @@ var consoleApi = {};
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.interpreter,
+    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter,
                                                        arguments[i]);
   }
   var output = '';
@@ -1338,6 +1093,22 @@ Applab.execute = function() {
       catch(err) {
         handleExecutionError(err);
       }
+      if (Applab.interpreter) {
+        Applab.JSInterpreter = new JSInterpreter({
+            interpreter: Applab.interpreter,
+            studioApp: studioApp,
+            codeInfo: {
+                cumulativeLength: Applab.cumulativeLength,
+                userCodeStartOffset: Applab.userCodeStartOffset,
+                userCodeLength: Applab.userCodeLength,
+            },
+            shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+            maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+            onNextStepChanged: Applab.updatePauseUIState,
+            onPause: Applab.onPauseContinueButton,
+            onExecutionError: handleExecutionError,
+        });
+      }
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
@@ -1378,19 +1149,20 @@ Applab.execute = function() {
 Applab.onPauseContinueButton = function() {
   if (Applab.running) {
     // We have code and are either running or paused
-    if (Applab.paused && Applab.nextStep === StepType.RUN) {
-      Applab.paused = false;
+    if (Applab.JSInterpreter.paused &&
+        Applab.JSInterpreter.nextStep === StepType.RUN) {
+      Applab.JSInterpreter.paused = false;
     } else {
-      Applab.paused = true;
-      Applab.nextStep = StepType.RUN;
+      Applab.JSInterpreter.paused = true;
+      Applab.JSInterpreter.nextStep = StepType.RUN;
     }
     Applab.updatePauseUIState();
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    stepInButton.disabled = !Applab.paused;
-    stepOverButton.disabled = !Applab.paused;
-    stepOutButton.disabled = !Applab.paused;
+    stepInButton.disabled = !Applab.JSInterpreter.paused;
+    stepOverButton.disabled = !Applab.JSInterpreter.paused;
+    stepOutButton.disabled = !Applab.JSInterpreter.paused;
   }
 };
 
@@ -1400,7 +1172,8 @@ Applab.updatePauseUIState = function() {
   var spinner = document.getElementById('spinner');
 
   if (pauseButton && continueButton && spinner) {
-    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+    if (Applab.JSInterpreter.paused &&
+        Applab.JSInterpreter.nextStep === StepType.RUN) {
       pauseButton.style.display = "none";
       continueButton.style.display = "inline-block";
       spinner.style.visibility = 'hidden';
@@ -1414,8 +1187,8 @@ Applab.updatePauseUIState = function() {
 
 Applab.onStepOverButton = function() {
   if (Applab.running) {
-    Applab.paused = true;
-    Applab.nextStep = StepType.OVER;
+    Applab.JSInterpreter.paused = true;
+    Applab.JSInterpreter.nextStep = StepType.OVER;
     Applab.updatePauseUIState();
   }
 };
@@ -1425,15 +1198,15 @@ Applab.onStepInButton = function() {
     Applab.runButtonClick();
     Applab.onPauseContinueButton();
   }
-  Applab.paused = true;
-  Applab.nextStep = StepType.IN;
+  Applab.JSInterpreter.paused = true;
+  Applab.JSInterpreter.nextStep = StepType.IN;
   Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
-    Applab.paused = true;
-    Applab.nextStep = StepType.OUT;
+    Applab.JSInterpreter.paused = true;
+    Applab.JSInterpreter.nextStep = StepType.OUT;
     Applab.updatePauseUIState();
   }
 };

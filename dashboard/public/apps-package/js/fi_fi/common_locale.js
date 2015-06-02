@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Jatka"},
 "defaultTwitterText":function(d){return "Katso mitä tein"},
 "designMode":function(d){return "Design"},
-"designModeHeader":function(d){return "Suunnittelutila"},
 "dialogCancel":function(d){return "Peru"},
 "dialogOK":function(d){return "OK"},
 "directionEastLetter":function(d){return "I"},

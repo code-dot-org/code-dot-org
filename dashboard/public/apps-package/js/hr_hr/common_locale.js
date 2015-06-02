@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Nastavi"},
 "defaultTwitterText":function(d){return "Pogledaj što sam napravio"},
 "designMode":function(d){return "Dizajn"},
-"designModeHeader":function(d){return "Dizajnerski način"},
 "dialogCancel":function(d){return "Odustani"},
 "dialogOK":function(d){return "U redu"},
 "directionEastLetter":function(d){return "Istok"},
