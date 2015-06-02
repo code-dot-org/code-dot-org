@@ -78,18 +78,16 @@ var LabelProperties = React.createClass({
     // bold/italics/underline (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
   }
 });
 
 module.exports = {
   PropertyTable: LabelProperties,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('label');
-    element.style.margin = '10px 5px';
-    element.style.width = '100px';
-    element.style.height = '100px';
+    element.style.padding = '2px';
+    element.style.lineHeight = '1';
     element.style.fontSize = '14px';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
@@ -97,6 +95,30 @@ module.exports = {
     element.style.color = '#000000';
     element.style.backgroundColor = '';
 
+    this.resizeToFitText(element);
     return element;
+  },
+
+  resizeToFitText: function (element) {
+    var clone = $(element).clone().css({
+      position: 'absolute',
+      visibility: 'hidden',
+      width: 'auto',
+      height: 'auto'
+    }).appendTo($(document.body));
+
+    element.style.width = clone.width() + 1 + 'px';
+    element.style.height = clone.height() + 1 + 'px';
+
+    clone.remove();
+  },
+
+  onPropertyChange: function (element, name, value) {
+    switch (name) {
+      case 'text':
+      case 'fontSize':
+        this.resizeToFitText(element);
+        return true;
+    }
   }
 };
