@@ -132,7 +132,9 @@ module.exports = {
         validatePropertyRow(1, 'id', 'button1', assert);
         var buttonElement = document.getElementById('button1');
         var buttonParent = buttonElement.parentNode;
-        assert.equal(buttonParent.getAttribute('id'), 'screen2');
+        assert($(buttonParent).hasClass('ui-draggable'));
+        assert($(buttonParent).hasClass('ui-resizable'));
+        assert.equal(buttonParent.parentNode.getAttribute('id'), 'screen2');
 
         // Change to screen1 using dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
@@ -292,16 +294,16 @@ module.exports = {
         // add a screen
         dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(1, 'id', 'screen2', assert);
-        assert.equal($('#screen1').is(':visible'), false, 'screen 1 hidden');
-        assert.equal($('#screen2').is(':visible'), true, 'screen 2 visible');
+        assert.equal($('#screen1')[0].style.display === 'none', true, 'screen 1 hidden');
+        assert.equal($('#screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         // return to code mode
         $("#designModeToggle").click();
         assert.equal($("#designModeToggle").text(), 'Design');
 
         // should be on screen 1
-        assert.equal($('#screen1').is(':visible'), true, 'screen 1 visible');
-        assert.equal($('#screen2').is(':visible'), false, 'screen 2 hidden');
+        assert.equal($('#screen1')[0].style.display === 'none', false, 'screen 1 visible');
+        assert.equal($('#screen2')[0].style.display === 'none', true, 'screen 2 hidden');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {

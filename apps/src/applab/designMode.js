@@ -49,13 +49,19 @@ designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
 
   var parent;
-  if ($(element).hasClass('screen')) {
+  var isScreen = $(element).hasClass('screen');
+  if (isScreen) {
     parent = document.getElementById('divApplab');
   } else {
-    parent = $('.screen').filter(':visible').first()[0];
+    parent = $('.screen').filter(function () {
+      return this.style.display !== 'none';
+    }).first()[0];
   }
   parent.appendChild(element);
-  makeDraggable($(element));
+
+  if (!isScreen) {
+    makeDraggable($(element));
+  }
   designMode.editElementProperties(element);
 
   return element;
@@ -273,9 +279,10 @@ designMode.onDepthChange = function (element, depthDirection) {
 
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
-  makeUndraggable(divApplab.children());
+  // Children are screens. Want to operate on grandchildren
+  makeUndraggable(divApplab.children().children());
   var s = new XMLSerializer().serializeToString(divApplab[0]);
-  makeDraggable(divApplab.children());
+  makeDraggable(divApplab.children().children());
   Applab.levelHtml = s;
 };
 
@@ -312,11 +319,11 @@ designMode.onClear = function() {
 };
 
 function toggleDragging (enable) {
-  var children = $('#divApplab').children();
+  var grandChildren = $('#divApplab').children().children();
   if (enable) {
-    makeDraggable(children);
+    makeDraggable(grandChildren);
   } else {
-    makeUndraggable(children);
+    makeUndraggable(grandChildren);
   }
 }
 
@@ -358,9 +365,6 @@ function makeDraggable (jq) {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
-      stop: function () {
-        Applab.levelHtml = designMode.serializeToLevelHtml();
-      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -391,9 +395,6 @@ function makeDraggable (jq) {
 
         ui.position.left = newLeft;
         ui.position.top = newTop;
-      },
-      stop: function () {
-        Applab.levelHtml = designMode.serializeToLevelHtml();
       }
     }).css('position', 'absolute');
 
@@ -553,4 +554,21 @@ designMode.addScreenIfNecessary = function(html) {
   rootDiv.append(screenElement);
 
   return rootDiv[0].outerHTML;
+  // var rootDiv = $(html);
+  // if (rootDiv.children().length > 0 &&
+  //     rootDiv.children().eq(0).hasClass('screen')) {
+  //   // first child is a screen
+  //   return html;
+  // }
+  //
+  // var screenElement = elementLibrary.createElement(
+  //   elementLibrary.ElementType.SCREEN);
+  // if (!rootDiv[0]) {
+  //   return screenElement.outerHTML;
+  // }
+  //
+  // rootDiv.children().appendTo(screenElement);
+  // rootDiv.append(screenElement);
+  //
+  // return rootDiv[0].outerHTML;
 };
