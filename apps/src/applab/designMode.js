@@ -103,6 +103,11 @@ designMode.onPropertyChange = function(element, name, value) {
   switch (name) {
     case 'id':
       element.id = value;
+      if (elementLibrary.getElementType(element) ===
+          elementLibrary.ElementType.SCREEN) {
+        // rerender design toggle, which has a dropdown of screen ids
+        designMode.changeScreen(value);
+      }
       break;
     case 'left':
       element.style.left = value + 'px';
@@ -493,9 +498,9 @@ designMode.changeScreen = function (screenId) {
   }
 
   designMode.serializeToLevelHtml();
-
   designMode.editElementProperties(document.getElementById(screenId));
 };
+
 designMode.renderDesignModeBox = function(element) {
   var designModeBox = document.getElementById('designModeBox');
   if (!designModeBox) {
