@@ -440,7 +440,6 @@ designMode.configureDesignToggleRow = function () {
       screens: ['screen1'],
       onDesignModeButton: throttledDesignModeClick,
       onCodeModeButton: Applab.onCodeModeButton,
-      handleManageAssets: showAssetManager
     }),
     designToggleRow
   );
@@ -470,6 +469,8 @@ designMode.configureDesignModeHeaders = function() {
     return;
   }
 
-  React.render(React.createElement(DesignModeHeaders), designModeHeaders);
+  React.render(React.createElement(DesignModeHeaders, {
+    handleManageAssets: showAssetManager
+  }), designModeHeaders);
 };
 
