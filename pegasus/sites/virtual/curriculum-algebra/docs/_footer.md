@@ -16,7 +16,9 @@
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+<a href="//code.org"><img src="../docs/codelogo.png" style="float:left; height: 60px;"></a>
+<a href="http://www.bootstrapworld.org" target="_blank"><img src="../docs/bootstraplogo.png" style="float:right; height: 60px;"></a>
+</div>
 
 [/content]
 

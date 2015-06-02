@@ -729,18 +729,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    match:
-      CSPPD AP quiz:
-        AP Assessment Matching: AP Assessment Matching
-        AP matching: AP matching
-        Create Task: Create Task
-        End-of-year exam, common with all AP courses: End-of-year exam, common with all AP courses
-        Explore Task: Explore Task
-        Fixed-response questions: Fixed-response questions
-        Programming projects that demonstrate student understanding of algorithms and abstraction: Programming projects that demonstrate student understanding of algorithms and abstraction
-        Written report about innovations in computing: Written report about innovations in computing
-        ap matching: ap matching
-        match the assessment-type with the description below: match the assessment-type with the description below
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
