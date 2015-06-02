@@ -368,7 +368,7 @@ function makeDraggable (jq) {
     });
 
     elm.css({
-      position: ''
+      position: 'static'
     });
   });
 }
