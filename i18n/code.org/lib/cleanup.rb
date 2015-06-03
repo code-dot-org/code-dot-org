@@ -6,8 +6,6 @@ dashboard_files = [
   'devise',
   'dsls',
   'instructions',
-  'match',
-  'multi',
   'scripts',
   'slides',
   'unplugged'

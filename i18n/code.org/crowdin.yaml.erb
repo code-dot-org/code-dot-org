@@ -8,10 +8,17 @@ files:
   - 
     source: '/source/**/*.yml'
     translation: '/%language%/**/%original_file_name%'
+    update_option: 'update_as_unapproved'
     ignore:
       - /source/hourofcode
+      
   - 
     source: '/source/**/*.json'
     translation: '/%language%/**/%original_file_name%'
+    update_option: 'update_as_unapproved'
     ignore:
       - /source/hourofcode
+      - /source/blockly-mooc/applab.json
+      - /source/blockly-mooc/calc.json
+      - /source/blockly-mooc/eval.json
+      - /source/blockly-mooc/netsim.json
