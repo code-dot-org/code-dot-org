@@ -50,6 +50,29 @@ $wide-column-width: 121px;
   left: 0;
   right: 0;
 
+  #router-log-modal {
+    display: none; // Initial state
+    width: 90%;
+    margin-left: -45%;
+
+    .modal-body {
+      max-height: 450px;
+      overflow-y: auto;
+    }
+
+    th {
+      cursor: pointer;
+    }
+
+    td {
+      font-family: monospace;
+      white-space: pre-wrap;
+      // Make sure table text can be selected and copied
+      @include user_select(text);
+    }
+
+  }
+
   #netsim-disconnected {
     display: block;
     position: relative;

@@ -25,6 +25,7 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
+var netsimNodeFactory = require('./netsimNodeFactory');
 
 var _ = utils.getLodash();
 
@@ -167,14 +168,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.simulateForSender_ = undefined;
-
-  /**
-   * Helper that converts node rows to correct node controllers.
-   * Injected to avoid circular dependency.
-   * @type {netsimNodeFactory}
-   * @private
-   */
-  this.nodeFactory_ = null;
 
   /**
    * Local cache of the last tick time in the local simulation.
@@ -790,12 +783,9 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
- * @param {netsimNodeFactory} nodeFactory - injected to prevent circular
- *        dependency.
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
-  this.nodeFactory_ = nodeFactory;
   this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
   this.validatePacketSpec_(this.packetSpec_);
 
@@ -1172,7 +1162,7 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   }
 
   // Is it some node elsewhere on the shard?
-  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAllCached());
   var node = _.find(nodes, function (node) {
     return node.getHostname() === hostname;
@@ -1232,7 +1222,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
   }
 
   // Is it a local client?
-  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAllCached());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
