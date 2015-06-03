@@ -11,6 +11,7 @@
  */
 'use strict';
 
+var moment = require('moment');
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
@@ -189,11 +190,7 @@ NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
  * @returns {string} 12-hour short time
  */
 NetSimLogEntry.prototype.getTimeString = function () {
-  var date = new Date(this.timestamp);
-  var hours = date.getHours() % 12;
-  var hourString = (hours === 0 ? '12' : hours.toString());
-  var minuteString = ('0' + date.getMinutes()).substr(-2);
-  return hourString + ':' + minuteString;
+  return moment(this.timestamp).format('LT');
 };
 
 /**
