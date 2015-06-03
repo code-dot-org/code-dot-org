@@ -7027,6 +7027,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    // Note (brent): this mode is currently defined in applab, which means we
+    // dont have it available to us in all apps, and ends up with a 404 as it
+    // tries to hit the network. At some point this should be cleaned up
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
