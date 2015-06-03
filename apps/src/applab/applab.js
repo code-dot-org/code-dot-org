@@ -1394,5 +1394,5 @@ var getPegasusHost = function() {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designModeWorkspace').is(':visible');
+  return $('#designWorkspace').is(':visible');
 };

@@ -13,7 +13,6 @@ module.exports = React.createClass({
     onDone: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
-    onToggleToolbox: React.PropTypes.func.isRequired
   },
 
   render: function() {
