@@ -49,10 +49,7 @@
         <td nowrap><%= logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) %></td>
       <% } %>
       <% if (showPacketInfo) { %>
-        <td nowrap><%= i18n.xOfYPackets({
-            x: logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX),
-            y: logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT)
-          }) %></td>
+        <td nowrap><%= logEntry.getLocalizedPacketInfo() %></td>
       <% }%>
       <td nowrap><%= netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) %></td>
       <td nowrap><%= logEntry.getLocalizedStatus() %></td>
