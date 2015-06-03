@@ -18,8 +18,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "instructions": "You can complete the most of this image by looping a 5 bit binary number - then you'll need one more 4 bit number to get the bottom right-hand corner.",
-    "use_modal_function_editor": "false",
-    "maze_data": null
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>

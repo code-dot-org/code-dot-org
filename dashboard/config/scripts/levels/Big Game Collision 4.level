@@ -38,8 +38,7 @@
     "min_workspace_height": "1500",
     "maze_data": null,
     "disable_examples": "false"
-  },
-  "md5": "e062be943acb1cb6563601e0cc487a7e"
+  }
 }]]></config>
   <blocks/>
 </Studio>

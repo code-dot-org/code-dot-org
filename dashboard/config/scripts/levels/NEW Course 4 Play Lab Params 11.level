@@ -31,7 +31,6 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
   }
