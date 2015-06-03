@@ -20,12 +20,12 @@ class OpsMailer < ActionMailer::Base
     mail content_type: 'text/html', subject: subject, to: params[:user].email
   end
 
-  def unexpected_teacher_added(workshop_facilitator, added_teachers, workshop)
+  def unexpected_teacher_added(user, added_teachers, workshop)
     @added_teachers = added_teachers
     @workshop = workshop
-    @facilitator = workshop_facilitator
+    @user = user
 
-    subject = "[ops notification] #{workshop_facilitator.ops_first_name} #{workshop_facilitator.ops_last_name} has added unexpected teachers to #{workshop.name}"
+    subject = "[ops notification] #{user.email} has added unexpected teachers to #{workshop.name}"
     mail content_type: 'text/html', subject: subject
   end
 end
