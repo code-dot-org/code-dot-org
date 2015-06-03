@@ -304,7 +304,9 @@ sq:
     panel:
       answer_viewer: Shfaqja e Pergjigjeve
       student: student
+      viewing_solution: Viewing Solution
       try_it_yourself: Bëje vetë
+      section: Pjesë
   user:
     email_confirm_needed: 'Adresa e emailit nuk është konfirmuar:'
     email_confirm_needed_required: 'Posta E Juaj Elektronike %{email}  Nuk Eshte Konfirmuar:'

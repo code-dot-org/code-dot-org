@@ -305,7 +305,9 @@ de:
     panel:
       answer_viewer: Answer Viewer
       student: Schüler
+      viewing_solution: Viewing Solution
       try_it_yourself: Versuche es selbst
+      section: Abschnitt
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'

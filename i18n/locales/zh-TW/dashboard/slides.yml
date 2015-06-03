@@ -324,7 +324,7 @@ zh:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: 嗨，我是 Chris Bosh。我是一個職業籃球運動員，讀大學時我也寫過程式。
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.

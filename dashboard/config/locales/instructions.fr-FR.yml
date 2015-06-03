@@ -1520,9 +1520,8 @@
       Course 4 Bee 1_instruction: 'L''abeille ne peut pas dire si c''est une fleur
         ou un nid d''abeilles. Vérifie d''abord si c''est une fleur ou un nid d''abeilles,
         puis recueille le nectar si c''est une fleur. '
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Bee 2_instruction: Vérifiez chaque objet pour voir si c'est une fleur.
+        Si c'est le cas, butinez... sinon, vous pouvez l'ignorer !
       Course 4 Bee 3_instruction: L'objet inconnu est soit une fleur soit un rayon
         de miel. Utilise le bloc si/sinon pour collecter le nectar si c'est une fleur,
         sinon pour faire du miel (parce qu'alors ce serait un rayon de miel).

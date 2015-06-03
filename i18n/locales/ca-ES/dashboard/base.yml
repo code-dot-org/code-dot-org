@@ -307,7 +307,9 @@ ca:
     panel:
       answer_viewer: Visualitzador de respostes
       student: estudiant
+      viewing_solution: Viewing Solution
       try_it_yourself: Prova-ho tu
+      section: Secció
   user:
     email_confirm_needed: "L'adreça de correu electrònic no ha estat confirmada:"
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no ha estat confirmada:'

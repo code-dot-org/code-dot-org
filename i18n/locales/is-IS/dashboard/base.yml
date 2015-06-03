@@ -302,7 +302,9 @@ is:
     panel:
       answer_viewer: Skoða svör
       student: nemandi
+      viewing_solution: Viewing Solution
       try_it_yourself: Prófaðu þetta
+      section: Hópur
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'

@@ -304,22 +304,23 @@
         Multiple Choice: Multiple Choice
         Which one of these items is hardest to describe an algorithm for?: Which one
           of these items is hardest to describe an algorithm for?
-        Brushing your teeth: Brushing your teeth
+        Brushing your teeth: Chải răng của bạn
         Baking cookies: Baking cookies
         Shopping from a grocery list: Shopping from a grocery list
-        Banana: Banana
+        Banana: Quả chuối
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple Choice
         0: '? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
+        1: ': Ở đây có 3 câu . Which of the templates below correctly abstracts so
+          that all three match the same pattern as the template?'
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        _____ is a _____ city.: _____ is a _____ city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        Eugene is a _____ city.: Eugene is a _____ city.
+          là một thành phố lớn.<br/>Eugene là một thành phố khá lớn<br/>Hillview là
+          một thành phố nhỏ.
+        Seattle _____ a _____ _____.: Bang Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ là một thành phố_____.
+        _____ is _____ a _____.: _____ là một _____ _____.
+        Eugene is a _____ city.: Eugene là một thành phố _____.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple Choice
         Which of these pictures best represents crowdsourcing?: Which of these pictures
@@ -330,10 +331,10 @@
         Multiple Choice: Multiple Choice
         Which one of these activities would be best for practicing crowdsourcing?: Which
           one of these activities would be best for practicing crowdsourcing?
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Brushing your hair: Brushing your hair
-        Washing your face: Washing your face
+        Cleaning your room: Dọn phòng
+        Eating your dessert: Thưởng thức bữa tráng miệng
+        Brushing your hair: Chải tóc
+        Washing your face: Rửa mặt
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Multiple Choice
         Which piece of information listed below is okay to share on the internet?: Which
@@ -1331,6 +1332,42 @@
         IP addresses are based upon area codes because computers often use phone lines for transmission.: IP
           addresses are based upon area codes because computers often use phone lines
           for transmission.
+      U2L09 Assessment1:
+        'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
+        0: '? A single central register of IP addresses and names (a DNS style system)
+          is an efficient means of translating human readable names to IP addresses.
+          Which of the following is NOT solved by DNS?'
+        1: ': A single central register of IP addresses and names (a DNS style system)
+          is an efficient means of translating human readable names to IP addresses.
+          Which of the following is NOT solved by DNS?'
+        It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It
+          is inefficient to have everyone on the Internet maintain their own list
+          of IP addresses.
+        There are too few IP addresses to meet the current demand.: There are too
+          few IP addresses to meet the current demand.
+        When someone new joins the Internet they must inform everyone else of the new IP address: When
+          someone new joins the Internet they must inform everyone else of the new
+          IP address
+        When an IP address changes, it is impossible to locate a computer until the owner announces the change.: When
+          an IP address changes, it is impossible to locate a computer until the owner
+          announces the change.
+      U2L10 Assessment1:
+        Assessment Question 1: Assessment Question 1
+        What feature of DNS and IP allow the internet to scale?: What feature of DNS
+          and IP allow the internet to scale?
+        Redundancy: Redundancy
+        Hierarchy: Hierarchy
+        Multiple servers: Multiple servers
+        Government control: Government control
+      U2L10 Assessment2:
+        Assessment Question 2: Assessment Question 2
+        What is a disadvantage of the open standard of addressing used by the internet? Pick 2: What
+          is a disadvantage of the open standard of addressing used by the internet?
+          Pick 2
+        Censorship: Censorship
+        Spoofing: Spoofing
+        Redundancy: Redundancy
+        Hierarchy: Hierarchy
       U3L01 Assessment2:
         Why Programming? Question 2: Why Programming? Question 2
         0: "? \"Complex actions can have easy-to-follow directions if the most basic

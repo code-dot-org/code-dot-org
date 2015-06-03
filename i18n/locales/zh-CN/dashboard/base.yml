@@ -299,7 +299,9 @@ zh:
     panel:
       answer_viewer: Answer Viewer
       student: 学生
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: 节点
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
     email_confirm_needed_required: '你的电子邮件地址尚未确认 %{email}：'
