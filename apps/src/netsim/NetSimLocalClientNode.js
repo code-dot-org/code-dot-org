@@ -482,7 +482,8 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         fromNodeID: localNodeID,
         toNodeID: remoteNodeID,
         simulatedBy: simulatingNodeID,
-        payload: payload
+        payload: payload,
+        extraHopsRemaining: netsimGlobals.getLevelConfig().extraHops
       },
       function (err) {
         if (err) {
