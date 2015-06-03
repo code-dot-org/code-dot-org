@@ -15,7 +15,8 @@
     "start_direction": "90",
     "ideal": "9",
     "instructions": "How many times do you need to loop this diamond to draw the flower?"
-  }
+  },
+  "md5": "4a19e8b03b30d9d22cffad95f919550c"
 }]]></config>
   <blocks>
     <start_blocks>

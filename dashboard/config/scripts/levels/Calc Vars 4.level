@@ -16,7 +16,8 @@
     "use_contract_editor": "true",
     "free_play": "false",
     "open_function_definition": "brother-age"
-  }
+  },
+  "md5": "dcbb0a600259fd214936cad6965a2d43"
 }]]></config>
   <blocks>
     <start_blocks>

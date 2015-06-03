@@ -27,9 +27,9 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false",
-    "maze_data": null
-  }
+    "definition_collapse": "false"
+  },
+  "md5": "edf5a3be0f7b9efbcc8e73dc9238959d"
 }]]></config>
   <blocks>
     <start_blocks>

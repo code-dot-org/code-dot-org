@@ -31,9 +31,9 @@
       "downButton",
       "upButton"
     ],
-    "step_speed": "100",
-    "maze_data": null
-  }
+    "step_speed": "100"
+  },
+  "md5": "3515d3697ea5991d75c31ffcffcf9791"
 }]]></config>
   <blocks>
     <start_blocks>

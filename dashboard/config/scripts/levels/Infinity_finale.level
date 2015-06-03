@@ -39,8 +39,7 @@
       "downButton",
       "upButton"
     ],
-    "min_workspace_height": "900",
-    "maze_data": null
+    "min_workspace_height": "900"
   },
   "md5": "ffac9916aa10438ec4cdf727835717cf"
 }]]></config>

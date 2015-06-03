@@ -15,9 +15,9 @@
     "use_contract_editor": "false",
     "start_direction": "3",
     "step_mode": "0",
-    "ideal": "4",
-    "maze_data": null
-  }
+    "ideal": "4"
+  },
+  "md5": "fa0ca06e201791ffdaca11a4ee51c01a"
 }]]></config>
   <blocks>
     <required_blocks>

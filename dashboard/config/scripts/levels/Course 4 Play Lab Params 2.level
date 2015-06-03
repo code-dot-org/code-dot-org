@@ -37,10 +37,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
-  }
+  },
+  "md5": "0b158f220bd6d38e7e19c767d7a607a2"
 }]]></config>
   <blocks>
     <start_blocks>

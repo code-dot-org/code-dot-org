@@ -15,7 +15,8 @@
     "slider_speed": ".7",
     "free_play": "false",
     "instructions": "Loop this triangle 10 times to draw the sun. You'll need to move and turn after each triangle. You can figure out how much to turn by dividing the number of degrees in a circle by the number of shapes that make it up."
-  }
+  },
+  "md5": "f468eee28ae0092fb741029a47380f0a"
 }]]></config>
   <blocks>
     <start_blocks>

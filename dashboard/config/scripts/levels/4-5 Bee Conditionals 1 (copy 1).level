@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-11-05T21:09:56.932Z",
+  "created_at": "2014-11-05T21:09:56.000Z",
   "level_num": "custom",
   "user_id": 6,
   "properties": {
@@ -18,7 +18,8 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "5",
     "video_key": "C3_bee_conditionals"
-  }
+  },
+  "md5": "c172a2200f8fe4e179f348bf410a5af2"
 }]]></config>
   <blocks>
     <toolbox_blocks>

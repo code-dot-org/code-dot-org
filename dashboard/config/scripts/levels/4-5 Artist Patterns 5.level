@@ -15,7 +15,8 @@
     "free_play": "false",
     "instructions": "Let's repeat that to make a row of 6 diamonds. Notice that we changed our diamond code to repeat 3 times instead of 2 - why do you think that is?",
     "ideal": "8"
-  }
+  },
+  "md5": "d6d5a9cad174f58d8bc319483df5fe86"
 }]]></config>
   <blocks>
     <start_blocks>

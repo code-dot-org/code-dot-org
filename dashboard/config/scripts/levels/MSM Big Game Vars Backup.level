@@ -30,9 +30,9 @@
     "soft_buttons": [
       "downButton",
       "upButton"
-    ],
-    "maze_data": null
-  }
+    ]
+  },
+  "md5": "bff6ce39b59d8d0ffc642a66122b8097"
 }]]></config>
   <blocks>
     <start_blocks>

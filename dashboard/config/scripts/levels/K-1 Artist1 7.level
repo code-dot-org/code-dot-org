@@ -8,7 +8,8 @@
   "properties": {
     "skin": "artist",
     "instructions": "Use the jump block to move without drawing. Jump up and draw a line."
-  }
+  },
+  "md5": "9bf3f78d59a39ff90f5fbc7fe0d0fcfa"
 }]]></config>
   <blocks>
     <toolbox_blocks>
