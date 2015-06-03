@@ -40,6 +40,6 @@ module.exports = React.createClass({
         onDone={this.props.onDone}
         onDelete={this.props.onDelete}
         isToolboxVisible={this.state.isToolboxVisible} />
-    </div>
+    </div>;
   }
 });
