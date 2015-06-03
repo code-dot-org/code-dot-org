@@ -480,6 +480,21 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
+  test 'cannot update level name trailing spaces' do
+    level = create :level, name: 'original name'
+
+    post :update, id: level.id, level: {name: 'original name '}
+
+    assert_response 422
+
+    # error message
+    assert assigns(:level).errors[:name]
+
+    level = level.reload
+    # same name
+    assert_equal 'original name', level.name
+  end
+
   test 'can show level when not signed in' do
     unset_levelbuilder_env
 
