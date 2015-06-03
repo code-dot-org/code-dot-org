@@ -3,9 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
-var DesignModeBox = require('./DesignModeBox.jsx');
-var DesignModeHeaders = require('./DesignModeHeaders.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
@@ -54,7 +52,7 @@ designMode.createElement = function (elementType, left, top) {
 
 designMode.editElementProperties = function(element) {
   currentlyEditedElement = element;
-  designMode.renderDesignModeBox(element);
+  designMode.renderDesignWorkspace(element);
 };
 
 /**
@@ -293,15 +291,12 @@ function toggleDragging (enable) {
 }
 
 designMode.toggleDesignMode = function(enable) {
-  var codeModeHeaders = document.getElementById('codeModeHeaders');
-  codeModeHeaders.style.display = enable ? 'none' : 'block';
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  designModeHeaders.style.display = enable ? 'block' : 'none';
-
-  var codeTextbox = document.getElementById('codeTextbox');
-  codeTextbox.style.display = enable ? 'none' : 'block';
-  var designModeBox = document.getElementById('designModeBox');
-  designModeBox.style.display = enable ? 'block' : 'none';
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (designWorkspace) {
+    designWorkspace.style.display = enable ? 'block' : 'none';
+  }
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
@@ -444,9 +439,9 @@ designMode.configureDesignToggleRow = function () {
     designToggleRow
   );
 };
-designMode.renderDesignModeBox = function(element) {
-  var designModeBox = document.getElementById('designModeBox');
-  if (!designModeBox) {
+designMode.renderDesignWorkspace = function(element) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     return;
   }
 
@@ -459,18 +454,7 @@ designMode.renderDesignModeBox = function(element) {
     onDepthChange: designMode.onDepthChange,
     onDone: designMode.onDonePropertiesButton,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
-  };
-  React.render(React.createElement(DesignModeBox, props), designModeBox);
-};
-
-designMode.configureDesignModeHeaders = function() {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
-    return;
-  }
-
-  React.render(React.createElement(DesignModeHeaders, {
     handleManageAssets: showAssetManager
-  }), designModeHeaders);
+  };
+  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
-
