@@ -1792,6 +1792,7 @@ describe("NetSimRouterNode", function () {
 
     it ("can make two extra hops", function () {
       netsimGlobals.getLevelConfig().extraHops = 2;
+      netsimGlobals.setRandomSeed('two-hops');
 
       // Introduce another router so there's space for two extra hops.
       var routerD = makeRouter();
@@ -1852,6 +1853,50 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID, routerC.entityID, routerD.entityID, routerB.entityID]);
+    });
+
+    describe ("extra hops in random order", function () {
+      var packetBinary, routerD, routerE, routerF;
+      beforeEach(function () {
+        netsimGlobals.getLevelConfig().extraHops = 2;
+        routerD = makeRouter();
+        routerE = makeRouter();
+        routerF = makeRouter();
+
+        packetBinary = encoder.concatenateBinary(
+            encoder.makeBinaryHeaders({
+              toAddress: clientB.getAddress(),
+              fromAddress: clientA.getAddress()
+            }),
+            dataConverters.asciiToBinary('wop'));
+      });
+
+      it ("uses one order here", function () {
+        netsimGlobals.setRandomSeed('two-hops');
+        clientA.sendMessage(packetBinary, function () {});
+        clientA.tick({time: 1000});
+        clientA.tick({time: 2000});
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerC.entityID,
+          routerF.entityID,
+          routerB.entityID
+        ]);
+      });
+
+      it ("uses a different order here", function () {
+        netsimGlobals.setRandomSeed('for something completely different');
+        clientA.sendMessage(packetBinary, function () {});
+        clientA.tick({time: 1000});
+        clientA.tick({time: 2000});
+        clientA.tick({time: 3000});
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerE.entityID,
+          routerC.entityID,
+          routerB.entityID
+        ]);
+      });
     });
 
     it ("only makes one extra hop if two would require backtracking", function () {

@@ -1288,8 +1288,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
           });
     }, this);
     if (possibleDestinationRouters.length > 0) {
-      // TODO: Pick one at random.
-      return possibleDestinationRouters[0];
+      return netsimGlobals.randomPickOne(possibleDestinationRouters);
     }
   }
 
@@ -1646,12 +1645,6 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   }
 
   // Create a new message with a new payload.
-  logger.info("Sending message:" +
-      "\n fromNode: " + routerNodeID +
-      "\n toNode: " + destinationNode.entityID +
-      "\n extraHops: " + Math.max(0, message.extraHopsRemaining - 1) +
-      "\n visitedNodeIDs: " + JSON.stringify(
-          message.visitedNodeIDs.concat(this.entityID)));
   NetSimMessage.send(
       this.shard_,
       {
