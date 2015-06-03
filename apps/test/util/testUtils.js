@@ -116,19 +116,26 @@ exports.generateArtistAnswer = function (generatedCode) {
 };
 
 /**
- * Runs the given function at the provided tick count. For Studio only.
+ * Runs the given function at the provided tick count. For Studio.
  */
 exports.runOnStudioTick = function (tick, fn) {
-  if (!Studio) {
-    throw new Error('not supported outside of studio');
+  exports.runOnAppTick(Studio, tick, fn);
+};
+
+/**
+ * Generic function allowing us to hook into onTick. Only tested for Studio/Applab
+ */
+exports.runOnAppTick = function (app, tick, fn) {
+  if (!app) {
+    throw new Error('not supported outside of studio/applab');
   }
   var ran = false;
-  Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick && !ran) {
+  app.onTick = _.wrap(app.onTick, function (originalOnTick) {
+    if (app.tickCount === tick && !ran) {
       ran = true;
       fn();
     }
-    studioOnTick();
+    originalOnTick();
   });
 };
 
