@@ -1057,12 +1057,9 @@ applabCommands.onEventFired = function (opts, e) {
 
     // Push a function call on the queue with an array of arguments consisting
     // of the applabEvent parameter (and any extraArgs originally supplied)
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [applabEvent].concat(opts.extraArgs)
-    });
+    Applab.JSInterpreter.queueEvent(opts.func, [applabEvent].concat(opts.extraArgs));
   } else {
-    Applab.eventQueue.push({'fn': opts.func});
+    Applab.JSInterpreter.queueEvent(opts.func, opts.extraArgs);
   }
   if (Applab.JSInterpreter) {
     // Execute the interpreter and if a return value is sent back from the
@@ -1154,13 +1151,12 @@ applabCommands.onHttpRequestEvent = function (opts) {
   // that is currently active before proceeding...
   if (opts.JSInterpreter === Applab.JSInterpreter) {
     if (this.readyState === 4) {
-      Applab.eventQueue.push({
-        'fn': opts.func,
-        'arguments': [
-          Number(this.status),
+      Applab.JSInterpreter.queueEvent(
+        opts.func,
+        [ Number(this.status),
           String(this.getResponseHeader('content-type')),
-          String(this.responseText)]
-      });
+          String(this.responseText)
+        ]);
     }
   }
 };
@@ -1177,9 +1173,7 @@ applabCommands.startWebRequest = function (opts) {
 
 applabCommands.onTimerFired = function (opts) {
   // ensure that this event came from the active interpreter instance:
-  Applab.eventQueue.push({
-    'fn': opts.func
-  });
+  Applab.JSInterpreter.queueEvent(opts.func);
   // NOTE: the interpreter will not execute forever, if the event handler
   // takes too long, executeInterpreter() will return and the rest of the
   // user's code will execute in the next onTick()
@@ -1236,10 +1230,7 @@ applabCommands.handleCreateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [record]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
   }
 };
 
@@ -1258,10 +1249,7 @@ applabCommands.handleReadValue = function(opts, value) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [value]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [value]);
   }
 };
 
@@ -1281,10 +1269,7 @@ applabCommands.handleSetKeyValue = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': []
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess);
   }
 };
 
@@ -1306,10 +1291,7 @@ applabCommands.handleReadRecords = function(opts, records) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [records]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [records]);
   }
 };
 
@@ -1331,10 +1313,7 @@ applabCommands.handleUpdateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [record]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
   }
 };
 
@@ -1356,10 +1335,7 @@ applabCommands.handleDeleteRecord = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': []
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess);
   }
 };
 

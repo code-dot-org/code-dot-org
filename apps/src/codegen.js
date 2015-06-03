@@ -276,16 +276,31 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 
 function populateGlobalFunctions(interpreter, blocks, scope) {
   for (var i = 0; i < blocks.length; i++) {
-    var gf = blocks[i];
-    if (gf.parent) {
-      var func = gf.parent[gf.func];
+    var block = blocks[i];
+    if (block.parent) {
+      var funcScope = scope;
+      var funcName = block.func;
+      var funcComponents = funcName.split('.');
+      if (funcComponents.length === 2) {
+        // Special accommodation for Object.function syntax (2 components only):
+        var objName = funcComponents[0];
+        // Find or create global object named 'objName' and make it the scope:
+        funcScope = interpreter.getProperty(scope, objName);
+        if (interpreter.UNDEFINED === funcScope) {
+          funcScope = interpreter.createObject(interpreter.OBJECT);
+          interpreter.setProperty(scope, objName, funcScope);
+        }
+        funcName = funcComponents[1];
+      }
+      var func = block.parent[funcName];
       var wrapper = exports.makeNativeMemberFunction({
           interpreter: interpreter,
           nativeFunc: func,
-          nativeParentObj: gf.parent,
+          nativeParentObj: block.parent,
+          dontMarshal: block.dontMarshal
       });
-      interpreter.setProperty(scope,
-                              gf.func,
+      interpreter.setProperty(funcScope,
+                              funcName,
                               interpreter.createNativeFunction(wrapper));
     }
   }
