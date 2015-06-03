@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2014-11-25T22:38:46.265Z",
+  "created_at": "2014-11-25T22:38:46.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -26,7 +26,8 @@
     "first_sprite_index": "23",
     "protaganist_sprite_index": "0",
     "open_function_definition": "rocket-height"
-  }
+  },
+  "md5": "1d1937e43e1ccba7ae32cd36e315ab04"
 }]]></config>
   <blocks>
     <start_blocks>

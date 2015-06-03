@@ -28,9 +28,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "failure_message_override": "Nice attempt! Try again to get it right.",
-    "maze_data": null
-  }
+    "failure_message_override": "Nice attempt! Try again to get it right."
+  },
+  "md5": "77d484429c28e5f319165381bf27ae8b"
 }]]></config>
   <blocks>
     <toolbox_blocks>

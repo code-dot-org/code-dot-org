@@ -22,7 +22,8 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"repeat_full_circle\",\"callout_text\":\"Enter in the number of times the zombie has to move to make a full circle\",\"element_id\":\"#repeat_block_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
-  }
+  },
+  "md5": "33903e5f4e1635e348aa779ceaf526b4"
 }]]></config>
   <blocks>
     <start_blocks>

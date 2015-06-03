@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-10T17:57:02.490Z",
+  "created_at": "2015-02-10T17:57:02.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -29,7 +29,8 @@
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
     "callout_json": "[\r\n  {\"localization_key\":\"big_game_title\",\"callout_text\":\"Edit this variable to change the title of your game\",\"element_id\":\"#game_title\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom right\"},\"style\":{\"classes\":\"\"}}}\r\n]"
-  }
+  },
+  "md5": "84d71b0cde43cac19cec450f586d0ce7"
 }]]></config>
   <blocks/>
 </Studio>

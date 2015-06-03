@@ -29,7 +29,8 @@
     "definition_collapse": "false",
     "ideal": "10",
     "failure_message_override": "Nice attempt! Try again to get it right."
-  }
+  },
+  "md5": "fec8b527f85ffd5c411186c45be7de8b"
 }]]></config>
   <blocks>
     <start_blocks>

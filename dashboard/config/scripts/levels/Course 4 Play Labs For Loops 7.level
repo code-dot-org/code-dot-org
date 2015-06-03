@@ -23,7 +23,8 @@
     "free_play": "false",
     "instructions": "Could you use a for loop to help me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?",
     "ideal": "9"
-  }
+  },
+  "md5": "45a383847b177585d2acc2dd9b7cc710"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -25,10 +25,10 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "true"
-  }
+  },
+  "md5": "9f0ae6a65285aa941efdad5116ca7f73"
 }]]></config>
   <blocks>
     <start_blocks>

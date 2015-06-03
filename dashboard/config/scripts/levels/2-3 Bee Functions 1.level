@@ -17,9 +17,9 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
     "ideal": "8",
-    "video_key": "C3_bee_functions",
-    "maze_data": null
-  }
+    "video_key": "C3_bee_functions"
+  },
+  "md5": "0c23e171deee06356ac94c6b03716c6e"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -14,7 +14,8 @@
     "skip_instructions_popup": "false",
     "ideal": "4",
     "video_key": "C1_maze_debugging"
-  }
+  },
+  "md5": "f95b8076f91e13afa44741129d227452"
 }]]></config>
   <blocks>
     <start_blocks>

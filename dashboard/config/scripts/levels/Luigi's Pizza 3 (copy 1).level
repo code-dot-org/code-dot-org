@@ -1,7 +1,7 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2015-03-11T22:56:58.996Z",
+  "created_at": "2015-03-11T22:56:58.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -25,7 +25,8 @@
     "callout_json": "[]",
     "instructions": "That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the \"else\" clause so that we charge them a premium for toppings that we don't normally offer?",
     "min_workspace_height": "2000"
-  }
+  },
+  "md5": "3084aaa4a4d5027371b4dfb7f561abbb"
 }]]></config>
   <blocks>
     <toolbox_blocks>

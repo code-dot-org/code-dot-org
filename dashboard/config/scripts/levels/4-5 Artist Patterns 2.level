@@ -16,7 +16,8 @@
     "slider_speed": ".8",
     "ideal": "6",
     "disable_param_editing": "true"
-  }
+  },
+  "md5": "56200e3808da9ea78774285f40f6003e"
 }]]></config>
   <blocks>
     <start_blocks>

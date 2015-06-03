@@ -10,7 +10,8 @@
     "instructions": "Ok, this is similar, but slightly different. Can you do it in only five blocks?",
     "start_direction": "1",
     "step_mode": 0
-  }
+  },
+  "md5": "0d6e4b6ea3387ed087105bd10bfb7355"
 }]]></config>
   <blocks>
     <toolbox_blocks>

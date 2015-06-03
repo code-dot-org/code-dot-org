@@ -24,7 +24,8 @@
     "instructions": "What for loop would make me speak 19, 27, 35, 43, 51?",
     "ideal": "9",
     "embed": "false"
-  }
+  },
+  "md5": "3ae1dec757d1f09ca5c599b6084777c2"
 }]]></config>
   <blocks>
     <start_blocks>

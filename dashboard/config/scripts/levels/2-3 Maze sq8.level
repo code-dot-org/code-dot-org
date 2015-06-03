@@ -10,7 +10,8 @@
     "instructions": "Get me to the pig! (Where is that \"repeat times\" block when I need it?)",
     "start_direction": "1",
     "step_mode": 1
-  }
+  },
+  "md5": "c9410eec33c149a6eef0ac5990581fc3"
 }]]></config>
   <blocks/>
 </Maze>

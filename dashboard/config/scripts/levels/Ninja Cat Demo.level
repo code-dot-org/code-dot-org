@@ -26,7 +26,8 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "free_play": "false"
-  }
+  },
+  "md5": "53026dd6e5e3f2c58c5c13ef4cde3ca9"
 }]]></config>
   <blocks>
     <start_blocks>
