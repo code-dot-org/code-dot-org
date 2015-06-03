@@ -155,17 +155,17 @@ p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
-"equivalentExpression":function(d){return "बिल्कुल उसी अभिव्यक्ति प्राप्त करने के लिए अपने तर्क पुनर्व्यवस्था की कोशिश करो।"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
 "evaluate":function(d){return "evaluate"},
-"extraTopBlocks":function(d){return "आपके पास स्वाधीन ब्लॉक है। आप ये \"गणना\" ब्लॉक संग जोड़ना चाहते हैं ?"},
-"failedInput":function(d){return "आपका फंक्षन सभी मूल्यों के लिए सही परिणाम वापस नहीं करता है।"},
-"goal":function(d){return "लक्ष्य:"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "यहाँ अपनी गणना है! उस पर काम जारी रखे, या अगले पहेली के लिए आगे बढ़े"},
-"yourExpression":function(d){return "आपका उत्तर"},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
 "wrongInput":function(d){return "You are calling your function with the wrong value."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Your expression does not return the correct result."}};
