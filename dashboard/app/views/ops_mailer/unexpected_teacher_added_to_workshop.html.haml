@@ -1,4 +1,4 @@
-#{@facilitator.ops_first_name} #{@facilitator.ops_last_name}
+#{@user.email}
 has added #{@added_teachers.ops_first_name} #{@added_teachers.ops_last_name} (#{@added_teachers.email}) to
 %a{href:"http:" + CDO.code_org_url("/ops-dashboard#/workshops/#{@workshop.id}/attendance")}
   #{@workshop.name}
