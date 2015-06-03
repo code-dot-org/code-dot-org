@@ -118,7 +118,7 @@ template: none
             %br
             %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
             %br
-            %button{'ng-click' => 'saveWorkshop(workshop, true);'}
+            %button{'ng-click' => 'saveWorkshop(workshop);'}
               Save
             %button{"ng-click" => "workshop.unexpected_teachers.splice(workshop.unexpected_teachers.indexOf(unexpected_teacher), 1)"}
               Cancel
