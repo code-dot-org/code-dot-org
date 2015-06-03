@@ -1,17 +1,17 @@
 {
-  "divideByZeroError": "O seu programa tem como resultado uma divisão por zero.",
-  "emptyComputeBlock": "Deve anexar um bloco para o bloco \"avaliar\".",
-  "equivalentExpression": "Tente reordenar os seus argumentos para obter exactamente a mesma expressão.",
-  "evaluate": "avaliar",
-  "extraTopBlocks": "Você tem blocos desligados. Você quis dizer para anexar estes para o bloco \"cálculo\"?",
-  "failedInput": "Sua função não retorna o resultado certo para todos os valores.",
-  "goal": "Objectivo:",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"evaluate\" block.",
+  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
+  "evaluate": "evaluate",
+  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput": "Your function does not return the right result for all values.",
+  "goal": "Goal:",
   "levelIncompleteError": "Your expression does not match the goal.",
   "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
-  "reinfFeedbackMsg": "Aqui está o seu cálculo! Continue trabalhando nele, ou passar para o próximo quebra-cabeça!",
-  "yourExpression": "A sua expressão:",
+  "reinfFeedbackMsg": "Here is your calculation! Continue working on it, or move on to the next puzzle!",
+  "yourExpression"  : "Your expression:",
   "wrongInput": "You are calling your function with the wrong value.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Your expression does not return the correct result."
 }
