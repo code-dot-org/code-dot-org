@@ -202,6 +202,8 @@ Dashboard::Application.routes.draw do
         get 'teachers'
       end
     end
+
+    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
     get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
     get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
     get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'

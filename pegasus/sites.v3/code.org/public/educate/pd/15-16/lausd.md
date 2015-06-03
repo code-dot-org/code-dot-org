@@ -94,13 +94,17 @@ The first phase of professional development is a two-hour online introduction th
 
 Wednesday, June 17, 2015 - Friday, June 19, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-TBD - More information coming soon!
+Columbia Memorial Space Center
+<br/>
+12400 Columbia Way
+<br/>
+Downey, CA 90242
 
 ### What do I bring to Phase 2? ###
 Water Bottle
@@ -134,7 +138,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 15, 2015 - Wednesday, June 17, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 

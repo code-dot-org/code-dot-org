@@ -8,12 +8,13 @@ var Mode = {
 
 module.exports = React.createClass({
   propTypes: {
+    initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    handleManageAssets: React.PropTypes.func.isRequired
+    handleManageAssets: React.PropTypes.func.isRequired,
+    onScreenChange: React.PropTypes.func.isRequired
   },
-
 
   getInitialState: function () {
     return {
@@ -40,6 +41,14 @@ module.exports = React.createClass({
     this.props.handleManageAssets();
   },
 
+  handleScreenChange: function (evt) {
+    this.props.onScreenChange(evt.target.value);
+  },
+
+  componentWillReceiveProps: function (newProps) {
+    this.setState({ activeScreen: newProps.initialScreen });
+  },
+
   render: function () {
     var selectDropdown;
     var dropdownStyle = {
@@ -49,11 +58,16 @@ module.exports = React.createClass({
 
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
-        return <option>{item}</option>;
+        return <option key={item}>{item}</option>;
       });
 
       selectDropdown = (
-        <select id="screenSelector" style={dropdownStyle}>
+        <select
+          id="screenSelector"
+          style={dropdownStyle}
+          value={this.state.activeScreen}
+          onChange={this.handleScreenChange}
+          disabled={Applab.isRunning()}>
           {options}
         </select>
       );

@@ -5,6 +5,7 @@ class NetSim < Blockly
     can_connect_to_clients
     can_connect_to_routers
     show_add_router_button
+    show_log_browser_button
     message_granularity
     automatic_receive
     broadcast_mode
