@@ -74,7 +74,8 @@ class Level < ActiveRecord::Base
     Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
 
-  # All levelbuilder levels will have a user_id, except for DSLDefined levels.
+  # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
+  # All custom levels will have a user_id, except for DSLDefined levels.
   def custom?
     user_id.present? || is_a?(DSLDefined)
   end
@@ -199,6 +200,6 @@ class Level < ActiveRecord::Base
   private
 
   def write_to_file?
-    custom? && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
   end
 end
