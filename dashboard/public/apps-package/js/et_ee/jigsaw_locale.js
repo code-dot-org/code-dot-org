@@ -147,7 +147,7 @@ var jigsaw_locale = {lc:{"ar":function(n){
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){jigsaw_locale.c(d,k);return d[k]},
@@ -158,7 +158,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "Palju õnne! See ülesanne on lahendatud."},
 "no":function(d){return "Ei"},
 "numBlocksNeeded":function(d){return "Selle ülesande saab lahendada %1 pusletükiga."},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your game."},
+"reinfFeedbackMsg":function(d){return "Te võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi mängu mängima."},
 "share":function(d){return "Jaga"},
 "shareGame":function(d){return "Jaga oma mängu:"},
 "yes":function(d){return "Jah"}};

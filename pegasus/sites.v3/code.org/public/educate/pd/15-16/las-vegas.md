@@ -37,6 +37,9 @@ Innevation Powered by Switch
 <br /> 
 Las Vegas, NV 89118
 
+<br />
+Please park in the uncovered parking area. The parking services that supervise the Innevation Center will **tow any unregistered vehicle** in the reserved covered parking area.
+
 #### What do I bring to Phase 2? ####
 Water Bottle
 <br />
