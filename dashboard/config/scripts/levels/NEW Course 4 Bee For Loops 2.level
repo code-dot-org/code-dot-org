@@ -20,9 +20,9 @@
     "ideal": "15",
     "instructions": "Add the code necessary to make sure the bee collects all the nectar. Look at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "maze_data": null
-  }
+    "use_contract_editor": "false"
+  },
+  "md5": "29c5105647f98b0613ddb054db9acd83"
 }]]></config>
   <blocks>
     <start_blocks>

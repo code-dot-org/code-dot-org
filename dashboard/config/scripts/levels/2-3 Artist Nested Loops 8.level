@@ -15,7 +15,8 @@
     "slider_speed": ".7",
     "free_play": "false",
     "instructions": "Now let's add some grass to our picture. Each tuft of grass is 50 pixels apart."
-  }
+  },
+  "md5": "590d7cf28bbfbec28a4f3cb366a433cd"
 }]]></config>
   <blocks>
     <start_blocks>

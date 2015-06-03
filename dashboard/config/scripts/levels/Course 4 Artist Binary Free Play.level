@@ -20,7 +20,8 @@
     "embed": "false",
     "disable_sharing": "false",
     "instructions": "Free Play: Draw whatever you like with binary!"
-  }
+  },
+  "md5": "ceeb27803993cc20ccc897596a307ce5"
 }]]></config>
   <blocks>
     <start_blocks>

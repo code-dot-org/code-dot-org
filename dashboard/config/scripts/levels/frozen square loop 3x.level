@@ -24,7 +24,8 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"replace_questions\",\"callout_text\":\"Use the drop-down to replace \\\"???\\\" with a number\",\"element_id\":\"#turn_right_qtip > .blocklyEditableText:eq(1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "permitted_errors": "0"
-  }
+  },
+  "md5": "5a2375e2caba5120f465553af178f102"
 }]]></config>
   <blocks>
     <start_blocks>

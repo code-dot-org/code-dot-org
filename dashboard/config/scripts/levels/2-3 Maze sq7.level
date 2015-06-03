@@ -10,7 +10,8 @@
     "instructions": "Get me to the green intruder using only three blocks.",
     "start_direction": "1",
     "step_mode": 1
-  }
+  },
+  "md5": "2e8e813ea90373368116e83da6ed89f4"
 }]]></config>
   <blocks>
     <toolbox_blocks>

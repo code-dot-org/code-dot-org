@@ -10,7 +10,8 @@
     "instructions": "Can you replace the previous answer with only two blocks? (Hint: Create a loop using a \"repeat times\" block.)",
     "start_direction": "1",
     "step_mode": 1
-  }
+  },
+  "md5": "c393b408b28c4b4a048fbcce82ec7451"
 }]]></config>
   <blocks>
     <start_blocks>

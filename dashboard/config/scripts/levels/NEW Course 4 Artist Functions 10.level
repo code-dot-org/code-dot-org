@@ -23,7 +23,8 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"write_draw_square_function\",\"callout_text\":\"Drag blocks from the toolbox into here that draw a square\",\"element_id\":\"#write_draw_square_function_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "ideal": "9"
-  }
+  },
+  "md5": "a2f2defde5f0939a7f1dd741b1ea8661"
 }]]></config>
   <blocks>
     <start_blocks>

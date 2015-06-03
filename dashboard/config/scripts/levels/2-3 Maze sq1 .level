@@ -10,7 +10,8 @@
     "instructions": "This pig is ruffling my feathers.  Help me find him!",
     "start_direction": "1",
     "step_mode": 1
-  }
+  },
+  "md5": "8d47e78e3499c12faac307d687d430a3"
 }]]></config>
   <blocks>
     <required_blocks>

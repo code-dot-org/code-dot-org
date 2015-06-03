@@ -22,7 +22,8 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"set_sides\",\"callout_text\":\"Use this block to set \\\"sides\\\" to the number needed to complete the puzzle.\",\"element_id\":\"[block-id='12']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
-  }
+  },
+  "md5": "98463c1e92b34d984f18d328f74eecc4"
 }]]></config>
   <blocks>
     <start_blocks>

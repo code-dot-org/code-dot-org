@@ -1,7 +1,7 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2014-11-21T19:13:07.172Z",
+  "created_at": "2014-11-21T19:13:07.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -15,7 +15,8 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "instructions": "Take your \"my-shape\" variable and use it with this provided code to draw two identical green triangles."
-  }
+  },
+  "md5": "c6cc0221a656d207bdb591076821967d"
 }]]></config>
   <blocks>
     <start_blocks>

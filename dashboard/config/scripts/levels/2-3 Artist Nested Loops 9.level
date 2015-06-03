@@ -15,7 +15,8 @@
     "slider_speed": ".7",
     "free_play": "false",
     "instructions": "We'll finish this picture by adding a flower. Loop the diamond 12 times to draw your flower."
-  }
+  },
+  "md5": "4b55f56c6d6128a0c014bd04fb366554"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-03-09T21:21:44.405Z",
+  "created_at": "2015-03-09T21:21:44.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -38,7 +38,8 @@
     "definition_highlight": "false",
     "definition_collapse": "true",
     "custom_game_type": "Rocket Height"
-  }
+  },
+  "md5": "0b14922ed09023a0f4a8327900c49026"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -10,7 +10,8 @@
     "instructions": "Get me to the pig!",
     "start_direction": "2",
     "step_mode": 0
-  }
+  },
+  "md5": "45797fb63469d9cb5184a381beb60f4e"
 }]]></config>
   <blocks/>
 </Maze>
