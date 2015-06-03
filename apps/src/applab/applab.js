@@ -363,10 +363,7 @@ function handleExecutionError(err, lineNumber) {
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
   if (!lineNumber && Applab.JSInterpreter) {
-    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+    lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
