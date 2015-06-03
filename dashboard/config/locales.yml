@@ -82,6 +82,9 @@
   english: "Pseudoloc"
   native: "Pseudoloc"
   debug: true
+"en-GB":
+  english: "English (UK)"
+  native: "English (UK)"
 
 "es": "es-ES"
 "es-ES":
@@ -116,6 +119,11 @@
 "fr-FR":
   english: "French"
   native: "français"
+
+"ga": "ga-IE"
+"ga-IE":
+  english: "Irish (Gaelic)"
+  native: "Gaeilge"
 
 "gl": "gl-ES"
 "gl-ES":

@@ -54,7 +54,7 @@ Moore Hall Room 2120
 <br/>
 Los Angeles, CA 90095
 
-Parking for Moore Hall will be in Lot 2. Stop at the kiosk and let them know you are here for the Exploring Computer Science workshop. The attendant will give you a pass and you will not be required to pay for parking. The campus map, directions and parking information can be found [here](http://www.ucla.edu/maps-directions-parking/). 
+Please allow plenty of time on the first day to locate the parking lot and Moore Hall. Parking for Moore Hall will be in Parking Lot 2 and the campus map can be found [here](/files/ucla-campus-map.pdf). Stop at the kiosk and let them know you are here for the Exploring Computer Science workshop. The attendant will give you a parking pass and you will not be required to pay for parking. 
 
 ### What do I bring to Phase 2? ###
 Water Bottle
@@ -94,13 +94,17 @@ The first phase of professional development is a two-hour online introduction th
 
 Wednesday, June 17, 2015 - Friday, June 19, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-TBD - More information coming soon!
+Columbia Memorial Space Center
+<br/>
+12400 Columbia Way
+<br/>
+Downey, CA 90242
 
 ### What do I bring to Phase 2? ###
 Water Bottle
@@ -134,7 +138,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 15, 2015 - Wednesday, June 17, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 

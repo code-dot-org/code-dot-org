@@ -60,7 +60,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
     }
   };
 
-  runLevel(app, skinId, level, validateResult, testData.runBeforeClick);
+  runLevel(app, skinId, level, validateResult, testData);
 };
 
 function logError(msg) {
@@ -106,7 +106,7 @@ function ಠ_ಠ() {
   require('@cdo/apps/applab/main');
 }
 
-function runLevel (app, skinId, level, onAttempt, beforeClick) {
+function runLevel (app, skinId, level, onAttempt, testData) {
   require('@cdo/apps/' + app + '/main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -133,8 +133,8 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
     isAdmin: true,
     onInitialize: function() {
       // Click the run button!
-      if (beforeClick) {
-        beforeClick(assert);
+      if (testData.runBeforeClick) {
+        testData.runBeforeClick(assert);
       }
 
       // we have a race condition for loading our editor. give it another 500ms
