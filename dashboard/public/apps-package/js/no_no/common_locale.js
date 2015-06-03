@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -222,9 +222,9 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_checkbox_param0":function(d){return "checkboxId"},
 "dropletBlock_checkbox_param1":function(d){return "checked"},
 "dropletBlock_circle_description":function(d){return "Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius"},
-"dropletBlock_circle_param0":function(d){return "centerX"},
+"dropletBlock_circle_param0":function(d){return "sentrerX"},
 "dropletBlock_circle_param0_description":function(d){return "The x position in pixels of the center of the circle."},
-"dropletBlock_circle_param1":function(d){return "centerY"},
+"dropletBlock_circle_param1":function(d){return "sentrerY"},
 "dropletBlock_circle_param1_description":function(d){return "The y position in pixels of the center of the circle."},
 "dropletBlock_circle_param2":function(d){return "radius"},
 "dropletBlock_circle_param2_description":function(d){return "The radius of the circle, in pixels."},
@@ -705,8 +705,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "errorRequiredParamsMissing":function(d){return "Lag en parameter for funksjonen din ved å klikke \"Rediger\" og legge til de nødvendige parameterne. Dra de nye parameterblokkene til funksjonsdefinisjonen."},
 "errorUnusedFunction":function(d){return "Du opprettet en funksjon, men brukte den ikke i arbeidsområdet! Klikk på \"Funksjoner\" i verktøykassen, og forsikre deg om at du bruker den i programmet ditt."},
 "errorUnusedParam":function(d){return "Du la til en parameterblokk, men bruke den ikke i definisjonen. Husk å bruke parameteren ved å klikke \"Rediger\" og sette parameterblokk innenfor den grønne blokken."},
-"extraTopBlocks":function(d){return "Du har ubrukte klosser. Vil du feste dem til \"start\"-klossen?"},
-"extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
+"extraTopBlocks":function(d){return "Du har ledige blokker."},
+"extraTopBlocksWhenRun":function(d){return "Du har ledige blokker. Mente du å knytte disse til \"når kjøre\" blokken?"},
 "finalStage":function(d){return "Gratulerer! Du har fullført siste nivå."},
 "finalStageTrophies":function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+common_locale.p(d,"numTrophies",0,"no",{"one":"en pokal","other":common_locale.n(d,"numTrophies")+" pokaler"})+"."},
 "finish":function(d){return "Fullfør"},

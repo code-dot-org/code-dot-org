@@ -23,7 +23,7 @@ var bounce_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -197,7 +197,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pathAhead":function(d){return "ees on tee"},
 "pathLeft":function(d){return "kui vasakut kätt on tee"},
 "pathRight":function(d){return "kui paremat kätt on tee"},
-"pilePresent":function(d){return "there is a pile"},
+"pilePresent":function(d){return "seal on kuhi"},
 "playSoundCrunch":function(d){return "lase heli \"krõbin\""},
 "playSoundGoal1":function(d){return "lase heli \"värav 1\""},
 "playSoundGoal2":function(d){return "lase heli \"värav 2\""},
@@ -211,12 +211,12 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundWinPoint":function(d){return "lase heli \"võidad punkti\""},
 "playSoundWinPoint2":function(d){return "lase heli \"võidad punkti 2\""},
 "playSoundWood":function(d){return "lase heli \"puit\""},
-"putdownTower":function(d){return "put down tower"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your game."},
+"putdownTower":function(d){return "aseta torn maha"},
+"reinfFeedbackMsg":function(d){return "Te võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi mängu mängima."},
 "removeSquare":function(d){return "eemalda ruut"},
 "repeatUntil":function(d){return "korda kuni"},
-"repeatUntilBlocked":function(d){return "while path ahead"},
-"repeatUntilFinish":function(d){return "repeat until finish"},
+"repeatUntilBlocked":function(d){return "kuni tee on ees"},
+"repeatUntilFinish":function(d){return "korda kuni lõpuni"},
 "scoreText":function(d){return "Skoor: "+bounce_locale.v(d,"playerScore")+" : "+bounce_locale.v(d,"opponentScore")},
 "setBackgroundRandom":function(d){return "vali suvaline taust"},
 "setBackgroundHardcourt":function(d){return "vali suvaline pall"},

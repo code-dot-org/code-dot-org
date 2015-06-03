@@ -303,7 +303,9 @@ el:
     panel:
       answer_viewer: Εμφάνιση Απαντήσεων
       student: φοιτητής/μαθητής
+      viewing_solution: Viewing Solution
       try_it_yourself: Δοκίμασέ το μόνος σου
+      section: Ενότητα
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'

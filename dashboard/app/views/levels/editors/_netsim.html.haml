@@ -29,6 +29,13 @@
       %td
         Whether the "Add Router" (or "Add Room") button should be available
         to students.
+    %tr
+      %td= boolean_check_box f, :show_log_browser_button
+      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button'
+      %td
+        Whether the Log Browser (which exposes logs for all routers) will be
+        availble, both from the lobby and from the Router tab.
+
 
 %h3 Simulation Configuration
 .field

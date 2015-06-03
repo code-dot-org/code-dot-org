@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Twój program prowadzi do dzielenia przez zero."},
-"emptyComputeBlock":function(d){return "Musisz dołączyć blok do bloku \"wykonaj\"."},
-"equivalentExpression":function(d){return "Spróbuj zmienić kolejność argumentów, aby otrzymać dokładnie to samo wyrażenie."},
-"evaluate":function(d){return "oblicz"},
-"extraTopBlocks":function(d){return "Masz niepodłączone bloki. Czy zamierzałeś dołączyć je do bloku \"wykonaj\"?"},
-"failedInput":function(d){return "Twoja funkcja nie zwraca poprawnego wyniku dla wszystkich wartości."},
-"goal":function(d){return "Cel:"},
-"levelIncompleteError":function(d){return "Twoje wyrażenie nie jest zgodne z celem."},
-"missingFunctionError":function(d){return "Musisz zdefiniować funkcję o nazwie "+calc_locale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "W Twoim wyrażeniu brakuje zmiennej "+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "Oto Twoje obliczenia! Kontynuuj pracę nad nimi lub przejdź dalej do następnej łamigłówki!"},
-"yourExpression":function(d){return "Twoje wyrażenie:"},
-"wrongInput":function(d){return "Wywołujesz swoją funkcję z niepoprawną wartością."},
-"wrongOtherValuesX":function(d){return "Twoje wyrażenie ma niepoprawną wartość, gdy zmieniamy "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Twoje wyrażenie nie zwraca poprawnego wyniku."}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

@@ -438,38 +438,30 @@
       4-5 Artist For Loops 7_instruction: 'Намалюй такі самі квадрати, але використай
         при цьому блок "розрахувати по" для зміни їх розміру.  Вбудуй блок "Лічильник"
         в функцію "Малювати квадрат". Підказка: Він знаходиться в категорії "Змінні".'
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Використовувати повторити цикл намалювати
-        цей трикутник.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+      4-5 Artist For Loops 8_instruction: Можеш заповнити програму шляхом розміщення
+        блоків всередині блоків "для", що можна порахувати від 10 до 200 десятками?
+        Можеш знайти блоки "для" в категорії Цикли.
+      4-5 Artist For Loops 9_instruction: Ці кола мають розмір 5, 10, 15, 20, 25,
+        30, та 35. Намалюй кола, використовуючи блок "для".
+      4-5 Artist Free Draw 1_instruction: Вільне малювання! Намалюй будь-що, на що
+        маєш натхнення творити.
+      4-5 Artist Functions 1_instruction: Використай цикл повторення, щоб намалювати
+        трикутник.
+      4-5 Artist Functions 10a_instruction: Розмісти цей код в функцію 'намалювати
+        сніжинку' та заміни 50 з параметром 'розмір'. Функція вже викликана, щоб створити
+        сніжинку,  100 пікселів.
+      4-5 Artist Functions 10b_instruction: 'Використай функцію "намалювати сніжинку",
+        щоб створити сніжинки різних розмірів. Підказка: перша сніжика має довжину
+        25 та кожна сніжинка - вдвічі більшого розмірі, ніж попередня.'
+      4-5 Artist Functions 11_instruction: 'Функція "намалювати шестикутник" використовує
+        функцію "намалювати трикутник". Заверши функцію шестикутника. (Підказка: шестикутник
+        має 6 сторін, кожна довжиною 100 пікселів)'
+      4-5 Artist Functions 12_instruction: 'Заверши функцію "намалювати хвилі". Кожна
+        хвиля складається с однієї Верхньої хвилі та однієї Нижньої хвилі. Підказка:
+        намалюй 5 синіх хвиль.'
+      4-5 Artist Functions 13 Free play_instruction: Тут наведено деякі функції, щоб
+        намалювати планети, зорі, ракети та роботів. Використай їх всі так, що створиш
+        малюнок, яким зможеш поділитися з твоїми друзями.
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops

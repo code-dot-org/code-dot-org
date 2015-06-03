@@ -23,7 +23,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -156,30 +156,30 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
 "badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
-"circleBlockTitle":function(d){return "वृत्त ( त्रिज्या , शैली, रंग)"},
-"displayBlockTitle":function(d){return "प्रदर्शन"},
-"ellipseBlockTitle":function(d){return "दीर्घवृत्त (चौड़ाई , ऊंचाई , शैली, रंग)"},
-"extraTopBlocks":function(d){return "आपके पास स्वाधीन ब्लॉक है। क्या आप ये ब्लॉक \"प्रदर्शन\" ब्लॉक करने के साथ जोड़ना चाहते हैं?"},
+"circleBlockTitle":function(d){return "circle (radius, style, color)"},
+"displayBlockTitle":function(d){return "evaluate"},
+"ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
-"overlayBlockTitle":function(d){return "उपरिशायी (ऊपर, नीचे)"},
-"placeImageBlockTitle":function(d){return "चित्र की जगह (x, y, चित्र)"},
-"offsetBlockTitle":function(d){return "ऑफ़सेट (x, y, चित्र)"},
-"rectangleBlockTitle":function(d){return "आयत (चौड़ाई, ऊँचाई, शैली, रंग)"},
-"reinfFeedbackMsg":function(d){return "आप अपने चित्र को संपादित करने के लिए \"पुन: प्रयास करें\" बटन दबा कर सकते हैं।"},
-"rotateImageBlockTitle":function(d){return "घुमाएँ (डिग्री,चित्र)"},
-"scaleImageBlockTitle":function(d){return "स्केल (कारक, छवि)"},
-"squareBlockTitle":function(d){return "स्क्वायर (आकार, शैली, रंग)"},
-"starBlockTitle":function(d){return "स्टार (त्रिज्या, शैली, रंग)"},
-"radialStarBlockTitle":function(d){return "रेडियल-स्टार (अंक, भीतरी, बाहरी, शैली, रंग)"},
-"polygonBlockTitle":function(d){return "बहुभुज (पक्षों, लम्बाई, शैली, रंग)"},
-"stringAppendBlockTitle":function(d){return "स्ट्रिंग संलग्न (प्रथम, द्वितीय)"},
-"stringLengthBlockTitle":function(d){return "स्ट्रिंग की लंबाई (स्ट्रिंग)"},
-"textBlockTitle":function(d){return "पाठ (स्ट्रिंग, आकार, रंग)"},
-"triangleBlockTitle":function(d){return "त्रिकोण (आकार, शैली, रंग)"},
-"underlayBlockTitle":function(d){return "बुनियाद (नीचे, शीर्ष)"},
-"outline":function(d){return "बाह्य रेखा"},
-"solid":function(d){return "ठोस"},
-"string":function(d){return "स्ट्रिंग"},
+"overlayBlockTitle":function(d){return "overlay (top, bottom)"},
+"placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
+"offsetBlockTitle":function(d){return "offset (x, y, image)"},
+"rectangleBlockTitle":function(d){return "rectangle (width, height, style, color)"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Keep Playing\" button to edit your program."},
+"rotateImageBlockTitle":function(d){return "rotate (degrees, image)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"squareBlockTitle":function(d){return "square (size, style, color)"},
+"starBlockTitle":function(d){return "star (radius, style, color)"},
+"radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},
+"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"stringAppendBlockTitle":function(d){return "string-append (first, second)"},
+"stringLengthBlockTitle":function(d){return "string-length (string)"},
+"textBlockTitle":function(d){return "text (string, size, color)"},
+"triangleBlockTitle":function(d){return "triangle (size, style, color)"},
+"underlayBlockTitle":function(d){return "underlay (bottom, top)"},
+"outline":function(d){return "outline"},
+"solid":function(d){return "solid"},
+"string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
 "userCodeException":function(d){return "An error occurred while executing your code."},
 "wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

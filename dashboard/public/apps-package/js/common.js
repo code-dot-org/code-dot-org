@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({139:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({140:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -58,7 +58,7 @@ exports.define = function(name) {
 };
 
 
-},{}],93:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -282,7 +282,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 }
 
 
-},{}],92:[function(require,module,exports){
+},{}],93:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -573,7 +573,7 @@ function RGBColor(color_string)
 
 
 
-},{}],91:[function(require,module,exports){
+},{}],92:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3542,7 +3542,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 }
 
 
-},{}],90:[function(require,module,exports){
+},{}],91:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4155,7 +4155,7 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],254:[function(require,module,exports){
+},{}],257:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4706,7 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"./locale":140,"./utils":303}],281:[function(require,module,exports){
+},{"./locale":141,"./utils":306}],284:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4729,7 +4729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":140,"ejs":474}],256:[function(require,module,exports){
+},{"../locale":141,"ejs":477}],259:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -4995,7 +4995,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":98}],255:[function(require,module,exports){
+},{"./dom":99}],258:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5070,7 +5070,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],287:[function(require,module,exports){
+},{}],290:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -5218,7 +5218,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":5,"./blocksCommon":66,"./dom":98,"./required_block_utils":253,"./utils":303}],253:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":67,"./dom":99,"./required_block_utils":256,"./utils":306}],256:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5541,7 +5541,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":65,"./locale":140,"./utils":303,"./xml":304}],66:[function(require,module,exports){
+},{"./block_utils":66,"./locale":141,"./utils":306,"./xml":307}],67:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5710,7 +5710,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 
-},{"./locale":140}],5:[function(require,module,exports){
+},{"./locale":141}],5:[function(require,module,exports){
 /* global Blockly, ace:true, $, requirejs, marked */
 
 var parseXmlElement = require('./xml').parseElement;
@@ -7027,6 +7027,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    // Note (brent): this mode is currently defined in applab, which means we
+    // dont have it available to us in all apps, and ends up with a 404 as it
+    // tries to hit the network. At some point this should be cleaned up
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
@@ -7328,7 +7331,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":63,"./block_utils":65,"./constants.js":97,"./dom":98,"./dropletUtils":99,"./feedback":119,"./locale":140,"./templates/builder.html.ejs":275,"./templates/buttons.html.ejs":276,"./templates/instructions.html.ejs":278,"./templates/learn.html.ejs":279,"./templates/makeYourOwn.html.ejs":280,"./utils":303,"./xml":304,"url":471}],471:[function(require,module,exports){
+},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":64,"./block_utils":66,"./constants.js":98,"./dom":99,"./dropletUtils":100,"./feedback":120,"./locale":141,"./templates/builder.html.ejs":278,"./templates/buttons.html.ejs":279,"./templates/instructions.html.ejs":281,"./templates/learn.html.ejs":282,"./templates/makeYourOwn.html.ejs":283,"./utils":306,"./xml":307,"url":474}],474:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8037,13 +8040,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":454,"querystring":457}],457:[function(require,module,exports){
+},{"punycode":457,"querystring":460}],460:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":455,"./encode":456}],456:[function(require,module,exports){
+},{"./decode":458,"./encode":459}],459:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8130,7 +8133,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],455:[function(require,module,exports){
+},{}],458:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8216,7 +8219,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],454:[function(require,module,exports){
+},{}],457:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8727,7 +8730,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],280:[function(require,module,exports){
+},{}],283:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8747,7 +8750,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":140,"ejs":474}],279:[function(require,module,exports){
+},{"../locale":141,"ejs":477}],282:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8769,7 +8772,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":140,"ejs":474}],278:[function(require,module,exports){
+},{"../locale":141,"ejs":477}],281:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8789,7 +8792,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],275:[function(require,module,exports){
+},{"ejs":477}],278:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8809,7 +8812,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],119:[function(require,module,exports){
+},{"ejs":477}],120:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10039,7 +10042,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":95,"./constants":97,"./dom":98,"./feedbackBlocks":120,"./locale":140,"./templates/buttons.html.ejs":276,"./templates/code.html.ejs":277,"./templates/shareFailure.html.ejs":283,"./templates/sharing.html.ejs":284,"./templates/showCode.html.ejs":285,"./templates/trophy.html.ejs":286,"./utils":303,"./xml":304}],286:[function(require,module,exports){
+},{"./codegen":96,"./constants":98,"./dom":99,"./feedbackBlocks":121,"./locale":141,"./templates/buttons.html.ejs":279,"./templates/code.html.ejs":280,"./templates/shareFailure.html.ejs":286,"./templates/sharing.html.ejs":287,"./templates/showCode.html.ejs":288,"./templates/trophy.html.ejs":289,"./utils":306,"./xml":307}],289:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10059,7 +10062,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],285:[function(require,module,exports){
+},{"ejs":477}],288:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10079,7 +10082,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":140,"ejs":474}],284:[function(require,module,exports){
+},{"../locale":141,"ejs":477}],287:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10099,7 +10102,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":140,"ejs":474}],283:[function(require,module,exports){
+},{"../locale":141,"ejs":477}],286:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10119,7 +10122,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],277:[function(require,module,exports){
+},{"ejs":477}],280:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10139,7 +10142,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],276:[function(require,module,exports){
+},{"ejs":477}],279:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10159,7 +10162,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":140,"ejs":474}],120:[function(require,module,exports){
+},{"../locale":141,"ejs":477}],121:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10289,7 +10292,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":97,"./templates/readonly.html.ejs":282}],282:[function(require,module,exports){
+},{"./constants":98,"./templates/readonly.html.ejs":285}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10310,7 +10313,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],98:[function(require,module,exports){
+},{"ejs":477}],99:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -10423,7 +10426,7 @@ exports.isIOS = function() {
 };
 
 
-},{}],97:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -10502,7 +10505,7 @@ exports.KeyCodes = {
 };
 
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -10801,7 +10804,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":304}],63:[function(require,module,exports){
+},{"./xml":307}],64:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -10890,7 +10893,7 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 module.exports = DropletTooltipManager;
 
 
-},{"./DropletAutocompleteParameterTooltipManager":57,"./DropletAutocompletePopupTooltipManager":58,"./DropletBlockTooltipManager":59,"./DropletFunctionTooltip":61}],59:[function(require,module,exports){
+},{"./DropletAutocompleteParameterTooltipManager":58,"./DropletAutocompletePopupTooltipManager":59,"./DropletBlockTooltipManager":60,"./DropletFunctionTooltip":62}],60:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -10987,7 +10990,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
 module.exports = DropletBlockTooltipManager;
 
 
-},{"./DropletFunctionTooltip":61,"./DropletFunctionTooltip.html.ejs":60}],61:[function(require,module,exports){
+},{"./DropletFunctionTooltip":62,"./DropletFunctionTooltip.html.ejs":61}],62:[function(require,module,exports){
 var msg = require('../locale');
 
 /**
@@ -11113,13 +11116,13 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
 module.exports = DropletFunctionTooltip;
 
 
-},{"../locale":140}],140:[function(require,module,exports){
+},{"../locale":141}],141:[function(require,module,exports){
 // base locale
 
 module.exports = window.blockly.common_locale;
 
 
-},{}],58:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
@@ -11246,7 +11249,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
 module.exports = DropletAutocompletePopupTooltipManager;
 
 
-},{"./DropletFunctionTooltip.html.ejs":60}],60:[function(require,module,exports){
+},{"./DropletFunctionTooltip.html.ejs":61}],61:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11271,7 +11274,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],57:[function(require,module,exports){
+},{"ejs":477}],58:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -11383,7 +11386,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
 module.exports = DropletAutocompleteParameterTooltipManager;
 
 
-},{"./DropletParameterTooltip.html.ejs":62,"./tooltipUtils.js":64}],64:[function(require,module,exports){
+},{"./DropletParameterTooltip.html.ejs":63,"./tooltipUtils.js":65}],65:[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -11527,7 +11530,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":303}],62:[function(require,module,exports){
+},{"../utils":306}],63:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11552,7 +11555,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":474}],474:[function(require,module,exports){
+},{"ejs":477}],477:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11907,7 +11910,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":475,"./utils":476,"fs":305,"path":452}],476:[function(require,module,exports){
+},{"./filters":478,"./utils":479,"fs":308,"path":455}],479:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11931,7 +11934,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],475:[function(require,module,exports){
+},{}],478:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12130,7 +12133,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],452:[function(require,module,exports){
+},{}],455:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12358,7 +12361,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":453}],453:[function(require,module,exports){
+},{"_process":456}],456:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12417,7 +12420,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],305:[function(require,module,exports){
+},{}],308:[function(require,module,exports){
 
 },{}],3:[function(require,module,exports){
 /**
@@ -12562,7 +12565,7 @@ process.umask = function() { return 0; };
     };
 
 
-},{}],95:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -13123,7 +13126,7 @@ exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
 };
 
 
-},{"./dropletUtils":99}],99:[function(require,module,exports){
+},{"./dropletUtils":100}],100:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -13520,7 +13523,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":303}],303:[function(require,module,exports){
+},{"./utils":306}],306:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -13783,7 +13786,7 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 
-},{"./hammer":131,"./lodash":141,"./xml":304}],304:[function(require,module,exports){
+},{"./hammer":132,"./lodash":142,"./xml":307}],307:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -13812,12 +13815,12 @@ exports.parseElement = function(text) {
 };
 
 
-},{}],141:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find,sortBy" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -14009,6 +14012,43 @@ exports.parseElement = function(text) {
   }
 
   /**
+   * Used by `sortBy` to compare transformed `collection` elements, stable sorting
+   * them in ascending order.
+   *
+   * @private
+   * @param {Object} a The object to compare to `b`.
+   * @param {Object} b The object to compare to `a`.
+   * @returns {number} Returns the sort order indicator of `1` or `-1`.
+   */
+  function compareAscending(a, b) {
+    var ac = a.criteria,
+        bc = b.criteria,
+        index = -1,
+        length = ac.length;
+
+    while (++index < length) {
+      var value = ac[index],
+          other = bc[index];
+
+      if (value !== other) {
+        if (value > other || typeof value == 'undefined') {
+          return 1;
+        }
+        if (value < other || typeof other == 'undefined') {
+          return -1;
+        }
+      }
+    }
+    // Fixes an `Array#sort` bug in the JS engine embedded in Adobe applications
+    // that causes it, under certain circumstances, to return the same value for
+    // `a` and `b`. See https://github.com/jashkenas/underscore/pull/1247
+    //
+    // This also ensures a stable sort in V8 and other engines.
+    // See http://code.google.com/p/v8/issues/detail?id=90
+    return a.index - b.index;
+  }
+
+  /**
    * Creates a cache object to optimize linear searches of large arrays.
    *
    * @private
@@ -14060,14 +14100,17 @@ exports.parseElement = function(text) {
     return objectPool.pop() || {
       'array': null,
       'cache': null,
+      'criteria': null,
       'false': false,
+      'index': 0,
       'null': false,
       'number': null,
       'object': null,
       'push': null,
       'string': null,
       'true': false,
-      'undefined': false
+      'undefined': false,
+      'value': null
     };
   }
 
@@ -14108,7 +14151,7 @@ exports.parseElement = function(text) {
     if (cache) {
       releaseObject(cache);
     }
-    object.array = object.cache =object.object = object.number = object.string =null;
+    object.array = object.cache = object.criteria = object.object = object.number = object.string = object.value = null;
     if (objectPool.length < maxPoolSize) {
       objectPool.push(object);
     }
@@ -16183,6 +16226,88 @@ exports.parseElement = function(text) {
     return typeof length == 'number' ? length : keys(collection).length;
   }
 
+  /**
+   * Creates an array of elements, sorted in ascending order by the results of
+   * running each element in a collection through the callback. This method
+   * performs a stable sort, that is, it will preserve the original sort order
+   * of equal elements. The callback is bound to `thisArg` and invoked with
+   * three arguments; (value, index|key, collection).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an array of property names is provided for `callback` the collection
+   * will be sorted by each property value.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to iterate over.
+   * @param {Array|Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {Array} Returns a new array of sorted elements.
+   * @example
+   *
+   * _.sortBy([1, 2, 3], function(num) { return Math.sin(num); });
+   * // => [3, 1, 2]
+   *
+   * _.sortBy([1, 2, 3], function(num) { return this.sin(num); }, Math);
+   * // => [3, 1, 2]
+   *
+   * var characters = [
+   *   { 'name': 'barney',  'age': 36 },
+   *   { 'name': 'fred',    'age': 40 },
+   *   { 'name': 'barney',  'age': 26 },
+   *   { 'name': 'fred',    'age': 30 }
+   * ];
+   *
+   * // using "_.pluck" callback shorthand
+   * _.map(_.sortBy(characters, 'age'), _.values);
+   * // => [['barney', 26], ['fred', 30], ['barney', 36], ['fred', 40]]
+   *
+   * // sorting by multiple properties
+   * _.map(_.sortBy(characters, ['name', 'age']), _.values);
+   * // = > [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]
+   */
+  function sortBy(collection, callback, thisArg) {
+    var index = -1,
+        isArr = isArray(callback),
+        length = collection ? collection.length : 0,
+        result = Array(typeof length == 'number' ? length : 0);
+
+    if (!isArr) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+    }
+    forEach(collection, function(value, key, collection) {
+      var object = result[++index] = getObject();
+      if (isArr) {
+        object.criteria = map(callback, function(key) { return value[key]; });
+      } else {
+        (object.criteria = getArray())[0] = callback(value, key, collection);
+      }
+      object.index = index;
+      object.value = value;
+    });
+
+    length = result.length;
+    result.sort(compareAscending);
+    while (length--) {
+      var object = result[length];
+      result[length] = object.value;
+      if (!isArr) {
+        releaseArray(object.criteria);
+      }
+      releaseObject(object);
+    }
+    return result;
+  }
+
   /*--------------------------------------------------------------------------*/
 
   /**
@@ -17011,6 +17136,7 @@ exports.parseElement = function(text) {
   lodash.range = range;
   lodash.reject = reject;
   lodash.shuffle = shuffle;
+  lodash.sortBy = sortBy;
   lodash.values = values;
   lodash.without = without;
   lodash.wrap = wrap;
@@ -17182,7 +17308,7 @@ exports.parseElement = function(text) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],131:[function(require,module,exports){
+},{}],132:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *

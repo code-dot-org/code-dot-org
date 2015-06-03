@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν."},
-"emptyComputeBlock":function(d){return "Πρέπει να επισυνάψετε ένα μπλοκ στο μπλοκ \"αξιολόγηση\"."},
-"equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
-"evaluate":function(d){return "υπολογισμός"},
-"extraTopBlocks":function(d){return "Έχετε ασύνδετα μποκ. Μήπως ενοούσατε να τα επισυνάψετε στο μπλοκ \"αξιολόγηση\";"},
-"failedInput":function(d){return "Η συνάρτηση δεν επιστρέφει το σωστό αποτέλεσμα για όλες τις τιμές."},
-"goal":function(d){return "Στόχος:"},
-"levelIncompleteError":function(d){return "Η έκφραση σας δεν ταιριάζει με την αναμενόμενη του στόχου."},
-"missingFunctionError":function(d){return "Πρέπει να ορίσετε μία συνάρτηση με το όνομα "+calc_locale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Η έκφρασή σας δεν περιέχει την μεταβλητή "+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "Εδώ είναι το αποτέλεσμα σας! Συνεχίστε να εργάζεστε εδω ή προχωρήστε στον επόμενο γρίφο!"},
-"yourExpression":function(d){return "Η έκφρασή σας:"},
-"wrongInput":function(d){return "Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή."},
-"wrongOtherValuesX":function(d){return "Η έκφρασή σας οδηγεί σε λάθος αποτέλεσμα αν αλλάξουμε την "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "H έκφρασή σας δεν επιστρέφει το σωστό αποτέλεσμα."}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

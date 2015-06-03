@@ -63,76 +63,50 @@ ar:
       2-3 Artist Loops 2_instruction: |
         Now use a repeat block to make the cell a
         shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
+      2-3 Artist Loops 4_instruction: 'عاوز تشوف إيه اللى هيحصل لو كررنا الشكل ده  كتير باستخدام قالب تكرار (loop)؟'
+      2-3 Artist Loops 5_instruction: ودلوقتى خلينا نعمل تغيير بسيط على قالب التكرار(loop) ونشوف ده هيأثر ازاى على الصورة.
       2-3 Artist Loops 6_instruction: |
         Add one more move and another turn inside
         the loop and see how your design changes.
       2-3 Artist Loops 7_instruction: |
         We can use loops to make all kinds of polygons.  Can
         you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "Let's put both elements inside a loop."
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops 8_instruction: خلينا نحط الحاجتين جوه قالب تكرار.
+      2-3 Artist Loops 9_instruction: |
+        هنكرر نفس الحاجات، لكن هنسيب مسافة بينهم.r\
+        استخدم نفس الكود اللى فات بس ضيف خطوة لقدام بعد نهاية قالب التكرار (loop) الخارجى. 
+      2-3 Artist Loops New 1_instruction: يلا نرسم راس الروبوت ده. تعرف ترسم مربع طول أضلاعه 100 بيكسل؟
+      2-3 Artist Loops New 10_instruction: 'ودلوقتى خلينا نرسم مجموعة من أشكال الـ "V" جنب بعض باستخدام قالب تكرار (loop).'
+      2-3 Artist Loops New 11_instruction: وهذه المرة دعونا نرسمها 24 مرة. ثم أضف للكود دوران لليسار بمقدار 30 درجة وأضف كل شىء إلى قالب تكرار.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        ارسم ماسة أبعادها 100 بيكسل.
         
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
+      2-3 Artist Loops New 13_instruction: |
+        والآن ارسم الماسة 3 مرات باستخدام قالب تكرار.
+        
+      2-3 Artist Loops New 14_instruction: ودلوقتى خلونا نرسم الماسة 10 مرات ولكن خلينا نلف 90 درجة بين كل ماسة والتانية.
+      2-3 Artist Loops New 15_instruction: ارسم حاجة حلوة.
+      2-3 Artist Loops New 2_instruction: 'إليك جزء من الكود اللى انت استخدمته عشان ترسم المربع. يا ترى إيه اللى خيحصل لو استخدمت قالب تكرار"loop" عشان تشغل الكود ده 4 مرات؟'
+      2-3 Artist Loops New 9_instruction: عشان تكمل السهم، ارسم شكل V طول كل ضلع من الضلعين بتوعه 50 بكسل.
+      2-3 Artist Match Hex Pic_instruction: وصَّل عشان نكمل سداسى الأضلاع.
+      2-3 Artist Match Rho Pic_instruction: يلا نكمل الكود الناقص.
+      2-3 Artist Match Sq Pic_instruction: يلا نكمل الكود الناقص.
+      2-3 Artist Match Tri pic_instruction: 'يلا نكمل الكود الناقص. '
+      2-3 Artist Nested Loops 1_instruction: |
+        انت استخدمت قوالب التكرار عشان ترسم بيها أشكال قبل كده، على فكرة ممكن تحط قالبين تكرار جوه بعض (nested loop). 
+        كرر الجزء ده من الكود 3 مرات عشان ترسم نمط.
+      2-3 Artist Nested Loops 10_instruction: كرر الكود ده 12 مرة عشان تكمل النمط.
+      2-3 Artist Nested Loops 11_instruction: 'كرر الكود ده 12 مرة عشان تكمل النمط, لف 90 درجة بعد كل دايرة. '
+      2-3 Artist Nested Loops 12_instruction: كرر الكود ده 12 مرة عشان تكمل التجاعيد.
+      2-3 Artist Nested Loops 2_instruction: ودلوقتى كرر المثلث 6 مرات. بين كل مرة والتانية لف 60 درجة.
+      2-3 Artist Nested Loops 3_instruction: كرر المثلث ده 12 مرة عشان ترسم النمط ده. قسم عدد درجات اللفة الكاملة (360 درجة) على عدد الأشكال اللى انت عاوز ترسمها (12) عشان تعرف انت محتاج تلف أد إيه بعد كل مثلث.
       2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
+        كرر الماسة 12 مرة عشان ترسم وردة.
+        ملحوظة: 12 ماسة زى الـ 12 مثلث اللى انت لسه رسمهم. محتاج تلف أد إيه بعد كل شكل والتانى؟
       2-3 Artist Nested Loops 5_instruction: |
         Fill in this building's windows with
         a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
+      2-3 Artist Nested Loops 6_instruction: الديناصور ده عنده 8 نتوءات على ذيله، طول كل واحدة فيهم 30 بيكسل. كرر المثلث 8 مرات، يس اوعى تنسى تتحرك لقدام بعد كل نتوء.
       2-3 Artist Nested Loops 7_instruction: |
         Loop this triangle 10 times to draw
         the sun. You'll need to move and turn after each triangle. You can figure

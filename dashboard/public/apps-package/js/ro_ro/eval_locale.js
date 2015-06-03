@@ -23,7 +23,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,32 +154,32 @@ v:function(d,k){eval_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:(k=eval_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
-"badColorStringError":function(d){return "Aţi folosit un cod text de culoare invalid: "+eval_locale.v(d,"val")},
-"badStyleStringError":function(d){return "Aţi folosit un stil invalid de text: "+eval_locale.v(d,"val")},
-"circleBlockTitle":function(d){return "cerc (raza, stil, culoare)"},
-"displayBlockTitle":function(d){return "evaluează"},
-"ellipseBlockTitle":function(d){return "elipsă (lăţime, înălţime, stil, culoare)"},
-"extraTopBlocks":function(d){return "Aveţi block-uri neataşate. Aţi vrut să ataşaţi aceste block-uri la block-ul \"evalueză\"?"},
-"infiniteRecursionError":function(d){return "Funcţia dumneavoastră se autodefineşte. Am oprit-o, deoarece,  in caz contrar, ar fi continuat sa se autodefineasca neîntrerupt."},
-"overlayBlockTitle":function(d){return "suprapunere (sus, jos)"},
-"placeImageBlockTitle":function(d){return "loc-imagine (x, y, imagine)"},
+"badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
+"circleBlockTitle":function(d){return "circle (radius, style, color)"},
+"displayBlockTitle":function(d){return "evaluate"},
+"ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
+"overlayBlockTitle":function(d){return "overlay (top, bottom)"},
+"placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
-"rectangleBlockTitle":function(d){return "dreptunghi (lăţime, înălţime, stil, culoare)"},
-"reinfFeedbackMsg":function(d){return "Apăsaţi butonul \"Continuati să derulaţi\" pentru a vă edita programul."},
-"rotateImageBlockTitle":function(d){return "rotire (grade, imagine)"},
-"scaleImageBlockTitle":function(d){return "redimensionare (factor, imagine)"},
-"squareBlockTitle":function(d){return "pătrat(mărime, stil, culoare)"},
-"starBlockTitle":function(d){return "stea (rază, stil, culoare)"},
-"radialStarBlockTitle":function(d){return "stea-radială (puncte, interior, exterior, stil, culoare)"},
-"polygonBlockTitle":function(d){return "poligon (laturi, lungime, stil, culoare)"},
-"stringAppendBlockTitle":function(d){return "șir-adăugare (primul, al_doilea)"},
-"stringLengthBlockTitle":function(d){return "șir-lungime (șir)"},
-"textBlockTitle":function(d){return "text(șir, mărime, culoare)"},
-"triangleBlockTitle":function(d){return "triunghi (mărime, stil, culoare)"},
-"underlayBlockTitle":function(d){return "underlay (jos, sus)"},
-"outline":function(d){return "schiță"},
+"rectangleBlockTitle":function(d){return "rectangle (width, height, style, color)"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Keep Playing\" button to edit your program."},
+"rotateImageBlockTitle":function(d){return "rotate (degrees, image)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"squareBlockTitle":function(d){return "square (size, style, color)"},
+"starBlockTitle":function(d){return "star (radius, style, color)"},
+"radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},
+"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"stringAppendBlockTitle":function(d){return "string-append (first, second)"},
+"stringLengthBlockTitle":function(d){return "string-length (string)"},
+"textBlockTitle":function(d){return "text (string, size, color)"},
+"triangleBlockTitle":function(d){return "triangle (size, style, color)"},
+"underlayBlockTitle":function(d){return "underlay (bottom, top)"},
+"outline":function(d){return "outline"},
 "solid":function(d){return "solid"},
-"string":function(d){return "șir"},
-"stringMismatchError":function(d){return "Aveţi un şir de caractere unde scrierea cu majusculă este folosită greşit."},
-"userCodeException":function(d){return "S-a produs o eroare în momentul executării codului."},
-"wrongBooleanError":function(d){return "Blocurile de date ale dumneavoastră se exprimă cifric in valiabila booleană greşită."}};
+"string":function(d){return "string"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
