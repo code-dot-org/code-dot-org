@@ -10,7 +10,8 @@
     "instructions": "Keep calm and help me find the bad pig. Otherwise I might get angry!",
     "start_direction": "1",
     "step_mode": 1
-  }
+  },
+  "md5": "528a4c30bac36fc2551220508a45526a"
 }]]></config>
   <blocks/>
 </Maze>

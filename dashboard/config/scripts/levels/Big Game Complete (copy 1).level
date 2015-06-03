@@ -40,9 +40,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "custom_game_type": "Big Game",
-    "maze_data": null
-  }
+    "custom_game_type": "Big Game"
+  },
+  "md5": "454a1fb3edee3fcda90a2a1f6d79b827"
 }]]></config>
   <blocks>
     <start_blocks>

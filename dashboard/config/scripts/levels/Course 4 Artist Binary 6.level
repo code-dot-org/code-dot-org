@@ -20,7 +20,8 @@
     "embed": "false",
     "instructions": "What is the shortest binary string that you can repeat to draw this image?",
     "disable_sharing": "false"
-  }
+  },
+  "md5": "e1f3f582809a1f1db331f3ce8a529a16"
 }]]></config>
   <blocks>
     <start_blocks>

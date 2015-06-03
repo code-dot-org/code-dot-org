@@ -20,7 +20,8 @@
     "instructions": "Each binary string represents one row of this picture. Can you rearrange them so it draws a smiley face instead of a frowny face?",
     "embed": "false",
     "disable_sharing": "false"
-  }
+  },
+  "md5": "1971a88173299c25174e53f68bb9f364"
 }]]></config>
   <blocks>
     <start_blocks>

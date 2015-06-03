@@ -17,9 +17,9 @@
     "step_mode": "0",
     "step_speed": "2",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "maze_data": null
-  }
+    "use_contract_editor": "false"
+  },
+  "md5": "d42bbd33ae1c0d49e9f665a94bbfd4ea"
 }]]></config>
   <blocks>
     <start_blocks>

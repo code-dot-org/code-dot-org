@@ -16,9 +16,9 @@
     "start_direction": "2",
     "step_mode": "0",
     "step_speed": "2",
-    "use_modal_function_editor": "false",
-    "maze_data": null
-  }
+    "use_modal_function_editor": "false"
+  },
+  "md5": "8287f06b8d07916d075cf03b26f5811a"
 }]]></config>
   <blocks>
     <toolbox_blocks>

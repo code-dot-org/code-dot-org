@@ -10,7 +10,8 @@
     "instructions": "Help the bird catch the naughty pig by moving it forward",
     "start_direction": "2",
     "step_mode": 1
-  }
+  },
+  "md5": "637b0fa5e5fdccadd144c3a366ac4153"
 }]]></config>
   <blocks>
     <start_blocks>

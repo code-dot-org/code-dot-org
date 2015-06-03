@@ -25,9 +25,9 @@
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
-    "disable_sharing": "false",
-    "maze_data": null
-  }
+    "disable_sharing": "false"
+  },
+  "md5": "62be38a214568dd85f9f43bb63156b20"
 }]]></config>
   <blocks>
     <start_blocks>

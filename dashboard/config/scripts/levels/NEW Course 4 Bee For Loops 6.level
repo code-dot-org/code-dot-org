@@ -20,9 +20,9 @@
     "instructions": "The last number in your for loop is called the \"increment,\"  and each time the loop is run the counter variable changes by the increment. Try collecting these flowers using an increment of 2.",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "maze_data": null
-  }
+    "use_contract_editor": "false"
+  },
+  "md5": "8cdea86c02ee2c548887f12f63a7c98f"
 }]]></config>
   <blocks>
     <start_blocks>

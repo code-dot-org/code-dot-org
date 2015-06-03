@@ -20,7 +20,8 @@
     "instructions": "Can you draw this pattern by looping a three digit binary string?",
     "embed": "false",
     "disable_sharing": "false"
-  }
+  },
+  "md5": "8aa0a7e8286364f164bef1899d956c14"
 }]]></config>
   <blocks>
     <start_blocks>

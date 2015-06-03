@@ -18,9 +18,9 @@
     "nectar_goal": "13",
     "flower_type": "redWithNectar",
     "ideal": "32",
-    "instructions": "Try using your new function to collect all of this nectar.",
-    "maze_data": null
-  }
+    "instructions": "Try using your new function to collect all of this nectar."
+  },
+  "md5": "79567e6e1019fbab2fa2fdb23b448b5a"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -13,7 +13,8 @@
     "skip_instructions_popup": "true",
     "instructions": "Get me to the pig!",
     "ideal": "10"
-  }
+  },
+  "md5": "c3d3d9dfbbfb0fd0e703005cd2ff0fc4"
 }]]></config>
   <blocks>
     <toolbox_blocks>

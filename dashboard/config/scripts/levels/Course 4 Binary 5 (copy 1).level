@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-11-06T16:43:22.950Z",
+  "created_at": "2014-11-06T16:43:22.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -19,7 +19,8 @@
     "disable_variable_editing": "false",
     "instructions": "Which binary string, repeated 10 times, will draw this image?",
     "use_modal_function_editor": "false"
-  }
+  },
+  "md5": "2f40ab1c344a970488a3ce9f37979064"
 }]]></config>
   <blocks>
     <start_blocks>
