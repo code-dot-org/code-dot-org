@@ -40,7 +40,6 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null,
     "disable_examples": "false"
   }
 }]]></config>

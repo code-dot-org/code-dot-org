@@ -37,8 +37,7 @@
     "definition_collapse": "false",
     "step_speed": "50",
     "custom_game_type": "Big Game",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

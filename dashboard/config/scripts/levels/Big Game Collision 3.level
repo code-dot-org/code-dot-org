@@ -37,7 +37,6 @@
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
     "open_function_definition": "distance",
-    "maze_data": null,
     "disable_examples": "false"
   }
 }]]></config>

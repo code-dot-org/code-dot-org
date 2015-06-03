@@ -36,8 +36,7 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "video_key": "alg_14_biggame_booleans",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks/>
