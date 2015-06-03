@@ -700,7 +700,15 @@ describe("NetSimRouterNode", function () {
     it ("ignores messages sent to itself from other clients", function () {
       var from = remoteA.entityID;
       var to = router.entityID;
-      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: from,
+            toNodeID: to,
+            simulatedBy: from,
+            payload: 'garbage'
+          },
+          function () {});
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', from);
       assertFirstMessageProperty('toNodeID', to);
@@ -709,7 +717,15 @@ describe("NetSimRouterNode", function () {
     it ("ignores messages sent to others", function () {
       var from = localClient.entityID;
       var to = remoteA.entityID;
-      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: from,
+            toNodeID: to,
+            simulatedBy: from,
+            payload: 'garbage'
+          },
+          function () {});
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', from);
@@ -721,7 +737,15 @@ describe("NetSimRouterNode", function () {
       var to = router.entityID;
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: from,
+            toNodeID: to,
+            simulatedBy: from,
+            payload: 'garbage'
+          },
+          function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
@@ -740,7 +764,14 @@ describe("NetSimRouterNode", function () {
         fromAddress: '1111'
       }, 'messageBody');
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: fromNodeID,
+            toNodeID: toNodeID,
+            simulatedBy: fromNodeID,
+            payload: payload
+          },
           function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
@@ -762,7 +793,14 @@ describe("NetSimRouterNode", function () {
         fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
       }, 'messageBody');
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID,fromNodeID, payload,
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: fromNodeID,
+            toNodeID: toNodeID,
+            simulatedBy: fromNodeID,
+            payload: payload
+          },
           function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
@@ -824,7 +862,14 @@ describe("NetSimRouterNode", function () {
           fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
         }, '0'.repeat(messageSizeBits - 8));
 
-        NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
+        NetSimMessage.send(
+            testShard,
+            {
+              fromNodeID: fromNodeID,
+              toNodeID: toNodeID,
+              simulatedBy: fromNodeID,
+              payload: payload
+            },
             function () {});
       };
 
@@ -1143,8 +1188,15 @@ describe("NetSimRouterNode", function () {
           fromAddress: addressStringToBinary(localClient.address, netsimGlobals.getLevelConfig().addressFormat)
         }, '0'.repeat(messageSizeBits - 8));
 
-        NetSimMessage.send(testShard, localClient.entityID, router.entityID,
-            localClient.entityID, payload, function () {});
+        NetSimMessage.send(
+            testShard,
+            {
+              fromNodeID: localClient.entityID,
+              toNodeID: router.entityID,
+              simulatedBy: localClient.entityID,
+              payload: payload
+            },
+            function () {});
       };
 
       var assertRouterQueueSize = function (expectedQueueSizeBits) {
@@ -1312,8 +1364,15 @@ describe("NetSimRouterNode", function () {
           toAddress: addressStringToBinary(autoDnsAddress, netsimGlobals.getLevelConfig().addressFormat),
           fromAddress: addressStringToBinary(fromNode.address, netsimGlobals.getLevelConfig().addressFormat)
         },  asciiToBinary(asciiPayload, BITS_PER_BYTE));
-        NetSimMessage.send(testShard, fromNode.entityID, router.entityID,
-            fromNode.entityID, payload, function () {});
+        NetSimMessage.send(
+            testShard,
+            {
+              fromNodeID: fromNode.entityID,
+              toNodeID: router.entityID,
+              simulatedBy: fromNode.entityID,
+              payload: payload
+            },
+            function () {});
       };
 
       beforeEach(function () {
