@@ -8,4 +8,4 @@ markdown <<MARKDOWN
 
 After you submit your form, please click "Continue" to move to the next level.<br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
+MARKDOWN
