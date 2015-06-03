@@ -147,7 +147,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){common_locale.c(d,k);return d[k]},
@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_lo
 s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "और"},
-"backToPreviousLevel":function(d){return "Back to previous level"},
+"backToPreviousLevel":function(d){return "पिछले स्तर को वापस"},
 "blocklyMessage":function(d){return "ब्लॉक्ली"},
 "blocks":function(d){return "blocks"},
 "booleanFalse":function(d){return "गलत "},

@@ -147,7 +147,7 @@ var flappy_locale = {lc:{"ar":function(n){
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){flappy_locale.c(d,k);return d[k]},
@@ -250,8 +250,8 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPlayerTooltip":function(d){return "Sæt spiller-billede"},
 "setScore":function(d){return "sæt score"},
 "setScoreTooltip":function(d){return "Angiver spillerens score"},
-"setSpeed":function(d){return "indstille hastighed"},
-"setSpeedTooltip":function(d){return "Indstiller dette niveaus hastighed"},
+"setSpeed":function(d){return "Sæt hastighed"},
+"setSpeedTooltip":function(d){return "Sæt dette niveaus hastighed"},
 "shareFlappyTwitter":function(d){return "Se det Flappy spil jeg lavede. Jeg skrev det selv med @codeorg"},
 "shareGame":function(d){return "Del dit spil:"},
 "soundRandom":function(d){return "tilfældig"},
@@ -274,7 +274,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "speedFast":function(d){return "Sæt hurtig hastighed"},
 "speedVeryFast":function(d){return "Sæt meget hurtig hastighed"},
 "whenClick":function(d){return "Når du klikker"},
-"whenClickTooltip":function(d){return "Udføre nedenstående handlinger når en klik begivenhed indtræffer."},
+"whenClickTooltip":function(d){return "Udfør handlingerne herunder når en klik begivenhed indtræffer."},
 "whenCollideGround":function(d){return "Når jorden rammes"},
 "whenCollideGroundTooltip":function(d){return "Udføre handlinger nedenfor når Flappy rammer jorden."},
 "whenCollideObstacle":function(d){return "når en forhindring er ramt"},

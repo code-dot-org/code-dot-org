@@ -40,9 +40,10 @@ var PropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
-          <button onClick={this.handleButtonClick}>
-            <i className='fa fa-picture-o'></i>
-          </button>
+          &nbsp;
+          <a onClick={this.handleButtonClick}>
+            Choose...
+          </a>
         </td>
       </tr>
     );

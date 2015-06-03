@@ -3,7 +3,7 @@ da-DK:
   select_language: Vælg dit sprog
   computer_science: Datalogi
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 14. December 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> kommer. Opråb til alle lærere og arrangørerne, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planlægge din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> er du Programmerings lærer? Se andre CSEdWeek ressourcer</a>'
   n_have_learned_an_hoc: '<h1>Prøv en</h1><h2>Hour of Code</h2><h3># vist</h3>'

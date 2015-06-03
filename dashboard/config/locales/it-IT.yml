@@ -366,7 +366,9 @@
     panel:
       answer_viewer: Answer Viewer
       student: Studente
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Classe
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}

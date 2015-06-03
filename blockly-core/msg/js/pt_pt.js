@@ -1,6 +1,6 @@
 Blockly.Msg.ACTUAL = "chamada";
 Blockly.Msg.ADD = "Adicionar";
-Blockly.Msg.ADD_COMMENT = "Adicionar Comentário";
+Blockly.Msg.ADD_COMMENT = "Adicionar comentário";
 Blockly.Msg.ADD_PARAMETER = "Adicionar parâmetro";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Alterar valor:";
 Blockly.Msg.COLLAPSE_ALL = "Comprimir os blocos";

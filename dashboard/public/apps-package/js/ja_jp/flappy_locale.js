@@ -147,7 +147,7 @@ var flappy_locale = {lc:{"ar":function(n){
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){flappy_locale.c(d,k);return d[k]},
@@ -157,10 +157,10 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "続行"},
 "doCode":function(d){return "してください"},
 "elseCode":function(d){return "他"},
-"endGame":function(d){return "ゲームオーバー"},
+"endGame":function(d){return "ゲーム終了"},
 "endGameTooltip":function(d){return "ゲームおしまい"},
 "finalLevel":function(d){return "おめでとうございます ！最後のパズルを解決しました。"},
-"flap":function(d){return "フラップ"},
+"flap":function(d){return "パタパタ"},
 "flapRandom":function(d){return "ランダムな量だけパタパタします。"},
 "flapVerySmall":function(d){return "ほんの少しだけパタパタします。"},
 "flapSmall":function(d){return "すこしだけパタパタします。"},

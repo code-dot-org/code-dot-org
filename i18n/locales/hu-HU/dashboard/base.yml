@@ -298,7 +298,9 @@ hu:
     panel:
       answer_viewer: Answer Viewer
       student: Diák
+      viewing_solution: Viewing Solution
       try_it_yourself: Próbáld ki magad
+      section: Szakasz
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'

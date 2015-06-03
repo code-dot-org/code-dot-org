@@ -147,7 +147,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){studio_locale.c(d,k);return d[k]},

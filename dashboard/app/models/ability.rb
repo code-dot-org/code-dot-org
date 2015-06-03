@@ -8,9 +8,9 @@ class Ability
     if user.admin?
       can :manage, :all
 
-      # Only custom levels and match/multi are editable
+      # Only custom levels are editable
       cannot [:update, :destroy], Level do |level|
-        !(level.custom? || level.is_a?(DSLDefined))
+        !level.custom?
       end
     else
       can :read, :all

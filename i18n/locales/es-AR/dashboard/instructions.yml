@@ -1113,9 +1113,7 @@ es-AR:
       Course 4 Artist Vars 8_instruction: 'Juego libre: Experimento con el número de lados de esta forma. ¿Puedes cambiar el algoritmo de modo que el tamaño total de la forma sigue siendo el mismo, no importa cuántos lados tengá? Consejo: Tendrás que usar tus bloques de matemáticas (360 dividido por "caras" en dos lugares esta vez) '
       Course 4 Artist Vars 9_instruction: 'Modificar este algoritmo para utilizar la variable "caras" en lugar de un número fijo para dibujar un triángulo. Reemplazar el número 3 con la variable "caras" y utilizar el bloque de "establecer lados".'
       Course 4 Bee 1_instruction: 'La abeja no puede decir si se trata de una flor o un panal de miel. Compruebe primero si se trata de una flor o un panal de abejas y entonces sólo recogen néctar de si es una flor. '
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Bee 2_instruction: 'Revisa cada objeto para ver si es una flor. Si lo es, colecta el néctar...  De lo contrario, ¡puedes ignorarlo!'
       Course 4 Bee 3_instruction: 'El objeto desconocido es una flor o un panal de miel. Usa el bloque if/else para recoger el néctar, "if" si es una flor, "else" hacer miel (porque entonces sería un panal de abejas).'
       Course 4 Bee 4_instruction: Esta flor púrpura puede tener 3, 2 o 1 néctar. Aquí un bloque if-else se combina con otro bloque if-else para crear un bloque if,else-if, else. Completa la solución para recoger la cantidad desconocida de néctar.
       Course 4 Bee For Loops 1_instruction: Utilizar un bucle para recolectar el néctar de cada flor.

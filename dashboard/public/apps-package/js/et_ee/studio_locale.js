@@ -147,7 +147,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){studio_locale.c(d,k);return d[k]},
@@ -365,7 +365,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundTooltip":function(d){return "Valib taustapildi"},
 "setEnemySpeed":function(d){return "sea vaenlase kiirus"},
 "setPlayerSpeed":function(d){return "sea mängija kiirus"},
-"setScoreText":function(d){return "set score"},
+"setScoreText":function(d){return "määra skoor"},
 "setScoreTextTooltip":function(d){return "Määrab teksti, mis kuvatakse skoori alal."},
 "setSpriteEmotionAngry":function(d){return "to a angry mood"},
 "setSpriteEmotionHappy":function(d){return "rõõmsasse meeleollu"},
@@ -440,7 +440,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "size":function(d){return "suurus"},
 "setSprite":function(d){return "väärtusta"},
 "setSpriteN":function(d){return "Sea tegelane "+studio_locale.v(d,"spriteIndex")},
-"soundCrunch":function(d){return "crunch"},
+"soundCrunch":function(d){return "purustama"},
 "soundGoal1":function(d){return "eesmärk 1"},
 "soundGoal2":function(d){return "eesmärk 2"},
 "soundHit":function(d){return "löök"},

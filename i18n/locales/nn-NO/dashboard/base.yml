@@ -302,7 +302,9 @@ nn:
     panel:
       answer_viewer: Answer Viewer
       student: student
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Seksjon
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'

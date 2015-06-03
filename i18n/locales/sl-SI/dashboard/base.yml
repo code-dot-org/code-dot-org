@@ -302,7 +302,9 @@ sl:
     panel:
       answer_viewer: Answer Viewer
       student: Učenec
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Razdelek
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

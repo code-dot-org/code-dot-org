@@ -436,7 +436,7 @@
         C4_unplugged_binary: Binary
         frozen_intro: 一小時代碼的介紹
         frozen_loops: 循環迴圈的介紹
-        frozen_functions: Introduction to Functions
+        frozen_functions: 「函式(Function)」的介紹
         playlab_intro: 遊戲實驗室的介紹
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever

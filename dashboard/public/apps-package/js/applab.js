@@ -2313,15 +2313,11 @@ designMode.onDepthChange = function (element, depthDirection) {
 };
 
 designMode.serializeToLevelHtml = function () {
-  var s = new XMLSerializer();
-  var divApplab = document.getElementById('divApplab');
-  var clone = divApplab.cloneNode(true);
-  // Remove unwanted classes added by jQuery.draggable.
-  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
-  // things like $().data or $().draggable('destroy'), so I just manually
-  // remove the classes instead.
-  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
-  return s.serializeToString(clone);
+  var divApplab = $('#divApplab');
+  makeUndraggable(divApplab.children());
+  var s = new XMLSerializer().serializeToString(divApplab[0]);
+  makeDraggable(divApplab.children());
+  return s;
 };
 
 /**
@@ -2353,11 +2349,7 @@ function toggleDragging (enable) {
   if (enable) {
     makeDraggable(children);
   } else {
-    children.each(function() {
-      if ($(this).data('uiDraggable')) {
-        $(this).draggable('destroy');
-      }
-    });
+    makeUndraggable(children);
   }
 }
 
@@ -2386,40 +2378,83 @@ designMode.toggleDesignMode = function(enable) {
  */
 function makeDraggable (jq) {
   var GRID_SIZE = 5;
-  jq.draggable({
-    cancel: false,  // allow buttons and inputs to be dragged
-    drag: function(event, ui) {
-      // draggables are not compatible with CSS transform-scale,
-      // so adjust the position in various ways here.
 
-      // dragging
-      var div = document.getElementById('divApplab');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-      var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
-      var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / yScale;
+  // For a non-div to be draggable & resizable it needs to be wrapped in a div.
+  jq.each(function () {
+    var elm = $(this);
+    var wrapper = elm.wrap('<div>').parent().resizable({
+      alsoResize: elm,
+      stop: function () {
+        Applab.levelHtml = designMode.serializeToLevelHtml();
+      }
+    }).draggable({
+      cancel: false,  // allow buttons and inputs to be dragged
+      drag: function (event, ui) {
+        // draggables are not compatible with CSS transform-scale,
+        // so adjust the position in various ways here.
 
-      // snap top-left corner to nearest location in the grid
-      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        // dragging
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        var changeLeft = ui.position.left - ui.originalPosition.left;
+        var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
+        var changeTop = ui.position.top - ui.originalPosition.top;
+        var newTop = (ui.originalPosition.top + changeTop) / yScale;
 
-      // containment
-      var container = $('#divApplab');
-      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-      newLeft = Math.min(newLeft, maxLeft);
-      newLeft = Math.max(newLeft, 0);
-      newTop = Math.min(newTop, maxTop);
-      newTop = Math.max(newTop, 0);
+        // snap top-left corner to nearest location in the grid
+        newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-      ui.position.left = newLeft;
-      ui.position.top = newTop;
-    },
-    stop: function(event, ui) {
-      Applab.levelHtml = designMode.serializeToLevelHtml();
+        // containment
+        var container = $('#divApplab');
+        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
+        newLeft = Math.min(newLeft, maxLeft);
+        newLeft = Math.max(newLeft, 0);
+        newTop = Math.min(newTop, maxTop);
+        newTop = Math.max(newTop, 0);
+
+        ui.position.left = newLeft;
+        ui.position.top = newTop;
+      },
+      stop: function () {
+        Applab.levelHtml = designMode.serializeToLevelHtml();
+      }
+    }).css('position', 'absolute');
+
+    wrapper.css({
+      top: elm.css('top'),
+      left: elm.css('left')
+    });
+
+    elm.css({
+      position: 'static'
+    });
+  });
+}
+
+/**
+ * Inverse of `makeDraggable`.
+ * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ */
+function makeUndraggable(jq) {
+  jq.each(function () {
+    var wrapper = $(this);
+    var elm = $(':first-child', wrapper);
+
+    // Don't unwrap elements that aren't wrapped with a draggable div.
+    if (!wrapper.data('uiDraggable')) {
+      return;
     }
+
+    wrapper.resizable('destroy').draggable('destroy');
+    elm.css({
+      top: wrapper.css('top'),
+      left: wrapper.css('left'),
+      position: 'absolute'
+    });
+    elm.unwrap();
   });
 }
 
@@ -7673,8 +7708,9 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
           React.createElement("input", {
             value: this.state.value, 
             onChange: this.handleChangeInternal}), 
-          React.createElement("button", {onClick: this.handleButtonClick}, 
-            React.createElement("i", {className: "fa fa-picture-o"})
+          " ", 
+          React.createElement("a", {onClick: this.handleButtonClick}, 
+            "Choose..."
           )
         )
       )
@@ -7883,7 +7919,7 @@ module.exports = React.createClass({displayName: "exports",
 
       assetList = (
         React.createElement("div", null, 
-          React.createElement("div", {style: {maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}, 
+          React.createElement("div", {style: {maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}, 
             React.createElement("table", {style: {width: '100%'}}, 
               React.createElement("tbody", null, 
                 rows

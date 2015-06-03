@@ -304,7 +304,9 @@ lt:
     panel:
       answer_viewer: Atsakymų apžvalga
       student: Mokinys
+      viewing_solution: Viewing Solution
       try_it_yourself: Išmėginkite patys
+      section: Grupė
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'

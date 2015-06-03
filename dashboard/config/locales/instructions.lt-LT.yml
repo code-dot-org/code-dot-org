@@ -29,9 +29,8 @@
       2-3 Artist 5_instruction: |
         Replace this code with a "repeat times" block
         to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
+      2-3 Artist 6_instruction: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris:
+        visos trys kraštinės yra tokio pat ilgio.'
       2-3 Artist 7_instruction: "Finish drawing the right half of the last window.\nEach
         square of the window is 25 pixels. \n"
       2-3 Artist 8_instruction: |
@@ -39,9 +38,8 @@
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall.
       2-3 Artist 9_instruction: Užbaik šį aitvarą
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
+      2-3 Artist Assessment 1_instruction: 'Įvertink duotą situaciją: užbaik piešti
+        dantį, kurio plotis ir aukštis yra po 25 pikselius.'
       2-3 Artist Debugging 1_instruction: |
         Can you make this hat with a top length
         of 100?
@@ -926,9 +924,8 @@
          There is a really deep hole and a really large
         pile of dirt.  How many shovelfuls of dirt need to be moved around to make
         the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 While Loops Assessment 1_instruction: Lauke yra daug duobių ir žemių. Padėk
+        man išlyginti lauką.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -2212,75 +2209,51 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen circle function in circle_instruction: O dabar sukurkime 20 persidengiančių
+        apskritimų. Tarp kiekvieno apskritimo turi būti 18 laipsnių kampas.
+      frozen circle function with parameter_instruction: Štai tau naujas blokelis
+        „sukurk apskritimą“, su kuriuo galima nubrėžti skirtingų dydžių apskritimus.
+        Pamėgink jį panaudoti ir sukurti apskritimus, kurių dydžiai yra 5 ir 10.
+      frozen circle function_instruction: Panaudok naują blokelį „sukurk apskritimą“.
+        Iš viso bus 10 apskritimų, o tarp jų reikės šuoliuoti su blokeliu „peršok“.
+      frozen circle_instruction: Apskritimas yra įdomi figūra. Ar sugalvosi, kiek
+        kartų reikės pakartoti veiksmus, kad nupieštum apskritimą?
+      frozen cross rotate dense_instruction: Pakartokime tą patį 90 kartų! 360 laipsnių
+        apskritime turės įtilpti 90 linijų. Koks kampas tarp jų turės būti?
+      frozen cross rotate_instruction: O dabar pamėgink pakartoti tą patį 10 kartų.
+        Sugalvok, kiek laipsnių reikės pasisukti piešiant linijas.
+      frozen cross_instruction: Panaudok kartojimo blokelį piešdamas pliuso ženklą.
+        Ar pastebėjai, kad Elsa gali judėti ne tik į priekį, bet ir atgal?
+      frozen diamond mini snowflake_instruction: Ar žinojai, kad visos snaigės turi
+        kitokią formą? Pamėginkime sukurti snaigę, sudarytą iš lygiagretainių. Tarp
+        kiekvieno lygiagretainio bus 90 laipsnių kampas, o kadangi jų bus 4, turėsime
+        savo veiksmus kartoti keturis kartus.
+      frozen diamond snowflake_instruction: O dabar pamėginkime nupiešti snaigę kartodami
+        10 kartų ir pasisukdami po 36 laipsnius po kiekvieno lygiagretainio.
+      frozen diamond_instruction: 'Sukurkime lygiagretainį. Jis panašus į kvadratą,
+        tačiau jo kampai skirtingi: po 60 ir po 120 laipsnių.'
+      frozen freeplay_instruction: Sveikinu! Tu tapai meistriškas menininkas! O dabar
+        gali nupiešti ką tik nori.
+      frozen line_instruction: Labas! Aš Elzė iš Arendelės. Padėk man nubrėžti liniją.
+      frozen perpendicular_instruction: O dabar pabandykime nubrėžti dvi linijas,
+        kurios sudaro 90 laipsnių kampą. Tau reikės panaudoti blokelį „pasisuk“ bei
+        blokelius „eik į priekį“.
+      frozen snowflake branch_instruction: Panaudok naują blokelį „sukurk snaigės
+        šaką“ ir nupiešk tris snaigės šakas.
+      frozen snowflake full_instruction: O dabar pakartokime tai 8 kartus ir gaukime
+        nuostabią snaigę!
+      frozen snowflower_instruction: Ši gėlytė gali būti sukurta iš įvairių apskritimų,
+        kurių dydžiai yra 5 ir 10. Kiekvieno iš jų yra po penkis.
+      frozen square iterative_instruction: Dvi linijas nubrėžti jau moki. O dabar
+        nubrėžk keturias, kad sukurtum kvadratą.
+      frozen square loop 3x_instruction: Pamėginkime nubrėžti tris kvadratus. Po kiekvieno
+        jų reikės pasisukti po 120 laipsnių.
+      frozen square loop_instruction: Labas! Aš Anna iš Arendelės! Dabar panaudosime
+        naują blokelį „kartok“ tam pačiam kvadratui nupiešti. Jis padės panaudoti
+        mažiau blokelių. Sugalvok, kiek kartų reikės kartoti tuos pačius veiksmus,
+        kad pavyktų nubrėžti kvadratą.
+      frozen square snowflake_instruction: Pamėginkime sukurti snaigę. Reikės nupiešti
+        10 kvadratų, o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2338,7 +2311,7 @@
       K-1 Artist1 10_instruction: |
         Draw and Jump to make the dashed path to the treasure
         X
-      K-1 Artist1 2_instruction: Draw the whisker on the cat with two lines!
+      K-1 Artist1 2_instruction: Nupiešk katinui ūsus iš dviejų linijų!
       K-1 Artist1 3_instruction: |
         Draw two lines east and two lines north to finish
         the house!
@@ -2346,7 +2319,7 @@
       K-1 Artist1 5.5_instruction: |
         Complete the third tower of the castle using
         short lines
-      K-1 Artist1 5_instruction: Draw the stem of this flower with two lines!
+      K-1 Artist1 5_instruction: Nupiešk šiai gėlei stiebą iš dviejų linijų!
       K-1 Artist1 6_instruction: Finish the picture by using a jump block!
       K-1 Artist1 7_instruction: |
         Use the jump block to move without drawing. Jump
@@ -2423,56 +2396,44 @@
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      k-1 maze 1_instruction: Can you make me move West to get to the pig?
+      k-1 maze 1_instruction: Padėk man žingsniuoti į vakarus, kad pasiekčiau kiaulę.
       K-1 Maze 10_instruction: 'Go around the TNT to get me to the pig! '
-      K-1 Maze 11_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
-      K-1 Maze 5_instruction: Move me East to get me to the pig!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
+      K-1 Maze 11_instruction: Atsek kelią iki kiaulės ir saugokis TNT dežių. Jei
+        paliesiu jas, susprogsiu!
+      K-1 Maze 2_instruction: Pajudink mane į rytus, kad pasiekčiau kiaulę!
+      K-1 Maze 3_instruction: Pajudink mane į pietus, kad pagaučiau kiaulę!
+      K-1 Maze 4_instruction: Pajudink mane į šiaurę, kad pagaučiau kiaulę!
+      K-1 Maze 5_instruction: Pajudink mane į rytus, kad pasiekčiau kiaulę!
+      K-1 Maze 6_instruction: Iš pradžių pajudink mane į vieną pusę, o po to – į kitą!
+      K-1 Maze 7_instruction: Iš pradžių pajudink mane į vieną pusę, o po to – į kitą!
+      K-1 Maze 8_instruction: Iš pradžių pajudink mane į vieną pusę, o po to – į kitą!
+      K-1 Maze 9_instruction: Iš pradžių pajudink mane į vieną pusę, o po to – į kitą!
       K-1 Maze Assessment 1_instruction: Assessment -- Get me to the pig!
       K-1 Maze Assessment 12_instruction: Assessment Level
       K-1 Maze Assessment 13_instruction: Assessment Level
       K-1 Maze Assessment 2_instruction: Assessment -- Get me to the pig!
-      K-1 maze debug 1_instruction: Change the code to get me to the pig!
-      K-1 maze debug 10_instruction: |
-        Debug this level by rearranging and adding
-        blocks to get me to the pig!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand
-        adding blocks to get me to the pig"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Figure out what is missing and then REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
-      K-1 maze debug 5_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 6_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 7_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 8_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 9_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 Maze debug Assessment 1_instruction: |
-        Assessment -- Debug this level by
-        rearranging and adding blocks to get me to the pig!
+      K-1 maze debug 1_instruction: Pakeisk blokelių seką, kad pasiekčiau kiaulę!
+      K-1 maze debug 10_instruction: Surask ir ištaisyk klaidas, kad galėčiau pasiekti
+        kiaulę!
+      K-1 maze debug 11_instruction: "Iššūkis tau!\r\nSurask ir ištaisyk klaidas,
+        \nkad galėčiau pasiekti kiaulę"
+      K-1 maze debug 2_instruction: Išsiaiškink, kokių blokelių trūksta ir juos pridėk!
+      K-1 maze debug 3_instruction: Išsiaiškink, kurie blokeliai NETINKA ir pašalink
+        juos!
+      K-1 maze debug 4_instruction: Pataisyk, kurie blokeliai netinka. Man atrodo,
+        kad aš judėsiu visai ne į tą pusę.
+      K-1 maze debug 5_instruction: Surask ir ištaisyk klaidas, kad galėčiau pasiekti
+        kiaulę!
+      K-1 maze debug 6_instruction: Surask ir ištaisyk klaidas, kad galėčiau pasiekti
+        kiaulę!
+      K-1 maze debug 7_instruction: Surask ir ištaisyk klaidas, kad galėčiau pasiekti
+        kiaulę!
+      K-1 maze debug 8_instruction: Surask ir ištaisyk klaidas, kad galėčiau pasiekti
+        kiaulę!
+      K-1 maze debug 9_instruction: Surask ir ištaisyk klaidas, kad galėčiau pasiekti
+        kiaulę!
+      K-1 Maze debug Assessment 1_instruction: Įvertink situaciją – Surask ir ištaisyk
+        klaidas, kad galėčiau pasiekti kiaulę!
       K-1 Maze Loops 1_instruction: Get me to the pig!
       K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
@@ -2493,10 +2454,10 @@
         to the pig!
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: "Metu tau iššūkį!\r\nPajudink mane
+        į vieną, \no po to į kitą pusę, kad pasiekčiau kiaulę"
+      K-1 Maze Sequence Assessment 2_instruction: "Metu tau iššūkį!\r\nPajudink mane
+        į vieną, \no po to į kitą pusę, kad pasiekčiau kiaulę."
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the "cost" function, and we'll return the
@@ -3003,9 +2964,8 @@
       scrat 20_instruction: Ar gali pridėti tik 3 blokelius, kad galėčiau pereiti
         per šį labirintą? Jei užduotį išspręsi teisingai, aš galėsiu eiti vingiuotu
         keliu, kad ir koks ilgas jis bebūtų. Paskubėk, arba ledas ištirps!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: Sveikinu! Tu tapai meistriškas menininkas! O
+        dabar gali nupiešti ką tik nori.
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.

@@ -5,7 +5,7 @@
   activerecord:
     errors:
       messages:
-        blank: påkrævet
+        blank: krævet
     attributes:
       user:
         name: Brugernavn
@@ -65,8 +65,8 @@
     need_confirmation: Har ikke modtaget bekræftelses instruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
-    student_count: '%{count} eleverne har allerede tilmeldt sig.'
-    teacher_count: '%{count} lærerne har allerede tilmeldt sig.'
+    student_count: '%{count} elever har allerede tilmeldt sig.'
+    teacher_count: '%{count} lærere har allerede tilmeldt sig.'
     overview_student: Tilmeld dig en konto for at spore dine fremskridt. Din email
       bruges primært til at tillade log ind og til gendannelse af din adgangskode.
       For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.
@@ -273,7 +273,7 @@
       signup: Tilmeld
       already_registered: Allerede registreret?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name}s fremskridt'
       progress: Dine fremskridt
       lines: 'Total linjer kode: %{lines}'
       close: LUK
@@ -319,7 +319,7 @@
         at tilmelde sig. Eleverne skal vælge brugernavne og adgangskoder, men de vil
         ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer
         sin adgangskode, vil du kunne nulstille det til dem.
-      register: Spørg dine elever om at registrere sig selv
+      register: Bed dine elever om selv at registrere sig
       vist: Spørg dine elever til at besøge
       section_code: 'og indtaste deres afsnit-kode:'
       first_please: Først, venligst %{add_section}
@@ -350,9 +350,11 @@
     student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
       %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Svar Viser
       student: studerende
-      try_it_yourself: Try it yourself
+      viewing_solution: Viewing Solution
+      try_it_yourself: Prøv selv
+      section: Afsnit
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'

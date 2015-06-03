@@ -176,14 +176,14 @@
     Майкл, учитель
   homepage_hero_text_student3: «Информатика — это огромная область, и Вы не узнаете,
     нравится Вам она или нет, пока не попробуете» Джексон, 6-й класс
-  homepage_hero_text_student4: «Вы можете сделать всё, что ваш разум захочет сделать
-    с программированием.» Майя, 2 класс
+  homepage_hero_text_student4: «С помощью программирования Вы можете сделать всё,
+    что ваш разум захочет сделать.» Майя, 2 класс
   homepage_hero_text_student5: «Информатика - это наука не для кого-то другого. Это
     наука для вас, здесь и сейчас." Geraldo, преподаватель
-  homepage_hero_text_teacher1: «Искры творчества, вдохновения и инноваций при кодировании
-    - все самое важное в любой карьере.» Floresa, учитель
-  homepage_hero_text_teacher2: «Эта программа привлекла 100% моих учеников.» Адам,
-    учитель
+  homepage_hero_text_teacher1: «При кодировании возникают искры творчества, вдохновения
+    и инноваций  -  это важно для любой карьеры.» Floresa, учитель
+  homepage_hero_text_teacher2: "&ldquo;Эта программа оказалась привлекательной для
+    100% моих учеников, они захотели поучаствовать в этом.&ldquo; \nАдам, учитель\n"
   homepage_slot_text_hoc: Час кода
   homepage_slot_text_frozen: Холодное сердце с Анной и Эльзой
   homepage_slot_text_teacher: Панель управления преподавателя
@@ -193,7 +193,7 @@
   homepage_slot_text_flappy: Порхающий код
   homepage_action_text_codevideo: Посмотрите видео
   homepage_action_text_teachervideo: Посмотрите видео
-  homepage_action_text_learn: Начните учиться
+  homepage_action_text_learn: Начать обучение
   homepage_action_text_signpetition: Подписать петицию
   homepage_signpetition_dropdown: Подписать нашу петицию &#x25BE;
   homepage_banner_text_main: Code.org и Совет колледжа сформировать альянс, чтобы
