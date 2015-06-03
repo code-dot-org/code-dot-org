@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which blocks draw a rectangle with a perimeter of 100?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Artist Multiple Choice",
+    "height": "160"
+  },
+  "md5": "d1dc75e801858c0d1ab03ae32544bbc2"
+}]]></config>
+</Multi>

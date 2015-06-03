@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Choose an algorithm for the image provided."
+      }
+    ],
+    "answers": [
+      {
+        "text": "Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square",
+        "correct": false
+      },
+      {
+        "text": "Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram",
+        "correct": true
+      },
+      {
+        "text": "Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram",
+        "correct": false
+      },
+      {
+        "text": "Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/2-3_images/unplugged/algorithms_1_q.png",
+    "height": "100"
+  },
+  "md5": "1f23f988d502cb2a0714cc3c1b61e04b"
+}]]></config>
+</Multi>

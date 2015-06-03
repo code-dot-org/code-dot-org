@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-02-24T23:47:35.000Z",
+  "properties": {
+    "title": "Computer Science as a Foundational Skill",
+    "content1": "Do you see computer science as a foundational skill for your students? Why or why not?",
+    "placeholder": "Your thoughts here"
+  },
+  "md5": "61b10bd65d7f125c6bc1105d1f4034bc"
+}]]></config>
+</TextMatch>

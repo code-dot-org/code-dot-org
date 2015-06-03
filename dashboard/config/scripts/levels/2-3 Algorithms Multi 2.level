@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which image does <em>not</em> follow this algorithm?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square",
+    "height": "100"
+  },
+  "md5": "c32d030c39bd0afb87be6fc3841cd1d3"
+}]]></config>
+</Multi>

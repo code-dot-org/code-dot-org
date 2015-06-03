@@ -18,8 +18,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "instructions": "Can you draw this pattern by looping a single binary string?"
-  },
-  "md5": "139a930d24918ed1c372948cc93b70ef"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,0 +1,40 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2014-10-02T22:32:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "<h4>1)</h4>"
+      },
+      {
+        "text": "<h4>2)</h4>"
+      },
+      {
+        "text": "<h4>3)</h4>"
+      },
+      {
+        "text": "<h4>4)</h4>"
+      }
+    ],
+    "answers": [
+      {
+        "text": "<h4>Set Player 1 score to 0</h4>"
+      },
+      {
+        "text": "<h4>Player 1 rolls die</h4>"
+      },
+      {
+        "text": "<h4>Add Player 1 roll to total score</h4>"
+      },
+      {
+        "text": "<h4>Compare player scores to see who wins</h4>"
+      }
+    ],
+    "title": "Matching",
+    "content1": "Match the steps in the Dice Race game to the order that they should appear in the algorithm.",
+    "height": "60"
+  },
+  "md5": "9932854887a197e270537fb8e7440e09"
+}]]></config>
+</Match>

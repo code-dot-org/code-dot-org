@@ -7,8 +7,6 @@
   "properties": {
     "skin": "netsim",
     "instructions": "This is Sarah's test of making a netsim level"
-  },
-  "md5": "eb68f8e10737124e601113110facdff4"
+  }
 }]]></config>
-  <blocks/>
 </NetSim>

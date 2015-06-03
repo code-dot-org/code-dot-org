@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-09T00:46:32.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What should f(1) produce?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "x",
+        "correct": false
+      },
+      {
+        "text": "117",
+        "correct": false
+      },
+      {
+        "text": "17",
+        "correct": true
+      }
+    ],
+    "title": "/script_assets/msm/define_f.png, 300"
+  },
+  "md5": "19e20e1af7d2ce8fdc45ddc03a9953e2"
+}]]></config>
+</Multi>

@@ -20,8 +20,7 @@
     "instructions": "Which of these binary strings could you loop 8 times to draw this image?",
     "embed": "false",
     "disable_sharing": "false"
-  },
-  "md5": "c6b2e5bd01f5f433812e170ef0f49d14"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

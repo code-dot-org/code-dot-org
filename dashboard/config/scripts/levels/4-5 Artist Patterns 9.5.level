@@ -14,8 +14,7 @@
     "free_play": "false",
     "instructions": "Let's loop this code to draw two rows of hexagons. Notice how our second row is shifted to the right.",
     "ideal": "11"
-  },
-  "md5": "1debed48e8631a3e6abe9de677e11b63"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

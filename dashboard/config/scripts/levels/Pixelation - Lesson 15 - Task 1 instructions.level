@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-06T20:40:29.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": " true",
+      "css": "unplugged"
+    },
+    "title": "Pixelation - Lesson 15 - Task 1 instructions",
+    "content1": "description here",
+    "markdown": "\n\n<img src = \"http://staging.code.org/images/cspunit1/ColorTask1.png\" align=left width=200 hspace=20>\n# Instructions: Task 1\nIn the next screen you'll be shown the 4x2 image Maddie was creating, but we've left out the last two squares.  Finish off the image by figuring out which two colors are missing and encode them.\n\n</br><br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "93df4aa4413e4a8cbc702aa7aa5bbadd"
+}]]></config>
+</External>

@@ -42,8 +42,7 @@
     "instructions": "Draw a square using only moveForward and turnLeft.  The square should be drawn above and to the left of the turtle's starting position.",
     "callout_json": "[]",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-leftSquare.gif"
-  },
-  "md5": "5c9efaae4a8e2b62a0b260d72f799a99"
+  }
 }]]></config>
   <blocks/>
 </Applab>

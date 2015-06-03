@@ -1,0 +1,19 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-02T22:21:16.000Z",
+  "properties": {
+    "href": "pixelation/pixelation.html",
+    "options": {
+      "skip_dialog": true,
+      "version": "2",
+      "instructions": "Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want.  Happy pixeling!",
+      "data": "0000 1010 0000 1010"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "# Make your own image of any size\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample1.png\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample2.png\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample3.png\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample5.png\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample6.png\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample7.gif\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample8.png\"  width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample9.png\"  width=50 >\n\n**Directions:**\n\n* Encode an image of anything you like.\n* You might want to do some planning and sketching with graph paper first.\n* DO NOT simply make an abstract pattern, like a checkerboard. \n* Depict something, perhaps your name written out, your initials, an icon or logo of some sort.\n* Get creative! The image doesn't have to be a perfect square, it can be long and skinny.\n* Optional: for fun, send your image bits to a friend using the sending bits widget.\n"
+  },
+  "md5": "0c7ff56d0668df4d03c1bcc770292358"
+}]]></config>
+</External>

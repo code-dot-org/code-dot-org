@@ -1,0 +1,31 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which repeat block is the same?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/move_blocks/r3_N.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/r3_NN.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/r4_N.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300",
+    "height": "150"
+  },
+  "md5": "f489ff0a8f188b6924fa633ba5fa6539"
+}]]></config>
+</Multi>

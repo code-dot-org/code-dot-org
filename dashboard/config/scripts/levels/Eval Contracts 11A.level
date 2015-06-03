@@ -15,8 +15,7 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "instructions": "Can you complete this puzzle to read \"Hello World\" in the banner?"
-  },
-  "md5": "0d09eb1b03eba02a468050c4cfcc78ee"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -10,8 +10,7 @@
     "instructions": "Get me to the pig! What blocks got repeated?",
     "start_direction": "1",
     "step_mode": 0
-  },
-  "md5": "6e8d89a4f2009e6e227f95698aaf1173"
+  }
 }]]></config>
   <blocks/>
 </Maze>

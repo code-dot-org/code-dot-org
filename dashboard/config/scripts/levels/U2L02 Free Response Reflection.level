@@ -1,0 +1,10 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-05-31T14:47:51.000Z",
+  "properties": {
+    "title": "The Need for Addressing: Reflection",
+    "markdown": "How did your group decide upon a system for sending messages in the Battleship simulator? \n\nWere there disagreements or problems? How were they resolved?\n\n\n"
+  }
+}]]></config>
+</TextMatch>

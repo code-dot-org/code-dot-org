@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-04-08T19:49:44.000Z",
+  "properties": {
+    "title": "Reflection: Binary Numbers",
+    "content1": "Reflect on your learning in this lesson. In the space below, enter:",
+    "markdown": "3 recollections (things you remember), \n\n2 observations (things you noticed), and \n\n1 insight (something you fully understand the significance of).\n"
+  },
+  "md5": "e5342e824d55856a5543ee869c6d4a1f"
+}]]></config>
+</TextMatch>

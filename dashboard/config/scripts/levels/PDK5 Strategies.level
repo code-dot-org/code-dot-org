@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-11T23:52:35.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Strategies for Teaching Computer Science",
+    "markdown": "## Strategies for Teaching Computer Science\n\n[This worksheet](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf) is available in the Teacher Dashboard in the \"Lesson Plans and Resources\" tile. \n\n</br>\n\n![image](http://staging.code.org/images/strategiesforteachingcs.png)\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "b77697a9a05846d95d3c97a386546a06"
+}]]></config>
+</External>

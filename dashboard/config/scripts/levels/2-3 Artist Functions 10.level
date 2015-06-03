@@ -15,8 +15,7 @@
     "free_play": "true",
     "slider_speed": "0.8",
     "min_workspace_height": "1500"
-  },
-  "md5": "ccebddcd78747e0b03ab95afb1400d00"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

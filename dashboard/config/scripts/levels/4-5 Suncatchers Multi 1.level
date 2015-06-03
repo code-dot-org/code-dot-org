@@ -1,0 +1,31 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-10-02T22:32:58.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which of the programs below <em>does not</em> make the exact same sequence as Program 1?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png",
+    "height": "100"
+  },
+  "md5": "5581af351657f0dd71a12bee9c1e7761"
+}]]></config>
+</Multi>

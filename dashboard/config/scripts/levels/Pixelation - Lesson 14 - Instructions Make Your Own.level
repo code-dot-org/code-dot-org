@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-04T03:08:05.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "Make your own B&W image",
+    "content1": "description here",
+    "markdown": "# Student Task 3 - Make your image!\n\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample1.png\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample2.png\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample3.png\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample5.png\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample6.png\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample7.gif\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample8.png\" width=50 >\n<img src=\"http://staging.code.org/images/cspunit1/BandWExample9.png\" width=50 >\n\n**Make your own image of any size and send it to a friend.**\n\n* Encode an image of anything you like.\n* You might want to do some planning and sketching with graph paper first.\n* DO NOT simply make an abstract pattern, like a checkerboard. \n* Depict something, perhaps your name written out, your initials, an icon or logo of some sort.\n* Get creative! The image doesn't have to a perfect square, it can be long and skinny.\n* Optional: for fun, send your image bits to a friend using the sending bits widget.\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n\n\n"
+  },
+  "md5": "1d3517cf61d8553facd71a3d03033922"
+}]]></config>
+</External>

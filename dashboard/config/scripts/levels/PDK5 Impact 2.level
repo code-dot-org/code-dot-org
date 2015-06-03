@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-02-24T23:57:50.000Z",
+  "properties": {
+    "title": "Connections to other Subjects",
+    "content1": "Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.",
+    "placeholder": "Your thoughts here"
+  },
+  "md5": "31c5439a5a79c0ca3bf40f96f6bd43f9"
+}]]></config>
+</TextMatch>

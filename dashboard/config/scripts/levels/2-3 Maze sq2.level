@@ -10,8 +10,7 @@
     "instructions": "Trace the path and lead me to the silly pig.  Avoid the TNT or the feathers will fly!",
     "start_direction": "1",
     "step_mode": 1
-  },
-  "md5": "718d7a9bd05b3b81c4660e7297dc9bab"
+  }
 }]]></config>
   <blocks/>
 </Maze>

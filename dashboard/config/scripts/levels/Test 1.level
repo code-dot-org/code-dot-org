@@ -1,0 +1,26 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-01-22T21:32:21.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "this is a question?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "wrong answer",
+        "correct": false
+      },
+      {
+        "text": "right answer",
+        "correct": true
+      }
+    ],
+    "title": "This is a test",
+    "content1": "whatever"
+  },
+  "md5": "fe7f889b7bae312fb3f6db6a07576000"
+}]]></config>
+</Multi>

@@ -14,8 +14,7 @@
     "free_play": "false",
     "instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen.",
     "ideal": "15"
-  },
-  "md5": "591a624f3324a894cc62b5721ea419a8"
+  }
 }]]></config>
   <blocks>
     <start_blocks>
