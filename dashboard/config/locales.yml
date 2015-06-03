@@ -75,11 +75,6 @@
   native: "Ελληνικά"
   webfonts: false
 
-"en-GB":
-  english: "English (UK)"
-  native: "English (UK)"
-  debug: true
-
 "en": "en-US"
 "en-US":
   english: "English"
