@@ -587,6 +587,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel'
     assert_select '.teacher-panel.hidden', 0
+
+    assert_equal @section, assigns(:section)
+    assert_equal @student, assigns(:user)
+  end
+
+  test 'shows expanded teacher panel when section is chosen but student is not' do
+    @teacher.update admin: true # TODO don't need this when feature is shipped
+
+    sign_in @teacher
+
+    last_attempt_data = 'test'
+    level = @custom_s1_l1.level
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, section_id: @section.id
+
+    assert_select '.teacher-panel'
+    assert_select '.teacher-panel.hidden', 0
+
+    assert_equal @section, assigns(:section)
+    assert_equal nil, assigns(:user)
   end
 
   test 'shows collapsed teacher panel when student not chosen' do
@@ -597,6 +618,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
 
     assert_select '.teacher-panel.hidden'
+
+    assert_equal nil, assigns(:section)
+    assert_equal nil, assigns(:user)
   end
 
   test 'does not show teacher panel for pd scripts' do
