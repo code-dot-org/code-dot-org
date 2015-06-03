@@ -382,6 +382,9 @@ function makeDraggable (jq) {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
+      resize: function () {
+        designMode.renderDesignModeBox(elm[0]);
+      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -412,6 +415,13 @@ function makeDraggable (jq) {
 
         ui.position.left = newLeft;
         ui.position.top = newTop;
+
+        elm.css({
+          top: newTop,
+          left: newLeft
+        });
+
+        designMode.renderDesignModeBox(elm[0]);
       }
     }).css('position', 'absolute');
 
@@ -420,9 +430,7 @@ function makeDraggable (jq) {
       left: elm.css('left')
     });
 
-    elm.css({
-      position: 'static'
-    });
+    elm.css('position', 'static');
   });
 }
 
@@ -441,11 +449,7 @@ function makeUndraggable(jq) {
     }
 
     wrapper.resizable('destroy').draggable('destroy');
-    elm.css({
-      top: wrapper.css('top'),
-      left: wrapper.css('left'),
-      position: 'absolute'
-    });
+    elm.css('position', 'absolute');
     elm.unwrap();
   });
 }
