@@ -81,7 +81,7 @@ module.exports = {
         assert.equal(document.getElementById('screenSelector'), null);
 
         // our design mode box is hidden
-        assert.equal($('#designModeBox').is(':visible'), false);
+        assert.equal($('#designWorkspace').is(':visible'), false);
 
         // click toggle
         $(designModeToggle).click();
@@ -89,12 +89,13 @@ module.exports = {
         assert.equal(designModeToggle.textContent, 'Code');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
-        assert.equal(screenSelector.options.length, 1);
+        assert.equal(screenSelector.options.length, 1, 'expected 1 screen');
         assert.equal($(screenSelector).val(), 'screen1');
-        assert.equal($('#designModeBox').is(':visible'), true);
+        assert.equal($('#designWorkspace').is(':visible'), true);
 
         // initially no design properties table
-        assert.equal($("#design-properties table").length, 0);
+        assert.equal($("#design-properties table").length, 0,
+            'expected no design properties table');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {

@@ -12,7 +12,6 @@ module.exports = React.createClass({
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    handleManageAssets: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired
   },
 
@@ -35,10 +34,6 @@ module.exports = React.createClass({
     this.setState({
       mode: newMode
     });
-  },
-
-  handleManageAssets: function() {
-    this.props.handleManageAssets();
   },
 
   handleScreenChange: function (evt) {
@@ -80,16 +75,6 @@ module.exports = React.createClass({
           className="share"
           onClick={this.handleModeToggle}>
           { this.state.mode === Mode.DESIGN ? msg.codeMode() : msg.designMode() }
-        </button>
-        <button
-          id="design-manage-assets"
-          className="share"
-          onClick={this.handleManageAssets}
-          style={{
-            display: this.state.mode === Mode.DESIGN ? 'inline-block' : 'none',
-            marginLeft: 10
-          }}>
-          Manage Assets
         </button>
         {selectDropdown}
       </div>
