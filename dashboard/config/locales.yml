@@ -75,16 +75,16 @@
   native: "Ελληνικά"
   webfonts: false
 
+"en-GB":
+  english: "English (UK)"
+  native: "English (UK)"
+  debug: true
+
 "en": "en-US"
 "en-US":
   english: "English"
   native: "English"
   fallback: "en" # Need this because source files use "en", not "en-US"
-
-"en-GB":
-  english: "English (UK)"
-  native: "English (UK)"
-  debug: true
 
 "en-PLOC":
   english: "Pseudoloc"
