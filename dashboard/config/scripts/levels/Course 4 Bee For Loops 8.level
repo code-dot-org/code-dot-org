@@ -20,9 +20,9 @@
     "ideal": "14",
     "instructions": "Can you use the loop variable to control movement and nectar collection?",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
-  },
-  "md5": "818de8a69edc90ebcdac6277c16ae699"
+    "use_contract_editor": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

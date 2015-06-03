@@ -19,8 +19,7 @@
     "y": "200",
     "instructions": "Can you figure out how to draw this shape? Here's a hint create a new function with 6 sides called a hexagon. ",
     "use_contract_editor": "false"
-  },
-  "md5": "0b1eb1f58e455da4ba75dbb85e0dc527"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

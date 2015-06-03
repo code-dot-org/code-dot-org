@@ -1,7 +1,7 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2014-12-01T20:07:23.000Z",
+  "created_at": "2014-12-01T20:07:23.517Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -15,8 +15,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false"
-  },
-  "md5": "eb6d62b51ec0d02e69cc42d7f824ea92"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

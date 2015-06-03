@@ -15,8 +15,7 @@
     "free_play": "false",
     "instructions": "This diamond has 50 pixel sides and angles of 120 and 60 degrees. Use a loop to draw it.",
     "ideal": "6"
-  },
-  "md5": "d51c6bb21859db2d75bdadf0d879da82"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

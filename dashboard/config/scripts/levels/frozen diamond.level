@@ -24,8 +24,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"frozen_diamond_repeat\",\"callout_text\":\"Use the repeat block to create this shape.\",\"element_id\":\"#toolbox_repeat_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0"
-  },
-  "md5": "7560dac3c5a8cf6b7e5dc999fdb6d4ee"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

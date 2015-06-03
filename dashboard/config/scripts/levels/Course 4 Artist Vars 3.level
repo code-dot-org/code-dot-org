@@ -23,8 +23,7 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"place_variable\",\"callout_text\":\"Drag your variable inside this block\",\"element_id\":\"#place_variable_qtip > .blocklyPath\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":60,\"y\":-10},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
-  },
-  "md5": "864421c228995260302750b72824043f"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -15,8 +15,7 @@
     "slider_speed": ".8",
     "free_play": "false",
     "instructions": "Fill in this building's windows with a nested loop. The windows are 20 pixels long and 20 pixels apart."
-  },
-  "md5": "093dcc3f26f6c2e785e260cab2f91a17"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

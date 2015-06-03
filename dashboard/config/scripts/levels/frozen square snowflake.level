@@ -25,8 +25,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"replace_questions\",\"callout_text\":\"Use the drop-down to replace \\\"???\\\" with a number\",\"element_id\":\"#repeat_block_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "shapeways_url": "https://www.shapeways.com/model/2925794/",
     "permitted_errors": "0"
-  },
-  "md5": "9257443fba0c28307327dfc684bac4fb"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

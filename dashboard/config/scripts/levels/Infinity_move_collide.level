@@ -35,9 +35,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "timeout_failure_tick": "100"
-  },
-  "md5": "4decdda9876403a705f3251aa33d041b"
+    "timeout_failure_tick": "100",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

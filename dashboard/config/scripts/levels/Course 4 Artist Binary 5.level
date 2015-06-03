@@ -10,7 +10,7 @@
     "y": "12",
     "start_direction": "90",
     "is_k1": "false",
-    "skip_instructions_popup": "false",
+    "skip_instructions_popup": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -19,16 +19,8 @@
     "impressive": "false",
     "instructions": "Which 6 digit binary string, repeated 11 times, will draw this image?",
     "embed": "false",
-    "disable_sharing": "false",
-    "contract_highlight": "false",
-    "contract_collapse": "false",
-    "examples_highlight": "false",
-    "examples_collapse": "false",
-    "definition_highlight": "false",
-    "definition_collapse": "false",
-    "disable_examples": "false"
-  },
-  "md5": "c418a5687063c199aeb097e6bfb1d192"
+    "disable_sharing": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>
