@@ -1,13 +1,12 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2014-11-07T21:51:59.000Z",
+  "created_at": "2014-11-07T21:51:59.116Z",
   "level_num": "custom",
   "user_id": 15,
   "properties": {
     "skin": "eval"
-  },
-  "md5": "5884f58fb1538da792de858cfaa5a73e"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

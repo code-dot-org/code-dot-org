@@ -23,8 +23,7 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"degrees_per_side\",\"callout_text\":\"Divide 360 by the number of sides to get the size of each angle in degrees.\",\"element_id\":\"[block-id='29']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
-  },
-  "md5": "abf1f83758172a015cc5e1f6af5279c5"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

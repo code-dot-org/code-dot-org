@@ -1,0 +1,41 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "<strong>N</strong>"
+      },
+      {
+        "text": "<strong>O</strong>"
+      },
+      {
+        "text": "<strong>P</strong>"
+      },
+      {
+        "text": "<strong>Q</strong>"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+      }
+    ],
+    "title": "Matching",
+    "content2": "Use the key to match each code to its letter",
+    "content1": "/script_assets/2-3_images/unplugged/binary_1_q.png, 250",
+    "height": "20"
+  },
+  "md5": "396e50678e56d0af1d2d3dc266bc1f98"
+}]]></config>
+</Match>

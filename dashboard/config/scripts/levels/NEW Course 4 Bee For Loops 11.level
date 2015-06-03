@@ -21,8 +21,7 @@
     "instructions": "Can you use the loop variable to control movement and nectar collection?",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false"
-  },
-  "md5": "5d24b29feafa845a6cfe16b5a2ea0bc2"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

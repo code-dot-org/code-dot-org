@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-02-23T23:39:27.000Z",
+  "properties": {
+    "title": "Enter title here",
+    "content1": "Enter prompt here",
+    "markdown": "# Test Markdown title\n\nTest Markdown prompt\n\n\n"
+  },
+  "md5": "9e5600594c680c7fda2aec26e97ae363"
+}]]></config>
+</TextMatch>

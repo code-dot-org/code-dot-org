@@ -24,8 +24,7 @@
     "instructions": "In the last stage we counted the square of each number. Try changing \"counter ^ 2\" to \"counter ^ 3\" to count the cube of each number (1, 8, 27, 64, 125, 216, 343….)",
     "ideal": "11",
     "embed": "false"
-  },
-  "md5": "8748eaf9b9f01a9174159a641706ac03"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

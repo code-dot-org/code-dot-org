@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-04T02:54:23.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Lesson 14 - Task 2: fix the error",
+    "content1": "description here",
+    "markdown": "<img src=\"http://staging.code.org/images/cspunit1/CodeLogoError.png\" align=\"left\" width=200 hspace=20>\n# Task 2: Find and Fix the Error\nOh no! The Code.org logo got messed up.  An extra bit was added to this image during transmission. Your task is to find the extra bit and remove it to fix the Code.org logo. HINT: one bit early on would make it look like many bits were out of order. \n<br><br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "a34386bb315846c067080b14820a2037"
+}]]></config>
+</External>

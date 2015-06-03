@@ -1,0 +1,15 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-06T17:22:23.000Z",
+  "properties": {
+    "answers": [
+      "scale|Image|Number|Image"
+    ],
+    "title": "Scale Contract",
+    "content1": "Write a contract for the scale function",
+    "content2": "Eval Contracts 4 A.solution_blocks, 300"
+  },
+  "md5": "b1dcddcfb7402e510bfc76977874c603"
+}]]></config>
+</ContractMatch>

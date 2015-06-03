@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-12T19:32:01.000Z",
+  "created_at": "2015-02-12T19:32:01.764Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -31,8 +31,7 @@
       "upButton"
     ],
     "step_speed": "50"
-  },
-  "md5": "93f0da50225c64b2f224447a28c2f8c3"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

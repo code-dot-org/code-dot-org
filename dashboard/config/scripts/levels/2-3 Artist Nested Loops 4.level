@@ -15,8 +15,7 @@
     "slider_speed": ".6",
     "free_play": "false",
     "instructions": "Loop this diamond 12 times to draw a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much do you need to turn after each shape?"
-  },
-  "md5": "89c7c3121e082e781cfc22c9cb1abcf8"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

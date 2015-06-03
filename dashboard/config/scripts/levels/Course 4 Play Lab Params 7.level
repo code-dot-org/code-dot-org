@@ -31,9 +31,9 @@
       "upButton"
     ],
     "disable_sharing": "false",
+    "maze_data": null,
     "protaganist_sprite_index": "0"
-  },
-  "md5": "6daf4c6ddb1d2769a4609953b2eaf3bc"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

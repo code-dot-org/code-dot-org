@@ -23,8 +23,7 @@
     "y": "275",
     "callout_json": "[\r\n  {\"localization_key\":\"create_function\",\"callout_text\":\"Click here to open the \\\"Functions\\\" flyout, then click the \\\"Create a Function\\\" button.\",\"element_id\":\".blocklyTreeLabel:contains(Functions)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "ideal": "12"
-  },
-  "md5": "e08cea3033f73e54addb18e202cbf38b"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -16,8 +16,7 @@
     "ideal": "10",
     "instructions": "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond.",
     "disable_param_editing": "true"
-  },
-  "md5": "c4e019e5ea8e8f83aa0787fef350123c"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

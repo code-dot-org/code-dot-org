@@ -1,0 +1,15 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-12T23:37:36.000Z",
+  "properties": {
+    "answers": [
+      "banner|Image|String"
+    ],
+    "title": "Banner Contract",
+    "content1": "Banner Function block",
+    "content2": "Examples 3.solution_blocks, 300"
+  },
+  "md5": "dbb971d9878dc4177bac8a966b3606da"
+}]]></config>
+</ContractMatch>

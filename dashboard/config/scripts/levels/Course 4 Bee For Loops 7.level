@@ -20,9 +20,9 @@
     "ideal": "12",
     "instructions": "Use your for loop \"counter\" variable to control how far to move horizontally.",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
-  },
-  "md5": "71607b4c5afb1aa59aa5d611196f6031"
+    "use_contract_editor": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

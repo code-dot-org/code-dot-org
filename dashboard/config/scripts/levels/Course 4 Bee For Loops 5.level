@@ -21,8 +21,7 @@
     "instructions": "Ah, the for loop makes this much easier! Using the \"counter\" variable from the for loop to loop the \"get nectar\" block the same number of times as the loop. Whew! That's a lot of loops. All the code you need it there, take a look at how it is put together then click on Run and see how it works. ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false"
-  },
-  "md5": "207d5d445ac0e277e0b21a5c2aa89e00"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

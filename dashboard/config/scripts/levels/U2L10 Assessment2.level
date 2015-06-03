@@ -1,0 +1,33 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-06-02T00:53:42.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is a disadvantage of the open standard of addressing used by the internet? Pick 2"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Censorship",
+        "correct": true
+      },
+      {
+        "text": "Spoofing",
+        "correct": true
+      },
+      {
+        "text": "Redundancy",
+        "correct": false
+      },
+      {
+        "text": "Hierarchy",
+        "correct": false
+      }
+    ],
+    "title": "Assessment Question 2",
+    "type": "multi2"
+  }
+}]]></config>
+</Multi>
