@@ -31,7 +31,6 @@
     "embed": "false",
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"right_arrow_fireball\",\"callout_text\":\"Use the right arrow to shoot fireballs\",\"element_id\":\"#rightButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom center\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
   }

@@ -43,8 +43,7 @@
     "success_condition": "function () {\r\n   return Studio.playerScore >= 6;\r\n}",
     "disable_examples": "false",
     "maze_data": null
-  },
-  "md5": "0ca2f4be6f61efdebe0fab63be9d37fb"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -39,8 +39,7 @@
     "custom_game_type": "Big Game",
     "disable_examples": "false",
     "maze_data": null
-  },
-  "md5": "527d3f037a95d92962636e608e5ec783"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

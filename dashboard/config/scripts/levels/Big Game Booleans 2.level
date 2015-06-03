@@ -39,8 +39,7 @@
     "disable_examples": "false",
     "maze_data": null,
     "success_condition": "function() {\r\n}"
-  },
-  "md5": "92587fa7b46631faa7f10ceebb602f51"
+  }
 }]]></config>
   <blocks/>
 </Studio>

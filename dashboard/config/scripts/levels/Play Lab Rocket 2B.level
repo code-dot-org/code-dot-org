@@ -40,8 +40,7 @@
     "custom_game_type": "Rocket Height",
     "disable_examples": "false",
     "maze_data": null
-  },
-  "md5": "100e87a98324bba33f119496285639fd"
+  }
 }]]></config>
   <blocks>
     <start_blocks>
