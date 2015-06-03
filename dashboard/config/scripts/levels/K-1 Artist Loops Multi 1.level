@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which blocks create this picture?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300",
+    "height": "150"
+  },
+  "md5": "c6cd192cc92accf029f0c1da2beb3358"
+}]]></config>
+</Multi>

@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-16T17:57:37.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "ECS PD commitments",
+    "content1": "overview of program commitments",
+    "markdown": "## Program Timeline\n\nThe program you're about to begin spans through the upcoming academic year and into next summer. During this time you will have access to four phases of professional development (PD) designed to leverage your experience with the curriculum and associated inquiry teaching strategies and to facilitate the development of a strong community of teachers. You'll work with a support network formed by that local community of teachers and facilitators to move through the first year and beyond. \n\nSee below for a timeline of these PD opportunities: \n![program commitments](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/ddEG8gHVFjedVDo/Screen%20Shot%202015-04-16%20at%204.27.43%20PM.png)\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "5f43fd39cee3fe801875e5f48df8eabd"
+}]]></config>
+</External>

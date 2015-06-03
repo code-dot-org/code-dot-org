@@ -1,0 +1,26 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-10-02T22:32:58.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which of these pictures best represents crowdsourcing?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png",
+        "correct": true
+      }
+    ],
+    "title": "Multiple Choice",
+    "height": "100"
+  },
+  "md5": "88e50d943a3bdde6f66a6ef133cbd9f1"
+}]]></config>
+</Multi>

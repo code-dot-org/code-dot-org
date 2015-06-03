@@ -29,9 +29,9 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
-    "disable_sharing": "false"
-  },
-  "md5": "b8dea37d23930b552e2c3e4a3aee8b27"
+    "disable_sharing": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -21,8 +21,7 @@
     "allow_sprites_outside_playspace": "true",
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "true"
-  },
-  "md5": "9db64166fababfb83bdbb1e4dccc895f"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

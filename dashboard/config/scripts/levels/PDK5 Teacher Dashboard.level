@@ -1,0 +1,22 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-24T23:40:18.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Are you ready to move on?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Yes",
+        "correct": true
+      }
+    ],
+    "title": "Teacher Dashboard",
+    "markdown": "The teacher dashboard in Code Studio allows teachers to create accounts for their students, reset their students' passwords, and see the progress their students' are making on all of Code.org's courses. The video below gives a tour of how to use all the features in the teacher dashboard. \n\n<iframe width=\"426\" height=\"260\" src=\"https://www.youtube.com/embed/E9Psq6wBBQA\" frameborder=\"0\" allowfullscreen></iframe>\n"
+  },
+  "md5": "b0ddf180768ecdaba65912bc5f81cb95"
+}]]></config>
+</Multi>

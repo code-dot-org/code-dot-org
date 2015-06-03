@@ -31,10 +31,10 @@
       "downButton",
       "upButton"
     ],
+    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
-  },
-  "md5": "ddf24b4d55d04b4bc63d63eaca605e34"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

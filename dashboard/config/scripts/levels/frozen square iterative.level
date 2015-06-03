@@ -24,8 +24,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"frozen_create_square\",\"callout_text\":\"Attach more blocks here to create a square\",\"element_id\":\"#add_more_blocks_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom left\"},\"style\":{\"classes\":\"no-tip\"}}}\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0"
-  },
-  "md5": "69a13daaf2509bf0f5361f39f21b2f1f"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

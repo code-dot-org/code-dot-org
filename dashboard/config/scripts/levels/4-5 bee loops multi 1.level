@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which blocks will solve the puzzle?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Bee Loops Multiple Choice",
+    "content1": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png",
+    "height": "160"
+  },
+  "md5": "070bf5eff325c95e03d08be13949d3ad"
+}]]></config>
+</Multi>

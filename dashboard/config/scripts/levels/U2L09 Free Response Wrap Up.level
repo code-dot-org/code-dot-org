@@ -1,0 +1,10 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-06-01T21:26:19.000Z",
+  "properties": {
+    "title": "The Need for DNS: Wrap Up",
+    "markdown": "Why don't we need to know the IP addresses for our favorite sites?\n"
+  }
+}]]></config>
+</TextMatch>

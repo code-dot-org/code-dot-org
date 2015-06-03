@@ -20,8 +20,7 @@
     "instructions": "Which 6 digit binary string, repeated 11 times, will draw this image?",
     "embed": "false",
     "disable_sharing": "false"
-  },
-  "md5": "c418a5687063c199aeb097e6bfb1d192"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

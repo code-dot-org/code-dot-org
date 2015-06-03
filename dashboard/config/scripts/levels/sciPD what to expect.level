@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-25T01:49:37.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "What to Expect",
+    "markdown": "\n### What to Expect: Material We'll Cover\n\n\n**Phase 1 consists of three components:**\n\n  1) an introduction to the course (10 minutes);<br>\n  2) eight CS in Science intro videos (roughly 58 minutes total); and<br>\n  3) a guided tutorial introduction to StarLogo Nova (approximately 60 minutes). *Available after May 15, 2014.<br>\n\nThe set of Phase 1 components can be completed in just over 2 hours.\n\n \n**What we'll cover:**\n\nWithin each of the lessons, you will watch a video, occasionally review a document, test your understanding by answering a quiz question or two, write a reflection on a topic and post it to the online forum, read other participants' entries on the forum and write a comment in reaction, and perhaps read an accompanying article.\n\nThe guided tutorial, \"Getting Started in StarLogo Nova\", takes you through a series of steps that will introduce you to the modeling and simulation environment. After completing each of the steps, you will save your project and share a link to it on the forum.\n\nLet's get started! \n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "0c1b47f2ff6c6dc011ad7dc735a6263d"
+}]]></config>
+</External>

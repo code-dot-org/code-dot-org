@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-10-02T22:32:58.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Lou, Lou, skip to my Lou,",
+        "correct": false
+      },
+      {
+        "text": "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.",
+        "correct": true
+      },
+      {
+        "text": "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,",
+        "correct": false
+      },
+      {
+        "text": "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/4-5_images/unplugged/songwriting_1_q.png",
+    "height": "150"
+  },
+  "md5": "73f0a56ed96d4c8ea7c433c14ab38f09"
+}]]></config>
+</Multi>

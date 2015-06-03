@@ -1,0 +1,39 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which flowers are yellow?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/matches/images/a1.jpg",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/matches/images/a2.jpg",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/matches/images/a3.jpg",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/matches/images/a4.jpg",
+        "correct": false
+      }
+    ],
+    "title": "Maze Multiple Choice Two",
+    "content1": "/script_assets/matches/images/head.jpg,400",
+    "content2": "This puzzle is all about selecting the correct flowers.",
+    "height": "170",
+    "pre_title": "Instructions",
+    "pre_body": "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?",
+    "pre_ani": "/script_assets/images/matching_ani.gif"
+  },
+  "md5": "4336c31b8a0c8e7e132f56e995cd7a47"
+}]]></config>
+</Multi>
