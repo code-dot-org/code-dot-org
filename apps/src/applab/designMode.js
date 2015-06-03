@@ -34,6 +34,11 @@ designMode.onDivApplabClick = function (event) {
   if (element.id === 'divApplab') {
     designMode.clearProperties();
   } else {
+    if ($(element).is('.ui-resizable')) {
+      element = element.children[0];
+    } else if ($(element).is('.ui-resizable-handle')) {
+      element = element.parentNode.children[0];
+    }
     designMode.editElementProperties(element);
   }
 };
@@ -220,10 +225,19 @@ designMode.onDonePropertiesButton = function() {
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
-  element.parentNode.removeChild(element);
-  if ($(element).hasClass('screen')) {
+  var isScreen = $(element).hasClass('screen');
+  var toRemove = element;
+  var parent = element.parentNode;
+  if ($(parent).is('.ui-resizable')) {
+    toRemove = parent;
+    parent = parent.parentNode;
+  }
+  parent.removeChild(toRemove);
+
+  if (isScreen) {
     designMode.changeScreen('screen1');
   }
+
   designMode.clearProperties();
 };
 
