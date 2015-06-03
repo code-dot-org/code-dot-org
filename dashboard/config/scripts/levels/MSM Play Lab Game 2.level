@@ -30,9 +30,9 @@
     "ideal": "99",
     "timeout_failure_tick": "100",
     "first_sprite_index": "2",
-    "embed": "false"
-  },
-  "md5": "7f569a190823b1fbf43bcf97d9bcb154"
+    "embed": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

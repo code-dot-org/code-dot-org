@@ -14,8 +14,7 @@
     "free_play": "false",
     "instructions": "If you copy that loop and turn left instead of right, what happens? Can you repeat that to draw this wave?",
     "ideal": "8"
-  },
-  "md5": "5a68e8e3755ebc06848347625b5c2504"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -19,8 +19,7 @@
     "disable_variable_editing": "false",
     "instructions": "Which binary string, repeated 10 times, will draw this image?",
     "use_modal_function_editor": "false"
-  },
-  "md5": "9952ae171a257a493b03950f78f09012"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -21,9 +21,9 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "coordinate_grid_background": "false"
-  },
-  "md5": "94058dbf69207fb4c2076c32b5514776"
+    "coordinate_grid_background": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

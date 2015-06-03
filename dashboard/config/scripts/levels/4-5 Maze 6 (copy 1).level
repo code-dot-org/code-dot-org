@@ -1,7 +1,7 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-11-05T21:04:23.000Z",
+  "created_at": "2014-11-05T21:04:23.217Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
@@ -13,8 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "ideal": "5"
-  },
-  "md5": "d0fae41873608416286d54756a7b8565"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

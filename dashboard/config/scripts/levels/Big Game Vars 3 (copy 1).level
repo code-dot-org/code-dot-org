@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-10T18:03:10.000Z",
+  "created_at": "2015-02-10T18:03:10.397Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -29,8 +29,7 @@
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
     "callout_json": "[\r\n  {\"localization_key\":\"big_game_bg\",\"callout_text\":\"Edit this variable to change the background image of your game\",\"element_id\":\"#game_bg\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom right\"},\"style\":{\"classes\":\"\"}}}\r\n]"
-  },
-  "md5": "980c5b80c1b93be52185c5731f9089a1"
+  }
 }]]></config>
   <blocks/>
 </Studio>

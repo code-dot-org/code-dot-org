@@ -25,10 +25,10 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"[block-id='2']>.blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
+    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
-  },
-  "md5": "7f89fe2cdbf78b94d542786c270ccf66"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

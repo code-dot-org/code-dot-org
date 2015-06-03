@@ -20,8 +20,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true"
-  },
-  "md5": "2080d589175d195a023f4e81ce884c56"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

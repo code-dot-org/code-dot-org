@@ -28,9 +28,9 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "embed": "false"
-  },
-  "md5": "2ba64ee9f3938d953cd909a0d601eebf"
+    "embed": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

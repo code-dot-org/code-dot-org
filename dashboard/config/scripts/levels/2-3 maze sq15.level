@@ -10,8 +10,7 @@
     "instructions": "Can you get to the sunflower using only five blocks?",
     "start_direction": "1",
     "step_mode": 0
-  },
-  "md5": "3e979c96ed28502c976b120f13fafbf5"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

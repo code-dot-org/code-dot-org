@@ -18,8 +18,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "8",
     "predraw_blocks": "<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"></block></xml>"
-  },
-  "md5": "b9da992891fb45858984fad95f993742"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

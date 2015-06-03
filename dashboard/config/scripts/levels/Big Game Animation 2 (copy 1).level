@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-12T18:12:33.000Z",
+  "created_at": "2015-02-12T18:12:33.158Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -30,8 +30,7 @@
     "generate_function_pass_blocks": "true",
     "callout_json": "[\r\n  {\"localization_key\":\"Big Game Animation 2\",\"callout_text\":\"Edit this function to animate the target\",\"element_id\":\"#game_update_target\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "step_speed": "50"
-  },
-  "md5": "d09bfbd9afdd5fb7fb8528a697aaafbc"
+  }
 }]]></config>
   <blocks/>
 </Studio>

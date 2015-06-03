@@ -18,8 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false"
-  },
-  "md5": "9ee84e2845e5cf872cb670d29ecba734"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

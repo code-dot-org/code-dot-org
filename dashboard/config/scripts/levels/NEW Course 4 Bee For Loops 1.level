@@ -20,9 +20,9 @@
     "nectar_goal": "5",
     "ideal": "4",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
-  },
-  "md5": "b1d847148638e96c235d9b2494933f32"
+    "use_contract_editor": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

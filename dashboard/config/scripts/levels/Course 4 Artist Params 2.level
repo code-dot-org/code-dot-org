@@ -24,8 +24,7 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"length_parameter\",\"callout_text\":\"Can you update this function so it uses the \\\"length\\\" parameter?\",\"element_id\":\"[block-id='44']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
-  },
-  "md5": "0753dbc0d6d602c57136cb1977c5cc12"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,7 +1,7 @@
 <Calc>
   <config><![CDATA[{
   "game_id": 34,
-  "created_at": "2014-11-21T17:44:51.000Z",
+  "created_at": "2014-11-21T17:44:51.477Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -14,8 +14,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false"
-  },
-  "md5": "aaa5ba497b2afd566e5d6603eb9756f8"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

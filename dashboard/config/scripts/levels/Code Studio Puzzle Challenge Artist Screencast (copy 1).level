@@ -1,7 +1,7 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2015-02-22T16:24:52.000Z",
+  "created_at": "2015-02-22T16:24:52.244Z",
   "level_num": "custom",
   "user_id": 45,
   "properties": {
@@ -26,8 +26,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false"
-  },
-  "md5": "b1bc8ea78209eea3658c6abe3c745356"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
