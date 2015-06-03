@@ -14,7 +14,6 @@ module.exports = React.createClass({
     onDelete: React.PropTypes.func.isRequired,
   },
 
-
   getInitialState: function() {
     return {
       isToolboxVisible: true
