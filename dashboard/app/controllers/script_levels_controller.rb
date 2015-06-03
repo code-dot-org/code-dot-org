@@ -33,6 +33,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     load_user
+    load_section
 
     present_level
 
@@ -111,8 +112,6 @@ class ScriptLevelsController < ApplicationController
       @user = user
       @user_level = @user.user_level_for(@script_level)
     end
-
-    load_section
   end
 
   def load_section

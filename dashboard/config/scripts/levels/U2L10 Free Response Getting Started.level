@@ -1,15 +1,10 @@
 <TextMatch>
   <config><![CDATA[{
   "game_id": 38,
-  "created_at": "2015-06-02T00:37:23.069Z",
+  "created_at": "2015-06-02T00:37:23.000Z",
   "properties": {
     "title": "DNS in the Real World: Getting Started",
-    "markdown": "List the details of a typical postal mailing address in a hierarchy from the largest, most general address element to the smallest, most unique address element. \n",
-    "type": "TextMatch",
-    "dsl_text": "name 'U2L10 Free Response Getting Started'\r\ntitle 'DNS in the Real World: Getting Started'\r\n\r\nmarkdown <<MARKDOWN\r\nList the details of a typical postal mailing address in a hierarchy from the largest, most general address element to the smallest, most unique address element. \r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "List the details of a typical postal mailing address in a hierarchy from the largest, most general address element to the smallest, most unique address element. \n"
   }
 }]]></config>
 </TextMatch>

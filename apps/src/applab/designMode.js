@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, Applab */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -16,6 +16,8 @@ var designMode = module.exports;
 
 var currentlyEditedElement = null;
 
+var GRID_SIZE = 5;
+
 /**
  * If in design mode and program is not running, display Properties
  * pane for editing the clicked element.
@@ -32,6 +34,11 @@ designMode.onDivApplabClick = function (event) {
   if (element.id === 'divApplab') {
     designMode.clearProperties();
   } else {
+    if ($(element).is('.ui-resizable')) {
+      element = getInnerElement(element);
+    } else if ($(element).is('.ui-resizable-handle')) {
+      element = getInnerElement(element.parentNode);
+    }
     designMode.editElementProperties(element);
   }
 };
@@ -41,18 +48,36 @@ designMode.onDivApplabClick = function (event) {
  * @param {ElementType} elementType Type of element to create
  * @param {number} left Position from left.
  * @param {number} top Position from top.
+ * @returns {HTMLElement} The generated element
  */
 designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
 
-  var divApplab = document.getElementById('divApplab');
-  divApplab.appendChild(element);
-  makeDraggable($(element));
+  var parent;
+  var isScreen = $(element).hasClass('screen');
+  if (isScreen) {
+    parent = document.getElementById('divApplab');
+  } else {
+    parent = $('.screen').filter(function () {
+      return this.style.display !== 'none';
+    }).first()[0];
+  }
+  parent.appendChild(element);
+
+  if (!isScreen) {
+    makeDraggable($(element));
+  }
   designMode.editElementProperties(element);
-  Applab.levelHtml = designMode.serializeToLevelHtml();
+
+  return element;
 };
 
 designMode.editElementProperties = function(element) {
+  var designPropertiesElement = document.getElementById('design-properties');
+  if (!designPropertiesElement) {
+    // design-properties won't exist when !user.isAdmin
+    return;
+  }
   currentlyEditedElement = element;
   designMode.renderDesignModeBox(element);
 };
@@ -88,6 +113,11 @@ designMode.onPropertyChange = function(element, name, value) {
   switch (name) {
     case 'id':
       element.id = value;
+      if (elementLibrary.getElementType(element) ===
+          elementLibrary.ElementType.SCREEN) {
+        // rerender design toggle, which has a dropdown of screen ids
+        designMode.changeScreen(value);
+      }
       break;
     case 'left':
       element.style.left = value + 'px';
@@ -188,7 +218,6 @@ designMode.onPropertyChange = function(element, name, value) {
     default:
       throw "unknown property name " + name;
   }
-  Applab.levelHtml = designMode.serializeToLevelHtml();
 };
 
 designMode.onDonePropertiesButton = function() {
@@ -196,8 +225,16 @@ designMode.onDonePropertiesButton = function() {
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
-  element.parentNode.removeChild(element);
-  Applab.levelHtml = designMode.serializeToLevelHtml();
+  var isScreen = $(element).hasClass('screen');
+  if ($(element.parentNode).is('.ui-resizable')) {
+    element = element.parentNode;
+  }
+  $(element).remove();
+
+  if (isScreen) {
+    designMode.changeScreen('screen1');
+  }
+
   designMode.clearProperties();
 };
 
@@ -253,10 +290,11 @@ designMode.onDepthChange = function (element, depthDirection) {
 
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
-  makeUndraggable(divApplab.children());
+  // Children are screens. Want to operate on grandchildren
+  makeUndraggable(divApplab.children().children());
   var s = new XMLSerializer().serializeToString(divApplab[0]);
-  makeDraggable(divApplab.children());
-  return s;
+  makeDraggable(divApplab.children().children());
+  Applab.levelHtml = s;
 };
 
 /**
@@ -269,9 +307,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
+
   children.appendTo(rootEl);
   if (allowDragging) {
-    makeDraggable(children);
+    // children are screens. make grandchildren draggable
+    makeDraggable(children.children());
   }
 
   children.each(function () {
@@ -280,23 +320,35 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 };
 
 designMode.onClear = function() {
+  // TODO (brent) - have this clear just the current screen instead of everything
+  // (along with a confirmation experience). Consider the case where this gets
+  // called on load too - might need to two separate funcs
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+  elementLibrary.resetIds();
+  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
+  designMode.changeScreen('screen1');
 };
 
 function toggleDragging (enable) {
-  var children = $('#divApplab').children();
+  var grandChildren = $('#divApplab').children().children();
   if (enable) {
-    makeDraggable(children);
+    makeDraggable(grandChildren);
   } else {
-    makeUndraggable(children);
+    makeUndraggable(grandChildren);
   }
 }
 
 designMode.toggleDesignMode = function(enable) {
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  if (!designModeHeaders) {
+    // Currently we don't run design mode in some circumstances (i.e. user is
+    // not an admin)
+    return;
+  }
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
   var codeModeHeaders = document.getElementById('codeModeHeaders');
   codeModeHeaders.style.display = enable ? 'none' : 'block';
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  designModeHeaders.style.display = enable ? 'block' : 'none';
 
   var codeTextbox = document.getElementById('codeTextbox');
   codeTextbox.style.display = enable ? 'none' : 'block';
@@ -306,26 +358,33 @@ designMode.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
+  designMode.serializeToLevelHtml();
+
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
+  designMode.changeScreen('screen1');
 };
+
+/**
+ * When we make elements resizable, we wrap them in an outer div. Given an outer
+ * div, this returns the inner element
+ */
+function getInnerElement(outerElement) {
+  // currently assume inner element is first child.
+  return outerElement.children[0];
+}
 
 /**
  *
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 function makeDraggable (jq) {
-  var GRID_SIZE = 5;
-
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
   jq.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
-      stop: function () {
-        Applab.levelHtml = designMode.serializeToLevelHtml();
-      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -356,9 +415,6 @@ function makeDraggable (jq) {
 
         ui.position.left = newLeft;
         ui.position.top = newTop;
-      },
-      stop: function () {
-        Applab.levelHtml = designMode.serializeToLevelHtml();
       }
     }).css('position', 'absolute');
 
@@ -368,7 +424,7 @@ function makeDraggable (jq) {
     });
 
     elm.css({
-      position: ''
+      position: 'static'
     });
   });
 }
@@ -380,7 +436,7 @@ function makeDraggable (jq) {
 function makeUndraggable(jq) {
   jq.each(function () {
     var wrapper = $(this);
-    var elm = $(':first-child', wrapper);
+    var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
     if (!wrapper.data('uiDraggable')) {
@@ -400,7 +456,6 @@ function makeUndraggable(jq) {
 designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
-  var GRID_SIZE = 5;
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
@@ -417,7 +472,10 @@ designMode.configureDragAndDrop = function () {
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
       top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-      designMode.createElement(elementType, left, top);
+      var element = designMode.createElement(elementType, left, top);
+      if (elementType === elementLibrary.ElementType.SCREEN) {
+        designMode.changeScreen(element.id);
+      }
     }
   });
 };
@@ -433,18 +491,40 @@ designMode.configureDesignToggleRow = function () {
       studioApp, Applab.onDesignModeButton);
   var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
-  // TODO (brent) - still need logic to generate list of screens, and rerender
-  // DesignToggleRow on changes
-  React.render(
-    React.createElement(DesignToggleRow, {
-      screens: ['screen1'],
-      onDesignModeButton: throttledDesignModeClick,
-      onCodeModeButton: Applab.onCodeModeButton,
-      handleManageAssets: showAssetManager
-    }),
-    designToggleRow
-  );
+  var firstScreen = $('.screen').first().attr('id');
+  designMode.changeScreen(firstScreen);
 };
+
+/**
+ * Changes the active screen by toggling all screens to be non-visible, unless
+ * they match the provided screenId. Also updates our dropdown to reflect the
+ * change, and opens the element property editor for the new screen.
+ */
+designMode.changeScreen = function (screenId) {
+  var screenIds = [];
+  $('.screen').each(function () {
+    screenIds.push(this.id);
+    $(this).toggle(this.id === screenId);
+  });
+
+  var designToggleRow = document.getElementById('designToggleRow');
+  if (designToggleRow) {
+    React.render(
+      React.createElement(DesignToggleRow, {
+        initialScreen: screenId,
+        screens: screenIds,
+        onDesignModeButton: Applab.onDesignModeButton,
+        onCodeModeButton: Applab.onCodeModeButton,
+        handleManageAssets: showAssetManager,
+        onScreenChange: designMode.changeScreen
+      }),
+      designToggleRow
+    );
+  }
+
+  designMode.editElementProperties(document.getElementById(screenId));
+};
+
 designMode.renderDesignModeBox = function(element) {
   var designModeBox = document.getElementById('designModeBox');
   if (!designModeBox) {
@@ -453,7 +533,9 @@ designMode.renderDesignModeBox = function(element) {
 
   var props = {
     handleDragStart: function() {
-      studioApp.resetButtonClick();
+      if ($('#resetButton').is(':visible')) {
+        studioApp.resetButtonClick();
+      }
     },
     element: element || null,
     handleChange: designMode.onPropertyChange.bind(this, element),
@@ -473,3 +555,23 @@ designMode.configureDesignModeHeaders = function() {
   React.render(React.createElement(DesignModeHeaders), designModeHeaders);
 };
 
+/**
+ * Early versions of applab didn't have screens, and instead all elements
+ * existed under the root div. If we find one of those, convert it to be a single
+ * screen app.
+ */
+designMode.addScreenIfNecessary = function(html) {
+  var rootDiv = $(html);
+  if (rootDiv.children().length === 0 ||
+      rootDiv.children().eq(0).hasClass('screen')) {
+    // no children, or first child is a screen
+    return html;
+  }
+
+  var screenElement = elementLibrary.createElement(
+    elementLibrary.ElementType.SCREEN);
+  rootDiv.children().appendTo(screenElement);
+  rootDiv.append(screenElement);
+
+  return rootDiv[0].outerHTML;
+};
