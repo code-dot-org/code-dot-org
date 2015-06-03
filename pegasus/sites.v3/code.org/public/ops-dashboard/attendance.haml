@@ -82,11 +82,8 @@ template: none
             %span{'ng-show' => 'attendance.updated'}
               Updated!
     %tr{'ng-show' => 'workshop.unexpected_teachers.length > 0'}
-      %th
-      %th
+      %th{colspan:'{{workshop.segments.length + 1}}'}
         Unexpected Attendees
-      %th
-      %th
     %tr{'ng-repeat' => 'unexpected_teacher in workshop.unexpected_teachers', 'ng-show' => 'workshop.unexpected_teachers.length > 0'}
       -if dashboard_user[:admin] || have_permission?('facilitator')
         %td{'ng-hide' => 'unexpected_teacher.editing == true'}
