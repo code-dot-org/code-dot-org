@@ -554,21 +554,4 @@ designMode.addScreenIfNecessary = function(html) {
   rootDiv.append(screenElement);
 
   return rootDiv[0].outerHTML;
-  // var rootDiv = $(html);
-  // if (rootDiv.children().length > 0 &&
-  //     rootDiv.children().eq(0).hasClass('screen')) {
-  //   // first child is a screen
-  //   return html;
-  // }
-  //
-  // var screenElement = elementLibrary.createElement(
-  //   elementLibrary.ElementType.SCREEN);
-  // if (!rootDiv[0]) {
-  //   return screenElement.outerHTML;
-  // }
-  //
-  // rootDiv.children().appendTo(screenElement);
-  // rootDiv.append(screenElement);
-  //
-  // return rootDiv[0].outerHTML;
 };
