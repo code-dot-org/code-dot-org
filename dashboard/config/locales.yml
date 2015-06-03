@@ -57,13 +57,6 @@
   english: "Danish"
   native: "Dansk"
 
-"fa": "fa-AF"
-"fa-AF":
-  english: Dari
-  native: "دريلو"
-  debug: true
-  webfonts: false
-
 "de": "de-DE"
 "de-DE":
   english: "German"
@@ -112,6 +105,13 @@
   english: "Basque"
   native: "Euskara"
   debug: true
+
+"fa": "fa-AF"
+"fa-AF":
+  english: Dari
+  native: "دريلو"
+  debug: true
+  webfonts: false
 
 "fa": "fa-IR"
 "fa-IR":
