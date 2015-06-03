@@ -65,10 +65,14 @@ module Ops
           # Generate csv column headers dynamically
           header = ["User ID", "First Name", "Last Name", "E-mail", "District Name", "School Name"]
           segment_number = 0
+          notes_headers = []
           @workshop.segments.each do |segment|
             header << ("#{segment.start.to_date}, #{segment.start.strftime('%H:%M')} #{segment.end.strftime('%H:%M')}")
-            header << ("Segment #{segment_number + 1} notes")
+            notes_headers << ("Segment #{segment_number + 1} notes")
             segment_number += 1
+          end
+          notes_headers.each do |note|
+            header << note
           end
           header << ("% Attended")
 
@@ -79,7 +83,7 @@ module Ops
             teachers.each do |teacher|
               number_attended = 0.0
               teacher_info_buffer = [teacher.id, teacher.ops_first_name, teacher.ops_last_name, teacher.email, teacher.district.name, teacher.ops_school]
-
+              teacher_segment_notes = []
               @workshop.segments.each do |segment|
                 segment_info = WorkshopAttendance.find_by(segment_id: segment.id, teacher_id: teacher.id)
                 if segment_info
@@ -87,12 +91,15 @@ module Ops
                     number_attended += 1.0
                   end
                   teacher_info_buffer << segment_info.status
-                  teacher_info_buffer << segment_info.notes
+                  teacher_segment_notes << segment_info.notes
                 else
                   # Blank entries so csv doesn't get misaligned
                   teacher_info_buffer << " "
-                  teacher_info_buffer << " "
+                  teacher_segment_notes << " "
                 end
+              end
+              teacher_segment_notes.each do |note|
+                teacher_info_buffer << note
               end
               teacher_info_buffer << (number_attended / @workshop.segments.length * 100).round
               teacher_info << teacher_info_buffer
