@@ -53,7 +53,7 @@ module Ops
       end
     end
 
-    # GET /ops/cohorts/1/teachers
+    # GET dashboardapi/attendance/download/:workshop_id
     def attendance
       @workshop = Workshop.includes(segments: :attendances).find(params.require(:workshop_id))
 
@@ -66,8 +66,8 @@ module Ops
           header = ["User ID", "First Name", "Last Name", "E-mail", "District Name", "School Name"]
           segment_number = 0
           @workshop.segments.each { |segment|
-            header << (segment.start.to_date.to_s + ", " + segment.start.strftime("%H:%M").to_s + " - " + segment.end.strftime("%H:%M").to_s)
-            header << ("Segment " + (segment_number + 1).to_s + " notes")
+            header << ("#{segment.start.to_date}, #{segment.start.strftime('%H:%M')} #{segment.end.strftime('%H:%M')}")
+            header << ("Segment #{segment_number + 1} notes")
             segment_number += 1
           }
           header << ("% Attended")
@@ -104,7 +104,7 @@ module Ops
 
           render text: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher|
              csv << teacher
-           }}
+          }}
         end
       end
     end
