@@ -476,8 +476,14 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
 
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
-      payload,
+  NetSimMessage.send(
+      this.shard_,
+      {
+        fromNodeID: localNodeID,
+        toNodeID: remoteNodeID,
+        simulatedBy: simulatingNodeID,
+        payload: payload
+      },
       function (err) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +

@@ -10,7 +10,7 @@
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 
 /**
@@ -57,6 +57,20 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * @type {*}
    */
   this.payload = messageRow.payload;
+
+  /**
+   * If this is an inter-router message, the number of routers this
+   * message should try to visit before going to the router that
+   * will actually lead to its destination.
+   * @type {number}
+   */
+  this.extraHopsRemaining = utils.valueOr(messageRow.extraHopsRemaining, 0);
+
+  /**
+   * A history of router node IDs this message has visited.
+   * @type {number[]}
+   */
+  this.visitedNodeIDs = utils.valueOr(messageRow.visitedNodeIDs, []);
 };
 NetSimMessage.inherits(NetSimEntity);
 
@@ -64,19 +78,23 @@ NetSimMessage.inherits(NetSimEntity);
  * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
- * @param {!number} fromNodeID - sender node ID
- * @param {!number} toNodeID - destination node ID
- * @param {!number} simulatedBy - node ID of client simulating message
- * @param {*} payload - message content
+ * @param {Object} messageData
+ * @param {!number} messageData.fromNodeID - sender node ID
+ * @param {!number} messageData.toNodeID - destination node ID
+ * @param {!number} messageData.simulatedBy - node ID of client simulating message
+ * @param {*} messageData.payload - message content
+ * @param {number} messageData.extraHopsRemaining
+ * @param {number[]} messageData.visitedNodeIDs
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.send = function (shard, fromNodeID, toNodeID, simulatedBy,
-    payload, onComplete) {
+NetSimMessage.send = function (shard, messageData, onComplete) {
   var entity = new NetSimMessage(shard);
-  entity.fromNodeID = fromNodeID;
-  entity.toNodeID = toNodeID;
-  entity.simulatedBy = simulatedBy;
-  entity.payload = payload;
+  entity.fromNodeID = messageData.fromNodeID;
+  entity.toNodeID = messageData.toNodeID;
+  entity.simulatedBy = messageData.simulatedBy;
+  entity.payload = messageData.payload;
+  entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
+  entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
   entity.getTable().create(entity.buildRow(), onComplete);
 };
 
@@ -107,6 +125,8 @@ NetSimMessage.prototype.buildRow = function () {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     simulatedBy: this.simulatedBy,
-    payload: this.payload
+    payload: this.payload,
+    extraHopsRemaining: this.extraHopsRemaining,
+    visitedNodeIDs: this.visitedNodeIDs
   };
 };
