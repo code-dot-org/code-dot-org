@@ -1,11 +1,11 @@
-name 'U2L12 Student Lesson Introduction'
+name 'U2L15 Student Lesson Introduction'
 title 'title'
 description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 12 - Challenges of the Internet
+## Unit 2: Lesson 15 - Encryption Algorithms
 
 # Background
 

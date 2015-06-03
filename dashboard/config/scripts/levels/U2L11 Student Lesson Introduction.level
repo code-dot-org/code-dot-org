@@ -9,7 +9,11 @@
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "## Unit 2: Lesson 11 - How HTTP Works\n\n# Background\n\nBackground goes here\n\n# Vocabulary\n\nVocabulary goes here\n\n# Lesson\n\n* Lesson overview\n* Goes here\n\n# Resources\n\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+    "markdown": "## Unit 2: Lesson 11 - HTTP and Abstraction\n\n# Background\n\nBackground goes here\n\n# Vocabulary\n\nVocabulary goes here\n\n# Lesson\n\n* Lesson overview\n* Goes here\n\n# Resources\n\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </External>
