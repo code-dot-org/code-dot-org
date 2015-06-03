@@ -1,0 +1,20 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-06T20:24:21.000Z",
+  "properties": {
+    "href": "pixelation/pixelation.html",
+    "options": {
+      "skip_dialog": true,
+      "Instructions": "Complete the 4x4 grid of shades of color.  Row 1 shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray. The first row has been provided for you in the same way its shown in the video.",
+      "version": "3",
+      "hex": "true",
+      "data": "04\n04\n18\nFF0000 00AAAA"
+    },
+    "title": "Pixelation - Lesson 15 - Color Shades 4x4",
+    "content1": "description here",
+    "markdown": "# Pixelation: Task 3\n<img src = \"http://staging.code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n * Row 1 - fill with shades of red. \n * Row 2 - shades of green. \n * Row 3 - shades of blue. \n * Row 4 - shades of gray.\n"
+  },
+  "md5": "fb3abab3480cb6bf0ce5e70625f8b3e9"
+}]]></config>
+</External>

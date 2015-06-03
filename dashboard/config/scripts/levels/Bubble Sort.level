@@ -21,9 +21,9 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "step_speed": "2"
-  },
-  "md5": "2ab47e6cd7c5ec2dfe1a355397413fb3"
+    "step_speed": "2",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

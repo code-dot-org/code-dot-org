@@ -18,9 +18,9 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "instructions": "Which binary string, repeated 10 times, will draw this image?",
-    "use_modal_function_editor": "false"
-  },
-  "md5": "4af8e3f61922a85f289da34b53ca118b"
+    "use_modal_function_editor": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

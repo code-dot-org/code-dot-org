@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-02-12T01:17:19.000Z",
+  "properties": {
+    "href": "pixelation/pixelation.html",
+    "options": {
+      "skip_dialog": true,
+      "version": "1"
+    },
+    "title": "Pixelation 1",
+    "content1": "Create images with bits and bytes."
+  },
+  "md5": "3092f5ecd1c7331495419336f6ae6ee7"
+}]]></config>
+</External>

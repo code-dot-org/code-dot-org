@@ -1,0 +1,31 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which step should fill in the blank for this algorithm?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+    "height": "100"
+  },
+  "md5": "10195bb420c052e5332bb6234324e47d"
+}]]></config>
+</Multi>

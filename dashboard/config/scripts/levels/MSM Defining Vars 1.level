@@ -15,8 +15,7 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "instructions": "Write a program that produces a 50 pixel solid green triangle."
-  },
-  "md5": "1dee7d2db28004020c147df79314e61b"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Who was the first president of the USA?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Fred Flintstone",
+        "correct": false
+      },
+      {
+        "text": "Martha Washington",
+        "correct": false
+      },
+      {
+        "text": "George Washington",
+        "correct": true
+      },
+      {
+        "text": "George Jetson",
+        "correct": false
+      }
+    ],
+    "title": "Presidents",
+    "content1": "This multiple choice is all about the presidents of the United States."
+  },
+  "md5": "e7c48e25f1d3d9ece5c6713b1aabb75f"
+}]]></config>
+</Multi>

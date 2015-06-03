@@ -15,8 +15,7 @@
     "instructions": "Use a loop to draw this hexagon with 40 pixel sides and 60 degree angles.",
     "ideal": "4",
     "slider_speed": ".6"
-  },
-  "md5": "5def08abb9e20ca51cd1dc8dfbdfd6a7"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "How would you simplify this sequence with loops?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png",
+    "height": "150"
+  },
+  "md5": "d97dbc8444ee6da88a47e99de52ba03d"
+}]]></config>
+</Multi>

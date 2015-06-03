@@ -10,8 +10,7 @@
     "instructions": "Create loops to get to the pig using less blocks.",
     "start_direction": "1",
     "step_mode": 1
-  },
-  "md5": "fdc7953b8fc3b1f60858f4aa5593ddc6"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

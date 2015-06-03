@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-08T22:33:03.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the value of (p - x)?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "q",
+        "correct": false
+      },
+      {
+        "text": "3",
+        "correct": false
+      },
+      {
+        "text": "5",
+        "correct": true
+      }
+    ],
+    "title": "/script_assets/msm/define_xpq.png, 600"
+  },
+  "md5": "910531bbec70f223d4bec674b1683593"
+}]]></config>
+</Multi>

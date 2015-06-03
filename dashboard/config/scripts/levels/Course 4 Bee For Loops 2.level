@@ -20,9 +20,9 @@
     "nectar_goal": "5",
     "ideal": "7",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
-  },
-  "md5": "040ce709a3c1324cfb9fd736a4cced7a"
+    "use_contract_editor": "false",
+    "maze_data": null
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,0 +1,15 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-13T00:00:07.000Z",
+  "properties": {
+    "answers": [
+      "shrink|Image|Image"
+    ],
+    "title": "Shrink Contract",
+    "content1": "Try using the \"shrink\" function.",
+    "content2": "Examples 4.solution_blocks, 300"
+  },
+  "md5": "d139ba9150f58bd2a9bc6d00697c05c6"
+}]]></config>
+</ContractMatch>

@@ -19,8 +19,7 @@
     "nectar_goal": "15",
     "ideal": "15",
     "instructions": "Collect all of the nectar from these flowers. I wonder if there's an easier way to do this..."
-  },
-  "md5": "8d2e8862c329fea1791fef18387bad3b"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

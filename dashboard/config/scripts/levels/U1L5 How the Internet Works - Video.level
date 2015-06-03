@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-08T13:05:09.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "How the Internet Works - Video",
+    "content1": "description here",
+    "markdown": "# How the Internet Works\n\n# THIS VIDEO URL MUST BE REPLACED\n\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dubPPv_ECPA\" frameborder=\"0\" allowfullscreen></iframe>\n</br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "bda8a254ebfc26b157e121aa10ab257c"
+}]]></config>
+</External>

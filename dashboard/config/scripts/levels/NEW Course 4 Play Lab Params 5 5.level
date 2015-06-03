@@ -25,8 +25,7 @@
     "free_play": "false",
     "disable_sharing": "false",
     "instructions": "Fill in actor parameter inputs with numbers (1, 2, and 3) to make these actors patrol. "
-  },
-  "md5": "a1f7f00e5aadbbe29668c9dcd654ab46"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

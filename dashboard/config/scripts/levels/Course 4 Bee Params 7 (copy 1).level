@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-11-04T22:16:54.000Z",
+  "created_at": "2014-11-04T22:16:54.855Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -19,8 +19,7 @@
     "flower_type": "redWithNectar",
     "ideal": "32",
     "instructions": "Try using your new function to collect all of this nectar."
-  },
-  "md5": "feadcced773eb7c721d9fd3ece1265dd"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

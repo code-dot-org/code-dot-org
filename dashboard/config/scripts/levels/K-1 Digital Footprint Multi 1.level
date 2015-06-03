@@ -1,0 +1,31 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png",
+        "correct": true
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png",
+    "height": "100"
+  },
+  "md5": "b9d37c14fc90a5f26b788db08d7bf16e"
+}]]></config>
+</Multi>

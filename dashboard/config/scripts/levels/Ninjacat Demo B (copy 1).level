@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2014-11-27T00:01:11.000Z",
+  "created_at": "2014-11-27T00:01:11.293Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -28,8 +28,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "free_play": "false"
-  },
-  "md5": "f0d832583d8faded3d9624a963a4c4e7"
+  }
 }]]></config>
   <blocks>
     <start_blocks>
