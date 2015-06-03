@@ -13,7 +13,8 @@
     "skip_instructions_popup": "true",
     "instructions": "Use the \"repeat\" block to get the zombie to the sunflower. (Avoid the chompers!)",
     "ideal": "15"
-  }
+  },
+  "md5": "cca56817abd0bbd5d2e60f3f5e42de00"
 }]]></config>
   <blocks>
     <toolbox_blocks>

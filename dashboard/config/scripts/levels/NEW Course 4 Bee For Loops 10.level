@@ -21,7 +21,8 @@
     "instructions": "Use your for loop \"counter\" variable to control how far to move horizontally.",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false"
-  }
+  },
+  "md5": "ddd01c78400a9971ff397255d2401704"
 }]]></config>
   <blocks>
     <start_blocks>

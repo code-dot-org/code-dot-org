@@ -33,8 +33,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_failure_tick": "250",
-    "timeout_after_when_run": "false",
-    "maze_data": null
+    "timeout_after_when_run": "false"
   },
   "md5": "2b6470f4d51df90f8ba74bfa2940f99d"
 }]]></config>

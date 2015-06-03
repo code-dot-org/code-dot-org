@@ -15,7 +15,8 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "instructions": "Can you complete this puzzle? The big-triangle is 200 pixels in size and purple?"
-  }
+  },
+  "md5": "fefba6851ebfbcf87346014ab04cea04"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -20,9 +20,9 @@
     "start_direction": "1",
     "step_mode": "0",
     "nectar_goal": "18",
-    "flower_type": "redWithNectar",
-    "maze_data": null
-  }
+    "flower_type": "redWithNectar"
+  },
+  "md5": "b3f6685ebd7ef04a8d61c7693ca771e8"
 }]]></config>
   <blocks>
     <start_blocks>

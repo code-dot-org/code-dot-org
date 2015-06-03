@@ -17,7 +17,8 @@
     "honey_goal": "2",
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "true"
-  }
+  },
+  "md5": "1d8296a94af7f0d6d239528ea64a040e"
 }]]></config>
   <blocks>
     <toolbox_blocks>

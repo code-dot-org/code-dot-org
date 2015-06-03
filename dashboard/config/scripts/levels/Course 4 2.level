@@ -19,9 +19,9 @@
     "ideal": "8",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
-    "maze_data": null
-  }
+    "use_modal_function_editor": "false"
+  },
+  "md5": "b2256ae81c26762ac4a8d0b3c4fcc648"
 }]]></config>
   <blocks>
     <toolbox_blocks>

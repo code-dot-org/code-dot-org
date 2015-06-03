@@ -20,7 +20,8 @@
     "embed": "false",
     "disable_sharing": "false",
     "instructions": "Free Play: Here's a higher resolution canvas to draw on - 16 bits by 16 bits!"
-  }
+  },
+  "md5": "ee7f67d153246decf23edcaf610b16f3"
 }]]></config>
   <blocks>
     <start_blocks>

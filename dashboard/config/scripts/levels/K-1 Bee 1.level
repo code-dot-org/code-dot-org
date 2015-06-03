@@ -19,9 +19,9 @@
     "honey_goal": "1",
     "ideal": "6",
     "video_key": "C1_bee_level_intro",
-    "disable_param_editing": "true",
-    "maze_data": null
-  }
+    "disable_param_editing": "true"
+  },
+  "md5": "3ee6055ac59c5b9d62d0759fc578bbfc"
 }]]></config>
   <blocks>
     <toolbox_blocks>
