@@ -95,6 +95,15 @@ git push
 * unplugged.en.yml
 2. DO NOT directly modify `match.en.yml` or `multi.en.yml` Please make changes to the levels directly in levelbuilder.
 
+## Adding a new language
+1. Add target language to ALL projects on Crowdin-in
+2. Add the language's name and key to the following files:
+* i18n/code.org/lib/fix-crowdin-codes.rb
+* dashboard/config/locales.yml
+* pegasus/sites.v3/code.org/views/target_languages.haml
+3. Run sync scripts to generate all language files
+
+
 ## Uncommon Issues
 
 If you see an error similar to the following:
