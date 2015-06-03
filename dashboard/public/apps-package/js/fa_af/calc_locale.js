@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "برنامه شما تقسیم بر صفر تولید میکند."},
-"emptyComputeBlock":function(d){return "شما باید یک قطعه به قطعه \"ارزیابی\" وصل کنید."},
-"equivalentExpression":function(d){return "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید."},
-"evaluate":function(d){return "ارزیابی کنید"},
-"extraTopBlocks":function(d){return "شما قطعه های به هم وصل نشده دارید. آیا قصد وصل کردن این قطعه ها به قطعه \"ارزیابی\" را نداشتید؟"},
-"failedInput":function(d){return "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند."},
-"goal":function(d){return "هدف:"},
-"levelIncompleteError":function(d){return "معادله ی شما با هدف تطابق ندارد."},
-"missingFunctionError":function(d){return "شما باید یک تابع به اسم "+calc_locale.v(d,"functionName")+" تعریف کنید."},
-"missingVariableX":function(d){return "معادله شما فاقد متغیر است"+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "این محاسبات شماست! یا روی آنها کار کنید، یا برو به پازل بعدی!"},
-"yourExpression":function(d){return "عبارت شما:"},
-"wrongInput":function(d){return "شما تابع خود را با مقدار نادرست صدا می کنید."},
-"wrongOtherValuesX":function(d){return "اگر ما متغیر"+calc_locale.v(d,"var")+" را تغییر دهیم معادله شما جواب اشتباه می دهد."},
-"wrongResult":function(d){return "عبارت شما جواب درست را بر نمی گرداند."}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

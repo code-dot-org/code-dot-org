@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Forritið þitt leiðir til deilingar með núlli."},
-"emptyComputeBlock":function(d){return "Þú verður að tengja kubb við \"meta\" kubbinn."},
-"equivalentExpression":function(d){return "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi."},
-"evaluate":function(d){return "meta"},
-"extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að tengja þá við \"meta\" kubbinn?"},
-"failedInput":function(d){return "Fallið þitt gefur stundum ekki rétta útkomu."},
-"goal":function(d){return "Markmið:"},
-"levelIncompleteError":function(d){return "Formúlan þín samsvarar ekki markmiðinu."},
-"missingFunctionError":function(d){return "Þú verður að skilgreina fall með heitinu "+calc_locale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Það vantar breytuna "+calc_locale.v(d,"var")+" í formúluna þína."},
-"reinfFeedbackMsg":function(d){return "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!"},
-"yourExpression":function(d){return "Formúlan þín:"},
-"wrongInput":function(d){return "Þú ert að kalla á fallið þitt með röngu gildi."},
-"wrongOtherValuesX":function(d){return "Formúlan þín gefur rangt gildi ef breytunni "+calc_locale.v(d,"var")+" er breytt."},
-"wrongResult":function(d){return "Formúlan þín gefur ekki rétta niðurstöðu."}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

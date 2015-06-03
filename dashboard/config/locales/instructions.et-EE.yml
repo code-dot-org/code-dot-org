@@ -2175,75 +2175,52 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen circle function in circle_instruction: Nüüd loome 20 osaliselt kattuvat
+        ringi, pöörates iga ringi vahel 18 kraadi.
+      frozen circle function with parameter_instruction: Siin on "Create circle" blokk
+        mis võimaldab luua erineva suurusega ringe. Kas sa oskad seda kasutades luua
+        väikese ringi suurusega 5 ja suure ringi suurusega 10?
+      frozen circle function_instruction: Kasuta uut "Loo ring" blokk, et luua 10
+        kattuvat ringi. Ära unusta ringide vahel hüpata edasi.
+      frozen circle_instruction: Ring on erilise kujuga. Kas sa oskad arvata mis number
+        tuleks küsimärgi asemele panna, et joonistada ring?
+      frozen cross rotate dense_instruction: 'Kordame seda 90 korda! Mitu korda mahub
+        90 360-ne sisse? Vihje: See on üsna väike number.'
+      frozen cross rotate_instruction: Nüüd proovige seda 10 korda korrata. Kui palju
+        kraade pead sa iga rea vahel keerama?
+      frozen cross_instruction: Kasuta "Korda" blokki, et luua plussmärk. Panid sa
+        tähele, et Elsa saab liikuda edasi ja tagasi?
+      frozen diamond mini snowflake_instruction: Kas sa teadsid et iga lumehelves
+        on erineva kujuga? Loome uue lumehelbe kasutades "Korda" blokki, et korrata
+        rööpkülikut 4 korda, samal ajal keerates 90 kraadi peale igat rööpkülikut.
+      frozen diamond snowflake_instruction: Nüüd, loome uue lumehelbe kasutades kordamise
+        blokki, joonistame rööpkülikut 10 korda, keerates peale igat rööpkülikut 36
+        kraadi.
+      frozen diamond_instruction: 'Loome rööpküliku. See on nagu ruut, ainult tal
+        on teistsugused nurgad: 60 ja 120 kraadi, mitte 90 kraadi.'
+      frozen freeplay_instruction: Sa oled ametlikult meister kunstnik! Loo talve
+        võlumaa.
+      frozen line_instruction: Tere! Olen Elsa. Aita mul joonistada üks joon.
+      frozen perpendicular_instruction: Nüüd vaatame, kas me saame luua kaks joont,
+        mis on teineteise suhtes 90 kraadise nurga all. Sa pead kasutama "Keera",
+        kui ka "Liigu" blokki.
+      frozen snowflake branch_instruction: Proovi kasutades "Loo lumehelbe võrestik"
+        blokki joonistada 3 võrestikku, mis hakkavad välja nägame nagu lumehelbed.
+      frozen snowflake full_instruction: Nüüd kordame seda 8 korda, et luua imeilus
+        lumehelves!
+      frozen snowflower_instruction: Keerulisi lumemustreid saab luua väga lihtsate
+        kujunditega. Kas sa oskad teha mustri joonistades 5 ringi suurusega 5 ja 5
+        ringi suurusega 10?
+      frozen square iterative_instruction: Näib et me oleme poolel teel joonistamaks
+        ruutu. Ühendame 4 joont omavahel, et valmiks ruut.
+      frozen square loop 3x_instruction: Loome kolm ruutu, peale igat ruutu peaks
+        aga keerama. Keera peale igat ruutu 120 kraadi.
+      frozen square loop_instruction: Tere, olen Anna! Teeme ruudu kasutades "Korda"
+        blokki, sellega kasutame teisi blokke vähem. Kui palju kordi (???) peaks "Korda"
+        blokki kasutama, et teha valmis ruut?
+      frozen square snowflake_instruction: Kas sa saad luua lumehelbe kasutades "Korda"
+        blokki, et joonistada ruutu 10 korda ja "Keera" blokki", et keerata iga ruudu
+        vahel 36 kraadi?
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2967,9 +2944,8 @@
       scrat 20_instruction: Kas saad lisada ainult 3 plokki et aidata mul lahendada
         veel raskem pusle? Kui sa seda õigesti teed, saan ma kõndida ükskõik millisel
         käänulisel rajal, vahet pole kui pikk see on. Kiirusta! Jää sulab!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: Sa oled ametlikult meister kunstnik! Loo talve
+        võlumaa.
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.

@@ -182,9 +182,31 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });
 
+        var buttons = [];
+
         if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
           var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
-          writeEmptyRow(buttonMarkup(buttonText, 'netsim-lobby-add-router', ['secondary']));
+          buttons.push(buttonMarkup(
+              buttonText,
+              'netsim-lobby-add-router',
+              ['secondary']
+          ));
+        }
+
+        if (levelConfig.showLogBrowserButton) {
+          buttons.push(buttonMarkup(
+              i18n.logBrowserButton(),
+              'show-router-log-modal',
+              ['secondary'],
+              {
+                'data-toggle':'modal',
+                'data-target':'#router-log-modal'
+              }
+          ));
+        }
+
+        if (buttons.length > 0) {
+          writeEmptyRow(buttons.join(' '));
         } else if (lobbyRows.length === 0) {
           writeEmptyRow(i18n.lobbyIsEmpty());
         }

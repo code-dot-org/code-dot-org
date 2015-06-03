@@ -159,7 +159,7 @@ module.exports = React.createClass({
 
       assetList = (
         <div>
-          <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
+          <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}

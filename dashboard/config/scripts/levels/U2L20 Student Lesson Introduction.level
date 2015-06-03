@@ -1,0 +1,20 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-06-02T23:01:03.650Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 2: Lesson 20 - Security and Hacking in the Real World\n\n# Background\n\nBackground goes here\n\n# Vocabulary\n\nVocabulary goes here\n\n# Lesson\n\n* Lesson overview\n* Goes here\n\n# Resources\n\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "dsl_text": "name 'U2L20 Student Lesson Introduction'\r\ntitle 'title'\r\ndescription 'description here'\r\ncss 'unplugged'\r\nskip_dialog 'true'\r\n\r\nmarkdown <<MARKDOWN\r\n## Unit 2: Lesson 20 - Security and Hacking in the Real World\r\n\r\n# Background\r\n\r\nBackground goes here\r\n\r\n# Vocabulary\r\n\r\nVocabulary goes here\r\n\r\n# Lesson\r\n\r\n* Lesson overview\r\n* Goes here\r\n\r\n# Resources\r\n\r\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\r\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\r\n\r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\n\r\n\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>
