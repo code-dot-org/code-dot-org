@@ -1,7 +1,7 @@
 module Ops
   class WorkshopsController < OpsControllerBase
     before_filter :convert_facilitators, :convert_cohorts, :convert_unexpected_teachers, only: [:create, :update]
-    after_filter :notify_ops
+    after_filter :notify_ops, only: [:update]
 
     load_and_authorize_resource
 
