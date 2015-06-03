@@ -961,9 +961,7 @@ fr:
       Course 4 Artist Vars 9_instruction: |-
         Modifie cet algorithme afin qu'il utilise la variable "côtés" au lieu d'un nombre fixe pour dessiner un triangle. Remplace le nombre 3 avec la variable "côtés", et utilise le block "set sides to".
       Course 4 Bee 1_instruction: "L'abeille ne peut pas dire si c'est une fleur ou un nid d'abeilles. Vérifie d'abord si c'est une fleur ou un nid d'abeilles, puis recueille le nectar si c'est une fleur. "
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Bee 2_instruction: "Vérifiez chaque objet pour voir si c'est une fleur. Si c'est le cas, butinez... sinon, vous pouvez l'ignorer !"
       Course 4 Bee 3_instruction: "L'objet inconnu est soit une fleur soit un rayon de miel. Utilise le bloc si/sinon pour collecter le nectar si c'est une fleur, sinon pour faire du miel (parce qu'alors ce serait un rayon de miel)."
       Course 4 Bee 4_instruction: La fleur violette peut avoir soit 3, 2, ou 1 nectar. Ici un bloc si-sinon est combiné avec un autre bloc si-sinon pour créer un bloc si, sinon-si, sinon. Complète la solution pour collecter la quantité inconnue de nectar.
       Course 4 Bee For Loops 1_instruction: Utilise une boucle pour collecter le nectar de chaque fleur.

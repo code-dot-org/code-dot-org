@@ -1,7 +1,7 @@
 "ja":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 次の間違い（エラー）を正しく直してください。
   activerecord:
     errors:
       messages:
@@ -322,7 +322,9 @@
     panel:
       answer_viewer: Answer Viewer
       student: 生徒
-      try_it_yourself: Try it yourself
+      viewing_solution: Viewing Solution
+      try_it_yourself: 試しにやってみてください。
+      section: セクション
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -346,7 +348,7 @@
     title: Code Studio
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: コース1、2、3の概要
-    lesson_plans: Lesson plans
+    lesson_plans: 授業計画
     signin_message: 既に登録されていますか？% {リンク}
     student_reg_link: 学生のサインアップ
     teacher_reg_link: 教師のサインアップ（登録）
@@ -375,7 +377,7 @@
     20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    use_as_teacher: このサイトを教師として使用
     heading_hoc2014: <h2>Hour of Code</h2> <h1>全年齢対象</h1>
     heading_elementary: <h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>
     heading_apps: <h2>お楽しみ</h2><h1>みんなの</h1>

@@ -1,6 +1,6 @@
 name 'U2L3 Student Lesson Introduction'
 title 'Lesson 3 - Invent an addressing protocol'
-
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 2: Lesson 3 - Invent an Addressing Protocol

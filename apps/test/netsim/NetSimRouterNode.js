@@ -24,7 +24,6 @@ var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
 var dataConverters = require('@cdo/apps/netsim/dataConverters');
-var netsimNodeFactory = require('@cdo/apps/netsim/netsimNodeFactory');
 
 var addressStringToBinary = dataConverters.addressStringToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
@@ -666,7 +665,7 @@ describe("NetSimRouterNode", function () {
       });
 
       // Tell router to simulate for local node
-      router.initializeSimulation(localClient.entityID, netsimNodeFactory);
+      router.initializeSimulation(localClient.entityID);
 
       // Manually connect nodes
       var wire;

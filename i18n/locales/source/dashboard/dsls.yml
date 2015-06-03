@@ -440,8 +440,7 @@ en:
         description here: description here
         title: title
       U2L10 Student Lesson Introduction:
-        description here: description here
-        title: title
+        'DNS in the Real World ': 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -467,8 +466,7 @@ en:
         description here: description here
         title: title
       U2L9 Student Lesson Introduction:
-        description here: description here
-        title: title
+        The Need for DNS: The Need for DNS
       U3L01 Student Lesson Introduction:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L02 Student Lesson Introduction:
@@ -729,18 +727,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    match:
-      CSPPD AP quiz:
-        AP Assessment Matching: AP Assessment Matching
-        AP matching: AP matching
-        Create Task: Create Task
-        End-of-year exam, common with all AP courses: End-of-year exam, common with all AP courses
-        Explore Task: Explore Task
-        Fixed-response questions: Fixed-response questions
-        Programming projects that demonstrate student understanding of algorithms and abstraction: Programming projects that demonstrate student understanding of algorithms and abstraction
-        Written report about innovations in computing: Written report about innovations in computing
-        ap matching: ap matching
-        match the assessment-type with the description below: match the assessment-type with the description below
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -1042,12 +1028,24 @@ en:
         'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L09 Assessment2:
+        'Assessment: Question 2': 'Assessment: Question 2'
+      U2L09 Free Response Wrap Up:
+        'The Need for DNS: Wrap Up': 'The Need for DNS: Wrap Up'
+      U2L10 Assessment3:
+        Assessment Question 3: Assessment Question 3
+      U2L10 Free Response Getting Started:
+        'DNS in the Real World: Getting Started': 'DNS in the Real World: Getting Started'
+      U2L10 Free Response Wrap Up:
+        'DNS in the Real World: Wrap Up': 'DNS in the Real World: Wrap Up'
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
       U2L3 Free Response Wrap Up:
         'Invent an Addressing Protocol: Wrap Up': 'Invent an Addressing Protocol: Wrap Up'
       U2L4 Free Response Getting Started:
         'Routers and Addresses: Getting Started': 'Routers and Addresses: Getting Started'
+      U2L9 Free Response Getting Started:
+        'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
       U3L01 Assessment1:
         Why Programming? Question 1: Why Programming? Question 1
       U3L01 Assessment3:

@@ -1067,6 +1067,28 @@ en:
         IP addresses are hierarchical; each city has an assigned set of numbers.: crwdns39033:0crwdne39033:0
         IP addresses are hierarchical; the first few fields identify the domain and subset.: crwdns39034:0crwdne39034:0
         IP addresses are based upon area codes because computers often use phone lines for transmission.: crwdns39035:0crwdne39035:0
+      U2L09 Assessment1:
+        "The Need for DNS: Question 1": crwdns39089:0crwdne39089:0
+        0: crwdns39090:0crwdne39090:0
+        1: crwdns39091:0crwdne39091:0
+        It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: crwdns39092:0crwdne39092:0
+        There are too few IP addresses to meet the current demand.: crwdns39093:0crwdne39093:0
+        When someone new joins the Internet they must inform everyone else of the new IP address: crwdns39094:0crwdne39094:0
+        When an IP address changes, it is impossible to locate a computer until the owner announces the change.: crwdns39095:0crwdne39095:0
+      U2L10 Assessment1:
+        Assessment Question 1: crwdns39096:0crwdne39096:0
+        What feature of DNS and IP allow the internet to scale?: crwdns39097:0crwdne39097:0
+        Redundancy: crwdns39098:0crwdne39098:0
+        Hierarchy: crwdns39099:0crwdne39099:0
+        Multiple servers: crwdns39100:0crwdne39100:0
+        Government control: crwdns39101:0crwdne39101:0
+      U2L10 Assessment2:
+        Assessment Question 2: crwdns39102:0crwdne39102:0
+        What is a disadvantage of the open standard of addressing used by the internet? Pick 2: crwdns39103:0crwdne39103:0
+        Censorship: crwdns39104:0crwdne39104:0
+        Spoofing: crwdns39105:0crwdne39105:0
+        Redundancy: crwdns39106:0crwdne39106:0
+        Hierarchy: crwdns39107:0crwdne39107:0
       U3L01 Assessment2:
         Why Programming? Question 2: crwdns38867:0crwdne38867:0
         0: crwdns38868:0crwdne38868:0

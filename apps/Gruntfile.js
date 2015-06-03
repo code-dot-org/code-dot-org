@@ -215,7 +215,7 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last', 'clone', 'isEqual', 'find']
+        'last', 'clone', 'isEqual', 'find', 'sortBy']
     }
   }
 };
@@ -488,4 +488,5 @@ module.exports = function(grunt) {
 
   process.env.mocha_grep = grunt.option('grep') || '';
   process.env.mocha_debug = grunt.option('debug') || '';
+  process.env.mocha_entry = grunt.option('entry') || '';
 };

@@ -303,7 +303,9 @@ id:
     panel:
       answer_viewer: Answer Viewer
       student: siswa
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Sesi
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'

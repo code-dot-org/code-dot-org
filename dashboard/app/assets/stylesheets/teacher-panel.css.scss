@@ -20,6 +20,7 @@
 
   .hide-handle,
   .show-handle {
+    cursor: pointer;
     transition: right 0.5s;
     position: absolute;
     right: 200px;
@@ -159,6 +160,7 @@
   }
   .scrollable-wrapper {
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 5px;
   }
 }

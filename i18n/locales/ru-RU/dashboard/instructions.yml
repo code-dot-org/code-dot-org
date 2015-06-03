@@ -243,10 +243,7 @@ ru:
       4-5 Artist Functions 2a_instruction: 'Теперь объедините эти блоки в новую функцию под названием "Рисовать маленький треугольник" и воспользуйтесь ею.'
       4-5 Artist Functions 2b_instruction: Теперь создайте функцию «Нарисуйте маленький треугольник» с использованием предоставленных блоков.
       4-5 Artist Functions 3_instruction: 'Теперь создайте функции "Рисовать средний треугольник" и "Рисовать большой треугольник".Функция "Рисовать маленький треугольник" уже создана для Вас. Треугольники имеют стороны длинной 50 (малый), 100 (средний) и 150 (большой) пикселей.'
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
+      4-5 Artist Functions 4_instruction: 'Эта новая функция "нарисовать треугольник" содержит параметр и может выполнять действия предыдущих трех функций. Нарисуйте такие же треугольники с помощью новой функции.'
       4-5 Artist Functions 5_instruction: Вы можете изменить функцию «Нарисуйте треугольник» в функцию «нарисуйте квадрат», чтобы изменить рисунок?
       4-5 Artist Functions 6_instruction: 'Используйте функции "Рисовать квадрат" и "Рисовать треугольник", чтобы нарисовать дом. (Подсказка: сторона квадрата 200 пикселей)'
       4-5 Artist Functions 6b_instruction: 'Используйте квадраты, треугольники и другие функции для того, чтобы нарисовать дом. Затем объедините их  в функцию "Нарисовать дом" и воспользуйтесь ею.'
@@ -254,18 +251,9 @@ ru:
       4-5 Artist Functions 8_instruction: 'Функция "Нарисовать цветок" имеет параметр, позволяющий установить высоту стебля. Установите его на 200 пикселей и посмотрите, что произойдёт.'
       4-5 Artist Functions 9_instruction: Нарисуйте 3 этих цветка. Высота первого 100 пикселей, каждый следующий больще предыдущего на 50 пикселей. Расстояние между цветами 100 пикселей.
       4-5 Artist Patterns 1_instruction: Можете нарисовать этот квадрат с помощью цикла? Каждая сторона составляет 20 пикселей.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
+      4-5 Artist Patterns 10_instruction: 'Этот код рисует два ряда шестиугольников - повторите цикл 4 раза, чтобы нарисовать соты. Подсказка: Вам понадобится вернуться на 120 пикселей назад от последнего цикла, чтобы рисунок не выступал за пределы экрана.'
+      4-5 Artist Patterns 11_instruction: 'Сколько раз Вам потребуется повторить цикл, чтобы нарисовать половину круга? Подсказка: если в круге 360 градусов и каждый цикл добавляет 3 градуса, сколько раз Вам понадобится повторить, чтобы получить полный круг?'
+      4-5 Artist Patterns 12_instruction: Если вы скопируете этот цикл, и повернете в нём налево, вместо того чтобы повернуть направо, что случится? Можешь ли ты повторить это, и нарисовать эту волну?
       4-5 Artist Patterns 13_instruction: |
         Now let's loop that whole thing four
         times to create this picture frame. Watch out for the corners - you can't
@@ -350,28 +338,24 @@ ru:
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
         all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
+      4-5 Bee Debugging 1_instruction: Эти блоки не дают мне покоя. Можете их исправить?
+      4-5 Bee Debugging 10_instruction: Найдите ошибки и исправьте их.
+      4-5 Bee Debugging 11_instruction: Это считается верно?
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 3_instruction: Найдите ошибки и исправьте их.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
       4-5 Bee Debugging 5_instruction: Что-то пошло не так...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
+      4-5 Bee Debugging 7_instruction: В функции что-то отсутствует...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
         properly.
-      4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: |
-        Collect all of the nectar from each flower.
-        Use a nested loop. 
+      4-5 Bee Debugging 9_instruction: Почему пчела делает недостаточно мёда?
+      4-5 Bee Debugging Assessment 1_instruction: 'Оценка: Исправьте код.'
+      4-5 Bee Nested Loops 1_instruction: Используйте цикл, чтобы собрать весь нектар.
+      4-5 Bee Nested Loops 2_instruction: 'Собери весь нектар с каждого цветка. Используй вложенный цикл. '
       4-5 Bee Nested Loops 3_instruction: |
         Collect all of the nectar by putting the
         starter code into a nested loop.
@@ -413,22 +397,14 @@ ru:
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 3 (copy 1)_instruction: Нужно... добраться... до подсолнечника.
+      4-5 Maze 3_instruction: Нужно... добраться... до подсолнечника.
+      4-5 Maze 4 (copy 1)_instruction: 'Попробуйте использовать блок "repeat", чтобы использовать меньше блоков...'
+      4-5 Maze 4_instruction: 'Попробуйте использовать блок "repeat", чтобы использовать меньше блоков...'
+      4-5 Maze 5 (copy 1)_instruction: Можете решить эту задачу используя наименьшее возможное число блоков?
+      4-5 Maze 5_instruction: Можете решить эту задачу, используя наименьшее возможное число блоков?
+      4-5 Maze 6 (copy 1)_instruction: Можете решить эту задачу используя наименьшее возможное число блоков?
+      4-5 Maze 6_instruction: Можете решить эту задачу, используя наименьшее возможное число блоков?
       4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
       4-5 Maze 8_instruction: |
         Use the "repeat" block to get the zombie to the
@@ -490,7 +466,7 @@ ru:
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
         complete a 360 degree rotation.  
       4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_instruction: Сделайте цикл из данного кода, чтобы создать ветряную мельницу.
       4-5 Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the triangle
         code?
@@ -1043,7 +1019,7 @@ ru:
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
+      Course 4 Artist Binary 7_instruction: Закончите рисунок.
       Course 4 Artist Binary Free Play 2_instruction: |
         Free Play: Here's a higher
         resolution canvas to draw on - 16 bits by 16 bits!
@@ -1434,13 +1410,9 @@ ru:
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 4_instruction: 'Попробуйте использовать блок "repeat", чтобы использовать меньше блоков...'
+      Course 4 Maze 5_instruction: Можете решить эту задачу, используя наименьшее возможное число блоков?
+      Course 4 Maze 6_instruction: Можете решить эту задачу, используя наименьшее возможное число блоков?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.

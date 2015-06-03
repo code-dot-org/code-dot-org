@@ -23,7 +23,7 @@ var bounce_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -179,13 +179,13 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "launchBallTooltip":function(d){return "Sæt bold i spil."},
 "makeYourOwn":function(d){return "Lav dit eget hoppe-spil"},
 "moveDown":function(d){return "Flyt ned"},
-"moveDownTooltip":function(d){return "Flytte battet ned."},
+"moveDownTooltip":function(d){return "Flyt battet ned."},
 "moveForward":function(d){return "flyt fremad"},
 "moveForwardTooltip":function(d){return "Flyt mig en plads frem."},
 "moveLeft":function(d){return "Flyt til venstre"},
-"moveLeftTooltip":function(d){return "Flytte battet til venstre."},
+"moveLeftTooltip":function(d){return "Flyt battet til venstre."},
 "moveRight":function(d){return "Flyt til højre"},
-"moveRightTooltip":function(d){return "Flytte battet til højre."},
+"moveRightTooltip":function(d){return "Flyt battet til højre."},
 "moveUp":function(d){return "Flyt op"},
 "moveUpTooltip":function(d){return "Flyt battet op."},
 "nextLevel":function(d){return "Tillykke! Du har fuldført denne opgave."},
@@ -236,7 +236,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleRandom":function(d){return "sæt tilfældigt bat"},
 "setPaddleHardcourt":function(d){return "sæt hardcourt bat"},
 "setPaddleRetro":function(d){return "sæt retro bat"},
-"setPaddleTooltip":function(d){return "Sætter paddel billede"},
+"setPaddleTooltip":function(d){return "Sætter battets billede"},
 "setPaddleSpeedRandom":function(d){return "sæt tilfældig bat hastighed"},
 "setPaddleSpeedVerySlow":function(d){return "sæt meget langsom bat hastighed"},
 "setPaddleSpeedSlow":function(d){return "sæt langsom bat hastighed"},
@@ -249,10 +249,10 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "turnLeft":function(d){return "drej til venstre"},
 "turnRight":function(d){return "drej til højre"},
 "turnTooltip":function(d){return "Vender mig venstre eller højre med 90 grader."},
-"whenBallInGoal":function(d){return "Når bolden i mål"},
-"whenBallInGoalTooltip":function(d){return "Udføre handlinger under når en bold ind i målet."},
+"whenBallInGoal":function(d){return "Når bolden er i mål"},
+"whenBallInGoalTooltip":function(d){return "Udfør handlingerne herunder når en bold går i mål."},
 "whenBallMissesPaddle":function(d){return "Når bolden misser battet"},
-"whenBallMissesPaddleTooltip":function(d){return "Udføre handlinger under når en bold misser battet."},
+"whenBallMissesPaddleTooltip":function(d){return "Udfør handlingerne herunder når en bold misser battet."},
 "whenDown":function(d){return "Når pil ned"},
 "whenDownTooltip":function(d){return "Udfører handlingen herunder når der trykkes pil ned."},
 "whenGameStarts":function(d){return "når spillet starter"},
@@ -260,7 +260,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenLeft":function(d){return "Når venstre pil"},
 "whenLeftTooltip":function(d){return "Udfører handlingen herunder når der trykkes venstre pil."},
 "whenPaddleCollided":function(d){return "Når bolden rammer battet"},
-"whenPaddleCollidedTooltip":function(d){return "Udføre handlinger nedenfor hvornår en bolden kolliderer med en battet."},
+"whenPaddleCollidedTooltip":function(d){return "Udfør handlingerne herunder når en bold rammer battet."},
 "whenRight":function(d){return "Når højre pil"},
 "whenRightTooltip":function(d){return "Udfører handlingen herunder når der trykkes højre pil."},
 "whenUp":function(d){return "Når pil op"},

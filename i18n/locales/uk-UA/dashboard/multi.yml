@@ -1073,6 +1073,28 @@ uk:
         IP addresses are hierarchical; each city has an assigned set of numbers.: IP addresses are hierarchical; each city has an assigned set of numbers.
         IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
         IP addresses are based upon area codes because computers often use phone lines for transmission.: IP addresses are based upon area codes because computers often use phone lines for transmission.
+      U2L09 Assessment1:
+        "The Need for DNS: Question 1": 'The Need for DNS: Question 1'
+        0: '? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?'
+        1: ': A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?'
+        It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        There are too few IP addresses to meet the current demand.: There are too few IP addresses to meet the current demand.
+        When someone new joins the Internet they must inform everyone else of the new IP address: When someone new joins the Internet they must inform everyone else of the new IP address
+        When an IP address changes, it is impossible to locate a computer until the owner announces the change.: When an IP address changes, it is impossible to locate a computer until the owner announces the change.
+      U2L10 Assessment1:
+        Assessment Question 1: Assessment Question 1
+        What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
+        Redundancy: Redundancy
+        Hierarchy: Hierarchy
+        Multiple servers: Multiple servers
+        Government control: Government control
+      U2L10 Assessment2:
+        Assessment Question 2: Assessment Question 2
+        What is a disadvantage of the open standard of addressing used by the internet? Pick 2: What is a disadvantage of the open standard of addressing used by the internet? Pick 2
+        Censorship: Censorship
+        Spoofing: Spoofing
+        Redundancy: Redundancy
+        Hierarchy: Hierarchy
       U3L01 Assessment2:
         Why Programming? Question 2: Why Programming? Question 2
         0: "? \"Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?\""
