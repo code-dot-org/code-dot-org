@@ -34,6 +34,11 @@ designMode.onDivApplabClick = function (event) {
   if (element.id === 'divApplab') {
     designMode.clearProperties();
   } else {
+    if ($(element).is('.ui-resizable')) {
+      element = getInnerElement(element);
+    } else if ($(element).is('.ui-resizable-handle')) {
+      element = getInnerElement(element.parentNode);
+    }
     designMode.editElementProperties(element);
   }
 };
@@ -220,10 +225,16 @@ designMode.onDonePropertiesButton = function() {
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
-  element.parentNode.removeChild(element);
-  if ($(element).hasClass('screen')) {
+  var isScreen = $(element).hasClass('screen');
+  if ($(element.parentNode).is('.ui-resizable')) {
+    element = element.parentNode;
+  }
+  $(element).remove();
+
+  if (isScreen) {
     designMode.changeScreen('screen1');
   }
+
   designMode.clearProperties();
 };
 
@@ -356,6 +367,15 @@ designMode.toggleDesignMode = function(enable) {
 };
 
 /**
+ * When we make elements resizable, we wrap them in an outer div. Given an outer
+ * div, this returns the inner element
+ */
+function getInnerElement(outerElement) {
+  // currently assume inner element is first child.
+  return outerElement.children[0];
+}
+
+/**
  *
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
@@ -416,7 +436,7 @@ function makeDraggable (jq) {
 function makeUndraggable(jq) {
   jq.each(function () {
     var wrapper = $(this);
-    var elm = $(':first-child', wrapper);
+    var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
     if (!wrapper.data('uiDraggable')) {

@@ -13,7 +13,7 @@
           = stage[:title]
         - if should_show_lesson_plan && stage[:lesson_plan_html_url]
           .stage-lesson-plan-link
-            = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url]
+            = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url], target: "_blank"
 
       .games
         - stage[:levels].each do |level|

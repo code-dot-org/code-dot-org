@@ -314,6 +314,46 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
+    },
+
+    {
+      description: "add/remove an element to a screen",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeToggle").click();
+        assert.equal($("#designModeToggle").text(), 'Code');
+
+        dragToVisualization('BUTTON', 10, 10);
+
+        var button = document.getElementById('button1');
+        assert(button);
+
+        var screenElement = document.getElementById('screen1');
+
+        assert.equal(screenElement.children.length, 1);
+
+        var outerDiv = screenElement.children[0];
+        assert($(outerDiv).hasClass('ui-resizable'), 'child is outer resizable div');
+
+        assert(button.parentNode === outerDiv);
+
+
+        ReactTestUtils.Simulate.click(document.getElementById('deletePropertiesButton'));
+
+        // outdiv and child should have gone away
+        assert.equal(screenElement.children.length, 0);
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
     }
   ]
 };

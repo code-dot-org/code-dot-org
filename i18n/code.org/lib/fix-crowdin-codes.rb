@@ -69,9 +69,24 @@ locales = {
   'Vietnamese' => 'vi-VN'
 }
 
+untranslated_apps = [
+  'applab',
+  'calc',
+  'eval',
+  'netsim'
+]
+
 locales.each_pair do |language, locale|
   if File.directory?("../locales/#{language}/")
     FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
     FileUtils.rm_r "../locales/#{language}"
+  end
+
+  if locale != 'en-US'
+    untranslated_apps.each do |app|
+      app_locale = locale.sub '-', '_'
+      app_locale.downcase!
+      FileUtils.cp_r "../../apps/i18n/#{app}/en_us.json", "../../apps/i18n/#{app}/#{app_locale}.json"
+    end
   end
 end
