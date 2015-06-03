@@ -119,15 +119,19 @@ designMode.onPropertyChange = function(element, name, value) {
       break;
     case 'left':
       element.style.left = value + 'px';
+      element.parentNode.style.left = value + 'px';
       break;
     case 'top':
       element.style.top = value + 'px';
+      element.parentNode.style.top = value + 'px';
       break;
     case 'width':
       element.style.width = value + 'px';
+      element.parentNode.style.width = value + 'px';
       break;
     case 'height':
       element.style.height = value + 'px';
+      element.parentNode.style.height = value + 'px';
       break;
     case 'text':
       element.textContent = value;
