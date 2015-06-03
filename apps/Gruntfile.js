@@ -488,4 +488,5 @@ module.exports = function(grunt) {
 
   process.env.mocha_grep = grunt.option('grep') || '';
   process.env.mocha_debug = grunt.option('debug') || '';
+  process.env.mocha_entry = grunt.option('entry') || '';
 };

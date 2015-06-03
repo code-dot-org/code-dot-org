@@ -27,7 +27,7 @@ var PropertyRow = React.createClass({
    * Make our button a colpick color picker, if it isn't already
    */
   ensureColorPicker: function () {
-    var element = this.getDOMNode().querySelector('.colorPicker');
+    var element = React.findDOMNode(this.refs.colorPicker);
     $(element).colpick({
       color: this.state.value,
     	layout: 'rgbhex',
@@ -60,7 +60,7 @@ var PropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
-          <button style={buttonStyle} className='colorPicker'></button>
+          <button style={buttonStyle} ref='colorPicker'></button>
         </td>
       </tr>
     );

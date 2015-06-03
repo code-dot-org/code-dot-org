@@ -47,13 +47,6 @@ var CanvasProperties = React.createClass({
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
       </table>);
-
-    // TODO (brent):
-    // bold/italics/underline (p2)
-    // shape (p2)
-    // textAlignment (p2)
-    // enabled (p2)
-    // send back/forward
   }
 });
 
@@ -61,8 +54,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '320px';
-    element.style.width = '480px';
+    element.style.height = '480px';
+    element.style.width = '320px';
 
     return element;
 
