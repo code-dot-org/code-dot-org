@@ -99,7 +99,7 @@ git push
 1. Add target language to ALL projects on Crowdin-in
 2. Add the language's name and key to the following files:
 * i18n/code.org/lib/fix-crowdin-codes.rb
-* dashboard/config/locales.yml
+* dashboard/config/locales.yml w/ debug: true until translation is complete
 * pegasus/sites.v3/code.org/views/target_languages.haml
 3. Run sync scripts to generate all language files
 
