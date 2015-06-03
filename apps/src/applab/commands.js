@@ -68,10 +68,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() " + varName + " parameter value (" +
         varValue + ") is not a " + expectedType + ".";
       outputError(errorString, ErrorLevel.WARNING, line);
@@ -92,10 +89,7 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
     }
     inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() " + varName + " parameter value (" +
         varValue + ") is not in the expected range.";
       outputError(errorString, ErrorLevel.WARNING, line);
@@ -109,10 +103,7 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() called without an active canvas. Call " +
         "createCanvas() first.";
       outputError(errorString, ErrorLevel.WARNING, line);
@@ -132,10 +123,7 @@ function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shoul
     var exists = Boolean(element && divApplab.contains(element));
     var valid = exists == shouldExist;
     if (!valid) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() " + varName +
         " parameter refers to an id (" +id + ") which " +
         (exists ? "already exists." : "does not exist.");

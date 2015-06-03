@@ -102,8 +102,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // call a simple function to just get the line number, otherwise we call a
     // function that also selects the code:
     var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
+            this.getUserCodeLine :
+            this.selectCurrentCode;
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
@@ -117,11 +117,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
     }
-    userCodeRow = selectCodeFunc(this.interpreter,
-                                 this.codeInfo.cumulativeLength,
-                                 this.codeInfo.userCodeStartOffset,
-                                 this.codeInfo.userCodeLength,
-                                 this.studioApp.editor);
+    userCodeRow = selectCodeFunc.call(this);
     inUserCode = (-1 !== userCodeRow);
     // Check to see if we've arrived at a new breakpoint:
     //  (1) should be in user code
@@ -217,11 +213,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
           unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
           if (wasUnwinding && !unwindingAfterStep) {
             // done unwinding.. select code that is next to execute:
-            userCodeRow = selectCodeFunc(this.interpreter,
-                                         this.codeInfo.cumulativeLength,
-                                         this.codeInfo.userCodeStartOffset,
-                                         this.codeInfo.userCodeLength,
-                                         this.studioApp.editor);
+            userCodeRow = selectCodeFunc.call(this);
             inUserCode = (-1 !== userCodeRow);
             if (!inUserCode) {
               // not in user code, so keep unwinding after all...
@@ -262,10 +254,75 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   if (reachedBreak && atMaxSpeed) {
     // If we were running atMaxSpeed and just reached a breakpoint, the
     // code may not be selected in the editor, so do it now:
-    codegen.selectCurrentCode(this.interpreter,
-                              this.codeInfo.cumulativeLength,
-                              this.codeInfo.userCodeStartOffset,
-                              this.codeInfo.userCodeLength,
-                              this.studioApp.editor);
+    this.selectCurrentCode();
   }
+};
+
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.selectCurrentCode = function () {
+  return codegen.selectCurrentCode(this.interpreter,
+                                   this.codeInfo.cumulativeLength,
+                                   this.codeInfo.userCodeStartOffset,
+                                   this.codeInfo.userCodeLength,
+                                   this.studioApp.editor);
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.getUserCodeLine = function () {
+  var userCodeRow = -1;
+  if (this.interpreter.stateStack[0]) {
+    var node = this.interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
+ */
+JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  var userCodeRow = -1;
+  for (var i = 0; i < this.interpreter.stateStack.length; i++) {
+    var node = this.interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+      break;
+    }
+  }
+  return userCodeRow;
 };
