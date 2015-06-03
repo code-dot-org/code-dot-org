@@ -44,6 +44,12 @@ exports.hideElement = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
+exports.setScreen = function (blockId, screenId) {
+  return Applab.executeCmd(blockId,
+                          'setScreen',
+                          {'screenId': screenId });
+};
+
 exports.button = function (blockId, elementId, text) {
   return Applab.executeCmd(blockId,
                           'button',
@@ -530,4 +536,3 @@ exports.removeItem = function (blockId, array, index) {
                           {'array': array,
                            'index': index });
 };
-

@@ -37,6 +37,8 @@ var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
+var elementLibrary = require('./designElements/library');
+
 var vsprintf = require('./sprintf').vsprintf;
 
 var ResultType = studioApp.ResultType;
@@ -46,8 +48,6 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
-
-
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -276,6 +276,11 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
+  if (Applab.levelHtml === '') {
+    // On clear gives us a fresh start, including our default screen.
+    designMode.onClear();
+    designMode.serializeToLevelHtml();
+  }
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
@@ -556,7 +561,7 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = level.levelHtml || "";
+  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
 
   studioApp.init(config);
 
@@ -772,7 +777,6 @@ Applab.reset = function(first) {
   apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
-
   while (divApplab.firstChild) {
     divApplab.removeChild(divApplab.firstChild);
   }
@@ -787,6 +791,7 @@ Applab.reset = function(first) {
 
   var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
+  designMode.changeScreen('screen1');
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(allowDragging);
@@ -865,6 +870,7 @@ Applab.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
+  designMode.serializeToLevelHtml();
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -1297,6 +1303,7 @@ Applab.callCmd = function (cmd) {
   }
   return retVal;
 };
+
 /*
 var onWaitComplete = function (opts) {
   if (!opts.complete) {

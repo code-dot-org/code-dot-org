@@ -9,7 +9,6 @@ template: none
 
 %h1
   Attendance for {{workshop.name}}
-
 #learn-tabs{'ng-hide' => 'workshop.teachers.length <= 0', style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
   %ul.nav.nav-tabs{style: "float: left;"}
     %li.active.tab
@@ -20,6 +19,11 @@ template: none
   -if dashboard_user[:admin] || have_permission?('facilitator')
     %button.btn.btn-white{'ng-click' => 'workshop.unexpected_teachers.unshift({editing: true})', style: "float:right"}
       Add a new teacher
+
+  %a{"ng-href" => '/dashboardapi/attendance/download/{{workshop.id}}.csv', style: "float:right; margin-right: 5px"}
+    %button.btn.btn-white
+      %i.fa.fa-download
+      Download attendance
 
 %div.jumbotron{'ng-show' => 'workshop.teachers.length <= 0'}
   No teachers registered for this workshop.
@@ -78,11 +82,8 @@ template: none
             %span{'ng-show' => 'attendance.updated'}
               Updated!
     %tr{'ng-show' => 'workshop.unexpected_teachers.length > 0'}
-      %th
-      %th
+      %th{colspan:'{{workshop.segments.length + 1}}'}
         Unexpected Attendees
-      %th
-      %th
     %tr{'ng-repeat' => 'unexpected_teacher in workshop.unexpected_teachers', 'ng-show' => 'workshop.unexpected_teachers.length > 0'}
       -if dashboard_user[:admin] || have_permission?('facilitator')
         %td{'ng-hide' => 'unexpected_teacher.editing == true'}

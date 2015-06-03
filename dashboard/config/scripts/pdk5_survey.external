@@ -5,4 +5,7 @@ skip_dialog true
 
 markdown <<MARKDOWN
 <script type="text/javascript" src="https://secure.jotform.us/jsform/51344671087154"></script>
+
+After you submit your form, please click "Continue" to move to the next level.<br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
