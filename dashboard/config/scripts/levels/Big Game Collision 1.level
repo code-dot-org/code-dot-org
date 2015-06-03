@@ -35,7 +35,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
-    "maze_data": null,
     "video_key": "alg_16_biggame_collision_detection",
     "disable_examples": "false"
   }

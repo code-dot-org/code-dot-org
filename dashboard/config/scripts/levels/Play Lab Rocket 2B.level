@@ -38,8 +38,7 @@
     "definition_highlight": "false",
     "definition_collapse": "true",
     "custom_game_type": "Rocket Height",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

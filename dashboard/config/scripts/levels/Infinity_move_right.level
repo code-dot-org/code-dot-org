@@ -36,8 +36,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_failure_tick": "100",
-    "video_key": "infinity_playlab_intro",
-    "maze_data": null
+    "video_key": "infinity_playlab_intro"
   }
 }]]></config>
   <blocks>
