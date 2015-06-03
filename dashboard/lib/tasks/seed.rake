@@ -54,7 +54,7 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :multis, :matches, :dsls]
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls]
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -63,50 +63,8 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
-  # cronjob that detects changes to .multi files
-  MULTIS_GLOB = Dir.glob('config/scripts/**/*.multi').sort.flatten
-  file 'config/scripts/.multis_seeded' => MULTIS_GLOB do |t|
-    Rake::Task['seed:multis'].invoke
-    touch t.name
-  end
-
-  # explicit execution of "seed:multis"
-  task multis: :environment do
-    Multi.transaction do
-      multi_strings = {}
-      # Parse each .multi file and setup its model.
-      MULTIS_GLOB.each do |script|
-        data, i18n = MultiDSL.parse_file(script)
-        Multi.setup data
-        multi_strings.deep_merge! i18n
-      end
-      File.write("config/locales/multi.en.yml", multi_strings.to_yaml(line_width: -1))
-    end
-  end
-
-  # cronjob that detects changes to .match files
-  MATCHES_GLOB = Dir.glob('config/scripts/**/*.match').sort.flatten
-  file 'config/scripts/.matches_seeded' => MATCHES_GLOB do |t|
-    Rake::Task['seed:matches'].invoke
-    touch t.name
-  end
-
- # explicit execution of "seed:matches"
-  task matches: :environment do
-    Match.transaction do
-      match_strings = {}
-      # Parse each .match file and setup its model.
-      MATCHES_GLOB.each do |script|
-        data, i18n = MatchDSL.parse_file(script)
-        Match.setup data
-        match_strings.deep_merge! i18n
-      end
-      File.write("config/locales/match.en.yml", match_strings.to_yaml(line_width: -1))
-    end
-  end
-
-  # detect changes to .text_match.txt files
-  DSL_TYPES = %w(TextMatch ContractMatch External)
+  # detect changes to dsldefined level files
+  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
   DSLS_GLOB = DSL_TYPES.map{|x|Dir.glob("config/scripts/**/*.#{x.underscore}*")}.sort.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
