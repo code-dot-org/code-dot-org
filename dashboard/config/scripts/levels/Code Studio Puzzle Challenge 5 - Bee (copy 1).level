@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2015-02-16T14:13:26.979Z",
+  "created_at": "2015-02-16T14:13:26.000Z",
   "level_num": "custom",
   "user_id": 45,
   "properties": {
@@ -21,7 +21,8 @@
     "nectar_goal": "1",
     "honey_goal": "0",
     "flower_type": "redWithNectar"
-  }
+  },
+  "md5": "198655672d71d06ab318b0fb6e65645a"
 }]]></config>
   <blocks>
     <toolbox_blocks>

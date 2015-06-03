@@ -16,7 +16,8 @@
     "nectar_goal": 6,
     "honey_goal": 6,
     "flower_type": "redWithNectar"
-  }
+  },
+  "md5": "c4dc56f2e4e4cd161254c23423c35224"
 }]]></config>
   <blocks>
     <toolbox_blocks>

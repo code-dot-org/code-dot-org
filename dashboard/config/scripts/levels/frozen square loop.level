@@ -25,7 +25,8 @@
     "disable_sharing": "false",
     "permitted_errors": "0",
     "video_key": "frozen_loops"
-  }
+  },
+  "md5": "5475c3276d2957be414ef5fba467e368"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -18,7 +18,8 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "free_play": "false"
-  }
+  },
+  "md5": "3a88da800f1974ddf02609e911cf6866"
 }]]></config>
   <blocks>
     <start_blocks>

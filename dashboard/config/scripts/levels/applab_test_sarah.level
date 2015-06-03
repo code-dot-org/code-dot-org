@@ -132,7 +132,8 @@
     "disable_examples": "false",
     "project_template_level_name": "applab_template_test",
     "free_play": "false"
-  }
+  },
+  "md5": "1744005dafb5f240e433be8540362b2b"
 }]]></config>
   <blocks/>
 </Applab>

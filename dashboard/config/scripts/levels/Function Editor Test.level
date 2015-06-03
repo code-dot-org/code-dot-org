@@ -18,9 +18,9 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "free_play": "false",
-    "maze_data": null
-  }
+    "free_play": "false"
+  },
+  "md5": "930b88ae5f939f0b0ec99bcafe33b2bb"
 }]]></config>
   <blocks>
     <toolbox_blocks>

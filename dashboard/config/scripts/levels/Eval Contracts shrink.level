@@ -15,7 +15,8 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "instructions": "Can you complete this image using the \"shrink\" function block? The radius is 20. "
-  }
+  },
+  "md5": "d3ad4e572330fe3b6a242ead9fede3c2"
 }]]></config>
   <blocks>
     <start_blocks>

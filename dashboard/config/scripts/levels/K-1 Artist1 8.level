@@ -10,7 +10,8 @@
     "instructions": "Draw the dashed line by using both the jump and draw blocks",
     "x": 40,
     "start_direction": "90"
-  }
+  },
+  "md5": "ed00320808874d183c76f1439e663334"
 }]]></config>
   <blocks>
     <toolbox_blocks>
