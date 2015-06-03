@@ -54,7 +54,7 @@ Moore Hall Room 2120
 <br/>
 Los Angeles, CA 90095
 
-Parking for Moore Hall will be in Lot 2. Stop at the kiosk and let them know you are here for the Exploring Computer Science workshop. The attendant will give you a pass and you will not be required to pay for parking. The campus map, directions and parking information can be found [here](http://www.ucla.edu/maps-directions-parking/). 
+Please allow plenty of time on the first day to locate the parking lot and Moore Hall. Parking for Moore Hall will be in Parking Lot 2 and the campus map can be found [here](/files/ucla-campus-map.pdf). Stop at the kiosk and let them know you are here for the Exploring Computer Science workshop. The attendant will give you a parking pass and you will not be required to pay for parking. 
 
 ### What do I bring to Phase 2? ###
 Water Bottle
