@@ -103,7 +103,7 @@ module Ops
           format_teachers_for_csv(@workshop.unexpected_teachers, teacher_info)
 
           render text: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher|
-             csv << teacher
+            csv << teacher
           }}
         end
       end
