@@ -13,6 +13,12 @@ window.Applab = {
 
 var designMode = require('@cdo/apps/applab/designMode');
 
+describe('should fail', function () {
+  it('failure', function () {
+    throw new Error("I'm a failure");
+  });
+});
+
 describe('designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
     var html =
