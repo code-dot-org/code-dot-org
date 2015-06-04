@@ -307,14 +307,10 @@ sub vcl_recv
     /* Normalize domain names to the short (non www.) form. */
     error 751 "http://" + regsub(req.http.host, "^www\.","") + req.url;
   }
-  else if(req.http.Host == "forums.code.org")
-  {
-    /* forums.code.org redirects to support */
-    error 751 "http://support.code.org/";
-  }
   <%
     # Alias the following domains to one of our primary ones.
     redirects = {
+      'forums.code.org'      => 'support.code.org',
       'aws.code.org'      => 'code.org',
       'blockly.com'       => 'studio.code.org',
       'learn.code.org'    => 'studio.code.org',
