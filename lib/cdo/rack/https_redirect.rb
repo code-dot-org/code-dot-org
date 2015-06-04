@@ -21,7 +21,7 @@ module Rack
       end
     end
 
-  private
+    private
     def https_ok?
       @request.cookies['https_ok']
     end
