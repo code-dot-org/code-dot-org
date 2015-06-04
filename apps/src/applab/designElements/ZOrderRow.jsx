@@ -34,8 +34,7 @@ var ZOrderRow = React.createClass({
 
     var squareButtonDisabled = {
       width: 42,
-      height: 42,
-      backgroundColor: '#d9eff7' // $lightest_cyan
+      height: 42
     };
 
     return (
