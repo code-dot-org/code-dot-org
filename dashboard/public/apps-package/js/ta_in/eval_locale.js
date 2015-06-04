@@ -23,7 +23,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -156,18 +156,18 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
 "badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
-"circleBlockTitle":function(d){return "வட்டம் (ஆரம், பாணி, வண்ணம்)"},
-"displayBlockTitle":function(d){return "காட்சி"},
-"ellipseBlockTitle":function(d){return "நீள்வட்ட (அகலம், உயரம், பாணி, வண்ணம்)"},
-"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
+"circleBlockTitle":function(d){return "circle (radius, style, color)"},
+"displayBlockTitle":function(d){return "evaluate"},
+"ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
-"overlayBlockTitle":function(d){return "மேலிடு (மேல், கீழ்)"},
-"placeImageBlockTitle":function(d){return "இடம்-உருவம் (x, y, உருவம்)"},
+"overlayBlockTitle":function(d){return "overlay (top, bottom)"},
+"placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
-"rectangleBlockTitle":function(d){return "செவ்வகம் (அகலம், உயரம், பாணி, வண்ணம்)"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to edit your drawing."},
+"rectangleBlockTitle":function(d){return "rectangle (width, height, style, color)"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Keep Playing\" button to edit your program."},
 "rotateImageBlockTitle":function(d){return "rotate (degrees, image)"},
-"scaleImageBlockTitle":function(d){return "scale (factor)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
 "squareBlockTitle":function(d){return "square (size, style, color)"},
 "starBlockTitle":function(d){return "star (radius, style, color)"},
 "radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},

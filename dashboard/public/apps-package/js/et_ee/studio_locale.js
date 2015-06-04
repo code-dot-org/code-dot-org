@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -365,7 +365,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundTooltip":function(d){return "Valib taustapildi"},
 "setEnemySpeed":function(d){return "sea vaenlase kiirus"},
 "setPlayerSpeed":function(d){return "sea mängija kiirus"},
-"setScoreText":function(d){return "set score"},
+"setScoreText":function(d){return "määra skoor"},
 "setScoreTextTooltip":function(d){return "Määrab teksti, mis kuvatakse skoori alal."},
 "setSpriteEmotionAngry":function(d){return "to a angry mood"},
 "setSpriteEmotionHappy":function(d){return "rõõmsasse meeleollu"},
@@ -440,7 +440,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "size":function(d){return "suurus"},
 "setSprite":function(d){return "väärtusta"},
 "setSpriteN":function(d){return "Sea tegelane "+studio_locale.v(d,"spriteIndex")},
-"soundCrunch":function(d){return "crunch"},
+"soundCrunch":function(d){return "purustama"},
 "soundGoal1":function(d){return "eesmärk 1"},
 "soundGoal2":function(d){return "eesmärk 2"},
 "soundHit":function(d){return "löök"},

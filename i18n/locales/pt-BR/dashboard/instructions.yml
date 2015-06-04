@@ -1691,8 +1691,8 @@ pt-BR:
         Primeiro verifique se isso é uma for ou uma colmeia, e então colete néctar
         apenas se for uma flor. 
       Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+        Verifique cada objeto para ver se é uma flor. Se for,
+        colete o néctar... caso contrário, você pode ignorá-lo!
       Course 4 Bee 3_instruction: |
         O objeto desconhecido pode ser uma flor ou uma colmeia.
         Use o bloco se-senão para coletar néctar se ele for uma flor, senão produza mel

@@ -7,9 +7,8 @@
       "skip_dialog": "true",
       "css": "unplugged"
     },
-    "title": "title",
-    "content1": "description here",
-    "markdown": "## Unit 2: Lesson 10 - DNS Simulation\n\n# Background\n\nBackground goes here\n\n# Vocabulary\n\nVocabulary goes here\n\n# Lesson\n\n* Lesson overview\n* Goes here\n\n# Resources\n\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+    "title": "DNS in the Real World ",
+    "markdown": "## Unit 2: Lesson 10 - DNS in the Real World\n\n# Background\n\nDNS and IP address work in the real world because of the hierarchy and duplicity of DNS servers. The hierarchy of DNS/IP is analogous the system used by the postal service that includes country, state, city, zip, street, direction, number.\n\n# Lesson\n\n* Watch a video to learn how DNS servers support IP lookups.\n* Analyze DNS problems.\n\n# Resources\n\n* Video: <a href=\"https://drive.google.com/a/code.org/folderview?id=0B_GJ_tm0nNssVWlPUVBydEJzSXc&usp=sharing#list\" target=\"_blank\"> The Internet: IP Addresses and DNS</a>\n* Activity:  <a href=\"https://docs.google.com/document/d/17DKfEZD6KZElQGCQDaAbig1ckA5ZSecIasVxJZWPOJ8\" target=\"_blank\">DNS in the Real World</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
   }
 }]]></config>
 </External>

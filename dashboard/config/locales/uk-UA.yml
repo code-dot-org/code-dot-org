@@ -347,7 +347,9 @@
     panel:
       answer_viewer: Перегляд відповідей
       student: учень
+      viewing_solution: Viewing Solution
       try_it_yourself: Спробуйте самі
+      section: Група
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'

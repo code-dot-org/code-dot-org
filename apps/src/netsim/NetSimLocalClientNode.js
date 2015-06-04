@@ -24,7 +24,6 @@ var ObservableEvent = require('../ObservableEvent');
 var logger = NetSimLogger.getSingleton();
 var netsimConstants = require('./netsimConstants');
 var netsimGlobals = require('./netsimGlobals');
-var netsimNodeFactory = require('./netsimNodeFactory');
 
 var MessageGranularity = netsimConstants.MessageGranularity;
 
@@ -569,7 +568,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 
     if (!alreadySimulating) {
       var newRouter = new NetSimRouterNode(this.shard_, row);
-      newRouter.initializeSimulation(this.entityID, netsimNodeFactory);
+      newRouter.initializeSimulation(this.entityID);
       this.routers_.push(newRouter);
     }
   }, this);

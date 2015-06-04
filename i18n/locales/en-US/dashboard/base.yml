@@ -295,7 +295,9 @@ en:
     panel:
       answer_viewer: crwdns38278:0crwdne38278:0
       student: crwdns38279:0crwdne38279:0
+      viewing_solution: crwdns39079:0crwdne39079:0
       try_it_yourself: crwdns38280:0crwdne38280:0
+      section: crwdns39080:0crwdne39080:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'

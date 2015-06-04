@@ -23,7 +23,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -156,30 +156,30 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
 "badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
-"circleBlockTitle":function(d){return "円 (半径、スタイル、色)"},
-"displayBlockTitle":function(d){return "計算する"},
-"ellipseBlockTitle":function(d){return "楕円 (幅、高さ、スタイル、色)"},
-"extraTopBlocks":function(d){return "関連付けられていないブロックがあります。このブロックを「evaluate」ブロックに追加しますか？"},
+"circleBlockTitle":function(d){return "circle (radius, style, color)"},
+"displayBlockTitle":function(d){return "evaluate"},
+"ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
-"overlayBlockTitle":function(d){return "上に重ねる (上、下)"},
-"placeImageBlockTitle":function(d){return "画像を配置 (縦座標、横座標、画像)"},
-"offsetBlockTitle":function(d){return "ずらす (縦座標、横座標、画像)"},
-"rectangleBlockTitle":function(d){return "長方形 (幅、高さ、スタイル、色)"},
-"reinfFeedbackMsg":function(d){return "「リトライ」ボタンで図形を変更することができます。"},
-"rotateImageBlockTitle":function(d){return "回転させる (角度、画像)"},
-"scaleImageBlockTitle":function(d){return "scale (factor)"},
-"squareBlockTitle":function(d){return "正方形 (サイズ、スタイル、色)"},
-"starBlockTitle":function(d){return "星型 (半径、スタイル、色)"},
-"radialStarBlockTitle":function(d){return "放射状の星型 (ポイント、内側、外側、スタイル、色)"},
-"polygonBlockTitle":function(d){return "多角形 (角、長さ、スタイル、色)"},
-"stringAppendBlockTitle":function(d){return "文字列の追加 (一番目、二番目)"},
-"stringLengthBlockTitle":function(d){return "文字列の長さ (文字列)"},
-"textBlockTitle":function(d){return "テキスト (文字列、サイズ、色)"},
-"triangleBlockTitle":function(d){return "三角形 (サイズ、スタイル、色)"},
-"underlayBlockTitle":function(d){return "下に重ねる (上、下)"},
-"outline":function(d){return "縁"},
-"solid":function(d){return "単色"},
-"string":function(d){return "文字列"},
+"overlayBlockTitle":function(d){return "overlay (top, bottom)"},
+"placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
+"offsetBlockTitle":function(d){return "offset (x, y, image)"},
+"rectangleBlockTitle":function(d){return "rectangle (width, height, style, color)"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Keep Playing\" button to edit your program."},
+"rotateImageBlockTitle":function(d){return "rotate (degrees, image)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"squareBlockTitle":function(d){return "square (size, style, color)"},
+"starBlockTitle":function(d){return "star (radius, style, color)"},
+"radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},
+"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"stringAppendBlockTitle":function(d){return "string-append (first, second)"},
+"stringLengthBlockTitle":function(d){return "string-length (string)"},
+"textBlockTitle":function(d){return "text (string, size, color)"},
+"triangleBlockTitle":function(d){return "triangle (size, style, color)"},
+"underlayBlockTitle":function(d){return "underlay (bottom, top)"},
+"outline":function(d){return "outline"},
+"solid":function(d){return "solid"},
+"string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
 "userCodeException":function(d){return "An error occurred while executing your code."},
 "wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

@@ -540,7 +540,7 @@
   "dropletBlock_write_param0": "tekst",
   "dropletBlock_write_param0_description": "The text or HTML you want appended to the bottom of your application",
   "emptyBlocksErrorMsg": "\"Gentag\" eller \"Hvis\" blokkene skal have andre blokke inden i for at virke. Kontroller, at den indre blok passer ordentligt inde i blokken.",
-  "emptyFunctionBlocksErrorMsg": "Funktionen blok skal have andre blokke inde i det for at virke.",
+  "emptyFunctionBlocksErrorMsg": "Funktion blokken skal have andre blokke inde i den for at virke.",
   "emptyFunctionalBlock": "Du har en blok med et ikke-udfyldt input.",
   "end": "slut",
   "errorEmptyFunctionBlockModal": "Der skal være blokke i din definition af en funktion. Klik på \"Rediger\" og træk blokke ind i den grønne blok.",

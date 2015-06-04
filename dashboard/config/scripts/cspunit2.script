@@ -7,7 +7,7 @@ concerns.'
 description_short 'The Internet'
 login_required 'true'
 
-stage 'Beyond Sending Bits'
+stage 'The Internet'
 level 'U2L1 Student Lesson Introduction'
 level 'Choose 2 Test'
 
@@ -26,7 +26,7 @@ level 'U2L3 NetSim Hub Mode'
 level 'U2L3 Assessment'
 level 'U2L3 Free Response Wrap Up'
 
-stage 'Routers and Addresses'
+stage 'Routers and Addresses as Numbers'
 level 'U2L4 Student Lesson Introduction'
 level 'U2L4 Free Response Getting Started'
 level 'U2L4 NetSim Routers Addresses'
@@ -36,31 +36,63 @@ level 'U2L04 Assessment3'
 level 'U2L04 Assessment4'
 level 'U2L04 Free Response Wrap Up'
 
-stage 'Classroom Internet'
+stage 'The Need for Packets'
 level 'U2L5 Student Lesson Introduction'
 level 'U2L5 NetSim Classroom Internet'
-
-stage 'Algorithms in Networking'
-level 'U2L6 Student Lesson Introduction'
-
-stage 'The Need for Packets'
-level 'U2L7 Student Lesson Introduction'
 level 'U2L7 NetSim Need for Packets'
 
-stage 'Packets in the Real World'
+stage 'Algorithms Detour - Minimum Spanning Tree'
+level 'U2L6 Student Lesson Introduction'
+
+stage 'Algorithms Detour - Shortest Path'
+level 'U2L7 Student Lesson Introduction'
+
+stage 'Algorithms Detour - How Routers Learn'
 level 'U2L8 Student Lesson Introduction'
 
 stage 'The Need for DNS'
 level 'U2L9 Student Lesson Introduction'
-
-stage 'DNS Simulation'
-level 'U2L10 Student Lesson Introduction'
+level 'U2L9 Free Response Getting started'
 level 'U2L10 NetSim Manual DNS'
-level 'U2L10 NetSim Automatic DNS'
+level 'U2L10 NetSim Automatic DNS'  
+level 'U2L09 Assessment1'
+level 'U2L09 Assessment2'
+level 'U2L09 Free Response Wrap Up'  
 
+stage 'DNS in the Real World'
+level 'U2L10 Student Lesson Introduction'
+level 'U2L10 Free Response Getting Started'
+level 'U2L10 Assessment1'
+level 'U2L10 Assessment2'
+level 'U2L10 Assessment3'
+level 'U2L10 Free Response Wrap Up'
 
-stage 'How HTTP Works'
+stage 'HTTP and Abstraction'
 level 'U2L11 Student Lesson Introduction'
 
-stage 'IP and DNS in the Real World'
+stage 'Challenges of the Internet'
 level 'U2L12 Student Lesson Introduction'
+
+stage 'Tell Me a Secret - Encrypting Text'
+level 'U2L13 Student Lesson Introduction'
+
+stage 'Cracking the Code'
+level 'U2L14 Student Lesson Introduction'
+
+stage 'Encryption Algorithms'
+level 'U2L15 Student Lesson Introduction'
+
+stage 'Alice and Bob and Asymmetric Keys'
+level 'U2L16 Student Lesson Introduction'
+
+stage 'Algorithms Detour - Hard Problems TSP'
+level 'U2L17 Student Lesson Introduction'
+
+stage 'One Way Functions - Ice Cream Vans'
+level 'U2L18 Student Lesson Introduction'
+
+stage 'Public Key Crypto'
+level 'U2L19 Student Lesson Introduction'
+
+stage ' Security and Hacking in the Real World'
+level 'U2L20 Student Lesson Introduction'

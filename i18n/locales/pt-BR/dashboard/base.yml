@@ -302,7 +302,9 @@ pt-BR:
     panel:
       answer_viewer: Visualizador de resposta
       student: Estudante
+      viewing_solution: Viewing Solution
       try_it_yourself: Tente você mesmo
+      section: Turma
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'

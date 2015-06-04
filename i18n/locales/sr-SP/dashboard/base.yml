@@ -302,7 +302,9 @@ sr:
     panel:
       answer_viewer: Answer Viewer
       student: студент
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

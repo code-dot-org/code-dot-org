@@ -23,7 +23,7 @@ var applab_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -84,6 +84,10 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continue"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"designToolboxDescription":function(d){return "Drag the elements into your app!"},
+"designToolboxHeader":function(d){return "Design Toolbox"},
+"designWorkspaceDescription":function(d){return "Click on an element to edit its properties."},
+"designWorkspaceHeader":function(d){return "Workspace"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "nextLevel":function(d){return "Congratulations! You have completed this puzzle."},
 "no":function(d){return "No"},

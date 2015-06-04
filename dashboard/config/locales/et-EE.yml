@@ -37,15 +37,15 @@
   puzzle: Mõistatus
   trophies: Trofeed
   courses: Kursused
-  of: of
+  of: kohta
   more: NÄITA ROHKEM
   less: NÄITA VÄHEM
-  beta: beta
+  beta: beeta
   try_hoc: 'Proovi Koodi Tundi, kliki siia >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  try_k8intro: Proovige meie K-8 kursust Arvutiteadus (15-25 tundi)
+  k8intro: K-8  Sissejuhatus Arvutiteaduse kursusele (15-25 tundi)
   already_started: 'Oled juba alustanud? Jätka siin>> '
-  demos: 'Admin: All Demos'
+  demos: 'Admin: Kõik demod'
   continue: Jätka
   prize: auhind
   more_info: Rohkem infot
@@ -65,8 +65,8 @@
     need_confirmation: Ei saanud kinnituse juhiseid?
     need_unlock: Ei saanud avamise juhiseid?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} õpilasi on juba registreerunud.'
+    teacher_count: '%{count} õpetajaid on juba registreerunud.'
     overview_student: Registreeri et oma progressi jälgida. Sinu email on primaarselt
       sisselogimiseks ja parooli lähtestamiseks. Rohkema info jaoks vaata <a href="http://code.org/privacy">Privaatsuspoliitikat</a>.
     overview_teacher: Õpeta arvutiteadust oma klassiruumis registreerides endale konto.
@@ -341,7 +341,9 @@
     panel:
       answer_viewer: Answer Viewer
       student: Õpilane
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Jaotis
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -356,7 +358,7 @@
     delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Tehtud
-    tried: Tried
+    tried: Proovisin
   user_stats:
     recent_activity: Viimane tegevus
     show_more: Näita rohkem
@@ -576,7 +578,7 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: K-8  Sissejuhatus Arvutiteaduse kursusele (15-25 tundi)
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.

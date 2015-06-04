@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "０による割り算を行ってしまいました。"},
-"emptyComputeBlock":function(d){return "「evaluate」ブロックにブロックを追加する必要があります"},
-"equivalentExpression":function(d){return "同じ式になるよう引数を並べ替えてください。"},
-"evaluate":function(d){return "計算する"},
-"extraTopBlocks":function(d){return "関連付けられていないブロックがあります。このブロックを「evaluate」ブロックに追加しますか？"},
-"failedInput":function(d){return "あなたの関数は正しい結果を返していません。"},
-"goal":function(d){return "ゴール: "},
-"levelIncompleteError":function(d){return "あなたの式はゴールと合っていません。"},
-"missingFunctionError":function(d){return calc_locale.v(d,"functionName")+" という関数を定義してください"},
-"missingVariableX":function(d){return "あなたの式には、変数"+calc_locale.v(d,"var")+"がありません。"},
-"reinfFeedbackMsg":function(d){return "あなたの計算結果です！このパズルを続けるか、次のパズルに進んでください！"},
-"yourExpression":function(d){return "あなたの式:"},
-"wrongInput":function(d){return "誤った入力値で関数を呼び出しています。"},
-"wrongOtherValuesX":function(d){return calc_locale.v(d,"var")+"の値が変わると、あなたの式の結果は誤った値になります。"},
-"wrongResult":function(d){return "あなたの式は、正しい結果を返していません。"}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

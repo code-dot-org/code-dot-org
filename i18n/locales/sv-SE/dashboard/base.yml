@@ -309,7 +309,9 @@ sv:
     panel:
       answer_viewer: Answer Viewer
       student: Student
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Grupp
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'

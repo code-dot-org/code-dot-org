@@ -340,7 +340,9 @@
     panel:
       answer_viewer: عارض الجواب
       student: طالب
+      viewing_solution: Viewing Solution
       try_it_yourself: جربها بنفسك
+      section: القسم
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوانك البريدي البريد الإلكتروني%{email}:'
