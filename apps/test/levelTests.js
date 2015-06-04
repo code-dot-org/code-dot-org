@@ -70,6 +70,7 @@ describe('Level tests', function() {
     if (window.Studio) {
       var Projectile = require('@cdo/apps/studio/projectile');
       Projectile.__resetIds();
+      Studio.JSInterpreter = undefined;
     }
   });
 
