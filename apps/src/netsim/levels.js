@@ -53,6 +53,15 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           or rooms.  When true, it is possible for messages to travel between
  *           routers, connecting the whole shard.
  *
+ * @property {number} minimumExtraHops - Fewest non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.  Number of hops can be lower if network
+ *           conditions don't allow it.
+ *
+ * @property {number} maximumExtraHops - Most non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.
+ *
  * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
  *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
@@ -179,6 +188,8 @@ levels.custom = {
   automaticReceive: false,
   broadcastMode: false,
   connectedRouters: false,
+  minimumExtraHops: 0,
+  maximumExtraHops: 0,
 
   // Packet header specification
   addressFormat: '4',

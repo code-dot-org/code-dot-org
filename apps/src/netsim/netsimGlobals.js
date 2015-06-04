@@ -36,6 +36,16 @@ var netsim_ = null;
 var pseudoRandomNumberFunction_ = Math.random;
 
 /**
+ * Get a random integer in the given range.
+ * @param {number} low inclusive lower end of range
+ * @param {number} high exclusive upper end of range
+ * @returns {number}
+ */
+var randomIntInRange = function (low, high) {
+  return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
+};
+
+/**
  * Provide singleton access to global simulation settings
  */
 module.exports = {
@@ -86,8 +96,20 @@ module.exports = {
    * @param {number} high exclusive upper end of range
    * @returns {number}
    */
-  randomIntInRange: function (low, high) {
-    return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
+  randomIntInRange: randomIntInRange,
+
+  /**
+   * Get a random item out of a collection
+   * @param {Array} collection
+   * @returns {*} undefined if collection is empty
+   */
+  randomPickOne: function (collection) {
+    var size = collection.length;
+    if (size === 0) {
+      return undefined;
+    }
+
+    return collection[randomIntInRange(0, size)];
   }
 
 };
