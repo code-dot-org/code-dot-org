@@ -30,15 +30,24 @@ designMode.onDivApplabClick = function (event) {
 
   var element = event.target;
   if (element.id === 'divApplab') {
-    designMode.clearProperties();
-  } else {
-    if ($(element).is('.ui-resizable')) {
-      element = getInnerElement(element);
-    } else if ($(element).is('.ui-resizable-handle')) {
-      element = getInnerElement(element.parentNode);
-    }
-    designMode.editElementProperties(element);
+    element = designMode.activeScreen();
   }
+
+  if ($(element).is('.ui-resizable')) {
+    element = getInnerElement(element);
+  } else if ($(element).is('.ui-resizable-handle')) {
+    element = getInnerElement(element.parentNode);
+  }
+  designMode.editElementProperties(element);
+};
+
+/**
+ * @returns {HTMLElement} The currently visible screen element.
+ */
+designMode.activeScreen = function () {
+  return $('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first()[0];
 };
 
 /**
@@ -56,9 +65,7 @@ designMode.createElement = function (elementType, left, top) {
   if (isScreen) {
     parent = document.getElementById('divApplab');
   } else {
-    parent = $('.screen').filter(function () {
-      return this.style.display !== 'none';
-    }).first()[0];
+    parent = designMode.activeScreen();
   }
   parent.appendChild(element);
 
