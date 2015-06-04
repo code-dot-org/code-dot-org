@@ -252,8 +252,10 @@ designMode.onDeletePropertiesButton = function(element, event) {
 };
 
 designMode.onDepthChange = function (element, depthDirection) {
-  var parent = element.parentNode;
-  var index = Array.prototype.indexOf.call(parent.children, element);
+  // move to outer resizable div
+  var outerElement = element.parentNode;
+  var parent = outerElement.parentNode;
+  var index = Array.prototype.indexOf.call(parent.children, outerElement);
 
   if (depthDirection === 'forward' && index + 2 >= parent.children.length) {
     // We're either the last or second to last element
@@ -265,23 +267,23 @@ designMode.onDepthChange = function (element, depthDirection) {
   // TODO (brent) - use an enum?
   switch (depthDirection) {
     case 'forward':
-      var twoAhead = element.nextSibling.nextSibling;
-      removed = parent.removeChild(element);
+      var twoAhead = outerElement.nextSibling.nextSibling;
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, twoAhead);
       break;
 
     case 'toFront':
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.appendChild(removed);
       break;
 
     case 'backward':
-      var previous = element.previousSibling;
+      var previous = outerElement.previousSibling;
       if (!previous) {
         return;
       }
 
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, previous);
       break;
 
@@ -289,7 +291,7 @@ designMode.onDepthChange = function (element, depthDirection) {
       if (parent.children.length === 1) {
         return;
       }
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, parent.children[0]);
       break;
 
@@ -393,6 +395,10 @@ function makeDraggable (jq) {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
+      create: function () {
+        // resizable sets z-index to 90, which we don't want
+        $(this).children().css('z-index', '');
+      },
       resize: function () {
         designMode.renderDesignWorkspace(elm[0]);
       }
