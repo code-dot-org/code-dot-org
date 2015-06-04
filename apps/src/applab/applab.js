@@ -639,11 +639,7 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
-    designMode.renderDesignModeBox();
-
-    // TODO(dave): make DesignModeHeaders and DesignModeBox share a
-    // parent component.
-    designMode.configureDesignModeHeaders();
+    designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
 
@@ -1398,5 +1394,5 @@ var getPegasusHost = function() {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designModeBox').is(':visible');
+  return $('#designWorkspace').is(':visible');
 };

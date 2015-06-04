@@ -3,9 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
-var DesignModeBox = require('./DesignModeBox.jsx');
-var DesignModeHeaders = require('./DesignModeHeaders.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
@@ -34,6 +32,11 @@ designMode.onDivApplabClick = function (event) {
   if (element.id === 'divApplab') {
     designMode.clearProperties();
   } else {
+    if ($(element).is('.ui-resizable')) {
+      element = getInnerElement(element);
+    } else if ($(element).is('.ui-resizable-handle')) {
+      element = getInnerElement(element.parentNode);
+    }
     designMode.editElementProperties(element);
   }
 };
@@ -74,7 +77,7 @@ designMode.editElementProperties = function(element) {
     return;
   }
   currentlyEditedElement = element;
-  designMode.renderDesignModeBox(element);
+  designMode.renderDesignWorkspace(element);
 };
 
 /**
@@ -220,10 +223,16 @@ designMode.onDonePropertiesButton = function() {
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
-  element.parentNode.removeChild(element);
-  if ($(element).hasClass('screen')) {
+  var isScreen = $(element).hasClass('screen');
+  if ($(element.parentNode).is('.ui-resizable')) {
+    element = element.parentNode;
+  }
+  $(element).remove();
+
+  if (isScreen) {
     designMode.changeScreen('screen1');
   }
+
   designMode.clearProperties();
 };
 
@@ -328,21 +337,16 @@ function toggleDragging (enable) {
 }
 
 designMode.toggleDesignMode = function(enable) {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
     // not an admin)
     return;
   }
-  designModeHeaders.style.display = enable ? 'block' : 'none';
+  designWorkspace.style.display = enable ? 'block' : 'none';
 
-  var codeModeHeaders = document.getElementById('codeModeHeaders');
-  codeModeHeaders.style.display = enable ? 'none' : 'block';
-
-  var codeTextbox = document.getElementById('codeTextbox');
-  codeTextbox.style.display = enable ? 'none' : 'block';
-  var designModeBox = document.getElementById('designModeBox');
-  designModeBox.style.display = enable ? 'block' : 'none';
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
@@ -354,6 +358,15 @@ designMode.toggleDesignMode = function(enable) {
   toggleDragging(enable);
   designMode.changeScreen('screen1');
 };
+
+/**
+ * When we make elements resizable, we wrap them in an outer div. Given an outer
+ * div, this returns the inner element
+ */
+function getInnerElement(outerElement) {
+  // currently assume inner element is first child.
+  return outerElement.children[0];
+}
 
 /**
  *
@@ -416,7 +429,7 @@ function makeDraggable (jq) {
 function makeUndraggable(jq) {
   jq.each(function () {
     var wrapper = $(this);
-    var elm = $(':first-child', wrapper);
+    var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
     if (!wrapper.data('uiDraggable')) {
@@ -495,7 +508,6 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
-        handleManageAssets: showAssetManager,
         onScreenChange: designMode.changeScreen
       }),
       designToggleRow
@@ -505,9 +517,9 @@ designMode.changeScreen = function (screenId) {
   designMode.editElementProperties(document.getElementById(screenId));
 };
 
-designMode.renderDesignModeBox = function(element) {
-  var designModeBox = document.getElementById('designModeBox');
-  if (!designModeBox) {
+designMode.renderDesignWorkspace = function(element) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     return;
   }
 
@@ -522,17 +534,9 @@ designMode.renderDesignModeBox = function(element) {
     onDepthChange: designMode.onDepthChange,
     onDone: designMode.onDonePropertiesButton,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+    handleManageAssets: showAssetManager
   };
-  React.render(React.createElement(DesignModeBox, props), designModeBox);
-};
-
-designMode.configureDesignModeHeaders = function() {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
-    return;
-  }
-
-  React.render(React.createElement(DesignModeHeaders), designModeHeaders);
+  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**
