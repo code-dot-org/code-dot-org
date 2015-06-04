@@ -467,7 +467,7 @@ end
 <%  def allow_cookies(cookies)
       cookies.push('NO_CACHE') # Always allow NO_CACHE cookie
       # (\1) is first matching group in the regsuball.
-      "set req.http.Cookie = regsuball(req.http.Cookie, \";(#{cookies.join('|')})=\", \"; \1=\");"
+      "set req.http.Cookie = regsuball(req.http.Cookie, \";(#{cookies.join('|')})=\", \"; \\1=\");"
     end
 %>
     if (req.url ~ "^/volunteers") {
