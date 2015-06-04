@@ -46,8 +46,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 |------------ | ------------- | 
 |10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos) | 
 |10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](/resources/stats) | 
-|10:15 - 10:17 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos) | 
-|10:17 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.  | 
+|10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.  | 
 |10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.  | 
 |10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers. | 
 |11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.  | 
