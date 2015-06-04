@@ -3,9 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
-var DesignModeBox = require('./DesignModeBox.jsx');
-var DesignModeHeaders = require('./DesignModeHeaders.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
@@ -79,7 +77,7 @@ designMode.editElementProperties = function(element) {
     return;
   }
   currentlyEditedElement = element;
-  designMode.renderDesignModeBox(element);
+  designMode.renderDesignWorkspace(element);
 };
 
 /**
@@ -104,12 +102,12 @@ designMode.resetElementTray = function (allowEditing) {
   }
 };
 
-// TODO (brent) I think some of these properties are going to end up having
-// different behaviors based on element type. I think the best way of handling
-// this is to have an onPropertyChange per element that gets the first shot to
-// handle the change, and reports whether it did or not. If it didn't, we fall
-// back to the default function
+/**
+ * Handle a change from our properties table. After handling properties
+ * generically, give elementLibrary a chance to do any element specific changes.
+ */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
@@ -121,15 +119,19 @@ designMode.onPropertyChange = function(element, name, value) {
       break;
     case 'left':
       element.style.left = value + 'px';
+      element.parentNode.style.left = value + 'px';
       break;
     case 'top':
       element.style.top = value + 'px';
+      element.parentNode.style.top = value + 'px';
       break;
     case 'width':
       element.style.width = value + 'px';
+      element.parentNode.style.width = value + 'px';
       break;
     case 'height':
       element.style.height = value + 'px';
+      element.parentNode.style.height = value + 'px';
       break;
     case 'text':
       element.textContent = value;
@@ -216,7 +218,18 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
+  }
+
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+    designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
   }
 };
 
@@ -339,21 +352,16 @@ function toggleDragging (enable) {
 }
 
 designMode.toggleDesignMode = function(enable) {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
     // not an admin)
     return;
   }
-  designModeHeaders.style.display = enable ? 'block' : 'none';
+  designWorkspace.style.display = enable ? 'block' : 'none';
 
-  var codeModeHeaders = document.getElementById('codeModeHeaders');
-  codeModeHeaders.style.display = enable ? 'none' : 'block';
-
-  var codeTextbox = document.getElementById('codeTextbox');
-  codeTextbox.style.display = enable ? 'none' : 'block';
-  var designModeBox = document.getElementById('designModeBox');
-  designModeBox.style.display = enable ? 'block' : 'none';
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
@@ -385,6 +393,9 @@ function makeDraggable (jq) {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
+      resize: function () {
+        designMode.renderDesignWorkspace(elm[0]);
+      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -415,6 +426,13 @@ function makeDraggable (jq) {
 
         ui.position.left = newLeft;
         ui.position.top = newTop;
+
+        elm.css({
+          top: newTop,
+          left: newLeft
+        });
+
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).css('position', 'absolute');
 
@@ -423,9 +441,7 @@ function makeDraggable (jq) {
       left: elm.css('left')
     });
 
-    elm.css({
-      position: 'static'
-    });
+    elm.css('position', 'static');
   });
 }
 
@@ -444,11 +460,7 @@ function makeUndraggable(jq) {
     }
 
     wrapper.resizable('destroy').draggable('destroy');
-    elm.css({
-      top: wrapper.css('top'),
-      left: wrapper.css('left'),
-      position: 'absolute'
-    });
+    elm.css('position', 'absolute');
     elm.unwrap();
   });
 }
@@ -486,11 +498,6 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  // Simulate a run button click, to load the channel id.
-  var designModeClick = studioApp.runButtonClickWrapper.bind(
-      studioApp, Applab.onDesignModeButton);
-  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
-
   var firstScreen = $('.screen').first().attr('id');
   designMode.changeScreen(firstScreen);
 };
@@ -509,13 +516,17 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
+    // Simulate a run button click, to load the channel id.
+    var designModeClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onDesignModeButton);
+    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
     React.render(
       React.createElement(DesignToggleRow, {
         initialScreen: screenId,
         screens: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
+        onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
-        handleManageAssets: showAssetManager,
         onScreenChange: designMode.changeScreen
       }),
       designToggleRow
@@ -525,9 +536,9 @@ designMode.changeScreen = function (screenId) {
   designMode.editElementProperties(document.getElementById(screenId));
 };
 
-designMode.renderDesignModeBox = function(element) {
-  var designModeBox = document.getElementById('designModeBox');
-  if (!designModeBox) {
+designMode.renderDesignWorkspace = function(element) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     return;
   }
 
@@ -542,17 +553,9 @@ designMode.renderDesignModeBox = function(element) {
     onDepthChange: designMode.onDepthChange,
     onDone: designMode.onDonePropertiesButton,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+    handleManageAssets: showAssetManager
   };
-  React.render(React.createElement(DesignModeBox, props), designModeBox);
-};
-
-designMode.configureDesignModeHeaders = function() {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
-    return;
-  }
-
-  React.render(React.createElement(DesignModeHeaders), designModeHeaders);
+  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**

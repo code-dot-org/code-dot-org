@@ -87,7 +87,7 @@ Computers are everywhere, but fewer schools teach computer science than 10 years
 
 Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, December 7-13, 2014. 
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, December 7-13, 2015. 
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 
