@@ -1,6 +1,10 @@
+/* global $*/
+
 var React = require('react');
 var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
+
+var nextKey = 0;
 
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
@@ -16,6 +20,16 @@ var DesignProperties = module.exports = React.createClass({
       return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }
 
+    // We want to have a unique key that doesn't change when the element id
+    // changes, and has no risk of collisions between elements. We add this to
+    // the backing element using jquery.data(), which keeps its own per-session
+    // store of data, without affecting the serialiazation
+    var key = $(this.props.element).data('key');
+    if (!key) {
+      key = nextKey++;
+      $(this.props.element).data('key', key);
+    }
+
     var elementType = elementLibrary.getElementType(this.props.element);
     var propertyClass = elementLibrary.getElementPropertyTable(elementType);
 
@@ -28,12 +42,8 @@ var DesignProperties = module.exports = React.createClass({
     // We provide a key to the outer div so that element foo and element bar are
     // seen to be two completely different tables. Otherwise the defaultValues
     // in inputs don't update correctly.
-    // TODO (brent) - right now if i create two elements with the same id, I
-    // can still run into the same problem, where I click on the other element
-    // and the table doesn't update
-    // TODO (brent) - it appears the wrong element sometimes gets deleted
     return (
-      <div key={this.props.element.id}>
+      <div key={key}>
         <p>{applabMsg.designWorkspaceDescription()}</p>
         {propertiesElement}
         <button
@@ -43,6 +53,7 @@ var DesignProperties = module.exports = React.createClass({
         </button>
         <button
           id="deletePropertiesButton"
+          disabled={this.props.element.id === 'screen1'}
           onClick={this.props.onDelete}>
           Delete
         </button>

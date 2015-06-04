@@ -11,14 +11,16 @@ module.exports = React.createClass({
     handleChange: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
     onDone: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired
+    onDelete: React.PropTypes.func.isRequired,
+    isToolboxVisible: React.PropTypes.bool.isRequired,
   },
+
   render: function() {
     var styles = {
       container: {
         position: 'absolute',
         width: '100%',
-        top: 0,
+        top: 40,
         bottom: 0,
         backgroundColor: 'white',
         boxSizing: 'border-box',
@@ -27,6 +29,7 @@ module.exports = React.createClass({
         borderBottom: '1px solid gray'
       },
       designToolbox: {
+        display: this.props.isToolboxVisible ? 'block' : 'none',
         position: 'absolute',
         top: 0,
         bottom: 0,
@@ -39,7 +42,7 @@ module.exports = React.createClass({
         position: 'absolute',
         top: 0,
         bottom: 0,
-        left: 270,
+        left: this.props.isToolboxVisible ? 270 : 0,
         right: 0,
         boxSizing: 'border-box',
         padding: 10
@@ -59,6 +62,7 @@ module.exports = React.createClass({
           <div data-element-type="DROPDOWN" className="new-design-element">dropdown</div>
           <div data-element-type="IMAGE" className="new-design-element">image</div>
           <div data-element-type="CANVAS" className="new-design-element">canvas</div>
+          <div data-element-type="SCREEN" className="new-design-element">screen</div>
           <button id="designModeClear" className="share">Clear</button><br/>
         </div>
         <div id="design-properties" style={styles.designProperties}>

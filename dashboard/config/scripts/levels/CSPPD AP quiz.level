@@ -31,11 +31,7 @@
     ],
     "title": "AP Assessment Matching",
     "content1": "match the assessment-type with the description below",
-    "height": "100",
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "height": "100"
   }
 }]]></config>
 </Match>

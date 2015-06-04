@@ -34,6 +34,8 @@ class VarnishEnvironment < Sinatra::Base
 
     def language_to_locale(language)
       case language
+      when 'en'
+        return 'en-US'
       when 'es'
         return 'es-ES'
       when 'fa'

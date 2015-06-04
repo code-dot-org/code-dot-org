@@ -27,11 +27,14 @@ LAUSD teachers enrolled in the Computer Science Principles program will attend P
 The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 </br>
 </br>
+
 **Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
 ### Save the dates
 
-Monday, June 15, 2015 - Friday, June 19, 2015
+Group 1: Monday, June 15, 2015 - Friday, June 19, 2015
+<br/>
+Group 2: Monday, June 22, 2015 - Friday, June 26, 2015
 <br/>
 Mon - Thurs: 8:30am - 3:30pm
 <br/>
@@ -41,25 +44,33 @@ Breakfast and lunch will be served.
 
 ### Location
 
-UCLA - More on exact building and room info coming soon!
+Group 1 and Group 2 will attend PD at the following location:
 
+UCLA
+<br/>
+Moore Hall Room 2120
+<br/>
+457 Portola Plaza
+<br/>
+Los Angeles, CA 90095
 
+Please allow plenty of time on the first day to locate the parking lot and Moore Hall. Parking for Moore Hall will be in Parking Lot 2 and the campus map can be found [here](/files/ucla-campus-map.pdf). Stop at the kiosk and let them know you are here for the Exploring Computer Science workshop. The attendant will give you a parking pass and you will not be required to pay for parking. 
 
-#### What do I bring to Phase 2? ####
+### What do I bring to Phase 2? ###
 Water Bottle
 <br />
 Snacks
 <br />
 Laptop optional, not required
+</br>
+</br>
 
-</br>
-</br>
 **Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
 
 More info coming soon!
+</br>
+</br>
 
-</br>
-</br>
 **Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
 
 More info coming soon!
@@ -76,21 +87,26 @@ More info coming soon!
 The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
 </br>
 </br>
+
 **Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
 
 Wednesday, June 17, 2015 - Friday, June 19, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-TBD - More information coming soon!
+Columbia Memorial Space Center
+<br/>
+12400 Columbia Way
+<br/>
+Downey, CA 90242
 
-#### What do I bring to Phase 2? ####
+### What do I bring to Phase 2? ###
 Water Bottle
 <br />
 Snacks
@@ -99,6 +115,7 @@ Laptop
 
 </br>
 </br>
+
 **Phase 3: Academic Year Development (2 days in-person & ~10 hours online)**
 
 More info coming soon!
@@ -114,13 +131,14 @@ More info coming soon!
 The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
 </br>
 </br>
+
 **Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
 
 Monday, June 15, 2015 - Wednesday, June 17, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 
@@ -128,7 +146,7 @@ Breakfast and lunch will be served.
 
 TBD - More info coming soon!
 
-#### What do I bring to Phase 2? ####
+### What do I bring to Phase 2? ###
 Water Bottle
 <br />
 Snacks
@@ -137,6 +155,7 @@ Laptop
 
 </br>
 </br>
+
 **Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)**
 
 More info coming soon!

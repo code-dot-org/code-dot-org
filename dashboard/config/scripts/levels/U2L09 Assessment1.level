@@ -1,0 +1,32 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-06-01T21:32:35.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "It is inefficient to have everyone on the Internet maintain their own list of IP addresses.",
+        "correct": false
+      },
+      {
+        "text": "There are too few IP addresses to meet the current demand.",
+        "correct": true
+      },
+      {
+        "text": "When someone new joins the Internet they must inform everyone else of the new IP address",
+        "correct": false
+      },
+      {
+        "text": "When an IP address changes, it is impossible to locate a computer until the owner announces the change.",
+        "correct": false
+      }
+    ],
+    "title": "The Need for DNS: Question 1"
+  }
+}]]></config>
+</Multi>

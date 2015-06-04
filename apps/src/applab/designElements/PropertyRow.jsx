@@ -40,7 +40,6 @@ var PropertyRow = React.createClass({
         onChange={this.handleChangeInternal}/>;
     }
 
-
     return (
       <tr>
         <td>{this.props.desc}</td>

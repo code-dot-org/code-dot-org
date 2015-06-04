@@ -94,7 +94,9 @@ class AssetsTest < Minitest::Unit::TestCase
 
     # mismatched file extension and mime type
     put('filename.jpg', 'stub-contents', 'application/gif')
-    assert_equal 415, @assets.last_response.status
+    assert @assets.last_response.successful?
+    delete('filename.jpg')
+    assert @assets.last_response.successful?
 
     # invalid files are not uploaded
     file_infos = JSON.parse(self.list)
