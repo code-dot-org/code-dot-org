@@ -863,6 +863,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
                          Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
   var newVizWidthString = newVizWidth + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
   if (this.isRtl()) {
@@ -872,10 +873,11 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationResizeBar.style.left = newVizWidthString;
     codeWorkspace.style.left = newVizWidthString;
   }
+  visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
-  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  visualization.style.maxHeight = newVizHeightString;
   applyTransformScaleToChildren(visualization,
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {
