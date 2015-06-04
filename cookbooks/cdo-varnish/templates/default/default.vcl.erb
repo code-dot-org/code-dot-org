@@ -406,18 +406,62 @@ end
     set req.backend = default;
   }
 
-  # Allow the backend to serve up stale content if it is responding slowly.
-  if (!req.backend.healthy) {
-    # Use anonymous, cached pages if all backends are down.
-    unset req.http.Cookie;
-    if (req.http.X-Forwarded-Proto == "https") {
-      set req.http.X-Forwarded-Proto = "http";
+  if (req.restarts == 0) {
+    if (req.http.X-Forwarded-For) {
+      set req.http.X-Forwarded-For = req.http.X-Forwarded-For + ", " + client.ip;
+    } else {
+      set req.http.X-Forwarded-For = client.ip;
     }
-    set req.grace = 30m;
-  } else {
-    set req.grace = 15s;
   }
 
+  if (req.request != "GET" &&
+      req.request != "HEAD" &&
+      req.request != "PUT" &&
+      req.request != "POST" &&
+      req.request != "TRACE" &&
+      req.request != "OPTIONS" &&
+      req.request != "PATCH" &&
+      req.request != "DELETE") {
+    /* Non-RFC2616 or CONNECT which is weird. */
+    return (pipe);
+  }
+
+  # Only cache GET or HEAD requests. This makes sure the POST requests are always passed.
+  if (req.request != "GET" && req.request != "HEAD") {
+    return (pass);
+  }
+
+  # For Websocket support, always pipe the requests: https://www.varnish-cache.org/docs/3.0/tutorial/websockets.html
+  if (req.http.Upgrade ~ "(?i)websocket") {
+    return (pipe);
+  }
+
+  # Configure grace period, in case the backend goes down. This allows otherwise "outdated"
+  # cache entries to still be served to the user, because the backend is unavailable to refresh them.
+  # This may not be desireable for you, but showing a Varnish Guru Meditation error probably isn't either.
+  if (req.backend.healthy) {
+    set req.grace = 15s;
+  } else {
+    unset req.http.Cookie;
+    set req.grace = 1h;
+  }
+
+  if (req.http.Authorization) {
+    # Not cacheable by default
+    return (pass);
+  }
+
+  # Strip hash, server doesn't need it.
+  if (req.url ~ "\#") {
+    set req.url = regsub(req.url, "\#.*$", "");
+  }
+
+  # Strip a trailing ? if it exists
+  if (req.url ~ "\?$") {
+    set req.url = regsub(req.url, "\?$", "");
+  }
+
+  # Normalize Accept-Encoding header
   # Handle compression correctly. Different browsers send different
   # "Accept-Encoding" headers, even though they mostly all support the same
   # compression mechanisms. By consolidating these compression headers into
@@ -442,8 +486,17 @@ end
     }
   }
 
-  # Always cache the following file types for all users.
-  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) ) {
+  # Large static files should be piped, so they are delivered directly to the end-user without
+  # waiting for Varnish to fully read the file first.
+  # TODO: once the Varnish Streaming branch merges with the master branch, use streaming here to avoid locking.
+  if (req.url ~ "^[^?]*\.(mp[34]|rar|tar|tgz|gz|wav|zip)(\?.*)?$") {
+    unset req.http.Cookie;
+    return (pipe);
+  }
+
+  # Remove all cookies for static files
+  # Monitor cache size. See: https://ma.ttias.be/stop-caching-static-files/
+  if (req.url ~ "^[^?]*\.(bmp|bz2|css|doc|eot|flv|gif|gz|ico|jpeg|jpg|js|less|pdf|png|rtf|swf|txt|woff|xml)(\?.*)?$") {
     unset req.http.Cookie;
   }
 
@@ -487,57 +540,33 @@ end
       unset req.http.Cookie;
     }
     else {
-      # If there is any cookies left (a session or NO_CACHE cookie), do not
-      # cache the page. Pass it on to Apache directly.
+      # If there are any cookies left (a session or NO_CACHE cookie), do not
+      # cache the page. Pass it on to the backend directly.
       return (pass);
     }
-  }
-
-  ## From default below ##
-  if (req.restarts == 0) {
-    if (req.http.x-forwarded-for) {
-      set req.http.X-Forwarded-For =
-      req.http.X-Forwarded-For + ", " + client.ip;
-    } else {
-      set req.http.X-Forwarded-For = client.ip;
-    }
-  }
-  if (req.request != "GET" &&
-    req.request != "HEAD" &&
-    req.request != "PUT" &&
-    req.request != "POST" &&
-    req.request != "TRACE" &&
-    req.request != "OPTIONS" &&
-    req.request != "PATCH" &&
-    req.request != "DELETE") {
-      /* Non-RFC2616 or CONNECT which is weird. */
-      return (pipe);
-  }
-  # Only cache GET or HEAD requests. This makes sure the POST requests are always passed.
-  if (req.request != "GET" && req.request != "HEAD") {
-      return (pass);
-  }
-  ## Unset Authorization header if it has the correct details...
-  #if (req.http.Authorization == "Basic ") {
-  #  unset req.http.Authorization;
-  #}
-  if (req.http.Authorization) {
-      /* Not cacheable by default */
-      return (pass);
-  }
-
-  # Strip hash, server doesn't need it.
-  if (req.url ~ "\#") {
-    set req.url = regsub(req.url, "\#.*$", "");
-  }
-
-  # Strip a trailing ? if it exists
-  if (req.url ~ "\?$") {
-    set req.url = regsub(req.url, "\?$", "");
   }
 
   return (lookup);
 }
+
+sub vcl_pipe {
+  # Note that only the first request to the backend will have
+  # X-Forwarded-For set.  If you use X-Forwarded-For and want to
+  # have it set for all requests, make sure to have:
+  # set bereq.http.connection = "close";
+  # here.  It is not set by default as it might break some broken web
+  # applications, like IIS with NTLM authentication.
+
+  #set bereq.http.Connection = "Close";
+
+  # Needed for WS (Websocket) support: https://www.varnish-cache.org/docs/3.0/tutorial/websockets.html
+  if (req.http.upgrade) {
+    set bereq.http.upgrade = req.http.upgrade;
+  }
+
+  return (pipe);
+}
+
 
 # Handle the HTTP request coming from our backend
 # beresp == Back-end response from the web server.
@@ -546,20 +575,34 @@ sub vcl_fetch {
   # gzip content that can be compressed
   # Do wildcard matches, since additional info (like charsets) can be added in the Content-Type header
   if (beresp.http.content-type ~ "text/plain"
-    || beresp.http.content-type ~ "text/xml"
-    || beresp.http.content-type ~ "text/css"
-    || beresp.http.content-type ~ "text/html"
-    || beresp.http.content-type ~ "application/(x-)?javascript"
-    || beresp.http.content-type ~ "application/(x-)?font-ttf"
-    || beresp.http.content-type ~ "application/(x-)?font-opentype"
-    || beresp.http.content-type ~ "application/font-woff"
-    || beresp.http.content-type ~ "application/vnd\.ms-fontobject"
-    || beresp.http.content-type ~ "image/svg\+xml"
+        || beresp.http.content-type ~ "text/xml"
+        || beresp.http.content-type ~ "text/css"
+        || beresp.http.content-type ~ "text/html"
+        || beresp.http.content-type ~ "application/(x-)?javascript"
+        || beresp.http.content-type ~ "application/(x-)?font-ttf"
+        || beresp.http.content-type ~ "application/(x-)?font-opentype"
+        || beresp.http.content-type ~ "application/font-woff"
+        || beresp.http.content-type ~ "application/vnd\.ms-fontobject"
+        || beresp.http.content-type ~ "image/svg\+xml"
   ) {
     set beresp.do_gzip = true;
   }
 
-  if (req.url ~ "^/api/hour/begin/" || req.url ~ "^/api/hour/begin_" || req.url ~ "^/auth$" || req.url ~ "^/auth/") {
+  # If the request to the backend returns a code is 5xx, restart the loop
+  # If the number of restarts reaches the value of the parameter max_restarts,
+  # the request will be error'ed.  max_restarts defaults to 4.  This prevents
+  # an eternal loop in the event that, e.g., the object does not exist at all.
+  if (beresp.status >= 500 && beresp.status <= 599 && req.restarts < 2){
+    return(restart);
+  }
+
+  if (
+    req.url ~ "^/api/hour/begin/" ||
+    req.url ~ "^/api/hour/begin_" ||
+    req.url ~ "^/auth$" ||
+    req.url ~ "^/auth/" ||
+    req.url ~ "^/test-image.png"
+  ) {
     # allow this route to always set cookies.
   }
   # Enable cache for all static files
@@ -576,13 +619,26 @@ sub vcl_fetch {
     return(deliver);
   }
 
-  ## Doesn't seem to work as expected
-  #if (beresp.status == 500) {
-  #  set beresp.saintmode = 10s;
-  #  return(restart);
-  #}
+  # If the backend response is an HTTP error (500, 502, 503), enter saint mode.
+  # This will block this particular request from happening again to this backend, and will restart the request on the next available backend.
+  # In case, for instance, the first backend is temporarily unavailable, this will restart the request on the second backend, without the client noticing it.
+  #
+  # Explained from the manual: by setting beresp.saintmode to a period of time, Varnish will not ask that backend again for this object for that amount of time.
+  # This only works if you have multiple backends.
+  if (beresp.status == 500 || beresp.status == 502 || beresp.status == 503) {
+    # Don't use this server, for this particular URL, for the next 10 seconds.
+    set beresp.saintmode = 10s;
 
-  # Allow items to be stale if needed.
+    # Restart the HTTP request, this will automatically happen on the next available server (due to saintmode, see above).
+    # But we don't want to restart POST requests, as that's dangerous (duplicate form submits etc.)
+    if (req.request != "POST") {
+      return(restart);
+    }
+  }
+
+  # Keep all objects for 1h longer in the cache than their TTL specifies.
+  # So even if HTTP objects are expired (they've passed their TTL), we can still use them in case all backends go down.
+  # Remember: old content to show is better than no content at all (or an error page).
   set beresp.grace = 1h;
 }
 
@@ -601,18 +657,24 @@ sub vcl_deliver {
 
 # In the event of an error, show friendlier messages.
 sub vcl_error {
-  if(obj.status == 750) {
+  if (obj.status >= 500 && obj.status <= 599 && req.restarts < 4) {
+    # 4 retry for 5xx error
+    return(restart);
+  } else if(obj.status == 750) {
+    # We use special error status 750 to force redirects with 302 (temporary) status
+    # To use this, call the following from anywhere in vcl_recv: error 750 "http://host/new.html"
     set obj.http.Location = obj.response;
     set obj.status = 302;
     return(deliver);
-  }
-
-  if(obj.status == 751) {
+  } else if(obj.status == 751) {
+    # We use special error status 751 to force redirects with 301 (permanent) status
+    # To use this, call the following from anywhere in vcl_recv: error 751 "http://host/new.html"
     set obj.http.Location = obj.response;
     set obj.status = 301;
     return(deliver);
   }
 
+  # All other error codes get this error page
   set obj.http.Content-Type = "text/html; charset=utf-8";
   set obj.http.Retry-After = "5";
   synthetic {"
