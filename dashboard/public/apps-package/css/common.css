@@ -629,6 +629,27 @@ input[type="radio"] {
     top: 0px; }
  }
 
+.workspace-header {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: 40px;
+  color: white; }
+  .workspace-header .workspace-header-clickable:hover {
+    cursor: pointer;
+    color: #ffb81d; }
+  .workspace-header span {
+    line-height: 40px; }
+
+#design-headers {
+  height: 40px;
+  background-color: #7665a0;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 #headers {
   height: 40px;
   background-color: #7665a0;
@@ -637,14 +658,6 @@ input[type="radio"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  #headers .workspace-header {
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: hidden;
-    height: 40px; }
-    #headers .workspace-header span {
-      color: white;
-      line-height: 40px; }
   #headers #toolbox-header {
     width: 270px;
     border-right: 1px solid gray;

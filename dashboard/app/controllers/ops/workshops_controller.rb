@@ -66,6 +66,7 @@ module Ops
       #This is necessary because rails turns empty arrays into nil
       if params[:workshop]
         params[:workshop][:facilitators] ||= [] if params[:workshop].has_key?(:facilitators)
+        params[:workshop][:unexpected_teachers] ||= [] if params[:workshop].has_key?(:unexpected_teachers)
       end
 
       params.require(:workshop).permit(

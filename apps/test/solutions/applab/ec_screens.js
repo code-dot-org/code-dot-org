@@ -81,7 +81,7 @@ module.exports = {
         assert.equal(document.getElementById('screenSelector'), null);
 
         // our design mode box is hidden
-        assert.equal($('#designModeBox').is(':visible'), false);
+        assert.equal($('#designWorkspace').is(':visible'), false);
 
         // click toggle
         $(designModeToggle).click();
@@ -89,12 +89,13 @@ module.exports = {
         assert.equal(designModeToggle.textContent, 'Code');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
-        assert.equal(screenSelector.options.length, 1);
+        assert.equal(screenSelector.options.length, 1, 'expected 1 screen');
         assert.equal($(screenSelector).val(), 'screen1');
-        assert.equal($('#designModeBox').is(':visible'), true);
+        assert.equal($('#designWorkspace').is(':visible'), true);
 
         // initially no design properties table
-        assert.equal($("#design-properties table").length, 0);
+        assert.equal($("#design-properties table").length, 0,
+            'expected no design properties table');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -304,6 +305,46 @@ module.exports = {
         // should be on screen 1
         assert.equal($('#screen1')[0].style.display === 'none', false, 'screen 1 visible');
         assert.equal($('#screen2')[0].style.display === 'none', true, 'screen 2 hidden');
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "add/remove an element to a screen",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeToggle").click();
+        assert.equal($("#designModeToggle").text(), 'Code');
+
+        dragToVisualization('BUTTON', 10, 10);
+
+        var button = document.getElementById('button1');
+        assert(button);
+
+        var screenElement = document.getElementById('screen1');
+
+        assert.equal(screenElement.children.length, 1);
+
+        var outerDiv = screenElement.children[0];
+        assert($(outerDiv).hasClass('ui-resizable'), 'child is outer resizable div');
+
+        assert(button.parentNode === outerDiv);
+
+
+        ReactTestUtils.Simulate.click(document.getElementById('deletePropertiesButton'));
+
+        // outdiv and child should have gone away
+        assert.equal(screenElement.children.length, 0);
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({74:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({75:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -17,7 +17,7 @@ window.bounceMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":69,"./bounce":70,"./levels":72,"./skins":75}],75:[function(require,module,exports){
+},{"../appMain":6,"./blocks":70,"./bounce":71,"./levels":73,"./skins":76}],76:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":258}],72:[function(require,module,exports){
+},{"../skins":259}],73:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -543,7 +543,7 @@ module.exports = {
 };
 
 
-},{"../block_utils":66,"./tiles":76}],70:[function(require,module,exports){
+},{"../block_utils":67,"./tiles":77}],71:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -1964,7 +1964,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":96,"../constants":98,"../dom":99,"../dropletUtils":100,"../hammer":132,"../locale":141,"../skins":258,"../templates/page.html.ejs":284,"../timeoutList":290,"../utils":306,"./api":68,"./controls.html.ejs":71,"./locale":73,"./tiles":76,"./visualization.html.ejs":77}],77:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":97,"../constants":99,"../dom":100,"../dropletUtils":101,"../hammer":133,"../locale":142,"../skins":259,"../templates/page.html.ejs":285,"../timeoutList":291,"../utils":307,"./api":69,"./controls.html.ejs":72,"./locale":74,"./tiles":77,"./visualization.html.ejs":78}],78:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1984,7 +1984,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":477}],71:[function(require,module,exports){
+},{"ejs":478}],72:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2007,7 +2007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":141,"./locale":73,"ejs":477}],69:[function(require,module,exports){
+},{"../locale":142,"./locale":74,"ejs":478}],70:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2503,13 +2503,13 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../codegen":96,"./locale":73}],73:[function(require,module,exports){
+},{"../codegen":97,"./locale":74}],74:[function(require,module,exports){
 // locale for bounce
 
 module.exports = window.blockly.bounce_locale;
 
 
-},{}],68:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2692,7 +2692,7 @@ exports.bounceBall = function(id) {
 };
 
 
-},{"../StudioApp":5,"./tiles":76}],76:[function(require,module,exports){
+},{"../StudioApp":5,"./tiles":77}],77:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2732,4 +2732,4 @@ exports.SquareType = {
 };
 
 
-},{}]},{},[74]);
+},{}]},{},[75]);
