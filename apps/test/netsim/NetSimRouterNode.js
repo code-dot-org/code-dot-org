@@ -60,6 +60,9 @@ describe("NetSimRouterNode", function () {
 
     assertOwnProperty(row, 'memory');
     assertEqual(row.memory, 'Infinity');
+
+    assertOwnProperty(row, 'randomDropChance');
+    assertEqual(row.randomDropChance, 0);
   });
 
   describe("constructing from a table row", function () {
@@ -101,6 +104,11 @@ describe("NetSimRouterNode", function () {
       // from the string 'Infinity' in the database.
       router = makeRouter({ memory: 'Infinity' });
       assertEqual(Infinity, router.memory);
+    });
+
+    it ("randomDropChance", function () {
+      router = makeRouter({ randomDropChance: 0.1 });
+      assertEqual(0.1, router.randomDropChance);
     });
   });
 
