@@ -41,8 +41,8 @@ In many Code.org pages, we like to include buttons to other pages. You can use t
 
 Example: 
 <br /><br />
-[<button style="font-size: 22px; height: 50px">Link internally to another Code.org page</button>](/professional-development-workshops)
-[<button style="font-size: 22px; height: 50px">Link to an external page</button>](http://blogs.edweek.org/edweek/curriculum/2015/06/washington_passes_bill_to_boost_K12_computer_science_education.html)<br /><br/>
+[<button>Link internally to another Code.org page</button>](/professional-development-workshops)
+[<button>Link to an external page</button>](http://blogs.edweek.org/edweek/curriculum/2015/06/washington_passes_bill_to_boost_K12_computer_science_education.html)<br /><br/>
 
 ### Lists
 You can create unordered lists in two ways, using either an asterisk (*) or a hyphen (-) followed by a space. Make sure to leave a row bewteen your headline and the list. 
