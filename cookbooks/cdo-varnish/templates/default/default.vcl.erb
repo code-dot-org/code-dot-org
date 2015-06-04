@@ -422,19 +422,23 @@ end
   # "Accept-Encoding" headers, even though they mostly all support the same
   # compression mechanisms. By consolidating these compression headers into
   # a consistent format, we can reduce the size of the cache and get more hits.=
-  # @see: http:// varnish.projects.linpro.no/wiki/FAQ/Compression
+  # @see: https://www.varnish-cache.org/trac/wiki/FAQ/Compression
   if (req.http.Accept-Encoding) {
-    if (req.http.Accept-Encoding ~ "gzip") {
+    if (req.url ~ "\.(jpg|png|gif|gz|tgz|bz2|tbz|mp3|ogg)$") {
+      # No point in compressing these
+      remove req.http.Accept-Encoding;
+    } else if (req.http.Accept-Encoding ~ "gzip") {
       # If the browser supports it, we'll use gzip.
       set req.http.Accept-Encoding = "gzip";
     }
-    else if (req.http.Accept-Encoding ~ "deflate") {
+    else if (req.http.Accept-Encoding ~ "deflate" && req.http.user-agent !~ "MSIE") {
       # Next, try deflate if it is supported.
+      # (IE doesn't support deflate properly, so we don't want to send deflated content to IE.)
       set req.http.Accept-Encoding = "deflate";
     }
     else {
       # Unknown algorithm. Remove it and send unencoded.
-      unset req.http.Accept-Encoding;
+      remove req.http.Accept-Encoding;
     }
   }
 
@@ -528,12 +532,13 @@ end
     req.request != "POST" &&
     req.request != "TRACE" &&
     req.request != "OPTIONS" &&
+    req.request != "PATCH" &&
     req.request != "DELETE") {
       /* Non-RFC2616 or CONNECT which is weird. */
       return (pipe);
   }
+  # Only cache GET or HEAD requests. This makes sure the POST requests are always passed.
   if (req.request != "GET" && req.request != "HEAD") {
-      /* We only deal with GET and HEAD by default */
       return (pass);
   }
   ## Unset Authorization header if it has the correct details...
@@ -544,16 +549,46 @@ end
       /* Not cacheable by default */
       return (pass);
   }
+
+  # Strip hash, server doesn't need it.
+  if (req.url ~ "\#") {
+    set req.url = regsub(req.url, "\#.*$", "");
+  }
+
+  # Strip a trailing ? if it exists
+  if (req.url ~ "\?$") {
+    set req.url = regsub(req.url, "\?$", "");
+  }
+
   return (lookup);
 }
 
-# Code determining what to do when serving items from the Apache servers.
+# Handle the HTTP request coming from our backend
+# beresp == Back-end response from the web server.
 sub vcl_fetch {
+  # https://www.varnish-cache.org/docs/3.0/tutorial/compression.html
+  # gzip content that can be compressed
+  # Do wildcard matches, since additional info (like charsets) can be added in the Content-Type header
+  if (beresp.http.content-type ~ "text/plain"
+    || beresp.http.content-type ~ "text/xml"
+    || beresp.http.content-type ~ "text/css"
+    || beresp.http.content-type ~ "text/html"
+    || beresp.http.content-type ~ "application/(x-)?javascript"
+    || beresp.http.content-type ~ "application/(x-)?font-ttf"
+    || beresp.http.content-type ~ "application/(x-)?font-opentype"
+    || beresp.http.content-type ~ "application/font-woff"
+    || beresp.http.content-type ~ "application/vnd\.ms-fontobject"
+    || beresp.http.content-type ~ "image/svg\+xml"
+  ) {
+    set beresp.do_gzip = true;
+  }
+
   if (req.url ~ "^/api/hour/begin/" || req.url ~ "^/api/hour/begin_" || req.url ~ "^/auth$" || req.url ~ "^/auth/") {
     # allow this route to always set cookies.
-  } else if (req.url ~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
-    # Don't allow static files to set cookies.
-    # beresp == Back-end response from the web server.
+  }
+  # Enable cache for all static files
+  # Monitor cache size. See: https://ma.ttias.be/stop-caching-static-files/
+  else if (req.url ~ "^[^?]*\.(bmp|bz2|css|doc|eot|flv|gif|gz|ico|jpeg|jpg|js|less|mp[34]|pdf|png|rar|rtf|swf|tar|tgz|txt|wav|woff|xml|zip)(\?.*)?$") {
     unset beresp.http.set-cookie;
   }
   else if (beresp.http.Cache-Control) {
