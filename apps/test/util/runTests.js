@@ -58,6 +58,7 @@ exec(command, function (err, stdout, stderr) {
     globs = [process.env.mocha_entry];
     console.log('restricting to entries: ' + globs);
   }
+
   mochify(globs.join(' '), {
     grep: process.env.mocha_grep,
     debug: process.env.mocha_debug,
@@ -65,7 +66,12 @@ exec(command, function (err, stdout, stderr) {
     timeout: 10000,
     phantomjs: which('phantomjs'),
     transform: 'ejsify'
-  }).bundle().on('end', function () {
+  })
+ .on('error', function () {
+   process.exit(1);
+  })
+  .bundle()
+  .on('end', function () {
     libServer.close();
-  });
+  })
 });
