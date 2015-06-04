@@ -18,6 +18,9 @@
   }
 
   ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
 
   function readCookie(name) {
     var nameEQ = name + "=";
