@@ -12,7 +12,7 @@ var PropertyRow = React.createClass({
       React.PropTypes.number
     ]).isRequired,
     isNumber: React.PropTypes.bool,
-    lockState: React.PropTypes.string,
+    lockState: React.PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
     isMultiLine: React.PropTypes.bool,
     handleChange: React.PropTypes.func,
     handleLockChange: React.PropTypes.func
