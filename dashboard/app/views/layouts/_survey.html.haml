@@ -1,32 +1,35 @@
--# If user is seeing English
-- if I18n.locale.to_s.downcase.split('-').first == "en"
+-# English only for now
+- if language == "en"
 
-  -# If user hasn't already filled out this survey
-  - if !current_user[:properties]['survey2015_value']
+  -# 1 in 10 chance of showing
+  - if rand(1..10) == 1
 
-    -# If signed in, at least 13, and account is at least 14 days old
-    - if current_user && !current_user.under_13? && (DateTime.now - current_user.created_at.to_datetime) >= 14
+    -# If signed in, and user hasn't already filled out this survey
+    - if current_user && !current_user.survey2015_value
 
-      .survey{style: "background-color: rgb(200,200,200); padding:40px; font-size:18px"}
-        #surveythanks{style: "display: none"} Thank you for your response.
-        #surveybody
-          %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Quick survey
-          %p{style: "padding-top: 10px; font-size:18px"}
-            How likely are you to recommend Code.org to a friend or colleague?
-          = form_for(current_user, url: registration_url('user'), html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
-            #dots{style: "padding-top: 10px; padding-bottom: 20px"}
-              - (-1..10).each do |i|
-                - display = i == -1 ? "none" : "inline"
-                %input{style: "margin-right:3px; vertical-align:top; display: #{display}", id: "radio_#{i}", type: "radio", name: "user[survey2015_value]", value: i, onclick: "enableSurveySubmit()"}
-                %label{style: "display: #{display}; font-size: 20px; padding-right:20px", for: i}= i
-            #textbox{style: "display:none"}
-              %p{style: "font-size:18px"}
-                Do you have any additional comments?
-              %input{type: "text", style: "width:600px; height:35px", name: "user[survey2015_comment]"}
-            #submit
-              %button#submitSurvey{type: "submit", disabled: true} Submit
-              %span{onclick: "return window.submitSurvey(false)", style: "cursor: pointer"} No thanks
-      %br/
+      -# If at least 13, and account is at least 14 days old
+      - if !current_user.under_13? && (DateTime.now - current_user.created_at.to_datetime) >= 14
+
+        .survey{style: "background-color: rgb(200,200,200); padding:40px; font-size:18px"}
+          #surveythanks{style: "display: none"} Thank you for your response.
+          #surveybody
+            %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Quick survey
+            %p{style: "padding-top: 10px; font-size:18px"}
+              How likely are you to recommend Code.org to a friend or colleague?
+            = form_for(current_user, url: registration_url('user'), html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
+              #dots{style: "padding-top: 10px; padding-bottom: 20px"}
+                - -1.upto(10) do |i|
+                  - display = i == -1 ? "none" : "inline"
+                  %input{style: "margin-right:3px; vertical-align:top; display: #{display}", id: "radio_#{i}", type: "radio", name: "user[survey2015_value]", value: i, onclick: "enableSurveySubmit()"}
+                  %label{style: "display: #{display}; font-size: 20px; padding-right:20px", for: "radio_#{i}"}= i
+              #textbox{style: "display:none"}
+                %p{style: "font-size:18px"}
+                  Do you have any additional comments?
+                %input{type: "text", style: "width:600px; height:35px", name: "user[survey2015_comment]"}
+              #submit
+                %button#submitSurvey{type: "submit", disabled: true} Submit
+                %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
+        %br/
 
 :javascript
 
@@ -36,7 +39,7 @@
     $("#submitSurvey").prop("disabled",false);
   }
 
-  window.submitSurvey = function(submittedValue)
+  function submitSurvey(submittedValue)
   {
     var value;
 
