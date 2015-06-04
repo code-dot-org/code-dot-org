@@ -67,7 +67,7 @@ var baseOptions = {
     }
 
     var hasVideo = !!appOptions.autoplayVideo;
-    var hasInstructions = appOptions.level.instructions || appOptions.level.aniGifURL;
+    var hasInstructions = !!(appOptions.level.instructions || appOptions.level.aniGifURL);
 
     if (hasVideo) {
       showVideoDialog(appOptions.autoplayVideo);
