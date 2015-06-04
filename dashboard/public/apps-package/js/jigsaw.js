@@ -317,7 +317,7 @@ Jigsaw.onPuzzleComplete = function() {
 };
 
 
-},{"../StudioApp":5,"../dom":101,"../skins":260,"../templates/page.html.ejs":286,"./controls.html.ejs":136}],136:[function(require,module,exports){
+},{"../StudioApp":5,"../dom":101,"../skins":260,"../templates/page.html.ejs":287,"./controls.html.ejs":136}],136:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -337,7 +337,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":139,"ejs":479}],135:[function(require,module,exports){
+},{"./locale":139,"ejs":480}],135:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *

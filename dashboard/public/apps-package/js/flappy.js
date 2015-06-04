@@ -763,7 +763,7 @@ module.exports.k1_9 = {
 };
 
 
-},{"../block_utils":68,"../utils":308,"./constants":126,"./locale":130}],128:[function(require,module,exports){
+},{"../block_utils":68,"../utils":309,"./constants":126,"./locale":130}],128:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -1777,7 +1777,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":98,"../dom":101,"../dropletUtils":102,"../locale":143,"../skins":260,"../templates/page.html.ejs":286,"../utils":308,"./api":124,"./constants":126,"./controls.html.ejs":127,"./locale":130,"./visualization.html.ejs":133}],133:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":98,"../dom":101,"../dropletUtils":102,"../locale":143,"../skins":260,"../templates/page.html.ejs":287,"../utils":309,"./api":124,"./constants":126,"./controls.html.ejs":127,"./locale":130,"./visualization.html.ejs":133}],133:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1797,7 +1797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],127:[function(require,module,exports){
+},{"ejs":480}],127:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1817,7 +1817,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],126:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],126:[function(require,module,exports){
 module.exports = {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,
@@ -2475,7 +2475,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../StudioApp":5,"../block_utils":68,"../locale":143,"../utils":308,"./locale":130}],130:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":68,"../locale":143,"../utils":309,"./locale":130}],130:[function(require,module,exports){
 // locale for flappy
 
 module.exports = window.blockly.flappy_locale;
