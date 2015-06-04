@@ -45,7 +45,10 @@ module Ops
 
     # PATCH/PUT /ops/workshops/1
     def update
-      @added_unexpected_teachers = params[:workshop][:unexpected_teachers] - @workshop.unexpected_teachers
+      unexpected_teachers = params[:workshop][:unexpected_teachers]
+      if unexpected_teachers
+        @added_unexpected_teachers = unexpected_teachers - @workshop.unexpected_teachers
+      end
       @workshop.update!(params[:workshop])
       respond_with @workshop
     end
