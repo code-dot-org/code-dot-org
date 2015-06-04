@@ -73,5 +73,5 @@ exec(command, function (err, stdout, stderr) {
   .bundle()
   .on('end', function () {
     libServer.close();
-  })
+  });
 });
