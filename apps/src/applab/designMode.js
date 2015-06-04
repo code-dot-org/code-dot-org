@@ -102,12 +102,12 @@ designMode.resetElementTray = function (allowEditing) {
   }
 };
 
-// TODO (brent) I think some of these properties are going to end up having
-// different behaviors based on element type. I think the best way of handling
-// this is to have an onPropertyChange per element that gets the first shot to
-// handle the change, and reports whether it did or not. If it didn't, we fall
-// back to the default function
+/**
+ * Handle a change from our properties table. After handling properties
+ * generically, give elementLibrary a chance to do any element specific changes.
+ */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
@@ -218,7 +218,18 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
+  }
+
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+    designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
   }
 };
 
@@ -383,7 +394,7 @@ function makeDraggable (jq) {
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
       resize: function () {
-        designMode.renderDesignModeBox(elm[0]);
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -421,7 +432,7 @@ function makeDraggable (jq) {
           left: newLeft
         });
 
-        designMode.renderDesignModeBox(elm[0]);
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).css('position', 'absolute');
 
@@ -487,11 +498,6 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  // Simulate a run button click, to load the channel id.
-  var designModeClick = studioApp.runButtonClickWrapper.bind(
-      studioApp, Applab.onDesignModeButton);
-  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
-
   var firstScreen = $('.screen').first().attr('id');
   designMode.changeScreen(firstScreen);
 };
@@ -510,11 +516,16 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
+    // Simulate a run button click, to load the channel id.
+    var designModeClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onDesignModeButton);
+    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
     React.render(
       React.createElement(DesignToggleRow, {
         initialScreen: screenId,
         screens: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
+        onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
         onScreenChange: designMode.changeScreen
       }),
