@@ -452,28 +452,12 @@ end
   # we always set the NO_CACHE cookie after any POST request, disabling the
   # Varnish cache temporarily. The session cookie allows all authenticated users
   # to pass through as long as they're logged in.
-  # Based on this example: https://www.varnish-cache.org/trac/wiki/VCLExampleRemovingSomeCookies#RemovingallBUTsomecookies
-  # TODO: refactor with cookie VMOD: https://github.com/lkarsten/libvmod-cookie
-
   if (req.http.Cookie) {
-    # 1. Append a semi-colon to the front of the cookie string.
-    set req.http.Cookie = ";" + req.http.Cookie;
-
-    # 2. Remove all spaces that appear after semi-colons.
-    set req.http.Cookie = regsuball(req.http.Cookie, "; +", ";");
-
-    # 3. Match the cookies we want to keep, adding the space we removed
-    #    previously, back.
-<%  def allow_cookies(cookies)
-      cookies.push('NO_CACHE') # Always allow NO_CACHE cookie
-      # (\1) is first matching group in the regsuball.
-      "set req.http.Cookie = regsuball(req.http.Cookie, \";(#{cookies.join('|')})=\", \"; \\1=\");"
-    end
-%>
+    cookie.parse(req.http.cookie);
     if (req.url ~ "^/volunteers") {
-      <%= allow_cookies ['_fe_session', 'hour_of_code'] %>
+      cookie.filter_except("_fe_session,hour_of_code,NO_CACHE");
     } else if (req.url ~ "^/auth") {
-      <%= allow_cookies ['cdo-private', 'hour_of_code'] %>
+      cookie.filter_except("cdo-private,hour_of_code,NO_CACHE");
     } else if (
         req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
         req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
@@ -491,19 +475,11 @@ end
         req.url ~ "^/ops-dashboard" ||
         req.url ~ "^/poste"
       ) {
-      <%= allow_cookies [session_cookie, deprecated_storage_cookie, storage_id_cookie, 'language_', 'hour_of_code'] %>
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,hour_of_code,NO_CACHE");
     } else {
-      <%= allow_cookies [] %>
+      cookie.filter_except("NO_CACHE");
     }
-
-    # 4. Remove all other cookies, identifying them by the fact that they have
-    #    no space after the preceding semi-colon.
-    set req.http.Cookie = regsuball(req.http.Cookie, ";[^ ][^;]*", "");
-
-    # 5. Remove all spaces and semi-colons from the beginning and end of the
-    #    cookie string.
-    set req.http.Cookie = regsuball(req.http.Cookie, "^[; ]+|[; ]+$", "");
-
+    set req.http.cookie = cookie.get_string();
     if (req.http.Cookie == "") {
       # If there are no remaining cookies, remove the cookie header. If there
       # aren't any cookie headers, Varnish's default behavior will be to cache
