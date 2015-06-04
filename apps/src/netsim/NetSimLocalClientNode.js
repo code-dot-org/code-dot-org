@@ -474,6 +474,13 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   // Who will be responsible for picking up/cleaning up this message?
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
+  var levelConfig = netsimGlobals.getLevelConfig();
+  var extraHops = levelConfig.minimumExtraHops;
+  if (levelConfig.minimumExtraHops !== levelConfig.maximumExtraHops) {
+    extraHops = netsimGlobals.randomIntInRange(
+        levelConfig.minimumExtraHops,
+        levelConfig.maximumExtraHops + 1);
+  }
 
   var self = this;
   NetSimMessage.send(
@@ -483,7 +490,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         toNodeID: remoteNodeID,
         simulatedBy: simulatingNodeID,
         payload: payload,
-        extraHopsRemaining: netsimGlobals.getLevelConfig().extraHops
+        extraHopsRemaining: extraHops
       },
       function (err) {
         if (err) {
