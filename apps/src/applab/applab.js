@@ -206,8 +206,9 @@ function adjustAppSizeStyles(container) {
           // NOTE: selectorText can appear in two different forms when styles and IDs
           // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
+          var maxChangedRules = 8;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < maxChangedRules; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive" ||
                 childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
@@ -236,7 +237,8 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
-                  Applab.appWidth * scale + "px;";
+                  Applab.appWidth * scale + "px; line-height: " +
+              Applab.appHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -247,11 +249,6 @@ function adjustAppSizeStyles(container) {
               // set the right for the visualizationResizeBar (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
-              changedChildRules++;
-            } else if (childRules[k].selectorText === "#visualizationResizeIcon") {
-              // set the line height for the visualizationResizeIcon
-              childRules[k].style.cssText = "line-height: " +
-                  Applab.appHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
                        childRules[k].selectorText === "div.responsive#visualization > *") {
