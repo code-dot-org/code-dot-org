@@ -79,6 +79,19 @@
         for messages to travel between routers, connecting the whole shard.
         Messages with a toAddress not found in the local subnet will be sent
         toward the first matching node found elsewhere on the shard.
+.field
+  = f.label :minimum_extra_hops, 'Minimum extra hops'
+  %p
+    Fewest non-destination routers an inter-router message should try to visit
+    before going to its destination router.  Number of hops can be lower if
+    network conditions don't allow it.
+  = f.number_field :minimum_extra_hops
+.field
+  = f.label :maximum_extra_hops, 'Maximum extra hops'
+  %p
+    Most non-destination routers an inter-router message should try to visit
+    before going to its destination router.
+  = f.number_field :maximum_extra_hops
 
 %h3 Packet Headers
 .field
