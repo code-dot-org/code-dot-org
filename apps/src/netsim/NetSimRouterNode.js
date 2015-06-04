@@ -162,8 +162,8 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * reason.
    * @type {number}
    */
-  this.randomDropChance = utils.valueOr(row.randomDropChance, 0);
-  //    levelConfig.defaultRandomDropChance);
+  this.randomDropChance = utils.valueOr(row.randomDropChance,
+      levelConfig.defaultRandomDropChance);
 
   /**
    * Determines a subset of connection and message events that this
