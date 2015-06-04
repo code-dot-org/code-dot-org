@@ -336,26 +336,6 @@ function onDebugInputKeyDown(e) {
   }
 }
 
-function selectEditorRowCol(row, col) {
-  if (studioApp.editor.currentlyUsingBlocks) {
-    var style = {color: '#FFFF22'};
-    studioApp.editor.clearLineMarks();
-    studioApp.editor.markLine(row, style);
-  } else {
-    var selection = studioApp.editor.aceEditor.getSelection();
-    var range = selection.getRange();
-
-    range.start.row = row;
-    range.start.column = col;
-    range.end.row = row;
-    range.end.column = col + 1;
-
-    // setting with the backwards parameter set to true - this prevents horizontal
-    // scrolling to the right
-    selection.setSelectionRange(range, true);
-  }
-}
-
 function handleExecutionError(err, lineNumber) {
   if (!lineNumber && err instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
@@ -363,7 +343,7 @@ function handleExecutionError(err, lineNumber) {
     lineNumber = err.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    selectEditorRowCol(lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
   if (!lineNumber && Applab.JSInterpreter) {
     lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();

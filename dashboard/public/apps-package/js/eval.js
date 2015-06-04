@@ -501,7 +501,7 @@ function onReportComplete(response) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../StudioApp":5,"../block_utils":68,"../canvg/StackBlur.js":93,"../canvg/canvg.js":94,"../canvg/rgbcolor.js":95,"../canvg/svg_todataurl":96,"../codegen":98,"../dom":101,"../locale":143,"../skins":260,"../templates/page.html.ejs":286,"../utils":308,"./api":103,"./controls.html.ejs":105,"./evalError":109,"./evalText":115,"./levels":118,"./locale":119,"./visualization.html.ejs":121}],121:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":68,"../canvg/StackBlur.js":93,"../canvg/canvg.js":94,"../canvg/rgbcolor.js":95,"../canvg/svg_todataurl":96,"../codegen":98,"../dom":101,"../locale":143,"../skins":260,"../templates/page.html.ejs":287,"../utils":309,"./api":103,"./controls.html.ejs":105,"./evalError":109,"./evalText":115,"./levels":118,"./locale":119,"./visualization.html.ejs":121}],121:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -521,7 +521,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],118:[function(require,module,exports){
+},{"ejs":480}],118:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -613,7 +613,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"./locale":119,"ejs":479}],104:[function(require,module,exports){
+},{"../locale":143,"./locale":119,"ejs":480}],104:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -1542,7 +1542,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
 };
 
 
-},{"../utils":308,"./evalError":109}],109:[function(require,module,exports){
+},{"../utils":309,"./evalError":109}],109:[function(require,module,exports){
 var evalMsg = require('./locale');
 
 /**
