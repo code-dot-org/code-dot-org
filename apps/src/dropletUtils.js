@@ -361,7 +361,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
       comments: { color: COLOR_WHITE },
-      containers: { color: COLOR_LIGHT_GREEN },
+      containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
       assignments: { color: COLOR_PURPLE },

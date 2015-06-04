@@ -156,7 +156,7 @@ levels.custom = {
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,
-    "declareAssign_list_abde": null,
+    "declareAssign_list_abd": null,
     "listLength": null,
     "insertItem": null,
     "appendItem": null,
