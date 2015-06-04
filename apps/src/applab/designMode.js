@@ -109,6 +109,7 @@ designMode.resetElementTray = function (allowEditing) {
  * generically, give elementLibrary a chance to do any element specific changes.
  */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
@@ -215,11 +216,18 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
   }
 
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
     designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
   }
 };
 
