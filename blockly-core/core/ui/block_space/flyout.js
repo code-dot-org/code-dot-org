@@ -141,7 +141,7 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
   if (!insideToolbox) {
     this.trashcan = new Blockly.Trashcan(this);
     this.svgTrashcan_ = this.trashcan.createDom();
-    this.svgTrashcan_.setAttribute("style", "opacity: 0");
+    this.svgTrashcan_.setAttribute("style", "opacity: 0; pointer-events: none");
     this.svgTrashcan_.setAttribute('transform', 'translate(0, 20)');
     this.svgGroup_.appendChild(this.svgTrashcan_);
   }
