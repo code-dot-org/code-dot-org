@@ -843,6 +843,7 @@ function applyTransformScaleToChildren(element, scale) {
 StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var codeWorkspace = document.getElementById('codeWorkspace');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualizationResizeIcon = document.getElementById('visualizationResizeIcon');
   var visualization = document.getElementById('visualization');
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
@@ -875,7 +876,9 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
-  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
+  visualization.style.maxHeight = newVizHeightString;
+  visualizationResizeIcon.style.lineHeight = newVizHeightString;
   applyTransformScaleToChildren(visualization,
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {

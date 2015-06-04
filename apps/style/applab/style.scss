@@ -41,6 +41,9 @@ div#visualization.with_padding {
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
+  #visualizationResizeIcon {
+    line-height: $width;
+  }
   div#visualization.responsive > * {
     -webkit-transform: scale(1.0);
     -ms-transform: scale(1.0);
@@ -72,6 +75,9 @@ div#visualization.with_padding {
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
+  }
+  #visualizationResizeIcon {
+    line-height: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.875);
@@ -105,6 +111,9 @@ div#visualization.with_padding {
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
+  #visualizationResizeIcon {
+    line-height: $width;
+  }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -137,6 +146,9 @@ div#visualization.with_padding {
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
+  #visualizationResizeIcon {
+    line-height: $width;
+  }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
@@ -168,6 +180,9 @@ div#visualization.with_padding {
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
+  }
+  #visualizationResizeIcon {
+    line-height: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.5);
