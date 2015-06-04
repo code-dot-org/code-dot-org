@@ -1587,6 +1587,10 @@ describe("NetSimRouterNode", function () {
       return logs[logs.length - 1];
     };
 
+    var getLogCount = function () {
+      return getRows(testShard, 'logTable').length;
+    };
+
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
       addressFormat = '4.4';
@@ -1743,7 +1747,8 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("can make one extra hop", function () {
-      netsimGlobals.getLevelConfig().extraHops = 1;
+      netsimGlobals.getLevelConfig().minimumExtraHops = 1;
+      netsimGlobals.getLevelConfig().maximumExtraHops = 1;
 
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
@@ -1791,7 +1796,8 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("can make two extra hops", function () {
-      netsimGlobals.getLevelConfig().extraHops = 2;
+      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
       netsimGlobals.setRandomSeed('two-hops');
 
       // Introduce another router so there's space for two extra hops.
@@ -1855,10 +1861,21 @@ describe("NetSimRouterNode", function () {
         routerA.entityID, routerC.entityID, routerD.entityID, routerB.entityID]);
     });
 
-    describe ("extra hops in random order", function () {
+
+    describe ("extra hop randomization", function () {
       var packetBinary, routerD, routerE, routerF;
+
+      var sendMessageAndTickUntilRouted = function () {
+        clientA.sendMessage(packetBinary, function () {});
+        var t = 1000;
+        var lastLogCount;
+        do {
+          lastLogCount = getLogCount();
+          clientA.tick({time: t});
+        } while (getLogCount() !== lastLogCount);
+      };
+
       beforeEach(function () {
-        netsimGlobals.getLevelConfig().extraHops = 2;
         routerD = makeRouter();
         routerE = makeRouter();
         routerF = makeRouter();
@@ -1871,11 +1888,12 @@ describe("NetSimRouterNode", function () {
             dataConverters.asciiToBinary('wop'));
       });
 
+
       it ("uses one order here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
         netsimGlobals.setRandomSeed('two-hops');
-        clientA.sendMessage(packetBinary, function () {});
-        clientA.tick({time: 1000});
-        clientA.tick({time: 2000});
+        sendMessageAndTickUntilRouted();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerC.entityID,
@@ -1885,11 +1903,10 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses a different order here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
         netsimGlobals.setRandomSeed('for something completely different');
-        clientA.sendMessage(packetBinary, function () {});
-        clientA.tick({time: 1000});
-        clientA.tick({time: 2000});
-        clientA.tick({time: 3000});
+        sendMessageAndTickUntilRouted();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerE.entityID,
@@ -1897,10 +1914,37 @@ describe("NetSimRouterNode", function () {
           routerB.entityID
         ]);
       });
+
+      it ("uses one number of hops here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
+        netsimGlobals.setRandomSeed('some random seed');
+        sendMessageAndTickUntilRouted();
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerD.entityID,
+          routerF.entityID,
+          routerC.entityID,
+          routerB.entityID
+        ]);
+      });
+
+      it ("uses a different number of hops here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
+        netsimGlobals.setRandomSeed('second random seed');
+        sendMessageAndTickUntilRouted();
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerD.entityID,
+          routerB.entityID
+        ]);
+      });
     });
 
     it ("only makes one extra hop if two would require backtracking", function () {
-      netsimGlobals.getLevelConfig().extraHops = 2;
+      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
 
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
