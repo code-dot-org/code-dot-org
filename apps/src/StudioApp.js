@@ -843,7 +843,6 @@ function applyTransformScaleToChildren(element, scale) {
 StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var codeWorkspace = document.getElementById('codeWorkspace');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  var visualizationResizeIcon = document.getElementById('visualizationResizeIcon');
   var visualization = document.getElementById('visualization');
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
@@ -864,6 +863,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
                          Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
   var newVizWidthString = newVizWidth + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
   if (this.isRtl()) {
@@ -873,12 +873,11 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationResizeBar.style.left = newVizWidthString;
     codeWorkspace.style.left = newVizWidthString;
   }
+  visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
-  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   visualization.style.maxHeight = newVizHeightString;
-  visualizationResizeIcon.style.lineHeight = newVizHeightString;
   applyTransformScaleToChildren(visualization,
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {
