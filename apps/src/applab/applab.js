@@ -248,6 +248,11 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
+            } else if (childRules[k].selectorText === "#visualizationResizeIcon") {
+              // set the line height for the visualizationResizeIcon
+              childRules[k].style.cssText = "line-height: " +
+                  Applab.appHeight * scale + "px;";
+              changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
                        childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
