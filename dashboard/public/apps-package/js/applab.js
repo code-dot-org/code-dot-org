@@ -1722,12 +1722,12 @@ designMode.resetElementTray = function (allowEditing) {
   }
 };
 
-// TODO (brent) I think some of these properties are going to end up having
-// different behaviors based on element type. I think the best way of handling
-// this is to have an onPropertyChange per element that gets the first shot to
-// handle the change, and reports whether it did or not. If it didn't, we fall
-// back to the default function
+/**
+ * Handle a change from our properties table. After handling properties
+ * generically, give elementLibrary a chance to do any element specific changes.
+ */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
@@ -1838,7 +1838,18 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
+  }
+
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+    designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
   }
 };
 
@@ -6690,6 +6701,20 @@ module.exports = {
     if (elements[elementType].onDeserialize) {
       elements[elementType].onDeserialize(element);
     }
+  },
+
+  /**
+   * Handle any element specific property changes. Called after designMode gets
+   * first crack at handling change.
+   * @returns {boolean} True if we modified the element in such a way that the
+   *   property table needs to be updated.
+   */
+  typeSpecificPropertyChange: function (element, name, value) {
+    var elementType = this.getElementType(element);
+    if (elements[elementType].onPropertyChange) {
+      return elements[elementType].onPropertyChange(element, name, value);
+    }
+    return false;
   }
 };
 
@@ -7098,11 +7123,15 @@ var LabelProperties = React.createClass({displayName: "LabelProperties",
         React.createElement(PropertyRow, {
           desc: 'width (px)', 
           isNumber: true, 
+          lockState: $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED, 
+          handleLockChange: this.props.handleChange.bind(this, 'lock-width'), 
           initialValue: parseInt(element.style.width, 10), 
           handleChange: this.props.handleChange.bind(this, 'width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
+          lockState: $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED, 
+          handleLockChange: this.props.handleChange.bind(this, 'lock-height'), 
           initialValue: parseInt(element.style.height, 10), 
           handleChange: this.props.handleChange.bind(this, 'height')}), 
         React.createElement(PropertyRow, {
@@ -7141,18 +7170,17 @@ var LabelProperties = React.createClass({displayName: "LabelProperties",
     // bold/italics/underline (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
   }
 });
 
 module.exports = {
   PropertyTable: LabelProperties,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('label');
-    element.style.margin = '10px 5px';
-    element.style.width = '100px';
-    element.style.height = '100px';
+    element.style.margin = '0px';
+    element.style.padding = '2px';
+    element.style.lineHeight = '1';
     element.style.fontSize = '14px';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
@@ -7160,7 +7188,47 @@ module.exports = {
     element.style.color = '#000000';
     element.style.backgroundColor = '';
 
+    this.resizeToFitText(element);
     return element;
+  },
+
+  resizeToFitText: function (element) {
+    var clone = $(element).clone().css({
+      position: 'absolute',
+      visibility: 'hidden',
+      width: 'auto',
+      height: 'auto'
+    }).appendTo($(document.body));
+
+    if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
+      element.style.width = clone.width() + 1 + 'px';
+    }
+    if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
+      element.style.height = clone.height() + 1 + 'px';
+    }
+
+    clone.remove();
+  },
+
+  /**
+   * @returns {boolean} True if it modified the backing element
+   */
+  onPropertyChange: function (element, name, value) {
+    switch (name) {
+      case 'text':
+      case 'fontSize':
+        this.resizeToFitText(element);
+        break;
+      case 'lock-width':
+        $(element).data('lock-width', value);
+        break;
+      case 'lock-height':
+        $(element).data('lock-height', value);
+        break;
+      default:
+        return false;
+    }
+    return true;
   }
 };
 
@@ -7772,6 +7840,11 @@ module.exports = ZOrderRow;
 },{"react":638}],32:[function(require,module,exports){
 var React = require('react');
 
+var LockState = {
+  LOCKED: 'LOCKED',
+  UNLOCKED: 'UNLOCKED'
+};
+
 var PropertyRow = React.createClass({displayName: "PropertyRow",
   propTypes: {
     initialValue: React.PropTypes.oneOfType([
@@ -7779,8 +7852,10 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
       React.PropTypes.number
     ]).isRequired,
     isNumber: React.PropTypes.bool,
+    lockState: React.PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
     isMultiLine: React.PropTypes.bool,
-    handleChange: React.PropTypes.func
+    handleChange: React.PropTypes.func,
+    handleLockChange: React.PropTypes.func
   },
 
   getInitialState: function () {
@@ -7799,6 +7874,14 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
     this.setState({value: value});
   },
 
+  handleClickLock: function () {
+    if (this.props.lockState === LockState.LOCKED) {
+      this.props.handleLockChange(LockState.UNLOCKED);
+    } else if (this.props.lockState === LockState.UNLOCKED) {
+      this.props.handleLockChange(LockState.LOCKED);
+    }
+  },
+
   render: function() {
     var inputElement;
     if (this.props.isMultiLine) {
@@ -7812,16 +7895,34 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
         onChange: this.handleChangeInternal});
     }
 
+    var lockStyle = {
+      marginLeft: '5px'
+    };
+
+    var lockIcon;
+    // state is either locked/unlocked or undefined (no icon)
+    if (this.props.lockState) {
+      var lockClass = "fa fa-" + (this.props.lockState === LockState.LOCKED ?
+        'lock' : 'unlock');
+      lockIcon = (React.createElement("i", {
+        className: lockClass, 
+        style: lockStyle, 
+        onClick: this.handleClickLock})
+      );
+    }
+
     return (
       React.createElement("tr", null, 
         React.createElement("td", null, this.props.desc), 
         React.createElement("td", null, 
-          inputElement
+          inputElement, 
+          lockIcon
         )
       )
     );
   }
 });
+PropertyRow.LockState = LockState;
 
 module.exports = PropertyRow;
 
