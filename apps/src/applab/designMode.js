@@ -383,7 +383,7 @@ function makeDraggable (jq) {
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
       resize: function () {
-        designMode.renderDesignModeBox(elm[0]);
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -421,7 +421,7 @@ function makeDraggable (jq) {
           left: newLeft
         });
 
-        designMode.renderDesignModeBox(elm[0]);
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).css('position', 'absolute');
 
