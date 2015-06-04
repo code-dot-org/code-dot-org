@@ -1561,6 +1561,7 @@ function outputError(warning, level, lineNum) {
     text += 'Line: ' + lineNum + ': ';
   }
   text += warning;
+  // TODO: consider how to notify the user without a debug console output area
   if (console.log) {
     console.log(text);
   }
@@ -1578,8 +1579,7 @@ function handleExecutionError(err, lineNumber) {
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
 
-    // TODO: connect this up
-    // selectEditorRowCol(lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
   if (!lineNumber && Studio.JSInterpreter) {
     lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();

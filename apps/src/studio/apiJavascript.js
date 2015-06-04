@@ -1,22 +1,4 @@
-var constants = require('./constants');
-
-// TODO: move to constants:
-
-exports.SpriteSpeed = {
-  VERY_SLOW: 2,
-  SLOW: 3,
-  NORMAL: 5,
-  FAST: 8,
-  VERY_FAST: 12,
-};
-
-exports.SpriteSize = {
-  VERY_SMALL: 0.5,
-  SMALL: 0.75,
-  NORMAL: 1,
-  LARGE: 1.5,
-  VERY_LARGE: 2
-};
+// API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});

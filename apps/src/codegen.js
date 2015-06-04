@@ -451,6 +451,32 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
   return Boolean(bps[userCodeRow]);
 };
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * This function simply highlights one spot, not a range. It is typically used
+ * to highlight where an error has occurred.
+ */
+exports.selectEditorRowCol = function (editor, row, col) {
+  if (editor.currentlyUsingBlocks) {
+    var style = {color: '#FFFF22'};
+    editor.clearLineMarks();
+    editor.markLine(row, style);
+  } else {
+    var selection = editor.aceEditor.getSelection();
+    var range = selection.getRange();
+
+    range.start.row = row;
+    range.start.column = col;
+    range.end.row = row;
+    range.end.column = col + 1;
+
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
+    selection.setSelectionRange(range, true);
+  }
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
