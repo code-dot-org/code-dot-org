@@ -723,7 +723,7 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
-  if (marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
+  if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
   }
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
