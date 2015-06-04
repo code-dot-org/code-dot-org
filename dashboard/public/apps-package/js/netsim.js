@@ -1344,6 +1344,15 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           or rooms.  When true, it is possible for messages to travel between
  *           routers, connecting the whole shard.
  *
+ * @property {number} minimumExtraHops - Fewest non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.  Number of hops can be lower if network
+ *           conditions don't allow it.
+ *
+ * @property {number} maximumExtraHops - Most non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.
+ *
  * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
  *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
@@ -1470,6 +1479,8 @@ levels.custom = {
   automaticReceive: false,
   broadcastMode: false,
   connectedRouters: false,
+  minimumExtraHops: 0,
+  maximumExtraHops: 0,
 
   // Packet header specification
   addressFormat: '4',
@@ -8232,10 +8243,24 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   // Who will be responsible for picking up/cleaning up this message?
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
+  var levelConfig = netsimGlobals.getLevelConfig();
+  var extraHops = levelConfig.minimumExtraHops;
+  if (levelConfig.minimumExtraHops !== levelConfig.maximumExtraHops) {
+    extraHops = netsimGlobals.randomIntInRange(
+        levelConfig.minimumExtraHops,
+        levelConfig.maximumExtraHops + 1);
+  }
 
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
-      payload,
+  NetSimMessage.send(
+      this.shard_,
+      {
+        fromNodeID: localNodeID,
+        toNodeID: remoteNodeID,
+        simulatedBy: simulatingNodeID,
+        payload: payload,
+        extraHopsRemaining: extraHops
+      },
       function (err) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
@@ -10445,14 +10470,17 @@ NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
 };
 
 /**
- * Given a network address, finds the node ID of the node that is the next
- * step along the shortest path from this router to that address.  Will return
- * undefined if no path to the address is found.
+ * Given a network address, finds the node that is the next step along the
+ * correct path from this router to that address.  Will return null if no
+ * path to the address is found.
  * @param {string} address
- * @returns {number|undefined}
+ * @param {number} hopsRemaining
+ * @param {number[]} visitedNodeIDs
+ * @returns {NetSimNode|null}
  * @private
  */
-NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
+NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
+    hopsRemaining, visitedNodeIDs) {
   // Is it us?
   if (address === this.getAddress()) {
     return this;
@@ -10478,10 +10506,11 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
     }
   }
 
+  // End of local subnet cases:
   // In levels where routers are not connected, this is as far as we go.
   var levelConfig = netsimGlobals.getLevelConfig();
   if (!levelConfig.connectedRouters) {
-    return undefined;
+    return null;
   }
 
   // Is it another node?
@@ -10490,23 +10519,49 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
         (node.getNodeType() === NodeType.ROUTER && address === node.getAutoDnsAddress());
   });
 
-  if (destinationNode) {
-    if (destinationNode.getNodeType() === NodeType.ROUTER) {
-      return destinationNode;
-    }
-    // How do I find the destination node's router?
+  // If the node we're after doesn't exist anywhere, we should stop now.
+  if (!destinationNode) {
+    return null;
+  }
+
+  // We are trying to get somewhere else!  Figure out what the target router
+  // for our destination is.
+  var destinationRouter = null;
+  if (destinationNode.getNodeType() === NodeType.ROUTER) {
+    destinationRouter = destinationNode;
+  } else {
     var destinationWire = destinationNode.getOutgoingWire();
     if (destinationWire) {
-      var remoteRouter = _.find(nodes, function (node) {
+      destinationRouter = utils.valueOr(_.find(nodes, function (node) {
         return node.entityID === destinationWire.remoteNodeID;
-      });
-      if (remoteRouter !== undefined) {
-        return remoteRouter;
-      }
+      }), null);
     }
   }
 
-  return undefined;
+  if (!destinationRouter) {
+    return null;
+  }
+
+  // If we have extra hops, we should try and go to a router that is NOT
+  // the target router.
+  if (hopsRemaining > 0) {
+    // Generate the set of possible target routers
+    var possibleDestinationRouters = nodes.filter(function (node) {
+      return node.getNodeType() === NodeType.ROUTER &&
+          node.entityID !== destinationRouter.entityID &&
+          node.entityID !== this.entityID &&
+          !visitedNodeIDs.some(function (visitedID) {
+            return node.entityID === visitedID;
+          });
+    }, this);
+    if (possibleDestinationRouters.length > 0) {
+      return netsimGlobals.randomPickOne(possibleDestinationRouters);
+    }
+  }
+
+  // If there's nowhere else to go or we are out of extra hops, go to the
+  // target router.
+  return destinationRouter;
 };
 
 /**
@@ -10791,10 +10846,12 @@ NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
   var nextRecipientNodeID = nodeIDs[0];
   NetSimMessage.send(
       this.shard_,
-      this.entityID,
-      nextRecipientNodeID,
-      nextRecipientNodeID,
-      message.payload,
+      {
+        fromNodeID: this.entityID,
+        toNodeID: nextRecipientNodeID,
+        simulatedBy: nextRecipientNodeID,
+        payload: message.payload
+      },
       function (err) {
         if (err) {
           onComplete(err);
@@ -10829,8 +10886,9 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     return;
   }
 
-  var destinationNode = this.getNextNodeTowardAddress_(toAddress);
-  if (destinationNode === undefined) {
+  var destinationNode = this.getNextNodeTowardAddress_(toAddress,
+      message.extraHopsRemaining, message.visitedNodeIDs);
+  if (destinationNode === null) {
     // Can't find or reach the address within the simulation
     logger.warn("Destination address not reachable");
     this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
@@ -10856,10 +10914,14 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
-      routerNodeID,
-      destinationNode.entityID,
-      simulatingNodeID,
-      message.payload,
+      {
+        fromNodeID: routerNodeID,
+        toNodeID: destinationNode.entityID,
+        simulatedBy: simulatingNodeID,
+        payload: message.payload,
+        extraHopsRemaining: Math.max(0, message.extraHopsRemaining - 1),
+        visitedNodeIDs: message.visitedNodeIDs.concat(this.entityID)
+      },
       function (err, result) {
         this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
         onComplete(err, result);
@@ -11020,10 +11082,12 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 
   NetSimMessage.send(
       this.shard_,
-      autoDnsNodeID,
-      routerNodeID,
-      message.simulatedBy,
-      responseBinary,
+      {
+        fromNodeID: autoDnsNodeID,
+        toNodeID: routerNodeID,
+        simulatedBy: message.simulatedBy,
+        payload: responseBinary
+      },
       onComplete);
 };
 
@@ -11041,7 +11105,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 
 /**
@@ -11088,6 +11152,20 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * @type {*}
    */
   this.payload = messageRow.payload;
+
+  /**
+   * If this is an inter-router message, the number of routers this
+   * message should try to visit before going to the router that
+   * will actually lead to its destination.
+   * @type {number}
+   */
+  this.extraHopsRemaining = utils.valueOr(messageRow.extraHopsRemaining, 0);
+
+  /**
+   * A history of router node IDs this message has visited.
+   * @type {number[]}
+   */
+  this.visitedNodeIDs = utils.valueOr(messageRow.visitedNodeIDs, []);
 };
 NetSimMessage.inherits(NetSimEntity);
 
@@ -11095,19 +11173,23 @@ NetSimMessage.inherits(NetSimEntity);
  * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
- * @param {!number} fromNodeID - sender node ID
- * @param {!number} toNodeID - destination node ID
- * @param {!number} simulatedBy - node ID of client simulating message
- * @param {*} payload - message content
+ * @param {Object} messageData
+ * @param {!number} messageData.fromNodeID - sender node ID
+ * @param {!number} messageData.toNodeID - destination node ID
+ * @param {!number} messageData.simulatedBy - node ID of client simulating message
+ * @param {*} messageData.payload - message content
+ * @param {number} messageData.extraHopsRemaining
+ * @param {number[]} messageData.visitedNodeIDs
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.send = function (shard, fromNodeID, toNodeID, simulatedBy,
-    payload, onComplete) {
+NetSimMessage.send = function (shard, messageData, onComplete) {
   var entity = new NetSimMessage(shard);
-  entity.fromNodeID = fromNodeID;
-  entity.toNodeID = toNodeID;
-  entity.simulatedBy = simulatedBy;
-  entity.payload = payload;
+  entity.fromNodeID = messageData.fromNodeID;
+  entity.toNodeID = messageData.toNodeID;
+  entity.simulatedBy = messageData.simulatedBy;
+  entity.payload = messageData.payload;
+  entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
+  entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
   entity.getTable().create(entity.buildRow(), onComplete);
 };
 
@@ -11138,7 +11220,9 @@ NetSimMessage.prototype.buildRow = function () {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     simulatedBy: this.simulatedBy,
-    payload: this.payload
+    payload: this.payload,
+    extraHopsRemaining: this.extraHopsRemaining,
+    visitedNodeIDs: this.visitedNodeIDs
   };
 };
 
@@ -17955,6 +18039,16 @@ var netsim_ = null;
 var pseudoRandomNumberFunction_ = Math.random;
 
 /**
+ * Get a random integer in the given range.
+ * @param {number} low inclusive lower end of range
+ * @param {number} high exclusive upper end of range
+ * @returns {number}
+ */
+var randomIntInRange = function (low, high) {
+  return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
+};
+
+/**
  * Provide singleton access to global simulation settings
  */
 module.exports = {
@@ -18005,8 +18099,20 @@ module.exports = {
    * @param {number} high exclusive upper end of range
    * @returns {number}
    */
-  randomIntInRange: function (low, high) {
-    return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
+  randomIntInRange: randomIntInRange,
+
+  /**
+   * Get a random item out of a collection
+   * @param {Array} collection
+   * @returns {*} undefined if collection is empty
+   */
+  randomPickOne: function (collection) {
+    var size = collection.length;
+    if (size === 0) {
+      return undefined;
+    }
+
+    return collection[randomIntInRange(0, size)];
   }
 
 };
