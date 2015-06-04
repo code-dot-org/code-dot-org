@@ -108,7 +108,7 @@ template: none
               %option{value:'{{district.name}}', 'ng-repeat' => 'district in districts | orderBy:"name"'}
                 {{district.name}}
             %br
-            %select.form-control{'ng-model' => 'unexpected_teacher.gender'}
+            %select.form-control{'ng-model' => 'unexpected_teacher.ops_gender'}
               %option{value:'', disabled:'true', selected:'true'}
                 Gender
               %option{value:'Male'}
@@ -116,7 +116,7 @@ template: none
               %option{value:'Female'}
                 Female
             %br
-            %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+            %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'unexpected_teacher.ops_school'}
             %br
             %button{'ng-click' => 'saveWorkshop(workshop)'}
               Save

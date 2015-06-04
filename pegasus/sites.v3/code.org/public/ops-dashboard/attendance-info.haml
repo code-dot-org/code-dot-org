@@ -41,3 +41,18 @@ template: none
       {{teacher.district.name}}
     %td
       {{teacher.ops_gender}}
+  %tr
+    %th{colspan:'5'}
+      Unexpected Attendees
+
+  %tr{'ng-repeat' => 'teacher in workshop.unexpected_teachers | orderBy:"ops_last_name"'}
+    %td
+      {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
+    %td
+      {{teacher.email}}
+    %td
+      {{teacher.ops_school}}
+    %td
+      {{teacher.district.name}}
+    %td
+      {{teacher.ops_gender}}
