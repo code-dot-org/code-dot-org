@@ -1,25 +1,74 @@
 var codegen = require('./codegen');
+var utils = require('./utils');
+var _ = utils.getLodash();
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
  * adds stepping, batching of steps, code highlighting, error handling,
- * breakpoints, and general debug capabilities (step in, step out, step over)
+ * breakpoints, general debug capabilities (step in, step out, step over), and
+ * an optional event queue.
  */
 var JSInterpreter = module.exports = function (options) {
 
-  this.interpreter = options.interpreter;
   this.studioApp = options.studioApp;
-  this.codeInfo = options.codeInfo;
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return false; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.onNextStepChanged = options.onNextStepChanged || function() {};
   this.onPause = options.onPause || function() {};
   this.onExecutionError = options.onExecutionError || function() {};
+  this.onExecutionWarning = options.onExecutionWarning || function() {};
 
   this.paused = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
+
+  this.codeInfo = {};
+  this.codeInfo.userCodeStartOffset = 0;
+  this.codeInfo.userCodeLength = options.code.length;
+  var session = this.studioApp.editor.aceEditor.getSession();
+  this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  if (options.enableEvents) {
+    this.eventQueue = [];
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    options.code += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
+                 'setCallbackRetVal(ret); }}';
+  }
+
+  var self = this;
+  var initFunc = function (interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, options.blocks, scope);
+
+    // Only allow five levels of depth when marshalling the return value
+    // since we will occasionally return DOM Event objects which contain
+    // properties that recurse over and over...
+    var wrapper = codegen.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: _.bind(self.nativeGetCallback, self),
+        maxDepth: 5
+    });
+    interpreter.setProperty(scope,
+                            'getCallback',
+                            interpreter.createNativeFunction(wrapper));
+
+    wrapper = codegen.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: _.bind(self.nativeSetCallbackRetVal, self),
+    });
+    interpreter.setProperty(scope,
+                            'setCallbackRetVal',
+                            interpreter.createNativeFunction(wrapper));
+  };
+
+  try {
+    this.interpreter = new window.Interpreter(options.code, initFunc);
+  }
+  catch(err) {
+    this.onExecutionError(err);
+  }
 
 };
 
@@ -29,6 +78,56 @@ JSInterpreter.StepType = {
   OVER: 2,
   OUT:  3,
 };
+
+/**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+JSInterpreter.prototype.nativeGetCallback = function () {
+  var retVal = this.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    this.seenEmptyGetCallbackDuringExecution = true;
+  }
+  return retVal;
+};
+
+JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
+  if (this.eventQueue.length === 0) {
+    // If nothing else is in the event queue, then store this return value
+    // away so it can be returned in the native event handler
+    this.seenReturnFromCallbackDuringExecution = true;
+    this.lastCallbackRetVal = retVal;
+  }
+  // Provide warnings to the user if this function has been called with a
+  // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
+  if (!this.runUntilCallbackReturn &&
+      typeof this.lastCallbackRetVal !== 'undefined') {
+    this.onExecutionWarning("Function passed to onEvent() has taken too long " +
+                            "- the return value was ignored.");
+    if (!this.shouldRunAtMaxSpeed()) {
+      this.onExecutionWarning("  (try moving the speed slider to its maximum value)");
+    }
+  }
+};
+
+/**
+ * Queue an event to be fired in the interpreter. The nativeArgs are optional.
+ * The function must be an interpreter function object (not native).
+ */
+JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
+  this.eventQueue.push({
+    'fn': interpreterFunc,
+    'arguments': nativeArgs
+  });
+};
+
 
 var StepType = JSInterpreter.StepType;
 
@@ -102,8 +201,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // call a simple function to just get the line number, otherwise we call a
     // function that also selects the code:
     var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
+            this.getUserCodeLine :
+            this.selectCurrentCode;
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
@@ -117,11 +216,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
     }
-    userCodeRow = selectCodeFunc(this.interpreter,
-                                 this.codeInfo.cumulativeLength,
-                                 this.codeInfo.userCodeStartOffset,
-                                 this.codeInfo.userCodeLength,
-                                 this.studioApp.editor);
+    userCodeRow = selectCodeFunc.call(this);
     inUserCode = (-1 !== userCodeRow);
     // Check to see if we've arrived at a new breakpoint:
     //  (1) should be in user code
@@ -214,14 +309,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         if (doneUserLine || reachedBreak) {
           var wasUnwinding = unwindingAfterStep;
           // step() additional times if we know it to be safe to get us to the next statement:
-          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
+          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
           if (wasUnwinding && !unwindingAfterStep) {
             // done unwinding.. select code that is next to execute:
-            userCodeRow = selectCodeFunc(this.interpreter,
-                                         this.codeInfo.cumulativeLength,
-                                         this.codeInfo.userCodeStartOffset,
-                                         this.codeInfo.userCodeLength,
-                                         this.studioApp.editor);
+            userCodeRow = selectCodeFunc.call(this);
             inUserCode = (-1 !== userCodeRow);
             if (!inUserCode) {
               // not in user code, so keep unwinding after all...
@@ -262,10 +353,85 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   if (reachedBreak && atMaxSpeed) {
     // If we were running atMaxSpeed and just reached a breakpoint, the
     // code may not be selected in the editor, so do it now:
-    codegen.selectCurrentCode(this.interpreter,
-                              this.codeInfo.cumulativeLength,
-                              this.codeInfo.userCodeStartOffset,
-                              this.codeInfo.userCodeLength,
-                              this.studioApp.editor);
+    this.selectCurrentCode();
   }
+};
+
+/**
+ * Helper to create an interpeter primitive value. Useful when extending the
+ * interpreter without relying on codegen marshalling helpers.
+ */
+JSInterpreter.prototype.createPrimitive = function (data) {
+  if (this.interpreter) {
+    return this.interpreter.createPrimitive(data);
+  }
+};
+
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.selectCurrentCode = function () {
+  return codegen.selectCurrentCode(this.interpreter,
+                                   this.codeInfo.cumulativeLength,
+                                   this.codeInfo.userCodeStartOffset,
+                                   this.codeInfo.userCodeLength,
+                                   this.studioApp.editor);
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.getUserCodeLine = function () {
+  var userCodeRow = -1;
+  if (this.interpreter.stateStack[0]) {
+    var node = this.interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
+ */
+JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  var userCodeRow = -1;
+  for (var i = 0; i < this.interpreter.stateStack.length; i++) {
+    var node = this.interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+      break;
+    }
+  }
+  return userCodeRow;
 };

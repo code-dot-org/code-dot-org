@@ -53,7 +53,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. 
 - Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**

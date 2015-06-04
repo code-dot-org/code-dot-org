@@ -102,12 +102,12 @@ designMode.resetElementTray = function (allowEditing) {
   }
 };
 
-// TODO (brent) I think some of these properties are going to end up having
-// different behaviors based on element type. I think the best way of handling
-// this is to have an onPropertyChange per element that gets the first shot to
-// handle the change, and reports whether it did or not. If it didn't, we fall
-// back to the default function
+/**
+ * Handle a change from our properties table. After handling properties
+ * generically, give elementLibrary a chance to do any element specific changes.
+ */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
@@ -119,15 +119,19 @@ designMode.onPropertyChange = function(element, name, value) {
       break;
     case 'left':
       element.style.left = value + 'px';
+      element.parentNode.style.left = value + 'px';
       break;
     case 'top':
       element.style.top = value + 'px';
+      element.parentNode.style.top = value + 'px';
       break;
     case 'width':
       element.style.width = value + 'px';
+      element.parentNode.style.width = value + 'px';
       break;
     case 'height':
       element.style.height = value + 'px';
+      element.parentNode.style.height = value + 'px';
       break;
     case 'text':
       element.textContent = value;
@@ -214,7 +218,18 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
+  }
+
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+    designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
   }
 };
 
@@ -378,6 +393,9 @@ function makeDraggable (jq) {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
+      resize: function () {
+        designMode.renderDesignWorkspace(elm[0]);
+      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -408,6 +426,13 @@ function makeDraggable (jq) {
 
         ui.position.left = newLeft;
         ui.position.top = newTop;
+
+        elm.css({
+          top: newTop,
+          left: newLeft
+        });
+
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).css('position', 'absolute');
 
@@ -416,9 +441,7 @@ function makeDraggable (jq) {
       left: elm.css('left')
     });
 
-    elm.css({
-      position: 'static'
-    });
+    elm.css('position', 'static');
   });
 }
 
@@ -437,11 +460,7 @@ function makeUndraggable(jq) {
     }
 
     wrapper.resizable('destroy').draggable('destroy');
-    elm.css({
-      top: wrapper.css('top'),
-      left: wrapper.css('left'),
-      position: 'absolute'
-    });
+    elm.css('position', 'absolute');
     elm.unwrap();
   });
 }
@@ -479,11 +498,6 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  // Simulate a run button click, to load the channel id.
-  var designModeClick = studioApp.runButtonClickWrapper.bind(
-      studioApp, Applab.onDesignModeButton);
-  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
-
   var firstScreen = $('.screen').first().attr('id');
   designMode.changeScreen(firstScreen);
 };
@@ -502,11 +516,16 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
+    // Simulate a run button click, to load the channel id.
+    var designModeClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onDesignModeButton);
+    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
     React.render(
       React.createElement(DesignToggleRow, {
         initialScreen: screenId,
         screens: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
+        onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
         onScreenChange: designMode.changeScreen
       }),
