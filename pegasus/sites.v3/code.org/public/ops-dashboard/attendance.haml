@@ -88,6 +88,10 @@ template: none
       -if dashboard_user[:admin] || have_permission?('facilitator')
         %td{'ng-hide' => 'unexpected_teacher.editing == true'}
           {{unexpected_teacher.ops_last_name}}, {{unexpected_teacher.ops_first_name}}
+          -if dashboard_user[:admin] || have_permission?('facilitator')
+            %br
+            %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.unexpected_teachers.splice(workshop.unexpected_teachers.indexOf(unexpected_teacher), 1) && saveWorkshop(workshop)'}
+              Delete
         %td{'ng-show' => 'unexpected_teacher.editing == true', colspan:'{{workshop.segments.length + 1}}'}
           %h3
             Enter unexpected attendee's information

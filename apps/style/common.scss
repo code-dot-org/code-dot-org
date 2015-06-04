@@ -771,6 +771,31 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+.workspace-header {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: $headers_height;
+  color: white;
+  .workspace-header-clickable:hover {
+    cursor: pointer;
+    color: $yellow-dark;
+  }
+  span {
+    line-height: $headers_height;
+  }
+}
+
+#design-headers {
+  height: $headers_height;
+  background-color: $purple;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #headers {
   height: $headers_height;
   background-color: $purple;
@@ -779,16 +804,6 @@ $aniGifPreviewHeight: 60px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .workspace-header {
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: hidden;
-    height: $headers_height;
-    span {
-      color: white;
-      line-height: $headers_height;
-    }
-  }
   #toolbox-header {
     width: 270px;
     border-right: 1px solid gray;
