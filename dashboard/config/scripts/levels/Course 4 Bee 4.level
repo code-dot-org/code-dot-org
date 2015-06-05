@@ -21,8 +21,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "video_key": "C4_bee_conditional",
-    "maze_data": null
+    "video_key": "C4_bee_conditional"
   }
 }]]></config>
   <blocks>

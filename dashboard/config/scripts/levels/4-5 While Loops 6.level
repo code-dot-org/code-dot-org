@@ -26,10 +26,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "1bf89823ab796a97e67f36a453c6f57c"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

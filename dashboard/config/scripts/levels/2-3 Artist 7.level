@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish drawing the right half of the last window. Each square of the window is 25 pixels. ",
+    "instructions": "Finish drawing the right half of the last window. Each square window pane is 25 pixels wide. ",
     "x": "290",
     "y": "200",
     "start_direction": "90",
@@ -18,7 +18,18 @@
     "permitted_errors": "10",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

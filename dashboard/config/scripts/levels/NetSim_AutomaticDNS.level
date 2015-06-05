@@ -42,8 +42,7 @@
     "can_connect_to_routers": "true",
     "message_granularity": "packets",
     "automatic_receive": "true"
-  },
-  "md5": "e526a1297171f723f4c575c99f196fc5"
+  }
 }]]></config>
   <blocks/>
 </NetSim>
