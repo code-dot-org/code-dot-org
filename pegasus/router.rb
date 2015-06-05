@@ -13,6 +13,7 @@ require 'base64'
 require 'cgi'
 require 'json'
 require 'uri'
+require 'cdo/rack/https_redirect'
 require 'cdo/rack/upgrade_insecure_requests'
 
 if rack_env?(:production)
@@ -57,6 +58,7 @@ class Documents < Sinatra::Base
     configs
   end
 
+  use Rack::HTTPSRedirect unless rack_env?(:production)
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater

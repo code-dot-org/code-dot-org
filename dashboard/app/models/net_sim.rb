@@ -10,6 +10,8 @@ class NetSim < Blockly
     automatic_receive
     broadcast_mode
     connected_routers
+    minimum_extra_hops
+    maximum_extra_hops
     address_format
     packet_count_bit_width
     router_expects_packet_header

@@ -126,7 +126,7 @@ class CDOImpl < OpenStruct
     "#{rack_env}#{sep}#{domain}"
   end
 
-  def site_url(domain, path = '')
+  def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
     if rack_env?(:development)
       port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
@@ -134,15 +134,15 @@ class CDOImpl < OpenStruct
     end
 
     path = '/' + path unless path.empty? || path[0] == '/'
-    return "//#{host}#{path}"
+    "#{scheme}//#{host}#{path}"
   end
 
-  def studio_url(path = '')
-    site_url('studio.code.org', path)
+  def studio_url(path = '', scheme = '')
+    site_url('studio.code.org', path, scheme)
   end
 
-  def code_org_url(path = '')
-    site_url('code.org', path)
+  def code_org_url(path = '', scheme = '')
+    site_url('code.org', path, scheme)
   end
 
   def dir(*dirs)
