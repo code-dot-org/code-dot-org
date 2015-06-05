@@ -1446,6 +1446,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {number} defaultRouterMemory - How much data the router packet
  *           queue is able to hold before it starts dropping packets, in bits.
  *
+ * @property {number} defaultRandomDropChance - Odds that the router will drop
+ *           the packet for no reason while routing it.  Value in range
+ *           0 (no drops) to 1 (drop everything)
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -1521,6 +1525,7 @@ levels.custom = {
   defaultRouterBandwidth: Infinity,
   showRouterMemoryControl: false,
   defaultRouterMemory: Infinity,
+  defaultRandomDropChance: 0,
 
   // DNS tab and its controls
   showDnsModeControl: false,
@@ -9424,6 +9429,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
       levelConfig.defaultRouterMemory);
 
   /**
+   * Percent chance (0-1) that a packet being routed will be dropped for no
+   * reason.
+   * @type {number}
+   */
+  this.randomDropChance = utils.valueOr(row.randomDropChance,
+      levelConfig.defaultRandomDropChance);
+
+  /**
    * Determines a subset of connection and message events that this
    * router will respond to, only managing events from the given node ID,
    * to avoid conflicting with other clients also simulating this router.
@@ -9461,7 +9474,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Not persisted on server (though the heartbeat does its own persisting)
    *
    * @type {NetSimHeartbeat}
-   * @private
    */
   this.heartbeat = null;
 
@@ -9634,6 +9646,8 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
  * @property {DnsMode} dnsMode - Current DNS mode for the local network
  * @property {number} dnsNodeID - Entity ID of the current DNS node in the
  *           local network.
+ * @property {number} randomDropChance - Odds (0-1) that a packet being routed
+ *           will be dropped for no reason.
  */
 
 /**
@@ -9650,7 +9664,8 @@ NetSimRouterNode.prototype.buildRow = function () {
         bandwidth: serializeNumber(this.bandwidth),
         memory: serializeNumber(this.memory),
         dnsMode: this.dnsMode,
-        dnsNodeID: this.dnsNodeID
+        dnsNodeID: this.dnsNodeID,
+        randomDropChance: this.randomDropChance
       }
   );
 };
@@ -9667,6 +9682,7 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
   this.memory = deserializeNumber(remoteRow.memory);
   this.dnsMode = remoteRow.dnsMode;
   this.dnsNodeID = remoteRow.dnsNodeID;
+  this.randomDropChance = remoteRow.randomDropChance;
   this.stateChange.notifyObservers(this);
 };
 
@@ -10072,14 +10088,13 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
 
+    // Populate router wire cache with initial data
+    var cachedWires = this.shard_.wireTable.readAllCached();
+    this.onWireTableChange_(cachedWires);
+
     // Populate router log cache with initial data
-    this.shard_.logTable.readAll(function (err, rows) {
-      if (err) {
-        logger.warn("Failed to read from log table: " + err.message);
-        return;
-      }
-      this.onLogTableChange_(rows);
-    }.bind(this));
+    var cachedLogs = this.shard_.logTable.readAllCached();
+    this.onLogTableChange_(cachedLogs);
   }
 };
 
@@ -10783,6 +10798,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
   message.destroy(function (err, result) {
     if (err) {
       onComplete(err, result);
+      return;
+    }
+
+    // Apply random chance to drop packet, right as we are about to forward it
+    if (this.randomDropChance > 0 && netsimGlobals.random() <= this.randomDropChance) {
+      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+      onComplete(null);
       return;
     }
 
@@ -18096,6 +18118,13 @@ module.exports = {
    */
   setRandomSeed: function (newSeed) {
     pseudoRandomNumberFunction_ = seedrandom(newSeed);
+  },
+
+  /**
+   * @returns {number} a random value between 0 and 1
+   */
+  random: function () {
+    return pseudoRandomNumberFunction_();
   },
 
   /**
