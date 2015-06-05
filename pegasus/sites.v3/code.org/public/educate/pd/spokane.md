@@ -39,6 +39,8 @@ PACCAR 107
 <br />
 Spokane, WA 99258
 
+Parking will be free on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave.
+
 #### What do I bring to Phase 4 PD? ####
 Exploring Computer Science binder with curriculum
 <br />
