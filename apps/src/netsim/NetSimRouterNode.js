@@ -764,18 +764,23 @@ NetSimRouterNode.prototype.isFull = function () {
  * @private
  */
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
+  // There are no requirements in broadcast mode
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    return;
+  }
+
   // Require TO_ADDRESS for routing
   if (!packetSpec.some(function (headerField) {
         return headerField === Packet.HeaderType.TO_ADDRESS;
       })) {
-    logger.error("Packet specification does not have a toAddress field.");
+    logger.warn("Packet specification does not have a toAddress field.");
   }
 
   // Require FROM_ADDRESS for auto-DNS tasks
   if (!packetSpec.some(function (headerField) {
         return headerField === Packet.HeaderType.FROM_ADDRESS;
       })) {
-    logger.error("Packet specification does not have a fromAddress field.");
+    logger.warn("Packet specification does not have a fromAddress field.");
   }
 };
 
