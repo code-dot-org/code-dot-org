@@ -17,10 +17,10 @@ import cookie;
       levelbuilder: 'levelbuilder-staging',
       'levelbuilder-dev' => 'levelbuilder-development',
     }.each do |subdomain, node_name|
-      return "#{subdomain + sep + domain}" if node.name == node_name
+      return "#{subdomain}#{sep}#{domain}" if node.name == node_name
     end
 
-    "#{node.chef_environment + sep + domain}"
+    "#{node.chef_environment}#{sep}#{domain}"
   end
 
   def rack_env?(env)
