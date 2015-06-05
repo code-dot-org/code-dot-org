@@ -43,7 +43,7 @@ module Ops
       assert_equal @cohort.teachers.count, assigns(:workshop).teachers.count
     end
 
-    test "Facilitators can add teachers the day of a workshop" do
+    test "Facilitators can add unexpected teachers to a workshop" do
       sign_in @workshop.facilitators.first
       unexpected_teacher_1 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', ops_school: 'Washington Elementary', ops_gender: 'Female')
       unexpected_teacher_2 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.yy', ops_school: 'Washington Elementary', ops_gender: 'Female')
