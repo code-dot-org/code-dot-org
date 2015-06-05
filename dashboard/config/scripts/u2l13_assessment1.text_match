@@ -1,0 +1,7 @@
+name 'U2L13 Assessment1'
+title 'Assessment: Question 1'
+
+
+markdown <<MARKDOWN
+Describe the role of "lock" and "key" in encryption algorithms.
+MARKDOWN

@@ -1,6 +1,0 @@
-name 'Test 1'
-title 'This is a test'
-description 'whatever'
-question 'this is a question?'
-wrong 'wrong answer'
-right 'right answer'

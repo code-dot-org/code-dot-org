@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "instructions": "Send a message by setting the state of the wire to A or B.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
@@ -47,7 +47,10 @@
     "lock_bit_rate_control": "false",
     "show_chunk_size_control": "false",
     "lock_chunk_size_control": "false",
-    "default_bit_rate_bits_per_second": "0.5"
+    "default_bit_rate_bits_per_second": "0.5",
+    "video_key": "csp_internetsimulator_1",
+    "show_log_browser_button": "false",
+    "connected_routers": "false"
   }
 }]]></config>
   <blocks/>
