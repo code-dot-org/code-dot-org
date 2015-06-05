@@ -451,16 +451,10 @@ en:
         title: title
       U2L13 Student Lesson Introduction:
         Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
-        description here: description here
-        title: title
       U2L14 Student Lesson Introduction:
         Cracking the Code: Cracking the Code
-        description here: description here
-        title: title
       U2L15 Student Lesson Introduction:
         Encryption Algorithms: Encryption Algorithms
-        description here: description here
-        title: title
       U2L16 Student Lesson Introduction:
         description here: description here
         title: title
@@ -469,19 +463,12 @@ en:
         title: title
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
-        description here: description here
-        title: title
       U2L19 Student Lesson Introduction:
         Public Key Crypto: Public Key Crypto
-        description here: description here
-        title: title
-        ublic Key Crypto: ublic Key Crypto
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
         Security and Hacking in the Real World: Security and Hacking in the Real World
-        description here: description here
-        title: title
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
       U2L4 Student Lesson Introduction:
@@ -1209,15 +1196,11 @@ en:
         Assessment: Assessment
         Caesar cipher: Caesar cipher
         Random substitution cipher: Random substitution cipher
-        an encoded message created by replacing letters based upon their order of the alphabet: an encoded message created by replacing letters based upon their order of the alphabet
-        an encoded message created by replacing letters with arbitrary letters or symbols: an encoded message created by replacing letters with arbitrary letters or symbols
         another term for encrypted message: another term for encrypted message
         character frequency: character frequency
         cipher: cipher
         crack: crack
         decrypt: decrypt
-        encoded message created by replacing letters with arbitrary symbols: encoded message created by replacing letters with arbitrary symbols
-        encoded message with letters replaced based upon their alphabetical order: encoded message with letters replaced based upon their alphabetical order
         encrypt: encrypt
         encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
@@ -2912,7 +2895,6 @@ en:
       U2L02 Assessment1:
         'The Need for Addressing: Question 1': 'The Need for Addressing: Question 1'
       U2L02 Assessment2:
-        'The Need for Addressing: Question 2': 'The Need for Addressing: Question 2'
         'The Need for Addressing: Security Concerns': 'The Need for Addressing: Security Concerns'
       U2L02 Free Response Getting Started:
         'The Need for Addressing: Getting Started': 'The Need for Addressing: Getting Started'
@@ -2939,7 +2921,6 @@ en:
       U2L13 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L13 Free Response Getting Started:
-        Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
         'Tell Me a Secret: Getting Started': 'Tell Me a Secret: Getting Started'
       U2L13 Free Response Wrap Up:
         'Tell Me a Secret: Wrap Up': 'Tell Me a Secret: Wrap Up'
@@ -2950,7 +2931,6 @@ en:
       U2L15 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L15 Free Response Getting Started:
-        'Encryption Algorithms: Getting Started': 'Encryption Algorithms: Getting Started'
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
