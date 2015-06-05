@@ -13,7 +13,6 @@ require 'base64'
 require 'cgi'
 require 'json'
 require 'uri'
-require 'cdo/rack/https_redirect'
 require 'cdo/rack/upgrade_insecure_requests'
 
 if rack_env?(:production)
