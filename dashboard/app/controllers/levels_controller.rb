@@ -79,7 +79,6 @@ class LevelsController < ApplicationController
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update
-    level_params[:name] = level_params[:name].strip
     if level_params[:name] &&
         @level.name != level_params[:name] &&
         @level.name.downcase == level_params[:name].downcase
