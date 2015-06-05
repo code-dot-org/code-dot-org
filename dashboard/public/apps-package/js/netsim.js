@@ -2864,9 +2864,8 @@ NetSimTabsComponent.prototype.attachToRunLoop = function (runLoop) {
  */
 NetSimTabsComponent.prototype.render = function () {
   var levelConfig = netsimGlobals.getLevelConfig();
-  // Grab the reference area before we re-render in case we are wiping
-  // out the only copy.
-  var referenceArea = $('#reference_area');
+  // Clone the reference area (with handlers) before we re-render
+  var referenceArea = $('#reference_area').first().clone(true);
 
   var rawMarkup = buildMarkup({
     level: levelConfig
@@ -15071,6 +15070,9 @@ NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
  * Recreate markup within panel body.
  */
 NetSimRemoteNodeSelectionPanel.prototype.render = function () {
+  // Clone the reference area (with handlers) before we re-render
+  var referenceArea = $('#reference_area').first().clone(true);
+
   // Create boilerplate panel markup
   NetSimRemoteNodeSelectionPanel.superPrototype.render.call(this);
 
@@ -15082,6 +15084,9 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
     remoteNode: this.remoteNode_
   }));
   this.getBody().html(newMarkup);
+
+  // Move the reference area to beneath the instructions
+  this.getBody().find('.instructions').append(referenceArea);
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
