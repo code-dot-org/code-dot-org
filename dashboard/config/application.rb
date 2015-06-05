@@ -12,8 +12,6 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 
-require 'cdo/rack/deflater'
-require 'cdo/rack/https_redirect'
 require 'cdo/rack/upgrade_insecure_requests'
 require 'bootstrap-sass'
 require 'cdo/hash'
