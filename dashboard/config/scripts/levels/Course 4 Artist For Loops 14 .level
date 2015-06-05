@@ -21,8 +21,7 @@
     "instructions": "If you turn a little bit more or less than you normally would for a shape, it creates a neat effect. Try turning 89 degrees to create this twisted square spiral.",
     "use_contract_editor": "false",
     "embed": "false"
-  },
-  "md5": "f60cfafedc0561bef8d72e17fa3f405e"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

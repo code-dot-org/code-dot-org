@@ -43,10 +43,8 @@
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 5 2\",\r\n  \"callout_text\": \"You can create new functions to check safe-up? and safe-down?\",\r\n  \"element_id\": \"[id=':3.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "bd90f776afb9b3a0f31eb3a5f0c582a1"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

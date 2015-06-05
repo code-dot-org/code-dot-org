@@ -155,6 +155,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {number} defaultRouterMemory - How much data the router packet
  *           queue is able to hold before it starts dropping packets, in bits.
  *
+ * @property {number} defaultRandomDropChance - Odds that the router will drop
+ *           the packet for no reason while routing it.  Value in range
+ *           0 (no drops) to 1 (drop everything)
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -230,6 +234,7 @@ levels.custom = {
   defaultRouterBandwidth: Infinity,
   showRouterMemoryControl: false,
   defaultRouterMemory: Infinity,
+  defaultRandomDropChance: 0,
 
   // DNS tab and its controls
   showDnsModeControl: false,

@@ -14,7 +14,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "12",
+    "ideal": "6",
     "slider_speed": "0.7",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -23,7 +23,14 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "video_key": "C3_artist_nested_loops"
+    "video_key": "C3_artist_nested_loops",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

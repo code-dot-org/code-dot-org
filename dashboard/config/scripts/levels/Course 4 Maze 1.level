@@ -18,8 +18,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"run\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"drag_blocks\",\"callout_text\":\"Drag a \\\"move\\\" block and snap it below the other block\",\"element_id\":\"#move_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "video_key": "C4_intro",
-    "maze_data": null
+    "video_key": "C4_intro"
   }
 }]]></config>
   <blocks>

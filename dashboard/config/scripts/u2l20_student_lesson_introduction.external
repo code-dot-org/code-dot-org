@@ -1,6 +1,6 @@
 name 'U2L20 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'Security and Hacking in the Real World'
+
 css 'unplugged'
 skip_dialog 'true'
 
@@ -9,21 +9,22 @@ markdown <<MARKDOWN
 
 # Background
 
-Background goes here
-
-# Vocabulary
-
-Vocabulary goes here
+Security is a basic human need. Since the beginning of time, humans have been creating a variety of tools and processes to keep themselves, their families, communities, and possessions safe from natural elements and human enemies. We have entered a new age of inventing tools to keep us secure. The difference this time is that the threats are electronic. 
 
 # Lesson
+* Explore important Internet security issues.
+* Select an issue to explore the social, economic, and/or cultural impacts.
+* Report on what you learned about how this issue.
 
-* Lesson overview
-* Goes here
 
 # Resources
+* Video: NEED URL The Internet: How to Avoid Getting Hacked 
+* Video: NEED URL The Internet: Cybersecurity and Crime
+* Worksheet: Security and Hacking in the Real World Guided Viewing
+NEED URL
+* Activity Guide: <a href="https://docs.google.com/document/d/1ax8pBNL_7Hq2tkQqNF7xHrTs5pbvjJtoFWNnMc0wcSM" target="_blank">Mini Performance task: Impact NEED REAL TITLE
+</a>
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

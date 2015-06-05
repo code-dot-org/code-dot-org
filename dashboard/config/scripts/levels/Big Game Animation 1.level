@@ -37,10 +37,8 @@
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
     "video_key": "alg_13_biggame_animation",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "eaa280dd2c1b460317d0f614d46c0bdc"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks/>
 </Studio>

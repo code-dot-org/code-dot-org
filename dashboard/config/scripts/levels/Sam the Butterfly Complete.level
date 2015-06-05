@@ -42,8 +42,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "generate_function_pass_blocks": "true",
-    "timeout_after_when_run": "false",
-    "maze_data": null
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
