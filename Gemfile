@@ -143,5 +143,6 @@ gem 'aws-sdk', '~> 2'
 gem 'rubocop', require: false, group: [:development, :staging]
 # Reduce volume of production logs
 gem 'lograge'
+
 # Enforce SSL
-gem 'rack-ssl-enforcer', group: [:development, :staging, :test]
+gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
