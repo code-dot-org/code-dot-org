@@ -86,11 +86,11 @@ module.exports = {
         // click design mode button
         $(designModeButton).click();
 
-        var lightestGray= 'rgb(231, 232, 234)';
+        var lightestGray = 'rgb(231, 232, 234)';
         var orange = 'rgb(255, 160, 0)';
         assert.equal(lightestGray, $("#designModeButton").css('background-color'),
           'expected Design button to have lightest gray background.');
-        assert.equal( orange, $("#codeModeButton").css('background-color'),
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
           'expected Code button to have orange background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
@@ -120,7 +120,6 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $("#designModeButton").click();
-
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
@@ -294,7 +293,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $("#designModeButton").click();
-        var lightestGray= 'rgb(231, 232, 234)';
+        var lightestGray = 'rgb(231, 232, 234)';
         var orange = 'rgb(255, 160, 0)';
         assert.equal(lightestGray, $("#designModeButton").css('background-color'),
           'expected Design button to have lightest gray background.');
@@ -308,7 +307,7 @@ module.exports = {
 
         // return to code mode
         $("#codeModeButton").click();
-        assert.equal( orange, $("#designModeButton").css('background-color'),
+        assert.equal(orange, $("#designModeButton").css('background-color'),
           'expected Design button to have orange background.');
         assert.equal(lightestGray, $("#codeModeButton").css('background-color'),
           'expected Code button to have lightest gray background.');
