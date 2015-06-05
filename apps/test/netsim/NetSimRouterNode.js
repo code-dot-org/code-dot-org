@@ -32,7 +32,7 @@ var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard,
-      routerA, routerB, routerC, routerD, routerE,
+      routerA, routerB, routerC, routerD, routerE, routerF,
       clientA, clientB, clientC;
 
   /**
@@ -120,17 +120,34 @@ describe("NetSimRouterNode", function () {
         expectedValue + ", but got " + realValue);
   };
 
+  /**
+   * Call tick() with an advanced time parameter on the argument until
+   * no change is detected in the log table.
+   * @param {NetSimRouterNode|NetSimLocalClientNode} tickable
+   */
+  var tickUntilLogsStabilize = function (tickable) {
+    var t = 1, lastLogCount;
+    do {
+      lastLogCount = countRows('logTable');
+      tickable.tick({time: t});
+      t += 1;
+    } while (countRows('logTable') !== lastLogCount);
+  };
+
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     netsimTestUtils.initializeGlobalsToDefaultValues();
     netsimGlobals.getLevelConfig().broadcastMode = false;
 
     testShard = fakeShard();
+
     routerA = makeRemoteRouter();
     routerB = makeRemoteRouter();
     routerC = makeRemoteRouter();
     routerD = makeRemoteRouter();
     routerE = makeRemoteRouter();
+    routerF = makeRemoteRouter();
+
     clientA = makeRemoteClient('clientA');
     clientB = makeRemoteClient('clientB');
     clientC = makeRemoteClient('clientC');
@@ -1320,20 +1337,11 @@ describe("NetSimRouterNode", function () {
         clientA.sendMessage(payload, function () {});
       };
 
-      var tickUntilStable = function () {
-        var t = 1, lastLogCount;
-        do {
-          lastLogCount = countRows('logTable');
-          routerA.tick({time: t});
-          t += 1;
-        } while (countRows('logTable') !== lastLogCount);
-      };
-
       var send100MessagesAndTickUntilStable = function () {
         for (var i = 0; i < 100; i++) {
           sendMessageOfSize(8);
         }
-        tickUntilStable();
+        tickUntilLogsStabilize(routerA);
       };
 
       var assertHowManyDropped = function (expectedDropCount) {
@@ -1741,6 +1749,7 @@ describe("NetSimRouterNode", function () {
       routerC.setBandwidth(25);
       routerD.destroy(); // We only want three routers in this test.
       routerE.destroy();
+      routerF.destroy();
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
@@ -1796,6 +1805,7 @@ describe("NetSimRouterNode", function () {
       routerC.setBandwidth(25);
       routerD.setBandwidth(25);
       routerE.destroy(); // Only use four routers
+      routerF.destroy();
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
@@ -1851,36 +1861,23 @@ describe("NetSimRouterNode", function () {
 
 
     describe ("extra hop randomization", function () {
-      var packetBinary, routerF;
-
-      var sendMessageAndTickUntilRouted = function () {
-        clientA.sendMessage(packetBinary, function () {});
-        var t = 1000;
-        var lastLogCount;
-        do {
-          lastLogCount = countRows('logTable');
-          clientA.tick({time: t});
-          t += 1000;
-        } while (countRows('logTable') !== lastLogCount);
-      };
-
-      beforeEach(function () {
-        routerF = makeRemoteRouter(); // Six routers
-
-        packetBinary = encoder.concatenateBinary(
+      var sendFromAToB = function () {
+        var packetBinary = encoder.concatenateBinary(
             encoder.makeBinaryHeaders({
               toAddress: clientB.getAddress(),
               fromAddress: clientA.getAddress()
             }),
             dataConverters.asciiToBinary('wop'));
-      });
+        clientA.sendMessage(packetBinary, function () {});
+        tickUntilLogsStabilize(clientA);
+      };
 
 
       it ("uses one order here", function () {
         netsimGlobals.getLevelConfig().minimumExtraHops = 2;
         netsimGlobals.getLevelConfig().maximumExtraHops = 2;
         netsimGlobals.setRandomSeed('two-hops');
-        sendMessageAndTickUntilRouted();
+        sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerC.entityID,
@@ -1893,7 +1890,7 @@ describe("NetSimRouterNode", function () {
         netsimGlobals.getLevelConfig().minimumExtraHops = 2;
         netsimGlobals.getLevelConfig().maximumExtraHops = 2;
         netsimGlobals.setRandomSeed('for something completely different');
-        sendMessageAndTickUntilRouted();
+        sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerE.entityID,
@@ -1906,7 +1903,7 @@ describe("NetSimRouterNode", function () {
         netsimGlobals.getLevelConfig().minimumExtraHops = 0;
         netsimGlobals.getLevelConfig().maximumExtraHops = 3;
         netsimGlobals.setRandomSeed('some random seed');
-        sendMessageAndTickUntilRouted();
+        sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerD.entityID,
@@ -1920,7 +1917,7 @@ describe("NetSimRouterNode", function () {
         netsimGlobals.getLevelConfig().minimumExtraHops = 0;
         netsimGlobals.getLevelConfig().maximumExtraHops = 3;
         netsimGlobals.setRandomSeed('second random seed');
-        sendMessageAndTickUntilRouted();
+        sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerD.entityID,
@@ -1939,6 +1936,7 @@ describe("NetSimRouterNode", function () {
       routerC.setBandwidth(25);
       routerD.destroy(); // Only use three routers in this example
       routerE.destroy();
+      routerF.destroy();
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
