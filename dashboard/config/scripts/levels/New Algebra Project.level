@@ -11,7 +11,6 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
     "is_k1": "false",
-    "is_project_level": "true",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -39,10 +38,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "c237ce9aabcfcc79fc9c6a35e26b334b"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

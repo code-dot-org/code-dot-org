@@ -44,10 +44,8 @@
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "e1a7a760c68755d3d79b203c720377d9"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -75,18 +75,23 @@ module.exports = {
         assert.equal(screen1.id, 'screen1');
         assert.equal(screen1.tagName, 'DIV');
 
-        // Our toggle button says design, and there's no dropdown
-        var designModeToggle = document.getElementById('designModeToggle');
-        assert.equal(designModeToggle.textContent, 'Design');
+        // The design button is visible, and there's no dropdown
+        var designModeButton= document.getElementById('designModeButton');
+        assert.equal(designModeButton.textContent, 'Design');
         assert.equal(document.getElementById('screenSelector'), null);
 
         // our design mode box is hidden
         assert.equal($('#designWorkspace').is(':visible'), false);
 
-        // click toggle
-        $(designModeToggle).click();
+        // click design mode button
+        $(designModeButton).click();
 
-        assert.equal(designModeToggle.textContent, 'Code');
+        var lightestGray = 'rgb(231, 232, 234)';
+        var orange = 'rgb(255, 160, 0)';
+        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
+          'expected Design button to have lightest gray background.');
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
+          'expected Code button to have orange background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
         assert.equal(screenSelector.options.length, 1, 'expected 1 screen');
@@ -114,8 +119,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
+        $("#designModeButton").click();
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
@@ -161,8 +165,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
+        $("#designModeButton").click();
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
@@ -257,7 +260,7 @@ module.exports = {
         'button("button2", "my_button_text");',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
+        $("#designModeButton").click();
 
         // drag a new screen in
         dragToVisualization('SCREEN', 10, 10);
@@ -289,9 +292,13 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
-
+        $("#designModeButton").click();
+        var lightestGray = 'rgb(231, 232, 234)';
+        var orange = 'rgb(255, 160, 0)';
+        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
+          'expected Design button to have lightest gray background.');
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
+          'expected Code button to have orange background.');
         // add a screen
         dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(1, 'id', 'screen2', assert);
@@ -299,8 +306,11 @@ module.exports = {
         assert.equal($('#screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         // return to code mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Design');
+        $("#codeModeButton").click();
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button to have orange background.');
+        assert.equal(lightestGray, $("#codeModeButton").css('background-color'),
+          'expected Code button to have lightest gray background.');
 
         // should be on screen 1
         assert.equal($('#screen1')[0].style.display === 'none', false, 'screen 1 visible');
@@ -323,8 +333,7 @@ module.exports = {
       xml: "",
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
+        $("#designModeButton").click();
 
         dragToVisualization('BUTTON', 10, 10);
 
