@@ -196,7 +196,7 @@ levels.custom = {
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,
-    "declareAssign_list_abde": null,
+    "declareAssign_list_abd": null,
     "listLength": null,
     "insertItem": null,
     "appendItem": null,
@@ -518,8 +518,9 @@ function adjustAppSizeStyles(container) {
           // NOTE: selectorText can appear in two different forms when styles and IDs
           // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
+          var maxChangedRules = 8;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < maxChangedRules; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive" ||
                 childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
@@ -548,7 +549,8 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
-                  Applab.appWidth * scale + "px;";
+                  Applab.appWidth * scale + "px; line-height: " +
+              Applab.appHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -5070,7 +5072,7 @@ module.exports.blocks = [
   {'func': 'length', 'block': 'str.length', 'category': 'Variables', 'modeOptionName': '*.length' },
   {'func': 'toUpperCase', 'blockPrefix': 'str.toUpperCase', 'category': 'Variables', 'modeOptionName': '*.toUpperCase' },
   {'func': 'toLowerCase', 'blockPrefix': 'str.toLowerCase', 'category': 'Variables', 'modeOptionName': '*.toLowerCase' },
-  {'func': 'declareAssign_list_abde', 'block': 'var list = ["a", "b", "d", "e"];', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'declareAssign_list_abd', 'block': 'var list = ["a", "b", "d"];', 'category': 'Variables', 'noAutocomplete': true },
   {'func': 'listLength', 'block': 'list.length', 'category': 'Variables', 'noAutocomplete': true },
   {'func': 'insertItem', 'parent': dontMarshalApi, 'category': 'Variables', 'paletteParams': ['list','index','item'], 'params': ["list", "2", '"c"'], 'dontMarshal': true },
   {'func': 'appendItem', 'parent': dontMarshalApi, 'category': 'Variables', 'paletteParams': ['list','item'], 'params': ["list", '"f"'], 'dontMarshal': true },
