@@ -688,28 +688,17 @@ describe("NetSimRouterNode", function () {
       netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
       encoder = new Packet.Encoder('4', 0, packetHeaderSpec);
 
+      // Manually connect nodes
+      clientA.initializeSimulation(null, null);
+      clientA.connectToRouter(routerA);
+      routerA.stopSimulation();
+
+      clientB.initializeSimulation(null, null);
+      clientB.connectToRouter(routerA);
+      routerA.stopSimulation();
+
       // Tell router to simulate for local node
       routerA.initializeSimulation(clientA.entityID);
-
-      // Manually connect nodes
-      var wire;
-      NetSimWire.create(testShard, clientA.entityID, routerA.entityID, function(e, w) {
-        wire = w;
-      });
-      wire.localHostname = clientA.getHostname();
-      wire.localAddress = '1';
-      wire.remoteAddress = '0';
-      wire.update();
-      clientA.myWire = wire;
-
-      NetSimWire.create(testShard, clientB.entityID, routerA.entityID, function (e, w) {
-        wire = w;
-      });
-      wire.localHostname = clientB.getHostname();
-      wire.localAddress = '2';
-      wire.remoteAddress = '0';
-      wire.update();
-      clientB.myWire = wire;
 
       var addressTable = routerA.getAddressTable();
       assertEqual(addressTable.length, 2);
@@ -722,20 +711,11 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("ignores messages sent to itself from other clients", function () {
-      var from = clientB.entityID;
-      var to = routerA.entityID;
-      NetSimMessage.send(
-          testShard,
-          {
-            fromNodeID: from,
-            toNodeID: to,
-            simulatedBy: from,
-            payload: 'garbage'
-          },
-          function () {});
+      clientB.sendMessage('garbage', function () {});
+      routerA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 0);
-      assertFirstMessageProperty('fromNodeID', from);
-      assertFirstMessageProperty('toNodeID', to);
+      assertFirstMessageProperty('fromNodeID', clientB.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
     });
 
     it ("ignores messages sent to others", function () {
@@ -750,6 +730,7 @@ describe("NetSimRouterNode", function () {
             payload: 'garbage'
           },
           function () {});
+      routerA.tick({time: 1000});
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', from);
@@ -757,22 +738,9 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("does not forward malformed packets", function () {
-      var from = clientA.entityID;
-      var to = routerA.entityID;
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      NetSimMessage.send(
-          testShard,
-          {
-            fromNodeID: from,
-            toNodeID: to,
-            simulatedBy: from,
-            payload: 'garbage'
-          },
-          function () {});
-
-      // Router must tick to process messages; 1000ms is sufficient time for
-      // a short packet.
+      clientA.sendMessage('garbage', function () {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
@@ -780,26 +748,11 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("does not forward packets with no match in the local network", function () {
-      var fromNodeID = clientA.entityID;
-      var toNodeID = routerA.entityID;
-
       var payload = encoder.concatenateBinary({
         toAddress: '1111',
         fromAddress: '1111'
       }, 'messageBody');
-
-      NetSimMessage.send(
-          testShard,
-          {
-            fromNodeID: fromNodeID,
-            toNodeID: toNodeID,
-            simulatedBy: fromNodeID,
-            payload: payload
-          },
-          function () {});
-
-      // Router must tick to process messages; 1000ms is sufficient time for
-      // a short packet.
+      clientA.sendMessage(payload, function () {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
@@ -807,8 +760,6 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("forwards packets when the toAddress is found in the network", function () {
-      var fromNodeID = clientA.entityID;
-      var toNodeID = routerA.entityID;
       var fromAddress = clientA.address;
       var toAddress = clientB.address;
 
@@ -816,19 +767,7 @@ describe("NetSimRouterNode", function () {
         toAddress: addressStringToBinary(toAddress, netsimGlobals.getLevelConfig().addressFormat),
         fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
       }, 'messageBody');
-
-      NetSimMessage.send(
-          testShard,
-          {
-            fromNodeID: fromNodeID,
-            toNodeID: toNodeID,
-            simulatedBy: fromNodeID,
-            payload: payload
-          },
-          function () {});
-
-      // Router must tick to process messages; 1000ms is sufficient time for
-      // a short packet.
+      clientA.sendMessage(payload, function () {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 1);
