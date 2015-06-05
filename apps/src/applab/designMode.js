@@ -135,6 +135,11 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'height':
       element.style.height = value + 'px';
@@ -158,6 +163,8 @@ designMode.onPropertyChange = function(element, name, value) {
       var backgroundImage = new Image();
       backgroundImage.onload = function(){
         element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+          backgroundImage.naturalHeight + 'px';
         element.style.width = backgroundImage.naturalWidth + 'px';
         element.style.height = backgroundImage.naturalHeight + 'px';
         // Re-render properties
@@ -420,7 +427,9 @@ function makeDraggable (jq) {
         $(this).children().css('z-index', '');
       },
       resize: function () {
-        designMode.renderDesignWorkspace(elm[0]);
+        var element = elm[0];
+        designMode.onPropertyChange(element, 'width', element.style.width);
+        designMode.onPropertyChange(element, 'height', element.style.height);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
