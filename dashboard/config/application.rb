@@ -12,6 +12,7 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 
+require 'cdo/rack/deflater'
 require 'cdo/rack/https_redirect'
 require 'cdo/rack/upgrade_insecure_requests'
 require 'bootstrap-sass'
@@ -37,6 +38,7 @@ module Dashboard
 
     unless Rails.env.production?
       config.middleware.insert_before ::ActionDispatch::Static, ::Rack::HTTPSRedirect
+      config.middleware.insert_before ::ActionDispatch::Static, ::Rack::Deflater
       config.middleware.use ::Rack::UpgradeInsecureRequests
       config.middleware.use ::Rack::ContentLength
     end
