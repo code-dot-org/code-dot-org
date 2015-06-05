@@ -91,6 +91,13 @@ module.exports = {
   },
 
   /**
+   * @returns {number} a random value between 0 and 1
+   */
+  random: function () {
+    return pseudoRandomNumberFunction_();
+  },
+
+  /**
    * Get a random integer in the given range.
    * @param {number} low inclusive lower end of range
    * @param {number} high exclusive upper end of range
