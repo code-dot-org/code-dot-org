@@ -15,6 +15,7 @@
 */
 /* global -Blockly */
 /* global $ */
+/* global sendReport */
 'use strict';
 
 var utils = require('../utils');
@@ -395,31 +396,12 @@ NetSim.prototype.initWithUserName_ = function (user) {
   window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
 
 
-  $('.submitButton').click(function () {
-    var submitButton = $('.submitButton');
-    if (submitButton.attr('disabled')) {
+  $('.submitButton').click(function (jQueryEvent) {
+    if ($(jQueryEvent.target).attr('disabled')) {
       return;
     }
 
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
-
-    sendReport({
-      fallbackResponse: this.reportingInfo_.fallback_response,
-      callback: this.reportingInfo_.callback,
-      app: 'netsim',
-      level: this.level.id,
-      result: true,
-      testResult: 100,
-      onComplete: function () {
-        $('.submitButton').attr('disabled', false);
-        if (lastServerResponse.videoInfo) {
-          //showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.nextRedirect) {
-          window.location.href = lastServerResponse.nextRedirect;
-        }
-      }
-    });
+    this.onContinueToNextLevel();
   }.bind(this));
 };
 
@@ -1269,4 +1251,38 @@ NetSim.prototype.updateLayout = function () {
 
   // Manually adjust the logwrap to the remaining height
   logWrap.css('height', rightColumnHeight - sendPanelHeight);
+};
+
+/**
+ * Appropriate steps for when the student hits the "Continue to next level"
+ * button.  Should mark the level as complete and navigate to the next level.
+ */
+NetSim.prototype.onContinueToNextLevel = function () {
+  // Avoid multiple simultaneous submissions.
+  $('.submitButton').attr('disabled', true);
+
+  sendReport({
+    fallbackResponse: this.reportingInfo_.fallback_response,
+    callback: this.reportingInfo_.callback,
+    app: 'netsim',
+    level: this.level.id,
+    result: true,
+    testResult: 100,
+    onComplete: function (serverResponse) {
+
+      // Re-enable submit button, in case there's nowhere to go.
+      $('.submitButton').attr('disabled', false);
+
+      // If there's somewhere to go, disconnect and go!
+      if (serverResponse.redirect) {
+        if (this.isConnectedToRemote()) {
+          this.disconnectFromRemote(function () {
+            window.location.href = serverResponse.redirect;
+          });
+        } else {
+          window.location.href = serverResponse.redirect;
+        }
+      }
+    }.bind(this)
+  });
 };
