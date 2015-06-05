@@ -53,9 +53,9 @@ social:
 | Rhode Island | Math, Science |
 | Tennessee | Math |
 | Texas | Math, Other |
-| Utah | Math |
+| Utah | Math, Science |
 | Vermont | Math |
-| Virginia | Math |
+| Virginia | Math, Science |
 | Washington | Math, Science |
 | Wisconsin | Math |
 

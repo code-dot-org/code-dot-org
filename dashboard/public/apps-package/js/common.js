@@ -4706,7 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"./locale":143,"./utils":308}],286:[function(require,module,exports){
+},{"./locale":143,"./utils":309}],287:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4721,7 +4721,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n\n    ');38; if (data.hasDesignMode) { ; buf.push('\n      <div id="designToggleRow"></div>\n    ');40; } ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <span>', escape((86,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n          <span id="hide-toolbox" style="display:none;">&nbsp;', escape((87,  msg.hideToolbox() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((89,  msg.showToolbox() )), '</span></div>\n        <div id="show-code-header" class="workspace-header"><span>', escape((90,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header"><span>', escape((91,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((93,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((95,  data.blockCounterClass )), '>\n              ', escape((96,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((99,  data.idealBlockNumber )), '</span>\n            <span> ', escape((100,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');105; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');107; } ; buf.push('\n    ');108; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (109,  data.extraControlRows ), '\n    ');110; } ; buf.push('\n  </div>\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');115; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <span>', escape((86,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n          <span id="hide-toolbox" style="display:none;">&nbsp;', escape((87,  msg.hideToolbox() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((89,  msg.showToolbox() )), '</span></div>\n        <div id="show-code-header" class="workspace-header"><span>', escape((90,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header"><span>', escape((91,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((93,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((95,  data.blockCounterClass )), '>\n              ', escape((96,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((99,  data.idealBlockNumber )), '</span>\n            <span> ', escape((100,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');105; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');107; } ; buf.push('\n    ');108; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (109,  data.extraControlRows ), '\n    ');110; } ; buf.push('\n  </div>\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');115; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4729,7 +4729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],261:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],261:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5070,7 +5070,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],292:[function(require,module,exports){
+},{}],293:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -5218,7 +5218,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":5,"./blocksCommon":69,"./dom":101,"./required_block_utils":258,"./utils":308}],258:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":69,"./dom":101,"./required_block_utils":258,"./utils":309}],258:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5541,7 +5541,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":68,"./locale":143,"./utils":308,"./xml":309}],69:[function(require,module,exports){
+},{"./block_utils":68,"./locale":143,"./utils":309,"./xml":310}],69:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -6576,6 +6576,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
                          Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
   var newVizWidthString = newVizWidth + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
   if (this.isRtl()) {
@@ -6585,10 +6586,11 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationResizeBar.style.left = newVizWidthString;
     codeWorkspace.style.left = newVizWidthString;
   }
+  visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
-  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  visualization.style.maxHeight = newVizHeightString;
   applyTransformScaleToChildren(visualization,
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {
@@ -7331,7 +7333,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":66,"./block_utils":68,"./constants.js":100,"./dom":101,"./dropletUtils":102,"./feedback":122,"./locale":143,"./templates/builder.html.ejs":280,"./templates/buttons.html.ejs":281,"./templates/instructions.html.ejs":283,"./templates/learn.html.ejs":284,"./templates/makeYourOwn.html.ejs":285,"./utils":308,"./xml":309,"url":476}],476:[function(require,module,exports){
+},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":66,"./block_utils":68,"./constants.js":100,"./dom":101,"./dropletUtils":102,"./feedback":122,"./locale":143,"./templates/builder.html.ejs":281,"./templates/buttons.html.ejs":282,"./templates/instructions.html.ejs":284,"./templates/learn.html.ejs":285,"./templates/makeYourOwn.html.ejs":286,"./utils":309,"./xml":310,"url":477}],477:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8040,13 +8042,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":459,"querystring":462}],462:[function(require,module,exports){
+},{"punycode":460,"querystring":463}],463:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":460,"./encode":461}],461:[function(require,module,exports){
+},{"./decode":461,"./encode":462}],462:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8133,7 +8135,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],460:[function(require,module,exports){
+},{}],461:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8219,7 +8221,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],459:[function(require,module,exports){
+},{}],460:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8730,7 +8732,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],285:[function(require,module,exports){
+},{}],286:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8750,7 +8752,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],284:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8772,7 +8774,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],283:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],284:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8792,7 +8794,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],280:[function(require,module,exports){
+},{"ejs":480}],281:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8812,7 +8814,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],122:[function(require,module,exports){
+},{"ejs":480}],122:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10042,7 +10044,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":98,"./constants":100,"./dom":101,"./feedbackBlocks":123,"./locale":143,"./templates/buttons.html.ejs":281,"./templates/code.html.ejs":282,"./templates/shareFailure.html.ejs":288,"./templates/sharing.html.ejs":289,"./templates/showCode.html.ejs":290,"./templates/trophy.html.ejs":291,"./utils":308,"./xml":309}],291:[function(require,module,exports){
+},{"./codegen":98,"./constants":100,"./dom":101,"./feedbackBlocks":123,"./locale":143,"./templates/buttons.html.ejs":282,"./templates/code.html.ejs":283,"./templates/shareFailure.html.ejs":289,"./templates/sharing.html.ejs":290,"./templates/showCode.html.ejs":291,"./templates/trophy.html.ejs":292,"./utils":309,"./xml":310}],292:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10062,7 +10064,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],290:[function(require,module,exports){
+},{"ejs":480}],291:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10082,7 +10084,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],289:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],290:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10102,7 +10104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],288:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],289:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10122,7 +10124,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],282:[function(require,module,exports){
+},{"ejs":480}],283:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10142,7 +10144,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],281:[function(require,module,exports){
+},{"ejs":480}],282:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10162,7 +10164,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":479}],123:[function(require,module,exports){
+},{"../locale":143,"ejs":480}],123:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10292,7 +10294,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":100,"./templates/readonly.html.ejs":287}],287:[function(require,module,exports){
+},{"./constants":100,"./templates/readonly.html.ejs":288}],288:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10313,7 +10315,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],101:[function(require,module,exports){
+},{"ejs":480}],101:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -10384,9 +10386,9 @@ exports.addClickTouchEvent = function(element, handler) {
 var TOUCH_MAP = {
   //  Incomplete list, add as needed.
   click: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
   },
   mousedown: {
     standard: 'touchstart',
@@ -10804,7 +10806,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":309}],66:[function(require,module,exports){
+},{"./xml":310}],66:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -11274,7 +11276,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],60:[function(require,module,exports){
+},{"ejs":480}],60:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -11530,7 +11532,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":308}],65:[function(require,module,exports){
+},{"../utils":309}],65:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11555,7 +11557,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],479:[function(require,module,exports){
+},{"ejs":480}],480:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11910,7 +11912,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":480,"./utils":481,"fs":310,"path":457}],481:[function(require,module,exports){
+},{"./filters":481,"./utils":482,"fs":311,"path":458}],482:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11934,7 +11936,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],480:[function(require,module,exports){
+},{}],481:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12133,7 +12135,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],457:[function(require,module,exports){
+},{}],458:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12361,7 +12363,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":458}],458:[function(require,module,exports){
+},{"_process":459}],459:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12420,7 +12422,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],310:[function(require,module,exports){
+},{}],311:[function(require,module,exports){
 
 },{}],3:[function(require,module,exports){
 /**
@@ -12565,7 +12567,447 @@ process.umask = function() { return 0; };
     };
 
 
-},{}],98:[function(require,module,exports){
+},{}],1:[function(require,module,exports){
+var codegen = require('./codegen');
+var utils = require('./utils');
+var _ = utils.getLodash();
+
+/**
+ * Create a JSInterpreter object. This object wraps an Interpreter object and
+ * adds stepping, batching of steps, code highlighting, error handling,
+ * breakpoints, general debug capabilities (step in, step out, step over), and
+ * an optional event queue.
+ */
+var JSInterpreter = module.exports = function (options) {
+
+  this.studioApp = options.studioApp;
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return false; };
+  this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
+  this.onNextStepChanged = options.onNextStepChanged || function() {};
+  this.onPause = options.onPause || function() {};
+  this.onExecutionError = options.onExecutionError || function() {};
+  this.onExecutionWarning = options.onExecutionWarning || function() {};
+
+  this.paused = false;
+  this.nextStep = StepType.RUN;
+  this.maxValidCallExpressionDepth = 0;
+  this.callExpressionSeenAtDepth = [];
+
+  this.codeInfo = {};
+  this.codeInfo.userCodeStartOffset = 0;
+  this.codeInfo.userCodeLength = options.code.length;
+  var session = this.studioApp.editor.aceEditor.getSession();
+  this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  if (options.enableEvents) {
+    this.eventQueue = [];
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    options.code += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
+                 'setCallbackRetVal(ret); }}';
+  }
+
+  var self = this;
+  var initFunc = function (interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, options.blocks, scope);
+
+    // Only allow five levels of depth when marshalling the return value
+    // since we will occasionally return DOM Event objects which contain
+    // properties that recurse over and over...
+    var wrapper = codegen.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: _.bind(self.nativeGetCallback, self),
+        maxDepth: 5
+    });
+    interpreter.setProperty(scope,
+                            'getCallback',
+                            interpreter.createNativeFunction(wrapper));
+
+    wrapper = codegen.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: _.bind(self.nativeSetCallbackRetVal, self),
+    });
+    interpreter.setProperty(scope,
+                            'setCallbackRetVal',
+                            interpreter.createNativeFunction(wrapper));
+  };
+
+  try {
+    this.interpreter = new window.Interpreter(options.code, initFunc);
+  }
+  catch(err) {
+    this.onExecutionError(err);
+  }
+
+};
+
+JSInterpreter.StepType = {
+  RUN:  0,
+  IN:   1,
+  OVER: 2,
+  OUT:  3,
+};
+
+/**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+JSInterpreter.prototype.nativeGetCallback = function () {
+  var retVal = this.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    this.seenEmptyGetCallbackDuringExecution = true;
+  }
+  return retVal;
+};
+
+JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
+  if (this.eventQueue.length === 0) {
+    // If nothing else is in the event queue, then store this return value
+    // away so it can be returned in the native event handler
+    this.seenReturnFromCallbackDuringExecution = true;
+    this.lastCallbackRetVal = retVal;
+  }
+  // Provide warnings to the user if this function has been called with a
+  // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
+  if (!this.runUntilCallbackReturn &&
+      typeof this.lastCallbackRetVal !== 'undefined') {
+    this.onExecutionWarning("Function passed to onEvent() has taken too long " +
+                            "- the return value was ignored.");
+    if (!this.shouldRunAtMaxSpeed()) {
+      this.onExecutionWarning("  (try moving the speed slider to its maximum value)");
+    }
+  }
+};
+
+/**
+ * Queue an event to be fired in the interpreter. The nativeArgs are optional.
+ * The function must be an interpreter function object (not native).
+ */
+JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
+  this.eventQueue.push({
+    'fn': interpreterFunc,
+    'arguments': nativeArgs
+  });
+};
+
+
+var StepType = JSInterpreter.StepType;
+
+/**
+ * Small helper to step the interpreter so that exception handler can exist outside
+ * of the core executeInterpeter() function (improves browser JS engine performance)
+ */
+function safeStepInterpreter(jsi) {
+  try {
+    jsi.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
+
+/**
+ * Execute the interpreter
+ */
+JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
+  this.runUntilCallbackReturn = runUntilCallbackReturn;
+  if (runUntilCallbackReturn) {
+    delete this.lastCallbackRetVal;
+  }
+  this.seenEmptyGetCallbackDuringExecution = false;
+  this.seenReturnFromCallbackDuringExecution = false;
+
+  var atInitialBreakpoint = this.paused &&
+                            this.nextStep === StepType.IN &&
+                            firstStep;
+  var atMaxSpeed = false;
+
+  if (this.paused) {
+    switch (this.nextStep) {
+      case StepType.RUN:
+        // Bail out here if in a break state (paused), but make sure that we still
+        // have the next tick queued first, so we can resume after un-pausing):
+        return;
+      case StepType.OUT:
+        // If we haven't yet set stepOutToStackDepth, work backwards through the
+        // history of callExpressionSeenAtDepth until we find the one we want to
+        // step out to - and store that in stepOutToStackDepth:
+        if (this.interpreter && typeof this.stepOutToStackDepth === 'undefined') {
+          this.stepOutToStackDepth = 0;
+          for (var i = this.maxValidCallExpressionDepth; i > 0; i--) {
+            if (this.callExpressionSeenAtDepth[i]) {
+              this.stepOutToStackDepth = i;
+              break;
+            }
+          }
+        }
+        break;
+    }
+  }
+
+  var doneUserLine = false;
+  var reachedBreak = false;
+  var unwindingAfterStep = false;
+  var inUserCode;
+  var userCodeRow;
+  var session = this.studioApp.editor.aceEditor.getSession();
+
+  // In each tick, we will step the interpreter multiple times in a tight
+  // loop as long as we are interpreting code that the user can't see
+  // (function aliases at the beginning, getCallback event loop at the end)
+  for (var stepsThisTick = 0;
+       (stepsThisTick < this.maxInterpreterStepsPerTick) || unwindingAfterStep;
+       stepsThisTick++) {
+    // Check this every time because the speed is allowed to change...
+    atMaxSpeed = this.shouldRunAtMaxSpeed();
+    // NOTE: when running with no source visible or at max speed, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
+            this.getUserCodeLine :
+            this.selectCurrentCode;
+
+    if ((reachedBreak && !unwindingAfterStep) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
+        this.seenEmptyGetCallbackDuringExecution ||
+        (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
+      // stop stepping the interpreter and wait until the next tick once we:
+      // (1) reached a breakpoint and are done unwinding OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
+      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      break;
+    }
+    userCodeRow = selectCodeFunc.call(this);
+    inUserCode = (-1 !== userCodeRow);
+    // Check to see if we've arrived at a new breakpoint:
+    //  (1) should be in user code
+    //  (2) should never happen while unwinding
+    //  (3) requires either
+    //   (a) atInitialBreakpoint OR
+    //   (b) isAceBreakpointRow() AND not still at the same line number where
+    //       we have already stopped from the last step/breakpoint
+    if (inUserCode && !unwindingAfterStep &&
+        (atInitialBreakpoint ||
+         (userCodeRow !== this.stoppedAtBreakpointRow &&
+          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+      // Yes, arrived at a new breakpoint:
+      if (this.paused) {
+        // Overwrite the nextStep value. (If we hit a breakpoint during a step
+        // out or step over, this will cancel that step operation early)
+        this.nextStep = StepType.RUN;
+        this.onNextStepChanged();
+      } else {
+        this.onPause();
+      }
+      // Store some properties about where we stopped:
+      this.stoppedAtBreakpointRow = userCodeRow;
+      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+
+      // Mark reachedBreak to stop stepping, and start unwinding if needed:
+      reachedBreak = true;
+      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
+      continue;
+    }
+    // If we've moved past the place of the last breakpoint hit without being
+    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
+    if (inUserCode &&
+        userCodeRow !== this.stoppedAtBreakpointRow &&
+        this.interpreter.stateStack.length <= this.stoppedAtBreakpointStackDepth) {
+      delete this.stoppedAtBreakpointRow;
+      delete this.stoppedAtBreakpointStackDepth;
+    }
+    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
+    // to ensure that we have the right properties stored when the unwind completes:
+    if (inUserCode && unwindingAfterStep) {
+      this.stoppedAtBreakpointRow = userCodeRow;
+      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+    }
+    var err = safeStepInterpreter(this);
+    if (!err) {
+      doneUserLine = doneUserLine ||
+        (inUserCode && this.interpreter.stateStack[0] && this.interpreter.stateStack[0].done);
+
+      var stackDepth = this.interpreter.stateStack.length;
+      // Remember the stack depths of call expressions (so we can implement 'step out')
+
+      // Truncate any history of call expressions seen deeper than our current stack position:
+      for (var depth = stackDepth + 1;
+            depth <= this.maxValidCallExpressionDepth;
+            depth++) {
+        this.callExpressionSeenAtDepth[depth] = false;
+      }
+      this.maxValidCallExpressionDepth = stackDepth;
+
+      if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+        this.callExpressionSeenAtDepth[stackDepth] = true;
+      }
+
+      if (this.paused) {
+        // Store the first call expression stack depth seen while in this step operation:
+        if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+          if (typeof this.firstCallStackDepthThisStep === 'undefined') {
+            this.firstCallStackDepthThisStep = stackDepth;
+          }
+        }
+        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
+        // though the the stateStack doesn't have "done" set, so that stepping in the
+        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
+        var nodeType = this.interpreter.stateStack[0].node.type;
+        doneUserLine = doneUserLine ||
+          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
+
+        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+        if (!doneUserLine &&
+            inUserCode &&
+            this.nextStep === StepType.IN &&
+            stackDepth > this.firstCallStackDepthThisStep) {
+          reachedBreak = true;
+        }
+        // After the interpreter says a node is "done" (meaning it is time to stop), we will
+        // advance a little further to the start of the next statement. We achieve this by
+        // continuing to set unwindingAfterStep to true to keep the loop going:
+        if (doneUserLine || reachedBreak) {
+          var wasUnwinding = unwindingAfterStep;
+          // step() additional times if we know it to be safe to get us to the next statement:
+          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
+          if (wasUnwinding && !unwindingAfterStep) {
+            // done unwinding.. select code that is next to execute:
+            userCodeRow = selectCodeFunc.call(this);
+            inUserCode = (-1 !== userCodeRow);
+            if (!inUserCode) {
+              // not in user code, so keep unwinding after all...
+              unwindingAfterStep = true;
+            }
+          }
+        }
+
+        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+          if (this.nextStep === StepType.OUT &&
+              stackDepth > this.stepOutToStackDepth) {
+            // trying to step out, but we didn't get out yet... continue on.
+          } else if (this.nextStep === StepType.OVER &&
+              typeof this.firstCallStackDepthThisStep !== 'undefined' &&
+              stackDepth > this.firstCallStackDepthThisStep) {
+            // trying to step over, and we're in deeper inside a function call... continue next onTick
+          } else {
+            // Our step operation is complete, reset nextStep to StepType.RUN to
+            // return to a normal 'break' state:
+            this.nextStep = StepType.RUN;
+            this.onNextStepChanged();
+            if (inUserCode) {
+              // Store some properties about where we stopped:
+              this.stoppedAtBreakpointRow = userCodeRow;
+              this.stoppedAtBreakpointStackDepth = stackDepth;
+            }
+            delete this.stepOutToStackDepth;
+            delete this.firstCallStackDepthThisStep;
+            break;
+          }
+        }
+      }
+    } else {
+      this.onExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      return;
+    }
+  }
+  if (reachedBreak && atMaxSpeed) {
+    // If we were running atMaxSpeed and just reached a breakpoint, the
+    // code may not be selected in the editor, so do it now:
+    this.selectCurrentCode();
+  }
+};
+
+/**
+ * Helper to create an interpeter primitive value. Useful when extending the
+ * interpreter without relying on codegen marshalling helpers.
+ */
+JSInterpreter.prototype.createPrimitive = function (data) {
+  if (this.interpreter) {
+    return this.interpreter.createPrimitive(data);
+  }
+};
+
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.selectCurrentCode = function () {
+  return codegen.selectCurrentCode(this.interpreter,
+                                   this.codeInfo.cumulativeLength,
+                                   this.codeInfo.userCodeStartOffset,
+                                   this.codeInfo.userCodeLength,
+                                   this.studioApp.editor);
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.getUserCodeLine = function () {
+  var userCodeRow = -1;
+  if (this.interpreter.stateStack[0]) {
+    var node = this.interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
+ */
+JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  var userCodeRow = -1;
+  for (var i = 0; i < this.interpreter.stateStack.length; i++) {
+    var node = this.interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+      break;
+    }
+  }
+  return userCodeRow;
+};
+
+
+},{"./codegen":98,"./utils":309}],98:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -13019,6 +13461,32 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
   return Boolean(bps[userCodeRow]);
 };
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * This function simply highlights one spot, not a range. It is typically used
+ * to highlight where an error has occurred.
+ */
+exports.selectEditorRowCol = function (editor, row, col) {
+  if (editor.currentlyUsingBlocks) {
+    var style = {color: '#FFFF22'};
+    editor.clearLineMarks();
+    editor.markLine(row, style);
+  } else {
+    var selection = editor.aceEditor.getSelection();
+    var range = selection.getRange();
+
+    range.start.row = row;
+    range.start.column = col;
+    range.end.row = row;
+    range.end.column = col + 1;
+
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
+    selection.setSelectionRange(range, true);
+  }
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
@@ -13452,7 +13920,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
       comments: { color: COLOR_WHITE },
-      containers: { color: COLOR_LIGHT_GREEN },
+      containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
       assignments: { color: COLOR_PURPLE },
@@ -13485,7 +13953,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":308}],308:[function(require,module,exports){
+},{"./utils":309}],309:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -13748,7 +14216,7 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 
-},{"./hammer":134,"./lodash":144,"./xml":309}],309:[function(require,module,exports){
+},{"./hammer":134,"./lodash":144,"./xml":310}],310:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

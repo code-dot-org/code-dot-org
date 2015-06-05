@@ -206,8 +206,9 @@ function adjustAppSizeStyles(container) {
           // NOTE: selectorText can appear in two different forms when styles and IDs
           // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
+          var maxChangedRules = 8;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < maxChangedRules; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive" ||
                 childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
@@ -236,7 +237,8 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
-                  Applab.appWidth * scale + "px;";
+                  Applab.appWidth * scale + "px; line-height: " +
+              Applab.appHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -336,26 +338,6 @@ function onDebugInputKeyDown(e) {
   }
 }
 
-function selectEditorRowCol(row, col) {
-  if (studioApp.editor.currentlyUsingBlocks) {
-    var style = {color: '#FFFF22'};
-    studioApp.editor.clearLineMarks();
-    studioApp.editor.markLine(row, style);
-  } else {
-    var selection = studioApp.editor.aceEditor.getSelection();
-    var range = selection.getRange();
-
-    range.start.row = row;
-    range.start.column = col;
-    range.end.row = row;
-    range.end.column = col + 1;
-
-    // setting with the backwards parameter set to true - this prevents horizontal
-    // scrolling to the right
-    selection.setSelectionRange(range, true);
-  }
-}
-
 function handleExecutionError(err, lineNumber) {
   if (!lineNumber && err instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
@@ -363,7 +345,7 @@ function handleExecutionError(err, lineNumber) {
     lineNumber = err.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    selectEditorRowCol(lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
   if (!lineNumber && Applab.JSInterpreter) {
     lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
@@ -843,7 +825,7 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (window.dashboard && (!dashboard.project.isEditing ||
+  if (!window.dashboard || (!dashboard.project.isEditing ||
       (dashboard.project.current && dashboard.project.current.id))) {
     $(window).trigger('run_button_pressed');
     callback();

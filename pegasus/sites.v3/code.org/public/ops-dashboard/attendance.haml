@@ -88,7 +88,7 @@ template: none
       -if dashboard_user[:admin] || have_permission?('facilitator')
         %td{'ng-hide' => 'unexpected_teacher.editing == true'}
           {{unexpected_teacher.ops_last_name}}, {{unexpected_teacher.ops_first_name}}
-          -if dashboard_user[:admin] || have_permission?('facilitator')
+          -if dashboard_user[:admin]
             %br
             %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.unexpected_teachers.splice(workshop.unexpected_teachers.indexOf(unexpected_teacher), 1) && saveWorkshop(workshop)'}
               Delete
@@ -108,7 +108,7 @@ template: none
               %option{value:'{{district.name}}', 'ng-repeat' => 'district in districts | orderBy:"name"'}
                 {{district.name}}
             %br
-            %select.form-control{'ng-model' => 'unexpected_teacher.gender'}
+            %select.form-control{'ng-model' => 'unexpected_teacher.ops_gender'}
               %option{value:'', disabled:'true', selected:'true'}
                 Gender
               %option{value:'Male'}
@@ -116,7 +116,7 @@ template: none
               %option{value:'Female'}
                 Female
             %br
-            %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+            %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'unexpected_teacher.ops_school'}
             %br
             %button{'ng-click' => 'saveWorkshop(workshop)'}
               Save

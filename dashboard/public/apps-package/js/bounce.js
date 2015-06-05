@@ -1248,10 +1248,10 @@ Bounce.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
-                             delegate(this,
-                                      Bounce.onArrowButtonUp,
-                                      ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+                               delegate(this,
+                                        Bounce.onArrowButtonUp,
+                                        ArrowIds[btn]));
       dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
                                  delegate(this,
                                           Bounce.onArrowButtonDown,
@@ -1964,7 +1964,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":98,"../constants":100,"../dom":101,"../dropletUtils":102,"../hammer":134,"../locale":143,"../skins":260,"../templates/page.html.ejs":286,"../timeoutList":292,"../utils":308,"./api":70,"./controls.html.ejs":73,"./locale":75,"./tiles":78,"./visualization.html.ejs":79}],79:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":98,"../constants":100,"../dom":101,"../dropletUtils":102,"../hammer":134,"../locale":143,"../skins":260,"../templates/page.html.ejs":287,"../timeoutList":293,"../utils":309,"./api":70,"./controls.html.ejs":73,"./locale":75,"./tiles":78,"./visualization.html.ejs":79}],79:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1984,7 +1984,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":479}],73:[function(require,module,exports){
+},{"ejs":480}],73:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2007,7 +2007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"./locale":75,"ejs":479}],71:[function(require,module,exports){
+},{"../locale":143,"./locale":75,"ejs":480}],71:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *

@@ -29,6 +29,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
+var JSInterpreter = require('../JSInterpreter');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -572,7 +573,7 @@ function callHandler (name, allowQueueExtension) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.eventQueue.push({'fn': handler.func});
+        Studio.JSInterpreter.queueEvent(handler.func);
       }
     }
   });
@@ -599,31 +600,8 @@ Studio.onTick = function() {
     Studio.customLogic.onTick();
   }
 
-  if (Studio.interpreter) {
-    var doneUserCodeStep = false;
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
-         stepsThisTick++) {
-      var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  Studio.cumulativeLength,
-                                                  Studio.userCodeStartOffset,
-                                                  Studio.userCodeLength,
-                                                  studioApp.editor);
-      try {
-        Studio.interpreter.step();
-        doneUserCodeStep = (-1 !== userCodeRow) &&
-                            Studio.interpreter.stateStack[0] &&
-                            Studio.interpreter.stateStack[0].done;
-      }
-      catch(err) {
-        Studio.executionError = err;
-        Studio.onPuzzleComplete();
-        return;
-      }
-    }
+  if (Studio.JSInterpreter) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
   } else {
     if (Studio.tickCount === 1) {
       callHandler('whenGameStarts');
@@ -1304,9 +1282,8 @@ Studio.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
   if (studioApp.editCode) {
-    Studio.eventQueue = [];
     Studio.executionError = null;
-    Studio.interpreter = null;
+    Studio.JSInterpreter = null;
   }
 
   // Move sprites into position.
@@ -1545,17 +1522,6 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * A miniature runtime in the interpreted world calls this function repeatedly
- * to check to see if it should invoke any callbacks from within the
- * interpreted world. If the eventQueue is not empty, we will return an object
- * that contains an interpreted callback function (stored in "fn") and,
- * optionally, callback arguments (stored in "arguments")
- */
-var nativeGetCallback = function () {
-  return Studio.eventQueue.shift();
-};
-
-/**
  * Looks for failures that should prevent execution.
  * @returns {boolean} True if we have a pre-execution failure
  */
@@ -1577,6 +1543,55 @@ Studio.checkForPreExecutionFailure = function () {
 
   return false;
 };
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
+};
+
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  // TODO: consider how to notify the user without a debug console output area
+  if (console.log) {
+    console.log(text);
+  }
+  if (lineNum !== undefined) {
+    // TODO: connect this up
+    // annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
+
+function handleExecutionError(err, lineNumber) {
+  if (!lineNumber && err instanceof SyntaxError) {
+    // syntax errors came before execution (during parsing), so we need
+    // to determine the proper line number by looking at the exception
+    lineNumber = err.loc.line;
+    // Now select this location in the editor, since we know we didn't hit
+    // this while executing (in which case, it would already have been selected)
+
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+  }
+  if (!lineNumber && Studio.JSInterpreter) {
+    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  Studio.executionError = err;
+
+  // Call onPuzzleComplete() if we're not on a freeplay level:
+  if (!level.freePlay) {
+    Studio.onPuzzleComplete();
+  }
+}
 
 /**
  * Execute the story
@@ -1625,35 +1640,14 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
-    Studio.userCodeStartOffset = codeWhenRun.length;
-    codeWhenRun += studioApp.editor.getValue();
-    Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
-    // Append our mini-runtime after the user's code. This will spin and process
-    // callback functions:
-    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = studioApp.editor.aceEditor.getSession();
-    Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
-
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, null, scope, {
-                                        StudioApp: studioApp,
-                                        Studio: api,
-                                        Globals: Studio.Globals } );
-
-
-      var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction({
-          interpreter: interpreter,
-          nativeFunc: nativeGetCallback,
-      });
-      interpreter.setProperty(scope,
-                              'getCallback',
-                              interpreter.createNativeFunction(wrapper));
-    };
-    Studio.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    var codeWhenRun = studioApp.editor.getValue();
+    Studio.JSInterpreter = new JSInterpreter({
+      code: codeWhenRun,
+      blocks: dropletConfig.blocks,
+      enableEvents: true,
+      studioApp: studioApp,
+      onExecutionError: handleExecutionError,
+    });
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
