@@ -23,8 +23,7 @@
     "coordinate_grid_background": "false",
     "min_workspace_height": "2000",
     "default_num_example_blocks": "4"
-  },
-  "md5": "e03db83d2a6606fd18d11445d894abce"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

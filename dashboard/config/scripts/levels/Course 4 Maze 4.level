@@ -18,8 +18,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"repeat\",\"callout_text\":\"Put blocks inside the loop to repeat commands\",\"element_id\":\"#repeat_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "maze_data": null
+    "callout_json": "[\r\n  {\"localization_key\":\"repeat\",\"callout_text\":\"Put blocks inside the loop to repeat commands\",\"element_id\":\"#repeat_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>

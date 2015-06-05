@@ -6,6 +6,9 @@ div#visualization {
 div#visualization.with_padding {
   border: 1px solid #ddd; }
 
+div#visualizationResizeBar {
+  top: 40px; }
+
 /* Shrink the visualization area on small displays. */
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
   div#visualization.responsive {
@@ -465,3 +468,14 @@ button.arrow:focus {
 
 .divApplabDesignMode canvas {
   background-color: #eee; }
+
+.no-outline:focus {
+  outline: none; }
+
+.justify-contents {
+  text-align: justify;
+  line-height: 0; }
+  .justify-contents:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }

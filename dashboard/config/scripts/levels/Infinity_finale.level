@@ -39,10 +39,8 @@
       "downButton",
       "upButton"
     ],
-    "min_workspace_height": "900",
-    "maze_data": null
-  },
-  "md5": "ffac9916aa10438ec4cdf727835717cf"
+    "min_workspace_height": "900"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

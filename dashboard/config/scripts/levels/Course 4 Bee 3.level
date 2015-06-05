@@ -22,8 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"if_else_bee\",\"callout_text\":\"Use the \\\"if/else\\\" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower\",\"element_id\":\"#if_else_bee_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"right center\",\"at\":\"left center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "video_key": "C4_conditionals",
-    "maze_data": null
+    "video_key": "C4_conditionals"
   }
 }]]></config>
   <blocks>
