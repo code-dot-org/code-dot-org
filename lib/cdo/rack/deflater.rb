@@ -1,31 +1,11 @@
+require 'rack/deflater'
+# Deflater Middleware backported from Rack 1.6 master
+# See: https://github.com/rack/rack/blob/master/lib/rack/deflater.rb
+require "zlib"
+require "time"  # for Time.httpdate
+require 'rack/utils'
+
 module Rack
-  class CdoDeflater < RackDeflater
-    def initialize(app, options = {})
-      super(app, options.merge(
-          if: lambda {|_, _, _, body| body.length > 1024},
-          include: %w(
-            application/javascript
-            application/json
-            application/x-javascript
-            application/xml
-            application/xml+rss
-            text/css
-            text/html
-            text/javascript;
-            text/plain
-            text/xml
-          )
-        ))
-    end
-  end
-
-  # Deflater Middleware backported from Rack 1.6 master
-  # See: https://github.com/rack/rack/blob/master/lib/rack/deflater.rb
-
-  require "zlib"
-  require "time"  # for Time.httpdate
-  require 'rack/utils'
-
   # This middleware enables compression of http responses.
   #
   # Currently supported compression algorithms:
@@ -38,7 +18,7 @@ module Rack
   # and allowed. For example no transformation is made when a cache
   # directive of 'no-transform' is present, or when the response status
   # code is one that doesn't allow an entity body.
-  class RackDeflater
+  class Deflater
     ##
     # Creates Rack::Deflater middleware.
     #
@@ -65,7 +45,7 @@ module Rack
       request = Request.new(env)
 
       encoding = Utils.select_best_encoding(%w(gzip deflate identity),
-                                            request.accept_encoding)
+        request.accept_encoding)
 
       # Set the Vary HTTP header.
       vary = headers["Vary"].to_s.split(",").map(&:strip)
@@ -76,20 +56,20 @@ module Rack
       case encoding
         when "gzip"
           headers['Content-Encoding'] = "gzip"
-          headers.delete(CONTENT_LENGTH)
+          headers.delete('Content-Length')
           mtime = headers.key?("Last-Modified") ?
             Time.httpdate(headers["Last-Modified"]) : Time.now
           [status, headers, GzipStream.new(body, mtime)]
         when "deflate"
           headers['Content-Encoding'] = "deflate"
-          headers.delete(CONTENT_LENGTH)
+          headers.delete('Content-Length')
           [status, headers, DeflateStream.new(body)]
         when "identity"
           [status, headers, body]
         when nil
           message = "An acceptable encoding for the requested resource #{request.fullpath} could not be found."
           bp = Rack::BodyProxy.new([message]) { body.close if body.respond_to?(:close) }
-          [406, {CONTENT_TYPE => "text/plain", CONTENT_LENGTH => message.length.to_s}, bp]
+          [406, {'Content-Type' => "text/plain", 'Content-Length' => message.length.to_s}, bp]
       end
     end
 
@@ -125,7 +105,7 @@ module Rack
     end
 
     class DeflateStream
-      DEFLATE_ARGS = [
+      DEFLATE_ARGS ||= [
         Zlib::DEFAULT_COMPRESSION,
         # drop the zlib header which causes both Safari and IE to choke
         -Zlib::MAX_WBITS,
@@ -159,13 +139,13 @@ module Rack
       # Skip compressing empty entity body responses and responses with
       # no-transform set.
       if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status) ||
-        headers[CACHE_CONTROL].to_s =~ /\bno-transform\b/ ||
+        headers['Cache-Control'].to_s =~ /\bno-transform\b/ ||
         (headers['Content-Encoding'] && headers['Content-Encoding'] !~ /\bidentity\b/)
         return false
       end
 
       # Skip if @compressible_types are given and does not include request's content type
-      return false if @compressible_types && !(headers.has_key?(CONTENT_TYPE) && @compressible_types.include?(headers[CONTENT_TYPE][/[^;]*/]))
+      return false if @compressible_types && !(headers.has_key?('Content-Type') && @compressible_types.include?(headers['Content-Type'][/[^;]*/]))
 
       # Skip if @condition lambda is given and evaluates to false
       return false if @condition && !@condition.call(env, status, headers, body)
