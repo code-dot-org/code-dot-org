@@ -33,7 +33,7 @@ var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 describe("NetSimRouterNode", function () {
   var testShard,
       routerA, routerB, routerC, routerD, routerE,
-      clientA, clientB;
+      clientA, clientB, clientC;
 
   /**
    * Concise router creation for test
@@ -133,6 +133,7 @@ describe("NetSimRouterNode", function () {
     routerE = makeRemoteRouter();
     clientA = makeRemoteClient('clientA');
     clientB = makeRemoteClient('clientB');
+    clientC = makeRemoteClient('clientC');
   });
 
   it("has expected row structure and default values", function () {
@@ -780,31 +781,22 @@ describe("NetSimRouterNode", function () {
 
 
     describe ("broadcast mode", function () {
-      var remoteB;
 
       beforeEach(function () {
         // Put level in broadcast mode
         netsimGlobals.getLevelConfig().broadcastMode = true;
 
-        NetSimLocalClientNode.create(testShard, "remoteB", function (e, n) {
-          remoteB = n;
-        });
-
-        // Manually connect nodes
-        var wire;
-        NetSimWire.create(testShard, remoteB.entityID, routerA.entityID, function (e, w) {
-          wire = w;
-        });
-        wire.localHostname = remoteB.getHostname();
-        remoteB.myWire = wire;
-        wire.update();
+        // Stop simulation from earlier setup, hook up new client, restart
+        // simulation
+        routerA.stopSimulation();
+        clientC.initializeSimulation(null, null);
+        clientC.connectToRouter(routerA);
+        routerA.stopSimulation();
+        routerA.initializeSimulation(clientA.entityID);
       });
 
       it ("forwards all messages it receives to every connected node", function () {
         clientA.sendMessage("00001111", function () {});
-
-        // Router must tick to process messages; 1000ms is sufficient time for
-        // a short packet.
         routerA.tick({time: 1000});
 
         // Router should log having picked up one message
