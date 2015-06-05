@@ -128,7 +128,7 @@
     $("#learnlink").click(function() {
       $("#learnoptions").fadeToggle();
     });
-    onURLBlocked("#{ CDO.studio_url('test-image.png', 'https:')}", function () {
+    onURLBlocked("#{ CDO.code_org_url('test-image.png', 'https:')}", function () {
       trackEvent("HTTPS Test", "blocked");
     });
   });
