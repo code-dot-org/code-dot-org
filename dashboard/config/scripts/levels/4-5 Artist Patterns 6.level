@@ -15,8 +15,7 @@
     "free_play": "false",
     "instructions": "How many times do you need to repeat this block to draw the full grid of diamonds?",
     "ideal": "15"
-  },
-  "md5": "fde5ab3b30c26a6a9dcee3c70d8fd62c"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

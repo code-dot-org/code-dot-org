@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. Hint: start by clicking on \"edit\" on your function block.",
+    "instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "16",
@@ -21,7 +21,14 @@
     "impressive": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

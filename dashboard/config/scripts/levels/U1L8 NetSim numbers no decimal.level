@@ -45,7 +45,11 @@
     "show_router_bandwidth_control": "false",
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
-    "default_dns_mode": "none"
+    "default_dns_mode": "none",
+    "video_key": "csp_internetsimulator_2",
+    "show_log_browser_button": "false",
+    "connected_routers": "false",
+    "instructions": "Default instructions"
   }
 }]]></config>
   <blocks/>
