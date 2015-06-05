@@ -1,6 +1,7 @@
 module Ops
   class WorkshopsController < OpsControllerBase
     before_filter :convert_facilitators, :convert_cohorts, :convert_unexpected_teachers, only: [:create, :update]
+    after_filter :notify_ops, only: [:update]
 
     load_and_authorize_resource
 
@@ -44,6 +45,10 @@ module Ops
 
     # PATCH/PUT /ops/workshops/1
     def update
+      unexpected_teachers = params[:workshop][:unexpected_teachers]
+      if unexpected_teachers
+        @added_unexpected_teachers = unexpected_teachers - @workshop.unexpected_teachers
+      end
       @workshop.update!(params[:workshop])
       respond_with @workshop
     end
@@ -118,6 +123,12 @@ module Ops
           end
         end
       end
+    end
+
+    def notify_ops
+      return unless @added_unexpected_teachers.present?
+      return unless current_user.facilitator?
+      OpsMailer.unexpected_teacher_added(current_user, @added_unexpected_teachers, @workshop).deliver
     end
   end
 end

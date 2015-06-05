@@ -58,8 +58,8 @@ end
 ].each do |file|
   cookbook_file "/etc/#{file}" do
     source file
-    owner "postfix"
-    group "postfix"
+    owner "root"
+    group "root"
     mode "0644"
     notifies :restart, "service[postfix]"
   end

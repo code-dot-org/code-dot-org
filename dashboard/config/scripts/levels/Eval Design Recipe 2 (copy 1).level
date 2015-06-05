@@ -1,7 +1,7 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2014-11-26T00:41:20.030Z",
+  "created_at": "2014-11-26T00:41:20.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {

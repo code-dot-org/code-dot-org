@@ -19,4 +19,13 @@ class OpsMailer < ActionMailer::Base
     subject = "You have been assigned a new course: #{params[:script].localized_title}"
     mail content_type: 'text/html', subject: subject, to: params[:user].email
   end
+
+  def unexpected_teacher_added(user, added_teachers, workshop)
+    @added_teachers = added_teachers
+    @workshop = workshop
+    @user = user
+
+    subject = "[ops notification] #{user.email} has added unexpected teachers to #{workshop.name}"
+    mail content_type: 'text/html', subject: subject
+  end
 end

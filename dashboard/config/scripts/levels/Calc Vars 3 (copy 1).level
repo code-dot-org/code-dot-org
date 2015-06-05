@@ -1,7 +1,7 @@
 <Calc>
   <config><![CDATA[{
   "game_id": 34,
-  "created_at": "2014-11-21T18:23:38.949Z",
+  "created_at": "2014-11-21T18:23:38.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {

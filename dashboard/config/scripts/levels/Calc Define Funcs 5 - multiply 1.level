@@ -24,8 +24,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "input_output_table": "[[3,15],[7,35],[10,50],[42,210]]"
-  },
-  "md5": "9e17676fb6226a44b86d5f6eda7d8c8e"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

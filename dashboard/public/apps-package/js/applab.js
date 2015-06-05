@@ -6216,6 +6216,8 @@ module.exports = React.createClass({displayName: "exports",
 
 
 },{"./DesignModeBox.jsx":7,"./DesignModeHeaders.jsx":8,"./locale":54,"react":639}],9:[function(require,module,exports){
+/* global $ */
+
 var React = require('react');
 var msg = require('../locale');
 
@@ -6239,14 +6241,14 @@ module.exports = React.createClass({displayName: "exports",
     };
   },
 
-  handleModeToggle: function () {
-    var newMode;
-    if (this.state.mode === Mode.DESIGN) {
+  handleSetMode: function (newMode) {
+    if (this.state.mode === newMode) {
+      return;
+    }
+    if (newMode === Mode.CODE) {
       this.props.onCodeModeButton();
-      newMode = Mode.CODE;
     } else {
       this.props.onDesignModeButton();
-      newMode = Mode.DESIGN;
     }
 
     this.setState({
@@ -6265,9 +6267,43 @@ module.exports = React.createClass({displayName: "exports",
   render: function () {
     var selectDropdown;
     var dropdownStyle = {
-      width: 140,
-      marginLeft: 10
+      display: 'inline-block',
+      verticalAlign: 'top',
+      width: 130,
+      height: 28,
+      marginBottom: 6,
+      borderColor: '#949ca2'
     };
+
+    var buttonStyle = {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      border: '1px solid #949ca2',
+      margin: '0 0 8px 0',
+      padding: '3px 6px',
+      fontSize: 14
+    };
+    var buttonPrimary = {
+      backgroundColor: '#ffa000',
+      color: '#fff'
+    };
+    var buttonSecondary = {
+      backgroundColor: '#e7e8ea',
+      color: '#949ca2'
+    };
+
+    var codeButtonStyle = $.extend({}, buttonStyle, {
+      borderBottomRightRadius: 0,
+      borderTopRightRadius: 0,
+      borderRightWidth: 0
+    }, (this.state.mode === Mode.CODE ? buttonSecondary : buttonPrimary));
+
+    var designButtonStyle = $.extend({}, buttonStyle, {
+      borderBottomLeftRadius: 0,
+      borderTopLeftRadius: 0
+    }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
+
+    var wrapperStyle = {minHeight: 40};
 
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
@@ -6287,13 +6323,22 @@ module.exports = React.createClass({displayName: "exports",
     }
 
     return (
-      React.createElement("div", null, 
+      React.createElement("div", {style: wrapperStyle, className: "justify-contents"}, 
         React.createElement("button", {
-          id: "designModeToggle", 
-          className: "share", 
-          onClick: this.handleModeToggle}, 
-           this.state.mode === Mode.DESIGN ? msg.codeMode() : msg.designMode()
+            id: "codeModeButton", 
+            style: codeButtonStyle, 
+            className: "no-outline", 
+            onClick: this.handleSetMode.bind(this, Mode.CODE)}, 
+          msg.codeMode()
         ), 
+        React.createElement("button", {
+            id: "designModeButton", 
+            style: designButtonStyle, 
+            className: "no-outline", 
+            onClick: this.handleSetMode.bind(this, Mode.DESIGN)}, 
+          msg.designMode()
+        ), 
+        ' ', /* Needed for "text-align: justify;" to work. */ 
         selectDropdown
       )
     );
