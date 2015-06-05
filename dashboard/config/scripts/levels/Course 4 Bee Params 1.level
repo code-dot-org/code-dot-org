@@ -20,8 +20,7 @@
     "ideal": "20",
     "instructions": "Use the function \"get 3 nectar\" which turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\"",
     "use_modal_function_editor": "true",
-    "use_contract_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

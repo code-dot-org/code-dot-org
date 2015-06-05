@@ -28,8 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "ideal": "6",
-    "failure_message_override": "Nice attempt! Try again to get it right.",
-    "maze_data": null
+    "failure_message_override": "Nice attempt! Try again to get it right."
   }
 }]]></config>
   <blocks>

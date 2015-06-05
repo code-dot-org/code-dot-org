@@ -33,10 +33,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_failure_tick": "250",
-    "timeout_after_when_run": "false",
-    "maze_data": null
-  },
-  "md5": "2b6470f4d51df90f8ba74bfa2940f99d"
+    "timeout_after_when_run": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

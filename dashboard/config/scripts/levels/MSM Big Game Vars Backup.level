@@ -30,8 +30,7 @@
     "soft_buttons": [
       "downButton",
       "upButton"
-    ],
-    "maze_data": null
+    ]
   }
 }]]></config>
   <blocks>

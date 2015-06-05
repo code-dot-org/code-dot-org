@@ -18,8 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "free_play": "false",
-    "maze_data": null
+    "free_play": "false"
   }
 }]]></config>
   <blocks>

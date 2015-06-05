@@ -30,8 +30,7 @@
     "coordinate_grid_background": "false",
     "open_function_definition": "score_points",
     "embed": "false",
-    "disable_sharing": "false",
-    "maze_data": null
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
