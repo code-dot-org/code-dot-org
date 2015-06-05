@@ -58,10 +58,10 @@ class Documents < Sinatra::Base
     configs
   end
 
+  use Rack::HTTPSRedirect unless rack_env?(:production)
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
-  use Rack::HTTPSRedirect unless rack_env?(:production)
   use Rack::UpgradeInsecureRequests unless rack_env?(:production)
 
   configure do
