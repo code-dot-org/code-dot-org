@@ -3,7 +3,7 @@ module Rack
   class CdoDeflater < Deflater
     def initialize(app, options = {})
       super(app, options.merge(
-          if: lambda {|_, _, _, body| body.length > 1024},
+          if: lambda {|env, status, headers, body| headers['Content-Length'] && headers['Content-Length'].to_i > 1024},
           include: %w(
             application/javascript
             application/json
