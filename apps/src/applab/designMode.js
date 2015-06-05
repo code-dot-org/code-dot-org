@@ -240,10 +240,6 @@ designMode.onPropertyChange = function(element, name, value) {
   }
 };
 
-designMode.onDonePropertiesButton = function() {
-  designMode.clearProperties();
-};
-
 designMode.onDeletePropertiesButton = function(element, event) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
@@ -564,7 +560,6 @@ designMode.renderDesignWorkspace = function(element) {
     element: element || null,
     handleChange: designMode.onPropertyChange.bind(this, element),
     onDepthChange: designMode.onDepthChange,
-    onDone: designMode.onDonePropertiesButton,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     handleManageAssets: showAssetManager
   };
