@@ -10,7 +10,7 @@ $green: #b9bf15;
 $purple-dark: #7665a0;
 $purple-light: #a69bc1;
 $purple-extra-light: #cfc9de;
-$light-gray: #e7e8ea;
+$lighter-gray: #c6cacd;
 $orange-dark: #ffa400;
 $green-dark: #b9bf15;
 $yellow-dark: #ffb81d;
@@ -272,6 +272,10 @@ html[dir='rtl'] #codeWorkspace {
   width: 15px;
   left: 400px;
   cursor: ew-resize;
+  text-align: center;
+  color: $lighter-gray;
+  font-size: 24px;
+  line-height: 400px;
 }
 
 #visualization {
@@ -333,6 +337,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -368,6 +373,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -403,6 +409,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -438,6 +445,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
