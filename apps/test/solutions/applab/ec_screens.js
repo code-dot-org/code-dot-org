@@ -27,35 +27,6 @@ function validationEmptyDesignProperties(assert) {
   assert.equal(designProperties.children[0].tagName, 'P');
 }
 
-/**
- * jQuery.simulate was having issues in phantom, so I decided to roll my own
- * drag simulation. May belong in a util file.
- * @param {string} type
- * @param {number} left Horizontal offset from top left of visualization to drop at
- * @param {number} top Vertical offset from top left of visualization to drop at
- */
-function dragToVisualization(type, left, top) {
-  // drag a new screen in
-  var element = $("[data-element-type='" + type + "']");
-  var screenOffset = element.offset();
-  var mousedown = $.Event("mousedown", {
-    which: 1,
-    pageX: screenOffset.left,
-    pageY: screenOffset.top
-  });
-  var drag = $.Event("mousemove", {
-    pageX: $("#visualization").offset().left + left,
-    pageY: $("#visualization").offset().top + top
-  });
-  var mouseup = $.Event('mouseup', {
-    pageX: $("#visualization").offset().left + left,
-    pageY: $("#visualization").offset().top + top
-  });
-  element.trigger(mousedown);
-  $(document).trigger(drag);
-  $(document).trigger(mouseup);
-}
-
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -123,7 +94,7 @@ module.exports = {
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
         assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
@@ -132,7 +103,7 @@ module.exports = {
         validatePropertyRow(1, 'id', 'screen2', assert);
 
         // drag a button onto our new screen
-        dragToVisualization('BUTTON', 10, 10);
+        testUtils.dragToVisualization('BUTTON', 10, 10);
 
         validatePropertyRow(1, 'id', 'button1', assert);
         var buttonElement = document.getElementById('button1');
@@ -169,7 +140,7 @@ module.exports = {
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
         assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
@@ -275,7 +246,7 @@ module.exports = {
         $("#designModeButton").click();
 
         // drag a new screen in
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
 
         // add a completion on timeout since this is a freeplay level
@@ -312,7 +283,7 @@ module.exports = {
         assert.equal(orange, $("#codeModeButton").css('background-color'),
           'expected Code button to have orange background.');
         // add a screen
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(1, 'id', 'screen2', assert);
         assert.equal($('#screen1')[0].style.display === 'none', true, 'screen 1 hidden');
         assert.equal($('#screen2')[0].style.display === 'none', false, 'screen 2 visible');
@@ -347,7 +318,7 @@ module.exports = {
         // enter design mode
         $("#designModeButton").click();
 
-        dragToVisualization('BUTTON', 10, 10);
+        testUtils.dragToVisualization('BUTTON', 10, 10);
 
         var button = document.getElementById('button1');
         assert(button);
@@ -368,6 +339,48 @@ module.exports = {
 
         // outdiv and child should have gone away
         assert.equal(screenElement.children.length, 0);
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "add a background",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeToggle").click();
+        assert.equal($("#designModeToggle").text(), 'Code');
+
+        $("#screen1").click();
+
+        validatePropertyRow(1, 'id', 'screen1', assert);
+
+        var assetUrl = '/assets/codeorg-studio-logo.png';
+
+        var imageInput = $("#design-properties input").eq(2)[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        var screenElement = document.getElementById('screen1');
+        var expected = /^url\(.*\/assets\/codeorg-studio-logo\.png\)$/;
+        assert(expected.test(screenElement.style.backgroundImage));
+
+        assert.equal(screenElement.style.backgroundSize, '320px 480px', 'image stretched');
+
+        // make sure dimensions didn't change
+        assert.equal(screenElement.style.width, '320px');
+        assert.equal(screenElement.style.height, '480px');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
