@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -103,7 +104,7 @@ hideElement(id);
 
 ### Returns
 Returns true if the id parameter refers to the id of an element that exists.
-Returns false if the id parameter refers to the id of an element that does not exist. 
+Returns false if the id parameter refers to the id of an element that does not exist.
 
 [/returns]
 
@@ -118,3 +119,5 @@ Returns false if the id parameter refers to the id of an element that does not e
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -21,7 +21,11 @@ function sizeDialogToViewport(scrollableElementSelector) {
     parseInt(modalBody.css('padding-bottom'), 10) +
     parseInt(modalBody.css('margin-bottom'), 10);
   var scrollableElementHeight = viewportHeight - (popupTop + popupBottom + headerHeight);
-  scrollableElement.css('max-height', scrollableElementHeight);
+  if (scrollableElement[0].tagName === "IFRAME") {
+    scrollableElement.css('height', scrollableElementHeight);
+  } else {
+    scrollableElement.css('max-height', scrollableElementHeight);
+  }
 }
 
 /**
@@ -35,7 +39,7 @@ function sizeDialogToViewport(scrollableElementSelector) {
  *           element scrollable and auto-resizes dialog to window's dimensions
  */
 function Dialog(options) {
-  // Cache visibility to avoid expensive lookup during window resizing
+  // Cache visibility to avoid expensive lookup during debounced window resizing
   this.isVisible = true;
 
   var body = options.body;
@@ -69,19 +73,22 @@ function Dialog(options) {
   modalBody.append(body);
   this.div.append(modalBody).appendTo($(document.body));
 
+  var resizeCallback;
   if (options.autoResizeScrollableElement) {
     this.div.addClass('auto-resize-scrollable');
     var scrollableElement = this.div.find(options.autoResizeScrollableElement);
-    scrollableElement.css('max-height', '560px');
     scrollableElement.css('overflow-y', 'auto');
 
-    $(window).resize(debounce(function () {
-      if (this && this.isVisible) {
-        sizeDialogToViewport(options.autoResizeScrollableElement);
+    resizeCallback = debounce(function () {
+      if (!this.isVisible) {
+        return;
       }
-    }.bind(this), 250));
-    sizeDialogToViewport(options.autoResizeScrollableElement);
+      sizeDialogToViewport(options.autoResizeScrollableElement);
+    }.bind(this), 250);
 
+    this.div.find('img').load(resizeCallback);
+    $(window).on('resize', resizeCallback);
+    resizeCallback();
   }
 
   // When the dialog is hidden, unhook the keydown event handler.
@@ -92,7 +99,11 @@ function Dialog(options) {
   $(this.div).on(
       'hidden.bs.modal',
       function() {
-        thisDialog.isVisible = false;
+        if (resizeCallback) {
+          thisDialog.isVisible = false;
+          $(window).off('resize', resizeCallback);
+        }
+
         if (options.onKeydown) {
           $(this.div).off('keydown', options.onKeydown);
         }

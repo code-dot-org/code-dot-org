@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -23,7 +24,7 @@ Hides the turtle so it is no longer visible.
 
 [/short_description]
 
-**Note**: When the turtle is hidden [penDown()](/applab/docs/penDown) can still be used to draw a trail behind the turtle as it moves.  
+**Note**: When the turtle is hidden [penDown()](/applab/docs/penDown) can still be used to draw a trail behind the turtle as it moves.
 **Note**: [show()](/applab/docs/show) is often used with hide.
 
 [/description]
@@ -103,3 +104,5 @@ No return value. Outputs to the display only.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

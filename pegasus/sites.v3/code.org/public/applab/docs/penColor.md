@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -23,7 +24,7 @@ Sets the color of the trail drawn behind the turtle as it moves.
 
 [/short_description]
 
-**Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.  
+**Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.
 **Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords) for a complete list of all available colors.
 **Note**: You can also use any of the valid CSS color naming conventions, especially, rgba(...) which allows you set a color with some amount of transparency. Reference [CSS colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
@@ -61,7 +62,7 @@ moveForward(50);              		 // moves the turtle forward 50 pixels
 penColor("rgb(127, 255, 0)"); 		 // sets the color using a rgb value
 moveForward(50);              		 // moves the turtle forward 50 pixels
 
-penColor("rgba(127, 255, 0, 0.5)"); // sets the color using a rgba value, the last value is amount 
+penColor("rgba(127, 255, 0, 0.5)"); // sets the color using a rgba value, the last value is amount
 									 //   of transparency, a percentage between 0.0 and 1.0
 moveForward(50);              		 // moves the turtle forward 50 pixels
 </pre>
@@ -150,3 +151,5 @@ No return value. Outputs to the display only.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>
