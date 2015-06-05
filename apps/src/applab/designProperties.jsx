@@ -4,6 +4,8 @@ var React = require('react');
 var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
 
+var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
+
 var nextKey = 0;
 
 var DesignProperties = module.exports = React.createClass({
@@ -46,17 +48,9 @@ var DesignProperties = module.exports = React.createClass({
       <div key={key}>
         <p>{applabMsg.designWorkspaceDescription()}</p>
         {propertiesElement}
-        <button
-          id="donePropertiesButton"
-          onClick={this.props.onDone}>
-          Done
-        </button>
-        <button
-          id="deletePropertiesButton"
-          disabled={this.props.element.id === 'screen1'}
-          onClick={this.props.onDelete}>
-          Delete
-        </button>
+        <DeleteElementButton
+          shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
+          handleDelete={this.props.onDelete}/>
       </div>
     );
   }
