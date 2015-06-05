@@ -202,6 +202,12 @@ NetSim.prototype.init = function(config) {
    */
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
+  /**
+   * Configuration for reporting level completion
+   * @type {Object}
+   */
+  this.reportingInfo_ = config.report;
+
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
@@ -370,7 +376,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
-}
+  }
 
   this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level,
       this);
@@ -387,6 +393,34 @@ NetSim.prototype.initWithUserName_ = function (user) {
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
   window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
+
+
+  $('.submitButton').click(function () {
+    var submitButton = $('.submitButton');
+    if (submitButton.attr('disabled')) {
+      return;
+    }
+
+    // Avoid multiple simultaneous submissions.
+    submitButton.attr('disabled', true);
+
+    sendReport({
+      fallbackResponse: this.reportingInfo_.fallback_response,
+      callback: this.reportingInfo_.callback,
+      app: 'netsim',
+      level: this.level.id,
+      result: true,
+      testResult: 100,
+      onComplete: function () {
+        $('.submitButton').attr('disabled', false);
+        if (lastServerResponse.videoInfo) {
+          //showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
+      }
+    });
+  }.bind(this));
 };
 
 /**
