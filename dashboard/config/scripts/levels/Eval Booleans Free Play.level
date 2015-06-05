@@ -23,8 +23,7 @@
     "coordinate_grid_background": "false",
     "instructions": "Free Play: Try out some creations of your own using Booleans.",
     "disable_examples": "false"
-  },
-  "md5": "db47d839037a1e43ac1b906167d2279e"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

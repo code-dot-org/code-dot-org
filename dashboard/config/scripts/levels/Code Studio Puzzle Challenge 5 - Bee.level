@@ -30,8 +30,7 @@
     "ideal": "4",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Code Studio Puzzle Challenge 5 - Bee_callout1\",\r\n  \"callout_text\": \"3. Press \\\"Run\\\" to execute your code\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Code Studio Puzzle Challenge 5 - Bee_callout2\",\r\n  \"callout_text\": \"2. Connect blocks to the \\\"When Run\\\" block\",\r\n  \"element_id\": \"g.blocklyDeletable.blocklyUndraggable\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Code Studio Puzzle Challenge 5 - Bee_callout3\",\r\n  \"callout_text\": \"1. Drag blocks from the toolbox\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
     "video_key": "tutorial_puzzle_challenge",
-    "failure_message_override": "Nice attempt! Try again to get it right.",
-    "maze_data": null
+    "failure_message_override": "Nice attempt! Try again to get it right."
   }
 }]]></config>
   <blocks>

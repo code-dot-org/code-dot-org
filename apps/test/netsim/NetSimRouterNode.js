@@ -700,7 +700,15 @@ describe("NetSimRouterNode", function () {
     it ("ignores messages sent to itself from other clients", function () {
       var from = remoteA.entityID;
       var to = router.entityID;
-      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: from,
+            toNodeID: to,
+            simulatedBy: from,
+            payload: 'garbage'
+          },
+          function () {});
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', from);
       assertFirstMessageProperty('toNodeID', to);
@@ -709,7 +717,15 @@ describe("NetSimRouterNode", function () {
     it ("ignores messages sent to others", function () {
       var from = localClient.entityID;
       var to = remoteA.entityID;
-      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: from,
+            toNodeID: to,
+            simulatedBy: from,
+            payload: 'garbage'
+          },
+          function () {});
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', from);
@@ -721,7 +737,15 @@ describe("NetSimRouterNode", function () {
       var to = router.entityID;
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: from,
+            toNodeID: to,
+            simulatedBy: from,
+            payload: 'garbage'
+          },
+          function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
@@ -740,7 +764,14 @@ describe("NetSimRouterNode", function () {
         fromAddress: '1111'
       }, 'messageBody');
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: fromNodeID,
+            toNodeID: toNodeID,
+            simulatedBy: fromNodeID,
+            payload: payload
+          },
           function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
@@ -762,7 +793,14 @@ describe("NetSimRouterNode", function () {
         fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
       }, 'messageBody');
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID,fromNodeID, payload,
+      NetSimMessage.send(
+          testShard,
+          {
+            fromNodeID: fromNodeID,
+            toNodeID: toNodeID,
+            simulatedBy: fromNodeID,
+            payload: payload
+          },
           function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
@@ -824,7 +862,14 @@ describe("NetSimRouterNode", function () {
           fromAddress: addressStringToBinary(fromAddress, netsimGlobals.getLevelConfig().addressFormat)
         }, '0'.repeat(messageSizeBits - 8));
 
-        NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
+        NetSimMessage.send(
+            testShard,
+            {
+              fromNodeID: fromNodeID,
+              toNodeID: toNodeID,
+              simulatedBy: fromNodeID,
+              payload: payload
+            },
             function () {});
       };
 
@@ -1143,8 +1188,15 @@ describe("NetSimRouterNode", function () {
           fromAddress: addressStringToBinary(localClient.address, netsimGlobals.getLevelConfig().addressFormat)
         }, '0'.repeat(messageSizeBits - 8));
 
-        NetSimMessage.send(testShard, localClient.entityID, router.entityID,
-            localClient.entityID, payload, function () {});
+        NetSimMessage.send(
+            testShard,
+            {
+              fromNodeID: localClient.entityID,
+              toNodeID: router.entityID,
+              simulatedBy: localClient.entityID,
+              payload: payload
+            },
+            function () {});
       };
 
       var assertRouterQueueSize = function (expectedQueueSizeBits) {
@@ -1312,8 +1364,15 @@ describe("NetSimRouterNode", function () {
           toAddress: addressStringToBinary(autoDnsAddress, netsimGlobals.getLevelConfig().addressFormat),
           fromAddress: addressStringToBinary(fromNode.address, netsimGlobals.getLevelConfig().addressFormat)
         },  asciiToBinary(asciiPayload, BITS_PER_BYTE));
-        NetSimMessage.send(testShard, fromNode.entityID, router.entityID,
-            fromNode.entityID, payload, function () {});
+        NetSimMessage.send(
+            testShard,
+            {
+              fromNodeID: fromNode.entityID,
+              toNodeID: router.entityID,
+              simulatedBy: fromNode.entityID,
+              payload: payload
+            },
+            function () {});
       };
 
       beforeEach(function () {
@@ -1460,8 +1519,33 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("routing to other routers", function () {
-    var addressFormat, packetHeaderSpec, encoder, routerA, routerB,
+    var addressFormat, packetHeaderSpec, encoder, routerA, routerB, routerC,
         clientA, clientB;
+
+    /**
+     * Synchronous router creation for test.
+     * @returns {NetSimRouterNode}
+     */
+    var makeRouter = function () {
+      var newRouter;
+      NetSimRouterNode.create(testShard, function (e, r) {
+        newRouter = r;
+      });
+      return newRouter;
+    };
+
+    /**
+     * Synchronous client creation for test.
+     * @param {string} displayName
+     * @returns {NetSimLocalClientNode}
+     */
+    var makeClient = function (displayName) {
+      var newClient;
+      NetSimLocalClientNode.create(testShard, displayName, function (e, n) {
+        newClient = n;
+      });
+      return newClient;
+    };
 
     var getRows = function (shard, table) {
       var rows;
@@ -1503,6 +1587,10 @@ describe("NetSimRouterNode", function () {
       return logs[logs.length - 1];
     };
 
+    var getLogCount = function () {
+      return getRows(testShard, 'logTable').length;
+    };
+
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
       addressFormat = '4.4';
@@ -1516,22 +1604,13 @@ describe("NetSimRouterNode", function () {
       encoder = new Packet.Encoder(addressFormat, 0, packetHeaderSpec);
 
       // Make routers
-      NetSimRouterNode.create(testShard, function (e, r) {
-        routerA = r;
-      });
-
-      NetSimRouterNode.create(testShard, function (e, r) {
-        routerB = r;
-      });
+      routerA = makeRouter();
+      routerB = makeRouter();
+      routerC = makeRouter();
 
       // Make clients
-      NetSimLocalClientNode.create(testShard, "clientA", function (e, n) {
-        clientA = n;
-      });
-
-      NetSimLocalClientNode.create(testShard, "clientB", function (e, n) {
-        clientB = n;
-      });
+      clientA = makeClient('clientA');
+      clientB = makeClient('clientB');
 
       clientA.initializeSimulation(null, null);
       clientB.initializeSimulation(null, null);
@@ -1665,6 +1744,253 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);
+    });
+
+    it ("can make one extra hop", function () {
+      netsimGlobals.getLevelConfig().minimumExtraHops = 1;
+      netsimGlobals.getLevelConfig().maximumExtraHops = 1;
+
+      // This test reads better with slower routing.
+      routerA.setBandwidth(50);
+      routerB.setBandwidth(50);
+      routerC.setBandwidth(25);
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: clientB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('wop'));
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 1);
+      assertFirstMessageProperty('visitedNodeIDs', []);
+
+      // t=1; router A picks up message, forwards to router B
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerA.entityID);
+      assertFirstMessageProperty('toNodeID', routerC.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID]);
+
+      // t=2; router C picks up message, forwards to router B
+      clientA.tick({time: 2000});
+      assertTableSize(testShard, 'logTable', 2);
+      assertFirstMessageProperty('fromNodeID', routerC.entityID);
+      assertFirstMessageProperty('toNodeID', routerB.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID]);
+
+      // t=3; router B picks up message, forwards to client B
+      clientA.tick({time: 3000});
+      assertTableSize(testShard, 'logTable', 3);
+      assertFirstMessageProperty('fromNodeID', routerB.entityID);
+      assertFirstMessageProperty('toNodeID', clientB.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID, routerB.entityID]);
+    });
+
+    it ("can make two extra hops", function () {
+      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
+      netsimGlobals.setRandomSeed('two-hops');
+
+      // Introduce another router so there's space for two extra hops.
+      var routerD = makeRouter();
+
+      // This test reads better with slower routing.
+      routerA.setBandwidth(50);
+      routerB.setBandwidth(50);
+      routerC.setBandwidth(25);
+      routerD.setBandwidth(25);
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: clientB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('wop'));
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 2);
+      assertFirstMessageProperty('visitedNodeIDs', []);
+
+      // t=1; router A picks up message, forwards to router B
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerA.entityID);
+      assertFirstMessageProperty('toNodeID', routerC.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 1);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID]);
+
+      // t=2; router C picks up message, forwards to router D
+      clientA.tick({time: 2000});
+      assertTableSize(testShard, 'logTable', 2);
+      assertFirstMessageProperty('fromNodeID', routerC.entityID);
+      assertFirstMessageProperty('toNodeID', routerD.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID, routerC.entityID]);
+
+      // t=3; router D picks up message, forwards to router B
+      clientA.tick({time: 3000});
+      assertTableSize(testShard, 'logTable', 3);
+      assertFirstMessageProperty('fromNodeID', routerD.entityID);
+      assertFirstMessageProperty('toNodeID', routerB.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID, routerC.entityID, routerD.entityID]);
+
+      // t=4; router B picks up message, forwards to client B
+      clientA.tick({time: 4000});
+      assertTableSize(testShard, 'logTable', 4);
+      assertFirstMessageProperty('fromNodeID', routerB.entityID);
+      assertFirstMessageProperty('toNodeID', clientB.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [
+        routerA.entityID, routerC.entityID, routerD.entityID, routerB.entityID]);
+    });
+
+
+    describe ("extra hop randomization", function () {
+      var packetBinary, routerD, routerE, routerF;
+
+      var sendMessageAndTickUntilRouted = function () {
+        clientA.sendMessage(packetBinary, function () {});
+        var t = 1000;
+        var lastLogCount;
+        do {
+          lastLogCount = getLogCount();
+          clientA.tick({time: t});
+        } while (getLogCount() !== lastLogCount);
+      };
+
+      beforeEach(function () {
+        routerD = makeRouter();
+        routerE = makeRouter();
+        routerF = makeRouter();
+
+        packetBinary = encoder.concatenateBinary(
+            encoder.makeBinaryHeaders({
+              toAddress: clientB.getAddress(),
+              fromAddress: clientA.getAddress()
+            }),
+            dataConverters.asciiToBinary('wop'));
+      });
+
+
+      it ("uses one order here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
+        netsimGlobals.setRandomSeed('two-hops');
+        sendMessageAndTickUntilRouted();
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerC.entityID,
+          routerF.entityID,
+          routerB.entityID
+        ]);
+      });
+
+      it ("uses a different order here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
+        netsimGlobals.setRandomSeed('for something completely different');
+        sendMessageAndTickUntilRouted();
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerE.entityID,
+          routerC.entityID,
+          routerB.entityID
+        ]);
+      });
+
+      it ("uses one number of hops here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
+        netsimGlobals.setRandomSeed('some random seed');
+        sendMessageAndTickUntilRouted();
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerD.entityID,
+          routerF.entityID,
+          routerC.entityID,
+          routerB.entityID
+        ]);
+      });
+
+      it ("uses a different number of hops here", function () {
+        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
+        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
+        netsimGlobals.setRandomSeed('second random seed');
+        sendMessageAndTickUntilRouted();
+        assertFirstMessageProperty('visitedNodeIDs', [
+          routerA.entityID,
+          routerD.entityID,
+          routerB.entityID
+        ]);
+      });
+    });
+
+    it ("only makes one extra hop if two would require backtracking", function () {
+      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
+      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
+
+      // This test reads better with slower routing.
+      routerA.setBandwidth(50);
+      routerB.setBandwidth(50);
+      routerC.setBandwidth(25);
+
+      var packetBinary = encoder.concatenateBinary(
+          encoder.makeBinaryHeaders({
+            toAddress: clientB.getAddress(),
+            fromAddress: clientA.getAddress()
+          }),
+          dataConverters.asciiToBinary('wop'));
+      clientA.sendMessage(packetBinary, function () {});
+
+      // t=0; nothing has happened yet
+      assertTableSize(testShard, 'logTable', 0);
+      assertFirstMessageProperty('fromNodeID', clientA.entityID);
+      assertFirstMessageProperty('toNodeID', routerA.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 2);
+      assertFirstMessageProperty('visitedNodeIDs', []);
+
+      // t=1; router A picks up message, forwards to router B
+      clientA.tick({time: 1000});
+      assertTableSize(testShard, 'logTable', 1);
+      assertFirstMessageProperty('fromNodeID', routerA.entityID);
+      assertFirstMessageProperty('toNodeID', routerC.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 1);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID]);
+
+      // t=2; router C picks up message, tries to forward to someone other
+      // than router B but there are no unvisited options;
+      // forwards to router B anyway.
+      clientA.tick({time: 2000});
+      assertTableSize(testShard, 'logTable', 2);
+      assertFirstMessageProperty('fromNodeID', routerC.entityID);
+      assertFirstMessageProperty('toNodeID', routerB.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID]);
+
+      // t=3; router B picks up message, forwards to client B
+      clientA.tick({time: 3000});
+      assertTableSize(testShard, 'logTable', 3);
+      assertFirstMessageProperty('fromNodeID', routerB.entityID);
+      assertFirstMessageProperty('toNodeID', clientB.entityID);
+      assertFirstMessageProperty('extraHopsRemaining', 0);
+      assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID, routerB.entityID]);
     });
 
     describe ("full-shard Auto-DNS", function () {

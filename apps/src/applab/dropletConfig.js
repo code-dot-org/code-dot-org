@@ -98,7 +98,7 @@ module.exports.blocks = [
   {'func': 'length', 'block': 'str.length', 'category': 'Variables', 'modeOptionName': '*.length' },
   {'func': 'toUpperCase', 'blockPrefix': 'str.toUpperCase', 'category': 'Variables', 'modeOptionName': '*.toUpperCase' },
   {'func': 'toLowerCase', 'blockPrefix': 'str.toLowerCase', 'category': 'Variables', 'modeOptionName': '*.toLowerCase' },
-  {'func': 'declareAssign_list_abde', 'block': 'var list = ["a", "b", "d", "e"];', 'category': 'Variables', 'noAutocomplete': true },
+  {'func': 'declareAssign_list_abd', 'block': 'var list = ["a", "b", "d"];', 'category': 'Variables', 'noAutocomplete': true },
   {'func': 'listLength', 'block': 'list.length', 'category': 'Variables', 'noAutocomplete': true },
   {'func': 'insertItem', 'parent': dontMarshalApi, 'category': 'Variables', 'paletteParams': ['list','index','item'], 'params': ["list", "2", '"c"'], 'dontMarshal': true },
   {'func': 'appendItem', 'parent': dontMarshalApi, 'category': 'Variables', 'paletteParams': ['list','item'], 'params': ["list", '"f"'], 'dontMarshal': true },

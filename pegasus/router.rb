@@ -5,7 +5,7 @@ require 'sinatra/base'
 require 'sinatra/verbs'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
-require 'cdo/rack/deflater'
+require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
 require 'active_support'
@@ -13,6 +13,7 @@ require 'base64'
 require 'cgi'
 require 'json'
 require 'uri'
+require 'cdo/rack/https_redirect'
 require 'cdo/rack/upgrade_insecure_requests'
 
 if rack_env?(:production)
@@ -57,6 +58,7 @@ class Documents < Sinatra::Base
     configs
   end
 
+  use Rack::HTTPSRedirect unless rack_env?(:production)
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater

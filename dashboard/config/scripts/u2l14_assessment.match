@@ -1,0 +1,24 @@
+name 'U2L14 Assessment'
+title 'Assessment'
+
+question 'character frequency'
+answer 'the distribution of letters in a language'
+question 'heuristic'  
+answer 'technique used to find an approximate solution' 
+question 'encrypt'
+answer 'use an algorithm to encode a message'
+question 'decrypt'
+answer 'use an algorithm to decode a message'
+question 'cipher'
+answer 'another term for encrypted message'
+question 'crack'
+answer 'process to discover an decryption algorithm'
+question 'Random substitution cipher'
+answer 'encryption in which arbitrary symbols replace letters'
+question 'Caesar cipher'
+answer 'encryption based upon the alphabetical order of letters'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -41,8 +41,7 @@
     "message_granularity": "bits",
     "automatic_receive": "false",
     "show_metronome": "true"
-  },
-  "md5": "fd73422fc914c269c1aa4240a1c4647e"
+  }
 }]]></config>
   <blocks/>
 </NetSim>

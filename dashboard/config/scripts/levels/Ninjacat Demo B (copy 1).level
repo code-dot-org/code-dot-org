@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2014-11-27T00:01:11.293Z",
+  "created_at": "2014-11-27T00:01:11.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {

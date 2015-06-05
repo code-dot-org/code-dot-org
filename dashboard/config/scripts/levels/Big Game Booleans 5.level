@@ -38,10 +38,8 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
-    "maze_data": null,
     "disable_examples": "false"
-  },
-  "md5": "8fa63c3dd9519e0026061b9900952251"
+  }
 }]]></config>
   <blocks/>
 </Studio>
