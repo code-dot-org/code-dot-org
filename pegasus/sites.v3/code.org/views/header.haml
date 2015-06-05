@@ -96,6 +96,17 @@
 
 :javascript
   var headerSetup = false;
+  function onURLBlocked(base_url, callback) {
+    $('<img width=1 height=1>')
+      .on("error", callback)
+      .attr("src", base_url + "?" + Math.random())
+      .css("position", "absolute")
+      .css("bottom", 0)
+      .css("width", 1)
+      .css("height", 1)
+      .css("visibility", "hidden")
+      .appendTo("body");
+  }
 
   $ = jQuery;
   $(document).ready(function() {
@@ -116,5 +127,8 @@
 
     $("#learnlink").click(function() {
       $("#learnoptions").fadeToggle();
+    });
+    onURLBlocked("#{ CDO.code_org_url('test-image.png', 'https:')}", function () {
+      trackEvent("HTTPS Test", "blocked");
     });
   });

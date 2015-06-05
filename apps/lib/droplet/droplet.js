@@ -4211,6 +4211,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       'alert': {},
       'prompt': {},
       'console.log': {},
+      '*.toString': {},
       'Math.abs': {
         value: true
       },
@@ -4554,25 +4555,29 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.lookupFunctionName = function(nn) {
-        var full, last;
-        if (nn.length > 1) {
-          full = (nn.map(function(n) {
-            return (n != null ? n.value : void 0) || '*';
-          })).join('.');
-          if (full in this.opts.functions) {
-            return {
-              name: full,
-              dotted: true,
-              fn: this.opts.functions[full]
-            };
-          }
-        }
-        last = nn[nn.length - 1];
-        if ((last != null) && last.value in this.opts.functions) {
+        var full, last, ref, wildcard;
+        full = (nn.map(function(n) {
+          return (n != null ? n.value : void 0) || '*';
+        })).join('.');
+        if (full in this.opts.functions) {
           return {
-            name: last.value,
-            dotted: false,
-            fn: this.opts.functions[last.value]
+            name: full,
+            anyobj: false,
+            fn: this.opts.functions[full]
+          };
+        }
+        last = (ref = nn[nn.length - 1]) != null ? ref.value : void 0;
+        if (nn.length > 1 && !((wildcard = '*.' + last) in this.opts.functions)) {
+          wildcard = null;
+        }
+        if (!wildcard && !((wildcard = '?.' + last) in this.opts.functions)) {
+          wildcard = null;
+        }
+        if (wildcard !== null) {
+          return {
+            name: last,
+            anyobj: true,
+            fn: this.opts.functions[wildcard]
           };
         }
         return null;
@@ -4734,7 +4739,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
               } else if (!known) {
                 this.csSocketAndMark(node.variable, depth + 1, 0, indentDepth);
-              } else if (!known.dotted && ((ref9 = node.variable.properties) != null ? ref9.length : void 0) > 0) {
+              } else if (known.anyobj && ((ref9 = node.variable.properties) != null ? ref9.length : void 0) > 0) {
                 this.csSocketAndMark(node.variable.base, depth + 1, 0, indentDepth);
               }
             } else {
@@ -7806,6 +7811,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       'alert': {},
       'prompt': {},
       'console.log': {},
+      '*.toString': {
+        value: true
+      },
       'Math.abs': {
         value: true
       },
@@ -8023,24 +8031,28 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.lookupFunctionName = function(node) {
-        var fname, full, last;
+        var fname, full, last, wildcard;
         fname = this.fullFunctionNameArray(node);
-        if (fname.length > 1) {
-          full = fname.join('.');
-          if (full in this.opts.functions) {
-            return {
-              name: full,
-              dotted: true,
-              fn: this.opts.functions[full]
-            };
-          }
+        full = fname.join('.');
+        if (full in this.opts.functions) {
+          return {
+            name: full,
+            anyobj: false,
+            fn: this.opts.functions[full]
+          };
         }
         last = fname[fname.length - 1];
-        if (last in this.opts.functions) {
+        if (fname.length > 1 && !((wildcard = '*.' + last) in this.opts.functions)) {
+          wildcard = null;
+        }
+        if (!wildcard && !((wildcard = '?.' + last) in this.opts.functions)) {
+          wildcard = null;
+        }
+        if (wildcard !== null) {
           return {
             name: last,
-            dotted: false,
-            fn: this.opts.functions[last]
+            anyobj: true,
+            fn: this.opts.functions[wildcard]
           };
         }
         return null;
@@ -8364,6 +8376,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             known = this.lookupFunctionName(node);
             if (!known) {
               this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
+            } else if (known.anyobj && node.callee.type === 'MemberExpression') {
+              this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN);
             }
             ref5 = node["arguments"];
             results5 = [];
@@ -8717,6 +8731,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           this.mode = new coffee(this.options.modeOptions);
         }
         this.draw = new draw.Draw();
+        this.gutterDecorations = {};
         this.debugging = true;
         this.dropletElement = document.createElement('div');
         this.dropletElement.className = 'droplet-wrapper-div';
@@ -9152,6 +9167,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     Editor.prototype.trackerPointIsInMainScroller = function(point) {
       return this.trackerPointIsInElement(point, this.mainScroller);
+    };
+    Editor.prototype.trackerPointIsInGutter = function(point) {
+      return this.trackerPointIsInElement(point, this.gutter);
     };
     Editor.prototype.trackerPointIsInPalette = function(point) {
       return this.trackerPointIsInElement(point, this.paletteCanvas);
@@ -11987,7 +12005,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.setEditorState = function(useBlocks) {
       var oldScrollTop, paletteVisibleInNewState;
       if (useBlocks) {
-        this.setValue(this.getAceValue());
+        if (!this.currentlyUsingBlocks) {
+          this.setValue(this.getAceValue());
+        }
         this.dropletElement.style.top = '0px';
         if (this.paletteEnabled) {
           this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
@@ -12005,7 +12025,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       } else {
         paletteVisibleInNewState = this.paletteEnabled && this.showPaletteInTextMode;
         oldScrollTop = this.aceEditor.session.getScrollTop();
-        this.setAceValue(this.getValue());
+        if (this.currentlyUsingBlocks) {
+          this.setAceValue(this.getValue());
+        }
         this.aceEditor.resize(true);
         this.aceEditor.session.setScrollTop(oldScrollTop);
         this.dropletElement.style.top = this.dropletElement.style.left = '-9999px';
@@ -12269,6 +12291,63 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.lineNumberTags = {};
       return this.dropletElement.appendChild(this.gutter);
     });
+    Editor.prototype.addGutterDecoration = function(row, className) {
+      var decorations;
+      if (!this.gutterDecorations[row]) {
+        this.gutterDecorations[row] = [];
+      }
+      decorations = this.gutterDecorations[row];
+      if (indexOf.call(decorations, className) >= 0) {
+        return;
+      }
+      decorations.push(className);
+      return this.redrawMain();
+    };
+    Editor.prototype.removeGutterDecoration = function(row, className) {
+      var decorations;
+      this.redrawMain();
+      if (!this.gutterDecorations[row]) {
+        return;
+      }
+      decorations = this.gutterDecorations[row];
+      if (indexOf.call(decorations, className) < 0) {
+        return;
+      }
+      decorations.splice(decorations.indexOf(className), 1);
+      if (decorations.length === 0) {
+        this.gutterDecorations[row] = null;
+      }
+      return this.redrawMain();
+    };
+    Editor.prototype.hasGutterDecoration = function(row, className) {
+      if (!this.gutterDecorations[row]) {
+        return false;
+      }
+      return indexOf.call(this.gutterDecorations[row], className) >= 0;
+    };
+    Editor.prototype.toggleGutterDecoration = function(row, className) {
+      if (this.hasGutterDecoration(row, className)) {
+        return this.removeGutterDecoration(row, className);
+      } else {
+        return this.addGutterDecoration(row, className);
+      }
+    };
+    hook('mousedown', 11, function(point, event, state) {
+      var clickedLine, mainPoint, treeView;
+      if (!this.trackerPointIsInGutter(point)) {
+        return;
+      }
+      mainPoint = this.trackerPointToMain(point);
+      treeView = this.view.getViewNodeFor(this.tree);
+      clickedLine = this.findLineNumberAtCoordinate(mainPoint.y);
+      this.fireEvent('guttermousedown', [
+        {
+          line: clickedLine,
+          event: event
+        }
+      ]);
+      return true;
+    });
     Editor.prototype.resizeGutter = function() {
       var ref1, ref2;
       this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
@@ -12281,11 +12360,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         lineDiv = this.lineNumberTags[line];
       } else {
         lineDiv = document.createElement('div');
-        lineDiv.className = 'droplet-gutter-line';
         lineDiv.innerText = lineDiv.textContent = line + 1;
         this.lineNumberTags[line] = lineDiv;
       }
-      lineDiv.style.top = (treeView.bounds[line].y + treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
+      lineDiv.className = 'droplet-gutter-line';
+      if (this.gutterDecorations[line]) {
+        lineDiv.className += ' ' + this.gutterDecorations[line].join(' ');
+      }
+      lineDiv.style.top = treeView.bounds[line].y + "px";
+      lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
       lineDiv.style.height = treeView.bounds[line].height + 'px';
       lineDiv.style.fontSize = this.fontSize + 'px';
       return this.lineNumberWrapper.appendChild(lineDiv);
@@ -12374,7 +12457,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               ref1 = str.split('\n');
               for (j = 0, len = ref1.length; j < len; j++) {
                 line = ref1[j];
-                minIndent = Math.min(minIndent, str.length - str.trimLeft().length);
+                minIndent = Math.min(minIndent, line.length - line.trimLeft().length);
               }
               str = ((function() {
                 var k, len1, ref2, results;
