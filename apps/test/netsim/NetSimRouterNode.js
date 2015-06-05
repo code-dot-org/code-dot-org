@@ -1228,7 +1228,7 @@ describe("NetSimRouterNode", function () {
         }, 0);
         assert(droppedPackets === expectedDropCount, "Expected that " +
             expectedDropCount + " packets would be dropped, " +
-            "but logs only report " + droppedPackets + "dropped packets");
+            "but logs only report " + droppedPackets + " dropped packets");
       };
 
       beforeEach(function () {
@@ -1361,6 +1361,95 @@ describe("NetSimRouterNode", function () {
         assertEqual(6 * 8, router.getMemoryInUse());
       });
 
+    });
+
+    describe ("Random drop chance", function () {
+      var sendMessageOfSize = function (messageSizeBits) {
+        var payload = encoder.concatenateBinary({
+          toAddress: addressStringToBinary(remoteA.address, netsimGlobals.getLevelConfig().addressFormat),
+          fromAddress: addressStringToBinary(localClient.address, netsimGlobals.getLevelConfig().addressFormat)
+        }, '0'.repeat(messageSizeBits - 8));
+
+        NetSimMessage.send(testShard, localClient.entityID, router.entityID,
+            localClient.entityID, payload, function () {});
+      };
+
+      var tickUntilStable = function () {
+        var t = 1, lastLogCount;
+        do {
+          lastLogCount = getRows(testShard, 'logTable').length;
+          router.tick({time: t});
+          t += 1;
+        } while (getRows(testShard, 'logTable').length !== lastLogCount);
+      };
+
+      var send100MessagesAndTickUntilStable = function () {
+        for (var i = 0; i < 100; i++) {
+          sendMessageOfSize(8);
+        }
+        tickUntilStable();
+      };
+
+      var assertHowManyDropped = function (expectedDropCount) {
+        var droppedPackets = getRows(testShard, 'logTable').map(function (l) {
+          return l.status === NetSimLogEntry.LogStatus.DROPPED ? 1 : 0;
+        }).reduce(function (p, c) {
+          return p + c;
+        }, 0);
+        assert(droppedPackets === expectedDropCount, "Expected that " +
+        expectedDropCount + " packets would be dropped, " +
+        "but logs only report " + droppedPackets + " dropped packets");
+      };
+
+      beforeEach(function () {
+        // Establish time baseline of zero
+        router.tick({time: 0});
+        assertTableSize(testShard, 'logTable', 0);
+        assertEqual(Infinity, router.bandwidth);
+        assertEqual(Infinity, router.memory);
+      });
+
+      it ("zero chance drops nothing", function () {
+        router.randomDropChance = 0;
+        send100MessagesAndTickUntilStable();
+        assertTableSize(testShard, 'messageTable', 100);
+        assertHowManyDropped(0);
+      });
+
+      it ("100% chance drops everything", function () {
+        router.randomDropChance = 1;
+        send100MessagesAndTickUntilStable();
+        assertTableSize(testShard, 'messageTable', 0);
+        assertHowManyDropped(100);
+      });
+
+      it ("50% drops about half", function () {
+        netsimGlobals.setRandomSeed('a');
+        router.randomDropChance = 0.5;
+        send100MessagesAndTickUntilStable();
+        assertHowManyDropped(48);
+      });
+
+      it ("50% drops about half (example two)", function () {
+        netsimGlobals.setRandomSeed('b');
+        router.randomDropChance = 0.5;
+        send100MessagesAndTickUntilStable();
+        assertHowManyDropped(58);
+      });
+
+      it ("10% drops a few", function () {
+        netsimGlobals.setRandomSeed('c');
+        router.randomDropChance = 0.1;
+        send100MessagesAndTickUntilStable();
+        assertHowManyDropped(7);
+      });
+
+      it ("10% drops a few (example two)", function () {
+        netsimGlobals.setRandomSeed('d');
+        router.randomDropChance = 0.1;
+        send100MessagesAndTickUntilStable();
+        assertHowManyDropped(8);
+      });
     });
 
     describe("Auto-DNS behavior", function () {

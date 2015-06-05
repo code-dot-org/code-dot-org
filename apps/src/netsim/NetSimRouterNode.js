@@ -1532,6 +1532,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
       return;
     }
 
+    // Apply random chance to drop packet, right as we are about to forward it
+    if (this.randomDropChance > 0 && netsimGlobals.random() <= this.randomDropChance) {
+      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+      onComplete(null);
+      return;
+    }
+
     var levelConfig = netsimGlobals.getLevelConfig();
     if (levelConfig.broadcastMode) {
       this.forwardMessageToAll_(message, onComplete);
