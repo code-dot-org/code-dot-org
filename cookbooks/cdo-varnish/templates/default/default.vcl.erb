@@ -345,14 +345,16 @@ sub vcl_recv
   %>else if(req.http.Host == "<%= domain %>")
   {
     /* <%= domain %> redirects to <%= site %> */
-    error 751 "<%= rack_env?(:production) ? 'http' : 'https' %>://<%= site %>" + req.url;
+    error 751 "http://<%= site %>" + req.url;
   }
   <% end%>
   <% unless rack_env?(:production) %>
-  else if(req.http.X-Forwarded-Proto !~ "(?i)https")
-  {
-  /* Redirect http to https */
-  error 751 "https://" + req.http.host + req.url;
+  # Redirect http to https if 'https_ok' cookie is set
+  if(req.http.X-Forwarded-Proto !~ "(?i)https" && req.http.Cookie) {
+    cookie.parse(req.http.cookie);
+    if(cookie.get("https_ok") == "1") {
+      error 751 "https://" + req.http.host + req.url;
+    }
   }
   <% end %>
 
