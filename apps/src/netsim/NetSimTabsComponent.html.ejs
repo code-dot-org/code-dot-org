@@ -27,7 +27,10 @@
     <% } %>
   </ul>
   <% if (showInstructions) { %>
-    <div id="tab_instructions"><p><%= instructionsContent %></p></div>
+    <div id="tab_instructions">
+      <p><%= instructionsContent %></p>
+      <button id="finished" class="btn btn-primary submitButton">Finished! Continue to next stage</button>
+    </div>
   <% } %>
   <% if (showMyDevice) { %>
     <div id="tab_my_device"></div>
