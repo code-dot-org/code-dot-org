@@ -9,7 +9,7 @@
     - heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:param2_s]}
     - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
     - heroes_stat = heroes.select {|hero| hero[:param2_s] == "stat"}
-    - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.zip(heroes_stat).flatten.compact.first(9)
+    - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.zip(heroes_stat).flatten.compact.first(6)
     - hero_display_time = 13 * 1000
   - else
     -# on non-production, show all heroes, and more quickly, for easier previewing
