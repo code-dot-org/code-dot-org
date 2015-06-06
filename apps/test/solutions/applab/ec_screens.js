@@ -177,7 +177,16 @@ module.exports = {
 
         validatePropertyRow(1, 'id', 'screen2', assert);
 
-        ReactTestUtils.Simulate.click(document.getElementById('deletePropertiesButton'));
+        var deleteButton = $("#design-properties button").eq(-1);
+        assert.equal(deleteButton.text(), 'Delete');
+
+        ReactTestUtils.Simulate.click(deleteButton[0]);
+
+        // Should have resulted in two new buttons
+        assert.equal($("#design-properties button").eq(-1).text(), 'No');
+        assert.equal($("#design-properties button").eq(-2).text(), 'Yes');
+
+        ReactTestUtils.Simulate.click($("#design-properties button").eq(-2)[0]);
 
         validationEmptyDesignProperties(assert);
         assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
@@ -187,7 +196,10 @@ module.exports = {
         // a react component)
         $("#screen1").click();
         validatePropertyRow(1, 'id', 'screen1', assert);
-        assert(document.getElementById('deletePropertiesButton').hasAttribute('disabled'));
+
+        // One button, and it isn't delete
+        assert.equal($("#design-properties button").length, 1);
+        assert.equal($("#design-properties button").text(), '');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -349,8 +361,10 @@ module.exports = {
 
         assert(button.parentNode === outerDiv);
 
+        var deleteButton = $("#design-properties button").eq(-1);
+        assert.equal(deleteButton.text(), 'Delete');
 
-        ReactTestUtils.Simulate.click(document.getElementById('deletePropertiesButton'));
+        ReactTestUtils.Simulate.click(deleteButton[0]);
 
         // outdiv and child should have gone away
         assert.equal(screenElement.children.length, 0);
