@@ -2,7 +2,12 @@
 
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-  - if rack_env == :production
+
+  - if rack_env != :production && request.params["preview"]
+    -# on non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
+    - heroes_arranged = heroes
+    - hero_display_time = 6 * 1000
+  - else
     - # The order alternates person & stat.  Person alternates non-celeb and celeb.  Non-celeb is student or teacher.
     - # We open with a celeba.
     - # i.e. celeba, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat, etc.
@@ -20,10 +25,6 @@
     -# heroes_arranged.each do |hero|
       - puts hero[:param2_s]
 
-  - else
-    -# on non-production, show all heroes, and more quickly, for easier previewing
-    - heroes_arranged = heroes
-    - hero_display_time = 6 * 1000
 
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
