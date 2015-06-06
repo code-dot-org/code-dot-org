@@ -4,13 +4,22 @@
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
   - if rack_env == :production
     - # The order alternates person & stat.  Person alternates non-celeb and celeb.  Non-celeb is student or teacher.
-    - # i.e. non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat, etc.
+    - # We open with a celeba.
+    - # i.e. celeba, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat, etc.
     - heroes.shuffle!
     - heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:param2_s]}
     - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
     - heroes_stat = heroes.select {|hero| hero[:param2_s] == "stat"}
-    - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.zip(heroes_stat).flatten.compact.first(6)
+    - heroes_arranged = heroes_stat.zip(heroes_nonceleb.zip(heroes_celeb).flatten).flatten.compact.first(6)
+    - heroes_celeba = heroes.select {|hero| hero[:param2_s] == "celeba"}
+    - heroes_celeba.shuffle!
+    - heroes_arranged.unshift(heroes_celeba.first)
     - hero_display_time = 13 * 1000
+
+    -# handy debug output:
+    -# heroes_arranged.each do |hero|
+      - puts hero[:param2_s]
+
   - else
     -# on non-production, show all heroes, and more quickly, for easier previewing
     - heroes_arranged = heroes
