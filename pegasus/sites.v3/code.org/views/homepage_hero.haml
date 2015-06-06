@@ -27,7 +27,7 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
-    .widehero{id: "fullwidth#{index}", style: "background-image: url(#{entry[:image_t]}); background-position: #{entry[:param1_s]}"}
+    .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
     .thegap{style: "height: 1px"}
@@ -102,6 +102,17 @@
     $("#fullwidth0").fadeTo(4000, 1);
 
     showQuote(null, 0);
+
+    // Use retina versions of the hero background images if on a retina display.
+    $(".widehero").each(function()
+    {
+      var imageUrl = $(this).data('background-image');
+      if (window.devicePixelRatio >= 2)
+      {
+        imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
+      }
+      $(this).css('background-image', imageUrl);
+    });
   }
 
   function showQuote(lastImage, nextImage)
