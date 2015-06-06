@@ -394,15 +394,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
   window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
-
-
-  $('.submitButton').click(function (jQueryEvent) {
-    if ($(jQueryEvent.target).attr('disabled')) {
-      return;
-    }
-
-    this.onContinueToNextLevel();
-  }.bind(this));
 };
 
 /**
@@ -1257,7 +1248,7 @@ NetSim.prototype.updateLayout = function () {
  * Appropriate steps for when the student hits the "Continue to next level"
  * button.  Should mark the level as complete and navigate to the next level.
  */
-NetSim.prototype.onContinueToNextLevel = function () {
+NetSim.prototype.completeLevelAndContinue = function () {
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
