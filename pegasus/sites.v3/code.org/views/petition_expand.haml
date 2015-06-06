@@ -60,6 +60,9 @@
             = I18n.t :homepage_signpetition_dropdown
           -else
             = I18n.t :hoc2014_support
+        - # Temp: English only until we have translations.
+        - if request.language == "en"
+          %span{:style=>"font-size: 14px; line-height:20px; font-weight:400; margin-left: 20px; margin-top:10px"}=I18n.t(:petition_join_others).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
 :javascript
 
@@ -150,39 +153,5 @@
   {
     petition = new Petition();
   }
-  
-
-:javascript
-  function trackFacebook(opt_pagePath) {
-    try {
-      if (FB && FB.Event && FB.Event.subscribe) {
-        FB.Event.subscribe('edge.create', function(targetUrl) {
-          if (console && console.log)
-            console.log("Recording facebook like", "http://#{request.host + request.path}");
-          ga('send', 'social', 'facebook', 'like', "http://#{request.host + request.path}");
-          ga('send','event','button','click',{eventLabel:'facebook_like'});
-        });
-      }
-    } catch(e) {}
-  };
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1560940110839035',
-      xfbml      : true,
-      version    : 'v2.1'
-    });
-
-    // Send back some analytics.
-    trackFacebook();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
 
  
