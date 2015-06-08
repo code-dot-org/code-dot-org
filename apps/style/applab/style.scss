@@ -557,3 +557,7 @@ button.arrow:focus {
   color: #0596CE;
   text-decoration: underline;
 }
+
+.droplet-dropdown {
+  z-index: 500 !important;
+}
