@@ -1,6 +1,8 @@
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
  * will fit within the browser viewport.
+ * @param {string} scrollableElementSelector - jQuery selector string for scrollable inner
+ * element
  */
 function sizeDialogToViewport(scrollableElementSelector) {
   var viewportHeight = $(window).height();

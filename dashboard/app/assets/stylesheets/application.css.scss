@@ -291,7 +291,7 @@ html, body {
   padding: 0px 25px 25px 25px;
 }
 
-$scrollable-modal-width: 635px;
+$default-modal-width: 640px;
 
 .modal {
   a:hover {color:$red; background-color: white; }
@@ -300,14 +300,21 @@ $scrollable-modal-width: 635px;
     background-color: $lightest_gray;
     position: absolute;
     top: 44px; // top of the dialog
+
+    // make dialog auto-center regardless of width
     right: 0;
     left: 0;
     margin: 0 auto;
+
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
     margin-bottom: 25px;
-    width: $scrollable-modal-width;
+
     z-index: 1050;
+  }
+
+  &#block-documentation-lightbox {
+    width: 80% !important;
   }
 }
 
@@ -316,8 +323,8 @@ $scrollable-modal-width: 635px;
 }
 
 .dash_modal {
-  width: 640px;
-  margin-left: -320px;
+  width: $default-modal-width;
+  margin-left: -($default-modal-width / 2);
 }
 
 .dash_modal_body {
@@ -1774,7 +1781,7 @@ $modal-image-margin-gap: 10px;
   padding: 0 $padding-side 15px;
   background-color: white;
   $outside-margin-side: 15px;
-  width: $scrollable-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
+  width: $default-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
 }
 
 .instructions-markdown {
