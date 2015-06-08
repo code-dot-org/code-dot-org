@@ -135,10 +135,20 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'text':
       element.textContent = value;
@@ -152,13 +162,32 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = value + 'px';
       break;
+
     case 'image':
-      // For now, we stretch the image to fit the element
+      var image = new Image();
+      var backgroundImage = new Image();
+      backgroundImage.onload = function(){
+        element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+          backgroundImage.naturalHeight + 'px';
+        element.style.width = backgroundImage.naturalWidth + 'px';
+        element.style.height = backgroundImage.naturalHeight + 'px';
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+      backgroundImage.src = value;
+      break;
+
+    case 'screen-image':
+      // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
+
     case 'picture':
       element.src = value;
       element.onload = function () {
@@ -403,7 +432,9 @@ function makeDraggable (jq) {
         $(this).children().css('z-index', '');
       },
       resize: function () {
-        designMode.renderDesignWorkspace(elm[0]);
+        var element = elm[0];
+        designMode.onPropertyChange(element, 'width', element.style.width);
+        designMode.onPropertyChange(element, 'height', element.style.height);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -449,6 +480,14 @@ function makeDraggable (jq) {
       top: elm.css('top'),
       left: elm.css('left')
     });
+
+    // Chrome has a nasty bug where when we wrap the element in a div, it
+    // occasionally chooses not to rerender our element for some reason. This
+    // is a hacky that causes Chrome to rerender the parent, thus not causing
+    // our element to disappear.
+    var currHeight = wrapper.parent().height();
+    wrapper.parent().height(currHeight + 1);
+    wrapper.parent().height(currHeight);
 
     elm.css('position', 'static');
   });
