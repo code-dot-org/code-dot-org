@@ -421,11 +421,6 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
     this.myWire = null;
   }
 
-  var myRouter = this.getMyRouter();
-  if (myRouter) {
-    myRouter.stopSimulation();
-  }
-
   this.myRemoteClient = null;
   this.myRouterID_ = undefined;
   this.remoteChange.notifyObservers(null, null);
@@ -445,11 +440,6 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     // re-disconnect.
     if (err) {
       logger.info("Error while disconnecting: " + err.message);
-    }
-
-    var myRouter = this.getMyRouter();
-    if (myRouter) {
-      myRouter.stopSimulation();
     }
 
     this.myWire = null;
