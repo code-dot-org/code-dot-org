@@ -1061,6 +1061,9 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
+
+    logger.info(this.getDisplayName() + ": Assigned address " +
+        wire.localAddress + " to host " + wire.localHostname);
   }.bind(this));
 };
 
@@ -1440,6 +1443,9 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   if (_.isEqual(this.routerQueueCache_, newQueue)) {
     return;
   }
+
+  logger.info(this.getDisplayName() + ': Message queue updated (size ' +
+      newQueue.length + ')');
 
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
