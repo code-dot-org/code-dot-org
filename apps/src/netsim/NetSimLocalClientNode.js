@@ -296,6 +296,9 @@ NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) 
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
+
+  logger.info(this.getDisplayName() + ": Connecting to " + router.getDisplayName());
+
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
@@ -500,12 +503,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
           return;
         }
 
-        logger.info('Local node sent message');
+        logger.info(this.getDisplayName() + ': Sent message:' +
+            '\nfrom: ' + localNodeID +
+            '\nto  : ' + remoteNodeID +
+            '\nsim : ' + simulatingNodeID +
+            '\nhops: ' + extraHops);
+
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
         onComplete(null);
-      }
+      }.bind(this)
   );
 };
 
