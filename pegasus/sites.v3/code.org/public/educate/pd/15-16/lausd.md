@@ -14,7 +14,11 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-LAUSD teachers enrolled in the Computer Science Principles program will attend PD in Broward County, Florida. Please visit the [Broward location page](/educate/pd/15-16/broward) for all  workshop details. 
+LAUSD teachers enrolled in the Computer Science Principles program have been assigned to attend PD in one of the following locations. Click on your location for workshop information.
+
+- [Broward, Florida](/educate/pd/15-16/broward) 
+- [Spokane, Washington](/educate/pd/15-16/spokane)
+- [Chicago, Illinois](/educate/pd/15-16/chicago)
 
 [**Back to the top**](#top)
 
@@ -48,7 +52,7 @@ Group 1 and Group 2 will attend PD at the following location:
 
 UCLA
 <br/>
-Moore Hall Room 2120
+Moore Hall Room 3140
 <br/>
 457 Portola Plaza
 <br/>
@@ -94,7 +98,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Wednesday, June 17, 2015 - Friday, June 19, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 
@@ -138,13 +142,21 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 15, 2015 - Wednesday, June 17, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-TBD - More info coming soon!
+STEM Academy of Hollywood
+<br/>
+Room 415
+<br/>
+1309 N Wilton Pl
+<br/>
+Los Angeles, CA 90028
+
+Parking Information: Enter parking lot on Fountain Ave. and park in tandem in a STEM Academy parking spot. The school advises you put your phone number on a piece of paper on your dashboard as parking is tight and you can sometime block people in.
 
 ### What do I bring to Phase 2? ###
 Water Bottle

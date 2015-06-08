@@ -32,7 +32,7 @@ var ScreenProperties = React.createClass({
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
-          handleChange={this.props.handleChange.bind(this, 'image')} />
+          handleChange={this.props.handleChange.bind(this, 'screen-image')} />
       </table>);
   }
 });
@@ -42,7 +42,7 @@ module.exports = {
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
-    element.style.display = 'inline';
+    element.style.display = 'block';
     element.style.height = Applab.appHeight + 'px';
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';

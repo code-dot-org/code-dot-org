@@ -15,6 +15,7 @@ nav: pd2_nav
 The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 </br>
 </br>
+
 **Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
 ### Save the dates
@@ -30,6 +31,8 @@ Breakfast and lunch will be served.
 ### Location
 
 Applications and Research Laboratory (ARL)
+<br />
+Room: A8
 <br />
 10920 Clarksville Pike
 <br />

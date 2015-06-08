@@ -43,9 +43,23 @@ module Ops
       assert_equal @cohort.teachers.count, assigns(:workshop).teachers.count
     end
 
-    test "Facilitators can add teachers the day of a workshop" do
-      #87055064
-      # todo
+    test "Facilitators can add unexpected teachers to a workshop" do
+      sign_in @workshop.facilitators.first
+      unexpected_teacher_1 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', ops_school: 'Washington Elementary', ops_gender: 'Female')
+      unexpected_teacher_2 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.yy', ops_school: 'Washington Elementary', ops_gender: 'Female')
+      unexpected_teacher_params = [
+          {email: unexpected_teacher_1.email},
+          {email: unexpected_teacher_2.email}]
+      workshop_params = {"unexpected_teachers"=>unexpected_teacher_params}
+      put :update, id: @workshop.id, workshop: workshop_params
+      @workshop.reload
+      assert_equal [unexpected_teacher_1, unexpected_teacher_2], @workshop.unexpected_teachers
+
+      assert !ActionMailer::Base.deliveries.empty?
+      # the notification to the ops team
+      mail = ActionMailer::Base.deliveries.last
+      assert_equal ['ops@code.org'], mail.to
+      assert_equal "[ops notification] #{@workshop.facilitators.first.email} has added unexpected teachers to #{@workshop.name}", mail.subject
     end
 
     test 'Ops team can add multiple cohorts to a workshop' do
