@@ -4,6 +4,8 @@ var React = require('react');
 var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
 
+var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
+
 var nextKey = 0;
 
 var DesignProperties = module.exports = React.createClass({
@@ -11,7 +13,6 @@ var DesignProperties = module.exports = React.createClass({
     element: React.PropTypes.instanceOf(HTMLElement),
     handleChange: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
-    onDone: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired
   },
 
@@ -39,6 +40,14 @@ var DesignProperties = module.exports = React.createClass({
       onDepthChange: this.props.onDepthChange
     });
 
+    var deleteButton;
+    if (this.props.element.id !== 'screen1') {
+      deleteButton = (<DeleteElementButton
+        shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
+        handleDelete={this.props.onDelete}/>);
+    }
+
+
     // We provide a key to the outer div so that element foo and element bar are
     // seen to be two completely different tables. Otherwise the defaultValues
     // in inputs don't update correctly.
@@ -46,17 +55,7 @@ var DesignProperties = module.exports = React.createClass({
       <div key={key}>
         <p>{applabMsg.designWorkspaceDescription()}</p>
         {propertiesElement}
-        <button
-          id="donePropertiesButton"
-          onClick={this.props.onDone}>
-          Done
-        </button>
-        <button
-          id="deletePropertiesButton"
-          disabled={this.props.element.id === 'screen1'}
-          onClick={this.props.onDelete}>
-          Delete
-        </button>
+        {deleteButton}
       </div>
     );
   }

@@ -493,6 +493,18 @@ Applab.init = function(config) {
     // Set up an event handler to create breakpoints when clicking in the
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
+
+    var toggleBreakpoint = function (row) {
+      var bps = aceEditor.session.getBreakpoints();
+      if (bps[row]) {
+        aceEditor.session.clearBreakpoint(row);
+        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
+      } else {
+        aceEditor.session.setBreakpoint(row);
+        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
+      }
+    };
+
     if (aceEditor) {
       aceEditor.on("guttermousedown", function(e) {
         var target = e.domEvent.target;
@@ -500,15 +512,14 @@ Applab.init = function(config) {
           return;
         }
         var row = e.getDocumentPosition().row;
-        var bps = e.editor.session.getBreakpoints();
-        if (bps[row]) {
-          e.editor.session.clearBreakpoint(row);
-        } else {
-          e.editor.session.setBreakpoint(row);
-        }
+        toggleBreakpoint(row);
         e.stop();
       });
     }
+
+    studioApp.editor.on('guttermousedown', function(e) {
+      toggleBreakpoint(e.line);
+    });
 
     if (studioApp.share) {
       // automatically run in share mode:
