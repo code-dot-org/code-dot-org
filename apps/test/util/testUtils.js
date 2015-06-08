@@ -225,12 +225,12 @@ exports.debugMode = function () {
 /**
  * jQuery.simulate was having issues in phantom, so I decided to roll my own
  * drag simulation. May belong in a util file.
- * @param {string} type
+ * @param {string} type ElementType to be dragged in
  * @param {number} left Horizontal offset from top left of visualization to drop at
  * @param {number} top Vertical offset from top left of visualization to drop at
  */
 exports.dragToVisualization = function (type, left, top) {
-  // drag a new screen in
+  // drag a new element in
   var element = $("[data-element-type='" + type + "']");
   var screenOffset = element.offset();
   var mousedown = $.Event("mousedown", {
