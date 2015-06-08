@@ -10435,19 +10435,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         ref1 = this.textFocus.dropdown();
         fn1 = (function(_this) {
           return function(el) {
-            var div;
+            var div, handleClick, ref2;
             div = document.createElement('div');
             div.innerHTML = el.display;
             div.className = 'droplet-dropdown-item';
             div.style.fontFamily = _this.fontFamily;
             div.style.fontSize = _this.fontSize;
             div.style.paddingLeft = helper.DROPDOWN_ARROW_WIDTH;
-            div.addEventListener('mouseup', function() {
-              _this.populateSocket(_this.textFocus, el.text);
-              _this.hiddenInput.value = el.text;
+            handleClick = function(text) {
+              _this.populateSocket(_this.textFocus, text);
+              _this.hiddenInput.value = text;
               _this.redrawMain();
               return _this.hideDropdown();
-            });
+            };
+            div.addEventListener('mouseup', ((ref2 = el.click) != null ? ref2.bind(null, handleClick) : void 0) || handleClick.bind(null, el.text));
             return _this.dropdownElement.appendChild(div);
           };
         })(this);
