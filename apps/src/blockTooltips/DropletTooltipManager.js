@@ -77,7 +77,8 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
     body: $('<iframe style="width:100%" src="' +
       this.getDropletTooltip(functionName).getFullDocumentationURL() +
       '" class="markdown-instructions-container">'),
-    autoResizeScrollableElement: '.markdown-instructions-container'
+    autoResizeScrollableElement: '.markdown-instructions-container',
+    id: 'block-documentation-lightbox'
   });
   dialog.show();
 };
