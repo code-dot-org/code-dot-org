@@ -418,12 +418,8 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
 NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   if (this.myWire) {
     this.myWire.synchronousDestroy();
-    this.myWire = null;
   }
-
-  this.myRemoteClient = null;
-  this.myRouterID_ = undefined;
-  this.remoteChange.notifyObservers(null, null);
+  this.cleanUpAfterDestroyingWire_();
 };
 
 /**
@@ -442,12 +438,28 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
       logger.info("Error while disconnecting: " + err.message);
     }
 
-    this.myWire = null;
-    this.myRemoteClient = null;
-    this.myRouterID_ = undefined;
-    this.remoteChange.notifyObservers(null, null);
+    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
+};
+
+/**
+ * Common cleanup behavior shared between the synchronous and asynchronous
+ * disconnect paths.
+ * @private
+ */
+NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+  var myRouter = this.getMyRouter();
+  if (myRouter) {
+    // We did manual heartbeat setup, we also need to do manual heartbeat
+    // cleanup when we disconnect from the router.
+    myRouter.heartbeat = null;
+  }
+
+  this.myWire = null;
+  this.myRemoteClient = null;
+  this.myRouterID_ = undefined;
+  this.remoteChange.notifyObservers(null, null);
 };
 
 /**
