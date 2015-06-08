@@ -161,7 +161,7 @@ NetSimTabsComponent.prototype.render = function () {
     referenceArea.insertBefore(
         this.rootDiv_.find('#tab_instructions button').first());
     this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
-      if (!$(jQueryEvent.target).attr('disabled')) {
+      if (!$(jQueryEvent.target).is(':disabled')) {
         netsimGlobals.completeLevelAndContinue();
       }
     });
