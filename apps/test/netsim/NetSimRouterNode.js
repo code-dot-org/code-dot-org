@@ -210,7 +210,7 @@ describe("NetSimRouterNode", function () {
    * to the sent/received log UI components.
    * @returns {{log: Function, getLatest: Function}}
    */
-  var makeSensingMessageLog = function () {
+  var makeFakeMessageLog = function () {
     var archive = [];
     return {
       log: function (payload) {
@@ -790,9 +790,9 @@ describe("NetSimRouterNode", function () {
   it ("still simulates/routes after connect-disconnect-connect cycle", function () {
     netsimGlobals.getLevelConfig().automaticReceive = true;
     var time = 1;
-    var receivedLog = makeSensingMessageLog();
+    var fakeReceivedLog = makeFakeMessageLog();
 
-    clientA.initializeSimulation(null, receivedLog);
+    clientA.initializeSimulation(null, fakeReceivedLog);
 
     var assertLoopbackWorks = function (forClient) {
       // Construct a message with a timestamp payload, to ensure calls to
@@ -801,7 +801,7 @@ describe("NetSimRouterNode", function () {
       var payload = encoder.concatenateBinary(headers, new Date().toISOString());
       forClient.sendMessage(payload, function () {});
       time = tickUntilLogsStabilize(forClient, time);
-      assertEqual(payload, receivedLog.getLatest());
+      assertEqual(payload, fakeReceivedLog.getLatest());
     };
 
     clientA.connectToRouter(routerA);
