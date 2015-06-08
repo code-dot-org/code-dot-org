@@ -82,6 +82,13 @@ module.exports = {
   },
 
   /**
+   * Trigger an attempt to complete the current level and continue to the next.
+   */
+  completeLevelAndContinue: function () {
+    netsim_.completeLevelAndContinue();
+  },
+
+  /**
    * Reseed the random number generator.  If this is never called, the default
    * Math.random function is used as the generator.
    * @param {string} newSeed
