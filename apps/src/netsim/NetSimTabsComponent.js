@@ -143,9 +143,8 @@ NetSimTabsComponent.prototype.attachToRunLoop = function (runLoop) {
  */
 NetSimTabsComponent.prototype.render = function () {
   var levelConfig = netsimGlobals.getLevelConfig();
-  // Grab the reference area before we re-render in case we are wiping
-  // out the only copy.
-  var referenceArea = $('#reference_area');
+  // Clone the reference area (with handlers) before we re-render
+  var referenceArea = $('#reference_area').first().clone(true);
 
   var rawMarkup = buildMarkup({
     level: levelConfig
@@ -159,7 +158,13 @@ NetSimTabsComponent.prototype.render = function () {
 
   if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
     // Move the reference area into the instructions tab
-    this.rootDiv_.find('#tab_instructions').append(referenceArea);
+    referenceArea.insertBefore(
+        this.rootDiv_.find('#tab_instructions button').first());
+    this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
+      if (!$(jQueryEvent.target).is(':disabled')) {
+        netsimGlobals.completeLevelAndContinue();
+      }
+    });
   }
 
   if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {
