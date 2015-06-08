@@ -42,10 +42,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "min_workspace_height": "1250",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "8625801c74d54f66de9edfd9989e7c51"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

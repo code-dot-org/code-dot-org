@@ -10,6 +10,8 @@ class NetSim < Blockly
     automatic_receive
     broadcast_mode
     connected_routers
+    minimum_extra_hops
+    maximum_extra_hops
     address_format
     packet_count_bit_width
     router_expects_packet_header
@@ -34,6 +36,7 @@ class NetSim < Blockly
     default_router_bandwidth
     show_router_memory_control
     default_router_memory
+    default_random_drop_chance
     show_dns_mode_control
     default_dns_mode
   )

@@ -49,8 +49,7 @@
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
     "default_chunk_size_bits": "4"
-  },
-  "md5": "9f6f0cde0bc6cc27930e6eb9d81016f2"
+  }
 }]]></config>
   <blocks/>
 </NetSim>

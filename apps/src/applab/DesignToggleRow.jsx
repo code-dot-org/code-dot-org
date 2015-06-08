@@ -1,3 +1,5 @@
+/* global $ */
+
 var React = require('react');
 var msg = require('../locale');
 
@@ -12,7 +14,6 @@ module.exports = React.createClass({
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    handleManageAssets: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired
   },
 
@@ -22,23 +23,19 @@ module.exports = React.createClass({
     };
   },
 
-  handleModeToggle: function () {
-    var newMode;
-    if (this.state.mode === Mode.DESIGN) {
+  handleSetMode: function (newMode) {
+    if (this.state.mode === newMode) {
+      return;
+    }
+    if (newMode === Mode.CODE) {
       this.props.onCodeModeButton();
-      newMode = Mode.CODE;
     } else {
       this.props.onDesignModeButton();
-      newMode = Mode.DESIGN;
     }
 
     this.setState({
       mode: newMode
     });
-  },
-
-  handleManageAssets: function() {
-    this.props.handleManageAssets();
   },
 
   handleScreenChange: function (evt) {
@@ -52,9 +49,43 @@ module.exports = React.createClass({
   render: function () {
     var selectDropdown;
     var dropdownStyle = {
-      width: 140,
-      marginLeft: 10
+      display: 'inline-block',
+      verticalAlign: 'top',
+      width: 130,
+      height: 28,
+      marginBottom: 6,
+      borderColor: '#949ca2'
     };
+
+    var buttonStyle = {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      border: '1px solid #949ca2',
+      margin: '0 0 8px 0',
+      padding: '3px 6px',
+      fontSize: 14
+    };
+    var buttonPrimary = {
+      backgroundColor: '#ffa000',
+      color: '#fff'
+    };
+    var buttonSecondary = {
+      backgroundColor: '#e7e8ea',
+      color: '#949ca2'
+    };
+
+    var codeButtonStyle = $.extend({}, buttonStyle, {
+      borderBottomRightRadius: 0,
+      borderTopRightRadius: 0,
+      borderRightWidth: 0
+    }, (this.state.mode === Mode.CODE ? buttonSecondary : buttonPrimary));
+
+    var designButtonStyle = $.extend({}, buttonStyle, {
+      borderBottomLeftRadius: 0,
+      borderTopLeftRadius: 0
+    }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
+
+    var wrapperStyle = {minHeight: 40};
 
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
@@ -74,23 +105,22 @@ module.exports = React.createClass({
     }
 
     return (
-      <div>
+      <div style={wrapperStyle} className="justify-contents">
         <button
-          id="designModeToggle"
-          className="share"
-          onClick={this.handleModeToggle}>
-          { this.state.mode === Mode.DESIGN ? msg.codeMode() : msg.designMode() }
+            id='codeModeButton'
+            style={codeButtonStyle}
+            className='no-outline'
+            onClick={this.handleSetMode.bind(this, Mode.CODE)}>
+          {msg.codeMode()}
         </button>
         <button
-          id="design-manage-assets"
-          className="share"
-          onClick={this.handleManageAssets}
-          style={{
-            display: this.state.mode === Mode.DESIGN ? 'inline-block' : 'none',
-            marginLeft: 10
-          }}>
-          Manage Assets
+            id='designModeButton'
+            style={designButtonStyle}
+            className='no-outline'
+            onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
+          {msg.designMode()}
         </button>
+        {' ' /* Needed for "text-align: justify;" to work. */ }
         {selectDropdown}
       </div>
     );

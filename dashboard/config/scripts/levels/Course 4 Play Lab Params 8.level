@@ -38,11 +38,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
-  },
-  "md5": "179578fabb8ad3521da956d9987bd601"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

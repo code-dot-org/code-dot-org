@@ -5,7 +5,7 @@ require 'sinatra/base'
 require 'sinatra/verbs'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
-require 'cdo/rack/deflater'
+require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
 require 'active_support'
@@ -171,7 +171,7 @@ class Documents < Sinatra::Base
     end
 
     # Assume we are returning the same resolution as we're reading.
-    retina_in = retina_out = basename[-3..-1] == '@2x'
+    retina_in = retina_out = basename[-3..-1] == '_2x'
 
     path = resolve_image File.join(dirname, basename)
     unless path
@@ -180,7 +180,7 @@ class Documents < Sinatra::Base
         basename = basename[0...-3]
         retina_in = false
       else
-        basename += '@2x'
+        basename += '_2x'
         retina_in = true
       end
       path = resolve_image File.join(dirname, basename)

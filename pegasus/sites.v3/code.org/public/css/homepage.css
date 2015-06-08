@@ -279,3 +279,15 @@ body.modal-open .supreme-container{
 #homepage #threedivs .fb-like > span {
   height: 27px !important;
 }
+
+.grey_input {
+  background-color: rgb(226,228,227);
+  color: rgb(82, 82, 82); 
+  border: 1px solid rgb(146,147,148);
+}
+
+.dropdown {
+  background-color: rgb(226,228,227);
+  color: rgb(82, 82, 82);
+  border: 1px solid rgb(146,147,148);
+}

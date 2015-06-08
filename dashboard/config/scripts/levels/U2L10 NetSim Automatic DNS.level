@@ -51,8 +51,7 @@
     "broadcast_mode": "false",
     "connected_routers": "true",
     "address_format": "4.4"
-  },
-  "md5": "e526a1297171f723f4c575c99f196fc5"
+  }
 }]]></config>
   <blocks/>
 </NetSim>

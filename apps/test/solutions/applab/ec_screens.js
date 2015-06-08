@@ -27,35 +27,6 @@ function validationEmptyDesignProperties(assert) {
   assert.equal(designProperties.children[0].tagName, 'P');
 }
 
-/**
- * jQuery.simulate was having issues in phantom, so I decided to roll my own
- * drag simulation. May belong in a util file.
- * @param {string} type
- * @param {number} left Horizontal offset from top left of visualization to drop at
- * @param {number} top Vertical offset from top left of visualization to drop at
- */
-function dragToVisualization(type, left, top) {
-  // drag a new screen in
-  var element = $("[data-element-type='" + type + "']");
-  var screenOffset = element.offset();
-  var mousedown = $.Event("mousedown", {
-    which: 1,
-    pageX: screenOffset.left,
-    pageY: screenOffset.top
-  });
-  var drag = $.Event("mousemove", {
-    pageX: $("#visualization").offset().left + left,
-    pageY: $("#visualization").offset().top + top
-  });
-  var mouseup = $.Event('mouseup', {
-    pageX: $("#visualization").offset().left + left,
-    pageY: $("#visualization").offset().top + top
-  });
-  element.trigger(mousedown);
-  $(document).trigger(drag);
-  $(document).trigger(mouseup);
-}
-
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -75,26 +46,32 @@ module.exports = {
         assert.equal(screen1.id, 'screen1');
         assert.equal(screen1.tagName, 'DIV');
 
-        // Our toggle button says design, and there's no dropdown
-        var designModeToggle = document.getElementById('designModeToggle');
-        assert.equal(designModeToggle.textContent, 'Design');
+        // The design button is visible, and there's no dropdown
+        var designModeButton = document.getElementById('designModeButton');
+        assert.equal(designModeButton.textContent, 'Design');
         assert.equal(document.getElementById('screenSelector'), null);
 
         // our design mode box is hidden
-        assert.equal($('#designModeBox').is(':visible'), false);
+        assert.equal($('#designWorkspace').is(':visible'), false);
 
-        // click toggle
-        $(designModeToggle).click();
+        // click design mode button
+        $(designModeButton).click();
 
-        assert.equal(designModeToggle.textContent, 'Code');
+        var lightestGray = 'rgb(231, 232, 234)';
+        var orange = 'rgb(255, 160, 0)';
+        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
+          'expected Design button to have lightest gray background.');
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
+          'expected Code button to have orange background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
-        assert.equal(screenSelector.options.length, 1);
+        assert.equal(screenSelector.options.length, 1, 'expected 1 screen');
         assert.equal($(screenSelector).val(), 'screen1');
-        assert.equal($('#designModeBox').is(':visible'), true);
+        assert.equal($('#designWorkspace').is(':visible'), true);
 
         // initially no design properties table
-        assert.equal($("#design-properties table").length, 0);
+        assert.equal($("#design-properties table").length, 0,
+            'expected no design properties table');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -113,12 +90,11 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
+        $("#designModeButton").click();
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
         assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
@@ -127,7 +103,7 @@ module.exports = {
         validatePropertyRow(1, 'id', 'screen2', assert);
 
         // drag a button onto our new screen
-        dragToVisualization('BUTTON', 10, 10);
+        testUtils.dragToVisualization('BUTTON', 10, 10);
 
         validatePropertyRow(1, 'id', 'button1', assert);
         var buttonElement = document.getElementById('button1');
@@ -160,12 +136,11 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
+        $("#designModeButton").click();
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
         assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
@@ -173,7 +148,16 @@ module.exports = {
 
         validatePropertyRow(1, 'id', 'screen2', assert);
 
-        ReactTestUtils.Simulate.click(document.getElementById('deletePropertiesButton'));
+        var deleteButton = $("#design-properties button").eq(-1);
+        assert.equal(deleteButton.text(), 'Delete');
+
+        ReactTestUtils.Simulate.click(deleteButton[0]);
+
+        // Should have resulted in two new buttons
+        assert.equal($("#design-properties button").eq(-1).text(), 'No');
+        assert.equal($("#design-properties button").eq(-2).text(), 'Yes');
+
+        ReactTestUtils.Simulate.click($("#design-properties button").eq(-2)[0]);
 
         validationEmptyDesignProperties(assert);
         assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
@@ -183,7 +167,10 @@ module.exports = {
         // a react component)
         $("#screen1").click();
         validatePropertyRow(1, 'id', 'screen1', assert);
-        assert(document.getElementById('deletePropertiesButton').hasAttribute('disabled'));
+
+        // One button, and it isn't delete
+        assert.equal($("#design-properties button").length, 1);
+        assert.equal($("#design-properties button").text(), '');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -256,10 +243,10 @@ module.exports = {
         'button("button2", "my_button_text");',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
+        $("#designModeButton").click();
 
         // drag a new screen in
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
 
         // add a completion on timeout since this is a freeplay level
@@ -288,22 +275,111 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
-
+        $("#designModeButton").click();
+        var lightestGray = 'rgb(231, 232, 234)';
+        var orange = 'rgb(255, 160, 0)';
+        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
+          'expected Design button to have lightest gray background.');
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
+          'expected Code button to have orange background.');
         // add a screen
-        dragToVisualization('SCREEN', 10, 10);
+        testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(1, 'id', 'screen2', assert);
         assert.equal($('#screen1')[0].style.display === 'none', true, 'screen 1 hidden');
         assert.equal($('#screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         // return to code mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Design');
+        $("#codeModeButton").click();
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button to have orange background.');
+        assert.equal(lightestGray, $("#codeModeButton").css('background-color'),
+          'expected Code button to have lightest gray background.');
 
         // should be on screen 1
         assert.equal($('#screen1')[0].style.display === 'none', false, 'screen 1 visible');
         assert.equal($('#screen2')[0].style.display === 'none', true, 'screen 2 hidden');
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "add/remove an element to a screen",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeButton").click();
+
+        testUtils.dragToVisualization('BUTTON', 10, 10);
+
+        var button = document.getElementById('button1');
+        assert(button);
+
+        var screenElement = document.getElementById('screen1');
+
+        assert.equal(screenElement.children.length, 1);
+
+        var outerDiv = screenElement.children[0];
+        assert($(outerDiv).hasClass('ui-resizable'), 'child is outer resizable div');
+
+        assert(button.parentNode === outerDiv);
+
+        var deleteButton = $("#design-properties button").eq(-1);
+        assert.equal(deleteButton.text(), 'Delete');
+
+        ReactTestUtils.Simulate.click(deleteButton[0]);
+
+        // outdiv and child should have gone away
+        assert.equal(screenElement.children.length, 0);
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "add a background",
+      editCode: true,
+      xml: "",
+      runBeforeClick: function (assert) {
+        // enter design mode
+        var designModeButton = document.getElementById('designModeButton');
+        
+        $("#screen1").click();
+
+        validatePropertyRow(1, 'id', 'screen1', assert);
+
+        // take advantage of the fact that we expose the filesystem via
+        // localhost:8001
+        var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
+        var imageInput = $("#design-properties input").eq(2)[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        var screenElement = document.getElementById('screen1');
+        assert.equal(screenElement.style.backgroundImage, 'url(' + assetUrl + ')');
+
+        assert.equal(screenElement.style.backgroundSize, '320px 480px', 'image stretched');
+
+        // make sure dimensions didn't change
+        assert.equal(screenElement.style.width, '320px');
+        assert.equal(screenElement.style.height, '480px');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {

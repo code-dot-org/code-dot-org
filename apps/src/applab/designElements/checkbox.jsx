@@ -25,7 +25,6 @@ var CheckboxProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          isNumber={true}
           handleChange={this.props.handleChange.bind(this, 'id')} />
         <PropertyRow
           desc={'width (px)'}

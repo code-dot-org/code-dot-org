@@ -10,7 +10,7 @@ $green: #b9bf15;
 $purple-dark: #7665a0;
 $purple-light: #a69bc1;
 $purple-extra-light: #cfc9de;
-$light-gray: #e7e8ea;
+$lighter-gray: #c6cacd;
 $orange-dark: #ffa400;
 $green-dark: #b9bf15;
 $yellow-dark: #ffb81d;
@@ -259,7 +259,7 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-.ace_gutter-cell.ace_breakpoint {
+.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet-breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
@@ -272,6 +272,10 @@ html[dir='rtl'] #codeWorkspace {
   width: 15px;
   left: 400px;
   cursor: ew-resize;
+  text-align: center;
+  color: $lighter-gray;
+  font-size: 24px;
+  line-height: 400px;
 }
 
 #visualization {
@@ -333,6 +337,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -368,6 +373,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -403,6 +409,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -438,6 +445,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -771,6 +779,31 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+.workspace-header {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: $headers_height;
+  color: white;
+  .workspace-header-clickable:hover {
+    cursor: pointer;
+    color: $yellow-dark;
+  }
+  span {
+    line-height: $headers_height;
+  }
+}
+
+#design-headers {
+  height: $headers_height;
+  background-color: $purple;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #headers {
   height: $headers_height;
   background-color: $purple;
@@ -779,16 +812,6 @@ $aniGifPreviewHeight: 60px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .workspace-header {
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: hidden;
-    height: $headers_height;
-    span {
-      color: white;
-      line-height: $headers_height;
-    }
-  }
   #toolbox-header {
     width: 270px;
     border-right: 1px solid gray;

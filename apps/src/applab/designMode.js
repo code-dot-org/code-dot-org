@@ -3,9 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
-var DesignModeBox = require('./DesignModeBox.jsx');
-var DesignModeHeaders = require('./DesignModeHeaders.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
@@ -32,10 +30,24 @@ designMode.onDivApplabClick = function (event) {
 
   var element = event.target;
   if (element.id === 'divApplab') {
-    designMode.clearProperties();
-  } else {
-    designMode.editElementProperties(element);
+    element = designMode.activeScreen();
   }
+
+  if ($(element).is('.ui-resizable')) {
+    element = getInnerElement(element);
+  } else if ($(element).is('.ui-resizable-handle')) {
+    element = getInnerElement(element.parentNode);
+  }
+  designMode.editElementProperties(element);
+};
+
+/**
+ * @returns {HTMLElement} The currently visible screen element.
+ */
+designMode.activeScreen = function () {
+  return $('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first()[0];
 };
 
 /**
@@ -53,9 +65,7 @@ designMode.createElement = function (elementType, left, top) {
   if (isScreen) {
     parent = document.getElementById('divApplab');
   } else {
-    parent = $('.screen').filter(function () {
-      return this.style.display !== 'none';
-    }).first()[0];
+    parent = designMode.activeScreen();
   }
   parent.appendChild(element);
 
@@ -74,7 +84,7 @@ designMode.editElementProperties = function(element) {
     return;
   }
   currentlyEditedElement = element;
-  designMode.renderDesignModeBox(element);
+  designMode.renderDesignWorkspace(element);
 };
 
 /**
@@ -99,12 +109,12 @@ designMode.resetElementTray = function (allowEditing) {
   }
 };
 
-// TODO (brent) I think some of these properties are going to end up having
-// different behaviors based on element type. I think the best way of handling
-// this is to have an onPropertyChange per element that gets the first shot to
-// handle the change, and reports whether it did or not. If it didn't, we fall
-// back to the default function
+/**
+ * Handle a change from our properties table. After handling properties
+ * generically, give elementLibrary a chance to do any element specific changes.
+ */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
@@ -116,15 +126,29 @@ designMode.onPropertyChange = function(element, name, value) {
       break;
     case 'left':
       element.style.left = value + 'px';
+      element.parentNode.style.left = value + 'px';
       break;
     case 'top':
       element.style.top = value + 'px';
+      element.parentNode.style.top = value + 'px';
       break;
     case 'width':
       element.style.width = value + 'px';
+      element.parentNode.style.width = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'height':
       element.style.height = value + 'px';
+      element.parentNode.style.height = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'text':
       element.textContent = value;
@@ -138,13 +162,32 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = value + 'px';
       break;
+
     case 'image':
-      // For now, we stretch the image to fit the element
+      var image = new Image();
+      var backgroundImage = new Image();
+      backgroundImage.onload = function(){
+        element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+          backgroundImage.naturalHeight + 'px';
+        element.style.width = backgroundImage.naturalWidth + 'px';
+        element.style.height = backgroundImage.naturalHeight + 'px';
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+      backgroundImage.src = value;
+      break;
+
+    case 'screen-image':
+      // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
+
     case 'picture':
       element.src = value;
       element.onload = function () {
@@ -211,25 +254,40 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
   }
-};
 
-designMode.onDonePropertiesButton = function() {
-  designMode.clearProperties();
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+    designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
+  }
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
-  element.parentNode.removeChild(element);
-  if ($(element).hasClass('screen')) {
+  var isScreen = $(element).hasClass('screen');
+  if ($(element.parentNode).is('.ui-resizable')) {
+    element = element.parentNode;
+  }
+  $(element).remove();
+
+  if (isScreen) {
     designMode.changeScreen('screen1');
   }
+
   designMode.clearProperties();
 };
 
 designMode.onDepthChange = function (element, depthDirection) {
-  var parent = element.parentNode;
-  var index = Array.prototype.indexOf.call(parent.children, element);
+  // move to outer resizable div
+  var outerElement = element.parentNode;
+  var parent = outerElement.parentNode;
+  var index = Array.prototype.indexOf.call(parent.children, outerElement);
 
   if (depthDirection === 'forward' && index + 2 >= parent.children.length) {
     // We're either the last or second to last element
@@ -241,23 +299,23 @@ designMode.onDepthChange = function (element, depthDirection) {
   // TODO (brent) - use an enum?
   switch (depthDirection) {
     case 'forward':
-      var twoAhead = element.nextSibling.nextSibling;
-      removed = parent.removeChild(element);
+      var twoAhead = outerElement.nextSibling.nextSibling;
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, twoAhead);
       break;
 
     case 'toFront':
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.appendChild(removed);
       break;
 
     case 'backward':
-      var previous = element.previousSibling;
+      var previous = outerElement.previousSibling;
       if (!previous) {
         return;
       }
 
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, previous);
       break;
 
@@ -265,7 +323,7 @@ designMode.onDepthChange = function (element, depthDirection) {
       if (parent.children.length === 1) {
         return;
       }
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, parent.children[0]);
       break;
 
@@ -328,32 +386,34 @@ function toggleDragging (enable) {
 }
 
 designMode.toggleDesignMode = function(enable) {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     // Currently we don't run design mode in some circumstances (i.e. user is
     // not an admin)
     return;
   }
-  designModeHeaders.style.display = enable ? 'block' : 'none';
+  designWorkspace.style.display = enable ? 'block' : 'none';
 
-  var codeModeHeaders = document.getElementById('codeModeHeaders');
-  codeModeHeaders.style.display = enable ? 'none' : 'block';
-
-  var codeTextbox = document.getElementById('codeTextbox');
-  codeTextbox.style.display = enable ? 'none' : 'block';
-  var designModeBox = document.getElementById('designModeBox');
-  designModeBox.style.display = enable ? 'block' : 'none';
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
-
-  designMode.serializeToLevelHtml();
 
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
   designMode.changeScreen('screen1');
 };
+
+/**
+ * When we make elements resizable, we wrap them in an outer div. Given an outer
+ * div, this returns the inner element
+ */
+function getInnerElement(outerElement) {
+  // currently assume inner element is first child.
+  return outerElement.children[0];
+}
 
 /**
  *
@@ -365,6 +425,15 @@ function makeDraggable (jq) {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
+      create: function () {
+        // resizable sets z-index to 90, which we don't want
+        $(this).children().css('z-index', '');
+      },
+      resize: function () {
+        var element = elm[0];
+        designMode.onPropertyChange(element, 'width', element.style.width);
+        designMode.onPropertyChange(element, 'height', element.style.height);
+      }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -395,6 +464,13 @@ function makeDraggable (jq) {
 
         ui.position.left = newLeft;
         ui.position.top = newTop;
+
+        elm.css({
+          top: newTop,
+          left: newLeft
+        });
+
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).css('position', 'absolute');
 
@@ -403,9 +479,15 @@ function makeDraggable (jq) {
       left: elm.css('left')
     });
 
-    elm.css({
-      position: 'static'
-    });
+    // Chrome has a nasty bug where when we wrap the element in a div, it
+    // occasionally chooses not to rerender our element for some reason. This
+    // is a hacky that causes Chrome to rerender the parent, thus not causing
+    // our element to disappear.
+    var currHeight = wrapper.parent().height();
+    wrapper.parent().height(currHeight + 1);
+    wrapper.parent().height(currHeight);
+
+    elm.css('position', 'static');
   });
 }
 
@@ -416,7 +498,7 @@ function makeDraggable (jq) {
 function makeUndraggable(jq) {
   jq.each(function () {
     var wrapper = $(this);
-    var elm = $(':first-child', wrapper);
+    var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
     if (!wrapper.data('uiDraggable')) {
@@ -424,11 +506,7 @@ function makeUndraggable(jq) {
     }
 
     wrapper.resizable('destroy').draggable('destroy');
-    elm.css({
-      top: wrapper.css('top'),
-      left: wrapper.css('left'),
-      position: 'absolute'
-    });
+    elm.css('position', 'absolute');
     elm.unwrap();
   });
 }
@@ -466,11 +544,6 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  // Simulate a run button click, to load the channel id.
-  var designModeClick = studioApp.runButtonClickWrapper.bind(
-      studioApp, Applab.onDesignModeButton);
-  var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
-
   var firstScreen = $('.screen').first().attr('id');
   designMode.changeScreen(firstScreen);
 };
@@ -489,13 +562,17 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
+    // Simulate a run button click, to load the channel id.
+    var designModeClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onDesignModeButton);
+    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
     React.render(
       React.createElement(DesignToggleRow, {
         initialScreen: screenId,
         screens: screenIds,
-        onDesignModeButton: Applab.onDesignModeButton,
+        onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
-        handleManageAssets: showAssetManager,
         onScreenChange: designMode.changeScreen
       }),
       designToggleRow
@@ -505,9 +582,9 @@ designMode.changeScreen = function (screenId) {
   designMode.editElementProperties(document.getElementById(screenId));
 };
 
-designMode.renderDesignModeBox = function(element) {
-  var designModeBox = document.getElementById('designModeBox');
-  if (!designModeBox) {
+designMode.renderDesignWorkspace = function(element) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
     return;
   }
 
@@ -520,19 +597,10 @@ designMode.renderDesignModeBox = function(element) {
     element: element || null,
     handleChange: designMode.onPropertyChange.bind(this, element),
     onDepthChange: designMode.onDepthChange,
-    onDone: designMode.onDonePropertiesButton,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+    handleManageAssets: showAssetManager
   };
-  React.render(React.createElement(DesignModeBox, props), designModeBox);
-};
-
-designMode.configureDesignModeHeaders = function() {
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  if (!designModeHeaders) {
-    return;
-  }
-
-  React.render(React.createElement(DesignModeHeaders), designModeHeaders);
+  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
 
 /**
