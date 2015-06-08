@@ -40,6 +40,7 @@ var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
+var showAssetManager = require('./assetManagement/show.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1259,8 +1260,11 @@ Applab.getAssetDropdown = function (typeFilter) {
       display: '"' + asset.filename + '"'
     };
   });
-  // TODO: handle 'Choose...' click
-  options.push({text: '', display: '<a href="#">Choose...</a>'});
+  options.push({display: '<span class="chooseAssetDropdownOption">Choose...</a>', click: function (callback) {
+    showAssetManager(function (filename) {
+      callback('"' + filename + '"');
+    }, 'image');
+  }});
   return options;
 };
 
