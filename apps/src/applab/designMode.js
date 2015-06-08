@@ -144,6 +144,11 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'text':
       element.textContent = value;

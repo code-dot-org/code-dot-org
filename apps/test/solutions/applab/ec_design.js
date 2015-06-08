@@ -32,15 +32,15 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        // enter design mode
-        $("#designModeToggle").click();
-        assert.equal($("#designModeToggle").text(), 'Code');
+        $("#designModeButton").click();
 
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
         validatePropertyRow(1, 'id', 'button1', assert);
 
-        var assetUrl = '/assets/codeorg-studio-logo.png';
+        // take advantage of the fact that we expose the filesystem via
+        // localhost:8001
+        var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
         // second last input
         var imageInput = $("#design-properties input").eq(-2)[0];
 
@@ -48,15 +48,26 @@ module.exports = {
           target: { value: assetUrl }
         });
 
-        // I'd like to assert that the size and image have changed here, but
-        // am currently unable as it seems phantom doesn't hit the image.onload
-        // for some reason
+        var buttonElement = $("#button1")[0];
 
+        // wait until image has loaded to do validation
+        var img = new Image();
+        img.src = assetUrl;
+        img.onload = function () {
+          // There's no guarantee that we hit this onload after the onload in
+          // designMode.js, so the styles won't always be set immediately.
+          // Instead, wait until the level starts to do our validation
 
-        // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 50, function () {
-          Applab.onPuzzleComplete();
-        });
+          // add a completion on timeout since this is a freeplay level
+          testUtils.runOnAppTick(Applab, 2, function () {
+            assert.equal(buttonElement.style.backgroundImage, 'url(' + assetUrl + ')');
+            assert.equal(buttonElement.style.width, '200px');
+            assert.equal(buttonElement.style.height, '113px');
+            assert.equal(buttonElement.style.backgroundSize, '200px 113px');
+
+            Applab.onPuzzleComplete();
+          });
+        };
       },
       expected: {
         result: true,
