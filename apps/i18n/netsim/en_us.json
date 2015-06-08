@@ -23,6 +23,7 @@
   "connectToAPeer": "Connect to a Peer",
   "connectToARoom": "Connect to a Room",
   "connectToARouter": "Connect to a Router",
+  "continueButton": "Finished! Continue to next stage",
   "decimal": "Decimal",
   "defaultNodeName": "[New Node]",
   "disconnected": "Disconnected",

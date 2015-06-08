@@ -158,7 +158,13 @@ NetSimTabsComponent.prototype.render = function () {
 
   if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
     // Move the reference area into the instructions tab
-    this.rootDiv_.find('#tab_instructions').append(referenceArea);
+    referenceArea.insertBefore(
+        this.rootDiv_.find('#tab_instructions button').first());
+    this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
+      if (!$(jQueryEvent.target).is(':disabled')) {
+        netsimGlobals.completeLevelAndContinue();
+      }
+    });
   }
 
   if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {
