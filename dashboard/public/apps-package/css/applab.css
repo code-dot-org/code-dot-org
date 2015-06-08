@@ -6,6 +6,9 @@ div#visualization {
 div#visualization.with_padding {
   border: 1px solid #ddd; }
 
+div#visualizationResizeBar {
+  top: 40px; }
+
 /* Shrink the visualization area on small displays. */
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
   div#visualization.responsive {
@@ -25,7 +28,8 @@ div#visualization.with_padding {
     right: 400px; }
 
   div#visualizationResizeBar {
-    left: 400px; }
+    left: 400px;
+    line-height: 400px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 400px; }
@@ -54,7 +58,8 @@ div#visualization.with_padding {
     right: 350px; }
 
   div#visualizationResizeBar {
-    left: 350px; }
+    left: 350px;
+    line-height: 350px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 350px; }
@@ -83,7 +88,8 @@ div#visualization.with_padding {
     right: 300px; }
 
   div#visualizationResizeBar {
-    left: 300px; }
+    left: 300px;
+    line-height: 300px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 300px; }
@@ -112,7 +118,8 @@ div#visualization.with_padding {
     right: 250px; }
 
   div#visualizationResizeBar {
-    left: 250px; }
+    left: 250px;
+    line-height: 250px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 250px; }
@@ -141,7 +148,8 @@ div#visualization.with_padding {
     right: 200px; }
 
   div#visualizationResizeBar {
-    left: 200px; }
+    left: 200px;
+    line-height: 200px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
@@ -417,9 +425,6 @@ button.arrow:focus {
   margin-bottom: 10px;
   font-size: 18px; }
 
-#designModeBox td {
-  vertical-align: top; }
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px; }
@@ -464,8 +469,13 @@ button.arrow:focus {
 .divApplabDesignMode canvas {
   background-color: #eee; }
 
-#designModeBox {
-  position: absolute;
-  top: 40px;
-  bottom: 0px;
-  width: 100%; }
+.no-outline:focus {
+  outline: none; }
+
+.justify-contents {
+  text-align: justify;
+  line-height: 0; }
+  .justify-contents:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }

@@ -14,6 +14,10 @@ div#visualization.with_padding {
   border: 1px solid #ddd;
 }
 
+div#visualizationResizeBar {
+  top: 40px;
+}
+
 /* Shrink the visualization area on small displays. */
 
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
@@ -37,6 +41,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -69,6 +74,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -101,6 +107,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -133,6 +140,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -165,6 +173,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -473,10 +482,6 @@ button.arrow:focus {
   font-size: 18px;
 }
 
-#designModeBox td {
-  vertical-align: top;
-}
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
@@ -534,9 +539,16 @@ button.arrow:focus {
   background-color: #eee;
 }
 
-#designModeBox {
-  position:absolute;
-  top: 40px;
-  bottom: 0px;
-  width: 100%;
+.no-outline:focus {
+  outline: none;
+}
+
+.justify-contents {
+  text-align: justify;
+  line-height: 0;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
 }

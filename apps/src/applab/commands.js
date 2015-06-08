@@ -70,10 +70,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() " + varName + " parameter value (" +
         varValue + ") is not a " + expectedType + ".";
       outputError(errorString, ErrorLevel.WARNING, line);
@@ -94,10 +91,7 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
     }
     inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() " + varName + " parameter value (" +
         varValue + ") is not in the expected range.";
       outputError(errorString, ErrorLevel.WARNING, line);
@@ -111,10 +105,7 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() called without an active canvas. Call " +
         "createCanvas() first.";
       outputError(errorString, ErrorLevel.WARNING, line);
@@ -135,10 +126,7 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var exists = Boolean(element && divApplab.contains(element));
     var valid = exists == shouldExist;
     if (!valid) {
-      var line = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
       var errorString = funcName + "() " + varName +
         " parameter refers to an id (" +id + ") which " +
         (exists ? "already exists." : "does not exist.");
@@ -176,6 +164,7 @@ applabCommands.container = function (opts) {
     newDiv.id = opts.elementId;
   }
   newDiv.innerHTML = opts.html;
+  newDiv.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newDiv));
 };
@@ -193,6 +182,7 @@ applabCommands.button = function (opts) {
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
+  newButton.style.position = 'relative';
 
   return Boolean(newButton.appendChild(textNode) &&
     activeScreen().appendChild(newButton));
@@ -205,6 +195,7 @@ applabCommands.image = function (opts) {
   var newImage = document.createElement("img");
   newImage.src = opts.src;
   newImage.id = opts.elementId;
+  newImage.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newImage));
 };
@@ -216,6 +207,7 @@ applabCommands.imageUploadButton = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.className = 'img-upload';
+  newLabel.style.position = 'relative';
 
   // We then create an offscreen input element and make it a child of the new
   // label element
@@ -230,8 +222,6 @@ applabCommands.imageUploadButton = function (opts) {
                  newLabel.appendChild(textNode) &&
                  activeScreen().appendChild(newLabel));
 };
-
-
 
 applabCommands.show = function (opts) {
   applabTurtle.turtleSetVisibility(true);
@@ -485,6 +475,7 @@ applabCommands.createCanvas = function (opts) {
     newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
+    newElement.style.position = 'relative';
     if (!opts.turtleCanvas) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
@@ -683,6 +674,7 @@ applabCommands.textInput = function (opts) {
   var newInput = document.createElement("input");
   newInput.value = opts.text;
   newInput.id = opts.elementId;
+  newInput.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newInput));
 };
@@ -698,6 +690,7 @@ applabCommands.textLabel = function (opts) {
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
+  newLabel.style.position = 'relative';
   var forElement = document.getElementById(opts.forId);
   if (forElement && activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -716,6 +709,7 @@ applabCommands.checkbox = function (opts) {
   newCheckbox.setAttribute("type", "checkbox");
   newCheckbox.checked = opts.checked;
   newCheckbox.id = opts.elementId;
+  newCheckbox.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newCheckbox));
 };
@@ -730,6 +724,7 @@ applabCommands.radioButton = function (opts) {
   newRadio.name = opts.name;
   newRadio.checked = opts.checked;
   newRadio.id = opts.elementId;
+  newRadio.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newRadio));
 };
@@ -749,6 +744,7 @@ applabCommands.dropdown = function (opts) {
     }
   }
   newSelect.id = opts.elementId;
+  newSelect.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newSelect));
 };
@@ -1080,12 +1076,9 @@ applabCommands.onEventFired = function (opts, e) {
 
     // Push a function call on the queue with an array of arguments consisting
     // of the applabEvent parameter (and any extraArgs originally supplied)
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [applabEvent].concat(opts.extraArgs)
-    });
+    Applab.JSInterpreter.queueEvent(opts.func, [applabEvent].concat(opts.extraArgs));
   } else {
-    Applab.eventQueue.push({'fn': opts.func});
+    Applab.JSInterpreter.queueEvent(opts.func, opts.extraArgs);
   }
   if (Applab.JSInterpreter) {
     // Execute the interpreter and if a return value is sent back from the
@@ -1177,13 +1170,12 @@ applabCommands.onHttpRequestEvent = function (opts) {
   // that is currently active before proceeding...
   if (opts.JSInterpreter === Applab.JSInterpreter) {
     if (this.readyState === 4) {
-      Applab.eventQueue.push({
-        'fn': opts.func,
-        'arguments': [
-          Number(this.status),
+      Applab.JSInterpreter.queueEvent(
+        opts.func,
+        [ Number(this.status),
           String(this.getResponseHeader('content-type')),
-          String(this.responseText)]
-      });
+          String(this.responseText)
+        ]);
     }
   }
 };
@@ -1200,9 +1192,7 @@ applabCommands.startWebRequest = function (opts) {
 
 applabCommands.onTimerFired = function (opts) {
   // ensure that this event came from the active interpreter instance:
-  Applab.eventQueue.push({
-    'fn': opts.func
-  });
+  Applab.JSInterpreter.queueEvent(opts.func);
   // NOTE: the interpreter will not execute forever, if the event handler
   // takes too long, executeInterpreter() will return and the rest of the
   // user's code will execute in the next onTick()
@@ -1259,10 +1249,7 @@ applabCommands.handleCreateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [record]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
   }
 };
 
@@ -1281,10 +1268,7 @@ applabCommands.handleReadValue = function(opts, value) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [value]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [value]);
   }
 };
 
@@ -1304,10 +1288,7 @@ applabCommands.handleSetKeyValue = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': []
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess);
   }
 };
 
@@ -1329,10 +1310,7 @@ applabCommands.handleReadRecords = function(opts, records) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [records]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [records]);
   }
 };
 
@@ -1354,10 +1332,7 @@ applabCommands.handleUpdateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': [record]
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
   }
 };
 
@@ -1379,10 +1354,7 @@ applabCommands.handleDeleteRecord = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onSuccess,
-      'arguments': []
-    });
+    Applab.JSInterpreter.queueEvent(opts.onSuccess);
   }
 };
 

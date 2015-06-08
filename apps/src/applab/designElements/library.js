@@ -147,5 +147,19 @@ module.exports = {
     if (elements[elementType].onDeserialize) {
       elements[elementType].onDeserialize(element);
     }
+  },
+
+  /**
+   * Handle any element specific property changes. Called after designMode gets
+   * first crack at handling change.
+   * @returns {boolean} True if we modified the element in such a way that the
+   *   property table needs to be updated.
+   */
+  typeSpecificPropertyChange: function (element, name, value) {
+    var elementType = this.getElementType(element);
+    if (elements[elementType].onPropertyChange) {
+      return elements[elementType].onPropertyChange(element, name, value);
+    }
+    return false;
   }
 };

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({271:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({275:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":262,"./levels":269,"./skins":275,"./studio":276}],276:[function(require,module,exports){
+},{"../appMain":6,"./blocks":266,"./levels":273,"./skins":279,"./studio":280}],280:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -49,6 +49,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
+var JSInterpreter = require('../JSInterpreter');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -592,7 +593,7 @@ function callHandler (name, allowQueueExtension) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.eventQueue.push({'fn': handler.func});
+        Studio.JSInterpreter.queueEvent(handler.func);
       }
     }
   });
@@ -619,31 +620,8 @@ Studio.onTick = function() {
     Studio.customLogic.onTick();
   }
 
-  if (Studio.interpreter) {
-    var doneUserCodeStep = false;
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
-         stepsThisTick++) {
-      var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  Studio.cumulativeLength,
-                                                  Studio.userCodeStartOffset,
-                                                  Studio.userCodeLength,
-                                                  studioApp.editor);
-      try {
-        Studio.interpreter.step();
-        doneUserCodeStep = (-1 !== userCodeRow) &&
-                            Studio.interpreter.stateStack[0] &&
-                            Studio.interpreter.stateStack[0].done;
-      }
-      catch(err) {
-        Studio.executionError = err;
-        Studio.onPuzzleComplete();
-        return;
-      }
-    }
+  if (Studio.JSInterpreter) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
   } else {
     if (Studio.tickCount === 1) {
       callHandler('whenGameStarts');
@@ -1324,9 +1302,8 @@ Studio.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
   if (studioApp.editCode) {
-    Studio.eventQueue = [];
     Studio.executionError = null;
-    Studio.interpreter = null;
+    Studio.JSInterpreter = null;
   }
 
   // Move sprites into position.
@@ -1565,17 +1542,6 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * A miniature runtime in the interpreted world calls this function repeatedly
- * to check to see if it should invoke any callbacks from within the
- * interpreted world. If the eventQueue is not empty, we will return an object
- * that contains an interpreted callback function (stored in "fn") and,
- * optionally, callback arguments (stored in "arguments")
- */
-var nativeGetCallback = function () {
-  return Studio.eventQueue.shift();
-};
-
-/**
  * Looks for failures that should prevent execution.
  * @returns {boolean} True if we have a pre-execution failure
  */
@@ -1597,6 +1563,55 @@ Studio.checkForPreExecutionFailure = function () {
 
   return false;
 };
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
+};
+
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  // TODO: consider how to notify the user without a debug console output area
+  if (console.log) {
+    console.log(text);
+  }
+  if (lineNum !== undefined) {
+    // TODO: connect this up
+    // annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
+
+function handleExecutionError(err, lineNumber) {
+  if (!lineNumber && err instanceof SyntaxError) {
+    // syntax errors came before execution (during parsing), so we need
+    // to determine the proper line number by looking at the exception
+    lineNumber = err.loc.line;
+    // Now select this location in the editor, since we know we didn't hit
+    // this while executing (in which case, it would already have been selected)
+
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+  }
+  if (!lineNumber && Studio.JSInterpreter) {
+    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  Studio.executionError = err;
+
+  // Call onPuzzleComplete() if we're not on a freeplay level:
+  if (!level.freePlay) {
+    Studio.onPuzzleComplete();
+  }
+}
 
 /**
  * Execute the story
@@ -1645,35 +1660,14 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
-    Studio.userCodeStartOffset = codeWhenRun.length;
-    codeWhenRun += studioApp.editor.getValue();
-    Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
-    // Append our mini-runtime after the user's code. This will spin and process
-    // callback functions:
-    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = studioApp.editor.aceEditor.getSession();
-    Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
-
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, null, scope, {
-                                        StudioApp: studioApp,
-                                        Studio: api,
-                                        Globals: Studio.Globals } );
-
-
-      var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction({
-          interpreter: interpreter,
-          nativeFunc: nativeGetCallback,
-      });
-      interpreter.setProperty(scope,
-                              'getCallback',
-                              interpreter.createNativeFunction(wrapper));
-    };
-    Studio.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    var codeWhenRun = studioApp.editor.getValue();
+    Studio.JSInterpreter = new JSInterpreter({
+      code: codeWhenRun,
+      blocks: dropletConfig.blocks,
+      enableEvents: true,
+      studioApp: studioApp,
+      onExecutionError: handleExecutionError,
+    });
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -3019,7 +3013,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../canvg/StackBlur.js":91,"../canvg/canvg.js":92,"../canvg/rgbcolor.js":93,"../canvg/svg_todataurl":94,"../codegen":96,"../constants":98,"../dom":99,"../dropletUtils":100,"../locale":141,"../skins":258,"../templates/page.html.ejs":284,"../utils":306,"../xml":307,"./api":260,"./bigGameLogic":261,"./blocks":262,"./collidable":263,"./constants":264,"./controls.html.ejs":265,"./dropletConfig":267,"./extraControlRows.html.ejs":268,"./locale":270,"./projectile":272,"./rocketHeightLogic":273,"./samBatLogic":274,"./visualization.html.ejs":277}],277:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":94,"../canvg/canvg.js":95,"../canvg/rgbcolor.js":96,"../canvg/svg_todataurl":97,"../codegen":99,"../constants":101,"../dom":102,"../dropletUtils":103,"../locale":144,"../skins":261,"../templates/page.html.ejs":288,"../utils":310,"../xml":311,"./api":263,"./bigGameLogic":265,"./blocks":266,"./collidable":267,"./constants":268,"./controls.html.ejs":269,"./dropletConfig":271,"./extraControlRows.html.ejs":272,"./locale":274,"./projectile":276,"./rocketHeightLogic":277,"./samBatLogic":278,"./visualization.html.ejs":281}],281:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3039,7 +3033,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":477}],274:[function(require,module,exports){
+},{"ejs":481}],278:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3164,7 +3158,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":96,"../constants":98,"./api":260,"./constants":264,"./customGameLogic":266}],273:[function(require,module,exports){
+},{"../codegen":99,"../constants":101,"./api":263,"./constants":268,"./customGameLogic":270}],277:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3227,7 +3221,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":96,"./api":260,"./constants":264,"./customGameLogic":266}],272:[function(require,module,exports){
+},{"../codegen":99,"./api":263,"./constants":268,"./customGameLogic":270}],276:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3409,7 +3403,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":263,"./constants":264}],275:[function(require,module,exports){
+},{"./collidable":267,"./constants":268}],279:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3779,7 +3773,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":258,"./constants":264,"./locale":270}],269:[function(require,module,exports){
+},{"../skins":261,"./constants":268,"./locale":274}],273:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -5280,7 +5274,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 });
 
 
-},{"../block_utils":66,"../utils":306,"./constants":264,"./locale":270}],268:[function(require,module,exports){
+},{"../block_utils":69,"../utils":310,"./constants":268,"./locale":274}],272:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5300,21 +5294,22 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":141,"ejs":477}],267:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],271:[function(require,module,exports){
 var msg = require('./locale');
+var api = require('./apiJavascript.js');
 
 module.exports.blocks = [
-  {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },
-  {'func': 'setBackground', 'category': 'Play Lab', 'params': ["'night'"] },
-  {'func': 'move', 'category': 'Play Lab', 'params': ["0", "1"] },
-  {'func': 'playSound', 'category': 'Play Lab', 'params': ["'slap'"] },
-  {'func': 'changeScore', 'category': 'Play Lab', 'params': ["1"] },
-  {'func': 'setSpritePosition', 'category': 'Play Lab', 'params': ["0", "7"] },
-  {'func': 'setSpriteSpeed', 'category': 'Play Lab', 'params': ["0", "8"] },
-  {'func': 'setSpriteEmotion', 'category': 'Play Lab', 'params': ["0", "1"] },
-  {'func': 'throwProjectile', 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
-  {'func': 'vanish', 'category': 'Play Lab', 'params': ["0"] },
-  {'func': 'onEvent', 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
+  {'func': 'setSprite', 'parent': api, 'category': 'Play Lab', 'params': ["0", "'cat'"] },
+  {'func': 'setBackground', 'parent': api, 'category': 'Play Lab', 'params': ["'night'"] },
+  {'func': 'move', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'playSound', 'parent': api, 'category': 'Play Lab', 'params': ["'slap'"] },
+  {'func': 'changeScore', 'parent': api, 'category': 'Play Lab', 'params': ["1"] },
+  {'func': 'setSpritePosition', 'parent': api, 'category': 'Play Lab', 'params': ["0", "7"] },
+  {'func': 'setSpriteSpeed', 'parent': api, 'category': 'Play Lab', 'params': ["0", "8"] },
+  {'func': 'setSpriteEmotion', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'throwProjectile', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
+  {'func': 'vanish', 'parent': api, 'category': 'Play Lab', 'params': ["0"] },
+  {'func': 'onEvent', 'parent': api, 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
 ];
 
 module.exports.categories = {
@@ -5325,7 +5320,7 @@ module.exports.categories = {
 };
 
 
-},{"./locale":270}],265:[function(require,module,exports){
+},{"./apiJavascript.js":264,"./locale":274}],269:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5345,7 +5340,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":141,"ejs":477}],263:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],267:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5452,7 +5447,7 @@ Collidable.prototype.outOfBounds = function () {
 };
 
 
-},{"../StudioApp":5,"./constants":264}],262:[function(require,module,exports){
+},{"../StudioApp":5,"./constants":268}],266:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7480,13 +7475,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":5,"../codegen":96,"../locale":141,"../sharedFunctionalBlocks":257,"../utils":306,"./constants":264,"./locale":270}],270:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":99,"../locale":144,"../sharedFunctionalBlocks":260,"../utils":310,"./constants":268,"./locale":274}],274:[function(require,module,exports){
 // locale for studio
 
 module.exports = window.blockly.studio_locale;
 
 
-},{}],261:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7720,7 +7715,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":96,"./api":260,"./constants":264,"./customGameLogic":266}],266:[function(require,module,exports){
+},{"../codegen":99,"./api":263,"./constants":268,"./customGameLogic":270}],270:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7790,24 +7785,119 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":96,"./api":260,"./constants":264}],260:[function(require,module,exports){
+},{"../codegen":99,"./api":263,"./constants":268}],264:[function(require,module,exports){
+// API definitions for functions exposed for JavaScript (droplet/ace) levels:
+
+exports.setBackground = function (value) {
+  Studio.queueCmd(null, 'setBackground', {'value': value});
+};
+
+exports.setSprite = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSprite', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+exports.setSpriteEmotion = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+exports.setSpriteSpeed = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpriteSpeed', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+/*
+exports.setSpriteSize = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpriteSize', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+*/
+
+exports.setSpritePosition = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpritePosition', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+/*
+exports.setSpriteXY = function (spriteIndex, xpos, ypos) {
+  Studio.queueCmd(null, 'setSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'x': xpos,
+    'y': ypos
+  });
+};
+*/
+
+exports.playSound = function(soundName) {
+  Studio.queueCmd(null, 'playSound', {'soundName': soundName});
+};
+
+exports.throwProjectile = function(spriteIndex, dir, className) {
+  Studio.queueCmd(null, 'throwProjectile', {
+    'spriteIndex': spriteIndex,
+    'dir': dir,
+    'className': className
+  });
+};
+
+/*
+exports.makeProjectile = function(className, action) {
+  Studio.queueCmd(null, 'makeProjectile', {
+    'className': className,
+    'action': action
+  });
+};
+*/
+
+exports.move = function(spriteIndex, dir) {
+  Studio.queueCmd(null, 'move', {
+    'spriteIndex': spriteIndex,
+    'dir': dir
+  });
+};
+
+/*
+exports.changeScore = function(value) {
+  Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
+exports.setScoreText = function(text) {
+  Studio.queueCmd(null, 'setScoreText', {'text': text});
+};
+
+exports.showCoordinates = function() {
+  Studio.queueCmd(null, 'showCoordinates', {});
+};
+*/
+
+exports.vanish = function (spriteIndex) {
+  Studio.queueCmd(null, 'vanish', {spriteIndex: spriteIndex});
+};
+
+exports.onEvent = function (eventName, func) {
+  Studio.queueCmd(null, 'onEvent', {
+    'eventName': eventName,
+    'func': func
+  });
+};
+
+
+},{}],263:[function(require,module,exports){
 var constants = require('./constants');
 
-exports.SpriteSpeed = {
-  VERY_SLOW: 2,
-  SLOW: 3,
-  NORMAL: 5,
-  FAST: 8,
-  VERY_FAST: 12,
-};
-
-exports.SpriteSize = {
-  VERY_SMALL: 0.5,
-  SMALL: 0.75,
-  NORMAL: 1,
-  LARGE: 1.5,
-  VERY_LARGE: 2
-};
+exports.SpriteSpeed = constants.SpriteSpeed;
+exports.SpriteSize = constants.SpriteSize;
 
 var SPEECH_BUBBLE_TIME = 3;
 
@@ -7955,8 +8045,24 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":264}],264:[function(require,module,exports){
+},{"./constants":268}],268:[function(require,module,exports){
 'use strict';
+
+exports.SpriteSpeed = {
+  VERY_SLOW: 2,
+  SLOW: 3,
+  NORMAL: 5,
+  FAST: 8,
+  VERY_FAST: 12,
+};
+
+exports.SpriteSize = {
+  VERY_SMALL: 0.5,
+  SMALL: 0.75,
+  NORMAL: 1,
+  LARGE: 1.5,
+  VERY_LARGE: 2
+};
 
 exports.Direction = {
   NONE: 0,
@@ -8133,4 +8239,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[271]);
+},{}]},{},[275]);

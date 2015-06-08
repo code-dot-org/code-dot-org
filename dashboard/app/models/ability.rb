@@ -61,6 +61,7 @@ class Ability
       if user.facilitator?
         can :read, Workshop
         can :teachers, Workshop
+        can :read, District
         # Allow facilitator to manage Workshop/Attendance for
         # workshops in which they are a facilitator.
         can :manage, WorkshopAttendance do |attendance|

@@ -39,8 +39,6 @@ var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
 
-var vsprintf = require('./sprintf').vsprintf;
-
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
@@ -208,8 +206,9 @@ function adjustAppSizeStyles(container) {
           // NOTE: selectorText can appear in two different forms when styles and IDs
           // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
+          var maxChangedRules = 8;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < maxChangedRules; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive" ||
                 childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
@@ -238,7 +237,8 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
-                  Applab.appWidth * scale + "px;";
+                  Applab.appWidth * scale + "px; line-height: " +
+              Applab.appHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -338,40 +338,17 @@ function onDebugInputKeyDown(e) {
   }
 }
 
-function selectEditorRowCol(row, col) {
-  if (studioApp.editor.currentlyUsingBlocks) {
-    var style = {color: '#FFFF22'};
-    studioApp.editor.clearLineMarks();
-    studioApp.editor.markLine(row, style);
-  } else {
-    var selection = studioApp.editor.aceEditor.getSelection();
-    var range = selection.getRange();
-
-    range.start.row = row;
-    range.start.column = col;
-    range.end.row = row;
-    range.end.column = col + 1;
-
-    // setting with the backwards parameter set to true - this prevents horizontal
-    // scrolling to the right
-    selection.setSelectionRange(range, true);
-  }
-}
-
 function handleExecutionError(err, lineNumber) {
   if (!lineNumber && err instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line - Applab.userCodeLineOffset;
+    lineNumber = err.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    selectEditorRowCol(lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
   if (!lineNumber && Applab.JSInterpreter) {
-    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.JSInterpreter.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+    lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
@@ -516,6 +493,18 @@ Applab.init = function(config) {
     // Set up an event handler to create breakpoints when clicking in the
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
+
+    var toggleBreakpoint = function (row) {
+      var bps = aceEditor.session.getBreakpoints();
+      if (bps[row]) {
+        aceEditor.session.clearBreakpoint(row);
+        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
+      } else {
+        aceEditor.session.setBreakpoint(row);
+        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
+      }
+    };
+
     if (aceEditor) {
       aceEditor.on("guttermousedown", function(e) {
         var target = e.domEvent.target;
@@ -523,15 +512,14 @@ Applab.init = function(config) {
           return;
         }
         var row = e.getDocumentPosition().row;
-        var bps = e.editor.session.getBreakpoints();
-        if (bps[row]) {
-          e.editor.session.clearBreakpoint(row);
-        } else {
-          e.editor.session.setBreakpoint(row);
-        }
+        toggleBreakpoint(row);
         e.stop();
       });
     }
+
+    studioApp.editor.on('guttermousedown', function(e) {
+      toggleBreakpoint(e.line);
+    });
 
     if (studioApp.share) {
       // automatically run in share mode:
@@ -639,11 +627,7 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
-    designMode.renderDesignModeBox();
-
-    // TODO(dave): make DesignModeHeaders and DesignModeBox share a
-    // parent component.
-    designMode.configureDesignModeHeaders();
+    designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
 
@@ -839,10 +823,8 @@ Applab.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
-  Applab.eventQueue = [];
   Applab.executionError = null;
   Applab.JSInterpreter = null;
-  Applab.interpreter = null;
 };
 
 // TODO(dave): remove once channel id is passed in appOptions.
@@ -854,7 +836,7 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (window.dashboard && (!dashboard.project.isEditing ||
+  if (!window.dashboard || (!dashboard.project.isEditing ||
       (dashboard.project.current && dashboard.project.current.id))) {
     $(window).trigger('run_button_pressed');
     callback();
@@ -941,85 +923,6 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * A miniature runtime in the interpreted world calls this function repeatedly
- * to check to see if it should invoke any callbacks from within the
- * interpreted world. If the eventQueue is not empty, we will return an object
- * that contains an interpreted callback function (stored in "fn") and,
- * optionally, callback arguments (stored in "arguments")
- */
-var nativeGetCallback = function () {
-  var retVal = Applab.eventQueue.shift();
-  if (typeof retVal === "undefined") {
-    Applab.JSInterpreter.seenEmptyGetCallbackDuringExecution = true;
-  }
-  return retVal;
-};
-
-var nativeSetCallbackRetVal = function (retVal) {
-  if (Applab.eventQueue.length === 0) {
-    // If nothing else is in the event queue, then store this return value
-    // away so it can be returned in the native event handler
-    Applab.JSInterpreter.seenReturnFromCallbackDuringExecution = true;
-    Applab.JSInterpreter.lastCallbackRetVal = retVal;
-  }
-  // Provide warnings to the user if this function has been called with a
-  // meaningful return value while we are no longer in the native event handler
-
-  // TODO (cpirich): Check to see if the DOM event object was modified
-  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
-  // warning since these won't work as expected unless running atMaxSpeed
-  if (!Applab.JSInterpreter.runUntilCallbackReturn &&
-      typeof Applab.JSInterpreter.lastCallbackRetVal !== 'undefined') {
-    outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
-    if (getCurrentTickLength() !== 0) {
-      outputApplabConsole("  (try moving the speed slider to its maximum value)");
-    }
-  }
-};
-
-var consoleApi = {};
-
-consoleApi.log = function() {
-  var nativeArgs = [];
-  for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter,
-                                                       arguments[i]);
-  }
-  var output = '';
-  var firstArg = nativeArgs[0];
-  if (typeof firstArg === 'string' || firstArg instanceof String) {
-    output = vsprintf(firstArg, nativeArgs.slice(1));
-  } else {
-    for (i = 0; i < nativeArgs.length; i++) {
-      output += nativeArgs[i].toString();
-      if (i < nativeArgs.length - 1) {
-        output += '\n';
-      }
-    }
-  }
-  outputApplabConsole(output);
-};
-
-function populateNonMarshalledFunctions(interpreter, scope, parent) {
-  for (var i = 0; i < dropletConfig.blocks.length; i++) {
-    var block = dropletConfig.blocks[i];
-    if (block.dontMarshal) {
-      var func = parent[block.func];
-      // 4th param is false to indicate: don't marshal params
-      var wrapper = codegen.makeNativeMemberFunction({
-          interpreter: interpreter,
-          nativeFunc: func,
-          nativeParentObj: parent,
-          dontMarshal: true
-      });
-      interpreter.setProperty(scope,
-                              block.func,
-                              interpreter.createNativeFunction(wrapper));
-    }
-  }
-}
-
-/**
  * Execute the app
  */
 Applab.execute = function() {
@@ -1036,17 +939,8 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
-    Applab.userCodeStartOffset = 0;
-    Applab.userCodeLineOffset = 0;
-    Applab.userCodeLength = codeWhenRun.length;
-    // Append our mini-runtime after the user's code. This will spin and process
-    // callback functions:
-    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
-                 'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
     annotationList.attachToSession(session);
-    Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1065,56 +959,18 @@ Applab.execute = function() {
   if (codeWhenRun) {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
-      var initFunc = function(interpreter, scope) {
-        codegen.initJSInterpreter(interpreter,
-                                  dropletConfig.blocks,
-                                  scope,
-                                  { console: consoleApi });
-
-        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
-
-        // Only allow five levels of depth when marshalling the return value
-        // since we will occasionally return DOM Event objects which contain
-        // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction({
-            interpreter: interpreter,
-            nativeFunc: nativeGetCallback,
-            maxDepth: 5
-        });
-        interpreter.setProperty(scope,
-                                'getCallback',
-                                interpreter.createNativeFunction(wrapper));
-
-        wrapper = codegen.makeNativeMemberFunction({
-            interpreter: interpreter,
-            nativeFunc: nativeSetCallbackRetVal,
-        });
-        interpreter.setProperty(scope,
-                                'setCallbackRetVal',
-                                interpreter.createNativeFunction(wrapper));
-      };
-      try {
-        Applab.interpreter = new window.Interpreter(codeWhenRun, initFunc);
-      }
-      catch(err) {
-        handleExecutionError(err);
-      }
-      if (Applab.interpreter) {
-        Applab.JSInterpreter = new JSInterpreter({
-            interpreter: Applab.interpreter,
-            studioApp: studioApp,
-            codeInfo: {
-                cumulativeLength: Applab.cumulativeLength,
-                userCodeStartOffset: Applab.userCodeStartOffset,
-                userCodeLength: Applab.userCodeLength,
-            },
-            shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-            maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-            onNextStepChanged: Applab.updatePauseUIState,
-            onPause: Applab.onPauseContinueButton,
-            onExecutionError: handleExecutionError,
-        });
-      }
+      Applab.JSInterpreter = new JSInterpreter({
+          code: codeWhenRun,
+          blocks: dropletConfig.blocks,
+          enableEvents: true,
+          studioApp: studioApp,
+          shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+          maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+          onNextStepChanged: Applab.updatePauseUIState,
+          onPause: Applab.onPauseContinueButton,
+          onExecutionError: handleExecutionError,
+          onExecutionWarning: outputApplabConsole,
+      });
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
@@ -1233,6 +1089,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1398,5 +1255,5 @@ var getPegasusHost = function() {
 };
 
 Applab.isInDesignMode = function () {
-  return $('#designModeBox').is(':visible');
+  return $('#designWorkspace').is(':visible');
 };
