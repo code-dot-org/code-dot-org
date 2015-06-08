@@ -36,7 +36,6 @@ module Dashboard
 
     unless Rails.env.production?
       config.middleware.use ::Rack::UpgradeInsecureRequests
-      config.middleware.use ::Rack::ContentLength
     end
 
     config.encoding = 'utf-8'

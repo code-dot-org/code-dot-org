@@ -4,5 +4,5 @@ require ::File.expand_path('../config/environment',  __FILE__)
 
 require 'unicorn/oob_gc'
 use Unicorn::OobGC
-
+use Rack::ContentLength
 run Rails.application
