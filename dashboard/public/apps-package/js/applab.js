@@ -7001,7 +7001,7 @@ module.exports = {
 
   create: function () {
     var element = document.createElement('input');
-    element.style.margin = '5px 2px';
+    element.style.margin = '0px';
     element.style.width = '236px';
     element.style.height = '30px';
     element.style.color = '#000000';
@@ -7580,7 +7580,6 @@ var CheckboxProperties = React.createClass({displayName: "CheckboxProperties",
         React.createElement(PropertyRow, {
           desc: 'id', 
           initialValue: element.id, 
-          isNumber: true, 
           handleChange: this.props.handleChange.bind(this, 'id')}), 
         React.createElement(PropertyRow, {
           desc: 'width (px)', 
@@ -7936,6 +7935,7 @@ var LockState = {
 
 var PropertyRow = React.createClass({displayName: "PropertyRow",
   propTypes: {
+    desc: React.PropTypes.string.isRequired,
     initialValue: React.PropTypes.oneOfType([
       React.PropTypes.string,
       React.PropTypes.number
