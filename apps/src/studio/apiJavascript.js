@@ -79,11 +79,11 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
-/*
 exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
+/*
 exports.setScoreText = function(text) {
   Studio.queueCmd(null, 'setScoreText', {'text': text});
 };

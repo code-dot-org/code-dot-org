@@ -181,6 +181,7 @@ exports.DEFAULT_SPRITE_SIZE = 1;
 exports.SquareType = {
   OPEN: 0,
   SPRITEFINISH: 1,
+  WALL: 4,
   SPRITESTART: 16
 };
 
