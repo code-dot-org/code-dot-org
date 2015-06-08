@@ -74,9 +74,10 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
   $('.tooltipstered').tooltipster('hide');
   var dialog = new window.Dialog({
-    body: $('<iframe style="width:100%" src="' +
-      this.getDropletTooltip(functionName).getFullDocumentationURL() +
-      '" class="markdown-instructions-container">'),
+    body: $('<iframe>')
+      .addClass('markdown-instructions-container')
+      .width('100%')
+      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
     autoResizeScrollableElement: '.markdown-instructions-container',
     id: 'block-documentation-lightbox'
   });

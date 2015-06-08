@@ -23,7 +23,7 @@ function sizeDialogToViewport(scrollableElementSelector) {
     parseInt(modalBody.css('padding-bottom'), 10) +
     parseInt(modalBody.css('margin-bottom'), 10);
   var scrollableElementHeight = viewportHeight - (popupTop + popupBottom + headerHeight);
-  if (scrollableElement[0].tagName === "IFRAME") {
+  if (scrollableElement.is('iframe')) {
     scrollableElement.css('height', scrollableElementHeight);
   } else {
     scrollableElement.css('max-height', scrollableElementHeight);
