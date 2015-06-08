@@ -178,6 +178,7 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "connectToAPeer":function(d){return "!!-Connect to a Peer-!!"},
 "connectToARoom":function(d){return "!!-Connect to a Room-!!"},
 "connectToARouter":function(d){return "!!-Connect to a Router-!!"},
+"continueButton":function(d){return "!!-Finished! Continue to next stage-!!"},
 "decimal":function(d){return "!!-Decimal-!!"},
 "defaultNodeName":function(d){return "!!-[New Node]-!!"},
 "disconnected":function(d){return "!!-Disconnected-!!"},
