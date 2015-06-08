@@ -36,6 +36,7 @@ class NetSim < Blockly
     default_router_bandwidth
     show_router_memory_control
     default_router_memory
+    default_random_drop_chance
     show_dns_mode_control
     default_dns_mode
   )
