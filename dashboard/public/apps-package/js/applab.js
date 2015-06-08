@@ -1401,6 +1401,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onPuzzleComplete = function() {
@@ -2012,8 +2013,6 @@ designMode.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
-
-  designMode.serializeToLevelHtml();
 
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
