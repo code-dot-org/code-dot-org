@@ -46,9 +46,9 @@ Example:
 
 ### Images
 
-It's easy to include images from our **Images** folder in Dropbox. 
+It's easy to include images from our **Images** folder in Dropbox. To change the size on the image, include "/fit-pixel width" after /images.
 
-Example: ![Code.org Logo](/images/infographics/diversity.png)
+Example: ![Code.org Logo](/images//fit-600/infographics/diversity.png)
 
 ### Lists
 You can create unordered lists in two ways, using either an asterisk (*) or a hyphen (-) followed by a space. Make sure to leave a row bewteen your headline and the list. 
