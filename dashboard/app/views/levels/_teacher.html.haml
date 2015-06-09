@@ -1,5 +1,6 @@
 - if current_user.try(:admin?) && @script_level # TODO: this should change to :teacher? when we want to ship this
-  .teacher-panel{class: @user || @section || @ideal_level_source ? '' : 'hidden'}
+
+  .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
@@ -38,8 +39,14 @@
         - if @section
           .section
             %h4
-              =t('teacher.panel.section')
-              =link_to @section.name, teacher_dashboard_section_progress_url(@section)
+              = t('teacher.panel.section')
+              = link_to @section.name, teacher_dashboard_section_progress_url(@section)
+      - if current_user.sections.many?
+        = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
+        :javascript
+          $('select#sections').change(function(ev) {
+            window.location.href = ev.target.value;
+          });
       - if @section
         .scrollable-wrapper
           %table.section-students
