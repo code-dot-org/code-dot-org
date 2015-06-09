@@ -1,0 +1,17 @@
+name 'U2L3: IP DNS Video'
+title 'IP/DNS Video'
+description 'Internet: IP/DNS'
+css 'unplugged' 
+markdown <<MARKDOWN
+## Video: The Internet: IP/DNS
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/mFa_h2W510A?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](http://)**
+
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
