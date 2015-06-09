@@ -16,7 +16,7 @@ var _ = utils.getLodash();
 var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimFakeVizWire = require('./NetSimFakeVizWire');
 var NetSimWire = require('./NetSimWire');
-var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizWire = require('./NetSimVizWire');
 var netsimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
@@ -71,7 +71,7 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
 
   /**
    * Reference to the local node viz element, the anchor for the visualization.
-   * @type {NetSimVizNode}
+   * @type {NetSimVizSimulationNode}
    */
   this.localNode = null;
 
@@ -194,7 +194,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
-      this.localNode = new NetSimVizNode(newLocalNode);
+      this.localNode = new NetSimVizSimulationNode(newLocalNode);
       this.elements_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
@@ -235,7 +235,7 @@ NetSimVisualization.prototype.getElementByEntityID = function (elementType, enti
 /**
  * Gets the set of VizWires directly attached to the given VizNode, (either
  * on the local end or remote end)
- * @param {NetSimVizNode} vizNode
+ * @param {NetSimVizSimulationNode} vizNode
  * @returns {Array.<NetSimVizWire>} the attached wires
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
@@ -251,7 +251,7 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
 /**
  * Gets the set of FakeVizWires directly attached to the given VizNode (in
  * either direction).
- * @param {NetSimVizNode} vizNode
+ * @param {NetSimVizSimulationNode} vizNode
  * @returns {NetSimFakeVizWire[]} the attached fake wires
  */
 NetSimVisualization.prototype.getFakeWiresAttachedToNode = function (vizNode) {
@@ -271,8 +271,8 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   var tableNodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
-  this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
-    var newVizNode = new NetSimVizNode(node);
+  this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
+    var newVizNode = new NetSimVizSimulationNode(node);
     newVizNode.setDnsMode(this.netsim_.getDnsMode());
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
@@ -541,7 +541,7 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
  * Notes that the current element is should be foreground when we're all done,
  * finds the current element's unvisited connections,
  * pushes those connections onto the stack.
- * @param {NetSimVizNode|NetSimVizWire} vizElement
+ * @param {NetSimVizSimulationNode|NetSimVizWire} vizElement
  * @returns {Array.<NetSimVizElement>}
  * @private
  */
@@ -549,7 +549,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   // Find new entities to explore based on node type and connections
   var neighbors = [];
 
-  if (vizElement instanceof NetSimVizNode) {
+  if (vizElement instanceof NetSimVizSimulationNode) {
     neighbors = this.getWiresAttachedToNode(vizElement)
         .concat(this.getFakeWiresAttachedToNode(vizElement));
   } else if (vizElement instanceof NetSimVizWire) {
@@ -596,9 +596,9 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
     return;
   }
 
-  /** @type {Array.<NetSimVizNode>} */
+  /** @type {Array.<NetSimVizSimulationNode>} */
   var foregroundNodes = this.elements_.filter(function (element) {
-    return element instanceof NetSimVizNode && element.isForeground;
+    return element instanceof NetSimVizSimulationNode && element.isForeground;
   });
 
   // Sometimes, there's no work to do.
@@ -670,9 +670,9 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
  *       O        O         O  O       O O
  */
 NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function () {
-  /** @type {Array.<NetSimVizNode>} */
+  /** @type {Array.<NetSimVizSimulationNode>} */
   var foregroundNodes = this.elements_.filter(function (element) {
-    return element instanceof NetSimVizNode &&
+    return element instanceof NetSimVizSimulationNode &&
         element.isForeground &&
         !element.isRouter;
   });
@@ -729,7 +729,7 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
   // Tell all nodes about the new DNS mode, so they can decide whether to
   // show or hide their address.
   this.elements_.forEach(function (vizElement) {
-    if (vizElement instanceof NetSimVizNode) {
+    if (vizElement instanceof NetSimVizSimulationNode) {
       vizElement.setDnsMode(newDnsMode);
     }
   });
@@ -740,7 +740,7 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
  */
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   this.elements_.forEach(function (vizElement) {
-    if (vizElement instanceof NetSimVizNode) {
+    if (vizElement instanceof NetSimVizSimulationNode) {
       vizElement.setIsDnsNode(vizElement.getCorrespondingEntityID() === dnsNodeID);
     }
   });
