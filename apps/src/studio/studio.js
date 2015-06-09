@@ -2955,6 +2955,10 @@ Studio.moveSingle = function (opts) {
 Studio.moveDistance = function (opts) {
   if (!opts.started) {
     opts.started = true;
+    if (level.gridAlignedMovement) {
+      opts.distance =
+        Math.ceil(opts.distance / Studio.SQUARE_SIZE) * Studio.SQUARE_SIZE;
+    }
     opts.queuedDistance = opts.distance;
   }
 
