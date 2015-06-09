@@ -10,20 +10,7 @@ class LevelsControllerTest < ActionController::TestCase
     @program = '<hey/>'
 
     @not_admin = create(:user)
-    # Most tests in levels controller assume we're working within the 'levelbuilder' environment.
-    # Run 'unset_levelbuiler_env' for a levels controller test in the normal 'test' environment.
-    Rails.env = 'levelbuilder'
-    # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
-    ENV['FORCE_CUSTOM_LEVELS'] = '1'
-  end
-
-  teardown do
-    unset_levelbuilder_env
-  end
-
-  def unset_levelbuilder_env
-    Rails.env = "test"
-    ENV.delete 'FORCE_CUSTOM_LEVELS'
+    set_env :levelbuilder
   end
 
   test "should get index" do
@@ -481,7 +468,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'can show level when not signed in' do
-    unset_levelbuilder_env
+    set_env :test
 
     level = create :artist
     sign_out @user
@@ -494,7 +481,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'can show embed level when not signed in' do
-    unset_levelbuilder_env
+    set_env :test
 
     level = create :artist
     sign_out @user
@@ -504,7 +491,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'can show embed blocks when not signed in' do
-    unset_levelbuilder_env
+    set_env :test
 
     level = create :artist
     sign_out @user
