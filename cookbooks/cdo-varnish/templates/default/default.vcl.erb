@@ -572,7 +572,7 @@ sub vcl_deliver {
     set resp.http.Strict-Transport-Security = "max-age=3600";
     cookie.parse(req.http.Cookie);
     if(cookie.get("https_ok") != "1") {
-      header.append(resp.http.Set-Cookie,"https_ok=1")
+      header.append(resp.http.Set-Cookie,"https_ok=1");
     }
   }
 
