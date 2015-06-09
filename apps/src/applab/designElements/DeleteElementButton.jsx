@@ -47,7 +47,7 @@ var DeleteElementButton = React.createClass({
 
     var confirm;
     if (this.state.confirming) {
-      confirm = (
+      return (
         <div>
           Delete?
           <button
@@ -70,7 +70,6 @@ var DeleteElementButton = React.createClass({
           onClick={this.handleDeleteInternal}>
           Delete
         </button>
-        {confirm}
       </div>
     );
   }
