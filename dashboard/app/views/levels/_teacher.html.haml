@@ -41,12 +41,12 @@
             %h4
               = t('teacher.panel.section')
               = link_to @section.name, teacher_dashboard_section_progress_url(@section)
-      - if current_user.sections.many?
-        = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
-        :javascript
-          $('select#sections').change(function(ev) {
-            window.location.href = ev.target.value;
-          });
+        - if current_user.sections.many?
+          = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
+          :javascript
+            $('select#sections').change(function(ev) {
+              window.location.href = ev.target.value;
+            });
       - if @section
         .scrollable-wrapper
           %table.section-students
@@ -68,7 +68,7 @@
     function resizeScrollable() {
       var newHeight = $('.teacher-panel').innerHeight() -
           $('.teacher-panel h3').outerHeight() -
-          25 - // magic..
+          15 - // magic..
           $('.non-scrollable-wrapper').outerHeight();
       $('.scrollable-wrapper').css('max-height', newHeight);
     }
