@@ -1,3 +1,5 @@
+/* globals $ */
+
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
@@ -7,6 +9,19 @@ var COLOR_BLUE = '#19C3E1';
 var COLOR_RED = '#F78183';
 var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';
+
+/**
+ * Generate a list of screen ids for our setScreen dropdown
+ */
+function getScreenIds() {
+  var ret = $(".screen").map(function () {
+    return '"' + this.id + '"';
+  });
+
+  // Convert from jQuery's array-like object to a true array
+  return $.makeArray(ret);
+}
+
 
 module.exports.blocks = [
   {'func': 'onEvent', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','type','callback'], 'params': ['"id"', '"click"', "function(event) {\n  \n}"], 'dropdown': { 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
@@ -31,7 +46,7 @@ module.exports.blocks = [
   {'func': 'write', 'parent': api, 'category': 'UI controls', 'paletteParams': ['text'], 'params': ['"text"'] },
   {'func': 'getXPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
   {'func': 'getYPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setScreen', 'parent': api, 'category': 'UI controls', 'paletteParams': ['screenId'], 'params': ['"screen1"']},
+  {'func': 'setScreen', 'parent': api, 'category': 'UI controls', 'paletteParams': ['screenId'], 'params': ['"screen1"'], 'dropdown': { 0: getScreenIds }},
 
   {'func': 'createCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','width','height'], 'params': ['"id"', "320", "480"] },
   {'func': 'setActiveCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id'], 'params': ['"id"'] },

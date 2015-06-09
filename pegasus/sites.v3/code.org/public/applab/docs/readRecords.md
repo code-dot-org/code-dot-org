@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -23,7 +24,7 @@ Using App Lab's table data storage, reads the records from the provided `tableNa
 
 [/short_description]
 
-**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/applab/docs/tabledatastorage).  
+**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/applab/docs/tabledatastorage).
 **Note:** View your app's table data by clicking 'View data' in App Lab and clicking the table name you want to view.
 
 [/description]
@@ -121,3 +122,5 @@ No return value. When `readRecords()` is finished executing, `callbackFunction` 
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

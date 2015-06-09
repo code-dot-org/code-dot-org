@@ -43,6 +43,7 @@ exports.load = function (assetUrl, id) {
 */
 /* global -Blockly */
 /* global $ */
+/* global sendReport */
 'use strict';
 
 var utils = require('../utils');
@@ -230,6 +231,12 @@ NetSim.prototype.init = function(config) {
    */
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
+  /**
+   * Configuration for reporting level completion
+   * @type {Object}
+   */
+  this.reportingInfo_ = config.report;
+
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
@@ -398,7 +405,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
-}
+  }
 
   this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level,
       this);
@@ -1263,6 +1270,40 @@ NetSim.prototype.updateLayout = function () {
 
   // Manually adjust the logwrap to the remaining height
   logWrap.css('height', rightColumnHeight - sendPanelHeight);
+};
+
+/**
+ * Appropriate steps for when the student hits the "Continue to next level"
+ * button.  Should mark the level as complete and navigate to the next level.
+ */
+NetSim.prototype.completeLevelAndContinue = function () {
+  // Avoid multiple simultaneous submissions.
+  $('.submitButton').attr('disabled', true);
+
+  sendReport({
+    fallbackResponse: this.reportingInfo_.fallback_response,
+    callback: this.reportingInfo_.callback,
+    app: 'netsim',
+    level: this.level.id,
+    result: true,
+    testResult: 100,
+    onComplete: function (serverResponse) {
+
+      // Re-enable submit button, in case there's nowhere to go.
+      $('.submitButton').attr('disabled', false);
+
+      // If there's somewhere to go, disconnect and go!
+      if (serverResponse.redirect) {
+        if (this.isConnectedToRemote()) {
+          this.disconnectFromRemote(function () {
+            window.location.href = serverResponse.redirect;
+          });
+        } else {
+          window.location.href = serverResponse.redirect;
+        }
+      }
+    }.bind(this)
+  });
 };
 
 
@@ -2884,7 +2925,13 @@ NetSimTabsComponent.prototype.render = function () {
 
   if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
     // Move the reference area into the instructions tab
-    this.rootDiv_.find('#tab_instructions').append(referenceArea);
+    referenceArea.insertBefore(
+        this.rootDiv_.find('#tab_instructions button').first());
+    this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
+      if (!$(jQueryEvent.target).is(':disabled')) {
+        netsimGlobals.completeLevelAndContinue();
+      }
+    });
   }
 
   if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {
@@ -3034,7 +3081,7 @@ with (locals || {}) { (function(){
   var showDns = shouldShowTab(level, NetSimTabType.DNS);
 
   var instructionsContent = level.instructions || '';
-; buf.push('\n<div class="netsim-tabs">\n  <ul>\n    ');16; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((17,  i18n.instructions() )), '</a></li>\n    ');18; } ; buf.push('\n    ');19; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((20,  i18n.myDevice() )), '</a></li>\n    ');21; } ; buf.push('\n    ');22; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((23,  i18n.router() )), '</a></li>\n    ');24; } ; buf.push('\n    ');25; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((26,  i18n.dns() )), '</a></li>\n    ');27; } ; buf.push('\n  </ul>\n  ');29; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions"><p>', escape((30,  instructionsContent )), '</p></div>\n  ');31; } ; buf.push('\n  ');32; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');34; } ; buf.push('\n  ');35; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');37; } ; buf.push('\n  ');38; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');40; } ; buf.push('\n</div>'); })();
+; buf.push('\n<div class="netsim-tabs">\n  <ul>\n    ');16; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((17,  i18n.instructions() )), '</a></li>\n    ');18; } ; buf.push('\n    ');19; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((20,  i18n.myDevice() )), '</a></li>\n    ');21; } ; buf.push('\n    ');22; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((23,  i18n.router() )), '</a></li>\n    ');24; } ; buf.push('\n    ');25; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((26,  i18n.dns() )), '</a></li>\n    ');27; } ; buf.push('\n  </ul>\n  ');29; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions">\n      <p>', escape((31,  instructionsContent )), '</p>\n      <button id="finished" class="btn btn-primary submitButton">', escape((32,  i18n.continueButton() )), '</button>\n    </div>\n  ');34; } ; buf.push('\n  ');35; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');37; } ; buf.push('\n  ');38; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');40; } ; buf.push('\n  ');41; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');43; } ; buf.push('\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -8069,6 +8116,9 @@ NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) 
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
+
+  logger.info(this.getDisplayName() + ": Connecting to " + router.getDisplayName());
+
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
@@ -8188,17 +8238,8 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
 NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   if (this.myWire) {
     this.myWire.synchronousDestroy();
-    this.myWire = null;
   }
-
-  var myRouter = this.getMyRouter();
-  if (myRouter) {
-    myRouter.stopSimulation();
-  }
-
-  this.myRemoteClient = null;
-  this.myRouterID_ = undefined;
-  this.remoteChange.notifyObservers(null, null);
+  this.cleanUpAfterDestroyingWire_();
 };
 
 /**
@@ -8217,17 +8258,28 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
       logger.info("Error while disconnecting: " + err.message);
     }
 
-    var myRouter = this.getMyRouter();
-    if (myRouter) {
-      myRouter.stopSimulation();
-    }
-
-    this.myWire = null;
-    this.myRemoteClient = null;
-    this.myRouterID_ = undefined;
-    this.remoteChange.notifyObservers(null, null);
+    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
+};
+
+/**
+ * Common cleanup behavior shared between the synchronous and asynchronous
+ * disconnect paths.
+ * @private
+ */
+NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+  var myRouter = this.getMyRouter();
+  if (myRouter) {
+    // We did manual heartbeat setup, we also need to do manual heartbeat
+    // cleanup when we disconnect from the router.
+    myRouter.heartbeat = null;
+  }
+
+  this.myWire = null;
+  this.myRemoteClient = null;
+  this.myRouterID_ = undefined;
+  this.remoteChange.notifyObservers(null, null);
 };
 
 /**
@@ -8273,12 +8325,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
           return;
         }
 
-        logger.info('Local node sent message');
+        logger.info(this.getDisplayName() + ': Sent message:' +
+            '\nfrom: ' + localNodeID +
+            '\nto  : ' + remoteNodeID +
+            '\nsim : ' + simulatingNodeID +
+            '\nhops: ' + extraHops);
+
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
         onComplete(null);
-      }
+      }.bind(this)
   );
 };
 
@@ -8455,6 +8512,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
  * @private
  */
 NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
+  logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(message.payload);
@@ -10332,6 +10390,9 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
+
+    logger.info(this.getDisplayName() + ": Assigned address " +
+        wire.localAddress + " to host " + wire.localHostname);
   }.bind(this));
 };
 
@@ -10711,6 +10772,9 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   if (_.isEqual(this.routerQueueCache_, newQueue)) {
     return;
   }
+
+  logger.info(this.getDisplayName() + ': Message queue updated (size ' +
+      newQueue.length + ')');
 
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
@@ -18114,6 +18178,13 @@ module.exports = {
    */
   updateLayout: function () {
     netsim_.updateLayout();
+  },
+
+  /**
+   * Trigger an attempt to complete the current level and continue to the next.
+   */
+  completeLevelAndContinue: function () {
+    netsim_.completeLevelAndContinue();
   },
 
   /**
@@ -37133,7 +37204,7 @@ var singletonInstance;
  */
 NetSimLogger.getSingleton = function () {
   if (singletonInstance === undefined) {
-    singletonInstance = new NetSimLogger(console, LogLevel.VERBOSE);
+    singletonInstance = new NetSimLogger(console, LogLevel.WARN);
   }
   return singletonInstance;
 };

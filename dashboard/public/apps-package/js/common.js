@@ -6436,14 +6436,23 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
+  var headerElement;
+
+  var puzzleTitle = msg.puzzleTitle({
+    stage_total: level.stage_total,
+    puzzle_number: level.puzzle_number
+  });
+
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
+    instructionsDiv.className += ' markdown-instructions-container';
+    headerElement = document.createElement('h1');
+    headerElement.className = 'markdown-level-header-text';
+    headerElement.innerHTML = puzzleTitle;
   }
+
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
-    puzzleTitle: msg.puzzleTitle({
-      stage_total: level.stage_total,
-      puzzle_number: level.puzzle_number
-    }),
+    puzzleTitle: puzzleTitle,
     instructions: level.instructions,
     renderedMarkdown: renderedMarkdown,
     aniGifURL: level.aniGifURL
@@ -6482,7 +6491,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
-    onHidden: hideFn
+    onHidden: hideFn,
+    scrollContent: !!renderedMarkdown,
+    header: headerElement
   });
 
   if (autoClose) {
@@ -8786,7 +8797,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; if (locals.renderedMarkdown) {; buf.push('  ', (2,  locals.renderedMarkdown ), '\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
+ buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('<div class=\'instructions-markdown\'>', (2,  locals.renderedMarkdown ), '</div>\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -9933,11 +9944,14 @@ FeedbackUtils.prototype.createModalDialog = function(options, icon) {
     }
   };
 
+  var elementToScroll = options.scrollContent ? '.modal-content' : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
-    id: options.id
+    autoResizeScrollableElement: elementToScroll,
+    id: options.id,
+    header: options.header
   });
 };
 
@@ -10315,120 +10329,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":481}],102:[function(require,module,exports){
-exports.addReadyListener = function(callback) {
-  if (document.readyState === "complete") {
-    setTimeout(callback, 1);
-  } else {
-    window.addEventListener('load', callback, false);
-  }
-};
-
-exports.getText = function(node) {
-  return node.innerText || node.textContent;
-};
-
-exports.setText = function(node, string) {
-  if (node.innerText) {
-    node.innerText = string;
-  } else {
-    node.textContent = string;
-  }
-};
-
-exports.getTouchEventName = function(eventName) {
-  var isIE11Touch = window.navigator.pointerEnabled;
-  var isIE10Touch = window.navigator.msPointerEnabled;
-  var isStandardTouch = 'ontouchend' in document.documentElement;
-
-  var key;
-  if (isIE11Touch) {
-    key = "ie11";
-  } else if (isIE10Touch) {
-    key = "ie10";
-  } else if (isStandardTouch) {
-    key = "standard";
-  }
-  if (key && TOUCH_MAP[eventName]) {
-    return TOUCH_MAP[eventName][key];
-  }
-};
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
-  var touchEvent = exports.getTouchEventName(eventName);
-  if (touchEvent) {
-    element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
-      handler(e);
-    }, false);
-  }
-};
-
-exports.addMouseDownTouchEvent = function(element, handler) {
-  addEvent(element, 'mousedown', handler);
-};
-
-exports.addMouseUpTouchEvent = function(element, handler) {
-  addEvent(element, 'mouseup', handler);
-};
-
-exports.addMouseMoveTouchEvent = function(element, handler) {
-  addEvent(element, 'mousemove', handler);
-};
-
-exports.addClickTouchEvent = function(element, handler) {
-  addEvent(element, 'click', handler);
-};
-
-// A map from standard touch events to various aliases.
-var TOUCH_MAP = {
-  //  Incomplete list, add as needed.
-  click: {
-    standard: 'touchstart',
-    ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
-  },
-  mousedown: {
-    standard: 'touchstart',
-    ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
-  },
-  mouseup: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
-  },
-  mousemove: {
-    standard: 'touchmove',
-    ie10: 'MSPointerMove',
-    ie11: 'pointermove'
-  }
-};
-
-exports.isMobile = function() {
-  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isWindowsTouch = function() {
-  var reg = /MSIE.*Touch/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isAndroid = function() {
-  var reg = /Android/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isIOS = function() {
-  var reg = /iP(hone|od|ad)/;
-  return reg.test(window.navigator.userAgent);
-};
-
-
-},{}],101:[function(require,module,exports){
+},{"ejs":481}],101:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -10880,6 +10781,19 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
   return this.blockTypeToTooltip.hasOwnProperty(functionName);
 };
 
+DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  $('.tooltipstered').tooltipster('hide');
+  var dialog = new window.Dialog({
+    body: $('<iframe>')
+      .addClass('markdown-instructions-container')
+      .width('100%')
+      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
+    autoResizeScrollableElement: '.markdown-instructions-container',
+    id: 'block-documentation-lightbox'
+  });
+  dialog.show();
+};
+
 /**
  * @param {String} functionName
  * @returns {DropletFunctionTooltip}
@@ -10900,6 +10814,7 @@ module.exports = DropletTooltipManager;
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -10958,7 +10873,17 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
 
     var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
       content: this.getTooltipHTML(funcName),
-      offsetX: tooltipOffsetX
+      offsetX: tooltipOffsetX,
+      functionReady: function (_, contents) {
+        var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+        // Important this binds to mouseDown/touchDown rather than click, needs to
+        // happen before `blur` which triggers the ace editor completer popup
+        // hide which in turn would hide the link and not show the docs.
+        dom.addClickTouchEvent(seeExamplesLink, function (event) {
+          this.dropletTooltipManager.showDocFor(funcName);
+          event.stopPropagation();
+        }.bind(this));
+      }.bind(this)
     });
 
     $(blockHoverDiv).tooltipster(configuration);
@@ -10992,8 +10917,9 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
 module.exports = DropletBlockTooltipManager;
 
 
-},{"./DropletFunctionTooltip":65,"./DropletFunctionTooltip.html.ejs":64}],65:[function(require,module,exports){
+},{"../dom":102,"./DropletFunctionTooltip":65,"./DropletFunctionTooltip.html.ejs":64}],65:[function(require,module,exports){
 var msg = require('../locale');
+var utils = require('../utils');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -11112,13 +11038,13 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
  * @returns {string} URL for full doc about this function
  */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
-  return 'http://code.org/applab/docs/' + this.functionName;
+  return '//' + utils.getPegasusHost() + '/applab/docs/' + this.functionName + '?embedded';
 };
 
 module.exports = DropletFunctionTooltip;
 
 
-},{"../locale":144}],144:[function(require,module,exports){
+},{"../locale":144,"../utils":310}],144:[function(require,module,exports){
 // base locale
 
 module.exports = window.blockly.common_locale;
@@ -11128,6 +11054,7 @@ module.exports = window.blockly.common_locale;
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -11221,8 +11148,23 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
     return;
   }
 
+  this.attachTooltipForFunction(funcName);
+};
+
+DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = function (funcName) {
+  var tooltipDOM = this.getTooltipHTML(funcName);
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-    content: this.getTooltipHTML(funcName)
+    content: tooltipDOM,
+    functionReady: function (_, contents) {
+      var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+      // Important this binds to mouseDown/touchDown rather than click, needs to
+      // happen before `blur` which triggers the ace editor completer popup
+      // hide which in turn would hide the link and not show the docs.
+      dom.addClickTouchEvent(seeExamplesLink, function (event) {
+        this.dropletTooltipManager.showDocFor(funcName);
+        event.stopPropagation();
+      }.bind(this));
+    }.bind(this)
   });
 
   var rowOverlayDiv = $('.ace_selected');
@@ -11239,19 +11181,20 @@ DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = 
  */
 DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
+  var dropletFunctionTooltipMarkup = DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
     fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });
+  return dropletFunctionTooltipMarkup;
 };
 
 module.exports = DropletAutocompletePopupTooltipManager;
 
 
-},{"./DropletFunctionTooltip.html.ejs":64}],64:[function(require,module,exports){
+},{"../dom":102,"./DropletFunctionTooltip.html.ejs":64}],64:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11268,7 +11211,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -11281,6 +11224,7 @@ return buf.join('');
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -11351,16 +11295,22 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   if (!this.dropletTooltipManager.hasDocFor(functionName)) {
     return;
   }
-
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
 
   if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
     return;
   }
 
-  this.getCursorTooltip_().tooltipster('content',
-    this.getTooltipHTML(tooltipInfo, currentParameterIndex));
-  this.getCursorTooltip_().tooltipster('show');
+  var cursorTooltip = this.getCursorTooltip_();
+
+  cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
+  cursorTooltip.tooltipster('show');
+
+  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+  dom.addClickTouchEvent(seeExamplesLink, function (event) {
+    this.dropletTooltipManager.showDocFor(functionName);
+    event.stopPropagation();
+  }.bind(this));
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
@@ -11376,6 +11326,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = functio
  */
 DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (tooltipInfo, currentParameterIndex) {
   return DropletFunctionTooltipMarkup({
+    funcName: tooltipInfo.functionName,
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
@@ -11388,7 +11339,120 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
 module.exports = DropletAutocompleteParameterTooltipManager;
 
 
-},{"./DropletParameterTooltip.html.ejs":66,"./tooltipUtils.js":68}],68:[function(require,module,exports){
+},{"../dom":102,"./DropletParameterTooltip.html.ejs":66,"./tooltipUtils.js":68}],102:[function(require,module,exports){
+exports.addReadyListener = function(callback) {
+  if (document.readyState === "complete") {
+    setTimeout(callback, 1);
+  } else {
+    window.addEventListener('load', callback, false);
+  }
+};
+
+exports.getText = function(node) {
+  return node.innerText || node.textContent;
+};
+
+exports.setText = function(node, string) {
+  if (node.innerText) {
+    node.innerText = string;
+  } else {
+    node.textContent = string;
+  }
+};
+
+exports.getTouchEventName = function(eventName) {
+  var isIE11Touch = window.navigator.pointerEnabled;
+  var isIE10Touch = window.navigator.msPointerEnabled;
+  var isStandardTouch = 'ontouchend' in document.documentElement;
+
+  var key;
+  if (isIE11Touch) {
+    key = "ie11";
+  } else if (isIE10Touch) {
+    key = "ie10";
+  } else if (isStandardTouch) {
+    key = "standard";
+  }
+  if (key && TOUCH_MAP[eventName]) {
+    return TOUCH_MAP[eventName][key];
+  }
+};
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var touchEvent = exports.getTouchEventName(eventName);
+  if (touchEvent) {
+    element.addEventListener(touchEvent, function(e) {
+      e.preventDefault();  // Stop mouse events.
+      handler(e);
+    }, false);
+  }
+};
+
+exports.addMouseDownTouchEvent = function(element, handler) {
+  addEvent(element, 'mousedown', handler);
+};
+
+exports.addMouseUpTouchEvent = function(element, handler) {
+  addEvent(element, 'mouseup', handler);
+};
+
+exports.addMouseMoveTouchEvent = function(element, handler) {
+  addEvent(element, 'mousemove', handler);
+};
+
+exports.addClickTouchEvent = function(element, handler) {
+  addEvent(element, 'click', handler);
+};
+
+// A map from standard touch events to various aliases.
+var TOUCH_MAP = {
+  //  Incomplete list, add as needed.
+  click: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mousedown: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mouseup: {
+    standard: 'touchend',
+    ie10: 'MSPointerUp',
+    ie11: 'pointerup'
+  },
+  mousemove: {
+    standard: 'touchmove',
+    ie10: 'MSPointerMove',
+    ie11: 'pointermove'
+  }
+};
+
+exports.isMobile = function() {
+  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isWindowsTouch = function() {
+  var reg = /MSIE.*Touch/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isAndroid = function() {
+  var reg = /Android/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isIOS = function() {
+  var reg = /iP(hone|od|ad)/;
+  return reg.test(window.navigator.userAgent);
+};
+
+
+},{}],68:[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -11549,7 +11613,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -14213,6 +14277,34 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   return false;
+};
+
+// TODO(dave): move this logic to dashboard.
+exports.getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:3000';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        case 'staging-studio':
+          return 'staging.code.org';
+        case 'test-studio':
+          return 'test.code.org';
+        case 'levelbuilder-studio':
+          return 'levelbuilder.code.org';
+        default:
+          return null;
+      }
+  }
 };
 
 

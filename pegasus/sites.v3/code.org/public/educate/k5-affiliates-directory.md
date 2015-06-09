@@ -102,11 +102,21 @@ style="clear:both"&nbsp;
 <br />
 <a id="ar"></a>
 ## Arkansas
+[col-33]
 ### Joel Spencer
-Sherwood, AR
+Little Rock, AR
 
 Spencer@pd.code.org
 
+[/col-33]
+
+[col-33]
+### Jennifer Lyon
+Fort Smith, AR
+
+lyon@pd.code.org
+
+[/col-33]
 <br />
 <a id="az"></a>
 ## Arizona
@@ -315,7 +325,7 @@ casas@pd.code.org
 ### Andrew Svehaug
 San Diego, CA
 
-Svehaug@pd.code.org
+svehaug@pd.code.org
 
 [/col-33]
 
@@ -387,6 +397,14 @@ zayas@pd.code.org
 Tampa, FL
 
 peters@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Suzanne Zylman
+St. Petersberg, FL
+
+zylman@pd.code.org
 
 [/col-33]
 
@@ -473,6 +491,14 @@ foust@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Jennifer Smith
+Ellaville, GA
+
+smith@pd.code.org
+
+[/col-33]
+
 <p style="clear:both">&nbsp;</p>
 
 <a id="hi"></a>
@@ -503,16 +529,6 @@ lavin@pd.code.org
 [/col-33]
 
 [col-33]
-
-### Brian Myers
-Chicago, IL
-
-myers@pd.code.org
-
-[/col-33]
-
-[col-33]
-
 ### Karen Putman
 Chicago, IL
 
@@ -543,10 +559,35 @@ roberts@pd.code.org
 <br />
 <a id="ia"></a>
 ## Iowa
+[col-33]
 ### Ben Schafer
 Cedar Falls, IA
 
 schafer@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Cindy Herren
+Waukee, IA
+
+herren@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Leka DeGroot
+Fort Dodge, IA
+
+[/col-33]
+
+[col-33]
+### Leslie Pralle Keehn
+Fort Dodge, IA
+
+prallekeehn@pd.code.org
+
+[/col-33]
 
 <br />
 <a id="ks"></a>
@@ -628,6 +669,12 @@ legrand@pd.code.org
 [/col-33]
 
 [col-33]
+### Janelle Steffen
+Baltimore, MD
+
+steffen@pd.code.org
+
+[/col-33]
 
 ### Dianne O'Grady-Cunniff
 Waldorf, MD
@@ -683,6 +730,12 @@ hitchcock@pd.code.org
 [/col-33]
 
 [col-33]
+### Angie Kalthoff
+Richmond, MN
+
+kalthoff@pd.code.org
+
+[/col-33]
 
 ### Angie Kalthoff
 Richmond, MN
@@ -695,15 +748,32 @@ Kalthoff@pd.code.org
 style="clear:both">&nbsp;
 </p>
 
+<a id="ms"></a>
+## Mississippi
+### Candance McClendon
+Biloxi, MS
+
+mcclendon@pd.code.org
+
 <a id="mo"></a>
 ## Missouri
+[col-33]
+### Tyler Watts
+Kansas City, MO
+
+watts@pd.code.org
+
+[/col-33]
+
 ### Michelle Powell
 St. Louis, MO
 
 powell@pd.code.org
 
+<p
+style="clear:both">&nbsp;
+</p>
 
-<br />
 <a id="nc"></a>
 ## North Carolina
 [col-33]
@@ -729,6 +799,14 @@ astrachan@pd.code.org
 Cary, NC
 
 thomas@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Gail Holmes
+Greensboro, NC
+
+holmes@pd.code.org
 
 [/col-33]
 
@@ -917,24 +995,31 @@ bartlo@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Kiki Prottsman
-Eugene, OR
-
-prottsman@pd.code.org
-
-[/col-33]
-
-<p
-style="clear:both">&nbsp;
-</p>
-
 <a id="pa"></a>
 ## Pennsylvania
+[col-33]
 ### Harvey Scribner
 Philadelphia, PA
 
 scribner@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Brian Stamford
+Homestead, PA
+
+stamford@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Megan Cicconi
+Homestead, PA
+
+cicconi@pd.code.org
+
+[/col-33]
 
 <br />
 <a id="ri"></a>
@@ -947,10 +1032,21 @@ ficarra@pd.code.org
 <br />
 <a id="sc"></a>
 ## South Carolina
+[col-33]
 ### Ann Puckett
 Columbia, SC
 
 puckett@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Jamesetta James
+Columbia, SC
+
+james@pd.code.org
+
+[/col-33]
 
 <br />
 <a id="tn"></a>
@@ -1111,6 +1207,13 @@ dovi@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Janice Maino
+Ashland, VA
+
+maino@Pd.code.org
+
+[/col-33]
 <p style="clear:both">&nbsp;</p>
 
 <a id="wa"></a>

@@ -1390,7 +1390,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 
@@ -1401,6 +1401,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1535,34 +1536,6 @@ var checkFinished = function () {
   }
 
   return false;
-};
-
-// TODO(dave): move this logic to dashboard.
-var getPegasusHost = function() {
-  switch (window.location.hostname) {
-    case 'studio.code.org':
-    case 'learn.code.org':
-      return 'code.org';
-    default:
-      var name = window.location.hostname.split('.')[0];
-      switch(name) {
-        case 'localhost':
-          return 'localhost.code.org:3000';
-        case 'development':
-        case 'staging':
-        case 'test':
-        case 'levelbuilder':
-          return name + '.code.org';
-        case 'staging-studio':
-          return 'staging.code.org';
-        case 'test-studio':
-          return 'test.code.org';
-        case 'levelbuilder-studio':
-          return 'levelbuilder.code.org';
-        default:
-          return null;
-      }
-  }
 };
 
 Applab.isInDesignMode = function () {
@@ -2012,8 +1985,6 @@ designMode.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
-
-  designMode.serializeToLevelHtml();
 
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
@@ -2558,6 +2529,7 @@ applabCommands.container = function (opts) {
     newDiv.id = opts.elementId;
   }
   newDiv.innerHTML = opts.html;
+  newDiv.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newDiv));
 };
@@ -2575,6 +2547,7 @@ applabCommands.button = function (opts) {
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
+  newButton.style.position = 'relative';
 
   return Boolean(newButton.appendChild(textNode) &&
     activeScreen().appendChild(newButton));
@@ -2587,6 +2560,7 @@ applabCommands.image = function (opts) {
   var newImage = document.createElement("img");
   newImage.src = opts.src;
   newImage.id = opts.elementId;
+  newImage.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newImage));
 };
@@ -2598,6 +2572,7 @@ applabCommands.imageUploadButton = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.className = 'img-upload';
+  newLabel.style.position = 'relative';
 
   // We then create an offscreen input element and make it a child of the new
   // label element
@@ -2612,8 +2587,6 @@ applabCommands.imageUploadButton = function (opts) {
                  newLabel.appendChild(textNode) &&
                  activeScreen().appendChild(newLabel));
 };
-
-
 
 applabCommands.show = function (opts) {
   applabTurtle.turtleSetVisibility(true);
@@ -2867,6 +2840,7 @@ applabCommands.createCanvas = function (opts) {
     newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
+    newElement.style.position = 'relative';
     if (!opts.turtleCanvas) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
@@ -3065,6 +3039,7 @@ applabCommands.textInput = function (opts) {
   var newInput = document.createElement("input");
   newInput.value = opts.text;
   newInput.id = opts.elementId;
+  newInput.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newInput));
 };
@@ -3080,6 +3055,7 @@ applabCommands.textLabel = function (opts) {
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
+  newLabel.style.position = 'relative';
   var forElement = document.getElementById(opts.forId);
   if (forElement && activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -3098,6 +3074,7 @@ applabCommands.checkbox = function (opts) {
   newCheckbox.setAttribute("type", "checkbox");
   newCheckbox.checked = opts.checked;
   newCheckbox.id = opts.elementId;
+  newCheckbox.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newCheckbox));
 };
@@ -3112,6 +3089,7 @@ applabCommands.radioButton = function (opts) {
   newRadio.name = opts.name;
   newRadio.checked = opts.checked;
   newRadio.id = opts.elementId;
+  newRadio.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newRadio));
 };
@@ -3131,6 +3109,7 @@ applabCommands.dropdown = function (opts) {
     }
   }
   newSelect.id = opts.elementId;
+  newSelect.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newSelect));
 };
@@ -5030,6 +5009,8 @@ exports.Mode = Mode;
 
 
 },{"../../dropletUtils":103,"../dropletConfig":50,"./annotationList":11}],50:[function(require,module,exports){
+/* globals $ */
+
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
@@ -5039,6 +5020,19 @@ var COLOR_BLUE = '#19C3E1';
 var COLOR_RED = '#F78183';
 var COLOR_CYAN = '#4DD0E1';
 var COLOR_YELLOW = '#FFF176';
+
+/**
+ * Generate a list of screen ids for our setScreen dropdown
+ */
+function getScreenIds() {
+  var ret = $(".screen").map(function () {
+    return '"' + this.id + '"';
+  });
+
+  // Convert from jQuery's array-like object to a true array
+  return $.makeArray(ret);
+}
+
 
 module.exports.blocks = [
   {'func': 'onEvent', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','type','callback'], 'params': ['"id"', '"click"', "function(event) {\n  \n}"], 'dropdown': { 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
@@ -5063,7 +5057,7 @@ module.exports.blocks = [
   {'func': 'write', 'parent': api, 'category': 'UI controls', 'paletteParams': ['text'], 'params': ['"text"'] },
   {'func': 'getXPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
   {'func': 'getYPosition', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setScreen', 'parent': api, 'category': 'UI controls', 'paletteParams': ['screenId'], 'params': ['"screen1"']},
+  {'func': 'setScreen', 'parent': api, 'category': 'UI controls', 'paletteParams': ['screenId'], 'params': ['"screen1"'], 'dropdown': { 0: getScreenIds }},
 
   {'func': 'createCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id','width','height'], 'params': ['"id"', "320", "480"] },
   {'func': 'setActiveCanvas', 'parent': api, 'category': 'Canvas', 'paletteParams': ['id'], 'params': ['"id"'] },
@@ -9173,7 +9167,7 @@ var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
 
     var confirm;
     if (this.state.confirming) {
-      confirm = (
+      return (
         React.createElement("div", null, 
           "Delete?", 
           React.createElement("button", {
@@ -9195,8 +9189,7 @@ var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
           style: redButtonStyle, 
           onClick: this.handleDeleteInternal}, 
           "Delete"
-        ), 
-        confirm
+        )
       )
     );
   }

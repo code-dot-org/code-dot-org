@@ -6,10 +6,10 @@ nav: about_nav
 # Job Openings at Code.org
 
 - [Evaluation Manager](#Eval)	
-- [K-5 Affiliate Program Manager](#K-5-PM)
-- [District Manager (New York City)](#reg-PM)
+- [District Manager (Seattle, New York City)](#reg-PM)
 - [Data Engineer](#data-engineer)
 - [Software Engineer](#engineer)
+- [Video Production] (#video)
 
 ## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
 
@@ -39,50 +39,11 @@ The ideal candidate has the following qualifications:
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-
-
-## <a name="K-5-PM"href="#K-5-PM">K-5 Affiliate Program Manager (Seattle, WA)</a>
-**Job Summary:**
-
-Code.org is recruiting a K-5 Affiliate Program Manager who can manage our K-5 Affiliate Program and support our outreach team to spread the K-5 program to Code.org’s school district partners. The Affiliate program is the centerpiece of Code.org’s K-5 talent development pipeline. The program is intended to develop and then support facilitators across the country who can, in turn, train teachers to teach our K-5 curriculum in the formal classroom.
-
-Responsibilities of the position include:
-
-- Setting strategy for scaling, management and potential expansion of the K-5 Affiliate Program
-- Managing the relationships with existing Code.org K-5 Affiliates across the country
-- Manage vendor relationships and monitor K-5 supplies and inventory
-- Manage and continuously update the K-5 budget 
-- Determining potential expansion areas for recruiting new affiliates
-- Leading the development of Code.org’s Affiliate Summit (where new affiliates are trained)
-- Supporting Code.org’s District Program Managers in growing the K-5 program within our existing partner districts and addressing implementation issues
-- Determining, tracking and evaluating overall program metrics
-- Evaluating data/feedback from teachers trained by affiliates and affiliates (as well as other sources) to make course corrections in Affiliate Program
-- Working with Code.org’s K-5 Education Team leads and K-5 Product Team leads to incorporate feedback from teachers/affiliates into the K-5 product
-- Working with Code.org’s education operations team and defining operations workflows to ensure logistical support of affiliate workshops
-- Other duties as assigned
-
-**Qualifications:**
-
-- 2-3 years experience in K-12 education (required)
-- 3+ years experience in relationship management in an education setting (required)
-- 3+ years experience in educational and/or professional development program management (including train the trainer) (required)
-- Knowledge of computer science education (preferred)
-- Strong analytical and problem solving ability
-- Professional demeanor, possessing excellent communication skills
-- Must be extremely organized and detail oriented
-- Must be an advanced or expert user of spreadsheets
-- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
-- Ability to work in a fast-paced, team-based environment with a geographically dispersed team
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="reg-PM" href="#reg-PM">District Manager (New York City)</a>
+## <a name="reg-PM" href="#reg-PM">District Manager (Seattle, New York City)</a>
 
 **Job Summary:** 
 
-Code.org is recruiting for a District Manager in New York City to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
+Code.org is recruiting for District Managers in New York City and Seattle to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
 
 **Qualifications:**
 
@@ -94,8 +55,8 @@ Code.org is recruiting for a District Manager in New York City to support Code.o
  
 Additional desired strengths include:
 
-- Experience working with New York school districts in a project implementation capacity
-- Established relationship or prior experience with the Department of Education   
+- Experience working with local school districts in a project implementation capacity
+- For New York District, established relationship or prior experience with the Department of Education   
 - Recent computer science teaching experience in a K-12 school setting
 - Strong existing connections to the computer science community 
 
@@ -176,6 +137,35 @@ Code.org is building interactive tutorials for computer science courses starting
 - Minimum of 3-5 years of experience as a software engineer working on Web sites or services
 - Ideally: deep expertise in either JavaScript or Ruby
 - Ideally: has experienced startup culture
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="video"href="#video">Videographer (Seattle,WA)</a>
+
+
+**Job Summary:**
+
+Code.org is recruiting for a videographer who can collaborate with our education team to produce professional development for K-12 teachers learning to teach computer science.  Ideal candidate will have experience both as a producer and an editor.
+
+Full-time, long-term contract position (approximately 6 months). 
+
+Responsibilities of the position include:
+
+Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
+Managing the production of the videos from start to finish.
+Brainstorming and story boarding ideas for each video, tailored to it’s audience and purpose 
+Skills in order of priority are: editing, producing/managing, animated graphics, shooting. 
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Bachelors degree in film, digital media, graphic design or related field
+- 4+ years work experience in producing videos either as a generalist or as an producer / editor.
+- Prefer experience in all stages of video production is helpful i.e: conception and story-boarding, shooting, media management, editing, animating needed graphics, and exporting appropriate format for YouTube; however our most urgent need is for a highly organized individual who can act as a producer to schedule shoots, prepare scripts and edit footage.  
+- Extensive experience with Adobe products (we use these exclusively for our video production)
+- A strong sense of design and story is key, as is a can-do / self-starter attitude
+- Excellent professional references
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

@@ -1,7 +1,7 @@
 name 'U1L13 Assessment 2'
-title 'Conclusion 2: Text Compression'
-content1 'Is there a way to know that a compressed piece of text is compressed the most possible? ' 
+title 'What is good compression?'
+content1 ''
 
 markdown <<MARKDOWN
-If yes, describe how you could determine it. If no, why not?
+For a piece of text, what is a “good” amount of compression? Is there a way to know when you’ve compressed it the most? Explain how you would know, or why you can’t know.
 MARKDOWN
