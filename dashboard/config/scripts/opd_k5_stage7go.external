@@ -1,0 +1,19 @@
+name 'OPD-K5 Stage7Go'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+# EVENTS > Reflection
+
+In this stage, you solved some pretty complex puzzles, combining all the core concepts and really demonstrating your learning. By allowing us to trigger actions based on other parts of our program, events allow us to really stretch our coding muscles.
+
+
+## Reflect
+
+How would you explain the concept of events to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-events/409/1">our Professional Learning Community (PLC) forum</a>.
+
+<a href="http://forum.code.org/t/teaching-events/409/1"><button>Discuss >></button></a>
+
+After commenting in the forum, return here and click below to move on.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
