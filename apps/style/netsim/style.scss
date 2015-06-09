@@ -260,6 +260,16 @@ $wide-column-width: 121px;
           stroke: $light_purple;
         }
       }
+      .auto-dns-node {
+        circle {
+          stroke: pink;
+          fill: pink;
+        }
+
+        rect {
+          stroke: pink;
+        }
+      }
 
       .viz-wire {
         stroke: $charcoal;
