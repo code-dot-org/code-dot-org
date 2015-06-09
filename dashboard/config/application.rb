@@ -83,9 +83,6 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/css')
 
     config.assets.precompile += %w(
-      epiceditor/*.css
-      editor/markdown_editor.css
-      editor/markdown_editor.js
       editor/blockly_editor.css
       editor/blockly_editor.js
       levels/*
