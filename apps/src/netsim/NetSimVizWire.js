@@ -45,9 +45,10 @@ var NetSimVizWire = module.exports = function (sourceWire, getElementByEntityID)
   root.addClass('viz-wire');
 
   /**
+   * ID of the simulation wire that this viz element maps to.
    * @type {number}
    */
-  this.id = sourceWire.entityID;
+  this.correspondingWireID_ = sourceWire.entityID;
 
   /**
    * @type {jQuery} wrapped around a SVGPathElement
@@ -131,6 +132,14 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
 };
 
 /**
+ * ID of the simulation entity that maps to this one.
+ * @returns {number}
+ */
+NetSimVizWire.prototype.getCorrespondingEntityID = function () {
+  return this.correspondingWireID_;
+};
+
+/**
  * Update path data for wire.
  */
 NetSimVizWire.prototype.render = function () {
@@ -168,7 +177,7 @@ NetSimVizWire.prototype.hide = function () {
  */
 NetSimVizWire.prototype.kill = function () {
   NetSimVizWire.superPrototype.kill.call(this);
-  this.id = undefined;
+  this.correspondingWireID_ = undefined;
   this.localVizNode = null;
   this.remoteVizNode = null;
 };

@@ -54,7 +54,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
    * ID of the simulation node that this viz element represents.
    * @type {number}
    */
-  this.id = sourceNode.entityID;
+  this.correspondingNodeID_ = sourceNode.entityID;
 
   /**
    * @type {string}
@@ -170,6 +170,14 @@ NetSimVizNode.prototype.configureFrom = function (sourceNode) {
 };
 
 /**
+ * ID of the simulation entity that maps to this one.
+ * @returns {number}
+ */
+NetSimVizNode.prototype.getCorrespondingEntityID = function () {
+  return this.correspondingNodeID_;
+};
+
+/**
  * Flag this viz node as the simulation local node.
  */
 NetSimVizNode.prototype.setIsLocalNode = function () {
@@ -228,7 +236,7 @@ NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
  */
 NetSimVizNode.prototype.kill = function () {
   NetSimVizNode.superPrototype.kill.call(this);
-  this.id = undefined;
+  this.correspondingNodeID_ = undefined;
   this.stopAllAnimation();
   this.tweenToScale(0, 200, tweens.easeInQuad);
 };
