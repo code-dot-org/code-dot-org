@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Can you set the values so that this expression evaluates as \"true\"?",
+    "instructions": "Can you set the values so that this expression evaluates as true?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Can you set the values so that this expression evaluates as _true_?",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

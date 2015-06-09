@@ -7,14 +7,22 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Can you write an expression that calculates \"age\" in months?",
+    "instructions": "Can you write an expression that calculates age in months?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "markdown_instructions": "Can you write an expression that calculates _age_ in months?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
