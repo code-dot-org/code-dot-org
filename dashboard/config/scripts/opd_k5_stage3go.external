@@ -1,0 +1,16 @@
+name 'OPD-K5 Stage3Go'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+# SEQUENCING > Reflect
+
+Congratulations! You just wrote some code. Code Studio tracks how many lines of code you've written. You are officially a programmer! In the next stage, we'll add some complexity to our programs through the addition of loops.
+
+## Reflect 
+
+Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+
+Share your thoughts on Twitter or other social media and be sure to tag @codeorg in your post.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

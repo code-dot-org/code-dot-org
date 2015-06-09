@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "With your group, invent a standard addressing scheme for the \"Game of Messages\" game, and try it out using the Internet Simulator. ",
+    "instructions": "Use the Internet Simulator to test out your group's binary communication protocol for battleship. How short can you make the message and response?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -37,8 +37,7 @@
     "default_tab_index": "0",
     "show_pulse_rate_slider": "false",
     "show_metronome": "false",
-    "show_encoding_controls": "[\"binary\", \"hexadecimal\", \"decimal\", \"ascii\"]",
-    "default_enabled_encodings": "[\"binary\", \"ascii\"]",
+    "default_enabled_encodings": "[\"binary\"]",
     "show_bit_rate_control": "true",
     "lock_bit_rate_control": "false",
     "show_chunk_size_control": "true",
@@ -47,7 +46,9 @@
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
-    "broadcast_mode": "true"
+    "broadcast_mode": "true",
+    "show_log_browser_button": "false",
+    "connected_routers": "false"
   }
 }]]></config>
   <blocks/>

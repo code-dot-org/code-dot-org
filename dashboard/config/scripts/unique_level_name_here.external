@@ -3,10 +3,17 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-##Video: A Little Bit About Pixels
+## Welcome!
+
+<p><strong>Welcome to Teaching Kids to Code: The Basics.</strong> </p>
+
+<p>As an educator, <a href="https://youtu.be/nKIu9yen5nc">you know how important it is for your students to learn the basics of computer science</a>. But how do you start teaching kids to code if you have no coding background yourself?</p>
+
+<p>
+Launched in 2013, <a href="http://code.org">Code.org®</a> is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra. 
 
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/15aqFQQVBWU?rel=0" frameborder="0" allowfullscreen></iframe>
+</br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -40,7 +40,9 @@
       "downButton",
       "upButton"
     ],
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "You made it!\r\n\r\nAt this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it.\r\n\r\nWhen you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game.\r\n\r\nGood work!",
+    "maze_data": null
   }
 }]]></config>
   <blocks/>

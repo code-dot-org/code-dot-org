@@ -1,0 +1,16 @@
+name 'U2L06 - MC: Which is an MST?'
+title 'Which one is the MST?'
+question '<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>
+<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>
+<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> 
+<img src=\'https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png\'>'
+wrong 'A'
+wrong 'B'
+right 'C'
+wrong 'D'
+wrong 'E'
+
+markdown <<MARKDOWN
+
+
+MARKDOWN

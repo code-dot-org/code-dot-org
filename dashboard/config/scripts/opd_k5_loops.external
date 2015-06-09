@@ -1,0 +1,12 @@
+name 'OPD-K5 Loops'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+# LOOPS > The Importance of Loops
+
+In the last puzzle, you used a loop to get the bird to the pig with 2 blocks instead of using 5 "move forward" blocks. Why do you think it's important to write computer programs efficiently?
+
+Share your thoughts on Twitter or other social media and be sure to tag @codeorg in your post.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

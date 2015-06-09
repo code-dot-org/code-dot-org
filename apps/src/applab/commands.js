@@ -164,6 +164,7 @@ applabCommands.container = function (opts) {
     newDiv.id = opts.elementId;
   }
   newDiv.innerHTML = opts.html;
+  newDiv.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newDiv));
 };
@@ -181,6 +182,7 @@ applabCommands.button = function (opts) {
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
+  newButton.style.position = 'relative';
 
   return Boolean(newButton.appendChild(textNode) &&
     activeScreen().appendChild(newButton));
@@ -193,6 +195,7 @@ applabCommands.image = function (opts) {
   var newImage = document.createElement("img");
   newImage.src = opts.src;
   newImage.id = opts.elementId;
+  newImage.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newImage));
 };
@@ -204,6 +207,7 @@ applabCommands.imageUploadButton = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.className = 'img-upload';
+  newLabel.style.position = 'relative';
 
   // We then create an offscreen input element and make it a child of the new
   // label element
@@ -218,8 +222,6 @@ applabCommands.imageUploadButton = function (opts) {
                  newLabel.appendChild(textNode) &&
                  activeScreen().appendChild(newLabel));
 };
-
-
 
 applabCommands.show = function (opts) {
   applabTurtle.turtleSetVisibility(true);
@@ -473,6 +475,7 @@ applabCommands.createCanvas = function (opts) {
     newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
+    newElement.style.position = 'relative';
     if (!opts.turtleCanvas) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
@@ -671,6 +674,7 @@ applabCommands.textInput = function (opts) {
   var newInput = document.createElement("input");
   newInput.value = opts.text;
   newInput.id = opts.elementId;
+  newInput.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newInput));
 };
@@ -686,6 +690,7 @@ applabCommands.textLabel = function (opts) {
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
+  newLabel.style.position = 'relative';
   var forElement = document.getElementById(opts.forId);
   if (forElement && activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -704,6 +709,7 @@ applabCommands.checkbox = function (opts) {
   newCheckbox.setAttribute("type", "checkbox");
   newCheckbox.checked = opts.checked;
   newCheckbox.id = opts.elementId;
+  newCheckbox.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newCheckbox));
 };
@@ -718,6 +724,7 @@ applabCommands.radioButton = function (opts) {
   newRadio.name = opts.name;
   newRadio.checked = opts.checked;
   newRadio.id = opts.elementId;
+  newRadio.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newRadio));
 };
@@ -737,6 +744,7 @@ applabCommands.dropdown = function (opts) {
     }
   }
   newSelect.id = opts.elementId;
+  newSelect.style.position = 'relative';
 
   return Boolean(activeScreen().appendChild(newSelect));
 };

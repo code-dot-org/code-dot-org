@@ -209,3 +209,7 @@ level 'Big Game Collision 1'
 level 'Big Game Collision 4'
 level 'Big Game Collision 3'
 level 'Big Game Final'
+
+stage 'Free Play'
+level 'Calc Free Play'
+level 'Eval Free Play'

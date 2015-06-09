@@ -4,9 +4,9 @@ description ''
 question 'The word “Apple” translated into its ASCII number equivalent is:'
 wrong '097 112 112 108 101'
 wrong '097 108 108 111 119'
-wrong '065 112 112 108 101'
+right '065 112 112 108 101'
 wrong '065 110 110 105 101'
-right '065 108 108 111 119'
+wrong '041 108 108 111 119'
 
 
 markdown <<MARKDOWN

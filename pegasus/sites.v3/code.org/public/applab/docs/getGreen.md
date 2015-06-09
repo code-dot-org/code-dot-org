@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -73,7 +74,7 @@ setGreen(imageData, 50, 50, 0); //Set the green value of pixel at x:50 y:50 in i
 putImageData(imageData, 0, 0); //Update the canvas with modified image data starting at x:0 y:0
 
 //Print green value at x:50 y:50 from imageData to the console again. We will see 0 in the console.
-console.log(getGreen(imageData, 50, 50)); 
+console.log(getGreen(imageData, 50, 50));
 </pre>
 
 [/example]
@@ -177,3 +178,5 @@ Returns a number representing the green value (between 0 and 255) of the pixel i
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

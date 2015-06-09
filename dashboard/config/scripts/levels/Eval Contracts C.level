@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Check out the \"rotate\" function - can you use it to rotate this 90 pixel green square by 45 degrees?",
+    "instructions": "Check out the rotate function - can you use it to rotate this 90 pixel green square by 45 degrees?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -14,7 +14,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "embed": "false"
+    "embed": "false",
+    "markdown_instructions": "Check out the _rotate_ function - can you use it to rotate this 90 pixel green square by 45 degrees?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
