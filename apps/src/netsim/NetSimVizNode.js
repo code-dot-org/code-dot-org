@@ -17,7 +17,6 @@ var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 
 var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
 
 var netsimGlobals = require('./netsimGlobals');
 
@@ -43,18 +42,11 @@ var TEXT_PADDING_X = 20;
 var TEXT_PADDING_Y = 10;
 
 /**
- * @param {NetSimNode} sourceNode
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizNode = module.exports = function (sourceNode) {
+var NetSimVizNode = module.exports = function () {
   NetSimVizElement.call(this);
-
-  /**
-   * ID of the simulation node that this viz element represents.
-   * @type {number}
-   */
-  this.correspondingNodeID_ = sourceNode.entityID;
 
   /**
    * @type {string}
@@ -67,11 +59,6 @@ var NetSimVizNode = module.exports = function (sourceNode) {
    * @private
    */
   this.dnsMode_ = undefined;
-
-  /**
-   * @type {number}
-   */
-  this.nodeID = undefined;
 
   /**
    * @type {boolean}
@@ -142,40 +129,9 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
-  this.configureFrom(sourceNode);
   this.render();
 };
 NetSimVizNode.inherits(NetSimVizElement);
-
-/**
- *
- * @param {NetSimNode} sourceNode
- */
-NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  var levelConfig = netsimGlobals.getLevelConfig();
-  if (levelConfig.showHostnameInGraph) {
-    this.setName(sourceNode.getHostname());
-  } else {
-    this.setName(sourceNode.getShortDisplayName());
-  }
-  this.nodeID = sourceNode.entityID;
-
-  if (sourceNode.getNodeType() === NodeType.ROUTER) {
-    this.isRouter = true;
-    this.getRoot().addClass('router-node');
-    if (levelConfig.broadcastMode) {
-      this.getRoot().css('display', 'none');
-    }
-  }
-};
-
-/**
- * ID of the simulation entity that maps to this one.
- * @returns {number}
- */
-NetSimVizNode.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingNodeID_;
-};
 
 /**
  * Flag this viz node as the simulation local node.
@@ -236,7 +192,6 @@ NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
  */
 NetSimVizNode.prototype.kill = function () {
   NetSimVizNode.superPrototype.kill.call(this);
-  this.correspondingNodeID_ = undefined;
   this.stopAllAnimation();
   this.tweenToScale(0, 200, tweens.easeInQuad);
 };
