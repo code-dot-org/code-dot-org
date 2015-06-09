@@ -291,8 +291,31 @@ html, body {
   padding: 0px 25px 25px 25px;
 }
 
+$default-modal-width: 640px;
+
 .modal {
   a:hover {color:$red; background-color: white; }
+
+  &.auto-resize-scrollable {
+    background-color: $lightest_gray;
+    position: absolute;
+    top: 44px; // top of the dialog
+
+    // make dialog auto-center regardless of width
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    // margin-bottom is reused in JavaScript to determine
+    // how close to get to the bottom of the viewport.
+    margin-bottom: 25px;
+
+    z-index: 1050;
+  }
+
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
 }
 
 .modal-body {
@@ -300,8 +323,8 @@ html, body {
 }
 
 .dash_modal {
-  width: 640px;
-  margin-left: -320px;
+  width: $default-modal-width;
+  margin-left: -($default-modal-width / 2);
 }
 
 .dash_modal_body {
@@ -661,11 +684,6 @@ input.header_input {
   border-style: solid;
   border-width: 2px;
   padding: 5px;
-}
-
-.modal-body {
-  height: 100%;
-  overflow: visible;
 }
 
 #codeApp {
@@ -1754,6 +1772,35 @@ $modal-image-margin-gap: 10px;
   height: 100%;
   overflow: visible;
 }
+
+.modal-content.markdown-instructions-container {
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  float: left;
+  $padding-side: 22px;
+  padding: 0 $padding-side 15px;
+  background-color: white;
+  $outside-margin-side: 15px;
+  width: $default-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
+}
+
+.instructions-markdown {
+  p {
+    line-height: initial;
+    font-size: initial;
+    color: initial;
+  }
+}
+
+.markdown-level-header-text {
+  margin-left: $modal-image-width + $modal-image-margin-gap;
+  font-weight: normal;
+  line-height: 27px;
+  font-size: 24px;
+  color: #7665a0;
+}
+
 #feedbackBlocks {
   margin-left: 50px;
   height: 100px;

@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -57,20 +58,20 @@ Squash the ant swarm!
 Ants will randomly appear on the screen every second for one minute. Click on the ant to squash it and remove it from the screen.
 
 <pre>
-// define a function to create an ant and place it on screen. 
+// define a function to create an ant and place it on screen.
 function createAnt() {
   var antId = "ant" + randomNumber(0, 1000); // create an id for the ant. The id is appended with a random number so only one ant is deleted at a time.
   var antHeight = randomNumber(35,100); // randomly generate a number between 35 and 100 to represent the pixel hight for the ant
   var antWidth = randomNumber(35, 100); // randomly generate a number between 35 and 100 to represent the pixel width for the ant
   var antXPosition = randomNumber(0, 300); // randomly generate a number between 0 and 300 to represent the x position coordinate for the ant
   var antYPosition = randomNumber(0, 400); // randomly generate a number between 0 and 400 to represent the y position coordinate for the ant
-  
+
   // create the ant with the appropraite id
-  image(antId, "http://www.pdclipart.org/albums/Animals_Bugs_Insects/ant.png"); 
-  
+  image(antId, "http://www.pdclipart.org/albums/Animals_Bugs_Insects/ant.png");
+
   // position the ant with the appropraite position coordinates and dimensions
-  setPosition(antId, antXPosition, antYPosition, antHeight, antWidth); 
-  
+  setPosition(antId, antXPosition, antYPosition, antHeight, antWidth);
+
   // Clicking on the ant will delete it
   onEvent(antId, "click", function(event) {
     deleteElement(antId);
@@ -119,7 +120,7 @@ deleteElement(id);
 
 ### Returns
 Returns true if the id parameter refers to the id of an element that exists.
-Returns false if the id parameter refers to the id of an element that does not exist. 
+Returns false if the id parameter refers to the id of an element that does not exist.
 
 [/returns]
 
@@ -134,3 +135,5 @@ Returns false if the id parameter refers to the id of an element that does not e
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

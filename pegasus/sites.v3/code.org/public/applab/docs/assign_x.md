@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -19,7 +20,7 @@ Category: Variables
 
 [short_description]
 
-Assigns a value to a variable.  
+Assigns a value to a variable.
 
 [/short_description]
 
@@ -119,9 +120,9 @@ console.log("Value is " + y)
 [tips]
 
 ### Tips
-- You can use the current value of a variable in the calculation of the new value of a variable.  
+- You can use the current value of a variable in the calculation of the new value of a variable.
 - Be careful in your if statements that you don't accidentally do an assignment.  if(x=1) is very different than if(x==1).  These bugs can be very hard to catch because if(x=1) is a valid statement, but isn't probably what you intended.
-- In some programming languages, the return result of assignment is 'true' or 'false', so you can test if your assignment happened using an if statement.  That is not the case in Javascript.  
+- In some programming languages, the return result of assignment is 'true' or 'false', so you can test if your assignment happened using an if statement.  That is not the case in Javascript.
 - If you're assigning a value to some complicated mathematical expression (say E = m*c*c) it can be helpful to add a comment letting the next developer know you're calculating the energy in the mass using Einstein's theory of relativity.
 - Puzzler for you: what does the following code print...
 
@@ -133,7 +134,7 @@ console.log(x)
 x = 1
 x = (x=3) + x
 console.log(x)
-// Neat isn't it!  
+// Neat isn't it!
 </pre>
 
 
@@ -144,3 +145,5 @@ console.log(x)
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

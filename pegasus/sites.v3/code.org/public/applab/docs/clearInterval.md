@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -63,7 +64,7 @@ var i = setInterval(function() { //Save the interval timer value in variable i
   write("Timer code ran!");
 }, 1000); //Set the delay to 1000 milliseconds
 onEvent("stop", "click", function(event){
-  clearInterval(i); //Use variable i to cancel the interval timer  
+  clearInterval(i); //Use variable i to cancel the interval timer
 });
 </pre>
 
@@ -108,3 +109,5 @@ No return value.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -123,10 +124,10 @@ getDirection()
 [returns]
 
 ### Returns
-Returns an integer representing the direction the turtle is facing. For reference, the values of the cardinal directions are shown below.  
-North: 0  
-East: 90  
-South: 180  
+Returns an integer representing the direction the turtle is facing. For reference, the values of the cardinal directions are shown below.
+North: 0
+East: 90
+South: 180
 West: 270
 
 [/returns]
@@ -143,3 +144,5 @@ West: 270
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

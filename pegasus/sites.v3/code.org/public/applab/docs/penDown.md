@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -23,7 +24,7 @@ Draws a trail behind the turtle as it moves.
 
 [/short_description]
 
-**Note**: [penUp()](/applab/docs/penUp) is often used with penDown.  
+**Note**: [penUp()](/applab/docs/penUp) is often used with penDown.
 **Note**: The color, and width of this trail can be changed, using [penColor(color)](/applab/docs/penColor) and [penWidth(width)](/applab/docs/penWidth).
 
 [/description]
@@ -132,3 +133,5 @@ No return value. Outputs to the display only.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>
