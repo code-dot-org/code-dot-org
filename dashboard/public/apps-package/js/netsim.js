@@ -8116,6 +8116,9 @@ NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) 
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
+
+  logger.info(this.getDisplayName() + ": Connecting to " + router.getDisplayName());
+
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
@@ -8235,17 +8238,8 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
 NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   if (this.myWire) {
     this.myWire.synchronousDestroy();
-    this.myWire = null;
   }
-
-  var myRouter = this.getMyRouter();
-  if (myRouter) {
-    myRouter.stopSimulation();
-  }
-
-  this.myRemoteClient = null;
-  this.myRouterID_ = undefined;
-  this.remoteChange.notifyObservers(null, null);
+  this.cleanUpAfterDestroyingWire_();
 };
 
 /**
@@ -8264,17 +8258,28 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
       logger.info("Error while disconnecting: " + err.message);
     }
 
-    var myRouter = this.getMyRouter();
-    if (myRouter) {
-      myRouter.stopSimulation();
-    }
-
-    this.myWire = null;
-    this.myRemoteClient = null;
-    this.myRouterID_ = undefined;
-    this.remoteChange.notifyObservers(null, null);
+    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
+};
+
+/**
+ * Common cleanup behavior shared between the synchronous and asynchronous
+ * disconnect paths.
+ * @private
+ */
+NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+  var myRouter = this.getMyRouter();
+  if (myRouter) {
+    // We did manual heartbeat setup, we also need to do manual heartbeat
+    // cleanup when we disconnect from the router.
+    myRouter.heartbeat = null;
+  }
+
+  this.myWire = null;
+  this.myRemoteClient = null;
+  this.myRouterID_ = undefined;
+  this.remoteChange.notifyObservers(null, null);
 };
 
 /**
@@ -8320,12 +8325,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
           return;
         }
 
-        logger.info('Local node sent message');
+        logger.info(this.getDisplayName() + ': Sent message:' +
+            '\nfrom: ' + localNodeID +
+            '\nto  : ' + remoteNodeID +
+            '\nsim : ' + simulatingNodeID +
+            '\nhops: ' + extraHops);
+
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
         onComplete(null);
-      }
+      }.bind(this)
   );
 };
 
@@ -8502,6 +8512,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
  * @private
  */
 NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
+  logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(message.payload);
@@ -10379,6 +10390,9 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
+
+    logger.info(this.getDisplayName() + ": Assigned address " +
+        wire.localAddress + " to host " + wire.localHostname);
   }.bind(this));
 };
 
@@ -10758,6 +10772,9 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   if (_.isEqual(this.routerQueueCache_, newQueue)) {
     return;
   }
+
+  logger.info(this.getDisplayName() + ': Message queue updated (size ' +
+      newQueue.length + ')');
 
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
@@ -37187,7 +37204,7 @@ var singletonInstance;
  */
 NetSimLogger.getSingleton = function () {
   if (singletonInstance === undefined) {
-    singletonInstance = new NetSimLogger(console, LogLevel.VERBOSE);
+    singletonInstance = new NetSimLogger(console, LogLevel.WARN);
   }
   return singletonInstance;
 };
