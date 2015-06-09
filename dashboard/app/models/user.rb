@@ -3,7 +3,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender survey2015_value survey2015_comment)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "继续"},
 "defaultTwitterText":function(d){return "看看我做了什么"},
 "designMode":function(d){return "设计"},
-"designModeHeader":function(d){return "设计模式"},
 "dialogCancel":function(d){return "取消"},
 "dialogOK":function(d){return "确定"},
 "directionEastLetter":function(d){return "东"},
@@ -260,7 +259,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
 "dropletBlock_declareAssign_x_array_1_4_param1":function(d){return "1,2,3,4"},
-"dropletBlock_declareAssign_x_array_1_4_param1_description":function(d){return "The initial values to the array"},
+"dropletBlock_declareAssign_x_array_1_4_param1_description":function(d){return "数组的初始值"},
 "dropletBlock_declareAssign_x_array_1_4_signatureOverride":function(d){return "Declare a variable assigned to an array"},
 "dropletBlock_declareAssign_x_description":function(d){return "声明一个具体的变量时，需要在它前面加var ，并在它的右侧赋值。"},
 "dropletBlock_declareAssign_x_param0":function(d){return "x"},
@@ -270,7 +269,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_declareAssign_x_prompt_description":function(d){return "Create a variable and assign it a value by displaying a prompt"},
 "dropletBlock_declareAssign_x_prompt_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_prompt_param0_description":function(d){return "The name you will use in the program to reference the variable"},
-"dropletBlock_declareAssign_x_prompt_param1":function(d){return "\"Enter value\""},
+"dropletBlock_declareAssign_x_prompt_param1":function(d){return "\"输入值\""},
 "dropletBlock_declareAssign_x_prompt_param1_description":function(d){return "The string the user will see in the pop up when asked to enter a value"},
 "dropletBlock_declareAssign_x_prompt_signatureOverride":function(d){return "Prompt the user for a value and store it"},
 "dropletBlock_declareAssign_x_signatureOverride":function(d){return "声明一个变量"},
@@ -304,7 +303,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_equalityOperator_param0_description":function(d){return "The first value to use for comparison."},
 "dropletBlock_equalityOperator_param1":function(d){return "y"},
 "dropletBlock_equalityOperator_param1_description":function(d){return "The second value to use for comparison."},
-"dropletBlock_equalityOperator_signatureOverride":function(d){return "Equality operator"},
+"dropletBlock_equalityOperator_signatureOverride":function(d){return "相等运算符"},
 "dropletBlock_forLoop_i_0_4_description":function(d){return "Do something multiple times"},
 "dropletBlock_forLoop_i_0_4_signatureOverride":function(d){return "for 循环"},
 "dropletBlock_functionParams_n_description":function(d){return "Create a function with an argument"},

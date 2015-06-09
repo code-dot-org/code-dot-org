@@ -36,6 +36,8 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 This lesson has one new and important word:<br/>
 
 - **Parameter** - A value or expression belonging to the domain.
+
+
 ### <a name="GetStarted"></a> 2) Introduction
 
 Defining a reusable _value_ is helpful when a program has lots of identical expressions. Sometimes, however, a program has expressions that aren’t identical, but are just _very similar_. A program that has fifty solid, green triangles can be simplified by defining a single value, _as long as they are all the same size_. But what if a program has fifty solid, green triangles of different sizes?

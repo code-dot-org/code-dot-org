@@ -27,12 +27,11 @@ module Rack
 
     def call(env)
       super(env).tap do |_, headers, _|
-        # Add HSTS and CSP headers to enable strict transport security and prohibit+log mixed content.
+        # Add CSP headers to prohibit+log mixed content.
         # See 'recommendations' and 'reporting upgrades':
         # http://www.w3.org/TR/upgrade-insecure-requests/#recommendations
         # http://www.w3.org/TR/upgrade-insecure-requests/#reporting-upgrades
         if ssl?(env)
-          headers['Strict-Transport-Security'] = 'max-age=86400'
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
           headers['Content-Security-Policy'] = [
               "default-src 'self' https:",

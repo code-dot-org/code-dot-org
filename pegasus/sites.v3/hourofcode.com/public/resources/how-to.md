@@ -9,7 +9,7 @@ nav: resources_nav
 <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 2) Try the tutorials:
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **All Hour of Code tutorials:**
 
@@ -53,7 +53,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. 
 - Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**

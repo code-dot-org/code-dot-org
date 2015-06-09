@@ -455,18 +455,9 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
   this.contractSectionView_.placeAndGetNewY(
     -this.getBlockSpaceEditorToContractSectionTop_(), fullWidth);
 
-  this.positionTrashcanVerticalMiddleOfTopHeader_();
-
   var currentY = 0;
   currentY = this.examplesSectionView_.placeAndGetNewY(currentY, fullWidth);
   this.definitionSectionView_.placeAndGetNewY(currentY, fullWidth);
-};
-
-Blockly.ContractEditor.prototype.positionTrashcanVerticalMiddleOfTopHeader_ = function () {
-  var trashcan = this.modalBlockSpace.trashcan;
-  var trashcanHeaderDifference = trashcan.getHeight() - HEADER_HEIGHT;
-  trashcan.repositionBelowBlockSpaceTop(-trashcanHeaderDifference / 2);
-  this.modalBlockSpace.moveElementToFront(trashcan.svgGroup_);
 };
 
 /**

@@ -12,8 +12,6 @@
 'use strict';
 
 var netsimConstants = require('./netsimConstants');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
 
 var NodeType = netsimConstants.NodeType;
 
@@ -41,8 +39,10 @@ netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
  */
 netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
   if (nodeRow.type === NodeType.CLIENT) {
+    var NetSimClientNode = require('./NetSimClientNode');
     return new NetSimClientNode(shard, nodeRow);
   } else if (nodeRow.type === NodeType.ROUTER) {
+    var NetSimRouterNode = require('./NetSimRouterNode');
     return new NetSimRouterNode(shard, nodeRow);
   }
 

@@ -302,7 +302,9 @@ pl:
     panel:
       answer_viewer: Answer Viewer
       student: Uczeń
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Sekcja
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'

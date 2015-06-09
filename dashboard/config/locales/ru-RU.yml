@@ -340,7 +340,9 @@
     panel:
       answer_viewer: Просмотр ответов
       student: Ученик
+      viewing_solution: Viewing Solution
       try_it_yourself: Попробуйте сами
+      section: Раздел
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был

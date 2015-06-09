@@ -12,15 +12,15 @@
           description: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          'Maze: Sequence': 'Mê cung: trình tự'
+          'Maze: Debugging': 'Mê cung: Hiệu chỉnh'
+          'Artist 1: Intro': 'Nghệ sĩ 1: giới thiệu'
+          Artists 2: Nghệ sĩ 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
+          'Bee 1: Intro': 'Ong 1: Giới thiệu'
+          'Maze 2: Loops': 'Mê cung 2: Vòng lặp'
+          'Bee 2: Loops': 'Ong 2: Vòng lặp'
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
@@ -76,7 +76,7 @@
             prior programming experience. In this course students will create programs
             to solve problems and develop interactive games or stories they can share.
             Recommended for grades 2-5.
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Mê cung: trình tự'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
           'Artist: Loops': 'Artist: Loops'
@@ -214,7 +214,7 @@
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Mê cung: trình tự'
         hourofcode:
           Maze: Mê cung
           title: Giờ của mã
@@ -270,7 +270,7 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Mê cung: trình tự'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -494,7 +494,7 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Mê cung: trình tự'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -703,6 +703,9 @@
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming

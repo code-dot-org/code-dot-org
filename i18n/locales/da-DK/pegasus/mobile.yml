@@ -3,7 +3,7 @@ da-DK:
   select_language: Vælg dit sprog
   computer_science: Datalogi
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
-  csedweek_dates: 14. december, 2014
+  csedweek_dates: 14. December 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> kommer. Opråb til alle lærere og arrangørerne, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planlægge din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> er du Programmerings lærer? Se andre CSEdWeek ressourcer</a>'
   n_have_learned_an_hoc: '<h1>Prøv en</h1><h2>Hour of Code</h2><h3># vist</h3>'
@@ -20,12 +20,12 @@ da-DK:
   twentyhours_text: Færdig med din første programmerings time ? Lær flere centrale datalogi og programmeringbegreber i dette opfølgende kursus.
   hoc2014_heading: 'Tilslut dig <a href="http://hourofcode.com">Hour of Code</a> <br/>8. - 14. December 2014 <br/>'
   hoc2014_students: Studerende
-  hoc2014_try: Afprøv det
+  hoc2014_try: Prøv det
   hoc2014_teachers: Lærere
   hoc2014_host: Være vært for det
   hoc2014_everyone: Alle
   hoc2014_support: 'Støt &#x25BE;'
-  hoc2014_whatishoc: 'Hvad er "En times kodning"?'
+  hoc2014_whatishoc: 'Hvad er "Hour of Code"?'
   twentyhours_trynow: Prøv nu
   california_heading: Bed din skole om undervisning i programmering
   california_text: "Enhver lærer kan tilbyde vores <a href='http://learn.code.org/'>gratis introforløb</a>.  Enhver grundskole kan <a href='http://code.org/educate/k5'>undervise i programmering</a>. Spørg gymnasier <a href='http://code.org/educate/districts'>om de vil være partner med os."
@@ -39,12 +39,12 @@ da-DK:
   all_ages: Alle aldre
   beginner: Nybegynder
   n_participants: '# deltagere'
-  go: Kør
+  go: Start
   thank_you_: Tak!
   congratulations: Tillykke!
   congratulations_on_completing_hoc: Tillykke med gennemførelsen af Hour of Code
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
-  enter_valid_email: Angiv en gyldig email adresse
+  enter_valid_email: Angiv en gyldig emailadresse
   get_a_certificate_message: "Vi sender dig et certifikat og oplysninger om, hvordan man <a href='/learn/beyond'> lærer ud over En Time</a>"
   get_a_certificate_message_after: "Klik på beviset for download eller print det. Fortsæt nu med vores <a href='http://studio.code.org'>andre kurser</a>, eller se flere muligheder for at <a href='/learn/beyond'>lære udover Kodetimen</a>."
   thanks_for_submitting: Tak for indsendelsen!
@@ -53,7 +53,7 @@ da-DK:
   share_achievement: Del din præstation
   beyond_hour_message: "Fortsæt med vores  <a href='http://studio.code.org'>andre kurser</a>, eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Kodetimen</a>."
   leaderboards_for_hoc: Ranglister for Kodetimen.
-  support_url: http://support.Code.org
+  support_url: http://support.code.org/
   country: Land
   city: By
   gender: Køn
@@ -104,13 +104,13 @@ da-DK:
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
   students_and_lines: '%{students} studerende har lavet Hour of Code and har skrevet %{lines} linjer af kode.'
-  start_hoc: Start Kodetimen nu
+  start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." - Nina Nichols Peery, lærer'
   stats_student: '"Jeg vidste det var en <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5. klasse'
   stats_michael: '"Jeg har <b>aldrig, nogensinde</b> set mine elever så begejstrede for at lære." - Michael Clark, lærer'
-  studiobar_title: "Udforsk <a href='http://studio.code.org'>kodeskolen</a>"
-  studiobar_title_nolink: Udforsk kodeskolen
+  studiobar_title: "Udforsk <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Udforsk Code Studio
   studiobar_elementary_title: Grundlæggende kurser
   studiobar_elementary_body: Vores tre nye kurser for indskoling og melemtrin
   studiobar_hoc_title: Kodetimen

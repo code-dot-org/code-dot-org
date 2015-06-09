@@ -23,10 +23,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "7440328dba8226d6a8aea7a1e62f9c3e"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks/>
 </Maze>

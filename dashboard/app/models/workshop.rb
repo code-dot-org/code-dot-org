@@ -9,6 +9,11 @@ class Workshop < ActiveRecord::Base
 
   has_many :teachers, through: :cohorts, class_name: 'User'
 
+  has_and_belongs_to_many :unexpected_teachers,
+                          class_name: 'User',
+                          association_foreign_key: 'unexpected_teacher_id',
+                          join_table: 'unexpected_teachers_workshops'
+
   # A Workshop is associated with one or more Cohorts
   has_many :workshop_cohorts, inverse_of: :workshop, dependent: :destroy
   has_many :cohorts, through: :workshop_cohorts

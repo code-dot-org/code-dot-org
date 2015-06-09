@@ -5,7 +5,7 @@ zh:
   activerecord:
     errors:
       messages:
-        blank: 需要
+        blank: 必填
     attributes:
       user:
         name: 显示名称
@@ -40,7 +40,7 @@ zh:
   of: 的
   more: 更多
   less: 更少
-  beta: 试用版
+  beta: 测试版
   try_hoc: '尝试一小时代码，请单击此处 >>'
   try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
@@ -58,7 +58,7 @@ zh:
     notyet_signedup: 还未注册吗？
     google_oauth2: 谷歌帐户
     twitter: 推特
-    facebook: 脸谱
+    facebook: Facebook
     windowslive: 微软账户
     forgot_password: 忘记了您的密码吗？
     need_confirmation: 没有收到确认的说明吗？
@@ -299,7 +299,9 @@ zh:
     panel:
       answer_viewer: Answer Viewer
       student: 学生
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: 节点
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
     email_confirm_needed_required: '你的电子邮件地址尚未确认 %{email}：'
@@ -321,7 +323,7 @@ zh:
   home:
     title: 代码工作室
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    all_courses: 1、 2 和 3 的课程概要
+    all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
     signin_message: '已经注册了吗？%{link}'
     student_reg_link: 学生 注册

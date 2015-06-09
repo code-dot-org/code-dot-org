@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Fortsæt"},
 "defaultTwitterText":function(d){return "Se hvad jeg har lavet"},
 "designMode":function(d){return "Design"},
-"designModeHeader":function(d){return "Designtilstand"},
 "dialogCancel":function(d){return "Annuller"},
 "dialogOK":function(d){return "Ok"},
 "directionEastLetter":function(d){return "Ø"},
@@ -185,7 +184,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "directionSouthLetter":function(d){return "S"},
 "directionWestLetter":function(d){return "V"},
 "dropletBlock_addOperator_description":function(d){return "Tilføj to numre"},
-"dropletBlock_addOperator_signatureOverride":function(d){return "Add operator"},
+"dropletBlock_addOperator_signatureOverride":function(d){return "Tilføj operatør"},
 "dropletBlock_andOperator_description":function(d){return "Returnerer sand, når begge udtryk er sande ellers falsk"},
 "dropletBlock_andOperator_signatureOverride":function(d){return "OG boolesk operator"},
 "dropletBlock_appendItem_description":function(d){return "Tilføj objectet for enden af arrayet"},
@@ -198,7 +197,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_arcLeft_param0_description":function(d){return "Vinklen langs cirklen som skal flyttes."},
 "dropletBlock_arcLeft_param1":function(d){return "radius"},
 "dropletBlock_arcLeft_param1_description":function(d){return "Radiussen af den cirkel som er placeret til venstre for skildpadden. Skal være >= 0."},
-"dropletBlock_arcRight_description":function(d){return "Flyt skildpadden i en højredrejet bue ved brug af specificerede grad- og radiusangivelser"},
+"dropletBlock_arcRight_description":function(d){return "Flytter skildpadden frem og til højre i en jævn cirkulær bue"},
 "dropletBlock_arcRight_param0":function(d){return "vinkel"},
 "dropletBlock_arcRight_param0_description":function(d){return "Vinklen langs cirklen som skal flyttes."},
 "dropletBlock_arcRight_param1":function(d){return "radius"},
@@ -270,7 +269,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_declareAssign_x_prompt_description":function(d){return "Opret en variabel og tilknyt den en værdi ved at vise en prompt"},
 "dropletBlock_declareAssign_x_prompt_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_prompt_param0_description":function(d){return "The name you will use in the program to reference the variable"},
-"dropletBlock_declareAssign_x_prompt_param1":function(d){return "\"Enter value\""},
+"dropletBlock_declareAssign_x_prompt_param1":function(d){return "\"Angiv værdi\""},
 "dropletBlock_declareAssign_x_prompt_param1_description":function(d){return "The string the user will see in the pop up when asked to enter a value"},
 "dropletBlock_declareAssign_x_prompt_signatureOverride":function(d){return "Prompt the user for a value and store it"},
 "dropletBlock_declareAssign_x_signatureOverride":function(d){return "Erklære en variabel"},
@@ -284,11 +283,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_deleteRecord_param2":function(d){return "tilbagekalds-Funktionen"},
 "dropletBlock_deleteRecord_param2_description":function(d){return "A function that is asynchronously called when the call to deleteRecord() is finished."},
 "dropletBlock_divideOperator_description":function(d){return "Opdel to tal"},
-"dropletBlock_divideOperator_signatureOverride":function(d){return "Divide operator"},
+"dropletBlock_divideOperator_signatureOverride":function(d){return "Divider operatør"},
 "dropletBlock_dot_description":function(d){return "Tegn en prik på skildpaddens placering med den specificerede radius"},
 "dropletBlock_dot_param0":function(d){return "radius"},
-"dropletBlock_dot_param0_description":function(d){return "The radius of the dot to draw"},
-"dropletBlock_drawImage_description":function(d){return "Tegn et billede på det aktive lærred med den specificerede billedelement og x, y som de øverste venstre koordinater"},
+"dropletBlock_dot_param0_description":function(d){return "Radiusen af cirklen der tegnes"},
+"dropletBlock_drawImage_description":function(d){return "Tegner det angivne billede eller canvas element på det aktive canvas på den angivne position, og skalerer eventuelt elementet til den specificerede brede og højde"},
 "dropletBlock_drawImage_param0":function(d){return "ID"},
 "dropletBlock_drawImage_param0_description":function(d){return "The x position in pixels of the upper left corner of the image to draw."},
 "dropletBlock_drawImage_param1":function(d){return "x"},
@@ -696,7 +695,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_write_param0":function(d){return "tekst"},
 "dropletBlock_write_param0_description":function(d){return "The text or HTML you want appended to the bottom of your application"},
 "emptyBlocksErrorMsg":function(d){return "\"Gentag\" eller \"Hvis\" blokkene skal have andre blokke inden i for at virke. Kontroller, at den indre blok passer ordentligt inde i blokken."},
-"emptyFunctionBlocksErrorMsg":function(d){return "Funktionen blok skal have andre blokke inde i det for at virke."},
+"emptyFunctionBlocksErrorMsg":function(d){return "Funktion blokken skal have andre blokke inde i den for at virke."},
 "emptyFunctionalBlock":function(d){return "Du har en blok med et ikke-udfyldt input."},
 "end":function(d){return "slut"},
 "errorEmptyFunctionBlockModal":function(d){return "Der skal være blokke i din definition af en funktion. Klik på \"Rediger\" og træk blokke ind i den grønne blok."},

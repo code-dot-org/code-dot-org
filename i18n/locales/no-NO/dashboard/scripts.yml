@@ -309,7 +309,7 @@
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
+          title: Disney Infinity spill Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Spill-Lab
@@ -645,6 +645,9 @@
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming

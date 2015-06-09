@@ -301,212 +301,167 @@
         доти, доки умова є істинною, в цьому випадку Нектар > 0.
       2-3 Bee Loops 9_instruction: Цикл "коли" може виконувати ту саму дію, як констатування
         "якщо" в циклі. Додай цикл "коли" до коду, щоб виконати теж саме завдання.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
-      2-3 Maze 1_instruction: "Can you help me to catch the naughty pig? Stack a\ncouple
-        of \"move forward\" blocks together and press \"Run\". \n"
+      2-3 Bee Loops Assessment 1_instruction: Оцінювання - Використай цикл while щоб
+        зібрати весь нектар з квітки.
+      2-3 Maze 1_instruction: 'Можеш допомогти мені зловити капризну свиню? Склади
+        пару з блоків "move forward" разом та натисни "Run". '
       2-3 Maze 10_instruction: Проведіть мене до зеленої лиходійки! (Важайте на динаміт)
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
+      2-3 Maze 11_instruction: Приведи мене до квітки, я - голодний! Скільки разів
+        тобі потрібно повторини блок?
+      2-3 Maze 12 (copy 1)_instruction: 'Можеш щамінити попередню відповідь  лише
+        з двома блоками? (Підказка: Створи цикл використовуючи блок "repeat times".)'
+      2-3 Maze 12 (copy 2)_instruction: 'Можеш щамінити попередню відповідь  лише
+        з двома блоками? (Підказка: Створи цикл використовуючи блок "repeat times".)'
+      2-3 Maze 12 (old)_instruction: Приведи мене до свині, зараз за допомогою блоків
+        Repeat times!
+      2-3 Maze 12_instruction: 'Можеш замінити ці п''ять блоків лише двома блоками?
+        (Підказка: створи цикл використовуючи блоки "repeat times".)'
+      2-3 Maze 13 (old)_instruction: Приведи мене до свині, зараз за допомогою Repeat
+        until block!
+      2-3 Maze 13_instruction: Доведи мене до свині використовуючи лише двох блоків.
+      2-3 Maze 14 (old)_instruction: Доведи мене до свині використовуючи Repeat until
         block!
-      2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
+      2-3 Maze 14_instruction: Доведи мене до соняшнику! (Де ці блоки "repeat times",
+        коли мені це потрібно?)
+      2-3 Maze 15 (old)_instruction: Доведи мене до свині використовуючи Repeat until
         block!
-      2-3 Maze 13_instruction: Зрозумійте мене до свині, за допомогою двох блоків.
-      2-3 Maze 14 (old)_instruction: Отримати мене свині з повторення до блоку!
-      2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Отримати мене свині з повторення до блоку!
-      2-3 Maze 15_instruction: Використовувати дві петлі, щоб дістатися до свині,
-        використовуючи менше блоки.
-      2-3 Maze 16 (old)_instruction: Отримати мене свині з повторення до блоку!
-      2-3 Maze 16 before_instruction: Зрозумійте мене до свині.
-      2-3 Maze 16_instruction: Потрапити мене на соняшник. Циклічне повторення послідовність!
-      2-3 Maze 2_instruction: Цей свиня ruffling мій пір'я. Допоможіть мені отримати
-        до нього!
-      2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+      2-3 Maze 15_instruction: Використовуй два цикли, щоб дойти до свині, використовуючи
+        декілька блоків.
+      2-3 Maze 16 (old)_instruction: Доведи мене до свині використовуючи Repeat until
+        block!
+      2-3 Maze 16 before_instruction: Доведи мене до свині.
+      2-3 Maze 16_instruction: Доведи мене до соняшнику. Застосуй циклічну послідовність!
+      2-3 Maze 2_instruction: Свиня наїжачує моє пір'я. Домопожи мені добратися до
+        неї!
+      2-3 Maze 3_instruction: Простеж шлях та проведи мене до нерозумної свині. Уникай
+        вибухівку чи пір'я взлетить!
       2-3 Maze 4_instruction: Проведіть мене до зеленої лиходійки! (Важайте на динаміт)
       2-3 Maze 5_instruction: Проведіть мене до зеленої лиходійки! (Важайте на динаміт)
-      2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze 6_instruction: Зберігай спокій та допоможи мені знайти погану свиню.
+        В іншому випадку, я можу розсердитися!
       2-3 Maze 7_instruction: Проведіть мене до зеленої лиходійки! (Важайте на динаміт)
-      2-3 Maze 8_instruction: Отримати мене свині!
+      2-3 Maze 8_instruction: Доведи мене до свині!
       2-3 Maze 9_instruction: Проведіть мене до зеленої лиходійки! (Важайте на динаміт)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      2-3 Maze Loops 17_instruction: Отримати мене на соняшник!
-      2-3 Maze Loops 18_instruction: Отримати мене на соняшник!
-      2-3 Maze Loops 19_instruction: Отримати мене на соняшник!
-      2-3 Maze Loops 20_instruction: Отримати мене на соняшник!
-      2-3 Maze Loops 21_instruction: Отримати мене на соняшник!
-      2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower\nusing
-        only 5 blocks! \n"
-      2-3 Maze sq1 _instruction: |
-        This pig is ruffling my feathers.  Help me find
-        him!
-      2-3 Maze sq10_instruction: Отримати мене свині! Те, що блокує отримав повторюється?
-      2-3 Maze sq10v2_instruction: Отримати мене свині! Те, що блокує отримав повторюється?
-      2-3 maze sq11_instruction: Отримати мене свині! Те, що блокує отримав повторюється?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
-      2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Ви можете отримати на соняшник, за допомогою всього
-        в 4 кварталах?
-      2-3 maze sq15_instruction: Ви можете отримати на соняшник, використовуючи тільки
-        п'ять блоків?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 Maze Loops 17_instruction: Доведи мене до соняшнику!
+      2-3 Maze Loops 18_instruction: Доведи мене до соняшнику!
+      2-3 Maze Loops 19_instruction: Доведи мене до соняшнику!
+      2-3 Maze Loops 20_instruction: Доведи мене до соняшнику!
+      2-3 Maze Loops 21_instruction: Доведи мене до соняшнику!
+      2-3 Maze Loops Assessment 1_instruction: 'Оцінювання: доведи мене до соняшника,
+        використовуючи дише 5 блоків! '
+      2-3 Maze sq1 _instruction: Ця свиня наїжачує моє пір'я. Допоможи мені знайти
+        її!
+      2-3 Maze sq10_instruction: Доведи мене до свині! Які блоки потрібно повторити?
+      2-3 Maze sq10v2_instruction: Доведи мене до свині! Які блоки потрібно повторити?
+      2-3 maze sq11_instruction: Доведи мене до свині! Які блоки потрібно повторити?
+      2-3 maze sq12_instruction: Можеш щамінити попередню відповідь за допомогою циклю,
+        використовуючи блоки "repeat times"?
+      2-3 maze sq13_instruction: Дорогий друже. Я - зомбі. Повинен... діститися...
+        до соняшнику. Створи цикл за допомогою блоків "repeat until".
+      2-3 maze sq14_instruction: Можеш добратися до соняшнику, використовуючи лише
+        4 блоки?
+      2-3 maze sq15_instruction: Можеш добратися до соняшнику, використовуючи лише
+        5 блоків?
+      2-3 maze sq16_instruction: Гаразд, це схоже, але дещо відрізняється. Ти можеш
+        зробити це за допомогою лише 5 блоків?
+      2-3 Maze sq2_instruction: Простеж шлях та проведи мене до нерозумної свині.
+        Уникай вибухівку або пір'я буде літати!
       2-3 Maze sq3_instruction: Проведіть мене до зеленої лиходійки! (Важайте на динаміт)
-      2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Зрозумійте мене до зеленої порушник, використовуючи
-        тільки три блоки.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Створювати петлі, щоб дістатися до свині, використовуючи
-        менше блоки.
+      2-3 Maze sq4_instruction: Зберігай спокій та допоможи мені знайти погану свиню.
+        В іншому випадку, я можу розсердитися!
+      2-3 Maze sq5_instruction: Доведи мене до свині! Скільки разів потрібно повторити
+        блок?
+      2-3 Maze sq6_instruction: 'Можеш замінити попередню відповідь за допомогою лише
+        двох блоків? (Підказка: використай цикл з блоків "repeat times".)'
+      2-3 Maze sq7_instruction: Доведи мене до зеленого порушника, використовуючи
+        лише три блоки.
+      2-3 Maze sq8_instruction: Доведи мене до свині! (Де блок "repeat times", який
+        мені потрібен?)
+      2-3 Maze sq9_instruction: Створи цикли, щоб дойти до свині, використовуючи найменше
+        блоків.
       2-3level1_instruction: Допоможи пташці спіймати вередливє порося, рухаючи її
         вперед
       4-5 Artist 1_instruction: 'Допоможи меня домалювати мою коробку. (Довжина кожної
         лінії - 300 пікселей) '
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Ви можете петлі цей код на повний квадрат?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
-      4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
-      4-5 Artist 5_instruction: Якого боку ви використовуєте?
-      4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
-      4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. \n"
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Використовувати повторити цикл намалювати
-        цей трикутник.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+      4-5 Artist 10_instruction: Натисни "Run", щоб спробувати код. Потім повторіть
+        це стільки разів, щоб завершити ескіз. Кольори будуть відрізнятися кожного
+        разу.
+      4-5 Artist 11_instruction: Заверши зелені лінії. Лінії довжиною 300 пікселів
+        та 15 пікселів одна від одної.
+      4-5 Artist 2_instruction: Можеш створити цикл цього коду, щоб завершити квадрат?
+      4-5 Artist 3.5_instruction: Гаразд, спробуй з'ясувати, що відбувається, якщо
+        ти запустиш цей код (або натиснеш "Run", щоб спробувати це). Потім повтори
+        це достатньо разів, щоб завершити ескіз. Кольори будуть (з великою ймовірністю)
+        різними кожний раз.
+      4-5 Artist 3_instruction: Цей прямокутний квітник має периметер 600. Довжина
+        сторони має довжину 200. Намалюй прямокутник.
+      4-5 Artist 4_instruction: Скільки градусів в колі? Створи цикл блоків, щоб створити
+        коло кольорів.
+      4-5 Artist 5_instruction: Який кут використовуєш?
+      4-5 Artist 6_instruction: Цей рівносторонній трикутник має кути 60, 60 та 60
+        градусів. Кожна сторона має 200 пікселів. Заверши ескіз.
+      4-5 Artist 7_instruction: Цей прямокутний трикутник має кути 30, 60 та 90 градусів.
+        Довжина похилої сторони - подвійної висоти зі 100 пікселів. Завершити малювання.
+      4-5 Artist 8_instruction: Лінія по середині футбольного поля перпендикулярна
+        до бічних ліній. Це поле має периметер 800 пікселів та 240 пікселів в довжину.
+        Якої ширини воно? Намалюй межі та середню лінію.
+      4-5 Artist 9_instruction: Намалюй іншу половину так, що дизайн буде симетричним.
+        Трикутники - рівностороні та в довжину 50 пікселів.
+      4-5 Artist Assessment 1_instruction: 'Оцінювання: використая цикл, щоб намалювати
+        рівносторонній трикутник. Кожна сторона - 300 пікселів.'
+      4-5 Artist For Loops 1_instruction: Введи числа від 1 до 10 в блоки ширини та
+        запусти код.
+      4-5 Artist For Loops 11_instruction: Заверш блок "for" так, щоб він мав значення
+        0, 20, 40, 60, 80... 200.
+      4-5 Artist For Loops 12_instruction: 'Що трапиться, якщо ти зміниш порядок "from"
+        та "to" номерів? Заверши блок "for" так, що він нараховуватиме 200, 180, 160,
+        140, 120...0. '
+      4-5 Artist For Loops 13_instruction: 'Модель починається без циклу "for" та
+        містить дуже багато блоків. Використай блок "for", щоб завершити спіраль.
+        Підказка: остання лінія має довжину 250 пікселів.'
+      4-5 Artist For Loops 14_instruction: 'Хтось почав код, але потім зрозумів, що
+        там має бути швидший шлях! Використай блок "for", щоб змінити блоки та завершити
+        трикутну спіраль. (Підказка: остання лінія має довжину 300 пікселів.'
+      4-5 Artist For Loops 15_instruction: 'Хтось почав код, але потім зрозумів, що
+        там має бути швидший шлях! Використай блок "for", щоб змінити блоки та завершити
+        шестикутну спіраль. (Підказка: остання лінія має довжину 200 пікселів.'
+      4-5 Artist For Loops 2_instruction: Це блок "for". Замість введення 1,2,3...
+        10, блок "for" може повторити блоки всередині цього та порахувати числа для
+        тебе. Розмісти число 10 в розділ "to" блоку "for".
+      4-5 Artist For Loops 3_instruction: Як ми можемо підрахувати від 1 до 50? Відредагуй
+        блок "for".
+      4-5 Artist For Loops 4_instruction: Укомплектуй блок "for" так, що він підрахує
+        одиницею від 1 до 10.
+      4-5 Artist For Loops 6_instruction: Намалюй квадрати зі сторонами 50, 60, 70,
+        80 та 90 пікселів. Ти повинен використати функцію "draw square" п'ять разів.
+      4-5 Artist For Loops 7_instruction: 'Намалюй такі самі квадрати, але використай
+        при цьому блок "розрахувати по" для зміни їх розміру.  Вбудуй блок "Лічильник"
+        в функцію "Малювати квадрат". Підказка: Він знаходиться в категорії "Змінні".'
+      4-5 Artist For Loops 8_instruction: Можеш заповнити програму шляхом розміщення
+        блоків всередині блоків "для", що можна порахувати від 10 до 200 десятками?
+        Можеш знайти блоки "для" в категорії Цикли.
+      4-5 Artist For Loops 9_instruction: Ці кола мають розмір 5, 10, 15, 20, 25,
+        30, та 35. Намалюй кола, використовуючи блок "для".
+      4-5 Artist Free Draw 1_instruction: Вільне малювання! Намалюй будь-що, на що
+        маєш натхнення творити.
+      4-5 Artist Functions 1_instruction: Використай цикл повторення, щоб намалювати
+        трикутник.
+      4-5 Artist Functions 10a_instruction: Розмісти цей код в функцію 'намалювати
+        сніжинку' та заміни 50 з параметром 'розмір'. Функція вже викликана, щоб створити
+        сніжинку,  100 пікселів.
+      4-5 Artist Functions 10b_instruction: 'Використай функцію "намалювати сніжинку",
+        щоб створити сніжинки різних розмірів. Підказка: перша сніжика має довжину
+        25 та кожна сніжинка - вдвічі більшого розмірі, ніж попередня.'
+      4-5 Artist Functions 11_instruction: 'Функція "намалювати шестикутник" використовує
+        функцію "намалювати трикутник". Заверши функцію шестикутника. (Підказка: шестикутник
+        має 6 сторін, кожна довжиною 100 пікселів)'
+      4-5 Artist Functions 12_instruction: 'Заверши функцію "намалювати хвилі". Кожна
+        хвиля складається с однієї Верхньої хвилі та однієї Нижньої хвилі. Підказка:
+        намалюй 5 синіх хвиль.'
+      4-5 Artist Functions 13 Free play_instruction: Тут наведено деякі функції, щоб
+        намалювати планети, зорі, ракети та роботів. Використай їх всі так, що створиш
+        малюнок, яким зможеш поділитися з твоїми друзями.
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops
@@ -666,10 +621,10 @@
       4-5 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Can you
         fix them?
-      4-5 Bee Debugging 10_instruction: Знайти помилки і виправити їх.
+      4-5 Bee Debugging 10_instruction: Знайди помилки та виправ їх.
       4-5 Bee Debugging 11_instruction: Чи означає це кількість правильно?
       4-5 Bee Debugging 2_instruction: Допомогти отримати нектар і зробити Мед бджоли.
-      4-5 Bee Debugging 3_instruction: Знайти помилки і виправити їх.
+      4-5 Bee Debugging 3_instruction: Знайди помилки та виправ їх.
       4-5 Bee Debugging 4_instruction: Ці блоки не працюють. Що таке шаблон?
       4-5 Bee Debugging 5_instruction: Щось не прямо тут...
       4-5 Bee Debugging 6_instruction: |
@@ -712,13 +667,13 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Ви можете отримати на соняшник, за допомогою всього
-        в 4 кварталах?
+      4-5 Maze 10_instruction: Можеш добратися до соняшнику, використовуючи лише 4
+        блоки?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: Отримати мене свині!
+      4-5 Maze 13_instruction: Доведи мене до свині!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
@@ -1606,8 +1561,8 @@
         first if it is a flower or a honeycomb, and then only gather nectar\nfrom
         it if it is a flower. \n"
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2344,19 +2299,19 @@
       K-1 Maze debug Assessment 1_instruction: |
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Отримати мене свині!
+      K-1 Maze Loops 1_instruction: Доведи мене до свині!
       K-1 Maze Loops 10_instruction: Приведи мене до свині! Використовуй цикл "повторити".
       K-1 Maze Loops 11_instruction: Приведи мене до свині! Використовуй цикл "повторити".
       K-1 Maze Loops 12_instruction: Приведи мене до свині! Використовуй цикл "повторити".
       K-1 Maze Loops 2_instruction: Використовуй блок "Повторити", щоб привести мене
         до свині!
       K-1 Maze Loops 3_instruction: Приведи мене до свині! Використовуй цикл "повторити".
-      K-1 Maze Loops 4_instruction: Отримати мене свині!
+      K-1 Maze Loops 4_instruction: Доведи мене до свині!
       K-1 Maze Loops 5_instruction: Приведи мене до свині! Використовуй цикл "повторити".
       K-1 Maze Loops 6_instruction: Приведи мене до свині! Використовуй цикл "повторити".
       K-1 Maze Loops 7_instruction: Приведи мене до свині! Використовуй цикл "повторити".
       K-1 Maze Loops 8_instruction: Приведи мене до свині! Використовуй цикл "повторити".
-      K-1 Maze Loops 9_instruction: Отримати мене свині!
+      K-1 Maze Loops 9_instruction: Доведи мене до свині!
       K-1 Maze Loops Assessment 1_instruction: Оцінювання - Використайте цикл, щоб
         привести мене до свині!
       K-1 Maze Loops Assessment 2_instruction: Оцінювання - Використайте цикл, щоб
@@ -2682,6 +2637,11 @@
         ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
         \ \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

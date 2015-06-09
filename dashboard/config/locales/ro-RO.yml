@@ -358,7 +358,9 @@
     panel:
       answer_viewer: Answer Viewer
       student: elev
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Secţiune
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de email %{email} nu a fost confirmată:'

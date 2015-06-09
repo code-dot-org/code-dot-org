@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({67:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({77:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -17,7 +17,7 @@ window.bounceMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":62,"./bounce":63,"./levels":65,"./skins":68}],68:[function(require,module,exports){
+},{"../appMain":6,"./blocks":72,"./bounce":73,"./levels":75,"./skins":78}],78:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":249}],65:[function(require,module,exports){
+},{"../skins":261}],75:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -543,7 +543,7 @@ module.exports = {
 };
 
 
-},{"../block_utils":59,"./tiles":69}],63:[function(require,module,exports){
+},{"../block_utils":69,"./tiles":79}],73:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -1248,10 +1248,10 @@ Bounce.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
-                             delegate(this,
-                                      Bounce.onArrowButtonUp,
-                                      ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+                               delegate(this,
+                                        Bounce.onArrowButtonUp,
+                                        ArrowIds[btn]));
       dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
                                  delegate(this,
                                           Bounce.onArrowButtonDown,
@@ -1964,7 +1964,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":4,"../codegen":89,"../constants":91,"../dom":92,"../dropletUtils":93,"../hammer":125,"../locale":134,"../skins":249,"../templates/page.html.ejs":275,"../timeoutList":281,"../utils":297,"./api":61,"./controls.html.ejs":64,"./locale":66,"./tiles":69,"./visualization.html.ejs":70}],70:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":99,"../constants":101,"../dom":102,"../dropletUtils":103,"../hammer":135,"../locale":144,"../skins":261,"../templates/page.html.ejs":288,"../timeoutList":294,"../utils":310,"./api":71,"./controls.html.ejs":74,"./locale":76,"./tiles":79,"./visualization.html.ejs":80}],80:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1984,7 +1984,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],64:[function(require,module,exports){
+},{"ejs":481}],74:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2007,7 +2007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"./locale":66,"ejs":468}],62:[function(require,module,exports){
+},{"../locale":144,"./locale":76,"ejs":481}],72:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2503,13 +2503,13 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../codegen":89,"./locale":66}],66:[function(require,module,exports){
+},{"../codegen":99,"./locale":76}],76:[function(require,module,exports){
 // locale for bounce
 
 module.exports = window.blockly.bounce_locale;
 
 
-},{}],61:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2692,7 +2692,7 @@ exports.bounceBall = function(id) {
 };
 
 
-},{"../StudioApp":4,"./tiles":69}],69:[function(require,module,exports){
+},{"../StudioApp":5,"./tiles":79}],79:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2732,4 +2732,4 @@ exports.SquareType = {
 };
 
 
-},{}]},{},[67]);
+},{}]},{},[77]);

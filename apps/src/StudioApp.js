@@ -730,7 +730,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     puzzle_number: level.puzzle_number
   });
 
-  if (marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
+  if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
@@ -874,6 +874,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
                          Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
   var newVizWidthString = newVizWidth + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
   if (this.isRtl()) {
@@ -883,10 +884,11 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationResizeBar.style.left = newVizWidthString;
     codeWorkspace.style.left = newVizWidthString;
   }
+  visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
-  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  visualization.style.maxHeight = newVizHeightString;
   applyTransformScaleToChildren(visualization,
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {
@@ -1325,6 +1327,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    // Note (brent): this mode is currently defined in applab, which means we
+    // dont have it available to us in all apps, and ends up with a 404 as it
+    // tries to hit the network. At some point this should be cleaned up
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level

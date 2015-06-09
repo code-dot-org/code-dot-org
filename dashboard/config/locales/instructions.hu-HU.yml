@@ -98,25 +98,19 @@
       2-3 Artist Functions 9_instruction: Ez itt a hópehely függvény. Kísérletezz
         vele, és hozz létre egy téli tájat! Szabad a játék, nincs megoldandó feladvány.
         Jó szórakozást!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
+      2-3 Artist Loops 1_instruction: A sejt befejezéséhez tudsz készíteni 100 pixel
+        oldalhosszúságú hatszöget? Ne feledd, ebben az esetben csak 60 fokot kell
+        fordulnod!
+      2-3 Artist Loops 10_instruction: Mi történik vajon a mintával, ha az utolsó
+        lépés csak fele akkora?
+      2-3 Artist Loops 11_instruction: Most akkor csinálj egy *újabb* ciklust az eddigi
+        kód köré. Ne felejts el egy szöget adni a külső ciklus végéhez.
+      2-3 Artist Loops 2_instruction: Most használj egy ismétlő elemet, hogy a cellából
+        egy kagyló legyen.
+      2-3 Artist Loops 4_instruction: Szeretnéd látni mi történik ha újra és újra
+        megismételjük ezt az alakzatot egy ciklus segítségével?
+      2-3 Artist Loops 5_instruction: Most változtasd meg kicsit a ciklust, és nézd
+        meg, hogy változik meg a képünk.
       2-3 Artist Loops 6_instruction: |
         Add one more move and another turn inside
         the loop and see how your design changes.
@@ -127,35 +121,33 @@
       2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
         we're going to add some distance between them.\r\nUse the same code as\nbefore,
         but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops New 1_instruction: Rajzoljuk meg a robot fejét! Tudnál rajzolni
+        egy négyzetet, aminek az oldalai 100 pixel hosszúak?
+      2-3 Artist Loops New 10_instruction: Most kössük össze ezt a sok V alakot! Rajzold
+        őket egy ciklusban!
+      2-3 Artist Loops New 11_instruction: 'Ezúttal 24-szer rajzold meg! A kód végéhez
+        rakj hozzá egy 30 fokos balra fordulást, és tedd az egészet egy ismétlő elembe! '
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
+        Rajzold meg a gyémántot 100 pixel hosszú oldalakkal.
+      2-3 Artist Loops New 13_instruction: Most rajzold le a gyémántot háromszor egy
+        ciklusban.
+      2-3 Artist Loops New 14_instruction: Most rajzold le a gyémántot tízszer, de
+        minden alkalommal forgasd el 90 fokkal.
+      2-3 Artist Loops New 15_instruction: Rajzolj valami érdekeset.
+      2-3 Artist Loops New 2_instruction: Itt van egy része annak a kódnak, amivel
+        a négyzetet rajzoltad. Mi történne, ha ezt a részt egy ismétlő elembe raknád,
+        hogy megismétlődjön 4-szer?
+      2-3 Artist Loops New 9_instruction: Rajzolj egy egyszerű V betűt, aminek mind
+        a két oldala 50 pixel hosszú, hogy elkészüljön az nyíl.
+      2-3 Artist Match Hex Pic_instruction: 'Párosítsd össze: Segíts befejezni a hatszöget.'
+      2-3 Artist Match Rho Pic_instruction: 'Párosítsd össze: Fejezd be a hiányzó
+        kódot.'
+      2-3 Artist Match Sq Pic_instruction: 'Párosítsd össze: Egészítsd ki a hiányzó
+        kódot'
+      2-3 Artist Match Tri pic_instruction: 'Párosítsd össze: Pótold a hiányzó kódot.'
+      2-3 Artist Nested Loops 1_instruction: "Már használtál ciklusokat ezelőtt, de
+        azt tudtad, hogy egymásba is lehet rakni a ciklusokat? \r\nRakd ciklusba ezt
+        az egész kódot háromszor, hogy kirajzolódjon a minta."
       2-3 Artist Nested Loops 10_instruction: |
         Loop this code 12 times to complete
         the pattern.
@@ -204,11 +196,11 @@
         Vigyázz, ne gyűjts nektárt olyan virágból, amelyben nincs nektár.\r\n"
       2-3 Bee Conditionals 11_instruction: Gyűjts nektárt azokból a virágokból, amelyekben
         van nektár.
-      2-3 Bee Conditionals 12_instruction: Használj ciklust hogy ellenőrizd és összegyűjtsd
+      2-3 Bee Conditionals 12_instruction: Használj ciklust, hogy ellenőrizd, és összegyűjtsd
         a nektárt minden virágból.
       2-3 Bee Conditionals 13_instruction: 'Gyűjts nektárt és készíts mézet! Tipp:
         mi történik, ha a piros virágra alkalmazod a  "ha nektár" feltételt? Meg tudod
-        csinálni ezt egy ciklussal?'
+        csinálni ezt a feladatot egy ciklussal?'
       2-3 Bee Conditionals 14_instruction: Gyűjts nektárt és készíts mézet. Vigyázz,
         ne gyűjts nektárt a lila virágból, ha nincs benne nektár!
       2-3 Bee Conditionals 15_instruction: Mind a négy virágból gyűjts nektárt.
@@ -359,7 +351,7 @@
       2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
       2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
       2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
+      2-3 Maze 16 before_instruction: Vigyél el a malachoz.
       2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
       2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
       2-3 Maze 3_instruction: |
@@ -1281,36 +1273,30 @@
       Course 4 2_instruction: A méh most csak nektárt akar gyűjteni. Emlékezz rá,
         hogy nem minden elrejtett objektum virág, így először ellenőrizni kell, mert
         csak virágról tud nektárt gyűjteni.
-      Course 4 Artist 1_instruction: "Help me finish drawing my box. (Each line is\n300
-        pixels long) \n"
-      Course 4 Artist 10_instruction: "It's Free Play time! Have fun and draw anything\nyou
-        would like. \n"
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
-      Course 4 Artist 3_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
+      Course 4 Artist 1_instruction: 'Segíts nekem befejezni a dobozom rajzolását.
+        (Minden vonal 300 pixel hosszú) '
+      Course 4 Artist 10_instruction: 'Most szabadon játszhatsz! Rajzolj bármit, amit
+        csak szeretnél. '
+      Course 4 Artist 2_instruction: Ciklusba tudnád rakni ezt a kód részletet, hogy
+        a szürke négyzet kirajzolódjon?
+      Course 4 Artist 3_instruction: Rendben, most próbáld meg kitalálni, hogy mi
+        fog történni, ha futtatod ezt a kódot (vagy futtasd le). Aztán, ismételd meg
+        a kódot annyiszor, hogy kirajzolódjon a teljes ábra.
+      Course 4 Artist 4_instruction: Hány fokból áll egy kör? A hiányzó helyre írd
+        be a helyes választ, hogy egy színes kört készíts.
+      Course 4 Artist 5_instruction: Rajzold meg a minta másik oldalát, úgy hogy szimmetrikus
+        legyen. A háromszögek szabályosak, és az oldalai 50 pixel hosszúak.
       Course 4 Artist 6_instruction: |
-        Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
+        Egészítsd ki a kódot, hogy kirajzolódjanak a háromszögek.
+        Segítség: a 3 háromszög egy kör belsejében vannak.
       Course 4 Artist 7_instruction: 'Most ágyazd be ezt a ciklust egy másik ciklus
         belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak
-        nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.'
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code 12 times.
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
+        nevezik. Segítség: a 10 háromszög egy körben vannak egyenlően elosztva.  '
+      Course 4 Artist 8_instruction: Rajzold meg ezt a napocskát egy ciklussal, ami
+        12 háromszöget rajzol.
+      Course 4 Artist 9_instruction: 'Rajzold le ezt az ábrát 10-szer. Figyelj arra,
+        hogy el kell fordulni két alakzat között. Egy kis segítség: Mennyi 360 elosztva
+        10-zel?'
       Course 4 Artist Binary 1_instruction: |
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to turn on the go from left
@@ -1586,8 +1572,9 @@
       Course 4 Bee 1_instruction: 'A méh nem tudja megmondani, hogy ez egy virág vagy
         egy méhsejt. Először ellenőrizd, hogy vajon virág vagy méhsejt, és csak akkor
         gyűjts nektárt, ha ez egy virág. '
-      Course 4 Bee 2_instruction: Minden dolgot ellenőrizz, hogy meglássuk, virágok-e?
-        Ha igen, gyűjts nektárt.
+      Course 4 Bee 2_instruction: |
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: Az ismeretlen objektum vagy virág vagy lép. Használd
         a ha/különben blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts
         mézet (mert ez egy lép).
@@ -2158,16 +2145,17 @@
       Infinity_touch_score_instruction: Állítsd be, hogy Anna pontot szerezzen, valahányszor
         megérint egy hópelyhet. Ezután kattints a Futtatásra, és vezesd oda Annát
         mindegyik hópehelyhez.
-      K-1 Artist 1 Assessment 1_instruction: |
-        Draw a short line up and a long one
-        to the right!
-      K-1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both the
-        jump and draw blocks
+      K-1 Artist 1 Assessment 1_instruction: Rajzolj egy rövid vonalat felfelé és
+        egy hosszút jobbra!
+      K-1 artist 1 level 10_instruction: Rajzold meg a szaggatott vonalat az "ugorj"
+        és "rajzolj" elemekkel!
       K-1 artist 1 level 9_instruction: Draw this using three lines
-      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
-      K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
+      K-1 Artist Loops 1_instruction: Rajzold meg ezt a vonalat kelet felé haladva
+        négyszer!
+      K-1 Artist Loops 2_instruction: Meg tudnád rajzolni ugyanezt a vonalat egy ciklus
+        használatával?
+      K-1 Artist Loops 3_instruction: Bele tudod tenni ezeket az elemeket egy ciklusba,
+        hogy 6 vonalat rajzoljon?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
         castle?
@@ -2545,12 +2533,10 @@
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
-      NEW Course 4 Artist Params 2 _instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
-      NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
+      NEW Course 4 Artist Params 2 _instruction: Készíts egy "rajzolj egy háromszöget
+        50 pixeles oldalakkal" funkciót
+      NEW Course 4 Artist Params 2_instruction: Készíts egy "rajzolj egy háromszöget
+        50 pixeles oldalakkal" funkciót
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3
         triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
@@ -2651,6 +2637,11 @@
         ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
         \ \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
@@ -2831,12 +2822,12 @@
         can you get it right on your first try?
       scrat 19_instruction: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod
         csinálni elsőre?
-      scrat 20_instruction: Tudsz segíteni kijutni ebből az összetett útvesztőből
-        mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós
-        utat be tudok járni annak hosszától függetlenül. Siess! Olvad a jég!
+      scrat 20_instruction: Tudnál nekem segíteni kijutni ebből az útvesztőből mindössze
+        3 elem hozzáadásával? Ha jól csinálod, bármilyen kacskaringós utat be tudok
+        járni hosszától függetlenül. Siess! Olvad a jég!
       SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+        Hivatalosan is egy mester művész lettél!
+        Hozz létre egy téli csodaországot!
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.

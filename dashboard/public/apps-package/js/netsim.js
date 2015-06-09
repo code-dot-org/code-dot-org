@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({238:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({250:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -16,7 +16,7 @@ window.netsimMain = function(options) {
 };
 
 
-},{"../StudioApp":4,"../appMain":5,"./levels":236,"./netsim":239,"./skins":245}],245:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":6,"./levels":248,"./netsim":251,"./skins":257}],257:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -25,7 +25,7 @@ exports.load = function (assetUrl, id) {
 };
 
 
-},{"../skins":249}],239:[function(require,module,exports){
+},{"../skins":261}],251:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -43,6 +43,7 @@ exports.load = function (assetUrl, id) {
 */
 /* global -Blockly */
 /* global $ */
+/* global sendReport */
 'use strict';
 
 var utils = require('../utils');
@@ -59,6 +60,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimLogPanel = require('./NetSimLogPanel');
+var NetSimRouterLogModal = require('./NetSimRouterLogModal');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
@@ -229,6 +231,12 @@ NetSim.prototype.init = function(config) {
    */
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
+  /**
+   * Configuration for reporting level completion
+   * @type {Object}
+   */
+  this.reportingInfo_ = config.report;
+
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
@@ -365,6 +373,9 @@ NetSim.prototype.initWithUserName_ = function (user) {
         expireHeartbeat: this.expireHeartbeat.bind(this)
       });
 
+  if (this.level.showLogBrowserButton) {
+    this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
+  }
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -394,7 +405,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
-}
+  }
 
   this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level,
       this);
@@ -618,7 +629,7 @@ NetSim.prototype.isConnectedToRouter = function () {
  */
 NetSim.prototype.getConnectedRouter = function () {
   if (this.isConnectedToShard()) {
-    return this.myNode.myRouter;
+    return this.myNode.getMyRouter();
   }
   return null;
 };
@@ -858,10 +869,10 @@ NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
  */
 NetSim.prototype.becomeDnsNode = function () {
   this.setIsDnsNode(true);
-  if (this.myNode && this.myNode.myRouter) {
+  if (this.myNode && this.myNode.getMyRouter()) {
     // STATE IS THE ROOT OF ALL EVIL
     var myNode = this.myNode;
-    var router = myNode.myRouter;
+    var router = myNode.getMyRouter();
     router.dnsNodeID = myNode.entityID;
     router.update();
   }
@@ -1015,6 +1026,10 @@ NetSim.prototype.render = function () {
     this.lobby_.render();
   }
 
+  if (this.routerLogModal_) {
+    this.routerLogModal_.render();
+  }
+
   this.updateLayout();
 };
 
@@ -1038,6 +1053,11 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
     this.eventKeys.remoteChange = localNode.remoteChange.register(
         this.onRemoteChange_.bind(this));
     this.eventKeys.registeredWithLocalNode = localNode;
+  }
+
+  // Update the log viewer's shard reference so it can get current data.
+  if (this.routerLogModal_) {
+    this.routerLogModal_.setShard(shard);
   }
 
   // Shard changes almost ALWAYS require a re-render
@@ -1252,8 +1272,42 @@ NetSim.prototype.updateLayout = function () {
   logWrap.css('height', rightColumnHeight - sendPanelHeight);
 };
 
+/**
+ * Appropriate steps for when the student hits the "Continue to next level"
+ * button.  Should mark the level as complete and navigate to the next level.
+ */
+NetSim.prototype.completeLevelAndContinue = function () {
+  // Avoid multiple simultaneous submissions.
+  $('.submitButton').attr('disabled', true);
 
-},{"../ObservableEvent":1,"../RunLoop":3,"../utils":297,"./DashboardUser":165,"./NetSimBitLogPanel":168,"./NetSimLobby":185,"./NetSimLocalClientNode":186,"./NetSimLogPanel":190,"./NetSimLogger":191,"./NetSimRouterNode":209,"./NetSimSendPanel":215,"./NetSimShard":216,"./NetSimShardCleaner":217,"./NetSimStatusPanel":223,"./NetSimTabsComponent":226,"./NetSimVisualization":227,"./controls.html.ejs":234,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241,"./netsimUtils":243,"./page.html.ejs":244}],244:[function(require,module,exports){
+  sendReport({
+    fallbackResponse: this.reportingInfo_.fallback_response,
+    callback: this.reportingInfo_.callback,
+    app: 'netsim',
+    level: this.level.id,
+    result: true,
+    testResult: 100,
+    onComplete: function (serverResponse) {
+
+      // Re-enable submit button, in case there's nowhere to go.
+      $('.submitButton').attr('disabled', false);
+
+      // If there's somewhere to go, disconnect and go!
+      if (serverResponse.redirect) {
+        if (this.isConnectedToRemote()) {
+          this.disconnectFromRemote(function () {
+            window.location.href = serverResponse.redirect;
+          });
+        } else {
+          window.location.href = serverResponse.redirect;
+        }
+      }
+    }.bind(this)
+  });
+};
+
+
+},{"../ObservableEvent":2,"../RunLoop":4,"../utils":310,"./DashboardUser":175,"./NetSimBitLogPanel":178,"./NetSimLobby":195,"./NetSimLocalClientNode":196,"./NetSimLogPanel":200,"./NetSimLogger":201,"./NetSimRouterLogModal":218,"./NetSimRouterNode":221,"./NetSimSendPanel":227,"./NetSimShard":228,"./NetSimShardCleaner":229,"./NetSimStatusPanel":235,"./NetSimTabsComponent":238,"./NetSimVisualization":239,"./controls.html.ejs":246,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253,"./netsimUtils":255,"./page.html.ejs":256}],256:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1267,7 +1321,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
   var msg = require('../locale');
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n      </div>\n    </div>\n  </div>\n');28; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-disconnected">\n      <div class="lobby-panel"></div>\n    </div>\n\n\n    <div id="netsim-connected">\n      <div id="netsim-leftcol">\n        <div class="column-width-limiter">\n\n          <div id="netsim-status"></div>\n\n          <div id="netsim-visualization">\n            <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n              <filter id="backgroundBlur">\n                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n                <feComponentTransfer>\n                  <feFuncA slope="0.5" type="linear"></feFuncA>\n                </feComponentTransfer>\n              </filter>\n\n              <g id="centered-group" transform="translate(150,150)">\n                <g id="background-group" filter="url(#backgroundBlur)"></g>\n                <g id="foreground-group"></g>\n              </g>\n            </svg>\n          </div>\n\n          <div id="netsim-tabs"></div>\n\n        </div>\n      </div>\n\n      <div id="netsim-rightcol">\n        <div id="netsim-logs">\n          <div id="netsim-received"></div>\n          <div id="netsim-sent"></div>\n        </div>\n        <div id="netsim-send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((75,  data.localeDirection )), '">\n    ');76; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n      </div>\n    </div>\n  </div>\n');28; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-disconnected">\n      <div class="lobby-panel"></div>\n    </div>\n\n\n    <div id="netsim-connected">\n      <div id="netsim-leftcol">\n        <div class="column-width-limiter">\n\n          <div id="netsim-status"></div>\n\n          <div id="netsim-visualization">\n            <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n              <filter id="backgroundBlur">\n                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n                <feComponentTransfer>\n                  <feFuncA slope="0.5" type="linear"></feFuncA>\n                </feComponentTransfer>\n              </filter>\n\n              <g id="centered-group" transform="translate(150,150)">\n                <g id="background-group" filter="url(#backgroundBlur)"></g>\n                <g id="foreground-group"></g>\n              </g>\n            </svg>\n          </div>\n\n          <div id="netsim-tabs"></div>\n\n        </div>\n      </div>\n\n      <div id="netsim-rightcol">\n        <div id="netsim-logs">\n          <div id="netsim-received"></div>\n          <div id="netsim-sent"></div>\n        </div>\n        <div id="netsim-send"></div>\n      </div>\n    </div>\n\n    <div id="router-log-modal" class="modal fade"></div>\n\n  </div>\n  <div id="footers" dir="', escape((78,  data.localeDirection )), '">\n    ');79; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -1275,7 +1329,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],236:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],248:[function(require,module,exports){
 /*jshint multistr: true */
 
 var netsimConstants = require('./netsimConstants');
@@ -1307,6 +1361,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
+ * @property {boolean} showLogBrowserButton - Whether the "Log Browser" is
+ *           available.  Adds a button to the lobby and one to the bottom
+ *           of the router tab.
+ *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
  *           Should use 'bits' for variant 1 (levels about the coordination
@@ -1326,6 +1384,15 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           room exists in isolation and will have no contact with other routers
  *           or rooms.  When true, it is possible for messages to travel between
  *           routers, connecting the whole shard.
+ *
+ * @property {number} minimumExtraHops - Fewest non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.  Number of hops can be lower if network
+ *           conditions don't allow it.
+ *
+ * @property {number} maximumExtraHops - Most non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.
  *
  * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
@@ -1420,6 +1487,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {number} defaultRouterMemory - How much data the router packet
  *           queue is able to hold before it starts dropping packets, in bits.
  *
+ * @property {number} defaultRandomDropChance - Odds that the router will drop
+ *           the packet for no reason while routing it.  Value in range
+ *           0 (no drops) to 1 (drop everything)
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -1446,12 +1517,15 @@ levels.custom = {
   canConnectToClients: false,
   canConnectToRouters: false,
   showAddRouterButton: false,
+  showLogBrowserButton: false,
 
   // Simulator-wide setup
   messageGranularity: MessageGranularity.BITS,
   automaticReceive: false,
   broadcastMode: false,
   connectedRouters: false,
+  minimumExtraHops: 0,
+  maximumExtraHops: 0,
 
   // Packet header specification
   addressFormat: '4',
@@ -1492,6 +1566,7 @@ levels.custom = {
   defaultRouterBandwidth: Infinity,
   showRouterMemoryControl: false,
   defaultRouterMemory: Infinity,
+  defaultRandomDropChance: 0,
 
   // DNS tab and its controls
   showDnsModeControl: false,
@@ -1499,7 +1574,7 @@ levels.custom = {
 };
 
 
-},{"./Packet":233,"./netsimConstants":240}],234:[function(require,module,exports){
+},{"./Packet":245,"./netsimConstants":252}],246:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1519,7 +1594,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],227:[function(require,module,exports){
+},{"ejs":481}],239:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2368,7 +2443,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 };
 
 
-},{"../utils":297,"./NetSimFakeVizWire":183,"./NetSimVizNode":230,"./NetSimVizWire":231,"./NetSimWire":232,"./netsimConstants":240,"./netsimGlobals":241,"./netsimNodeFactory":242,"./tweens":246}],231:[function(require,module,exports){
+},{"../utils":310,"./NetSimFakeVizWire":193,"./NetSimVizNode":242,"./NetSimVizWire":243,"./NetSimWire":244,"./netsimConstants":252,"./netsimGlobals":253,"./netsimNodeFactory":254,"./tweens":258}],243:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2689,7 +2764,7 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
 };
 
 
-},{"../utils":297,"./NetSimVizEntity":229,"./NetSimVizNode":230,"./dataConverters":235,"./netsimConstants":240,"./netsimGlobals":241,"./netsimUtils":243,"./tweens":246}],226:[function(require,module,exports){
+},{"../utils":310,"./NetSimVizEntity":241,"./NetSimVizNode":242,"./dataConverters":247,"./netsimConstants":252,"./netsimGlobals":253,"./netsimUtils":255,"./tweens":258}],238:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2835,6 +2910,8 @@ NetSimTabsComponent.prototype.attachToRunLoop = function (runLoop) {
  */
 NetSimTabsComponent.prototype.render = function () {
   var levelConfig = netsimGlobals.getLevelConfig();
+  // Clone the reference area (with handlers) before we re-render
+  var referenceArea = $('#reference_area').first().clone(true);
 
   var rawMarkup = buildMarkup({
     level: levelConfig
@@ -2845,6 +2922,17 @@ NetSimTabsComponent.prototype.render = function () {
   this.rootDiv_.find('.netsim-tabs').tabs({
     active: levelConfig.defaultTabIndex
   });
+
+  if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
+    // Move the reference area into the instructions tab
+    referenceArea.insertBefore(
+        this.rootDiv_.find('#tab_instructions button').first());
+    this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
+      if (!$(jQueryEvent.target).is(':disabled')) {
+        netsimGlobals.completeLevelAndContinue();
+      }
+    });
+  }
 
   if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
@@ -2969,7 +3057,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimDnsTab":177,"./NetSimMyDeviceTab":197,"./NetSimRouterTab":213,"./NetSimTabsComponent.html.ejs":225,"./netsimConstants":240,"./netsimGlobals":241,"./netsimUtils":243}],225:[function(require,module,exports){
+},{"./NetSimDnsTab":187,"./NetSimMyDeviceTab":207,"./NetSimRouterTab":225,"./NetSimTabsComponent.html.ejs":237,"./netsimConstants":252,"./netsimGlobals":253,"./netsimUtils":255}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2993,7 +3081,7 @@ with (locals || {}) { (function(){
   var showDns = shouldShowTab(level, NetSimTabType.DNS);
 
   var instructionsContent = level.instructions || '';
-; buf.push('\n<div class="netsim-tabs">\n  <ul>\n    ');16; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((17,  i18n.instructions() )), '</a></li>\n    ');18; } ; buf.push('\n    ');19; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((20,  i18n.myDevice() )), '</a></li>\n    ');21; } ; buf.push('\n    ');22; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((23,  i18n.router() )), '</a></li>\n    ');24; } ; buf.push('\n    ');25; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((26,  i18n.dns() )), '</a></li>\n    ');27; } ; buf.push('\n  </ul>\n  ');29; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions"><p>', escape((30,  instructionsContent )), '</p></div>\n  ');31; } ; buf.push('\n  ');32; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');34; } ; buf.push('\n  ');35; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');37; } ; buf.push('\n  ');38; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');40; } ; buf.push('\n</div>'); })();
+; buf.push('\n<div class="netsim-tabs">\n  <ul>\n    ');16; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((17,  i18n.instructions() )), '</a></li>\n    ');18; } ; buf.push('\n    ');19; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((20,  i18n.myDevice() )), '</a></li>\n    ');21; } ; buf.push('\n    ');22; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((23,  i18n.router() )), '</a></li>\n    ');24; } ; buf.push('\n    ');25; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((26,  i18n.dns() )), '</a></li>\n    ');27; } ; buf.push('\n  </ul>\n  ');29; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions">\n      <p>', escape((31,  instructionsContent )), '</p>\n      <button id="finished" class="btn btn-primary submitButton">', escape((32,  i18n.continueButton() )), '</button>\n    </div>\n  ');34; } ; buf.push('\n  ');35; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');37; } ; buf.push('\n  ');38; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');40; } ; buf.push('\n  ');41; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');43; } ; buf.push('\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -3001,7 +3089,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"./netsimConstants":240,"./netsimUtils":243,"ejs":468}],223:[function(require,module,exports){
+},{"./locale":249,"./netsimConstants":252,"./netsimUtils":255,"ejs":481}],235:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3100,7 +3188,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 };
 
 
-},{"../utils":297,"./NetSimPanel.js":203,"./NetSimStatusPanel.html.ejs":222}],222:[function(require,module,exports){
+},{"../utils":310,"./NetSimPanel.js":213,"./NetSimStatusPanel.html.ejs":234}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3131,7 +3219,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"ejs":468}],217:[function(require,module,exports){
+},{"./locale":249,"ejs":481}],229:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3729,7 +3817,7 @@ CleanLogs.prototype.onBegin_ = function () {
 };
 
 
-},{"../commands":90,"../utils":297,"./NetSimEntity":182,"./NetSimHeartbeat":184,"./NetSimLogEntry":187,"./NetSimLogger":191,"./NetSimMessage":193,"./NetSimNode":198,"./NetSimWire":232}],216:[function(require,module,exports){
+},{"../commands":100,"../utils":310,"./NetSimEntity":192,"./NetSimHeartbeat":194,"./NetSimLogEntry":197,"./NetSimLogger":201,"./NetSimMessage":203,"./NetSimNode":208,"./NetSimWire":244}],228:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3813,7 +3901,7 @@ NetSimShard.prototype.tick = function (clock) {
 };
 
 
-},{"../clientApi":88,"./NetSimTable":224}],224:[function(require,module,exports){
+},{"../clientApi":98,"./NetSimTable":236}],236:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4058,7 +4146,7 @@ NetSimTable.prototype.tick = function () {
 };
 
 
-},{"../ObservableEvent":1,"../utils":297}],215:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":310}],227:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4588,7 +4676,7 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":297,"./NetSimLogger":191,"./NetSimPacketEditor":200,"./NetSimPacketSizeControl":201,"./NetSimPanel":203,"./NetSimSendPanel.html.ejs":214,"./Packet":233,"./dataConverters":235,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241}],214:[function(require,module,exports){
+},{"../utils":310,"./NetSimLogger":201,"./NetSimPacketEditor":210,"./NetSimPacketSizeControl":211,"./NetSimPanel":213,"./NetSimSendPanel.html.ejs":226,"./Packet":245,"./dataConverters":247,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4611,7 +4699,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"./netsimConstants":240,"ejs":468}],213:[function(require,module,exports){
+},{"./locale":249,"./netsimConstants":252,"ejs":481}],225:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4802,7 +4890,7 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
 };
 
 
-},{"./NetSimBandwidthControl":166,"./NetSimMemoryControl":192,"./NetSimRouterLogTable":208,"./NetSimRouterStatsTable":211,"./NetSimRouterTab.html.ejs":212,"./netsimGlobals":241}],212:[function(require,module,exports){
+},{"./NetSimBandwidthControl":176,"./NetSimMemoryControl":202,"./NetSimRouterLogTable":220,"./NetSimRouterStatsTable":223,"./NetSimRouterTab.html.ejs":224,"./netsimGlobals":253}],224:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4816,7 +4904,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 var i18n = require('./locale');
-; buf.push('\n<div class="netsim-router-tab">\n  <h1>', escape((5,  i18n.routerTab_stats() )), '</h1>\n  <div class="router-stats"></div>\n  ');7; if (level.showRouterBandwidthControl) { ; buf.push('\n    <h1>', escape((8,  i18n.routerTab_bandwidth() )), '</h1>\n    <div class="bandwidth-control"></div>\n  ');10; } ; buf.push('\n  ');11; if (level.showRouterMemoryControl) { ; buf.push('\n    <h1>', escape((12,  i18n.routerTab_memory() )), '</h1>\n    <div class="memory-control"></div>\n  ');14; } ; buf.push('\n  <div class="router_log_table"></div>\n</div>\n'); })();
+; buf.push('\n<div class="netsim-router-tab">\n  <h1>', escape((5,  i18n.routerTab_stats() )), '</h1>\n  <div class="router-stats"></div>\n  ');7; if (level.showRouterBandwidthControl) { ; buf.push('\n    <h1>', escape((8,  i18n.routerTab_bandwidth() )), '</h1>\n    <div class="bandwidth-control"></div>\n  ');10; } ; buf.push('\n  ');11; if (level.showRouterMemoryControl) { ; buf.push('\n    <h1>', escape((12,  i18n.routerTab_memory() )), '</h1>\n    <div class="memory-control"></div>\n  ');14; } ; buf.push('\n  <div class="router_log_table"></div>\n  ');16; if (level.showLogBrowserButton) { ; buf.push('\n    <span class="secondary netsim-button large-button" id="show-router-log-modal-two" data-toggle="modal" data-target="#router-log-modal">', escape((17,  i18n.logBrowserButton() )), '</span>\n  ');18; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4824,7 +4912,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"ejs":468}],211:[function(require,module,exports){
+},{"./locale":249,"ejs":481}],223:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5113,7 +5201,7 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
 };
 
 
-},{"./NetSimLogEntry":187,"./NetSimRouterStatsTable.html.ejs":210,"./netsimUtils":243}],210:[function(require,module,exports){
+},{"./NetSimLogEntry":197,"./NetSimRouterStatsTable.html.ejs":222,"./netsimUtils":255}],222:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5161,7 +5249,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":297,"./netsimUtils":243,"ejs":468}],208:[function(require,module,exports){
+},{"../utils":310,"./netsimUtils":255,"ejs":481}],220:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5228,7 +5316,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimRouterLogTable.html.ejs":207}],207:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html.ejs":219}],219:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5262,10 +5350,7 @@ with (locals || {}) { (function(){
     // Create rows
     tableData.forEach(function (logEntry) {
       var rowClasses = [];
-    ; buf.push('\n    <tr class="', escape((44,  rowClasses.join(' ') )), '" title="', escape((44,  logEntry.getMessageAscii() )), '">\n      ');45; if (showToAddress) { ; buf.push('\n        <td nowrap>', escape((46,  logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS) )), '</td>\n      ');47; } ; buf.push('\n      ');48; if (showFromAddress) { ; buf.push('\n        <td nowrap>', escape((49,  logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) )), '</td>\n      ');50; } ; buf.push('\n      ');51; if (showPacketInfo) { ; buf.push('\n        <td nowrap>', escape((52,  i18n.xOfYPackets({
-            x: logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX),
-            y: logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT)
-          }) )), '</td>\n      ');56; }; buf.push('\n      <td nowrap>', escape((57,  netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) )), '</td>\n      <td nowrap>', escape((58,  logEntry.getLocalizedStatus() )), '</td>\n    </tr>\n    ');60;
+    ; buf.push('\n    <tr class="', escape((44,  rowClasses.join(' ') )), '" title="', escape((44,  logEntry.getMessageAscii() )), '">\n      ');45; if (showToAddress) { ; buf.push('\n        <td nowrap>', escape((46,  logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS) )), '</td>\n      ');47; } ; buf.push('\n      ');48; if (showFromAddress) { ; buf.push('\n        <td nowrap>', escape((49,  logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) )), '</td>\n      ');50; } ; buf.push('\n      ');51; if (showPacketInfo) { ; buf.push('\n        <td nowrap>', escape((52,  logEntry.getLocalizedPacketInfo() )), '</td>\n      ');53; }; buf.push('\n      <td nowrap>', escape((54,  netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) )), '</td>\n      <td nowrap>', escape((55,  logEntry.getLocalizedStatus() )), '</td>\n    </tr>\n    ');57;
     });
     ; buf.push('\n    </tbody>\n  </table>\n</div>'); })();
 } 
@@ -5275,7 +5360,242 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":233,"./locale":237,"./netsimConstants":240,"./netsimUtils":243,"ejs":468}],201:[function(require,module,exports){
+},{"./Packet":245,"./locale":249,"./netsimConstants":252,"./netsimUtils":255,"ejs":481}],218:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+/* global $ */
+'use strict';
+
+var _ = require('../utils').getLodash();
+var NetSimLogEntry = require('./NetSimLogEntry');
+var Packet = require('./Packet');
+var markup = require('./NetSimRouterLogModal.html.ejs');
+var netsimGlobals = require('./netsimGlobals');
+
+/**
+ * Generator and controller for contents of modal dialog that reveals
+ * all router logs together, in a searchable/sortable/filterable manner.
+ *
+ * @param {jQuery} rootDiv
+ * @constructor
+ */
+var NetSimRouterLogModal = module.exports = function (rootDiv) {
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimShard}
+   * @private
+   */
+  this.shard_ = null;
+
+  /**
+   * @type {NetSimLogEntry[]}
+   * @private
+   */
+  this.logEntries_ = [];
+
+  /**
+   * Tracking information for which events we're registered to, so we can
+   * perform cleanup as needed.
+   * @type {Object}
+   * @private
+   */
+  this.eventKeys_ = {};
+
+  /**
+   * Sorting key, changed by user interaction, which determines which sort
+   * we use on render.
+   * @type {string}
+   * @private
+   */
+  this.sortBy_ = 'timestamp';
+
+  /**
+   * Whether currently using a descending sort.
+   * @type {boolean}
+   * @private
+   */
+  this.sortDescending_ = true;
+
+  this.render();
+};
+
+NetSimRouterLogModal.iterateeMap = {
+
+  'timestamp': function (logEntry) {
+    return logEntry.timestamp;
+  },
+
+  'logged-by': function (logEntry) {
+    var originNode = logEntry.getOriginNode();
+    if (originNode) {
+      return originNode.getDisplayName();
+    }
+    return logEntry.nodeID.toString(10);
+  },
+
+  'status': function (logEntry) {
+    return logEntry.getLocalizedStatus();
+  },
+
+  'from-address': function (logEntry) {
+    return logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS);
+  },
+
+  'to-address': function (logEntry) {
+    return logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS);
+  },
+
+  'packet-info': function (logEntry) {
+    return logEntry.getLocalizedPacketInfo();
+  },
+
+  'message': function (logEntry) {
+    return logEntry.getMessageAscii();
+  }
+
+};
+
+/**
+ * Fill the root div with new elements reflecting the current state
+ */
+NetSimRouterLogModal.prototype.render = function () {
+
+  // Sort before rendering
+  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
+  var sortedLogEntries = _.sortBy(this.logEntries_, iterateeFunction);
+  if (this.sortDescending_) {
+    sortedLogEntries.reverse();
+  }
+
+  var renderedMarkup = $(markup({
+    logEntries: sortedLogEntries,
+    sortBy: this.sortBy_,
+    sortDescending: this.sortDescending_
+  }));
+  this.rootDiv_.html(renderedMarkup);
+
+  this.rootDiv_.find('th').click(function (event) {
+    this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
+  }.bind(this));
+};
+
+NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
+  if (!sortKey) {
+    return;
+  }
+
+  if (this.sortBy_ === sortKey) {
+    this.sortDescending_ = !this.sortDescending_;
+  } else {
+    this.sortBy_ = sortKey;
+    this.sortDescending_ = false;
+  }
+  this.render();
+};
+
+/**
+ * Give the log browser a reference to the shard, so that it can query the
+ * log table.  Or, pass null when disconnecting from a shard.
+ * @param {NetSimShard|null} newShard
+ */
+NetSimRouterLogModal.prototype.setShard = function (newShard) {
+
+  if (this.eventKeys_.registeredWithShard) {
+    this.eventKeys_.registeredWithShard.logTable.tableChange.unregister(
+        this.eventKeys_.logTableChange);
+    this.eventKeys_.registeredWithShard = null;
+  }
+
+  if (newShard) {
+    this.eventKeys_.logTableChange = newShard.logTable.tableChange.register(
+        this.onLogTableChange_.bind(this));
+    this.eventKeys_.registeredWithShard = newShard;
+  }
+
+  this.shard_ = newShard;
+};
+
+/**
+ * Handle log table changes.
+ * @param {logEntryRow[]} logRows
+ * @private
+ */
+NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
+  var headerSpec = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  this.logEntries_ = logRows.map(function (row) {
+    return new NetSimLogEntry(this.shard_, row, headerSpec);
+  }, this);
+  this.render();
+};
+
+
+},{"../utils":310,"./NetSimLogEntry":197,"./NetSimRouterLogModal.html.ejs":217,"./Packet":245,"./netsimGlobals":253}],217:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
+var Packet = require('./Packet');
+var i18n = require('./locale');
+var netsimGlobals = require('./netsimGlobals');
+
+var headerFields = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+
+/** @type {boolean} */
+var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+    headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+
+function sortMarkupFor(sortKey) {
+  if (sortKey === sortBy) {
+    if (sortDescending) {
+      return '<i class="fa fa-sort-desc"></i>';
+    } else {
+      return '<i class="fa fa-sort-asc"></i>';
+    }
+  }
+  return '';
+}
+; buf.push('\n<div class="modal-dialog modal-lg">\n    <div class="modal-header">\n      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n      <h4 class="modal-title">', escape((32,  i18n.logBrowserHeader() )), '</h4>\n    </div>\n    <div class="modal-body">\n      <table>\n        <thead>\n          <tr>\n            <th nowrap data-sort-key="timestamp">', escape((38,  i18n.time() )), ' ', (38,  sortMarkupFor('timestamp') ), '</th>\n            <th nowrap data-sort-key="logged-by">', escape((39,  i18n.loggedByNode() )), ' ', (39,  sortMarkupFor('logged-by') ), '</th>\n            <th nowrap data-sort-key="status">', escape((40,  i18n.status() )), ' ', (40,  sortMarkupFor('status') ), '</th>\n            ');41; if (showFromAddress) { ; buf.push('\n              <th nowrap data-sort-key="from-address">', escape((42,  i18n.from() )), ' ', (42,  sortMarkupFor('from-address') ), '</th>\n            ');43; } ; buf.push('\n            ');44; if (showToAddress) { ; buf.push('\n              <th nowrap data-sort-key="to-address">', escape((45,  i18n.to() )), ' ', (45,  sortMarkupFor('to-address') ), '</th>\n            ');46; } ; buf.push('\n            ');47; if (showPacketInfo) { ; buf.push('\n              <th nowrap data-sort-key="packet-info">', escape((48,  i18n.packet() )), ' ', (48,  sortMarkupFor('packet-info') ), '</th>\n            ');49; } ; buf.push('\n            <th nowrap data-sort-key="message">', escape((50,  i18n.message() )), ' ', (50,  sortMarkupFor('message') ), '</th>\n          </tr>\n        </thead>\n        <tbody>\n          ');54;
+            logEntries.forEach(function (entry) {
+              var originNode = entry.getOriginNode();
+              ; buf.push('\n              <tr>\n                <td nowrap>', escape((59,  entry.getTimeString() )), '</td>\n                <td nowrap>', escape((60,  originNode ? originNode.getDisplayName() : entry.nodeID )), '</td>\n                <td nowrap>', escape((61,  entry.getLocalizedStatus() )), '</td>\n                ');62; if (showFromAddress) { ; buf.push('\n                  <td nowrap>', escape((63,  entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) )), '</td>\n                ');64; } ; buf.push('\n                ');65; if (showToAddress) { ; buf.push('\n                  <td nowrap>', escape((66,  entry.getHeaderField(Packet.HeaderType.TO_ADDRESS) )), '</td>\n                ');67; } ; buf.push('\n                ');68; if (showPacketInfo) { ; buf.push('\n                  <td nowrap>', escape((69,  entry.getLocalizedPacketInfo() )), '</td>\n                ');70; } ; buf.push('\n                <td>', escape((71,  entry.getMessageAscii() )), '</td>\n              </tr>\n              ');73;
+            });
+          ; buf.push('\n        </tbody>\n      </table>\n    </div>\n    <div class="modal-footer">\n      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>\n    </div>\n</div>'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"./Packet":245,"./locale":249,"./netsimGlobals":253,"ejs":481}],211:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5354,7 +5674,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":221,"./locale":237}],200:[function(require,module,exports){
+},{"./NetSimSlider":233,"./locale":249}],210:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6269,7 +6589,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 };
 
 
-},{"../constants":91,"../utils":297,"./NetSimEncodingControl":181,"./NetSimLogPanel":190,"./NetSimPacketEditor.html.ejs":199,"./Packet":233,"./dataConverters":235,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241}],199:[function(require,module,exports){
+},{"../constants":101,"../utils":310,"./NetSimEncodingControl":191,"./NetSimLogPanel":200,"./NetSimPacketEditor.html.ejs":209,"./Packet":245,"./dataConverters":247,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6342,7 +6662,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":233,"./locale":237,"./netsimConstants":240,"./netsimUtils":243,"ejs":468}],197:[function(require,module,exports){
+},{"./Packet":245,"./locale":249,"./netsimConstants":252,"./netsimUtils":255,"ejs":481}],207:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6548,7 +6868,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
 };
 
 
-},{"./NetSimBitRateControl":169,"./NetSimChunkSizeControl":170,"./NetSimEncodingControl":181,"./NetSimMetronome":195,"./NetSimMyDeviceTab.html.ejs":196,"./NetSimPulseRateControl":204,"./netsimGlobals":241}],204:[function(require,module,exports){
+},{"./NetSimBitRateControl":179,"./NetSimChunkSizeControl":180,"./NetSimEncodingControl":191,"./NetSimMetronome":205,"./NetSimMyDeviceTab.html.ejs":206,"./NetSimPulseRateControl":214,"./netsimGlobals":253}],214:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6615,7 +6935,7 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"../utils":297,"./NetSimSlider":221,"./locale":237}],196:[function(require,module,exports){
+},{"../utils":310,"./NetSimSlider":233,"./locale":249}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6635,7 +6955,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],195:[function(require,module,exports){
+},{"ejs":481}],205:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6754,7 +7074,7 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
 };
 
 
-},{"./NetSimMetronome.html.ejs":194}],194:[function(require,module,exports){
+},{"./NetSimMetronome.html.ejs":204}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6846,7 +7166,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],192:[function(require,module,exports){
+},{"ejs":481}],202:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6899,7 +7219,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":297,"./NetSimSlider":221,"./netsimConstants":240,"./netsimUtils":243}],190:[function(require,module,exports){
+},{"../utils":310,"./NetSimSlider":233,"./netsimConstants":252,"./netsimUtils":255}],200:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7337,7 +7657,7 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":297,"./NetSimEncodingControl":181,"./NetSimLogPacket.html.ejs":188,"./NetSimLogPanel.html.ejs":189,"./NetSimPanel":203,"./Packet":233,"./locale":237,"./netsimGlobals":241}],189:[function(require,module,exports){
+},{"../utils":310,"./NetSimEncodingControl":191,"./NetSimLogPacket.html.ejs":198,"./NetSimLogPanel.html.ejs":199,"./NetSimPanel":213,"./Packet":245,"./locale":249,"./netsimGlobals":253}],199:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7357,7 +7677,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],188:[function(require,module,exports){
+},{"ejs":481}],198:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7497,7 +7817,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":233,"./dataConverters":235,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241,"./netsimUtils":243,"ejs":468}],186:[function(require,module,exports){
+},{"./Packet":245,"./dataConverters":247,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253,"./netsimUtils":255,"ejs":481}],196:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7524,7 +7844,6 @@ var ObservableEvent = require('../ObservableEvent');
 var logger = NetSimLogger.getSingleton();
 var netsimConstants = require('./netsimConstants');
 var netsimGlobals = require('./netsimGlobals');
-var netsimNodeFactory = require('./netsimNodeFactory');
 
 var MessageGranularity = netsimConstants.MessageGranularity;
 
@@ -7560,11 +7879,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.myRemoteClient = null;
 
   /**
-   * Client nodes can be connected to a router, which they will
-   * help to simulate.
-   * @type {NetSimRouterNode}
+   * ID of the router this client node is connected to.  Undefined if
+   * not connected to a router.
+   * @type {number|undefined}
+   * @private
    */
-  this.myRouter = null;
+  this.myRouterID_ = undefined;
 
   /**
    * Set of router controllers enabled for simulation by this node.
@@ -7796,25 +8116,46 @@ NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) 
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
+
+  logger.info(this.getDisplayName() + ": Connecting to " + router.getDisplayName());
+
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
       return;
     }
 
-    // TODO: Unify this with the set of simulating routers
-    this.myRouter = router;
-    this.myRouter.initializeSimulation(this.entityID, netsimNodeFactory);
+    this.myRouterID_ = router.entityID;
+    var myRouter = this.getMyRouter();
+    // Copy the heartbeat reference over to the router instance
+    // in our simulating routers collection.
+    myRouter.heartbeat = router.heartbeat;
 
-    router.requestAddress(wire, this.getHostname(), function (err) {
+    myRouter.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
         this.disconnectRemote(onComplete);
         return;
       }
 
-      this.remoteChange.notifyObservers(this.myWire, this.myRouter);
+      this.remoteChange.notifyObservers(this.myWire, myRouter);
       onComplete(null);
     }.bind(this));
+  }.bind(this));
+};
+
+/**
+ * Helper/accessor for router controller instance for the router that this
+ * client is directly connected to.
+ * @returns {NetSimRouterNode|null} Router we are connected to or null if not
+ *          connected to a router at all.
+ */
+NetSimLocalClientNode.prototype.getMyRouter = function () {
+  if (this.myRouterID_ === undefined) {
+    return null;
+  }
+
+  return _.find(this.routers_, function (router) {
+    return router.entityID === this.myRouterID_;
   }.bind(this));
 };
 
@@ -7824,7 +8165,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
  */
 NetSimLocalClientNode.prototype.synchronousDestroy = function () {
   // If connected to remote, synchronously disconnect
-  if (this.myRemoteClient || this.myRouter) {
+  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
     this.synchronousDisconnectRemote();
   }
 
@@ -7851,7 +8192,7 @@ NetSimLocalClientNode.prototype.synchronousDestroy = function () {
  */
 NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   // If connected to remote, asynchronously disconnect then try destroy again.
-  if (this.myRemoteClient || this.myRouter) {
+  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
     this.disconnectRemote(function (err) {
       if (err) {
         onComplete(err);
@@ -7897,16 +8238,8 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
 NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   if (this.myWire) {
     this.myWire.synchronousDestroy();
-    this.myWire = null;
   }
-
-  if (this.myRouter) {
-    this.myRouter.stopSimulation();
-  }
-
-  this.myRemoteClient = null;
-  this.myRouter = null;
-  this.remoteChange.notifyObservers(null, null);
+  this.cleanUpAfterDestroyingWire_();
 };
 
 /**
@@ -7925,16 +8258,28 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
       logger.info("Error while disconnecting: " + err.message);
     }
 
-    if (this.myRouter) {
-      this.myRouter.stopSimulation();
-    }
-
-    this.myWire = null;
-    this.myRemoteClient = null;
-    this.myRouter = null;
-    this.remoteChange.notifyObservers(null, null);
+    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
+};
+
+/**
+ * Common cleanup behavior shared between the synchronous and asynchronous
+ * disconnect paths.
+ * @private
+ */
+NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+  var myRouter = this.getMyRouter();
+  if (myRouter) {
+    // We did manual heartbeat setup, we also need to do manual heartbeat
+    // cleanup when we disconnect from the router.
+    myRouter.heartbeat = null;
+  }
+
+  this.myWire = null;
+  this.myRemoteClient = null;
+  this.myRouterID_ = undefined;
+  this.remoteChange.notifyObservers(null, null);
 };
 
 /**
@@ -7954,10 +8299,24 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   // Who will be responsible for picking up/cleaning up this message?
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
+  var levelConfig = netsimGlobals.getLevelConfig();
+  var extraHops = levelConfig.minimumExtraHops;
+  if (levelConfig.minimumExtraHops !== levelConfig.maximumExtraHops) {
+    extraHops = netsimGlobals.randomIntInRange(
+        levelConfig.minimumExtraHops,
+        levelConfig.maximumExtraHops + 1);
+  }
 
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
-      payload,
+  NetSimMessage.send(
+      this.shard_,
+      {
+        fromNodeID: localNodeID,
+        toNodeID: remoteNodeID,
+        simulatedBy: simulatingNodeID,
+        payload: payload,
+        extraHopsRemaining: extraHops
+      },
       function (err) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
@@ -7966,12 +8325,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
           return;
         }
 
-        logger.info('Local node sent message');
+        logger.info(this.getDisplayName() + ': Sent message:' +
+            '\nfrom: ' + localNodeID +
+            '\nto  : ' + remoteNodeID +
+            '\nsim : ' + simulatingNodeID +
+            '\nhops: ' + extraHops);
+
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
         onComplete(null);
-      }
+      }.bind(this)
   );
 };
 
@@ -7988,7 +8352,7 @@ NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (localNodeID,
     // In simplex wire mode, the local node cleans up its own messages
     // when it knows they are no longer current.
     return localNodeID;
-  } else if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
+  } else if (this.myRouterID_ !== undefined && this.myRouterID_ === remoteNodeID) {
     // If sending to a router, we will do our own simulation on the router's
     // behalf
     return localNodeID;
@@ -8048,7 +8412,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 
     if (!alreadySimulating) {
       var newRouter = new NetSimRouterNode(this.shard_, row);
-      newRouter.initializeSimulation(this.entityID, netsimNodeFactory);
+      newRouter.initializeSimulation(this.entityID);
       this.routers_.push(newRouter);
     }
   }, this);
@@ -8148,6 +8512,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
  * @private
  */
 NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
+  logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(message.payload);
@@ -8253,7 +8618,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 };
 
 
-},{"../ObservableEvent":1,"../utils":297,"./NetSimClientNode":171,"./NetSimEntity":182,"./NetSimHeartbeat":184,"./NetSimLogger":191,"./NetSimMessage":193,"./NetSimRouterNode":209,"./netsimConstants":240,"./netsimGlobals":241,"./netsimNodeFactory":242}],185:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":310,"./NetSimClientNode":181,"./NetSimEntity":192,"./NetSimHeartbeat":194,"./NetSimLogger":201,"./NetSimMessage":203,"./NetSimRouterNode":221,"./netsimConstants":252,"./netsimGlobals":253}],195:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8755,61 +9120,7 @@ NetSimLobby.prototype.getShareLink = function () {
 };
 
 
-},{"../utils":297,"./NetSimClientNode":171,"./NetSimLogger":191,"./NetSimRemoteNodeSelectionPanel":206,"./NetSimRouterNode":209,"./NetSimShardSelectionPanel":219,"./locale":237,"./netsimGlobals":241,"./netsimNodeFactory":242}],242:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-var netsimConstants = require('./netsimConstants');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
-
-var NodeType = netsimConstants.NodeType;
-
-var netsimNodeFactory = module.exports;
-
-/**
- * Given a set of rows from the node table on a shard, gives back a set of node
- * controllers (of appropriate types).
- * @param {!NetSimShard} shard
- * @param {!Array.<Object>} nodeRows
- * @throws when a row doesn't have a mappable node type.
- * @return {Array.<NetSimNode>} nodes for the rows
- */
-netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
-  return nodeRows.map(netsimNodeFactory.nodeFromRow.bind(this, shard));
-};
-
-/**
- * Given a row from the node table on a shard, gives back a node controllers
- * (of appropriate types).
- * @param {!NetSimShard} shard
- * @param {!Object} nodeRow
- * @throws when the row doesn't have a mappable node type.
- * @return {NetSimNode} node for the rows
- */
-netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
-  if (nodeRow.type === NodeType.CLIENT) {
-    return new NetSimClientNode(shard, nodeRow);
-  } else if (nodeRow.type === NodeType.ROUTER) {
-    return new NetSimRouterNode(shard, nodeRow);
-  }
-
-  // Oops!  We probably shouldn't ever get here.
-  throw new Error("Unable to map row to node.");
-};
-
-
-},{"./NetSimClientNode":171,"./NetSimRouterNode":209,"./netsimConstants":240}],219:[function(require,module,exports){
+},{"../utils":310,"./NetSimClientNode":181,"./NetSimLogger":201,"./NetSimRemoteNodeSelectionPanel":216,"./NetSimRouterNode":221,"./NetSimShardSelectionPanel":231,"./locale":249,"./netsimGlobals":253,"./netsimNodeFactory":254}],231:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8983,7 +9294,7 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
 };
 
 
-},{"../constants":91,"../utils":297,"./NetSimPanel":203,"./NetSimShardSelectionPanel.html.ejs":218,"./locale":237}],218:[function(require,module,exports){
+},{"../constants":101,"../utils":310,"./NetSimPanel":213,"./NetSimShardSelectionPanel.html.ejs":230,"./locale":249}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9015,7 +9326,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"ejs":468}],209:[function(require,module,exports){
+},{"./locale":249,"ejs":481}],221:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9043,6 +9354,7 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
+var netsimNodeFactory = require('./netsimNodeFactory');
 
 var _ = utils.getLodash();
 
@@ -9175,6 +9487,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
       levelConfig.defaultRouterMemory);
 
   /**
+   * Percent chance (0-1) that a packet being routed will be dropped for no
+   * reason.
+   * @type {number}
+   */
+  this.randomDropChance = utils.valueOr(row.randomDropChance,
+      levelConfig.defaultRandomDropChance);
+
+  /**
    * Determines a subset of connection and message events that this
    * router will respond to, only managing events from the given node ID,
    * to avoid conflicting with other clients also simulating this router.
@@ -9185,14 +9505,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.simulateForSender_ = undefined;
-
-  /**
-   * Helper that converts node rows to correct node controllers.
-   * Injected to avoid circular dependency.
-   * @type {netsimNodeFactory}
-   * @private
-   */
-  this.nodeFactory_ = null;
 
   /**
    * Local cache of the last tick time in the local simulation.
@@ -9220,7 +9532,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Not persisted on server (though the heartbeat does its own persisting)
    *
    * @type {NetSimHeartbeat}
-   * @private
    */
   this.heartbeat = null;
 
@@ -9393,6 +9704,8 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
  * @property {DnsMode} dnsMode - Current DNS mode for the local network
  * @property {number} dnsNodeID - Entity ID of the current DNS node in the
  *           local network.
+ * @property {number} randomDropChance - Odds (0-1) that a packet being routed
+ *           will be dropped for no reason.
  */
 
 /**
@@ -9409,7 +9722,8 @@ NetSimRouterNode.prototype.buildRow = function () {
         bandwidth: serializeNumber(this.bandwidth),
         memory: serializeNumber(this.memory),
         dnsMode: this.dnsMode,
-        dnsNodeID: this.dnsNodeID
+        dnsNodeID: this.dnsNodeID,
+        randomDropChance: this.randomDropChance
       }
   );
 };
@@ -9426,6 +9740,7 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
   this.memory = deserializeNumber(remoteRow.memory);
   this.dnsMode = remoteRow.dnsMode;
   this.dnsNodeID = remoteRow.dnsNodeID;
+  this.randomDropChance = remoteRow.randomDropChance;
   this.stateChange.notifyObservers(this);
 };
 
@@ -9789,18 +10104,23 @@ NetSimRouterNode.prototype.isFull = function () {
  * @private
  */
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
+  // There are no requirements in broadcast mode
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    return;
+  }
+
   // Require TO_ADDRESS for routing
   if (!packetSpec.some(function (headerField) {
         return headerField === Packet.HeaderType.TO_ADDRESS;
       })) {
-    logger.error("Packet specification does not have a toAddress field.");
+    logger.warn("Packet specification does not have a toAddress field.");
   }
 
   // Require FROM_ADDRESS for auto-DNS tasks
   if (!packetSpec.some(function (headerField) {
         return headerField === Packet.HeaderType.FROM_ADDRESS;
       })) {
-    logger.error("Packet specification does not have a fromAddress field.");
+    logger.warn("Packet specification does not have a fromAddress field.");
   }
 };
 
@@ -9808,12 +10128,9 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
- * @param {netsimNodeFactory} nodeFactory - injected to prevent circular
- *        dependency.
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
-  this.nodeFactory_ = nodeFactory;
   this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
   this.validatePacketSpec_(this.packetSpec_);
 
@@ -9834,14 +10151,13 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, nodeFactory)
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
 
+    // Populate router wire cache with initial data
+    var cachedWires = this.shard_.wireTable.readAllCached();
+    this.onWireTableChange_(cachedWires);
+
     // Populate router log cache with initial data
-    this.shard_.logTable.readAll(function (err, rows) {
-      if (err) {
-        logger.warn("Failed to read from log table: " + err.message);
-        return;
-      }
-      this.onLogTableChange_(rows);
-    }.bind(this));
+    var cachedLogs = this.shard_.logTable.readAllCached();
+    this.onLogTableChange_(cachedLogs);
   }
 };
 
@@ -10074,6 +10390,9 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
+
+    logger.info(this.getDisplayName() + ": Assigned address " +
+        wire.localAddress + " to host " + wire.localHostname);
   }.bind(this));
 };
 
@@ -10183,6 +10502,22 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   if (wireRow !== undefined) {
     return wireRow.localAddress;
   }
+
+  // If we don't have connected routers, this is as far as the auto-DNS can see.
+  if (!netsimGlobals.getLevelConfig().connectedRouters) {
+    return undefined;
+  }
+
+  // Is it some node elsewhere on the shard?
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAllCached());
+  var node = _.find(nodes, function (node) {
+    return node.getHostname() === hostname;
+  });
+  if (node) {
+    return node.getAddress();
+  }
+
   return undefined;
 };
 
@@ -10215,14 +10550,17 @@ NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
 };
 
 /**
- * Given a network address, finds the node ID of the node that is the next
- * step along the shortest path from this router to that address.  Will return
- * undefined if no path to the address is found.
+ * Given a network address, finds the node that is the next step along the
+ * correct path from this router to that address.  Will return null if no
+ * path to the address is found.
  * @param {string} address
- * @returns {number|undefined}
+ * @param {number} hopsRemaining
+ * @param {number[]} visitedNodeIDs
+ * @returns {NetSimNode|null}
  * @private
  */
-NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
+NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
+    hopsRemaining, visitedNodeIDs) {
   // Is it us?
   if (address === this.getAddress()) {
     return this;
@@ -10234,7 +10572,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
   }
 
   // Is it a local client?
-  var nodes = this.nodeFactory_.nodesFromRows(this.shard_,
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAllCached());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
@@ -10248,34 +10586,62 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address) {
     }
   }
 
+  // End of local subnet cases:
   // In levels where routers are not connected, this is as far as we go.
   var levelConfig = netsimGlobals.getLevelConfig();
   if (!levelConfig.connectedRouters) {
-    return undefined;
+    return null;
   }
 
   // Is it another node?
   var destinationNode = _.find(nodes, function (node) {
-    return address === node.getAddress();
+    return address === node.getAddress() ||
+        (node.getNodeType() === NodeType.ROUTER && address === node.getAutoDnsAddress());
   });
 
-  if (destinationNode) {
-    if (destinationNode.getNodeType() === NodeType.ROUTER) {
-      return destinationNode;
-    }
-    // How do I find the destination node's router?
+  // If the node we're after doesn't exist anywhere, we should stop now.
+  if (!destinationNode) {
+    return null;
+  }
+
+  // We are trying to get somewhere else!  Figure out what the target router
+  // for our destination is.
+  var destinationRouter = null;
+  if (destinationNode.getNodeType() === NodeType.ROUTER) {
+    destinationRouter = destinationNode;
+  } else {
     var destinationWire = destinationNode.getOutgoingWire();
     if (destinationWire) {
-      var remoteRouter = _.find(nodes, function (node) {
+      destinationRouter = utils.valueOr(_.find(nodes, function (node) {
         return node.entityID === destinationWire.remoteNodeID;
-      });
-      if (remoteRouter !== undefined) {
-        return remoteRouter;
-      }
+      }), null);
     }
   }
 
-  return undefined;
+  if (!destinationRouter) {
+    return null;
+  }
+
+  // If we have extra hops, we should try and go to a router that is NOT
+  // the target router.
+  if (hopsRemaining > 0) {
+    // Generate the set of possible target routers
+    var possibleDestinationRouters = nodes.filter(function (node) {
+      return node.getNodeType() === NodeType.ROUTER &&
+          node.entityID !== destinationRouter.entityID &&
+          node.entityID !== this.entityID &&
+          !visitedNodeIDs.some(function (visitedID) {
+            return node.entityID === visitedID;
+          });
+    }, this);
+    if (possibleDestinationRouters.length > 0) {
+      return netsimGlobals.randomPickOne(possibleDestinationRouters);
+    }
+  }
+
+  // If there's nowhere else to go or we are out of extra hops, go to the
+  // target router.
+  return destinationRouter;
 };
 
 /**
@@ -10407,6 +10773,9 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
     return;
   }
 
+  logger.info(this.getDisplayName() + ': Message queue updated (size ' +
+      newQueue.length + ')');
+
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
   this.enforceMemoryLimit_();
@@ -10501,6 +10870,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
       return;
     }
 
+    // Apply random chance to drop packet, right as we are about to forward it
+    if (this.randomDropChance > 0 && netsimGlobals.random() <= this.randomDropChance) {
+      this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+      onComplete(null);
+      return;
+    }
+
     var levelConfig = netsimGlobals.getLevelConfig();
     if (levelConfig.broadcastMode) {
       this.forwardMessageToAll_(message, onComplete);
@@ -10560,10 +10936,12 @@ NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
   var nextRecipientNodeID = nodeIDs[0];
   NetSimMessage.send(
       this.shard_,
-      this.entityID,
-      nextRecipientNodeID,
-      nextRecipientNodeID,
-      message.payload,
+      {
+        fromNodeID: this.entityID,
+        toNodeID: nextRecipientNodeID,
+        simulatedBy: nextRecipientNodeID,
+        payload: message.payload
+      },
       function (err) {
         if (err) {
           onComplete(err);
@@ -10598,8 +10976,9 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     return;
   }
 
-  var destinationNode = this.getNextNodeTowardAddress_(toAddress);
-  if (destinationNode === undefined) {
+  var destinationNode = this.getNextNodeTowardAddress_(toAddress,
+      message.extraHopsRemaining, message.visitedNodeIDs);
+  if (destinationNode === null) {
     // Can't find or reach the address within the simulation
     logger.warn("Destination address not reachable");
     this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
@@ -10625,10 +11004,14 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
-      routerNodeID,
-      destinationNode.entityID,
-      simulatingNodeID,
-      message.payload,
+      {
+        fromNodeID: routerNodeID,
+        toNodeID: destinationNode.entityID,
+        simulatedBy: simulatingNodeID,
+        payload: message.payload,
+        extraHopsRemaining: Math.max(0, message.extraHopsRemaining - 1),
+        visitedNodeIDs: message.visitedNodeIDs.concat(this.entityID)
+      },
       function (err, result) {
         this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
         onComplete(err, result);
@@ -10676,8 +11059,8 @@ NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
 };
 
 /**
- *
  * @param {messageRow} messageRow
+ * @return {boolean}
  */
 NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
   var packet, toAddress;
@@ -10789,15 +11172,17 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 
   NetSimMessage.send(
       this.shard_,
-      autoDnsNodeID,
-      routerNodeID,
-      message.simulatedBy,
-      responseBinary,
+      {
+        fromNodeID: autoDnsNodeID,
+        toNodeID: routerNodeID,
+        simulatedBy: message.simulatedBy,
+        payload: responseBinary
+      },
       onComplete);
 };
 
 
-},{"../ObservableEvent":1,"../utils":297,"./NetSimEntity":182,"./NetSimHeartbeat":184,"./NetSimLogEntry":187,"./NetSimLogger":191,"./NetSimMessage":193,"./NetSimNode":198,"./NetSimWire":232,"./Packet":233,"./dataConverters":235,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241,"./netsimUtils":243}],193:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":310,"./NetSimEntity":192,"./NetSimHeartbeat":194,"./NetSimLogEntry":197,"./NetSimLogger":201,"./NetSimMessage":203,"./NetSimNode":208,"./NetSimWire":244,"./Packet":245,"./dataConverters":247,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253,"./netsimNodeFactory":254,"./netsimUtils":255}],203:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10810,7 +11195,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 
 /**
@@ -10857,6 +11242,20 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * @type {*}
    */
   this.payload = messageRow.payload;
+
+  /**
+   * If this is an inter-router message, the number of routers this
+   * message should try to visit before going to the router that
+   * will actually lead to its destination.
+   * @type {number}
+   */
+  this.extraHopsRemaining = utils.valueOr(messageRow.extraHopsRemaining, 0);
+
+  /**
+   * A history of router node IDs this message has visited.
+   * @type {number[]}
+   */
+  this.visitedNodeIDs = utils.valueOr(messageRow.visitedNodeIDs, []);
 };
 NetSimMessage.inherits(NetSimEntity);
 
@@ -10864,19 +11263,23 @@ NetSimMessage.inherits(NetSimEntity);
  * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
- * @param {!number} fromNodeID - sender node ID
- * @param {!number} toNodeID - destination node ID
- * @param {!number} simulatedBy - node ID of client simulating message
- * @param {*} payload - message content
+ * @param {Object} messageData
+ * @param {!number} messageData.fromNodeID - sender node ID
+ * @param {!number} messageData.toNodeID - destination node ID
+ * @param {!number} messageData.simulatedBy - node ID of client simulating message
+ * @param {*} messageData.payload - message content
+ * @param {number} messageData.extraHopsRemaining
+ * @param {number[]} messageData.visitedNodeIDs
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.send = function (shard, fromNodeID, toNodeID, simulatedBy,
-    payload, onComplete) {
+NetSimMessage.send = function (shard, messageData, onComplete) {
   var entity = new NetSimMessage(shard);
-  entity.fromNodeID = fromNodeID;
-  entity.toNodeID = toNodeID;
-  entity.simulatedBy = simulatedBy;
-  entity.payload = payload;
+  entity.fromNodeID = messageData.fromNodeID;
+  entity.toNodeID = messageData.toNodeID;
+  entity.simulatedBy = messageData.simulatedBy;
+  entity.payload = messageData.payload;
+  entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
+  entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
   entity.getTable().create(entity.buildRow(), onComplete);
 };
 
@@ -10907,12 +11310,14 @@ NetSimMessage.prototype.buildRow = function () {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     simulatedBy: this.simulatedBy,
-    payload: this.payload
+    payload: this.payload,
+    extraHopsRemaining: this.extraHopsRemaining,
+    visitedNodeIDs: this.visitedNodeIDs
   };
 };
 
 
-},{"../utils":297,"./NetSimEntity":182}],187:[function(require,module,exports){
+},{"../utils":310,"./NetSimEntity":192}],197:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10926,10 +11331,13 @@ NetSimMessage.prototype.buildRow = function () {
  */
 'use strict';
 
+var moment = require('moment');
 var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
+var netsimNodeFactory = require('./netsimNodeFactory');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
@@ -11049,7 +11457,7 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
 };
 
 /**
- * Get requested packet header field as a number.  Returns empty string
+ * Get requested packet header field as a string.  Returns empty string
  * if the requested field is not in the current packet format.
  * @param {Packet.HeaderType} field
  * @returns {string}
@@ -11076,6 +11484,9 @@ NetSimLogEntry.prototype.getMessageAscii = function () {
   return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
 };
 
+/**
+ * @returns {string} Localized packet status, "success" or "dropped"
+ */
 NetSimLogEntry.prototype.getLocalizedStatus = function () {
   if (this.status === NetSimLogEntry.LogStatus.SUCCESS) {
     return i18n.logStatus_success();
@@ -11085,8 +11496,3208 @@ NetSimLogEntry.prototype.getLocalizedStatus = function () {
   return '';
 };
 
+/**
+ * @returns {string} Localized "X of Y" packet count info for this entry.
+ */
+NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
+  return i18n.xOfYPackets({
+    x: this.getHeaderField(Packet.HeaderType.PACKET_INDEX),
+    y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT)
+  });
+};
 
-},{"../utils":297,"./NetSimEntity":182,"./Packet":233,"./dataConverters":235,"./locale":237,"./netsimConstants":240}],233:[function(require,module,exports){
+/**
+ * @returns {string} 12-hour short time
+ */
+NetSimLogEntry.prototype.getTimeString = function () {
+  return moment(this.timestamp).format('LT');
+};
+
+/**
+ * Get a controller for the node that generated this log entry
+ * @returns {NetSimClientNode|NetSimRouterNode|null}
+ */
+NetSimLogEntry.prototype.getOriginNode = function () {
+  var nodeRows = this.shard_.nodeTable.readAllCached();
+  var originNodeRow = _.find(nodeRows, function (row) {
+    return row.id === this.nodeID;
+  }.bind(this));
+
+  if (!originNodeRow) {
+    return null;
+  }
+
+  return netsimNodeFactory.nodeFromRow(this.shard_, originNodeRow);
+};
+
+
+},{"../utils":310,"./NetSimEntity":192,"./Packet":245,"./dataConverters":247,"./locale":249,"./netsimConstants":252,"./netsimNodeFactory":254,"moment":485}],485:[function(require,module,exports){
+//! moment.js
+//! version : 2.10.3
+//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
+//! license : MIT
+//! momentjs.com
+
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    global.moment = factory()
+}(this, function () { 'use strict';
+
+    var hookCallback;
+
+    function utils_hooks__hooks () {
+        return hookCallback.apply(null, arguments);
+    }
+
+    // This is done to register the method called with moment()
+    // without creating circular dependencies.
+    function setHookCallback (callback) {
+        hookCallback = callback;
+    }
+
+    function isArray(input) {
+        return Object.prototype.toString.call(input) === '[object Array]';
+    }
+
+    function isDate(input) {
+        return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
+    }
+
+    function map(arr, fn) {
+        var res = [], i;
+        for (i = 0; i < arr.length; ++i) {
+            res.push(fn(arr[i], i));
+        }
+        return res;
+    }
+
+    function hasOwnProp(a, b) {
+        return Object.prototype.hasOwnProperty.call(a, b);
+    }
+
+    function extend(a, b) {
+        for (var i in b) {
+            if (hasOwnProp(b, i)) {
+                a[i] = b[i];
+            }
+        }
+
+        if (hasOwnProp(b, 'toString')) {
+            a.toString = b.toString;
+        }
+
+        if (hasOwnProp(b, 'valueOf')) {
+            a.valueOf = b.valueOf;
+        }
+
+        return a;
+    }
+
+    function create_utc__createUTC (input, format, locale, strict) {
+        return createLocalOrUTC(input, format, locale, strict, true).utc();
+    }
+
+    function defaultParsingFlags() {
+        // We need to deep clone this object.
+        return {
+            empty           : false,
+            unusedTokens    : [],
+            unusedInput     : [],
+            overflow        : -2,
+            charsLeftOver   : 0,
+            nullInput       : false,
+            invalidMonth    : null,
+            invalidFormat   : false,
+            userInvalidated : false,
+            iso             : false
+        };
+    }
+
+    function getParsingFlags(m) {
+        if (m._pf == null) {
+            m._pf = defaultParsingFlags();
+        }
+        return m._pf;
+    }
+
+    function valid__isValid(m) {
+        if (m._isValid == null) {
+            var flags = getParsingFlags(m);
+            m._isValid = !isNaN(m._d.getTime()) &&
+                flags.overflow < 0 &&
+                !flags.empty &&
+                !flags.invalidMonth &&
+                !flags.nullInput &&
+                !flags.invalidFormat &&
+                !flags.userInvalidated;
+
+            if (m._strict) {
+                m._isValid = m._isValid &&
+                    flags.charsLeftOver === 0 &&
+                    flags.unusedTokens.length === 0 &&
+                    flags.bigHour === undefined;
+            }
+        }
+        return m._isValid;
+    }
+
+    function valid__createInvalid (flags) {
+        var m = create_utc__createUTC(NaN);
+        if (flags != null) {
+            extend(getParsingFlags(m), flags);
+        }
+        else {
+            getParsingFlags(m).userInvalidated = true;
+        }
+
+        return m;
+    }
+
+    var momentProperties = utils_hooks__hooks.momentProperties = [];
+
+    function copyConfig(to, from) {
+        var i, prop, val;
+
+        if (typeof from._isAMomentObject !== 'undefined') {
+            to._isAMomentObject = from._isAMomentObject;
+        }
+        if (typeof from._i !== 'undefined') {
+            to._i = from._i;
+        }
+        if (typeof from._f !== 'undefined') {
+            to._f = from._f;
+        }
+        if (typeof from._l !== 'undefined') {
+            to._l = from._l;
+        }
+        if (typeof from._strict !== 'undefined') {
+            to._strict = from._strict;
+        }
+        if (typeof from._tzm !== 'undefined') {
+            to._tzm = from._tzm;
+        }
+        if (typeof from._isUTC !== 'undefined') {
+            to._isUTC = from._isUTC;
+        }
+        if (typeof from._offset !== 'undefined') {
+            to._offset = from._offset;
+        }
+        if (typeof from._pf !== 'undefined') {
+            to._pf = getParsingFlags(from);
+        }
+        if (typeof from._locale !== 'undefined') {
+            to._locale = from._locale;
+        }
+
+        if (momentProperties.length > 0) {
+            for (i in momentProperties) {
+                prop = momentProperties[i];
+                val = from[prop];
+                if (typeof val !== 'undefined') {
+                    to[prop] = val;
+                }
+            }
+        }
+
+        return to;
+    }
+
+    var updateInProgress = false;
+
+    // Moment prototype object
+    function Moment(config) {
+        copyConfig(this, config);
+        this._d = new Date(+config._d);
+        // Prevent infinite loop in case updateOffset creates new moment
+        // objects.
+        if (updateInProgress === false) {
+            updateInProgress = true;
+            utils_hooks__hooks.updateOffset(this);
+            updateInProgress = false;
+        }
+    }
+
+    function isMoment (obj) {
+        return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
+    }
+
+    function toInt(argumentForCoercion) {
+        var coercedNumber = +argumentForCoercion,
+            value = 0;
+
+        if (coercedNumber !== 0 && isFinite(coercedNumber)) {
+            if (coercedNumber >= 0) {
+                value = Math.floor(coercedNumber);
+            } else {
+                value = Math.ceil(coercedNumber);
+            }
+        }
+
+        return value;
+    }
+
+    function compareArrays(array1, array2, dontConvert) {
+        var len = Math.min(array1.length, array2.length),
+            lengthDiff = Math.abs(array1.length - array2.length),
+            diffs = 0,
+            i;
+        for (i = 0; i < len; i++) {
+            if ((dontConvert && array1[i] !== array2[i]) ||
+                (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
+                diffs++;
+            }
+        }
+        return diffs + lengthDiff;
+    }
+
+    function Locale() {
+    }
+
+    var locales = {};
+    var globalLocale;
+
+    function normalizeLocale(key) {
+        return key ? key.toLowerCase().replace('_', '-') : key;
+    }
+
+    // pick the locale from the array
+    // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
+    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
+    function chooseLocale(names) {
+        var i = 0, j, next, locale, split;
+
+        while (i < names.length) {
+            split = normalizeLocale(names[i]).split('-');
+            j = split.length;
+            next = normalizeLocale(names[i + 1]);
+            next = next ? next.split('-') : null;
+            while (j > 0) {
+                locale = loadLocale(split.slice(0, j).join('-'));
+                if (locale) {
+                    return locale;
+                }
+                if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
+                    //the next array item is better than a shallower substring of this one
+                    break;
+                }
+                j--;
+            }
+            i++;
+        }
+        return null;
+    }
+
+    function loadLocale(name) {
+        var oldLocale = null;
+        // TODO: Find a better way to register and load all the locales in Node
+        if (!locales[name] && typeof module !== 'undefined' &&
+                module && module.exports) {
+            try {
+                oldLocale = globalLocale._abbr;
+                require('./locale/' + name);
+                // because defineLocale currently also sets the global locale, we
+                // want to undo that for lazy loaded locales
+                locale_locales__getSetGlobalLocale(oldLocale);
+            } catch (e) { }
+        }
+        return locales[name];
+    }
+
+    // This function will load locale and then set the global locale.  If
+    // no arguments are passed in, it will simply return the current global
+    // locale key.
+    function locale_locales__getSetGlobalLocale (key, values) {
+        var data;
+        if (key) {
+            if (typeof values === 'undefined') {
+                data = locale_locales__getLocale(key);
+            }
+            else {
+                data = defineLocale(key, values);
+            }
+
+            if (data) {
+                // moment.duration._locale = moment._locale = data;
+                globalLocale = data;
+            }
+        }
+
+        return globalLocale._abbr;
+    }
+
+    function defineLocale (name, values) {
+        if (values !== null) {
+            values.abbr = name;
+            if (!locales[name]) {
+                locales[name] = new Locale();
+            }
+            locales[name].set(values);
+
+            // backwards compat for now: also set the locale
+            locale_locales__getSetGlobalLocale(name);
+
+            return locales[name];
+        } else {
+            // useful for testing
+            delete locales[name];
+            return null;
+        }
+    }
+
+    // returns locale data
+    function locale_locales__getLocale (key) {
+        var locale;
+
+        if (key && key._locale && key._locale._abbr) {
+            key = key._locale._abbr;
+        }
+
+        if (!key) {
+            return globalLocale;
+        }
+
+        if (!isArray(key)) {
+            //short-circuit everything else
+            locale = loadLocale(key);
+            if (locale) {
+                return locale;
+            }
+            key = [key];
+        }
+
+        return chooseLocale(key);
+    }
+
+    var aliases = {};
+
+    function addUnitAlias (unit, shorthand) {
+        var lowerCase = unit.toLowerCase();
+        aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
+    }
+
+    function normalizeUnits(units) {
+        return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
+    }
+
+    function normalizeObjectUnits(inputObject) {
+        var normalizedInput = {},
+            normalizedProp,
+            prop;
+
+        for (prop in inputObject) {
+            if (hasOwnProp(inputObject, prop)) {
+                normalizedProp = normalizeUnits(prop);
+                if (normalizedProp) {
+                    normalizedInput[normalizedProp] = inputObject[prop];
+                }
+            }
+        }
+
+        return normalizedInput;
+    }
+
+    function makeGetSet (unit, keepTime) {
+        return function (value) {
+            if (value != null) {
+                get_set__set(this, unit, value);
+                utils_hooks__hooks.updateOffset(this, keepTime);
+                return this;
+            } else {
+                return get_set__get(this, unit);
+            }
+        };
+    }
+
+    function get_set__get (mom, unit) {
+        return mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]();
+    }
+
+    function get_set__set (mom, unit, value) {
+        return mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
+    }
+
+    // MOMENTS
+
+    function getSet (units, value) {
+        var unit;
+        if (typeof units === 'object') {
+            for (unit in units) {
+                this.set(unit, units[unit]);
+            }
+        } else {
+            units = normalizeUnits(units);
+            if (typeof this[units] === 'function') {
+                return this[units](value);
+            }
+        }
+        return this;
+    }
+
+    function zeroFill(number, targetLength, forceSign) {
+        var output = '' + Math.abs(number),
+            sign = number >= 0;
+
+        while (output.length < targetLength) {
+            output = '0' + output;
+        }
+        return (sign ? (forceSign ? '+' : '') : '-') + output;
+    }
+
+    var formattingTokens = /(\[[^\[]*\])|(\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Q|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|mm?|ss?|S{1,4}|x|X|zz?|ZZ?|.)/g;
+
+    var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
+
+    var formatFunctions = {};
+
+    var formatTokenFunctions = {};
+
+    // token:    'M'
+    // padded:   ['MM', 2]
+    // ordinal:  'Mo'
+    // callback: function () { this.month() + 1 }
+    function addFormatToken (token, padded, ordinal, callback) {
+        var func = callback;
+        if (typeof callback === 'string') {
+            func = function () {
+                return this[callback]();
+            };
+        }
+        if (token) {
+            formatTokenFunctions[token] = func;
+        }
+        if (padded) {
+            formatTokenFunctions[padded[0]] = function () {
+                return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
+            };
+        }
+        if (ordinal) {
+            formatTokenFunctions[ordinal] = function () {
+                return this.localeData().ordinal(func.apply(this, arguments), token);
+            };
+        }
+    }
+
+    function removeFormattingTokens(input) {
+        if (input.match(/\[[\s\S]/)) {
+            return input.replace(/^\[|\]$/g, '');
+        }
+        return input.replace(/\\/g, '');
+    }
+
+    function makeFormatFunction(format) {
+        var array = format.match(formattingTokens), i, length;
+
+        for (i = 0, length = array.length; i < length; i++) {
+            if (formatTokenFunctions[array[i]]) {
+                array[i] = formatTokenFunctions[array[i]];
+            } else {
+                array[i] = removeFormattingTokens(array[i]);
+            }
+        }
+
+        return function (mom) {
+            var output = '';
+            for (i = 0; i < length; i++) {
+                output += array[i] instanceof Function ? array[i].call(mom, format) : array[i];
+            }
+            return output;
+        };
+    }
+
+    // format date using native date object
+    function formatMoment(m, format) {
+        if (!m.isValid()) {
+            return m.localeData().invalidDate();
+        }
+
+        format = expandFormat(format, m.localeData());
+
+        if (!formatFunctions[format]) {
+            formatFunctions[format] = makeFormatFunction(format);
+        }
+
+        return formatFunctions[format](m);
+    }
+
+    function expandFormat(format, locale) {
+        var i = 5;
+
+        function replaceLongDateFormatTokens(input) {
+            return locale.longDateFormat(input) || input;
+        }
+
+        localFormattingTokens.lastIndex = 0;
+        while (i >= 0 && localFormattingTokens.test(format)) {
+            format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
+            localFormattingTokens.lastIndex = 0;
+            i -= 1;
+        }
+
+        return format;
+    }
+
+    var match1         = /\d/;            //       0 - 9
+    var match2         = /\d\d/;          //      00 - 99
+    var match3         = /\d{3}/;         //     000 - 999
+    var match4         = /\d{4}/;         //    0000 - 9999
+    var match6         = /[+-]?\d{6}/;    // -999999 - 999999
+    var match1to2      = /\d\d?/;         //       0 - 99
+    var match1to3      = /\d{1,3}/;       //       0 - 999
+    var match1to4      = /\d{1,4}/;       //       0 - 9999
+    var match1to6      = /[+-]?\d{1,6}/;  // -999999 - 999999
+
+    var matchUnsigned  = /\d+/;           //       0 - inf
+    var matchSigned    = /[+-]?\d+/;      //    -inf - inf
+
+    var matchOffset    = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
+
+    var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
+
+    // any word (or two) characters or numbers including two/three word month in arabic.
+    var matchWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i;
+
+    var regexes = {};
+
+    function addRegexToken (token, regex, strictRegex) {
+        regexes[token] = typeof regex === 'function' ? regex : function (isStrict) {
+            return (isStrict && strictRegex) ? strictRegex : regex;
+        };
+    }
+
+    function getParseRegexForToken (token, config) {
+        if (!hasOwnProp(regexes, token)) {
+            return new RegExp(unescapeFormat(token));
+        }
+
+        return regexes[token](config._strict, config._locale);
+    }
+
+    // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+    function unescapeFormat(s) {
+        return s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
+            return p1 || p2 || p3 || p4;
+        }).replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    }
+
+    var tokens = {};
+
+    function addParseToken (token, callback) {
+        var i, func = callback;
+        if (typeof token === 'string') {
+            token = [token];
+        }
+        if (typeof callback === 'number') {
+            func = function (input, array) {
+                array[callback] = toInt(input);
+            };
+        }
+        for (i = 0; i < token.length; i++) {
+            tokens[token[i]] = func;
+        }
+    }
+
+    function addWeekParseToken (token, callback) {
+        addParseToken(token, function (input, array, config, token) {
+            config._w = config._w || {};
+            callback(input, config._w, config, token);
+        });
+    }
+
+    function addTimeToArrayFromToken(token, input, config) {
+        if (input != null && hasOwnProp(tokens, token)) {
+            tokens[token](input, config._a, config, token);
+        }
+    }
+
+    var YEAR = 0;
+    var MONTH = 1;
+    var DATE = 2;
+    var HOUR = 3;
+    var MINUTE = 4;
+    var SECOND = 5;
+    var MILLISECOND = 6;
+
+    function daysInMonth(year, month) {
+        return new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+    }
+
+    // FORMATTING
+
+    addFormatToken('M', ['MM', 2], 'Mo', function () {
+        return this.month() + 1;
+    });
+
+    addFormatToken('MMM', 0, 0, function (format) {
+        return this.localeData().monthsShort(this, format);
+    });
+
+    addFormatToken('MMMM', 0, 0, function (format) {
+        return this.localeData().months(this, format);
+    });
+
+    // ALIASES
+
+    addUnitAlias('month', 'M');
+
+    // PARSING
+
+    addRegexToken('M',    match1to2);
+    addRegexToken('MM',   match1to2, match2);
+    addRegexToken('MMM',  matchWord);
+    addRegexToken('MMMM', matchWord);
+
+    addParseToken(['M', 'MM'], function (input, array) {
+        array[MONTH] = toInt(input) - 1;
+    });
+
+    addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
+        var month = config._locale.monthsParse(input, token, config._strict);
+        // if we didn't find a month name, mark the date as invalid.
+        if (month != null) {
+            array[MONTH] = month;
+        } else {
+            getParsingFlags(config).invalidMonth = input;
+        }
+    });
+
+    // LOCALES
+
+    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
+    function localeMonths (m) {
+        return this._months[m.month()];
+    }
+
+    var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
+    function localeMonthsShort (m) {
+        return this._monthsShort[m.month()];
+    }
+
+    function localeMonthsParse (monthName, format, strict) {
+        var i, mom, regex;
+
+        if (!this._monthsParse) {
+            this._monthsParse = [];
+            this._longMonthsParse = [];
+            this._shortMonthsParse = [];
+        }
+
+        for (i = 0; i < 12; i++) {
+            // make the regex if we don't have it already
+            mom = create_utc__createUTC([2000, i]);
+            if (strict && !this._longMonthsParse[i]) {
+                this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
+                this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
+            }
+            if (!strict && !this._monthsParse[i]) {
+                regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
+                this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
+            }
+            // test the regex
+            if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
+                return i;
+            } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
+                return i;
+            } else if (!strict && this._monthsParse[i].test(monthName)) {
+                return i;
+            }
+        }
+    }
+
+    // MOMENTS
+
+    function setMonth (mom, value) {
+        var dayOfMonth;
+
+        // TODO: Move this out of here!
+        if (typeof value === 'string') {
+            value = mom.localeData().monthsParse(value);
+            // TODO: Another silent failure?
+            if (typeof value !== 'number') {
+                return mom;
+            }
+        }
+
+        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+        mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
+        return mom;
+    }
+
+    function getSetMonth (value) {
+        if (value != null) {
+            setMonth(this, value);
+            utils_hooks__hooks.updateOffset(this, true);
+            return this;
+        } else {
+            return get_set__get(this, 'Month');
+        }
+    }
+
+    function getDaysInMonth () {
+        return daysInMonth(this.year(), this.month());
+    }
+
+    function checkOverflow (m) {
+        var overflow;
+        var a = m._a;
+
+        if (a && getParsingFlags(m).overflow === -2) {
+            overflow =
+                a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
+                a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
+                a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
+                a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
+                a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
+                a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
+                -1;
+
+            if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
+                overflow = DATE;
+            }
+
+            getParsingFlags(m).overflow = overflow;
+        }
+
+        return m;
+    }
+
+    function warn(msg) {
+        if (utils_hooks__hooks.suppressDeprecationWarnings === false && typeof console !== 'undefined' && console.warn) {
+            console.warn('Deprecation warning: ' + msg);
+        }
+    }
+
+    function deprecate(msg, fn) {
+        var firstTime = true,
+            msgWithStack = msg + '\n' + (new Error()).stack;
+
+        return extend(function () {
+            if (firstTime) {
+                warn(msgWithStack);
+                firstTime = false;
+            }
+            return fn.apply(this, arguments);
+        }, fn);
+    }
+
+    var deprecations = {};
+
+    function deprecateSimple(name, msg) {
+        if (!deprecations[name]) {
+            warn(msg);
+            deprecations[name] = true;
+        }
+    }
+
+    utils_hooks__hooks.suppressDeprecationWarnings = false;
+
+    var from_string__isoRegex = /^\s*(?:[+-]\d{6}|\d{4})-(?:(\d\d-\d\d)|(W\d\d$)|(W\d\d-\d)|(\d\d\d))((T| )(\d\d(:\d\d(:\d\d(\.\d+)?)?)?)?([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
+
+    var isoDates = [
+        ['YYYYYY-MM-DD', /[+-]\d{6}-\d{2}-\d{2}/],
+        ['YYYY-MM-DD', /\d{4}-\d{2}-\d{2}/],
+        ['GGGG-[W]WW-E', /\d{4}-W\d{2}-\d/],
+        ['GGGG-[W]WW', /\d{4}-W\d{2}/],
+        ['YYYY-DDD', /\d{4}-\d{3}/]
+    ];
+
+    // iso time formats and regexes
+    var isoTimes = [
+        ['HH:mm:ss.SSSS', /(T| )\d\d:\d\d:\d\d\.\d+/],
+        ['HH:mm:ss', /(T| )\d\d:\d\d:\d\d/],
+        ['HH:mm', /(T| )\d\d:\d\d/],
+        ['HH', /(T| )\d\d/]
+    ];
+
+    var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
+
+    // date from iso format
+    function configFromISO(config) {
+        var i, l,
+            string = config._i,
+            match = from_string__isoRegex.exec(string);
+
+        if (match) {
+            getParsingFlags(config).iso = true;
+            for (i = 0, l = isoDates.length; i < l; i++) {
+                if (isoDates[i][1].exec(string)) {
+                    // match[5] should be 'T' or undefined
+                    config._f = isoDates[i][0] + (match[6] || ' ');
+                    break;
+                }
+            }
+            for (i = 0, l = isoTimes.length; i < l; i++) {
+                if (isoTimes[i][1].exec(string)) {
+                    config._f += isoTimes[i][0];
+                    break;
+                }
+            }
+            if (string.match(matchOffset)) {
+                config._f += 'Z';
+            }
+            configFromStringAndFormat(config);
+        } else {
+            config._isValid = false;
+        }
+    }
+
+    // date from iso format or fallback
+    function configFromString(config) {
+        var matched = aspNetJsonRegex.exec(config._i);
+
+        if (matched !== null) {
+            config._d = new Date(+matched[1]);
+            return;
+        }
+
+        configFromISO(config);
+        if (config._isValid === false) {
+            delete config._isValid;
+            utils_hooks__hooks.createFromInputFallback(config);
+        }
+    }
+
+    utils_hooks__hooks.createFromInputFallback = deprecate(
+        'moment construction falls back to js Date. This is ' +
+        'discouraged and will be removed in upcoming major ' +
+        'release. Please refer to ' +
+        'https://github.com/moment/moment/issues/1407 for more info.',
+        function (config) {
+            config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
+        }
+    );
+
+    function createDate (y, m, d, h, M, s, ms) {
+        //can't just apply() to create a date:
+        //http://stackoverflow.com/questions/181348/instantiating-a-javascript-object-by-calling-prototype-constructor-apply
+        var date = new Date(y, m, d, h, M, s, ms);
+
+        //the date constructor doesn't accept years < 1970
+        if (y < 1970) {
+            date.setFullYear(y);
+        }
+        return date;
+    }
+
+    function createUTCDate (y) {
+        var date = new Date(Date.UTC.apply(null, arguments));
+        if (y < 1970) {
+            date.setUTCFullYear(y);
+        }
+        return date;
+    }
+
+    addFormatToken(0, ['YY', 2], 0, function () {
+        return this.year() % 100;
+    });
+
+    addFormatToken(0, ['YYYY',   4],       0, 'year');
+    addFormatToken(0, ['YYYYY',  5],       0, 'year');
+    addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
+
+    // ALIASES
+
+    addUnitAlias('year', 'y');
+
+    // PARSING
+
+    addRegexToken('Y',      matchSigned);
+    addRegexToken('YY',     match1to2, match2);
+    addRegexToken('YYYY',   match1to4, match4);
+    addRegexToken('YYYYY',  match1to6, match6);
+    addRegexToken('YYYYYY', match1to6, match6);
+
+    addParseToken(['YYYY', 'YYYYY', 'YYYYYY'], YEAR);
+    addParseToken('YY', function (input, array) {
+        array[YEAR] = utils_hooks__hooks.parseTwoDigitYear(input);
+    });
+
+    // HELPERS
+
+    function daysInYear(year) {
+        return isLeapYear(year) ? 366 : 365;
+    }
+
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+    }
+
+    // HOOKS
+
+    utils_hooks__hooks.parseTwoDigitYear = function (input) {
+        return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
+    };
+
+    // MOMENTS
+
+    var getSetYear = makeGetSet('FullYear', false);
+
+    function getIsLeapYear () {
+        return isLeapYear(this.year());
+    }
+
+    addFormatToken('w', ['ww', 2], 'wo', 'week');
+    addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
+
+    // ALIASES
+
+    addUnitAlias('week', 'w');
+    addUnitAlias('isoWeek', 'W');
+
+    // PARSING
+
+    addRegexToken('w',  match1to2);
+    addRegexToken('ww', match1to2, match2);
+    addRegexToken('W',  match1to2);
+    addRegexToken('WW', match1to2, match2);
+
+    addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
+        week[token.substr(0, 1)] = toInt(input);
+    });
+
+    // HELPERS
+
+    // firstDayOfWeek       0 = sun, 6 = sat
+    //                      the day of the week that starts the week
+    //                      (usually sunday or monday)
+    // firstDayOfWeekOfYear 0 = sun, 6 = sat
+    //                      the first week is the week that contains the first
+    //                      of this day of the week
+    //                      (eg. ISO weeks use thursday (4))
+    function weekOfYear(mom, firstDayOfWeek, firstDayOfWeekOfYear) {
+        var end = firstDayOfWeekOfYear - firstDayOfWeek,
+            daysToDayOfWeek = firstDayOfWeekOfYear - mom.day(),
+            adjustedMoment;
+
+
+        if (daysToDayOfWeek > end) {
+            daysToDayOfWeek -= 7;
+        }
+
+        if (daysToDayOfWeek < end - 7) {
+            daysToDayOfWeek += 7;
+        }
+
+        adjustedMoment = local__createLocal(mom).add(daysToDayOfWeek, 'd');
+        return {
+            week: Math.ceil(adjustedMoment.dayOfYear() / 7),
+            year: adjustedMoment.year()
+        };
+    }
+
+    // LOCALES
+
+    function localeWeek (mom) {
+        return weekOfYear(mom, this._week.dow, this._week.doy).week;
+    }
+
+    var defaultLocaleWeek = {
+        dow : 0, // Sunday is the first day of the week.
+        doy : 6  // The week that contains Jan 1st is the first week of the year.
+    };
+
+    function localeFirstDayOfWeek () {
+        return this._week.dow;
+    }
+
+    function localeFirstDayOfYear () {
+        return this._week.doy;
+    }
+
+    // MOMENTS
+
+    function getSetWeek (input) {
+        var week = this.localeData().week(this);
+        return input == null ? week : this.add((input - week) * 7, 'd');
+    }
+
+    function getSetISOWeek (input) {
+        var week = weekOfYear(this, 1, 4).week;
+        return input == null ? week : this.add((input - week) * 7, 'd');
+    }
+
+    addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
+
+    // ALIASES
+
+    addUnitAlias('dayOfYear', 'DDD');
+
+    // PARSING
+
+    addRegexToken('DDD',  match1to3);
+    addRegexToken('DDDD', match3);
+    addParseToken(['DDD', 'DDDD'], function (input, array, config) {
+        config._dayOfYear = toInt(input);
+    });
+
+    // HELPERS
+
+    //http://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
+    function dayOfYearFromWeeks(year, week, weekday, firstDayOfWeekOfYear, firstDayOfWeek) {
+        var d = createUTCDate(year, 0, 1).getUTCDay();
+        var daysToAdd;
+        var dayOfYear;
+
+        d = d === 0 ? 7 : d;
+        weekday = weekday != null ? weekday : firstDayOfWeek;
+        daysToAdd = firstDayOfWeek - d + (d > firstDayOfWeekOfYear ? 7 : 0) - (d < firstDayOfWeek ? 7 : 0);
+        dayOfYear = 7 * (week - 1) + (weekday - firstDayOfWeek) + daysToAdd + 1;
+
+        return {
+            year      : dayOfYear > 0 ? year      : year - 1,
+            dayOfYear : dayOfYear > 0 ? dayOfYear : daysInYear(year - 1) + dayOfYear
+        };
+    }
+
+    // MOMENTS
+
+    function getSetDayOfYear (input) {
+        var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
+        return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
+    }
+
+    // Pick the first defined of two or three arguments.
+    function defaults(a, b, c) {
+        if (a != null) {
+            return a;
+        }
+        if (b != null) {
+            return b;
+        }
+        return c;
+    }
+
+    function currentDateArray(config) {
+        var now = new Date();
+        if (config._useUTC) {
+            return [now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()];
+        }
+        return [now.getFullYear(), now.getMonth(), now.getDate()];
+    }
+
+    // convert an array to a date.
+    // the array should mirror the parameters below
+    // note: all values past the year are optional and will default to the lowest possible value.
+    // [year, month, day , hour, minute, second, millisecond]
+    function configFromArray (config) {
+        var i, date, input = [], currentDate, yearToUse;
+
+        if (config._d) {
+            return;
+        }
+
+        currentDate = currentDateArray(config);
+
+        //compute day of the year from weeks and weekdays
+        if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
+            dayOfYearFromWeekInfo(config);
+        }
+
+        //if the day of the year is set, figure out what it is
+        if (config._dayOfYear) {
+            yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+
+            if (config._dayOfYear > daysInYear(yearToUse)) {
+                getParsingFlags(config)._overflowDayOfYear = true;
+            }
+
+            date = createUTCDate(yearToUse, 0, config._dayOfYear);
+            config._a[MONTH] = date.getUTCMonth();
+            config._a[DATE] = date.getUTCDate();
+        }
+
+        // Default to current date.
+        // * if no year, month, day of month are given, default to today
+        // * if day of month is given, default month and year
+        // * if month is given, default only year
+        // * if year is given, don't default anything
+        for (i = 0; i < 3 && config._a[i] == null; ++i) {
+            config._a[i] = input[i] = currentDate[i];
+        }
+
+        // Zero out whatever was not defaulted, including time
+        for (; i < 7; i++) {
+            config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
+        }
+
+        // Check for 24:00:00.000
+        if (config._a[HOUR] === 24 &&
+                config._a[MINUTE] === 0 &&
+                config._a[SECOND] === 0 &&
+                config._a[MILLISECOND] === 0) {
+            config._nextDay = true;
+            config._a[HOUR] = 0;
+        }
+
+        config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
+        // Apply timezone offset from input. The actual utcOffset can be changed
+        // with parseZone.
+        if (config._tzm != null) {
+            config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+        }
+
+        if (config._nextDay) {
+            config._a[HOUR] = 24;
+        }
+    }
+
+    function dayOfYearFromWeekInfo(config) {
+        var w, weekYear, week, weekday, dow, doy, temp;
+
+        w = config._w;
+        if (w.GG != null || w.W != null || w.E != null) {
+            dow = 1;
+            doy = 4;
+
+            // TODO: We need to take the current isoWeekYear, but that depends on
+            // how we interpret now (local, utc, fixed offset). So create
+            // a now version of current config (take local/utc/offset flags, and
+            // create now).
+            weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(local__createLocal(), 1, 4).year);
+            week = defaults(w.W, 1);
+            weekday = defaults(w.E, 1);
+        } else {
+            dow = config._locale._week.dow;
+            doy = config._locale._week.doy;
+
+            weekYear = defaults(w.gg, config._a[YEAR], weekOfYear(local__createLocal(), dow, doy).year);
+            week = defaults(w.w, 1);
+
+            if (w.d != null) {
+                // weekday -- low day numbers are considered next week
+                weekday = w.d;
+                if (weekday < dow) {
+                    ++week;
+                }
+            } else if (w.e != null) {
+                // local weekday -- counting starts from begining of week
+                weekday = w.e + dow;
+            } else {
+                // default to begining of week
+                weekday = dow;
+            }
+        }
+        temp = dayOfYearFromWeeks(weekYear, week, weekday, doy, dow);
+
+        config._a[YEAR] = temp.year;
+        config._dayOfYear = temp.dayOfYear;
+    }
+
+    utils_hooks__hooks.ISO_8601 = function () {};
+
+    // date from string and format string
+    function configFromStringAndFormat(config) {
+        // TODO: Move this to another part of the creation flow to prevent circular deps
+        if (config._f === utils_hooks__hooks.ISO_8601) {
+            configFromISO(config);
+            return;
+        }
+
+        config._a = [];
+        getParsingFlags(config).empty = true;
+
+        // This array is used to make a Date, either with `new Date` or `Date.UTC`
+        var string = '' + config._i,
+            i, parsedInput, tokens, token, skipped,
+            stringLength = string.length,
+            totalParsedInputLength = 0;
+
+        tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
+
+        for (i = 0; i < tokens.length; i++) {
+            token = tokens[i];
+            parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
+            if (parsedInput) {
+                skipped = string.substr(0, string.indexOf(parsedInput));
+                if (skipped.length > 0) {
+                    getParsingFlags(config).unusedInput.push(skipped);
+                }
+                string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
+                totalParsedInputLength += parsedInput.length;
+            }
+            // don't parse if it's not a known token
+            if (formatTokenFunctions[token]) {
+                if (parsedInput) {
+                    getParsingFlags(config).empty = false;
+                }
+                else {
+                    getParsingFlags(config).unusedTokens.push(token);
+                }
+                addTimeToArrayFromToken(token, parsedInput, config);
+            }
+            else if (config._strict && !parsedInput) {
+                getParsingFlags(config).unusedTokens.push(token);
+            }
+        }
+
+        // add remaining unparsed input length to the string
+        getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
+        if (string.length > 0) {
+            getParsingFlags(config).unusedInput.push(string);
+        }
+
+        // clear _12h flag if hour is <= 12
+        if (getParsingFlags(config).bigHour === true &&
+                config._a[HOUR] <= 12 &&
+                config._a[HOUR] > 0) {
+            getParsingFlags(config).bigHour = undefined;
+        }
+        // handle meridiem
+        config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
+
+        configFromArray(config);
+        checkOverflow(config);
+    }
+
+
+    function meridiemFixWrap (locale, hour, meridiem) {
+        var isPm;
+
+        if (meridiem == null) {
+            // nothing to do
+            return hour;
+        }
+        if (locale.meridiemHour != null) {
+            return locale.meridiemHour(hour, meridiem);
+        } else if (locale.isPM != null) {
+            // Fallback
+            isPm = locale.isPM(meridiem);
+            if (isPm && hour < 12) {
+                hour += 12;
+            }
+            if (!isPm && hour === 12) {
+                hour = 0;
+            }
+            return hour;
+        } else {
+            // this is not supposed to happen
+            return hour;
+        }
+    }
+
+    function configFromStringAndArray(config) {
+        var tempConfig,
+            bestMoment,
+
+            scoreToBeat,
+            i,
+            currentScore;
+
+        if (config._f.length === 0) {
+            getParsingFlags(config).invalidFormat = true;
+            config._d = new Date(NaN);
+            return;
+        }
+
+        for (i = 0; i < config._f.length; i++) {
+            currentScore = 0;
+            tempConfig = copyConfig({}, config);
+            if (config._useUTC != null) {
+                tempConfig._useUTC = config._useUTC;
+            }
+            tempConfig._f = config._f[i];
+            configFromStringAndFormat(tempConfig);
+
+            if (!valid__isValid(tempConfig)) {
+                continue;
+            }
+
+            // if there is any input that was not parsed add a penalty for that format
+            currentScore += getParsingFlags(tempConfig).charsLeftOver;
+
+            //or tokens
+            currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
+
+            getParsingFlags(tempConfig).score = currentScore;
+
+            if (scoreToBeat == null || currentScore < scoreToBeat) {
+                scoreToBeat = currentScore;
+                bestMoment = tempConfig;
+            }
+        }
+
+        extend(config, bestMoment || tempConfig);
+    }
+
+    function configFromObject(config) {
+        if (config._d) {
+            return;
+        }
+
+        var i = normalizeObjectUnits(config._i);
+        config._a = [i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond];
+
+        configFromArray(config);
+    }
+
+    function createFromConfig (config) {
+        var input = config._i,
+            format = config._f,
+            res;
+
+        config._locale = config._locale || locale_locales__getLocale(config._l);
+
+        if (input === null || (format === undefined && input === '')) {
+            return valid__createInvalid({nullInput: true});
+        }
+
+        if (typeof input === 'string') {
+            config._i = input = config._locale.preparse(input);
+        }
+
+        if (isMoment(input)) {
+            return new Moment(checkOverflow(input));
+        } else if (isArray(format)) {
+            configFromStringAndArray(config);
+        } else if (format) {
+            configFromStringAndFormat(config);
+        } else if (isDate(input)) {
+            config._d = input;
+        } else {
+            configFromInput(config);
+        }
+
+        res = new Moment(checkOverflow(config));
+        if (res._nextDay) {
+            // Adding is smart enough around DST
+            res.add(1, 'd');
+            res._nextDay = undefined;
+        }
+
+        return res;
+    }
+
+    function configFromInput(config) {
+        var input = config._i;
+        if (input === undefined) {
+            config._d = new Date();
+        } else if (isDate(input)) {
+            config._d = new Date(+input);
+        } else if (typeof input === 'string') {
+            configFromString(config);
+        } else if (isArray(input)) {
+            config._a = map(input.slice(0), function (obj) {
+                return parseInt(obj, 10);
+            });
+            configFromArray(config);
+        } else if (typeof(input) === 'object') {
+            configFromObject(config);
+        } else if (typeof(input) === 'number') {
+            // from milliseconds
+            config._d = new Date(input);
+        } else {
+            utils_hooks__hooks.createFromInputFallback(config);
+        }
+    }
+
+    function createLocalOrUTC (input, format, locale, strict, isUTC) {
+        var c = {};
+
+        if (typeof(locale) === 'boolean') {
+            strict = locale;
+            locale = undefined;
+        }
+        // object construction must be done this way.
+        // https://github.com/moment/moment/issues/1423
+        c._isAMomentObject = true;
+        c._useUTC = c._isUTC = isUTC;
+        c._l = locale;
+        c._i = input;
+        c._f = format;
+        c._strict = strict;
+
+        return createFromConfig(c);
+    }
+
+    function local__createLocal (input, format, locale, strict) {
+        return createLocalOrUTC(input, format, locale, strict, false);
+    }
+
+    var prototypeMin = deprecate(
+         'moment().min is deprecated, use moment.min instead. https://github.com/moment/moment/issues/1548',
+         function () {
+             var other = local__createLocal.apply(null, arguments);
+             return other < this ? this : other;
+         }
+     );
+
+    var prototypeMax = deprecate(
+        'moment().max is deprecated, use moment.max instead. https://github.com/moment/moment/issues/1548',
+        function () {
+            var other = local__createLocal.apply(null, arguments);
+            return other > this ? this : other;
+        }
+    );
+
+    // Pick a moment m from moments so that m[fn](other) is true for all
+    // other. This relies on the function fn to be transitive.
+    //
+    // moments should either be an array of moment objects or an array, whose
+    // first element is an array of moment objects.
+    function pickBy(fn, moments) {
+        var res, i;
+        if (moments.length === 1 && isArray(moments[0])) {
+            moments = moments[0];
+        }
+        if (!moments.length) {
+            return local__createLocal();
+        }
+        res = moments[0];
+        for (i = 1; i < moments.length; ++i) {
+            if (moments[i][fn](res)) {
+                res = moments[i];
+            }
+        }
+        return res;
+    }
+
+    // TODO: Use [].sort instead?
+    function min () {
+        var args = [].slice.call(arguments, 0);
+
+        return pickBy('isBefore', args);
+    }
+
+    function max () {
+        var args = [].slice.call(arguments, 0);
+
+        return pickBy('isAfter', args);
+    }
+
+    function Duration (duration) {
+        var normalizedInput = normalizeObjectUnits(duration),
+            years = normalizedInput.year || 0,
+            quarters = normalizedInput.quarter || 0,
+            months = normalizedInput.month || 0,
+            weeks = normalizedInput.week || 0,
+            days = normalizedInput.day || 0,
+            hours = normalizedInput.hour || 0,
+            minutes = normalizedInput.minute || 0,
+            seconds = normalizedInput.second || 0,
+            milliseconds = normalizedInput.millisecond || 0;
+
+        // representation for dateAddRemove
+        this._milliseconds = +milliseconds +
+            seconds * 1e3 + // 1000
+            minutes * 6e4 + // 1000 * 60
+            hours * 36e5; // 1000 * 60 * 60
+        // Because of dateAddRemove treats 24 hours as different from a
+        // day when working around DST, we need to store them separately
+        this._days = +days +
+            weeks * 7;
+        // It is impossible translate months into days without knowing
+        // which months you are are talking about, so we have to store
+        // it separately.
+        this._months = +months +
+            quarters * 3 +
+            years * 12;
+
+        this._data = {};
+
+        this._locale = locale_locales__getLocale();
+
+        this._bubble();
+    }
+
+    function isDuration (obj) {
+        return obj instanceof Duration;
+    }
+
+    function offset (token, separator) {
+        addFormatToken(token, 0, 0, function () {
+            var offset = this.utcOffset();
+            var sign = '+';
+            if (offset < 0) {
+                offset = -offset;
+                sign = '-';
+            }
+            return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
+        });
+    }
+
+    offset('Z', ':');
+    offset('ZZ', '');
+
+    // PARSING
+
+    addRegexToken('Z',  matchOffset);
+    addRegexToken('ZZ', matchOffset);
+    addParseToken(['Z', 'ZZ'], function (input, array, config) {
+        config._useUTC = true;
+        config._tzm = offsetFromString(input);
+    });
+
+    // HELPERS
+
+    // timezone chunker
+    // '+10:00' > ['10',  '00']
+    // '-1530'  > ['-15', '30']
+    var chunkOffset = /([\+\-]|\d\d)/gi;
+
+    function offsetFromString(string) {
+        var matches = ((string || '').match(matchOffset) || []);
+        var chunk   = matches[matches.length - 1] || [];
+        var parts   = (chunk + '').match(chunkOffset) || ['-', 0, 0];
+        var minutes = +(parts[1] * 60) + toInt(parts[2]);
+
+        return parts[0] === '+' ? minutes : -minutes;
+    }
+
+    // Return a moment from input, that is local/utc/zone equivalent to model.
+    function cloneWithOffset(input, model) {
+        var res, diff;
+        if (model._isUTC) {
+            res = model.clone();
+            diff = (isMoment(input) || isDate(input) ? +input : +local__createLocal(input)) - (+res);
+            // Use low-level api, because this fn is low-level api.
+            res._d.setTime(+res._d + diff);
+            utils_hooks__hooks.updateOffset(res, false);
+            return res;
+        } else {
+            return local__createLocal(input).local();
+        }
+        return model._isUTC ? local__createLocal(input).zone(model._offset || 0) : local__createLocal(input).local();
+    }
+
+    function getDateOffset (m) {
+        // On Firefox.24 Date#getTimezoneOffset returns a floating point.
+        // https://github.com/moment/moment/pull/1871
+        return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
+    }
+
+    // HOOKS
+
+    // This function will be called whenever a moment is mutated.
+    // It is intended to keep the offset in sync with the timezone.
+    utils_hooks__hooks.updateOffset = function () {};
+
+    // MOMENTS
+
+    // keepLocalTime = true means only change the timezone, without
+    // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
+    // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
+    // +0200, so we adjust the time as needed, to be valid.
+    //
+    // Keeping the time actually adds/subtracts (one hour)
+    // from the actual represented time. That is why we call updateOffset
+    // a second time. In case it wants us to change the offset again
+    // _changeInProgress == true case, then we have to adjust, because
+    // there is no such time in the given timezone.
+    function getSetOffset (input, keepLocalTime) {
+        var offset = this._offset || 0,
+            localAdjust;
+        if (input != null) {
+            if (typeof input === 'string') {
+                input = offsetFromString(input);
+            }
+            if (Math.abs(input) < 16) {
+                input = input * 60;
+            }
+            if (!this._isUTC && keepLocalTime) {
+                localAdjust = getDateOffset(this);
+            }
+            this._offset = input;
+            this._isUTC = true;
+            if (localAdjust != null) {
+                this.add(localAdjust, 'm');
+            }
+            if (offset !== input) {
+                if (!keepLocalTime || this._changeInProgress) {
+                    add_subtract__addSubtract(this, create__createDuration(input - offset, 'm'), 1, false);
+                } else if (!this._changeInProgress) {
+                    this._changeInProgress = true;
+                    utils_hooks__hooks.updateOffset(this, true);
+                    this._changeInProgress = null;
+                }
+            }
+            return this;
+        } else {
+            return this._isUTC ? offset : getDateOffset(this);
+        }
+    }
+
+    function getSetZone (input, keepLocalTime) {
+        if (input != null) {
+            if (typeof input !== 'string') {
+                input = -input;
+            }
+
+            this.utcOffset(input, keepLocalTime);
+
+            return this;
+        } else {
+            return -this.utcOffset();
+        }
+    }
+
+    function setOffsetToUTC (keepLocalTime) {
+        return this.utcOffset(0, keepLocalTime);
+    }
+
+    function setOffsetToLocal (keepLocalTime) {
+        if (this._isUTC) {
+            this.utcOffset(0, keepLocalTime);
+            this._isUTC = false;
+
+            if (keepLocalTime) {
+                this.subtract(getDateOffset(this), 'm');
+            }
+        }
+        return this;
+    }
+
+    function setOffsetToParsedOffset () {
+        if (this._tzm) {
+            this.utcOffset(this._tzm);
+        } else if (typeof this._i === 'string') {
+            this.utcOffset(offsetFromString(this._i));
+        }
+        return this;
+    }
+
+    function hasAlignedHourOffset (input) {
+        if (!input) {
+            input = 0;
+        }
+        else {
+            input = local__createLocal(input).utcOffset();
+        }
+
+        return (this.utcOffset() - input) % 60 === 0;
+    }
+
+    function isDaylightSavingTime () {
+        return (
+            this.utcOffset() > this.clone().month(0).utcOffset() ||
+            this.utcOffset() > this.clone().month(5).utcOffset()
+        );
+    }
+
+    function isDaylightSavingTimeShifted () {
+        if (this._a) {
+            var other = this._isUTC ? create_utc__createUTC(this._a) : local__createLocal(this._a);
+            return this.isValid() && compareArrays(this._a, other.toArray()) > 0;
+        }
+
+        return false;
+    }
+
+    function isLocal () {
+        return !this._isUTC;
+    }
+
+    function isUtcOffset () {
+        return this._isUTC;
+    }
+
+    function isUtc () {
+        return this._isUTC && this._offset === 0;
+    }
+
+    var aspNetRegex = /(\-)?(?:(\d*)\.)?(\d+)\:(\d+)(?:\:(\d+)\.?(\d{3})?)?/;
+
+    // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
+    // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
+    var create__isoRegex = /^(-)?P(?:(?:([0-9,.]*)Y)?(?:([0-9,.]*)M)?(?:([0-9,.]*)D)?(?:T(?:([0-9,.]*)H)?(?:([0-9,.]*)M)?(?:([0-9,.]*)S)?)?|([0-9,.]*)W)$/;
+
+    function create__createDuration (input, key) {
+        var duration = input,
+            // matching against regexp is expensive, do it on demand
+            match = null,
+            sign,
+            ret,
+            diffRes;
+
+        if (isDuration(input)) {
+            duration = {
+                ms : input._milliseconds,
+                d  : input._days,
+                M  : input._months
+            };
+        } else if (typeof input === 'number') {
+            duration = {};
+            if (key) {
+                duration[key] = input;
+            } else {
+                duration.milliseconds = input;
+            }
+        } else if (!!(match = aspNetRegex.exec(input))) {
+            sign = (match[1] === '-') ? -1 : 1;
+            duration = {
+                y  : 0,
+                d  : toInt(match[DATE])        * sign,
+                h  : toInt(match[HOUR])        * sign,
+                m  : toInt(match[MINUTE])      * sign,
+                s  : toInt(match[SECOND])      * sign,
+                ms : toInt(match[MILLISECOND]) * sign
+            };
+        } else if (!!(match = create__isoRegex.exec(input))) {
+            sign = (match[1] === '-') ? -1 : 1;
+            duration = {
+                y : parseIso(match[2], sign),
+                M : parseIso(match[3], sign),
+                d : parseIso(match[4], sign),
+                h : parseIso(match[5], sign),
+                m : parseIso(match[6], sign),
+                s : parseIso(match[7], sign),
+                w : parseIso(match[8], sign)
+            };
+        } else if (duration == null) {// checks for null or undefined
+            duration = {};
+        } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
+            diffRes = momentsDifference(local__createLocal(duration.from), local__createLocal(duration.to));
+
+            duration = {};
+            duration.ms = diffRes.milliseconds;
+            duration.M = diffRes.months;
+        }
+
+        ret = new Duration(duration);
+
+        if (isDuration(input) && hasOwnProp(input, '_locale')) {
+            ret._locale = input._locale;
+        }
+
+        return ret;
+    }
+
+    create__createDuration.fn = Duration.prototype;
+
+    function parseIso (inp, sign) {
+        // We'd normally use ~~inp for this, but unfortunately it also
+        // converts floats to ints.
+        // inp may be undefined, so careful calling replace on it.
+        var res = inp && parseFloat(inp.replace(',', '.'));
+        // apply sign while we're at it
+        return (isNaN(res) ? 0 : res) * sign;
+    }
+
+    function positiveMomentsDifference(base, other) {
+        var res = {milliseconds: 0, months: 0};
+
+        res.months = other.month() - base.month() +
+            (other.year() - base.year()) * 12;
+        if (base.clone().add(res.months, 'M').isAfter(other)) {
+            --res.months;
+        }
+
+        res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
+
+        return res;
+    }
+
+    function momentsDifference(base, other) {
+        var res;
+        other = cloneWithOffset(other, base);
+        if (base.isBefore(other)) {
+            res = positiveMomentsDifference(base, other);
+        } else {
+            res = positiveMomentsDifference(other, base);
+            res.milliseconds = -res.milliseconds;
+            res.months = -res.months;
+        }
+
+        return res;
+    }
+
+    function createAdder(direction, name) {
+        return function (val, period) {
+            var dur, tmp;
+            //invert the arguments, but complain about it
+            if (period !== null && !isNaN(+period)) {
+                deprecateSimple(name, 'moment().' + name  + '(period, number) is deprecated. Please use moment().' + name + '(number, period).');
+                tmp = val; val = period; period = tmp;
+            }
+
+            val = typeof val === 'string' ? +val : val;
+            dur = create__createDuration(val, period);
+            add_subtract__addSubtract(this, dur, direction);
+            return this;
+        };
+    }
+
+    function add_subtract__addSubtract (mom, duration, isAdding, updateOffset) {
+        var milliseconds = duration._milliseconds,
+            days = duration._days,
+            months = duration._months;
+        updateOffset = updateOffset == null ? true : updateOffset;
+
+        if (milliseconds) {
+            mom._d.setTime(+mom._d + milliseconds * isAdding);
+        }
+        if (days) {
+            get_set__set(mom, 'Date', get_set__get(mom, 'Date') + days * isAdding);
+        }
+        if (months) {
+            setMonth(mom, get_set__get(mom, 'Month') + months * isAdding);
+        }
+        if (updateOffset) {
+            utils_hooks__hooks.updateOffset(mom, days || months);
+        }
+    }
+
+    var add_subtract__add      = createAdder(1, 'add');
+    var add_subtract__subtract = createAdder(-1, 'subtract');
+
+    function moment_calendar__calendar (time) {
+        // We want to compare the start of today, vs this.
+        // Getting start-of-today depends on whether we're local/utc/offset or not.
+        var now = time || local__createLocal(),
+            sod = cloneWithOffset(now, this).startOf('day'),
+            diff = this.diff(sod, 'days', true),
+            format = diff < -6 ? 'sameElse' :
+                diff < -1 ? 'lastWeek' :
+                diff < 0 ? 'lastDay' :
+                diff < 1 ? 'sameDay' :
+                diff < 2 ? 'nextDay' :
+                diff < 7 ? 'nextWeek' : 'sameElse';
+        return this.format(this.localeData().calendar(format, this, local__createLocal(now)));
+    }
+
+    function clone () {
+        return new Moment(this);
+    }
+
+    function isAfter (input, units) {
+        var inputMs;
+        units = normalizeUnits(typeof units !== 'undefined' ? units : 'millisecond');
+        if (units === 'millisecond') {
+            input = isMoment(input) ? input : local__createLocal(input);
+            return +this > +input;
+        } else {
+            inputMs = isMoment(input) ? +input : +local__createLocal(input);
+            return inputMs < +this.clone().startOf(units);
+        }
+    }
+
+    function isBefore (input, units) {
+        var inputMs;
+        units = normalizeUnits(typeof units !== 'undefined' ? units : 'millisecond');
+        if (units === 'millisecond') {
+            input = isMoment(input) ? input : local__createLocal(input);
+            return +this < +input;
+        } else {
+            inputMs = isMoment(input) ? +input : +local__createLocal(input);
+            return +this.clone().endOf(units) < inputMs;
+        }
+    }
+
+    function isBetween (from, to, units) {
+        return this.isAfter(from, units) && this.isBefore(to, units);
+    }
+
+    function isSame (input, units) {
+        var inputMs;
+        units = normalizeUnits(units || 'millisecond');
+        if (units === 'millisecond') {
+            input = isMoment(input) ? input : local__createLocal(input);
+            return +this === +input;
+        } else {
+            inputMs = +local__createLocal(input);
+            return +(this.clone().startOf(units)) <= inputMs && inputMs <= +(this.clone().endOf(units));
+        }
+    }
+
+    function absFloor (number) {
+        if (number < 0) {
+            return Math.ceil(number);
+        } else {
+            return Math.floor(number);
+        }
+    }
+
+    function diff (input, units, asFloat) {
+        var that = cloneWithOffset(input, this),
+            zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4,
+            delta, output;
+
+        units = normalizeUnits(units);
+
+        if (units === 'year' || units === 'month' || units === 'quarter') {
+            output = monthDiff(this, that);
+            if (units === 'quarter') {
+                output = output / 3;
+            } else if (units === 'year') {
+                output = output / 12;
+            }
+        } else {
+            delta = this - that;
+            output = units === 'second' ? delta / 1e3 : // 1000
+                units === 'minute' ? delta / 6e4 : // 1000 * 60
+                units === 'hour' ? delta / 36e5 : // 1000 * 60 * 60
+                units === 'day' ? (delta - zoneDelta) / 864e5 : // 1000 * 60 * 60 * 24, negate dst
+                units === 'week' ? (delta - zoneDelta) / 6048e5 : // 1000 * 60 * 60 * 24 * 7, negate dst
+                delta;
+        }
+        return asFloat ? output : absFloor(output);
+    }
+
+    function monthDiff (a, b) {
+        // difference in months
+        var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
+            // b is in (anchor - 1 month, anchor + 1 month)
+            anchor = a.clone().add(wholeMonthDiff, 'months'),
+            anchor2, adjust;
+
+        if (b - anchor < 0) {
+            anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
+            // linear across the month
+            adjust = (b - anchor) / (anchor - anchor2);
+        } else {
+            anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
+            // linear across the month
+            adjust = (b - anchor) / (anchor2 - anchor);
+        }
+
+        return -(wholeMonthDiff + adjust);
+    }
+
+    utils_hooks__hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
+
+    function toString () {
+        return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
+    }
+
+    function moment_format__toISOString () {
+        var m = this.clone().utc();
+        if (0 < m.year() && m.year() <= 9999) {
+            if ('function' === typeof Date.prototype.toISOString) {
+                // native implementation is ~50x faster, use it when we can
+                return this.toDate().toISOString();
+            } else {
+                return formatMoment(m, 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
+            }
+        } else {
+            return formatMoment(m, 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
+        }
+    }
+
+    function format (inputString) {
+        var output = formatMoment(this, inputString || utils_hooks__hooks.defaultFormat);
+        return this.localeData().postformat(output);
+    }
+
+    function from (time, withoutSuffix) {
+        if (!this.isValid()) {
+            return this.localeData().invalidDate();
+        }
+        return create__createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
+    }
+
+    function fromNow (withoutSuffix) {
+        return this.from(local__createLocal(), withoutSuffix);
+    }
+
+    function to (time, withoutSuffix) {
+        if (!this.isValid()) {
+            return this.localeData().invalidDate();
+        }
+        return create__createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
+    }
+
+    function toNow (withoutSuffix) {
+        return this.to(local__createLocal(), withoutSuffix);
+    }
+
+    function locale (key) {
+        var newLocaleData;
+
+        if (key === undefined) {
+            return this._locale._abbr;
+        } else {
+            newLocaleData = locale_locales__getLocale(key);
+            if (newLocaleData != null) {
+                this._locale = newLocaleData;
+            }
+            return this;
+        }
+    }
+
+    var lang = deprecate(
+        'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
+        function (key) {
+            if (key === undefined) {
+                return this.localeData();
+            } else {
+                return this.locale(key);
+            }
+        }
+    );
+
+    function localeData () {
+        return this._locale;
+    }
+
+    function startOf (units) {
+        units = normalizeUnits(units);
+        // the following switch intentionally omits break keywords
+        // to utilize falling through the cases.
+        switch (units) {
+        case 'year':
+            this.month(0);
+            /* falls through */
+        case 'quarter':
+        case 'month':
+            this.date(1);
+            /* falls through */
+        case 'week':
+        case 'isoWeek':
+        case 'day':
+            this.hours(0);
+            /* falls through */
+        case 'hour':
+            this.minutes(0);
+            /* falls through */
+        case 'minute':
+            this.seconds(0);
+            /* falls through */
+        case 'second':
+            this.milliseconds(0);
+        }
+
+        // weeks are a special case
+        if (units === 'week') {
+            this.weekday(0);
+        }
+        if (units === 'isoWeek') {
+            this.isoWeekday(1);
+        }
+
+        // quarters are also special
+        if (units === 'quarter') {
+            this.month(Math.floor(this.month() / 3) * 3);
+        }
+
+        return this;
+    }
+
+    function endOf (units) {
+        units = normalizeUnits(units);
+        if (units === undefined || units === 'millisecond') {
+            return this;
+        }
+        return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
+    }
+
+    function to_type__valueOf () {
+        return +this._d - ((this._offset || 0) * 60000);
+    }
+
+    function unix () {
+        return Math.floor(+this / 1000);
+    }
+
+    function toDate () {
+        return this._offset ? new Date(+this) : this._d;
+    }
+
+    function toArray () {
+        var m = this;
+        return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
+    }
+
+    function moment_valid__isValid () {
+        return valid__isValid(this);
+    }
+
+    function parsingFlags () {
+        return extend({}, getParsingFlags(this));
+    }
+
+    function invalidAt () {
+        return getParsingFlags(this).overflow;
+    }
+
+    addFormatToken(0, ['gg', 2], 0, function () {
+        return this.weekYear() % 100;
+    });
+
+    addFormatToken(0, ['GG', 2], 0, function () {
+        return this.isoWeekYear() % 100;
+    });
+
+    function addWeekYearFormatToken (token, getter) {
+        addFormatToken(0, [token, token.length], 0, getter);
+    }
+
+    addWeekYearFormatToken('gggg',     'weekYear');
+    addWeekYearFormatToken('ggggg',    'weekYear');
+    addWeekYearFormatToken('GGGG',  'isoWeekYear');
+    addWeekYearFormatToken('GGGGG', 'isoWeekYear');
+
+    // ALIASES
+
+    addUnitAlias('weekYear', 'gg');
+    addUnitAlias('isoWeekYear', 'GG');
+
+    // PARSING
+
+    addRegexToken('G',      matchSigned);
+    addRegexToken('g',      matchSigned);
+    addRegexToken('GG',     match1to2, match2);
+    addRegexToken('gg',     match1to2, match2);
+    addRegexToken('GGGG',   match1to4, match4);
+    addRegexToken('gggg',   match1to4, match4);
+    addRegexToken('GGGGG',  match1to6, match6);
+    addRegexToken('ggggg',  match1to6, match6);
+
+    addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
+        week[token.substr(0, 2)] = toInt(input);
+    });
+
+    addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
+        week[token] = utils_hooks__hooks.parseTwoDigitYear(input);
+    });
+
+    // HELPERS
+
+    function weeksInYear(year, dow, doy) {
+        return weekOfYear(local__createLocal([year, 11, 31 + dow - doy]), dow, doy).week;
+    }
+
+    // MOMENTS
+
+    function getSetWeekYear (input) {
+        var year = weekOfYear(this, this.localeData()._week.dow, this.localeData()._week.doy).year;
+        return input == null ? year : this.add((input - year), 'y');
+    }
+
+    function getSetISOWeekYear (input) {
+        var year = weekOfYear(this, 1, 4).year;
+        return input == null ? year : this.add((input - year), 'y');
+    }
+
+    function getISOWeeksInYear () {
+        return weeksInYear(this.year(), 1, 4);
+    }
+
+    function getWeeksInYear () {
+        var weekInfo = this.localeData()._week;
+        return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
+    }
+
+    addFormatToken('Q', 0, 0, 'quarter');
+
+    // ALIASES
+
+    addUnitAlias('quarter', 'Q');
+
+    // PARSING
+
+    addRegexToken('Q', match1);
+    addParseToken('Q', function (input, array) {
+        array[MONTH] = (toInt(input) - 1) * 3;
+    });
+
+    // MOMENTS
+
+    function getSetQuarter (input) {
+        return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
+    }
+
+    addFormatToken('D', ['DD', 2], 'Do', 'date');
+
+    // ALIASES
+
+    addUnitAlias('date', 'D');
+
+    // PARSING
+
+    addRegexToken('D',  match1to2);
+    addRegexToken('DD', match1to2, match2);
+    addRegexToken('Do', function (isStrict, locale) {
+        return isStrict ? locale._ordinalParse : locale._ordinalParseLenient;
+    });
+
+    addParseToken(['D', 'DD'], DATE);
+    addParseToken('Do', function (input, array) {
+        array[DATE] = toInt(input.match(match1to2)[0], 10);
+    });
+
+    // MOMENTS
+
+    var getSetDayOfMonth = makeGetSet('Date', true);
+
+    addFormatToken('d', 0, 'do', 'day');
+
+    addFormatToken('dd', 0, 0, function (format) {
+        return this.localeData().weekdaysMin(this, format);
+    });
+
+    addFormatToken('ddd', 0, 0, function (format) {
+        return this.localeData().weekdaysShort(this, format);
+    });
+
+    addFormatToken('dddd', 0, 0, function (format) {
+        return this.localeData().weekdays(this, format);
+    });
+
+    addFormatToken('e', 0, 0, 'weekday');
+    addFormatToken('E', 0, 0, 'isoWeekday');
+
+    // ALIASES
+
+    addUnitAlias('day', 'd');
+    addUnitAlias('weekday', 'e');
+    addUnitAlias('isoWeekday', 'E');
+
+    // PARSING
+
+    addRegexToken('d',    match1to2);
+    addRegexToken('e',    match1to2);
+    addRegexToken('E',    match1to2);
+    addRegexToken('dd',   matchWord);
+    addRegexToken('ddd',  matchWord);
+    addRegexToken('dddd', matchWord);
+
+    addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config) {
+        var weekday = config._locale.weekdaysParse(input);
+        // if we didn't get a weekday name, mark the date as invalid
+        if (weekday != null) {
+            week.d = weekday;
+        } else {
+            getParsingFlags(config).invalidWeekday = input;
+        }
+    });
+
+    addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
+        week[token] = toInt(input);
+    });
+
+    // HELPERS
+
+    function parseWeekday(input, locale) {
+        if (typeof input === 'string') {
+            if (!isNaN(input)) {
+                input = parseInt(input, 10);
+            }
+            else {
+                input = locale.weekdaysParse(input);
+                if (typeof input !== 'number') {
+                    return null;
+                }
+            }
+        }
+        return input;
+    }
+
+    // LOCALES
+
+    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
+    function localeWeekdays (m) {
+        return this._weekdays[m.day()];
+    }
+
+    var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
+    function localeWeekdaysShort (m) {
+        return this._weekdaysShort[m.day()];
+    }
+
+    var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
+    function localeWeekdaysMin (m) {
+        return this._weekdaysMin[m.day()];
+    }
+
+    function localeWeekdaysParse (weekdayName) {
+        var i, mom, regex;
+
+        if (!this._weekdaysParse) {
+            this._weekdaysParse = [];
+        }
+
+        for (i = 0; i < 7; i++) {
+            // make the regex if we don't have it already
+            if (!this._weekdaysParse[i]) {
+                mom = local__createLocal([2000, 1]).day(i);
+                regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
+                this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
+            }
+            // test the regex
+            if (this._weekdaysParse[i].test(weekdayName)) {
+                return i;
+            }
+        }
+    }
+
+    // MOMENTS
+
+    function getSetDayOfWeek (input) {
+        var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+        if (input != null) {
+            input = parseWeekday(input, this.localeData());
+            return this.add(input - day, 'd');
+        } else {
+            return day;
+        }
+    }
+
+    function getSetLocaleDayOfWeek (input) {
+        var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
+        return input == null ? weekday : this.add(input - weekday, 'd');
+    }
+
+    function getSetISODayOfWeek (input) {
+        // behaves the same as moment#day except
+        // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
+        // as a setter, sunday should belong to the previous week.
+        return input == null ? this.day() || 7 : this.day(this.day() % 7 ? input : input - 7);
+    }
+
+    addFormatToken('H', ['HH', 2], 0, 'hour');
+    addFormatToken('h', ['hh', 2], 0, function () {
+        return this.hours() % 12 || 12;
+    });
+
+    function meridiem (token, lowercase) {
+        addFormatToken(token, 0, 0, function () {
+            return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
+        });
+    }
+
+    meridiem('a', true);
+    meridiem('A', false);
+
+    // ALIASES
+
+    addUnitAlias('hour', 'h');
+
+    // PARSING
+
+    function matchMeridiem (isStrict, locale) {
+        return locale._meridiemParse;
+    }
+
+    addRegexToken('a',  matchMeridiem);
+    addRegexToken('A',  matchMeridiem);
+    addRegexToken('H',  match1to2);
+    addRegexToken('h',  match1to2);
+    addRegexToken('HH', match1to2, match2);
+    addRegexToken('hh', match1to2, match2);
+
+    addParseToken(['H', 'HH'], HOUR);
+    addParseToken(['a', 'A'], function (input, array, config) {
+        config._isPm = config._locale.isPM(input);
+        config._meridiem = input;
+    });
+    addParseToken(['h', 'hh'], function (input, array, config) {
+        array[HOUR] = toInt(input);
+        getParsingFlags(config).bigHour = true;
+    });
+
+    // LOCALES
+
+    function localeIsPM (input) {
+        // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
+        // Using charAt should be more compatible.
+        return ((input + '').toLowerCase().charAt(0) === 'p');
+    }
+
+    var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
+    function localeMeridiem (hours, minutes, isLower) {
+        if (hours > 11) {
+            return isLower ? 'pm' : 'PM';
+        } else {
+            return isLower ? 'am' : 'AM';
+        }
+    }
+
+
+    // MOMENTS
+
+    // Setting the hour should keep the time, because the user explicitly
+    // specified which hour he wants. So trying to maintain the same hour (in
+    // a new timezone) makes sense. Adding/subtracting hours does not follow
+    // this rule.
+    var getSetHour = makeGetSet('Hours', true);
+
+    addFormatToken('m', ['mm', 2], 0, 'minute');
+
+    // ALIASES
+
+    addUnitAlias('minute', 'm');
+
+    // PARSING
+
+    addRegexToken('m',  match1to2);
+    addRegexToken('mm', match1to2, match2);
+    addParseToken(['m', 'mm'], MINUTE);
+
+    // MOMENTS
+
+    var getSetMinute = makeGetSet('Minutes', false);
+
+    addFormatToken('s', ['ss', 2], 0, 'second');
+
+    // ALIASES
+
+    addUnitAlias('second', 's');
+
+    // PARSING
+
+    addRegexToken('s',  match1to2);
+    addRegexToken('ss', match1to2, match2);
+    addParseToken(['s', 'ss'], SECOND);
+
+    // MOMENTS
+
+    var getSetSecond = makeGetSet('Seconds', false);
+
+    addFormatToken('S', 0, 0, function () {
+        return ~~(this.millisecond() / 100);
+    });
+
+    addFormatToken(0, ['SS', 2], 0, function () {
+        return ~~(this.millisecond() / 10);
+    });
+
+    function millisecond__milliseconds (token) {
+        addFormatToken(0, [token, 3], 0, 'millisecond');
+    }
+
+    millisecond__milliseconds('SSS');
+    millisecond__milliseconds('SSSS');
+
+    // ALIASES
+
+    addUnitAlias('millisecond', 'ms');
+
+    // PARSING
+
+    addRegexToken('S',    match1to3, match1);
+    addRegexToken('SS',   match1to3, match2);
+    addRegexToken('SSS',  match1to3, match3);
+    addRegexToken('SSSS', matchUnsigned);
+    addParseToken(['S', 'SS', 'SSS', 'SSSS'], function (input, array) {
+        array[MILLISECOND] = toInt(('0.' + input) * 1000);
+    });
+
+    // MOMENTS
+
+    var getSetMillisecond = makeGetSet('Milliseconds', false);
+
+    addFormatToken('z',  0, 0, 'zoneAbbr');
+    addFormatToken('zz', 0, 0, 'zoneName');
+
+    // MOMENTS
+
+    function getZoneAbbr () {
+        return this._isUTC ? 'UTC' : '';
+    }
+
+    function getZoneName () {
+        return this._isUTC ? 'Coordinated Universal Time' : '';
+    }
+
+    var momentPrototype__proto = Moment.prototype;
+
+    momentPrototype__proto.add          = add_subtract__add;
+    momentPrototype__proto.calendar     = moment_calendar__calendar;
+    momentPrototype__proto.clone        = clone;
+    momentPrototype__proto.diff         = diff;
+    momentPrototype__proto.endOf        = endOf;
+    momentPrototype__proto.format       = format;
+    momentPrototype__proto.from         = from;
+    momentPrototype__proto.fromNow      = fromNow;
+    momentPrototype__proto.to           = to;
+    momentPrototype__proto.toNow        = toNow;
+    momentPrototype__proto.get          = getSet;
+    momentPrototype__proto.invalidAt    = invalidAt;
+    momentPrototype__proto.isAfter      = isAfter;
+    momentPrototype__proto.isBefore     = isBefore;
+    momentPrototype__proto.isBetween    = isBetween;
+    momentPrototype__proto.isSame       = isSame;
+    momentPrototype__proto.isValid      = moment_valid__isValid;
+    momentPrototype__proto.lang         = lang;
+    momentPrototype__proto.locale       = locale;
+    momentPrototype__proto.localeData   = localeData;
+    momentPrototype__proto.max          = prototypeMax;
+    momentPrototype__proto.min          = prototypeMin;
+    momentPrototype__proto.parsingFlags = parsingFlags;
+    momentPrototype__proto.set          = getSet;
+    momentPrototype__proto.startOf      = startOf;
+    momentPrototype__proto.subtract     = add_subtract__subtract;
+    momentPrototype__proto.toArray      = toArray;
+    momentPrototype__proto.toDate       = toDate;
+    momentPrototype__proto.toISOString  = moment_format__toISOString;
+    momentPrototype__proto.toJSON       = moment_format__toISOString;
+    momentPrototype__proto.toString     = toString;
+    momentPrototype__proto.unix         = unix;
+    momentPrototype__proto.valueOf      = to_type__valueOf;
+
+    // Year
+    momentPrototype__proto.year       = getSetYear;
+    momentPrototype__proto.isLeapYear = getIsLeapYear;
+
+    // Week Year
+    momentPrototype__proto.weekYear    = getSetWeekYear;
+    momentPrototype__proto.isoWeekYear = getSetISOWeekYear;
+
+    // Quarter
+    momentPrototype__proto.quarter = momentPrototype__proto.quarters = getSetQuarter;
+
+    // Month
+    momentPrototype__proto.month       = getSetMonth;
+    momentPrototype__proto.daysInMonth = getDaysInMonth;
+
+    // Week
+    momentPrototype__proto.week           = momentPrototype__proto.weeks        = getSetWeek;
+    momentPrototype__proto.isoWeek        = momentPrototype__proto.isoWeeks     = getSetISOWeek;
+    momentPrototype__proto.weeksInYear    = getWeeksInYear;
+    momentPrototype__proto.isoWeeksInYear = getISOWeeksInYear;
+
+    // Day
+    momentPrototype__proto.date       = getSetDayOfMonth;
+    momentPrototype__proto.day        = momentPrototype__proto.days             = getSetDayOfWeek;
+    momentPrototype__proto.weekday    = getSetLocaleDayOfWeek;
+    momentPrototype__proto.isoWeekday = getSetISODayOfWeek;
+    momentPrototype__proto.dayOfYear  = getSetDayOfYear;
+
+    // Hour
+    momentPrototype__proto.hour = momentPrototype__proto.hours = getSetHour;
+
+    // Minute
+    momentPrototype__proto.minute = momentPrototype__proto.minutes = getSetMinute;
+
+    // Second
+    momentPrototype__proto.second = momentPrototype__proto.seconds = getSetSecond;
+
+    // Millisecond
+    momentPrototype__proto.millisecond = momentPrototype__proto.milliseconds = getSetMillisecond;
+
+    // Offset
+    momentPrototype__proto.utcOffset            = getSetOffset;
+    momentPrototype__proto.utc                  = setOffsetToUTC;
+    momentPrototype__proto.local                = setOffsetToLocal;
+    momentPrototype__proto.parseZone            = setOffsetToParsedOffset;
+    momentPrototype__proto.hasAlignedHourOffset = hasAlignedHourOffset;
+    momentPrototype__proto.isDST                = isDaylightSavingTime;
+    momentPrototype__proto.isDSTShifted         = isDaylightSavingTimeShifted;
+    momentPrototype__proto.isLocal              = isLocal;
+    momentPrototype__proto.isUtcOffset          = isUtcOffset;
+    momentPrototype__proto.isUtc                = isUtc;
+    momentPrototype__proto.isUTC                = isUtc;
+
+    // Timezone
+    momentPrototype__proto.zoneAbbr = getZoneAbbr;
+    momentPrototype__proto.zoneName = getZoneName;
+
+    // Deprecations
+    momentPrototype__proto.dates  = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
+    momentPrototype__proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
+    momentPrototype__proto.years  = deprecate('years accessor is deprecated. Use year instead', getSetYear);
+    momentPrototype__proto.zone   = deprecate('moment().zone is deprecated, use moment().utcOffset instead. https://github.com/moment/moment/issues/1779', getSetZone);
+
+    var momentPrototype = momentPrototype__proto;
+
+    function moment__createUnix (input) {
+        return local__createLocal(input * 1000);
+    }
+
+    function moment__createInZone () {
+        return local__createLocal.apply(null, arguments).parseZone();
+    }
+
+    var defaultCalendar = {
+        sameDay : '[Today at] LT',
+        nextDay : '[Tomorrow at] LT',
+        nextWeek : 'dddd [at] LT',
+        lastDay : '[Yesterday at] LT',
+        lastWeek : '[Last] dddd [at] LT',
+        sameElse : 'L'
+    };
+
+    function locale_calendar__calendar (key, mom, now) {
+        var output = this._calendar[key];
+        return typeof output === 'function' ? output.call(mom, now) : output;
+    }
+
+    var defaultLongDateFormat = {
+        LTS  : 'h:mm:ss A',
+        LT   : 'h:mm A',
+        L    : 'MM/DD/YYYY',
+        LL   : 'MMMM D, YYYY',
+        LLL  : 'MMMM D, YYYY LT',
+        LLLL : 'dddd, MMMM D, YYYY LT'
+    };
+
+    function longDateFormat (key) {
+        var output = this._longDateFormat[key];
+        if (!output && this._longDateFormat[key.toUpperCase()]) {
+            output = this._longDateFormat[key.toUpperCase()].replace(/MMMM|MM|DD|dddd/g, function (val) {
+                return val.slice(1);
+            });
+            this._longDateFormat[key] = output;
+        }
+        return output;
+    }
+
+    var defaultInvalidDate = 'Invalid date';
+
+    function invalidDate () {
+        return this._invalidDate;
+    }
+
+    var defaultOrdinal = '%d';
+    var defaultOrdinalParse = /\d{1,2}/;
+
+    function ordinal (number) {
+        return this._ordinal.replace('%d', number);
+    }
+
+    function preParsePostFormat (string) {
+        return string;
+    }
+
+    var defaultRelativeTime = {
+        future : 'in %s',
+        past   : '%s ago',
+        s  : 'a few seconds',
+        m  : 'a minute',
+        mm : '%d minutes',
+        h  : 'an hour',
+        hh : '%d hours',
+        d  : 'a day',
+        dd : '%d days',
+        M  : 'a month',
+        MM : '%d months',
+        y  : 'a year',
+        yy : '%d years'
+    };
+
+    function relative__relativeTime (number, withoutSuffix, string, isFuture) {
+        var output = this._relativeTime[string];
+        return (typeof output === 'function') ?
+            output(number, withoutSuffix, string, isFuture) :
+            output.replace(/%d/i, number);
+    }
+
+    function pastFuture (diff, output) {
+        var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
+        return typeof format === 'function' ? format(output) : format.replace(/%s/i, output);
+    }
+
+    function locale_set__set (config) {
+        var prop, i;
+        for (i in config) {
+            prop = config[i];
+            if (typeof prop === 'function') {
+                this[i] = prop;
+            } else {
+                this['_' + i] = prop;
+            }
+        }
+        // Lenient ordinal parsing accepts just a number in addition to
+        // number + (possibly) stuff coming from _ordinalParseLenient.
+        this._ordinalParseLenient = new RegExp(this._ordinalParse.source + '|' + (/\d{1,2}/).source);
+    }
+
+    var prototype__proto = Locale.prototype;
+
+    prototype__proto._calendar       = defaultCalendar;
+    prototype__proto.calendar        = locale_calendar__calendar;
+    prototype__proto._longDateFormat = defaultLongDateFormat;
+    prototype__proto.longDateFormat  = longDateFormat;
+    prototype__proto._invalidDate    = defaultInvalidDate;
+    prototype__proto.invalidDate     = invalidDate;
+    prototype__proto._ordinal        = defaultOrdinal;
+    prototype__proto.ordinal         = ordinal;
+    prototype__proto._ordinalParse   = defaultOrdinalParse;
+    prototype__proto.preparse        = preParsePostFormat;
+    prototype__proto.postformat      = preParsePostFormat;
+    prototype__proto._relativeTime   = defaultRelativeTime;
+    prototype__proto.relativeTime    = relative__relativeTime;
+    prototype__proto.pastFuture      = pastFuture;
+    prototype__proto.set             = locale_set__set;
+
+    // Month
+    prototype__proto.months       =        localeMonths;
+    prototype__proto._months      = defaultLocaleMonths;
+    prototype__proto.monthsShort  =        localeMonthsShort;
+    prototype__proto._monthsShort = defaultLocaleMonthsShort;
+    prototype__proto.monthsParse  =        localeMonthsParse;
+
+    // Week
+    prototype__proto.week = localeWeek;
+    prototype__proto._week = defaultLocaleWeek;
+    prototype__proto.firstDayOfYear = localeFirstDayOfYear;
+    prototype__proto.firstDayOfWeek = localeFirstDayOfWeek;
+
+    // Day of Week
+    prototype__proto.weekdays       =        localeWeekdays;
+    prototype__proto._weekdays      = defaultLocaleWeekdays;
+    prototype__proto.weekdaysMin    =        localeWeekdaysMin;
+    prototype__proto._weekdaysMin   = defaultLocaleWeekdaysMin;
+    prototype__proto.weekdaysShort  =        localeWeekdaysShort;
+    prototype__proto._weekdaysShort = defaultLocaleWeekdaysShort;
+    prototype__proto.weekdaysParse  =        localeWeekdaysParse;
+
+    // Hours
+    prototype__proto.isPM = localeIsPM;
+    prototype__proto._meridiemParse = defaultLocaleMeridiemParse;
+    prototype__proto.meridiem = localeMeridiem;
+
+    function lists__get (format, index, field, setter) {
+        var locale = locale_locales__getLocale();
+        var utc = create_utc__createUTC().set(setter, index);
+        return locale[field](utc, format);
+    }
+
+    function list (format, index, field, count, setter) {
+        if (typeof format === 'number') {
+            index = format;
+            format = undefined;
+        }
+
+        format = format || '';
+
+        if (index != null) {
+            return lists__get(format, index, field, setter);
+        }
+
+        var i;
+        var out = [];
+        for (i = 0; i < count; i++) {
+            out[i] = lists__get(format, i, field, setter);
+        }
+        return out;
+    }
+
+    function lists__listMonths (format, index) {
+        return list(format, index, 'months', 12, 'month');
+    }
+
+    function lists__listMonthsShort (format, index) {
+        return list(format, index, 'monthsShort', 12, 'month');
+    }
+
+    function lists__listWeekdays (format, index) {
+        return list(format, index, 'weekdays', 7, 'day');
+    }
+
+    function lists__listWeekdaysShort (format, index) {
+        return list(format, index, 'weekdaysShort', 7, 'day');
+    }
+
+    function lists__listWeekdaysMin (format, index) {
+        return list(format, index, 'weekdaysMin', 7, 'day');
+    }
+
+    locale_locales__getSetGlobalLocale('en', {
+        ordinalParse: /\d{1,2}(th|st|nd|rd)/,
+        ordinal : function (number) {
+            var b = number % 10,
+                output = (toInt(number % 100 / 10) === 1) ? 'th' :
+                (b === 1) ? 'st' :
+                (b === 2) ? 'nd' :
+                (b === 3) ? 'rd' : 'th';
+            return number + output;
+        }
+    });
+
+    // Side effect imports
+    utils_hooks__hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', locale_locales__getSetGlobalLocale);
+    utils_hooks__hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', locale_locales__getLocale);
+
+    var mathAbs = Math.abs;
+
+    function duration_abs__abs () {
+        var data           = this._data;
+
+        this._milliseconds = mathAbs(this._milliseconds);
+        this._days         = mathAbs(this._days);
+        this._months       = mathAbs(this._months);
+
+        data.milliseconds  = mathAbs(data.milliseconds);
+        data.seconds       = mathAbs(data.seconds);
+        data.minutes       = mathAbs(data.minutes);
+        data.hours         = mathAbs(data.hours);
+        data.months        = mathAbs(data.months);
+        data.years         = mathAbs(data.years);
+
+        return this;
+    }
+
+    function duration_add_subtract__addSubtract (duration, input, value, direction) {
+        var other = create__createDuration(input, value);
+
+        duration._milliseconds += direction * other._milliseconds;
+        duration._days         += direction * other._days;
+        duration._months       += direction * other._months;
+
+        return duration._bubble();
+    }
+
+    // supports only 2.0-style add(1, 's') or add(duration)
+    function duration_add_subtract__add (input, value) {
+        return duration_add_subtract__addSubtract(this, input, value, 1);
+    }
+
+    // supports only 2.0-style subtract(1, 's') or subtract(duration)
+    function duration_add_subtract__subtract (input, value) {
+        return duration_add_subtract__addSubtract(this, input, value, -1);
+    }
+
+    function bubble () {
+        var milliseconds = this._milliseconds;
+        var days         = this._days;
+        var months       = this._months;
+        var data         = this._data;
+        var seconds, minutes, hours, years = 0;
+
+        // The following code bubbles up values, see the tests for
+        // examples of what that means.
+        data.milliseconds = milliseconds % 1000;
+
+        seconds           = absFloor(milliseconds / 1000);
+        data.seconds      = seconds % 60;
+
+        minutes           = absFloor(seconds / 60);
+        data.minutes      = minutes % 60;
+
+        hours             = absFloor(minutes / 60);
+        data.hours        = hours % 24;
+
+        days += absFloor(hours / 24);
+
+        // Accurately convert days to years, assume start from year 0.
+        years = absFloor(daysToYears(days));
+        days -= absFloor(yearsToDays(years));
+
+        // 30 days to a month
+        // TODO (iskren): Use anchor date (like 1st Jan) to compute this.
+        months += absFloor(days / 30);
+        days   %= 30;
+
+        // 12 months -> 1 year
+        years  += absFloor(months / 12);
+        months %= 12;
+
+        data.days   = days;
+        data.months = months;
+        data.years  = years;
+
+        return this;
+    }
+
+    function daysToYears (days) {
+        // 400 years have 146097 days (taking into account leap year rules)
+        return days * 400 / 146097;
+    }
+
+    function yearsToDays (years) {
+        // years * 365 + absFloor(years / 4) -
+        //     absFloor(years / 100) + absFloor(years / 400);
+        return years * 146097 / 400;
+    }
+
+    function as (units) {
+        var days;
+        var months;
+        var milliseconds = this._milliseconds;
+
+        units = normalizeUnits(units);
+
+        if (units === 'month' || units === 'year') {
+            days   = this._days   + milliseconds / 864e5;
+            months = this._months + daysToYears(days) * 12;
+            return units === 'month' ? months : months / 12;
+        } else {
+            // handle milliseconds separately because of floating point math errors (issue #1867)
+            days = this._days + Math.round(yearsToDays(this._months / 12));
+            switch (units) {
+                case 'week'   : return days / 7     + milliseconds / 6048e5;
+                case 'day'    : return days         + milliseconds / 864e5;
+                case 'hour'   : return days * 24    + milliseconds / 36e5;
+                case 'minute' : return days * 1440  + milliseconds / 6e4;
+                case 'second' : return days * 86400 + milliseconds / 1000;
+                // Math.floor prevents floating point math errors here
+                case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
+                default: throw new Error('Unknown unit ' + units);
+            }
+        }
+    }
+
+    // TODO: Use this.as('ms')?
+    function duration_as__valueOf () {
+        return (
+            this._milliseconds +
+            this._days * 864e5 +
+            (this._months % 12) * 2592e6 +
+            toInt(this._months / 12) * 31536e6
+        );
+    }
+
+    function makeAs (alias) {
+        return function () {
+            return this.as(alias);
+        };
+    }
+
+    var asMilliseconds = makeAs('ms');
+    var asSeconds      = makeAs('s');
+    var asMinutes      = makeAs('m');
+    var asHours        = makeAs('h');
+    var asDays         = makeAs('d');
+    var asWeeks        = makeAs('w');
+    var asMonths       = makeAs('M');
+    var asYears        = makeAs('y');
+
+    function duration_get__get (units) {
+        units = normalizeUnits(units);
+        return this[units + 's']();
+    }
+
+    function makeGetter(name) {
+        return function () {
+            return this._data[name];
+        };
+    }
+
+    var duration_get__milliseconds = makeGetter('milliseconds');
+    var seconds      = makeGetter('seconds');
+    var minutes      = makeGetter('minutes');
+    var hours        = makeGetter('hours');
+    var days         = makeGetter('days');
+    var months       = makeGetter('months');
+    var years        = makeGetter('years');
+
+    function weeks () {
+        return absFloor(this.days() / 7);
+    }
+
+    var round = Math.round;
+    var thresholds = {
+        s: 45,  // seconds to minute
+        m: 45,  // minutes to hour
+        h: 22,  // hours to day
+        d: 26,  // days to month
+        M: 11   // months to year
+    };
+
+    // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
+    function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
+        return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
+    }
+
+    function duration_humanize__relativeTime (posNegDuration, withoutSuffix, locale) {
+        var duration = create__createDuration(posNegDuration).abs();
+        var seconds  = round(duration.as('s'));
+        var minutes  = round(duration.as('m'));
+        var hours    = round(duration.as('h'));
+        var days     = round(duration.as('d'));
+        var months   = round(duration.as('M'));
+        var years    = round(duration.as('y'));
+
+        var a = seconds < thresholds.s && ['s', seconds]  ||
+                minutes === 1          && ['m']           ||
+                minutes < thresholds.m && ['mm', minutes] ||
+                hours   === 1          && ['h']           ||
+                hours   < thresholds.h && ['hh', hours]   ||
+                days    === 1          && ['d']           ||
+                days    < thresholds.d && ['dd', days]    ||
+                months  === 1          && ['M']           ||
+                months  < thresholds.M && ['MM', months]  ||
+                years   === 1          && ['y']           || ['yy', years];
+
+        a[2] = withoutSuffix;
+        a[3] = +posNegDuration > 0;
+        a[4] = locale;
+        return substituteTimeAgo.apply(null, a);
+    }
+
+    // This function allows you to set a threshold for relative time strings
+    function duration_humanize__getSetRelativeTimeThreshold (threshold, limit) {
+        if (thresholds[threshold] === undefined) {
+            return false;
+        }
+        if (limit === undefined) {
+            return thresholds[threshold];
+        }
+        thresholds[threshold] = limit;
+        return true;
+    }
+
+    function humanize (withSuffix) {
+        var locale = this.localeData();
+        var output = duration_humanize__relativeTime(this, !withSuffix, locale);
+
+        if (withSuffix) {
+            output = locale.pastFuture(+this, output);
+        }
+
+        return locale.postformat(output);
+    }
+
+    var iso_string__abs = Math.abs;
+
+    function iso_string__toISOString() {
+        // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
+        var Y = iso_string__abs(this.years());
+        var M = iso_string__abs(this.months());
+        var D = iso_string__abs(this.days());
+        var h = iso_string__abs(this.hours());
+        var m = iso_string__abs(this.minutes());
+        var s = iso_string__abs(this.seconds() + this.milliseconds() / 1000);
+        var total = this.asSeconds();
+
+        if (!total) {
+            // this is the same as C#'s (Noda) and python (isodate)...
+            // but not other JS (goog.date)
+            return 'P0D';
+        }
+
+        return (total < 0 ? '-' : '') +
+            'P' +
+            (Y ? Y + 'Y' : '') +
+            (M ? M + 'M' : '') +
+            (D ? D + 'D' : '') +
+            ((h || m || s) ? 'T' : '') +
+            (h ? h + 'H' : '') +
+            (m ? m + 'M' : '') +
+            (s ? s + 'S' : '');
+    }
+
+    var duration_prototype__proto = Duration.prototype;
+
+    duration_prototype__proto.abs            = duration_abs__abs;
+    duration_prototype__proto.add            = duration_add_subtract__add;
+    duration_prototype__proto.subtract       = duration_add_subtract__subtract;
+    duration_prototype__proto.as             = as;
+    duration_prototype__proto.asMilliseconds = asMilliseconds;
+    duration_prototype__proto.asSeconds      = asSeconds;
+    duration_prototype__proto.asMinutes      = asMinutes;
+    duration_prototype__proto.asHours        = asHours;
+    duration_prototype__proto.asDays         = asDays;
+    duration_prototype__proto.asWeeks        = asWeeks;
+    duration_prototype__proto.asMonths       = asMonths;
+    duration_prototype__proto.asYears        = asYears;
+    duration_prototype__proto.valueOf        = duration_as__valueOf;
+    duration_prototype__proto._bubble        = bubble;
+    duration_prototype__proto.get            = duration_get__get;
+    duration_prototype__proto.milliseconds   = duration_get__milliseconds;
+    duration_prototype__proto.seconds        = seconds;
+    duration_prototype__proto.minutes        = minutes;
+    duration_prototype__proto.hours          = hours;
+    duration_prototype__proto.days           = days;
+    duration_prototype__proto.weeks          = weeks;
+    duration_prototype__proto.months         = months;
+    duration_prototype__proto.years          = years;
+    duration_prototype__proto.humanize       = humanize;
+    duration_prototype__proto.toISOString    = iso_string__toISOString;
+    duration_prototype__proto.toString       = iso_string__toISOString;
+    duration_prototype__proto.toJSON         = iso_string__toISOString;
+    duration_prototype__proto.locale         = locale;
+    duration_prototype__proto.localeData     = localeData;
+
+    // Deprecations
+    duration_prototype__proto.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', iso_string__toISOString);
+    duration_prototype__proto.lang = lang;
+
+    // Side effect imports
+
+    addFormatToken('X', 0, 0, 'unix');
+    addFormatToken('x', 0, 0, 'valueOf');
+
+    // PARSING
+
+    addRegexToken('x', matchSigned);
+    addRegexToken('X', matchTimestamp);
+    addParseToken('X', function (input, array, config) {
+        config._d = new Date(parseFloat(input, 10) * 1000);
+    });
+    addParseToken('x', function (input, array, config) {
+        config._d = new Date(toInt(input));
+    });
+
+    // Side effect imports
+
+
+    utils_hooks__hooks.version = '2.10.3';
+
+    setHookCallback(local__createLocal);
+
+    utils_hooks__hooks.fn                    = momentPrototype;
+    utils_hooks__hooks.min                   = min;
+    utils_hooks__hooks.max                   = max;
+    utils_hooks__hooks.utc                   = create_utc__createUTC;
+    utils_hooks__hooks.unix                  = moment__createUnix;
+    utils_hooks__hooks.months                = lists__listMonths;
+    utils_hooks__hooks.isDate                = isDate;
+    utils_hooks__hooks.locale                = locale_locales__getSetGlobalLocale;
+    utils_hooks__hooks.invalid               = valid__createInvalid;
+    utils_hooks__hooks.duration              = create__createDuration;
+    utils_hooks__hooks.isMoment              = isMoment;
+    utils_hooks__hooks.weekdays              = lists__listWeekdays;
+    utils_hooks__hooks.parseZone             = moment__createInZone;
+    utils_hooks__hooks.localeData            = locale_locales__getLocale;
+    utils_hooks__hooks.isDuration            = isDuration;
+    utils_hooks__hooks.monthsShort           = lists__listMonthsShort;
+    utils_hooks__hooks.weekdaysMin           = lists__listWeekdaysMin;
+    utils_hooks__hooks.defineLocale          = defineLocale;
+    utils_hooks__hooks.weekdaysShort         = lists__listWeekdaysShort;
+    utils_hooks__hooks.normalizeUnits        = normalizeUnits;
+    utils_hooks__hooks.relativeTimeThreshold = duration_humanize__getSetRelativeTimeThreshold;
+
+    var _moment = utils_hooks__hooks;
+
+    return _moment;
+
+}));
+},{}],254:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+var netsimConstants = require('./netsimConstants');
+
+var NodeType = netsimConstants.NodeType;
+
+var netsimNodeFactory = module.exports;
+
+/**
+ * Given a set of rows from the node table on a shard, gives back a set of node
+ * controllers (of appropriate types).
+ * @param {!NetSimShard} shard
+ * @param {!Array.<Object>} nodeRows
+ * @throws when a row doesn't have a mappable node type.
+ * @return {Array.<NetSimNode>} nodes for the rows
+ */
+netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
+  return nodeRows.map(netsimNodeFactory.nodeFromRow.bind(this, shard));
+};
+
+/**
+ * Given a row from the node table on a shard, gives back a node controllers
+ * (of appropriate types).
+ * @param {!NetSimShard} shard
+ * @param {!Object} nodeRow
+ * @throws when the row doesn't have a mappable node type.
+ * @return {NetSimNode} node for the rows
+ */
+netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
+  if (nodeRow.type === NodeType.CLIENT) {
+    var NetSimClientNode = require('./NetSimClientNode');
+    return new NetSimClientNode(shard, nodeRow);
+  } else if (nodeRow.type === NodeType.ROUTER) {
+    var NetSimRouterNode = require('./NetSimRouterNode');
+    return new NetSimRouterNode(shard, nodeRow);
+  }
+
+  // Oops!  We probably shouldn't ever get here.
+  throw new Error("Unable to map row to node.");
+};
+
+
+},{"./NetSimClientNode":181,"./NetSimRouterNode":221,"./netsimConstants":252}],245:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11448,7 +15059,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 };
 
 
-},{"./dataConverters":235,"./netsimGlobals":241,"./netsimUtils":243}],206:[function(require,module,exports){
+},{"./dataConverters":247,"./netsimGlobals":253,"./netsimUtils":255}],216:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11550,6 +15161,9 @@ NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
  * Recreate markup within panel body.
  */
 NetSimRemoteNodeSelectionPanel.prototype.render = function () {
+  // Clone the reference area (with handlers) before we re-render
+  var referenceArea = $('#reference_area').first().clone(true);
+
   // Create boilerplate panel markup
   NetSimRemoteNodeSelectionPanel.superPrototype.render.call(this);
 
@@ -11561,6 +15175,9 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
     remoteNode: this.remoteNode_
   }));
   this.getBody().html(newMarkup);
+
+  // Move the reference area to beneath the instructions
+  this.getBody().find('.instructions').append(referenceArea);
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
@@ -11688,7 +15305,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 
 
 
-},{"../utils":297,"./NetSimPanel":203,"./NetSimRemoteNodeSelectionPanel.html.ejs":205,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241}],205:[function(require,module,exports){
+},{"../utils":310,"./NetSimPanel":213,"./NetSimRemoteNodeSelectionPanel.html.ejs":215,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253}],215:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11861,9 +15478,31 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
         });
 
+        var buttons = [];
+
         if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
           var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
-          writeEmptyRow(buttonMarkup(buttonText, 'netsim-lobby-add-router', ['secondary']));
+          buttons.push(buttonMarkup(
+              buttonText,
+              'netsim-lobby-add-router',
+              ['secondary']
+          ));
+        }
+
+        if (levelConfig.showLogBrowserButton) {
+          buttons.push(buttonMarkup(
+              i18n.logBrowserButton(),
+              'show-router-log-modal',
+              ['secondary'],
+              {
+                'data-toggle':'modal',
+                'data-target':'#router-log-modal'
+              }
+          ));
+        }
+
+        if (buttons.length > 0) {
+          writeEmptyRow(buttons.join(' '));
         } else if (lobbyRows.length === 0) {
           writeEmptyRow(i18n.lobbyIsEmpty());
         }
@@ -11903,7 +15542,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":297,"./locale":237,"./netsimConstants":240,"./netsimGlobals":241,"ejs":468}],184:[function(require,module,exports){
+},{"../utils":310,"./locale":249,"./netsimConstants":252,"./netsimGlobals":253,"ejs":481}],194:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12106,7 +15745,7 @@ NetSimHeartbeat.prototype.spoofExpired = function () {
 };
 
 
-},{"../utils":297,"./NetSimEntity":182}],183:[function(require,module,exports){
+},{"../utils":310,"./NetSimEntity":192}],193:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12246,7 +15885,7 @@ NetSimFakeVizWire.prototype.setWireClasses_ = function (newState) {
 };
 
 
-},{"../utils":297,"./NetSimVizElement":228,"./NetSimVizNode":230,"./netsimUtils":243}],230:[function(require,module,exports){
+},{"../utils":310,"./NetSimVizElement":240,"./NetSimVizNode":242,"./netsimUtils":255}],242:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12550,7 +16189,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
 };
 
 
-},{"../utils":297,"./NetSimVizEntity":229,"./netsimConstants":240,"./netsimGlobals":241,"./netsimUtils":243,"./tweens":246}],229:[function(require,module,exports){
+},{"../utils":310,"./NetSimVizEntity":241,"./netsimConstants":252,"./netsimGlobals":253,"./netsimUtils":255,"./tweens":258}],241:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12605,7 +16244,7 @@ NetSimVizEntity.prototype.kill = function () {
 };
 
 
-},{"../utils":297,"./NetSimVizElement":228}],228:[function(require,module,exports){
+},{"../utils":310,"./NetSimVizElement":240}],240:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12850,7 +16489,7 @@ NetSimVizElement.prototype.snapToScale = function (newScale) {
 };
 
 
-},{"./netsimUtils":243,"./tweens":246}],246:[function(require,module,exports){
+},{"./netsimUtils":255,"./tweens":258}],258:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13087,7 +16726,7 @@ exports.DoAfterDelay.prototype.tick = function (clock) {
 };
 
 
-},{"../utils":297}],177:[function(require,module,exports){
+},{"../utils":310}],187:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13210,7 +16849,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsManualControl":173,"./NetSimDnsModeControl":175,"./NetSimDnsTab.html.ejs":176,"./NetSimDnsTable":179,"./netsimConstants":240,"./netsimGlobals":241}],179:[function(require,module,exports){
+},{"./NetSimDnsManualControl":183,"./NetSimDnsModeControl":185,"./NetSimDnsTab.html.ejs":186,"./NetSimDnsTable":189,"./netsimConstants":252,"./netsimGlobals":253}],189:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13285,7 +16924,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsTable.html.ejs":178,"./netsimConstants":240}],178:[function(require,module,exports){
+},{"./NetSimDnsTable.html.ejs":188,"./netsimConstants":252}],188:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13328,7 +16967,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":240,"ejs":468}],176:[function(require,module,exports){
+},{"./netsimConstants":252,"ejs":481}],186:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13348,7 +16987,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],175:[function(require,module,exports){
+},{"ejs":481}],185:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13435,7 +17074,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
 };
 
 
-},{"./NetSimDnsModeControl.html.ejs":174,"./netsimConstants":240}],174:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html.ejs":184,"./netsimConstants":252}],184:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13466,7 +17105,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"./netsimConstants":240,"ejs":468}],173:[function(require,module,exports){
+},{"./locale":249,"./netsimConstants":252,"ejs":481}],183:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13532,7 +17171,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 
-},{"./NetSimDnsManualControl.html.ejs":172}],172:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html.ejs":182}],182:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13552,7 +17191,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],171:[function(require,module,exports){
+},{"ejs":481}],181:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13675,7 +17314,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
 };
 
 
-},{"../utils":297,"./NetSimEntity":182,"./NetSimNode":198,"./NetSimWire":232,"./locale":237,"./netsimConstants":240}],198:[function(require,module,exports){
+},{"../utils":310,"./NetSimEntity":192,"./NetSimNode":208,"./NetSimWire":244,"./locale":249,"./netsimConstants":252}],208:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13829,7 +17468,7 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
 
-},{"../utils":297,"./NetSimEntity":182,"./NetSimWire":232,"./locale":237}],232:[function(require,module,exports){
+},{"../utils":310,"./NetSimEntity":192,"./NetSimWire":244,"./locale":249}],244:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13953,7 +17592,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
 };
 
 
-},{"../utils":297,"./NetSimEntity":182}],182:[function(require,module,exports){
+},{"../utils":310,"./NetSimEntity":192}],192:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14100,7 +17739,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 };
 
 
-},{}],170:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14160,7 +17799,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":221,"./locale":237}],169:[function(require,module,exports){
+},{"./NetSimSlider":233,"./locale":249}],179:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14212,7 +17851,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":297,"./NetSimSlider":221,"./netsimUtils":243}],168:[function(require,module,exports){
+},{"../utils":310,"./NetSimSlider":233,"./netsimUtils":255}],178:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14457,7 +18096,7 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":297,"./NetSimBitLogPanel.html.ejs":167,"./NetSimEncodingControl":181,"./NetSimLogger":191,"./NetSimPanel":203,"./locale":237,"./netsimGlobals":241}],241:[function(require,module,exports){
+},{"../utils":310,"./NetSimBitLogPanel.html.ejs":177,"./NetSimEncodingControl":191,"./NetSimLogger":201,"./NetSimPanel":213,"./locale":249,"./netsimGlobals":253}],253:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14496,6 +18135,16 @@ var netsim_ = null;
 var pseudoRandomNumberFunction_ = Math.random;
 
 /**
+ * Get a random integer in the given range.
+ * @param {number} low inclusive lower end of range
+ * @param {number} high exclusive upper end of range
+ * @returns {number}
+ */
+var randomIntInRange = function (low, high) {
+  return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
+};
+
+/**
  * Provide singleton access to global simulation settings
  */
 module.exports = {
@@ -14532,6 +18181,13 @@ module.exports = {
   },
 
   /**
+   * Trigger an attempt to complete the current level and continue to the next.
+   */
+  completeLevelAndContinue: function () {
+    netsim_.completeLevelAndContinue();
+  },
+
+  /**
    * Reseed the random number generator.  If this is never called, the default
    * Math.random function is used as the generator.
    * @param {string} newSeed
@@ -14541,19 +18197,38 @@ module.exports = {
   },
 
   /**
+   * @returns {number} a random value between 0 and 1
+   */
+  random: function () {
+    return pseudoRandomNumberFunction_();
+  },
+
+  /**
    * Get a random integer in the given range.
    * @param {number} low inclusive lower end of range
    * @param {number} high exclusive upper end of range
    * @returns {number}
    */
-  randomIntInRange: function (low, high) {
-    return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
+  randomIntInRange: randomIntInRange,
+
+  /**
+   * Get a random item out of a collection
+   * @param {Array} collection
+   * @returns {*} undefined if collection is empty
+   */
+  randomPickOne: function (collection) {
+    var size = collection.length;
+    if (size === 0) {
+      return undefined;
+    }
+
+    return collection[randomIntInRange(0, size)];
   }
 
 };
 
 
-},{"seedrandom":627}],627:[function(require,module,exports){
+},{"seedrandom":641}],641:[function(require,module,exports){
 // A library of seedable RNGs implemented in Javascript.
 //
 // Usage:
@@ -14609,7 +18284,7 @@ sr.tychei = tychei;
 
 module.exports = sr;
 
-},{"./lib/tychei":628,"./lib/xor128":629,"./lib/xor4096":630,"./lib/xorshift7":631,"./lib/xorwow":632,"./seedrandom":633}],633:[function(require,module,exports){
+},{"./lib/tychei":642,"./lib/xor128":643,"./lib/xor4096":644,"./lib/xorshift7":645,"./lib/xorwow":646,"./seedrandom":647}],647:[function(require,module,exports){
 /*
 Copyright 2014 David Bau.
 
@@ -14853,7 +18528,7 @@ if ((typeof module) == 'object' && module.exports) {
   Math    // math: package containing random, pow, and seedrandom
 );
 
-},{"crypto":305}],305:[function(require,module,exports){
+},{"crypto":318}],318:[function(require,module,exports){
 'use strict';
 exports.randomBytes = exports.rng = require('randombytes')
 var prng = exports.prng = require('./prng');
@@ -14912,7 +18587,7 @@ each([
   }
 })
 
-},{"./pbkdf2":441,"./prng":442,"browserify-aes/inject":313,"browserify-sign/algos":324,"browserify-sign/inject":325,"create-ecdh/inject":371,"create-hash":393,"create-hmac":404,"diffie-hellman/inject":407,"public-encrypt/inject":413,"randombytes":440}],442:[function(require,module,exports){
+},{"./pbkdf2":454,"./prng":455,"browserify-aes/inject":326,"browserify-sign/algos":337,"browserify-sign/inject":338,"create-ecdh/inject":384,"create-hash":406,"create-hmac":417,"diffie-hellman/inject":420,"public-encrypt/inject":426,"randombytes":453}],455:[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 (function() {
@@ -14943,9 +18618,9 @@ each([
 }())
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"buffer":301,"crypto":300}],300:[function(require,module,exports){
-arguments[4][299][0].apply(exports,arguments)
-},{"dup":299}],441:[function(require,module,exports){
+},{"buffer":314,"crypto":313}],313:[function(require,module,exports){
+arguments[4][312][0].apply(exports,arguments)
+},{"dup":312}],454:[function(require,module,exports){
 'use strict';
 var pbkdf2Export = require('pbkdf2-compat/pbkdf2')
 
@@ -14960,7 +18635,7 @@ module.exports = function (crypto, exports) {
   return exports
 }
 
-},{"pbkdf2-compat/pbkdf2":412}],412:[function(require,module,exports){
+},{"pbkdf2-compat/pbkdf2":425}],425:[function(require,module,exports){
 (function (Buffer){
 module.exports = function(crypto) {
   function pbkdf2(password, salt, iterations, keylen, digest, callback) {
@@ -15048,7 +18723,7 @@ module.exports = function(crypto) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],440:[function(require,module,exports){
+},{"buffer":314}],453:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict';
 
@@ -15079,13 +18754,13 @@ function oldBrowser() {
     )
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":447,"buffer":301}],413:[function(require,module,exports){
+},{"_process":460,"buffer":314}],426:[function(require,module,exports){
 
 module.exports = function (exports, crypto) {
   exports.publicEncrypt = require('./publicEncrypt')(crypto);
   exports.privateDecrypt = require('./privateDecrypt')(crypto);
 };
-},{"./privateDecrypt":437,"./publicEncrypt":438}],438:[function(require,module,exports){
+},{"./privateDecrypt":450,"./publicEncrypt":451}],451:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -15174,7 +18849,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":414,"./xor":439,"bn.js":415,"buffer":301,"parse-asn1":421}],437:[function(require,module,exports){
+},{"./mgf":427,"./xor":452,"bn.js":428,"buffer":314,"parse-asn1":434}],450:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -15274,7 +18949,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":414,"./xor":439,"bn.js":415,"browserify-rsa":416,"buffer":301,"parse-asn1":421}],439:[function(require,module,exports){
+},{"./mgf":427,"./xor":452,"bn.js":428,"browserify-rsa":429,"buffer":314,"parse-asn1":434}],452:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -15283,51 +18958,51 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],421:[function(require,module,exports){
-arguments[4][352][0].apply(exports,arguments)
-},{"./aesid.json":418,"./asn1":419,"./fixProc":420,"buffer":301,"dup":352,"pemstrip":436}],436:[function(require,module,exports){
-arguments[4][367][0].apply(exports,arguments)
-},{"dup":367}],420:[function(require,module,exports){
-arguments[4][351][0].apply(exports,arguments)
-},{"./EVP_BytesToKey":417,"buffer":301,"dup":351}],417:[function(require,module,exports){
-arguments[4][348][0].apply(exports,arguments)
-},{"buffer":301,"dup":348}],419:[function(require,module,exports){
-arguments[4][350][0].apply(exports,arguments)
-},{"asn1.js":423,"asn1.js-rfc3280":422,"dup":350}],422:[function(require,module,exports){
-arguments[4][353][0].apply(exports,arguments)
-},{"asn1.js":423,"dup":353}],423:[function(require,module,exports){
-arguments[4][354][0].apply(exports,arguments)
-},{"./asn1/api":424,"./asn1/base":426,"./asn1/constants":430,"./asn1/decoders":432,"./asn1/encoders":434,"bn.js":415,"dup":354}],434:[function(require,module,exports){
+},{}],434:[function(require,module,exports){
 arguments[4][365][0].apply(exports,arguments)
-},{"./der":433,"dup":365}],433:[function(require,module,exports){
+},{"./aesid.json":431,"./asn1":432,"./fixProc":433,"buffer":314,"dup":365,"pemstrip":449}],449:[function(require,module,exports){
+arguments[4][380][0].apply(exports,arguments)
+},{"dup":380}],433:[function(require,module,exports){
 arguments[4][364][0].apply(exports,arguments)
-},{"../../asn1":423,"buffer":301,"dup":364,"inherits":444}],432:[function(require,module,exports){
-arguments[4][363][0].apply(exports,arguments)
-},{"./der":431,"dup":363}],431:[function(require,module,exports){
-arguments[4][362][0].apply(exports,arguments)
-},{"../../asn1":423,"dup":362,"inherits":444}],430:[function(require,module,exports){
+},{"./EVP_BytesToKey":430,"buffer":314,"dup":364}],430:[function(require,module,exports){
 arguments[4][361][0].apply(exports,arguments)
-},{"./der":429,"dup":361}],429:[function(require,module,exports){
-arguments[4][360][0].apply(exports,arguments)
-},{"../constants":430,"dup":360}],426:[function(require,module,exports){
-arguments[4][357][0].apply(exports,arguments)
-},{"./buffer":425,"./node":427,"./reporter":428,"dup":357}],428:[function(require,module,exports){
-arguments[4][359][0].apply(exports,arguments)
-},{"dup":359,"inherits":444}],427:[function(require,module,exports){
-arguments[4][358][0].apply(exports,arguments)
-},{"../base":426,"dup":358,"minimalistic-assert":435}],435:[function(require,module,exports){
+},{"buffer":314,"dup":361}],432:[function(require,module,exports){
+arguments[4][363][0].apply(exports,arguments)
+},{"asn1.js":436,"asn1.js-rfc3280":435,"dup":363}],435:[function(require,module,exports){
 arguments[4][366][0].apply(exports,arguments)
-},{"dup":366}],425:[function(require,module,exports){
-arguments[4][356][0].apply(exports,arguments)
-},{"../base":426,"buffer":301,"dup":356,"inherits":444}],424:[function(require,module,exports){
-arguments[4][355][0].apply(exports,arguments)
-},{"../asn1":423,"dup":355,"inherits":444,"vm":466}],418:[function(require,module,exports){
-arguments[4][349][0].apply(exports,arguments)
-},{"dup":349}],416:[function(require,module,exports){
-arguments[4][327][0].apply(exports,arguments)
-},{"bn.js":415,"buffer":301,"dup":327}],415:[function(require,module,exports){
-arguments[4][326][0].apply(exports,arguments)
-},{"dup":326}],414:[function(require,module,exports){
+},{"asn1.js":436,"dup":366}],436:[function(require,module,exports){
+arguments[4][367][0].apply(exports,arguments)
+},{"./asn1/api":437,"./asn1/base":439,"./asn1/constants":443,"./asn1/decoders":445,"./asn1/encoders":447,"bn.js":428,"dup":367}],447:[function(require,module,exports){
+arguments[4][378][0].apply(exports,arguments)
+},{"./der":446,"dup":378}],446:[function(require,module,exports){
+arguments[4][377][0].apply(exports,arguments)
+},{"../../asn1":436,"buffer":314,"dup":377,"inherits":457}],445:[function(require,module,exports){
+arguments[4][376][0].apply(exports,arguments)
+},{"./der":444,"dup":376}],444:[function(require,module,exports){
+arguments[4][375][0].apply(exports,arguments)
+},{"../../asn1":436,"dup":375,"inherits":457}],443:[function(require,module,exports){
+arguments[4][374][0].apply(exports,arguments)
+},{"./der":442,"dup":374}],442:[function(require,module,exports){
+arguments[4][373][0].apply(exports,arguments)
+},{"../constants":443,"dup":373}],439:[function(require,module,exports){
+arguments[4][370][0].apply(exports,arguments)
+},{"./buffer":438,"./node":440,"./reporter":441,"dup":370}],441:[function(require,module,exports){
+arguments[4][372][0].apply(exports,arguments)
+},{"dup":372,"inherits":457}],440:[function(require,module,exports){
+arguments[4][371][0].apply(exports,arguments)
+},{"../base":439,"dup":371,"minimalistic-assert":448}],448:[function(require,module,exports){
+arguments[4][379][0].apply(exports,arguments)
+},{"dup":379}],438:[function(require,module,exports){
+arguments[4][369][0].apply(exports,arguments)
+},{"../base":439,"buffer":314,"dup":369,"inherits":457}],437:[function(require,module,exports){
+arguments[4][368][0].apply(exports,arguments)
+},{"../asn1":436,"dup":368,"inherits":457,"vm":479}],431:[function(require,module,exports){
+arguments[4][362][0].apply(exports,arguments)
+},{"dup":362}],429:[function(require,module,exports){
+arguments[4][340][0].apply(exports,arguments)
+},{"bn.js":428,"buffer":314,"dup":340}],428:[function(require,module,exports){
+arguments[4][339][0].apply(exports,arguments)
+},{"dup":339}],427:[function(require,module,exports){
 (function (Buffer){
 module.exports = function (seed, len, crypto) {
   var t = new Buffer('');
@@ -15345,7 +19020,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],407:[function(require,module,exports){
+},{"buffer":314}],420:[function(require,module,exports){
 (function (Buffer){
 var primes = require('./primes.json');
 var DH = require('./dh');
@@ -15384,7 +19059,7 @@ module.exports = function (crypto, exports) {
 	};
 }
 }).call(this,require("buffer").Buffer)
-},{"./dh":405,"./generatePrime":406,"./primes.json":411,"buffer":301}],411:[function(require,module,exports){
+},{"./dh":418,"./generatePrime":419,"./primes.json":424,"buffer":314}],424:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -15419,7 +19094,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],405:[function(require,module,exports){
+},{}],418:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -15579,7 +19254,7 @@ function returnValue(bn, enc) {
 	}
 }
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":406,"bn.js":408,"buffer":301,"miller-rabin":409}],406:[function(require,module,exports){
+},{"./generatePrime":419,"bn.js":421,"buffer":314,"miller-rabin":422}],419:[function(require,module,exports){
 
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -15711,7 +19386,7 @@ function findPrime(bits, gen ,crypto) {
   }
 
 }
-},{"bn.js":408,"miller-rabin":409}],409:[function(require,module,exports){
+},{"bn.js":421,"miller-rabin":422}],422:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -15827,11 +19502,11 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return prime;
 };
 
-},{"bn.js":408,"brorand":410}],410:[function(require,module,exports){
-arguments[4][340][0].apply(exports,arguments)
-},{"dup":340}],408:[function(require,module,exports){
-arguments[4][326][0].apply(exports,arguments)
-},{"dup":326}],404:[function(require,module,exports){
+},{"bn.js":421,"brorand":423}],423:[function(require,module,exports){
+arguments[4][353][0].apply(exports,arguments)
+},{"dup":353}],421:[function(require,module,exports){
+arguments[4][339][0].apply(exports,arguments)
+},{"dup":339}],417:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('create-hash/browser');
@@ -15900,7 +19575,7 @@ Hmac.prototype.digest = function (enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":301,"create-hash/browser":393,"inherits":444,"stream":463}],393:[function(require,module,exports){
+},{"buffer":314,"create-hash/browser":406,"inherits":457,"stream":476}],406:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('sha.js')
@@ -15986,7 +19661,7 @@ Hash.prototype.digest = function (enc) {
   return outData
 }
 }).call(this,require("buffer").Buffer)
-},{"./md5":395,"buffer":301,"inherits":444,"ripemd160":396,"sha.js":398,"stream":463}],398:[function(require,module,exports){
+},{"./md5":408,"buffer":314,"inherits":457,"ripemd160":409,"sha.js":411,"stream":476}],411:[function(require,module,exports){
 var exports = module.exports = function (alg) {
   var Alg = exports[alg.toLowerCase()]
   if(!Alg) throw new Error(alg + ' is not supported (we accept pull requests)')
@@ -16000,7 +19675,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha1":399,"./sha224":400,"./sha256":401,"./sha384":402,"./sha512":403}],402:[function(require,module,exports){
+},{"./sha1":412,"./sha224":413,"./sha256":414,"./sha384":415,"./sha512":416}],415:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512');
@@ -16060,7 +19735,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":397,"./sha512":403,"buffer":301,"inherits":444}],403:[function(require,module,exports){
+},{"./hash":410,"./sha512":416,"buffer":314,"inherits":457}],416:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -16309,7 +19984,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":397,"buffer":301,"inherits":444}],400:[function(require,module,exports){
+},{"./hash":410,"buffer":314,"inherits":457}],413:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -16365,7 +20040,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":397,"./sha256":401,"buffer":301,"inherits":444}],401:[function(require,module,exports){
+},{"./hash":410,"./sha256":414,"buffer":314,"inherits":457}],414:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -16518,7 +20193,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":397,"buffer":301,"inherits":444}],399:[function(require,module,exports){
+},{"./hash":410,"buffer":314,"inherits":457}],412:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -16618,7 +20293,7 @@ module.exports = Sha1
 
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":397,"buffer":301,"inherits":444}],397:[function(require,module,exports){
+},{"./hash":410,"buffer":314,"inherits":457}],410:[function(require,module,exports){
 (function (Buffer){
 //prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -16691,7 +20366,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],396:[function(require,module,exports){
+},{"buffer":314}],409:[function(require,module,exports){
 (function (Buffer){
 /*
 CryptoJS v3.1.2
@@ -16901,7 +20576,7 @@ function ripemd160(message) {
 module.exports = ripemd160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],395:[function(require,module,exports){
+},{"buffer":314}],408:[function(require,module,exports){
 'use strict';
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -17058,7 +20733,7 @@ function bit_rol(num, cnt)
 module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
-},{"./helpers":394}],394:[function(require,module,exports){
+},{"./helpers":407}],407:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var intSize = 4;
@@ -17095,14 +20770,14 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],371:[function(require,module,exports){
+},{"buffer":314}],384:[function(require,module,exports){
 var ECDH = require('./ecdh');
 module.exports = function (crypto, exports) {
 	exports.createECDH = function (curve) {
 		return new ECDH(curve, crypto);
 	};
 };
-},{"./ecdh":370}],370:[function(require,module,exports){
+},{"./ecdh":383}],383:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -17174,49 +20849,49 @@ function returnValue(bn, enc) {
 	}
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":372,"buffer":301,"elliptic":373}],373:[function(require,module,exports){
-arguments[4][328][0].apply(exports,arguments)
-},{"../package.json":392,"./elliptic/curve":376,"./elliptic/curves":379,"./elliptic/ec":380,"./elliptic/hmac-drbg":383,"./elliptic/utils":384,"brorand":385,"dup":328}],392:[function(require,module,exports){
-arguments[4][347][0].apply(exports,arguments)
-},{"dup":347}],385:[function(require,module,exports){
-arguments[4][340][0].apply(exports,arguments)
-},{"dup":340}],384:[function(require,module,exports){
-arguments[4][339][0].apply(exports,arguments)
-},{"bn.js":372,"dup":339}],383:[function(require,module,exports){
-arguments[4][338][0].apply(exports,arguments)
-},{"../elliptic":373,"dup":338,"hash.js":386}],380:[function(require,module,exports){
-arguments[4][335][0].apply(exports,arguments)
-},{"../../elliptic":373,"./key":381,"./signature":382,"bn.js":372,"dup":335}],382:[function(require,module,exports){
-arguments[4][337][0].apply(exports,arguments)
-},{"../../elliptic":373,"bn.js":372,"dup":337}],381:[function(require,module,exports){
-arguments[4][336][0].apply(exports,arguments)
-},{"../../elliptic":373,"bn.js":372,"dup":336}],379:[function(require,module,exports){
-arguments[4][334][0].apply(exports,arguments)
-},{"../elliptic":373,"bn.js":372,"dup":334,"hash.js":386}],386:[function(require,module,exports){
+},{"bn.js":385,"buffer":314,"elliptic":386}],386:[function(require,module,exports){
 arguments[4][341][0].apply(exports,arguments)
-},{"./hash/common":387,"./hash/hmac":388,"./hash/ripemd":389,"./hash/sha":390,"./hash/utils":391,"dup":341}],391:[function(require,module,exports){
-arguments[4][346][0].apply(exports,arguments)
-},{"dup":346,"inherits":444}],390:[function(require,module,exports){
-arguments[4][345][0].apply(exports,arguments)
-},{"../hash":386,"dup":345}],389:[function(require,module,exports){
+},{"../package.json":405,"./elliptic/curve":389,"./elliptic/curves":392,"./elliptic/ec":393,"./elliptic/hmac-drbg":396,"./elliptic/utils":397,"brorand":398,"dup":341}],405:[function(require,module,exports){
+arguments[4][360][0].apply(exports,arguments)
+},{"dup":360}],398:[function(require,module,exports){
+arguments[4][353][0].apply(exports,arguments)
+},{"dup":353}],397:[function(require,module,exports){
+arguments[4][352][0].apply(exports,arguments)
+},{"bn.js":385,"dup":352}],396:[function(require,module,exports){
+arguments[4][351][0].apply(exports,arguments)
+},{"../elliptic":386,"dup":351,"hash.js":399}],393:[function(require,module,exports){
+arguments[4][348][0].apply(exports,arguments)
+},{"../../elliptic":386,"./key":394,"./signature":395,"bn.js":385,"dup":348}],395:[function(require,module,exports){
+arguments[4][350][0].apply(exports,arguments)
+},{"../../elliptic":386,"bn.js":385,"dup":350}],394:[function(require,module,exports){
+arguments[4][349][0].apply(exports,arguments)
+},{"../../elliptic":386,"bn.js":385,"dup":349}],392:[function(require,module,exports){
+arguments[4][347][0].apply(exports,arguments)
+},{"../elliptic":386,"bn.js":385,"dup":347,"hash.js":399}],399:[function(require,module,exports){
+arguments[4][354][0].apply(exports,arguments)
+},{"./hash/common":400,"./hash/hmac":401,"./hash/ripemd":402,"./hash/sha":403,"./hash/utils":404,"dup":354}],404:[function(require,module,exports){
+arguments[4][359][0].apply(exports,arguments)
+},{"dup":359,"inherits":457}],403:[function(require,module,exports){
+arguments[4][358][0].apply(exports,arguments)
+},{"../hash":399,"dup":358}],402:[function(require,module,exports){
+arguments[4][357][0].apply(exports,arguments)
+},{"../hash":399,"dup":357}],401:[function(require,module,exports){
+arguments[4][356][0].apply(exports,arguments)
+},{"../hash":399,"dup":356}],400:[function(require,module,exports){
+arguments[4][355][0].apply(exports,arguments)
+},{"../hash":399,"dup":355}],389:[function(require,module,exports){
 arguments[4][344][0].apply(exports,arguments)
-},{"../hash":386,"dup":344}],388:[function(require,module,exports){
+},{"./base":387,"./edwards":388,"./mont":390,"./short":391,"dup":344}],391:[function(require,module,exports){
+arguments[4][346][0].apply(exports,arguments)
+},{"../../elliptic":386,"../curve":389,"bn.js":385,"dup":346,"inherits":457}],390:[function(require,module,exports){
+arguments[4][345][0].apply(exports,arguments)
+},{"../../elliptic":386,"../curve":389,"bn.js":385,"dup":345,"inherits":457}],388:[function(require,module,exports){
 arguments[4][343][0].apply(exports,arguments)
-},{"../hash":386,"dup":343}],387:[function(require,module,exports){
+},{"../../elliptic":386,"../curve":389,"bn.js":385,"dup":343,"inherits":457}],387:[function(require,module,exports){
 arguments[4][342][0].apply(exports,arguments)
-},{"../hash":386,"dup":342}],376:[function(require,module,exports){
-arguments[4][331][0].apply(exports,arguments)
-},{"./base":374,"./edwards":375,"./mont":377,"./short":378,"dup":331}],378:[function(require,module,exports){
-arguments[4][333][0].apply(exports,arguments)
-},{"../../elliptic":373,"../curve":376,"bn.js":372,"dup":333,"inherits":444}],377:[function(require,module,exports){
-arguments[4][332][0].apply(exports,arguments)
-},{"../../elliptic":373,"../curve":376,"bn.js":372,"dup":332,"inherits":444}],375:[function(require,module,exports){
-arguments[4][330][0].apply(exports,arguments)
-},{"../../elliptic":373,"../curve":376,"bn.js":372,"dup":330,"inherits":444}],374:[function(require,module,exports){
-arguments[4][329][0].apply(exports,arguments)
-},{"../../elliptic":373,"bn.js":372,"dup":329}],372:[function(require,module,exports){
-arguments[4][326][0].apply(exports,arguments)
-},{"dup":326}],325:[function(require,module,exports){
+},{"../../elliptic":386,"bn.js":385,"dup":342}],385:[function(require,module,exports){
+arguments[4][339][0].apply(exports,arguments)
+},{"dup":339}],338:[function(require,module,exports){
 (function (Buffer){
 var sign = require('./sign');
 var verify = require('./verify');
@@ -17298,7 +20973,7 @@ Verify.prototype.verify = function verifyMethod(key, sig, enc) {
 	return verify(sig, Buffer.concat([this._tag, hash]), key);
 };
 }).call(this,require("buffer").Buffer)
-},{"./algos":324,"./sign":368,"./verify":369,"buffer":301,"inherits":444,"stream":463}],369:[function(require,module,exports){
+},{"./algos":337,"./sign":381,"./verify":382,"buffer":314,"inherits":457,"stream":476}],382:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var parseKeys = require('parse-asn1');
@@ -17378,7 +21053,7 @@ function checkValue(b, q) {
   }
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":326,"buffer":301,"elliptic":328,"parse-asn1":352}],368:[function(require,module,exports){
+},{"bn.js":339,"buffer":314,"elliptic":341,"parse-asn1":365}],381:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var parseKeys = require('parse-asn1');
@@ -17541,7 +21216,7 @@ function makeR(g, k, p, q) {
   return g.toRed(bn.mont(p)).redPow(k).fromRed().mod(q);
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":326,"browserify-rsa":327,"buffer":301,"elliptic":328,"parse-asn1":352}],352:[function(require,module,exports){
+},{"bn.js":339,"browserify-rsa":340,"buffer":314,"elliptic":341,"parse-asn1":365}],365:[function(require,module,exports){
 (function (Buffer){
 var pemstrip = require('pemstrip');
 var asn1 = require('./asn1');
@@ -17647,7 +21322,7 @@ function decrypt(crypto, data, password) {
   return Buffer.concat(out);
 }
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":349,"./asn1":350,"./fixProc":351,"buffer":301,"pemstrip":367}],367:[function(require,module,exports){
+},{"./aesid.json":362,"./asn1":363,"./fixProc":364,"buffer":314,"pemstrip":380}],380:[function(require,module,exports){
 exports.strip = function strip(artifact) {
   artifact = artifact.toString()
   var startRegex = /^-----BEGIN (.*)-----\n/;
@@ -17681,7 +21356,7 @@ exports.assemble = function assemble(info) {
   var endLine = "-----END " + tag + "-----";
   return startLine + "\n" + wrap(base64, 64) + "\n" + endLine + "\n";
 }
-},{}],351:[function(require,module,exports){
+},{}],364:[function(require,module,exports){
 (function (Buffer){
 var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m;
 var startRegex = /^-----BEGIN (.*)-----\n/;
@@ -17720,7 +21395,7 @@ function wrap(str) {
   return chunks.join("\n");
 }
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":348,"buffer":301}],348:[function(require,module,exports){
+},{"./EVP_BytesToKey":361,"buffer":314}],361:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function evp(crypto, password, salt, keyLen) {
@@ -17762,7 +21437,7 @@ module.exports = function evp(crypto, password, salt, keyLen) {
   return key;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],350:[function(require,module,exports){
+},{"buffer":314}],363:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 
@@ -17925,7 +21600,7 @@ exports.signature = asn1.define('signature', function() {
     this.key('s').int()
   );
 });
-},{"asn1.js":354,"asn1.js-rfc3280":353}],353:[function(require,module,exports){
+},{"asn1.js":367,"asn1.js-rfc3280":366}],366:[function(require,module,exports){
 try {
   var asn1 = require('asn1.js');
 } catch (e) {
@@ -18079,7 +21754,7 @@ var AttributeValue = asn1.define('AttributeValue', function() {
 });
 exports.AttributeValue = AttributeValue;
 
-},{"asn1.js":354}],354:[function(require,module,exports){
+},{"asn1.js":367}],367:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -18090,12 +21765,12 @@ asn1.constants = require('./asn1/constants');
 asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
-},{"./asn1/api":355,"./asn1/base":357,"./asn1/constants":361,"./asn1/decoders":363,"./asn1/encoders":365,"bn.js":326}],365:[function(require,module,exports){
+},{"./asn1/api":368,"./asn1/base":370,"./asn1/constants":374,"./asn1/decoders":376,"./asn1/encoders":378,"bn.js":339}],378:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
 
-},{"./der":364}],364:[function(require,module,exports){
+},{"./der":377}],377:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -18367,12 +22042,12 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":354,"buffer":301,"inherits":444}],363:[function(require,module,exports){
+},{"../../asn1":367,"buffer":314,"inherits":457}],376:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
 
-},{"./der":362}],362:[function(require,module,exports){
+},{"./der":375}],375:[function(require,module,exports){
 var inherits = require('inherits');
 
 var asn1 = require('../../asn1');
@@ -18674,7 +22349,7 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":354,"inherits":444}],361:[function(require,module,exports){
+},{"../../asn1":367,"inherits":457}],374:[function(require,module,exports){
 var constants = exports;
 
 // Helper
@@ -18695,7 +22370,7 @@ constants._reverse = function reverse(map) {
 
 constants.der = require('./der');
 
-},{"./der":360}],360:[function(require,module,exports){
+},{"./der":373}],373:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -18739,7 +22414,7 @@ exports.tag = {
 };
 exports.tagByName = constants._reverse(exports.tag);
 
-},{"../constants":361}],357:[function(require,module,exports){
+},{"../constants":374}],370:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -18747,7 +22422,7 @@ base.DecoderBuffer = require('./buffer').DecoderBuffer;
 base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
-},{"./buffer":356,"./node":358,"./reporter":359}],359:[function(require,module,exports){
+},{"./buffer":369,"./node":371,"./reporter":372}],372:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -18838,7 +22513,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":444}],358:[function(require,module,exports){
+},{"inherits":457}],371:[function(require,module,exports){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
 var assert = require('minimalistic-assert');
@@ -19415,7 +23090,7 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag, data) {
     throw new Error('Unsupported tag: ' + tag);
 };
 
-},{"../base":357,"minimalistic-assert":366}],366:[function(require,module,exports){
+},{"../base":370,"minimalistic-assert":379}],379:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -19428,7 +23103,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],356:[function(require,module,exports){
+},{}],369:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -19545,7 +23220,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":357,"buffer":301,"inherits":444}],355:[function(require,module,exports){
+},{"../base":370,"buffer":314,"inherits":457}],368:[function(require,module,exports){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
 var vm = require('vm');
@@ -19598,7 +23273,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":354,"inherits":444,"vm":466}],466:[function(require,module,exports){
+},{"../asn1":367,"inherits":457,"vm":479}],479:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -19738,7 +23413,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":467}],467:[function(require,module,exports){
+},{"indexof":480}],480:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -19749,7 +23424,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],349:[function(require,module,exports){
+},{}],362:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -19763,7 +23438,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],328:[function(require,module,exports){
+},{}],341:[function(require,module,exports){
 var elliptic = exports;
 
 elliptic.version = require('../package.json').version;
@@ -19776,7 +23451,7 @@ elliptic.curves = require('./elliptic/curves');
 // Protocols
 elliptic.ec = require('./elliptic/ec');
 
-},{"../package.json":347,"./elliptic/curve":331,"./elliptic/curves":334,"./elliptic/ec":335,"./elliptic/hmac-drbg":338,"./elliptic/utils":339,"brorand":340}],347:[function(require,module,exports){
+},{"../package.json":360,"./elliptic/curve":344,"./elliptic/curves":347,"./elliptic/ec":348,"./elliptic/hmac-drbg":351,"./elliptic/utils":352,"brorand":353}],360:[function(require,module,exports){
 module.exports={
   "name": "elliptic",
   "version": "1.0.1",
@@ -19825,7 +23500,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-1.0.1.tgz"
 }
 
-},{}],340:[function(require,module,exports){
+},{}],353:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -19884,7 +23559,7 @@ if (typeof window === 'object') {
   }
 }
 
-},{}],339:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
 var bn = require('bn.js');
 
 var utils = exports;
@@ -20036,7 +23711,7 @@ function getJSF(k1, k2) {
 }
 utils.getJSF = getJSF;
 
-},{"bn.js":326}],338:[function(require,module,exports){
+},{"bn.js":339}],351:[function(require,module,exports){
 var hash = require('hash.js');
 var elliptic = require('../elliptic');
 var utils = elliptic.utils;
@@ -20150,7 +23825,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"../elliptic":328,"hash.js":341}],335:[function(require,module,exports){
+},{"../elliptic":341,"hash.js":354}],348:[function(require,module,exports){
 var bn = require('bn.js');
 var elliptic = require('../../elliptic');
 var utils = elliptic.utils;
@@ -20303,7 +23978,7 @@ EC.prototype.verify = function verify(msg, signature, key) {
   return p.getX().mod(this.n).cmp(r) === 0;
 };
 
-},{"../../elliptic":328,"./key":336,"./signature":337,"bn.js":326}],337:[function(require,module,exports){
+},{"../../elliptic":341,"./key":349,"./signature":350,"bn.js":339}],350:[function(require,module,exports){
 var bn = require('bn.js');
 
 var elliptic = require('../../elliptic');
@@ -20368,7 +24043,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":328,"bn.js":326}],336:[function(require,module,exports){
+},{"../../elliptic":341,"bn.js":339}],349:[function(require,module,exports){
 var bn = require('bn.js');
 
 var elliptic = require('../../elliptic');
@@ -20514,7 +24189,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"../../elliptic":328,"bn.js":326}],334:[function(require,module,exports){
+},{"../../elliptic":341,"bn.js":339}],347:[function(require,module,exports){
 var curves = exports;
 
 var hash = require('hash.js');
@@ -21444,7 +25119,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":328,"bn.js":326,"hash.js":341}],341:[function(require,module,exports){
+},{"../elliptic":341,"bn.js":339,"hash.js":354}],354:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -21461,7 +25136,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":342,"./hash/hmac":343,"./hash/ripemd":344,"./hash/sha":345,"./hash/utils":346}],346:[function(require,module,exports){
+},{"./hash/common":355,"./hash/hmac":356,"./hash/ripemd":357,"./hash/sha":358,"./hash/utils":359}],359:[function(require,module,exports){
 var utils = exports;
 var inherits = require('inherits');
 
@@ -21720,7 +25395,7 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":444}],345:[function(require,module,exports){
+},{"inherits":457}],358:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -22286,7 +25961,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":341}],344:[function(require,module,exports){
+},{"../hash":354}],357:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 
@@ -22432,7 +26107,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":341}],343:[function(require,module,exports){
+},{"../hash":354}],356:[function(require,module,exports){
 var hmac = exports;
 
 var hash = require('../hash');
@@ -22482,7 +26157,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":341}],342:[function(require,module,exports){
+},{"../hash":354}],355:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -22575,7 +26250,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":341}],331:[function(require,module,exports){
+},{"../hash":354}],344:[function(require,module,exports){
 var curve = exports;
 
 curve.base = require('./base');
@@ -22583,7 +26258,7 @@ curve.short = require('./short');
 curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
-},{"./base":329,"./edwards":330,"./mont":332,"./short":333}],333:[function(require,module,exports){
+},{"./base":342,"./edwards":343,"./mont":345,"./short":346}],346:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -23481,7 +27156,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":328,"../curve":331,"bn.js":326,"inherits":444}],332:[function(require,module,exports){
+},{"../../elliptic":341,"../curve":344,"bn.js":339,"inherits":457}],345:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -23646,7 +27321,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":328,"../curve":331,"bn.js":326,"inherits":444}],330:[function(require,module,exports){
+},{"../../elliptic":341,"../curve":344,"bn.js":339,"inherits":457}],343:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -24009,7 +27684,7 @@ Point.prototype.getY = function getY() {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":328,"../curve":331,"bn.js":326,"inherits":444}],329:[function(require,module,exports){
+},{"../../elliptic":341,"../curve":344,"bn.js":339,"inherits":457}],342:[function(require,module,exports){
 var bn = require('bn.js');
 var elliptic = require('../../elliptic');
 
@@ -24313,7 +27988,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":328,"bn.js":326}],327:[function(require,module,exports){
+},{"../../elliptic":341,"bn.js":339}],340:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 module.exports = crt;
@@ -24361,7 +28036,7 @@ function getr(priv, crypto) {
   return r;
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":326,"buffer":301}],326:[function(require,module,exports){
+},{"bn.js":339,"buffer":314}],339:[function(require,module,exports){
 // Utils
 
 function assert(val, msg) {
@@ -26285,7 +29960,7 @@ Mont.prototype.invm = function invm(a) {
   return res._forceRed(this);
 };
 
-},{}],324:[function(require,module,exports){
+},{}],337:[function(require,module,exports){
 (function (Buffer){
 exports['RSA-SHA224'] = exports.sha224WithRSAEncryption = {
   sign: 'rsa',
@@ -26358,7 +30033,7 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
   id: new Buffer('3020300c06082a864886f70d020505000410', 'hex')
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],313:[function(require,module,exports){
+},{"buffer":314}],326:[function(require,module,exports){
 module.exports = function (crypto, exports) {
   exports = exports || {};
   var ciphers = require('./encrypter')(crypto);
@@ -26374,7 +30049,7 @@ module.exports = function (crypto, exports) {
   exports.listCiphers = exports.getCiphers = getCiphers;
 };
 
-},{"./decrypter":310,"./encrypter":311,"./modes":314}],311:[function(require,module,exports){
+},{"./decrypter":323,"./encrypter":324,"./modes":327}],324:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -26501,7 +30176,7 @@ module.exports = function (crypto) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":306,"./aes":307,"./authCipher":308,"./cipherBase":309,"./modes":314,"./modes/cbc":315,"./modes/cfb":316,"./modes/cfb1":317,"./modes/cfb8":318,"./modes/ctr":319,"./modes/ecb":320,"./modes/ofb":321,"./streamCipher":322,"buffer":301,"inherits":444}],310:[function(require,module,exports){
+},{"./EVP_BytesToKey":319,"./aes":320,"./authCipher":321,"./cipherBase":322,"./modes":327,"./modes/cbc":328,"./modes/cfb":329,"./modes/cfb1":330,"./modes/cfb8":331,"./modes/ctr":332,"./modes/ecb":333,"./modes/ofb":334,"./streamCipher":335,"buffer":314,"inherits":457}],323:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -26645,7 +30320,7 @@ module.exports = function (crypto) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":306,"./aes":307,"./authCipher":308,"./cipherBase":309,"./modes":314,"./modes/cbc":315,"./modes/cfb":316,"./modes/cfb1":317,"./modes/cfb8":318,"./modes/ctr":319,"./modes/ecb":320,"./modes/ofb":321,"./streamCipher":322,"buffer":301,"inherits":444}],322:[function(require,module,exports){
+},{"./EVP_BytesToKey":319,"./aes":320,"./authCipher":321,"./cipherBase":322,"./modes":327,"./modes/cbc":328,"./modes/cfb":329,"./modes/cfb1":330,"./modes/cfb8":331,"./modes/ctr":332,"./modes/ecb":333,"./modes/ofb":334,"./streamCipher":335,"buffer":314,"inherits":457}],335:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -26673,7 +30348,7 @@ StreamCipher.prototype._final = function () {
   this._cipher.scrub();
 };
 }).call(this,require("buffer").Buffer)
-},{"./aes":307,"./cipherBase":309,"buffer":301,"inherits":444}],321:[function(require,module,exports){
+},{"./aes":320,"./cipherBase":322,"buffer":314,"inherits":457}],334:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 function getBlock(self) {
@@ -26689,14 +30364,14 @@ exports.encrypt = function (self, chunk) {
   return xor(chunk, pad);
 };
 }).call(this,require("buffer").Buffer)
-},{"../xor":323,"buffer":301}],320:[function(require,module,exports){
+},{"../xor":336,"buffer":314}],333:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block);
 };
 exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block);
 };
-},{}],319:[function(require,module,exports){
+},{}],332:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 function getBlock(self) {
@@ -26727,7 +30402,7 @@ function incr32(iv) {
   }
 }
 }).call(this,require("buffer").Buffer)
-},{"../xor":323,"buffer":301}],318:[function(require,module,exports){
+},{"../xor":336,"buffer":314}],331:[function(require,module,exports){
 (function (Buffer){
 function encryptByte(self, byte, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev);
@@ -26745,7 +30420,7 @@ exports.encrypt = function (self, chunk, decrypt) {
   return out;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],317:[function(require,module,exports){
+},{"buffer":314}],330:[function(require,module,exports){
 (function (Buffer){
 
 function encryptByte(self, byte, decrypt) {
@@ -26783,7 +30458,7 @@ function shiftIn(buffer, value) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],316:[function(require,module,exports){
+},{"buffer":314}],329:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 exports.encrypt = function (self, data, decrypt) {
@@ -26813,7 +30488,7 @@ function encryptStart(self, data, decrypt) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"../xor":323,"buffer":301}],315:[function(require,module,exports){
+},{"../xor":336,"buffer":314}],328:[function(require,module,exports){
 var xor = require('../xor');
 exports.encrypt = function (self, block) {
   var data = xor(block, self._prev);
@@ -26826,7 +30501,7 @@ exports.decrypt = function (self, block) {
   var out = self._cipher.decryptBlock(block);
   return xor(out, pad);
 };
-},{"../xor":323}],314:[function(require,module,exports){
+},{"../xor":336}],327:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -26998,7 +30673,7 @@ exports['aes-256-gcm'] = {
   mode: 'GCM',
   type: 'auth'
 };
-},{}],308:[function(require,module,exports){
+},{}],321:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -27101,7 +30776,7 @@ function xorTest(a, b) {
 
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":307,"./cipherBase":309,"./ghash":312,"./xor":323,"buffer":301,"inherits":444}],323:[function(require,module,exports){
+},{"./aes":320,"./cipherBase":322,"./ghash":325,"./xor":336,"buffer":314,"inherits":457}],336:[function(require,module,exports){
 (function (Buffer){
 module.exports = xor;
 function xor(a, b) {
@@ -27114,7 +30789,7 @@ function xor(a, b) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],312:[function(require,module,exports){
+},{"buffer":314}],325:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16);
 zeros.fill(0);
@@ -27215,7 +30890,7 @@ function xor(a, b) {
   ];
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],309:[function(require,module,exports){
+},{"buffer":314}],322:[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform;
 var inherits = require('inherits');
@@ -27255,7 +30930,7 @@ CipherBase.prototype.final = function (outputEnc) {
   return outData;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":301,"inherits":444,"stream":463}],463:[function(require,module,exports){
+},{"buffer":314,"inherits":457,"stream":476}],476:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -27384,13 +31059,13 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":443,"inherits":444,"readable-stream/duplex.js":452,"readable-stream/passthrough.js":459,"readable-stream/readable.js":460,"readable-stream/transform.js":461,"readable-stream/writable.js":462}],462:[function(require,module,exports){
+},{"events":456,"inherits":457,"readable-stream/duplex.js":465,"readable-stream/passthrough.js":472,"readable-stream/readable.js":473,"readable-stream/transform.js":474,"readable-stream/writable.js":475}],475:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":457}],461:[function(require,module,exports){
+},{"./lib/_stream_writable.js":470}],474:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":456}],460:[function(require,module,exports){
+},{"./lib/_stream_transform.js":469}],473:[function(require,module,exports){
 var Stream = require('stream'); // hack to fix a circular dependency issue when used with browserify
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = Stream;
@@ -27400,10 +31075,10 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":453,"./lib/_stream_passthrough.js":454,"./lib/_stream_readable.js":455,"./lib/_stream_transform.js":456,"./lib/_stream_writable.js":457,"stream":463}],459:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":466,"./lib/_stream_passthrough.js":467,"./lib/_stream_readable.js":468,"./lib/_stream_transform.js":469,"./lib/_stream_writable.js":470,"stream":476}],472:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":454}],454:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":467}],467:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -27451,7 +31126,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
   cb(null, chunk);
 };
 
-},{"./_stream_transform":456,"core-util-is":458,"inherits":444}],456:[function(require,module,exports){
+},{"./_stream_transform":469,"core-util-is":471,"inherits":457}],469:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -27663,10 +31338,10 @@ function done(stream, er) {
   return stream.push(null);
 }
 
-},{"./_stream_duplex":453,"core-util-is":458,"inherits":444}],452:[function(require,module,exports){
+},{"./_stream_duplex":466,"core-util-is":471,"inherits":457}],465:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":453}],453:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":466}],466:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -27759,7 +31434,7 @@ function forEach (xs, f) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_readable":455,"./_stream_writable":457,"_process":447,"core-util-is":458,"inherits":444}],457:[function(require,module,exports){
+},{"./_stream_readable":468,"./_stream_writable":470,"_process":460,"core-util-is":471,"inherits":457}],470:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -28149,7 +31824,7 @@ function endWritable(stream, state, cb) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":453,"_process":447,"buffer":301,"core-util-is":458,"inherits":444,"stream":463}],455:[function(require,module,exports){
+},{"./_stream_duplex":466,"_process":460,"buffer":314,"core-util-is":471,"inherits":457,"stream":476}],468:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -29135,7 +32810,7 @@ function indexOf (xs, x) {
 }
 
 }).call(this,require('_process'))
-},{"_process":447,"buffer":301,"core-util-is":458,"events":443,"inherits":444,"isarray":445,"stream":463,"string_decoder/":464}],464:[function(require,module,exports){
+},{"_process":460,"buffer":314,"core-util-is":471,"events":456,"inherits":457,"isarray":458,"stream":476,"string_decoder/":477}],477:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -29358,7 +33033,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":301}],458:[function(require,module,exports){
+},{"buffer":314}],471:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -29468,12 +33143,12 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],445:[function(require,module,exports){
+},{"buffer":314}],458:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],443:[function(require,module,exports){
+},{}],456:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -29776,7 +33451,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],444:[function(require,module,exports){
+},{}],457:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -29801,7 +33476,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],307:[function(require,module,exports){
+},{}],320:[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -30002,7 +33677,7 @@ AES.prototype._doCryptBlock = function(M, keySchedule, SUB_MIX, SBOX) {
 
   exports.AES = AES;
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],306:[function(require,module,exports){
+},{"buffer":314}],319:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function (crypto, password, keyLen, ivLen) {
@@ -30062,7 +33737,7 @@ module.exports = function (crypto, password, keyLen, ivLen) {
   };
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":301}],301:[function(require,module,exports){
+},{"buffer":314}],314:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -31380,7 +35055,7 @@ function decodeUtf8Char (str) {
   }
 }
 
-},{"base64-js":302,"ieee754":303,"is-array":304}],304:[function(require,module,exports){
+},{"base64-js":315,"ieee754":316,"is-array":317}],317:[function(require,module,exports){
 
 /**
  * isArray
@@ -31415,7 +35090,7 @@ module.exports = isArray || function (val) {
   return !! val && '[object Array]' == str.call(val);
 };
 
-},{}],303:[function(require,module,exports){
+},{}],316:[function(require,module,exports){
 exports.read = function(buffer, offset, isLE, mLen, nBytes) {
   var e, m,
       eLen = nBytes * 8 - mLen - 1,
@@ -31501,7 +35176,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128;
 };
 
-},{}],302:[function(require,module,exports){
+},{}],315:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -31627,7 +35302,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],632:[function(require,module,exports){
+},{}],646:[function(require,module,exports){
 // A Javascript implementaion of the "xorwow" prng algorithm by
 // George Marsaglia.  See http://www.jstatsoft.org/v08/i14/paper
 
@@ -31715,7 +35390,7 @@ if (module && module.exports) {
 
 
 
-},{}],631:[function(require,module,exports){
+},{}],645:[function(require,module,exports){
 // A Javascript implementaion of the "xorshift7" algorithm by
 // François Panneton and Pierre L'ecuyer:
 // "On the Xorgshift Random Number Generators"
@@ -31814,7 +35489,7 @@ if (module && module.exports) {
 );
 
 
-},{}],630:[function(require,module,exports){
+},{}],644:[function(require,module,exports){
 // A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
 //
 // This fast non-cryptographic random number generator is designed for
@@ -31962,7 +35637,7 @@ if (module && module.exports) {
   (typeof define) == 'function' && define   // present with an AMD loader
 );
 
-},{}],629:[function(require,module,exports){
+},{}],643:[function(require,module,exports){
 // A Javascript implementaion of the "xor128" prng algorithm by
 // George Marsaglia.  See http://www.jstatsoft.org/v08/i14/paper
 
@@ -32045,7 +35720,7 @@ if (module && module.exports) {
 
 
 
-},{}],628:[function(require,module,exports){
+},{}],642:[function(require,module,exports){
 // A Javascript implementaion of the "Tyche-i" prng algorithm by
 // Samuel Neves and Filipe Araujo.
 // See https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
@@ -32150,7 +35825,7 @@ if (module && module.exports) {
 
 
 
-},{}],203:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -32338,7 +36013,7 @@ NetSimPanel.prototype.getBody = function () {
 };
 
 
-},{"../utils":297,"./NetSimPanel.html.ejs":202}],202:[function(require,module,exports){
+},{"../utils":310,"./NetSimPanel.html.ejs":212}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -32358,7 +36033,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],181:[function(require,module,exports){
+},{"ejs":481}],191:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -32482,7 +36157,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
 };
 
 
-},{"./NetSimEncodingControl.html.ejs":180,"./netsimConstants":240}],180:[function(require,module,exports){
+},{"./NetSimEncodingControl.html.ejs":190,"./netsimConstants":252}],190:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -32517,7 +36192,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":237,"./netsimConstants":240,"ejs":468}],167:[function(require,module,exports){
+},{"./locale":249,"./netsimConstants":252,"ejs":481}],177:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -32564,7 +36239,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./dataConverters":235,"./locale":237,"./netsimConstants":240,"./netsimUtils":243,"ejs":468}],235:[function(require,module,exports){
+},{"./dataConverters":247,"./locale":249,"./netsimConstants":252,"./netsimUtils":255,"ejs":481}],247:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -33022,7 +36697,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 };
 
 
-},{"../utils":297,"./netsimUtils":243}],166:[function(require,module,exports){
+},{"../utils":310,"./netsimUtils":255}],176:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -33076,7 +36751,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":297,"./NetSimSlider":221,"./netsimConstants":240,"./netsimUtils":243}],243:[function(require,module,exports){
+},{"../utils":310,"./NetSimSlider":233,"./netsimConstants":252,"./netsimUtils":255}],255:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -33444,7 +37119,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
 
 
 
-},{"../utils":297,"./NetSimLogger":191,"./locale":237,"./netsimConstants":240}],191:[function(require,module,exports){
+},{"../utils":310,"./NetSimLogger":201,"./locale":249,"./netsimConstants":252}],201:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -33529,7 +37204,7 @@ var singletonInstance;
  */
 NetSimLogger.getSingleton = function () {
   if (singletonInstance === undefined) {
-    singletonInstance = new NetSimLogger(console, LogLevel.VERBOSE);
+    singletonInstance = new NetSimLogger(console, LogLevel.WARN);
   }
   return singletonInstance;
 };
@@ -33597,7 +37272,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
 };
 
 
-},{}],240:[function(require,module,exports){
+},{}],252:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -33749,7 +37424,7 @@ exports.PacketUIColumnType = {
 };
 
 
-},{}],221:[function(require,module,exports){
+},{}],233:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -34246,13 +37921,13 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
 };
 
 
-},{"../utils":297,"./NetSimSlider.html.ejs":220,"./locale":237}],237:[function(require,module,exports){
+},{"../utils":310,"./NetSimSlider.html.ejs":232,"./locale":249}],249:[function(require,module,exports){
 // locale for netsim
 
 module.exports = window.blockly.netsim_locale;
 
 
-},{}],220:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -34272,7 +37947,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],165:[function(require,module,exports){
+},{"ejs":481}],175:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -34389,7 +38064,7 @@ DashboardUser.prototype.whenReady = function (callback) {
   }
 };
 
-},{}],90:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -34614,7 +38289,7 @@ CommandSequence.prototype.tick = function (clock) {
 };
 
 
-},{"./utils":297}],88:[function(require,module,exports){
+},{"./utils":310}],98:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -34892,7 +38567,7 @@ module.exports = {
 };
 
 
-},{"./utils":297}],3:[function(require,module,exports){
+},{"./utils":310}],4:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -35033,7 +38708,7 @@ RunLoop.prototype.end = function () {
 };
 
 
-},{"./ObservableEvent":1}],1:[function(require,module,exports){
+},{"./ObservableEvent":2}],2:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -35102,4 +38777,4 @@ ObservableEvent.prototype.notifyObservers = function () {
   });
 };
 
-},{}]},{},[238]);
+},{}]},{},[250]);

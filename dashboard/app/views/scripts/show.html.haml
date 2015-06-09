@@ -14,7 +14,7 @@
 
 
     .span3#trynow
-      = button_to t('home.trynow'), script_puzzle_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
+      = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
       %p.lightgreytext
         - if @script.feedback_url
           = link_to t('landing.feedback'), @script.feedback_url
@@ -25,7 +25,7 @@
     - if @script.banner_image
       .span12
         %p
-          = link_to image_tag(@script.banner_image), script_puzzle_path(@script, 'next')
+          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
 
     - if @script.beta?
       .span10

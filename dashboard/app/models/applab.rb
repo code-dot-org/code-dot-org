@@ -63,6 +63,7 @@ class Applab < Blockly
         "write": null,
         "getXPosition": null,
         "getYPosition": null,
+        "setScreen": null,
 
         // Canvas
         "createCanvas": null,
@@ -152,9 +153,19 @@ class Applab < Blockly
         // Variables
         "declareAssign_x": null,
         "assign_x": null,
-        "declareAssign_x_array_1_4": null,
         "declareAssign_x_prompt": null,
         "console.log": null,
+        "declareAssign_str_hello_world": null,
+        "substring": null,
+        "indexOf": null,
+        "length": null,
+        "toUpperCase": null,
+        "toLowerCase": null,
+        "declareAssign_list_abd": null,
+        "listLength": null,
+        "insertItem": null,
+        "appendItem": null,
+        "removeItem": null,
 
         // Functions
         "functionParams_none": null,

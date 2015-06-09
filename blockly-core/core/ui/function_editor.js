@@ -407,7 +407,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
-        goog.bind(this.calculateMetrics_, this));
+        goog.bind(this.calculateMetrics_, this), false, true);
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
   Blockly.modalBlockSpace = this.modalBlockSpace;
@@ -547,8 +547,6 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
-
-  this.modalBlockSpace.trashcan.setYOffset(currentY);
 
   currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);

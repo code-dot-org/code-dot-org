@@ -1,7 +1,7 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-11-05T21:12:14.472Z",
+  "created_at": "2014-11-05T21:12:14.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {

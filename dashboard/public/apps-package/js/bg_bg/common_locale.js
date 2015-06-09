@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Продължи"},
 "defaultTwitterText":function(d){return "Вижте какво направих"},
 "designMode":function(d){return "Дизайн"},
-"designModeHeader":function(d){return "Режим на проектиране"},
 "dialogCancel":function(d){return "Отмени"},
 "dialogOK":function(d){return "OK"},
 "directionEastLetter":function(d){return "И"},
@@ -382,7 +381,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_ifBlock_description":function(d){return "Изпълнява блок с отчети, ако указано условие е вярно"},
 "dropletBlock_ifBlock_signatureOverride":function(d){return "\"Ако\" отчет"},
 "dropletBlock_ifElseBlock_description":function(d){return "Изпълнява блок с отчети, ако указано условие е вярно; в противен случай блокът с отчетите се изпълнява спрямо посоченото в \"друго\" клаузата"},
-"dropletBlock_ifElseBlock_signatureOverride":function(d){return "ако/друго отчет"},
+"dropletBlock_ifElseBlock_signatureOverride":function(d){return "ако/иначе отчет"},
 "dropletBlock_imageUploadButton_description":function(d){return "Създава бутон за качване на изображение и му го присвоява ИД на елемент"},
 "dropletBlock_image_description":function(d){return "Показва изображението от предоставения url на екрана"},
 "dropletBlock_image_param0":function(d){return "идентификатор(ИД)"},

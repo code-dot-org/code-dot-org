@@ -2,16 +2,33 @@
 
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-  - if rack_env == :production
-    - heroes.shuffle!
-    - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
-    - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
-    - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
-    - hero_display_time = 13 * 1000
-  - else
-    -# on non-production, show all heroes, and more quickly, for easier previewing
+
+  - if rack_env != :production && request.params["preview"]
+    -# on non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
     - heroes_arranged = heroes
     - hero_display_time = 6 * 1000
+  - else
+    - # The order alternates person & stat.  Person alternates non-celeb and celeb.  Non-celeb is student or teacher.
+    - # We open with a celeba.
+    - # i.e. celeba, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat, etc.
+    - heroes.shuffle!
+    - heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:param2_s]}
+    - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
+    - heroes_stat = heroes.select {|hero| hero[:param2_s] == "stat"}
+    - if heroes_stat.length > 0
+      - heroes_arranged = heroes_stat.zip(heroes_nonceleb.zip(heroes_celeb).flatten).flatten.compact.first(6)
+    - else
+      - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+    - heroes_celeba = heroes.select {|hero| hero[:param2_s] == "celeba"}
+    - if heroes_celeba.length > 0
+      - heroes_celeba.shuffle!
+      - heroes_arranged.unshift(heroes_celeba.first)
+    - hero_display_time = 13 * 1000
+
+    -# handy debug output:
+    -# heroes_arranged.each do |hero|
+      - puts hero[:param2_s]
+
 
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
@@ -24,7 +41,7 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
-    .widehero{id: "fullwidth#{index}", style: "background-image: url(#{entry[:image_t]}); background-position: #{entry[:param1_s]}"}
+    .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
     .thegap{style: "height: 1px"}
@@ -41,6 +58,12 @@
         - display = entry[:active_s] == "hide" ? "none" : "block"
         - unless entry[:text1_s].nil_or_empty?
           - text = I18n.t(entry[:text1_s])
+
+          - # Replace special tags
+          - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
+          - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
+          - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))
+
           - unless text.nil_or_empty?
             - lines = text.lines
             - if entry[:param3_s] == "bottom"
@@ -93,6 +116,17 @@
     $("#fullwidth0").fadeTo(4000, 1);
 
     showQuote(null, 0);
+
+    // Use retina versions of the hero background images if on a retina display.
+    $(".widehero").each(function()
+    {
+      var imageUrl = $(this).data('background-image');
+      if (window.devicePixelRatio >= 2)
+      {
+        imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
+      }
+      $(this).css('background-image', imageUrl);
+    });
   }
 
   function showQuote(lastImage, nextImage)

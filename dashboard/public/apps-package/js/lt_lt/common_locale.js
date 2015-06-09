@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tęsti"},
 "defaultTwitterText":function(d){return "Pažiūrėkite, ką aš sukūriau"},
 "designMode":function(d){return "Dizainas"},
-"designModeHeader":function(d){return "Dizaino režimas"},
 "dialogCancel":function(d){return "Atšaukti"},
 "dialogOK":function(d){return "Gerai"},
 "directionEastLetter":function(d){return "R"},
@@ -697,7 +696,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_write_param0_description":function(d){return "The text or HTML you want appended to the bottom of your application"},
 "emptyBlocksErrorMsg":function(d){return "„Kartojimo“ arba „Jei“ blokelių viduje reikia įdėti kitus blokelius, kad jie veiktų. Įsitikink, kad jie yra gerai sukibę vienas su kitu."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyFunctionalBlock":function(d){return "Kažkuris blokelis yra tuščias."},
 "end":function(d){return "pabaiga"},
 "errorEmptyFunctionBlockModal":function(d){return "Tavo kuriamoje komandoje turi būti veiksmų. Spustelk \"taisyti\" ir įkelk veiksmų į žalią bloką."},
 "errorIncompleteBlockInFunction":function(d){return "Spustelk \"taisyti\", kad įsitikintum, ar tavo kuriamoje komandoje netrūksta veiksmų."},
@@ -706,8 +705,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "errorRequiredParamsMissing":function(d){return "Norėdamas perduoti komandai duomenis, turi juos aprašyti - spausk \"redaguoti\" ir pridėk reikiamus argumentų laukelius. Nutempk \"naujų argumentų\" laukelius į kuriamos  komandos bloką."},
 "errorUnusedFunction":function(d){return "Tu sukūrei naują komandą, bet jos nepanaudojai. Ją rasi kategorijoje \"Komandų kūrimas\"."},
 "errorUnusedParam":function(d){return "Tu pridėjai argumento aprašą, bet argumento duomenų nenaudoji komandos veiksmuose..."},
-"extraTopBlocks":function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos prijungti prie bloko „paleidus“?"},
-"extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
+"extraTopBlocks":function(d){return "Tavo blokeliai nėra sujungti."},
+"extraTopBlocksWhenRun":function(d){return "Tavo blokeliai nėra sujungti. Gal tu jų nesujungei su blokeliu „paleidus“?"},
 "finalStage":function(d){return "Sveikinu! Tu baigei paskutinį etapą."},
 "finalStageTrophies":function(d){return "Sveikinu! Tu užbaigei paskutinį lygį ir laimėjai "+common_locale.p(d,"numTrophies",0,"lt",{"one":"a trofėjų","other":common_locale.n(d,"numTrophies")+" trofėjus"})+"."},
 "finish":function(d){return "Finišas"},
@@ -715,13 +714,13 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "genericFeedback":function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."},
 "hashError":function(d){return "Atsiprašome, '%1' nesutampa su jokia įrašyta programa."},
 "help":function(d){return "pagalba"},
-"hideToolbox":function(d){return "(Hide)"},
+"hideToolbox":function(d){return "(Slėpti)"},
 "hintHeader":function(d){return "Štai patarimas:"},
 "hintRequest":function(d){return "Užuomina"},
 "hintTitle":function(d){return "Patarimas:"},
 "infinity":function(d){return "Begalybė"},
 "jump":function(d){return "šok"},
-"keepPlaying":function(d){return "Keep Playing"},
+"keepPlaying":function(d){return "Tęsti žaidimą"},
 "levelIncompleteError":function(d){return "Tu naudoji visus būtinus blokelius, tačiau netinkamai."},
 "listVariable":function(d){return "sąrašas"},
 "makeYourOwnFlappy":function(d){return "Sukurk savo Flappy žaidimą"},
@@ -750,17 +749,17 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "Rodyti blokus"},
 "showCodeHeader":function(d){return "Rodyti kodą"},
 "showGeneratedCode":function(d){return "Rodyti kodą"},
-"showToolbox":function(d){return "Show Toolbox"},
+"showToolbox":function(d){return "Rodyti įrankinę"},
 "signup":function(d){return "Užsiregistruok į kursą pradedantiesiems"},
 "stringEquals":function(d){return "tekstas=?"},
 "subtitle":function(d){return "Vizuali programavimo aplinka"},
 "textVariable":function(d){return "tekstas"},
-"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"toggleBlocksErrorMsg":function(d){return "Programoje reikia ištaisyti klaidą, antraip ji nebus atvaizduojama blokeliais."},
 "tooFewBlocksMsg":function(d){return "Tu naudoji visas reikiamas blokų rūšis, tačiau reikia panaudoti po daugiau kažkurių blokų."},
 "tooManyBlocksMsg":function(d){return "Ši užduotis gali būti išspręsta su <x id='START_SPAN'/><x id='END_SPAN'/> blokais."},
 "tooMuchWork":function(d){return "Tu privertei mane tiek daug dirbti! Ar galėtum atlikti užduotį su mažiau kartojimų?"},
 "toolboxHeader":function(d){return "Blokeliai"},
-"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"toolboxHeaderDroplet":function(d){return "Įrankinė"},
 "totalNumLinesOfCodeWritten":function(d){return "Iš viso: "+common_locale.p(d,"numLines",0,"lt",{"one":"1 eilutė","other":common_locale.n(d,"numLines")+" eilučių"})+" kodo."},
 "tryAgain":function(d){return "Pabandyk dar kartą"},
 "tryHOC":function(d){return "Išmėgink „Programavimo valandą“"},

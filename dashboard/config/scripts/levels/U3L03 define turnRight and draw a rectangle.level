@@ -45,8 +45,7 @@
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false"
-  },
-  "md5": "a920b1ee21ee5a71b1be1d8e936e2c10"
+  }
 }]]></config>
   <blocks/>
 </Applab>

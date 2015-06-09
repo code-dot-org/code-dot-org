@@ -125,7 +125,7 @@ da:
       2-3 Artist Loops New 14_instruction: |
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+      2-3 Artist Loops New 15_instruction: Tegn noget sjovt.
       2-3 Artist Loops New 2_instruction: |
         Here's some of the code you used to draw
         that square. What happens if you use the repeat block to run this code 4 times?
@@ -1675,8 +1675,8 @@ da:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -1752,9 +1752,7 @@ da:
       Course 4 Bee Params 4_instruction: |
         Try using your new function to collect
         all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 5_instruction: |
-        Let's start from scratch - can you create
-        a new function called "get 5 nectar" with a direction parameter?
+      Course 4 Bee Params 5_instruction: 'Lad os starte fra bunden - kan du oprette en ny funktion kaldet "skaf 5 nektar" med en retning parameter?'
       Course 4 Bee Params 6 (copy 1)_instruction: |
         Try using your new function to
         collect all of this nectar.
@@ -2181,51 +2179,19 @@ da:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
+      frozen circle function in circle_instruction: Lad os nu lave 20 overlappende cirkler mens vi drejer 18 grader mellem hver cirkel.
+      frozen circle function with parameter_instruction: 'Her er en "Lav cirkel" blok, der laver cirkler af forskellig størrelse. Kan du bruge den til at lave en lille cirkel med størrelse 5 og en stor cirkel med størrelse 10?'
+      frozen circle function_instruction: 'Brug den nye "Lav cirkel" blok til at lave 10 overlappende cirkler. Husk at gå fremad mellem cirklerne.'
+      frozen circle_instruction: En cirkel er en speciel form. Kan du regne ud hvilket tal der skal stå i stedet for spørgsmåls tegnene for at tegne en cirkel?
+      frozen cross rotate dense_instruction: 'Lad os gentage det 90 gange! Hvor mange gange går 90 op i 360? Tip: Det er et virkeligt lille tal.'
+      frozen cross rotate_instruction: Prøv nu at gentage det 10 gange. Hvor mange grader skal du dreje mellem hver linje?
+      frozen cross_instruction: 'Brug "Gentag" blokken til at lave et plustegn. Lagde du mærke til Elsa kan flytte frem og tilbage?'
+      frozen diamond mini snowflake_instruction: 'Vidste du ethvert snefnug er en forskellig form? Lad os lave et nyt snefnug ved hjælp af "Gentag" blokken ved at gentage et parallelogram 4 gange og dreje 90 grader til højre mellem hvert parallelogram.'
+      frozen diamond snowflake_instruction: Lad os nu lave et nyt snefnug ved at bruge gentag blokken til at gentage et parallelogram 10 gange og dreje 36 grader til højre mellem hver.
+      frozen diamond_instruction: 'Lad os lave et parallelogram. Det er ligesom en firkant, men med andre vinkler: 60 og 120 graders vinkler i stedet for 90 graders vinkler.'
+      frozen freeplay_instruction: Du er nu blevet en stor kunstner! Lav et Vinter drømmeland.
+      frozen line_instruction: Hej jeg hedder Elsa af Arendelle. Hjælp mig med at lave en linje.
+      frozen perpendicular_instruction: 'Nu lad os se om vi kan lave to linjer der er i en 90 graders vinkel til hinanden. Du skal bruge "Drej" og "Flyt" blokkene.'
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
@@ -2650,12 +2616,8 @@ da:
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
-      NEW Course 4 Artist Params 2 _instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
-      NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
+      NEW Course 4 Artist Params 2 _instruction: 'Lav en "tegn en trekant med 50 pixel sider" funktion fra begyndelsen'
+      NEW Course 4 Artist Params 2_instruction: 'Lav en "tegn en trekant med 50 pixel sider" funktion fra begyndelsen'
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3 triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
@@ -2767,6 +2729,11 @@ da:
         is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
@@ -2932,32 +2899,21 @@ da:
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: 'Agern! Agern! Agern! Brug en "hvis" blok til at få mig derhen med færrest mulige blokke.'
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: 'OK, lad os prøve igen for øvelsens skyld - dette er ikke meget anderledes, men pas på væggen!'
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 18_instruction: '"Hvis-ellers" blokke kontrollerer en betingelse, og udfører derefter én ting eller en anden. Prøv at bruge denne nye blok for at få mig hen til agerne.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 19_instruction: 'En mere øvelse med "hvis-ellers" blokken, kan du klare den i første forsøg?'
+      scrat 20_instruction: Kan du tilføje kun 3 blokke for at få mig til at løse en mere kompleks labyrint? Hvis du gør det rigtigt, så kan jeg gå ad enhver krum vej uanset dens længde. Skynd dig! Isen smelter!
       SpecialFrozenLevel_instruction: |
         You've officially become a master artist!
         Create a winter wonderland.

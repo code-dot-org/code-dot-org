@@ -23,7 +23,7 @@ var applab_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -165,19 +165,23 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continue"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"designToolboxDescription":function(d){return "Drag the elements into your app!"},
+"designToolboxHeader":function(d){return "Design Toolbox"},
+"designWorkspaceDescription":function(d){return "Click on an element to edit its properties."},
+"designWorkspaceHeader":function(d){return "Workspace"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "nextLevel":function(d){return "Congratulations! You have completed this puzzle."},
 "no":function(d){return "No"},
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
-"pause":function(d){return "توڑ"},
+"pause":function(d){return "Break"},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to running your app."},
 "repeatForever":function(d){return "repeat forever"},
-"repeatDo":function(d){return "کر"},
+"repeatDo":function(d){return "do"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the app is running."},
 "shareApplabTwitter":function(d){return "Check out the app I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your app:"},
-"stepIn":function(d){return "اندر قدم رکھیں"},
-"stepOver":function(d){return "پھلانگ"},
-"stepOut":function(d){return "باہر قدم"},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"},
 "viewData":function(d){return "View Data"},
 "yes":function(d){return "Yes"}};

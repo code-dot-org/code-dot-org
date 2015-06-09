@@ -1,0 +1,16 @@
+name 'CSPPD AP quiz'
+title 'AP Assessment Matching'
+description 'match the assessment-type with the description below'
+skip_sound true
+hide_submit true
+
+question 'Programming projects that demonstrate student understanding of algorithms and abstraction'
+answer 'Create Task'
+question 'Written report about innovations in computing' 
+answer 'Explore Task' 
+question 'End-of-year exam, common with all AP courses' 
+answer 'Fixed-response questions'  
+height '100'
+markdown <<MARKDOWN
+
+MARKDOWN

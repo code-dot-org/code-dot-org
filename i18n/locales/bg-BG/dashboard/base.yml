@@ -300,7 +300,9 @@ bg:
     panel:
       answer_viewer: Преглед на отговора
       student: Ученик
+      viewing_solution: Viewing Solution
       try_it_yourself: Опитайте сами
+      section: Раздел
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'

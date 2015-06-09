@@ -344,7 +344,9 @@
     panel:
       answer_viewer: cevap gözlemleyicisi
       student: öğrenci
+      viewing_solution: Viewing Solution
       try_it_yourself: kendini dene
+      section: Bölüm
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'

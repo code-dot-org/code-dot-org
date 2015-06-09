@@ -469,69 +469,56 @@
       4-5 Artist Functions 12_instruction: 'Заверши процедуру "нарисовать волны".
         Каждая волна состоит из одной верхней и одной нижней волны. Подсказка: нарисуй
         5 синих волн.'
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
+      4-5 Artist Functions 13 Free play_instruction: Вот некоторые функции для рисования
+        планет, звезд, ракет и роботов. Используйте их любым способом, вам нравится,
+        чтобы сделать фотографии, которыми вы можете поделиться со своими друзьями.
+      4-5 Artist Functions 14 Free play_instruction: Здесь мы предоставили Вам некоторые
+        функции. Используйте их так, как Вам удобно, для создания фотографии внутри
+        одной или нескольких петель. Вы можете поделиться ими со своими друзьями.
+        Нажмите "Запустить", чтобы увидеть пример.
+      4-5 Artist Functions 15 Assessment_instruction: 'Задание: Используйте функцию
+        "Нарисовать квадрат" для создания квадратов. Стороны квадратов: 50, 100 и
+        150 пикселей.'
+      4-5 Artist Functions 2a_instruction: Теперь объедините эти блоки в новую функцию
+        под названием "Рисовать маленький треугольник" и воспользуйтесь ею.
+      4-5 Artist Functions 2b_instruction: Теперь создайте функцию «Нарисуйте маленький
+        треугольник» с использованием предоставленных блоков.
+      4-5 Artist Functions 3_instruction: Теперь создайте функции "Рисовать средний
+        треугольник" и "Рисовать большой треугольник".Функция "Рисовать маленький
+        треугольник" уже создана для Вас. Треугольники имеют стороны длинной 50 (малый),
+        100 (средний) и 150 (большой) пикселей.
+      4-5 Artist Functions 4_instruction: Эта новая функция "нарисовать треугольник"
+        содержит параметр и может выполнять действия предыдущих трех функций. Нарисуйте
+        такие же треугольники с помощью новой функции.
+      4-5 Artist Functions 5_instruction: Вы можете изменить функцию «Нарисуйте треугольник»
+        в функцию «нарисуйте квадрат», чтобы изменить рисунок?
+      4-5 Artist Functions 6_instruction: 'Используйте функции "Рисовать квадрат"
+        и "Рисовать треугольник", чтобы нарисовать дом. (Подсказка: сторона квадрата
+        200 пикселей)'
+      4-5 Artist Functions 6b_instruction: Используйте квадраты, треугольники и другие
+        функции для того, чтобы нарисовать дом. Затем объедините их  в функцию "Нарисовать
+        дом" и воспользуйтесь ею.
+      4-5 Artist Functions 7_instruction: Используйте  функцию "Нарисовать дом", чтобы
+        нарисовать дома высотой 100 и 50 пикселей. Расстояние между домами 50 пикселей.
+      4-5 Artist Functions 8_instruction: Функция "Нарисовать цветок" имеет параметр,
+        позволяющий установить высоту стебля. Установите его на 200 пикселей и посмотрите,
+        что произойдёт.
+      4-5 Artist Functions 9_instruction: Нарисуйте 3 этих цветка. Высота первого
+        100 пикселей, каждый следующий больще предыдущего на 50 пикселей. Расстояние
+        между цветами 100 пикселей.
+      4-5 Artist Patterns 1_instruction: Можете нарисовать этот квадрат с помощью
+        цикла? Каждая сторона составляет 20 пикселей.
+      4-5 Artist Patterns 10_instruction: 'Этот код рисует два ряда шестиугольников
+        - повторите цикл 4 раза, чтобы нарисовать соты. Подсказка: Вам понадобится
+        вернуться на 120 пикселей назад от последнего цикла, чтобы рисунок не выступал
+        за пределы экрана.'
+      4-5 Artist Patterns 11_instruction: 'Сколько раз Вам потребуется повторить цикл,
+        чтобы нарисовать половину круга? Подсказка: если в круге 360 градусов и каждый
+        цикл добавляет 3 градуса, сколько раз Вам понадобится повторить, чтобы получить
+        полный круг?'
+      4-5 Artist Patterns 12_instruction: Если вы скопируете этот цикл, и повернете
+        в нём налево, вместо того чтобы повернуть направо, что случится? Можешь ли
+        ты повторить это, и нарисовать эту волну?
       4-5 Artist Patterns 13_instruction: |
         Now let's loop that whole thing four
         times to create this picture frame. Watch out for the corners - you can't
@@ -546,27 +533,22 @@
         nested that whole block of code into another loop, but you need to get the
         artist back in place to draw the next line. Which of these code blocks can
         you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
+      4-5 Artist Patterns 4_instruction: Грани этого алмаза 50 пикселей, углы по 120
+        и 60 градусов. Чтобы нарисовать его, используйте цикл.
+      4-5 Artist Patterns 5.5_instruction: Сколько Вам нужно повторять этот блок,
+        чтобы нарисовать полную сетку алмазов?
+      4-5 Artist Patterns 5_instruction: 'Давайте повторим это, чтобы создать строку
+        из 6 бриллиантов. Обратите внимание: мы изменили код "повторить" на 3 раза
+        вместо 2. Как Вы думаете, почему?'
+      4-5 Artist Patterns 6_instruction: Сколько раз Вам нужно повторить этот блок,
+        чтобы нарисовать полную сетку алмазов?
       4-5 Artist Patterns 7_instruction: |
         Let's modify the code from the last puzzle
         to make this more complex pattern. Notice how the diamonds overlap now, try
         changing the first "jump backwards" from 100 to 50 (half as far) - now how
         far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
+      4-5 Artist Patterns 8_instruction: Используйте цикл, чтобы нарисовать шестиугольник
+        со стороной 40 пикселей и углами в 60 градусов.
       4-5 Artist Patterns 9.5_instruction: |
         Let's loop this code to draw two rows
         of hexagons. Notice how our second row is shifted to the right.
@@ -574,9 +556,8 @@
         Now repeat that code 3 times to draw the
         whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
         to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
+      4-5 Artist Patterns Free Play_instruction: 'Свободная игра: попробуйте создать
+        свой собственный узор!'
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -629,27 +610,25 @@
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
         all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
+      4-5 Bee Debugging 1_instruction: Эти блоки не дают мне покоя. Можете их исправить?
+      4-5 Bee Debugging 10_instruction: Найдите ошибки и исправьте их.
+      4-5 Bee Debugging 11_instruction: Это считается верно?
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 3_instruction: Найдите ошибки и исправьте их.
       4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
       4-5 Bee Debugging 5_instruction: Что-то пошло не так...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
+      4-5 Bee Debugging 7_instruction: В функции что-то отсутствует...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
         properly.
-      4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. \n"
+      4-5 Bee Debugging 9_instruction: Почему пчела делает недостаточно мёда?
+      4-5 Bee Debugging Assessment 1_instruction: 'Оценка: Исправьте код.'
+      4-5 Bee Nested Loops 1_instruction: Используйте цикл, чтобы собрать весь нектар.
+      4-5 Bee Nested Loops 2_instruction: 'Собери весь нектар с каждого цветка. Используй
+        вложенный цикл. '
       4-5 Bee Nested Loops 3_instruction: |
         Collect all of the nectar by putting the
         starter code into a nested loop.
@@ -690,22 +669,20 @@
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 3 (copy 1)_instruction: Нужно... добраться... до подсолнечника.
+      4-5 Maze 3_instruction: Нужно... добраться... до подсолнечника.
+      4-5 Maze 4 (copy 1)_instruction: Попробуйте использовать блок "repeat", чтобы
+        использовать меньше блоков...
+      4-5 Maze 4_instruction: Попробуйте использовать блок "repeat", чтобы использовать
+        меньше блоков...
+      4-5 Maze 5 (copy 1)_instruction: Можете решить эту задачу используя наименьшее
+        возможное число блоков?
+      4-5 Maze 5_instruction: Можете решить эту задачу, используя наименьшее возможное
+        число блоков?
+      4-5 Maze 6 (copy 1)_instruction: Можете решить эту задачу используя наименьшее
+        возможное число блоков?
+      4-5 Maze 6_instruction: Можете решить эту задачу, используя наименьшее возможное
+        число блоков?
       4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
       4-5 Maze 8_instruction: |
         Use the "repeat" block to get the zombie to the
@@ -767,7 +744,8 @@
         a 360 degree rotation.  \n"
       4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
         loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_instruction: Сделайте цикл из данного кода, чтобы создать
+        ветряную мельницу.
       4-5 Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the triangle
         code?
@@ -1325,7 +1303,7 @@
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
+      Course 4 Artist Binary 7_instruction: Закончите рисунок.
       Course 4 Artist Binary Free Play 2_instruction: |
         Free Play: Here's a higher
         resolution canvas to draw on - 16 bits by 16 bits!
@@ -1578,8 +1556,8 @@
         first if it is a flower or a honeycomb, and then only gather nectar\nfrom
         it if it is a flower. \n"
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -1706,13 +1684,12 @@
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 4_instruction: Попробуйте использовать блок "repeat", чтобы использовать
+        меньше блоков...
+      Course 4 Maze 5_instruction: Можете решить эту задачу, используя наименьшее
+        возможное число блоков?
+      Course 4 Maze 6_instruction: Можете решить эту задачу, используя наименьшее
+        возможное число блоков?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -2654,6 +2631,11 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2866,15 +2848,12 @@
         help you avoid repeating yourself. This function draws a flower, so you can
         use it any time you want to draw a flower. Use this and the new jump block
         to draw these flowers. Hint: The flowers are 150 pixels apart
-      Standalone_Artist_8_instruction: |
-        Here's a function called "Draw a shape"
-        that we've programmed to draw hexagons. Run the code to see what it does
-        and then experiment with the function to see what happens. Can you make it
-        draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
+      Standalone_Artist_8_instruction: Функция, которую мы запрограммировали нарисовать
+        шестиугольник, называется "Нарисовать фигуру". Запустите код, чтобы увидеть,
+        что она делает, а затем поэкспериментируйте с ней. Можете изменить её так,
+        чтобы она рисовала узоры из квадратов, треугольников, или восьмиугольников?
+      Standalone_Artist_9_instruction: Теперь вперёд - можете нарисовать всё, что
+        Вам хочется! У вас так же есть пустая функция - творите всё, что пожелаете!
       Standalone_Artist_v2_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.

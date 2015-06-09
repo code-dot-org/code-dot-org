@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({133:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({143:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -58,7 +58,7 @@ exports.define = function(name) {
 };
 
 
-},{}],87:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -282,7 +282,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 }
 
 
-},{}],86:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -573,7 +573,7 @@ function RGBColor(color_string)
 
 
 
-},{}],85:[function(require,module,exports){
+},{}],95:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3542,7 +3542,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 }
 
 
-},{}],84:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4155,7 +4155,7 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],248:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4706,71 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"./locale":134,"./utils":297}],281:[function(require,module,exports){
-var timeoutList = [];
-
-/**
- * call setTimeout and track the returned id
- */
-exports.setTimeout = function (fn, time) {
-  var timeout = window.setTimeout.apply(window, arguments);
-  timeoutList.push(timeout);
-  return timeout;
-};
-
-/**
- * Clears all timeouts in our timeoutList and resets the timeoutList
- */
-exports.clearTimeouts = function () {
-  timeoutList.forEach(window.clearTimeout, window);
-  timeoutList = [];
-};
-
-/**
- * Clears a timeout and removes the item from the timeoutList
- */
-exports.clearTimeout = function (id) {
-  window.clearTimeout(id);
-  // List removal requires IE9+
-  var index = timeoutList.indexOf(id);
-  if (index > -1) {
-    timeoutList.splice(index, 1);
-  }
-};
-
-var intervalList = [];
-
-/**
- * call setInterval and track the returned id
- */
-exports.setInterval = function (fn, time) {
-  var interval = window.setInterval.apply(window, arguments);
-  intervalList.push(interval);
-  return interval;
-};
-
-/**
- * Clears all interval timeouts in our intervalList and resets the intervalList
- */
-exports.clearIntervals = function () {
-  intervalList.forEach(window.clearInterval, window);
-  intervalList = [];
-};
-
-/**
- * Clears a timeout and removes the item from the intervalList
- */
-exports.clearInterval = function (id) {
-  window.clearInterval(id);
-  // List removal requires IE9+
-  var index = intervalList.indexOf(id);
-  if (index > -1) {
-    intervalList.splice(index, 1);
-  }
-};
-
-
-},{}],275:[function(require,module,exports){
+},{"./locale":144,"./utils":310}],288:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4785,7 +4721,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n\n    ');38; if (data.hasDesignMode) { ; buf.push('\n      <div id="designToggleRow"></div>\n    ');40; } ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((82,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((85,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((86,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((88,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((89,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((90,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((92,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((94,  data.blockCounterClass )), '>\n            ', escape((95,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((98,  data.idealBlockNumber )), '</span>\n          <span> ', escape((99,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');103; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((106,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');109; } ; buf.push('\n  </div>\n  ');111; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');113; } ; buf.push('\n  ');114; if (data.hasDesignMode) { ; buf.push('\n    ', (115,  data.designModeBox ), '\n  ');116; } ; buf.push('\n  ');117; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (118,  data.extraControlRows ), '\n  ');119; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <span>', escape((86,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n          <span id="hide-toolbox" style="display:none;">&nbsp;', escape((87,  msg.hideToolbox() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((89,  msg.showToolbox() )), '</span></div>\n        <div id="show-code-header" class="workspace-header"><span>', escape((90,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header"><span>', escape((91,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((93,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((95,  data.blockCounterClass )), '>\n              ', escape((96,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((99,  data.idealBlockNumber )), '</span>\n            <span> ', escape((100,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');105; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');107; } ; buf.push('\n    ');108; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (109,  data.extraControlRows ), '\n    ');110; } ; buf.push('\n  </div>\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');115; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4793,7 +4729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],250:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],262:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5059,7 +4995,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":92}],249:[function(require,module,exports){
+},{"./dom":102}],261:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5134,7 +5070,71 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],5:[function(require,module,exports){
+},{}],294:[function(require,module,exports){
+var timeoutList = [];
+
+/**
+ * call setTimeout and track the returned id
+ */
+exports.setTimeout = function (fn, time) {
+  var timeout = window.setTimeout.apply(window, arguments);
+  timeoutList.push(timeout);
+  return timeout;
+};
+
+/**
+ * Clears all timeouts in our timeoutList and resets the timeoutList
+ */
+exports.clearTimeouts = function () {
+  timeoutList.forEach(window.clearTimeout, window);
+  timeoutList = [];
+};
+
+/**
+ * Clears a timeout and removes the item from the timeoutList
+ */
+exports.clearTimeout = function (id) {
+  window.clearTimeout(id);
+  // List removal requires IE9+
+  var index = timeoutList.indexOf(id);
+  if (index > -1) {
+    timeoutList.splice(index, 1);
+  }
+};
+
+var intervalList = [];
+
+/**
+ * call setInterval and track the returned id
+ */
+exports.setInterval = function (fn, time) {
+  var interval = window.setInterval.apply(window, arguments);
+  intervalList.push(interval);
+  return interval;
+};
+
+/**
+ * Clears all interval timeouts in our intervalList and resets the intervalList
+ */
+exports.clearIntervals = function () {
+  intervalList.forEach(window.clearInterval, window);
+  intervalList = [];
+};
+
+/**
+ * Clears a timeout and removes the item from the intervalList
+ */
+exports.clearInterval = function (id) {
+  window.clearInterval(id);
+  // List removal requires IE9+
+  var index = intervalList.indexOf(id);
+  if (index > -1) {
+    intervalList.splice(index, 1);
+  }
+};
+
+
+},{}],6:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -5218,7 +5218,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":4,"./blocksCommon":60,"./dom":92,"./required_block_utils":247,"./utils":297}],247:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":70,"./dom":102,"./required_block_utils":259,"./utils":310}],259:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5541,7 +5541,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":59,"./locale":134,"./utils":297,"./xml":298}],60:[function(require,module,exports){
+},{"./block_utils":69,"./locale":144,"./utils":310,"./xml":311}],70:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5710,8 +5710,8 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 
-},{"./locale":134}],4:[function(require,module,exports){
-/* global Blockly, ace:true, $, requirejs */
+},{"./locale":144}],5:[function(require,module,exports){
+/* global Blockly, ace:true, $, requirejs, marked */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -5737,6 +5737,8 @@ var MIN_VISUALIZATION_WIDTH = 200;
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
+var ENGLISH_LOCALE = 'en_us';
+
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
@@ -5759,7 +5761,7 @@ var StudioApp = function () {
   /**
   * The current locale code.
   */
-  this.LOCALE = 'en_us';
+  this.LOCALE = ENGLISH_LOCALE;
 
   this.enableShowCode = true;
   this.editCode = false;
@@ -6433,7 +6435,19 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
+  var renderedMarkdown;
+  if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
+    renderedMarkdown = marked(level.markdownInstructions);
+  }
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+    puzzleTitle: msg.puzzleTitle({
+      stage_total: level.stage_total,
+      puzzle_number: level.puzzle_number
+    }),
+    instructions: level.instructions,
+    renderedMarkdown: renderedMarkdown,
+    aniGifURL: level.aniGifURL
+  });
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -6562,6 +6576,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
                          Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
   var newVizWidthString = newVizWidth + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
   if (this.isRtl()) {
@@ -6571,10 +6586,11 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationResizeBar.style.left = newVizWidthString;
     codeWorkspace.style.left = newVizWidthString;
   }
+  visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
-  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  visualization.style.maxHeight = newVizHeightString;
   applyTransformScaleToChildren(visualization,
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {
@@ -7013,6 +7029,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    // Note (brent): this mode is currently defined in applab, which means we
+    // dont have it available to us in all apps, and ends up with a 404 as it
+    // tries to hit the network. At some point this should be cleaned up
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
@@ -7314,7 +7333,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":57,"./block_utils":59,"./constants.js":91,"./dom":92,"./dropletUtils":93,"./feedback":113,"./locale":134,"./templates/builder.html.ejs":269,"./templates/buttons.html.ejs":270,"./templates/instructions.html.ejs":272,"./templates/learn.html.ejs":273,"./templates/makeYourOwn.html.ejs":274,"./utils":297,"./xml":298,"url":465}],465:[function(require,module,exports){
+},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":67,"./block_utils":69,"./constants.js":101,"./dom":102,"./dropletUtils":103,"./feedback":123,"./locale":144,"./templates/builder.html.ejs":282,"./templates/buttons.html.ejs":283,"./templates/instructions.html.ejs":285,"./templates/learn.html.ejs":286,"./templates/makeYourOwn.html.ejs":287,"./utils":310,"./xml":311,"url":478}],478:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8023,13 +8042,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":448,"querystring":451}],451:[function(require,module,exports){
+},{"punycode":461,"querystring":464}],464:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":449,"./encode":450}],450:[function(require,module,exports){
+},{"./decode":462,"./encode":463}],463:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8116,7 +8135,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],449:[function(require,module,exports){
+},{}],462:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8202,7 +8221,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],448:[function(require,module,exports){
+},{}],461:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8713,7 +8732,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],274:[function(require,module,exports){
+},{}],287:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8733,7 +8752,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],273:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],286:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8755,7 +8774,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],272:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8767,7 +8786,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n<p class=\'dialog-title\'>', escape((3,  msg.puzzleTitle(locals) )), '</p>\n');4; if (locals.instructions) {; buf.push('  <p>', escape((4,  locals.instructions )), '</p>\n');5; };; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; };; buf.push(''); })();
+ buf.push('<p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; if (locals.renderedMarkdown) {; buf.push('  ', (2,  locals.renderedMarkdown ), '\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8775,7 +8794,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],269:[function(require,module,exports){
+},{"ejs":481}],282:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8795,7 +8814,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],113:[function(require,module,exports){
+},{"ejs":481}],123:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10025,7 +10044,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":89,"./constants":91,"./dom":92,"./feedbackBlocks":114,"./locale":134,"./templates/buttons.html.ejs":270,"./templates/code.html.ejs":271,"./templates/shareFailure.html.ejs":277,"./templates/sharing.html.ejs":278,"./templates/showCode.html.ejs":279,"./templates/trophy.html.ejs":280,"./utils":297,"./xml":298}],280:[function(require,module,exports){
+},{"./codegen":99,"./constants":101,"./dom":102,"./feedbackBlocks":124,"./locale":144,"./templates/buttons.html.ejs":283,"./templates/code.html.ejs":284,"./templates/shareFailure.html.ejs":290,"./templates/sharing.html.ejs":291,"./templates/showCode.html.ejs":292,"./templates/trophy.html.ejs":293,"./utils":310,"./xml":311}],293:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10045,7 +10064,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],279:[function(require,module,exports){
+},{"ejs":481}],292:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10065,7 +10084,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],278:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],291:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10085,7 +10104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],277:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],290:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10105,7 +10124,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],271:[function(require,module,exports){
+},{"ejs":481}],284:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10125,7 +10144,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],270:[function(require,module,exports){
+},{"ejs":481}],283:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10145,7 +10164,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":134,"ejs":468}],114:[function(require,module,exports){
+},{"../locale":144,"ejs":481}],124:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10275,7 +10294,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":91,"./templates/readonly.html.ejs":276}],276:[function(require,module,exports){
+},{"./constants":101,"./templates/readonly.html.ejs":289}],289:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10296,7 +10315,2699 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":468}],89:[function(require,module,exports){
+},{"ejs":481}],102:[function(require,module,exports){
+exports.addReadyListener = function(callback) {
+  if (document.readyState === "complete") {
+    setTimeout(callback, 1);
+  } else {
+    window.addEventListener('load', callback, false);
+  }
+};
+
+exports.getText = function(node) {
+  return node.innerText || node.textContent;
+};
+
+exports.setText = function(node, string) {
+  if (node.innerText) {
+    node.innerText = string;
+  } else {
+    node.textContent = string;
+  }
+};
+
+exports.getTouchEventName = function(eventName) {
+  var isIE11Touch = window.navigator.pointerEnabled;
+  var isIE10Touch = window.navigator.msPointerEnabled;
+  var isStandardTouch = 'ontouchend' in document.documentElement;
+
+  var key;
+  if (isIE11Touch) {
+    key = "ie11";
+  } else if (isIE10Touch) {
+    key = "ie10";
+  } else if (isStandardTouch) {
+    key = "standard";
+  }
+  if (key && TOUCH_MAP[eventName]) {
+    return TOUCH_MAP[eventName][key];
+  }
+};
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var touchEvent = exports.getTouchEventName(eventName);
+  if (touchEvent) {
+    element.addEventListener(touchEvent, function(e) {
+      e.preventDefault();  // Stop mouse events.
+      handler(e);
+    }, false);
+  }
+};
+
+exports.addMouseDownTouchEvent = function(element, handler) {
+  addEvent(element, 'mousedown', handler);
+};
+
+exports.addMouseUpTouchEvent = function(element, handler) {
+  addEvent(element, 'mouseup', handler);
+};
+
+exports.addMouseMoveTouchEvent = function(element, handler) {
+  addEvent(element, 'mousemove', handler);
+};
+
+exports.addClickTouchEvent = function(element, handler) {
+  addEvent(element, 'click', handler);
+};
+
+// A map from standard touch events to various aliases.
+var TOUCH_MAP = {
+  //  Incomplete list, add as needed.
+  click: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mousedown: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mouseup: {
+    standard: 'touchend',
+    ie10: 'MSPointerUp',
+    ie11: 'pointerup'
+  },
+  mousemove: {
+    standard: 'touchmove',
+    ie10: 'MSPointerMove',
+    ie11: 'pointermove'
+  }
+};
+
+exports.isMobile = function() {
+  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isWindowsTouch = function() {
+  var reg = /MSIE.*Touch/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isAndroid = function() {
+  var reg = /Android/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isIOS = function() {
+  var reg = /iP(hone|od|ad)/;
+  return reg.test(window.navigator.userAgent);
+};
+
+
+},{}],101:[function(require,module,exports){
+/**
+ * @fileoverview Constants used in production code and tests.
+ */
+
+/**
+ * Enumeration of user program execution outcomes.
+ * These are determined by each app.
+ */
+exports.ResultType = {
+  UNSET: 0,       // The result has not yet been computed.
+  SUCCESS: 1,     // The program completed successfully, achieving the goal.
+  FAILURE: -1,    // The program ran without error but did not achieve goal.
+  TIMEOUT: 2,     // The program did not complete (likely infinite loop).
+  ERROR: -2       // The program generated an error.
+};
+
+/**
+ * Enumeration of test results.
+ * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
+ * StudioApp.checkForEmptyBlocks_ is true.
+ */
+exports.TestResults = {
+  // Default value before any tests are run.
+  NO_TESTS_RUN: -1,
+
+  // The level was not solved.
+  EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
+  TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
+  LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
+  MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
+  EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
+  MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
+  APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
+  UNUSED_PARAM: 13,              // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
+  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
+
+  // The level was solved in a non-optimal way.  User may advance or retry.
+  TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
+  APP_SPECIFIC_ACCEPTABLE_FAIL: 21,  // Application-specific acceptable failure.
+
+  // Other.
+  FREE_PLAY: 30,              // The user is in free-play mode.
+  EDIT_BLOCKS: 70,            // The user is creating/editing a new level.
+
+  // The level was solved in the ideal manner.
+  ALL_PASS: 100
+};
+
+exports.BeeTerminationValue = {
+  FAILURE: false,
+  SUCCESS: true,
+  INFINITE_LOOP: Infinity,
+  NOT_AT_FLOWER: 1,     // Tried to get nectar when not at flower.
+  FLOWER_EMPTY: 2,      // Tried to get nectar when flower empty.
+  NOT_AT_HONEYCOMB: 3,  // Tried to make honey when not at honeycomb.
+  HONEYCOMB_FULL: 4,    // Tried to make honey, but no room at honeycomb.
+  UNCHECKED_CLOUD: 5,    // Finished puzzle, but didn't check every clouded item
+  UNCHECKED_PURPLE: 6,   // Finished puzzle, but didn't check every purple flower
+  INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
+  INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
+};
+
+exports.KeyCodes = {
+  ENTER: 13,
+  SPACE: 32,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40,
+  DELETE: 127
+};
+
+
+},{}],69:[function(require,module,exports){
+var xml = require('./xml');
+
+/**
+ * Create the xml for a level's toolbox
+ * @param {string} blocks The xml of the blocks to go in the toolbox
+ */
+exports.createToolbox = function(blocks) {
+  return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
+};
+
+/**
+ * Create the xml for a block of the given type
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ */
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
+};
+
+/**
+ * Create the xml for a block of the given type, with the provided child nested
+ * in a next block
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ * @param {string} child Xml for the child block
+ */
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
+};
+
+/**
+ * Give a list of types, returns the xml assuming each block is a child of
+ * the previous block.
+ */
+exports.blocksFromList = function (types) {
+  if (types.length === 1) {
+    return this.blockOfType(types[0]);
+  }
+
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
+};
+
+/**
+ * Create the xml for a category in a toolbox
+ */
+exports.createCategory = function(name, blocks, custom) {
+  return '<category name="' + name + '"' +
+          (custom ? ' custom="' + custom + '"' : '') +
+          '>' + blocks + '</category>';
+};
+
+/**
+ * Generate a simple block with a plain title and next/previous connectors.
+ */
+exports.generateSimpleBlock = function (blockly, generator, options) {
+  ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
+    if (!options[param]) {
+      throw new Error('generateSimpleBlock requires param "' + param + '"');
+    }
+  });
+
+  var name = options.name;
+  var helpUrl = options.helpUrl || ""; // optional param
+  var title = options.title;
+  var titleImage = options.titleImage;
+  var tooltip = options.tooltip;
+  var functionName = options.functionName;
+
+  blockly.Blocks[name] = {
+    helpUrl: helpUrl,
+    init: function() {
+      // Note: has a fixed HSV.  Could make this customizable if need be
+      this.setHSV(184, 1.00, 0.74);
+      var input = this.appendDummyInput();
+      if (title) {
+        input.appendTitle(title);
+      }
+      if (titleImage) {
+        input.appendTitle(new blockly.FieldImage(titleImage));
+      }
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(tooltip);
+    }
+  };
+
+  generator[name] = function() {
+    // Generate JavaScript for putting dirt on to a tile.
+    return functionName + '(\'block_id_' + this.id + '\');\n';
+  };
+};
+
+/**
+ * Generates a single block from a <block/> DOM element, adding it to the main workspace
+ * @param blockDOM {Element}
+ * @returns {*}
+ */
+exports.domToBlock = function(blockDOM) {
+  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
+};
+
+/**
+ * Generates a single block from a block XML string—e.g., <block type="testBlock"></block>,
+ * and adds it to the main workspace
+ * @param blockDOMString
+ * @returns {*}
+ */
+exports.domStringToBlock = function(blockDOMString) {
+  return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
+};
+
+/**
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
+ */
+exports.forceInsertTopBlock = function (input, blockType) {
+  input = input || '';
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
+    return input;
+  }
+
+  var root = xml.parseElement(input);
+
+  // Extract the document from the root. The reason I do this instead of just
+  // using document.createElement elsewhere is
+  var doc = root.parentNode;
+
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
+
+  var numChildren = root.childNodes ? root.childNodes.length : 0;
+
+  // find the first non-function definition block and extract it
+  var firstBlock = null, i = 0;
+  while (i < numChildren && firstBlock === null) {
+    var child = root.childNodes[i];
+    // only look at element nodes
+    if (child.nodeType === 1) {
+      var type = child.getAttribute('type');
+      if (type !== 'procedures_defnoreturn' && type !== 'procedures_defreturn') {
+        firstBlock = root.removeChild(child);
+        numChildren--;
+      }
+    }
+    i++;
+  }
+
+  if (firstBlock !== null) {
+    // when run -> next -> firstBlock
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
+    next.appendChild(firstBlock);
+    topBlock.appendChild(next);
+  }
+
+  if (numChildren > 0) {
+    root.insertBefore(topBlock, root.childNodes[0]);
+  } else {
+    root.appendChild(topBlock);
+  }
+  return xml.serialize(root);
+};
+
+/**
+ * Generate the xml for a block for the calc app.
+ * @param {string} type Type for this block
+ * @param {number[]|string[]} args List of args, where each arg is either the
+ *   xml for a child block, a number, or the name of a variable.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    } else if (/^<block/.test(arg)) {
+      // we have xml, dont make any changes
+      arg = arg;
+    } else {
+      // we think we have a variable
+      arg = exports.calcBlockGetVar(arg);
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str += '</block>';
+
+  return str;
+};
+
+/**
+ * @returns the xml for a functional_parameters_get block with the given
+ *   variableName
+ */
+exports.calcBlockGetVar = function (variableName) {
+  return '' +
+    '<block type="functional_parameters_get" uservisible="false">' +
+    '  <mutation>' +
+    '    <outputtype>Number</outputtype>' +
+    '  </mutation>' +
+    '  <title name="VAR">' + variableName + '</title>' +
+    '</block>';
+};
+
+/**
+ * Generate the xml for a math block (either calc or eval apps).
+ * @param {string} type Type for this block
+ * @param {Object.<string,string} inputs Dictionary mapping input name to the
+     xml for that input
+ * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
+ */
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
+
+  return str;
+};
+
+/**
+ * Generate xml for a functional defintion
+ * @param {string} name The name of the function
+ * @param {string} outputType Function's output type
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ * @param {string} blockXml Xml for the blocks that actually define the function
+ */
+exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
+  var mutation = '<mutation>';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
+
+  return '<block type="functional_definition" inline="false">'+
+      mutation +
+      '<title name="NAME">' + name + '</title>' +
+     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
+    '</block>';
+};
+
+/**
+ * Generate xml for a calling a functional function
+ * @param {string} name The name of the function
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ */
+exports.functionalCallXml = function (name, argList, inputContents) {
+  if (argList.length !== inputContents.length) {
+    throw new Error('must define contents for each arg');
+  }
+
+  var mutation = '<mutation name="' + name + '">';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '</mutation>';
+
+  var contents = '';
+  inputContents.forEach(function (blockXml, index) {
+    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
+  });
+
+  return '<block type="functional_call">' +
+      mutation +
+      contents +
+    '</block>';
+};
+
+
+},{"./xml":311}],67:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
+var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
+var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+
+/**
+ * @fileoverview Manages a store of known blocks and tooltips
+ */
+
+/**
+ * Store for finding tooltips for blocks
+ * @constructor
+ */
+function DropletTooltipManager() {
+  /**
+   * Map of block types to tooltip objects
+   * @type {Object.<String, DropletFunctionTooltip>}
+   */
+  this.blockTypeToTooltip = {};
+
+  /**
+   * @type {DropletBlockTooltipManager}
+   * @private
+   */
+  this.dropletBlockTooltipManager_ = new DropletBlockTooltipManager(this);
+
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
+
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
+}
+
+/**
+ * Registers handlers for droplet block tooltips.
+ * @param dropletEditor
+ */
+DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
+  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
+};
+
+/**
+ * Registers handlers for ACE mode tooltips
+ * @param dropletEditor
+ */
+DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
+  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
+  this.dropletAutocompleteParameterTooltipManager_.installTooltipsForEditor_(dropletEditor);
+};
+
+/**
+ * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
+ *    which to register documentation
+ */
+DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
+  dropletBlocks.forEach(function (dropletBlockDefinition) {
+    this.blockTypeToTooltip[dropletBlockDefinition.func] =
+      new DropletFunctionTooltip(dropletBlockDefinition.func);
+  }, this);
+};
+
+DropletTooltipManager.prototype.hasDocFor = function (functionName) {
+  return this.blockTypeToTooltip.hasOwnProperty(functionName);
+};
+
+/**
+ * @param {String} functionName
+ * @returns {DropletFunctionTooltip}
+ */
+DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
+  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
+    throw "Function name " + functionName + " not registered in documentation manager.";
+  }
+
+  return this.blockTypeToTooltip[functionName];
+};
+
+module.exports = DropletTooltipManager;
+
+
+},{"./DropletAutocompleteParameterTooltipManager":61,"./DropletAutocompletePopupTooltipManager":62,"./DropletBlockTooltipManager":63,"./DropletFunctionTooltip":65}],63:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet blocks
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletBlockTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  speed: 150,
+  maxWidth: 450,
+  position: 'right',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  delay: 400
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
+  this.hideTooltipsOnBlockPick_(dropletEditor);
+
+  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
+  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
+};
+
+DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
+  if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+    this.installTooltipsForCurrentCategoryBlocks();
+  }
+};
+
+DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+  $('.droplet-hover-div').each(function (_, blockHoverDiv) {
+    if ($(blockHoverDiv).hasClass('tooltipstered')) {
+      return;
+    }
+
+    var funcName = $(blockHoverDiv).attr('title');
+
+    var hoverDivWidth = $(blockHoverDiv).width();
+    var hoverDivLeftToToolboxRight = $('.droplet-palette-canvas').width() -
+      parseInt(blockHoverDiv.style.left, 10);
+    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
+    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
+
+    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: this.getTooltipHTML(funcName),
+      offsetX: tooltipOffsetX
+    });
+
+    $(blockHoverDiv).tooltipster(configuration);
+  }.bind(this));
+};
+
+/**
+ * Tooltipster's hideOnClick setting does not work with the droplet hover
+ * overlay as-is. Hide the tooltip on block picking explicitly.
+ */
+DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (dropletEditor) {
+  dropletEditor.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
+  });
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.parameterInfos,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+  });
+};
+
+module.exports = DropletBlockTooltipManager;
+
+
+},{"./DropletFunctionTooltip":65,"./DropletFunctionTooltip.html.ejs":64}],65:[function(require,module,exports){
+var msg = require('../locale');
+
+/**
+ * @fileoverview Representation of a droplet function/block's tooltip
+ */
+
+var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
+
+/**
+ * @typedef {Object} parameterInfo
+ * @property {String} name
+ * @property {?String} description
+ */
+
+/**
+ * Stores a block's tooltip information and helps render it
+ * Grabs much of the tooltip's information from the 'common' locale file,
+ * (apps/i18n/common/en_us.json), keyed by the function name.
+ *
+ * e.g.,
+ *
+ * "dropletBlock_readRecords_description": "Reads records [...].",
+ * "dropletBlock_readRecords_param0": "table",
+ * "dropletBlock_readRecords_param1": "searchParams",
+ * "dropletBlock_readRecords_param2": "onSuccess",
+ *
+ * Will result in a tooltip with the contents:
+ *
+ *    readRecords(table, searchParams, onSuccess)
+ *    Reads records [...].
+ *    [Read More] (links to `readRecords` doc file)
+ *
+ * Blocks which have functionNames that should not be user-visible can define
+ * their own signature override.
+ *
+ * e.g.,
+ *
+ * "dropletBlock_functionParams_n_description": "Define a function with a given parameter",
+ * "dropletBlock_functionParams_n_signatureOverride": "Function with a Parameter",
+ *
+ * Will result in a tooltip with the contents:
+ *
+ *    Function with a Parameter <-- note, no ()s
+ *    Define a function with a given parameter.
+ *    [Read More] (links to `functionParams_n` doc file)
+ *
+ * @constructor
+ */
+var DropletFunctionTooltip = function (functionName) {
+  /** @type {String} */
+  this.functionName = functionName;
+
+  /** @type {String} */
+  this.description = null;
+
+  if (msg.hasOwnProperty(this.descriptionKey())) {
+    this.description = msg[this.descriptionKey()]();
+  }
+
+  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
+    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  }
+
+  /** @type {Array.<parameterInfo>} */
+  this.parameterInfos = [];
+
+  var paramId = 0;
+  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+    var paramInfo = {};
+    paramInfo.name = msg[this.parameterNameKey(paramId)]();
+    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
+      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    }
+    this.parameterInfos.push(paramInfo);
+    paramId++;
+  }
+};
+
+/**
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.descriptionKey = function () {
+  return this.i18nPrefix() + "_description";
+};
+
+/**
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
+  return this.i18nPrefix() + "_signatureOverride";
+};
+
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.parameterNameKey = function (paramIndex) {
+  return this.i18nPrefix() + "_param" + paramIndex;
+};
+
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.parameterDescriptionKey = function (paramIndex) {
+  return this.i18nPrefix() + "_param" + paramIndex + '_description';
+};
+
+/**
+ * @returns {string} i18n file prefix for this function
+ */
+DropletFunctionTooltip.prototype.i18nPrefix = function () {
+  return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
+};
+
+/**
+ * @returns {string} URL for full doc about this function
+ */
+DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
+  return 'http://code.org/applab/docs/' + this.functionName;
+};
+
+module.exports = DropletFunctionTooltip;
+
+
+},{"../locale":144}],144:[function(require,module,exports){
+// base locale
+
+module.exports = window.blockly.common_locale;
+
+
+},{}],62:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet's ACE editor autocomplete dropdown
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  autoClose: false,
+  trigger: 'custom',
+  speed: 100,
+  maxWidth: 450,
+  position: 'left',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  restoration: 'none',
+  updateAnimation: false
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  var aceEditor = dropletEditor.aceEditor;
+
+  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
+  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
+};
+
+/**
+ * When an autocomplete popup has been shown the first time, register event
+ * handlers to show and hide tooltips during autocomplete popup usage.
+ * @param aceEditor - ace editor instance
+ * @param changeEvent - event from aceEditor.commands.on("afterExec")
+ * @private
+ */
+DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
+  if (changeEvent.command.name !== 'insertstring') {
+    return;
+  }
+
+  var popupHasBeenShownOnce = aceEditor.completer && aceEditor.completer.popup;
+  if (!popupHasBeenShownOnce) {
+    return;
+  }
+
+  this.setupForEditorPopup_(aceEditor);
+
+  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
+  this.editorChangedEventHandler_ = null;
+};
+
+DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
+  aceEditor.completer.popup.setSelectOnHover(true);
+
+  aceEditor.completer.popup.renderer.on("afterRender", function () {
+    this.updateAutocompletePopupTooltip(aceEditor);
+  }.bind(this));
+
+  aceEditor.completer.popup.on("hide", function () {
+    this.destroyAutocompleteTooltips_();
+  }.bind(this));
+};
+
+DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
+  if (!aceEditor.completer.completions) {
+    return;
+  }
+
+  var keyboardRow = aceEditor.completer.popup.getRow();
+
+  if (keyboardRow < 0) {
+    return;
+  }
+
+  var filteredCompletions = aceEditor.completer.completions.filtered;
+  var funcName = filteredCompletions[keyboardRow].value;
+
+  this.destroyAutocompleteTooltips_();
+
+  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
+    return;
+  }
+
+  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+    content: this.getTooltipHTML(funcName)
+  });
+
+  var rowOverlayDiv = $('.ace_selected');
+  rowOverlayDiv.tooltipster(configuration);
+  rowOverlayDiv.tooltipster('show');
+};
+
+DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
+  $('.ace_autocomplete .tooltipstered').tooltipster('destroy');
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.parameterInfos,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+  });
+};
+
+module.exports = DropletAutocompletePopupTooltipManager;
+
+
+},{"./DropletFunctionTooltip.html.ejs":64}],64:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {
+    /**
+     * TODO(bjordan): would be nice to split the following line up, can't figure
+     * out how to do so without inserting extraneous spaces between parameters.
+     */
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":481}],61:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
+var tooltipUtils = require('./tooltipUtils.js');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet's ACE editor when filling in
+ * an empty parameter.
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  autoClose: false,
+  trigger: 'custom',
+  speed: 100,
+  maxWidth: 450,
+  position: 'bottom',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  restoration: 'none',
+  updateAnimation: false,
+  positionTracker: true
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  var aceEditor = dropletEditor.aceEditor;
+
+  var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
+  aceEditor.commands.on('afterExec', cursorMovementHandler);
+  aceEditor.on('mousedown', function(e) {
+    this.getCursorTooltip_().tooltipster('hide');
+  }.bind(this));
+};
+
+/**
+ * @param editor - ace editor instance
+ * @param changeEvent - event from aceEditor.session.selection.on('changeCursor')
+ * @private
+ */
+DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = function (editor, changeEvent) {
+  this.getCursorTooltip_().tooltipster('hide');
+
+  if (!editor.selection.isEmpty()) {
+    return;
+  }
+
+  var cursorPosition = editor.selection.getCursor();
+
+  var currentParameterInfo = tooltipUtils.findFunctionAndParamNumber(editor, cursorPosition);
+  if (!currentParameterInfo) {
+    return;
+  }
+
+  this.updateParameterTooltip_(editor, currentParameterInfo.funcName,
+    currentParameterInfo.currentParameterIndex);
+};
+
+DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
+  if (!this.dropletTooltipManager.hasDocFor(functionName)) {
+    return;
+  }
+
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+
+  if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
+    return;
+  }
+
+  this.getCursorTooltip_().tooltipster('content',
+    this.getTooltipHTML(tooltipInfo, currentParameterIndex));
+  this.getCursorTooltip_().tooltipster('show');
+};
+
+DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
+  if (!this.cursorTooltip_) {
+    this.cursorTooltip_ = $('.droplet-ace .ace_cursor');
+    this.cursorTooltip_.tooltipster(DEFAULT_TOOLTIP_CONFIG);
+  }
+  return this.cursorTooltip_;
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (tooltipInfo, currentParameterIndex) {
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.parameterInfos,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    currentParameterIndex: currentParameterIndex
+  });
+};
+
+module.exports = DropletAutocompleteParameterTooltipManager;
+
+
+},{"./DropletParameterTooltip.html.ejs":66,"./tooltipUtils.js":68}],68:[function(require,module,exports){
+/* global ace */
+'use strict';
+
+var utils = require('../utils');
+var _ = utils.getLodash();
+
+/**
+ * @typedef {Object} parameterSlotInfo
+ * @property {string} funcName
+ * @property {number} currentParameterIndex
+ */
+
+var ONLY_WHITESPACE_REGEXP = /^\s*$/;
+var ENDING_OF_BLOCK_COMMENT = /\*\/$/;
+var START_OF_BLOCK_COMMENT = /^\/\*/;
+
+/**
+ * Returns the number of instances of character within string
+ * @param {string} string
+ * @param {string} character
+ * @returns {number}
+ */
+function countNumberOfCharacter(string, character) {
+  return string.split(character).length - 1;
+}
+
+function openerMatchesCloser(opener, closer) {
+  var closersToOpeners = {
+    '}': '{',
+    ')': '(',
+    ']': '['
+  };
+  return closersToOpeners[closer] === opener;
+}
+
+/**
+ * Given an ace editor and row/column position, returns the function
+ * name and index of the currently edited parameter.
+ * If a parameter is not currently being filled in, returns null.
+ * TODO(bjordan): Unit test once ace.require available in utility tests
+ * @param editor
+ * @param position
+ * @returns {parameterSlotInfo|null}
+ */
+exports.findFunctionAndParamNumber = function (editor, position) {
+  var seenCloserStack = [];
+  var sameDepthPrecedingCommaCount = 0;
+
+  var TokenIterator = ace.require("./token_iterator").TokenIterator;
+  var iterator = new TokenIterator(editor.session, position.row, position.column);
+
+  var token = iterator.getCurrentToken();
+
+  // Special cases for first token
+
+  if (position.column === 0) {
+    // At beginning of a line. Step back one for first token.
+    token = iterator.stepBackward();
+  } else if (token && token.type.match(/^comment/)) {
+    var isBlockComment = token.type === "comment.doc" ||
+      token.value.match(START_OF_BLOCK_COMMENT);
+    if (isBlockComment) {
+      var tokenIsEndOfDocComment = token.value.match(ENDING_OF_BLOCK_COMMENT);
+      var cursorIsEndOfToken = (token.start + token.value.length) === position.column;
+      var cursorIsEndOfBlockComment = (tokenIsEndOfDocComment && cursorIsEndOfToken);
+      if (!cursorIsEndOfBlockComment) {
+        // Starting within a block comment
+        return null;
+      }
+    } else {
+      // Starting within a comment
+      return null;
+    }
+  }
+
+  while (token) {
+    switch (token.type) {
+      case "paren.rparen":
+        var closers = token.value.split();
+        for (var i = closers.length - 1; i >= 0; i--) {
+          var currentCloser = closers[i];
+          seenCloserStack.push(currentCloser);
+        }
+        break;
+      case "paren.lparen":
+        var openers = token.value.split();
+        for (var j = openers.length - 1; j >= 0; j--) {
+          var currentOpener = openers[j];
+
+          var isBeginningOfFunctionCall =
+            seenCloserStack.length === 0 && currentOpener === '(';
+          if (isBeginningOfFunctionCall) {
+            return {
+              funcName: iterator.stepBackward().value,
+              currentParameterIndex: sameDepthPrecedingCommaCount
+            };
+          }
+
+          var lastCloser = seenCloserStack.pop();
+          if (!lastCloser || !openerMatchesCloser(currentOpener, lastCloser)) {
+            return null;
+          }
+        }
+        break;
+      case "punctuation.operator":
+        if (seenCloserStack.length === 0) {
+          if (_.contains(token.value, ';')) {
+            return null;
+          }
+          if (_.contains(token.value, ',')) {
+            sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
+          }
+        }
+        break;
+      case "comment":
+      case "comment.doc":
+        break;
+      case "text":
+        // Whitespace or random non-identifier characters
+        if (seenCloserStack.length !== 0 || token.value.match(ONLY_WHITESPACE_REGEXP)) {
+          break;
+        }
+        return null;
+      case "string":
+      case "storage.type":
+      case "identifier":
+        /* falls through */
+      default:
+        if (seenCloserStack.length === 0 && sameDepthPrecedingCommaCount === 0) {
+          // Something substantial between cursor and start of parameter slot
+          return null;
+        }
+        break;
+    }
+
+    token = iterator.stepBackward();
+  }
+
+  return null;
+};
+
+
+
+},{"../utils":310}],66:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {
+    /**
+     * TODO(bjordan): would be nice to split the following line up, can't figure
+     * out how to do so without inserting extraneous spaces between parameters.
+     */
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":481}],481:[function(require,module,exports){
+
+/*!
+ * EJS
+ * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Module dependencies.
+ */
+
+var utils = require('./utils')
+  , path = require('path')
+  , basename = path.basename
+  , dirname = path.dirname
+  , extname = path.extname
+  , join = path.join
+  , fs = require('fs')
+  , read = fs.readFileSync;
+
+/**
+ * Filters.
+ *
+ * @type Object
+ */
+
+var filters = exports.filters = require('./filters');
+
+/**
+ * Intermediate js cache.
+ *
+ * @type Object
+ */
+
+var cache = {};
+
+/**
+ * Clear intermediate js cache.
+ *
+ * @api public
+ */
+
+exports.clearCache = function(){
+  cache = {};
+};
+
+/**
+ * Translate filtered code into function calls.
+ *
+ * @param {String} js
+ * @return {String}
+ * @api private
+ */
+
+function filtered(js) {
+  return js.substr(1).split('|').reduce(function(js, filter){
+    var parts = filter.split(':')
+      , name = parts.shift()
+      , args = parts.join(':') || '';
+    if (args) args = ', ' + args;
+    return 'filters.' + name + '(' + js + args + ')';
+  });
+};
+
+/**
+ * Re-throw the given `err` in context to the
+ * `str` of ejs, `filename`, and `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} str
+ * @param {String} filename
+ * @param {String} lineno
+ * @api private
+ */
+
+function rethrow(err, str, filename, lineno){
+  var lines = str.split('\n')
+    , start = Math.max(lineno - 3, 0)
+    , end = Math.min(lines.length, lineno + 3);
+
+  // Error context
+  var context = lines.slice(start, end).map(function(line, i){
+    var curr = i + start + 1;
+    return (curr == lineno ? ' >> ' : '    ')
+      + curr
+      + '| '
+      + line;
+  }).join('\n');
+
+  // Alter exception message
+  err.path = filename;
+  err.message = (filename || 'ejs') + ':'
+    + lineno + '\n'
+    + context + '\n\n'
+    + err.message;
+  
+  throw err;
+}
+
+/**
+ * Parse the given `str` of ejs, returning the function body.
+ *
+ * @param {String} str
+ * @return {String}
+ * @api public
+ */
+
+var parse = exports.parse = function(str, options){
+  var options = options || {}
+    , open = options.open || exports.open || '<%'
+    , close = options.close || exports.close || '%>'
+    , filename = options.filename
+    , compileDebug = options.compileDebug !== false
+    , buf = [];
+
+  buf.push('var buf = [];');
+  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
+  buf.push('\n buf.push(\'');
+
+  var lineno = 1;
+
+  var consumeEOL = false;
+  for (var i = 0, len = str.length; i < len; ++i) {
+    if (str.slice(i, open.length + i) == open) {
+      i += open.length
+  
+      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
+      switch (str.substr(i, 1)) {
+        case '=':
+          prefix = "', escape((" + line + ', ';
+          postfix = ")), '";
+          ++i;
+          break;
+        case '-':
+          prefix = "', (" + line + ', ';
+          postfix = "), '";
+          ++i;
+          break;
+        default:
+          prefix = "');" + line + ';';
+          postfix = "; buf.push('";
+      }
+
+      var end = str.indexOf(close, i)
+        , js = str.substring(i, end)
+        , start = i
+        , include = null
+        , n = 0;
+
+      if ('-' == js[js.length-1]){
+        js = js.substring(0, js.length - 2);
+        consumeEOL = true;
+      }
+
+      if (0 == js.trim().indexOf('include')) {
+        var name = js.trim().slice(7).trim();
+        if (!filename) throw new Error('filename option is required for includes');
+        var path = resolveInclude(name, filename);
+        include = read(path, 'utf8');
+        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
+        buf.push("' + (function(){" + include + "})() + '");
+        js = '';
+      }
+
+      while (~(n = js.indexOf("\n", n))) n++, lineno++;
+      if (js.substr(0, 1) == ':') js = filtered(js);
+      if (js) {
+        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
+        buf.push(prefix, js, postfix);
+      }
+      i += end - start + close.length - 1;
+
+    } else if (str.substr(i, 1) == "\\") {
+      buf.push("\\\\");
+    } else if (str.substr(i, 1) == "'") {
+      buf.push("\\'");
+    } else if (str.substr(i, 1) == "\r") {
+      // ignore
+    } else if (str.substr(i, 1) == "\n") {
+      if (consumeEOL) {
+        consumeEOL = false;
+      } else {
+        buf.push("\\n");
+        lineno++;
+      }
+    } else {
+      buf.push(str.substr(i, 1));
+    }
+  }
+
+  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
+  else buf.push("');\nreturn buf.join('');");
+
+  return buf.join('');
+};
+
+/**
+ * Compile the given `str` of ejs into a `Function`.
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {Function}
+ * @api public
+ */
+
+var compile = exports.compile = function(str, options){
+  options = options || {};
+  var escape = options.escape || utils.escape;
+  
+  var input = JSON.stringify(str)
+    , compileDebug = options.compileDebug !== false
+    , client = options.client
+    , filename = options.filename
+        ? JSON.stringify(options.filename)
+        : 'undefined';
+  
+  if (compileDebug) {
+    // Adds the fancy stack trace meta info
+    str = [
+      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
+      rethrow.toString(),
+      'try {',
+      exports.parse(str, options),
+      '} catch (err) {',
+      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
+      '}'
+    ].join("\n");
+  } else {
+    str = exports.parse(str, options);
+  }
+  
+  if (options.debug) console.log(str);
+  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
+
+  try {
+    var fn = new Function('locals, filters, escape', str);
+  } catch (err) {
+    if ('SyntaxError' == err.name) {
+      err.message += options.filename
+        ? ' in ' + filename
+        : ' while compiling ejs';
+    }
+    throw err;
+  }
+
+  if (client) return fn;
+
+  return function(locals){
+    return fn.call(this, locals, filters, escape);
+  }
+};
+
+/**
+ * Render the given `str` of ejs.
+ *
+ * Options:
+ *
+ *   - `locals`          Local variables object
+ *   - `cache`           Compiled functions are cached, requires `filename`
+ *   - `filename`        Used by `cache` to key caches
+ *   - `scope`           Function execution context
+ *   - `debug`           Output generated function body
+ *   - `open`            Open tag, defaulting to "<%"
+ *   - `close`           Closing tag, defaulting to "%>"
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {String}
+ * @api public
+ */
+
+exports.render = function(str, options){
+  var fn
+    , options = options || {};
+
+  if (options.cache) {
+    if (options.filename) {
+      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
+    } else {
+      throw new Error('"cache" option requires "filename".');
+    }
+  } else {
+    fn = compile(str, options);
+  }
+
+  options.__proto__ = options.locals;
+  return fn.call(options.scope, options);
+};
+
+/**
+ * Render an EJS file at the given `path` and callback `fn(err, str)`.
+ *
+ * @param {String} path
+ * @param {Object|Function} options or callback
+ * @param {Function} fn
+ * @api public
+ */
+
+exports.renderFile = function(path, options, fn){
+  var key = path + ':string';
+
+  if ('function' == typeof options) {
+    fn = options, options = {};
+  }
+
+  options.filename = path;
+
+  var str;
+  try {
+    str = options.cache
+      ? cache[key] || (cache[key] = read(path, 'utf8'))
+      : read(path, 'utf8');
+  } catch (err) {
+    fn(err);
+    return;
+  }
+  fn(null, exports.render(str, options));
+};
+
+/**
+ * Resolve include `name` relative to `filename`.
+ *
+ * @param {String} name
+ * @param {String} filename
+ * @return {String}
+ * @api private
+ */
+
+function resolveInclude(name, filename) {
+  var path = join(dirname(filename), name);
+  var ext = extname(name);
+  if (!ext) path += '.ejs';
+  return path;
+}
+
+// express support
+
+exports.__express = exports.renderFile;
+
+/**
+ * Expose to require().
+ */
+
+if (require.extensions) {
+  require.extensions['.ejs'] = function(module, filename) {
+    source = require('fs').readFileSync(filename, 'utf-8');
+    module._compile(compile(source, {}), filename);
+  };
+} else if (require.registerExtension) {
+  require.registerExtension('.ejs', function(src) {
+    return compile(src, {});
+  });
+}
+
+},{"./filters":482,"./utils":483,"fs":312,"path":459}],483:[function(require,module,exports){
+
+/*!
+ * EJS
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Escape the given string of `html`.
+ *
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
+
+exports.escape = function(html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+ 
+},{}],482:[function(require,module,exports){
+
+/*!
+ * EJS - Filters
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * First element of the target `obj`.
+ */
+
+exports.first = function(obj) {
+  return obj[0];
+};
+
+/**
+ * Last element of the target `obj`.
+ */
+
+exports.last = function(obj) {
+  return obj[obj.length - 1];
+};
+
+/**
+ * Capitalize the first letter of the target `str`.
+ */
+
+exports.capitalize = function(str){
+  str = String(str);
+  return str[0].toUpperCase() + str.substr(1, str.length);
+};
+
+/**
+ * Downcase the target `str`.
+ */
+
+exports.downcase = function(str){
+  return String(str).toLowerCase();
+};
+
+/**
+ * Uppercase the target `str`.
+ */
+
+exports.upcase = function(str){
+  return String(str).toUpperCase();
+};
+
+/**
+ * Sort the target `obj`.
+ */
+
+exports.sort = function(obj){
+  return Object.create(obj).sort();
+};
+
+/**
+ * Sort the target `obj` by the given `prop` ascending.
+ */
+
+exports.sort_by = function(obj, prop){
+  return Object.create(obj).sort(function(a, b){
+    a = a[prop], b = b[prop];
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+};
+
+/**
+ * Size or length of the target `obj`.
+ */
+
+exports.size = exports.length = function(obj) {
+  return obj.length;
+};
+
+/**
+ * Add `a` and `b`.
+ */
+
+exports.plus = function(a, b){
+  return Number(a) + Number(b);
+};
+
+/**
+ * Subtract `b` from `a`.
+ */
+
+exports.minus = function(a, b){
+  return Number(a) - Number(b);
+};
+
+/**
+ * Multiply `a` by `b`.
+ */
+
+exports.times = function(a, b){
+  return Number(a) * Number(b);
+};
+
+/**
+ * Divide `a` by `b`.
+ */
+
+exports.divided_by = function(a, b){
+  return Number(a) / Number(b);
+};
+
+/**
+ * Join `obj` with the given `str`.
+ */
+
+exports.join = function(obj, str){
+  return obj.join(str || ', ');
+};
+
+/**
+ * Truncate `str` to `len`.
+ */
+
+exports.truncate = function(str, len){
+  str = String(str);
+  return str.substr(0, len);
+};
+
+/**
+ * Truncate `str` to `n` words.
+ */
+
+exports.truncate_words = function(str, n){
+  var str = String(str)
+    , words = str.split(/ +/);
+  return words.slice(0, n).join(' ');
+};
+
+/**
+ * Replace `pattern` with `substitution` in `str`.
+ */
+
+exports.replace = function(str, pattern, substitution){
+  return String(str).replace(pattern, substitution || '');
+};
+
+/**
+ * Prepend `val` to `obj`.
+ */
+
+exports.prepend = function(obj, val){
+  return Array.isArray(obj)
+    ? [val].concat(obj)
+    : val + obj;
+};
+
+/**
+ * Append `val` to `obj`.
+ */
+
+exports.append = function(obj, val){
+  return Array.isArray(obj)
+    ? obj.concat(val)
+    : obj + val;
+};
+
+/**
+ * Map the given `prop`.
+ */
+
+exports.map = function(arr, prop){
+  return arr.map(function(obj){
+    return obj[prop];
+  });
+};
+
+/**
+ * Reverse the given `obj`.
+ */
+
+exports.reverse = function(obj){
+  return Array.isArray(obj)
+    ? obj.reverse()
+    : String(obj).split('').reverse().join('');
+};
+
+/**
+ * Get `prop` of the given `obj`.
+ */
+
+exports.get = function(obj, prop){
+  return obj[prop];
+};
+
+/**
+ * Packs the given `obj` into json string
+ */
+exports.json = function(obj){
+  return JSON.stringify(obj);
+};
+},{}],459:[function(require,module,exports){
+(function (process){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+}).call(this,require('_process'))
+},{"_process":460}],460:[function(require,module,exports){
+// shim for using process in browser
+
+var process = module.exports = {};
+var queue = [];
+var draining = false;
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    draining = true;
+    var currentQueue;
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        var i = -1;
+        while (++i < len) {
+            currentQueue[i]();
+        }
+        len = queue.length;
+    }
+    draining = false;
+}
+process.nextTick = function (fun) {
+    queue.push(fun);
+    if (!draining) {
+        setTimeout(drainQueue, 0);
+    }
+};
+
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+// TODO(shtylman)
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],312:[function(require,module,exports){
+
+},{}],3:[function(require,module,exports){
+/**
+ * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
+ * directory of this distribution and at
+ * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
+ */
+
+    /**
+     * Class for dimension change detection.
+     *
+     * @param {Element|Element[]|Elements|jQuery} element
+     * @param {Function} callback
+     *
+     * @constructor
+     */
+    module.exports = function(element, callback) {
+        /**
+         *
+         * @constructor
+         */
+        function EventQueue() {
+            this.q = [];
+            this.add = function(ev) {
+                this.q.push(ev);
+            };
+
+            var i, j;
+            this.call = function() {
+                for (i = 0, j = this.q.length; i < j; i++) {
+                    this.q[i].call();
+                }
+            };
+        }
+
+        /**
+         * @param {HTMLElement} element
+         * @param {String}      prop
+         * @returns {String|Number}
+         */
+        function getComputedStyle(element, prop) {
+            if (element.currentStyle) {
+                return element.currentStyle[prop];
+            } else if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null).getPropertyValue(prop);
+            } else {
+                return element.style[prop];
+            }
+        }
+
+        /**
+         *
+         * @param {HTMLElement} element
+         * @param {Function}    resized
+         */
+        function attachResizeEvent(element, resized) {
+            if (!element.resizedAttached) {
+                element.resizedAttached = new EventQueue();
+                element.resizedAttached.add(resized);
+            } else if (element.resizedAttached) {
+                element.resizedAttached.add(resized);
+                return;
+            }
+
+            element.resizeSensor = document.createElement('div');
+            element.resizeSensor.className = 'resize-sensor';
+            var style = 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;';
+            var styleChild = 'position: absolute; left: 0; top: 0;';
+
+            element.resizeSensor.style.cssText = style;
+            element.resizeSensor.innerHTML =
+                '<div class="resize-sensor-expand" style="' + style + '">' +
+                    '<div style="' + styleChild + '"></div>' +
+                '</div>' +
+                '<div class="resize-sensor-shrink" style="' + style + '">' +
+                    '<div style="' + styleChild + ' width: 200%; height: 200%"></div>' +
+                '</div>';
+            element.appendChild(element.resizeSensor);
+
+            if ('absolute' !== getComputedStyle(element, 'position')) {
+                element.style.position = 'relative';
+            }
+
+            var expand = element.resizeSensor.childNodes[0];
+            var expandChild = expand.childNodes[0];
+            var shrink = element.resizeSensor.childNodes[1];
+            var shrinkChild = shrink.childNodes[0];
+
+            var lastWidth, lastHeight;
+
+            var reset = function() {
+                expandChild.style.width = expand.offsetWidth + 10 + 'px';
+                expandChild.style.height = expand.offsetHeight + 10 + 'px';
+                expand.scrollLeft = expand.scrollWidth;
+                expand.scrollTop = expand.scrollHeight;
+                shrink.scrollLeft = shrink.scrollWidth;
+                shrink.scrollTop = shrink.scrollHeight;
+                lastWidth = element.offsetWidth;
+                lastHeight = element.offsetHeight;
+            };
+
+            reset();
+
+            var changed = function() {
+                element.resizedAttached.call();
+            };
+
+            var addEvent = function(el, name, cb) {
+                if (el.attachEvent) {
+                    el.attachEvent('on' + name, cb);
+                } else {
+                    el.addEventListener(name, cb);
+                }
+            };
+
+            addEvent(expand, 'scroll', function() {
+                if (element.offsetWidth > lastWidth || element.offsetHeight > lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+
+            addEvent(shrink, 'scroll',function() {
+                if (element.offsetWidth < lastWidth || element.offsetHeight < lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+        }
+
+        if (element && element.constructor === Array ||
+          ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
+          ('undefined' !== typeof Elements && element instanceof Elements) //mootools
+        ) {
+            var i = 0, j = element.length;
+            for (; i < j; i++) {
+                attachResizeEvent(element[i], callback);
+            }
+        } else {
+            attachResizeEvent(element, callback);
+        }
+    };
+
+
+},{}],1:[function(require,module,exports){
+var codegen = require('./codegen');
+var utils = require('./utils');
+var _ = utils.getLodash();
+
+/**
+ * Create a JSInterpreter object. This object wraps an Interpreter object and
+ * adds stepping, batching of steps, code highlighting, error handling,
+ * breakpoints, general debug capabilities (step in, step out, step over), and
+ * an optional event queue.
+ */
+var JSInterpreter = module.exports = function (options) {
+
+  this.studioApp = options.studioApp;
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return false; };
+  this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
+  this.onNextStepChanged = options.onNextStepChanged || function() {};
+  this.onPause = options.onPause || function() {};
+  this.onExecutionError = options.onExecutionError || function() {};
+  this.onExecutionWarning = options.onExecutionWarning || function() {};
+
+  this.paused = false;
+  this.nextStep = StepType.RUN;
+  this.maxValidCallExpressionDepth = 0;
+  this.callExpressionSeenAtDepth = [];
+
+  this.codeInfo = {};
+  this.codeInfo.userCodeStartOffset = 0;
+  this.codeInfo.userCodeLength = options.code.length;
+  var session = this.studioApp.editor.aceEditor.getSession();
+  this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  if (options.enableEvents) {
+    this.eventQueue = [];
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    options.code += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
+                 'setCallbackRetVal(ret); }}';
+  }
+
+  var self = this;
+  var initFunc = function (interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, options.blocks, scope);
+
+    // Only allow five levels of depth when marshalling the return value
+    // since we will occasionally return DOM Event objects which contain
+    // properties that recurse over and over...
+    var wrapper = codegen.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: _.bind(self.nativeGetCallback, self),
+        maxDepth: 5
+    });
+    interpreter.setProperty(scope,
+                            'getCallback',
+                            interpreter.createNativeFunction(wrapper));
+
+    wrapper = codegen.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: _.bind(self.nativeSetCallbackRetVal, self),
+    });
+    interpreter.setProperty(scope,
+                            'setCallbackRetVal',
+                            interpreter.createNativeFunction(wrapper));
+  };
+
+  try {
+    this.interpreter = new window.Interpreter(options.code, initFunc);
+  }
+  catch(err) {
+    this.onExecutionError(err);
+  }
+
+};
+
+JSInterpreter.StepType = {
+  RUN:  0,
+  IN:   1,
+  OVER: 2,
+  OUT:  3,
+};
+
+/**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+JSInterpreter.prototype.nativeGetCallback = function () {
+  var retVal = this.eventQueue.shift();
+  if (typeof retVal === "undefined") {
+    this.seenEmptyGetCallbackDuringExecution = true;
+  }
+  return retVal;
+};
+
+JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
+  if (this.eventQueue.length === 0) {
+    // If nothing else is in the event queue, then store this return value
+    // away so it can be returned in the native event handler
+    this.seenReturnFromCallbackDuringExecution = true;
+    this.lastCallbackRetVal = retVal;
+  }
+  // Provide warnings to the user if this function has been called with a
+  // meaningful return value while we are no longer in the native event handler
+
+  // TODO (cpirich): Check to see if the DOM event object was modified
+  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
+  // warning since these won't work as expected unless running atMaxSpeed
+  if (!this.runUntilCallbackReturn &&
+      typeof this.lastCallbackRetVal !== 'undefined') {
+    this.onExecutionWarning("Function passed to onEvent() has taken too long " +
+                            "- the return value was ignored.");
+    if (!this.shouldRunAtMaxSpeed()) {
+      this.onExecutionWarning("  (try moving the speed slider to its maximum value)");
+    }
+  }
+};
+
+/**
+ * Queue an event to be fired in the interpreter. The nativeArgs are optional.
+ * The function must be an interpreter function object (not native).
+ */
+JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
+  this.eventQueue.push({
+    'fn': interpreterFunc,
+    'arguments': nativeArgs
+  });
+};
+
+
+var StepType = JSInterpreter.StepType;
+
+/**
+ * Small helper to step the interpreter so that exception handler can exist outside
+ * of the core executeInterpeter() function (improves browser JS engine performance)
+ */
+function safeStepInterpreter(jsi) {
+  try {
+    jsi.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
+
+/**
+ * Execute the interpreter
+ */
+JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
+  this.runUntilCallbackReturn = runUntilCallbackReturn;
+  if (runUntilCallbackReturn) {
+    delete this.lastCallbackRetVal;
+  }
+  this.seenEmptyGetCallbackDuringExecution = false;
+  this.seenReturnFromCallbackDuringExecution = false;
+
+  var atInitialBreakpoint = this.paused &&
+                            this.nextStep === StepType.IN &&
+                            firstStep;
+  var atMaxSpeed = false;
+
+  if (this.paused) {
+    switch (this.nextStep) {
+      case StepType.RUN:
+        // Bail out here if in a break state (paused), but make sure that we still
+        // have the next tick queued first, so we can resume after un-pausing):
+        return;
+      case StepType.OUT:
+        // If we haven't yet set stepOutToStackDepth, work backwards through the
+        // history of callExpressionSeenAtDepth until we find the one we want to
+        // step out to - and store that in stepOutToStackDepth:
+        if (this.interpreter && typeof this.stepOutToStackDepth === 'undefined') {
+          this.stepOutToStackDepth = 0;
+          for (var i = this.maxValidCallExpressionDepth; i > 0; i--) {
+            if (this.callExpressionSeenAtDepth[i]) {
+              this.stepOutToStackDepth = i;
+              break;
+            }
+          }
+        }
+        break;
+    }
+  }
+
+  var doneUserLine = false;
+  var reachedBreak = false;
+  var unwindingAfterStep = false;
+  var inUserCode;
+  var userCodeRow;
+  var session = this.studioApp.editor.aceEditor.getSession();
+
+  // In each tick, we will step the interpreter multiple times in a tight
+  // loop as long as we are interpreting code that the user can't see
+  // (function aliases at the beginning, getCallback event loop at the end)
+  for (var stepsThisTick = 0;
+       (stepsThisTick < this.maxInterpreterStepsPerTick) || unwindingAfterStep;
+       stepsThisTick++) {
+    // Check this every time because the speed is allowed to change...
+    atMaxSpeed = this.shouldRunAtMaxSpeed();
+    // NOTE: when running with no source visible or at max speed, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
+            this.getUserCodeLine :
+            this.selectCurrentCode;
+
+    if ((reachedBreak && !unwindingAfterStep) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
+        this.seenEmptyGetCallbackDuringExecution ||
+        (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
+      // stop stepping the interpreter and wait until the next tick once we:
+      // (1) reached a breakpoint and are done unwinding OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
+      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      break;
+    }
+    userCodeRow = selectCodeFunc.call(this);
+    inUserCode = (-1 !== userCodeRow);
+    // Check to see if we've arrived at a new breakpoint:
+    //  (1) should be in user code
+    //  (2) should never happen while unwinding
+    //  (3) requires either
+    //   (a) atInitialBreakpoint OR
+    //   (b) isAceBreakpointRow() AND not still at the same line number where
+    //       we have already stopped from the last step/breakpoint
+    if (inUserCode && !unwindingAfterStep &&
+        (atInitialBreakpoint ||
+         (userCodeRow !== this.stoppedAtBreakpointRow &&
+          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+      // Yes, arrived at a new breakpoint:
+      if (this.paused) {
+        // Overwrite the nextStep value. (If we hit a breakpoint during a step
+        // out or step over, this will cancel that step operation early)
+        this.nextStep = StepType.RUN;
+        this.onNextStepChanged();
+      } else {
+        this.onPause();
+      }
+      // Store some properties about where we stopped:
+      this.stoppedAtBreakpointRow = userCodeRow;
+      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+
+      // Mark reachedBreak to stop stepping, and start unwinding if needed:
+      reachedBreak = true;
+      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
+      continue;
+    }
+    // If we've moved past the place of the last breakpoint hit without being
+    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
+    if (inUserCode &&
+        userCodeRow !== this.stoppedAtBreakpointRow &&
+        this.interpreter.stateStack.length <= this.stoppedAtBreakpointStackDepth) {
+      delete this.stoppedAtBreakpointRow;
+      delete this.stoppedAtBreakpointStackDepth;
+    }
+    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
+    // to ensure that we have the right properties stored when the unwind completes:
+    if (inUserCode && unwindingAfterStep) {
+      this.stoppedAtBreakpointRow = userCodeRow;
+      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+    }
+    var err = safeStepInterpreter(this);
+    if (!err) {
+      doneUserLine = doneUserLine ||
+        (inUserCode && this.interpreter.stateStack[0] && this.interpreter.stateStack[0].done);
+
+      var stackDepth = this.interpreter.stateStack.length;
+      // Remember the stack depths of call expressions (so we can implement 'step out')
+
+      // Truncate any history of call expressions seen deeper than our current stack position:
+      for (var depth = stackDepth + 1;
+            depth <= this.maxValidCallExpressionDepth;
+            depth++) {
+        this.callExpressionSeenAtDepth[depth] = false;
+      }
+      this.maxValidCallExpressionDepth = stackDepth;
+
+      if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+        this.callExpressionSeenAtDepth[stackDepth] = true;
+      }
+
+      if (this.paused) {
+        // Store the first call expression stack depth seen while in this step operation:
+        if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+          if (typeof this.firstCallStackDepthThisStep === 'undefined') {
+            this.firstCallStackDepthThisStep = stackDepth;
+          }
+        }
+        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
+        // though the the stateStack doesn't have "done" set, so that stepping in the
+        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
+        var nodeType = this.interpreter.stateStack[0].node.type;
+        doneUserLine = doneUserLine ||
+          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
+
+        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+        if (!doneUserLine &&
+            inUserCode &&
+            this.nextStep === StepType.IN &&
+            stackDepth > this.firstCallStackDepthThisStep) {
+          reachedBreak = true;
+        }
+        // After the interpreter says a node is "done" (meaning it is time to stop), we will
+        // advance a little further to the start of the next statement. We achieve this by
+        // continuing to set unwindingAfterStep to true to keep the loop going:
+        if (doneUserLine || reachedBreak) {
+          var wasUnwinding = unwindingAfterStep;
+          // step() additional times if we know it to be safe to get us to the next statement:
+          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
+          if (wasUnwinding && !unwindingAfterStep) {
+            // done unwinding.. select code that is next to execute:
+            userCodeRow = selectCodeFunc.call(this);
+            inUserCode = (-1 !== userCodeRow);
+            if (!inUserCode) {
+              // not in user code, so keep unwinding after all...
+              unwindingAfterStep = true;
+            }
+          }
+        }
+
+        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
+          if (this.nextStep === StepType.OUT &&
+              stackDepth > this.stepOutToStackDepth) {
+            // trying to step out, but we didn't get out yet... continue on.
+          } else if (this.nextStep === StepType.OVER &&
+              typeof this.firstCallStackDepthThisStep !== 'undefined' &&
+              stackDepth > this.firstCallStackDepthThisStep) {
+            // trying to step over, and we're in deeper inside a function call... continue next onTick
+          } else {
+            // Our step operation is complete, reset nextStep to StepType.RUN to
+            // return to a normal 'break' state:
+            this.nextStep = StepType.RUN;
+            this.onNextStepChanged();
+            if (inUserCode) {
+              // Store some properties about where we stopped:
+              this.stoppedAtBreakpointRow = userCodeRow;
+              this.stoppedAtBreakpointStackDepth = stackDepth;
+            }
+            delete this.stepOutToStackDepth;
+            delete this.firstCallStackDepthThisStep;
+            break;
+          }
+        }
+      }
+    } else {
+      this.onExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      return;
+    }
+  }
+  if (reachedBreak && atMaxSpeed) {
+    // If we were running atMaxSpeed and just reached a breakpoint, the
+    // code may not be selected in the editor, so do it now:
+    this.selectCurrentCode();
+  }
+};
+
+/**
+ * Helper to create an interpeter primitive value. Useful when extending the
+ * interpreter without relying on codegen marshalling helpers.
+ */
+JSInterpreter.prototype.createPrimitive = function (data) {
+  if (this.interpreter) {
+    return this.interpreter.createPrimitive(data);
+  }
+};
+
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.selectCurrentCode = function () {
+  return codegen.selectCurrentCode(this.interpreter,
+                                   this.codeInfo.cumulativeLength,
+                                   this.codeInfo.userCodeStartOffset,
+                                   this.codeInfo.userCodeLength,
+                                   this.studioApp.editor);
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ */
+JSInterpreter.prototype.getUserCodeLine = function () {
+  var userCodeRow = -1;
+  if (this.interpreter.stateStack[0]) {
+    var node = this.interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
+ */
+JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  var userCodeRow = -1;
+  for (var i = 0; i < this.interpreter.stateStack.length; i++) {
+    var node = this.interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - this.codeInfo.userCodeStartOffset;
+    var end = node.end - this.codeInfo.userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
+                                       0,
+                                       this.codeInfo.cumulativeLength.length,
+                                       start);
+      break;
+    }
+  }
+  return userCodeRow;
+};
+
+
+},{"./codegen":99,"./utils":310}],99:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -10575,16 +13286,31 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 
 function populateGlobalFunctions(interpreter, blocks, scope) {
   for (var i = 0; i < blocks.length; i++) {
-    var gf = blocks[i];
-    if (gf.parent) {
-      var func = gf.parent[gf.func];
+    var block = blocks[i];
+    if (block.parent) {
+      var funcScope = scope;
+      var funcName = block.func;
+      var funcComponents = funcName.split('.');
+      if (funcComponents.length === 2) {
+        // Special accommodation for Object.function syntax (2 components only):
+        var objName = funcComponents[0];
+        // Find or create global object named 'objName' and make it the scope:
+        funcScope = interpreter.getProperty(scope, objName);
+        if (interpreter.UNDEFINED === funcScope) {
+          funcScope = interpreter.createObject(interpreter.OBJECT);
+          interpreter.setProperty(scope, objName, funcScope);
+        }
+        funcName = funcComponents[1];
+      }
+      var func = block.parent[funcName];
       var wrapper = exports.makeNativeMemberFunction({
           interpreter: interpreter,
           nativeFunc: func,
-          nativeParentObj: gf.parent,
+          nativeParentObj: block.parent,
+          dontMarshal: block.dontMarshal
       });
-      interpreter.setProperty(scope,
-                              gf.func,
+      interpreter.setProperty(funcScope,
+                              funcName,
                               interpreter.createNativeFunction(wrapper));
     }
   }
@@ -10712,7 +13438,7 @@ exports.aceCalculateCumulativeLength = function (session) {
 // Usage
 // var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
 // tries to find 2512th character lies in which row.
-function aceFindRow(cumulativeLength, rows, rowe, pos) {
+exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
   if (rows > rowe) {
     return null;
   }
@@ -10723,24 +13449,50 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   var mid = Math.floor((rows + rowe) / 2);
 
   if (pos < cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, rows, mid, pos);
+    return exports.aceFindRow(cumulativeLength, rows, mid, pos);
   } else if(pos > cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, mid, rowe, pos);
+    return exports.aceFindRow(cumulativeLength, mid, rowe, pos);
   }
   return mid;
-}
+};
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * This function simply highlights one spot, not a range. It is typically used
+ * to highlight where an error has occurred.
+ */
+exports.selectEditorRowCol = function (editor, row, col) {
+  if (editor.currentlyUsingBlocks) {
+    var style = {color: '#FFFF22'};
+    editor.clearLineMarks();
+    editor.markLine(row, style);
+  } else {
+    var selection = editor.aceEditor.getSelection();
+    var range = selection.getRange();
+
+    range.start.row = row;
+    range.start.column = col;
+    range.end.row = row;
+    range.end.column = col + 1;
+
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
+    selection.setSelectionRange(range, true);
+  }
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
-  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
   range.start.column = start - cumulativeLength[range.start.row];
-  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
   range.end.column = end - cumulativeLength[range.end.row];
 
   // calling with the backwards parameter set to true - this prevents horizontal
@@ -10771,7 +13523,7 @@ exports.selectCurrentCode = function (interpreter,
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start >= 0 && start < userCodeLength && end <= userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      userCodeRow = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
@@ -10803,61 +13555,8 @@ exports.selectCurrentCode = function (interpreter,
   return userCodeRow;
 };
 
-/**
- * Finds the current line of code in droplet/ace editor.
- *
- * Returns the line of code where the interpreter is at. If it is outside
- * of the userCode area, the return value is -1
- *
- * NOTE: first 4 params match the selectCurrentCode function by design.
- */
-exports.getUserCodeLine = function (interpreter, cumulativeLength,
-                                    userCodeStartOffset, userCodeLength) {
-  var userCodeRow = -1;
-  if (interpreter.stateStack[0]) {
-    var node = interpreter.stateStack[0].node;
-    // Adjust start/end by userCodeStartOffset since the code running
-    // has been expanded vs. what the user sees in the editor window:
-    var start = node.start - userCodeStartOffset;
-    var end = node.end - userCodeStartOffset;
 
-    // Only return a valid userCodeRow if the node being executed is inside the
-    // user's code (not inside code we inserted before or after their code that
-    // is not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-    }
-  }
-  return userCodeRow;
-};
-
-/**
- * Finds the current line of code in droplet/ace editor. Walks up the stack if
- * not currently in the user code area.
- */
-exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
-                                           userCodeStartOffset, userCodeLength) {
-  var userCodeRow = -1;
-  for (var i = 0; i < interpreter.stateStack.length; i++) {
-    var node = interpreter.stateStack[i].node;
-    // Adjust start/end by userCodeStartOffset since the code running
-    // has been expanded vs. what the user sees in the editor window:
-    var start = node.start - userCodeStartOffset;
-    var end = node.end - userCodeStartOffset;
-
-    // Only return a valid userCodeRow if the node being executed is inside the
-    // user's code (not inside code we inserted before or after their code that
-    // is not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-      break;
-    }
-  }
-  return userCodeRow;
-};
-
-
-},{"./dropletUtils":93}],93:[function(require,module,exports){
+},{"./dropletUtils":103}],103:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -11221,7 +13920,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
       comments: { color: COLOR_WHITE },
-      containers: { color: COLOR_LIGHT_GREEN },
+      containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
       assignments: { color: COLOR_PURPLE },
@@ -11254,1224 +13953,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":297}],92:[function(require,module,exports){
-exports.addReadyListener = function(callback) {
-  if (document.readyState === "complete") {
-    setTimeout(callback, 1);
-  } else {
-    window.addEventListener('load', callback, false);
-  }
-};
-
-exports.getText = function(node) {
-  return node.innerText || node.textContent;
-};
-
-exports.setText = function(node, string) {
-  if (node.innerText) {
-    node.innerText = string;
-  } else {
-    node.textContent = string;
-  }
-};
-
-exports.getTouchEventName = function(eventName) {
-  var isIE11Touch = window.navigator.pointerEnabled;
-  var isIE10Touch = window.navigator.msPointerEnabled;
-  var isStandardTouch = 'ontouchend' in document.documentElement;
-
-  var key;
-  if (isIE11Touch) {
-    key = "ie11";
-  } else if (isIE10Touch) {
-    key = "ie10";
-  } else if (isStandardTouch) {
-    key = "standard";
-  }
-  if (key && TOUCH_MAP[eventName]) {
-    return TOUCH_MAP[eventName][key];
-  }
-};
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
-  var touchEvent = exports.getTouchEventName(eventName);
-  if (touchEvent) {
-    element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
-      handler(e);
-    }, false);
-  }
-};
-
-exports.addMouseDownTouchEvent = function(element, handler) {
-  addEvent(element, 'mousedown', handler);
-};
-
-exports.addMouseUpTouchEvent = function(element, handler) {
-  addEvent(element, 'mouseup', handler);
-};
-
-exports.addMouseMoveTouchEvent = function(element, handler) {
-  addEvent(element, 'mousemove', handler);
-};
-
-exports.addClickTouchEvent = function(element, handler) {
-  addEvent(element, 'click', handler);
-};
-
-// A map from standard touch events to various aliases.
-var TOUCH_MAP = {
-  //  Incomplete list, add as needed.
-  click: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
-  },
-  mousedown: {
-    standard: 'touchstart',
-    ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
-  },
-  mouseup: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
-  },
-  mousemove: {
-    standard: 'touchmove',
-    ie10: 'MSPointerMove',
-    ie11: 'pointermove'
-  }
-};
-
-exports.isMobile = function() {
-  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isWindowsTouch = function() {
-  var reg = /MSIE.*Touch/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isAndroid = function() {
-  var reg = /Android/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isIOS = function() {
-  var reg = /iP(hone|od|ad)/;
-  return reg.test(window.navigator.userAgent);
-};
-
-
-},{}],91:[function(require,module,exports){
-/**
- * @fileoverview Constants used in production code and tests.
- */
-
-/**
- * Enumeration of user program execution outcomes.
- * These are determined by each app.
- */
-exports.ResultType = {
-  UNSET: 0,       // The result has not yet been computed.
-  SUCCESS: 1,     // The program completed successfully, achieving the goal.
-  FAILURE: -1,    // The program ran without error but did not achieve goal.
-  TIMEOUT: 2,     // The program did not complete (likely infinite loop).
-  ERROR: -2       // The program generated an error.
-};
-
-/**
- * Enumeration of test results.
- * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
- * StudioApp.checkForEmptyBlocks_ is true.
- */
-exports.TestResults = {
-  // Default value before any tests are run.
-  NO_TESTS_RUN: -1,
-
-  // The level was not solved.
-  EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
-  LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
-  MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
-  EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
-  MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
-  APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
-  UNUSED_PARAM: 13,              // Param declared but not used in function.
-  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
-  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
-  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
-  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
-  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
-
-  // The level was solved in a non-optimal way.  User may advance or retry.
-  TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
-  APP_SPECIFIC_ACCEPTABLE_FAIL: 21,  // Application-specific acceptable failure.
-
-  // Other.
-  FREE_PLAY: 30,              // The user is in free-play mode.
-  EDIT_BLOCKS: 70,            // The user is creating/editing a new level.
-
-  // The level was solved in the ideal manner.
-  ALL_PASS: 100
-};
-
-exports.BeeTerminationValue = {
-  FAILURE: false,
-  SUCCESS: true,
-  INFINITE_LOOP: Infinity,
-  NOT_AT_FLOWER: 1,     // Tried to get nectar when not at flower.
-  FLOWER_EMPTY: 2,      // Tried to get nectar when flower empty.
-  NOT_AT_HONEYCOMB: 3,  // Tried to make honey when not at honeycomb.
-  HONEYCOMB_FULL: 4,    // Tried to make honey, but no room at honeycomb.
-  UNCHECKED_CLOUD: 5,    // Finished puzzle, but didn't check every clouded item
-  UNCHECKED_PURPLE: 6,   // Finished puzzle, but didn't check every purple flower
-  INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
-  INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
-};
-
-exports.KeyCodes = {
-  ENTER: 13,
-  SPACE: 32,
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40,
-  DELETE: 127
-};
-
-
-},{}],59:[function(require,module,exports){
-var xml = require('./xml');
-
-/**
- * Create the xml for a level's toolbox
- * @param {string} blocks The xml of the blocks to go in the toolbox
- */
-exports.createToolbox = function(blocks) {
-  return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
-};
-
-/**
- * Create the xml for a block of the given type
- * @param {string} type The type of the block
- * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
- */
-exports.blockOfType = function(type, titles) {
-  var titleText = '';
-  if (titles) {
-    for (var key in titles) {
-      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
-    }
-  }
-  return '<block type="' + type + '">' + titleText +'</block>';
-};
-
-/**
- * Create the xml for a block of the given type, with the provided child nested
- * in a next block
- * @param {string} type The type of the block
- * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
- * @param {string} child Xml for the child block
- */
-exports.blockWithNext = function (type, titles, child) {
-  var titleText = '';
-  if (titles) {
-    for (var key in titles) {
-      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
-    }
-  }
-  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
-};
-
-/**
- * Give a list of types, returns the xml assuming each block is a child of
- * the previous block.
- */
-exports.blocksFromList = function (types) {
-  if (types.length === 1) {
-    return this.blockOfType(types[0]);
-  }
-
-  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
-};
-
-/**
- * Create the xml for a category in a toolbox
- */
-exports.createCategory = function(name, blocks, custom) {
-  return '<category name="' + name + '"' +
-          (custom ? ' custom="' + custom + '"' : '') +
-          '>' + blocks + '</category>';
-};
-
-/**
- * Generate a simple block with a plain title and next/previous connectors.
- */
-exports.generateSimpleBlock = function (blockly, generator, options) {
-  ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
-    if (!options[param]) {
-      throw new Error('generateSimpleBlock requires param "' + param + '"');
-    }
-  });
-
-  var name = options.name;
-  var helpUrl = options.helpUrl || ""; // optional param
-  var title = options.title;
-  var titleImage = options.titleImage;
-  var tooltip = options.tooltip;
-  var functionName = options.functionName;
-
-  blockly.Blocks[name] = {
-    helpUrl: helpUrl,
-    init: function() {
-      // Note: has a fixed HSV.  Could make this customizable if need be
-      this.setHSV(184, 1.00, 0.74);
-      var input = this.appendDummyInput();
-      if (title) {
-        input.appendTitle(title);
-      }
-      if (titleImage) {
-        input.appendTitle(new blockly.FieldImage(titleImage));
-      }
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip(tooltip);
-    }
-  };
-
-  generator[name] = function() {
-    // Generate JavaScript for putting dirt on to a tile.
-    return functionName + '(\'block_id_' + this.id + '\');\n';
-  };
-};
-
-/**
- * Generates a single block from a <block/> DOM element, adding it to the main workspace
- * @param blockDOM {Element}
- * @returns {*}
- */
-exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
-};
-
-/**
- * Generates a single block from a block XML string—e.g., <block type="testBlock"></block>,
- * and adds it to the main workspace
- * @param blockDOMString
- * @returns {*}
- */
-exports.domStringToBlock = function(blockDOMString) {
-  return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
-};
-
-/**
- * Takes a set of start blocks, and returns them with a particular top level
- * block inserted in front of the first non-function block.  If we already have
- * this block, does nothing.
- */
-exports.forceInsertTopBlock = function (input, blockType) {
-  input = input || '';
-
-  if (blockType === null || input.indexOf(blockType) !== -1) {
-    return input;
-  }
-
-  var root = xml.parseElement(input);
-
-  // Extract the document from the root. The reason I do this instead of just
-  // using document.createElement elsewhere is
-  var doc = root.parentNode;
-
-  var topBlock = doc.createElement('block');
-  topBlock.setAttribute('type', blockType);
-  topBlock.setAttribute('movable', 'false');
-  topBlock.setAttribute('deletable', 'false');
-
-  var numChildren = root.childNodes ? root.childNodes.length : 0;
-
-  // find the first non-function definition block and extract it
-  var firstBlock = null, i = 0;
-  while (i < numChildren && firstBlock === null) {
-    var child = root.childNodes[i];
-    // only look at element nodes
-    if (child.nodeType === 1) {
-      var type = child.getAttribute('type');
-      if (type !== 'procedures_defnoreturn' && type !== 'procedures_defreturn') {
-        firstBlock = root.removeChild(child);
-        numChildren--;
-      }
-    }
-    i++;
-  }
-
-  if (firstBlock !== null) {
-    // when run -> next -> firstBlock
-    var next;
-    if (/^functional/.test(blockType)) {
-      next = doc.createElement('functional_input');
-      next.setAttribute('name', 'ARG1');
-    } else {
-      next = doc.createElement('next');
-    }
-    next.appendChild(firstBlock);
-    topBlock.appendChild(next);
-  }
-
-  if (numChildren > 0) {
-    root.insertBefore(topBlock, root.childNodes[0]);
-  } else {
-    root.appendChild(topBlock);
-  }
-  return xml.serialize(root);
-};
-
-/**
- * Generate the xml for a block for the calc app.
- * @param {string} type Type for this block
- * @param {number[]|string[]} args List of args, where each arg is either the
- *   xml for a child block, a number, or the name of a variable.
- */
-exports.calcBlockXml = function (type, args) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var i = 1; i <= args.length; i++) {
-    str += '<functional_input name="ARG' + i + '">';
-    var arg = args[i - 1];
-    if (typeof(arg) === "number") {
-      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
-        '</title></block>';
-    } else if (/^<block/.test(arg)) {
-      // we have xml, dont make any changes
-      arg = arg;
-    } else {
-      // we think we have a variable
-      arg = exports.calcBlockGetVar(arg);
-    }
-    str += arg;
-    str += '</functional_input>';
-  }
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * @returns the xml for a functional_parameters_get block with the given
- *   variableName
- */
-exports.calcBlockGetVar = function (variableName) {
-  return '' +
-    '<block type="functional_parameters_get" uservisible="false">' +
-    '  <mutation>' +
-    '    <outputtype>Number</outputtype>' +
-    '  </mutation>' +
-    '  <title name="VAR">' + variableName + '</title>' +
-    '</block>';
-};
-
-/**
- * Generate the xml for a math block (either calc or eval apps).
- * @param {string} type Type for this block
- * @param {Object.<string,string} inputs Dictionary mapping input name to the
-     xml for that input
- * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
- */
-exports.mathBlockXml = function (type, inputs, titles) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var title in titles) {
-    str += '<title name="' + title + '">' + titles[title] + '</title>';
-  }
-
-  for (var input in inputs) {
-    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
-  }
-
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * Generate xml for a functional defintion
- * @param {string} name The name of the function
- * @param {string} outputType Function's output type
- * @param {Object<string, string>[]} argList Name and type for each arg
- * @param {string} blockXml Xml for the blocks that actually define the function
- */
-exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
-  var mutation = '<mutation>';
-  argList.forEach(function (argInfo) {
-    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
-
-  return '<block type="functional_definition" inline="false">'+
-      mutation +
-      '<title name="NAME">' + name + '</title>' +
-     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
-    '</block>';
-};
-
-/**
- * Generate xml for a calling a functional function
- * @param {string} name The name of the function
- * @param {Object<string, string>[]} argList Name and type for each arg
- */
-exports.functionalCallXml = function (name, argList, inputContents) {
-  if (argList.length !== inputContents.length) {
-    throw new Error('must define contents for each arg');
-  }
-
-  var mutation = '<mutation name="' + name + '">';
-  argList.forEach(function (argInfo) {
-    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '</mutation>';
-
-  var contents = '';
-  inputContents.forEach(function (blockXml, index) {
-    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
-  });
-
-  return '<block type="functional_call">' +
-      mutation +
-      contents +
-    '</block>';
-};
-
-
-},{"./xml":298}],57:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltip = require('./DropletFunctionTooltip');
-var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
-var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
-var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
-
-/**
- * @fileoverview Manages a store of known blocks and tooltips
- */
-
-/**
- * Store for finding tooltips for blocks
- * @constructor
- */
-function DropletTooltipManager() {
-  /**
-   * Map of block types to tooltip objects
-   * @type {Object.<String, DropletFunctionTooltip>}
-   */
-  this.blockTypeToTooltip = {};
-
-  /**
-   * @type {DropletBlockTooltipManager}
-   * @private
-   */
-  this.dropletBlockTooltipManager_ = new DropletBlockTooltipManager(this);
-
-  /**
-   * @type {DropletAutocompletePopupTooltipManager}
-   * @private
-   */
-  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
-
-  /**
-   * @type {DropletAutocompletePopupTooltipManager}
-   * @private
-   */
-  this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
-}
-
-/**
- * Registers handlers for droplet block tooltips.
- * @param dropletEditor
- */
-DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
-  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
-};
-
-/**
- * Registers handlers for ACE mode tooltips
- * @param dropletEditor
- */
-DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
-  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
-  this.dropletAutocompleteParameterTooltipManager_.installTooltipsForEditor_(dropletEditor);
-};
-
-/**
- * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
- *    which to register documentation
- */
-DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
-  dropletBlocks.forEach(function (dropletBlockDefinition) {
-    this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(dropletBlockDefinition.func);
-  }, this);
-};
-
-DropletTooltipManager.prototype.hasDocFor = function (functionName) {
-  return this.blockTypeToTooltip.hasOwnProperty(functionName);
-};
-
-/**
- * @param {String} functionName
- * @returns {DropletFunctionTooltip}
- */
-DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
-  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
-    throw "Function name " + functionName + " not registered in documentation manager.";
-  }
-
-  return this.blockTypeToTooltip[functionName];
-};
-
-module.exports = DropletTooltipManager;
-
-
-},{"./DropletAutocompleteParameterTooltipManager":51,"./DropletAutocompletePopupTooltipManager":52,"./DropletBlockTooltipManager":53,"./DropletFunctionTooltip":55}],53:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltip = require('./DropletFunctionTooltip');
-var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
-
-/**
- * @fileoverview Displays tooltips for Droplet blocks
- */
-
-/**
- * Handles displaying tooltips on Droplet blocks
- * @param {DropletTooltipManager} dropletTooltipManager
- * @constructor
- */
-var DropletBlockTooltipManager = function (dropletTooltipManager) {
-  this.dropletTooltipManager = dropletTooltipManager;
-};
-
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  speed: 150,
-  maxWidth: 450,
-  position: 'right',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  delay: 400
-};
-
-/**
- * @param {Editor} dropletEditor
- */
-DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
-  this.hideTooltipsOnBlockPick_(dropletEditor);
-
-  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
-  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
-};
-
-DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
-  if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-    this.installTooltipsForCurrentCategoryBlocks();
-  }
-};
-
-DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
-  $('.droplet-hover-div').each(function (_, blockHoverDiv) {
-    if ($(blockHoverDiv).hasClass('tooltipstered')) {
-      return;
-    }
-
-    var funcName = $(blockHoverDiv).attr('title');
-
-    var hoverDivWidth = $(blockHoverDiv).width();
-    var hoverDivLeftToToolboxRight = $('.droplet-palette-canvas').width() -
-      parseInt(blockHoverDiv.style.left, 10);
-    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
-    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
-
-    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: this.getTooltipHTML(funcName),
-      offsetX: tooltipOffsetX
-    });
-
-    $(blockHoverDiv).tooltipster(configuration);
-  }.bind(this));
-};
-
-/**
- * Tooltipster's hideOnClick setting does not work with the droplet hover
- * overlay as-is. Hide the tooltip on block picking explicitly.
- */
-DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (dropletEditor) {
-  dropletEditor.on('pickblock', function () {
-    $('.tooltipstered').tooltipster('hide');
-  });
-};
-
-/**
- * @returns {String} HTML for tooltip
- */
-DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
-  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
-    functionName: tooltipInfo.functionName,
-    functionShortDescription: tooltipInfo.description,
-    parameters: tooltipInfo.parameterInfos,
-    signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
-  });
-};
-
-module.exports = DropletBlockTooltipManager;
-
-
-},{"./DropletFunctionTooltip":55,"./DropletFunctionTooltip.html.ejs":54}],55:[function(require,module,exports){
-var msg = require('../locale');
-
-/**
- * @fileoverview Representation of a droplet function/block's tooltip
- */
-
-var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
-
-/**
- * @typedef {Object} parameterInfo
- * @property {String} name
- * @property {?String} description
- */
-
-/**
- * Stores a block's tooltip information and helps render it
- * Grabs much of the tooltip's information from the 'common' locale file,
- * (apps/i18n/common/en_us.json), keyed by the function name.
- *
- * e.g.,
- *
- * "dropletBlock_readRecords_description": "Reads records [...].",
- * "dropletBlock_readRecords_param0": "table",
- * "dropletBlock_readRecords_param1": "searchParams",
- * "dropletBlock_readRecords_param2": "onSuccess",
- *
- * Will result in a tooltip with the contents:
- *
- *    readRecords(table, searchParams, onSuccess)
- *    Reads records [...].
- *    [Read More] (links to `readRecords` doc file)
- *
- * Blocks which have functionNames that should not be user-visible can define
- * their own signature override.
- *
- * e.g.,
- *
- * "dropletBlock_functionParams_n_description": "Define a function with a given parameter",
- * "dropletBlock_functionParams_n_signatureOverride": "Function with a Parameter",
- *
- * Will result in a tooltip with the contents:
- *
- *    Function with a Parameter <-- note, no ()s
- *    Define a function with a given parameter.
- *    [Read More] (links to `functionParams_n` doc file)
- *
- * @constructor
- */
-var DropletFunctionTooltip = function (functionName) {
-  /** @type {String} */
-  this.functionName = functionName;
-
-  /** @type {String} */
-  this.description = null;
-
-  if (msg.hasOwnProperty(this.descriptionKey())) {
-    this.description = msg[this.descriptionKey()]();
-  }
-
-  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
-    this.signatureOverride = msg[this.signatureOverrideKey()]();
-  }
-
-  /** @type {Array.<parameterInfo>} */
-  this.parameterInfos = [];
-
-  var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
-    var paramInfo = {};
-    paramInfo.name = msg[this.parameterNameKey(paramId)]();
-    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
-      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
-    }
-    this.parameterInfos.push(paramInfo);
-    paramId++;
-  }
-};
-
-/**
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.descriptionKey = function () {
-  return this.i18nPrefix() + "_description";
-};
-
-/**
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
-  return this.i18nPrefix() + "_signatureOverride";
-};
-
-/**
- * @param {Number} paramIndex
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.parameterNameKey = function (paramIndex) {
-  return this.i18nPrefix() + "_param" + paramIndex;
-};
-
-/**
- * @param {Number} paramIndex
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.parameterDescriptionKey = function (paramIndex) {
-  return this.i18nPrefix() + "_param" + paramIndex + '_description';
-};
-
-/**
- * @returns {string} i18n file prefix for this function
- */
-DropletFunctionTooltip.prototype.i18nPrefix = function () {
-  return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
-};
-
-/**
- * @returns {string} URL for full doc about this function
- */
-DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
-  return 'http://code.org/applab/docs/' + this.functionName;
-};
-
-module.exports = DropletFunctionTooltip;
-
-
-},{"../locale":134}],134:[function(require,module,exports){
-// base locale
-
-module.exports = window.blockly.common_locale;
-
-
-},{}],52:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
-
-/**
- * @fileoverview Displays tooltips for Droplet blocks
- */
-
-/**
- * Handles displaying tooltips on Droplet's ACE editor autocomplete dropdown
- * @param {DropletTooltipManager} dropletTooltipManager
- * @constructor
- */
-var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
-  this.dropletTooltipManager = dropletTooltipManager;
-};
-
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  autoClose: false,
-  trigger: 'custom',
-  speed: 100,
-  maxWidth: 450,
-  position: 'left',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  restoration: 'none',
-  updateAnimation: false
-};
-
-/**
- * @param {Editor} dropletEditor
- */
-DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  var aceEditor = dropletEditor.aceEditor;
-
-  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
-  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
-};
-
-/**
- * When an autocomplete popup has been shown the first time, register event
- * handlers to show and hide tooltips during autocomplete popup usage.
- * @param aceEditor - ace editor instance
- * @param changeEvent - event from aceEditor.commands.on("afterExec")
- * @private
- */
-DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
-  if (changeEvent.command.name !== 'insertstring') {
-    return;
-  }
-
-  var popupHasBeenShownOnce = aceEditor.completer && aceEditor.completer.popup;
-  if (!popupHasBeenShownOnce) {
-    return;
-  }
-
-  this.setupForEditorPopup_(aceEditor);
-
-  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
-  this.editorChangedEventHandler_ = null;
-};
-
-DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
-  aceEditor.completer.popup.setSelectOnHover(true);
-
-  aceEditor.completer.popup.renderer.on("afterRender", function () {
-    this.updateAutocompletePopupTooltip(aceEditor);
-  }.bind(this));
-
-  aceEditor.completer.popup.on("hide", function () {
-    this.destroyAutocompleteTooltips_();
-  }.bind(this));
-};
-
-DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
-  if (!aceEditor.completer.completions) {
-    return;
-  }
-
-  var keyboardRow = aceEditor.completer.popup.getRow();
-
-  if (keyboardRow < 0) {
-    return;
-  }
-
-  var filteredCompletions = aceEditor.completer.completions.filtered;
-  var funcName = filteredCompletions[keyboardRow].value;
-
-  this.destroyAutocompleteTooltips_();
-
-  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
-    return;
-  }
-
-  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-    content: this.getTooltipHTML(funcName)
-  });
-
-  var rowOverlayDiv = $('.ace_selected');
-  rowOverlayDiv.tooltipster(configuration);
-  rowOverlayDiv.tooltipster('show');
-};
-
-DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
-  $('.ace_autocomplete .tooltipstered').tooltipster('destroy');
-};
-
-/**
- * @returns {String} HTML for tooltip
- */
-DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
-  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
-    functionName: tooltipInfo.functionName,
-    functionShortDescription: tooltipInfo.description,
-    parameters: tooltipInfo.parameterInfos,
-    signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
-  });
-};
-
-module.exports = DropletAutocompletePopupTooltipManager;
-
-
-},{"./DropletFunctionTooltip.html.ejs":54}],54:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {
-    /**
-     * TODO(bjordan): would be nice to split the following line up, can't figure
-     * out how to do so without inserting extraneous spaces between parameters.
-     */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":468}],51:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
-var tooltipUtils = require('./tooltipUtils.js');
-
-/**
- * @fileoverview Displays tooltips for Droplet blocks
- */
-
-/**
- * Handles displaying tooltips on Droplet's ACE editor when filling in
- * an empty parameter.
- * @param {DropletTooltipManager} dropletTooltipManager
- * @constructor
- */
-var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
-  this.dropletTooltipManager = dropletTooltipManager;
-};
-
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  autoClose: false,
-  trigger: 'custom',
-  speed: 100,
-  maxWidth: 450,
-  position: 'bottom',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  restoration: 'none',
-  updateAnimation: false,
-  positionTracker: true
-};
-
-/**
- * @param {Editor} dropletEditor
- */
-DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  var aceEditor = dropletEditor.aceEditor;
-
-  var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
-  aceEditor.commands.on('afterExec', cursorMovementHandler);
-  aceEditor.on('mousedown', function(e) {
-    this.getCursorTooltip_().tooltipster('hide');
-  }.bind(this));
-};
-
-/**
- * @param editor - ace editor instance
- * @param changeEvent - event from aceEditor.session.selection.on('changeCursor')
- * @private
- */
-DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = function (editor, changeEvent) {
-  this.getCursorTooltip_().tooltipster('hide');
-
-  if (!editor.selection.isEmpty()) {
-    return;
-  }
-
-  var cursorPosition = editor.selection.getCursor();
-
-  var currentParameterInfo = tooltipUtils.findFunctionAndParamNumber(editor, cursorPosition);
-  if (!currentParameterInfo) {
-    return;
-  }
-
-  this.updateParameterTooltip_(editor, currentParameterInfo.funcName,
-    currentParameterInfo.currentParameterIndex);
-};
-
-DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
-  if (!this.dropletTooltipManager.hasDocFor(functionName)) {
-    return;
-  }
-
-  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-
-  if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
-    return;
-  }
-
-  this.getCursorTooltip_().tooltipster('content',
-    this.getTooltipHTML(tooltipInfo, currentParameterIndex));
-  this.getCursorTooltip_().tooltipster('show');
-};
-
-DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
-  if (!this.cursorTooltip_) {
-    this.cursorTooltip_ = $('.droplet-ace .ace_cursor');
-    this.cursorTooltip_.tooltipster(DEFAULT_TOOLTIP_CONFIG);
-  }
-  return this.cursorTooltip_;
-};
-
-/**
- * @returns {String} HTML for tooltip
- */
-DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (tooltipInfo, currentParameterIndex) {
-  return DropletFunctionTooltipMarkup({
-    functionName: tooltipInfo.functionName,
-    functionShortDescription: tooltipInfo.description,
-    parameters: tooltipInfo.parameterInfos,
-    signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
-    currentParameterIndex: currentParameterIndex
-  });
-};
-
-module.exports = DropletAutocompleteParameterTooltipManager;
-
-
-},{"./DropletParameterTooltip.html.ejs":56,"./tooltipUtils.js":58}],58:[function(require,module,exports){
-/* global ace */
-'use strict';
-
-var utils = require('../utils');
-var _ = utils.getLodash();
-
-/**
- * @typedef {Object} parameterSlotInfo
- * @property {string} funcName
- * @property {number} currentParameterIndex
- */
-
-var ONLY_WHITESPACE_REGEXP = /^\s*$/;
-var ENDING_OF_BLOCK_COMMENT = /\*\/$/;
-var START_OF_BLOCK_COMMENT = /^\/\*/;
-
-/**
- * Returns the number of instances of character within string
- * @param {string} string
- * @param {string} character
- * @returns {number}
- */
-function countNumberOfCharacter(string, character) {
-  return string.split(character).length - 1;
-}
-
-function openerMatchesCloser(opener, closer) {
-  var closersToOpeners = {
-    '}': '{',
-    ')': '(',
-    ']': '['
-  };
-  return closersToOpeners[closer] === opener;
-}
-
-/**
- * Given an ace editor and row/column position, returns the function
- * name and index of the currently edited parameter.
- * If a parameter is not currently being filled in, returns null.
- * TODO(bjordan): Unit test once ace.require available in utility tests
- * @param editor
- * @param position
- * @returns {parameterSlotInfo|null}
- */
-exports.findFunctionAndParamNumber = function (editor, position) {
-  var seenCloserStack = [];
-  var sameDepthPrecedingCommaCount = 0;
-
-  var TokenIterator = ace.require("./token_iterator").TokenIterator;
-  var iterator = new TokenIterator(editor.session, position.row, position.column);
-
-  var token = iterator.getCurrentToken();
-
-  // Special cases for first token
-
-  if (position.column === 0) {
-    // At beginning of a line. Step back one for first token.
-    token = iterator.stepBackward();
-  } else if (token && token.type.match(/^comment/)) {
-    var isBlockComment = token.type === "comment.doc" ||
-      token.value.match(START_OF_BLOCK_COMMENT);
-    if (isBlockComment) {
-      var tokenIsEndOfDocComment = token.value.match(ENDING_OF_BLOCK_COMMENT);
-      var cursorIsEndOfToken = (token.start + token.value.length) === position.column;
-      var cursorIsEndOfBlockComment = (tokenIsEndOfDocComment && cursorIsEndOfToken);
-      if (!cursorIsEndOfBlockComment) {
-        // Starting within a block comment
-        return null;
-      }
-    } else {
-      // Starting within a comment
-      return null;
-    }
-  }
-
-  while (token) {
-    switch (token.type) {
-      case "paren.rparen":
-        var closers = token.value.split();
-        for (var i = closers.length - 1; i >= 0; i--) {
-          var currentCloser = closers[i];
-          seenCloserStack.push(currentCloser);
-        }
-        break;
-      case "paren.lparen":
-        var openers = token.value.split();
-        for (var j = openers.length - 1; j >= 0; j--) {
-          var currentOpener = openers[j];
-
-          var isBeginningOfFunctionCall =
-            seenCloserStack.length === 0 && currentOpener === '(';
-          if (isBeginningOfFunctionCall) {
-            return {
-              funcName: iterator.stepBackward().value,
-              currentParameterIndex: sameDepthPrecedingCommaCount
-            };
-          }
-
-          var lastCloser = seenCloserStack.pop();
-          if (!lastCloser || !openerMatchesCloser(currentOpener, lastCloser)) {
-            return null;
-          }
-        }
-        break;
-      case "punctuation.operator":
-        if (seenCloserStack.length === 0) {
-          if (_.contains(token.value, ';')) {
-            return null;
-          }
-          if (_.contains(token.value, ',')) {
-            sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
-          }
-        }
-        break;
-      case "comment":
-      case "comment.doc":
-        break;
-      case "text":
-        // Whitespace or random non-identifier characters
-        if (seenCloserStack.length !== 0 || token.value.match(ONLY_WHITESPACE_REGEXP)) {
-          break;
-        }
-        return null;
-      case "string":
-      case "storage.type":
-      case "identifier":
-        /* falls through */
-      default:
-        if (seenCloserStack.length === 0 && sameDepthPrecedingCommaCount === 0) {
-          // Something substantial between cursor and start of parameter slot
-          return null;
-        }
-        break;
-    }
-
-    token = iterator.stepBackward();
-  }
-
-  return null;
-};
-
-
-
-},{"../utils":297}],297:[function(require,module,exports){
+},{"./utils":310}],310:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -12734,7 +14216,7 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 
-},{"./hammer":125,"./lodash":135,"./xml":298}],298:[function(require,module,exports){
+},{"./hammer":135,"./lodash":145,"./xml":311}],311:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12763,12 +14245,12 @@ exports.parseElement = function(text) {
 };
 
 
-},{}],135:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find,sortBy" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -12960,6 +14442,43 @@ exports.parseElement = function(text) {
   }
 
   /**
+   * Used by `sortBy` to compare transformed `collection` elements, stable sorting
+   * them in ascending order.
+   *
+   * @private
+   * @param {Object} a The object to compare to `b`.
+   * @param {Object} b The object to compare to `a`.
+   * @returns {number} Returns the sort order indicator of `1` or `-1`.
+   */
+  function compareAscending(a, b) {
+    var ac = a.criteria,
+        bc = b.criteria,
+        index = -1,
+        length = ac.length;
+
+    while (++index < length) {
+      var value = ac[index],
+          other = bc[index];
+
+      if (value !== other) {
+        if (value > other || typeof value == 'undefined') {
+          return 1;
+        }
+        if (value < other || typeof other == 'undefined') {
+          return -1;
+        }
+      }
+    }
+    // Fixes an `Array#sort` bug in the JS engine embedded in Adobe applications
+    // that causes it, under certain circumstances, to return the same value for
+    // `a` and `b`. See https://github.com/jashkenas/underscore/pull/1247
+    //
+    // This also ensures a stable sort in V8 and other engines.
+    // See http://code.google.com/p/v8/issues/detail?id=90
+    return a.index - b.index;
+  }
+
+  /**
    * Creates a cache object to optimize linear searches of large arrays.
    *
    * @private
@@ -13011,14 +14530,17 @@ exports.parseElement = function(text) {
     return objectPool.pop() || {
       'array': null,
       'cache': null,
+      'criteria': null,
       'false': false,
+      'index': 0,
       'null': false,
       'number': null,
       'object': null,
       'push': null,
       'string': null,
       'true': false,
-      'undefined': false
+      'undefined': false,
+      'value': null
     };
   }
 
@@ -13059,7 +14581,7 @@ exports.parseElement = function(text) {
     if (cache) {
       releaseObject(cache);
     }
-    object.array = object.cache =object.object = object.number = object.string =null;
+    object.array = object.cache = object.criteria = object.object = object.number = object.string = object.value = null;
     if (objectPool.length < maxPoolSize) {
       objectPool.push(object);
     }
@@ -15134,6 +16656,88 @@ exports.parseElement = function(text) {
     return typeof length == 'number' ? length : keys(collection).length;
   }
 
+  /**
+   * Creates an array of elements, sorted in ascending order by the results of
+   * running each element in a collection through the callback. This method
+   * performs a stable sort, that is, it will preserve the original sort order
+   * of equal elements. The callback is bound to `thisArg` and invoked with
+   * three arguments; (value, index|key, collection).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an array of property names is provided for `callback` the collection
+   * will be sorted by each property value.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to iterate over.
+   * @param {Array|Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {Array} Returns a new array of sorted elements.
+   * @example
+   *
+   * _.sortBy([1, 2, 3], function(num) { return Math.sin(num); });
+   * // => [3, 1, 2]
+   *
+   * _.sortBy([1, 2, 3], function(num) { return this.sin(num); }, Math);
+   * // => [3, 1, 2]
+   *
+   * var characters = [
+   *   { 'name': 'barney',  'age': 36 },
+   *   { 'name': 'fred',    'age': 40 },
+   *   { 'name': 'barney',  'age': 26 },
+   *   { 'name': 'fred',    'age': 30 }
+   * ];
+   *
+   * // using "_.pluck" callback shorthand
+   * _.map(_.sortBy(characters, 'age'), _.values);
+   * // => [['barney', 26], ['fred', 30], ['barney', 36], ['fred', 40]]
+   *
+   * // sorting by multiple properties
+   * _.map(_.sortBy(characters, ['name', 'age']), _.values);
+   * // = > [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]
+   */
+  function sortBy(collection, callback, thisArg) {
+    var index = -1,
+        isArr = isArray(callback),
+        length = collection ? collection.length : 0,
+        result = Array(typeof length == 'number' ? length : 0);
+
+    if (!isArr) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+    }
+    forEach(collection, function(value, key, collection) {
+      var object = result[++index] = getObject();
+      if (isArr) {
+        object.criteria = map(callback, function(key) { return value[key]; });
+      } else {
+        (object.criteria = getArray())[0] = callback(value, key, collection);
+      }
+      object.index = index;
+      object.value = value;
+    });
+
+    length = result.length;
+    result.sort(compareAscending);
+    while (length--) {
+      var object = result[length];
+      result[length] = object.value;
+      if (!isArr) {
+        releaseArray(object.criteria);
+      }
+      releaseObject(object);
+    }
+    return result;
+  }
+
   /*--------------------------------------------------------------------------*/
 
   /**
@@ -15962,6 +17566,7 @@ exports.parseElement = function(text) {
   lodash.range = range;
   lodash.reject = reject;
   lodash.shuffle = shuffle;
+  lodash.sortBy = sortBy;
   lodash.values = values;
   lodash.without = without;
   lodash.wrap = wrap;
@@ -16133,7 +17738,7 @@ exports.parseElement = function(text) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],125:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -18297,1040 +19902,5 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-
-},{}],56:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {
-    /**
-     * TODO(bjordan): would be nice to split the following line up, can't figure
-     * out how to do so without inserting extraneous spaces between parameters.
-     */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":468}],468:[function(require,module,exports){
-
-/*!
- * EJS
- * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * Module dependencies.
- */
-
-var utils = require('./utils')
-  , path = require('path')
-  , basename = path.basename
-  , dirname = path.dirname
-  , extname = path.extname
-  , join = path.join
-  , fs = require('fs')
-  , read = fs.readFileSync;
-
-/**
- * Filters.
- *
- * @type Object
- */
-
-var filters = exports.filters = require('./filters');
-
-/**
- * Intermediate js cache.
- *
- * @type Object
- */
-
-var cache = {};
-
-/**
- * Clear intermediate js cache.
- *
- * @api public
- */
-
-exports.clearCache = function(){
-  cache = {};
-};
-
-/**
- * Translate filtered code into function calls.
- *
- * @param {String} js
- * @return {String}
- * @api private
- */
-
-function filtered(js) {
-  return js.substr(1).split('|').reduce(function(js, filter){
-    var parts = filter.split(':')
-      , name = parts.shift()
-      , args = parts.join(':') || '';
-    if (args) args = ', ' + args;
-    return 'filters.' + name + '(' + js + args + ')';
-  });
-};
-
-/**
- * Re-throw the given `err` in context to the
- * `str` of ejs, `filename`, and `lineno`.
- *
- * @param {Error} err
- * @param {String} str
- * @param {String} filename
- * @param {String} lineno
- * @api private
- */
-
-function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function(line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-  
-  throw err;
-}
-
-/**
- * Parse the given `str` of ejs, returning the function body.
- *
- * @param {String} str
- * @return {String}
- * @api public
- */
-
-var parse = exports.parse = function(str, options){
-  var options = options || {}
-    , open = options.open || exports.open || '<%'
-    , close = options.close || exports.close || '%>'
-    , filename = options.filename
-    , compileDebug = options.compileDebug !== false
-    , buf = [];
-
-  buf.push('var buf = [];');
-  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
-  buf.push('\n buf.push(\'');
-
-  var lineno = 1;
-
-  var consumeEOL = false;
-  for (var i = 0, len = str.length; i < len; ++i) {
-    if (str.slice(i, open.length + i) == open) {
-      i += open.length
-  
-      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
-      switch (str.substr(i, 1)) {
-        case '=':
-          prefix = "', escape((" + line + ', ';
-          postfix = ")), '";
-          ++i;
-          break;
-        case '-':
-          prefix = "', (" + line + ', ';
-          postfix = "), '";
-          ++i;
-          break;
-        default:
-          prefix = "');" + line + ';';
-          postfix = "; buf.push('";
-      }
-
-      var end = str.indexOf(close, i)
-        , js = str.substring(i, end)
-        , start = i
-        , include = null
-        , n = 0;
-
-      if ('-' == js[js.length-1]){
-        js = js.substring(0, js.length - 2);
-        consumeEOL = true;
-      }
-
-      if (0 == js.trim().indexOf('include')) {
-        var name = js.trim().slice(7).trim();
-        if (!filename) throw new Error('filename option is required for includes');
-        var path = resolveInclude(name, filename);
-        include = read(path, 'utf8');
-        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
-        buf.push("' + (function(){" + include + "})() + '");
-        js = '';
-      }
-
-      while (~(n = js.indexOf("\n", n))) n++, lineno++;
-      if (js.substr(0, 1) == ':') js = filtered(js);
-      if (js) {
-        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
-        buf.push(prefix, js, postfix);
-      }
-      i += end - start + close.length - 1;
-
-    } else if (str.substr(i, 1) == "\\") {
-      buf.push("\\\\");
-    } else if (str.substr(i, 1) == "'") {
-      buf.push("\\'");
-    } else if (str.substr(i, 1) == "\r") {
-      // ignore
-    } else if (str.substr(i, 1) == "\n") {
-      if (consumeEOL) {
-        consumeEOL = false;
-      } else {
-        buf.push("\\n");
-        lineno++;
-      }
-    } else {
-      buf.push(str.substr(i, 1));
-    }
-  }
-
-  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
-  else buf.push("');\nreturn buf.join('');");
-
-  return buf.join('');
-};
-
-/**
- * Compile the given `str` of ejs into a `Function`.
- *
- * @param {String} str
- * @param {Object} options
- * @return {Function}
- * @api public
- */
-
-var compile = exports.compile = function(str, options){
-  options = options || {};
-  var escape = options.escape || utils.escape;
-  
-  var input = JSON.stringify(str)
-    , compileDebug = options.compileDebug !== false
-    , client = options.client
-    , filename = options.filename
-        ? JSON.stringify(options.filename)
-        : 'undefined';
-  
-  if (compileDebug) {
-    // Adds the fancy stack trace meta info
-    str = [
-      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
-      rethrow.toString(),
-      'try {',
-      exports.parse(str, options),
-      '} catch (err) {',
-      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
-      '}'
-    ].join("\n");
-  } else {
-    str = exports.parse(str, options);
-  }
-  
-  if (options.debug) console.log(str);
-  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
-
-  try {
-    var fn = new Function('locals, filters, escape', str);
-  } catch (err) {
-    if ('SyntaxError' == err.name) {
-      err.message += options.filename
-        ? ' in ' + filename
-        : ' while compiling ejs';
-    }
-    throw err;
-  }
-
-  if (client) return fn;
-
-  return function(locals){
-    return fn.call(this, locals, filters, escape);
-  }
-};
-
-/**
- * Render the given `str` of ejs.
- *
- * Options:
- *
- *   - `locals`          Local variables object
- *   - `cache`           Compiled functions are cached, requires `filename`
- *   - `filename`        Used by `cache` to key caches
- *   - `scope`           Function execution context
- *   - `debug`           Output generated function body
- *   - `open`            Open tag, defaulting to "<%"
- *   - `close`           Closing tag, defaulting to "%>"
- *
- * @param {String} str
- * @param {Object} options
- * @return {String}
- * @api public
- */
-
-exports.render = function(str, options){
-  var fn
-    , options = options || {};
-
-  if (options.cache) {
-    if (options.filename) {
-      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
-    } else {
-      throw new Error('"cache" option requires "filename".');
-    }
-  } else {
-    fn = compile(str, options);
-  }
-
-  options.__proto__ = options.locals;
-  return fn.call(options.scope, options);
-};
-
-/**
- * Render an EJS file at the given `path` and callback `fn(err, str)`.
- *
- * @param {String} path
- * @param {Object|Function} options or callback
- * @param {Function} fn
- * @api public
- */
-
-exports.renderFile = function(path, options, fn){
-  var key = path + ':string';
-
-  if ('function' == typeof options) {
-    fn = options, options = {};
-  }
-
-  options.filename = path;
-
-  var str;
-  try {
-    str = options.cache
-      ? cache[key] || (cache[key] = read(path, 'utf8'))
-      : read(path, 'utf8');
-  } catch (err) {
-    fn(err);
-    return;
-  }
-  fn(null, exports.render(str, options));
-};
-
-/**
- * Resolve include `name` relative to `filename`.
- *
- * @param {String} name
- * @param {String} filename
- * @return {String}
- * @api private
- */
-
-function resolveInclude(name, filename) {
-  var path = join(dirname(filename), name);
-  var ext = extname(name);
-  if (!ext) path += '.ejs';
-  return path;
-}
-
-// express support
-
-exports.__express = exports.renderFile;
-
-/**
- * Expose to require().
- */
-
-if (require.extensions) {
-  require.extensions['.ejs'] = function(module, filename) {
-    source = require('fs').readFileSync(filename, 'utf-8');
-    module._compile(compile(source, {}), filename);
-  };
-} else if (require.registerExtension) {
-  require.registerExtension('.ejs', function(src) {
-    return compile(src, {});
-  });
-}
-
-},{"./filters":469,"./utils":470,"fs":299,"path":446}],470:[function(require,module,exports){
-
-/*!
- * EJS
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * Escape the given string of `html`.
- *
- * @param {String} html
- * @return {String}
- * @api private
- */
-
-exports.escape = function(html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
- 
-},{}],469:[function(require,module,exports){
-
-/*!
- * EJS - Filters
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * First element of the target `obj`.
- */
-
-exports.first = function(obj) {
-  return obj[0];
-};
-
-/**
- * Last element of the target `obj`.
- */
-
-exports.last = function(obj) {
-  return obj[obj.length - 1];
-};
-
-/**
- * Capitalize the first letter of the target `str`.
- */
-
-exports.capitalize = function(str){
-  str = String(str);
-  return str[0].toUpperCase() + str.substr(1, str.length);
-};
-
-/**
- * Downcase the target `str`.
- */
-
-exports.downcase = function(str){
-  return String(str).toLowerCase();
-};
-
-/**
- * Uppercase the target `str`.
- */
-
-exports.upcase = function(str){
-  return String(str).toUpperCase();
-};
-
-/**
- * Sort the target `obj`.
- */
-
-exports.sort = function(obj){
-  return Object.create(obj).sort();
-};
-
-/**
- * Sort the target `obj` by the given `prop` ascending.
- */
-
-exports.sort_by = function(obj, prop){
-  return Object.create(obj).sort(function(a, b){
-    a = a[prop], b = b[prop];
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
-  });
-};
-
-/**
- * Size or length of the target `obj`.
- */
-
-exports.size = exports.length = function(obj) {
-  return obj.length;
-};
-
-/**
- * Add `a` and `b`.
- */
-
-exports.plus = function(a, b){
-  return Number(a) + Number(b);
-};
-
-/**
- * Subtract `b` from `a`.
- */
-
-exports.minus = function(a, b){
-  return Number(a) - Number(b);
-};
-
-/**
- * Multiply `a` by `b`.
- */
-
-exports.times = function(a, b){
-  return Number(a) * Number(b);
-};
-
-/**
- * Divide `a` by `b`.
- */
-
-exports.divided_by = function(a, b){
-  return Number(a) / Number(b);
-};
-
-/**
- * Join `obj` with the given `str`.
- */
-
-exports.join = function(obj, str){
-  return obj.join(str || ', ');
-};
-
-/**
- * Truncate `str` to `len`.
- */
-
-exports.truncate = function(str, len){
-  str = String(str);
-  return str.substr(0, len);
-};
-
-/**
- * Truncate `str` to `n` words.
- */
-
-exports.truncate_words = function(str, n){
-  var str = String(str)
-    , words = str.split(/ +/);
-  return words.slice(0, n).join(' ');
-};
-
-/**
- * Replace `pattern` with `substitution` in `str`.
- */
-
-exports.replace = function(str, pattern, substitution){
-  return String(str).replace(pattern, substitution || '');
-};
-
-/**
- * Prepend `val` to `obj`.
- */
-
-exports.prepend = function(obj, val){
-  return Array.isArray(obj)
-    ? [val].concat(obj)
-    : val + obj;
-};
-
-/**
- * Append `val` to `obj`.
- */
-
-exports.append = function(obj, val){
-  return Array.isArray(obj)
-    ? obj.concat(val)
-    : obj + val;
-};
-
-/**
- * Map the given `prop`.
- */
-
-exports.map = function(arr, prop){
-  return arr.map(function(obj){
-    return obj[prop];
-  });
-};
-
-/**
- * Reverse the given `obj`.
- */
-
-exports.reverse = function(obj){
-  return Array.isArray(obj)
-    ? obj.reverse()
-    : String(obj).split('').reverse().join('');
-};
-
-/**
- * Get `prop` of the given `obj`.
- */
-
-exports.get = function(obj, prop){
-  return obj[prop];
-};
-
-/**
- * Packs the given `obj` into json string
- */
-exports.json = function(obj){
-  return JSON.stringify(obj);
-};
-},{}],446:[function(require,module,exports){
-(function (process){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-// resolves . and .. elements in a path array with directory names there
-// must be no slashes, empty elements, or device names (c:\) in the array
-// (so also no leading and trailing slashes - it does not distinguish
-// relative and absolute paths)
-function normalizeArray(parts, allowAboveRoot) {
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = parts.length - 1; i >= 0; i--) {
-    var last = parts[i];
-    if (last === '.') {
-      parts.splice(i, 1);
-    } else if (last === '..') {
-      parts.splice(i, 1);
-      up++;
-    } else if (up) {
-      parts.splice(i, 1);
-      up--;
-    }
-  }
-
-  // if the path is allowed to go above the root, restore leading ..s
-  if (allowAboveRoot) {
-    for (; up--; up) {
-      parts.unshift('..');
-    }
-  }
-
-  return parts;
-}
-
-// Split a filename into [root, dir, basename, ext], unix version
-// 'root' is just a slash, or nothing.
-var splitPathRe =
-    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
-var splitPath = function(filename) {
-  return splitPathRe.exec(filename).slice(1);
-};
-
-// path.resolve([from ...], to)
-// posix version
-exports.resolve = function() {
-  var resolvedPath = '',
-      resolvedAbsolute = false;
-
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-    var path = (i >= 0) ? arguments[i] : process.cwd();
-
-    // Skip empty and invalid entries
-    if (typeof path !== 'string') {
-      throw new TypeError('Arguments to path.resolve must be strings');
-    } else if (!path) {
-      continue;
-    }
-
-    resolvedPath = path + '/' + resolvedPath;
-    resolvedAbsolute = path.charAt(0) === '/';
-  }
-
-  // At this point the path should be resolved to a full absolute path, but
-  // handle relative paths to be safe (might happen when process.cwd() fails)
-
-  // Normalize the path
-  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
-    return !!p;
-  }), !resolvedAbsolute).join('/');
-
-  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
-};
-
-// path.normalize(path)
-// posix version
-exports.normalize = function(path) {
-  var isAbsolute = exports.isAbsolute(path),
-      trailingSlash = substr(path, -1) === '/';
-
-  // Normalize the path
-  path = normalizeArray(filter(path.split('/'), function(p) {
-    return !!p;
-  }), !isAbsolute).join('/');
-
-  if (!path && !isAbsolute) {
-    path = '.';
-  }
-  if (path && trailingSlash) {
-    path += '/';
-  }
-
-  return (isAbsolute ? '/' : '') + path;
-};
-
-// posix version
-exports.isAbsolute = function(path) {
-  return path.charAt(0) === '/';
-};
-
-// posix version
-exports.join = function() {
-  var paths = Array.prototype.slice.call(arguments, 0);
-  return exports.normalize(filter(paths, function(p, index) {
-    if (typeof p !== 'string') {
-      throw new TypeError('Arguments to path.join must be strings');
-    }
-    return p;
-  }).join('/'));
-};
-
-
-// path.relative(from, to)
-// posix version
-exports.relative = function(from, to) {
-  from = exports.resolve(from).substr(1);
-  to = exports.resolve(to).substr(1);
-
-  function trim(arr) {
-    var start = 0;
-    for (; start < arr.length; start++) {
-      if (arr[start] !== '') break;
-    }
-
-    var end = arr.length - 1;
-    for (; end >= 0; end--) {
-      if (arr[end] !== '') break;
-    }
-
-    if (start > end) return [];
-    return arr.slice(start, end - start + 1);
-  }
-
-  var fromParts = trim(from.split('/'));
-  var toParts = trim(to.split('/'));
-
-  var length = Math.min(fromParts.length, toParts.length);
-  var samePartsLength = length;
-  for (var i = 0; i < length; i++) {
-    if (fromParts[i] !== toParts[i]) {
-      samePartsLength = i;
-      break;
-    }
-  }
-
-  var outputParts = [];
-  for (var i = samePartsLength; i < fromParts.length; i++) {
-    outputParts.push('..');
-  }
-
-  outputParts = outputParts.concat(toParts.slice(samePartsLength));
-
-  return outputParts.join('/');
-};
-
-exports.sep = '/';
-exports.delimiter = ':';
-
-exports.dirname = function(path) {
-  var result = splitPath(path),
-      root = result[0],
-      dir = result[1];
-
-  if (!root && !dir) {
-    // No dirname whatsoever
-    return '.';
-  }
-
-  if (dir) {
-    // It has a dirname, strip trailing slash
-    dir = dir.substr(0, dir.length - 1);
-  }
-
-  return root + dir;
-};
-
-
-exports.basename = function(path, ext) {
-  var f = splitPath(path)[2];
-  // TODO: make this comparison case-insensitive on windows?
-  if (ext && f.substr(-1 * ext.length) === ext) {
-    f = f.substr(0, f.length - ext.length);
-  }
-  return f;
-};
-
-
-exports.extname = function(path) {
-  return splitPath(path)[3];
-};
-
-function filter (xs, f) {
-    if (xs.filter) return xs.filter(f);
-    var res = [];
-    for (var i = 0; i < xs.length; i++) {
-        if (f(xs[i], i, xs)) res.push(xs[i]);
-    }
-    return res;
-}
-
-// String.prototype.substr - negative index don't work in IE8
-var substr = 'ab'.substr(-1) === 'b'
-    ? function (str, start, len) { return str.substr(start, len) }
-    : function (str, start, len) {
-        if (start < 0) start = str.length + start;
-        return str.substr(start, len);
-    }
-;
-
-}).call(this,require('_process'))
-},{"_process":447}],447:[function(require,module,exports){
-// shim for using process in browser
-
-var process = module.exports = {};
-var queue = [];
-var draining = false;
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    draining = true;
-    var currentQueue;
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        var i = -1;
-        while (++i < len) {
-            currentQueue[i]();
-        }
-        len = queue.length;
-    }
-    draining = false;
-}
-process.nextTick = function (fun) {
-    queue.push(fun);
-    if (!draining) {
-        setTimeout(drainQueue, 0);
-    }
-};
-
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-// TODO(shtylman)
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],299:[function(require,module,exports){
-
-},{}],2:[function(require,module,exports){
-/**
- * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
- * directory of this distribution and at
- * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
- */
-
-    /**
-     * Class for dimension change detection.
-     *
-     * @param {Element|Element[]|Elements|jQuery} element
-     * @param {Function} callback
-     *
-     * @constructor
-     */
-    module.exports = function(element, callback) {
-        /**
-         *
-         * @constructor
-         */
-        function EventQueue() {
-            this.q = [];
-            this.add = function(ev) {
-                this.q.push(ev);
-            };
-
-            var i, j;
-            this.call = function() {
-                for (i = 0, j = this.q.length; i < j; i++) {
-                    this.q[i].call();
-                }
-            };
-        }
-
-        /**
-         * @param {HTMLElement} element
-         * @param {String}      prop
-         * @returns {String|Number}
-         */
-        function getComputedStyle(element, prop) {
-            if (element.currentStyle) {
-                return element.currentStyle[prop];
-            } else if (window.getComputedStyle) {
-                return window.getComputedStyle(element, null).getPropertyValue(prop);
-            } else {
-                return element.style[prop];
-            }
-        }
-
-        /**
-         *
-         * @param {HTMLElement} element
-         * @param {Function}    resized
-         */
-        function attachResizeEvent(element, resized) {
-            if (!element.resizedAttached) {
-                element.resizedAttached = new EventQueue();
-                element.resizedAttached.add(resized);
-            } else if (element.resizedAttached) {
-                element.resizedAttached.add(resized);
-                return;
-            }
-
-            element.resizeSensor = document.createElement('div');
-            element.resizeSensor.className = 'resize-sensor';
-            var style = 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;';
-            var styleChild = 'position: absolute; left: 0; top: 0;';
-
-            element.resizeSensor.style.cssText = style;
-            element.resizeSensor.innerHTML =
-                '<div class="resize-sensor-expand" style="' + style + '">' +
-                    '<div style="' + styleChild + '"></div>' +
-                '</div>' +
-                '<div class="resize-sensor-shrink" style="' + style + '">' +
-                    '<div style="' + styleChild + ' width: 200%; height: 200%"></div>' +
-                '</div>';
-            element.appendChild(element.resizeSensor);
-
-            if ('absolute' !== getComputedStyle(element, 'position')) {
-                element.style.position = 'relative';
-            }
-
-            var expand = element.resizeSensor.childNodes[0];
-            var expandChild = expand.childNodes[0];
-            var shrink = element.resizeSensor.childNodes[1];
-            var shrinkChild = shrink.childNodes[0];
-
-            var lastWidth, lastHeight;
-
-            var reset = function() {
-                expandChild.style.width = expand.offsetWidth + 10 + 'px';
-                expandChild.style.height = expand.offsetHeight + 10 + 'px';
-                expand.scrollLeft = expand.scrollWidth;
-                expand.scrollTop = expand.scrollHeight;
-                shrink.scrollLeft = shrink.scrollWidth;
-                shrink.scrollTop = shrink.scrollHeight;
-                lastWidth = element.offsetWidth;
-                lastHeight = element.offsetHeight;
-            };
-
-            reset();
-
-            var changed = function() {
-                element.resizedAttached.call();
-            };
-
-            var addEvent = function(el, name, cb) {
-                if (el.attachEvent) {
-                    el.attachEvent('on' + name, cb);
-                } else {
-                    el.addEventListener(name, cb);
-                }
-            };
-
-            addEvent(expand, 'scroll', function() {
-                if (element.offsetWidth > lastWidth || element.offsetHeight > lastHeight) {
-                    changed();
-                }
-                reset();
-            });
-
-            addEvent(shrink, 'scroll',function() {
-                if (element.offsetWidth < lastWidth || element.offsetHeight < lastHeight) {
-                    changed();
-                }
-                reset();
-            });
-        }
-
-        if (element && element.constructor === Array ||
-          ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
-          ('undefined' !== typeof Elements && element instanceof Elements) //mootools
-        ) {
-            var i = 0, j = element.length;
-            for (; i < j; i++) {
-                attachResizeEvent(element[i], callback);
-            }
-        } else {
-            attachResizeEvent(element, callback);
-        }
-    };
-
 
 },{}]},{},[]);

@@ -302,7 +302,9 @@ ko:
     panel:
       answer_viewer: 답변 보기
       student: student
+      viewing_solution: Viewing Solution
       try_it_yourself: 스스로 시도해 보세요
+      section: 섹션
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'

@@ -1691,8 +1691,8 @@ pt-BR:
         Primeiro verifique se isso é uma for ou uma colmeia, e então colete néctar
         apenas se for uma flor. 
       Course 4 Bee 2_instruction: |
-        Verifique cada um dos objetos para ver se ele é uma flor
-        - se for, colete néctar.
+        Verifique cada objeto para ver se é uma flor. Se for,
+        colete o néctar... caso contrário, você pode ignorá-lo!
       Course 4 Bee 3_instruction: |
         O objeto desconhecido pode ser uma flor ou uma colmeia.
         Use o bloco se-senão para coletar néctar se ele for uma flor, senão produza mel
@@ -2803,6 +2803,11 @@ pt-BR:
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      Ninjacat Demo No Animate_instruction: |
+        Vamos começar explorando um jogo simples
+        e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
+        ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
+        achar que já descobriu como o jogo funciona, clique em "Concluir"
       PDK5 Conditionals 1_instruction: |
         As flores roxas podem ter 1 ou 0 néctar,
         mas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa
@@ -3042,8 +3047,8 @@ pt-BR:
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
         outro padrão comum para comprimir ainda mais o poema?
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Envie uma mensagem configurando o estado do
+        fio como A ou B.
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3273,12 +3278,12 @@ pt-BR:
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
       U3L19 - Clicker Game Freeplay Area_instruction: |
-        Use this App Lab area to improve
-        your clicker game.  You should start by copy/pasting the code from your old
-        game here.  We're showing a more full set of blocks in the toolbox - some
-        of the things you might not have used yet.  Feel free to explore then and
-        experiment if you want to.  Everything else you need should be shown.  Have
-        fun!
+        Use esta área de laboratório do aplicativo para melhorar
+        seu jogo no estilo clicker.  Você deve começar copiando/colando o código do seu jogo antigo
+        aqui. Estamos mostrando um conjunto mais completo de blocos na caixa de ferramentas -
+        você pode não ter usado algumas coisas ainda. Fique à vontade para explorar e
+        testar o que você quiser. Tudo o que você precisa deve ser mostrado.
+        Divirta-se!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

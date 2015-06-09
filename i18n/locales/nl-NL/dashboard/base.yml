@@ -302,7 +302,9 @@ nl:
     panel:
       answer_viewer: Antwoord Viewer
       student: Leerling
+      viewing_solution: Viewing Solution
       try_it_yourself: Probeer het zelf
+      section: Groep
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'

@@ -1,18 +1,20 @@
-/* global $, Dialog */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
+/* global $, Applab */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var React = require('react');
-var DesignProperties = require('./designProperties.jsx');
+var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
-var AssetManager = require('./assetManagement/AssetManager.jsx');
+var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
+var _ = require('../utils').getLodash();
 
 var designMode = module.exports;
 
 var currentlyEditedElement = null;
+
+var GRID_SIZE = 5;
 
 /**
  * If in design mode and program is not running, display Properties
@@ -28,10 +30,24 @@ designMode.onDivApplabClick = function (event) {
 
   var element = event.target;
   if (element.id === 'divApplab') {
-    designMode.clearProperties();
-  } else {
-    designMode.editElementProperties(element);
+    element = designMode.activeScreen();
   }
+
+  if ($(element).is('.ui-resizable')) {
+    element = getInnerElement(element);
+  } else if ($(element).is('.ui-resizable-handle')) {
+    element = getInnerElement(element.parentNode);
+  }
+  designMode.editElementProperties(element);
+};
+
+/**
+ * @returns {HTMLElement} The currently visible screen element.
+ */
+designMode.activeScreen = function () {
+  return $('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first()[0];
 };
 
 /**
@@ -39,29 +55,36 @@ designMode.onDivApplabClick = function (event) {
  * @param {ElementType} elementType Type of element to create
  * @param {number} left Position from left.
  * @param {number} top Position from top.
+ * @returns {HTMLElement} The generated element
  */
 designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
 
-  var divApplab = document.getElementById('divApplab');
-  divApplab.appendChild(element);
-  makeDraggable($(element));
+  var parent;
+  var isScreen = $(element).hasClass('screen');
+  if (isScreen) {
+    parent = document.getElementById('divApplab');
+  } else {
+    parent = designMode.activeScreen();
+  }
+  parent.appendChild(element);
+
+  if (!isScreen) {
+    makeDraggable($(element));
+  }
   designMode.editElementProperties(element);
-  Applab.levelHtml = designMode.serializeToLevelHtml();
+
+  return element;
 };
 
 designMode.editElementProperties = function(element) {
   var designPropertiesElement = document.getElementById('design-properties');
+  if (!designPropertiesElement) {
+    // design-properties won't exist when !user.isAdmin
+    return;
+  }
   currentlyEditedElement = element;
-  React.render(
-    React.createElement(DesignProperties, {
-        element: element,
-        handleChange: designMode.onPropertyChange.bind(this, element),
-        onDepthChange: designMode.onDepthChange,
-        onDone: designMode.onDonePropertiesButton,
-        onDelete: designMode.onDeletePropertiesButton.bind(this, element)}
-    ),
-    designPropertiesElement);
+  designMode.renderDesignWorkspace(element);
 };
 
 /**
@@ -77,7 +100,7 @@ designMode.clearProperties = function () {
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
-  $('#design-elements .new-design-element').each(function() {
+  $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
   var designModeClear = document.getElementById('designModeClear');
@@ -86,27 +109,46 @@ designMode.resetElementTray = function (allowEditing) {
   }
 };
 
-// TODO (brent) I think some of these properties are going to end up having
-// different behaviors based on element type. I think the best way of handling
-// this is to have an onPropertyChange per element that gets the first shot to
-// handle the change, and reports whether it did or not. If it didn't, we fall
-// back to the default function
+/**
+ * Handle a change from our properties table. After handling properties
+ * generically, give elementLibrary a chance to do any element specific changes.
+ */
 designMode.onPropertyChange = function(element, name, value) {
+  var handled = true;
   switch (name) {
     case 'id':
       element.id = value;
+      if (elementLibrary.getElementType(element) ===
+          elementLibrary.ElementType.SCREEN) {
+        // rerender design toggle, which has a dropdown of screen ids
+        designMode.changeScreen(value);
+      }
       break;
     case 'left':
       element.style.left = value + 'px';
+      element.parentNode.style.left = value + 'px';
       break;
     case 'top':
       element.style.top = value + 'px';
+      element.parentNode.style.top = value + 'px';
       break;
     case 'width':
       element.style.width = value + 'px';
+      element.parentNode.style.width = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'height':
       element.style.height = value + 'px';
+      element.parentNode.style.height = value + 'px';
+
+      if (element.style.backgroundSize) {
+        element.style.backgroundSize = element.style.width + ' ' +
+          element.style.height;
+      }
       break;
     case 'text':
       element.textContent = value;
@@ -120,13 +162,32 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'fontSize':
       element.style.fontSize = value + 'px';
       break;
+
     case 'image':
-      // For now, we stretch the image to fit the element
+      var image = new Image();
+      var backgroundImage = new Image();
+      backgroundImage.onload = function(){
+        element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+          backgroundImage.naturalHeight + 'px';
+        element.style.width = backgroundImage.naturalWidth + 'px';
+        element.style.height = backgroundImage.naturalHeight + 'px';
+        // Re-render properties
+        if (currentlyEditedElement === element) {
+          designMode.editElementProperties(element);
+        }
+      };
+      backgroundImage.src = value;
+      break;
+
+    case 'screen-image':
+      // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + value + ')';
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
+
     case 'picture':
       element.src = value;
       element.onload = function () {
@@ -193,24 +254,40 @@ designMode.onPropertyChange = function(element, name, value) {
       element.setAttribute('rows', value);
       break;
     default:
-      throw "unknown property name " + name;
+      // Mark as unhandled, but give typeSpecificPropertyChange a chance to
+      // handle it
+      handled = false;
   }
-  Applab.levelHtml = designMode.serializeToLevelHtml();
-};
 
-designMode.onDonePropertiesButton = function() {
-  designMode.clearProperties();
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+    designMode.editElementProperties(element);
+    handled = true;
+  }
+
+  if (!handled) {
+    throw "unknown property name " + name;
+  }
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
-  element.parentNode.removeChild(element);
-  Applab.levelHtml = designMode.serializeToLevelHtml();
+  var isScreen = $(element).hasClass('screen');
+  if ($(element.parentNode).is('.ui-resizable')) {
+    element = element.parentNode;
+  }
+  $(element).remove();
+
+  if (isScreen) {
+    designMode.changeScreen('screen1');
+  }
+
   designMode.clearProperties();
 };
 
 designMode.onDepthChange = function (element, depthDirection) {
-  var parent = element.parentNode;
-  var index = Array.prototype.indexOf.call(parent.children, element);
+  // move to outer resizable div
+  var outerElement = element.parentNode;
+  var parent = outerElement.parentNode;
+  var index = Array.prototype.indexOf.call(parent.children, outerElement);
 
   if (depthDirection === 'forward' && index + 2 >= parent.children.length) {
     // We're either the last or second to last element
@@ -222,23 +299,23 @@ designMode.onDepthChange = function (element, depthDirection) {
   // TODO (brent) - use an enum?
   switch (depthDirection) {
     case 'forward':
-      var twoAhead = element.nextSibling.nextSibling;
-      removed = parent.removeChild(element);
+      var twoAhead = outerElement.nextSibling.nextSibling;
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, twoAhead);
       break;
 
     case 'toFront':
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.appendChild(removed);
       break;
 
     case 'backward':
-      var previous = element.previousSibling;
+      var previous = outerElement.previousSibling;
       if (!previous) {
         return;
       }
 
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, previous);
       break;
 
@@ -246,7 +323,7 @@ designMode.onDepthChange = function (element, depthDirection) {
       if (parent.children.length === 1) {
         return;
       }
-      removed = parent.removeChild(element);
+      removed = parent.removeChild(outerElement);
       parent.insertBefore(removed, parent.children[0]);
       break;
 
@@ -259,15 +336,12 @@ designMode.onDepthChange = function (element, depthDirection) {
 };
 
 designMode.serializeToLevelHtml = function () {
-  var s = new XMLSerializer();
-  var divApplab = document.getElementById('divApplab');
-  var clone = divApplab.cloneNode(true);
-  // Remove unwanted classes added by jQuery.draggable.
-  // This clone isn't fully jQuery-ized, meaning we can't take advantage of
-  // things like $().data or $().draggable('destroy'), so I just manually
-  // remove the classes instead.
-  $(clone).find('*').removeClass('ui-draggable ui-draggable-handle');
-  return s.serializeToString(clone);
+  var divApplab = $('#divApplab');
+  // Children are screens. Want to operate on grandchildren
+  makeUndraggable(divApplab.children().children());
+  var s = new XMLSerializer().serializeToString(divApplab[0]);
+  makeDraggable(divApplab.children().children());
+  Applab.levelHtml = s;
 };
 
 /**
@@ -280,9 +354,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
+
   children.appendTo(rootEl);
   if (allowDragging) {
-    makeDraggable(children);
+    // children are screens. make grandchildren draggable
+    makeDraggable(children.children());
   }
 
   children.each(function () {
@@ -291,59 +367,35 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
 };
 
 designMode.onClear = function() {
+  // TODO (brent) - have this clear just the current screen instead of everything
+  // (along with a confirmation experience). Consider the case where this gets
+  // called on load too - might need to two separate funcs
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
-};
-
-/**
- * Display the "Manage Assets" modal.
- * @param assetChosen {Function} Called when the user chooses an asset. The
- *   "Choose" button in the UI only appears if this optional param is provided.
- * @param typeFilter {String} The type of assets to show and allow to be
- *   uploaded.
- */
-designMode.showAssetManager = function(assetChosen, typeFilter) {
-  var codeDiv = document.createElement('div');
-  var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
-  var dialog = studioApp.createModalDialog({
-    Dialog: Dialog,
-    contentDiv: codeDiv,
-    defaultBtnSelector: 'again-button',
-    id: 'manageAssetsModal'
-  });
-  React.render(React.createElement(AssetManager, {
-    typeFilter : typeFilter,
-    assetChosen: showChoseImageButton ? function (fileWithPath) {
-      dialog.hide();
-      assetChosen(fileWithPath);
-    } : null
-  }), codeDiv);
-
-  dialog.show();
+  elementLibrary.resetIds();
+  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
+  designMode.changeScreen('screen1');
 };
 
 function toggleDragging (enable) {
-  var children = $('#divApplab').children();
+  var grandChildren = $('#divApplab').children().children();
   if (enable) {
-    makeDraggable(children);
+    makeDraggable(grandChildren);
   } else {
-    children.each(function() {
-      if ($(this).data('uiDraggable')) {
-        $(this).draggable('destroy');
-      }
-    });
+    makeUndraggable(grandChildren);
   }
 }
 
 designMode.toggleDesignMode = function(enable) {
-  var codeModeHeaders = document.getElementById('codeModeHeaders');
-  codeModeHeaders.style.display = enable ? 'none' : 'block';
-  var designModeHeaders = document.getElementById('designModeHeaders');
-  designModeHeaders.style.display = enable ? 'block' : 'none';
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
+    // Currently we don't run design mode in some circumstances (i.e. user is
+    // not an admin)
+    return;
+  }
+  designWorkspace.style.display = enable ? 'block' : 'none';
 
-  var codeTextbox = document.getElementById('codeTextbox');
-  codeTextbox.style.display = enable ? 'none' : 'block';
-  var designModeBox = document.getElementById('designModeBox');
-  designModeBox.style.display = enable ? 'block' : 'none';
+  var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
+  codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
@@ -351,65 +403,117 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
+  designMode.changeScreen('screen1');
 };
+
+/**
+ * When we make elements resizable, we wrap them in an outer div. Given an outer
+ * div, this returns the inner element
+ */
+function getInnerElement(outerElement) {
+  // currently assume inner element is first child.
+  return outerElement.children[0];
+}
 
 /**
  *
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 function makeDraggable (jq) {
-  var GRID_SIZE = 5;
-  jq.draggable({
-    cancel: false,  // allow buttons and inputs to be dragged
-    drag: function(event, ui) {
-      // draggables are not compatible with CSS transform-scale,
-      // so adjust the position in various ways here.
+  // For a non-div to be draggable & resizable it needs to be wrapped in a div.
+  jq.each(function () {
+    var elm = $(this);
+    var wrapper = elm.wrap('<div>').parent().resizable({
+      alsoResize: elm,
+      create: function () {
+        // resizable sets z-index to 90, which we don't want
+        $(this).children().css('z-index', '');
+      },
+      resize: function () {
+        var element = elm[0];
+        designMode.onPropertyChange(element, 'width', element.style.width);
+        designMode.onPropertyChange(element, 'height', element.style.height);
+      }
+    }).draggable({
+      cancel: false,  // allow buttons and inputs to be dragged
+      drag: function (event, ui) {
+        // draggables are not compatible with CSS transform-scale,
+        // so adjust the position in various ways here.
 
-      // dragging
-      var div = document.getElementById('divApplab');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-      var changeLeft = ui.position.left - ui.originalPosition.left;
-      var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
-      var changeTop = ui.position.top - ui.originalPosition.top;
-      var newTop = (ui.originalPosition.top + changeTop) / yScale;
+        // dragging
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        var changeLeft = ui.position.left - ui.originalPosition.left;
+        var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
+        var changeTop = ui.position.top - ui.originalPosition.top;
+        var newTop = (ui.originalPosition.top + changeTop) / yScale;
 
-      // snap top-left corner to nearest location in the grid
-      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        // snap top-left corner to nearest location in the grid
+        newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-      // containment
-      var container = $('#divApplab');
-      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-      newLeft = Math.min(newLeft, maxLeft);
-      newLeft = Math.max(newLeft, 0);
-      newTop = Math.min(newTop, maxTop);
-      newTop = Math.max(newTop, 0);
+        // containment
+        var container = $('#divApplab');
+        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
+        newLeft = Math.min(newLeft, maxLeft);
+        newLeft = Math.max(newLeft, 0);
+        newTop = Math.min(newTop, maxTop);
+        newTop = Math.max(newTop, 0);
 
-      ui.position.left = newLeft;
-      ui.position.top = newTop;
-    },
-    stop: function(event, ui) {
-      Applab.levelHtml = designMode.serializeToLevelHtml();
+        ui.position.left = newLeft;
+        ui.position.top = newTop;
+
+        elm.css({
+          top: newTop,
+          left: newLeft
+        });
+
+        designMode.renderDesignWorkspace(elm[0]);
+      }
+    }).css('position', 'absolute');
+
+    wrapper.css({
+      top: elm.css('top'),
+      left: elm.css('left')
+    });
+
+    // Chrome has a nasty bug where when we wrap the element in a div, it
+    // occasionally chooses not to rerender our element for some reason. This
+    // is a hacky that causes Chrome to rerender the parent, thus not causing
+    // our element to disappear.
+    var currHeight = wrapper.parent().height();
+    wrapper.parent().height(currHeight + 1);
+    wrapper.parent().height(currHeight);
+
+    elm.css('position', 'static');
+  });
+}
+
+/**
+ * Inverse of `makeDraggable`.
+ * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ */
+function makeUndraggable(jq) {
+  jq.each(function () {
+    var wrapper = $(this);
+    var elm = $(getInnerElement(this));
+
+    // Don't unwrap elements that aren't wrapped with a draggable div.
+    if (!wrapper.data('uiDraggable')) {
+      return;
     }
+
+    wrapper.resizable('destroy').draggable('destroy');
+    elm.css('position', 'absolute');
+    elm.unwrap();
   });
 }
 
 designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
-  $('.new-design-element').draggable({
-    containment:"#codeApp",
-    helper:"clone",
-    appendTo:"#codeApp",
-    revert: 'invalid',
-    zIndex: 2,
-    start: function() {
-      studioApp.resetButtonClick();
-    }
-  });
-  var GRID_SIZE = 5;
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
@@ -426,7 +530,10 @@ designMode.configureDragAndDrop = function () {
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
       top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
-      designMode.createElement(elementType, left, top);
+      var element = designMode.createElement(elementType, left, top);
+      if (elementType === elementLibrary.ElementType.SCREEN) {
+        designMode.changeScreen(element.id);
+      }
     }
   });
 };
@@ -437,14 +544,82 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  // TODO (brent) - still need logic to generate list of screens, and rerender
-  // DesignToggleRow on changes
-  React.render(
-    React.createElement(DesignToggleRow, {
-      screens: ['screen1'],
-      onDesignModeButton: Applab.onDesignModeButton,
-      onCodeModeButton: Applab.onCodeModeButton
-    }),
-    designToggleRow
-  );
+  var firstScreen = $('.screen').first().attr('id');
+  designMode.changeScreen(firstScreen);
+};
+
+/**
+ * Changes the active screen by toggling all screens to be non-visible, unless
+ * they match the provided screenId. Also updates our dropdown to reflect the
+ * change, and opens the element property editor for the new screen.
+ */
+designMode.changeScreen = function (screenId) {
+  var screenIds = [];
+  $('.screen').each(function () {
+    screenIds.push(this.id);
+    $(this).toggle(this.id === screenId);
+  });
+
+  var designToggleRow = document.getElementById('designToggleRow');
+  if (designToggleRow) {
+    // Simulate a run button click, to load the channel id.
+    var designModeClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onDesignModeButton);
+    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
+    React.render(
+      React.createElement(DesignToggleRow, {
+        initialScreen: screenId,
+        screens: screenIds,
+        onDesignModeButton: throttledDesignModeClick,
+        onCodeModeButton: Applab.onCodeModeButton,
+        onScreenChange: designMode.changeScreen
+      }),
+      designToggleRow
+    );
+  }
+
+  designMode.editElementProperties(document.getElementById(screenId));
+};
+
+designMode.renderDesignWorkspace = function(element) {
+  var designWorkspace = document.getElementById('designWorkspace');
+  if (!designWorkspace) {
+    return;
+  }
+
+  var props = {
+    handleDragStart: function() {
+      if ($('#resetButton').is(':visible')) {
+        studioApp.resetButtonClick();
+      }
+    },
+    element: element || null,
+    handleChange: designMode.onPropertyChange.bind(this, element),
+    onDepthChange: designMode.onDepthChange,
+    onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+    handleManageAssets: showAssetManager
+  };
+  React.render(React.createElement(DesignWorkspace, props), designWorkspace);
+};
+
+/**
+ * Early versions of applab didn't have screens, and instead all elements
+ * existed under the root div. If we find one of those, convert it to be a single
+ * screen app.
+ */
+designMode.addScreenIfNecessary = function(html) {
+  var rootDiv = $(html);
+  if (rootDiv.children().length === 0 ||
+      rootDiv.children().eq(0).hasClass('screen')) {
+    // no children, or first child is a screen
+    return html;
+  }
+
+  var screenElement = elementLibrary.createElement(
+    elementLibrary.ElementType.SCREEN);
+  rootDiv.children().appendTo(screenElement);
+  rootDiv.append(screenElement);
+
+  return rootDiv[0].outerHTML;
 };

@@ -1,0 +1,37 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-06-01T12:20:37.000Z",
+  "properties": {
+    "options": {
+      "skip_sound": true,
+      "hide_submit": true
+    },
+    "questions": [
+      {
+        "text": "Programming projects that demonstrate student understanding of algorithms and abstraction"
+      },
+      {
+        "text": "Written report about innovations in computing"
+      },
+      {
+        "text": "End-of-year exam, common with all AP courses"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Create Task"
+      },
+      {
+        "text": "Explore Task"
+      },
+      {
+        "text": "Fixed-response questions"
+      }
+    ],
+    "title": "AP Assessment Matching",
+    "content1": "match the assessment-type with the description below",
+    "height": "100"
+  }
+}]]></config>
+</Match>

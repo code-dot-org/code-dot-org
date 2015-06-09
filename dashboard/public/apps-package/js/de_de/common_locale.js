@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Weiter"},
 "defaultTwitterText":function(d){return "Schau dir an was ich gemacht habe"},
 "designMode":function(d){return "Entwurf"},
-"designModeHeader":function(d){return "Entwurfsmodus"},
 "dialogCancel":function(d){return "Abbrechen"},
 "dialogOK":function(d){return "OK"},
 "directionEastLetter":function(d){return "O"},
@@ -223,9 +222,9 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_checkbox_param0":function(d){return "checkboxId"},
 "dropletBlock_checkbox_param1":function(d){return "checked"},
 "dropletBlock_circle_description":function(d){return "Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius"},
-"dropletBlock_circle_param0":function(d){return "centerX"},
+"dropletBlock_circle_param0":function(d){return "mitteX"},
 "dropletBlock_circle_param0_description":function(d){return "The x position in pixels of the center of the circle."},
-"dropletBlock_circle_param1":function(d){return "centerY"},
+"dropletBlock_circle_param1":function(d){return "mitteY"},
 "dropletBlock_circle_param1_description":function(d){return "The y position in pixels of the center of the circle."},
 "dropletBlock_circle_param2":function(d){return "Radius"},
 "dropletBlock_circle_param2_description":function(d){return "The radius of the circle, in pixels."},
@@ -706,8 +705,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "errorRequiredParamsMissing":function(d){return "Erstelle einen Parameter für die Funktion, indem du auf \"Bearbeiten\" klickst und füge die erforderlichen Parameter hinzu. Ziehen die neuen Parameter-Blöcke in die Funktionsdefinition."},
 "errorUnusedFunction":function(d){return "Du hast eine Funktion erstellt, aber sie nie im Arbeitsbereich verwendet! Klicke auf \"Funktionen\" in den Werkzeugen, und stelle sicher, dass du es in deinem Programm verwendst."},
 "errorUnusedParam":function(d){return "Du hast einen Parameterblock hinzugefügt, aber nicht in der Definition verwendet. Stelle sicher, deine Parameter zu verwenden, indem du auf \"Bearbeiten\" klickst und den Parameterblock im grünen Block plazierst."},
-"extraTopBlocks":function(d){return "Einige Blöcke sind nicht verbunden. Wolltest Du diese mit dem \"Wenn ausführen\" Block verbinden?"},
-"extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
+"extraTopBlocks":function(d){return "Du hast unverbundene Blöcke."},
+"extraTopBlocksWhenRun":function(d){return "Du hast unverbundene Blöcke. Wolltest Du sie mit dem \"wenn ausgeführt\" Block verbinden?"},
 "finalStage":function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen."},
 "finalStageTrophies":function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen und "+common_locale.p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":common_locale.n(d,"numTrophies")+" Trophäen"})+" gewonnen."},
 "finish":function(d){return "Abschließen"},
@@ -721,7 +720,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintTitle":function(d){return "Hinweis:"},
 "infinity":function(d){return "Unendlichkeit"},
 "jump":function(d){return "springen"},
-"keepPlaying":function(d){return "Keep Playing"},
+"keepPlaying":function(d){return "Spiel weiter"},
 "levelIncompleteError":function(d){return "Du verwendest alle nötigen Bausteine, aber noch nicht auf die richtige Weise."},
 "listVariable":function(d){return "Liste"},
 "makeYourOwnFlappy":function(d){return "Programmiere Dein eigenes \"Flappy\"-Spiel"},

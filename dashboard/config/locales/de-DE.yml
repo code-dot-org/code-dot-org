@@ -292,9 +292,9 @@
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
-    remove: (entfernen Lehrername)
+    remove: (entferne Lehrer)
     confirm:
-      remove: Bist du sicher, dass Du diesen Lehrernamen entfernen möchtest?
+      remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
     tools: Werkzeuge für Lehrer
     followers:
       section: 'Abschnitt:'
@@ -357,7 +357,9 @@
     panel:
       answer_viewer: Answer Viewer
       student: Schüler
+      viewing_solution: Viewing Solution
       try_it_yourself: Versuche es selbst
+      section: Abschnitt
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -547,7 +549,7 @@
       sehen.
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: Mehr &rarr;
-    caption_by_name_age: Von%{name}, Alter %{age}
+    caption_by_name_age: Von %{name}, Alter %{age}
     caption_time_ago: '%{time_ago} früher'
     header: Galerie
     header_playlab: Play Lab

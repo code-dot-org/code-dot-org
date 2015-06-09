@@ -23,7 +23,7 @@ var netsim_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -178,6 +178,7 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "connectToAPeer":function(d){return "!!-Connect to a Peer-!!"},
 "connectToARoom":function(d){return "!!-Connect to a Room-!!"},
 "connectToARouter":function(d){return "!!-Connect to a Router-!!"},
+"continueButton":function(d){return "!!-Finished! Continue to next stage-!!"},
 "decimal":function(d){return "!!-Decimal-!!"},
 "defaultNodeName":function(d){return "!!-[New Node]-!!"},
 "disconnected":function(d){return "!!-Disconnected-!!"},
@@ -204,8 +205,11 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "lobbyIsEmpty":function(d){return "!!-Nobody's here yet.-!!"},
 "lobbyStatusWaitingForOther":function(d){return "!!-"+netsim_locale.v(d,"spinner")+" Waiting for "+netsim_locale.v(d,"otherName")+" to connect... ("+netsim_locale.v(d,"otherStatus")+")-!!"},
 "lobbyStatusWaitingForYou":function(d){return "!!-Waiting for you...-!!"},
+"logBrowserButton":function(d){return "!!-Log Browser-!!"},
+"logBrowserHeader":function(d){return "!!-All Router Logs-!!"},
 "logStatus_dropped":function(d){return "!!-Dropped-!!"},
 "logStatus_success":function(d){return "!!-Success-!!"},
+"loggedByNode":function(d){return "!!-Logged By-!!"},
 "markAsRead":function(d){return "!!-Mark as read-!!"},
 "message":function(d){return "!!-Message-!!"},
 "myDevice":function(d){return "!!-My Device-!!"},
@@ -249,6 +253,7 @@ s:function(d,k,p){netsim_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareThisNetwork":function(d){return "!!-Share this network-!!"},
 "size":function(d){return "!!-Size-!!"},
 "status":function(d){return "!!-Status-!!"},
+"time":function(d){return "!!-Time-!!"},
 "to":function(d){return "!!-To-!!"},
 "unknownNode":function(d){return "!!-Unknown Node-!!"},
 "unlimited":function(d){return "!!-Unlimited-!!"},

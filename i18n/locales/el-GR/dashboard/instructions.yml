@@ -26,61 +26,34 @@ el:
         Αυτό το σπίτι χρειάζεται μία στέγη. Σχεδίασε το τρίγωνο. Υπόδειξη:
         και οι τρεις πλευρές έχουν το ίδιο μήκος.
       2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
+        Ολοκληρώστε τη σχεδίαση του δεξιού μισού του τελευταίου παραθύρου,
+        Κάθε τετράγωνο του παραθύρου περιλαμβάνει 25 εικονοστοιχεία. 
       2-3 Artist 8_instruction: Ολοκλήρωσε τα δωμάτια για κάθε ένα από τα ζώα χωρίζοντας το ορθογώνιο σε 2 ισομεγεθη τετράγωνα. Το ορθογώνιο είναι 200 pixel σε πλάτος και 100 pixel σε ύψος.
       2-3 Artist 9_instruction: Ολοκληρώστε τον χαρταετό
       2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
+        Αξιολόγηση: Ολοκληρώστε τη σχεδίαση του τελευταίου δοντιού,
+        25 εικονοστοιχεία πλάτος και 25 εικονοστοιχεία ύψος.
+      2-3 Artist Debugging 1_instruction: Μπορείτε να κάνετε αυτό το καπέλο με μέγιστο μήκος 100;
       2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
+        Η επιφάνεια αφής του χειριστηρίου του παιχνιδιού μου
+        είναι πολύ στενή. Υπόδειξη: Κάντε την φαρδύτερη κατά 10 εικονοστοιχεία
       2-3 Artist Debugging 11_instruction: 'Βοήθησέ με να τελειώσω την όμορφη νιφάδα χιονιού μου. Πόσες φορές πρέπει να το "επαναλάβω" για να το τελειώσω;'
       2-3 Artist Debugging 12_instruction: Υποτίθεται οτι πρέπει να προσθέσω ενα κύμα του ωκεανού σε αυτή τη σκηνή. Μπορείς να με βοηθήσεις?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
+      2-3 Artist Debugging 2_instruction: 'Ο κώδικας για τις τρεις γενειάδες που βλέπετε είναι λάθος. Υπόδειξη: η κάθε γενειάδα έχει 75 εικονοστοιχεία μάκρος. Διορθώστε αυτόν τον κώδικα να σχεδιάσετε τις γενειάδες.'
       2-3 Artist Debugging 3_instruction: 'Η βάρκα μου έχει μία τρύπα. Μπορείς να την φτιάξεις αλλάζοντας την γωνία της γραμμής?  Υπόδειξη: η τελευταία γωνία ήταν εκτός κατά 15 μοίρες.'
       2-3 Artist Debugging 4_instruction: Ποιά είναι η εικόνα που προσπαθούμε να σχεδιάσουμε? Ολοκλήρωσε την σύνδεση των τελειών χρησιμοποιώντας τις κατάλληλες γραμμές και γωνίες.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
+      2-3 Artist Debugging 5_instruction: 'Ο κώδικας για το μακρύ μέρος και το άκρο του ποδιού που βλέπετε είναι λάθος. Υπόδειξη: Το άκρο του ποδιού είναι πολύ μακρύ, ίσως χρειαστεί να διαγράψετε ένα βήμα (λόγου χάριν)'
       2-3 Artist Debugging 6_instruction: Φαίνεται οτι κάθομαι σε μια καρέκλα που της λείπει ένα πόδι. Επεξεργάσου τα κουτιά για να σχεδιάσεις ένα πόδι.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
+      2-3 Artist Debugging 7_instruction: Φαίνεται πως το C στον κώδικα είναι ζωγραφισμένο ανάποδα. Μπορείτε να το κάνετε να μοιάζει με C;
+      2-3 Artist Debugging 8_instruction: Ο ανεμόμυλός μου δεν έχει τελειώσει. Πόσες επαναλήψεις πρέπει να κάνω για να τον τελειώσω;
       2-3 Artist Debugging 9_instruction: 'Ο κωδικός για αυτό το στέλεχος είναι εσφαλμένος. Υπόδειξη: Η γωνία είναι εκτός κατά 60 μοίρες'
       2-3 Artist Debugging Assessment 1_instruction: 'Αυτό το σχήμα είναι πολύ μικρό. Μπορείς να το μεγαλόσεις; Υπόδειξη: θα πρέπει να είναι 75 εικονοστοιχεία μακρύτερο σε κάθε πλευρα.'
       2-3 Artist Free Play_instruction: Ελεύθερο παιχνίδι. Σχεδιάστε ότι θέλετε.
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
+      2-3 Artist Functions 1_instruction: 'Γεια σου. Εγώ καλλιτέχνης ζόμπι. Εμένα αρέσει σχεδιάζω! Βοήθησέ με να σχεδιάσω τα τετράγωνα γυαλιά.  Υπόδειξη: η γέφυρα μεταξύ των φακών είναι 25 εικονοστοιχεία μικρότερη από το μήκος του τετραγώνου.'
+      2-3 Artist Functions 10_instruction: Εδώ είναι δύο συναρτήσεις, μία που σχεδιάζει ένα μεγάλο γρανάζι και μία που σχεδιάζει ένα μικρό γρανάζι. Χρησιμοποιήστε τες για να σχεδιάσετε το εσωτερικό μιας μηχανής!
+      2-3 Artist Functions 11.5_instruction: 'Εδώ είναι ότι η ίδια συνάρτηση "Σχεδιάστε ένα εξάγωνο". Τι θα συμβεί αν απλά στρίβετε κατά 60 μοίρες κάθε φορά που μπαίνετε στο βρόχο;'
+      2-3 Artist Functions 11_instruction: 'Έχουμε μετονομάσει τη συνάρτηση "σχεδιάστε ένα τετράγωνο" στη "σχεδιάστε ένα εξάγωνο", αλλά εξακολουθεί να σχεδιάζει μόνο τετράγωνα! Μπορείτε να τροποποιήσετε τη συνάρτηση "σχεδιάστε ένα εξάγωνο" ώστε να σχεδιάζει ένα εξάγωνο πλευράς 50 εικονοστοιχείων, και να σχεδιάσετε την εικόνα χρησιμοποιώντας τη συνάρτηση;'
+      2-3 Artist Functions 12_instruction: 'Οι συναρτήσεις είναι πραγματικά εξαιρετικές για να σχεδιάζουμε σύνθετα πράγματα πολλές φορές. Μπορείτε να χρησιμοποιήσετε τη συνάρτηση "σχεδίασε ένα λουλούδι" για να συμπληρώσετε το υπόλοιπο της γλάστρας; (Υπόδειξη: όλα τα φυτά απέχουν μήκος 100 εικονστοιχείων)  '
       2-3 Artist Functions 13_instruction: |
         We've provided you with four functions.
         Use them any way you like inside of one or more loops to make pictures that
@@ -1675,8 +1648,8 @@ el:
         3 with the "sides" variable, and use the "set sides to" block.
       Course 4 Bee 1_instruction: 'Η μέλισσα δεν μπορεί να καταλάβει αν αυτό είναι ένα λουλούδι ή μια κηρήθρα. Έλεγξε πρώτα αν είναι λουλούδι ή κηρήθρα, και έπειτα μόνο αν είναι λουλούδι σύλλεξε το νέκτρα απο αυτό. '
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2728,6 +2701,11 @@ el:
         is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

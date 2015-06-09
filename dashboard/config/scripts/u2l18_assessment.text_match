@@ -1,0 +1,6 @@
+name 'U2L18 Assessment'
+title 'Assessment: Question'
+
+markdown <<MARKDOWN
+How is the Ice Cream Van problem different from another “hard” problem you saw, the Traveling Salesman problem?
+MARKDOWN

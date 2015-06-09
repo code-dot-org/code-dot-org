@@ -159,7 +159,7 @@ module.exports = React.createClass({
 
       assetList = (
         <div>
-          <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
+          <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -173,7 +173,7 @@ module.exports = React.createClass({
 
     var title = this.props.assetChosen ?
         <p className="dialog-title">Choose Assets</p> :
-        <p className="dialog-title">Manage Asset</p>;
+        <p className="dialog-title">Manage Assets</p>;
 
     return (
       <div className="modal-content" style={{margin: 0}}>

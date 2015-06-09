@@ -30,8 +30,7 @@
       "downButton",
       "upButton"
     ],
-    "step_speed": "50",
-    "maze_data": null
+    "step_speed": "50"
   }
 }]]></config>
   <blocks>

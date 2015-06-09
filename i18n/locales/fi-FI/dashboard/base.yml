@@ -311,7 +311,9 @@ fi:
     panel:
       answer_viewer: Answer Viewer
       student: Oppilas
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Ryhmä
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'

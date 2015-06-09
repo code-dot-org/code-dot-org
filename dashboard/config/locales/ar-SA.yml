@@ -340,7 +340,9 @@
     panel:
       answer_viewer: عارض الجواب
       student: طالب
+      viewing_solution: Viewing Solution
       try_it_yourself: جربها بنفسك
+      section: القسم
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوانك البريدي البريد الإلكتروني%{email}:'
@@ -636,9 +638,9 @@
     name: الاسم
     updated: تحديث
     project_type: نوع المشروع
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
+    help_text: اضغط<strong> اصنع تطبيق</strong> أو <strong>ارسم شيئاً</strong> في
+      الأسفل لتبدأ مشروع مختبر لعب أو رسام جديد<br/>بإمكانك العودة والعمل على مشروعك
+      في أي وقت.
     need_help: هل أنت بحاجة إلى المساعدة لتبدأ؟
     really_delete: حذف؟
     delete_yes: نعم

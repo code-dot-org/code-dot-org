@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "!!-Continue-!!"},
 "defaultTwitterText":function(d){return "!!-Check out what I made-!!"},
 "designMode":function(d){return "!!-Design-!!"},
-"designModeHeader":function(d){return "!!-Design Mode-!!"},
 "dialogCancel":function(d){return "!!-Cancel-!!"},
 "dialogOK":function(d){return "!!-OK-!!"},
 "directionEastLetter":function(d){return "!!-E-!!"},
@@ -621,6 +620,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_setRed_param2_description":function(d){return "!!-The y position in pixels starting from the upper left corner of image.-!!"},
 "dropletBlock_setRed_param3":function(d){return "!!-redValue-!!"},
 "dropletBlock_setRed_param3_description":function(d){return "!!-The amount of red (from 0 to 255) to set in the pixel.-!!"},
+"dropletBlock_setScreen_description":function(d){return "!!-Sets the screen to the given screenId-!!"},
+"dropletBlock_setScreen_param0":function(d){return "!!-screenId-!!"},
 "dropletBlock_setSpriteEmotion_description":function(d){return "!!-Sets the actor mood-!!"},
 "dropletBlock_setSpritePosition_description":function(d){return "!!-Instantly moves an actor to the specified location.-!!"},
 "dropletBlock_setSpriteSpeed_description":function(d){return "!!-Sets the speed of an actor-!!"},

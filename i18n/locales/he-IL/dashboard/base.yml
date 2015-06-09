@@ -306,7 +306,9 @@ he:
     panel:
       answer_viewer: Answer Viewer
       student: תלמיד
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

@@ -42,8 +42,7 @@
     "definition_collapse": "false",
     "generate_function_pass_blocks": "true",
     "timeout_after_when_run": "false",
-    "custom_game_type": "Sam the Bat",
-    "maze_data": null
+    "custom_game_type": "Sam the Bat"
   }
 }]]></config>
   <blocks>

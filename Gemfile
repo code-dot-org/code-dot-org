@@ -131,7 +131,7 @@ gem 'aws-s3'
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
 gem 'user_agent_parser'
-gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rails content and static assets
+gem 'heroku_rails_deflate' # gzip rails content and static assets
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
@@ -143,3 +143,6 @@ gem 'aws-sdk', '~> 2'
 gem 'rubocop', require: false, group: [:development, :staging]
 # Reduce volume of production logs
 gem 'lograge'
+
+# Enforce SSL
+gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]

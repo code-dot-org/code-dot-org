@@ -1375,8 +1375,9 @@
       Course 4 Bee 1_instruction: 'Pčela ne može razaznati da li je ovo cvijet ili
         saće meda. Prvo provjeri da li je ovo cvijet ili saće meda, a zatim pokupi
         nektar samo ako je u pitanju cvijet. '
-      Course 4 Bee 2_instruction: Provjeri svaki objekat da vidiš da li je u pitanju
-        cvijet - ako jeste, pokupi nektar.
+      Course 4 Bee 2_instruction: |
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: Nepoznati objekat je ili cvijet ili saće meda. Upotrijebi
         ako/inače blok za sakupljanje nektra u pitanju cvijeta. Inače napravi med
         (jer je onda u pitanju saće meda).
@@ -2324,6 +2325,11 @@
         za kretanje ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći
         zmaja!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

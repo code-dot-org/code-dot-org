@@ -23,7 +23,7 @@ var common_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -177,7 +177,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuar"},
 "defaultTwitterText":function(d){return "Mira lo que hice"},
 "designMode":function(d){return "Diseño"},
-"designModeHeader":function(d){return "Modo de diseño"},
 "dialogCancel":function(d){return "Cancelar"},
 "dialogOK":function(d){return "OK"},
 "directionEastLetter":function(d){return "E"},
@@ -247,15 +246,15 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_createCanvas_param1_description":function(d){return "El ancho en píxeles del rectángulo."},
 "dropletBlock_createCanvas_param2":function(d){return "altura"},
 "dropletBlock_createCanvas_param2_description":function(d){return "La altura en píxeles del rectángulo."},
-"dropletBlock_createRecord_description":function(d){return "Usando almacenamiento de datos de tabla del laboratorio de la aplicación, crea un registro con un único id en nombre de la tabla proporcionada y llama a la callbackFunction cuando termine la acción."},
+"dropletBlock_createRecord_description":function(d){return "Usando almacenamiento de datos de tabla del App Lab, crea un registro con un id único en el nombre de la tabla proporcionado y llama a la callbackFunction cuando termine la acción."},
 "dropletBlock_createRecord_param0":function(d){return "nombreTabla"},
-"dropletBlock_createRecord_param0_description":function(d){return "El nombre de la tabla debe agregarse al registro. 'Nombre_de_tabla' y se crea si no existe."},
+"dropletBlock_createRecord_param0_description":function(d){return "El nombre de la tabla en la que debe agregarse el registro. La tabla 'nombreTabla' se crea si no existe."},
 "dropletBlock_createRecord_param1":function(d){return "registro"},
 "dropletBlock_createRecord_param2":function(d){return "funcionDeRetorno"},
-"dropletBlock_declareAssign_list_abde_description":function(d){return "Declare una variable y asigna una matriz con los valores iniciales dados"},
+"dropletBlock_declareAssign_list_abde_description":function(d){return "Declara una variable y le asigna una matriz con los valores iniciales proporcionados"},
 "dropletBlock_declareAssign_list_abde_signatureOverride":function(d){return "Declarar y asignar una matriz a una variable"},
-"dropletBlock_declareAssign_str_hello_world_description":function(d){return "Declare una variable y asignarle una cadena"},
-"dropletBlock_declareAssign_str_hello_world_signatureOverride":function(d){return "Declarar y asignar una cadena a una variable"},
+"dropletBlock_declareAssign_str_hello_world_description":function(d){return "Declara una variable y le asigna una cadena"},
+"dropletBlock_declareAssign_str_hello_world_signatureOverride":function(d){return "Declara y asigna una cadena a una variable"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Defina una variable y asignela a una secuencia, con su valor inicial  "},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "El nombre que utilizarás en el programa para hacer referencia a la variable"},

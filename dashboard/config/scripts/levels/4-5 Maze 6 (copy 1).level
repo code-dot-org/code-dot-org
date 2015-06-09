@@ -1,7 +1,7 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2014-11-05T21:04:23.217Z",
+  "created_at": "2014-11-05T21:04:23.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {

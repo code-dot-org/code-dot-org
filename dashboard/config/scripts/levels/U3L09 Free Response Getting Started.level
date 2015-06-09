@@ -1,0 +1,10 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-05-29T00:18:54.000Z",
+  "properties": {
+    "title": "Scene Design Part 1: Plan",
+    "markdown": "In computer science, when programmers break a big job into several smaller jobs, it's called decomposition.\n\nWhen programmers think about tasks in the general terms about what is going to be accomplished (not specifically about how every step will be accomplished), it's called abstraction. \n\nWhat non-CS task have you worked on lately that involved decomposition? Explain.\n\nWhat non-CS task have you worked on lately that involved abstraction? Explain.\n\n\n"
+  }
+}]]></config>
+</TextMatch>

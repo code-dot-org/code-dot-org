@@ -2,10 +2,7 @@ zh:
   data:
     instructions:
       2-3 _instruction: 紫色的花可能有 1 或 0 的花蜜。注意不要從一朵沒有任何花蜜的紫色花中採集花蜜。
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
+      2-3 Artist 1 new_instruction: 嗨，我是一個藝術家。您可以寫程式來讓我畫出任何東西。現在請您用一些程式積木，讓我沿著圖中的灰色線條畫畫。（每一條線的長度都是 100 像素）
       2-3 Artist 11_instruction: 幫這個八邊形畫上8個邊，每邊長100像素。你應該轉多少度？(提示：360除以8是多少?)
       2-3 Artist 12_instruction: '設定"重複次數"程式積木來製造一個圓作為眼球。如果每一次動作都向右轉1度，你需要重複多少次來完成這個圓?180?360?500?'
       2-3 Artist 2 new_instruction: '這房子有個半完成的牆。兩邊都是 100，但是半完成的牆是只有 50。完成這個牆。 '
@@ -1663,8 +1660,8 @@ zh:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2762,6 +2759,11 @@ zh:
         is saved as a project you can return to at any time.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you

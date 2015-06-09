@@ -1,6 +1,6 @@
 {
   "and": "और",
-  "backToPreviousLevel": "Back to previous level",
+  "backToPreviousLevel": "पिछले स्तर को वापस",
   "blocklyMessage": "ब्लॉक्ली",
   "blocks": "blocks",
   "booleanFalse": "गलत ",
@@ -22,7 +22,6 @@
   "continue": "जारी रखें",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Design",
-  "designModeHeader": "Design Mode",
   "dialogCancel": "रद्द करें",
   "dialogOK": "ठीक है",
   "directionEastLetter": "E",
