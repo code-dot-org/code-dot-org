@@ -1,3 +1,6 @@
+- authentication_required!
+- forbidden! unless dashboard_user[:admin]
+
 :ruby
   query = DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey')
   def fetch_workshop_info(workshop_id)
