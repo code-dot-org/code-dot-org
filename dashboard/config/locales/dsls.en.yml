@@ -186,8 +186,35 @@ en:
       Mixing Colors:
         description here: description here
         title: title
+      OPD-K5 About: {}
+      OPD-K5 CS: {}
+      OPD-K5 CS Tips: {}
+      OPD-K5 Congrats: {}
+      OPD-K5 Events: {}
+      OPD-K5 Loops: {}
+      OPD-K5 Participation: {}
+      OPD-K5 Program: {}
+      OPD-K5 Puzzles: {}
+      OPD-K5 Stage1Go: {}
+      OPD-K5 Stage2Go: {}
+      OPD-K5 Stage2Overview: {}
+      OPD-K5 Stage3Go: {}
+      OPD-K5 Stage3Start: {}
+      OPD-K5 Stage4Go: {}
+      OPD-K5 Stage4Start: {}
+      OPD-K5 Stage5Go: {}
+      OPD-K5 Stage5Start: {}
+      OPD-K5 Stage6Go: {}
+      OPD-K5 Stage6Start: {}
+      OPD-K5 Stage7Go: {}
+      OPD-K5 Stage7Start: {}
+      OPD-K5 Vocabulary: {}
+      OPD-K5 Welcome: {}
+      OPD-K5 What is CS: {}
+      OPD-K5 Why teach CS: {}
       Odometer:
         Odometer: Odometer
+      OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
       PDAlg Curriculum Overview:
@@ -471,6 +498,9 @@ en:
         Security and Hacking in the Real World: Security and Hacking in the Real World
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
+      'U2L3: IP DNS Video':
+        IP/DNS Video: IP/DNS Video
+        'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
@@ -1192,6 +1222,19 @@ en:
         Match the bit sending technology with the underlying system: Match the bit sending technology with the underlying system
         'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment: Sending Bits in the Real World'
         Radio Wave: Radio Wave
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        Cycle: Cycle
+        D: D
+        E: E
+        Edge: Edge
+        Graph: Graph
+        Graph Terminology: Graph Terminology
+        Look at the diagram below and then match the proper term with what each label is pointing to.: Look at the diagram below and then match the proper term with what each label is pointing to.
+        Node: Node
+        Weight: Weight
       U2L14 Assessment:
         Assessment: Assessment
         Caesar cipher: Caesar cipher
@@ -1211,17 +1254,15 @@ en:
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L3 Assessment:
+        A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
+        A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
+        A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
         IPv4 packet: IPv4 packet
-        IPv4 packet definition: IPv4 packet definition
         Internet Protocol: Internet Protocol
-        Internet protocol definition: Internet protocol definition
         'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
-        datagram: datagram
-        datagram definition: datagram definition
+        The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
         packet: packet
-        packet definition: packet definition
         protocol: protocol
-        protocol definition: protocol definition
       U3L05 Assessment1:
         Effort: Effort
         Programming Efficiency Question 1: Programming Efficiency Question 1
@@ -1332,6 +1373,19 @@ en:
         Where is Brendan from?: Where is Brendan from?
         blue: blue
         salt: salt
+      unique level name here:
+        A: A
+        B: B
+        C: C
+        Cycle: Cycle
+        D: D
+        E: E
+        Edge: Edge
+        Graph: Graph
+        Graph Terminology: Graph Terminology
+        Look at diagram below and then match the proper term with what each label is pointing to.: Look at diagram below and then match the proper term with what each label is pointing to.
+        Node: Node
+        Weight: Weight
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
@@ -2079,7 +2133,7 @@ en:
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
         How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
       U1L11 Assessment 2:
-        065 108 108 111 119: 065 108 108 111 119
+        041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
         065 112 112 108 101: 065 112 112 108 101
         097 108 108 111 119: 097 108 108 111 119
@@ -2141,6 +2195,24 @@ en:
         IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
         'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
         Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+      'U2L06 - MC: Which is an MST?':
+        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+        Which one is the MST?: Which one is the MST?
+      'U2L06- MC: what is an MST?':
+        Minimum Spanning Trees: Minimum Spanning Trees
+        The fewest number and smallest total distance of connections necessary to connect all points in a graph: The fewest number and smallest total distance of connections necessary to connect all points in a graph
+        ? The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice
+        : The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice
+        The shortest path between any two points for all points in the graph: The shortest path between any two points for all points in the graph
+        The shortest path from a particular point in the graph to another point in the graph: The shortest path from a particular point in the graph to another point in the graph
+        What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
+        Whether or not the graph represents a network: Whether or not the graph represents a network
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
@@ -2266,44 +2338,44 @@ en:
         The button, with its id, must appear in the code BEFORE the event handler: The button, with its id, must appear in the code BEFORE the event handler
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Make calculations: Make calculations
-        Make decisions: Make decisions
-        Remember things during play: Remember things during play
-        'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
-        store information permanently: store information permanently
-        track of time: track of time
-      U3L18 Controlling Memory and Program Flow 2:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Keep track of time: Keep track of time
         Make calculations: Make calculations
         Make decisions: Make decisions
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
         Store information permanently: Store information permanently
-        Track of time: Track of time
-      U3L18 Controlling Memory and Program Flow 3:
+      U3L18 Controlling Memory and Program Flow 2:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
-        Make calculations: Make calculations
-        Make decisions: Make decisions
-        Remember things during play: Remember things during play
-        'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. '
-        store information permanently: store information permanently
-        track of time: track of time
-      U3L18 Controlling Memory and Program Flow 4:
-        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Keep track of time: Keep track of time
         Make calculations: Make calculations
         Make decisions: Make decisions
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
-        store information permanently: store information permanently
-        track of time: track of time
+        Store information permanently: Store information permanently
+      U3L18 Controlling Memory and Program Flow 3:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Keep track of time: Keep track of time
+        Make calculations: Make calculations
+        Make decisions: Make decisions
+        Remember things during play: Remember things during play
+        'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. '
+        Store information permanently: Store information permanently
+      U3L18 Controlling Memory and Program Flow 4:
+        Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Keep track of time: Keep track of time
+        Make calculations: Make calculations
+        Make decisions: Make decisions
+        Remember things during play: Remember things during play
+        'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
+        Store information permanently: Store information permanently
       U3L18 Controlling Memory and Program Flow 5:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
+        Keep track of time: Keep track of time
         Make calculations: Make calculations
         Make decisions: Make decisions
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. '
-        store information permanently: store information permanently
-        track of time: track of time
+        Store information permanently: Store information permanently
       U3L19 - MC what are values of abc:
         Choose the best answer: Choose the best answer
         Code does not execute due to error: Code does not execute due to error
@@ -2821,12 +2893,12 @@ en:
       U1L12 Reflection Free Response:
         'Reflection: Data Storage': 'Reflection: Data Storage'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+      U1L13 - Assess Text Compression reverse process:
+        Act as the computer!: Act as the computer!
       U1L13 Assessment 1:
-        'Conclusion 1: Text Compression': 'Conclusion 1: Text Compression'
-        Consider your heuristic and those of your classmates.: Consider your heuristic and those of your classmates.
+        Why Compress?: Why Compress?
       U1L13 Assessment 2:
-        'Conclusion 2: Text Compression': 'Conclusion 2: Text Compression'
-        'Is there a way to know that a compressed piece of text is compressed the most possible? ': 'Is there a way to know that a compressed piece of text is compressed the most possible? '
+        What is good compression?: What is good compression?
       U1L13 Reflection 1:
         'Reflection: Text Compression': 'Reflection: Text Compression'
         What made compressing text hard to do?: What made compressing text hard to do?

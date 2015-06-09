@@ -1,6 +1,5 @@
 name 'U3L12 - Student Introduction 1'
 title 'Events Unplugged'
-css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN

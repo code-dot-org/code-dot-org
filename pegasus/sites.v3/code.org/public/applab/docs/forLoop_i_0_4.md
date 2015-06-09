@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -36,7 +37,7 @@ for (initialization; condition; final expression) {
 [/example]
 ____________________________________________________
 
-The most common usage of a for-loop in JavaScript is simply to use it as a "repeat loop" - a block of code that defines how many times you want some lines of code to repeat.  Unfortunately, JavaScript does not have a simple "repeat" construct, so you need to use a for-loop.  Here is a typical construct used to repeat in which the loop uses a variable to count up to 10 and then stops: 
+The most common usage of a for-loop in JavaScript is simply to use it as a "repeat loop" - a block of code that defines how many times you want some lines of code to repeat.  Unfortunately, JavaScript does not have a simple "repeat" construct, so you need to use a for-loop.  Here is a typical construct used to repeat in which the loop uses a variable to count up to 10 and then stops:
 
 <code>for(var i = 0; i < 10; i++)</code>
 
@@ -59,7 +60,7 @@ ____________________________________________________
 
 [example]
 
-The most common usage of a for-loop in javascript is simply to use it as a "repeat loop".  The loop below repeats the group of turtle moves 10 times.  You can change the 10 to any number. 
+The most common usage of a for-loop in javascript is simply to use it as a "repeat loop".  The loop below repeats the group of turtle moves 10 times.  You can change the 10 to any number.
 <pre>
 penDown();
 for(var i=0; i<10; i++){
@@ -136,3 +137,5 @@ for (initialization; condition; expression) {
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "We can use the \"string=?\" function to make conditionals that respond to text input. Here's a function called \"green shape\" that takes a string parameter for the shape. Complete the conditions so that the correct shape is drawn when the function is run with \"circle,\" \"triangle,\" \"square,\" or \"rectangle.\"",
+    "instructions": "We can use the string=? function to make conditionals that respond to text input. Here's a function called green shape that takes a string parameter for the shape. Complete the conditions so that the correct shape is drawn when the function is run with circle, triangle, square, or rectangle.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -25,7 +25,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "We can use the _string=?_ function to make conditionals that respond to text input. Here's a function called _green shape_ that takes a string parameter for the shape. Complete the conditions so that the correct shape is drawn when the function is run with _circle_, _triangle_, _square_, or _rectangle_."
   }
 }]]></config>
   <blocks>

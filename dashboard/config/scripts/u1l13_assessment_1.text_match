@@ -1,7 +1,7 @@
 name 'U1L13 Assessment 1'
-title 'Conclusion 1: Text Compression'
-content1 'Consider your heuristic and those of your classmates.'
+title 'Why Compress?'
+content1 ''
 
 markdown <<MARKDOWN
-Do you think it’s possible to describe (or write) a specific set of instructions that a person could follow that would always result in better text compression than your heuristic? Why or why not?
+Why do you want to compress anything? What’s the point?
 MARKDOWN

@@ -816,6 +816,7 @@ en:
           One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
           Public Key Crypto: Public Key Crypto
           ' Security and Hacking in the Real World': ' Security and Hacking in the Real World'
+          Security and Hacking in the Real World: Security and Hacking in the Real World
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -834,6 +835,7 @@ en:
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Free Play
         allthethings:
           Jigsaw: Jigsaw
           Maze: Maze
@@ -894,3 +896,26 @@ en:
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          Introduction to PD: Introduction to PD
+          K-5 Courses: K-5 Courses
+          Writing computer programs: Writing computer programs
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          'Programming Concept: Events': 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Next Steps
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing

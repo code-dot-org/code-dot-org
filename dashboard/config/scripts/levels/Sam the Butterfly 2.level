@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called \"safe-left?\" - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's inside the left boundary of the yard (x > -25). If your function works, Sam shouldn't be able to leave the yard from the left side.",
+    "instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called safe-left? - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's inside the left boundary of the yard (x > -25). If your function works, Sam shouldn't be able to leave the yard from the left side.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -44,7 +44,9 @@
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called _safe-left?_ - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's inside the left boundary of the yard (x > -25). If your function works, Sam shouldn't be able to leave the yard from the left side.",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

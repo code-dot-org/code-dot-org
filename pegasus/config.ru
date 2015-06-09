@@ -1,6 +1,6 @@
 require File.expand_path('../router', __FILE__)
 
-unless rack_env? :production
+if rack_env? :development
   require 'cdo/rack/https_redirect'
   use Rack::HTTPSRedirect
 end

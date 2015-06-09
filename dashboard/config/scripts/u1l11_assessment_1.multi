@@ -3,9 +3,9 @@ title 'Assessment: Sending Formatted Text'
 description ''
 question 'How many bits are required to store the number "150" in ASCII?'
 wrong '3 bits'
-right '8 bits'
+wrong '8 bits'
 wrong '15 bits'
-wrong '21 bits'
+right '21 bits'
 wrong '30 bits'
 
 
