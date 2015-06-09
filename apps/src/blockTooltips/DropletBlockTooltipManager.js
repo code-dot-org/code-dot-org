@@ -2,6 +2,7 @@
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -60,7 +61,17 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
 
     var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
       content: this.getTooltipHTML(funcName),
-      offsetX: tooltipOffsetX
+      offsetX: tooltipOffsetX,
+      functionReady: function (_, contents) {
+        var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+        // Important this binds to mouseDown/touchDown rather than click, needs to
+        // happen before `blur` which triggers the ace editor completer popup
+        // hide which in turn would hide the link and not show the docs.
+        dom.addClickTouchEvent(seeExamplesLink, function (event) {
+          this.dropletTooltipManager.showDocFor(funcName);
+          event.stopPropagation();
+        }.bind(this));
+      }.bind(this)
     });
 
     $(blockHoverDiv).tooltipster(configuration);

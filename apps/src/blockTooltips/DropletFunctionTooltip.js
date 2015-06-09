@@ -1,4 +1,5 @@
 var msg = require('../locale');
+var utils = require('../utils');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -117,7 +118,7 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
  * @returns {string} URL for full doc about this function
  */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
-  return 'http://code.org/applab/docs/' + this.functionName;
+  return '//' + utils.getPegasusHost() + '/applab/docs/' + this.functionName + '?embedded';
 };
 
 module.exports = DropletFunctionTooltip;
