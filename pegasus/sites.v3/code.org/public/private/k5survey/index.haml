@@ -52,8 +52,7 @@
     - data['satisfaction_s'] = satisfaction_s_to_i(data['satisfaction_s'])
     %tr
       %td
-        - if data['workshop_stopped_dt']
-          #{data['workshop_stopped_dt'].strftime('%m/%d/%Y')}
+        #{data['workshop_stopped_dt']}
       %td
         #{data['workshop_facilitator_email']}
       %td
