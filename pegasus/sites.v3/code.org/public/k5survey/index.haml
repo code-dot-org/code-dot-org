@@ -1,0 +1,88 @@
+:ruby
+  query = DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey')
+  def fetch_workshop_info(workshop_id)
+    workshop = DB[:forms].where(id:workshop_id.to_i).first
+    return {} unless workshop
+    JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data])).merge({'user_id'=>workshop[:user_id]})
+  end
+
+  def satisfaction_s_to_i(value)
+    case value
+    when 'extremely satisfied (would recommend to others)'
+      return 5
+    when 'moderately satisfied'
+      return 4
+    when 'neither satisfied nor dissatisfied'
+      return 3
+    when 'moderately dissatisfied'
+      return 2
+    when 'dissatisfied (would not recommend to others)'
+      return 1
+    end
+  end
+
+  def main()
+    keys = nil
+    DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey').each do |row|
+      data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))
+
+      workshop = fetch_workshop_info data['workshop_id_i']
+      data['workshop_stopped_dt'] = workshop['stopped_dt']
+      data['workshop_facilitator_email'] = workshop['user_id']
+      data['workshop_facilitator_name'] = workshop['name_s']
+
+      data['satisfaction_s'] = satisfaction_s_to_i(data['satisfaction_s'])
+      data['teacher_years_s'] = "'#{data['teacher_years_s']}"
+      data['send_materials_zip_s'] = "'#{data['send_materials_zip_s']}"
+
+      unless keys
+        keys = data.keys
+        puts CSV.generate_line keys
+      end
+      puts CSV.generate_line keys.map{|i| data[i]}
+    end
+  end
+
+%h1
+  YO!
+%h2
+  Hello
+
+%table
+  %th
+    workshop stopped dt
+  %th
+    workshop facilitator email
+  %th
+    workshop facilitator name
+  %th
+    Satisfaction
+  %th
+    teacher years
+  %th
+    Send materials
+
+
+  - query.each do |row|
+    - data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))
+    - workshop = fetch_workshop_info data['workshop_id_i']
+    - data['workshop_stopped_dt'] = workshop['stopped_dt']
+    - data['workshop_facilitator_email'] = workshop['user_id']
+    - data['workshop_facilitator_name'] = workshop['name_s']
+
+    - data['satisfaction_s'] = satisfaction_s_to_i(data['satisfaction_s'])
+    -#- data['teacher_years_s'] = data['teacher_years_s']
+    -#- data['send_materials_zip_s'] = data['send_materials_zip_s']
+    %tr
+      %td
+        #{data['workshop_stopped_dt']}
+      %td
+        #{data['workshop_facilitator_email']}
+      %td
+        #{data['workshop_facilitator_name']}
+      %td
+        #{data['satisfaction_s']}
+      %td
+        #{data['teacher_years_s']}
+      %td
+        #{data['send_materials_zip_s']}
