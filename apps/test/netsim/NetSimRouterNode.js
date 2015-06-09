@@ -14,6 +14,8 @@ var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 var _ = require('lodash');
 
+var utils = require('@cdo/apps/utils');
+
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
@@ -91,6 +93,19 @@ describe("NetSimRouterNode", function () {
    */
   var countRows = function (tableName) {
     return getRows(tableName).length;
+  };
+
+  /**
+   * Get the row most recently added to the specified table.
+   * @param {string} tableName
+   * @returns {Object}
+   */
+  var getLatestRow = function (tableName) {
+    var rows = getRows(tableName);
+    if (rows.length === 0) {
+      throw new Error("Now rows in " + tableName + ", unable to retrieve latest row.");
+    }
+    return rows[rows.length - 1];
   };
 
   /**
@@ -172,14 +187,42 @@ describe("NetSimRouterNode", function () {
    * Call tick() with an advanced time parameter on the argument until
    * no change is detected in the log table.
    * @param {NetSimRouterNode|NetSimLocalClientNode} tickable
+   * @param {number} [startTime] default 1
+   * @param {number} [timeStep] default 1
+   * @returns {number} Next tick time after stabilized
    */
-  var tickUntilLogsStabilize = function (tickable) {
-    var t = 1, lastLogCount;
+  var tickUntilLogsStabilize = function (tickable, startTime, timeStep) {
+    var t = utils.valueOr(startTime, 1);
+    timeStep = utils.valueOr(timeStep, 1);
+    var lastLogCount;
     do {
       lastLogCount = countRows('logTable');
       tickable.tick({time: t});
-      t += 1;
+      t += timeStep;
     } while (countRows('logTable') !== lastLogCount);
+    return t;
+  };
+
+  /**
+   * Build a fake message log that can be passed into
+   * NetSimLocalClientNode.initializeSimulation as the sent or received log,
+   * and can be used to sense whether a particular message would be passed
+   * to the sent/received log UI components.
+   * @returns {{log: Function, getLatest: Function}}
+   */
+  var makeFakeMessageLog = function () {
+    var archive = [];
+    return {
+      log: function (payload) {
+        archive.push(payload);
+      },
+      getLatest: function () {
+        if (archive.length === 0) {
+          throw new Error('Nothing has been logged.');
+        }
+        return archive[archive.length - 1];
+      }
+    };
   };
 
   /**
@@ -742,6 +785,33 @@ describe("NetSimRouterNode", function () {
       });
     });
 
+  });
+
+  it ("still simulates/routes after connect-disconnect-connect cycle", function () {
+    netsimGlobals.getLevelConfig().automaticReceive = true;
+    var time = 1;
+    var fakeReceivedLog = makeFakeMessageLog();
+
+    clientA.initializeSimulation(null, fakeReceivedLog);
+
+    var assertLoopbackWorks = function (forClient) {
+      // Construct a message with a timestamp payload, to ensure calls to
+      // this method don't conflict with one another.
+      var headers = encoder.makeBinaryHeaders({ toAddress: forClient.getAddress()});
+      var payload = encoder.concatenateBinary(headers, new Date().toISOString());
+      forClient.sendMessage(payload, function () {});
+      time = tickUntilLogsStabilize(forClient, time);
+      assertEqual(payload, fakeReceivedLog.getLatest());
+    };
+
+    clientA.connectToRouter(routerA);
+    assertLoopbackWorks(clientA);
+    clientA.disconnectRemote();
+    clientA.connectToRouter(routerA);
+    assertLoopbackWorks(clientA);
+    clientA.disconnectRemote();
+    clientA.connectToRouter(routerA);
+    assertLoopbackWorks(clientA);
   });
 
   describe("message routing rules", function () {
@@ -1574,15 +1644,6 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("routing to other routers", function () {
-    var getLatestLogRow = function () {
-      var logs = getRows('logTable');
-      if (logs.length === 0) {
-        throw new Error("No rows in log table, unbale to retrieve latest message.");
-      }
-
-      return logs[logs.length - 1];
-    };
-
     beforeEach(function () {
       setAddressFormat('4.4');
       netsimGlobals.getLevelConfig().connectedRouters = true;
@@ -1620,7 +1681,7 @@ describe("NetSimRouterNode", function () {
       //   out of local subnet
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
-      var logRow = getLatestLogRow();
+      var logRow = getLatestRow('logTable');
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.DROPPED, logRow.status);
       assertEqual(packetBinary, logRow.binary);
@@ -1655,7 +1716,7 @@ describe("NetSimRouterNode", function () {
       // t=1; router A picks up message, forwards to router B
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
-      logRow = getLatestLogRow();
+      logRow = getLatestRow('logTable');
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
       assertEqual(packetBinary, logRow.binary);
@@ -1666,7 +1727,7 @@ describe("NetSimRouterNode", function () {
       // t=2; router B picks up message, consumes it
       clientA.tick({time: 2000});
       assertTableSize(testShard, 'logTable', 2);
-      logRow = getLatestLogRow();
+      logRow = getLatestRow('logTable');
       assertEqual(routerB.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
       assertEqual(packetBinary, logRow.binary);
@@ -1701,7 +1762,7 @@ describe("NetSimRouterNode", function () {
       // t=1; router A picks up message, forwards to router B
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
-      logRow = getLatestLogRow();
+      logRow = getLatestRow('logTable');
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
       assertEqual(packetBinary, logRow.binary);
@@ -1712,7 +1773,7 @@ describe("NetSimRouterNode", function () {
       // t=2; router B picks up message, forwards to client B
       clientA.tick({time: 2000});
       assertTableSize(testShard, 'logTable', 2);
-      logRow = getLatestLogRow();
+      logRow = getLatestRow('logTable');
       assertEqual(routerB.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
       assertEqual(packetBinary, logRow.binary);

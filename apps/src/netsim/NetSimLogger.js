@@ -82,7 +82,7 @@ var singletonInstance;
  */
 NetSimLogger.getSingleton = function () {
   if (singletonInstance === undefined) {
-    singletonInstance = new NetSimLogger(console, LogLevel.VERBOSE);
+    singletonInstance = new NetSimLogger(console, LogLevel.WARN);
   }
   return singletonInstance;
 };

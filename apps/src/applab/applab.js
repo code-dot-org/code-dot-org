@@ -1089,6 +1089,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onPuzzleComplete = function() {
