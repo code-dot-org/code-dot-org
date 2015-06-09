@@ -8,24 +8,8 @@ class ScriptsControllerTest < ActionController::TestCase
     @not_admin = create(:user)
   end
 
-  # Some tests in scripts controller assume we're working within the 'levelbuilder' environment.
-  # Run 'set_levelbuiler_env' for a scripts controller test that requires levelbuilder functionality.
-  def set_levelbuilder_env
-    Rails.env = 'levelbuilder'
-    # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
-    ENV['FORCE_CUSTOM_LEVELS'] = '1'
-  end
-
-  teardown do
-    unset_levelbuilder_env
-  end
-
-  def unset_levelbuilder_env
-    Rails.env = "test"
-    ENV.delete 'FORCE_CUSTOM_LEVELS'
-  end
-
   test "should get index" do
+    set_env :levelbuilder
     sign_in(@admin)
     get :index
     assert_response :success
@@ -129,14 +113,14 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get edit if not signed in" do
-    set_levelbuilder_env
+    set_env :levelbuilder
     get :edit, id: 'course1'
 
     assert_redirected_to_sign_in
   end
 
   test "should not get edit if not admin" do
-    set_levelbuilder_env
+    set_env :levelbuilder
     sign_in @not_admin
     get :edit, id: 'course1'
 
@@ -144,7 +128,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "edit" do
-    set_levelbuilder_env
+    set_env :levelbuilder
     sign_in @admin
     script = Script.find_by_name('course1')
     get :edit, id: script.name
