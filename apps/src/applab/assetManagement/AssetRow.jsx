@@ -88,12 +88,6 @@ module.exports = React.createClass({
     }.bind(this));
   },
 
-  handleDoubleClick: function () {
-    if (this.props.onChoose) {
-      this.props.onChoose();
-    }
-  },
-
   render: function () {
     var actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
@@ -146,7 +140,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <tr className="assetRow" onDoubleClick={this.handleDoubleClick}>
+      <tr className="assetRow" onDoubleClick={this.props.onChoose}>
         <td width="80">
           <div className="assetThumbnail" style={{
             width: '60px',
