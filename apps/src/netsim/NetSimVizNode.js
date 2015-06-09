@@ -13,7 +13,7 @@
 require('../utils');
 var netsimConstants = require('./netsimConstants');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
+var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 
 var DnsMode = netsimConstants.DnsMode;
@@ -45,10 +45,16 @@ var TEXT_PADDING_Y = 10;
 /**
  * @param {NetSimNode} sourceNode
  * @constructor
- * @augments NetSimVizEntity
+ * @augments NetSimVizElement
  */
 var NetSimVizNode = module.exports = function (sourceNode) {
-  NetSimVizEntity.call(this, sourceNode);
+  NetSimVizElement.call(this);
+
+  /**
+   * ID of the simulation node that this viz element represents.
+   * @type {number}
+   */
+  this.id = sourceNode.entityID;
 
   /**
    * @type {string}
@@ -139,7 +145,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.configureFrom(sourceNode);
   this.render();
 };
-NetSimVizNode.inherits(NetSimVizEntity);
+NetSimVizNode.inherits(NetSimVizElement);
 
 /**
  *
@@ -222,6 +228,7 @@ NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
  */
 NetSimVizNode.prototype.kill = function () {
   NetSimVizNode.superPrototype.kill.call(this);
+  this.id = undefined;
   this.stopAllAnimation();
   this.tweenToScale(0, 200, tweens.easeInQuad);
 };
