@@ -15,10 +15,14 @@
     - heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:param2_s]}
     - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
     - heroes_stat = heroes.select {|hero| hero[:param2_s] == "stat"}
-    - heroes_arranged = heroes_stat.zip(heroes_nonceleb.zip(heroes_celeb).flatten).flatten.compact.first(6)
+    - if heroes_stat.length > 0
+      - heroes_arranged = heroes_stat.zip(heroes_nonceleb.zip(heroes_celeb).flatten).flatten.compact.first(6)
+    - else
+      - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
     - heroes_celeba = heroes.select {|hero| hero[:param2_s] == "celeba"}
-    - heroes_celeba.shuffle!
-    - heroes_arranged.unshift(heroes_celeba.first)
+    - if heroes_celeba.length > 0
+      - heroes_celeba.shuffle!
+      - heroes_arranged.unshift(heroes_celeba.first)
     - hero_display_time = 13 * 1000
 
     -# handy debug output:
