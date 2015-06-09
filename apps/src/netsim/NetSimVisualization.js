@@ -16,11 +16,14 @@ var _ = utils.getLodash();
 var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimFakeVizWire = require('./NetSimFakeVizWire');
 var NetSimWire = require('./NetSimWire');
+var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizWire = require('./NetSimVizWire');
 var netsimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
-var NodeType = require('./netsimConstants').NodeType;
+var netsimConstants = require('./netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+var NodeType = netsimConstants.NodeType;
 
 /**
  * Top-level controller for the network visualization.
@@ -86,6 +89,14 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
    * @type {number}
    */
   this.visualizationHeight = 300;
+
+  /**
+   * Reference to visualized auto-DNS node, a fake node (not mapped to the
+   * simulation in a normal way) that also lives in our elements_ collection.
+   * @type {NetSimVizAutoDnsNode}
+   * @private
+   */
+  this.autoDnsNode_ = null;
 
   /**
    * Event registration information
@@ -726,6 +737,13 @@ NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function 
  * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+  // Show/hide the auto-DNS node according to the new state
+  if (newDnsMode === DnsMode.AUTOMATIC) {
+    this.makeAutoDnsNode();
+  } else {
+    this.destroyAutoDnsNode();
+  }
+
   // Tell all nodes about the new DNS mode, so they can decide whether to
   // show or hide their address.
   this.elements_.forEach(function (vizElement) {
@@ -733,6 +751,20 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
       vizElement.setDnsMode(newDnsMode);
     }
   });
+};
+
+NetSimVisualization.prototype.makeAutoDnsNode = function () {
+  if (!this.autoDnsNode_) {
+    this.autoDnsNode_ = new NetSimVizAutoDnsNode();
+    this.addVizElement_(this.autoDnsNode_);
+  }
+};
+
+NetSimVisualization.prototype.destroyAutoDnsNode = function () {
+  if (this.autoDnsNode_) {
+    this.autoDnsNode_.kill();
+    this.autoDnsNode_ = null;
+  }
 };
 
 /**

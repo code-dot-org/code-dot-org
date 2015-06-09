@@ -2,6 +2,7 @@
 /* global describe */
 /* global beforeEach */
 /* global it */
+/* global $ */
 
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');

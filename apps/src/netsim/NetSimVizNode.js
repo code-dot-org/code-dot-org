@@ -128,8 +128,6 @@ var NetSimVizNode = module.exports = function () {
   // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
-
-  this.render();
 };
 NetSimVizNode.inherits(NetSimVizElement);
 
