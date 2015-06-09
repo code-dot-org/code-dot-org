@@ -1,4 +1,5 @@
 import cookie;
+import header;
 <%
   def canonical_hostname(domain)
     return "console.#{domain}" if node.name == 'production-console'
@@ -352,7 +353,7 @@ sub vcl_recv
   <% unless rack_env?(:production) %>
   # Redirect http to https if 'https_ok' cookie is set
   if(req.http.X-Forwarded-Proto !~ "(?i)https" && req.http.Cookie) {
-    cookie.parse(req.http.cookie);
+    cookie.parse(req.http.Cookie);
     if(cookie.get("https_ok") == "1") {
       error 751 "https://" + req.http.host + req.url;
     }
@@ -453,7 +454,7 @@ end
   # Varnish cache temporarily. The session cookie allows all authenticated users
   # to pass through as long as they're logged in.
   if (req.http.Cookie) {
-    cookie.parse(req.http.cookie);
+    cookie.parse(req.http.Cookie);
     if (req.url ~ "^/volunteers") {
       cookie.filter_except("_fe_session,hour_of_code,NO_CACHE");
     } else if (req.url ~ "^/auth") {
@@ -479,7 +480,7 @@ end
     } else {
       cookie.filter_except("NO_CACHE");
     }
-    set req.http.cookie = cookie.get_string();
+    set req.http.Cookie = cookie.get_string();
     if (req.http.Cookie == "") {
       # If there are no remaining cookies, remove the cookie header. If there
       # aren't any cookie headers, Varnish's default behavior will be to cache
@@ -567,6 +568,13 @@ sub vcl_fetch {
 
 # Set a header to track a cache HIT/MISS.
 sub vcl_deliver {
+  if (req.http.X-Forwarded-Proto ~ "(?i)https") {
+    set resp.http.Strict-Transport-Security = "max-age=3600";
+    cookie.parse(req.http.Cookie);
+    if(cookie.get("https_ok") != "1") {
+      header.append(resp.http.Set-Cookie,"https_ok=1")
+    }
+  }
 
   if (obj.hits > 0) {
     set resp.http.X-Varnish-Cache = "HIT";
@@ -576,6 +584,22 @@ sub vcl_deliver {
   }
 
   set resp.http.X-Varnish-Node = "<%= node.name %>";
+}
+
+sub vcl_hash {
+  hash_data(req.url);
+  if (req.http.host) {
+    hash_data(req.http.host);
+  } else {
+    hash_data(server.ip);
+  }
+
+  # Include scheme in hash. Once we always redirect to HTTPS, this can be removed
+  if (req.http.X-Forwarded-Proto) {
+    hash_data(req.http.X-Forwarded-Proto);
+  }
+
+  return (hash);
 }
 
 # In the event of an error, show friendlier messages.
