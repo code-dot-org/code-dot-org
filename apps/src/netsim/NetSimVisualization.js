@@ -222,7 +222,7 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
  * Find a particular VizEntity in the visualization, by type and ID.
  * @param {function} entityType - constructor of entity we're looking for
  * @param {number} entityID - ID, with corresponds to NetSimEntity.entityID
- * @returns {NetSimVizEntity} or undefined if not found
+ * @returns {NetSimVizElement} or undefined if not found
  */
 NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
   return _.find(this.elements_, function (entity) {
@@ -539,7 +539,7 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
  * finds the current entity's unvisited connections,
  * pushes those connections onto the stack.
  * @param {NetSimVizNode|NetSimVizWire} vizEntity
- * @returns {Array.<NetSimVizEntity>}
+ * @returns {Array.<NetSimVizElement>}
  * @private
  */
 NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {

@@ -12,7 +12,7 @@
 
 require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
+var NetSimVizElement = require('./NetSimVizElement');
 var NetSimVizNode = require('./NetSimVizNode');
 var tweens = require('./tweens');
 var dataConverters = require('./dataConverters');
@@ -36,13 +36,18 @@ var TEXT_FINAL_VERTICAL_OFFSET = -10;
  * @param {function} getEntityByID - Allows this wire to search
  *        for other entities in the simulation
  * @constructor
- * @augments NetSimVizEntity
+ * @augments NetSimVizElement
  */
 var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
-  NetSimVizEntity.call(this, sourceWire);
+  NetSimVizElement.call(this);
 
   var root = this.getRoot();
   root.addClass('viz-wire');
+
+  /**
+   * @type {number}
+   */
+  this.id = sourceWire.entityID;
 
   /**
    * @type {jQuery} wrapped around a SVGPathElement
@@ -102,7 +107,7 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
   this.configureFrom(sourceWire);
   this.render();
 };
-NetSimVizWire.inherits(NetSimVizEntity);
+NetSimVizWire.inherits(NetSimVizElement);
 
 /**
  * Configuring a wire means looking up the viz nodes that will be its endpoints.
@@ -163,6 +168,7 @@ NetSimVizWire.prototype.hide = function () {
  */
 NetSimVizWire.prototype.kill = function () {
   NetSimVizWire.superPrototype.kill.call(this);
+  this.id = undefined;
   this.localVizNode = null;
   this.remoteVizNode = null;
 };
