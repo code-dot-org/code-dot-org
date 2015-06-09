@@ -215,6 +215,12 @@ NetSimVizNode.prototype.tick = function (clock) {
  */
 NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
+
+  // Don't add tweens if this node has been killed
+  if (this.isDying() || this.isDead()) {
+    return;
+  }
+
   this.tweens_.length = 0;
   if (isForeground) {
     this.tweenToScale(1, 600, tweens.easeOutElastic);
