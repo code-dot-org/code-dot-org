@@ -355,7 +355,7 @@ sub vcl_recv
   }
   <% unless rack_env?(:production) %>
   # Filter https_ok cookie from incoming request
-  if (cookie.isset("https_ok") {
+  if (cookie.isset("https_ok")) {
     cookie.delete("https_ok");
     set req.http.X-Https-Ok = "1";
   }
