@@ -473,7 +473,8 @@ end
         req.url ~ "^/manage-professional-development-workshops" ||
         req.url ~ "^/professional-development-workshop-surveys/" ||
         req.url ~ "^/ops-dashboard" ||
-        req.url ~ "^/poste"
+        req.url ~ "^/poste" ||
+        req.url ~ "^/k5survey"
       ) {
       cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,hour_of_code,NO_CACHE");
     } else {
