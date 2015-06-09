@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a similar function \"red shape\" with an additional parameter for size. Complete the conditionals so the correct image is drawn for \"circle,\" \"triangle,\" and \"star.\"",
+    "instructions": "Here's a similar function red shape with an additional parameter for size. Complete the conditionals so the correct image is drawn for circle, triangle, and star.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "min_workspace_height": "1500",
@@ -25,7 +25,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Here's a similar function _red shape_ with an additional parameter for size. Complete the conditionals so the correct image is drawn for _circle_, _triangle_, and _star_."
   }
 }]]></config>
   <blocks>

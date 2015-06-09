@@ -1,0 +1,14 @@
+name 'U1L13 - Assess Text Compression reverse process'
+title 'Act as the computer!'
+
+markdown <<MARKDOWN
+Below is a piece of text that has already been compressed, and shows some of the information about it. Prove you know how this works by reconstructing the original text from the dictionary and compressed version.
+
+![](https://images.code.org/ff0b1798def28b61dd1a623ca13f777e-image-1433782834840.png)
+
+**In the text box below enter two things:**
+
+1. The original text you've reconstructed from the compressed version above.
+2. The approximate amount of compression.
+    * TIP: count the number characters/bytes in the original (including spaces), compare with the total number bytes in the compressed version and approximate the % of compression.
+MARKDOWN

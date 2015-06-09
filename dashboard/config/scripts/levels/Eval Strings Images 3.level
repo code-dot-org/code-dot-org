@@ -22,7 +22,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Some functions can only take a specific set of Strings, such as the second argument of this _circle_ function, which controls its style. Draw this orange outline circle using the special String block with a dropdown to make sure you only use valid styles.",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
