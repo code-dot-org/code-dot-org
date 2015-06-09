@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -64,15 +65,15 @@ var beeImageURL = "http://studio.code.org/blockly/media/skins/bee/static_avatar.
 // create an image element with the dog character
 image(imageId, dogImageURL);
 
-// create a button element 
+// create a button element
 button(buttonId, "Change Character");
 
 // add a click event to the button to change the character
 onEvent(buttonId, "click", function(event) {
-  
+
   // get the current character image URL
   var currentCharacterURL = getImageURL(imageId);
-  
+
   // determine which character is currently displayed on the screen
   // check if the current character URL is the same URL as the dog character's
   if (currentCharacterURL == dogImageURL) {
@@ -131,3 +132,5 @@ Returns false if the URL assignment was not successful
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

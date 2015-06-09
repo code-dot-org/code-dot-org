@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -25,7 +26,7 @@ The speed can also be set by the slider bar below the blue reset button.
 
 [/short_description]
 
-**Note**: Be sure to [show()](/applab/docs/show)  the turtle to see its movement.  
+**Note**: Be sure to [show()](/applab/docs/show)  the turtle to see its movement.
 **Note**: A speed of 100 will be too fast for the human eye to see the movement on screen.
 
 [/description]
@@ -112,3 +113,5 @@ No return value. Outputs to the display only.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

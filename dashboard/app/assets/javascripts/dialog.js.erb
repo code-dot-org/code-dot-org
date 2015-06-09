@@ -1,12 +1,49 @@
 /**
+ * Adjust the maximum size of the popup's inner scroll area so that the whole popup
+ * will fit within the browser viewport.
+ * @param {string} scrollableElementSelector - jQuery selector string for scrollable inner
+ * element
+ */
+function sizeDialogToViewport(scrollableElementSelector) {
+  var viewportHeight = $(window).height();
+  var modalBody = $('.modal-body').filter(':visible');
+  var modalDialog = $('.auto-resize-scrollable').filter(':visible');
+  var scrollableElement = modalDialog.find(scrollableElementSelector);
+
+  var popupTop =
+    parseInt(modalDialog.css('top'), 10) +
+    parseInt(modalBody.css('padding-bottom'), 10);
+
+  var scrollableAreaTop = scrollableElement.offset().top;
+  var modalDialogTop = modalDialog.offset().top;
+  var headerHeight = scrollableAreaTop - modalDialogTop;
+
+  var popupBottom =
+    parseInt(modalDialog.css('margin-bottom'), 10) +
+    parseInt(modalBody.css('padding-bottom'), 10) +
+    parseInt(modalBody.css('margin-bottom'), 10);
+  var scrollableElementHeight = viewportHeight - (popupTop + popupBottom + headerHeight);
+  if (scrollableElement.is('iframe')) {
+    scrollableElement.css('height', scrollableElementHeight);
+  } else {
+    scrollableElement.css('max-height', scrollableElementHeight);
+  }
+}
+
+/**
  * Create a custom modal dialog box which takes a configurable options object.
  * Currently supported options include:
  * 'header' and 'body': DOM elements
  * 'redirect': redirect page after the dialog is dismissed (default: no redirect)
  * 'id': id of the dialog (default: none)
- * 'close': whether to show a close link (default: true)
+ * 'close': whether to show a close 'x' button (default: true)
+ * 'autoResizeScrollableElement': if selected, makes the specified selector's
+ *           element scrollable and auto-resizes dialog to window's dimensions
  */
 function Dialog(options) {
+  // Cache visibility to avoid expensive lookup during debounced window resizing
+  this.isVisible = true;
+
   var body = options.body;
   var header = options.header;
 
@@ -16,12 +53,14 @@ function Dialog(options) {
       .addClass('x-close')
       .attr('data-dismiss', 'modal');
   this.div = $('<div tabindex="-1"/>').addClass('modal');
+
   this.div.addClass('dash_modal');
   if (options.id) {
     this.div.attr('id', options.id);
   }
   var modalBody = $('<div/>').addClass('modal-body');
   modalBody.addClass('dash_modal_body');
+
   if (header) {
     var modalHeader = $('<div/>').addClass('modal-header')
         .append(header);
@@ -32,16 +71,41 @@ function Dialog(options) {
   } else if (close) {
     modalBody.append(closeLink);
   }
+
   modalBody.append(body);
   this.div.append(modalBody).appendTo($(document.body));
+
+  var resizeCallback;
+  if (options.autoResizeScrollableElement) {
+    this.div.addClass('auto-resize-scrollable');
+    var scrollableElement = this.div.find(options.autoResizeScrollableElement);
+    scrollableElement.css('overflow-y', 'auto');
+
+    resizeCallback = debounce(function () {
+      if (!this.isVisible) {
+        return;
+      }
+      sizeDialogToViewport(options.autoResizeScrollableElement);
+    }.bind(this), 250);
+
+    this.div.find('img').load(resizeCallback);
+    $(window).on('resize', resizeCallback);
+    resizeCallback();
+  }
 
   // When the dialog is hidden, unhook the keydown event handler.
   // If onHidden option is passed in, call that as well.
   // If redirect option is passed in, redirect the page.
   // After that, close the dialog.
+  var thisDialog = this;
   $(this.div).on(
       'hidden.bs.modal',
       function() {
+        if (resizeCallback) {
+          thisDialog.isVisible = false;
+          $(window).off('resize', resizeCallback);
+        }
+
         if (options.onKeydown) {
           $(this.div).off('keydown', options.onKeydown);
         }
@@ -91,6 +155,8 @@ Dialog.prototype.show = function(options) {
     // will close the modal. A value of 'static' will not close the modal.
     backdrop: options.backdrop || true
   });
+
+  this.isVisible = true;
 
   // Store hideOptions for later use when the dialog is dismissed, inside the div itself.
   if (options.hideOptions) {
@@ -154,5 +220,5 @@ Dialog.prototype.processHideOptions = function(options) {
     $(this).modal('hide');
   });
 
-}
+};
 

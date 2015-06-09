@@ -1116,11 +1116,14 @@ FeedbackUtils.prototype.createModalDialog = function(options, icon) {
     }
   };
 
+  var elementToScroll = options.scrollContent ? '.modal-content' : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
-    id: options.id
+    autoResizeScrollableElement: elementToScroll,
+    id: options.id,
+    header: options.header
   });
 };
 

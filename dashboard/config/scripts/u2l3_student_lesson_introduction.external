@@ -10,20 +10,19 @@ markdown <<MARKDOWN
 A communication protocol is encoded in binary. The protocol must be efficient in the number of bits required and flexible enough to handle various situations. An addressing protocol typically includes the sender and recipient’s identifying information and perhaps the size of the message and the date sent. IP addresses must be of a fixed length.
 
 # Vocabulary
-* protocol: NEED DEFINITIONS HERE
-* datagram:
-* packet:
-* Internet Protocol:   
+* **Protocol:** A well-known set of rules and standards used to communicate between machines
+* **Packet:** A message of data that includes information to route the message from the source to the destination computer. Also known as a datagram 
+* **Internet Protocol:** The communication protocol that dictates of the specific format and structure of a packet in order for it to be routed properly on the internet   
 
 # Lesson
 
-* Invent an efficient and flexible addressing protocol for the BattleShip Internet Simulator.
-* Learn about the requirements of an internet addressing protocol.
-
+* Learn about the requirements of an internet addressing protocol
+* Invent an efficient and flexible addressing protocol for the battleship
 
 # Resources
 
-* Activity: <a href=" https://docs.google.com/document/d/1HKgmnXaqSBpExpxorcMpIrUS-JU4tGp5lH4jjjVGGcs” target="_blank"> Rapid Reseach </a>
+* Worksheet: <a href="https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing” target="_blank">IP/DNS video questions</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1sFmHWCY-jSKs40jvTnfkbjO61xZEZp_UyTolmGt_zjw/edit” target="_blank">Inventing a protocol for Battleship</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

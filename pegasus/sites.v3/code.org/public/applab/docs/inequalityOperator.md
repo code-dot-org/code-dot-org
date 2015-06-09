@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -136,7 +137,7 @@ True or false.
 [tips]
 
 ### Tips
-- In general, it is easier to think about equivalence testing than not equivalent testing.  Some programmers therefore prefer to avoid negative logic  and structure around equivalence tests and then use the else clause of the if statement to handle when the values aren't equivalent.  
+- In general, it is easier to think about equivalence testing than not equivalent testing.  Some programmers therefore prefer to avoid negative logic  and structure around equivalence tests and then use the else clause of the if statement to handle when the values aren't equivalent.
 
 
 [/tips]
@@ -146,3 +147,5 @@ True or false.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -270,6 +270,12 @@ class Documents < Sinatra::Base
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
+    if params.has_key?('embedded') && @locals[:header]['embedded_layout']
+      @locals[:header]['layout'] = @locals[:header]['embedded_layout']
+      @locals[:header]['theme'] ||= 'none'
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+    end
+
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
