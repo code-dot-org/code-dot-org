@@ -33,12 +33,12 @@ var TEXT_FINAL_VERTICAL_OFFSET = -10;
 /**
  *
  * @param sourceWire
- * @param {function} getEntityByID - Allows this wire to search
+ * @param {function} getElementByEntityID - Allows this wire to search
  *        for other entities in the simulation
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
+var NetSimVizWire = module.exports = function (sourceWire, getElementByEntityID) {
   NetSimVizElement.call(this);
 
   var root = this.getRoot();
@@ -95,11 +95,11 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
   this.encodings_ = [];
 
   /**
-   * Bound getEntityByID method from vizualization controller.
+   * Bound getElementByEntityID method from vizualization controller.
    * @type {Function}
    * @private
    */
-  this.getEntityByID_ = getEntityByID;
+  this.getElementByEntityID_ = getElementByEntityID;
 
   this.localVizNode = null;
   this.remoteVizNode = null;
@@ -114,8 +114,8 @@ NetSimVizWire.inherits(NetSimVizElement);
  * @param {NetSimWire} sourceWire
  */
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
-  this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
+  this.localVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.localNodeID);
+  this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.remoteNodeID);
 
   if (this.localVizNode) {
     this.localVizNode.setAddress(sourceWire.localAddress);

@@ -22,12 +22,12 @@ var NetSimVizNode = require('./NetSimVizNode');
  * are all connected to one another.
  *
  * @param {{nodeA:{number}, nodeB:{number}}} endpoints
- * @param {function} getEntityByID - Allows this wire to search
+ * @param {function} getElementByEntityID - Allows this wire to search
  *        for entities in the simulation
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimFakeVizWire = module.exports = function (endpoints, getEntityByID) {
+var NetSimFakeVizWire = module.exports = function (endpoints, getElementByEntityID) {
   NetSimVizElement.call(this);
 
   var root = this.getRoot();
@@ -41,11 +41,11 @@ var NetSimFakeVizWire = module.exports = function (endpoints, getEntityByID) {
       .appendTo(root);
 
   /**
-   * Bound getEntityByID method from vizualization controller.
+   * Bound getElementByEntityID method from vizualization controller.
    * @type {Function}
    * @private
    */
-  this.getEntityByID_ = getEntityByID;
+  this.getElementByEntityID_ = getElementByEntityID;
 
   this.localVizNode = null;
   this.remoteVizNode = null;
@@ -60,8 +60,8 @@ NetSimFakeVizWire.inherits(NetSimVizElement);
  * @param {{nodeA:{number}, nodeB:{number}}} endpoints
  */
 NetSimFakeVizWire.prototype.configureFrom = function (endpoints) {
-  this.localVizNode = this.getEntityByID_(NetSimVizNode, endpoints.nodeA);
-  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, endpoints.nodeB);
+  this.localVizNode = this.getElementByEntityID_(NetSimVizNode, endpoints.nodeA);
+  this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, endpoints.nodeB);
 };
 
 /**
