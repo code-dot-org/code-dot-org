@@ -1,5 +1,5 @@
 var React = require('react');
-var designMode = require('../designMode');
+var showAssetManager = require('../assetManagement/show.js');
 
 var PropertyRow = React.createClass({
   propTypes: {
@@ -24,7 +24,7 @@ var PropertyRow = React.createClass({
     //
     // However today the `createModalDialog` function and `Dialog` component
     // are intertwined with `StudioApp` which is why we have this direct call.
-    designMode.showAssetManager(this.changeImage, 'image');
+    showAssetManager(this.changeImage, 'image');
   },
 
   changeImage: function (filename) {
@@ -40,9 +40,10 @@ var PropertyRow = React.createClass({
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
-          <button onClick={this.handleButtonClick}>
-            <i className='fa fa-picture-o'></i>
-          </button>
+          &nbsp;
+          <a onClick={this.handleButtonClick}>
+            Choose...
+          </a>
         </td>
       </tr>
     );

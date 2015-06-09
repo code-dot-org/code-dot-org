@@ -68,9 +68,9 @@ exports.addClickTouchEvent = function(element, handler) {
 var TOUCH_MAP = {
   //  Incomplete list, add as needed.
   click: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
   },
   mousedown: {
     standard: 'touchstart',

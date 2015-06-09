@@ -35,8 +35,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "timeout_failure_tick": "100",
-    "maze_data": null
+    "timeout_failure_tick": "100"
   }
 }]]></config>
   <blocks>

@@ -35,22 +35,23 @@ describe('Level tests', function() {
 
   before(function(done) {
     this.timeout(15000);
+
+    window.jQuery = $;
+    window.$ = $;
+
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('http://localhost:8001/jsinterpreter/acorn_interpreter.js')
-    .then(function () { return loadSource('http://localhost:8001/requirejs/full/require.js'); })
-    .then(function () { return loadSource('http://localhost:8001/ace/src-noconflict/ace.js'); })
-    .then(function () { return loadSource('http://localhost:8001/ace/src-noconflict/mode-javascript.js'); })
-    .then(function () { return loadSource('http://localhost:8001/ace/src-noconflict/ext-language_tools.js'); })
-    .then(function () { return loadSource('http://localhost:8001/droplet/droplet-full.js'); })
-    .then(function () { return loadSource('http://localhost:8001/tooltipster/jquery.tooltipster.js'); })
+    loadSource('http://localhost:8001/apps/lib/jsinterpreter/acorn_interpreter.js')
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/requirejs/full/require.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ace.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/mode-javascript.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ext-language_tools.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/droplet/droplet-full.js'); })
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/tooltipster/jquery.tooltipster.js'); })
     .then(function () {
       assert(window.requirejs);
       done();
     });
-
-    window.jQuery = $;
-    window.$ = $;
   });
 
   beforeEach(function () {
@@ -69,6 +70,7 @@ describe('Level tests', function() {
     if (window.Studio) {
       var Projectile = require('@cdo/apps/studio/projectile');
       Projectile.__resetIds();
+      Studio.JSInterpreter = undefined;
     }
   });
 

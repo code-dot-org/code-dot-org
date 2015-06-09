@@ -276,16 +276,31 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 
 function populateGlobalFunctions(interpreter, blocks, scope) {
   for (var i = 0; i < blocks.length; i++) {
-    var gf = blocks[i];
-    if (gf.parent) {
-      var func = gf.parent[gf.func];
+    var block = blocks[i];
+    if (block.parent) {
+      var funcScope = scope;
+      var funcName = block.func;
+      var funcComponents = funcName.split('.');
+      if (funcComponents.length === 2) {
+        // Special accommodation for Object.function syntax (2 components only):
+        var objName = funcComponents[0];
+        // Find or create global object named 'objName' and make it the scope:
+        funcScope = interpreter.getProperty(scope, objName);
+        if (interpreter.UNDEFINED === funcScope) {
+          funcScope = interpreter.createObject(interpreter.OBJECT);
+          interpreter.setProperty(scope, objName, funcScope);
+        }
+        funcName = funcComponents[1];
+      }
+      var func = block.parent[funcName];
       var wrapper = exports.makeNativeMemberFunction({
           interpreter: interpreter,
           nativeFunc: func,
-          nativeParentObj: gf.parent,
+          nativeParentObj: block.parent,
+          dontMarshal: block.dontMarshal
       });
-      interpreter.setProperty(scope,
-                              gf.func,
+      interpreter.setProperty(funcScope,
+                              funcName,
                               interpreter.createNativeFunction(wrapper));
     }
   }
@@ -413,7 +428,7 @@ exports.aceCalculateCumulativeLength = function (session) {
 // Usage
 // var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
 // tries to find 2512th character lies in which row.
-function aceFindRow(cumulativeLength, rows, rowe, pos) {
+exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
   if (rows > rowe) {
     return null;
   }
@@ -424,24 +439,50 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   var mid = Math.floor((rows + rowe) / 2);
 
   if (pos < cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, rows, mid, pos);
+    return exports.aceFindRow(cumulativeLength, rows, mid, pos);
   } else if(pos > cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, mid, rowe, pos);
+    return exports.aceFindRow(cumulativeLength, mid, rowe, pos);
   }
   return mid;
-}
+};
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * This function simply highlights one spot, not a range. It is typically used
+ * to highlight where an error has occurred.
+ */
+exports.selectEditorRowCol = function (editor, row, col) {
+  if (editor.currentlyUsingBlocks) {
+    var style = {color: '#FFFF22'};
+    editor.clearLineMarks();
+    editor.markLine(row, style);
+  } else {
+    var selection = editor.aceEditor.getSelection();
+    var range = selection.getRange();
+
+    range.start.row = row;
+    range.start.column = col;
+    range.end.row = row;
+    range.end.column = col + 1;
+
+    // setting with the backwards parameter set to true - this prevents horizontal
+    // scrolling to the right
+    selection.setSelectionRange(range, true);
+  }
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
-  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
   range.start.column = start - cumulativeLength[range.start.row];
-  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
   range.end.column = end - cumulativeLength[range.end.row];
 
   // calling with the backwards parameter set to true - this prevents horizontal
@@ -472,7 +513,7 @@ exports.selectCurrentCode = function (interpreter,
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start >= 0 && start < userCodeLength && end <= userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      userCodeRow = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
@@ -499,59 +540,6 @@ exports.selectCurrentCode = function (interpreter,
       editor.clearLineMarks();
     } else {
       editor.aceEditor.getSelection().clearSelection();
-    }
-  }
-  return userCodeRow;
-};
-
-/**
- * Finds the current line of code in droplet/ace editor.
- *
- * Returns the line of code where the interpreter is at. If it is outside
- * of the userCode area, the return value is -1
- *
- * NOTE: first 4 params match the selectCurrentCode function by design.
- */
-exports.getUserCodeLine = function (interpreter, cumulativeLength,
-                                    userCodeStartOffset, userCodeLength) {
-  var userCodeRow = -1;
-  if (interpreter.stateStack[0]) {
-    var node = interpreter.stateStack[0].node;
-    // Adjust start/end by userCodeStartOffset since the code running
-    // has been expanded vs. what the user sees in the editor window:
-    var start = node.start - userCodeStartOffset;
-    var end = node.end - userCodeStartOffset;
-
-    // Only return a valid userCodeRow if the node being executed is inside the
-    // user's code (not inside code we inserted before or after their code that
-    // is not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-    }
-  }
-  return userCodeRow;
-};
-
-/**
- * Finds the current line of code in droplet/ace editor. Walks up the stack if
- * not currently in the user code area.
- */
-exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
-                                           userCodeStartOffset, userCodeLength) {
-  var userCodeRow = -1;
-  for (var i = 0; i < interpreter.stateStack.length; i++) {
-    var node = interpreter.stateStack[i].node;
-    // Adjust start/end by userCodeStartOffset since the code running
-    // has been expanded vs. what the user sees in the editor window:
-    var start = node.start - userCodeStartOffset;
-    var end = node.end - userCodeStartOffset;
-
-    // Only return a valid userCodeRow if the node being executed is inside the
-    // user's code (not inside code we inserted before or after their code that
-    // is not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-      break;
     }
   }
   return userCodeRow;

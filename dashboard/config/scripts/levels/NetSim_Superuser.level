@@ -51,8 +51,7 @@
     "default_chunk_size_bits": "8",
     "show_hostname_in_graph": "false",
     "show_pulse_rate_slider": "true"
-  },
-  "md5": "e9f562e16d9487b1f02353ac05fde04c"
+  }
 }]]></config>
   <blocks/>
 </NetSim>

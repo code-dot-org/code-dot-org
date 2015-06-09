@@ -1,29 +1,29 @@
 name 'U2L3 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'Lesson 3 - Invent an addressing protocol'
 css 'unplugged'
-skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 3 - Invent an addressing protocol
+## Unit 2: Lesson 3 - Invent an Addressing Protocol
 
 # Background
 
-Background goes here
+A communication protocol is encoded in binary. The protocol must be efficient in the number of bits required and flexible enough to handle various situations. An addressing protocol typically includes the sender and recipient’s identifying information and perhaps the size of the message and the date sent. IP addresses must be of a fixed length.
 
 # Vocabulary
-
-Vocabulary goes here
+* protocol: NEED DEFINITIONS HERE
+* datagram:
+* packet:
+* Internet Protocol:   
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Invent an efficient and flexible addressing protocol for the BattleShip Internet Simulator.
+* Learn about the requirements of an internet addressing protocol.
+
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Activity: <a href=" https://docs.google.com/document/d/1HKgmnXaqSBpExpxorcMpIrUS-JU4tGp5lH4jjjVGGcs” target="_blank"> Rapid Reseach </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

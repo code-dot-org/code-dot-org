@@ -50,8 +50,7 @@
     "lock_chunk_size_control": "false",
     "show_hostname_in_graph": "false",
     "show_pulse_rate_slider": "true"
-  },
-  "md5": "4f6c2be7a81200975d6f6540230868a7"
+  }
 }]]></config>
   <blocks/>
 </NetSim>

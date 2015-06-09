@@ -27,8 +27,8 @@
     "show_add_router_button": "true",
     "message_granularity": "packets",
     "automatic_receive": "true",
-    "router_expects_packet_header": "[{\"key\":\"toAddress\", \"bits\":4}, {\"key\":\"fromAddress\", \"bits\":4}]",
-    "client_initial_packet_header": "[{\"key\":\"toAddress\", \"bits\":4}, {\"key\":\"fromAddress\", \"bits\":4}]",
+    "router_expects_packet_header": "[\"toAddress\", \"fromAddress\"]",
+    "client_initial_packet_header": "[\"toAddress\", \"fromAddress\"]",
     "show_hostname_in_graph": "false",
     "show_add_packet_button": "false",
     "show_packet_size_control": "false",
@@ -43,12 +43,16 @@
     "lock_bit_rate_control": "false",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
-    "show_router_bandwidth_control": "false",
-    "show_router_memory_control": "false",
+    "show_router_bandwidth_control": "true",
+    "show_router_memory_control": "true",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
-    "default_router_bandwidth": "Infinity",
-    "default_router_memory": "Infinity"
+    "default_router_bandwidth": "600",
+    "default_router_memory": "6200",
+    "broadcast_mode": "false",
+    "connected_routers": "true",
+    "address_format": "8.4",
+    "packet_count_bit_width": "4"
   }
 }]]></config>
   <blocks/>

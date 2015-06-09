@@ -1,0 +1,34 @@
+name 'U2L14 Student Lesson Introduction'
+title 'Cracking the Code'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 2: Lesson 14 - Cracking the Code
+
+# Background
+
+There are situations in which cracking a code is ethical and important.  Character frequency analysis can sometimes be used to reveal an encoded message. More difficult encryption algorithms require more elaborate heuristics to solve and sometimes cannot be solved efficiently with computers.
+
+# Vocabulary
+
+character frequency analysis: a system of decrypting letter substitution encryptions that is based  upon the likely occurrence of various letters in a message. The distribution of letters is roughly the same for almost all samples of a language. In English, ETAOIN SHRDLU are the most commonly used letters.
+
+heuristic:  technique used to find an approximate solution when typical methods fail to find an exact solution.
+
+# Lesson
+
+* Try your hand at decrypting cryptoquips. 
+* Create a decryption algorithm for a computer to follow. 
+* Explore the limitations of what computers can do in a reasonable time.
+
+# Resources
+
+* Resource: <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html#intro" target="_blank">Crypto Corner</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

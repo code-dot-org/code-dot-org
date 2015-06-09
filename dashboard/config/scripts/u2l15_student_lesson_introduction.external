@@ -1,0 +1,28 @@
+name 'U2L15 Student Lesson Introduction'
+title 'Encryption Algorithms'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 2: Lesson 15 - Encryption Algorithms
+
+# Background
+
+The more complicated a key is, the harder it is to crack. Encryption algorithms are evaluated based upon the amount of time it would take a computer to crack the key. Vigenère cipher cannot be cracked using frequency analysis; it requires a “brute force” strategy of trying every combination.
+
+# Vocabulary
+
+Vigenère (Vee-zha-nair) cipher: a method of encrypting text by applying a series of Caesar ciphers based on the letters of a keyword.
+
+# Lesson
+
+* Write an algorithm for a Vigenere cipher.
+* Explain the factors that ensure strong encryption and secure data.
+
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

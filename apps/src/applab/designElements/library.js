@@ -23,7 +23,8 @@ var ElementType = {
   RADIO_BUTTON: 'RADIO_BUTTON',
   TEXT_AREA: 'TEXT_AREA',
   IMAGE: 'IMAGE',
-  CANVAS: 'CANVAS'
+  CANVAS: 'CANVAS',
+  SCREEN: 'SCREEN'
 };
 
 var elements = {};
@@ -36,6 +37,7 @@ elements[ElementType.RADIO_BUTTON] = require('./radioButton.jsx');
 elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
 elements[ElementType.IMAGE] = require('./image.jsx');
 elements[ElementType.CANVAS] = require('./canvas.jsx');
+elements[ElementType.SCREEN] = require('./screen.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -62,6 +64,14 @@ module.exports = {
   },
 
   /**
+   * Resets the next element id for all prefixes to be 1. Called after clearing
+   * all design mode elements
+   */
+  resetIds: function () {
+    nextElementIdMap = {};
+  },
+
+  /**
    * Create a new element of the specified type
    * @param {ElementType} elementType Type of element to create
    * @param {number} left Position from left.
@@ -77,9 +87,12 @@ module.exports = {
 
     // Stuff that's common across all elements
     element.id = this.getUnusedElementId(elementType.toLowerCase());
-    element.style.position = 'absolute';
-    element.style.left = left + 'px';
-    element.style.top = top + 'px';
+
+    if (elementType !== ElementType.SCREEN) {
+      element.style.position = 'absolute';
+      element.style.left = left + 'px';
+      element.style.top = top + 'px';
+    }
 
     return element;
   },
@@ -103,6 +116,9 @@ module.exports = {
       case 'select':
         return ElementType.DROPDOWN;
       case 'div':
+        if ($(element).hasClass('screen')) {
+          return ElementType.SCREEN;
+        }
         return ElementType.TEXT_AREA;
       case 'img':
         return ElementType.IMAGE;
@@ -131,5 +147,19 @@ module.exports = {
     if (elements[elementType].onDeserialize) {
       elements[elementType].onDeserialize(element);
     }
+  },
+
+  /**
+   * Handle any element specific property changes. Called after designMode gets
+   * first crack at handling change.
+   * @returns {boolean} True if we modified the element in such a way that the
+   *   property table needs to be updated.
+   */
+  typeSpecificPropertyChange: function (element, name, value) {
+    var elementType = this.getElementType(element);
+    if (elements[elementType].onPropertyChange) {
+      return elements[elementType].onPropertyChange(element, name, value);
+    }
+    return false;
   }
 };

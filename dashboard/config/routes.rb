@@ -111,21 +111,20 @@ Dashboard::Application.routes.draw do
   post 'level_assets/upload', to: 'level_assets#upload'
 
   resources :scripts, path: '/s/' do
-    # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false do
-      get 'solution', to: 'script_levels#solution'
-    end
-
     # /s/xxx/reset
-    get 'reset', to: 'script_levels#show', reset: true
+    get 'reset', to: 'script_levels#reset'
+    get 'next', to: 'script_levels#next'
+
+
+    # /s/xxx/level/yyy
+    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
 
     # /s/xxx/puzzle/yyy
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [:show], path: "/stage", format: false do
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
-      end
+      resources :script_levels, only: [:show], path: "/puzzle", format: false
     end
   end
 
@@ -133,7 +132,7 @@ Dashboard::Application.routes.draw do
 
   get 'reset_session', to: 'application#reset_session_endpoint'
 
-  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
+  get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
   get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
@@ -203,6 +202,8 @@ Dashboard::Application.routes.draw do
         get 'teachers'
       end
     end
+
+    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
     get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
     get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
     get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'

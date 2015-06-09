@@ -1,0 +1,30 @@
+name 'U1L15 Student Lesson Summary'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+## Unit 1: Lesson 15 - Encoding Color Images
+# Background
+
+Humans can perceive millions of different colors. If we wish to encode color images we will need a system to represent this huge variety of color. Along the way we will need to develop a new number system to enable humans to more easily read and write large amounts of binary information.
+
+# Vocabulary
+* Hexadecimal Number System: a number system consisting of 16 distinct symbols which can be placed in each place value, 0-9, and A-F.
+
+# Lesson 
+
+* Video: A Little Bit About Pixels
+* Using the hexadecimal number system
+* Creating color images with the Pixelation Tool
+* Design your personal favicon
+ 
+# Resources 
+
+* Video Guide: <a href= "https://drive.google.com/open?id=1PwH2nRfWH-3CmkL2IxC0Le2DdRcDmsR8McMFe-ktol4&authuser=0" target="_blank">A Little Bit About Pixels</a>
+* Activity Guide: <a href= "https://drive.google.com/open?id=12EVGBWX7C2Ak7GT7Gbbp-WxDtHFK4hALX0PASc7prMw&authuser=0" target="_blank">Encoding Color Images</a>
+* Project Guide Guide: <a href= "https://drive.google.com/open?id=1kIiOf-cFxS4bzF4ulEDAsjLejAOvTbUKiOXhmE3cJgM&authuser=0" target="_blank">Personal Favicon</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
