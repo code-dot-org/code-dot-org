@@ -592,7 +592,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @student, assigns(:user)
   end
 
-  test 'shows expanded teacher panel when section is chosen but student is not' do
+  test 'shows collapsed teacher panel when section is chosen but student is not' do
     @teacher.update admin: true # TODO don't need this when feature is shipped
 
     sign_in @teacher
@@ -603,15 +603,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, section_id: @section.id
 
-    assert_select '.teacher-panel'
-    assert_select '.teacher-panel.hidden', 0
+    assert_select '.teacher-panel.hidden'
 
     assert_equal @section, assigns(:section)
     assert_equal nil, assigns(:user)
   end
 
-  test 'shows collapsed teacher panel when student not chosen' do
+  test 'shows collapsed teacher panel when student not chosen, chooses section when teacher has one section' do
     @teacher.update admin: true # TODO don't need this when feature is shipped
+
+    sign_in @teacher
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
+
+    assert_select '.teacher-panel.hidden'
+
+    assert_equal @section, assigns(:section)
+    assert_equal nil, assigns(:user)
+  end
+
+  test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
+    @teacher.update admin: true # TODO don't need this when feature is shipped
+    create :section, user: @teacher
 
     sign_in @teacher
 
