@@ -9195,7 +9195,7 @@ var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
 
     var confirm;
     if (this.state.confirming) {
-      confirm = (
+      return (
         React.createElement("div", null, 
           "Delete?", 
           React.createElement("button", {
@@ -9217,8 +9217,7 @@ var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
           style: redButtonStyle, 
           onClick: this.handleDeleteInternal}, 
           "Delete"
-        ), 
-        confirm
+        )
       )
     );
   }
