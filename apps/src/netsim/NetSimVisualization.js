@@ -17,6 +17,7 @@ var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimFakeVizWire = require('./NetSimFakeVizWire');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
+var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizWire = require('./NetSimVizWire');
 var netsimGlobals = require('./netsimGlobals');
@@ -563,6 +564,11 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   if (vizElement instanceof NetSimVizSimulationNode) {
     neighbors = this.getWiresAttachedToNode(vizElement)
         .concat(this.getFakeWiresAttachedToNode(vizElement));
+
+    // Special case: The DNS node fake is a neighbor of a visited router
+    if (vizElement.isRouter && this.autoDnsNode_) {
+      neighbors.push(this.autoDnsNode_);
+    }
   } else if (vizElement instanceof NetSimVizWire) {
     if (vizElement.localVizNode) {
       neighbors.push(vizElement.localVizNode);
@@ -609,7 +615,7 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
 
   /** @type {Array.<NetSimVizSimulationNode>} */
   var foregroundNodes = this.elements_.filter(function (element) {
-    return element instanceof NetSimVizSimulationNode && element.isForeground;
+    return element instanceof NetSimVizNode && element.isForeground;
   });
 
   // Sometimes, there's no work to do.
@@ -751,6 +757,10 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
       vizElement.setDnsMode(newDnsMode);
     }
   });
+
+  // Update layering and layout since we just added/removed a node.
+  this.pullElementsToForeground();
+  this.distributeForegroundNodes();
 };
 
 NetSimVisualization.prototype.makeAutoDnsNode = function () {
