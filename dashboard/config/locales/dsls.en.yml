@@ -1255,32 +1255,14 @@ en:
         use an algorithm to encode a message: use an algorithm to encode a message
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
-        A message of data that includes information to route the message from the source to the destination computer.: A message of data that includes information to route the message from the source to the destination computer.
-        A message that contains address information: A message that contains address information
-        A message that includes information to route the message from the source to the destination: A message that includes information to route the message from the source to the destination
-        A message that with address information: A message that with address information
-        A packet of data that uses 32-bit IP addresses for the source and destination machines: A packet of data that uses 32-bit IP addresses for the source and destination machines
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
-        A packet of data that uses 32-bit addresses for the source and destination machines: A packet of data that uses 32-bit addresses for the source and destination machines
         A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
-        A well-known set of rules and standards used to communicate between machines: A well-known set of rules and standards used to communicate between machines
         IPv4 packet: IPv4 packet
-        IPv4 packet definition: IPv4 packet definition
         Internet Protocol: Internet Protocol
-        Internet protocol definition: Internet protocol definition
         'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
-        ? The communication protocol that dictates of the specific format and structure of a packet in order for it to be routed properly on the internet
-        : The communication protocol that dictates of the specific format and structure of a packet in order for it to be routed properly on the internet
-        The protocol for the structure of a packet in order for it to be routed on the internet: The protocol for the structure of a packet in order for it to be routed on the internet
-        The protocol that dictates of the specific format and structure of a packet in order for it to be routed on the internet: The protocol that dictates of the specific format and structure of a packet in order for it to be routed on the internet
-        The required structure of a packet for it to be sent on the internet: The required structure of a packet for it to be sent on the internet
         The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
-        datagram: datagram
-        datagram definition: datagram definition
         packet: packet
-        packet definition: packet definition
         protocol: protocol
-        protocol definition: protocol definition
       U3L05 Assessment1:
         Effort: Effort
         Programming Efficiency Question 1: Programming Efficiency Question 1
@@ -1401,12 +1383,9 @@ en:
         Edge: Edge
         Graph: Graph
         Graph Terminology: Graph Terminology
-        Label this diagram properly.: Label this diagram properly.
         Look at diagram below and then match the proper term with what each label is pointing to.: Look at diagram below and then match the proper term with what each label is pointing to.
         Node: Node
         Weight: Weight
-        description here: description here
-        title: title
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
@@ -2155,7 +2134,6 @@ en:
         How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
       U1L11 Assessment 2:
         041 108 108 111 119: 041 108 108 111 119
-        065 108 108 111 119: 065 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
         065 112 112 108 101: 065 112 112 108 101
         097 108 108 111 119: 097 108 108 111 119
@@ -2218,12 +2196,6 @@ en:
         'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
         Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
       'U2L06 - MC: Which is an MST?':
-        <img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>: <img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>
-        <img src=\"https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png\">: <img src=\"https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png\">
-        ? "<p>The images below all show the same map (or graph) as the one depicted to the right, but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        : "<p>The images below all show the same map (or graph) as the one depicted to the right, but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        ? "<p>The images below all show the same map (or graph) as the one depicted to the right, but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        : "<p>The images below all show the same map (or graph) as the one depicted to the right, but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         A: A
@@ -2241,8 +2213,6 @@ en:
         The shortest path from a particular point in the graph to another point in the graph: The shortest path from a particular point in the graph to another point in the graph
         What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents a network
-        description here: description here
-        title: title
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
@@ -2374,8 +2344,6 @@ en:
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
         Store information permanently: Store information permanently
-        store information permanently: store information permanently
-        track of time: track of time
       U3L18 Controlling Memory and Program Flow 2:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -2384,7 +2352,6 @@ en:
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
         Store information permanently: Store information permanently
-        Track of time: Track of time
       U3L18 Controlling Memory and Program Flow 3:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -2393,8 +2360,6 @@ en:
         Remember things during play: Remember things during play
         'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. '
         Store information permanently: Store information permanently
-        store information permanently: store information permanently
-        track of time: track of time
       U3L18 Controlling Memory and Program Flow 4:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -2403,8 +2368,6 @@ en:
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired feature of the game described at left. '
         Store information permanently: Store information permanently
-        store information permanently: store information permanently
-        track of time: track of time
       U3L18 Controlling Memory and Program Flow 5:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -2413,8 +2376,6 @@ en:
         Remember things during play: Remember things during play
         'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. '
         Store information permanently: Store information permanently
-        store information permanently: store information permanently
-        track of time: track of time
       U3L19 - MC what are values of abc:
         Choose the best answer: Choose the best answer
         Code does not execute due to error: Code does not execute due to error
@@ -2934,18 +2895,10 @@ en:
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
-        Enter answer here: Enter answer here
-        Enter prompt here: Enter prompt here
-        Enter title here: Enter title here
       U1L13 Assessment 1:
-        'Conclusion 1: Text Compression': 'Conclusion 1: Text Compression'
-        Consider your heuristic and those of your classmates.: Consider your heuristic and those of your classmates.
         Why Compress?: Why Compress?
       U1L13 Assessment 2:
-        'Conclusion 2: Text Compression': 'Conclusion 2: Text Compression'
-        'Is there a way to know that a compressed piece of text is compressed the most possible? ': 'Is there a way to know that a compressed piece of text is compressed the most possible? '
         What is good compression?: What is good compression?
-        hello: hello
       U1L13 Reflection 1:
         'Reflection: Text Compression': 'Reflection: Text Compression'
         What made compressing text hard to do?: What made compressing text hard to do?
