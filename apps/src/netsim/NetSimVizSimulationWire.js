@@ -24,7 +24,9 @@ var NetSimVizWire = require('./NetSimVizWire');
  */
 var NetSimVizSimulationWire = module.exports = function (sourceWire,
     getElementByEntityID) {
-  NetSimVizWire.call(this, getElementByEntityID);
+  var localNode = getElementByEntityID(NetSimVizNode, sourceWire.localNodeID);
+  var remoteNode = getElementByEntityID(NetSimVizNode, sourceWire.remoteNodeID);
+  NetSimVizWire.call(this, localNode, remoteNode);
 
   /**
    * ID of the simulation wire that this viz element maps to.
@@ -33,7 +35,8 @@ var NetSimVizSimulationWire = module.exports = function (sourceWire,
   this.correspondingWireID_ = sourceWire.entityID;
 
   /**
-   * Bound getElementByEntityID method from vizualization controller.
+   * Bound getElementByEntityID method from vizualization controller;
+   * we hold on to this so that calls to configureFrom can find nodes later.
    * @type {Function}
    * @private
    */

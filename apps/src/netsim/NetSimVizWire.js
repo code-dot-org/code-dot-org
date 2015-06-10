@@ -29,10 +29,12 @@ var binaryToAB = dataConverters.binaryToAB;
 var TEXT_FINAL_VERTICAL_OFFSET = -10;
 
 /**
+ * @param {NetSimVizNode} localNode
+ * @param {NetSimVizNode} remoteNode
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizWire = module.exports = function () {
+var NetSimVizWire = module.exports = function (localNode, remoteNode) {
   NetSimVizElement.call(this);
 
   var root = this.getRoot();
@@ -83,8 +85,8 @@ var NetSimVizWire = module.exports = function () {
    */
   this.encodings_ = [];
 
-  this.localVizNode = null;
-  this.remoteVizNode = null;
+  this.localVizNode = localNode;
+  this.remoteVizNode = remoteNode;
 
   this.render();
 };
