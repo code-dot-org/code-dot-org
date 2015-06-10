@@ -1,0 +1,16 @@
+name 'OPD-K5 Celebrate'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+# NEXT STEPS > Celebrate!
+
+<img src="http://code.org/educate/onlinepd/cert1.png">
+
+Congratulations on completing this professional development online course. You can [download and print a certificate of accomplishment now](https://www.dropbox.com/s/rckzc9tq9nasnwa/online%20pd%20k5%20certificate.png?dl=0).
+
+And don't forget...you can return to this online course anytime to review your learning, access links or resources, or just refresh your memory!
+
+Thank you for your participation! We can't wait to hear how you implement computer science and Code Studio in your classroom!
+
+<a class="btn btn-large btn-primary next-stage submitButton">I'm Finished!</a>
+MARKDOWN

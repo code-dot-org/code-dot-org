@@ -18,6 +18,7 @@
   petition_sign_message: 'Ja tu piekrītat, rakstiet savu vārdu šeit. Pievienojies
     # citiem.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: Vārds
   email: E-pasts
   zipcode: Pasta indekss vai valsts
@@ -198,6 +199,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: '"Programmēšanas stunda"'
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
