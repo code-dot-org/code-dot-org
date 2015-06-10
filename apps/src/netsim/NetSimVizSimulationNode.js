@@ -32,6 +32,13 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode) {
    */
   this.correspondingNodeID_ = sourceNode.entityID;
 
+  /**
+   * If we end up representing a router, we may need to hold the auto-dns address
+   * to pass to a fake auto-dns node.
+   * @type {string}
+   */
+  this.autoDnsAddress = undefined;
+
   this.configureFrom(sourceNode);
   this.render();
 };
@@ -54,6 +61,7 @@ NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
   if (sourceNode.getNodeType() === NodeType.ROUTER) {
     this.isRouter = true;
     this.getRoot().addClass('router-node');
+    this.autoDnsAddress = sourceNode.getAutoDnsAddress();
     if (levelConfig.broadcastMode) {
       this.getRoot().css('display', 'none');
     }
