@@ -465,6 +465,8 @@
   "dropletBlock_setRed_param2_description": "Позиция y, указанная в пикселях, начиная с верхнего левого угла изображения.",
   "dropletBlock_setRed_param3": "красноеЗначение",
   "dropletBlock_setRed_param3_description": "The amount of red (from 0 to 255) to set in the pixel.",
+  "dropletBlock_setScreen_description": "Sets the screen to the given screenId",
+  "dropletBlock_setScreen_param0": "screenId",
   "dropletBlock_setSpriteEmotion_description": "Установить настроение актера",
   "dropletBlock_setSpritePosition_description": "Мгновенно перемещает персонажа в указанное место.",
   "dropletBlock_setSpriteSpeed_description": "Установите скорость персонажа",

@@ -12,6 +12,7 @@ sr-SP:
   petition_message: Сваки ученик у свакој школи треба да има прилику да учи компјутерску науку
   petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
   petition_sign_message_support: 'Ако нас подржаваш, упиши своје име. Придружи се # осталима.'
+  petition_join_others: 'Join # others'
   name: Име
   email: Електронска пошта
   zipcode: Поштански број или име државе
@@ -176,6 +177,9 @@ sr-SP:
     &ldquo;Овај програм је постигао да се 100% мојих 
     ђака око њега ангажује и активно учествује.&rdquo;
     Адам, учитељ
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: сата кодирања
   homepage_slot_text_frozen: 'Смрзнути - са Аном и Елзом'
   homepage_slot_text_teacher: Teacher Dashboard

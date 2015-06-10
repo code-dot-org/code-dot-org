@@ -12,6 +12,7 @@ fa-IR:
   petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به پیوندید.'
   petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به #دیگران بپیوندید.'
+  petition_join_others: 'Join # others'
   name: نام
   email: ایمیل
   zipcode: کدپستی یا کشور
@@ -171,6 +172,9 @@ fa-IR:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard

@@ -172,7 +172,7 @@ pl:
           Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
         image: uwagi/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Teraz, zabierz te potwory (zombies), gdzie ich miejsce!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -300,7 +300,7 @@ pl:
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Pamiętaj, możesz zmienić liczbę pikseli i stopni klikając strzałki obok nich.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg

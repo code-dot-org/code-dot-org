@@ -12,6 +12,7 @@ sv-SE:
   petition_message: Alla elever i alla skolor borde ha möjligheten att lära sig datavetenskap
   petition_sign_message: 'Om du håller med så skriv ditt namn. Delta # andra.'
   petition_sign_message_support: 'Om du stöder oss, skriv ditt namn.  Kom tillsammans med  # andra.'
+  petition_join_others: 'Join # others'
   name: Namn
   email: E-post
   zipcode: Postnummer eller land
@@ -164,6 +165,9 @@ sv-SE:
   homepage_hero_text_teacher2: |
     &ldquo;Det här programmet fick 100% av mina elever att bli engagerade, involverade och deltagande.&rdquo;
     Adam, lärare
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Timme med Kod
   homepage_slot_text_frozen: Frozen med Anna och Elsa
   homepage_slot_text_teacher: Lärare Dashboard
@@ -173,11 +177,11 @@ sv-SE:
   homepage_slot_text_flappy: Flappy kod
   homepage_action_text_codevideo: Titta på videon
   homepage_action_text_teachervideo: Titta på videon
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: 'Börja lära '
   homepage_action_text_signpetition: Skriv på uppropet
   homepage_signpetition_dropdown: 'Underteckna vår namninsamling &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: Code.org och College Board bildar en allians för att förbättra mångfalden i datavetenskap.
+  homepage_banner_text_link: Lär dig mer
   homepage_slot_text_title_hoc: Timmen med Kod
   homepage_slot_text_blurb_hoc: Alla kan lära sig. Börja idag
   homepage_slot_text_link_hoc: Prova Kodtimmen
@@ -196,7 +200,7 @@ sv-SE:
   homepage_slot_text_title_advocates: Förespråkar
   homepage_slot_text_blurb_advocates: Stöd vårt arbete
   homepage_slot_text_link_stats: Se statistik
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: Engagera dig
   homepage_slot_text_link_donate: Gör en donation
   homepage_header_codestudio: Kod Studio elev arbeten
   homepage_header_donors: Code.org tackar alla sina anhängare

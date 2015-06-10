@@ -12,6 +12,7 @@ zh-TW:
   petition_message: 每個在學校的學生都應該有機會去學習電腦科學
   petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
   petition_sign_message_support: '如果你支持我們，請在這裡簽名。加入 # 已簽名的。'
+  petition_join_others: 'Join # others'
   name: 你的名字
   email: 電子郵件
   zipcode: 郵遞區號或國家
@@ -138,6 +139,9 @@ zh-TW:
   homepage_hero_text_student5: '&ldquo;計算機科學，不是為他人的。它是為了現在在這裡的你。&rdquo;傑拉爾多，老師。'
   homepage_hero_text_teacher1: '&ldquo;編程啟發創意、 靈感和創新 &mdash; 它們都是在任何職業不可缺少的&rdquo;Floresa，老師'
   homepage_hero_text_teacher2: '&ldquo;這個課程得到 同學100%的投入、 參與和參加。&rdquo;亞當，老師'
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: 一小時的編程
   homepage_slot_text_frozen: 魔雪奇緣 安娜與艾莎
   homepage_slot_text_teacher: Teacher Dashboard
@@ -149,7 +153,7 @@ zh-TW:
   homepage_action_text_teachervideo: 觀看影片
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: 一小時的程式設計課程

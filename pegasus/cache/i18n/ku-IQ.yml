@@ -23,6 +23,7 @@
   petition_sign_message: 'ئەگەر ڕەزامەندی، ناوت واژووبکە. بەشداربە لەگەڵ # کەسی تر.'
   petition_sign_message_support: 'ئەگەر پاڵپشتیمان لێدەكەی، ناوت واژووبکە. بەشداربە
     لەگەڵ # کەسی تر.'
+  petition_join_others: 'Join # others'
   name: ناو
   email: ئیمەیڵ
   zipcode: ژمارەی پۆستە یان وولات
@@ -188,6 +189,9 @@
     فلۆریسا، مامۆستا
   homepage_hero_text_teacher2: "&ldquo; ئەو پرۆگرامە وای لە قوتابیانم کرد ١٠٠% بەشداربن.&rdquo;
     \nئادەم، مامۆستا\n"
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: كاژێری كۆدنووسی
   homepage_slot_text_frozen: کارتۆنی فرۆزن لەگەڵ ئانا و ئێلسا
   homepage_slot_text_teacher: Teacher Dashboard

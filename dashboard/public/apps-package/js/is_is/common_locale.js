@@ -620,6 +620,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_setRed_param2_description":function(d){return "Y staðan í dílum mælt frá efra vinstra horni myndar."},
 "dropletBlock_setRed_param3":function(d){return "redValue"},
 "dropletBlock_setRed_param3_description":function(d){return "Magn rauða litarins (á bilinu 0 til 255) sem á að setja í dílinn."},
+"dropletBlock_setScreen_description":function(d){return "Sets the screen to the given screenId"},
+"dropletBlock_setScreen_param0":function(d){return "screenId"},
 "dropletBlock_setSpriteEmotion_description":function(d){return "Stillir skap leikmanns"},
 "dropletBlock_setSpritePosition_description":function(d){return "Færir leikmann samstundis á hinn tiltekna stað."},
 "dropletBlock_setSpriteSpeed_description":function(d){return "Stillir hraða leikmanns"},

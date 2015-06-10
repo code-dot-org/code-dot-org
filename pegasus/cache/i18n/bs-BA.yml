@@ -17,6 +17,7 @@
   petition_message: Svaki učenik u svakoj školi ima šansu da uči računarske nauke
   petition_sign_message: Ako se slažeš, napiši svoje ime. Pridruži se ostalima.
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: Ime
   email: Email
   zipcode: Poštanski broj ili zemlja
@@ -197,6 +198,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Nadzorna Ploča za Nastavnike

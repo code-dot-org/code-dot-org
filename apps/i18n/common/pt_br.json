@@ -465,6 +465,8 @@
   "dropletBlock_setRed_param2_description": "A posição y em pixels a partir do canto superior esquerdo da imagem.",
   "dropletBlock_setRed_param3": "redValue",
   "dropletBlock_setRed_param3_description": "A quantidade de vermelho (de 0 a 255) para definir no pixel.",
+  "dropletBlock_setScreen_description": "Sets the screen to the given screenId",
+  "dropletBlock_setScreen_param0": "screenId",
   "dropletBlock_setSpriteEmotion_description": "Define o humor do personagem",
   "dropletBlock_setSpritePosition_description": "Move um personagem instantaneamente para o local especificado.",
   "dropletBlock_setSpriteSpeed_description": "Define a velocidade de um personagem",
