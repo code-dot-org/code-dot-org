@@ -44,6 +44,13 @@ Example:
 [<button>Link internally to another Code.org page</button>](/professional-development-workshops)
 [<button>Link to an external page</button>](http://blogs.edweek.org/edweek/curriculum/2015/06/washington_passes_bill_to_boost_K12_computer_science_education.html)<br /><br/>
 
+### Images
+
+It's easy to include images from our **Images** folder in Dropbox. To change the size on the image, include "/fit-pixel width" after /images.
+
+Example: <br/>
+![Code.org Logo](/images//fit-600/infographics/diversity.png)
+
 ### Lists
 You can create unordered lists in two ways, using either an asterisk (*) or a hyphen (-) followed by a space. Make sure to leave a row bewteen your headline and the list. 
 

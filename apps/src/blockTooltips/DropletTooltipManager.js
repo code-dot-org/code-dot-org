@@ -71,6 +71,19 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
   return this.blockTypeToTooltip.hasOwnProperty(functionName);
 };
 
+DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  $('.tooltipstered').tooltipster('hide');
+  var dialog = new window.Dialog({
+    body: $('<iframe>')
+      .addClass('markdown-instructions-container')
+      .width('100%')
+      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
+    autoResizeScrollableElement: '.markdown-instructions-container',
+    id: 'block-documentation-lightbox'
+  });
+  dialog.show();
+};
+
 /**
  * @param {String} functionName
  * @returns {DropletFunctionTooltip}

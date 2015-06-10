@@ -174,7 +174,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
   if (this.steps_){
     this.steps_.tick(clock);
     if (this.steps_.isFinished()){
-      this.steps_ = undefined;
+      this.releaseCleaningLock(function () {
+        this.steps_ = undefined;
+      }.bind(this));
     }
   }
 };
@@ -205,9 +207,7 @@ NetSimShardCleaner.prototype.cleanShard = function () {
       new CleanMessages(this),
 
       new CacheTable(this, 'log', this.shard_.logTable),
-      new CleanLogs(this),
-
-      new ReleaseCleaningLock(this)
+      new CleanLogs(this)
     ]);
     this.steps_.begin();
   }.bind(this));
@@ -260,6 +260,11 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
+  if (!this.heartbeat) {
+    onComplete(null, null);
+    return;
+  }
+
   this.heartbeat.destroy(function (err) {
     this.heartbeat = null;
     this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
@@ -336,6 +341,12 @@ CacheTable.inherits(Command);
  */
 CacheTable.prototype.onBegin_ = function () {
   this.table_.readAll(function (err, rows) {
+    if (err) {
+      logger.error("Failed to cache rows for " + this.key_);
+      this.fail();
+      return;
+    }
+
     this.cleaner_.cacheTable(this.key_, rows);
     this.succeed();
   }.bind(this));
@@ -372,38 +383,6 @@ DestroyEntity.prototype.onBegin_ = function () {
     }
     logger.info("Deleted entity");
     this.succeed();
-  }.bind(this));
-};
-
-/**
- * Command that tells cleaner to release its cleaning lock.
- *
- * @param {!NetSimShardCleaner} cleaner
- * @constructor
- * @augments Command
- */
-var ReleaseCleaningLock = function (cleaner) {
-  Command.call(this);
-
-  /**
-   * @type {!NetSimShardCleaner}
-   * @private
-   */
-  this.cleaner_ = cleaner;
-};
-ReleaseCleaningLock.inherits(Command);
-
-/**
- * Tell cleaner to release its cleaning lock.
- * @private
- */
-ReleaseCleaningLock.prototype.onBegin_ = function () {
-  this.cleaner_.releaseCleaningLock(function (success) {
-    if (success) {
-      this.succeed();
-    } else {
-      this.fail();
-    }
   }.bind(this));
 };
 

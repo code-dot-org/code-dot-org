@@ -36,7 +36,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 - [Massachusetts](#ma)
 - [Minnesota](#mn)
 - [Missouri](#mo)
-- [North Carolina](#nc)
+- [Mississippi](#ms)
 
 
 [/col-25]
@@ -44,6 +44,8 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 
 [col-25]
 
+
+- [North Carolina](#nc)
 - [Nebraska](#ne)
 - [New Hampshire](#nh)
 - [New Jersey](#nj)
@@ -54,7 +56,6 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 - [Oklahoma](#ok)
 - [Oregon](#or)
 - [Pennsylvania](#pa)
-- [Rhode Island](#ri)
 
 
 [/col-25]
@@ -62,6 +63,8 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 
 [col-25]
 
+
+- [Rhode Island](#ri)
 - [South Carolina](#sc)
 - [Tennessee](#tn)
 - [Texas](#tx)
@@ -102,10 +105,25 @@ style="clear:both"&nbsp;
 <br />
 <a id="ar"></a>
 ## Arkansas
+[col-33]
 ### Joel Spencer
-Sherwood, AR
+Little Rock, AR
 
-Spencer@pd.code.org
+spencer@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Jennifer Lyon
+Fort Smith, AR
+
+lyon@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both"&nbsp;
+</p>
 
 <br />
 <a id="az"></a>
@@ -122,7 +140,7 @@ angeloff@pd.code.org
 ### Mary Lou Klem
 Tucson, AZ
 
-Klem@pd.code.org
+klem@pd.code.org
 
 [/col-33]
 
@@ -157,7 +175,7 @@ friend@pd.code.org
 ### Olivier Monteil
 Palo Alto, CA
 
-Monteil@pd.code.org
+monteil@pd.code.org
 
 [/col-33]
 
@@ -166,7 +184,7 @@ Monteil@pd.code.org
 ### Lisa Anothony
 Berkeley, CA
 
-Anthony@pd.code.org
+anthony@pd.code.org
 
 [/col-33]
 
@@ -175,7 +193,7 @@ Anthony@pd.code.org
 ### Seema Khan
 San Jose, CA
 
-Khan@pd.code.org
+khan@pd.code.org
 
 [/col-33]
 
@@ -315,7 +333,7 @@ casas@pd.code.org
 ### Andrew Svehaug
 San Diego, CA
 
-Svehaug@pd.code.org
+svehaug@pd.code.org
 
 [/col-33]
 
@@ -387,6 +405,14 @@ zayas@pd.code.org
 Tampa, FL
 
 peters@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Suzanne Zylman
+St. Petersberg, FL
+
+zylman@pd.code.org
 
 [/col-33]
 
@@ -473,6 +499,14 @@ foust@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Jennifer Smith
+Ellaville, GA
+
+smith@pd.code.org
+
+[/col-33]
+
 <p style="clear:both">&nbsp;</p>
 
 <a id="hi"></a>
@@ -503,16 +537,6 @@ lavin@pd.code.org
 [/col-33]
 
 [col-33]
-
-### Brian Myers
-Chicago, IL
-
-myers@pd.code.org
-
-[/col-33]
-
-[col-33]
-
 ### Karen Putman
 Chicago, IL
 
@@ -543,19 +567,49 @@ roberts@pd.code.org
 <br />
 <a id="ia"></a>
 ## Iowa
+[col-33]
 ### Ben Schafer
 Cedar Falls, IA
 
 schafer@pd.code.org
 
-<br />
+[/col-33]
+
+[col-33]
+### Cindy Herren
+Waukee, IA
+
+herren@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Leka DeGroot
+Fort Dodge, IA
+
+degroot@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Leslie Pralle Keehn
+Fort Dodge, IA
+
+prallekeehn@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
+
 <a id="ks"></a>
 ## Kansas
 [col-33]
 ### Jessica Asbury
 Kansas City, KS
 
-Asbury@pd.code.org
+asbury@pd.code.org
 
 [/col-33]
 
@@ -576,7 +630,7 @@ mccall@pd.code.org
 ### Mark Lorence
 Louisville, KY
 
-Lorence@pd.code.org
+lorence@pd.code.org
 
 <br />
 <a id="la"></a>
@@ -602,7 +656,7 @@ jacobsen@pd.code.org
 ### Kristin Thibodeaux
 Shreveport, LA
 
-Thibodeaux@pd.code.org
+thibodeaux@pd.code.org
 
 [/col-33]
 
@@ -628,7 +682,14 @@ legrand@pd.code.org
 [/col-33]
 
 [col-33]
+### Janelle Steffen
+Baltimore, MD
 
+steffen@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Dianne O'Grady-Cunniff
 Waldorf, MD
 
@@ -683,11 +744,18 @@ hitchcock@pd.code.org
 [/col-33]
 
 [col-33]
-
 ### Angie Kalthoff
 Richmond, MN
 
-Kalthoff@pd.code.org
+kalthoff@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Angie Kalthoff
+Richmond, MN
+
+kalthoff@pd.code.org
 
 [/col-33]
 
@@ -695,15 +763,35 @@ Kalthoff@pd.code.org
 style="clear:both">&nbsp;
 </p>
 
+<a id="ms"></a>
+## Mississippi
+### Candance McClendon
+Biloxi, MS
+
+mcclendon@pd.code.org
+
 <a id="mo"></a>
 ## Missouri
+[col-33]
+### Tyler Watts
+Kansas City, MO
+
+watts@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Michelle Powell
 St. Louis, MO
 
 powell@pd.code.org
 
+[/col-33]
 
-<br />
+<p
+style="clear:both">&nbsp;
+</p>
+
 <a id="nc"></a>
 ## North Carolina
 [col-33]
@@ -729,6 +817,14 @@ astrachan@pd.code.org
 Cary, NC
 
 thomas@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Gail Holmes
+Greensboro, NC
+
+holmes@pd.code.org
 
 [/col-33]
 
@@ -789,7 +885,7 @@ style="clear:both">&nbsp;
 ### Paige Prescott
 Sante Fe, NM
 
-Prescott@pd.code.org
+prescott@pd.code.org
 
 <br />
 <a id="nv"></a>
@@ -909,32 +1005,39 @@ carr@pd.code.org
 <br />
 <a id="or"></a>
 ## Oregon
-[col-33]
 ### Chris Bartlo
 Portland, OR
 
 bartlo@pd.code.org
 
-[/col-33]
-
-[col-33]
-### Kiki Prottsman
-Eugene, OR
-
-prottsman@pd.code.org
-
-[/col-33]
-
-<p
-style="clear:both">&nbsp;
-</p>
-
+<br />
 <a id="pa"></a>
 ## Pennsylvania
+[col-33]
 ### Harvey Scribner
 Philadelphia, PA
 
 scribner@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Brian Stamford
+Homestead, PA
+
+stamford@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Megan Cicconi
+Homestead, PA
+
+cicconi@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 <br />
 <a id="ri"></a>
@@ -947,12 +1050,24 @@ ficarra@pd.code.org
 <br />
 <a id="sc"></a>
 ## South Carolina
+[col-33]
 ### Ann Puckett
 Columbia, SC
 
 puckett@pd.code.org
 
-<br />
+[/col-33]
+
+[col-33]
+### Jamesetta James
+Columbia, SC
+
+james@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 <a id="tn"></a>
 ## Tennessee
 [col-33]
@@ -968,7 +1083,7 @@ Jjackson@pd.code.org
 ### Herman Nelson
 Murfreesboro, TN
 
-Nelson@pd.code.org
+nelson@pd.code.org
 
 [/col-33]
 
@@ -1104,10 +1219,26 @@ angle@pd.code.org
 [/col-33]
 
 [col-33]
+### Kammy Sanghere
+Fairfax, VA
+
+sanghera@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Rebecca Dovi
 Richmond, VA
 
 dovi@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Janice Maino
+Ashland, VA
+
+maino@Pd.code.org
 
 [/col-33]
 
@@ -1150,17 +1281,47 @@ scrader@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Ann Wrightmockler
+Tri-cities, WA
+
+wrightmockler@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Liz Stephens
+Tri-cities, WA
+
+stephens@pd.code.org
+
+[/col-33]
+
 <p
 style="clear:both">&nbsp;
 </p>
 
 <a id="wi"></a>
 ## Wisconsin
+[col-33]
 ### Dennis Brylow
 Milwaukee, WI
 
 brylow@pd.code.org
 
+[/col-33]
+
+[col-33]
+### Amanda Werner
+Janesville, WI
+
+werner@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <br />
 <br />

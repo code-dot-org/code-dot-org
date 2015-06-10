@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -75,7 +76,7 @@ function isOffRight(){
   } else{
     return false
   }
-}  
+}
 turnRight(90); //Turn the turtle to the East
 for(var i=0; i<10; i++){
   moveForward(50); //Move forward 50 pixels
@@ -122,3 +123,5 @@ Returns a number representing the current x coordinate in pixels of the turtle w
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -13,12 +13,9 @@ module Rack
     def call(env)
       status, headers, body = super(env)
       if ssl_request? && !https_ok?
-        response = Rack::Response.new body, status, headers
-        response.set_cookie('https_ok', {:value => '1', :path => '/', :expires => Time.now+24*60*60})
-        response.finish
-      else
-        [status, headers, body]
+        Utils.set_cookie_header! headers, 'https_ok', {:value => '1', :path => '/', :expires => Time.now+24*60*60}
       end
+      [status, headers, body]
     end
 
     private
