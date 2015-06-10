@@ -53,8 +53,8 @@
     sign_in_with: היכנס באמצעות %{provider}
     signed_in: נכנסת!
     signed_out: התנתקת מ<a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    sign_out_of: השתמשת ב- %{provider} להכנס. in. <a href="%{url}"> לחץ כאן</a> כדי
+      לצאת מ- %{provider}.
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
     google_oauth2: חשבון גוגל

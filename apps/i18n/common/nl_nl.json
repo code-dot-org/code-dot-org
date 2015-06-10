@@ -465,6 +465,8 @@
   "dropletBlock_setRed_param2_description": "The y position in pixels starting from the upper left corner of image.",
   "dropletBlock_setRed_param3": "roodWaarde",
   "dropletBlock_setRed_param3_description": "The amount of red (from 0 to 255) to set in the pixel.",
+  "dropletBlock_setScreen_description": "Sets the screen to the given screenId",
+  "dropletBlock_setScreen_param0": "screenId",
   "dropletBlock_setSpriteEmotion_description": "Zet het humeur van de acteur",
   "dropletBlock_setSpritePosition_description": "Verplaats de speler meteen naar een opgegeven plaats.",
   "dropletBlock_setSpriteSpeed_description": "Hiermee stel je de snelheid van een speler in",

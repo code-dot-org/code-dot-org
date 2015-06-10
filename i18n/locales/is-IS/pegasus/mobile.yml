@@ -12,6 +12,7 @@ is-IS:
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
   petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
+  petition_join_others: 'Join # others'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
@@ -169,6 +170,9 @@ is-IS:
   homepage_hero_text_teacher2: |
     &ldquo;Í þessu verkefni voru 100% nemenda minna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara

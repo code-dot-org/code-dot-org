@@ -56,21 +56,23 @@ zh:
         one: '发生了1个错误，%{resource}无法被保存：'
         other: '发生了%{count}个错误，%{resource}无法被保存：'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: '一封邀请电子邮件已经发送至%{email}。'
+      invitation_token_invalid: 提供的邀请令牌不是有效的！
+      updated: |
+        
+        您的密码已经设置成功。您现在已经在登录状态了。
+      no_invitations_remaining: 没有剩余的邀请
+      invitation_removed: 您的邀请已经被取消了。
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: 发送邀请
+        submit_button: 发送一个邀请
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: 设置您你的密码
+        submit_button: 设置我的密码
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: 邀请说明
+        hello: '你好 %{email}'
+        someone_invited_you: '有人邀请你去%{url}，你可以通过下面的链接接受它。'
+        accept: 接受邀请
+        ignore: '如果您不想接受邀请，请忽略这封电子邮件。<br/>您的账户将不会被创建除非访问上面的链接并设置您的密码。'

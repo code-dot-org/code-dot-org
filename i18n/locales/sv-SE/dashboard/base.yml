@@ -66,8 +66,8 @@ sv:
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} elever har redan kommit med.'
+    teacher_count: '%{count} lärare har redan kommit med.'
     overview_student: 'Registrera dig för ett konto för att spåra dina framsteg. Din e-post används främst för att inloggning och för återställning av lösenord. För mer information, se vår <a href="http://code.org/privacy"> Sekretesspolicy</a>.'
     overview_teacher: 'Undervisa datavetenskap i klassrummet genom att registrera dig för ett konto. <p/> Du kommer att kunna lägga till dina elever och följa deras utveckling.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org"> Bläddra bland de olika stadierna och pusslen</a>, men du måste registrera dig för att spara dina framsteg.'
@@ -236,7 +236,7 @@ sv:
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: "%{name}'s framsteg"
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -307,10 +307,10 @@ sv:
     cant_remove_teacher_no_email: '%{teacher_name} kan inte tas bort som din lärare eftersom du inte har registrerat en e-postadress'
     student_teacher_disassociated: '%{teacher_name} har tagits bort som lärare för %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Svar ruta
       student: Student
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Visa lösning
+      try_it_yourself: Prova det själv
       section: Grupp
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
@@ -332,7 +332,7 @@ sv:
     classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} RADER KOD SKRIVEN AV STUDENTER'
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: 'Redan registrerad? %{link}'
@@ -366,7 +366,7 @@ sv:
     heading_apps: '<h2>Kul för</h2><h1>Alla</h1>'
     heading_legacy: '<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>'
     your_gallery: Galleri
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Prova en kurs på Code Studio
   gender:
     male: Man
     female: Kvinna
@@ -497,11 +497,11 @@ sv:
     badrange: Ditt kontrakt har fel omfång.
     baddomainsize: Ditt kontrakt har inte rätt antal objekt i domänen.
     baddomainname: En eller flera av dina domän objekt har fel namn.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: En eller flera av dina domän objekt har fel typ, eller de är i fel ordning.
   text_match:
     placeholder: Skriv in ditt svar här
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Tack
+    open_response_body: Tack för ditt svar!
   dialog:
     ok: Ok
   time:

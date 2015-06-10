@@ -72,24 +72,24 @@
         one: '1 błąd zabrania temu %{resource}, by został zapisany:'
         other: '%{count} błędów zabrania temu %{resource}, by został zapisany:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Zaproszenie mailem zostało wysłane do %{email}.
+      invitation_token_invalid: Przesłany znacznik (token) zaproszenia nie jest ważny!
+      updated: Twoje hasło zostało zmienione. Jesteś teraz zalogowany.
+      no_invitations_remaining: Nie ma żadnego zaproszenia
+      invitation_removed: Twoje zaproszenie zostało usunięte.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Wyślij zaproszenie
+        submit_button: Wyślij zaproszenie
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Ustaw swoje hasło
+        submit_button: Ustaw moje hasło
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Instrukcje zaproszenia
+        hello: Witaj %{email}
+        someone_invited_you: Ktoś zaprosił Cię do %{url}, możesz przyjąć to zaproszenie
+          korzystając z linku poniżej.
+        accept: Przyjmij zaproszenie
+        ignore: Jeśli nie chcesz przyjąć zaproszenia, zignoruj ten mail. <br /> Twoje
+          konto nie zostanie utworzone, dopóki nie przejdziesz pod wskazany powyżej
+          link i nie ustalisz hasła.
