@@ -85,6 +85,7 @@ module Dashboard
     config.assets.precompile += %w(
       editor/blockly_editor.css
       editor/blockly_editor.js
+      editor/embedded_markdown_editor.js
       levels/*
       react.js
       jquery.handsontable.full.css
