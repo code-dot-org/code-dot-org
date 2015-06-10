@@ -4,7 +4,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # CONDITIONALS > Stage Overview
 
-So far, you've written a simple program and added loops to increase efficiency. In this stage, we'll explore "conditionals" or "if, then…" statements which begin to add logic to your program.
+So far, you've written a simple program and added loops to increase efficiency. In this stage, we'll explore "conditionals" or "if-statements" which begin to add logic to your program.
 
 By completing Stage 5, you will:
 
@@ -12,9 +12,10 @@ By completing Stage 5, you will:
 - Practice coding simple conditionals
 - Reflect on classroom application
 
+<br/>
 ## What to Expect in this Stage:
 
-As in the previous stage, we'll first present a program that does not use conditionals, and then introduce some video instruction on conditionals. Then we'll introduce a series of puzzles and ask you to apply your learning, practicing using conditionals. We'll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
+As in the previous stage, we'll first present a program that does not use conditionals, then introduce some video instruction on conditionals. Next, we'll introduce a series of puzzles and ask you to apply your learning using conditionals. We'll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
 
 Ready? Let's go!
 
