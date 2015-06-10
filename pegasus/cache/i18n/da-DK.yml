@@ -1121,3 +1121,8 @@
   sphero_beyond_longdescription: Uanset om du er lærer eller forælder, vil SPRK lektionerne
     giver børnene et sjovt kursus i at programmere robotter, og samtidig skærpe deres
     færdigheder i matematik og naturfag.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning
