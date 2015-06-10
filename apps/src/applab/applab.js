@@ -1249,6 +1249,10 @@ Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
 };
 
+function quote(str) {
+  return '"' + str + '"';
+}
+
 /**
  * Returns a list of options (optionally filtered by type) for code-mode
  * asset dropdowns.
@@ -1256,15 +1260,19 @@ Applab.isInDesignMode = function () {
 Applab.getAssetDropdown = function (typeFilter) {
   var options = assetListStore.list(typeFilter).map(function (asset) {
     return {
-      text: '"' + clientApi.basePath(asset.filename) + '"',
-      display: '"' + asset.filename + '"'
+      text: quote(clientApi.basePath(asset.filename)),
+      display: quote(asset.filename)
     };
   });
-  options.push({display: '<span class="chooseAssetDropdownOption">Choose...</a>', click: function (callback) {
+  var handleChooseClick = function (callback) {
     showAssetManager(function (filename) {
-      callback('"' + filename + '"');
+      callback(quote(filename));
     }, 'image');
-  }});
+  };
+  options.push({
+    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
+    click: handleChooseClick
+  });
   return options;
 };
 
