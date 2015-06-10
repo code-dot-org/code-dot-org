@@ -18,7 +18,7 @@
     }
   }
 
-#warning-banner-https
+#warning-banner-https{style: 'display: none;'}
   .expanded{style: 'display: none;'}
     %i.fa.fa-warning
     = I18n.t 'compatibility_https_header'
@@ -33,6 +33,7 @@
     var collapsed = banner.find(".collapsed");
     var expanded = banner.find(".expanded");
     function showWarning() {
+      banner.show();
       if (document.cookie.indexOf('hide-https-warning') >= 0) {
         collapsed.show();
       } else {
