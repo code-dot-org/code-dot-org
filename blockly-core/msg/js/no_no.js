@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "Anrop";
+Blockly.Msg.ACTUAL = "Kall";
 Blockly.Msg.ADD = "Legg til";
 Blockly.Msg.ADD_COMMENT = "Legg til kommentar";
 Blockly.Msg.ADD_PARAMETER = "Legg til Parameter";
@@ -88,7 +88,7 @@ Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Velg type...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Beskrivelse";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domene";
 Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Definer en funksjonell metode";
-Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Utvalg";
+Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Område";
 Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Lag en Variabel";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variabel";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";

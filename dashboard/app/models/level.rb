@@ -7,6 +7,8 @@ class Level < ActiveRecord::Base
   belongs_to :user
   has_many :level_sources
 
+  before_validation :strip_name
+
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
@@ -195,6 +197,10 @@ class Level < ActiveRecord::Base
   def project_template_level
     return nil if self.try(:project_template_level_name).nil?
     Level.find_by_key(project_template_level_name)
+  end
+
+  def strip_name
+    self.name = name.to_s.strip unless name.nil?
   end
 
   private

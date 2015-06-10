@@ -14,8 +14,8 @@ Blockly.Msg.COLOUR_BLEND_TOOLTIP = "دو رنگوں کو دیے گیے تناس�
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://en.wikipedia.org/wiki/Color";
 Blockly.Msg.COLOUR_PICKER_TOOLTIP = "رنگوں کی تختی میں سے رنگ کا انتخاب کریں۔.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "مختلف رنگ";
-Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "کسی بھی ایک رنگ کا انتخاب کیجئے۔.";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "بے ترتیب رنگ";
+Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "بغیر ترتیب کے کسی بھی ایک رنگ کا انتخاب کیجئے۔.";
 Blockly.Msg.COLOUR_RGB_BLUE = "نيلا";
 Blockly.Msg.COLOUR_RGB_GREEN = "سبز";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";
@@ -26,7 +26,7 @@ Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "لوپ سے نکل جائیں";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "لوپ کی اگلی تکرار سے جاری رکھیں";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "اندر والے لوپ سے باہر نکلیں۔";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "بیرونی لوپ سے باہر نکلیں۔";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "اس لوپ کو آگے سے پھلانگیں۔ اور اگلی تکرار سے جاری رکھیں۔";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "خبردار: یہ بلاک صرف لوپ کے اندر استعمال ہو سکتا ہے۔";
 Blockly.Msg.CONTROLS_FOREACH_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#for_each";
@@ -126,13 +126,13 @@ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_END = "شے فہرست میں م
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_START = "شے فہرست میں مخصوص مقام پر ہٹاتا ہے ۔  #1 پہلی شے ہے ۔";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST = "فہرست میں آخری شے ہٹاتا ہے ۔";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM = "ایک فہرست میں ایک بے ترتیب شے ہٹاتا ہے ۔";
-Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_END = "to # from end";
-Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_START = "to #";
+Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_END = "آخر سے # تک";
+Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_START = "# تک";
 Blockly.Msg.LISTS_GET_SUBLIST_END_LAST = "آخری";
 Blockly.Msg.LISTS_GET_SUBLIST_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#Getting_a_sublist";
 Blockly.Msg.LISTS_GET_SUBLIST_START_FIRST = "پہلے سےذیلی فہرست حاصل کریں";
-Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_END = "get sub-list from # from end";
-Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_START = "get sub-list from #";
+Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_END = "اختتام سے # سے ذیلی فہرست حاصل کریں";
+Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_START = "# سے ذیلی فہرست حاصل کریں";
 Blockly.Msg.LISTS_GET_SUBLIST_TAIL = "";
 Blockly.Msg.LISTS_GET_SUBLIST_TOOLTIP = "فہرست کا اختصاصی حصہ کی نقل بناتا ہے ۔";
 Blockly.Msg.LISTS_INDEX_OF_FIRST = "پہلا واقعہ شے کی تلاش کریں";
@@ -151,9 +151,9 @@ Blockly.Msg.LISTS_REPEAT_TITLE = "%1  شے کو %2 بار دہرا کر فہرس
 Blockly.Msg.LISTS_REPEAT_TOOLTIP = "ایک فہرست بناتا ہے جو دی گئی قدر کو اختصاصی تعداد میں دہرا کر بنتی ہے۔";
 Blockly.Msg.LISTS_SET_INDEX_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#in_list_..._set";
 Blockly.Msg.LISTS_SET_INDEX_INPUT_TO = "کے طور پر";
-Blockly.Msg.LISTS_SET_INDEX_INSERT = "insert at";
+Blockly.Msg.LISTS_SET_INDEX_INSERT = "پرڈالیں";
 Blockly.Msg.LISTS_SET_INDEX_SET = "رکهنا";
-Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = "Inserts the item at the start of a list.";
+Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = "شے کو فہرست کے شروع میں ڈالیں ۔";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_END = "Inserts the item at the specified position in a list.  #1 is the last item.";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_START = "Inserts the item at the specified position in a list.  #1 is the first item.";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_LAST = "Append the item to the end of a list.";

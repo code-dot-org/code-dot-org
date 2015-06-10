@@ -52,6 +52,12 @@ class ActiveSupport::TestCase
   def set_env(env)
     Rails.env = env.to_s
     CDO.rack_env = env
+    # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
+    if Rails.env.levelbuilder?
+      ENV['FORCE_CUSTOM_LEVELS'] = '1'
+    else
+      ENV.delete 'FORCE_CUSTOM_LEVELS'
+    end
   end
 
 

@@ -42,6 +42,9 @@ level 'blockly:Bounce:1'
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
 
+stage 'Multi2'
+level 'Choose 2 Test'
+
 stage 'Match'
 level 'K-1 Maze Match 1'
 

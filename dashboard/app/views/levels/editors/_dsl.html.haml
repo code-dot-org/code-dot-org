@@ -9,6 +9,13 @@
 
 - if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
   %p Markdown Editor
-  #epiceditor{style: 'height: 350px; border: 5px;'}
-  = stylesheet_link_tag    'editor/markdown_editor', media: 'all'
-  = javascript_include_tag 'editor/markdown_editor'
+
+  %textarea#level_markdown_textarea
+  #markdown-preview
+
+  = javascript_include_tag 'editor/embedded_markdown_editor'
+  :javascript
+    dashboard.initializeEmbeddedMarkdownEditor(
+      $('#level_dsl_text'),
+      'markdown_textarea',
+      $('#markdown-preview'));
