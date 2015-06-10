@@ -339,9 +339,9 @@ designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
   // Children are screens. Want to operate on grandchildren
   makeUndraggable(divApplab.children().children());
-  var s = new XMLSerializer().serializeToString(divApplab[0]);
+  var serialization = new XMLSerializer().serializeToString(divApplab[0]);
   makeDraggable(divApplab.children().children());
-  Applab.levelHtml = s;
+  Applab.levelHtml = serialization;
 };
 
 /**
