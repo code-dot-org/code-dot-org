@@ -4,7 +4,7 @@ Feature: Droplet levels work as expected
     Given I am on "http://learn.code.org/"
     And I am a student
     And I am on "http://learn.code.org/users/sign_in"
-    And I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/5?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/5?noautoplay=true"
     And I wait to see "#x-close"
     And I close the dialog
 

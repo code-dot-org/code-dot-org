@@ -441,7 +441,6 @@
             inlineattach.onPaste(e);
         }, false);
 
-        console.log("setting event");
         codeMirror.on('drop', function(data, e) {
           if (inlineattach.onDrop(e)) {
             e.stopPropagation();

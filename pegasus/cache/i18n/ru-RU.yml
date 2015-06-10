@@ -20,6 +20,7 @@
     подписавших.'
   petition_sign_message_support: 'Если вы поддерживаете нас, подпишите свое имя.  Присоединяйтесь
     к #остальным.'
+  petition_join_others: 'Join # others'
   name: Имя
   email: Электронная почта
   zipcode: Почтовый индекс или страна
@@ -184,6 +185,9 @@
     и инноваций  -  это важно для любой карьеры.» Floresa, учитель
   homepage_hero_text_teacher2: "&ldquo;Эта программа оказалась привлекательной для
     100% моих учеников, они захотели поучаствовать в этом.&ldquo; \nАдам, учитель\n"
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Час кода
   homepage_slot_text_frozen: Холодное сердце с Анной и Эльзой
   homepage_slot_text_teacher: Панель управления преподавателя
