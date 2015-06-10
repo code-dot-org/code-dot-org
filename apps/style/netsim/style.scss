@@ -262,12 +262,12 @@ $wide-column-width: 121px;
       }
       .auto-dns-node {
         circle {
-          stroke: pink;
-          fill: pink;
+          stroke: $light_yellow;
+          fill: $light_yellow;
         }
 
         rect {
-          stroke: pink;
+          stroke: $light_yellow;
         }
       }
 
