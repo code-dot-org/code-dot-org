@@ -930,6 +930,10 @@ a.download-video {
   @include warning-banner;
 }
 
+#warning-banner-https {
+  @include warning-banner;
+}
+
 #warning-banner-chrome {
   @include warning-banner;
   color: white;
