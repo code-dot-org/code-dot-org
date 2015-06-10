@@ -1393,19 +1393,6 @@ en:
         Where is Brendan from?: Where is Brendan from?
         blue: blue
         salt: salt
-      unique level name here:
-        A: A
-        B: B
-        C: C
-        Cycle: Cycle
-        D: D
-        E: E
-        Edge: Edge
-        Graph: Graph
-        Graph Terminology: Graph Terminology
-        Look at diagram below and then match the proper term with what each label is pointing to.: Look at diagram below and then match the proper term with what each label is pointing to.
-        Node: Node
-        Weight: Weight
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
@@ -2683,12 +2670,6 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      unique level name here:
-        Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
