@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 [Research shows](http://code.org/promote) that computer science promotes critical thinking, creativity, problem-solving, and engagement in real-world skills.
 
-Why would you want to teach computer science if you're not a STEM teacher? If you're taking this course, you likely have a number of your own answers to that question, but if you need further inspiration, take some time now and review this video collection to get a sense of the "why". These videos are great to share with your students, your administration, parents, and your community if you need help making a case for CS in the classroom.
+Why would you want to teach computer science if you're not a STEM teacher? If you're taking this course, you likely have a number of your own answers to that question, but if you need further inspiration, take some time now and review [this video collection](http://code.org/educate/inspire) to get a sense of the "why". These videos are great to share with your students, your administration, parents, and your community if you need help making a case for CS in the classroom.
 
 [Explore inspirational videos >>](http://code.org/educate/inspire)
 
@@ -18,9 +18,9 @@ You might also be interested in some of the statistics and evidence around CS ed
 
 If we wait until high school or college to introduce students to computer science, some students will already have decided that computer science is not for them or they will feel that they are already too far behind compared to students who study it outside of school.
 
-Exposing students to computer science in grades K-5, when they don't have to opt-in to a class like in high school, allows all students to see how accessible the subject is and decide if they enjoy it. Below are 2 infographics that help paint a picture of the kind of students currently studying computer science. By introducing students to computer science at a younger age, we can help to make the computer science field more equitable.
+Exposing students to computer science in grades K-5, when they don't have to opt-in to a class like they might in high school, allows all students to see how accessible the subject is, and decide if they enjoy it. Below are 2 infographics that help paint a picture of the kind of students currently studying computer science. By introducing students to computer science at a younger age, we can help to make the computer science field more equitable.
 
-</br>
+<br/>
 
 ![image](http://code.org/images/cs-stats/gender-inequality.png)
 
@@ -28,9 +28,9 @@ Exposing students to computer science in grades K-5, when they don't have to opt
 
 ![image](http://code.org/images/cs-stats/2012-hs-ap-courses.png)
 
-</br>
+<br/><br/>
 
-Why do you believe teaching computer science is worthwhile? [Tweet your thoughts and be sure to tag](https://twitter.com/codeorg) [@codeorg](https://twitter.com/codeorg) [in your tweet so we can respond.](https://twitter.com/codeorg) Or [find us](http://code.org/about) on the social media platform of your choice, and put your response there.
+Why do you believe teaching computer science is worthwhile? [Tweet your thoughts and be sure to tag @codeorg in your tweet so we can respond.](https://twitter.com/codeorg) Or [find us](http://code.org/about) on the social media platform of your choice and put your response there.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
