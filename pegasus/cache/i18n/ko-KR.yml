@@ -16,6 +16,7 @@
   petition_message: 모든 학교의 모든 학생은 컴퓨터과학(정보과학)을 배울 기회가 있어야 합니다.
   petition_sign_message: '동의하시면 이름을 서명해 주세요. 지금까지 # 명이 서명하였습니다.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: 이름
   email: Email
   zipcode: 우편번호 또는 국가
@@ -186,6 +187,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: 안나, 엘사와 함께 하는 겨울왕국
   homepage_slot_text_teacher: Teacher Dashboard

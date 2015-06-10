@@ -15,6 +15,7 @@
   petition_message: すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです
   petition_sign_message: 同意して、署名をする。参加する
   petition_sign_message_support: 私たちを支援して頂けるなら、あなたのお名前の署名をお願いします。＃ 他に参加をします。
+  petition_join_others: 'Join # others'
   name: 名前
   email: Eメール
   zipcode: 郵便番号または国名
@@ -163,6 +164,9 @@
   homepage_hero_text_student5: '&ldquo;コンピューターサイエンスは他の人のためにあるんじゃない。あなたのためにあるのだ。いま、ここから始めよう。&rdquo;ジェラルド先生'
   homepage_hero_text_teacher1: '&ldquo;コーディングは創造性、インスピレーション、革新性が育てられます&mdash;これらは、どのような仕事でも大事なことです」&rdquo;フローレサ先生'
   homepage_hero_text_teacher2: '&ldquo;生徒全員がこのプログラムに興味を持ち、集中して取り組みました。&rdquo;アダム、教師'
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: 「アナと雪の女王」のアナとエルサ
   homepage_slot_text_teacher: Teacher Dashboard
@@ -197,7 +201,7 @@
   homepage_slot_text_link_stats: 統計情報を表示
   homepage_slot_text_link_buy: 参加しよう
   homepage_slot_text_link_donate: 寄付をする
-  homepage_header_codestudio: コードスタジオの学生作品
+  homepage_header_codestudio: Code Studio の生徒作品
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: 全て見る
   homepage_donors_donate: 寄付する
@@ -522,7 +526,7 @@
   lightbotintl_platformtext: iOS、Android (またはweb ブラウザ)
   codehs_platformtext: 最新ブラウザ（継続コースは費用がかかります)
   codecademy_platformtext: 最新web ブラウザ、iOS、Android アプリケーション
-  codecombat_platformtext: 最近のブラウザー。 (続くコースでは$$が必要になります)
+  codecombat_platformtext: 最近のウェブブラウザー（以降のコースは有料になります）
   codemonkey_platformtext: 最新Webブラウザ
   codeavengers_platformtext: 最新Webブラウザ
   processing_platformtext: 最新Webブラウザ
@@ -781,7 +785,7 @@
   finch_beyond_shortdescription: コンピュータサイエンス教育用のロボット
   arduino_beyond_shortdescription: Sparkfun の Digital Sandbox を使って Arduino について学ぶ
   processing_beyond_shortdescription: Processing 言語を学ぶ
-  alice_beyond_shortdescription: 3D環境でのプログラミングを教える
+  alice_beyond_shortdescription: 3D環境でプログラミングを教える
   sphero_beyond_shortdescription: SPRK では子供たちにロボットプログラミングの速習コースを用意しています。算数や科学のスキルを鍛えます。
   codeorg_beyond_longdescription: ドラッグ＆ドロップによるプログラミングでコンピューターサイエンスの基礎的な概念について学びます。３つのコースが用意されており、それぞれ15-20個のレッスンから構成されています。ゲームのように独習できるチュートリアルや、ネット環境を必要としないクラスルーム用の課題も用意されています。ビデオレクチャにはビルゲイツ、マークザッカーバーグ、アングリーバード、プランツ対ゾンビなどが出演しています。繰り返しループ、条件分岐、基本的なアルゴリズム、関数、変数などを学びましょう
   khan_beyond_longdescription: 楽しくお絵かきをしながらJavaScriptのプログラミングの基本を学びます。自分でやったり、クラスで取り組んだりすることができます
@@ -800,14 +804,14 @@
     とプログラミングについて理解できるようになります。私たちは、いろんな年代、いろんな背景をもつ生徒にこの教材を使ってきたので、あなたもきっとできると確信しています。
   hacketyhack_beyond_longdescription: Hackety Hack では、ゼロからプログラミングの基礎について学ぶことができます。未経験でも大丈夫です！Hackety
     Hack では Ruby というプログラミング言語について学びます。Ruby はデスクトップアプリからウェブサイトを含む、様々なプログラミングでつかわれています[注：デスクトップへのインストールが必要です]。
-  robomind_beyond_longdescription: 'バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。 '
+  robomind_beyond_longdescription: 'バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、プログラミングの実習をサポートするための簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。 '
   makegameswithus_beyond_longdescription: 既に ObjectiveC を知ってますか？1時間で iPhone ゲームを作り方を学びましょう！コード、テスト、プレイといった全てのプロセスをブラウザ上で学ぶことができます。できたものは、Facebook
     に共有して友達に遊んでもらいましょう。iPhone での開発経験は必要ありません。変数、メソッド、オブジェクトがどのようなものなのか理解しなくてはなりません。
   appinventor_beyond_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour
     of Codeでは、事前に何も知らなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています
   touchdevelop_beyond_longdescription: TouchDevelop を使うと iPad, iPhone, Android, PC,
     Mac, Windows Phone で動くアプリを作ることができます。あなたのフォンやタブレットの上でも、タッチ対応のエディタを使って楽しく作業ができます。
-  codehs_beyond_longdescription: 犬のカレルと一緒にプログラミングの基礎について学びましょう。コンピューターに命令することは、犬に指示を出すのと同じようなことです。このチュートリアルは、先生が実施するのに最適ですが、個人で取り組むこともできます
+  codehs_beyond_longdescription: 犬のカレルと一緒にプログラミングの基礎について学びましょう。楽しくてわかりやすいビジュアルな基礎コースで、犬に指示を出すのと同じような感覚でコンピューターのコマンドを入力します。このチュートリアルは、先生に主導してもらうのが理想的ですが、個人で学ぶこともできます
     [注：有料です]。
   udemy_beyond_longdescription: コードを見たことがなくても、コードで生計を立てていたとしても、プロの先生による Udemy のコースがあります[注：有料です]。
   lynda_beyond_longdescription: コーディングの方法を学習してウェブアプリを作りましょう。C や C++ でのオブジェクト指向の基礎から、Java
@@ -828,7 +832,7 @@
     36 個のすごく面白いパズルが用意されています。あなたの解き方を記録して、YouTube に共有してともだちに見せることもできます。
   kidsruby_beyond_longdescription: Ruby を使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生には Ruby
     プログラミングの勉強をしているといっておきましょう :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。
-  w3schools_beyond_longdescription: あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びます。ウェブサイトにデータベースを追加しましょう。
+  w3schools_beyond_longdescription: あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びましょう。ウェブサイトにデータベースを追加する方法を学びましょう。
   codeavengers_beyond_longdescription: |
     どうやってゲームやアプリ、ウェブサイトを作るか知ることができます。専門家が初心者のために難易度を設定しています。説明はわかりやすく、必要なときに使えるヘルプもあります。
     HTML、CSS、そして JavaScript のコースはコード・チャレンジと復習ゲームが含まれており、すべての年齢層へ楽しく効果的に学習できるようになっています。
@@ -839,8 +843,8 @@
   codea_beyond_longdescription: iPad アプリの Codea ではゲーム作り、またはあなたの持っているアイデアを表現することができます。タッチ機能や加速度計を使って、そのアイデアを作品にしてみよう。Codea
     では一番きれいに、一番かんたんにプログラムを作ることができます。さらに、あなたのプログラムにタッチすることもできます。数字を変えたい？色は？画像は？タッチしてプログラミングをする、まさにあなたの求めていたものです。
   lego_beyond_longdescription: LEGO ブロックを使って小さなロボットを作ってみよう。
-  finch_beyond_longdescription: Finchは最新のロボットです。この分野でトップのカーネギーメロン大学という大学のCREATEラボから生まれました。Finchは初心者向けのプログラミングアートをサポートします。Finchは何十ものプログラミング言語と開発環境、そして8歳前後の生徒に適した開発環境もサポートしています。Finchはインタラクティブなプログラムを作りたい生徒をサポートするために作られました。
-  arduino_beyond_longdescription: Arduino はアーティストやデザイナーに向けて作られたプラットフォームで、本物のセンサーやLED、ブザーなどを使うことができます。Sparkfun
+  finch_beyond_longdescription: Finchは、コンピューターサイエンスを教育するための最新のロボットです。カーネギーメロン大学のCREATEラボにおける４年間の研究の結果から生まれました。Finchは初心者向けのプログラミングの基礎技術の学習をサポートします。Finchは何十ものプログラミング言語と開発環境、そして8歳前後の児童に適した開発環境もサポートしています。Finchは学生がインタラクティブなプログラムを作れるようサポートために設計されました。。
+  arduino_beyond_longdescription: Arduino はアーティストやデザイナーに向けの人気のあるプラットフォームで、本物のセンサーやLED、ブザーなどを使うことができます。Sparkfun
     Virtual Sandbox は実際のArduinoコードをブラウザ上で教えてくれます。
   processing_beyond_longdescription: Processing はプログラミング言語のひとつであり、また開発環境のひとつでもあり、オンラインのコミュニティでもあります。2001
     年に生まれてから、ビジュアルアートの分野でのプログラミングを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
