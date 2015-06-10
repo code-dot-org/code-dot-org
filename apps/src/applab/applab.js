@@ -38,6 +38,9 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
+var clientApi = require('./assetManagement/clientApi');
+var assetListStore = require('./assetManagement/assetListStore');
+var showAssetManager = require('./assetManagement/show.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -969,7 +972,7 @@ Applab.execute = function() {
           onNextStepChanged: Applab.updatePauseUIState,
           onPause: Applab.onPauseContinueButton,
           onExecutionError: handleExecutionError,
-          onExecutionWarning: outputApplabConsole,
+          onExecutionWarning: outputApplabConsole
       });
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
@@ -1229,3 +1232,37 @@ var checkFinished = function () {
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
 };
+
+function quote(str) {
+  return '"' + str + '"';
+}
+
+/**
+ * Returns a list of options (optionally filtered by type) for code-mode
+ * asset dropdowns.
+ */
+Applab.getAssetDropdown = function (typeFilter) {
+  var options = assetListStore.list(typeFilter).map(function (asset) {
+    return {
+      text: quote(clientApi.basePath(asset.filename)),
+      display: quote(asset.filename)
+    };
+  });
+  var handleChooseClick = function (callback) {
+    showAssetManager(function (filename) {
+      callback(quote(filename));
+    }, 'image');
+  };
+  options.push({
+    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
+    click: handleChooseClick
+  });
+  return options;
+};
+
+// Pre-populate asset list
+if (dashboard.project.current) {
+  clientApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  });
+}
