@@ -60,7 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "までを繰り返します",
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "以下が満たされている間続行",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "値が 偽( false ) の間、構文を実行。",
-  "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "値が 真( ture ) の間、構文を実行。",
+  "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "値が 真(true)の間、構文を実行。",
   "DEFINE_HEADER_DEFINITION": "意味を決める",
   "DEFINE_FUNCTION_DEFINE": "定義",
   "DELETE_BLOCK": "ブロックを削除",

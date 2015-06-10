@@ -19,6 +19,7 @@
     Anderen anschließen.'
   petition_sign_message_support: 'Wenn du uns unterstützen möchtest, unterzeichne
     mit deinem Namen. Schließe dich den # anderen Supportern an.'
+  petition_join_others: 'Join # others'
   name: Name
   email: E-Mail
   zipcode: Postleitzahl oder Land
@@ -194,6 +195,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Die "Hour of Code"
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
   homepage_slot_text_teacher: Teacher Dashboard
