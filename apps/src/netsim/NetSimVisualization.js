@@ -569,6 +569,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
       neighbors.push(this.autoDnsNode_);
+      this.autoDnsNode_.setAddress(vizElement.autoDnsAddress);
     }
   } else if (vizElement instanceof NetSimVizSimulationWire) {
     if (vizElement.localVizNode) {
