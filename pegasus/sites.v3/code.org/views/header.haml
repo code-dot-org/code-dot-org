@@ -59,7 +59,7 @@
     border-width: 8px;
     margin-left: 0px;  
   }
-- unless request.ssl?
+- unless request.ssl? || rack_env?(:development)
   = view 'http_support'
 
 #pageheader-wrapper
