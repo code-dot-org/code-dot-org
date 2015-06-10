@@ -38,6 +38,9 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
+var clientApi = require('./assetManagement/clientApi');
+var assetListStore = require('./assetManagement/assetListStore');
+var showAssetManager = require('./assetManagement/show.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -493,6 +496,18 @@ Applab.init = function(config) {
     // Set up an event handler to create breakpoints when clicking in the
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
+
+    var toggleBreakpoint = function (row) {
+      var bps = aceEditor.session.getBreakpoints();
+      if (bps[row]) {
+        aceEditor.session.clearBreakpoint(row);
+        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
+      } else {
+        aceEditor.session.setBreakpoint(row);
+        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
+      }
+    };
+
     if (aceEditor) {
       aceEditor.on("guttermousedown", function(e) {
         var target = e.domEvent.target;
@@ -500,15 +515,14 @@ Applab.init = function(config) {
           return;
         }
         var row = e.getDocumentPosition().row;
-        var bps = e.editor.session.getBreakpoints();
-        if (bps[row]) {
-          e.editor.session.clearBreakpoint(row);
-        } else {
-          e.editor.session.setBreakpoint(row);
-        }
+        toggleBreakpoint(row);
         e.stop();
       });
     }
+
+    studioApp.editor.on('guttermousedown', function(e) {
+      toggleBreakpoint(e.line);
+    });
 
     if (studioApp.share) {
       // automatically run in share mode:
@@ -958,7 +972,7 @@ Applab.execute = function() {
           onNextStepChanged: Applab.updatePauseUIState,
           onPause: Applab.onPauseContinueButton,
           onExecutionError: handleExecutionError,
-          onExecutionWarning: outputApplabConsole,
+          onExecutionWarning: outputApplabConsole
       });
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
@@ -1067,7 +1081,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 
@@ -1078,6 +1092,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1214,34 +1229,40 @@ var checkFinished = function () {
   return false;
 };
 
-// TODO(dave): move this logic to dashboard.
-var getPegasusHost = function() {
-  switch (window.location.hostname) {
-    case 'studio.code.org':
-    case 'learn.code.org':
-      return 'code.org';
-    default:
-      var name = window.location.hostname.split('.')[0];
-      switch(name) {
-        case 'localhost':
-          return 'localhost.code.org:3000';
-        case 'development':
-        case 'staging':
-        case 'test':
-        case 'levelbuilder':
-          return name + '.code.org';
-        case 'staging-studio':
-          return 'staging.code.org';
-        case 'test-studio':
-          return 'test.code.org';
-        case 'levelbuilder-studio':
-          return 'levelbuilder.code.org';
-        default:
-          return null;
-      }
-  }
-};
-
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
 };
+
+function quote(str) {
+  return '"' + str + '"';
+}
+
+/**
+ * Returns a list of options (optionally filtered by type) for code-mode
+ * asset dropdowns.
+ */
+Applab.getAssetDropdown = function (typeFilter) {
+  var options = assetListStore.list(typeFilter).map(function (asset) {
+    return {
+      text: quote(clientApi.basePath(asset.filename)),
+      display: quote(asset.filename)
+    };
+  });
+  var handleChooseClick = function (callback) {
+    showAssetManager(function (filename) {
+      callback(quote(filename));
+    }, 'image');
+  };
+  options.push({
+    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
+    click: handleChooseClick
+  });
+  return options;
+};
+
+// Pre-populate asset list
+if (window.dashboard && dashboard.project.current) {
+  clientApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  });
+}

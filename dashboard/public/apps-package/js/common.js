@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({142:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({144:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -58,7 +58,7 @@ exports.define = function(name) {
 };
 
 
-},{}],96:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -282,7 +282,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 }
 
 
-},{}],95:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -573,7 +573,7 @@ function RGBColor(color_string)
 
 
 
-},{}],94:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3542,7 +3542,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 }
 
 
-},{}],93:[function(require,module,exports){
+},{}],95:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4155,7 +4155,7 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],259:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4706,7 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"./locale":143,"./utils":309}],287:[function(require,module,exports){
+},{"./locale":145,"./utils":311}],289:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4729,7 +4729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],261:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],263:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -4995,7 +4995,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":101}],260:[function(require,module,exports){
+},{"./dom":103}],262:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5070,7 +5070,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],293:[function(require,module,exports){
+},{}],295:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -5218,7 +5218,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":5,"./blocksCommon":69,"./dom":101,"./required_block_utils":258,"./utils":309}],258:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":71,"./dom":103,"./required_block_utils":260,"./utils":311}],260:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5541,7 +5541,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":68,"./locale":143,"./utils":309,"./xml":310}],69:[function(require,module,exports){
+},{"./block_utils":70,"./locale":145,"./utils":311,"./xml":312}],71:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5710,7 +5710,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 
-},{"./locale":143}],5:[function(require,module,exports){
+},{"./locale":145}],5:[function(require,module,exports){
 /* global Blockly, ace:true, $, requirejs, marked */
 
 var parseXmlElement = require('./xml').parseElement;
@@ -6436,14 +6436,23 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
+  var headerElement;
+
+  var puzzleTitle = msg.puzzleTitle({
+    stage_total: level.stage_total,
+    puzzle_number: level.puzzle_number
+  });
+
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
+    instructionsDiv.className += ' markdown-instructions-container';
+    headerElement = document.createElement('h1');
+    headerElement.className = 'markdown-level-header-text';
+    headerElement.innerHTML = puzzleTitle;
   }
+
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
-    puzzleTitle: msg.puzzleTitle({
-      stage_total: level.stage_total,
-      puzzle_number: level.puzzle_number
-    }),
+    puzzleTitle: puzzleTitle,
     instructions: level.instructions,
     renderedMarkdown: renderedMarkdown,
     aniGifURL: level.aniGifURL
@@ -6482,7 +6491,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
-    onHidden: hideFn
+    onHidden: hideFn,
+    scrollContent: !!renderedMarkdown,
+    header: headerElement
   });
 
   if (autoClose) {
@@ -7333,7 +7344,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":66,"./block_utils":68,"./constants.js":100,"./dom":101,"./dropletUtils":102,"./feedback":122,"./locale":143,"./templates/builder.html.ejs":281,"./templates/buttons.html.ejs":282,"./templates/instructions.html.ejs":284,"./templates/learn.html.ejs":285,"./templates/makeYourOwn.html.ejs":286,"./utils":309,"./xml":310,"url":477}],477:[function(require,module,exports){
+},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":68,"./block_utils":70,"./constants.js":102,"./dom":103,"./dropletUtils":104,"./feedback":124,"./locale":145,"./templates/builder.html.ejs":283,"./templates/buttons.html.ejs":284,"./templates/instructions.html.ejs":286,"./templates/learn.html.ejs":287,"./templates/makeYourOwn.html.ejs":288,"./utils":311,"./xml":312,"url":479}],479:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8042,13 +8053,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":460,"querystring":463}],463:[function(require,module,exports){
+},{"punycode":462,"querystring":465}],465:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":461,"./encode":462}],462:[function(require,module,exports){
+},{"./decode":463,"./encode":464}],464:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8135,7 +8146,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],461:[function(require,module,exports){
+},{}],463:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8221,7 +8232,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],460:[function(require,module,exports){
+},{}],462:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8732,7 +8743,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],286:[function(require,module,exports){
+},{}],288:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8752,7 +8763,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],285:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],287:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8774,7 +8785,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],284:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],286:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8786,7 +8797,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; if (locals.renderedMarkdown) {; buf.push('  ', (2,  locals.renderedMarkdown ), '\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
+ buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('<div class=\'instructions-markdown\'>', (2,  locals.renderedMarkdown ), '</div>\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8794,7 +8805,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],281:[function(require,module,exports){
+},{"ejs":482}],283:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8814,7 +8825,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],122:[function(require,module,exports){
+},{"ejs":482}],124:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -9933,11 +9944,14 @@ FeedbackUtils.prototype.createModalDialog = function(options, icon) {
     }
   };
 
+  var elementToScroll = options.scrollContent ? '.modal-content' : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
-    id: options.id
+    autoResizeScrollableElement: elementToScroll,
+    id: options.id,
+    header: options.header
   });
 };
 
@@ -10044,7 +10058,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":98,"./constants":100,"./dom":101,"./feedbackBlocks":123,"./locale":143,"./templates/buttons.html.ejs":282,"./templates/code.html.ejs":283,"./templates/shareFailure.html.ejs":289,"./templates/sharing.html.ejs":290,"./templates/showCode.html.ejs":291,"./templates/trophy.html.ejs":292,"./utils":309,"./xml":310}],292:[function(require,module,exports){
+},{"./codegen":100,"./constants":102,"./dom":103,"./feedbackBlocks":125,"./locale":145,"./templates/buttons.html.ejs":284,"./templates/code.html.ejs":285,"./templates/shareFailure.html.ejs":291,"./templates/sharing.html.ejs":292,"./templates/showCode.html.ejs":293,"./templates/trophy.html.ejs":294,"./utils":311,"./xml":312}],294:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10064,7 +10078,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],291:[function(require,module,exports){
+},{"ejs":482}],293:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10084,7 +10098,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],290:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],292:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10104,7 +10118,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],289:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],291:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10124,7 +10138,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],283:[function(require,module,exports){
+},{"ejs":482}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10144,7 +10158,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],282:[function(require,module,exports){
+},{"ejs":482}],284:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10164,7 +10178,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],123:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],125:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10294,7 +10308,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":100,"./templates/readonly.html.ejs":288}],288:[function(require,module,exports){
+},{"./constants":102,"./templates/readonly.html.ejs":290}],290:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10315,120 +10329,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],101:[function(require,module,exports){
-exports.addReadyListener = function(callback) {
-  if (document.readyState === "complete") {
-    setTimeout(callback, 1);
-  } else {
-    window.addEventListener('load', callback, false);
-  }
-};
-
-exports.getText = function(node) {
-  return node.innerText || node.textContent;
-};
-
-exports.setText = function(node, string) {
-  if (node.innerText) {
-    node.innerText = string;
-  } else {
-    node.textContent = string;
-  }
-};
-
-exports.getTouchEventName = function(eventName) {
-  var isIE11Touch = window.navigator.pointerEnabled;
-  var isIE10Touch = window.navigator.msPointerEnabled;
-  var isStandardTouch = 'ontouchend' in document.documentElement;
-
-  var key;
-  if (isIE11Touch) {
-    key = "ie11";
-  } else if (isIE10Touch) {
-    key = "ie10";
-  } else if (isStandardTouch) {
-    key = "standard";
-  }
-  if (key && TOUCH_MAP[eventName]) {
-    return TOUCH_MAP[eventName][key];
-  }
-};
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
-  var touchEvent = exports.getTouchEventName(eventName);
-  if (touchEvent) {
-    element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
-      handler(e);
-    }, false);
-  }
-};
-
-exports.addMouseDownTouchEvent = function(element, handler) {
-  addEvent(element, 'mousedown', handler);
-};
-
-exports.addMouseUpTouchEvent = function(element, handler) {
-  addEvent(element, 'mouseup', handler);
-};
-
-exports.addMouseMoveTouchEvent = function(element, handler) {
-  addEvent(element, 'mousemove', handler);
-};
-
-exports.addClickTouchEvent = function(element, handler) {
-  addEvent(element, 'click', handler);
-};
-
-// A map from standard touch events to various aliases.
-var TOUCH_MAP = {
-  //  Incomplete list, add as needed.
-  click: {
-    standard: 'touchstart',
-    ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
-  },
-  mousedown: {
-    standard: 'touchstart',
-    ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
-  },
-  mouseup: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
-  },
-  mousemove: {
-    standard: 'touchmove',
-    ie10: 'MSPointerMove',
-    ie11: 'pointermove'
-  }
-};
-
-exports.isMobile = function() {
-  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isWindowsTouch = function() {
-  var reg = /MSIE.*Touch/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isAndroid = function() {
-  var reg = /Android/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isIOS = function() {
-  var reg = /iP(hone|od|ad)/;
-  return reg.test(window.navigator.userAgent);
-};
-
-
-},{}],100:[function(require,module,exports){
+},{"ejs":482}],102:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -10507,7 +10408,7 @@ exports.KeyCodes = {
 };
 
 
-},{}],68:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -10806,7 +10707,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":310}],66:[function(require,module,exports){
+},{"./xml":312}],68:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -10880,6 +10781,19 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
   return this.blockTypeToTooltip.hasOwnProperty(functionName);
 };
 
+DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  $('.tooltipstered').tooltipster('hide');
+  var dialog = new window.Dialog({
+    body: $('<iframe>')
+      .addClass('markdown-instructions-container')
+      .width('100%')
+      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
+    autoResizeScrollableElement: '.markdown-instructions-container',
+    id: 'block-documentation-lightbox'
+  });
+  dialog.show();
+};
+
 /**
  * @param {String} functionName
  * @returns {DropletFunctionTooltip}
@@ -10895,11 +10809,12 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 module.exports = DropletTooltipManager;
 
 
-},{"./DropletAutocompleteParameterTooltipManager":60,"./DropletAutocompletePopupTooltipManager":61,"./DropletBlockTooltipManager":62,"./DropletFunctionTooltip":64}],62:[function(require,module,exports){
+},{"./DropletAutocompleteParameterTooltipManager":62,"./DropletAutocompletePopupTooltipManager":63,"./DropletBlockTooltipManager":64,"./DropletFunctionTooltip":66}],64:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -10958,7 +10873,17 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
 
     var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
       content: this.getTooltipHTML(funcName),
-      offsetX: tooltipOffsetX
+      offsetX: tooltipOffsetX,
+      functionReady: function (_, contents) {
+        var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+        // Important this binds to mouseDown/touchDown rather than click, needs to
+        // happen before `blur` which triggers the ace editor completer popup
+        // hide which in turn would hide the link and not show the docs.
+        dom.addClickTouchEvent(seeExamplesLink, function (event) {
+          this.dropletTooltipManager.showDocFor(funcName);
+          event.stopPropagation();
+        }.bind(this));
+      }.bind(this)
     });
 
     $(blockHoverDiv).tooltipster(configuration);
@@ -10992,8 +10917,9 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
 module.exports = DropletBlockTooltipManager;
 
 
-},{"./DropletFunctionTooltip":64,"./DropletFunctionTooltip.html.ejs":63}],64:[function(require,module,exports){
+},{"../dom":103,"./DropletFunctionTooltip":66,"./DropletFunctionTooltip.html.ejs":65}],66:[function(require,module,exports){
 var msg = require('../locale');
+var utils = require('../utils');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -11112,22 +11038,23 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
  * @returns {string} URL for full doc about this function
  */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
-  return 'http://code.org/applab/docs/' + this.functionName;
+  return '//' + utils.getPegasusHost() + '/applab/docs/' + this.functionName + '?embedded';
 };
 
 module.exports = DropletFunctionTooltip;
 
 
-},{"../locale":143}],143:[function(require,module,exports){
+},{"../locale":145,"../utils":311}],145:[function(require,module,exports){
 // base locale
 
 module.exports = window.blockly.common_locale;
 
 
-},{}],61:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -11221,8 +11148,23 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
     return;
   }
 
+  this.attachTooltipForFunction(funcName);
+};
+
+DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = function (funcName) {
+  var tooltipDOM = this.getTooltipHTML(funcName);
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-    content: this.getTooltipHTML(funcName)
+    content: tooltipDOM,
+    functionReady: function (_, contents) {
+      var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+      // Important this binds to mouseDown/touchDown rather than click, needs to
+      // happen before `blur` which triggers the ace editor completer popup
+      // hide which in turn would hide the link and not show the docs.
+      dom.addClickTouchEvent(seeExamplesLink, function (event) {
+        this.dropletTooltipManager.showDocFor(funcName);
+        event.stopPropagation();
+      }.bind(this));
+    }.bind(this)
   });
 
   var rowOverlayDiv = $('.ace_selected');
@@ -11239,19 +11181,20 @@ DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = 
  */
 DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
+  var dropletFunctionTooltipMarkup = DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
     fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });
+  return dropletFunctionTooltipMarkup;
 };
 
 module.exports = DropletAutocompletePopupTooltipManager;
 
 
-},{"./DropletFunctionTooltip.html.ejs":63}],63:[function(require,module,exports){
+},{"../dom":103,"./DropletFunctionTooltip.html.ejs":65}],65:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11268,7 +11211,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -11276,11 +11219,12 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],60:[function(require,module,exports){
+},{"ejs":482}],62:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -11351,16 +11295,22 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   if (!this.dropletTooltipManager.hasDocFor(functionName)) {
     return;
   }
-
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
 
   if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
     return;
   }
 
-  this.getCursorTooltip_().tooltipster('content',
-    this.getTooltipHTML(tooltipInfo, currentParameterIndex));
-  this.getCursorTooltip_().tooltipster('show');
+  var cursorTooltip = this.getCursorTooltip_();
+
+  cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
+  cursorTooltip.tooltipster('show');
+
+  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+  dom.addClickTouchEvent(seeExamplesLink, function (event) {
+    this.dropletTooltipManager.showDocFor(functionName);
+    event.stopPropagation();
+  }.bind(this));
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
@@ -11376,6 +11326,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = functio
  */
 DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (tooltipInfo, currentParameterIndex) {
   return DropletFunctionTooltipMarkup({
+    funcName: tooltipInfo.functionName,
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
@@ -11388,7 +11339,120 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
 module.exports = DropletAutocompleteParameterTooltipManager;
 
 
-},{"./DropletParameterTooltip.html.ejs":65,"./tooltipUtils.js":67}],67:[function(require,module,exports){
+},{"../dom":103,"./DropletParameterTooltip.html.ejs":67,"./tooltipUtils.js":69}],103:[function(require,module,exports){
+exports.addReadyListener = function(callback) {
+  if (document.readyState === "complete") {
+    setTimeout(callback, 1);
+  } else {
+    window.addEventListener('load', callback, false);
+  }
+};
+
+exports.getText = function(node) {
+  return node.innerText || node.textContent;
+};
+
+exports.setText = function(node, string) {
+  if (node.innerText) {
+    node.innerText = string;
+  } else {
+    node.textContent = string;
+  }
+};
+
+exports.getTouchEventName = function(eventName) {
+  var isIE11Touch = window.navigator.pointerEnabled;
+  var isIE10Touch = window.navigator.msPointerEnabled;
+  var isStandardTouch = 'ontouchend' in document.documentElement;
+
+  var key;
+  if (isIE11Touch) {
+    key = "ie11";
+  } else if (isIE10Touch) {
+    key = "ie10";
+  } else if (isStandardTouch) {
+    key = "standard";
+  }
+  if (key && TOUCH_MAP[eventName]) {
+    return TOUCH_MAP[eventName][key];
+  }
+};
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var touchEvent = exports.getTouchEventName(eventName);
+  if (touchEvent) {
+    element.addEventListener(touchEvent, function(e) {
+      e.preventDefault();  // Stop mouse events.
+      handler(e);
+    }, false);
+  }
+};
+
+exports.addMouseDownTouchEvent = function(element, handler) {
+  addEvent(element, 'mousedown', handler);
+};
+
+exports.addMouseUpTouchEvent = function(element, handler) {
+  addEvent(element, 'mouseup', handler);
+};
+
+exports.addMouseMoveTouchEvent = function(element, handler) {
+  addEvent(element, 'mousemove', handler);
+};
+
+exports.addClickTouchEvent = function(element, handler) {
+  addEvent(element, 'click', handler);
+};
+
+// A map from standard touch events to various aliases.
+var TOUCH_MAP = {
+  //  Incomplete list, add as needed.
+  click: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mousedown: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mouseup: {
+    standard: 'touchend',
+    ie10: 'MSPointerUp',
+    ie11: 'pointerup'
+  },
+  mousemove: {
+    standard: 'touchmove',
+    ie10: 'MSPointerMove',
+    ie11: 'pointermove'
+  }
+};
+
+exports.isMobile = function() {
+  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isWindowsTouch = function() {
+  var reg = /MSIE.*Touch/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isAndroid = function() {
+  var reg = /Android/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isIOS = function() {
+  var reg = /iP(hone|od|ad)/;
+  return reg.test(window.navigator.userAgent);
+};
+
+
+},{}],69:[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -11532,7 +11596,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":309}],65:[function(require,module,exports){
+},{"../utils":311}],67:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11549,7 +11613,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -11557,7 +11621,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],480:[function(require,module,exports){
+},{"ejs":482}],482:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11912,7 +11976,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":481,"./utils":482,"fs":311,"path":458}],482:[function(require,module,exports){
+},{"./filters":483,"./utils":484,"fs":313,"path":460}],484:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11936,7 +12000,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],481:[function(require,module,exports){
+},{}],483:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12135,7 +12199,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],458:[function(require,module,exports){
+},{}],460:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12363,7 +12427,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":459}],459:[function(require,module,exports){
+},{"_process":461}],461:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12422,7 +12486,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],311:[function(require,module,exports){
+},{}],313:[function(require,module,exports){
 
 },{}],3:[function(require,module,exports){
 /**
@@ -13007,7 +13071,7 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
 };
 
 
-},{"./codegen":98,"./utils":309}],98:[function(require,module,exports){
+},{"./codegen":100,"./utils":311}],100:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -13556,7 +13620,7 @@ exports.selectCurrentCode = function (interpreter,
 };
 
 
-},{"./dropletUtils":102}],102:[function(require,module,exports){
+},{"./dropletUtils":104}],104:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -13953,7 +14017,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":309}],309:[function(require,module,exports){
+},{"./utils":311}],311:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -14215,8 +14279,36 @@ exports.isInfiniteRecursionError = function (err) {
   return false;
 };
 
+// TODO(dave): move this logic to dashboard.
+exports.getPegasusHost = function() {
+  switch (window.location.hostname) {
+    case 'studio.code.org':
+    case 'learn.code.org':
+      return 'code.org';
+    default:
+      var name = window.location.hostname.split('.')[0];
+      switch(name) {
+        case 'localhost':
+          return 'localhost.code.org:3000';
+        case 'development':
+        case 'staging':
+        case 'test':
+        case 'levelbuilder':
+          return name + '.code.org';
+        case 'staging-studio':
+          return 'staging.code.org';
+        case 'test-studio':
+          return 'test.code.org';
+        case 'levelbuilder-studio':
+          return 'levelbuilder.code.org';
+        default:
+          return null;
+      }
+  }
+};
 
-},{"./hammer":134,"./lodash":144,"./xml":310}],310:[function(require,module,exports){
+
+},{"./hammer":136,"./lodash":146,"./xml":312}],312:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -14245,7 +14337,7 @@ exports.parseElement = function(text) {
 };
 
 
-},{}],144:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -17738,7 +17830,7 @@ exports.parseElement = function(text) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],134:[function(require,module,exports){
+},{}],136:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *

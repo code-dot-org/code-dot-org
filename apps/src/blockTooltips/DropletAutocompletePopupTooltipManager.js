@@ -1,6 +1,7 @@
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -94,8 +95,23 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
     return;
   }
 
+  this.attachTooltipForFunction(funcName);
+};
+
+DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = function (funcName) {
+  var tooltipDOM = this.getTooltipHTML(funcName);
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-    content: this.getTooltipHTML(funcName)
+    content: tooltipDOM,
+    functionReady: function (_, contents) {
+      var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+      // Important this binds to mouseDown/touchDown rather than click, needs to
+      // happen before `blur` which triggers the ace editor completer popup
+      // hide which in turn would hide the link and not show the docs.
+      dom.addClickTouchEvent(seeExamplesLink, function (event) {
+        this.dropletTooltipManager.showDocFor(funcName);
+        event.stopPropagation();
+      }.bind(this));
+    }.bind(this)
   });
 
   var rowOverlayDiv = $('.ace_selected');
@@ -112,13 +128,14 @@ DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = 
  */
 DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
+  var dropletFunctionTooltipMarkup = DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
     fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });
+  return dropletFunctionTooltipMarkup;
 };
 
 module.exports = DropletAutocompletePopupTooltipManager;

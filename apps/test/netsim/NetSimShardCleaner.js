@@ -65,7 +65,7 @@ describe("NetSimShardCleaner", function () {
   var testShard, cleaner;
 
   beforeEach(function () {
-    NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
+    netsimTestUtils.initializeGlobalsToDefaultValues();
     testShard = fakeShard();
     cleaner = new NetSimShardCleaner(testShard, 0);
   });
@@ -135,6 +135,26 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'heartbeatTable', 0);
     assert(!cleaner.hasCleaningLock());
+  });
+
+  it ("still releases cleaning lock if any steps fail", function () {
+    makeHeartbeat(testShard, 'valid');
+    makeExpiredHeartbeat(testShard, 'invalid');
+
+    assertTableSize(testShard, 'heartbeatTable', 2);
+
+    cleaner.tick(); // First tick triggers cleaning and starts it
+
+    assert(cleaner.hasCleaningLock(), "Didn't acquire cleaning lock");
+    assertTableSize(testShard, 'heartbeatTable', 3); // Includes lock
+
+    // Simulate a failure somewhere
+    cleaner.steps_.fail();
+
+    cleaner.tick(); // Second tick detects error and results in cleanup
+
+    assert(!cleaner.hasCleaningLock(), "Didn't release cleaning lock");
+    assertTableSize(testShard, 'heartbeatTable', 2); // Without lock
   });
 
   it ("deletes heartbeats older than 60 seconds", function () {

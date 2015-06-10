@@ -7,6 +7,7 @@ var LockState = {
 
 var PropertyRow = React.createClass({
   propTypes: {
+    desc: React.PropTypes.string.isRequired,
     initialValue: React.PropTypes.oneOfType([
       React.PropTypes.string,
       React.PropTypes.number

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({274:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({276:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":265,"./levels":272,"./skins":278,"./studio":279}],279:[function(require,module,exports){
+},{"../appMain":6,"./blocks":267,"./levels":274,"./skins":280,"./studio":281}],281:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -266,6 +266,10 @@ var drawMap = function () {
     });
   }
 
+  if (level.wallMapCollisions) {
+    Studio.drawMapTiles(svg);
+  }
+
   if (Studio.spriteStart_) {
     for (i = 0; i < Studio.spriteCount; i++) {
       // Sprite clipPath element
@@ -389,6 +393,10 @@ var drawMap = function () {
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) <= xVariance) && (Math.abs(y1 - y2) <= yVariance);
+}
+
+function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
+  return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
 
 /**
@@ -781,8 +789,10 @@ function checkForCollisions() {
     }
     var iHalfWidth = sprite.width / 2;
     var iHalfHeight = sprite.height / 2;
-    var iXCenter = getNextPosition(i, false, false) + iHalfWidth;
-    var iYCenter = getNextPosition(i, true, false) + iHalfHeight;
+    var iXPos = getNextPosition(i, false, false);
+    var iYPos = getNextPosition(i, true, false);
+    var iXCenter = iXPos + iHalfWidth;
+    var iYCenter = iYPos + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
       if (i == j || !Studio.sprite[j].visible) {
         continue;
@@ -862,6 +872,19 @@ function checkForCollisions() {
       }
     }
 
+    if (level.wallMapCollisions) {
+      if (Studio.willSpriteTouchWall(sprite, iXPos, iYPos)) {
+        if (level.blockMovingIntoWalls) {
+          cancelQueuedMovements(i, false);
+          cancelQueuedMovements(i, true);
+        }
+        Studio.collideSpriteWith(i, 'wall');
+      } else {
+        sprite.endCollision('wall');
+      }
+      executeCollision(i, 'wall');
+    }
+
     // Don't execute projectile collision queue(s) until we've handled all edge
     // collisions. Not sure this is strictly necessary, but it means the code is
     // the same as it was before this change.
@@ -873,6 +896,39 @@ function checkForCollisions() {
     }
   }
 }
+
+/**
+ * Test to see if a sprite will be touching a wall given particular X/Y
+ * position coordinates (top-left)
+ */
+
+Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
+  var iXCenter = xPos + sprite.width / 2;
+  var iYCenter = yPos + sprite.height / 2;
+  var colsOffset = Math.floor(iXCenter) + 1;
+  var rowsOffset = Math.floor(iYCenter) + 1;
+  var iXGrid = Math.floor(iXCenter / Studio.SQUARE_SIZE);
+  var iYGrid = Math.floor(iYCenter / Studio.SQUARE_SIZE);
+  for (var col = Math.max(0, iXGrid - colsOffset);
+       col < Math.min(Studio.COLS, iXGrid + colsOffset);
+       col++) {
+    for (var row = Math.max(0, iYGrid - rowsOffset);
+         row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
+         row++) {
+      if (Studio.map[row][col] & SquareType.WALL) {
+        if (overlappingTest(iXCenter,
+                            (col + 0.5) * Studio.SQUARE_SIZE,
+                            Studio.SQUARE_SIZE / 2 + sprite.width / 2,
+                            iYCenter,
+                            (row + 0.5) * Studio.SQUARE_SIZE,
+                            Studio.SQUARE_SIZE / 2 + sprite.height / 2)) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+};
 
 Studio.onSvgDrag = function(e) {
   if (Studio.tickCount > 0) {
@@ -1846,6 +1902,55 @@ function spriteTotalFrames (index) {
     sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
 
+function cellId(prefix, row, col) {
+  return prefix + '_' + row + '_' + col;
+}
+
+Studio.drawWallTile = function (svg, row, col) {
+
+  // Placeholder implementation: just drawing boxes with X's in them for now:
+
+  var backgroundId = cellId('wallBackground', row, col);
+  var textId = cellId('wallLetter', row, col);
+
+  var group = document.createElementNS(SVG_NS, 'g');
+  var background = document.createElementNS(SVG_NS, 'rect');
+  background.setAttribute('id', backgroundId);
+  background.setAttribute('width', Studio.SQUARE_SIZE);
+  background.setAttribute('height', Studio.SQUARE_SIZE);
+  background.setAttribute('x', col * Studio.SQUARE_SIZE);
+  background.setAttribute('y', row * Studio.SQUARE_SIZE);
+  background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+  background.setAttribute('stroke', '#000000');
+  background.setAttribute('stroke-width', 1);
+  group.appendChild(background);
+
+  var text = document.createElementNS(SVG_NS, 'text');
+  text.setAttribute('id', textId);
+  text.setAttribute('class', 'wall-letter');
+  text.setAttribute('width', Studio.SQUARE_SIZE);
+  text.setAttribute('height', Studio.SQUARE_SIZE);
+  text.setAttribute('x', (col + 0.5) * Studio.SQUARE_SIZE);
+  text.setAttribute('y', (row + 1) * Studio.SQUARE_SIZE - 12);
+  text.setAttribute('font-size', 32);
+  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('font-family', 'Verdana');
+  text.textContent = 'X';
+  group.appendChild(text);
+  svg.appendChild(group);
+};
+
+Studio.drawMapTiles = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      if (mapVal & SquareType.WALL) {
+        Studio.drawWallTile(svg, row, col);
+      }
+    }
+  }
+};
+
 var updateSpeechBubblePath = function (element) {
   var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
@@ -2283,8 +2388,14 @@ Studio.setSprite = function (opts) {
   sprite.frameCounts = skin[spriteValue].frameCounts;
   sprite.timePerFrame = skin[spriteValue].timePerFrame;
   // Reset height and width:
-  sprite.height = sprite.size * skin.spriteHeight;
-  sprite.width = sprite.size * skin.spriteWidth;
+  if (level.gridAlignedMovement) {
+    // This mode only works properly with square sprites
+    sprite.height = sprite.width = Studio.SQUARE_SIZE;
+    sprite.size = sprite.width / skin.spriteWidth;
+  } else {
+    sprite.height = sprite.size * skin.spriteHeight;
+    sprite.width = sprite.size * skin.spriteWidth;
+  }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
   }
@@ -2814,29 +2925,46 @@ Studio.setSpriteXY = function (opts) {
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
+  var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   switch (opts.dir) {
     case Direction.NORTH:
-      sprite.y -= sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y - distance)) {
+        break;
+      }
+      sprite.y -= distance;
       if (sprite.y < 0 && !level.allowSpritesOutsidePlayspace) {
         sprite.y = 0;
       }
       break;
     case Direction.EAST:
-      sprite.x += sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x + distance, sprite.y)) {
+        break;
+      }
+      sprite.x += distance;
       var rightBoundary = Studio.MAZE_WIDTH - sprite.width;
       if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.x = rightBoundary;
       }
       break;
     case Direction.SOUTH:
-      sprite.y += sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y + distance)) {
+        break;
+      }
+      sprite.y += distance;
       var bottomBoundary = Studio.MAZE_HEIGHT - sprite.height;
       if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.y = bottomBoundary;
       }
       break;
     case Direction.WEST:
-      sprite.x -= sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x - distance, sprite.y)) {
+        break;
+      }
+      sprite.x -= distance;
       if (sprite.x < 0 && !level.allowSpritesOutsidePlayspace) {
         sprite.x = 0;
       }
@@ -2847,6 +2975,10 @@ Studio.moveSingle = function (opts) {
 Studio.moveDistance = function (opts) {
   if (!opts.started) {
     opts.started = true;
+    if (level.gridAlignedMovement) {
+      opts.distance =
+        Math.ceil(opts.distance / Studio.SQUARE_SIZE) * Studio.SQUARE_SIZE;
+    }
     opts.queuedDistance = opts.distance;
   }
 
@@ -3013,7 +3145,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":93,"../canvg/canvg.js":94,"../canvg/rgbcolor.js":95,"../canvg/svg_todataurl":96,"../codegen":98,"../constants":100,"../dom":101,"../dropletUtils":102,"../locale":143,"../skins":260,"../templates/page.html.ejs":287,"../utils":309,"../xml":310,"./api":262,"./bigGameLogic":264,"./blocks":265,"./collidable":266,"./constants":267,"./controls.html.ejs":268,"./dropletConfig":270,"./extraControlRows.html.ejs":271,"./locale":273,"./projectile":275,"./rocketHeightLogic":276,"./samBatLogic":277,"./visualization.html.ejs":280}],280:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":262,"../templates/page.html.ejs":289,"../utils":311,"../xml":312,"./api":264,"./bigGameLogic":266,"./blocks":267,"./collidable":268,"./constants":269,"./controls.html.ejs":270,"./dropletConfig":272,"./extraControlRows.html.ejs":273,"./locale":275,"./projectile":277,"./rocketHeightLogic":278,"./samBatLogic":279,"./visualization.html.ejs":282}],282:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3033,7 +3165,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":480}],277:[function(require,module,exports){
+},{"ejs":482}],279:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3158,7 +3290,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":98,"../constants":100,"./api":262,"./constants":267,"./customGameLogic":269}],276:[function(require,module,exports){
+},{"../codegen":100,"../constants":102,"./api":264,"./constants":269,"./customGameLogic":271}],278:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3221,7 +3353,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":98,"./api":262,"./constants":267,"./customGameLogic":269}],275:[function(require,module,exports){
+},{"../codegen":100,"./api":264,"./constants":269,"./customGameLogic":271}],277:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3403,7 +3535,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":266,"./constants":267}],278:[function(require,module,exports){
+},{"./collidable":268,"./constants":269}],280:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3773,7 +3905,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":260,"./constants":267,"./locale":273}],272:[function(require,module,exports){
+},{"../skins":262,"./constants":269,"./locale":275}],274:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -5274,7 +5406,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 });
 
 
-},{"../block_utils":68,"../utils":309,"./constants":267,"./locale":273}],271:[function(require,module,exports){
+},{"../block_utils":70,"../utils":311,"./constants":269,"./locale":275}],273:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5294,7 +5426,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],270:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],272:[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
@@ -5320,7 +5452,7 @@ module.exports.categories = {
 };
 
 
-},{"./apiJavascript.js":263,"./locale":273}],268:[function(require,module,exports){
+},{"./apiJavascript.js":265,"./locale":275}],270:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5340,7 +5472,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":143,"ejs":480}],266:[function(require,module,exports){
+},{"../locale":145,"ejs":482}],268:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5447,7 +5579,7 @@ Collidable.prototype.outOfBounds = function () {
 };
 
 
-},{"../StudioApp":5,"./constants":267}],265:[function(require,module,exports){
+},{"../StudioApp":5,"./constants":269}],267:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7475,13 +7607,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":5,"../codegen":98,"../locale":143,"../sharedFunctionalBlocks":259,"../utils":309,"./constants":267,"./locale":273}],273:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":100,"../locale":145,"../sharedFunctionalBlocks":261,"../utils":311,"./constants":269,"./locale":275}],275:[function(require,module,exports){
 // locale for studio
 
 module.exports = window.blockly.studio_locale;
 
 
-},{}],264:[function(require,module,exports){
+},{}],266:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7715,7 +7847,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":98,"./api":262,"./constants":267,"./customGameLogic":269}],269:[function(require,module,exports){
+},{"../codegen":100,"./api":264,"./constants":269,"./customGameLogic":271}],271:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7785,7 +7917,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":98,"./api":262,"./constants":267}],263:[function(require,module,exports){
+},{"../codegen":100,"./api":264,"./constants":269}],265:[function(require,module,exports){
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
@@ -7867,11 +7999,11 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
-/*
 exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
+/*
 exports.setScoreText = function(text) {
   Studio.queueCmd(null, 'setScoreText', {'text': text});
 };
@@ -7893,7 +8025,7 @@ exports.onEvent = function (eventName, func) {
 };
 
 
-},{}],262:[function(require,module,exports){
+},{}],264:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = constants.SpriteSpeed;
@@ -8045,7 +8177,7 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":267}],267:[function(require,module,exports){
+},{"./constants":269}],269:[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -8229,6 +8361,7 @@ exports.DEFAULT_SPRITE_SIZE = 1;
 exports.SquareType = {
   OPEN: 0,
   SPRITEFINISH: 1,
+  WALL: 4,
   SPRITESTART: 16
 };
 
@@ -8239,4 +8372,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[274]);
+},{}]},{},[276]);

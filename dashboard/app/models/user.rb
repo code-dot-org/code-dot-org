@@ -409,15 +409,6 @@ SQL
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
   end
 
-  # returns a map from section to the users in that section
-  def students_by_section
-    class_map = Hash.new{ |h,k| h[k] = [] }
-    self.followers.includes([:section, :student_user]).each do |f|
-      class_map[f.section] << f.student_user
-    end
-    class_map
-  end
-
   def average_student_trophies
     User.connection.select_value(<<SQL)
 select coalesce(avg(num), 0)

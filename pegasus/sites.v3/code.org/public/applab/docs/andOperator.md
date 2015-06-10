@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -69,3 +70,5 @@ When used with Boolean values, returns true if both expressions are true; otherw
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>
