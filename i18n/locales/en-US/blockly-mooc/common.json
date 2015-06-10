@@ -465,6 +465,8 @@
   "dropletBlock_setRed_param2_description":"crwdns38233:0crwdne38233:0",
   "dropletBlock_setRed_param3":"crwdns36177:0crwdne36177:0",
   "dropletBlock_setRed_param3_description":"crwdns38234:0crwdne38234:0",
+  "dropletBlock_setScreen_description":"crwdns41669:0crwdne41669:0",
+  "dropletBlock_setScreen_param0":"crwdns41670:0crwdne41670:0",
   "dropletBlock_setSpriteEmotion_description":"crwdns35909:0crwdne35909:0",
   "dropletBlock_setSpritePosition_description":"crwdns35910:0crwdne35910:0",
   "dropletBlock_setSpriteSpeed_description":"crwdns35911:0crwdne35911:0",

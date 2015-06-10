@@ -20,6 +20,7 @@
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
   petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í
     hóp með # öðrum.'
+  petition_join_others: 'Join # others'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
@@ -195,6 +196,9 @@
   homepage_hero_text_teacher2: |
     &ldquo;Í þessu verkefni voru 100% nemenda minna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara
@@ -1121,3 +1125,8 @@
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK
     kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir
     þau um leið í raungreinum.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning

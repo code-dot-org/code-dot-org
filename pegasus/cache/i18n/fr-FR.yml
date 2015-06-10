@@ -20,6 +20,7 @@
     participants.'
   petition_sign_message_support: 'Si vous nous soutenez, signez votre nom.  Rejoignez
     #.'
+  petition_join_others: 'Join # others'
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -190,6 +191,9 @@
   homepage_hero_text_teacher2: |
     &ldquo;Tous mes élèves se sont sentis impliqués, investis et ont participé à ce programme.&rdquo;
     Adam, enseignant
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: L'Heure de Code
   homepage_slot_text_frozen: La reine des neige, avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant
@@ -1186,3 +1190,8 @@
   sphero_beyond_longdescription: Que vous soyez un éducateur ou un parent, les leçons
     SPRK donnent aux enfants un cours accélé fun en programmation de robots tout en
     affûtant leurs compétences en mathématiques et sciences.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning

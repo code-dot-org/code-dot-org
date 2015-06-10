@@ -865,6 +865,25 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: İnternet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
         algebraPD2a:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Functional Programming through Algebra
@@ -883,6 +902,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Ücretsiz Oyna
         allthethings:
           Jigsaw: Yapboz
           Maze: Labirent
@@ -923,3 +943,47 @@
           Next Steps: Sonraki Adımlar
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: İnternet Simülatörü
+          App Lab: Uygulama Laboratuvarı
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: İnternet Simülatörü
+          App Lab: Uygulama Laboratuvarı
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          K-5 Courses: K-5 dersleri
+          Writing computer programs: Bilgisayar programları yazma
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          Unplugged lessons: Bağımsız dersler
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          'Programming Concept: Events': 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Sonraki Adımlar
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing

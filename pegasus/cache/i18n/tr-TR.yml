@@ -19,6 +19,7 @@
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
   petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek
     # ile bize katılabilirsiniz.'
+  petition_join_others: 'Join # others'
   name: İsim
   email: e-posta
   zipcode: Posta kodu ya da ülke
@@ -190,6 +191,9 @@
   homepage_hero_text_teacher2: |
     &ldquo;Bu program, öğrencilerimin %100'ünün ilgisinde ve katılımında.&rdquo;
     Adam, öğretmen
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
   homepage_slot_text_teacher: Teacher Dashboard
@@ -1121,3 +1125,8 @@
     programming across a spectrum of ages and grade levels.
   sphero_beyond_longdescription: Öğretmen veya ebeveyn olun,SPRK dersleri çocukların
     matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning

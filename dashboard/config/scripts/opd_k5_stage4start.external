@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 # LOOPS > Stage 4 Overview
 
-This stage builds on your first programming experience by adding on the core concept of "loops."
+This stage builds on your first programming experience by adding the core concept of "loops."
 
 By completing Stage 4, you will:
 
@@ -13,11 +13,14 @@ By completing Stage 4, you will:
 - Practice coding simple loops
 - Reflect on classroom application
 
+<br/>
 ## What to Expect in this Stage:
 
-In the levels that follow, we'll provide you with an example of a program that is not as efficient as it could be. Next, we'll share some video instruction that explains why using loops improves your ability to code efficiently. Then we'll introduce a series of puzzles and ask you to create loops and apply your learning. In order to complete a puzzle, you'll need to write code using visual programming. We'll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
+In the levels that follow, we'll provide you with an example of a program that is not as efficient as it could be. Next, we'll share some video instruction that explains why using loops improves your ability to code efficiently. Then we'll introduce a series of puzzles and ask you to create loops and apply your learning. In order to complete a puzzle, you'll need to write code using visual, block-based programming. We'll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
 
 Ready? Let's go!
+
+<br/>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

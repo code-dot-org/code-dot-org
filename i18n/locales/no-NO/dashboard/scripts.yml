@@ -39,7 +39,7 @@
           "Artist: Shapes": 'Kunstner: former'
           "Maze: Loops": 'Labyring: Løkker'
           "Bee: Loops": 'Bie: Løkker'
-          "Studio: Create a Story": 'Spill Lab: Lage en historie'
+          "Studio: Create a Story": 'Spill-Lab: Lage en historie'
           "Artist: Loops": 'Kunstner: Løkker'
           description_audience: Fra 4 år (krever ikke leseferdigheter)
           description_short: Kurs 1 er utformet for tidlig lesekyndige.
@@ -49,7 +49,7 @@
           The Artist: Kunstneren
           Artist Debugging: Kunstner Feilsøking
           Bounce: sprett
-          "Studio: Create a Story": 'Spill Lab: Lage en historie'
+          "Studio: Create a Story": 'Spill-Lab: Lage en historie'
           Artist Loops: Kunstner løkker
           Bee Conditionals: Bie Betingelser
           Flappy: Flakse
@@ -84,7 +84,7 @@
           description_short: Kurs 2 er laget for elever som kan lese.
         course3:
           The Maze: Labyrinten
-          "Studio: Create a Story": 'Spill Lab: Lage en historie'
+          "Studio: Create a Story": 'Spill-Lab: Lage en historie'
           The Artist: Kunstneren
           title: Kurs 3
           Artist Functions: Kunstner funksjoner
@@ -107,8 +107,8 @@
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitalt statsborgerskap
           Farmer - While Loops: 'Bonde - mens-løkker'
-          description: Kurs 4 er laget for elever som har fullført kurs 2 og 3. Elevene vil gå nærmere innpå temaer som ble presentert i tidligere kurs, og de vil lære mer fleksible løsninger på mer komplekse problemer. Ved slutten av dette kurset vil elevene lage interaktive historier og spill som de kan dele med andre. Anbefalt for fjerde til syvende klasse.
-          "Studio: Create a Game": 'Spill Lab: Lag et spill'
+          description: Kurs 3 er laget for elever som har fullført kurs 2 . Elevene vil gå nærmere innpå temaer som ble presentert i tidligere kurs, og de vil lære mer fleksible løsninger på mer komplekse problemer. Ved slutten av dette kurset vil elevene lage interaktive historier og spill som de kan dele med andre. Anbefalt for fjerde til syvende klasse.
+          "Studio: Create a Game": 'Spill-Lab: Lag et spill'
           Maze: Labyrint
           Artist: Kunstner
           "Artist: Functions": 'Kunstner: Funksjoner'
@@ -184,9 +184,9 @@
           "Eval: Design Recipe": 'Evaluering: Design oppskriften'
         playlab:
           title: Spill-Lab
-          description: Lag en historie eller spill med Spill Labben!
+          description: Lag en historie eller spill med Spill-Labben!
           Play Lab: Spill-Lab
-          description_short: Lag en historie eller spill med Spill Labben!
+          description_short: Lag en historie eller spill med Spill-Labben!
         artist:
           title: Kunstner
           description: Tegn kule bilder og tegninger med kunstneren!
@@ -216,10 +216,10 @@
           "Algorithms: Tangrams": 'Algoritmer: Tangram'
           Variables: Variabler
           "Play Lab: Variables": 'Spill Lab: Variabler'
-          "Play Lab: Functions with Parameters": 'Spill Lab: Funksjoner med parametere'
+          "Play Lab: Functions with Parameters": 'Spill-Lab: Funksjoner med parametere'
           "Bee: Functions with Parameters": 'Bee: Funksjoner med parametere'
           "Artist: For Loops": 'Kunstner: For-løkker'
-          "Play Lab: For Loops": 'Spill Lab: For-løkker'
+          "Play Lab: For Loops": 'Spill-Lab: For-løkker'
           "Artist: Functions": 'Kunstner: Funksjoner'
           "Artist: Functions with Paraqmeters": 'Kunstner: Funksjoner med parametere'
           "Unplugged: Tangrams": 'Frakoblet: Tangram'
@@ -309,9 +309,9 @@
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity spill Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Disney Infinity Spill-Lab
+          description_short: Bruk Spill-Lab for å lage en historie eller spill med Disney Infinity figurer.
+          description: Bruk Spill-Lab for å lage en historie eller spill med Disney Infinity figurer.
           Play Lab: Spill-Lab
           Infinity: Uendelig
         algebrademo:
@@ -348,10 +348,10 @@
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: Internett Simulator
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Internett Simulator
           Unit 1: Enhet 1
           Unit 2: Enhet 2
           Sending Bits: Sending Bits
@@ -798,6 +798,22 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internett
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -816,6 +832,7 @@
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Free Play
         allthethings:
           Jigsaw: Puslespill
           Maze: Labyrint
@@ -834,9 +851,9 @@
           online pd?: online pd?
           AppLab: AppLab
           Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          title: Alt!
+          description: Alle nivå typer for UI tester
+          Odometer: Kilometerteller
           Text Compression: Text Compression
           Pixelation: Pixelation
         algebraPD2b:
@@ -856,3 +873,46 @@
           Next Steps: Next Steps
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internett Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internett Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          Introduction to PD: Introduction to PD
+          K-5 Courses: K-5 Courses
+          Writing computer programs: Writing computer programs
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          "Programming Concept: Events": 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Next Steps
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'

@@ -4,8 +4,11 @@ skip_dialog true
 markdown <<MARKDOWN
 # SEQUENCING > Reflect
 
-Congratulations! You just wrote some code. Code Studio tracks how many lines of code you've written. You are officially a programmer! In the next stage, we'll add some complexity to our programs through the addition of loops.
+Congratulations! You just wrote some code. You are officially a programmer! Code Studio will track how many lines of code you've written. 
 
+In the next stage, we'll add some complexity to our programs through the addition of loops.
+
+<br/><br/>
 ## Reflect 
 
 Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?

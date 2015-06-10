@@ -793,6 +793,22 @@ en:
           DNS Simulation: crwdns38687:0crwdne38687:0
           How HTTP Works: crwdns38688:0crwdne38688:0
           IP and DNS in the Real World: crwdns38689:0crwdne38689:0
+          The Internet: crwdns41458:0crwdne41458:0
+          Routers and Addresses as Numbers: crwdns41459:0crwdne41459:0
+          Algorithms Detour - Minimum Spanning Tree: crwdns41460:0crwdne41460:0
+          Algorithms Detour - Shortest Path: crwdns41461:0crwdne41461:0
+          Algorithms Detour - How Routers Learn: crwdns41462:0crwdne41462:0
+          DNS in the Real World: crwdns41463:0crwdne41463:0
+          HTTP and Abstraction: crwdns41464:0crwdne41464:0
+          Challenges of the Internet: crwdns41465:0crwdne41465:0
+          Tell Me a Secret - Encrypting Text: crwdns41466:0crwdne41466:0
+          Cracking the Code: crwdns41467:0crwdne41467:0
+          Encryption Algorithms: crwdns41468:0crwdne41468:0
+          Alice and Bob and Asymmetric Keys: crwdns41469:0crwdne41469:0
+          Algorithms Detour - Hard Problems TSP: crwdns41470:0crwdne41470:0
+          One Way Functions - Ice Cream Vans: crwdns41471:0crwdne41471:0
+          Public Key Crypto: crwdns41472:0crwdne41472:0
+          Security and Hacking in the Real World: crwdns41623:0crwdne41623:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
@@ -811,6 +827,7 @@ en:
           Big GAme - Collision Detection: crwdns38704:0crwdne38704:0
           Rocket-Height: crwdns38813:0crwdne38813:0
           Big Game - Collision Detection: crwdns38814:0crwdne38814:0
+          Free Play: crwdns41624:0crwdne41624:0
         allthethings:
           Jigsaw: crwdns38815:0crwdne38815:0
           Maze: crwdns38816:0crwdne38816:0
@@ -851,3 +868,46 @@ en:
           Next Steps: crwdns38843:0crwdne38843:0
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": crwdns38844:0crwdne38844:0
+        cspfacilitator:
+          title: crwdns41625:0crwdne41625:0
+          description: crwdns41626:0crwdne41626:0
+          Pixelation Widget: crwdns41627:0crwdne41627:0
+          Text Compression Widget: crwdns41628:0crwdne41628:0
+          Internet Simulator: crwdns41629:0crwdne41629:0
+          App Lab: crwdns41630:0crwdne41630:0
+          Broadcast Lesson: crwdns41631:0crwdne41631:0
+          Text Compression Lesson: crwdns41632:0crwdne41632:0
+          Welcome!: crwdns41633:0crwdne41633:0
+        CSPfac intro:
+          title: crwdns41634:0crwdne41634:0
+          description: crwdns41635:0crwdne41635:0
+          Welcome!: crwdns41636:0crwdne41636:0
+          Pixelation Widget: crwdns41637:0crwdne41637:0
+          Text Compression Widget: crwdns41638:0crwdne41638:0
+          Internet Simulator: crwdns41639:0crwdne41639:0
+          App Lab: crwdns41640:0crwdne41640:0
+          Broadcast Lesson: crwdns41641:0crwdne41641:0
+          Text Compression Lesson: crwdns41642:0crwdne41642:0
+        OnlinePD-K5:
+          Introduction to PD: crwdns41643:0crwdne41643:0
+          K-5 Courses: crwdns41644:0crwdne41644:0
+          Writing computer programs: crwdns41645:0crwdne41645:0
+          "Programming Concept: Loops": crwdns41646:0crwdne41646:0
+          Unplugged lessons: crwdns41647:0crwdne41647:0
+          "Programming Concept: Conditionals": crwdns41648:0crwdne41648:0
+          Computer Science Pedagogy: crwdns41649:0crwdne41649:0
+          "Programming Concept: Functions": crwdns41650:0crwdne41650:0
+          Teacher Dashboard: crwdns41651:0crwdne41651:0
+          "Programming Concept: Events": crwdns41652:0crwdne41652:0
+          Reflection: crwdns41653:0crwdne41653:0
+          Next Steps: crwdns41654:0crwdne41654:0
+          Getting Started: crwdns41655:0crwdne41655:0
+          Computer Science Fundamentals: crwdns41656:0crwdne41656:0
+          "Mastering the Basics: Sequencing": crwdns41657:0crwdne41657:0
+          "Mastering the Basics: Loops": crwdns41658:0crwdne41658:0
+          "Mastering the Basics: Conditionals": crwdns41659:0crwdne41659:0
+          "Mastering the Basics: Functions": crwdns41660:0crwdne41660:0
+          "Mastering the Basics: Events": crwdns41661:0crwdne41661:0
+          Best Practices for Teaching Computer Science: crwdns41662:0crwdne41662:0
+          Planning: crwdns41663:0crwdne41663:0
+          Mastering the Basics - Sequencing: crwdns41664:0crwdne41664:0

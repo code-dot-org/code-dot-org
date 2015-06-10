@@ -930,6 +930,10 @@ a.download-video {
   @include warning-banner;
 }
 
+#warning-banner-https {
+  @include warning-banner;
+}
+
 #warning-banner-chrome {
   @include warning-banner;
   color: white;
@@ -1786,8 +1790,9 @@ $modal-image-margin-gap: 10px;
 }
 
 .instructions-markdown {
+  padding-top: 19px;
   p {
-    line-height: initial;
+    line-height: 25px;
     font-size: initial;
     color: initial;
   }

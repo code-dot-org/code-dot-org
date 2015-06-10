@@ -12,6 +12,7 @@ sk-SK:
   petition_message: Každý študent v každej škole by mal mať možnosť naučiť sa informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš svoje meno.  Pridaj sa k # iným.'
   petition_sign_message_support: 'Pokiaľ nás podporuješ, zapíš sa. Pridaj sa k  # ostatným.'
+  petition_join_others: 'Join # others'
   name: Meno
   email: E-mail
   zipcode: ZIP (ak si v Spojených štátoch Amerických) alebo krajina
@@ -174,6 +175,9 @@ sk-SK:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Hodina Kódu
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -185,7 +189,7 @@ sk-SK:
   homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: Hodina kódovania

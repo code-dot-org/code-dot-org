@@ -1,7 +1,6 @@
 is:
   data:
     instructions:
-      2-3 _instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3 Artist 1 new_instruction: Hæ ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir gráu strikin í myndinni. (Hver lína er 100 díla löng.)
       2-3 Artist 11_instruction: 'Teiknaðu útlínu á merkið með því að búa til átthyrning með 8 hliðum, sem hver er 100 díla löng. Um hve margar gráður á að snúa? (Vísbending: Hvað er 360 deilt með 8?) '
       2-3 Artist 12_instruction: 'Stilltu "endurtaka" kubbinn þannig að hann búi til "hring" til að ljúka auganu. Hve oft þarf að endurtaka til að ljúka hringnum, ef hver hreyfing snýr til hægri um 1 gráðu? 180? 360? 500?'
@@ -172,7 +171,9 @@ is:
       2-3 Maze Loops 20_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops 21_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops Assessment 1_instruction: 'Mat: Komdu mér til sólblómsins með aðeins 5 kubbum! '
-      2-3 Maze sq1 _instruction: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!
+      2-3 Maze sq1_instruction: |
+        This pig is ruffling my feathers.  Help me find
+        him!
       2-3 Maze sq10_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 Maze sq10v2_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 maze sq11_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
@@ -189,6 +190,9 @@ is:
       2-3 Maze sq7_instruction: Þetta græna er ekki velkomið. Komdu mér þangað með 3 kubbum.
       2-3 Maze sq8_instruction: 'Komdu mér til svínsins! (Hvar er nú þessi "endurtaka" kubbur?)'
       2-3 Maze sq9_instruction: Notaðu lykkjur til að ná svínka með færri kubbum.
+      2-3_instruction: |
+        Purple flowers may have either 1 or 0 nectar. Be careful
+        not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Láttu fuglinn ná óþæga svíninu með því að færa hann áfram
       4-5 Artist 1_instruction: 'Hjálpaðu mér að ljúka teikningunni. (Hver lína er 300 díla löng) '
       4-5 Artist 10_instruction: 'Ýttu á "Keyra" til að prófa kóðann. Endurtaktu hann svo nógu oft til að ljúka við teikninguna. Litirnir munu breytast í hvert sinn.'
@@ -389,11 +393,8 @@ is:
       Big Game Collision 2_instruction: 'Til að færa leikmanninn upp og niður, munum við þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu "update-player" (uppfæra leikmann) svo að það færi leikmanninn upp þegar ýtt er á örina upp og niður þegar ýtt er á örina niður.'
       Big Game Collision 3_instruction: Lögum þetta fall fyrir fjarlægð svo að skynjun árekstra virki rétt. Notaðu fjarlægðarformúluna svo að hún skili fjarlægðinni á milli miðjuhnita leikmanns (px, py) og miðjuhnita annarrar leikveru (cx, cy). Þú færð tilbúið fall fyrir lengd línu til að hjálpa þér.
       Big Game Collision 4_instruction: |
-        The 'distance' function returns the distance
-        between two sprites. Complete the 'collide?' function so that it returns
-        true if the distance between two points is less than 100 pixels apart. If
-        you're successful, your sprites will instantly collide - why do you think
-        that is?
+        Complete the collide? function so that it
+        returns true if the distance between two points is less than 100 pixels apart.
       Big Game Complete (copy 1)_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Final_instruction: Þér tókst þetta! Nú ætti leikurinn að hafa fulla virkni. Taktu þér tíma til að njóta hans og fínpússa ef með þarf. Þegar þú ert ánægð/ur með afraksturinn, skaltu smella á Ljúka og þá færðu tækifæri til að deila tengli á leikinn. Vel gert!
@@ -529,7 +530,6 @@ is:
       Course 4 Artist For Loops 11_instruction: 'Manstu hvernig við notuðum breytu til að stjórna fjölda hliða á formi? Hér byrjum við á þríhyrningi og bætum við einni hlið í einu þar til hliðarnar eru orðnar 10. Hver hlið á að vera 100 dílar. Vísbending: 360 deilt með fjölda hliðanna er gráðufjöldinn sem þarf að snúa um.'
       Course 4 Artist For Loops 12_instruction: 'Þetta leit vel út, en nú vil ég teikna hvert form við hlið þess síðasta. Í þetta sinn er hver hlið 20 dílar. Notaðu "hoppa" kubb til fara fram um 40 díla eftir hvert form. '
       Course 4 Artist For Loops 13_instruction: Hmmm, þessi form fara sístækkandi! Vorum við ekki búin að leysa þetta vandamál með breytum? Hvernig getum við notað teljarann til að stytta hliðarnar eftir því sem þeim fjölgar? Jú með því að deila með honum. Í stað þess að færa áfram um fasta stærð skulum við nú færa áfram um (100 / teljari) díla.
-      Course 4 Artist For Loops 14 _instruction: Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
       Course 4 Artist For Loops 14_instruction: Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
       Course 4 Artist For Loops 15_instruction: 'Frjáls æfing! Prófaðu að búa til eigin teikningar með "frá" lykkjum. Við höfum bætt við nokkrum almennum breytum sem þú getur notað.'
       Course 4 Artist For Loops 2_instruction: 'Ég hef sett kóða fyrir þríhyrning inn í "frá" lykkju sem telur frá 50 til 100 um 10. Skoðaðu hvernig kóðinn er samsettur og smelltu svo á "Keyra" til að sjá hvernig hann virkar. '
@@ -589,9 +589,7 @@ is:
       Course 4 Artist Vars 8_instruction: 'Frjáls æfing: Gerðu tilraunir með fjölda hliða á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formsins haldist svipuð sama hversu margar hliðar það hefur? Vísbending: Þú gætir þurft að nota reikningskubba (360 deilt með "hliðar" á tveimur stöðum í þetta sinn) '
       Course 4 Artist Vars 9_instruction: 'Breyttu þessu algrími svo það noti breytuna "hliðar" í stað fastrar tölu til að teikna þríhyrning. Skiptu tölunni 3 út fyrir breytuna "hliðar" og notaðu "stilla hliðar" kubbinn.'
       Course 4 Bee 1_instruction: 'Býflugan veit ekki hvort þetta er blóm eða býflugnabú. Athugaðu fyrst hvort það er blóm eða bú, og safnaðu blómasafa aðeins ef það er blóm. '
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Bee 2_instruction: Athugaðu hvern hlut. Ef hann er blóm, á að safna blómasafa, annars ekki!
       Course 4 Bee 3_instruction: 'Þetta óþekkta er annað hvort blóm eða býflugnabú. Notaðu "ef-annars" kubbinn til að safna blómasafa ef það er blóm, annars búa til hunang (því þá er það bú).'
       Course 4 Bee 4_instruction: 'Þetta fjólubláa blóm gæti innihaldið 3, 2 eða 1 af blómasafa. Hér er "ef-annars" kubbur settur í annan "ef-annars" kubb til að setja fleiri skilyrði (ef 3 þá... - annars ef 2 þá... - annars...). Ljúktu við lausnina til að safna óþekktu magni af safa.'
       Course 4 Bee For Loops 1_instruction: Notaðu lykkju til að safna blómasafa úr hverju blómi.
@@ -719,8 +717,8 @@ is:
       Eval Strings Images .2_instruction: 'Fallið "skeyta-streng" tekur inn tvo strengi og skilar þeim skeyttum saman. Settu strenginn "Universe" í seinni stika fallsins.'
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
-        use is an Image. This "star" function takes in a Number and two Strings,
-        and it evaluates to an Image. Use this function to make a solid red star with
+        use is an Image. This star function takes in a Number and two Strings, and
+        it evaluates to an Image. Use this function to make a solid red star with
         radius of 100.
       Eval Strings Images 2_instruction: 'Frjáls æfing: Hver matskubbur hefur litamerkingu, sem sýnir hvaða tegund gagna hann skilar og hvaða gagnategundir á að setja í stika kubbsins. Síðasti stiki þríhyrningsfallsins þarf að vera strengur sem stjórnar litnum - prófaðu mismunandi liti til að sjá hvað virkar.'
       Eval Strings Images 3_instruction: Sum föll taka aðeins inn tiltekna strengi. Þannig er með annan stika þessa hringfalls, en hann stjórnar gerð hringsins. Teiknaðu útlínu þessa appelsínugula hrings. Notaðu sérstaka kubbinn með fellilistanum til að tryggja að þú notir aðeins gerðir sem virka.
@@ -728,7 +726,7 @@ is:
       Eval Strings Images 5_instruction: 'Prófaðu að nota þennan nýja matskubb "yfirlögn" til að leggja 100 díla hvítan þríhyrning yfir 200 díla rauðan hring.'
       Eval Strings Images 6_instruction: Notaðu yfirlagnarfallið til að leggja gula stjörnu með 75 díla geisla yfir 150 díla langan bláan ferning.
       Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
+        The offset block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
         square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: 'Hér er önnur tegund af stjörnukubb, sem nefnist "radial-star". Með honum geturðu teiknað stjörnur með mismunandi fjölda arma! Notaðu hann til að búa til appelsínugula stjörnu með 75 díla innri geisla og 175 díla ytri geisla.'
@@ -948,7 +946,6 @@ is:
       NEW Course 4 Artist Params 13_instruction: 'Breytum þessu "teikna form" falli. Það er búið að fá stikann "lengd". Nú skulum við bæta við stikanum "hliðar". Mundu að snúningshorn forms er 360 deilt með fjölda hliða sem formið hefur. Vísbending: Þríhyrningurinn er með 100 díla hliðar, sexhyrningurinn 25 og ferningur 50.'
       NEW Course 4 Artist Params 14_instruction: 'Getur þú búið til þessi form? Dragðu stikann "lengd" inn í skilgreiningu fallsins. '
       NEW Course 4 Artist Params 15_instruction: 'Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Teiknaðu eitthvað hrífandi!'
-      NEW Course 4 Artist Params 2 _instruction: Búðu til frá grunni fall sem teiknar þríhyrning með 50 díla hliðar
       NEW Course 4 Artist Params 2_instruction: Búðu til frá grunni fall sem teiknar þríhyrning með 50 díla hliðar
       NEW Course 4 Artist Params 3_instruction: "Nú skulum við nota fallið til að teikna röð af 3 þríhyrningum úr síðustu þraut. Vísbending: Það er 50 díla bil á milli þeirra.\r\n"
       NEW Course 4 Artist Params 4_instruction: 'Sérðu eitthvað öðruvísi við þessa fallkubba? Smelltu á "Keyra" til að sjá hvað gerist.'
@@ -1065,6 +1062,7 @@ is:
       U1L4 NetSim SendAB_instruction: |
         Send a message by setting the state of the
         wire to A or B.
+      U1L8 NetSim numbers no decimal_instruction: Default instructions
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -1073,11 +1071,11 @@ is:
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame you just played in person, but this time using the Internet Simulator.\nJoin a room to be connected to your group, and then follow the instructions\non the worksheet handed out by your teacher.\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
       U2L3 NetSim Hub Mode_instruction: |
-        With your group, invent a standard addressing
-        scheme for the "Game of Messages" game, and try it out using the Internet
-        Simulator. 
+        Use the Internet Simulator to test out your
+        group's binary communication protocol for battleship. How short can you make
+        the message and response?
       U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
       U2L7 NetSim Need for Packets_instruction: |

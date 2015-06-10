@@ -12,6 +12,7 @@ tr-TR:
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için fırsatı olmalıdır
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
   petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek # ile bize katılabilirsiniz.'
+  petition_join_others: 'Join # others'
   name: İsim
   email: e-posta
   zipcode: Posta kodu ya da ülke
@@ -159,6 +160,9 @@ tr-TR:
   homepage_hero_text_teacher2: |
     &ldquo;Bu program, öğrencilerimin %100'ünün ilgisinde ve katılımında.&rdquo;
     Adam, öğretmen
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
   homepage_slot_text_teacher: Teacher Dashboard

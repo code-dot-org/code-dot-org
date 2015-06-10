@@ -143,7 +143,7 @@
           są proszeni o powtarzanie jej.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Programowanie przekaźnika
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -163,7 +163,7 @@
           is pressed.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Bezpiecznie dotrzeć na miejsce
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
@@ -173,13 +173,13 @@
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Rzeczywiste algorytmy: Papierowe samoloty'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Binarne bransoletki
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
@@ -196,7 +196,7 @@
           w grę, którą otrzymali bez instrukcji.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Funkcjonalni Łapacze Słońca (Suncatchers)
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
@@ -225,7 +225,7 @@
           if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Cyfrowe obywatelstwo
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:

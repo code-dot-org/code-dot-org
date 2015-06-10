@@ -66,8 +66,8 @@
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} Pelajar sudah terdaftar.'
+    teacher_count: '%{count} Guru sudah terdaftar.'
     overview_student: Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama
       anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password.
       Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a>
@@ -278,7 +278,7 @@
       signup: Daftar
       already_registered: Apa Sudah Terdaftar?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name} kemajuan'
       progress: Kemajuan Anda
       lines: 'Jumlah baris kode: %{lines}'
       close: TUTUP
@@ -355,10 +355,10 @@
     student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari
       %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Menjawab Pembaca
       student: siswa
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Melihat Solusi
+      try_it_yourself: Lakukan itu sendiri
       section: Sesi
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
@@ -382,7 +382,7 @@
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code: '%{lines_count} GARIS KODE DITULIS OLEH PELAJAR'
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: Sudah terdaftar? %{link}
@@ -584,8 +584,8 @@
       dalam urutan yang salah.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Terima kasih
+    open_response_body: Terima kasih atas responmu!
   dialog:
     ok: Oke!
   time:

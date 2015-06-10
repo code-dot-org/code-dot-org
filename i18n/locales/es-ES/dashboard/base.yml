@@ -1,7 +1,7 @@
 es:
   errors:
     messages:
-      not_saved: 'Por favor corrija los siguientes errores:'
+      not_saved: 'Por favor corrije los siguientes errores:'
   activerecord:
     errors:
       messages:
@@ -302,7 +302,7 @@ es:
     panel:
       answer_viewer: Ver respuesta
       student: estudiante
-      viewing_solution: Viewing Solution
+      viewing_solution: Visualizando la Solución
       try_it_yourself: Inténtalo tu mismo
       section: Sección
   user:
@@ -313,7 +313,7 @@ es:
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
     delete: Eliminar tu cuenta
-    delete_text: Hacer click en el botón de abajo eliminará su cuenta.
+    delete_text: Haz click en el botón de abajo para eliminar tu cuenta.
     delete_text_teacher_note: 'Nota: Eliminar su cuenta no eliminará la cuenta de sus alumnos.'
     delete_confirm: ¿Estás seguro que desea eliminar su cuenta?
   user_level:
@@ -451,7 +451,7 @@ es:
       title: Frozen
     infinity:
       title: Laboratorio de Juego Infinity
-      body: 'Utilice el  laboratorio jugar para crear una historia o juego protagonizada por personajes de Disney infinito.'
+      body: Utilice el laboratorio de juegos para crear una historia o juego protagonizada por personajes de Disney Infinity.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!

@@ -1,8 +1,6 @@
 "is":
   data:
     instructions:
-      2-3 _instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að
-        safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3 Artist 1 new_instruction: Hæ ég er listamaður. Þú getur skrifað kóða til
         að láta mig teikna næstum hvað sem er. Notaðu nokkra kubba til að láta mig
         teikna yfir gráu strikin í myndinni. (Hver lína er 100 díla löng.)
@@ -339,8 +337,9 @@
       2-3 Maze Loops 21_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops Assessment 1_instruction: 'Mat: Komdu mér til sólblómsins með
         aðeins 5 kubbum! '
-      2-3 Maze sq1 _instruction: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að
-        finna það!
+      2-3 Maze sq1_instruction: |
+        This pig is ruffling my feathers.  Help me find
+        him!
       2-3 Maze sq10_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 Maze sq10v2_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 maze sq11_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
@@ -367,6 +366,9 @@
       2-3 Maze sq8_instruction: Komdu mér til svínsins! (Hvar er nú þessi "endurtaka"
         kubbur?)
       2-3 Maze sq9_instruction: Notaðu lykkjur til að ná svínka með færri kubbum.
+      2-3_instruction: |
+        Purple flowers may have either 1 or 0 nectar. Be careful
+        not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Láttu fuglinn ná óþæga svíninu með því að færa hann áfram
       4-5 Artist 1_instruction: 'Hjálpaðu mér að ljúka teikningunni. (Hver lína er
         300 díla löng) '
@@ -796,11 +798,8 @@
         á milli miðjuhnita leikmanns (px, py) og miðjuhnita annarrar leikveru (cx,
         cy). Þú færð tilbúið fall fyrir lengd línu til að hjálpa þér.
       Big Game Collision 4_instruction: |
-        The 'distance' function returns the distance
-        between two sprites. Complete the 'collide?' function so that it returns
-        true if the distance between two points is less than 100 pixels apart. If
-        you're successful, your sprites will instantly collide - why do you think
-        that is?
+        Complete the collide? function so that it
+        returns true if the distance between two points is less than 100 pixels apart.
       Big Game Complete (copy 1)_instruction: Sýnishorn af verkefninu Stórleikur í
         Tölvunarfræði í algebru
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði
@@ -1113,9 +1112,6 @@
         notað teljarann til að stytta hliðarnar eftir því sem þeim fjölgar? Jú með
         því að deila með honum. Í stað þess að færa áfram um fasta stærð skulum við
         nú færa áfram um (100 / teljari) díla.
-      Course 4 Artist For Loops 14 _instruction: Ef þú snýrð aðeins meira eða minna
-        en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega
-        á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
       Course 4 Artist For Loops 14_instruction: Ef þú snýrð aðeins meira eða minna
         en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega
         á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
@@ -1276,9 +1272,8 @@
       Course 4 Bee 1_instruction: 'Býflugan veit ekki hvort þetta er blóm eða býflugnabú.
         Athugaðu fyrst hvort það er blóm eða bú, og safnaðu blómasafa aðeins ef það
         er blóm. '
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Bee 2_instruction: Athugaðu hvern hlut. Ef hann er blóm, á að safna
+        blómasafa, annars ekki!
       Course 4 Bee 3_instruction: Þetta óþekkta er annað hvort blóm eða býflugnabú.
         Notaðu "ef-annars" kubbinn til að safna blómasafa ef það er blóm, annars búa
         til hunang (því þá er það bú).
@@ -1637,8 +1632,8 @@
         og skilar þeim skeyttum saman. Settu strenginn "Universe" í seinni stika fallsins.
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
-        use is an Image. This "star" function takes in a Number and two Strings,
-        and it evaluates to an Image. Use this function to make a solid red star with
+        use is an Image. This star function takes in a Number and two Strings, and
+        it evaluates to an Image. Use this function to make a solid red star with
         radius of 100.
       Eval Strings Images 2_instruction: 'Frjáls æfing: Hver matskubbur hefur litamerkingu,
         sem sýnir hvaða tegund gagna hann skilar og hvaða gagnategundir á að setja
@@ -1656,7 +1651,7 @@
       Eval Strings Images 6_instruction: Notaðu yfirlagnarfallið til að leggja gula
         stjörnu með 75 díla geisla yfir 150 díla langan bláan ferning.
       Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
+        The offset block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
         square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: Hér er önnur tegund af stjörnukubb, sem nefnist
@@ -2057,8 +2052,6 @@
         stikann "lengd" inn í skilgreiningu fallsins. '
       NEW Course 4 Artist Params 15_instruction: 'Frjáls æfing: Hér eru föllin sem
         þú hefur skrifað og nokkur í viðbót til að leika með. Teiknaðu eitthvað hrífandi!'
-      NEW Course 4 Artist Params 2 _instruction: Búðu til frá grunni fall sem teiknar
-        þríhyrning með 50 díla hliðar
       NEW Course 4 Artist Params 2_instruction: Búðu til frá grunni fall sem teiknar
         þríhyrning með 50 díla hliðar
       NEW Course 4 Artist Params 3_instruction: "Nú skulum við nota fallið til að
@@ -2340,6 +2333,7 @@
       U1L4 NetSim SendAB_instruction: |
         Send a message by setting the state of the
         wire to A or B.
+      U1L8 NetSim numbers no decimal_instruction: Default instructions
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -2348,13 +2342,14 @@
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame
-        you just played in person, but this time using the Internet Simulator.\nJoin
-        a room to be connected to your group, and then follow the instructions\non
-        the worksheet handed out by your teacher.\r\n"
-      U2L3 NetSim Hub Mode_instruction: "With your group, invent a standard addressing\nscheme
-        for the \"Game of Messages\" game, and try it out using the Internet\nSimulator.
-        \n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship
+        moves. For setup, join a Room with your group, and add ships to\nyour paper
+        board for each opponent. When playing, all communication must be\ndone through
+        the tool, so no talking, but have fun!\r\n"
+      U2L3 NetSim Hub Mode_instruction: |
+        Use the Internet Simulator to test out your
+        group's binary communication protocol for battleship. How short can you make
+        the message and response?
       U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter
         with the others in your group. Important note: The router will only\nproperly
         route messages where the first 4 bits are the To: address and the\nsecond

@@ -620,6 +620,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_setRed_param2_description":function(d){return "A posição y em pixels a partir do canto superior esquerdo da imagem."},
 "dropletBlock_setRed_param3":function(d){return "redValue"},
 "dropletBlock_setRed_param3_description":function(d){return "A quantidade de vermelho (de 0 a 255) para definir no pixel."},
+"dropletBlock_setScreen_description":function(d){return "Sets the screen to the given screenId"},
+"dropletBlock_setScreen_param0":function(d){return "screenId"},
 "dropletBlock_setSpriteEmotion_description":function(d){return "Define o humor do personagem"},
 "dropletBlock_setSpritePosition_description":function(d){return "Move um personagem instantaneamente para o local especificado."},
 "dropletBlock_setSpriteSpeed_description":function(d){return "Define a velocidade de um personagem"},

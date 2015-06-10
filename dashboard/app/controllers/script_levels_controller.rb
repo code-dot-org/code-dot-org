@@ -115,12 +115,14 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_section
-    return if params[:section_id].blank?
+    if params[:section_id]
+      section = Section.find(params[:section_id])
 
-    section = Section.find(params[:section_id])
-
-    if section.user == current_user
-      @section = section
+      if section.user == current_user
+        @section = section
+      end
+    elsif current_user.try(:sections) && current_user.sections.count == 1
+      @section = current_user.sections.first
     end
   end
 
