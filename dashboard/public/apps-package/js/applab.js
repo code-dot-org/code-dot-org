@@ -8433,7 +8433,7 @@ module.exports = React.createClass({displayName: "exports",
     }
 
     return (
-      React.createElement("tr", {className: "assetRow"}, 
+      React.createElement("tr", {className: "assetRow", onDoubleClick: this.props.onChoose}, 
         React.createElement("td", {width: "80"}, 
           React.createElement("div", {className: "assetThumbnail", style: {
             width: '60px',
