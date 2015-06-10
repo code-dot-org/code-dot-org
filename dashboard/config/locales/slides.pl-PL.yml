@@ -233,7 +233,7 @@
           checking if there's somewhere to turn.
       4:
         image: uwagi/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Teraz, zabierz te potwory (zombies), gdzie ich miejsce!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -418,8 +418,8 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Pamiętaj, możesz zmienić liczbę pikseli i stopni klikając strzałki obok
+          nich.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg

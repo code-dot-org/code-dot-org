@@ -356,10 +356,10 @@
             colisiones
         infinity:
           title: Disney Infinity Lab de juego
-          description_short: Utilice el  laboratorio jugar para crear una historia
-            o juego protagonizada por personajes de Disney infinito.
-          description: Utilice el  laboratorio jugar para crear una historia o juego
-            protagonizada por personajes de Disney infinito.
+          description_short: Utilice el laboratorio de juegos para crear una historia
+            o juego protagonizada por personajes de Disney Infinity.
+          description: Utilice el laboratorio de juegos para crear una historia o
+            juego protagonizada por personajes de Disney Infinity.
           Play Lab: Laboratorio de Juegos
           Infinity: Infinito
         algebrademo:
@@ -388,7 +388,7 @@
             de 1, 2 y 3
           K-5 Courses: Cursos de K-5
           Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Personal Reflection: Reflexión personal
           Next Steps: Próximos pasos
           Computer Science Pedagogy: Pedagogía de la ciencia informática
@@ -415,7 +415,7 @@
           description: Crear imágenes con bits y bytes.
           Pixelation: Pixelación
         20-hour:
-          title: Curso de 20 horas introducción
+          title: Curso Introductorio de 20 horas
           description: 'Este curso de 20 horas introduce el núcleo de la informática
             y conceptos de programación. El curso está diseñado para su uso en aulas
             para los grados K-8, pero es divertido aprender en todas las edades.  '
@@ -598,7 +598,7 @@
           Introduction to PD: Introducción al DP
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Why Computer Science belongs in Algebra: Why Computer Science belongs in
             Algebra
           Preparing for in-person PD: Preparing for in-person PD
@@ -625,10 +625,11 @@
         CSPPD:
           new stage: nueva etapa
           Introduction to PD: Introducción al DP
-          title: Principios de Ciencia computacional PD
+          title: Principios de la Ciencia de la Computación PD
           description: Introducción en linea de CSP
-          What is CSP?: ¿Que es CPS?
-          Exploring CSP Instructional Materials: Exploración de CSP, Materiales instructivos
+          What is CSP?: ¿Qué es CSP?
+          Exploring CSP Instructional Materials: Explorando Materiales Instructivos
+            de CSP
           Impact of Computer Science: Impact of Computer Science
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -660,7 +661,7 @@
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
             Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
+          Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
           Dispositions and Classroom Culture: Dispositions and Classroom Culture
           Computational Thinking And The Framework For K-12 Science Education: Computational
             Thinking And The Framework For K-12 Science Education
@@ -731,7 +732,7 @@
             new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Evaluation Blocks: Bloques de evaluación
           The Big Game: The Big Game
           Strings and Images: Cadenas de texto e imágenes
@@ -782,7 +783,7 @@
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Why Computer Science belongs in Algebra: Why Computer Science belongs in
             Algebra
           Preparing for in-person PD: Preparing for in-person PD
@@ -794,7 +795,7 @@
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Why Computer Science belongs in Algebra: Why Computer Science belongs in
             Algebra
           Preparing for in-person PD: Preparing for in-person PD
@@ -810,7 +811,7 @@
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
             Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
+          Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
           Dispositions and Classroom Culture: Dispositions and Classroom Culture
           Computational Thinking And The Framework For K-12 Science Education: Computational
             Thinking And The Framework For K-12 Science Education
@@ -829,7 +830,7 @@
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
             Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
+          Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
           Dispositions and Classroom Culture: Dispositions and Classroom Culture
           Computational Thinking And The Framework For K-12 Science Education: Computational
             Thinking And The Framework For K-12 Science Education
@@ -884,6 +885,25 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
         algebraPD2a:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -902,6 +922,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Juego libre
         allthethings:
           Jigsaw: Rompecabezas
           Maze: Laberinto
@@ -919,10 +940,10 @@
           applab: applab
           online pd?: online pd?
           AppLab: AppLab
-          Online PD: PD en linea
+          Online PD: PD en línea
           title: ¡Todas las cosas!
-          description: Todos los tipos de niveles para pruebas UI
-          Odometer: Odometro
+          description: Todos los tipos de niveles para las pruebas de UI
+          Odometer: Odómetro
           Text Compression: Compresión de texto
           Pixelation: Pixelación
         algebraPD2b:
@@ -930,7 +951,7 @@
           description: Enseñar programación funcional a través de álgebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Evaluation Blocks: Bloques de evaluación
           Strings and Images: Cadenas de texto e imágenes
           Writing Contracts: Contratos de redacción
@@ -942,3 +963,47 @@
           Next Steps: Próximos pasos
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Definición de funciones'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratorio de App
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratorio de App
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          Introduction to PD: Introducción al DP
+          K-5 Courses: Cursos de K-5
+          Writing computer programs: Programas informáticos de escritura
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Pedagogía de la ciencia informática
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          Teacher Dashboard: Tablero Maestro del Profesor
+          'Programming Concept: Events': 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Próximos pasos
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing

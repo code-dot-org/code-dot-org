@@ -12,6 +12,7 @@ uk-UA:
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: "Якщо ви згодні, то напишіть своє ім'я.  Приєднайтеся до # інших."
   petition_sign_message_support: "Якщо Ви підтримуєте наші ідеї, запишіть своє ім'я. Приєднайтесь до # інших."
+  petition_join_others: 'Join # others'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -177,6 +178,9 @@ uk-UA:
     &ldquo;Ця програма спонукала 100% моїх учнів
     до активної участі та залучення.&rdquo;
     Адам, вчитель
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Година Коду
   homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
   homepage_slot_text_teacher: Teacher Dashboard

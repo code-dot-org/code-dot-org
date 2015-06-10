@@ -13,6 +13,7 @@ fr-FR:
   petition_message: "Tous les élèves dans toutes les écoles devraient avoir la possibilité d'apprendre l'informatique"
   petition_sign_message: "Si tu es d'accord, indique ton nom. Rejoins les # autres participants."
   petition_sign_message_support: 'Si vous nous soutenez, signez votre nom.  Rejoignez #.'
+  petition_join_others: 'Join # others'
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -158,6 +159,9 @@ fr-FR:
   homepage_hero_text_teacher2: |
     &ldquo;Tous mes élèves se sont sentis impliqués, investis et ont participé à ce programme.&rdquo;
     Adam, enseignant
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "L'Heure de Code"
   homepage_slot_text_frozen: La reine des neige, avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant

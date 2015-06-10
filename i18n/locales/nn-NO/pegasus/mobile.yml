@@ -12,6 +12,7 @@ nn-NO:
   petition_message: Alle elevar på alle skular burde få høve til å lære koding
   petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
   petition_sign_message_support: 'Signer dette dersom du ønsker å støtte oss. Gjør som # andre.'
+  petition_join_others: 'Join # others'
   name: Navn
   email: E-post
   zipcode: Postnummer eller land
@@ -159,6 +160,9 @@ nn-NO:
     "Dette programmet har fått 100 % av elevene 
     engasjert, involvert og delaktige."
     Adam, lærer
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -614,7 +618,7 @@ nn-NO:
   projguts_longdescription: 'Denne "analoge" aktiviteten hjelper elevar å lære korleis modellering og simulering fungerer, ved at ei gruppe elevar spelar ulike versjonar av stein/saks/papir, og ser resultata som forskjellige modelleringseksperiment.'
   hourofcode_longdescription: Plassholder for ny code.org/hoc
   frozen_longdescription: La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!
-  playlab_longdescription: 'Lag en historie eller lag et spill med "Play Lab"! Få dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage lyder, få poeng, og til og med kaste flammekuler!'
+  playlab_longdescription: 'Lag en historie eller lag et spill med "Spill-Lab"! Få dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage lyder, få poeng, og til og med kaste flammekuler!'
   codeorg_beyond_name: 'Introduksjon til koding (1. - 8. trinn)'
   khan_beyond_name: Lær programmering
   tynker_beyond_name: Lær programmering heime

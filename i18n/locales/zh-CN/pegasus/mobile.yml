@@ -12,6 +12,7 @@ zh-CN:
   petition_message: 在每个学校每个学生都应该有机会学习计算机科学
   petition_sign_message: '如果你同意，签上你的名字。加入#其他人。'
   petition_sign_message_support: '如果你支持我们，签上你的名字。加入# 其他。'
+  petition_join_others: 'Join # others'
   name: 姓名
   email: 电子邮件
   zipcode: 邮政编码或国家
@@ -159,6 +160,9 @@ zh-CN:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: 编程一小时
   homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
   homepage_slot_text_teacher: Teacher Dashboard

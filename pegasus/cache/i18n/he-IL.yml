@@ -16,6 +16,7 @@
   petition_message: כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב
   petition_sign_message: 'אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים.'
   petition_sign_message_support: אם אתם תומכים בנו חיתמו את שמכם. צרפו# נוספים.
+  petition_join_others: 'Join # others'
   name: שם
   email: דואר אלקטרוני
   zipcode: מיקוד או מדינה
@@ -174,6 +175,9 @@
     אשר חיוניים בכל קריירה שהיא.&rdquo; פלורסה, מורה'
   homepage_hero_text_teacher2: '&ldquo;התוכנית הזו גרמה ל 1005 מהתלמידים שלי להיות
     פעילים ומעורבים. &rdquo; אדם, מורה'
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: שעה של קוד
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_teacher: Teacher Dashboard

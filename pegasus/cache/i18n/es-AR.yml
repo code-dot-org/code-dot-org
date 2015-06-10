@@ -19,6 +19,7 @@
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
     otros.'
+  petition_join_others: 'Join # others'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -191,9 +192,12 @@
   homepage_hero_text_teacher2: |
     &ldquo;Este programa tiene al 100% de mis estudiantes comprometidos, involucrados y participando.&ldquo;
     Adam, profesor
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Tablero Maestro del Profesor
   homepage_slot_text_studio: Todos nuestros tutoriales
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Tienda

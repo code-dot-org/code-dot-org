@@ -620,6 +620,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_setRed_param2_description":function(d){return "Позиция y, указанная в пикселях, начиная с верхнего левого угла изображения."},
 "dropletBlock_setRed_param3":function(d){return "красноеЗначение"},
 "dropletBlock_setRed_param3_description":function(d){return "The amount of red (from 0 to 255) to set in the pixel."},
+"dropletBlock_setScreen_description":function(d){return "Sets the screen to the given screenId"},
+"dropletBlock_setScreen_param0":function(d){return "screenId"},
 "dropletBlock_setSpriteEmotion_description":function(d){return "Установить настроение актера"},
 "dropletBlock_setSpritePosition_description":function(d){return "Мгновенно перемещает персонажа в указанное место."},
 "dropletBlock_setSpriteSpeed_description":function(d){return "Установите скорость персонажа"},
