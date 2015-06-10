@@ -3,7 +3,7 @@
 
 :ruby
   surveys = DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey')
-  professional_development_workshops = PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop')
+  pd_workshops = PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop')
   def fetch_workshop_info(workshop_id)
     workshop = DB[:forms].where(id:workshop_id.to_i).first
     return {} unless workshop
@@ -180,12 +180,13 @@
       -#%td
       -#  #{data['send_materials_zip_s']}
 %table
-  - professional_development_workshops.each do |row|
+  - pd_workshops.each do |row|
     - data = JSON.parse(row[:data]) rescue {}
     - section_id = data['section_id_s']
     - next unless section_id
-    - temp = get_more(section_id)
+    -#- temp = get_more(section_id)
 
     %tr
       %td
-        #{temp}
+        -##{temp}
+        #{row}
