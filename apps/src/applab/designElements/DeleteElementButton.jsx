@@ -37,7 +37,8 @@ var DeleteElementButton = React.createClass({
     var buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',
-      fontSize: '14px'
+      fontSize: '14px',
+      marginLeft: 0
     };
 
     var redButtonStyle = $.extend({}, buttonStyle, {
