@@ -1,3 +1,5 @@
+# Run 'rake' or 'rake -P' to get a list of valid Rake commands.
+
 require_relative './deployment'
 require 'os'
 require 'cdo/hip_chat'
@@ -205,9 +207,8 @@ namespace :install do
       end
 
       if OS.linux?
-        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
-        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
-        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+        RakeUtils.npm_update_g 'npm'
+        RakeUtils.npm_install_g 'grunt-cli'
       elsif OS.mac?
         RakeUtils.system 'brew install node'
         RakeUtils.system 'npm', 'update', '-g', 'npm'
@@ -224,9 +225,8 @@ namespace :install do
       end
 
       if OS.linux?
-        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
-        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
-        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+        RakeUtils.npm_update_g 'npm'
+        RakeUtils.npm_install_g 'grunt-cli'
       elsif OS.mac?
         RakeUtils.system 'brew install node'
         RakeUtils.system 'npm', 'update', '-g', 'npm'
@@ -267,3 +267,8 @@ namespace :install do
 
 end
 task :install => ['install:all']
+
+task :default do
+  puts 'List of valid commands:'
+  system 'rake -P'
+end
