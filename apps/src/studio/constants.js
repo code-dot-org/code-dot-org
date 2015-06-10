@@ -31,14 +31,17 @@ exports.Direction = {
 var Dir = exports.Direction;
 
 /**
- * Given a direction, returns the unit vector for it. Currently only supports
- * cardinal directions.
+ * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
 UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
+UNIT_VECTOR[Dir.NORTHEAST] = { x: 1, y:-1};
+UNIT_VECTOR[Dir.SOUTHEAST] = { x: 1, y: 1};
+UNIT_VECTOR[Dir.SOUTHWEST] = { x:-1, y: 1};
+UNIT_VECTOR[Dir.NORTHWEST] = { x:-1, y:-1};
 exports.Direction.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
