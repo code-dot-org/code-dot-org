@@ -35,6 +35,9 @@ class LevelLoader
     # Fixes issue #75863324 (delete removed level properties on import)
     level.send(:write_attribute, 'properties', {})
     level.assign_attributes(level.load_level_xml(xml_node))
+
+    level.save! if level.changed?
+    level
   end
 
   def self.update_unplugged
