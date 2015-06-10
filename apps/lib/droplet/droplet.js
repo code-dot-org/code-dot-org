@@ -1754,7 +1754,7 @@
       }
 
       Indent.prototype._cloneEmpty = function() {
-        return new Indent(this.prefix);
+        return new Indent(this.prefix, this.classes);
       };
 
       Indent.prototype._serialize_header = function() {
@@ -12377,8 +12377,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (this.gutterDecorations[line]) {
         lineDiv.className += ' ' + this.gutterDecorations[line].join(' ');
       }
-      lineDiv.style.top = treeView.bounds[line].y + "px";
-      lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
+      lineDiv.style.top = (treeView.bounds[line].y - this.scrollOffsets.main.y) + "px";
+      lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
       lineDiv.style.height = treeView.bounds[line].height + 'px';
       lineDiv.style.fontSize = this.fontSize + 'px';
       return this.lineNumberWrapper.appendChild(lineDiv);
