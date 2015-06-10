@@ -858,6 +858,7 @@ en:
           Odometer: Odometer
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
