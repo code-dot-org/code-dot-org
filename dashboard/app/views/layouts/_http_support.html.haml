@@ -1,0 +1,40 @@
+#warning-banner-https
+  .expanded{style: 'display: none;'}
+    %i.fa.fa-warning
+    = t("compatability.https.header")
+    %span#hide-warning.btn.btn-primary= 'hide this warning'
+    %p
+      != t("compatability.https.message", https_date: Date.parse('2015/07/01'), it_requirements_url: '//code.org/educate/it')
+  .collapsed{style: 'display: none; cursor: pointer; text-align: left; font-size: 10px; line-height: 10px;'}
+    %i.fa.fa-warning
+    = t("compatability.https.header")
+  :javascript
+    var banner = $('#warning-banner-https');
+    var collapsed = banner.find(".collapsed");
+    var expanded = banner.find(".expanded");
+    function showWarning() {
+      if (document.cookie.indexOf('hide-https-warning') >= 0) {
+        collapsed.show();
+      } else {
+        expanded.show();
+      }
+    }
+    if(document.cookie.indexOf('https-blocked') >= 0) {
+      showWarning();
+    }
+    banner.find("#hide-warning").click(function () {
+      document.cookie = "hide-https-warning=1; path=/";
+      expanded.slideUp('fast');
+      collapsed.slideDown('fast');
+    });
+    collapsed.click(function () {
+      expanded.slideDown('fast');
+      collapsed.slideUp('fast');
+    });
+    $(window).load(function () {
+      onURLBlocked("#{ CDO.studio_url('test-image.png', 'https:') }", function () {
+        trackEvent("HTTPS Test", "blocked");
+        showWarning();
+        document.cookie = "https-blocked=1; path=/";
+      });
+    });
