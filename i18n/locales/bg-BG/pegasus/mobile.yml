@@ -4,35 +4,36 @@ bg-BG:
   computer_science: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
   csedweek_dates: 8-14 Декември 2014 г.
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Един Час Програмиране</a> идва. Призоваваме всички учители и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> да планират техния Час </a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по   информатика ли   сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Опитайте</h1><h2>Един Час Програмиране</h2><h3># served</h3>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> да планират техния Час на кодирането</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по информатика ли сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
+  n_have_learned_an_hoc: '<h1>Опитайте</h1><h2>Часът на кодирането</h2><h3># served</h3>'
   anybody_can_learn: Всеки може да се научи.
   learn_now: Научете сега
-  petition_message: Всеки ученик във всяко училище трябва да има възможност да учи компютърни науки
-  petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # други.'
+  petition_message: Всеки ученик в училище трябва да има възможност да учи компютърни науки
+  petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # всички останали.'
   petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се # към другите.'
+  petition_join_others: 'Join # others'
   name: Име
   email: Имейл
   zipcode: Пощенски код или държава
   submit: Изпрати
-  twentyhours_heading: Опитайте нашите интро курсове по компютърни науки
+  twentyhours_heading: Опитайте нашите въвеждащи курсове по компютърни науки
   twentyhours_text: Завършихте ли първия час на code.org? Научете повече за основните понятия в компютърните науки и програмиране в този следващ курс.
-  hoc2014_heading: 'Присъединете се към <a href="http://hourofcode.com"> Часът на програмирането</a> <br/>на 8-14 декември 2014 г. <br/>'
+  hoc2014_heading: 'Присъединете се към <a href="http://hourofcode.com"> Часът на кодирането</a> <br/>на 8-14 декември 2014 г. <br/>'
   hoc2014_students: Ученици
-  hoc2014_try: 'Пробваийте '
+  hoc2014_try: Опитайте го
   hoc2014_teachers: Учители
   hoc2014_host: Организирайте го
   hoc2014_everyone: Всички
   hoc2014_support: 'Подкрепете  &#x25BE;'
-  hoc2014_whatishoc: 'Какво е представлява  "Един Час Програмиране ?'
+  hoc2014_whatishoc: Какво представлява Часът на кодирането?
   twentyhours_trynow: Опитай сега
-  california_heading: Попитайте във вашето училище дали се изучават компютърни науки
-  california_text: "Всеки учител може да предложи нашия <a href='http://studio.code.org/'> безплатен въвеждащ курс</a>.  Всяко основно училище може да<a href='http://code.org/educate/k5'> въведе предметът  Инфроматика</a>. Попитайте гимназиите дали са <a href = 'http://code.org/educate/districts'>  искат да си партнират с нас."
+  california_heading: Попитайте във Вашето училище дали се изучават компютърни науки
+  california_text: "Всеки учител може да предложи нашия <a href='http://studio.code.org/'> безплатен въвеждащ курс</a>.  Всяко основно училище може да<a href='http://code.org/educate/k5'> въведе предметът  компютърни науки</a>. Попитайте гимназиите дали са <a href = 'http://code.org/educate/districts'> партньори с нас."
   california_button: Научете повече
   flappy_heading: Flappy рожден ден на Code.org
   flappy_text: 'Code.org навърши 1 година. <br/> <br/> Празнувай с нас като направиш своя собствена персонализирана <b>Flappy</b> игра. Кодирай по свои собствени правила и  я сподели с приятели!'
-  view_english_site: Вижте сайта на Английски
+  view_english_site: Вижте сайта на английски
   non_english_tutorials: 'Уроци, преведени на множество езици:'
   write_your_first_program: Напишете първата си компютърна програма
   learn_cs_concepts: "Научете основните понятия на компютърните науки чрез визуално програмиране. Това е урок-игра, с  видео лекции от Бил Гейтс, Марк Зукерберг, Ядосаните Птици и Растенията срещу Зомбитата. Научете се да създавате циклични повторения, условия 'ако-то-иначе' и някои основни алгоритми."
@@ -42,13 +43,13 @@ bg-BG:
   go: Започни
   thank_you_: Благодарим Ви!
   congratulations: Поздравления!
-  congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството Един Час Програмиране
+  congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството Един Час Кодиране
   get_a_certificate_of_achievement: Получете сертификат за постижение
   enter_valid_email: Моля, въведете валиден имейл адрес
   get_a_certificate_message: "Ние ще ви изпратим сертификат и информация за това как да <a href='/learn/beyond'> учите и след първия час програмиране</a>"
-  get_a_certificate_message_after: "Щракнете върху сертификата, за да го изтеглите или да го отпечатате. Сега продължете с нашият <a href='http://studio.code.org'> 20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> продължете и след като завършите  и Един  Част програмиране</a>."
+  get_a_certificate_message_after: "Щракнете върху сертификата, за да го изтеглите или да го отпечатате. Сега продължете с нашият <a href='http://studio.code.org'> 20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите и след Часът на кодирането</a>."
   thanks_for_submitting: Благодарим за изпращането!
-  if_you_enjoyed: Ако Ви е харесало да учите, кажете и на приятелите ви, за да го пробват! Ние искаме целият свят да научи.
+  if_you_enjoyed: Ако Ви е харесало наученото, споделете с приятелите си, за да пробват и те! Ние искаме целият свят да научи.
   personalize_certificate: Персонализирайте вашия сертификат
   share_achievement: Споделете вашето постижение
   beyond_hour_message: "Продължете с нашия<a href='http://studio.code.org'> 20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите след ПЪРВИЯ час</a>."
@@ -138,6 +139,9 @@ bg-BG:
   homepage_hero_text_student5: '&ldquo;"Компютърните науки не са за други хора. Те са за вас, тук и сега."&rdquo; Джералдо, учител'
   homepage_hero_text_teacher1: '&ldquo;"Кодирането разпалва креативност, вдъхновение и иновации, &mdash; които са от съществено значение за всяка кариера."&rdquo; Флорес, учител'
   homepage_hero_text_teacher2: '&ldquo;Тази програма ангажира и увлича  учениците ми на 100%&rdquo; Адам, учител'
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Един Час Програмиране
   homepage_slot_text_frozen: Замръзнали (Frozen) с Анна и Елза
   homepage_slot_text_teacher: Учителско табло
@@ -370,7 +374,7 @@ bg-BG:
   hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кодирането
   hoc2014_try_new_tutorial: Опитайте нашия нов Час на кодирането (бета версия)
   hoc2014_try_scrat: Angry Birds, PvZ и Scrat
-  hoc2014_try_frozen: Рисувай с Анна и Елза, от Frozen
+  hoc2014_try_frozen: Художникът с Анна и Елза от Frozen
   carousel_heading_international: Уроци на вашия език
   carousel_heading_domestic: Уроци на английски
   carousel_heading_beginners: Уроци за начинаещи

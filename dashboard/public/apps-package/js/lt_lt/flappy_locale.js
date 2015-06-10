@@ -275,7 +275,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "speedVeryFast":function(d){return "greitis = labai greitai"},
 "whenClick":function(d){return "kai spusteli"},
 "whenClickTooltip":function(d){return "Vykdyti pateiktas komandas, kai bus spustelta pele."},
-"whenCollideGround":function(d){return "kai nuktrenti ant žemės"},
+"whenCollideGround":function(d){return "kai nukrenti ant žemės"},
 "whenCollideGroundTooltip":function(d){return "Vykdyti pateiktus veiksmus, kai Flappy pasieks žemę."},
 "whenCollideObstacle":function(d){return "kai atsimuši į kliūtį"},
 "whenCollideObstacleTooltip":function(d){return "Vykdyti  pateiktus veiksmus, kai Flappy atsitrenks į kliūtį."},

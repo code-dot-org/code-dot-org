@@ -353,7 +353,7 @@
     panel:
       answer_viewer: Skoða svör
       student: nemandi
-      viewing_solution: Viewing Solution
+      viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
   user:

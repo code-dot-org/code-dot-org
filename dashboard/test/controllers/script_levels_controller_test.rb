@@ -597,10 +597,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     sign_in @teacher
 
-    last_attempt_data = 'test'
-    level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, section_id: @section.id
 
     assert_select '.teacher-panel'
@@ -610,8 +606,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal nil, assigns(:user)
   end
 
-  test 'shows collapsed teacher panel when student not chosen' do
+  test 'shows collapsed teacher panel when student not chosen, chooses section when teacher has one section' do
     @teacher.update admin: true # TODO don't need this when feature is shipped
+
+    sign_in @teacher
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
+
+    assert_select '.teacher-panel.hidden'
+
+    assert_equal @section, assigns(:section)
+    assert_equal nil, assigns(:user)
+  end
+
+  test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
+    @teacher.update admin: true # TODO don't need this when feature is shipped
+    create :section, user: @teacher
 
     sign_in @teacher
 

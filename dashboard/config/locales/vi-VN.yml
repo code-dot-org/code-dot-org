@@ -542,8 +542,8 @@
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
     header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Phòng trò chơi
+    header_artist: Nghệ sĩ
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback

@@ -12,6 +12,7 @@ lt-LT:
   petition_message: Kiekvienas mokinys turėtų turėti galimybę mokytis programavimo
   petition_sign_message: 'Jei sutinkate, parašykite savo vardą. Prijunkite # kitus.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: Vardas
   email: El. pašto adresas
   zipcode: Pašto indeksas arba šalis
@@ -177,9 +178,12 @@ lt-LT:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Vienos Valandos Kodo kursas
   homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Mokytojo prietaisų skydelis
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Kursas 4
   homepage_slot_text_shop: Shop
@@ -188,7 +192,7 @@ lt-LT:
   homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: „Programavimo valanda“

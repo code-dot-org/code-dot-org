@@ -12,6 +12,7 @@ ar-SA:
   petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة الفرصة لتعلم علوم الحاسب الآلي
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
   petition_sign_message_support: اذا اردت مساعدتنا , سجل أسمك. انضم مع الاخرين.
+  petition_join_others: 'Join # others'
   name: الاسم
   email: البريد الإلكتروني
   zipcode: الرمز البريدي أو اسم البلد
@@ -181,6 +182,9 @@ ar-SA:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: الساعة من التعليمات البرمجية
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -192,7 +196,7 @@ ar-SA:
   homepage_action_text_teachervideo: شاهد الفيديو
   homepage_action_text_learn: ابدأ التعلم
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: اعرف المزيد
   homepage_slot_text_title_hoc: ساعة من البرمجة

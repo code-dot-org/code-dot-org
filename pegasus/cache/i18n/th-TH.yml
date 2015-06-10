@@ -17,6 +17,7 @@
   petition_sign_message: 'ถ้าคุณเห็นด้วย ลงชื่อของคุณได้เลย มาเข้าร่วม #'
   petition_sign_message_support: 'ถ้าคุณสนับสนุนเรา ลงชื่อของคุณ เข้าร่วมกับคนอื่นอีก
     # คน'
+  petition_join_others: 'Join # others'
   name: ชื่อ
   email: อีเมล
   zipcode: รหัสไปรษณีย์หรือประเทศ
@@ -186,6 +187,9 @@
   homepage_hero_text_teacher2: |
     &ldquo;โครงการนี้ได้รับความร่วมมือ 100% จากนักเรียน &rdquo;
     Adam, ครู
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า
   homepage_slot_text_teacher: Teacher Dashboard

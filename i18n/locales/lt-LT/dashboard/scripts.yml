@@ -531,7 +531,7 @@ lt:
           Introduction to PD: Introduction to PD
           Course Overview: Course Overview
           Computer Science Pedagogy: Informatikos pedagogika
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Mokytojo prietaisų skydelis
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
         algPDmiami:
@@ -654,7 +654,7 @@ lt:
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Informatikos pedagogika
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Mokytojo prietaisų skydelis
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
           Strings and Images: Eilutės ir paveikslėliai
@@ -704,7 +704,7 @@ lt:
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Informatikos pedagogika
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Mokytojo prietaisų skydelis
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
@@ -715,7 +715,7 @@ lt:
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Informatikos pedagogika
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Mokytojo prietaisų skydelis
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
         sciencePD-NexTech:
@@ -798,6 +798,22 @@ lt:
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internetas
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
         algebraPD2a:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -816,6 +832,7 @@ lt:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Free Play
         allthethings:
           Jigsaw: Dėlionės
           Maze: Labirintas
@@ -844,7 +861,7 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           Course Overview: Course Overview
           Computer Science Pedagogy: Informatikos pedagogika
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Mokytojo prietaisų skydelis
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Eilutės ir paveikslėliai
           Writing Contracts: Writing Contracts
@@ -856,3 +873,46 @@ lt:
           Next Steps: Kiti žingsniai
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Interneto simuliatorius
+          App Lab: Programėlių laboratorija
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Interneto simuliatorius
+          App Lab: Programėlių laboratorija
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          Introduction to PD: Introduction to PD
+          K-5 Courses: Kursai pradinių klasių mokiniams
+          Writing computer programs: Kompiuterinių programų rašymas
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          Unplugged lessons: Papildomos pamokėlės
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Informatikos pedagogika
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          Teacher Dashboard: Mokytojo prietaisų skydelis
+          "Programming Concept: Events": 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Kiti žingsniai
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'

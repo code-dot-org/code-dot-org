@@ -140,7 +140,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <tr className="assetRow">
+      <tr className="assetRow" onDoubleClick={this.props.onChoose}>
         <td width="80">
           <div className="assetThumbnail" style={{
             width: '60px',

@@ -38,6 +38,7 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "designWorkspaceDescription":function(d){return "Click on an element to edit its properties."},
 "designWorkspaceHeader":function(d){return "Workspace"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
+"manageAssets":function(d){return "Click to view or update your images and sounds."},
 "nextLevel":function(d){return "Congratulations! You have completed this puzzle."},
 "no":function(d){return "No"},
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
