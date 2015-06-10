@@ -186,10 +186,10 @@
     - data = JSON.parse(row[:data]) rescue {}
     - section_id = data['section_id_s']
     - next unless section_id
-    -#- temp = get_more(section_id)
-    - more = DASHBOARD_DB[:followers].where(section_id: section_id).join(:users, id: :student_user_id).select(:users__id___id, :users__name___name, :users__email___email)
+    - temp = get_more(section_id)
+    -#- more = DASHBOARD_DB[:followers].where(section_id: section_id).join(:users, id: :student_user_id).select(:users__id___id, :users__name___name, :users__email___email)
 
     %tr
       %td
-        - if more
-          #{more.first}
+        - if temp
+          #{temp.first}
