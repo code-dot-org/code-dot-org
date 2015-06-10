@@ -467,6 +467,17 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
+  test 'trailing spaces in level name get stripped' do
+    level = create :level, name: 'original name '
+    assert_equal 'original name', level.name
+
+    post :update, id: level.id, level: {name: 'different name  '}
+
+    level = level.reload
+    # same name
+    assert_equal 'different name', level.name
+  end
+
   test 'can show level when not signed in' do
     set_env :test
 
