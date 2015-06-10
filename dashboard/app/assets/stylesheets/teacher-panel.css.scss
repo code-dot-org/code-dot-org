@@ -54,11 +54,10 @@
     margin: 0;
   }
 
-  .content {
-    h4 {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
-      text-align: center;
-    }
+  h4 {
+    font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    text-align: center;
+    margin: 5px 0;
   }
 
   .students {
@@ -162,5 +161,11 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0 5px;
+  }
+
+  select {
+    width: auto;
+    display: block;
+    margin: 5px auto;
   }
 }
