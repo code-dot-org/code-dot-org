@@ -13,11 +13,9 @@
 require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
-var NetSimVizNode = require('./NetSimVizNode');
 var tweens = require('./tweens');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 
@@ -31,24 +29,14 @@ var binaryToAB = dataConverters.binaryToAB;
 var TEXT_FINAL_VERTICAL_OFFSET = -10;
 
 /**
- *
- * @param sourceWire
- * @param {function} getElementByEntityID - Allows this wire to search
- *        for other entities in the simulation
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizWire = module.exports = function (sourceWire, getElementByEntityID) {
+var NetSimVizWire = module.exports = function () {
   NetSimVizElement.call(this);
 
   var root = this.getRoot();
   root.addClass('viz-wire');
-
-  /**
-   * ID of the simulation wire that this viz element maps to.
-   * @type {number}
-   */
-  this.correspondingWireID_ = sourceWire.entityID;
 
   /**
    * @type {jQuery} wrapped around a SVGPathElement
@@ -95,49 +83,12 @@ var NetSimVizWire = module.exports = function (sourceWire, getElementByEntityID)
    */
   this.encodings_ = [];
 
-  /**
-   * Bound getElementByEntityID method from vizualization controller.
-   * @type {Function}
-   * @private
-   */
-  this.getElementByEntityID_ = getElementByEntityID;
-
   this.localVizNode = null;
   this.remoteVizNode = null;
 
-  this.configureFrom(sourceWire);
   this.render();
 };
 NetSimVizWire.inherits(NetSimVizElement);
-
-/**
- * Configuring a wire means looking up the viz nodes that will be its endpoints.
- * @param {NetSimWire} sourceWire
- */
-NetSimVizWire.prototype.configureFrom = function (sourceWire) {
-  this.localVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.remoteNodeID);
-
-  if (this.localVizNode) {
-    this.localVizNode.setAddress(sourceWire.localAddress);
-  }
-
-  if (this.remoteVizNode) {
-    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
-  }
-
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
-    this.getRoot().css('display', 'none');
-  }
-};
-
-/**
- * ID of the simulation entity that maps to this one.
- * @returns {number}
- */
-NetSimVizWire.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingWireID_;
-};
 
 /**
  * Update path data for wire.
@@ -177,7 +128,6 @@ NetSimVizWire.prototype.hide = function () {
  */
 NetSimVizWire.prototype.kill = function () {
   NetSimVizWire.superPrototype.kill.call(this);
-  this.correspondingWireID_ = undefined;
   this.localVizNode = null;
   this.remoteVizNode = null;
 };

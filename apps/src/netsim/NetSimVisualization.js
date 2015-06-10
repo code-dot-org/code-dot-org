@@ -19,7 +19,7 @@ var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
-var NetSimVizWire = require('./NetSimVizWire');
+var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var netsimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
 var netsimConstants = require('./netsimConstants');
@@ -248,11 +248,11 @@ NetSimVisualization.prototype.getElementByEntityID = function (elementType, enti
  * Gets the set of VizWires directly attached to the given VizNode, (either
  * on the local end or remote end)
  * @param {NetSimVizSimulationNode} vizNode
- * @returns {Array.<NetSimVizWire>} the attached wires
+ * @returns {Array.<NetSimVizSimulationWire>} the attached wires
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
   return this.elements_.filter(function (element) {
-    return element instanceof NetSimVizWire &&
+    return element instanceof NetSimVizSimulationWire &&
         (
         (element.localVizNode === vizNode) ||
         (vizNode.isRouter && element.remoteVizNode === vizNode)
@@ -305,8 +305,9 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   }.bind(this));
 
   // Update collection of VizWires from source data
-  this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
-    var newVizWire = new NetSimVizWire(wire, this.getElementByEntityID.bind(this));
+  this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
+    var newVizWire = new NetSimVizSimulationWire(wire,
+        this.getElementByEntityID.bind(this));
     newVizWire.setEncodings(this.netsim_.getEncodings());
     return newVizWire;
   }.bind(this));
@@ -485,7 +486,7 @@ NetSimVisualization.prototype.addVizElement_ = function (vizElement) {
  */
 var moveVizElementToGroup = function (vizElement, newParent) {
   vizElement.getRoot().detach();
-  if (vizElement instanceof NetSimVizWire ||
+  if (vizElement instanceof NetSimVizSimulationWire ||
       vizElement instanceof NetSimFakeVizWire) {
     vizElement.getRoot().prependTo(newParent);
   } else {
@@ -553,7 +554,7 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
  * Notes that the current element is should be foreground when we're all done,
  * finds the current element's unvisited connections,
  * pushes those connections onto the stack.
- * @param {NetSimVizSimulationNode|NetSimVizWire} vizElement
+ * @param {NetSimVizSimulationNode|NetSimVizSimulationWire} vizElement
  * @returns {Array.<NetSimVizElement>}
  * @private
  */
@@ -569,7 +570,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
     if (vizElement.isRouter && this.autoDnsNode_) {
       neighbors.push(this.autoDnsNode_);
     }
-  } else if (vizElement instanceof NetSimVizWire) {
+  } else if (vizElement instanceof NetSimVizSimulationWire) {
     if (vizElement.localVizNode) {
       neighbors.push(vizElement.localVizNode);
     }
@@ -795,7 +796,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
  */
 NetSimVisualization.prototype.setEncodings = function (newEncodings) {
   this.elements_.forEach(function (vizElement) {
-    if (vizElement instanceof NetSimVizWire) {
+    if (vizElement instanceof NetSimVizSimulationWire) {
       vizElement.setEncodings(newEncodings);
     }
   });
@@ -850,7 +851,7 @@ NetSimVisualization.prototype.animateReadWireState = function (newState) {
 
 /**
  * Find the outgoing wire from the local node to a remote node.
- * @returns {NetSimVizWire|null} null if no outgoing connection is established.
+ * @returns {NetSimVizSimulationWire|null} null if no outgoing connection is established.
  */
 NetSimVisualization.prototype.getVizWireToRemote = function () {
   if (!this.localNode) {
@@ -858,7 +859,7 @@ NetSimVisualization.prototype.getVizWireToRemote = function () {
   }
 
   var outgoingWires = this.elements_.filter(function (element) {
-    return element instanceof NetSimVizWire &&
+    return element instanceof NetSimVizSimulationWire &&
         element.localVizNode === this.localNode;
   }, this);
 
@@ -871,7 +872,7 @@ NetSimVisualization.prototype.getVizWireToRemote = function () {
 
 /**
  * Find the incoming wire from a remote node to the local node.
- * @returns {NetSimVizWire|null} null if no incoming connection is established.
+ * @returns {NetSimVizSimulationWire|null} null if no incoming connection is established.
  */
 NetSimVisualization.prototype.getVizWireFromRemote = function () {
   if (!this.localNode) {
@@ -879,7 +880,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
   }
 
   var incomingWires = this.elements_.filter(function (element) {
-    return element instanceof NetSimVizWire &&
+    return element instanceof NetSimVizSimulationWire &&
         element.remoteVizNode === this.localNode;
   }, this);
 
