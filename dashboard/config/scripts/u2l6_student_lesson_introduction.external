@@ -1,6 +1,6 @@
 name 'U2L6 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'Algorithm detour - Minimum Spanning Tree'
+
 css 'unplugged'
 skip_dialog 'true'
 
@@ -9,21 +9,34 @@ markdown <<MARKDOWN
 
 # Background
 
-Background goes here
+The Minimum Spanning Tree is a type of problem known in mathematics and computer science as Graph Theory. Graph problems, such as networks, schedules, and logistics, are common in computer science. The MST problem is interesting because it might have multiple “best” solutions.
 
 # Vocabulary
 
-Vocabulary goes here
+graph: a diagram that shows the nodes and edges of a problem
+
+node: sometimes called a vertex; typically represented as a labeled circle
+
+edge: a line connecting two nodes
+
+cost: sometimes called the weight; the number associated with an edge that indicates distance, time, or economic cost 
+
+cycle: a set of edges that, begin at one node and can be followed through other nodes back where you started
+
+tree: a set of edges that connects nodes together in a way that does not form a cycle
+
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Investigate graph problems
+* Create an algorithm for solving a minimum spanning tree problem
+* Compare your algorithm to Kruskal’s algorithm
+
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Handout: <a href="https://docs.google.com/document/d/13jOKoR3Tbz67innI1g7V-AjKpwM8esW_HwRDICDFEwE" target="_blank">Algorithms, graphs, and the MST problem</a>
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

@@ -16,7 +16,13 @@ litmus_tracking_id: "iujowffk"
 
 Thank you for signing up to attend a Code.org K-5 workshop.
 
-**To prepare for your workshop:** Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. Review the following [introductory course materials](http://code.org/educate/k5/introPD). These will give you a head start into the course materials to be covered and maximizing learning time during the in-person workshop.
+**Next steps to prepare for your workshop:** 
+
+1. Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. 
+
+2. Update your name in your Code Studio account settings to be the name you want to appear on your PD certificate.
+
+3. Review the following [introductory course materials](http://code.org/educate/k5/introPD). These will give you a head start into the course materials to be covered and maximizing learning time during the in-person workshop.
 
 **Technology Requirements:** This workshop requires you bring your own technology. Review [this page](https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-) for more information regarding compatible operating systems and browsers.
 
