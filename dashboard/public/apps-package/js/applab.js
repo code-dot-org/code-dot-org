@@ -9232,14 +9232,14 @@ var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
         React.createElement("div", null, 
           "Delete?", 
           React.createElement("button", {
-            style: redButtonStyle, 
-            onClick: this.finishDelete}, 
-            "Yes"
-          ), 
-          React.createElement("button", {
             style: buttonStyle, 
             onClick: this.abortDelete}, 
             "No"
+          ), 
+          React.createElement("button", {
+            style: redButtonStyle, 
+            onClick: this.finishDelete}, 
+            "Yes"
           )
         )
       );
