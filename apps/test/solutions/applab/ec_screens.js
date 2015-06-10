@@ -154,10 +154,10 @@ module.exports = {
         ReactTestUtils.Simulate.click(deleteButton[0]);
 
         // Should have resulted in two new buttons
-        assert.equal($("#design-properties button").eq(-1).text(), 'No');
-        assert.equal($("#design-properties button").eq(-2).text(), 'Yes');
+        assert.equal($("#design-properties button").eq(-2).text(), 'No');
+        assert.equal($("#design-properties button").eq(-1).text(), 'Yes');
 
-        ReactTestUtils.Simulate.click($("#design-properties button").eq(-2)[0]);
+        ReactTestUtils.Simulate.click($("#design-properties button").eq(-1)[0]);
 
         validationEmptyDesignProperties(assert);
         assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
@@ -358,7 +358,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         var designModeButton = document.getElementById('designModeButton');
-        
+
         $("#screen1").click();
 
         validatePropertyRow(1, 'id', 'screen1', assert);
