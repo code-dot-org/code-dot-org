@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 ## Unit 1: Lesson 4 - Coordination on the Internet
 
 # Background
-Computer science involves being comfortable with multiple layers of abstraction in order to focus on specific problems at hand and also to break problems down into manageable parts. Using the Internet Simulator you can solve the problem of how to coordinate sending messages between two devices more quickly. This tools simulates a single wire shared between two people.  
+Now that you have learned what binary messages are, we are going to investigate how binary messages are sent over the internet. You will get to experience some of the challenges the original creators of the internet had to solve. Using the Internet Simulator you can solve the problem of how to coordinate sending messages between two devices more quickly.
 
 # Vocabulary
 
