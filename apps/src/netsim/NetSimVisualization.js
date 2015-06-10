@@ -14,12 +14,12 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimNodeFactory = require('./netsimNodeFactory');
-var NetSimFakeVizWire = require('./NetSimFakeVizWire');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
+var NetSimVizWire = require('./NetSimVizWire');
 var netsimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
 var netsimConstants = require('./netsimConstants');
@@ -98,6 +98,15 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
    * @private
    */
   this.autoDnsNode_ = null;
+
+  /**
+   * Reference to wire between the auto-DNS node and the foreground router.
+   * Managed manually so we keep a handle on it, but also lives in the elements_
+   * collection.
+   * @type {NetSimVizWire}
+   * @private
+   */
+  this.autoDnsWire_ = null;
 
   /**
    * Event registration information
@@ -252,23 +261,7 @@ NetSimVisualization.prototype.getElementByEntityID = function (elementType, enti
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
   return this.elements_.filter(function (element) {
-    return element instanceof NetSimVizSimulationWire &&
-        (
-        (element.localVizNode === vizNode) ||
-        (vizNode.isRouter && element.remoteVizNode === vizNode)
-        );
-  });
-};
-
-/**
- * Gets the set of FakeVizWires directly attached to the given VizNode (in
- * either direction).
- * @param {NetSimVizSimulationNode} vizNode
- * @returns {NetSimFakeVizWire[]} the attached fake wires
- */
-NetSimVisualization.prototype.getFakeWiresAttachedToNode = function (vizNode) {
-  return this.elements_.filter(function (element) {
-    return element instanceof NetSimFakeVizWire &&
+    return element instanceof NetSimVizWire &&
         (element.localVizNode === vizNode || element.remoteVizNode === vizNode);
   });
 };
@@ -334,7 +327,8 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
 NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
   // Kill all fake wires
   this.elements_.forEach(function (vizElement) {
-    if (vizElement instanceof NetSimFakeVizWire) {
+    if (vizElement instanceof NetSimVizWire &&
+        !(vizElement instanceof NetSimVizSimulationWire)) {
       vizElement.kill();
     }
   }, this);
@@ -342,8 +336,7 @@ NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
   // Generate new wires
   var connections = this.generateBroadcastModeConnections_();
   connections.forEach(function (connectedPair) {
-    var newFakeWire = new NetSimFakeVizWire(connectedPair,
-        this.getElementByEntityID.bind(this));
+    var newFakeWire = new NetSimVizWire(connectedPair.nodeA, connectedPair.nodeB);
     this.addVizElement_(newFakeWire);
   }, this);
 };
@@ -407,8 +400,8 @@ NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
       var reachable = graph[from][to];
       if (clientToClient && reachable) {
         connections.push({
-          nodeA: nodeRows[from].id,
-          nodeB: nodeRows[to].id
+          nodeA: this.getElementByEntityID(NetSimVizSimulationNode, nodeRows[from].id),
+          nodeB: this.getElementByEntityID(NetSimVizSimulationNode, nodeRows[to].id)
         });
       }
     }
@@ -486,8 +479,7 @@ NetSimVisualization.prototype.addVizElement_ = function (vizElement) {
  */
 var moveVizElementToGroup = function (vizElement, newParent) {
   vizElement.getRoot().detach();
-  if (vizElement instanceof NetSimVizSimulationWire ||
-      vizElement instanceof NetSimFakeVizWire) {
+  if (vizElement instanceof NetSimVizWire) {
     vizElement.getRoot().prependTo(newParent);
   } else {
     vizElement.getRoot().appendTo(newParent);
@@ -547,6 +539,8 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
       vizElement.onDepthChange(false);
     }
   }, this);
+
+  this.updateAutoDnsNode();
 };
 
 /**
@@ -563,15 +557,13 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   var neighbors = [];
 
   if (vizElement instanceof NetSimVizSimulationNode) {
-    neighbors = this.getWiresAttachedToNode(vizElement)
-        .concat(this.getFakeWiresAttachedToNode(vizElement));
+    neighbors = this.getWiresAttachedToNode(vizElement);
 
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
       neighbors.push(this.autoDnsNode_);
-      this.autoDnsNode_.setAddress(vizElement.autoDnsAddress);
     }
-  } else if (vizElement instanceof NetSimVizSimulationWire) {
+  } else if (vizElement instanceof NetSimVizWire) {
     if (vizElement.localVizNode) {
       neighbors.push(vizElement.localVizNode);
     }
@@ -580,8 +572,6 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
       neighbors.push(vizElement.remoteVizNode);
     }
   }
-  // We intentionally exclude NetSimFakeVizWire; it should give no
-  // neighbors because it's not used to calculate reachability.
 
   return neighbors.filter(function (vizElement) {
     return !vizElement.visited;
@@ -765,17 +755,56 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
   this.distributeForegroundNodes();
 };
 
+/**
+ * If it doesn't already exist, create an auto-DNS node and corresponding
+ * wire.
+ */
 NetSimVisualization.prototype.makeAutoDnsNode = function () {
   if (!this.autoDnsNode_) {
     this.autoDnsNode_ = new NetSimVizAutoDnsNode();
     this.addVizElement_(this.autoDnsNode_);
+
+    this.autoDnsWire_ = new NetSimVizWire(this.autoDnsNode_, null);
+    this.addVizElement_(this.autoDnsWire_);
   }
 };
 
+/**
+ * Manually update the auto-DNS node and wire to match the foreground router.
+ */
+NetSimVisualization.prototype.updateAutoDnsNode = function () {
+  if (!this.autoDnsNode_) {
+    return;
+  }
+
+  var foregroundRouterNode = _.find(this.elements_, function (element) {
+    return element instanceof NetSimVizSimulationNode &&
+        element.isRouter &&
+        element.isForeground;
+  });
+
+  // Update address to match foreground router
+  if (foregroundRouterNode) {
+    this.autoDnsNode_.setAddress(foregroundRouterNode.autoDnsAddress);
+  }
+
+  // Update wire endpoints
+  this.autoDnsWire_.localVizNode = this.autoDnsNode_;
+  this.autoDnsWire_.remoteVizNode = foregroundRouterNode;
+};
+
+/**
+ * Remove the auto-DNS node and wire.
+ */
 NetSimVisualization.prototype.destroyAutoDnsNode = function () {
   if (this.autoDnsNode_) {
     this.autoDnsNode_.kill();
     this.autoDnsNode_ = null;
+  }
+
+  if (this.autoDnsWire_) {
+    this.autoDnsWire_.kill();
+    this.autoDnsWire_ = null;
   }
 };
 
