@@ -140,6 +140,7 @@ function loadInfinity(skin, assetUrl) {
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
+  skin.itemFrames = 8;
 
   skin.explosion = skin.assetUrl('explosion.gif');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
@@ -284,6 +285,16 @@ function loadStudio(skin, assetUrl) {
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.projectileBlueFireball(), '"blue_fireball"'],
+    [msg.projectilePurpleFireball(), '"purple_fireball"'],
+    [msg.projectileRedFireball(), '"red_fireball"'],
+    [msg.projectileYellowHearts(), '"yellow_hearts"'],
+    [msg.projectilePurpleHearts(), '"purple_hearts"'],
+    [msg.projectileRedHearts(), '"red_hearts"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
 
@@ -293,6 +304,15 @@ exports.load = function(assetUrl, id) {
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
+    'blue_fireball',
+    'purple_fireball',
+    'red_fireball',
+    'purple_hearts',
+    'red_hearts',
+    'yellow_hearts',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
     'blue_fireball',
     'purple_fireball',
     'red_fireball',
@@ -347,8 +367,8 @@ exports.load = function(assetUrl, id) {
 
   // Settings
   skin.background = skin.assetUrl('background.png');
-  skin.spriteHeight = 100;
-  skin.spriteWidth = 100;
+  skin.spriteHeight = 50;
+  skin.spriteWidth = 50;
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;

@@ -1443,6 +1443,19 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
+  'map': [
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 4, 0, 0, 0, 4, 0],
+    [0,16, 4, 0, 0,16, 4, 0],
+    [0, 0, 4, 4, 4, 4, 4, 0],
+    [0, 0, 4, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  // 'gridAlignedMovement': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
   'codeFunctions': {
     // Play Lab
     "setSprite": null,

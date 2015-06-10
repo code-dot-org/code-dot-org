@@ -13,6 +13,10 @@ DIR_TO_ROTATION[Direction.EAST] = 0;
 DIR_TO_ROTATION[Direction.SOUTH] = 90;
 DIR_TO_ROTATION[Direction.WEST] = 180;
 DIR_TO_ROTATION[Direction.NORTH] = 270;
+DIR_TO_ROTATION[Direction.NORTHEAST] = 45;
+DIR_TO_ROTATION[Direction.SOUTHEAST] = 135;
+DIR_TO_ROTATION[Direction.SOUTHWEST] = 225;
+DIR_TO_ROTATION[Direction.NORTHWEST] = 315;
 
 // Origin of projectile relative to sprite, based on direction
 // (a scale factor to be multiplied by sprite width and height)
@@ -34,6 +38,22 @@ OFFSET_FROM_SPRITE[Direction.WEST] = {
   x: 0,
   y: 0.5
 };
+OFFSET_FROM_SPRITE[Direction.NORTHEAST] = {
+  x: 1,
+  y: 0
+};
+OFFSET_FROM_SPRITE[Direction.SOUTHEAST] = {
+  x: 1,
+  y: 1
+};
+OFFSET_FROM_SPRITE[Direction.SOUTHWEST] = {
+  x: 0,
+  y: 1
+};
+OFFSET_FROM_SPRITE[Direction.NORTHWEST] = {
+  x: 0,
+  y: 0
+};
 
 // Origin of projectile, based on direction
 // assumes projectile is always 50x50 in size
@@ -54,6 +74,22 @@ OFFSET_CENTER[Direction.SOUTH] = {
 OFFSET_CENTER[Direction.WEST] = {
   x: -25,
   y: 0
+};
+OFFSET_CENTER[Direction.NORTHEAST] = {
+  x: 25,
+  y: -25
+};
+OFFSET_CENTER[Direction.SOUTHEAST] = {
+  x: 25,
+  y: 25
+};
+OFFSET_CENTER[Direction.SOUTHWEST] = {
+  x: -25,
+  y: 25
+};
+OFFSET_CENTER[Direction.NORTHWEST] = {
+  x: -25,
+  y: -25
 };
 
 
