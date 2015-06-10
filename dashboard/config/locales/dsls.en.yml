@@ -491,8 +491,6 @@ en:
         'DNS in the Real World ': 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
         HTTP and Abstraction: HTTP and Abstraction
-        description here: description here
-        title: title
       U2L12 Student Lesson Introduction:
         description here: description here
         title: title
@@ -504,8 +502,6 @@ en:
         Encryption Algorithms: Encryption Algorithms
       U2L16 Student Lesson Introduction:
         Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
-        description here: description here
-        title: title
       U2L17 Student Lesson Introduction:
         description here: description here
         title: title
@@ -529,8 +525,6 @@ en:
         title: title
       U2L6 Student Lesson Introduction:
         Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
-        description here: description here
-        title: title
       U2L7 Student Lesson Introduction:
         description here: description here
         title: title
