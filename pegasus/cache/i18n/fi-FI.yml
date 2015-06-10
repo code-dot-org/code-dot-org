@@ -1120,3 +1120,8 @@
     ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan.
     Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning

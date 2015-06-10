@@ -1098,3 +1098,8 @@
     وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
   sphero_beyond_longdescription: سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة
     للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning
