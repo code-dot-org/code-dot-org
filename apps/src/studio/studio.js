@@ -795,7 +795,7 @@ function handleActorCollisionsWithCollidableList (
         Studio.currentEventParams = null;
       }
     } else {
-      collidable.endCollision(i);
+      collidable.endCollision(spriteIndex);
     }
   }
 }
