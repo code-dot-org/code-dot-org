@@ -8,7 +8,6 @@
 /* global dashboard */
 
 'use strict';
-require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
