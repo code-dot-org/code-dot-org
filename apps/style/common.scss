@@ -1,13 +1,7 @@
 @import "color";
+@import "font";
 
 $common_root: '/blockly/media/common_images/';
-
-$gotham-regular: "Gotham 4r";
-$gotham-italics: "Gotham 4i";
-$gotham-bold: "Gotham 5r";
-$gotham-extra-bold: "Gotham 7r";
-$gotham-extra-bold-italics: "Gotham 7i";
-$code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 
 @mixin fill-container {
   height: 100%;
@@ -685,7 +679,7 @@ input[type="radio"] {
   margin: 20px 0px 20px 0px;
   line-height: 28px;
   color: #7E5BA0;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 
 }
@@ -952,7 +946,7 @@ $aniGifPreviewHeight: 60px;
     margin-bottom: 10px;
 
     a {
-      font-family: 'Gotham 7r', sans-serif;
+      font-family: $gotham-extra-bold;
       font-weight: normal;
       color: $purple;
       &:hover {
