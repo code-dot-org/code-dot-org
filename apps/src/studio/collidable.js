@@ -105,7 +105,7 @@ Collidable.prototype.bounce = function () {
 };
 
 /**
- * Assumes x/y are center coords (true for projectiles)
+ * Assumes x/y are center coords (true for projectiles and items)
  * outOfBounds() returns true if the object is entirely "off screen"
  */
 Collidable.prototype.outOfBounds = function () {

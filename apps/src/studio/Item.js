@@ -87,7 +87,7 @@ Item.prototype.removeElement = function () {
 };
 
 /**
- * Display our item at it's current location, rotating as necessary
+ * Display our item at it's current location (currently not supporting rotation)
  */
 Item.prototype.display = function () {
   var topLeft = {
