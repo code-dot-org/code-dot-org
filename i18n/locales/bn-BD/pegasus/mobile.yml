@@ -12,6 +12,7 @@ bn-BD:
   petition_message: প্রত্যেক স্কুলের প্রতিটি ছাত্রের কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ থাকা উচিত
   petition_sign_message: 'আপনি যদি সহমত হন, তবে আপনার নাম সই করুন।  # অন্যদের যোগ দিতে বলুন।'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: নাম
   email: ই-মেইল
   zipcode: ZIP কোড বা দেশ
@@ -178,6 +179,9 @@ bn-BD:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -189,7 +193,7 @@ bn-BD:
   homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: এক ঘন্টার কোড

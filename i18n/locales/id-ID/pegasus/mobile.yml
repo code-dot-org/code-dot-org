@@ -12,6 +12,7 @@ id-ID:
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, bubuhkan nama Anda.  Bergabung dengan # orang lain.'
   petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabung dengan # orang lainnya.'
+  petition_join_others: 'Join # others'
   name: Nama
   email: Email
   zipcode: poskode atau negara
@@ -167,6 +168,9 @@ id-ID:
   homepage_hero_text_teacher2: |
     &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
     Adam, guru
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Jam kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -180,7 +184,7 @@ id-ID:
   homepage_action_text_signpetition: Tandatangani petisi
   homepage_signpetition_dropdown: 'Tandatangani petisi kami &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: 'Cobalah "Hour of Code"'

@@ -479,3 +479,10 @@ button.arrow:focus {
     content: '';
     width: 100%;
     display: inline-block; }
+
+.chooseAssetDropdownOption {
+  color: #0596CE;
+  text-decoration: underline; }
+
+.droplet-dropdown {
+  z-index: 500 !important; }

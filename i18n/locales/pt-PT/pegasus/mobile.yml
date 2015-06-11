@@ -12,6 +12,7 @@ pt-PT:
   petition_message: Todos os alunos de todas as escolas deviam ter a oportunidade de ter uma disciplina de informática
   petition_sign_message: 'Se concordares, escreve o teu nome e apoia esta causa. # pessoas já apoiam.'
   petition_sign_message_support: 'Se nos apoias, escreve o teu nome. Junta-te a mais # utilizadores.'
+  petition_join_others: 'Join # others'
   name: Nome
   email: E-mail
   zipcode: Código postal ou país
@@ -177,6 +178,9 @@ pt-PT:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: A Hora de Código
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard

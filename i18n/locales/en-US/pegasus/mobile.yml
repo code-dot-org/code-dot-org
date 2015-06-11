@@ -12,6 +12,7 @@ en-US:
   petition_message: crwdns4938:0crwdne4938:0
   petition_sign_message: crwdns3779:0crwdne3779:0
   petition_sign_message_support: crwdns35451:0crwdne35451:0
+  petition_join_others: crwdns41665:0crwdne41665:0
   name: crwdns3600:0crwdne3600:0
   email: crwdns3601:0crwdne3601:0
   zipcode: crwdns3602:0crwdne3602:0
@@ -138,6 +139,9 @@ en-US:
   homepage_hero_text_student5: crwdns36293:0crwdne36293:0
   homepage_hero_text_teacher1: crwdns36294:0crwdne36294:0
   homepage_hero_text_teacher2: crwdns36295:0crwdne36295:0
+  homepage_hero_text_stat_loc: crwdns41666:0crwdne41666:0
+  homepage_hero_text_stat_students: crwdns41667:0crwdne41667:0
+  homepage_hero_text_stat_served: crwdns41668:0crwdne41668:0
   homepage_slot_text_hoc: crwdns35456:0crwdne35456:0
   homepage_slot_text_frozen: crwdns35457:0crwdne35457:0
   homepage_slot_text_teacher: crwdns35458:0crwdne35458:0

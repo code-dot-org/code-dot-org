@@ -12,6 +12,7 @@ pt-BR:
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade de aprender ciência da computação
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
   petition_sign_message_support: 'Se você nos apoia, assine seu nome. Junte-se aos # outros.'
+  petition_join_others: 'Join # others'
   name: Nome
   email: E-mail
   zipcode: CEP ou país
@@ -176,6 +177,9 @@ pt-BR:
     &ldquo;Esse programa manteve 100% dos meus alunos
     engajados, envolvidos e participando.&rdquo;
     Adam, professor
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -187,7 +191,7 @@ pt-BR:
   homepage_action_text_teachervideo: Assista ao vídeo
   homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assine a petição
-  homepage_signpetition_dropdown: 'Assine nossa petição &#x25BE;'
+  homepage_signpetition_dropdown: 'Assinar nossa petição &#x25BE;'
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código

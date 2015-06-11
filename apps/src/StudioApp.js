@@ -1187,6 +1187,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.runButtonClickWrapper = function (callback) {
   if (window.$) {
     $(window).trigger('run_button_pressed');
+    $(window).trigger('appModeChanged');
   }
   callback();
 };

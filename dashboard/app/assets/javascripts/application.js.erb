@@ -77,9 +77,3 @@ function cache_bust_only() {
 }
 
 var CDOSounds = new Sounds();
-
-$(window).load(function () {
-  onURLBlocked("<%= CDO.studio_url('test-image.png', 'https:') %>", function () {
-    trackEvent("HTTPS Test", "blocked");
-  });
-});

@@ -30,8 +30,7 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. <a href="<%= hoc_uri('/prizes') %>">Details</a>
-
+**EVERY** Hour of Code organizer will receive a prize as a thank you. 2015 Hour of Code organizer prizes will be announced in the fall! <a href="<%= hoc_uri('/prizes') %>">See last year's prizes.</a>
 
 ## 1. Spread the word 
 Tell your friends about the #HourOfCode. 
@@ -39,18 +38,15 @@ Tell your friends about the #HourOfCode.
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or <a href="/resources/hoc-one-pager.pdf">this handout</a> to your principal.
+<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> to your principal to encourage every classroom at your school to sign up. 
 
-## 3. Make a generous donation
-<a href="http://<%= codeorg_url() %>/donate">Donate to our crowdfunding campaign.</a> To teach 100 million children, we need your support. We just launched the <a href="http://<%= codeorg_url() %>/donate">largest education crowdfunding campaign</a> in history. *Every* dollar will be matched <a href="http://<%= codeorg_url() %>/about/donors">donors</a>, doubling your impact. 
+## 3. Ask your employer to get involved
+<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> to your manager or the CEO. 
 
-## 4. Ask your employer to get involved
-<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> to your manager, or the CEO. Or <a href="http://hourofcode.com/resources/hoc-one-pager.pdf">give them this handout</a>.
-
-## 5. Promote Hour of Code within your community
+## 4. Promote Hour of Code within your community
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 6. Ask a local elected official to support the Hour of Code
-<a href="<%= hoc_uri('/resources#politicians') %>">Send this email</a> to your mayor, city council, or school board. Or <a href="http://hourofcode.com/resources/hoc-one-pager.pdf">give them this handout</a> and invite them to visit your school.
+## 5. Ask a local elected official to support the Hour of Code
+<a href="<%= hoc_uri('/resources#politicians') %>">Send this email</a> to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

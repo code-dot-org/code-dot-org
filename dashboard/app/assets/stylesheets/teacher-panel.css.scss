@@ -1,4 +1,5 @@
 @import "color";
+@import "font";
 
 .teacher-panel {
   position: fixed;
@@ -48,17 +49,16 @@
   h3 {
     padding: 5px;
     font-size: 18px;
-    font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    font-family: $gotham-extra-bold; font-weight: normal;
     color: white;
     background: $cyan;
     margin: 0;
   }
 
-  .content {
-    h4 {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
-      text-align: center;
-    }
+  h4 {
+    font-family: $gotham-extra-bold; font-weight: normal;
+    text-align: center;
+    margin: 5px 0;
   }
 
   .students {
@@ -148,12 +148,12 @@
 
       &:hover {
         background-color: $lighter_cyan;
-        font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+        font-family: $gotham-extra-bold; font-weight: normal;
         a { color: white; }
       }
       &.active {
         background-color: $light_cyan;
-        font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+        font-family: $gotham-extra-bold; font-weight: normal;
         a { color: white; }
       }
     }
@@ -162,5 +162,11 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0 5px;
+  }
+
+  select {
+    width: auto;
+    display: block;
+    margin: 5px auto;
   }
 }

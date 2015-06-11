@@ -12,6 +12,7 @@ el-GR:
   petition_message: Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να μάθει την επιστήμη των υπολογιστών
   petition_sign_message: Είμαι
   petition_sign_message_support: 'Για να μας στηρίξετε, υπογράψτε με το όνομά σας. Συμμετέχετε στο #others.'
+  petition_join_others: 'Join # others'
   name: Όνομα
   email: Ηλεκτρονικό ταχυδρομείο
   zipcode: Ταχυδρομικός κώδικας (για κατοίκους Η.Π.Α) ή χώρα
@@ -139,6 +140,9 @@ el-GR:
   homepage_hero_text_student5: '&ldquo; Η Επιστήμη υπολογιστών δεν είναι για κάποιον άλλο. Είναι για σας, εδώ, τώρα.&rdquo; Geraldo, δάσκαλος'
   homepage_hero_text_teacher1: '&ldquo; Το γράψιμο κώδικα ξυπνά την δημιουργικότητα, την έμπνευση και την καινοτομία &mdash; οι οποίες είναι απαραίτητες για κάθε σταδιοδρομία.&rdquo; Floresa, δάσκαλος'
   homepage_hero_text_teacher2: '&ldquo; Αυτό το πρόγραμμα, πήρε το 100% από τους μαθητές μου που ασχολούνται, συμμετέχουν. .&rdquo; Αδάμ, δάσκαλος'
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
   homepage_slot_text_teacher: πίνακας Δασκάλου

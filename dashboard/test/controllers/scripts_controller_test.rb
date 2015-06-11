@@ -9,6 +9,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
+    set_env :levelbuilder
     sign_in(@admin)
     get :index
     assert_response :success
@@ -112,12 +113,14 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get edit if not signed in" do
+    set_env :levelbuilder
     get :edit, id: 'course1'
 
     assert_redirected_to_sign_in
   end
 
   test "should not get edit if not admin" do
+    set_env :levelbuilder
     sign_in @not_admin
     get :edit, id: 'course1'
 
@@ -125,6 +128,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "edit" do
+    set_env :levelbuilder
     sign_in @admin
     script = Script.find_by_name('course1')
     get :edit, id: script.name
@@ -144,5 +148,11 @@ class ScriptsControllerTest < ActionController::TestCase
   test "show should redirect to flappy" do
     get :show, id: 6
     assert_redirected_to "/s/flappy"
+  end
+
+  test "edit forbidden if not on levelbuilder" do
+    sign_in @admin
+    get :edit, id: 'course1'
+    assert_response :forbidden
   end
 end

@@ -3417,7 +3417,7 @@ QUAD.init = function (args) {
       }
 
       Indent.prototype._cloneEmpty = function() {
-        return new Indent(this.prefix);
+        return new Indent(this.prefix, this.classes);
       };
 
       Indent.prototype._serialize_header = function() {
@@ -9617,6 +9617,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       'Identifier': 'value'
     };
     OPERATOR_PRECEDENCES = {
+      '++': 3,
+      '--': 3,
+      '!': 4,
+      '~': 4,
       '*': 5,
       '/': 5,
       '%': 5,
@@ -9754,16 +9758,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.getPrecedence = function(node) {
+        var ref, ref1;
         switch (node.type) {
           case 'BinaryExpression':
+          case 'LogicalExpression':
             return OPERATOR_PRECEDENCES[node.operator];
           case 'AssignStatement':
             return 16;
           case 'UnaryExpression':
             if (node.prefix) {
-              return 4;
+              return (ref = OPERATOR_PRECEDENCES[node.operator]) != null ? ref : 4;
             } else {
-              return 3;
+              return (ref1 = OPERATOR_PRECEDENCES[node.operator]) != null ? ref1 : 3;
             }
             break;
           case 'CallExpression':
@@ -10075,8 +10081,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             break;
           case 'LogicalExpression':
             this.jsBlock(node, depth, bounds);
-            this.jsSocketAndMark(indentDepth, node.left, depth + 1);
-            return this.jsSocketAndMark(indentDepth, node.right, depth + 1);
+            this.jsSocketAndMark(indentDepth, node.left, depth + 1, this.getPrecedence(node));
+            return this.jsSocketAndMark(indentDepth, node.right, depth + 1, this.getPrecedence(node));
           case 'WhileStatement':
           case 'DoWhileStatement':
             this.jsBlock(node, depth, bounds);
@@ -10260,7 +10266,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-controller',['droplet-helper', 'droplet-coffee', 'droplet-javascript', 'droplet-draw', 'droplet-model', 'droplet-view'], function(helper, coffee, javascript, draw, model, view) {
-    var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, editorBindings, escapeString, exports, extend_, getAtChar, getCharactersTo, getOffsetLeft, getOffsetTop, getSocketAtChar, hook, isOSX, isValidCursorPosition, j, key, last_, len, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection;
+    var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, editorBindings, escapeString, exports, extend_, getAtChar, getOffsetLeft, getOffsetTop, hook, isOSX, isValidCursorPosition, j, key, last_, len, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection;
     modes = {
       'coffeescript': coffee,
       'coffee': coffee,
@@ -11350,8 +11356,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         }
       }
     });
-    Editor.prototype.reparseRawReplace = function(oldBlock) {
-      var e, newBlock, newParse, pos;
+    Editor.prototype.reparseRawReplace = function(oldBlock, originalTrigger) {
+      var e, newBlock, newParse, parent, pos;
+      if (originalTrigger == null) {
+        originalTrigger = oldBlock;
+      }
+      parent = oldBlock.visParent();
       try {
         newParse = this.mode.parse(oldBlock.stringify(this.mode), {
           wrapAtRoot: true
@@ -11359,18 +11369,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         newBlock = newParse.start.next.container;
         if (newParse.start.next.container.end === newParse.end.prev && (newBlock != null ? newBlock.type : void 0) === 'block') {
           this.addMicroUndoOperation(new ReparseOperation(oldBlock, newBlock));
-          if (this.cursor.hasParent(oldBlock)) {
-            pos = this.getRecoverableCursorPosition();
-            newBlock.rawReplace(oldBlock);
-            return this.recoverCursorPosition(pos);
-          } else {
-            return newBlock.rawReplace(oldBlock);
-          }
+          pos = this.getRecoverableCursorPosition();
+          newBlock.rawReplace(oldBlock);
+          return this.recoverCursorPosition(pos);
         }
       } catch (_error) {
         e = _error;
-        throw e;
-        return false;
+        if (parent != null) {
+          return this.reparseRawReplace(parent, originalTrigger);
+        } else {
+          this.markBlock(originalTrigger, {
+            color: '#F00'
+          });
+          return false;
+        }
       }
     };
     Editor.prototype.findForReal = function(token) {
@@ -11963,6 +11975,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           if (shouldPop) {
             this.undoStack.pop();
           }
+          this.reparseRawReplace(this.textFocus.parent);
           this.redrawMain();
         }
       }
@@ -12098,18 +12111,28 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         ref1 = this.textFocus.dropdown();
         fn1 = (function(_this) {
           return function(el) {
-            var div;
+            var div, setText;
             div = document.createElement('div');
             div.innerHTML = el.display;
             div.className = 'droplet-dropdown-item';
             div.style.fontFamily = _this.fontFamily;
             div.style.fontSize = _this.fontSize;
             div.style.paddingLeft = helper.DROPDOWN_ARROW_WIDTH;
-            div.addEventListener('mouseup', function() {
-              _this.populateSocket(_this.textFocus, el.text);
-              _this.hiddenInput.value = el.text;
+            setText = function(text) {
+              if (_this.dropdownElement.style.display === 'none') {
+                return;
+              }
+              _this.populateSocket(_this.textFocus, text);
+              _this.hiddenInput.value = text;
               _this.redrawMain();
               return _this.hideDropdown();
+            };
+            div.addEventListener('mouseup', function() {
+              if (el.click) {
+                return el.click(setText);
+              } else {
+                return setText(el.text);
+              }
             });
             return _this.dropdownElement.appendChild(div);
           };
@@ -12526,7 +12549,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     Editor.prototype.moveCursorHorizontally = function(direction) {
-      var chars, head, persistentParent, position, ref1, socket;
+      var chars, head, position, ref1, socket;
       if (this.textFocus != null) {
         if (direction === 'right') {
           head = this.textFocus.end.next;
@@ -12559,11 +12582,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
         }
         if (head.type === 'socketStart' && (head.next.type === 'text' || head.next === head.container.end)) {
-          if ((this.textFocus != null) && head.container.hasParent(this.textFocus.parent)) {
-            persistentParent = this.textFocus.getCommonParent(head.container).parent;
-            chars = getCharactersTo(persistentParent, head.container.start);
+          if (this.textFocus != null) {
+            chars = this.getCharactersTo(head.container.start);
             this.setTextInputFocus(null);
-            socket = getSocketAtChar(persistentParent, chars);
+            socket = this.getSocketAtChar(chars);
           } else {
             socket = head.container;
             this.setTextInputFocus(null);
@@ -12647,11 +12669,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.setTextInputFocus(null);
       return this.scrollCursorIntoPosition();
     });
-    getCharactersTo = function(parent, token) {
+    Editor.prototype.getCharactersTo = function(token) {
       var chars, head;
       head = token;
       chars = 0;
-      while (head !== parent.start) {
+      while (head !== this.tree.start) {
         if (head.type === 'text') {
           chars += head.value.length;
         }
@@ -12659,9 +12681,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
       return chars;
     };
-    getSocketAtChar = function(parent, chars) {
+    Editor.prototype.getSocketAtChar = function(chars) {
       var charsCounted, head;
-      head = parent.start;
+      head = this.tree.start;
       charsCounted = 0;
       while (!(charsCounted >= chars && head.type === 'socketStart' && (head.next.type === 'text' || head.next === head.container.end))) {
         if (head.type === 'text') {
@@ -12672,7 +12694,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return head.container;
     };
     hook('keydown', 0, function(event, state) {
-      var chars, head, persistentParent, socket;
+      var chars, head, socket;
       if (event.which !== TAB_KEY) {
         return;
       }
@@ -12686,11 +12708,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           head = head.prev;
         }
         if (head != null) {
-          if ((this.textFocus != null) && head.container.hasParent(this.textFocus.parent)) {
-            persistentParent = this.textFocus.getCommonParent(head.container).parent;
-            chars = getCharactersTo(persistentParent, head.container.start);
+          if (this.textFocus != null) {
+            chars = this.getCharactersTo(head.container.start);
             this.setTextInputFocus(null);
-            socket = getSocketAtChar(persistentParent, chars);
+            socket = this.getSocketAtChar(chars);
           } else {
             socket = head.container;
             this.setTextInputFocus(null);
@@ -12708,11 +12729,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           head = head.next;
         }
         if (head != null) {
-          if ((this.textFocus != null) && head.container.hasParent(this.textFocus.parent)) {
-            persistentParent = this.textFocus.getCommonParent(head.container).parent;
-            chars = getCharactersTo(persistentParent, head.container.start);
+          if (this.textFocus != null) {
+            chars = this.getCharactersTo(head.container.start);
             this.setTextInputFocus(null);
-            socket = getSocketAtChar(persistentParent, chars);
+            socket = this.getSocketAtChar(chars);
           } else {
             socket = head.container;
             this.setTextInputFocus(null);
@@ -12871,25 +12891,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(UndoOperation);
     Editor.prototype.copyAceEditor = function() {
-      clearTimeout(this.changeFromAceTimer);
-      this.changeFromAceTimer = null;
       this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
       this.resizeBlockMode();
       return this.setValue_raw(this.getAceValue());
-    };
-    Editor.prototype.changeFromAceEditor = function() {
-      if (this.changeFromAceTimer) {
-        return;
-      }
-      return this.changeFromAceTimer = setTimeout(((function(_this) {
-        return function() {
-          var result;
-          result = _this.copyAceEditor();
-          if (!result.success && result.error) {
-            return _this.fireEvent('parseerror', [result.error]);
-          }
-        };
-      })(this)), 0);
     };
     hook('populate', 0, function() {
       var acemode;
@@ -12905,18 +12909,6 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
       this.aceEditor.getSession().setMode('ace/mode/' + acemode);
       this.aceEditor.getSession().setTabSize(2);
-      this.aceEditor.on('change', (function(_this) {
-        return function() {
-          if (_this.suppressAceChangeEvent) {
-            return;
-          }
-          if (_this.currentlyUsingBlocks) {
-            return _this.changeFromAceEditor();
-          } else {
-            return _this.fireEvent('change', []);
-          }
-        };
-      })(this));
       this.currentlyUsingBlocks = true;
       this.currentlyAnimating = false;
       this.transitionContainer = document.createElement('div');
@@ -13021,6 +13013,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         cb = function() {};
       }
       if (this.currentlyUsingBlocks && !this.currentlyAnimating) {
+        this.hideDropdown();
         this.fireEvent('statechange', [false]);
         this.setAceValue(this.getValue());
         top = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y);
@@ -13481,6 +13474,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
       return this.redrawHighlights();
     };
+    Editor.prototype.markBlock = function(block, style) {
+      var key;
+      key = this.nextMarkedBlockId++;
+      this.markedBlocks[key] = {
+        model: block,
+        style: style
+      };
+      return key;
+    };
     Editor.prototype.mark = function(line, col, style) {
       var chars, head, key, lineStart, parent;
       lineStart = this.tree.getNewlineBefore(line);
@@ -13686,6 +13688,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.resizeBlockMode();
         return this.redrawMain();
       } else {
+        this.hideDropdown();
         paletteVisibleInNewState = this.paletteEnabled && this.showPaletteInTextMode;
         oldScrollTop = this.aceEditor.session.getScrollTop();
         if (this.currentlyUsingBlocks) {
@@ -14030,8 +14033,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (this.gutterDecorations[line]) {
         lineDiv.className += ' ' + this.gutterDecorations[line].join(' ');
       }
-      lineDiv.style.top = treeView.bounds[line].y + "px";
-      lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
+      lineDiv.style.top = (treeView.bounds[line].y - this.scrollOffsets.main.y) + "px";
+      lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
       lineDiv.style.height = treeView.bounds[line].height + 'px';
       lineDiv.style.fontSize = this.fontSize + 'px';
       return this.lineNumberWrapper.appendChild(lineDiv);

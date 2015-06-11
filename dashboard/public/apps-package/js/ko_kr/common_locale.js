@@ -620,6 +620,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_setRed_param2_description":function(d){return "The y position in pixels starting from the upper left corner of image."},
 "dropletBlock_setRed_param3":function(d){return "빨간색 값"},
 "dropletBlock_setRed_param3_description":function(d){return "The amount of red (from 0 to 255) to set in the pixel."},
+"dropletBlock_setScreen_description":function(d){return "Sets the screen to the given screenId"},
+"dropletBlock_setScreen_param0":function(d){return "screenId"},
 "dropletBlock_setSpriteEmotion_description":function(d){return "케릭터의 표정을 설정합니다."},
 "dropletBlock_setSpritePosition_description":function(d){return "케릭터를 지정한 위치로 바로 점프 시킵니다."},
 "dropletBlock_setSpriteSpeed_description":function(d){return "케릭터의 속도를 설정합니다."},

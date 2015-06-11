@@ -14,6 +14,7 @@ mr-IN:
   petition_message: प्रत्येक शाळेतील प्रत्येक विद्यार्थ्याला संगणक शिकण्याची संधी मिळाली पाहिजे
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: नाव
   email: Email
   zipcode: पोस्टल क्रमांक
@@ -179,6 +180,9 @@ mr-IN:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -190,7 +194,7 @@ mr-IN:
   homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_slot_text_title_hoc: Hour of Code

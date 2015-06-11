@@ -12,8 +12,8 @@ module LevelsHelper
     end
   end
 
-  def build_script_level_url(script_level)
-    url_from_path(build_script_level_path(script_level))
+  def build_script_level_url(script_level, params = {})
+    url_from_path(build_script_level_path(script_level, params))
   end
 
   def url_from_path(path)
