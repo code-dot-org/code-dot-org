@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({276:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({277:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":267,"./levels":274,"./skins":280,"./studio":281}],281:[function(require,module,exports){
+},{"../appMain":6,"./blocks":268,"./levels":275,"./skins":281,"./studio":282}],282:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -40,6 +40,7 @@ var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
+var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
@@ -608,6 +609,22 @@ function callHandler (name, allowQueueExtension) {
 }
 
 /**
+ * Performs movement on a list of Projectiles or Items. Removes items from the
+ * list automatically when they move out of bounds
+ */
+function performItemOrProjectileMoves (list) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    list[i].moveToNextPosition();
+    if (list[i].outOfBounds()) {
+      list[i].removeElement();
+      list.splice(i, 1);
+    } else {
+      list[i].display();
+    }
+  }
+}
+
+/**
  * This is a little weird, but is effectively a way for us to call api code
  * (i.e. the methods in studio/api.js) so that we can essentially simulate
  * generated code. It does this by creating an event handler for the given name,
@@ -735,51 +752,129 @@ Studio.onTick = function() {
     Studio.displaySprite(i, isWalking);
   }
 
-  for (i = 0; i < Studio.projectiles.length; i++) {
-    Studio.projectiles[i].moveToNextPosition();
-    if (Studio.projectiles[i].outOfBounds()) {
-      Studio.projectiles[i].removeElement();
-      Studio.projectiles.splice(i, 1);
-      // decrement i because we just removed an item from the array. We want to
-      // keep i as the same value for the next iteration through this loop
-      i--;
-    } else {
-      Studio.projectiles[i].display();
-    }
-  }
+  performItemOrProjectileMoves(Studio.projectiles);
+  performItemOrProjectileMoves(Studio.items);
 
   if (checkFinished()) {
     Studio.onPuzzleComplete();
   }
 };
 
+function spriteCollisionDistance  (i1, i2, yAxis) {
+  var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
+  var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
+  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+}
+
+function spriteCollidableCollisionDistance (iS, collidable, yAxis) {
+  var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
+  var dim2 = yAxis ? collidable.height : collidable.width;
+  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+}
+
+function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
+  var dim1 = yAxis ? collidable.height : collidable.width;
+  var dim2;
+  if (edgeName === 'left' || edgeName === 'right') {
+    dim2 = yAxis ? Studio.MAZE_HEIGHT : 0;
+  } else {
+    dim2 = yAxis ? 0 : Studio.MAZE_WIDTH;
+  }
+  return (dim1 + dim2) / 2;
+}
+
+/* Checks for collisions between an actor and a list of projectiles or items.
+ * Calls startCollision/endCollision and handleCollision for className, but not
+ * executeCollision, which is expected to be called afterwards by the caller.
+ */
+function handleActorCollisionsWithCollidableList (
+           spriteIndex, xCenter, yCenter, list)
+{
+  for (var i = 0; i < list.length; i++) {
+    var collidable = list[i];
+    var next = collidable.getNextPosition();
+    if (collisionTest(
+          xCenter,
+          next.x,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, false),
+          yCenter,
+          next.y,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, true))) {
+      if (collidable.startCollision(spriteIndex)) {
+        Studio.currentEventParams = { eventObject: collidable };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple collidables before executing the queue
+        // below
+
+        // NOTE: not using collideSpriteWith() because collision state is
+        // tracked on the collidable in this case
+        handleCollision(spriteIndex, collidable.className, true);
+        Studio.currentEventParams = null;
+      }
+    } else {
+      collidable.endCollision(spriteIndex);
+    }
+  }
+}
+
+/* Checks for collisions between a collidable and all of the edges.
+ * Calls startCollision and endCollision on the projectile. The caller
+ * should pass in a function to handle the case when a new collision is
+ * detected. executeCollision() is expected to be called later by the caller.
+ */
+function handleEdgeCollisions (collidable, xPos, yPos, onCollided) {
+  for (var i = 0; i < EdgeClassNames.length && level.edgeCollisions; i++) {
+    var edgeXCenter, edgeYCenter;
+    var edgeClass = EdgeClassNames[i];
+    switch (edgeClass) {
+      case 'top':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = 0;
+        break;
+      case 'left':
+        edgeXCenter = 0;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+      case 'bottom':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = Studio.MAZE_HEIGHT;
+        break;
+      case 'right':
+        edgeXCenter = Studio.MAZE_WIDTH;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+    }
+    if (collisionTest(
+          xPos,
+          edgeXCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, false),
+          yPos,
+          edgeYCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, true))) {
+      if (collidable.startCollision(edgeClass)) {
+        onCollided(edgeClass);
+      }
+    } else {
+      collidable.endCollision(edgeClass);
+    }
+  }
+}
+
+/* Create an edge collision handler callback for a specific spriteIndex
+ */
+function createActorEdgeCollisionHandler (spriteIndex) {
+  return function (edgeClass) {
+    handleCollision(spriteIndex, edgeClass);
+  };
+}
+
 /* Check for collisions (note that we use the positions they are about
  * to attain with queued moves - this allows the moves to be canceled before
  * the actual movements take place)
  */
 function checkForCollisions() {
-  var spriteCollisionDistance = function (i1, i2, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
-    var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
-    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-  };
-  var projectileCollisionDistance = function (iS, iP, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-    var dim2 = yAxis ?
-                  Studio.projectiles[iP].height :
-                  Studio.projectiles[iP].width;
-    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-  };
-  var edgeCollisionDistance = function (iS, edgeName, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-    var dim2;
-    if (edgeName === 'left' || edgeName === 'right') {
-      dim2 = yAxis ? Studio.MAZE_HEIGHT : 0;
-    } else {
-      dim2 = yAxis ? 0 : Studio.MAZE_WIDTH;
-    }
-    return (dim1 + dim2) / 2;
-  };
+
+  checkForItemCollisions();
 
   for (var i = 0; i < Studio.spriteCount; i++) {
     var sprite = Studio.sprite[i];
@@ -814,63 +909,15 @@ function checkForCollisions() {
       }
       executeCollision(i, j);
     }
-    for (j = 0; j < Studio.projectiles.length; j++) {
-      var projectile = Studio.projectiles[j];
-      var next = projectile.getNextPosition();
-      if (collisionTest(iXCenter,
-                        next.x,
-                        projectileCollisionDistance(i, j, false),
-                        iYCenter,
-                        next.y,
-                        projectileCollisionDistance(i, j, true))) {
-        if (projectile.startCollision(i)) {
-          Studio.currentEventParams = { projectile: projectile };
-          // Allow cmdQueue extension (pass true) since this handler
-          // may be called for multiple projectiles before executing the queue
-          // below
 
-          // NOTE: not using collideSpriteWith() because collision state is
-          // tracked on the projectile in this case
-          handleCollision(i, projectile.className, true);
-          Studio.currentEventParams = null;
-        }
-      } else {
-        projectile.endCollision(i);
-      }
-    }
+    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.items);
 
-    for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
-      var edgeXCenter, edgeYCenter;
-      var edgeClass = EdgeClassNames[j];
-      switch (edgeClass) {
-        case 'top':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = 0;
-          break;
-        case 'left':
-          edgeXCenter = 0;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-        case 'bottom':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = Studio.MAZE_HEIGHT;
-          break;
-        case 'right':
-          edgeXCenter = Studio.MAZE_WIDTH;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-      }
-      if (collisionTest(iXCenter,
-                        edgeXCenter,
-                        edgeCollisionDistance(i, edgeClass, false),
-                        iYCenter,
-                        edgeYCenter,
-                        edgeCollisionDistance(i, edgeClass, true))) {
-        Studio.collideSpriteWith(i, edgeClass);
-      } else {
-        sprite.endCollision(edgeClass);
-      }
-    }
+    handleEdgeCollisions(
+        sprite,
+        iXCenter,
+        iYCenter,
+        createActorEdgeCollisionHandler(i));
 
     if (level.wallMapCollisions) {
       if (Studio.willSpriteTouchWall(sprite, iXPos, iYPos)) {
@@ -882,46 +929,114 @@ function checkForCollisions() {
       } else {
         sprite.endCollision('wall');
       }
-      executeCollision(i, 'wall');
     }
 
-    // Don't execute projectile collision queue(s) until we've handled all edge
-    // collisions. Not sure this is strictly necessary, but it means the code is
-    // the same as it was before this change.
+    // Don't execute actor collision queue(s) until we've handled all
+    // wall, projectile, item, and edge collisions. Not sure this is strictly
+    // necessary, but it preserves behavior that student code may depend upon.
+    executeCollision(i, 'wall');
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
     for (j = 0; j < skin.ProjectileClassNames.length; j++) {
       executeCollision(i, skin.ProjectileClassNames[j]);
     }
+    for (j = 0; j < skin.ItemClassNames.length; j++) {
+      executeCollision(i, skin.ItemClassNames[j]);
+    }
+  }
+}
+
+/* Create an edge collision handler callback for a specific item
+ */
+function createItemEdgeCollisionHandler (item) {
+  return function (edgeClass) {
+    if (level.blockMovingIntoWalls) {
+      // TODO: Find a real direction!!
+      item.bounce();
+    }
+    Studio.currentEventParams = { eventObject: item };
+    // Allow cmdQueue extension (pass true) since this handler
+    // may be called for multiple items before executing the queue
+    // below
+    handleItemCollision(item.className, edgeClass, true);
+    Studio.currentEventParams = null;
+  };
+}
+
+function checkForItemCollisions () {
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = Studio.items[i];
+    var next = item.getNextPosition();
+
+    if (level.wallMapCollisions) {
+      if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
+        if (level.blockMovingIntoWalls) {
+          // TODO: Find a real direction!!
+          item.bounce();
+        }
+        Studio.currentEventParams = { eventObject: item };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple items before executing the queue
+        // below
+        Studio.collideItemWith(item, 'wall', true);
+        Studio.currentEventParams = null;
+      } else {
+        item.endCollision('wall');
+      }
+    }
+
+    if (level.edgeCollisions) {
+      handleEdgeCollisions(
+          item,
+          next.x,
+          next.y,
+          createItemEdgeCollisionHandler(item));
+    }
+
+    // After collisions have been handled for these items, now execute the
+    // command queues for this item:
+    executeItemCollision(item.className, 'wall');
+    for (var j = 0; j < EdgeClassNames.length; j++) {
+      executeItemCollision(item.className, EdgeClassNames[j]);
+    }
   }
 }
 
 /**
- * Test to see if a sprite will be touching a wall given particular X/Y
+ * Test to see if an actor sprite will be touching a wall given particular X/Y
  * position coordinates (top-left)
  */
 
 Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
-  var iXCenter = xPos + sprite.width / 2;
-  var iYCenter = yPos + sprite.height / 2;
-  var colsOffset = Math.floor(iXCenter) + 1;
-  var rowsOffset = Math.floor(iYCenter) + 1;
-  var iXGrid = Math.floor(iXCenter / Studio.SQUARE_SIZE);
-  var iYGrid = Math.floor(iYCenter / Studio.SQUARE_SIZE);
-  for (var col = Math.max(0, iXGrid - colsOffset);
-       col < Math.min(Studio.COLS, iXGrid + colsOffset);
+  var xCenter = xPos + sprite.width / 2;
+  var yCenter = yPos + sprite.height / 2;
+  return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
+};
+
+/**
+ * Test to see if a collidable will be touching a wall given particular X/Y
+ * position coordinates (center)
+ */
+
+Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
+  var colsOffset = Math.floor(xCenter) + 1;
+  var rowsOffset = Math.floor(yCenter) + 1;
+  var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
+  var iYGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
+  for (var col = Math.max(0, xGrid - colsOffset);
+       col < Math.min(Studio.COLS, xGrid + colsOffset);
        col++) {
     for (var row = Math.max(0, iYGrid - rowsOffset);
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
       if (Studio.map[row][col] & SquareType.WALL) {
-        if (overlappingTest(iXCenter,
+        if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + sprite.width / 2,
-                            iYCenter,
+                            Studio.SQUARE_SIZE / 2 + collidable.width / 2,
+                            yCenter,
                             (row + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + sprite.height / 2)) {
+                            Studio.SQUARE_SIZE / 2 + collidable.height / 2)) {
           return true;
         }
       }
@@ -995,7 +1110,6 @@ Studio.onMouseUp = function(e) {
 Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
-  Studio.projectiles = [];
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
@@ -1104,6 +1218,11 @@ Studio.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  Studio.projectiles = [];
+  Studio.items = [];
+  Studio.eventHandlers = [];
+  Studio.perExecutionTimeouts = [];
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1227,7 +1346,7 @@ Studio.init = function(config) {
   //  are changed at runtime)
   if (config.skin.preloadAssets) {
     preloadActorImages();
-    preloadProjectileImages();
+    preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
 };
@@ -1247,9 +1366,12 @@ var preloadBackgroundImages = function() {
   }
 };
 
-var preloadProjectileImages = function() {
+var preloadProjectileAndItemImages = function() {
   for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
     preloadImage(skin[skin.ProjectileClassNames[i]]);
+  }
+  for (i = 0; i < skin.ItemClassNames.length; i++) {
+    preloadImage(skin[skin.ItemClassNames[i]]);
   }
 };
 
@@ -1260,27 +1382,34 @@ var preloadActorImages = function() {
 };
 
 /**
+ * Clean up a list of Items or Projectiles.
+ */
+function resetItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].removeElement();
+  }
+  // Set length because list = [] will not modify array passed in by reference
+  list.length = 0;
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
-  if (Studio.eventHandlers) {
-    // Check the first command in all of the cmdQueues and clear the timeout
-    // if there is a pending wait command
-    Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue[0];
+  // Check the first command in all of the cmdQueues and clear the timeout
+  // if there is a pending wait command
+  Studio.eventHandlers.forEach(function (handler) {
+    var cmd = handler.cmdQueue[0];
 
-      if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
-        // Note: not calling waitCallback() or setting complete = true
-        window.clearTimeout(cmd.opts.waitTimeout);
-      }
-    });
-  }
+    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+      // Note: not calling waitCallback() or setting complete = true
+      window.clearTimeout(cmd.opts.waitTimeout);
+    }
+  });
   Studio.eventHandlers = [];
-  if (Studio.perExecutionTimeouts) {
-    Studio.perExecutionTimeouts.forEach(function (timeout) {
-      clearInterval(timeout);
-    });
-  }
+  Studio.perExecutionTimeouts.forEach(function (timeout) {
+    clearInterval(timeout);
+  });
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1288,12 +1417,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  if (Studio.projectiles) {
-    for (i = 0; i < Studio.projectiles.length; i++) {
-      Studio.projectiles[i].removeElement();
-    }
-    Studio.projectiles = [];
-  }
+  // Reset the projectiles and items (they include animation timers)
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 };
 
 /**
@@ -1314,12 +1440,6 @@ Studio.reset = function(first) {
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
-
-  // Reset the dynamic sprites list
-  while (Studio.projectiles.length) {
-    var projectile = Studio.projectiles.pop();
-    projectile.removeElement();
   }
 
   // True if we should fail before execution, even if freeplay
@@ -1571,6 +1691,7 @@ var registerHandlersWithMultipleSpriteParams =
                        String(j));
     }
     skin.ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ItemClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -2241,12 +2362,81 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
+    case 'addItemsToScene':
+      studioApp.highlight(cmd.id);
+      Studio.addItemsToScene(cmd.opts);
+      break;
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
       break;
   }
   return true;
+};
+
+Studio.addItemsToScene = function (opts) {
+  var frames;
+
+  if (/.gif$/.test(skin[opts.className])) {
+    frames = 1;
+  } else if (skin.specialItemFrames && skin.specialItemFrames[opts.className]) {
+    frames = skin.specialItemFrames[opts.className];
+  } else {
+    frames = skin.itemFrames;
+  }
+
+  var directions = [
+    Direction.NORTH,
+    Direction.EAST,
+    Direction.SOUTH,
+    Direction.WEST,
+    Direction.NORTHEAST,
+    Direction.SOUTHEAST,
+    Direction.SOUTHWEST,
+    Direction.NORTHWEST,
+  ];
+
+  var halfSquare = Studio.SQUARE_SIZE / 2;
+
+  for (var i = 0; i < opts.number; i++) {
+    var itemOptions = {
+      frames: frames,
+      className: opts.className,
+      dir: directions[Math.floor(Math.random() * directions.length)],
+      image: skin[opts.className],
+      loop: true,
+      x: halfSquare +
+        Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE)),
+      y: halfSquare +
+        Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE)),
+    };
+
+    var item = new Item(itemOptions);
+
+    if (level.blockMovingIntoWalls) {
+      // TODO: just move within the map looking for open spaces instead of
+      // randomly retrying random numbers
+
+      // TODO: check for edge collisions? (currently avoided by placing the
+      // items within the coordinate space (x/y min of halfSquare,
+      // max of max - halfSquare)
+
+      var numTries = 0;
+      while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
+        item.x = halfSquare +
+          Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+        item.y = halfSquare +
+          Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+        numTries++;
+        if (numTries > 100) {
+          break;
+        }
+      }
+    }
+
+    item.createElement(document.getElementById('svgStudio'));
+    Studio.items.push(item);
+  }
 };
 
 Studio.vanishActor = function (opts) {
@@ -2722,10 +2912,10 @@ var doMakeProjectile = function (projectile, action) {
 };
 
 Studio.makeProjectile = function (opts) {
-  // opts.projectile will be set when we've had a collision with a particular
+  // opts.eventObject will be set when we've had a collision with a particular
   // projectile, otherwise we operate all all of that class
-  if (opts.projectile) {
-    doMakeProjectile(opts.projectile, opts.action);
+  if (opts.eventObject) {
+    doMakeProjectile(opts.eventObject, opts.action);
   } else {
     // No "current" projectile, so apply action to all of them of this class
     for (var i = 0; i < Studio.projectiles.length; i++) {
@@ -2835,8 +3025,12 @@ function isProjectileClass(className) {
   return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
+function isItemClass(className) {
+  return skin.ItemClassNames.indexOf(className) !== -1;
+}
+
 /**
- * Call the handler for src colliding with target
+ * Call the handler for an actor (src) colliding with target
  */
 function handleCollision(src, target, allowQueueExtension) {
   var prefix = 'whenSpriteCollided-' + src + '-';
@@ -2850,11 +3044,39 @@ function handleCollision(src, target, allowQueueExtension) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
     callHandler(prefix + 'any_projectile', allowQueueExtension);
+  } else if (isItemClass(target)) {
+    callHandler(prefix + 'any_item', allowQueueExtension);
   }
 }
 
 /**
- * Execute the code for src colliding with target
+ * Call the handler for an item colliding with target
+ */
+function handleItemCollision(src, target, allowQueueExtension) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  callHandler(prefix + target, allowQueueExtension);
+
+  if (isEdgeClass(target)) {
+    callHandler(prefix + 'any_edge', allowQueueExtension);
+  }
+}
+
+/**
+ * Execute the code for an item colliding with target
+ */
+function executeItemCollision(src, target) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  Studio.executeQueue(prefix + target);
+
+  if (isEdgeClass(target)) {
+    Studio.executeQueue(prefix + 'any_edge');
+  }
+}
+
+/**
+ * Execute the code for an actor (src) colliding with target
  */
 function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
@@ -2869,14 +3091,30 @@ function executeCollision(src, target) {
     Studio.executeQueue(srcPrefix + 'any_edge');
   } else if (isProjectileClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_projectile');
+  } else if (isItemClass(target)) {
+    Studio.executeQueue(srcPrefix + 'any_item');
   }
 }
 
 /**
- * Looks to see if sprite is already colliding with target.  If it isn't, it
+ * Looks to see if the item is already colliding with target.  If it
+ * isn't, it starts the collision and calls the relevant code.
+ * @param {Collidable} Collidable colliding
+ * @param {string/number} target Class name of the target. String for classes,
+ *   index if colliding with another sprite.
+ * @param {boolean} allowQueueExtension Passed on to callHandler
+ */
+Studio.collideItemWith = function (item, target, allowQueueExtension) {
+  if (item.startCollision(target)) {
+    handleItemCollision(item.className, target, allowQueueExtension);
+  }
+};
+
+/**
+ * Looks to see if the sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
- * @param {number} spriteIndex Index of the sprite colliding
- * @param {string/number} target Class name of the target. String for edges,
+ * @param {Collidable} Collidable colliding
+ * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
  */
@@ -3145,7 +3383,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":262,"../templates/page.html.ejs":289,"../utils":311,"../xml":312,"./api":264,"./bigGameLogic":266,"./blocks":267,"./collidable":268,"./constants":269,"./controls.html.ejs":270,"./dropletConfig":272,"./extraControlRows.html.ejs":273,"./locale":275,"./projectile":277,"./rocketHeightLogic":278,"./samBatLogic":279,"./visualization.html.ejs":282}],282:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":262,"../templates/page.html.ejs":290,"../utils":312,"../xml":313,"./Item":264,"./api":265,"./bigGameLogic":267,"./blocks":268,"./collidable":269,"./constants":270,"./controls.html.ejs":271,"./dropletConfig":273,"./extraControlRows.html.ejs":274,"./locale":276,"./projectile":278,"./rocketHeightLogic":279,"./samBatLogic":280,"./visualization.html.ejs":283}],283:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3165,7 +3403,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],279:[function(require,module,exports){
+},{"ejs":483}],280:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3290,7 +3528,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":100,"../constants":102,"./api":264,"./constants":269,"./customGameLogic":271}],278:[function(require,module,exports){
+},{"../codegen":100,"../constants":102,"./api":265,"./constants":270,"./customGameLogic":272}],279:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3353,7 +3591,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":100,"./api":264,"./constants":269,"./customGameLogic":271}],277:[function(require,module,exports){
+},{"../codegen":100,"./api":265,"./constants":270,"./customGameLogic":272}],278:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3369,6 +3607,10 @@ DIR_TO_ROTATION[Direction.EAST] = 0;
 DIR_TO_ROTATION[Direction.SOUTH] = 90;
 DIR_TO_ROTATION[Direction.WEST] = 180;
 DIR_TO_ROTATION[Direction.NORTH] = 270;
+DIR_TO_ROTATION[Direction.NORTHEAST] = 45;
+DIR_TO_ROTATION[Direction.SOUTHEAST] = 135;
+DIR_TO_ROTATION[Direction.SOUTHWEST] = 225;
+DIR_TO_ROTATION[Direction.NORTHWEST] = 315;
 
 // Origin of projectile relative to sprite, based on direction
 // (a scale factor to be multiplied by sprite width and height)
@@ -3390,6 +3632,22 @@ OFFSET_FROM_SPRITE[Direction.WEST] = {
   x: 0,
   y: 0.5
 };
+OFFSET_FROM_SPRITE[Direction.NORTHEAST] = {
+  x: 1,
+  y: 0
+};
+OFFSET_FROM_SPRITE[Direction.SOUTHEAST] = {
+  x: 1,
+  y: 1
+};
+OFFSET_FROM_SPRITE[Direction.SOUTHWEST] = {
+  x: 0,
+  y: 1
+};
+OFFSET_FROM_SPRITE[Direction.NORTHWEST] = {
+  x: 0,
+  y: 0
+};
 
 // Origin of projectile, based on direction
 // assumes projectile is always 50x50 in size
@@ -3410,6 +3668,22 @@ OFFSET_CENTER[Direction.SOUTH] = {
 OFFSET_CENTER[Direction.WEST] = {
   x: -25,
   y: 0
+};
+OFFSET_CENTER[Direction.NORTHEAST] = {
+  x: 25,
+  y: -25
+};
+OFFSET_CENTER[Direction.SOUTHEAST] = {
+  x: 25,
+  y: 25
+};
+OFFSET_CENTER[Direction.SOUTHWEST] = {
+  x: -25,
+  y: 25
+};
+OFFSET_CENTER[Direction.NORTHWEST] = {
+  x: -25,
+  y: -25
 };
 
 
@@ -3535,7 +3809,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":268,"./constants":269}],280:[function(require,module,exports){
+},{"./collidable":269,"./constants":270}],281:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3558,6 +3832,7 @@ function loadInfinity(skin, assetUrl) {
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+  skin.itemFrames = 10;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -3576,6 +3851,24 @@ function loadInfinity(skin, assetUrl) {
     'projectile_cherry': 13,
     'projectile_ice': 12,
     'projectile_duck': 12
+  };
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_hiro',
+    'item_anna',
+    'item_elsa',
+    'item_baymax',
+    'item_rapunzel',
+    'item_cherry',
+    'item_ice',
+    'item_duck'
+  ];
+
+  skin.specialItemFrames = {
+    'item_cherry': 13,
+    'item_ice': 12,
+    'item_duck': 12
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -3605,6 +3898,10 @@ function loadInfinity(skin, assetUrl) {
     return className === 'projectile_hiro';
   };
 
+  skin.preventItemLoop = function (className) {
+    return className === 'item_hiro';
+  };
+
   skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
   skin.projectile_anna = skin.assetUrl('projectile_anna.png');
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
@@ -3613,6 +3910,16 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
   skin.projectile_ice = skin.assetUrl('projectile_ice.png');
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
+
+  // TODO: Create actual item choices
+  skin.item_hiro = skin.assetUrl('projectile_hiro.png');
+  skin.item_anna = skin.assetUrl('projectile_anna.png');
+  skin.item_elsa = skin.assetUrl('projectile_elsa.png');
+  skin.item_baymax = skin.assetUrl('projectile_baymax.png');
+  skin.item_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.item_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.item_ice = skin.assetUrl('projectile_ice.png');
+  skin.item_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
     background: skin.assetUrl('background_leafy.jpg')
@@ -3673,11 +3980,24 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileIce(), '"projectile_ice"'],
     [msg.projectileDuck(), '"projectile_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.itemHiro(), '"item_hiro"'],
+    [msg.itemAnna(), '"item_anna"'],
+    [msg.itemElsa(), '"item_elsa"'],
+    [msg.itemBaymax(), '"item_baymax"'],
+    [msg.itemRapunzel(), '"item_rapunzel"'],
+    [msg.itemCherry(), '"item_cherry"'],
+    [msg.itemIce(), '"item_ice"'],
+    [msg.itemDuck(), '"item_duck"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
+  skin.itemFrames = 8;
 
   skin.explosion = skin.assetUrl('explosion.gif');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
@@ -3822,6 +4142,16 @@ function loadStudio(skin, assetUrl) {
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.itemBlueFireball(), '"item_blue_fireball"'],
+    [msg.itemPurpleFireball(), '"item_purple_fireball"'],
+    [msg.itemRedFireball(), '"item_red_fireball"'],
+    [msg.itemYellowHearts(), '"item_yellow_hearts"'],
+    [msg.itemPurpleHearts(), '"item_purple_hearts"'],
+    [msg.itemRedHearts(), '"item_red_hearts"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 
@@ -3838,6 +4168,15 @@ exports.load = function(assetUrl, id) {
     'red_hearts',
     'yellow_hearts',
   ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_blue_fireball',
+    'item_purple_fireball',
+    'item_red_fireball',
+    'item_purple_hearts',
+    'item_red_hearts',
+    'item_yellow_hearts',
+  ];
 
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
@@ -3846,6 +4185,14 @@ exports.load = function(assetUrl, id) {
   skin.blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
+
+  // TODO: proper item class names
+  skin.item_yellow_hearts = skin.assetUrl('yellow_hearts.gif');
+  skin.item_purple_hearts = skin.assetUrl('purple_hearts.gif');
+  skin.item_red_hearts = skin.assetUrl('red_hearts.gif');
+  skin.item_blue_fireball = skin.assetUrl('blue_fireball.png');
+  skin.item_purple_fireball = skin.assetUrl('purple_fireball.png');
+  skin.item_red_fireball = skin.assetUrl('red_fireball.png');
 
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');
@@ -3905,7 +4252,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":262,"./constants":269,"./locale":275}],274:[function(require,module,exports){
+},{"../skins":262,"./constants":270,"./locale":276}],275:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -5247,6 +5594,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
+                        blockOfType('studio_addItems') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -5351,6 +5699,18 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
+  'map': [
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 4, 0, 0, 0, 4, 0],
+    [0,16, 4, 0, 0,16, 4, 0],
+    [0, 0, 4, 4, 4, 4, 4, 0],
+    [0, 0, 4, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
@@ -5406,7 +5766,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 });
 
 
-},{"../block_utils":70,"../utils":311,"./constants":269,"./locale":275}],273:[function(require,module,exports){
+},{"../block_utils":70,"../utils":312,"./constants":270,"./locale":276}],274:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5426,7 +5786,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],272:[function(require,module,exports){
+},{"../locale":145,"ejs":483}],273:[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
@@ -5441,6 +5801,7 @@ module.exports.blocks = [
   {'func': 'setSpriteEmotion', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
   {'func': 'throwProjectile', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
   {'func': 'vanish', 'parent': api, 'category': 'Play Lab', 'params': ["0"] },
+  {'func': 'addItemsToScene', 'parent': api, 'category': 'Play Lab', 'params': ["'blue_fireball'", "5"] },
   {'func': 'onEvent', 'parent': api, 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
 ];
 
@@ -5452,7 +5813,7 @@ module.exports.categories = {
 };
 
 
-},{"./apiJavascript.js":265,"./locale":275}],270:[function(require,module,exports){
+},{"./apiJavascript.js":266,"./locale":276}],271:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5472,114 +5833,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],268:[function(require,module,exports){
-/**
- * Blockly App: Studio
- *
- * Copyright 2014 Code.org
- *
- */
-
-'use strict';
-
-var studioApp = require('../StudioApp').singleton;
-var Direction = require('./constants').Direction;
-
-//
-// Collidable constructor
-//
-// opts.image (URL)
-// opts.width (pixels)
-// opts.height (pixels)
-// opts.x
-// opts.y
-// opts.dir (direction)
-// opts.speed (speed)
-// opts.frames
-//
-
-var Collidable = function (opts) {
-  for (var prop in opts) {
-    this[prop] = opts[prop];
-  }
-  this.visible = this.visible || true;
-  this.flags = 0;
-  // hash table of other sprites we're currently colliding with
-  this.collidingWith_ = {};
-
-  // default num frames is 1
-  this.frames = this.frames || 1;
-};
-
-module.exports = Collidable;
-
-/**
- * Clear all current collisions
- */
-Collidable.prototype.clearCollisions = function () {
-  this.collidingWith_ = {};
-};
-
-/**
- * Mark that we're colliding with object represented by key
- * @param key A unique key representing the object we're colliding with
- * @returns {boolean} True if collision is started, false if we're already colliding
- */
-Collidable.prototype.startCollision = function (key) {
-  if (this.isCollidingWith(key)) {
-    return false;
-  }
-
-  this.collidingWith_[key] = true;
-  return true;
-};
-
-/**
- * Mark that we're no longer colliding with object represented by key
- * @param key A unique key representing the object we're querying
- */
-Collidable.prototype.endCollision = function (key) {
-  this.collidingWith_[key] = false;
-};
-
-/**
- * Are we colliding with the object represented by key?
- * @param key A unique key representing the object we're querying
- */
-Collidable.prototype.isCollidingWith = function (key) {
-  return this.collidingWith_[key] === true;
-};
-
-Collidable.prototype.bounce = function () {
-  switch (this.dir) {
-    case Direction.NORTH:
-      this.dir = Direction.SOUTH;
-      break;
-    case Direction.WEST:
-      this.dir = Direction.EAST;
-      break;
-    case Direction.SOUTH:
-      this.dir = Direction.NORTH;
-      break;
-    case Direction.EAST:
-      this.dir = Direction.WEST;
-      break;
-  }
-};
-
-/**
- * Assumes x/y are center coords (true for projectiles)
- * outOfBounds() returns true if the object is entirely "off screen"
- */
-Collidable.prototype.outOfBounds = function () {
-  return (this.x < -(this.width / 2)) ||
-         (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
-         (this.y < -(this.height / 2)) ||
-         (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
-};
-
-
-},{"../StudioApp":5,"./constants":269}],267:[function(require,module,exports){
+},{"../locale":145,"ejs":483}],268:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6003,6 +6257,53 @@ exports.install = function(blockly, blockInstallOptions) {
     var spriteParam = getSpriteIndex(this);
     return 'Studio.stop(\'block_id_' + this.id + '\', ' +
         spriteParam + ');\n';
+  };
+
+  blockly.Blocks.studio_addItems = {
+    // Block for adding items to a scene.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.NUMBER), 'NUMBER');
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addItemsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_addItems.NUMBER =
+      [[msg.addItems1(), '1'],
+       [msg.addItems2(), '2'],
+       [msg.addItems3(), '3'],
+       [msg.addItems5(), '5'],
+       [msg.addItems10(), '10'],
+       [msg.addItemsRandom(), 'random']];
+
+  generator.studio_addItems = function() {
+    // Generate JavaScript for adding items to a scene.
+    var allNumbers = this.NUMBER.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var numParam = this.getTitleValue('NUMBER');
+    if (numParam === 'random') {
+      numParam = 'Studio.random([' + allNumbers + '])';
+    }
+    var allValues = skin.itemChoices.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var valParam = this.getTitleValue('VALUE');
+    if (valParam === 'random') {
+      valParam = 'Studio.random([' + allValues + '])';
+    }
+
+    return 'Studio.addItemsToScene(\'block_id_' + this.id +
+        '\', ' +
+        valParam + ', ' +
+        (numParam || '1') + ');\n';
   };
 
   blockly.Blocks.studio_throw = {
@@ -7607,13 +7908,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":5,"../codegen":100,"../locale":145,"../sharedFunctionalBlocks":261,"../utils":311,"./constants":269,"./locale":275}],275:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":100,"../locale":145,"../sharedFunctionalBlocks":261,"../utils":312,"./constants":270,"./locale":276}],276:[function(require,module,exports){
 // locale for studio
 
 module.exports = window.blockly.studio_locale;
 
 
-},{}],266:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7847,7 +8148,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":100,"./api":264,"./constants":269,"./customGameLogic":271}],271:[function(require,module,exports){
+},{"../codegen":100,"./api":265,"./constants":270,"./customGameLogic":272}],272:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7917,7 +8218,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":100,"./api":264,"./constants":269}],265:[function(require,module,exports){
+},{"../codegen":100,"./api":265,"./constants":270}],266:[function(require,module,exports){
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
@@ -8003,6 +8304,13 @@ exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
+exports.addItemsToScene = function(className, number) {
+  Studio.queueCmd(null, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
+};
+
 /*
 exports.setScoreText = function(text) {
   Studio.queueCmd(null, 'setScoreText', {'text': text});
@@ -8025,7 +8333,7 @@ exports.onEvent = function (eventName, func) {
 };
 
 
-},{}],264:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = constants.SpriteSpeed;
@@ -8145,6 +8453,13 @@ exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
+exports.addItemsToScene = function(id, className, number) {
+  Studio.queueCmd(id, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
+};
+
 exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
@@ -8177,7 +8492,247 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":269}],269:[function(require,module,exports){
+},{"./constants":270}],264:[function(require,module,exports){
+var Collidable = require('./collidable');
+var Direction = require('./constants').Direction;
+var constants = require('./constants');
+
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// uniqueId that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * An Item is a type of Collidable.
+ * Note: x/y represent x/y of center in gridspace
+ */
+var Item = function (options) {
+  // call collidable constructor
+  Collidable.apply(this, arguments);
+
+  this.height = options.height || 50;
+  this.width = options.width || 50;
+  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
+
+  this.currentFrame_ = 0;
+  var self = this;
+  this.animator_ = window.setInterval(function () {
+    if (self.loop || self.currentFrame_ + 1 < self.frames) {
+      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    }
+  }, 50);
+};
+
+// inherit from Collidable
+Item.prototype = new Collidable();
+
+module.exports = Item;
+
+/**
+ * Test only function so that we can start our id count over.
+ */
+Item.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/**
+ * Create an image element with a clip path
+ */
+Item.prototype.createElement = function (parentElement) {
+  // create our clipping path/rect
+  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'item_clippath_' + (uniqueId++);
+  this.clipPath.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.width);
+  rect.setAttribute('height', this.height);
+  this.clipPath.appendChild(rect);
+
+  parentElement.appendChild(this.clipPath);
+
+  this.element = document.createElementNS(SVG_NS, 'image');
+  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    this.image);
+  this.element.setAttribute('height', this.height);
+  this.element.setAttribute('width', this.width * this.frames);
+  parentElement.appendChild(this.element);
+
+  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+};
+
+/**
+ * Remove our element/clipPath/animator
+ */
+Item.prototype.removeElement = function () {
+  if (this.element) {
+    this.element.parentNode.removeChild(this.element);
+    this.element = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath) {
+    this.clipPath.parentNode.removeChild(this.clipPath);
+    this.clipPath = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
+};
+
+/**
+ * Display our item at it's current location (currently not supporting rotation)
+ */
+Item.prototype.display = function () {
+  var topLeft = {
+    x: this.x - this.width / 2,
+    y: this.y - this.height / 2
+  };
+
+  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
+  this.element.setAttribute('y', topLeft.y);
+
+  var clipRect = this.clipPath.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
+};
+
+Item.prototype.getNextPosition = function () {
+  var unit = Direction.getUnitVector(this.dir);
+  return {
+    x: this.x + this.speed * unit.x,
+    y: this.y + this.speed * unit.y
+  };
+};
+
+Item.prototype.moveToNextPosition = function () {
+  var next = this.getNextPosition();
+  this.x = next.x;
+  this.y = next.y;
+};
+
+
+},{"./collidable":269,"./constants":270}],269:[function(require,module,exports){
+/**
+ * Blockly App: Studio
+ *
+ * Copyright 2014 Code.org
+ *
+ */
+
+'use strict';
+
+var studioApp = require('../StudioApp').singleton;
+var Direction = require('./constants').Direction;
+
+//
+// Collidable constructor
+//
+// opts.image (URL)
+// opts.width (pixels)
+// opts.height (pixels)
+// opts.x
+// opts.y
+// opts.dir (direction)
+// opts.speed (speed)
+// opts.frames
+//
+
+var Collidable = function (opts) {
+  for (var prop in opts) {
+    this[prop] = opts[prop];
+  }
+  this.visible = this.visible || true;
+  this.flags = 0;
+  // hash table of other sprites we're currently colliding with
+  this.collidingWith_ = {};
+
+  // default num frames is 1
+  this.frames = this.frames || 1;
+};
+
+module.exports = Collidable;
+
+/**
+ * Clear all current collisions
+ */
+Collidable.prototype.clearCollisions = function () {
+  this.collidingWith_ = {};
+};
+
+/**
+ * Mark that we're colliding with object represented by key
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ */
+Collidable.prototype.startCollision = function (key) {
+  if (this.isCollidingWith(key)) {
+    return false;
+  }
+
+  this.collidingWith_[key] = true;
+  return true;
+};
+
+/**
+ * Mark that we're no longer colliding with object represented by key
+ * @param key A unique key representing the object we're querying
+ */
+Collidable.prototype.endCollision = function (key) {
+  this.collidingWith_[key] = false;
+};
+
+/**
+ * Are we colliding with the object represented by key?
+ * @param key A unique key representing the object we're querying
+ */
+Collidable.prototype.isCollidingWith = function (key) {
+  return this.collidingWith_[key] === true;
+};
+
+Collidable.prototype.bounce = function () {
+  switch (this.dir) {
+    case Direction.NORTH:
+      this.dir = Direction.SOUTH;
+      break;
+    case Direction.WEST:
+      this.dir = Direction.EAST;
+      break;
+    case Direction.SOUTH:
+      this.dir = Direction.NORTH;
+      break;
+    case Direction.EAST:
+      this.dir = Direction.WEST;
+      break;
+    case Direction.NORTHEAST:
+      this.dir = Direction.SOUTHWEST;
+      break;
+    case Direction.SOUTHEAST:
+      this.dir = Direction.NORTHWEST;
+      break;
+    case Direction.SOUTHWEST:
+      this.dir = Direction.NORTHEAST;
+      break;
+    case Direction.NORTHWEST:
+      this.dir = Direction.SOUTHEAST;
+      break;
+  }
+};
+
+/**
+ * Assumes x/y are center coords (true for projectiles and items)
+ * outOfBounds() returns true if the object is entirely "off screen"
+ */
+Collidable.prototype.outOfBounds = function () {
+  return (this.x < -(this.width / 2)) ||
+         (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
+         (this.y < -(this.height / 2)) ||
+         (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
+};
+
+
+},{"../StudioApp":5,"./constants":270}],270:[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -8211,14 +8766,17 @@ exports.Direction = {
 var Dir = exports.Direction;
 
 /**
- * Given a direction, returns the unit vector for it. Currently only supports
- * cardinal directions.
+ * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
 UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
+UNIT_VECTOR[Dir.NORTHEAST] = { x: 1, y:-1};
+UNIT_VECTOR[Dir.SOUTHEAST] = { x: 1, y: 1};
+UNIT_VECTOR[Dir.SOUTHWEST] = { x:-1, y: 1};
+UNIT_VECTOR[Dir.NORTHWEST] = { x:-1, y:-1};
 exports.Direction.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
@@ -8372,4 +8930,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[276]);
+},{}]},{},[277]);
