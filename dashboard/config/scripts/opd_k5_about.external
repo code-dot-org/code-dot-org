@@ -2,13 +2,15 @@ name 'OPD-K5 About'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# GETTING STARTED: About the Course
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-## Course Overview
+### GETTING STARTED: About the Course
+
+#### Course Overview
 
 This course is intended as an introduction to computer science fundamentals and the code.org Code Studio resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
 
-### Learning Objectives 
+#### Learning Objectives 
 
 Through completing this online course, participants will:
 
@@ -18,26 +20,28 @@ Through completing this online course, participants will:
 - Plan for how you might get started teaching computer science 
 - Connect with a community of fellow educators who are making positive change in their classrooms through coding 
 
-### Pre-requisites
+#### Pre-requisites
 
 No previous experience with coding or computer science education is assumed. This is a beginner's course.
+<br/><br/>
 
 > **A Note About Audience:** This course focuses on code.org's free Code Studio learning platform, but the concepts you learn can be applied to any computer science course. If you wish to teach a more in-depth computer science curricula than what we offer in Code Studio (for example, one of our Middle or High school curricula), you can still benefit from this online course, although we do recommend you pursue more [in-depth or ongoing professional development opportunities](http://code.org/educate) in addition to completing this course.
 
-### Course Duration
+#### Course Duration
 Completing this online course should take between 1-3 hours, depending on your prior knowledge and how deep you want to dive into the code.org resources.
 
-### Course Certification
+#### Course Certification
 
 After completing this course, you'll have access to a digital certificate of completion.
 
 * * *
 
-## Course Outline
+#### Course Outline
 
 The course is divided into ten stages, and each stage is made up of "levels" or "puzzles." Here's an overview of what you'll learn if you complete the entire course:
 
-### Stage 1: Getting Started (10-30 minutes)
+
+##### Stage 1: Getting Started (10-30 minutes)
 
 By completing Stage 1, you will:
 
@@ -45,7 +49,7 @@ By completing Stage 1, you will:
 - Practice using Code Studio as a learning platform 
 - Plan your participation in this course 
 
-### Stage 2: Computer Science Fundamentals (10-30 minutes)
+##### Stage 2: Computer Science Fundamentals (10-30 minutes)
 
 By completing Stage 2, you will:
 
@@ -54,7 +58,7 @@ By completing Stage 2, you will:
 - Differentiate between "coding" and "computer science" 
 - Explain the benefits of beginning to code using visual programming 
 
-### Stage 3: Mastering the Basics: Sequencing (10-30 minutes)
+##### Stage 3: Mastering the Basics: Sequencing (10-30 minutes)
 
 By completing Stage 3, you will:
 
@@ -62,7 +66,7 @@ By completing Stage 3, you will:
 - Use the Code Studio visual programming engine to write simple programs 
 - Reflect on classroom application 
 
-### Stage 4: Mastering the Basics: Loops (20-45 minutes)
+##### Stage 4: Mastering the Basics: Loops (20-45 minutes)
 
 By completing Stage 4, you will:
 
@@ -70,7 +74,7 @@ By completing Stage 4, you will:
 - Practice coding simple loops 
 - Reflect on classroom application 
 
-### Stage 5: Mastering the Basics: Conditionals (20-45 minutes)
+##### Stage 5: Mastering the Basics: Conditionals (20-45 minutes)
 
 By completing Stage 5, you will:
 
@@ -78,7 +82,7 @@ By completing Stage 5, you will:
 - Practice coding simple conditionals 
 - Reflect on classroom application 
 
-### Stage 6: Mastering the Basics: Functions (20-45 minutes)
+##### Stage 6: Mastering the Basics: Functions (20-45 minutes)
 
 By completing Stage 6, you will:
 
@@ -86,7 +90,7 @@ By completing Stage 6, you will:
 - Practice coding simple functions 
 - Reflect on classroom application 
 
-### Stage 7: Mastering the Basics: Events (30-60 minutes)
+##### Stage 7: Mastering the Basics: Events (30-60 minutes)
 
 By completing Stage 7, you will:
 
@@ -94,20 +98,20 @@ By completing Stage 7, you will:
 - Practice coding simple events 
 - Reflect on classroom application 
 
-### Stage 8: Best Practices for Teaching Computer Science (30-60 minutes)
+##### Stage 8: Best Practices for Teaching Computer Science (30-60 minutes)
 
 By completing Stage 8, you will:
 
 - Review best practices for teaching computer science 
 
-### Stage 9: Planning (30-60 minutes)
+##### Stage 9: Planning (30-60 minutes)
 
 By completing Stage 9, you will:
 
 - Explore Code Studio and Teacher Dashboard resources 
 - Plan for how you might integrate computer science into your practice 
 
-### Stage 10: Next Steps (10-30 minutes)
+##### Stage 10: Next Steps (10-30 minutes)
 
 By completing Stage 9, you will
 
