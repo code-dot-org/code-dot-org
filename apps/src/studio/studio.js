@@ -589,6 +589,25 @@ function callHandler (name, allowQueueExtension) {
 }
 
 /**
+ * Performs movement on a list of Projectiles or Items. Removes items from the
+ * list automatically when they move out of bounds
+ */
+function performItemOrProjectileMoves (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].moveToNextPosition();
+    if (list[i].outOfBounds()) {
+      list[i].removeElement();
+      list.splice(i, 1);
+      // decrement i because we just removed an item from the array. We want to
+      // keep i as the same value for the next iteration through this loop
+      i--;
+    } else {
+      list[i].display();
+    }
+  }
+}
+
+/**
  * This is a little weird, but is effectively a way for us to call api code
  * (i.e. the methods in studio/api.js) so that we can essentially simulate
  * generated code. It does this by creating an event handler for the given name,
@@ -716,31 +735,8 @@ Studio.onTick = function() {
     Studio.displaySprite(i, isWalking);
   }
 
-  for (i = 0; i < Studio.projectiles.length; i++) {
-    Studio.projectiles[i].moveToNextPosition();
-    if (Studio.projectiles[i].outOfBounds()) {
-      Studio.projectiles[i].removeElement();
-      Studio.projectiles.splice(i, 1);
-      // decrement i because we just removed an item from the array. We want to
-      // keep i as the same value for the next iteration through this loop
-      i--;
-    } else {
-      Studio.projectiles[i].display();
-    }
-  }
-  // TODO: DRY
-  for (i = 0; i < Studio.items.length; i++) {
-    Studio.items[i].moveToNextPosition();
-    if (Studio.items[i].outOfBounds()) {
-      Studio.items[i].removeElement();
-      Studio.items.splice(i, 1);
-      // decrement i because we just removed an item from the array. We want to
-      // keep i as the same value for the next iteration through this loop
-      i--;
-    } else {
-      Studio.items[i].display();
-    }
-  }
+  performItemOrProjectileMoves(Studio.projectiles);
+  performItemOrProjectileMoves(Studio.items);
 
   if (checkFinished()) {
     Studio.onPuzzleComplete();
@@ -753,19 +749,9 @@ function spriteCollisionDistance  (i1, i2, yAxis) {
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
-function projectileCollisionDistance (iS, iP, yAxis) {
+function spriteCollidableCollisionDistance (iS, collidable, yAxis) {
   var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-  var dim2 = yAxis ?
-                Studio.projectiles[iP].height :
-                Studio.projectiles[iP].width;
-  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-}
-
-function itemCollisionDistance (iS, iP, yAxis) {
-  var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-  var dim2 = yAxis ?
-                Studio.items[iP].height :
-                Studio.items[iP].width;
+  var dim2 = yAxis ? collidable.height : collidable.width;
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
@@ -780,8 +766,89 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
   return (dim1 + dim2) / 2;
 }
 
-function edgeCollisionDistance (iS, edgeName, yAxis) {
-  return edgeCollidableCollisionDistance(Studio.sprite[iS]);
+/* Checks for collisions between an actor and a list of projectiles or items.
+ * Calls startCollision/endCollision and handleCollision for className, but not
+ * executeCollision, which is expected to be called afterwards by the caller.
+ */
+function handleActorCollisionsWithCollidableList (
+           spriteIndex, xCenter, yCenter, list)
+{
+  for (var i = 0; i < list.length; i++) {
+    var collidable = list[i];
+    var next = collidable.getNextPosition();
+    if (collisionTest(
+          xCenter,
+          next.x,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, false),
+          yCenter,
+          next.y,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, true))) {
+      if (collidable.startCollision(spriteIndex)) {
+        Studio.currentEventParams = { eventObject: collidable };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple collidables before executing the queue
+        // below
+
+        // NOTE: not using collideSpriteWith() because collision state is
+        // tracked on the collidable in this case
+        handleCollision(spriteIndex, collidable.className, true);
+        Studio.currentEventParams = null;
+      }
+    } else {
+      collidable.endCollision(i);
+    }
+  }
+}
+
+/* Checks for collisions between a collidable and all of the edges.
+ * Calls startCollision and endCollision on the projectile. The caller
+ * should pass in a function to handle the case when a new collision is
+ * detected. executeCollision() is expected to be called later by the caller.
+ */
+function handleEdgeCollisions (collidable, xPos, yPos, onCollided) {
+  for (var i = 0; i < EdgeClassNames.length && level.edgeCollisions; i++) {
+    var edgeXCenter, edgeYCenter;
+    var edgeClass = EdgeClassNames[i];
+    switch (edgeClass) {
+      case 'top':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = 0;
+        break;
+      case 'left':
+        edgeXCenter = 0;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+      case 'bottom':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = Studio.MAZE_HEIGHT;
+        break;
+      case 'right':
+        edgeXCenter = Studio.MAZE_WIDTH;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+    }
+    if (collisionTest(
+          xPos,
+          edgeXCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, false),
+          yPos,
+          edgeYCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, true))) {
+      if (collidable.startCollision(edgeClass)) {
+        onCollided(edgeClass);
+      }
+    } else {
+      collidable.endCollision(edgeClass);
+    }
+  }
+}
+
+/* Create an edge collision handler callback for a specific spriteIndex
+ */
+function createActorEdgeCollisionHandler (spriteIndex) {
+  return function (edgeClass) {
+    handleCollision(spriteIndex, edgeClass);
+  };
 }
 
 /* Check for collisions (note that we use the positions they are about
@@ -825,89 +892,15 @@ function checkForCollisions() {
       }
       executeCollision(i, j);
     }
-    var next;
-    for (j = 0; j < Studio.projectiles.length; j++) {
-      var projectile = Studio.projectiles[j];
-      next = projectile.getNextPosition();
-      if (collisionTest(iXCenter,
-                        next.x,
-                        projectileCollisionDistance(i, j, false),
-                        iYCenter,
-                        next.y,
-                        projectileCollisionDistance(i, j, true))) {
-        if (projectile.startCollision(i)) {
-          Studio.currentEventParams = { projectile: projectile };
-          // Allow cmdQueue extension (pass true) since this handler
-          // may be called for multiple projectiles before executing the queue
-          // below
 
-          // NOTE: not using collideSpriteWith() because collision state is
-          // tracked on the projectile in this case
-          handleCollision(i, projectile.className, true);
-          Studio.currentEventParams = null;
-        }
-      } else {
-        projectile.endCollision(i);
-      }
-    }
-    // TODO: combine these two functions based on Collidable (DRY)
-    for (j = 0; j < Studio.items.length; j++) {
-      var item = Studio.items[j];
-      next = item.getNextPosition();
-      if (collisionTest(iXCenter,
-                        next.x,
-                        itemCollisionDistance(i, j, false),
-                        iYCenter,
-                        next.y,
-                        itemCollisionDistance(i, j, true))) {
-        if (item.startCollision(i)) {
-          Studio.currentEventParams = { item: item };
-          // Allow cmdQueue extension (pass true) since this handler
-          // may be called for multiple items before executing the queue
-          // below
+    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.items);
 
-          // NOTE: not using collideSpriteWith() because collision state is
-          // tracked on the item in this case
-          handleCollision(i, item.className, true);
-          Studio.currentEventParams = null;
-        }
-      } else {
-        item.endCollision(i);
-      }
-    }
-
-    for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
-      var edgeXCenter, edgeYCenter;
-      var edgeClass = EdgeClassNames[j];
-      switch (edgeClass) {
-        case 'top':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = 0;
-          break;
-        case 'left':
-          edgeXCenter = 0;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-        case 'bottom':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = Studio.MAZE_HEIGHT;
-          break;
-        case 'right':
-          edgeXCenter = Studio.MAZE_WIDTH;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-      }
-      if (collisionTest(iXCenter,
-                        edgeXCenter,
-                        edgeCollisionDistance(i, edgeClass, false),
-                        iYCenter,
-                        edgeYCenter,
-                        edgeCollisionDistance(i, edgeClass, true))) {
-        Studio.collideSpriteWith(i, edgeClass);
-      } else {
-        sprite.endCollision(edgeClass);
-      }
-    }
+    handleEdgeCollisions(
+        sprite,
+        iXCenter,
+        iYCenter,
+        createActorEdgeCollisionHandler(i));
 
     if (level.wallMapCollisions) {
       if (Studio.willSpriteTouchWall(sprite, iXPos, iYPos)) {
@@ -919,12 +912,12 @@ function checkForCollisions() {
       } else {
         sprite.endCollision('wall');
       }
-      executeCollision(i, 'wall');
     }
 
-    // Don't execute projectile collision queue(s) until we've handled all edge
-    // collisions. Not sure this is strictly necessary, but it means the code is
-    // the same as it was before this change.
+    // Don't execute actor collision queue(s) until we've handled all
+    // wall, projectile, item, and edge collisions. Not sure this is strictly
+    // necessary, but it preserves behavior that student code may depend upon.
+    executeCollision(i, 'wall');
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
@@ -935,6 +928,23 @@ function checkForCollisions() {
       executeCollision(i, skin.ItemClassNames[j]);
     }
   }
+}
+
+/* Create an edge collision handler callback for a specific item
+ */
+function createItemEdgeCollisionHandler (item) {
+  return function (edgeClass) {
+    if (level.blockMovingIntoWalls) {
+      // TODO: Find a real direction!!
+      item.bounce();
+    }
+    Studio.currentEventParams = { eventObject: item };
+    // Allow cmdQueue extension (pass true) since this handler
+    // may be called for multiple items before executing the queue
+    // below
+    handleItemCollision(item.className, edgeClass, true);
+    Studio.currentEventParams = null;
+  };
 }
 
 function checkForItemCollisions () {
@@ -948,7 +958,7 @@ function checkForItemCollisions () {
           // TODO: Find a real direction!!
           item.bounce();
         }
-        Studio.currentEventParams = { item: item };
+        Studio.currentEventParams = { eventObject: item };
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple items before executing the queue
         // below
@@ -957,50 +967,21 @@ function checkForItemCollisions () {
       } else {
         item.endCollision('wall');
       }
-      executeItemCollision(item.className, 'wall');
     }
 
-    for (var j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
-      var edgeXCenter, edgeYCenter;
-      var edgeClass = EdgeClassNames[j];
-      switch (edgeClass) {
-        case 'top':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = 0;
-          break;
-        case 'left':
-          edgeXCenter = 0;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-        case 'bottom':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = Studio.MAZE_HEIGHT;
-          break;
-        case 'right':
-          edgeXCenter = Studio.MAZE_WIDTH;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-      }
-      if (collisionTest(next.x,
-                        edgeXCenter,
-                        edgeCollidableCollisionDistance(item, edgeClass, false),
-                        next.y,
-                        edgeYCenter,
-                        edgeCollidableCollisionDistance(item, edgeClass, true))) {
-        if (level.blockMovingIntoWalls) {
-          // TODO: Find a real direction!!
-          item.bounce();
-        }
-        Studio.currentEventParams = { item: item };
-        // Allow cmdQueue extension (pass true) since this handler
-        // may be called for multiple items before executing the queue
-        // below
-        Studio.collideItemWith(item, edgeClass, true);
-        Studio.currentEventParams = null;
-      } else {
-        item.endCollision(edgeClass);
-      }
-      executeItemCollision(item.className, edgeClass);
+    if (level.edgeCollisions) {
+      handleEdgeCollisions(
+          item,
+          next.x,
+          next.y,
+          createItemEdgeCollisionHandler(item));
+    }
+
+    // After collisions have been handled for these items, now execute the
+    // command queues for this item:
+    executeItemCollision(item.className, 'wall');
+    for (var j = 0; j < EdgeClassNames.length; j++) {
+      executeItemCollision(item.className, EdgeClassNames[j]);
     }
   }
 }
@@ -1112,8 +1093,6 @@ Studio.onMouseUp = function(e) {
 Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
-  Studio.projectiles = [];
-  Studio.items = [];
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
@@ -1222,6 +1201,11 @@ Studio.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  Studio.projectiles = [];
+  Studio.items = [];
+  Studio.eventHandlers = [];
+  Studio.perExecutionTimeouts = [];
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1381,27 +1365,34 @@ var preloadActorImages = function() {
 };
 
 /**
+ * Clean up a list of Items or Projectiles.
+ */
+function resetItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].removeElement();
+  }
+  // Set length because list = [] will not modify array passed in by reference
+  list.length = 0;
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
-  if (Studio.eventHandlers) {
-    // Check the first command in all of the cmdQueues and clear the timeout
-    // if there is a pending wait command
-    Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue[0];
+  // Check the first command in all of the cmdQueues and clear the timeout
+  // if there is a pending wait command
+  Studio.eventHandlers.forEach(function (handler) {
+    var cmd = handler.cmdQueue[0];
 
-      if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
-        // Note: not calling waitCallback() or setting complete = true
-        window.clearTimeout(cmd.opts.waitTimeout);
-      }
-    });
-  }
+    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+      // Note: not calling waitCallback() or setting complete = true
+      window.clearTimeout(cmd.opts.waitTimeout);
+    }
+  });
   Studio.eventHandlers = [];
-  if (Studio.perExecutionTimeouts) {
-    Studio.perExecutionTimeouts.forEach(function (timeout) {
-      clearInterval(timeout);
-    });
-  }
+  Studio.perExecutionTimeouts.forEach(function (timeout) {
+    clearInterval(timeout);
+  });
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1409,18 +1400,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  if (Studio.projectiles) {
-    for (i = 0; i < Studio.projectiles.length; i++) {
-      Studio.projectiles[i].removeElement();
-    }
-    Studio.projectiles = [];
-  }
-  if (Studio.items) {
-    for (i = 0; i < Studio.items.length; i++) {
-      Studio.items[i].removeElement();
-    }
-    Studio.items = [];
-  }
+  // Reset the projectiles and items (they include animation timers)
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 };
 
 /**
@@ -1441,17 +1423,6 @@ Studio.reset = function(first) {
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
-
-  // Reset the dynamic sprites list
-  while (Studio.projectiles.length) {
-    var projectile = Studio.projectiles.pop();
-    projectile.removeElement();
-  }
-  // TODO: DRY
-  while (Studio.items.length) {
-    var item = Studio.items.pop();
-    item.removeElement();
   }
 
   // True if we should fail before execution, even if freeplay
@@ -2924,10 +2895,10 @@ var doMakeProjectile = function (projectile, action) {
 };
 
 Studio.makeProjectile = function (opts) {
-  // opts.projectile will be set when we've had a collision with a particular
+  // opts.eventObject will be set when we've had a collision with a particular
   // projectile, otherwise we operate all all of that class
-  if (opts.projectile) {
-    doMakeProjectile(opts.projectile, opts.action);
+  if (opts.eventObject) {
+    doMakeProjectile(opts.eventObject, opts.action);
   } else {
     // No "current" projectile, so apply action to all of them of this class
     for (var i = 0; i < Studio.projectiles.length; i++) {
