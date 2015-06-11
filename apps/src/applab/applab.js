@@ -838,13 +838,27 @@ Applab.reset = function(first) {
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
+  $(window).trigger('run_button_pressed');
+  Applab.serializeAndSave(callback, true);
+};
+
+/**
+ * We also want to serialize in save in some other cases (i.e. entering code
+ * mode from design mode).
+ */
+Applab.serializeAndSave = function (callback, runButtonClick) {
+  designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
   if (!window.dashboard || (!dashboard.project.isEditing ||
       (dashboard.project.current && dashboard.project.current.id))) {
-    $(window).trigger('run_button_pressed');
-    callback();
+    $(window).trigger('appModeChanged');
+    if (callback) {
+      callback();
+    }
   } else {
-    $(window).trigger('run_button_pressed', callback);
+    // Otherwise, makes sure we don't hit our callback until after we've created
+    // a channel
+    $(window).trigger('appModeChanged', callback());
   }
 };
 
@@ -859,7 +873,6 @@ Applab.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  designMode.serializeToLevelHtml();
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -1092,7 +1105,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
-  designMode.serializeToLevelHtml();
+  Applab.serializeAndSave();
 };
 
 Applab.onPuzzleComplete = function() {

@@ -144,7 +144,8 @@ function runLevel (app, skinId, level, onAttempt, testData) {
         timeout = 500;
       }
       setTimeout(function () {
-        studioApp.runButtonClick();
+        studioApp.runButtonClickWrapper.call(studioApp, studioApp.runButtonClick);
+
       }, timeout);
       // waitLong();
     },

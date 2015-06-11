@@ -6,11 +6,19 @@ var hasProjectChanged = false;
 
 var channels = require('./client_api/channels');
 
+var events = {
+  // Fired when run state changes or we enter/exit design mode
+  appModeChanged: 'appModeChanged',
+  appInitialized: 'appInitialized',
+  workspaceChange: 'workspaceChange',
+  hashchange: 'hashchange'
+};
+
 module.exports = {
   init: function () {
     if (appOptions.level.isProjectLevel || this.current) {
 
-      $(window).on('hashchange', (function () {
+      $(window).on(events.hashchange, (function () {
         var hashData = parseHash();
         if ((this.current &&
             hashData.channelId !== this.current.id) ||
@@ -34,16 +42,16 @@ module.exports = {
           };
         }
 
-        $(window).on('run_button_pressed', (function(event, callback) {
+        $(window).on(events.appModeChanged, (function(event, callback) {
           this.save(callback);
         }).bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
-        $(window).on('appInitialized', (function () {
+        $(window).on(events.appInitialized, (function () {
           // Get the initial app code as a baseline
           this.current.levelSource = dashboard.getEditorSource();
         }).bind(this));
-        $(window).on('workspaceChange', function () {
+        $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
         window.setInterval((function () {
