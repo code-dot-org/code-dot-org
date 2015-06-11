@@ -1186,6 +1186,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 // Overwritten by applab.
 StudioApp.prototype.runButtonClickWrapper = function (callback) {
   $(window).trigger('run_button_pressed');
+  $(window).trigger('appModeChanged');
   callback();
 };
 
