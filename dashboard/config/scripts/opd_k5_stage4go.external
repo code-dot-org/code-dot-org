@@ -4,14 +4,16 @@ skip_dialog true
 markdown <<MARKDOWN
 # LOOPS > Reflection
 
-In this stage, we saw how adding loops to a program makes it more efficient to code repetitive actions. In the next stage, we'll look at conditionals or "if, then" statements, in coding.
+In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding conditionals or "if-statements".
 
+<br/>
 ## Reflect
 
 How would you explain the concept of loops to your students? [Share your thoughts in our Professional Learning Community (PLC) forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
 
 <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1"><button>Discuss >></button></a>
 
+<br/>
 After commenting in the forum, return here and click below to move on to Stage 5.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

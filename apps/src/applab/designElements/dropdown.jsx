@@ -91,6 +91,7 @@ module.exports = {
     element.style.width = '100px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
+    element.style.margin = '0';
 
     return element;
   }

@@ -552,3 +552,12 @@ button.arrow:focus {
     display: inline-block;
   }
 }
+
+.chooseAssetDropdownOption {
+  color: $link_color;
+  text-decoration: underline;
+}
+
+.droplet-dropdown {
+  z-index: 500 !important;
+}
