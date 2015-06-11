@@ -956,20 +956,43 @@ a.download-video {
 }
 
 #landingpage {
+  .welcome {
+    background-color: $light_purple;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:white;
+  }
+
+  .welcomeleft {
+    text-align: left;
+  }
+
+  .welcomeright {
+    text-align: center;
+  }
+
   .lines_of_code_header {
     width: 100%;
-    color: $charcoal;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+    padding-top: 0px;
+    font-size: 24px;
+    line-height: 34px;
   }
 
   a.lines_of_code_link {
-    color: $charcoal;
+    color: white;
     text-decoration: none;
     font-family: $gotham-bold;
     font-weight: normal;
-    line-height: 40px;
+    line-height: 34px;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .row#continue {
