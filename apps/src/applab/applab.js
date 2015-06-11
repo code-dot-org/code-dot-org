@@ -838,14 +838,15 @@ Applab.reset = function(first) {
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
-  Applab.serializeAndSave(callback);
+  $(window).trigger('run_button_pressed');
+  Applab.serializeAndSave(callback, true);
 };
 
 /**
  * We also want to serialize in save in some other cases (i.e. entering code
  * mode from design mode).
  */
-Applab.serializeAndSave = function (callback) {
+Applab.serializeAndSave = function (callback, runButtonClick) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
   if (!window.dashboard || (!dashboard.project.isEditing ||
