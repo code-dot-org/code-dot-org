@@ -1,0 +1,43 @@
+h2 {
+	color: #7665a0;
+}
+
+h3 {
+	color: #7665a0;
+}
+
+h4 {
+	font-weight: bolder;
+    color: #ffa400;
+}
+h5 {
+	font-weight: bolder;
+    color: #00adbb;
+}
+blockquote{
+	background: rgba(255, 242, 185, .35);
+    border-radius: 10px;
+    font-size: .8em;
+    font-weight: lighter;
+    font-style: italic;
+    padding: 15px;
+    
+}
+p{
+	margin: 0 0 0 15px;
+}
+ul{
+	margin: 10px 0 30px 40px;
+}
+
+.plc{
+	background: rgba(119, 100, 160, 1);
+    color: white;
+    font-weight: bold;
+}
+
+button{
+	background: rgba(0, 173, 187, 1);
+    color: white;
+    font-weight: bold;
+}
