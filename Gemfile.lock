@@ -57,15 +57,14 @@ GEM
       builder
       mime-types
       xml-simple
-    aws-sdk (2.0.29)
-      aws-sdk-resources (= 2.0.29)
-    aws-sdk-core (2.0.29)
+    aws-sdk (2.0.48)
+      aws-sdk-resources (= 2.0.48)
+    aws-sdk-core (2.0.48)
       builder (~> 3.0)
       jmespath (~> 1.0)
       multi_json (~> 1.0)
-      multi_xml (~> 0.5)
-    aws-sdk-resources (2.0.29)
-      aws-sdk-core (= 2.0.29)
+    aws-sdk-resources (2.0.48)
+      aws-sdk-core (= 2.0.48)
     bcrypt (3.1.7)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -218,7 +217,7 @@ GEM
       powerbar
     mocha (1.0.0)
       metaclass (~> 0.0.1)
-    multi_json (1.10.1)
+    multi_json (1.11.1)
     multi_test (0.1.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
