@@ -182,6 +182,13 @@ td.studentname {
     background-color: $level_not_tried;
   }
 
+  &:hover,
+  &:link,
+  &:visited {
+    color: transparent !important;
+    cursor: pointer;
+  }
+
 }
 
 .zoomed-out .dot {
