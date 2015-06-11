@@ -1,7 +1,8 @@
 /* global ace */
+var dropletConfig;
+exports.setDropletConfig = function (newConfig) { dropletConfig = newConfig; };
 
-var dropletConfig = require('../dropletConfig');
-var dropletUtils = require('./dropletUtils');
+var dropletUtils = require('../dropletUtils');
 var annotationList = require('./annotationList');
 
 // define ourselves for ace, so that it knows where to get us
@@ -73,7 +74,7 @@ oop.inherits(Mode, JavaScriptMode);
     };
     // Mark all of our blocks as predefined so that linter doesnt complain about
     // using undefined variables
-    dropletUtils.getAllAvailableDropletBlocks(exports.dropletConfig).forEach(function (block) {
+    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
       newOptions.predef[block.func] = false;
     });
 
