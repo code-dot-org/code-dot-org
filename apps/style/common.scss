@@ -1,5 +1,6 @@
 @import "color";
 @import "font";
+@import "style-constants";
 
 $common_root: '/blockly/media/common_images/';
 
@@ -11,7 +12,6 @@ $common_root: '/blockly/media/common_images/';
   font-family: $gotham-regular, sans-serif;
   font-weight: normal;
 }
-$headers_height: 30px;
 
 body {
   @include font;
@@ -202,7 +202,7 @@ div.droplet-palette-group-header-selected.orange {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: $headers_height;
+  top: $workspace-headers-height;
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
@@ -760,19 +760,19 @@ $aniGifPreviewHeight: 60px;
   text-align: center;
   white-space: nowrap;
   overflow-x: hidden;
-  height: $headers_height;
+  height: $workspace-headers-height;
   color: white;
   .workspace-header-clickable:hover {
     cursor: pointer;
     color: $yellow;
   }
   span {
-    line-height: $headers_height;
+    line-height: $workspace-headers-height;
   }
 }
 
 #design-headers {
-  height: $headers_height;
+  height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
@@ -782,7 +782,7 @@ $aniGifPreviewHeight: 60px;
 }
 
 #headers {
-  height: $headers_height;
+  height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
