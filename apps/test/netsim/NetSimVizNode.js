@@ -12,6 +12,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
+var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 
 describe("NetSimVizNode", function () {
@@ -21,6 +22,10 @@ describe("NetSimVizNode", function () {
 
     beforeEach(function () {
       vizNode = new NetSimVizNode();
+    });
+
+    it ("is a VizElement", function () {
+      assert(vizNode instanceof NetSimVizElement);
     });
 
     it ("has default properties", function () {
