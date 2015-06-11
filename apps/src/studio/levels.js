@@ -1339,6 +1339,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
+                        blockOfType('studio_addItems') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1443,6 +1444,18 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
+  'map': [
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 4, 0, 0, 0, 4, 0],
+    [0,16, 4, 0, 0,16, 4, 0],
+    [0, 0, 4, 4, 4, 4, 4, 0],
+    [0, 0, 4, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
