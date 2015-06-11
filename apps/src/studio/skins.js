@@ -20,6 +20,7 @@ function loadInfinity(skin, assetUrl) {
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+  skin.itemFrames = 10;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -38,6 +39,24 @@ function loadInfinity(skin, assetUrl) {
     'projectile_cherry': 13,
     'projectile_ice': 12,
     'projectile_duck': 12
+  };
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_hiro',
+    'item_anna',
+    'item_elsa',
+    'item_baymax',
+    'item_rapunzel',
+    'item_cherry',
+    'item_ice',
+    'item_duck'
+  ];
+
+  skin.specialItemFrames = {
+    'item_cherry': 13,
+    'item_ice': 12,
+    'item_duck': 12
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -67,6 +86,10 @@ function loadInfinity(skin, assetUrl) {
     return className === 'projectile_hiro';
   };
 
+  skin.preventItemLoop = function (className) {
+    return className === 'item_hiro';
+  };
+
   skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
   skin.projectile_anna = skin.assetUrl('projectile_anna.png');
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
@@ -75,6 +98,16 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
   skin.projectile_ice = skin.assetUrl('projectile_ice.png');
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
+
+  // TODO: Create actual item choices
+  skin.item_hiro = skin.assetUrl('projectile_hiro.png');
+  skin.item_anna = skin.assetUrl('projectile_anna.png');
+  skin.item_elsa = skin.assetUrl('projectile_elsa.png');
+  skin.item_baymax = skin.assetUrl('projectile_baymax.png');
+  skin.item_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.item_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.item_ice = skin.assetUrl('projectile_ice.png');
+  skin.item_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
     background: skin.assetUrl('background_leafy.jpg')
@@ -134,6 +167,18 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileCherry(), '"projectile_cherry"'],
     [msg.projectileIce(), '"projectile_ice"'],
     [msg.projectileDuck(), '"projectile_duck"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.projectileHiro(), '"item_hiro"'],
+    [msg.projectileAnna(), '"item_anna"'],
+    [msg.projectileElsa(), '"item_elsa"'],
+    [msg.projectileBaymax(), '"item_baymax"'],
+    [msg.projectileRapunzel(), '"item_rapunzel"'],
+    [msg.projectileCherry(), '"item_cherry"'],
+    [msg.projectileIce(), '"item_ice"'],
+    [msg.projectileDuck(), '"item_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
@@ -369,8 +414,8 @@ exports.load = function(assetUrl, id) {
   skin.background = skin.assetUrl('background.png');
   skin.spriteHeight = 50;
   skin.spriteWidth = 50;
-  skin.dropdownThumbnailWidth = 50;
-  skin.dropdownThumbnailHeight = 50;
+  skin.dropdownThumbnailWidth = 100;
+  skin.dropdownThumbnailHeight = 100;
   skin.preloadAssets = true;
 
   // take care of items specific to skins

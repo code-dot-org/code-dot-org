@@ -2391,6 +2391,8 @@ Studio.addItemsToScene = function (opts) {
 
   if (/.gif$/.test(skin[opts.className])) {
     frames = 1;
+  } else if (skin.specialItemFrames && skin.specialItemFrames[opts.className]) {
+    frames = skin.specialItemFrames[opts.className];
   } else {
     frames = skin.itemFrames;
   }
@@ -2443,8 +2445,6 @@ Studio.addItemsToScene = function (opts) {
         }
       }
     }
-
-    console.log("Created item with coords of (" + item.x + "," + item.y + ")");
 
     item.createElement(document.getElementById('svgStudio'));
     Studio.items.push(item);
