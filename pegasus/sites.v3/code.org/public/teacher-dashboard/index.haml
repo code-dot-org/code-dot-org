@@ -103,8 +103,8 @@ angular: teacherDashboard
          update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
-         progress: {method:'GET', url:'/dashboardapi/section_progress/:id.json'},
-         studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId.json'}
+         progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
+         studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'}
       });
     }]);
 
