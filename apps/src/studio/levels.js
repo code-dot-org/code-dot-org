@@ -1339,6 +1339,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
+                        blockOfType('studio_addItems') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1453,7 +1454,6 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  // 'gridAlignedMovement': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'codeFunctions': {
