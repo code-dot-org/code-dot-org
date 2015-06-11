@@ -1,5 +1,6 @@
 /* global $ */
 var React = require('react');
+var rowStyle = require('./rowStyle.jsx');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -21,7 +22,8 @@ var RadioButtonProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          extraRowStyle={rowStyle.idRowContainer}/>
         <PropertyRow
           desc={'group id'}
           initialValue={element.getAttribute('name') || ''}

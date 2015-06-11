@@ -1,4 +1,5 @@
 var React = require('react');
+var rowStyle = require('./rowStyle.jsx');
 
 var ZOrderRow = React.createClass({
   propTypes: {
@@ -38,11 +39,11 @@ var ZOrderRow = React.createClass({
     };
 
     return (
-      <div>
+      <div style={rowStyle.container}>
         <div>
           depth
         </div>
-        <div>
+        <div style={{marginLeft: -7}}>
           <button
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
