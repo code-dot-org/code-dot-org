@@ -338,9 +338,11 @@ designMode.onDepthChange = function (element, depthDirection) {
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
   // Children are screens. Want to operate on grandchildren
-  makeUndraggable(divApplab.children().children());
+  var madeUndraggable = makeUndraggable(divApplab.children().children());
   var serialization = new XMLSerializer().serializeToString(divApplab[0]);
-  makeDraggable(divApplab.children().children());
+  if (madeUndraggable) {
+    makeDraggable(divApplab.children().children());
+  }
   Applab.levelHtml = serialization;
 };
 
@@ -417,11 +419,12 @@ function getInnerElement(outerElement) {
 
 /**
  *
- * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
+ *   draggable.
  */
-function makeDraggable (jq) {
+function makeDraggable (jqueryElements) {
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
-  jq.each(function () {
+  jqueryElements.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
@@ -496,22 +499,29 @@ function makeDraggable (jq) {
 
 /**
  * Inverse of `makeDraggable`.
- * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
+ *   undraggable.
+ * @returns {boolean} True if we made something undraggable
  */
-function makeUndraggable(jq) {
-  jq.each(function () {
+function makeUndraggable(jqueryElements) {
+  var foundOne = false;
+  jqueryElements.each(function () {
     var wrapper = $(this);
     var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
-    if (!wrapper.data('uiDraggable')) {
+    if (!wrapper.hasClass('ui-draggable')) {
       return;
     }
+
+    foundOne = true;
 
     wrapper.resizable('destroy').draggable('destroy');
     elm.css('position', 'absolute');
     elm.unwrap();
   });
+
+  return foundOne;
 }
 
 designMode.configureDragAndDrop = function () {
