@@ -41,8 +41,7 @@ module.exports = {
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
         var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
-        // second last input
-        var imageInput = $("#design-properties input").eq(-2)[0];
+        var imageInput = $("#design-properties input").last()[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
@@ -67,6 +66,9 @@ module.exports = {
 
             Applab.onPuzzleComplete();
           });
+        };
+        img.onerror = function (err) {
+          assert(false, err.message);
         };
       },
       expected: {

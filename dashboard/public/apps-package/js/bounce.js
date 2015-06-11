@@ -1964,7 +1964,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../hammer":136,"../locale":145,"../skins":262,"../templates/page.html.ejs":289,"../timeoutList":295,"../utils":311,"./api":72,"./controls.html.ejs":75,"./locale":77,"./tiles":80,"./visualization.html.ejs":81}],81:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../hammer":136,"../locale":145,"../skins":262,"../templates/page.html.ejs":290,"../timeoutList":296,"../utils":312,"./api":72,"./controls.html.ejs":75,"./locale":77,"./tiles":80,"./visualization.html.ejs":81}],81:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1984,7 +1984,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],75:[function(require,module,exports){
+},{"ejs":483}],75:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2007,7 +2007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"./locale":77,"ejs":482}],73:[function(require,module,exports){
+},{"../locale":145,"./locale":77,"ejs":483}],73:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
