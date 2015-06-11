@@ -5,6 +5,7 @@ exports.setDropletConfig = function (newConfig) { dropletConfig = newConfig; };
 var dropletUtils = require('../dropletUtils');
 var annotationList = require('./annotationList');
 
+if (window.ace) {
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -98,3 +99,5 @@ oop.inherits(Mode, JavaScriptMode);
 
 exports.Mode = Mode;
 });
+
+}
