@@ -593,14 +593,11 @@ function callHandler (name, allowQueueExtension) {
  * list automatically when they move out of bounds
  */
 function performItemOrProjectileMoves (list) {
-  for (var i = 0; i < list.length; i++) {
+  for (var i = list.length - 1; i >= 0; i--) {
     list[i].moveToNextPosition();
     if (list[i].outOfBounds()) {
       list[i].removeElement();
       list.splice(i, 1);
-      // decrement i because we just removed an item from the array. We want to
-      // keep i as the same value for the next iteration through this loop
-      i--;
     } else {
       list[i].display();
     }
