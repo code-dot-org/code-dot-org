@@ -1113,7 +1113,7 @@ Calc.__testonly__ = {
 /* end-test-block */
 
 
-},{"../StudioApp":5,"../block_utils":70,"../dom":103,"../locale":145,"../skins":262,"../templates/page.html.ejs":289,"../timeoutList":295,"../utils":311,"./controls.html.ejs":84,"./equation":85,"./equationSet":86,"./expressionNode":87,"./inputIterator":88,"./js-numbers/js-numbers.js":89,"./levels":90,"./locale":91,"./token":93,"./visualization.html.ejs":94,"lodash":485}],485:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":70,"../dom":103,"../locale":145,"../skins":262,"../templates/page.html.ejs":290,"../timeoutList":296,"../utils":312,"./controls.html.ejs":84,"./equation":85,"./equationSet":86,"./expressionNode":87,"./inputIterator":88,"./js-numbers/js-numbers.js":89,"./levels":90,"./locale":91,"./token":93,"./visualization.html.ejs":94,"lodash":486}],486:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -7922,7 +7922,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":91,"ejs":482}],90:[function(require,module,exports){
+},{"./locale":91,"ejs":483}],90:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -8424,7 +8424,7 @@ EquationSet.__testonly__ = {
 /* end-test-block */
 
 
-},{"../utils":311,"./equation":85,"./expressionNode":87,"./js-numbers/js-numbers":89}],87:[function(require,module,exports){
+},{"../utils":312,"./equation":85,"./expressionNode":87,"./js-numbers/js-numbers":89}],87:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -9038,7 +9038,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
 };
 
 
-},{"../utils":311,"./js-numbers/js-numbers":89,"./token":93}],93:[function(require,module,exports){
+},{"../utils":312,"./js-numbers/js-numbers":89,"./token":93}],93:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -13553,7 +13553,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"./locale":91,"ejs":482}],82:[function(require,module,exports){
+},{"../locale":145,"./locale":91,"ejs":483}],82:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *

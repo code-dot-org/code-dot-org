@@ -18,7 +18,8 @@ function codeMirror(name, mode, callback, attachments) {
     htmlMode: false,
     viewportMargin: Infinity,
     matchTags: {bothTags: true},
-    autoCloseTags: true
+    autoCloseTags: true,
+    lineWrapping: true
   });
   if (callback) {
     editor.on('change', callback)
