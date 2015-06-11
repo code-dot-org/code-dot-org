@@ -472,7 +472,10 @@ function makeDraggable (jq) {
 
         designMode.renderDesignWorkspace(elm[0]);
       }
-    }).css('position', 'absolute');
+    }).css({
+      position: 'absolute',
+      lineHeight: '0px'
+    });
 
     wrapper.css({
       top: elm.css('top'),
