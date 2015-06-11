@@ -1,23 +1,6 @@
 @import "color";
 
 $common_root: '/blockly/media/common_images/';
-$cyan: #0094ca;
-$charcoal: #5b6770;
-$orange: #ffa400;
-$purple: #7665a0;
-$green: #b9bf15;
-
-$purple-dark: #7665a0;
-$purple-light: #a69bc1;
-$purple-extra-light: #cfc9de;
-$lighter-gray: #c6cacd;
-$orange-dark: #ffa400;
-$green-dark: #b9bf15;
-$yellow-dark: #ffb81d;
-$yellow-light: #ffdb74;
-$cyan-dark: #0094ca;
-$teal-dark: #00adbc;
-$teal-light: #59cad3;
 
 $gotham-regular: "Gotham 4r";
 $gotham-italics: "Gotham 4i";
@@ -52,9 +35,9 @@ h2 {
   font-weight: normal;
 }
 a {
-  color: #0596CE;
+  color: $link_color;
   &:hover {
-    color: #0596CE;
+    color: $link_color;
     background: none;
   }
 }
@@ -108,12 +91,12 @@ div.droplet-palette-header-row {
 }
 
 div.droplet-palette-group-header:active {
-  color: #000;
+  color: $black;
 }
 
 div.droplet-palette-group-header-selected {
   font-weight: 400;
-  color: #000;
+  color: $black;
 }
 
 $droplet-light-green: #D3E965;
@@ -273,7 +256,7 @@ html[dir='rtl'] #codeWorkspace {
   left: 400px;
   cursor: ew-resize;
   text-align: center;
-  color: $lighter-gray;
+  color: $lighter_gray;
   font-size: 24px;
   line-height: 400px;
 }
@@ -472,12 +455,12 @@ button, label.img-upload {
   border: 1px solid #ddd;
   font-size: large;
   background-color: #eee;
-  color: #000;
+  color: $black;
 }
 button.launch {
   border: 1px solid $orange;
   background-color: $orange;
-  color: #fff;
+  color: $white;
   font-size: large;
   min-width: 96px;
   margin-left: 0px;
@@ -534,7 +517,7 @@ button.blocklyLaunch {
 button.share {
   border: 1px solid #FFA000;
   background-color: #FFA000;
-  color: #fff;
+  color: $white;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -643,9 +626,9 @@ input[type="radio"] {
 }
 #dialog {
   visibility: hidden;
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
   position: absolute;
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
@@ -655,8 +638,8 @@ input[type="radio"] {
 #dialogBorder {
   visibility: hidden;
   position: absolute;
-  background-color: #fff;
-  color: #000;
+  background-color: $white;
+  color: $black;
   border-radius: 6px;
   box-shadow: 5px 5px 5px $shadow;
 }
@@ -666,7 +649,7 @@ input[type="radio"] {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: $black;
   opacity: 0.3;
   z-index: 1;
 }
@@ -711,14 +694,14 @@ input[type="radio"] {
   margin-bottom: 5px;
 }
 #hint {
-  color: #fff;
+  color: $white;
   padding: 5px 1em;
   font-size: large;
 }
 
 /* Instructions. */
 #bubble {
-  color: black;
+  color: $black;
   margin-bottom: 10px;
   position: relative;
   cursor: pointer;
@@ -787,7 +770,7 @@ $aniGifPreviewHeight: 60px;
   color: white;
   .workspace-header-clickable:hover {
     cursor: pointer;
-    color: $yellow-dark;
+    color: $yellow;
   }
   span {
     line-height: $headers_height;
@@ -837,19 +820,19 @@ $aniGifPreviewHeight: 60px;
     }
   }
   #clear-puzzle-header:hover {
-    background-color: #c00;
+    background-color: $red;
   }
   #hide-toolbox, #show-toolbox {
     cursor: pointer;
     &:hover {
-      color: $yellow-dark;
+      color: $yellow;
     }
   }
   .block-counter-default {
     color: white;
   }
   .block-counter-overflow {
-    color: $yellow-dark;
+    color: $yellow;
   }
 }
 
@@ -985,7 +968,7 @@ $aniGifPreviewHeight: 60px;
 }
 
 .light-yellow-background {
-  background-color: #fff7df;
+  background-color: $lightest_yellow;
 }
 
 .white-background {
@@ -1225,10 +1208,10 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 // Droplet block tooltips configuration
-$parameterColor: $yellow-light;
-$linkColor: #ffffff;
-$tooltipBackground: $cyan-dark;
-$text-color: #ffffff;
+$parameterColor: $light_yellow;
+$linkColor: $white;
+$tooltipBackground: $cyan;
+$text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
@@ -1237,7 +1220,7 @@ $tooltip-font: $gotham-regular;
 $function-name-font: $code-font;
 $examples-link-font: $gotham-extra-bold;
 
-$see-examples-thick-underline-color: $yellow-dark;
+$see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link {
   margin-top: 5px;
@@ -1260,7 +1243,7 @@ $see-examples-thick-underline-color: $yellow-dark;
 }
 
 .current-tooltip-parameter-name {
-  border-bottom: 3px solid $yellow-dark;
+  border-bottom: 3px solid $yellow;
 }
 
 // Tooltipster theme class
