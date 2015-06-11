@@ -16,11 +16,7 @@ var ScreenProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
@@ -33,7 +29,7 @@ var ScreenProperties = React.createClass({
           desc={'image'}
           initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
-      </table>);
+      </div>);
   }
 });
 

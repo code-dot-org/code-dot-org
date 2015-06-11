@@ -38,11 +38,11 @@ var ZOrderRow = React.createClass({
     };
 
     return (
-      <tr>
-        <td>
+      <div>
+        <div>
           depth
-        </td>
-        <td>
+        </div>
+        <div>
           <button
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
@@ -71,8 +71,8 @@ var ZOrderRow = React.createClass({
             title='Send to Front'>
             <i className="fa fa-angle-double-right"></i>
           </button>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

@@ -30,14 +30,14 @@ var OptionsSelectRow = React.createClass({
 
   render: function() {
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div>
+        <div>{this.props.desc}</div>
+        <div>
           <textarea
             onChange={this.handleChangeInternal}
             value={this.state.value}/>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

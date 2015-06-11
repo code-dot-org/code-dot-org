@@ -14,11 +14,7 @@ var CanvasProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
@@ -46,7 +42,7 @@ var CanvasProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
   }
 });
 

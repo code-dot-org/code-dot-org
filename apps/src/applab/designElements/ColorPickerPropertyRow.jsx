@@ -54,15 +54,15 @@ var PropertyRow = React.createClass({
       backgroundColor: this.state.value
     };
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div>
+        <div>{this.props.desc}</div>
+        <div>
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
           <button style={buttonStyle} ref='colorPicker'></button>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });
