@@ -957,7 +957,7 @@ function checkForItemCollisions () {
       } else {
         item.endCollision('wall');
       }
-      executeItemCollision('wall');
+      executeItemCollision(item.className, 'wall');
     }
 
     for (var j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
@@ -1000,7 +1000,7 @@ function checkForItemCollisions () {
       } else {
         item.endCollision(edgeClass);
       }
-      executeItemCollision(edgeClass);
+      executeItemCollision(item.className, edgeClass);
     }
   }
 }
@@ -3042,7 +3042,7 @@ function isItemClass(className) {
 }
 
 /**
- * Call the handler for src colliding with target
+ * Call the handler for an actor (src) colliding with target
  */
 function handleCollision(src, target, allowQueueExtension) {
   var prefix = 'whenSpriteCollided-' + src + '-';
@@ -3064,27 +3064,31 @@ function handleCollision(src, target, allowQueueExtension) {
 /**
  * Call the handler for an item colliding with target
  */
-function handleItemCollision(target, allowQueueExtension) {
-  callHandler('whenItemCollided-' + target, allowQueueExtension);
+function handleItemCollision(src, target, allowQueueExtension) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  callHandler(prefix + target, allowQueueExtension);
 
   if (isEdgeClass(target)) {
-    callHandler('whenItemCollided-' + 'any_edge', allowQueueExtension);
+    callHandler(prefix + 'any_edge', allowQueueExtension);
   }
 }
 
 /**
  * Execute the code for an item colliding with target
  */
-function executeItemCollision(target) {
-  Studio.executeQueue('whenItemCollided-' + target);
+function executeItemCollision(src, target) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  Studio.executeQueue(prefix + target);
 
   if (isEdgeClass(target)) {
-    Studio.executeQueue('whenItemCollided-' + 'any_edge');
+    Studio.executeQueue(prefix + 'any_edge');
   }
 }
 
 /**
- * Execute the code for src colliding with target
+ * Execute the code for an actor (src) colliding with target
  */
 function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
@@ -3114,7 +3118,7 @@ function executeCollision(src, target) {
  */
 Studio.collideItemWith = function (item, target, allowQueueExtension) {
   if (item.startCollision(target)) {
-    handleItemCollision(target, allowQueueExtension);
+    handleItemCollision(item.className, target, allowQueueExtension);
   }
 };
 

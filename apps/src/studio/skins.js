@@ -171,15 +171,15 @@ function loadInfinity(skin, assetUrl) {
 
   // TODO: Create actual item choices
   skin.itemChoices = [
-    [msg.projectileHiro(), '"item_hiro"'],
-    [msg.projectileAnna(), '"item_anna"'],
-    [msg.projectileElsa(), '"item_elsa"'],
-    [msg.projectileBaymax(), '"item_baymax"'],
-    [msg.projectileRapunzel(), '"item_rapunzel"'],
-    [msg.projectileCherry(), '"item_cherry"'],
-    [msg.projectileIce(), '"item_ice"'],
-    [msg.projectileDuck(), '"item_duck"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+    [msg.itemHiro(), '"item_hiro"'],
+    [msg.itemAnna(), '"item_anna"'],
+    [msg.itemElsa(), '"item_elsa"'],
+    [msg.itemBaymax(), '"item_baymax"'],
+    [msg.itemRapunzel(), '"item_rapunzel"'],
+    [msg.itemCherry(), '"item_cherry"'],
+    [msg.itemIce(), '"item_ice"'],
+    [msg.itemDuck(), '"item_duck"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
@@ -333,13 +333,13 @@ function loadStudio(skin, assetUrl) {
 
   // TODO: Create actual item choices
   skin.itemChoices = [
-    [msg.projectileBlueFireball(), '"blue_fireball"'],
-    [msg.projectilePurpleFireball(), '"purple_fireball"'],
-    [msg.projectileRedFireball(), '"red_fireball"'],
-    [msg.projectileYellowHearts(), '"yellow_hearts"'],
-    [msg.projectilePurpleHearts(), '"purple_hearts"'],
-    [msg.projectileRedHearts(), '"red_hearts"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+    [msg.itemBlueFireball(), '"item_blue_fireball"'],
+    [msg.itemPurpleFireball(), '"item_purple_fireball"'],
+    [msg.itemRedFireball(), '"item_red_fireball"'],
+    [msg.itemYellowHearts(), '"item_yellow_hearts"'],
+    [msg.itemPurpleHearts(), '"item_purple_hearts"'],
+    [msg.itemRedHearts(), '"item_red_hearts"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 
@@ -358,12 +358,12 @@ exports.load = function(assetUrl, id) {
   ];
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'blue_fireball',
-    'purple_fireball',
-    'red_fireball',
-    'purple_hearts',
-    'red_hearts',
-    'yellow_hearts',
+    'item_blue_fireball',
+    'item_purple_fireball',
+    'item_red_fireball',
+    'item_purple_hearts',
+    'item_red_hearts',
+    'item_yellow_hearts',
   ];
 
   // Images
@@ -373,6 +373,14 @@ exports.load = function(assetUrl, id) {
   skin.blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
+
+  // TODO: proper item class names
+  skin.item_yellow_hearts = skin.assetUrl('yellow_hearts.gif');
+  skin.item_purple_hearts = skin.assetUrl('purple_hearts.gif');
+  skin.item_red_hearts = skin.assetUrl('red_hearts.gif');
+  skin.item_blue_fireball = skin.assetUrl('blue_fireball.png');
+  skin.item_purple_fireball = skin.assetUrl('purple_fireball.png');
+  skin.item_red_fireball = skin.assetUrl('red_fireball.png');
 
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');
@@ -412,10 +420,10 @@ exports.load = function(assetUrl, id) {
 
   // Settings
   skin.background = skin.assetUrl('background.png');
-  skin.spriteHeight = 50;
-  skin.spriteWidth = 50;
-  skin.dropdownThumbnailWidth = 100;
-  skin.dropdownThumbnailHeight = 100;
+  skin.spriteHeight = 100;
+  skin.spriteWidth = 100;
+  skin.dropdownThumbnailWidth = 50;
+  skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
 
   // take care of items specific to skins
