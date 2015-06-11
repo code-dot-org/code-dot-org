@@ -2108,7 +2108,10 @@ function makeDraggable (jq) {
 
         designMode.renderDesignWorkspace(elm[0]);
       }
-    }).css('position', 'absolute');
+    }).css({
+      position: 'absolute',
+      lineHeight: '0px'
+    });
 
     wrapper.css({
       top: elm.css('top'),
@@ -7192,6 +7195,7 @@ module.exports = {
     element.type = 'radio';
     element.style.width = '12px';
     element.style.height = '12px';
+    element.style.margin = '0px';
 
     this.onDeserialize(element);
 
@@ -7673,6 +7677,7 @@ module.exports = {
     element.type = 'checkbox';
     element.style.width = '12px';
     element.style.height = '12px';
+    element.style.margin = '0px';
 
     this.onDeserialize(element);
 
