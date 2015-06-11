@@ -19,6 +19,10 @@ div#visualizationResizeBar {
   top: $workspace-headers-height;
 }
 
+#designToggleRow > div {
+  height: $workspace-headers-height;
+}
+
 /* Shrink the visualization area on small displays. */
 
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
