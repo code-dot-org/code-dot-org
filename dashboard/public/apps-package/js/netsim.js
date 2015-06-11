@@ -11486,10 +11486,10 @@ NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
 };
 
 /**
- * @returns {string} 12-hour short time
+ * @returns {string} 12-hour time with milliseconds
  */
 NetSimLogEntry.prototype.getTimeString = function () {
-  return moment(this.timestamp).format('LT');
+  return moment(this.timestamp).format('h:mm:ss.SSS A');
 };
 
 /**

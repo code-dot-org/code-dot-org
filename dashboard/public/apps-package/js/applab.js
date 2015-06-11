@@ -729,6 +729,15 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  // Pre-populate asset list
+  if (window.dashboard && dashboard.project.current) {
+    clientApi.ajax('GET', '', function (xhr) {
+      assetListStore.reset(JSON.parse(xhr.responseText));
+    }, function () {
+      // Unable to load asset list
+    });
+  }
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1584,13 +1593,6 @@ Applab.getAssetDropdown = function (typeFilter) {
   });
   return options;
 };
-
-// Pre-populate asset list
-if (window.dashboard && dashboard.project.current) {
-  clientApi.ajax('GET', '', function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-  });
-}
 
 
 },{"../JSInterpreter":1,"../StudioApp":5,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":262,"../slider":263,"../templates/page.html.ejs":290,"../timeoutList":296,"../utils":312,"../xml":313,"./acemode/annotationList":11,"./acemode/mode-javascript_codeorg":13,"./api":14,"./apiBlockly":15,"./appStorage":16,"./applabTurtle":18,"./assetManagement/assetListStore":21,"./assetManagement/clientApi":22,"./assetManagement/show.js":23,"./blocks":24,"./commands":26,"./controls.html.ejs":28,"./designElements/library":43,"./designMode":48,"./dontMarshalApi":50,"./dropletConfig":51,"./errorHandler":52,"./extraControlRows.html.ejs":53,"./locale":56,"./visualization.html.ejs":61}],61:[function(require,module,exports){
