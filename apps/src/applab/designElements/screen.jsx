@@ -3,6 +3,7 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
+var rowStyle = require('./rowStyle.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -20,7 +21,8 @@ var ScreenProperties = React.createClass({
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          extraRowStyle={rowStyle.idRowContainer} />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}

@@ -25,7 +25,7 @@ var DesignProperties = module.exports = React.createClass({
    * @param newTab {TabType} Tab to switch to.
    */
   handleTabClick: function(newTab) {
-    this.setState({selectedTab: newTab})
+    this.setState({selectedTab: newTab});
   },
 
   render: function() {
@@ -99,7 +99,7 @@ var DesignProperties = module.exports = React.createClass({
       borderColor: borderColor,
       borderStyle: 'solid',
       borderWidth: '0 0 0 1px'
-    }
+    };
 
     var tabLabelStyle = {
       lineHeight: tabHeight + 'px',
@@ -111,16 +111,17 @@ var DesignProperties = module.exports = React.createClass({
 
     var workspaceBodyStyle = {
       height: 'calc(100% - 83px)',
-      padding: 10,
+      padding: '10px 10px 10px 0',
       borderColor: borderColor,
       borderStyle: 'solid',
       borderWidth: '0 1px 1px 1px',
-      backgroundColor: bgColor,
-      overflowY: 'scroll'
+      backgroundColor: bgColor
     };
 
     var propertiesBodyStyle = {
-      display: this.state.selectedTab === TabType.PROPERTIES ? '' : 'none'
+      display: this.state.selectedTab === TabType.PROPERTIES ? '' : 'none',
+      height: '100%',
+      overflowY: 'scroll'
     };
     var eventsBodyStyle = {
       minHeight: 200,

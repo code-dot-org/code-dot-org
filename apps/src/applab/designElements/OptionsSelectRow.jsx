@@ -1,4 +1,6 @@
+/* global $ */
 var React = require('react');
+var rowStyle = require('./rowStyle.jsx');
 
 var OptionsSelectRow = React.createClass({
   propTypes: {
@@ -29,13 +31,17 @@ var OptionsSelectRow = React.createClass({
   },
 
   render: function() {
+    var textAreaStyle = $.extend({}, rowStyle.input, {
+      height: 40
+    });
     return (
-      <div>
+      <div style={rowStyle.container}>
         <div>{this.props.desc}</div>
         <div>
           <textarea
             onChange={this.handleChangeInternal}
-            value={this.state.value}/>
+            value={this.state.value}
+            style={textAreaStyle} />
         </div>
       </div>
     );

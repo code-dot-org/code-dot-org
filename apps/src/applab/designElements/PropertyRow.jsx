@@ -1,4 +1,6 @@
+/* global $ */
 var React = require('react');
+var rowStyle = require('./rowStyle.jsx');
 
 var LockState = {
   LOCKED: 'LOCKED',
@@ -16,7 +18,8 @@ var PropertyRow = React.createClass({
     lockState: React.PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
     isMultiLine: React.PropTypes.bool,
     handleChange: React.PropTypes.func,
-    handleLockChange: React.PropTypes.func
+    handleLockChange: React.PropTypes.func,
+    extraRowStyle: React.PropTypes.object
   },
 
   getInitialState: function () {
@@ -44,16 +47,19 @@ var PropertyRow = React.createClass({
   },
 
   render: function() {
+    var rowContainerStyle = $.extend({}, rowStyle.container, this.props.extraRowStyle || {});
+
     var inputElement;
     if (this.props.isMultiLine) {
       inputElement = <textarea
         value={this.state.value}
-        onChange={this.handleChangeInternal}/>;
+        onChange={this.handleChangeInternal} />;
     } else {
       inputElement = <input
         type={this.props.isNumber ? 'number' : undefined}
         value={this.state.value}
-        onChange={this.handleChangeInternal}/>;
+        onChange={this.handleChangeInternal}
+        style={rowStyle.input} />;
     }
 
     var lockStyle = {
@@ -73,7 +79,7 @@ var PropertyRow = React.createClass({
     }
 
     return (
-      <div>
+      <div style={rowContainerStyle}>
         <div>{this.props.desc}</div>
         <div>
           {inputElement}

@@ -1,9 +1,10 @@
 /* global $ */
 var React = require('react');
+var rowStyle = require('./rowStyle.jsx');
 
 var colorPicker = require('../colpick');
 
-var PropertyRow = React.createClass({
+var ColorPickerPropertyRow = React.createClass({
   propTypes: {
     initialValue: React.PropTypes.string.isRequired,
     handleChange: React.PropTypes.func
@@ -51,15 +52,17 @@ var PropertyRow = React.createClass({
 
   render: function() {
     var buttonStyle = {
-      backgroundColor: this.state.value
+      backgroundColor: this.state.value,
+      verticalAlign: 'top'
     };
     return (
-      <div>
+      <div style={rowStyle.container}>
         <div>{this.props.desc}</div>
         <div>
           <input
             value={this.state.value}
-            onChange={this.handleChangeInternal}/>
+            onChange={this.handleChangeInternal}
+            style={rowStyle.input} />
           <button style={buttonStyle} ref='colorPicker'></button>
         </div>
       </div>
@@ -67,4 +70,4 @@ var PropertyRow = React.createClass({
   }
 });
 
-module.exports = PropertyRow;
+module.exports = ColorPickerPropertyRow;
