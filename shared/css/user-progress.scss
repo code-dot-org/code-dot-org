@@ -1,4 +1,5 @@
 @import 'color';
+@import 'font';
 
 .level_link, .level_link:link, .level_link:visited {
   box-sizing: content-box;
@@ -9,7 +10,7 @@
   font-size: 16px;
   text-align: center;
   display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-regular;
   font-weight: normal;
   color: white;
   border: 2px solid $lighter_gray;
@@ -89,7 +90,7 @@ a.level_link.submitted:hover
 {
   font-size: 10px;
   color: $purple;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
@@ -106,7 +107,7 @@ a.level_link.submitted:hover
     vertical-align: middle;
     padding-right: 10px;
     .game-title {
-      font-family: 'Gotham 5r', sans-serif;
+      font-family: $gotham-bold;
       font-weight: normal;
     }
   }
