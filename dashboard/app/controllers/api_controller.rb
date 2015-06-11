@@ -40,7 +40,7 @@ class ApiController < ApplicationController
                     }
            }
 
-    render json: data.to_json
+    render json: data
     # This really should be:
     # render json: data
     # but it doesn't work because we have some CSRF "protection" thing
@@ -63,7 +63,7 @@ class ApiController < ApplicationController
       progressHtml: render_to_string(partial: 'shared/user_stats', locals: { user: @student})
     }
 
-    render json: data.to_json
+    render json: data
   end
 
   private
