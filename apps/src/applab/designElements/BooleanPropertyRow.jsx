@@ -33,15 +33,15 @@ var BooleanPropertyRow = React.createClass({
     };
 
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div>
+        <div>{this.props.desc}</div>
+        <div>
           <div
             className={classes}
             style={style}
             onClick={this.handleClick}/>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

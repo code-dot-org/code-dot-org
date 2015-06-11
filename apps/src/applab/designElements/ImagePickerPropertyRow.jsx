@@ -34,9 +34,9 @@ var PropertyRow = React.createClass({
 
   render: function() {
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div>
+        <div>{this.props.desc}</div>
+        <div>
           <input
             value={this.state.value}
             onChange={this.handleChangeInternal}/>
@@ -44,8 +44,8 @@ var PropertyRow = React.createClass({
           <a onClick={this.handleButtonClick}>
             Choose...
           </a>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

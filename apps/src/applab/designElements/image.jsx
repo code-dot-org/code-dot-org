@@ -20,11 +20,7 @@ var ImageProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
@@ -64,14 +60,13 @@ var ImageProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
 
     // TODO (brent):
     // bold/italics/underline (p2)
     // shape (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
   }
 });
 
