@@ -121,27 +121,27 @@
 %table
   %tr
     %th
-      Name
+      email_s
     %th
-      User ID
+      facilitator_prepared_i
     %th
-      \# of qualified teachers attending workshops
+      facilitator_knowledgeable_i
     %th
-      \# of teachers paid for
+      facilitator_enjoyable_i
     %th
-      \# of resulting students
+      facilitator_professional_i
     %th
-      Average student progress / student lifetime
+      workshop_start_i
     %th
-      \# of teachers surveyed
+      workshop_end_i
     %th
-      \% in-service teachers
+      workshop_materials_i
     %th
-      \% in-school vs after/home school
+      workshop_venue_i
     %th
-      \% plan to offer the course
+      workshop_food_i
     %th
-      Overall satisfaction
+      satisfaction_s
 
   - surveys.each do |row|
     - data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))
