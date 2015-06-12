@@ -885,7 +885,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
     margin-bottom: $workspace-header-button-margin;
     margin-right: $workspace-header-button-margin;
     margin-left: 0;
-    border: $workspace-header-button-border-width groove $charcoal;
+    border: $workspace-header-button-border-width groove $light_gray;
     height: $workspace-header-button-height;
     border-radius: 4px; // TODO: Make mixin
     font-family: $gotham-bold;
