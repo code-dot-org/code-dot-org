@@ -869,15 +869,24 @@ $aniGifPreviewHeight: 60px;
   #blockCounter, #blockUsed {
     display: inline-block;
   }
-  #clear-puzzle-header, #show-code-header {
+  $workspace-header-button-border-width: 1px;
+  $workspace-header-button-height: 22px;
+  .workspace-header-button {
     cursor: pointer;
     float: right;
-    border-left: 1px solid gray;
+    overflow: hidden;
+    background-color: $light_purple;
+    margin: ($workspace-headers-height - ($workspace-header-button-height + 2 * $workspace-header-button-border-width)) / 2;
+    border: $workspace-header-button-border-width solid $charcoal;
+    height: $workspace-header-button-height;
+    border-radius: 4px; // TODO: Make mixin
+    font-family: $gotham-bold;
     &:hover {
       background-color: $cyan;
     }
     span {
       padding: 0 20px;
+      line-height: $workspace-header-button-height;
     }
   }
   #clear-puzzle-header:hover {
@@ -917,7 +926,7 @@ $aniGifPreviewHeight: 60px;
   #show-toolbox-header {
     float: right;
   }
-  #clear-puzzle-header, #show-code-header {
+  .workspace-header-button {
     border-left: 0;
     border-right: 1px solid gray;
     float: left;
