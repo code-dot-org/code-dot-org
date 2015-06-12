@@ -16,7 +16,7 @@ window.netsimMain = function(options) {
 };
 
 
-},{"../StudioApp":5,"../appMain":6,"./levels":250,"./netsim":253,"./skins":259}],259:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":9,"./levels":250,"./netsim":253,"./skins":259}],259:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
