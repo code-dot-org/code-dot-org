@@ -401,6 +401,7 @@ Applab.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+  config.appMsg = applabMsg;
   loadLevel();
 
   // Applab.initMinimal();
@@ -553,6 +554,8 @@ Applab.init = function(config) {
 
   config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
   config.nativeVizWidth = Applab.appWidth;
+
+  config.appMsg = applabMsg;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
