@@ -6,13 +6,13 @@ skip_sound true
 hide_submit true
 
 question 'Number'
-answer 'http://staging.studio.code.org/script_assets/pd/blue.png'
+answer 'https://studio.code.org/script_assets/pd/blue.png'
 
 question 'String'
-answer 'http://staging.studio.code.org/script_assets/pd/teal.png'
+answer 'https://studio.code.org/script_assets/pd/teal.png'
 
 question 'Image'
-answer 'http://staging.studio.code.org/script_assets/pd/purple.png'
+answer 'https://studio.code.org/script_assets/pd/purple.png'
 
 markdown <<MARKDOWN
 ### Evaluation Blocks
