@@ -1,4 +1,4 @@
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 
 var ErrorLevel = {
   WARNING: 'WARNING',

@@ -8,7 +8,6 @@
 /* global dashboard */
 
 'use strict';
-require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -31,7 +30,7 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
@@ -964,6 +963,7 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
+    // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
     annotationList.attachToSession(session);
   } else {
