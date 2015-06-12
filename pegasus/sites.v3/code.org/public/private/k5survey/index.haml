@@ -144,14 +144,14 @@
 
 :javascript
   $(document).ready(function() {
-    $('select').bind("change", function () {
-      window.location = $("select option:selected").first().val();
+    $('#facilitator_dropdown').bind("change", function (ev) {
+      window.location.href = ev.target.value;
     });
   });
 
 %h1
   K-5 Facilitator Profile
-%select
+%select#facilitator_dropdown
   %option{value:"/private/k5survey"}
     Select a Facilitator
   - all_facilitators.each do |facilitator|
