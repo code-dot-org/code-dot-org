@@ -1530,7 +1530,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+  var newButtonTitle = usingBlocks ? msg.showTextHeader() :
     msg.showBlocksHeader();
   showCodeHeader.firstChild.lastChild.textContent = newButtonTitle;
 
