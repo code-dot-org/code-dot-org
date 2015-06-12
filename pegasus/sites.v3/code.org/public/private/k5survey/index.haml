@@ -21,101 +21,50 @@
 
   def total_survey_data(surveys)
     responses = 0.0
-    satisfaction_total = 0.0
-    number_in_service_teachers = 0.0
-    number_in_school = 0.0
-    number_offering_again = 0.0
-    facilitator_prepared_total = 0.0
-    facilitator_knowledgeable_total = 0.0
-    facilitator_enjoyable_total = 0.0
-    facilitator_professional_total = 0.0
-    started_on_time_total = 0.0
-    ended_on_time_total = 0.0
-    materials_condition_total = 0.0
-    venue_clean_total = 0.0
-    food_total = 0.0
-    tech_access_total = 0.0
-    teacher_prepared_total = 0.0
-    useful_experience_total = 0.0
-    kept_attention_total = 0.0
-    useful_time_total = 0.0
-    best_pd_total = 0.0
-    logical_sequence_total = 0.0
-    suitable_level_total = 0.0
-    equitable_total = 0.0
-    changed_beliefs_total = 0.0
-    current_knowledge_total = 0.0
-    careers_knowledge_total = 0.0
-    comments = []
+    totals = {}
+    fields_to_count =
+      %w{facilitator_prepared_i facilitator_knowledgeable_i facilitator_enjoyable_i facilitator_professional_i workshop_start_i
+         workshop_end_i workshop_materials_i workshop_venue_i workshop_food_i workshop_tech_i experience_courses_i experience_useful_i
+         experience_attention_i experience_time_i experience_bestpd_i experience_sequence_i experience_level_i experience_equitable_i
+         beliefs_i knowledge_i cscareers_i satisfaction_s
+        }
+
+    fields_to_count.each do |field|
+      totals[field] = 0.0
+    end
+
+    totals['teacher_type_s'] = 0.0
+    totals['school_type_s'] = 0.0
+    totals['course_offering_s'] = 0.0
+    totals['satisfaction_s'] = 0.0
+    totals['responses'] = 0.0
+    totals['improve_pd_s'] = []
 
     surveys.each do |survey|
       data = JSON.parse(survey[:data]).merge(JSON.parse(survey[:processed_data]))
       responses += 1
 
       if data['teacher_type_s'] == 'in-service teacher, currently teaching'
-        number_in_service_teachers += 1
+        totals['teacher_type_s'] += 1
       end
       if data['school_type_s'] != 'home school' && data['school_type_s'] != 'other'
-        number_in_school += 1
+        totals['school_type_s'] += 1
       end
       if data['course_offering_s'] == 'yes'
-        number_offering_again += 1
+        totals['course_offering_s'] += 1
       end
       if data['improve_pd_s'] != ""
-        comments << data['improve_pd_s']
+        totals['improve_pd_s'] << data['improve_pd_s']
       end
-      facilitator_prepared_total += data['facilitator_prepared_i'].to_i
-      facilitator_knowledgeable_total += data['facilitator_knowledgeable_i'].to_i
-      facilitator_enjoyable_total += data['facilitator_enjoyable_i'].to_i
-      facilitator_professional_total += data['facilitator_professional_i'].to_i
-      started_on_time_total += data['workshop_start_i'].to_i
-      ended_on_time_total += data['workshop_end_i'].to_i
-      materials_condition_total += data['workshop_materials_i'].to_i
-      venue_clean_total += data['workshop_venue_i'].to_i
-      food_total += data['workshop_food_i'].to_i
-      tech_access_total += data['workshop_tech_i'].to_i
-      teacher_prepared_total += data['experience_courses_i'].to_i
-      useful_experience_total += data['experience_useful_i'].to_i
-      kept_attention_total += data['experience_attention_i'].to_i
-      useful_time_total += data['experience_time_i'].to_i
-      best_pd_total += data['experience_bestpd_i'].to_i
-      logical_sequence_total += data['experience_sequence_i'].to_i
-      suitable_level_total += data['experience_level_i'].to_i
-      equitable_total += data['experience_equitable_i'].to_i
-      changed_beliefs_total += data['beliefs_i'].to_i
-      current_knowledge_total += data['knowledge_i'].to_i
-      careers_knowledge_total += data['cscareers_i'].to_i
-      satisfaction_total += satisfaction_s_to_i(data['satisfaction_s'])
+
+      totals['satisfaction_s'] += satisfaction_s_to_i(data['satisfaction_s'])
+
+      fields_to_count.each do |field|
+        totals[field] += data[field].to_i
+      end
     end
-    {
-      responses: responses,
-      satisfaction_total: satisfaction_total,
-      number_in_service_teachers: number_in_service_teachers,
-      number_in_school: number_in_school,
-      number_offering_again: number_offering_again,
-      facilitator_prepared_total: facilitator_prepared_total,
-      facilitator_knowledgeable_total: facilitator_knowledgeable_total,
-      facilitator_enjoyable_total: facilitator_enjoyable_total,
-      facilitator_professional_total: facilitator_professional_total,
-      started_on_time_total: started_on_time_total,
-      ended_on_time_total: ended_on_time_total,
-      materials_condition_total: materials_condition_total,
-      venue_clean_total: venue_clean_total,
-      food_total: food_total,
-      tech_access_total: tech_access_total,
-      teacher_prepared_total: teacher_prepared_total,
-      useful_experience_total: useful_experience_total,
-      kept_attention_total: kept_attention_total,
-      useful_time_total: useful_time_total,
-      best_pd_total: best_pd_total,
-      logical_sequence_total: logical_sequence_total,
-      suitable_level_total: suitable_level_total,
-      equitable_total: equitable_total,
-      changed_beliefs_total: changed_beliefs_total,
-      current_knowledge_total: current_knowledge_total,
-      careers_knowledge_total: careers_knowledge_total,
-      comments: comments
-    }
+    totals['responses'] = responses
+    return totals
   end
 
   if facilitator_id
@@ -193,214 +142,214 @@
       %td
         \# of teachers surveyed
       %td
-        #{individual_survey_totals[:responses].round}
+        #{individual_survey_totals['responses'].round}
       %td
       %td
-        #{all_surveys_totals[:responses].round}
+        #{all_surveys_totals['responses'].round}
     %tr{style:'background-color:lightgreen'}
       %td
         Overall, rate your satisfaction about the workshop.
       %td
-        #{(individual_survey_totals[:satisfaction_total ]/ individual_survey_totals[:responses]).round(2)}
+        #{(individual_survey_totals['satisfaction_s'] / individual_survey_totals['responses']).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:satisfaction_total] / all_surveys_totals[:responses]).round(2)}
+        #{(all_surveys_totals['satisfaction_s'] / all_surveys_totals['responses']).round(2)}
     %tr{style:'background-color:deepskyblue'}
       %td
         \% In-service teachers
       %td
-        #{(individual_survey_totals[:number_in_service_teachers] / individual_survey_totals[:responses] * 100).round}%
+        #{(individual_survey_totals['teacher_type_s'] / individual_survey_totals['responses'] * 100).round}%
       %td
       %td
-        #{(all_surveys_totals[:number_in_service_teachers] / all_surveys_totals[:responses] * 100).round}%
+        #{(all_surveys_totals['teacher_type_s'] / all_surveys_totals['responses'] * 100).round}%
     %tr{style:'background-color:deepskyblue'}
       %td
         \% in-school - vs afterschool/homeschool
       %td
-        #{(individual_survey_totals[:number_in_school] / individual_survey_totals[:responses] * 100).round}%
+        #{(individual_survey_totals['school_type_s'] / individual_survey_totals['responses'] * 100).round}%
       %td
       %td
-        #{(all_surveys_totals[:number_in_school] / all_surveys_totals[:responses] * 100).round}%
+        #{(all_surveys_totals['school_type_s'] / all_surveys_totals['responses'] * 100).round}%
     %tr{style:'background-color:deepskyblue'}
       %td
         \% who plan to offer the course
       %td
-        #{(individual_survey_totals[:number_offering_again] / individual_survey_totals[:responses] * 100).round}%
+        #{(individual_survey_totals['course_offering_s'] / individual_survey_totals['responses'] * 100).round}%
       %td
       %td
-        #{(all_surveys_totals[:number_offering_again] / all_surveys_totals[:responses] * 100).round}%
+        #{(all_surveys_totals['course_offering_s'] / all_surveys_totals['responses'] * 100).round}%
     %tr{style:'background-color:bisque'}
       %td
         My facilitator came prepared to teach/lead the workshop
       %td
-        #{(individual_survey_totals[:facilitator_prepared_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['facilitator_prepared_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:facilitator_prepared_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['facilitator_prepared_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:bisque'}
       %td
         My facilitator was very knowledgeable in the workshop content and Code.org curriculum.
       %td
-        #{(individual_survey_totals[:facilitator_knowledgeable_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['facilitator_knowledgeable_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:facilitator_knowledgeable_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['facilitator_knowledgeable_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:bisque'}
       %td
         My facilitator was an enjoyable person.
       %td
-        #{(individual_survey_totals[:facilitator_enjoyable_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['facilitator_enjoyable_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:facilitator_enjoyable_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['facilitator_enjoyable_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:bisque'}
       %td
         My facilitator acted in a professional manner.
       %td
-        #{(individual_survey_totals[:facilitator_professional_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['facilitator_professional_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:facilitator_professional_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['facilitator_professional_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:lightblue'}
       %td
         The workshop started on time.
       %td
-        #{(individual_survey_totals[:started_on_time_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['workshop_start_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:started_on_time_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['workshop_start_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:lightblue'}
       %td
         The workshop ended on time.
       %td
-        #{(individual_survey_totals[:ended_on_time_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['workshop_end_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:ended_on_time_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['workshop_end_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:lightblue'}
       %td
         The workshop materials were in perfect condition.
       %td
-        #{(individual_survey_totals[:materials_condition_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['workshop_materials_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:materials_condition_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['workshop_materials_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:lightblue'}
       %td
         The venue was clean with adequate space to work.
       %td
-        #{(individual_survey_totals[:venue_clean_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['workshop_venue_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:venue_clean_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['workshop_venue_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:lightblue'}
       %td
         The food provided was what the facilitator described.
       %td
-        #{(individual_survey_totals[:food_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['workshop_food_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:food_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['workshop_food_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:lightblue'}
       %td
         The workshop had no issues with technology access (computers / Internet / WiFi).
       %td
-        #{(individual_survey_totals[:tech_access_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['workshop_tech_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:tech_access_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['workshop_tech_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:darkseagreen'}
       %td
         I feel prepared to teach the Code.org computer science courses.
       %td
-        #{(individual_survey_totals[:teacher_prepared_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_courses_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:teacher_prepared_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_courses_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:darkseagreen'}
       %td
         The information presented at the workshop was useful.
       %td
-        #{(individual_survey_totals[:useful_experience_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_useful_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:useful_experience_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_useful_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:darkseagreen'}
       %td
         The organization/sequence of this professional development made sense to me.
       %td
-        #{(individual_survey_totals[:logical_sequence_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_sequence_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:logical_sequence_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_sequence_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:darkseagreen'}
       %td
         This professional development kept my attention for the entire time.
       %td
-        #{(individual_survey_totals[:kept_attention_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_attention_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:kept_attention_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_attention_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:darkseagreen'}
       %td
         This professional development was a very good use of my time.
       %td
-        #{(individual_survey_totals[:useful_time_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_time_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:useful_time_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_time_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:darkseagreen'}
       %td
         This was the absolute best professional development I’ve ever participated in.
       %td
-        #{(individual_survey_totals[:best_pd_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_bestpd_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:best_pd_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_bestpd_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:aliceblue'}
       %td
         The professional development session was suitable for my level of experience with teaching Computer Science.
       %td
-        #{(individual_survey_totals[:suitable_level_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_level_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:suitable_level_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_level_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:aliceblue'}
       %td
         This professional development session prepared me to facilitate an equitable computer science classroom.
       %td
-        #{(individual_survey_totals[:equitable_total] / individual_survey_totals[:responses] + 3).round(2)}
+        #{(individual_survey_totals['experience_equitable_i'] / individual_survey_totals['responses'] + 3).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:equitable_total] / all_surveys_totals[:responses] + 3).round(2)}
+        #{(all_surveys_totals['experience_equitable_i'] / all_surveys_totals['responses'] + 3).round(2)}
     %tr{style:'background-color:aliceblue'}
       %td
         How much have your beliefs and values about teaching computer science changed after attending the Code.org professional development workshop?
       %td
-        #{(individual_survey_totals[:changed_beliefs_total] / individual_survey_totals[:responses]).round(2)}
+        #{(individual_survey_totals['beliefs_i'] / individual_survey_totals['responses']).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:changed_beliefs_total] / all_surveys_totals[:responses]).round(2)}
+        #{(all_surveys_totals['beliefs_i'] / all_surveys_totals['responses']).round(2)}
     %tr{style:'background-color:aliceblue'}
       %td
         Which of the following best describes your current level of knowledge related to computer science?
       %td
-        #{(individual_survey_totals[:current_knowledge_total] / individual_survey_totals[:responses]).round(2)}
+        #{(individual_survey_totals['knowledge_i'] / individual_survey_totals['responses']).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:current_knowledge_total] / all_surveys_totals[:responses]).round(2)}
+        #{(all_surveys_totals['knowledge_i'] / all_surveys_totals['responses']).round(2)}
     %tr{style:'background-color:aliceblue'}
       %td
         Which of the following best describes your current level of awareness of careers that use computer science?
       %td
-        #{(individual_survey_totals[:careers_knowledge_total] / individual_survey_totals[:responses]).round(2)}
+        #{(individual_survey_totals['cscareers_i'] / individual_survey_totals['responses']).round(2)}
       %td
       %td
-        #{(all_surveys_totals[:careers_knowledge_total] / all_surveys_totals[:responses]).round(2)}
+        #{(all_surveys_totals['cscareers_i'] / all_surveys_totals['responses']).round(2)}
     %tr
       %th{colspan:4}
         Attendee Comments
-    - individual_survey_totals[:comments].each do |comment|
+    - individual_survey_totals['improve_pd_s'].each do |comment|
       %tr
         %td{colspan:4}
           #{comment}
