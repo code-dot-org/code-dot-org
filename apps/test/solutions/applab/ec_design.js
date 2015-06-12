@@ -75,6 +75,72 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-    }
+    },
+    {
+      description: "resizing",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        var shouldBeResizable = function () {
+          var rootDiv, screen1, resizable, button;
+
+          rootDiv = $('#divApplab');
+          assert.equal(rootDiv.children().length, 1);
+          screen1 = rootDiv.children().first();
+          assert.equal(screen1.attr('id'), 'screen1');
+          assert.equal(screen1.children().length, 1);
+          resizable = screen1.children().first();
+          assert.equal(resizable.hasClass('ui-resizable'), true, 'is resizable');
+          assert.equal(resizable.hasClass('ui-draggable'), true, 'is draggable');
+          assert.equal(resizable.children().length, 4);
+          button = resizable.children().first();
+          assert.equal(button.prop('tagName'), 'BUTTON');
+          assert.equal(resizable.children().eq(1).hasClass('ui-resizable-handle'),
+            true, 'is resizable handle');
+          assert.equal(resizable.children().eq(2).hasClass('ui-resizable-handle'),
+            true, 'is resizable handle');
+          assert.equal(resizable.children().eq(3).hasClass('ui-resizable-handle'),
+            true, 'is resizable handle');
+        };
+
+        var shouldNotBeResizable = function () {
+          var rootDiv, screen1, resizable, button;
+
+          rootDiv = $('#divApplab');
+          assert.equal(rootDiv.children().length, 1);
+          screen1 = rootDiv.children().first();
+          assert.equal(screen1.attr('id'), 'screen1');
+          assert.equal(screen1.children().length, 1);
+          // button should now be a direct descendant
+          button = screen1.children().first();
+          assert.equal(button.prop('tagName'), 'BUTTON');
+        };
+
+        $("#designModeButton").click();
+        testUtils.dragToVisualization('BUTTON', 10, 10);
+        validatePropertyRow(1, 'id', 'button1', assert);
+        shouldBeResizable();
+
+        $("#codeModeButton").click();
+        assert.equal($("#design-properties").is(':visible'), false);
+        shouldNotBeResizable();
+
+        $("#designModeButton").click();
+        shouldBeResizable();
+
+        $("#runButton").click();
+        shouldNotBeResizable();
+
+        $("#resetButton").click();
+        shouldBeResizable();
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
   ]
 };

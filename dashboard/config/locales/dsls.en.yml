@@ -1185,18 +1185,18 @@ en:
         Match each data type with its color code: Match each data type with its color code
         Number: Number
         String: String
-        http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
-        http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
-        http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
+        https://studio.code.org/script_assets/pd/blue.png: https://studio.code.org/script_assets/pd/blue.png
+        https://studio.code.org/script_assets/pd/purple.png: https://studio.code.org/script_assets/pd/purple.png
+        https://studio.code.org/script_assets/pd/teal.png: https://studio.code.org/script_assets/pd/teal.png
       PDAlg block match:
         Block match: Block match
         Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match the expressions with the appropriate Circle of Evaluation or Evaluation Block
-        http://staging.studio.code.org/script_assets/pd/block1.png: http://staging.studio.code.org/script_assets/pd/block1.png
-        http://staging.studio.code.org/script_assets/pd/block2.png: http://staging.studio.code.org/script_assets/pd/block2.png
-        http://staging.studio.code.org/script_assets/pd/block3.png: http://staging.studio.code.org/script_assets/pd/block3.png
-        http://staging.studio.code.org/script_assets/pd/circle1.png: http://staging.studio.code.org/script_assets/pd/circle1.png
-        http://staging.studio.code.org/script_assets/pd/circle2.png: http://staging.studio.code.org/script_assets/pd/circle2.png
-        http://staging.studio.code.org/script_assets/pd/circle3.png: http://staging.studio.code.org/script_assets/pd/circle3.png
+        https://studio.code.org/script_assets/pd/block1.png: https://studio.code.org/script_assets/pd/block1.png
+        https://studio.code.org/script_assets/pd/block2.png: https://studio.code.org/script_assets/pd/block2.png
+        https://studio.code.org/script_assets/pd/block3.png: https://studio.code.org/script_assets/pd/block3.png
+        https://studio.code.org/script_assets/pd/circle1.png: https://studio.code.org/script_assets/pd/circle1.png
+        https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
+        https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
         'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
@@ -1967,7 +1967,7 @@ en:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
       PDAlg Blocks Video:
         In which area of the screen do you click blocks together to write a program?: In which area of the screen do you click blocks together to write a program?
         Intro to Evaluation Blocks: Intro to Evaluation Blocks
@@ -2887,6 +2887,7 @@ en:
         Enter title here: Enter title here
       Trent Test Level:
         Enter title here: Enter title here
+      U1L1 - FR computer science word association: {}
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
