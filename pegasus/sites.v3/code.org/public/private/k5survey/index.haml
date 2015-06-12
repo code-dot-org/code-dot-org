@@ -105,13 +105,13 @@
     Select a Facilitator
   - all_facilitators.each do |facilitator|
     %option{value:'/private/k5survey?user_id=' + facilitator[:user_id].to_s}
-      #{facilitator[:name]}
+      #{facilitator[:user_id].to_s + ' - ' + facilitator[:name]}
 
 - if workshops
   %h2
     #{workshops.first[:name]}
 
-- if params['user_id']
+- if params['user_id'] && individual_surveys.count > 0
   %table{style:'width:970px; layout:fixed;'}
     %colgroup
       %col{width: "400"}
@@ -353,3 +353,6 @@
       %tr
         %td{colspan:4}
           #{comment}
+- else
+  %div.jumbotron
+    There are no surveys regarding this facilitator
