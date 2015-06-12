@@ -2,6 +2,7 @@ var errorMapper = require('./errorMapper');
 
 var annotations = [];
 var aceSession;
+var dropletEditor;
 
 /**
  * Update gutter with our annotation list
@@ -12,6 +13,22 @@ function updateGutter() {
     return;
   }
   aceSession.setAnnotations(annotations);
+
+  if (dropletEditor) {
+    // TODO: connect to missing hover event to show text
+    // TODO: differentiate between error and warning (type is always warning)
+
+    // Reset all decorations:
+    dropletEditor.gutterDecorations = {};
+    dropletEditor.redrawMain();
+
+    // Add each annotation as a gutter decoration:
+    for (var i = 0; i < annotations.length; i++) {
+      dropletEditor.addGutterDecoration(
+          annotations[i].row,
+          'droplet-' + annotations[i].type);
+    }
+  }
 }
 
 /**
@@ -24,13 +41,15 @@ function updateGutter() {
 module.exports = {
   detachFromSession: function () {
     aceSession = null;
+    dropletEditor = null;
   },
   
-  attachToSession: function (session) {
+  attachToSession: function (session, editor) {
     if (aceSession && session !== aceSession) {
       throw new Error('Already attached to ace session');
     }
     aceSession = session;
+    dropletEditor = editor;
   },
 
   setJSLintAnnotations: function (jslintResults) {

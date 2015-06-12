@@ -4155,7 +4155,7 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],261:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4706,7 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"./locale":145,"./utils":311}],289:[function(require,module,exports){
+},{"./locale":145,"./utils":313}],291:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4729,7 +4729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],263:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],264:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -4995,7 +4995,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":103}],262:[function(require,module,exports){
+},{"./dom":103}],263:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5070,7 +5070,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],295:[function(require,module,exports){
+},{}],297:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -5134,7 +5134,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],6:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -5218,7 +5218,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":5,"./blocksCommon":71,"./dom":103,"./required_block_utils":260,"./utils":311}],260:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":71,"./dom":103,"./required_block_utils":261,"./utils":313}],261:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5541,7 +5541,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":70,"./locale":145,"./utils":311,"./xml":312}],71:[function(require,module,exports){
+},{"./block_utils":70,"./locale":145,"./utils":313,"./xml":314}],71:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5713,6 +5713,7 @@ function installWhenRun(blockly, skin, isK1) {
 },{"./locale":145}],5:[function(require,module,exports){
 /* global Blockly, ace:true, $, requirejs, marked */
 
+var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -6898,7 +6899,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
 // Overwritten by applab.
 StudioApp.prototype.runButtonClickWrapper = function (callback) {
-  $(window).trigger('run_button_pressed');
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+    $(window).trigger('appModeChanged');
+  }
   callback();
 };
 
@@ -7040,9 +7044,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
-    // Note (brent): this mode is currently defined in applab, which means we
-    // dont have it available to us in all apps, and ends up with a 404 as it
-    // tries to hit the network. At some point this should be cleaned up
+
+    // Init and define our custom ace mode:
+    aceMode.defineForAce(options.dropletConfig, this.editor);
+    // Now set the editor to that mode:
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
@@ -7344,7 +7349,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./blockTooltips/DropletTooltipManager":68,"./block_utils":70,"./constants.js":102,"./dom":103,"./dropletUtils":104,"./feedback":124,"./locale":145,"./templates/builder.html.ejs":283,"./templates/buttons.html.ejs":284,"./templates/instructions.html.ejs":286,"./templates/learn.html.ejs":287,"./templates/makeYourOwn.html.ejs":288,"./utils":311,"./xml":312,"url":479}],479:[function(require,module,exports){
+},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":68,"./block_utils":70,"./constants.js":102,"./dom":103,"./dropletUtils":104,"./feedback":124,"./locale":145,"./templates/builder.html.ejs":285,"./templates/buttons.html.ejs":286,"./templates/instructions.html.ejs":288,"./templates/learn.html.ejs":289,"./templates/makeYourOwn.html.ejs":290,"./utils":313,"./xml":314,"url":481}],481:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8053,13 +8058,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":462,"querystring":465}],465:[function(require,module,exports){
+},{"punycode":464,"querystring":467}],467:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":463,"./encode":464}],464:[function(require,module,exports){
+},{"./decode":465,"./encode":466}],466:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8146,7 +8151,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],463:[function(require,module,exports){
+},{}],465:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8232,7 +8237,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],462:[function(require,module,exports){
+},{}],464:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8743,7 +8748,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],288:[function(require,module,exports){
+},{}],290:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8763,7 +8768,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],287:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],289:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8785,7 +8790,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],286:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],288:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8805,7 +8810,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],283:[function(require,module,exports){
+},{"ejs":484}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8825,7 +8830,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],124:[function(require,module,exports){
+},{"ejs":484}],124:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10058,7 +10063,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":100,"./constants":102,"./dom":103,"./feedbackBlocks":125,"./locale":145,"./templates/buttons.html.ejs":284,"./templates/code.html.ejs":285,"./templates/shareFailure.html.ejs":291,"./templates/sharing.html.ejs":292,"./templates/showCode.html.ejs":293,"./templates/trophy.html.ejs":294,"./utils":311,"./xml":312}],294:[function(require,module,exports){
+},{"./codegen":100,"./constants":102,"./dom":103,"./feedbackBlocks":125,"./locale":145,"./templates/buttons.html.ejs":286,"./templates/code.html.ejs":287,"./templates/shareFailure.html.ejs":293,"./templates/sharing.html.ejs":294,"./templates/showCode.html.ejs":295,"./templates/trophy.html.ejs":296,"./utils":313,"./xml":314}],296:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10078,7 +10083,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],293:[function(require,module,exports){
+},{"ejs":484}],295:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10098,7 +10103,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],292:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],294:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10118,7 +10123,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],291:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],293:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10138,7 +10143,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],285:[function(require,module,exports){
+},{"ejs":484}],287:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10158,7 +10163,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],284:[function(require,module,exports){
+},{"ejs":484}],286:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10178,7 +10183,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":482}],125:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],125:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10308,7 +10313,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":102,"./templates/readonly.html.ejs":290}],290:[function(require,module,exports){
+},{"./constants":102,"./templates/readonly.html.ejs":292}],292:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10329,7 +10334,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],102:[function(require,module,exports){
+},{"ejs":484}],102:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -10707,7 +10712,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":312}],68:[function(require,module,exports){
+},{"./xml":314}],68:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -11044,7 +11049,7 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
 module.exports = DropletFunctionTooltip;
 
 
-},{"../locale":145,"../utils":311}],145:[function(require,module,exports){
+},{"../locale":145,"../utils":313}],145:[function(require,module,exports){
 // base locale
 
 module.exports = window.blockly.common_locale;
@@ -11219,7 +11224,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],62:[function(require,module,exports){
+},{"ejs":484}],62:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -11596,7 +11601,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":311}],67:[function(require,module,exports){
+},{"../utils":313}],67:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11621,7 +11626,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":482}],482:[function(require,module,exports){
+},{"ejs":484}],484:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11976,7 +11981,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":483,"./utils":484,"fs":313,"path":460}],484:[function(require,module,exports){
+},{"./filters":485,"./utils":486,"fs":315,"path":462}],486:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12000,7 +12005,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],483:[function(require,module,exports){
+},{}],485:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12199,7 +12204,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],460:[function(require,module,exports){
+},{}],462:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12427,7 +12432,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":461}],461:[function(require,module,exports){
+},{"_process":463}],463:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12486,7 +12491,233 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],313:[function(require,module,exports){
+},{}],315:[function(require,module,exports){
+
+},{}],8:[function(require,module,exports){
+/* global ace */
+var _dropletConfig;
+var _dropletEditor;
+
+var dropletUtils = require('../dropletUtils');
+var annotationList = require('./annotationList');
+
+exports.defineForAce = function (dropletConfig, dropletEditor) {
+  _dropletConfig = dropletConfig;
+  _dropletEditor = dropletEditor;
+  // define ourselves for ace, so that it knows where to get us
+  ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
+
+    var oop = acerequire("ace/lib/oop");
+    var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
+    var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
+    var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+    var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
+    var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
+    var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
+
+    var Mode = function() {
+        this.HighlightRules = JavaScriptHighlightRules;
+        this.$outdent = new MatchingBraceOutdent();
+        this.$behaviour = new CstyleBehaviour();
+        this.foldingRules = new CStyleFoldMode();
+    };
+    oop.inherits(Mode, JavaScriptMode);
+
+    (function() {
+
+      // A set of keywords we don't want to autocomplete
+      var excludedKeywords = [
+        'ArrayBuffer',
+        'Collator',
+        'EvalError',
+        'Float32Array',
+        'Float64Array',
+        'Intl',
+        'Int16Array',
+        'Int32Array',
+        'Int8Array',
+        'Iterator',
+        'NumberFormat',
+        'Object',
+        'QName',
+        'RangeError',
+        'ReferenceError',
+        'StopIteration',
+        'SyntaxError',
+        'TypeError',
+        'Uint16Array',
+        'Uint32Array',
+        'Uint8Array',
+        'Uint8ClampedArra',
+        'URIError'
+      ];
+
+      // Manually create our highlight rules so that we can modify it
+      this.$highlightRules = new JavaScriptHighlightRules();
+
+      excludedKeywords.forEach(function (keywordToRemove) {
+        var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+        if (keywordIndex > 0) {
+          this.$highlightRules.$keywordList.splice(keywordIndex);
+        }
+      }, this);
+
+      this.createWorker = function(session) {
+        var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
+        worker.attachToDocument(session.getDocument());
+        var newOptions = {
+          unused: true,
+          undef: true,
+          predef: {
+          }
+        };
+        // Mark all of our blocks as predefined so that linter doesnt complain about
+        // using undefined variables
+        dropletUtils.getAllAvailableDropletBlocks(_dropletConfig).forEach(function (block) {
+          newOptions.predef[block.func] = false;
+        });
+
+        annotationList.attachToSession(session, _dropletEditor);
+
+        worker.send("changeOptions", [newOptions]);
+
+        worker.on("jslint", annotationList.setJSLintAnnotations);
+
+        worker.on("terminate", function() {
+          session.clearAnnotations();
+        });
+
+        return worker;
+      };
+
+      this.cleanup = function () {
+        annotationList.detachFromSession();
+      };
+    }).call(Mode.prototype);
+
+  exports.Mode = Mode;
+  });
+};
+
+
+},{"../dropletUtils":104,"./annotationList":6}],6:[function(require,module,exports){
+var errorMapper = require('./errorMapper');
+
+var annotations = [];
+var aceSession;
+var dropletEditor;
+
+/**
+ * Update gutter with our annotation list
+ * @private
+ */
+function updateGutter() {
+  if (!aceSession) {
+    return;
+  }
+  aceSession.setAnnotations(annotations);
+
+  if (dropletEditor) {
+    // TODO: connect to missing hover event to show text
+    // TODO: differentiate between error and warning (type is always warning)
+
+    // Reset all decorations:
+    dropletEditor.gutterDecorations = {};
+    dropletEditor.redrawMain();
+
+    // Add each annotation as a gutter decoration:
+    for (var i = 0; i < annotations.length; i++) {
+      dropletEditor.addGutterDecoration(
+          annotations[i].row,
+          'droplet-' + annotations[i].type);
+    }
+  }
+}
+
+/**
+ * Object for tracking annotations placed in gutter. General design is as
+ * follows:
+ * When jslint runs (i.e. code changes) display just jslint errors
+ * When code runs, display jslint errors and runtime errors. Runtime errors will
+ * go away the next time jstlint gets run (when code changes)
+ */
+module.exports = {
+  detachFromSession: function () {
+    aceSession = null;
+    dropletEditor = null;
+  },
+  
+  attachToSession: function (session, editor) {
+    if (aceSession && session !== aceSession) {
+      throw new Error('Already attached to ace session');
+    }
+    aceSession = session;
+    dropletEditor = editor;
+  },
+
+  setJSLintAnnotations: function (jslintResults) {
+    errorMapper.processResults(jslintResults);
+    // clone annotations in case anyone else has a reference to data
+    annotations = jslintResults.data.slice();
+    updateGutter();
+  },
+
+  /**
+   * @param {string} level
+   * @param {number} lineNumber One index line number
+   * @param {string} text Error string
+   */
+  addRuntimeAnnotation: function (level, lineNumber, text) {
+    var annotation = {
+      row: lineNumber - 1,
+      col: 0,
+      raw: text,
+      text: text,
+      type: level.toLowerCase()
+    };
+    annotations.push(annotation);
+    updateGutter();
+  },
+};
+
+
+},{"./errorMapper":7}],7:[function(require,module,exports){
+var errorMap = [
+  {
+    original: /Assignment in conditional expression/,
+    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
+  },
+  {
+    original: /(.*)\sis defined but never used./,
+    replacement: "$1 is defined, but it's not called in your program."
+  },
+  {
+    original: /(.*)\sis not defined./,
+    replacement: "$1 hasn't been declared yet."
+  }
+];
+
+/**
+ * Takes the results of a JSLint pass, and modifies the error text according to
+ * our mapping. Note this makes changes in place to the passed in results
+ * object.
+ */
+module.exports.processResults = function (results) {
+  results.data.forEach(function (item) {
+    if (item.type === 'info') {
+      item.type = 'warning';
+    }
+
+    errorMap.forEach(function (errorMapping) {
+      if (!errorMapping.original.test(item.text)) {
+        return;
+      }
+
+      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
+    });
+  });
+};
+
 
 },{}],3:[function(require,module,exports){
 /**
@@ -13071,7 +13302,7 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
 };
 
 
-},{"./codegen":100,"./utils":311}],100:[function(require,module,exports){
+},{"./codegen":100,"./utils":313}],100:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -14017,7 +14248,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":311}],311:[function(require,module,exports){
+},{"./utils":313}],313:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -14308,7 +14539,7 @@ exports.getPegasusHost = function() {
 };
 
 
-},{"./hammer":136,"./lodash":146,"./xml":312}],312:[function(require,module,exports){
+},{"./hammer":136,"./lodash":146,"./xml":314}],314:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

@@ -20,6 +20,11 @@ class LevelLoader
     level.md5 = Digest::MD5.hexdigest(level_data)
     load_custom_level_xml(level_data, level) if level.changed?
     level
+  rescue Exception => e
+    # print filename for better debugging
+    new_e = Exception.new("in level: #{level_path}: #{e.message}")
+    new_e.set_backtrace(e.backtrace)
+    raise new_e
   end
 
   def self.load_custom_level_xml(xml, level)

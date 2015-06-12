@@ -8,7 +8,6 @@
 /* global dashboard */
 
 'use strict';
-require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -31,7 +30,7 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
@@ -416,6 +415,15 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  // Pre-populate asset list
+  if (window.dashboard && dashboard.project.current) {
+    clientApi.ajax('GET', '', function (xhr) {
+      assetListStore.reset(JSON.parse(xhr.responseText));
+    }, function () {
+      // Unable to load asset list
+    });
+  }
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -838,13 +846,27 @@ Applab.reset = function(first) {
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
+  $(window).trigger('run_button_pressed');
+  Applab.serializeAndSave(callback, true);
+};
+
+/**
+ * We also want to serialize in save in some other cases (i.e. entering code
+ * mode from design mode).
+ */
+Applab.serializeAndSave = function (callback, runButtonClick) {
+  designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
   if (!window.dashboard || (!dashboard.project.isEditing ||
       (dashboard.project.current && dashboard.project.current.id))) {
-    $(window).trigger('run_button_pressed');
-    callback();
+    $(window).trigger('appModeChanged');
+    if (callback) {
+      callback();
+    }
   } else {
-    $(window).trigger('run_button_pressed', callback);
+    // Otherwise, makes sure we don't hit our callback until after we've created
+    // a channel
+    $(window).trigger('appModeChanged', callback());
   }
 };
 
@@ -859,7 +881,6 @@ Applab.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  designMode.serializeToLevelHtml();
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -942,6 +963,7 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
+    // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
     annotationList.attachToSession(session);
   } else {
@@ -1092,7 +1114,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
-  designMode.serializeToLevelHtml();
+  Applab.serializeAndSave();
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1251,7 +1273,7 @@ Applab.getAssetDropdown = function (typeFilter) {
   var handleChooseClick = function (callback) {
     showAssetManager(function (filename) {
       callback(quote(filename));
-    }, 'image');
+    }, typeFilter);
   };
   options.push({
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
@@ -1259,10 +1281,3 @@ Applab.getAssetDropdown = function (typeFilter) {
   });
   return options;
 };
-
-// Pre-populate asset list
-if (window.dashboard && dashboard.project.current) {
-  clientApi.ajax('GET', '', function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-  });
-}

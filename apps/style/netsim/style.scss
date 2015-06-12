@@ -1,6 +1,7 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
 @import 'color';
+@import 'font';
 
 $alabaster: #fafafa;
 $own-node-background-color: $white;
@@ -122,11 +123,11 @@ $wide-column-width: 121px;
   }
 
   h1 {
-    font-family: "Gotham 5r", sans-serif;
+    font-family: $gotham-bold;
   }
 
   p, label {
-    font-family: "Gotham 4r", sans-serif;
+    font-family: $gotham-regular;
   }
 
   table {
@@ -139,13 +140,13 @@ $wide-column-width: 121px;
 
     th {
       border: solid $charcoal 1px;
-      font-family: "Gotham 4r", sans-serif;
+      font-family: $gotham-regular;
       font-size: 10pt;
     }
 
     td {
       border: solid $lighter_gray 1px;
-      font-family: "Gotham 4r", sans-serif;
+      font-family: $gotham-regular;
 
       // Make sure table text can be selected and copied
       @include user_select(text);
@@ -185,7 +186,7 @@ $wide-column-width: 121px;
     color: $white;
     background-color: $orange;
     border-radius: 3px;
-    font-family: "Gotham 4r", sans-serif;
+    font-family: $gotham-regular;
     font-size: 8pt;
     line-height: 14pt;
     padding: 0 10px;
@@ -258,6 +259,16 @@ $wide-column-width: 121px;
 
         rect {
           stroke: $light_purple;
+        }
+      }
+      .auto-dns-node {
+        circle {
+          stroke: $light_yellow;
+          fill: $light_yellow;
+        }
+
+        rect {
+          stroke: $light_yellow;
         }
       }
 
@@ -435,7 +446,7 @@ $wide-column-width: 121px;
     h1 {
       margin: 0;
       padding: 0.3em 0.5em;
-      font-family: "Gotham 4r", sans-serif;
+      font-family: $gotham-regular;
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
@@ -810,7 +821,7 @@ $wide-column-width: 121px;
         // Make tabs just a _little_ bit more compact
         margin-right: 2px;
         a {
-          font-family: "Gotham 5r", sans-serif;
+          font-family: $gotham-bold;
           font-size: 8pt;
           padding: 0 1em;
         }
