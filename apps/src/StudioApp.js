@@ -1532,7 +1532,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var showCodeHeader = document.getElementById('show-code-header');
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
-  showCodeHeader.firstChild.textContent = newButtonTitle;
+  showCodeHeader.firstChild.lastChild.textContent = newButtonTitle;
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {

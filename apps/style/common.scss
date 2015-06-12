@@ -820,6 +820,12 @@ $aniGifPreviewHeight: 60px;
   user-select: none;
 }
 
+$workspace-header-button-border-width: 1px;
+$workspace-header-button-height: 22px;
+$workspace-header-button-margin: ($workspace-headers-height -
+    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
+    ) / 2;
+
 #headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -869,15 +875,17 @@ $aniGifPreviewHeight: 60px;
   #blockCounter, #blockUsed {
     display: inline-block;
   }
-  $workspace-header-button-border-width: 1px;
-  $workspace-header-button-height: 22px;
+
   .workspace-header-button {
     cursor: pointer;
     float: right;
     overflow: hidden;
     background-color: $light_purple;
-    margin: ($workspace-headers-height - ($workspace-header-button-height + 2 * $workspace-header-button-border-width)) / 2;
-    border: $workspace-header-button-border-width solid $charcoal;
+    margin-top: $workspace-header-button-margin;
+    margin-bottom: $workspace-header-button-margin;
+    margin-right: $workspace-header-button-margin;
+    margin-left: 0;
+    border: $workspace-header-button-border-width groove $charcoal;
     height: $workspace-header-button-height;
     border-radius: 4px; // TODO: Make mixin
     font-family: $gotham-bold;
@@ -885,8 +893,16 @@ $aniGifPreviewHeight: 60px;
       background-color: $cyan;
     }
     span {
-      padding: 0 20px;
+      padding: 0 12px;
       line-height: $workspace-header-button-height;
+    }
+    .fa {
+      line-height: $workspace-header-button-height;
+      padding-right: 8px;
+      font-size: 15px;
+    }
+    .fa-code {
+      font-weight: bold;
     }
   }
   #clear-puzzle-header:hover {
@@ -927,9 +943,14 @@ $aniGifPreviewHeight: 60px;
     float: right;
   }
   .workspace-header-button {
-    border-left: 0;
-    border-right: 1px solid gray;
+    margin-left: $workspace-header-button-margin;
+    margin-right: 0;
     float: left;
+
+    .fa {
+      padding-right: 0;
+      padding-left: 8px;
+    }
   }
 }
 
