@@ -4,9 +4,10 @@
 
 #landingpage
   .welcome.row
+    .span1
     .welcomeleft.span2
       = image_tag('codeorg-studio-logo-white.png', style: "height:120px")
-    .welcomeright.span8
+    .welcomeright.span7
       .lines_of_code_header
         %a.lines_of_code_link{href: CDO.code_org_url('/loc')}
           - loc = fetch_metrics['lines_of_code']
