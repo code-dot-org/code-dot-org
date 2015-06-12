@@ -12,7 +12,7 @@ window.evalMain = function(options) {
 };
 
 
-},{"../appMain":6,"../skins":262,"./blocks":106,"./eval":108,"./levels":120}],108:[function(require,module,exports){
+},{"../appMain":6,"../skins":263,"./blocks":106,"./eval":108,"./levels":120}],108:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -501,7 +501,7 @@ function onReportComplete(response) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../StudioApp":5,"../block_utils":70,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../dom":103,"../locale":145,"../skins":262,"../templates/page.html.ejs":290,"../utils":312,"./api":105,"./controls.html.ejs":107,"./evalError":111,"./evalText":117,"./levels":120,"./locale":121,"./visualization.html.ejs":123}],123:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":70,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../dom":103,"../locale":145,"../skins":263,"../templates/page.html.ejs":291,"../utils":313,"./api":105,"./controls.html.ejs":107,"./evalError":111,"./evalText":117,"./levels":120,"./locale":121,"./visualization.html.ejs":123}],123:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -521,7 +521,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],120:[function(require,module,exports){
+},{"ejs":484}],120:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -613,7 +613,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"./locale":121,"ejs":483}],106:[function(require,module,exports){
+},{"../locale":145,"./locale":121,"ejs":484}],106:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -913,7 +913,7 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
 }
 
 
-},{"../locale":145,"../sharedFunctionalBlocks":261,"./evalUtils":119,"./locale":121}],105:[function(require,module,exports){
+},{"../locale":145,"../sharedFunctionalBlocks":262,"./evalUtils":119,"./locale":121}],105:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1542,7 +1542,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
 };
 
 
-},{"../utils":312,"./evalError":111}],111:[function(require,module,exports){
+},{"../utils":313,"./evalError":111}],111:[function(require,module,exports){
 var evalMsg = require('./locale');
 
 /**

@@ -187,7 +187,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":262}],131:[function(require,module,exports){
+},{"../skins":263}],131:[function(require,module,exports){
 /*jshint multistr: true */
 
 // todo - i think our prepoluated code counts as LOCs
@@ -763,7 +763,7 @@ module.exports.k1_9 = {
 };
 
 
-},{"../block_utils":70,"../utils":312,"./constants":128,"./locale":132}],130:[function(require,module,exports){
+},{"../block_utils":70,"../utils":313,"./constants":128,"./locale":132}],130:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -1777,7 +1777,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":100,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":262,"../templates/page.html.ejs":290,"../utils":312,"./api":126,"./constants":128,"./controls.html.ejs":129,"./locale":132,"./visualization.html.ejs":135}],135:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":100,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":263,"../templates/page.html.ejs":291,"../utils":313,"./api":126,"./constants":128,"./controls.html.ejs":129,"./locale":132,"./visualization.html.ejs":135}],135:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1797,7 +1797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],129:[function(require,module,exports){
+},{"ejs":484}],129:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1817,7 +1817,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":483}],128:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],128:[function(require,module,exports){
 module.exports = {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,
@@ -2475,7 +2475,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../StudioApp":5,"../block_utils":70,"../locale":145,"../utils":312,"./locale":132}],132:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":70,"../locale":145,"../utils":313,"./locale":132}],132:[function(require,module,exports){
 // locale for flappy
 
 module.exports = window.blockly.flappy_locale;
