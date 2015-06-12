@@ -6,3 +6,6 @@ java_script:
 
 scss:
   enabled: false
+
+haml:
+  enabled: false

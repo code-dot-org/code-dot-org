@@ -77,6 +77,7 @@ module.exports = {
     element.type = 'radio';
     element.style.width = '12px';
     element.style.height = '12px';
+    element.style.margin = '0px';
 
     this.onDeserialize(element);
 
