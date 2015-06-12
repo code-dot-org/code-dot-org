@@ -2107,6 +2107,14 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+        Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
+        Which one is the shortest path tree from the source node indicated?: Which one is the shortest path tree from the source node indicated?
       U1L10 Assessment 1:
         2 bits: 2 bits
         3 bits: 3 bits

@@ -417,6 +417,15 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  // Pre-populate asset list
+  if (window.dashboard && dashboard.project.current) {
+    clientApi.ajax('GET', '', function (xhr) {
+      assetListStore.reset(JSON.parse(xhr.responseText));
+    }, function () {
+      // Unable to load asset list
+    });
+  }
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1272,10 +1281,3 @@ Applab.getAssetDropdown = function (typeFilter) {
   });
   return options;
 };
-
-// Pre-populate asset list
-if (window.dashboard && dashboard.project.current) {
-  clientApi.ajax('GET', '', function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-  });
-}
