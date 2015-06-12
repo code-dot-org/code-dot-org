@@ -790,7 +790,7 @@ Applab.reset = function(first) {
 
   var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
   designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(allowDragging);
