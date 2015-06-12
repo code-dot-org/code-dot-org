@@ -25,6 +25,20 @@
       .span2.imgspan
         %img{style: 'height: 100px;', src: '//code.org/images/fit-520/code20hr.jpg'}
 
+- elsif id == 'artist' || id == 'playlab'
+
+  - url = script_reset_url(id)
+  - title = data_t_suffix('script.name', id, 'title')
+  - body = data_t_suffix('script.name', id, 'description_short')
+
+  .span6.miniblock
+    =link_to url do
+      .span4.heading
+        %h3= title
+        .smalltext= body
+      .span2.imgspan
+        %img{style: 'height: 100px;', src: CDO.code_org_url("/shared/images/courses/fill-240x200/logo_tall_#{id}.jpg")}
+
 -elsif id == 'course1' || id == 'course2' || id == 'course3' || id == 'course4' || id == 'algebra'
   .span9.miniblock.miniblock-short
     =link_to script_url(id) do
