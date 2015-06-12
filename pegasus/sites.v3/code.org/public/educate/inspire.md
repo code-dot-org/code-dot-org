@@ -81,7 +81,8 @@ Share these inspiring stories about students and teachers who are changing the f
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
 - [NCWIT outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
 - [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
-- [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435) 
+- [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435)
+- [Awards and recognition for girls engaged in coding](www.aspirations.org) 
 
 ## 5. Other Materials
 
