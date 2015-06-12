@@ -87,7 +87,7 @@
       careers_knowledge_total += data['cscareers_i'].to_i
       satisfaction_total += satisfaction_s_to_i(data['satisfaction_s'])
     end
-    return {
+    {
       responses: responses,
       satisfaction_total: satisfaction_total,
       number_in_service_teachers: number_in_service_teachers,
