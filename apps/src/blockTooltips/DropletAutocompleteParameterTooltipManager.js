@@ -89,6 +89,14 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     this.dropletTooltipManager.showDocFor(functionName);
     event.stopPropagation();
   }.bind(this));
+
+  var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
+  if (chooseAssetLink) {
+    dom.addClickTouchEvent(chooseAssetLink, function(event) {
+      // TODO: show asset manager, insert chosen asset
+      event.stopPropagation();
+    }.bind(this));
+  }
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
