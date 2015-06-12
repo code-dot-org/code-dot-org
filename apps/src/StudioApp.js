@@ -1,5 +1,6 @@
 /* global Blockly, ace:true, $, requirejs, marked */
 
+var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -1185,7 +1186,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
 // Overwritten by applab.
 StudioApp.prototype.runButtonClickWrapper = function (callback) {
-  $(window).trigger('run_button_pressed');
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+    $(window).trigger('appModeChanged');
+  }
   callback();
 };
 
@@ -1327,9 +1331,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
-    // Note (brent): this mode is currently defined in applab, which means we
-    // dont have it available to us in all apps, and ends up with a 404 as it
-    // tries to hit the network. At some point this should be cleaned up
+
+    // Init and define our custom ace mode:
+    aceMode.defineForAce(options.dropletConfig, this.editor);
+    // Now set the editor to that mode:
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
