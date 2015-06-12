@@ -1332,8 +1332,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     this.editor.aceEditor.setShowPrintMargin(false);
 
-    // Pass the current dropletConfig over to our custom ace mode:
-    aceMode.setDropletConfig(options.dropletConfig);
+    // Init and define our custom ace mode:
+    aceMode.defineForAce(options.dropletConfig, this.editor);
     // Now set the editor to that mode:
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
