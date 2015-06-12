@@ -788,12 +788,13 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
-  designMode.parseFromLevelHtml(newDivApplab, allowDragging);
+  var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
+  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
   designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
-    designMode.resetElementTray(allowDragging);
+    designMode.resetElementTray(isDesigning);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
