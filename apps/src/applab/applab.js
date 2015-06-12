@@ -1273,7 +1273,7 @@ Applab.getAssetDropdown = function (typeFilter) {
   var handleChooseClick = function (callback) {
     showAssetManager(function (filename) {
       callback(quote(filename));
-    }, 'image');
+    }, typeFilter);
   };
   options.push({
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
