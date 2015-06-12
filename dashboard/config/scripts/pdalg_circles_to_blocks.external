@@ -13,7 +13,7 @@ The most immediate and striking difference between Bootstrap and CS in Algebra i
 
 2. Draw the Circles of Evaluation
 
-  <img src="http://studio.code.org/script_assets/pd/645.png"/>
+  <img src="https://studio.code.org/script_assets/pd/645.png"/>
 
 3. Convert the Circles to Racket code
 
@@ -21,7 +21,7 @@ The most immediate and striking difference between Bootstrap and CS in Algebra i
 
 At some point some of your students may have moved on from the intermediate step of drawing the Circles of Evaluation, but for many students the visual layout is an essential step in understanding how to compose complex expressions and functions. With this in mind, we've developed a brand new programming language from the ground up that uses the visual metaphor of Circles as the actual language. We call this new language "Evaluation Blocks", and it looks like this:
 
-<img src="http://studio.code.org/script_assets/pd/circles_to_blocks.png"/>
+<img src="https://studio.code.org/script_assets/pd/circles_to_blocks.png"/>
 
 ### Why Blocks?
 Moving from a text language to a block-based language
