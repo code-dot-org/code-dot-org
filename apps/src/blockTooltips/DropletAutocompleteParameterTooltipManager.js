@@ -96,7 +96,6 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     dom.addClickTouchEvent(chooseAssetLink, function(event) {
       cursorTooltip.tooltipster('hide');
       chooseAsset(function(filename) {
-        console.log(filename);
         aceEditor.onTextInput('"' + filename + '"');
       });
       event.stopPropagation();
