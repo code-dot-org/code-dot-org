@@ -46,7 +46,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-v", "--browser_version Browser Version", String, "Specify a browser version") do |bv|
     $options.browser_version = bv
   end
-  opts.on("-f", "--feature Feature", String, "Single feature to run") do |f|
+  opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
     $options.feature = f
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost:9393") do |d|
@@ -162,9 +162,13 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
+features = $options.feature || Dir.glob('features/*.feature')
+browser_features = $browsers.product features
+
+Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
+  feature_name = feature.gsub('features/', '').gsub('.feature', '')
   browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_string = browser_name + ($options.run_eyes_tests ? '_eyes' : '')
+  test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
@@ -186,6 +190,8 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
+  ENV['BROWSER_CONFIG'] = browser_name
+
   ENV['SELENIUM_BROWSER'] = browser['browser']
   ENV['SELENIUM_VERSION'] = browser['browser_version']
   ENV['BS_AUTOMATE_OS'] = browser['os']
@@ -199,13 +205,15 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
+  ENV['TEST_RUN_NAME'] = test_run_string
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
   end
 
   arguments = ''
-  arguments += "#{$options.feature}" if $options.feature
+#  arguments += "#{$options.feature}" if $options.feature
+  arguments += feature
   arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']

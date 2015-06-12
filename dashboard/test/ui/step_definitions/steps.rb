@@ -17,6 +17,8 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
+  p url
+  p @browser
   @browser.navigate.to "#{url}"
 end
 
