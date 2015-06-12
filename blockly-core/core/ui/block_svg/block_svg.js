@@ -52,6 +52,12 @@ Blockly.BlockSvg = function(block) {
   this.svgGroup_ = Blockly.createSvgElement('g', options, null);
 
   this.initChildren();
+
+  /**
+   * Configurable lookup table of input widths
+   * @type {{string, number}}
+   */
+  this.forcedInputWidths = {};
 };
 
 Blockly.BlockSvg.prototype.initChildren = function () {
@@ -988,6 +994,7 @@ Blockly.BlockSvg.prototype.renderDrawRightCollapsed_ = function (renderInfo, row
 Blockly.BlockSvg.prototype.renderDrawRightInputValue_ = function (renderInfo,
   inputRows, rowIndex, connectionsXY) {
   // External input.
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var input = row[0];
   var titleX = renderInfo.curX;
@@ -1053,6 +1060,7 @@ Blockly.BlockSvg.prototype.renderDrawRightDummyInput_ = function (renderInfo,
 Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo,
   inputRows, rowIndex, connectionsXY) {
   // Nested statement.
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var input = row[0];
   if (rowIndex === 0) {
@@ -1179,10 +1187,10 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
         renderInfo.highlightInline.push('l', (BS.TAB_WIDTH * 0.42) + ',-1.8');
       }
       // Create inline input connection.
-      connectionX = connectionsXY.x + oppositeIfRTL(renderInfo.curX + BS.TAB_WIDTH -
+      var connectionX = connectionsXY.x + oppositeIfRTL(renderInfo.curX + BS.TAB_WIDTH -
         BS.SEP_SPACE_X - input.renderWidth + 1);
 
-      connectionY = connectionsXY.y + renderInfo.curY + BS.INLINE_PADDING_Y;
+      var connectionY = connectionsXY.y + renderInfo.curY + BS.INLINE_PADDING_Y;
       input.connection.moveTo(connectionX, connectionY);
       if (input.connection.targetConnection) {
         input.connection.tighten_();
@@ -1191,6 +1199,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
       hasFunctionalInput = true;
 
       this.renderDrawRightInlineFunctional_(renderInfo, input, connectionsXY);
+
     } else if (input.type != Blockly.DUMMY_INPUT) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
