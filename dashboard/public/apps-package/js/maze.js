@@ -18,7 +18,7 @@ window.mazeMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":151,"./levels":159,"./maze":162,"./skins":166}],166:[function(require,module,exports){
+},{"../appMain":9,"./blocks":151,"./levels":159,"./maze":162,"./skins":166}],166:[function(require,module,exports){
 /**
  * Load Skin for Maze.
  */

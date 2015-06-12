@@ -12,7 +12,7 @@ window.calcMain = function(options) {
 };
 
 
-},{"../appMain":6,"../skins":263,"./blocks":82,"./calc":83,"./levels":90}],83:[function(require,module,exports){
+},{"../appMain":9,"../skins":263,"./blocks":82,"./calc":83,"./levels":90}],83:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *

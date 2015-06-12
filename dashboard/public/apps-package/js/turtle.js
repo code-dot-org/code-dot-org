@@ -19,7 +19,7 @@ window.turtleMain = function(options) {
 };
 
 
-},{"../StudioApp":5,"../appMain":6,"./blocks":300,"./levels":305,"./skins":309,"./turtle":312}],309:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":9,"./blocks":300,"./levels":305,"./skins":309,"./turtle":312}],309:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {

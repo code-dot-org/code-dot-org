@@ -17,7 +17,7 @@ window.flappyMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":127,"./flappy":130,"./levels":131,"./skins":134}],134:[function(require,module,exports){
+},{"../appMain":9,"./blocks":127,"./flappy":130,"./levels":131,"./skins":134}],134:[function(require,module,exports){
 /**
  * Load Skin for Flappy.
  */

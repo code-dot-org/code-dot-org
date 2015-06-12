@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":6,"./blocks":269,"./levels":276,"./skins":282,"./studio":283}],283:[function(require,module,exports){
+},{"../appMain":9,"./blocks":269,"./levels":276,"./skins":282,"./studio":283}],283:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
