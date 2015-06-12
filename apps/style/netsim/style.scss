@@ -261,6 +261,16 @@ $wide-column-width: 121px;
           stroke: $light_purple;
         }
       }
+      .auto-dns-node {
+        circle {
+          stroke: $light_yellow;
+          fill: $light_yellow;
+        }
+
+        rect {
+          stroke: $light_yellow;
+        }
+      }
 
       .viz-wire {
         stroke: $charcoal;

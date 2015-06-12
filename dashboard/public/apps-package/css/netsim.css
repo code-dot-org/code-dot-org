@@ -155,6 +155,11 @@
       fill: #a69bc1; }
     #netsim #netsim-visualization svg .router-node rect {
       stroke: #a69bc1; }
+    #netsim #netsim-visualization svg .auto-dns-node circle {
+      stroke: #ffdb74;
+      fill: #ffdb74; }
+    #netsim #netsim-visualization svg .auto-dns-node rect {
+      stroke: #ffdb74; }
     #netsim #netsim-visualization svg .viz-wire {
       stroke: #5b6770;
       stroke-width: 2;

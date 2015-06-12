@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({251:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({252:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -16,7 +16,7 @@ window.netsimMain = function(options) {
 };
 
 
-},{"../StudioApp":5,"../appMain":6,"./levels":249,"./netsim":252,"./skins":258}],258:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":9,"./levels":250,"./netsim":253,"./skins":259}],259:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -25,7 +25,7 @@ exports.load = function (assetUrl, id) {
 };
 
 
-},{"../skins":262}],252:[function(require,module,exports){
+},{"../skins":263}],253:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -1307,7 +1307,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
 };
 
 
-},{"../ObservableEvent":2,"../RunLoop":4,"../utils":312,"./DashboardUser":176,"./NetSimBitLogPanel":179,"./NetSimLobby":196,"./NetSimLocalClientNode":197,"./NetSimLogPanel":201,"./NetSimLogger":202,"./NetSimRouterLogModal":219,"./NetSimRouterNode":222,"./NetSimSendPanel":228,"./NetSimShard":229,"./NetSimShardCleaner":230,"./NetSimStatusPanel":236,"./NetSimTabsComponent":239,"./NetSimVisualization":240,"./controls.html.ejs":247,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254,"./netsimUtils":256,"./page.html.ejs":257}],257:[function(require,module,exports){
+},{"../ObservableEvent":2,"../RunLoop":4,"../utils":313,"./DashboardUser":176,"./NetSimBitLogPanel":179,"./NetSimLobby":195,"./NetSimLocalClientNode":196,"./NetSimLogPanel":200,"./NetSimLogger":201,"./NetSimRouterLogModal":218,"./NetSimRouterNode":221,"./NetSimSendPanel":227,"./NetSimShard":228,"./NetSimShardCleaner":229,"./NetSimStatusPanel":235,"./NetSimTabsComponent":238,"./NetSimVisualization":239,"./controls.html.ejs":248,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255,"./netsimUtils":257,"./page.html.ejs":258}],258:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1329,7 +1329,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":483}],249:[function(require,module,exports){
+},{"../locale":145,"ejs":484}],250:[function(require,module,exports){
 /*jshint multistr: true */
 
 var netsimConstants = require('./netsimConstants');
@@ -1574,7 +1574,7 @@ levels.custom = {
 };
 
 
-},{"./Packet":246,"./netsimConstants":253}],247:[function(require,module,exports){
+},{"./Packet":247,"./netsimConstants":254}],248:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1594,7 +1594,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],240:[function(require,module,exports){
+},{"ejs":484}],239:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1611,13 +1611,17 @@ return buf.join('');
 var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimNodeFactory = require('./netsimNodeFactory');
-var NetSimFakeVizWire = require('./NetSimFakeVizWire');
 var NetSimWire = require('./NetSimWire');
+var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
+var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
 var netsimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
-var NodeType = require('./netsimConstants').NodeType;
+var netsimConstants = require('./netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+var NodeType = netsimConstants.NodeType;
 
 /**
  * Top-level controller for the network visualization.
@@ -1667,8 +1671,8 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   this.elements_ = [];
 
   /**
-   * Reference to the local node viz entity, the anchor for the visualization.
-   * @type {NetSimVizNode}
+   * Reference to the local node viz element, the anchor for the visualization.
+   * @type {NetSimVizSimulationNode}
    */
   this.localNode = null;
 
@@ -1683,6 +1687,23 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
    * @type {number}
    */
   this.visualizationHeight = 300;
+
+  /**
+   * Reference to visualized auto-DNS node, a fake node (not mapped to the
+   * simulation in a normal way) that also lives in our elements_ collection.
+   * @type {NetSimVizAutoDnsNode}
+   * @private
+   */
+  this.autoDnsNode_ = null;
+
+  /**
+   * Reference to wire between the auto-DNS node and the foreground router.
+   * Managed manually so we keep a handle on it, but also lives in the elements_
+   * collection.
+   * @type {NetSimVizWire}
+   * @private
+   */
+  this.autoDnsWire_ = null;
 
   /**
    * Event registration information
@@ -1703,14 +1724,14 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
  */
 NetSimVisualization.prototype.tick = function (clock) {
   // Everyone gets an update
-  this.elements_.forEach(function (entity) {
-    entity.tick(clock);
+  this.elements_.forEach(function (element) {
+    element.tick(clock);
   });
 
   // Tear out dead entities.
-  this.elements_ = this.elements_.filter(function (entity) {
-    if (entity.isDead()) {
-      entity.getRoot().remove();
+  this.elements_ = this.elements_.filter(function (element) {
+    if (element.isDead()) {
+      element.getRoot().remove();
       return false;
     }
     return true;
@@ -1721,8 +1742,8 @@ NetSimVisualization.prototype.tick = function (clock) {
  * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
  */
 NetSimVisualization.prototype.render = function () {
-  this.elements_.forEach(function (entity) {
-    entity.render();
+  this.elements_.forEach(function (element) {
+    element.render();
   });
 };
 
@@ -1791,7 +1812,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
-      this.localNode = new NetSimVizNode(newLocalNode);
+      this.localNode = new NetSimVizSimulationNode(newLocalNode);
       this.elements_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
@@ -1816,43 +1837,29 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
 };
 
 /**
- * Find a particular VizEntity in the visualization, by type and ID.
- * @param {function} entityType - constructor of entity we're looking for
+ * Find a particular VizElement in the visualization, by type and ID.
+ * @param {function} elementType - constructor of element we're looking for
  * @param {number} entityID - ID, with corresponds to NetSimEntity.entityID
- * @returns {NetSimVizEntity} or undefined if not found
+ * @returns {NetSimVizElement} or undefined if not found
  */
-NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
-  return _.find(this.elements_, function (entity) {
-    return entity instanceof entityType && entity.id === entityID;
+NetSimVisualization.prototype.getElementByEntityID = function (elementType, entityID) {
+  return _.find(this.elements_, function (element) {
+    return element instanceof elementType &&
+        element.getCorrespondingEntityID &&
+        element.getCorrespondingEntityID() === entityID;
   });
 };
 
 /**
  * Gets the set of VizWires directly attached to the given VizNode, (either
  * on the local end or remote end)
- * @param {NetSimVizNode} vizNode
- * @returns {Array.<NetSimVizWire>} the attached wires
+ * @param {NetSimVizSimulationNode} vizNode
+ * @returns {Array.<NetSimVizSimulationWire>} the attached wires
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
-  return this.elements_.filter(function (entity) {
-    return entity instanceof NetSimVizWire &&
-        (
-        (entity.localVizNode === vizNode) ||
-        (vizNode.isRouter && entity.remoteVizNode === vizNode)
-        );
-  });
-};
-
-/**
- * Gets the set of FakeVizWires directly attached to the given VizNode (in
- * either direction).
- * @param {NetSimVizNode} vizNode
- * @returns {NetSimFakeVizWire[]} the attached fake wires
- */
-NetSimVisualization.prototype.getFakeWiresAttachedToNode = function (vizNode) {
-  return this.elements_.filter(function (entity) {
-    return entity instanceof NetSimFakeVizWire &&
-        (entity.localVizNode === vizNode || entity.remoteVizNode === vizNode);
+  return this.elements_.filter(function (element) {
+    return element instanceof NetSimVizWire &&
+        (element.localVizNode === vizNode || element.remoteVizNode === vizNode);
   });
 };
 
@@ -1866,8 +1873,8 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   var tableNodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
-  this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
-    var newVizNode = new NetSimVizNode(node);
+  this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
+    var newVizNode = new NetSimVizSimulationNode(node);
     newVizNode.setDnsMode(this.netsim_.getDnsMode());
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
@@ -1888,8 +1895,9 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   }.bind(this));
 
   // Update collection of VizWires from source data
-  this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
-    var newVizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
+  this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
+    var newVizWire = new NetSimVizSimulationWire(wire,
+        this.getElementByEntityID.bind(this));
     newVizWire.setEncodings(this.netsim_.getEncodings());
     return newVizWire;
   }.bind(this));
@@ -1916,7 +1924,8 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
 NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
   // Kill all fake wires
   this.elements_.forEach(function (vizElement) {
-    if (vizElement instanceof NetSimFakeVizWire) {
+    if (vizElement instanceof NetSimVizWire &&
+        !(vizElement instanceof NetSimVizSimulationWire)) {
       vizElement.kill();
     }
   }, this);
@@ -1924,9 +1933,8 @@ NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
   // Generate new wires
   var connections = this.generateBroadcastModeConnections_();
   connections.forEach(function (connectedPair) {
-    var newFakeWire = new NetSimFakeVizWire(connectedPair,
-        this.getEntityByID.bind(this));
-    this.addVizEntity_(newFakeWire);
+    var newFakeWire = new NetSimVizWire(connectedPair.nodeA, connectedPair.nodeB);
+    this.addVizElement_(newFakeWire);
   }, this);
 };
 
@@ -1989,8 +1997,8 @@ NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
       var reachable = graph[from][to];
       if (clientToClient && reachable) {
         connections.push({
-          nodeA: nodeRows[from].id,
-          nodeB: nodeRows[to].id
+          nodeA: this.getElementByEntityID(NetSimVizSimulationNode, nodeRows[from].id),
+          nodeB: this.getElementByEntityID(NetSimVizSimulationNode, nodeRows[to].id)
         });
       }
     }
@@ -2003,25 +2011,25 @@ NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
  * visualization to the source data given, and creates/updates/removes
  * VizEntities so that the visualization reflects the new source data.
  *
- * @param {function} vizEntityType
+ * @param {function} vizElementType
  * @param {Array.<NetSimEntity>} entityCollection
  * @param {function} creationMethod
  * @private
  */
 NetSimVisualization.prototype.updateVizEntitiesOfType_ = function (
-    vizEntityType, entityCollection, creationMethod) {
+    vizElementType, entityCollection, creationMethod) {
 
   // 1. Kill VizEntities that are no longer in the source data
-  this.killVizEntitiesOfTypeMissingMatch_(vizEntityType, entityCollection);
+  this.killVizEntitiesOfTypeMissingMatch_(vizElementType, entityCollection);
 
   entityCollection.forEach(function (entity) {
-    var vizEntity = this.getEntityByID(vizEntityType, entity.entityID);
-    if (vizEntity) {
+    var vizElement = this.getElementByEntityID(vizElementType, entity.entityID);
+    if (vizElement) {
       // 2. Update existing VizEntities from their source data
-      vizEntity.configureFrom(entity);
+      vizElement.configureFrom(entity);
     } else {
       // 3. Create new VizEntities for new source data
-      this.addVizEntity_(creationMethod(entity));
+      this.addVizElement_(creationMethod(entity));
     }
   }, this);
 };
@@ -2029,46 +2037,46 @@ NetSimVisualization.prototype.updateVizEntitiesOfType_ = function (
 /**
  * Call kill() on any vizentities that match the given type and don't map to
  * a NetSimEntity in the provided collection.
- * @param {function} vizEntityType
+ * @param {function} vizElementType
  * @param {Array.<NetSimEntity>} entityCollection
  * @private
  */
 NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
-    vizEntityType, entityCollection) {
-  this.elements_.forEach(function (vizEntity) {
-    var isCorrectType = (vizEntity instanceof vizEntityType);
+    vizElementType, entityCollection) {
+  this.elements_.forEach(function (vizElement) {
+    var isCorrectType = (vizElement instanceof vizElementType);
     var foundMatch = entityCollection.some(function (entity) {
-      return entity.entityID === vizEntity.id;
+      return vizElement.getCorrespondingEntityID &&
+          entity.entityID === vizElement.getCorrespondingEntityID();
     });
 
     if (isCorrectType && !foundMatch) {
-      vizEntity.kill();
+      vizElement.kill();
     }
   });
 };
 
 /**
- * Adds a VizEntity to the visualization.
+ * Adds a VizElement to the visualization.
  * @param {NetSimVizElement} vizElement
  * @private
  */
-NetSimVisualization.prototype.addVizEntity_ = function (vizElement) {
+NetSimVisualization.prototype.addVizElement_ = function (vizElement) {
   this.elements_.push(vizElement);
   this.svgRoot_.find('#background-group').prepend(vizElement.getRoot());
 };
 
 /**
- * If we do need a DOM change, detach the entity and reattach it to the new
+ * If we do need a DOM change, detach the element and reattach it to the new
  * layer. Special rule (for now): Prepend wires so that they show up behind
  * nodes.  Will need a better solution for this if/when the viz gets more
  * complex.
  * @param {NetSimVizElement} vizElement
  * @param {jQuery} newParent
  */
-var moveVizEntityToGroup = function (vizElement, newParent) {
+var moveVizElementToGroup = function (vizElement, newParent) {
   vizElement.getRoot().detach();
-  if (vizElement instanceof NetSimVizWire ||
-      vizElement instanceof NetSimFakeVizWire) {
+  if (vizElement instanceof NetSimVizWire) {
     vizElement.getRoot().prependTo(newParent);
   } else {
     vizElement.getRoot().appendTo(newParent);
@@ -2115,51 +2123,55 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Possible optimization: Can we do this with just one operation on the live DOM?
   var foreground = this.svgRoot_.find('#foreground-group');
   var background = this.svgRoot_.find('#background-group');
-  this.elements_.forEach(function (vizEntity) {
-    var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
+  this.elements_.forEach(function (vizElement) {
+    var isForeground = $.contains(foreground[0], vizElement.getRoot()[0]);
 
     // Check whether a change should occur.  If not, we leave
     // newParent undefined so that we don't make unneeded DOM changes.
-    if (vizEntity.visited && !isForeground) {
-      moveVizEntityToGroup(vizEntity, foreground);
-      vizEntity.onDepthChange(true);
-    } else if (!vizEntity.visited && isForeground) {
-      moveVizEntityToGroup(vizEntity, background);
-      vizEntity.onDepthChange(false);
+    if (vizElement.visited && !isForeground) {
+      moveVizElementToGroup(vizElement, foreground);
+      vizElement.onDepthChange(true);
+    } else if (!vizElement.visited && isForeground) {
+      moveVizElementToGroup(vizElement, background);
+      vizElement.onDepthChange(false);
     }
   }, this);
+
+  this.updateAutoDnsNode();
 };
 
 /**
  * Visit method for pullElementsToForeground, not used anywhere else.
- * Notes that the current entity is should be foreground when we're all done,
- * finds the current entity's unvisited connections,
+ * Notes that the current element is should be foreground when we're all done,
+ * finds the current element's unvisited connections,
  * pushes those connections onto the stack.
- * @param {NetSimVizNode|NetSimVizWire} vizEntity
- * @returns {Array.<NetSimVizEntity>}
+ * @param {NetSimVizSimulationNode|NetSimVizSimulationWire} vizElement
+ * @returns {Array.<NetSimVizElement>}
  * @private
  */
-NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
+NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   // Find new entities to explore based on node type and connections
   var neighbors = [];
 
-  if (vizEntity instanceof NetSimVizNode) {
-    neighbors = this.getWiresAttachedToNode(vizEntity)
-        .concat(this.getFakeWiresAttachedToNode(vizEntity));
-  } else if (vizEntity instanceof NetSimVizWire) {
-    if (vizEntity.localVizNode) {
-      neighbors.push(vizEntity.localVizNode);
+  if (vizElement instanceof NetSimVizSimulationNode) {
+    neighbors = this.getWiresAttachedToNode(vizElement);
+
+    // Special case: The DNS node fake is a neighbor of a visited router
+    if (vizElement.isRouter && this.autoDnsNode_) {
+      neighbors.push(this.autoDnsNode_);
+    }
+  } else if (vizElement instanceof NetSimVizWire) {
+    if (vizElement.localVizNode) {
+      neighbors.push(vizElement.localVizNode);
     }
 
-    if (vizEntity.remoteVizNode) {
-      neighbors.push(vizEntity.remoteVizNode);
+    if (vizElement.remoteVizNode) {
+      neighbors.push(vizElement.remoteVizNode);
     }
   }
-  // We intentionally exclude NetSimFakeVizWire; it should give no
-  // neighbors because it's not used to calculate reachability.
 
-  return neighbors.filter(function (vizEntity) {
-    return !vizEntity.visited;
+  return neighbors.filter(function (vizElement) {
+    return !vizElement.visited;
   });
 };
 
@@ -2190,9 +2202,9 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
     return;
   }
 
-  /** @type {Array.<NetSimVizNode>} */
-  var foregroundNodes = this.elements_.filter(function (entity) {
-    return entity instanceof NetSimVizNode && entity.isForeground;
+  /** @type {Array.<NetSimVizSimulationNode>} */
+  var foregroundNodes = this.elements_.filter(function (element) {
+    return element instanceof NetSimVizNode && element.isForeground;
   });
 
   // Sometimes, there's no work to do.
@@ -2264,11 +2276,11 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
  *       O        O         O  O       O O
  */
 NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function () {
-  /** @type {Array.<NetSimVizNode>} */
-  var foregroundNodes = this.elements_.filter(function (entity) {
-    return entity instanceof NetSimVizNode &&
-        entity.isForeground &&
-        !entity.isRouter;
+  /** @type {Array.<NetSimVizSimulationNode>} */
+  var foregroundNodes = this.elements_.filter(function (element) {
+    return element instanceof NetSimVizSimulationNode &&
+        element.isForeground &&
+        !element.isRouter;
   });
 
   // Sometimes, there's no work to do.
@@ -2320,22 +2332,86 @@ NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function 
  * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+  // Show/hide the auto-DNS node according to the new state
+  if (newDnsMode === DnsMode.AUTOMATIC) {
+    this.makeAutoDnsNode();
+  } else {
+    this.destroyAutoDnsNode();
+  }
+
   // Tell all nodes about the new DNS mode, so they can decide whether to
   // show or hide their address.
-  this.elements_.forEach(function (vizEntity) {
-    if (vizEntity instanceof NetSimVizNode) {
-      vizEntity.setDnsMode(newDnsMode);
+  this.elements_.forEach(function (vizElement) {
+    if (vizElement instanceof NetSimVizSimulationNode) {
+      vizElement.setDnsMode(newDnsMode);
     }
   });
+
+  // Update layering and layout since we just added/removed a node.
+  this.pullElementsToForeground();
+  this.distributeForegroundNodes();
+};
+
+/**
+ * If it doesn't already exist, create an auto-DNS node and corresponding
+ * wire.
+ */
+NetSimVisualization.prototype.makeAutoDnsNode = function () {
+  if (!this.autoDnsNode_) {
+    this.autoDnsNode_ = new NetSimVizAutoDnsNode();
+    this.addVizElement_(this.autoDnsNode_);
+
+    this.autoDnsWire_ = new NetSimVizWire(this.autoDnsNode_, null);
+    this.addVizElement_(this.autoDnsWire_);
+  }
+};
+
+/**
+ * Manually update the auto-DNS node and wire to match the foreground router.
+ */
+NetSimVisualization.prototype.updateAutoDnsNode = function () {
+  if (!this.autoDnsNode_) {
+    return;
+  }
+
+  var foregroundRouterNode = _.find(this.elements_, function (element) {
+    return element instanceof NetSimVizSimulationNode &&
+        element.isRouter &&
+        element.isForeground;
+  });
+
+  // Update address to match foreground router
+  if (foregroundRouterNode) {
+    this.autoDnsNode_.setAddress(foregroundRouterNode.autoDnsAddress);
+  }
+
+  // Update wire endpoints
+  this.autoDnsWire_.localVizNode = this.autoDnsNode_;
+  this.autoDnsWire_.remoteVizNode = foregroundRouterNode;
+};
+
+/**
+ * Remove the auto-DNS node and wire.
+ */
+NetSimVisualization.prototype.destroyAutoDnsNode = function () {
+  if (this.autoDnsNode_) {
+    this.autoDnsNode_.kill();
+    this.autoDnsNode_ = null;
+  }
+
+  if (this.autoDnsWire_) {
+    this.autoDnsWire_.kill();
+    this.autoDnsWire_ = null;
+  }
 };
 
 /**
  * @param {number} dnsNodeID
  */
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
-  this.elements_.forEach(function (vizEntity) {
-    if (vizEntity instanceof NetSimVizNode) {
-      vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
+  this.elements_.forEach(function (vizElement) {
+    if (vizElement instanceof NetSimVizSimulationNode) {
+      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityID() === dnsNodeID);
     }
   });
 };
@@ -2346,9 +2422,9 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimVisualization.prototype.setEncodings = function (newEncodings) {
-  this.elements_.forEach(function (vizEntity) {
-    if (vizEntity instanceof NetSimVizWire) {
-      vizEntity.setEncodings(newEncodings);
+  this.elements_.forEach(function (vizElement) {
+    if (vizElement instanceof NetSimVizSimulationWire) {
+      vizElement.setEncodings(newEncodings);
     }
   });
 };
@@ -2402,16 +2478,16 @@ NetSimVisualization.prototype.animateReadWireState = function (newState) {
 
 /**
  * Find the outgoing wire from the local node to a remote node.
- * @returns {NetSimVizWire|null} null if no outgoing connection is established.
+ * @returns {NetSimVizSimulationWire|null} null if no outgoing connection is established.
  */
 NetSimVisualization.prototype.getVizWireToRemote = function () {
   if (!this.localNode) {
     return null;
   }
 
-  var outgoingWires = this.elements_.filter(function (entity) {
-    return entity instanceof NetSimVizWire &&
-        entity.localVizNode === this.localNode;
+  var outgoingWires = this.elements_.filter(function (element) {
+    return element instanceof NetSimVizSimulationWire &&
+        element.localVizNode === this.localNode;
   }, this);
 
   if (outgoingWires.length === 0) {
@@ -2423,16 +2499,16 @@ NetSimVisualization.prototype.getVizWireToRemote = function () {
 
 /**
  * Find the incoming wire from a remote node to the local node.
- * @returns {NetSimVizWire|null} null if no incoming connection is established.
+ * @returns {NetSimVizSimulationWire|null} null if no incoming connection is established.
  */
 NetSimVisualization.prototype.getVizWireFromRemote = function () {
   if (!this.localNode) {
     return null;
   }
 
-  var incomingWires = this.elements_.filter(function (entity) {
-    return entity instanceof NetSimVizWire &&
-        entity.remoteVizNode === this.localNode;
+  var incomingWires = this.elements_.filter(function (element) {
+    return element instanceof NetSimVizSimulationWire &&
+        element.remoteVizNode === this.localNode;
   }, this);
 
   if (incomingWires.length === 0) {
@@ -2443,7 +2519,97 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 };
 
 
-},{"../utils":312,"./NetSimFakeVizWire":194,"./NetSimVizNode":243,"./NetSimVizWire":244,"./NetSimWire":245,"./netsimConstants":253,"./netsimGlobals":254,"./netsimNodeFactory":255,"./tweens":259}],244:[function(require,module,exports){
+},{"../utils":313,"./NetSimVizAutoDnsNode":240,"./NetSimVizNode":242,"./NetSimVizSimulationNode":243,"./NetSimVizSimulationWire":244,"./NetSimVizWire":245,"./NetSimWire":246,"./netsimConstants":254,"./netsimGlobals":255,"./netsimNodeFactory":256,"./tweens":260}],244:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var netsimGlobals = require('./netsimGlobals');
+var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizWire = require('./NetSimVizWire');
+
+/**
+ * @param {NetSimWire} sourceWire
+ * @param {function} getElementByEntityID - Allows this wire to search
+ *        for other entities in the simulation
+ * @constructor
+ * @augments NetSimVizWire
+ */
+var NetSimVizSimulationWire = module.exports = function (sourceWire,
+    getElementByEntityID) {
+  var localNode = getElementByEntityID(NetSimVizNode, sourceWire.localNodeID);
+  var remoteNode = getElementByEntityID(NetSimVizNode, sourceWire.remoteNodeID);
+  NetSimVizWire.call(this, localNode, remoteNode);
+
+  /**
+   * ID of the simulation wire that this viz element maps to.
+   * @type {number}
+   */
+  this.correspondingWireID_ = sourceWire.entityID;
+
+  /**
+   * Bound getElementByEntityID method from vizualization controller;
+   * we hold on to this so that calls to configureFrom can find nodes later.
+   * @type {Function}
+   * @private
+   */
+  this.getElementByEntityID_ = getElementByEntityID;
+
+  this.configureFrom(sourceWire);
+  this.render();
+};
+NetSimVizSimulationWire.inherits(NetSimVizWire);
+
+/**
+ * Configuring a wire means looking up the viz nodes that will be its endpoints.
+ * @param {NetSimWire} sourceWire
+ */
+NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
+  this.localVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.localNodeID);
+  this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.remoteNodeID);
+
+  if (this.localVizNode) {
+    this.localVizNode.setAddress(sourceWire.localAddress);
+  }
+
+  if (this.remoteVizNode) {
+    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
+
+  if (netsimGlobals.getLevelConfig().broadcastMode) {
+    this.getRoot().css('display', 'none');
+  }
+};
+
+/**
+ * ID of the simulation entity that maps to this one.
+ * @returns {number}
+ */
+NetSimVizSimulationWire.prototype.getCorrespondingEntityID = function () {
+  return this.correspondingWireID_;
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizSimulationWire.prototype.kill = function () {
+  NetSimVizSimulationWire.superPrototype.kill.call(this);
+  this.correspondingWireID_ = undefined;
+};
+
+
+},{"../utils":313,"./NetSimVizNode":242,"./NetSimVizWire":245,"./netsimGlobals":255}],245:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2458,12 +2624,10 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 
 require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
-var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 
@@ -2477,15 +2641,13 @@ var binaryToAB = dataConverters.binaryToAB;
 var TEXT_FINAL_VERTICAL_OFFSET = -10;
 
 /**
- *
- * @param sourceWire
- * @param {function} getEntityByID - Allows this wire to search
- *        for other entities in the simulation
+ * @param {NetSimVizNode} localNode
+ * @param {NetSimVizNode} remoteNode
  * @constructor
- * @augments NetSimVizEntity
+ * @augments NetSimVizElement
  */
-var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
-  NetSimVizEntity.call(this, sourceWire);
+var NetSimVizWire = module.exports = function (localNode, remoteNode) {
+  NetSimVizElement.call(this);
 
   var root = this.getRoot();
   root.addClass('viz-wire');
@@ -2535,41 +2697,12 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
    */
   this.encodings_ = [];
 
-  /**
-   * Bound getEntityByID method from vizualization controller.
-   * @type {Function}
-   * @private
-   */
-  this.getEntityByID_ = getEntityByID;
+  this.localVizNode = localNode;
+  this.remoteVizNode = remoteNode;
 
-  this.localVizNode = null;
-  this.remoteVizNode = null;
-
-  this.configureFrom(sourceWire);
   this.render();
 };
-NetSimVizWire.inherits(NetSimVizEntity);
-
-/**
- * Configuring a wire means looking up the viz nodes that will be its endpoints.
- * @param {NetSimWire} sourceWire
- */
-NetSimVizWire.prototype.configureFrom = function (sourceWire) {
-  this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
-
-  if (this.localVizNode) {
-    this.localVizNode.setAddress(sourceWire.localAddress);
-  }
-
-  if (this.remoteVizNode) {
-    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
-  }
-
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
-    this.getRoot().css('display', 'none');
-  }
-};
+NetSimVizWire.inherits(NetSimVizElement);
 
 /**
  * Update path data for wire.
@@ -2764,7 +2897,901 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
 };
 
 
-},{"../utils":312,"./NetSimVizEntity":242,"./NetSimVizNode":243,"./dataConverters":248,"./netsimConstants":253,"./netsimGlobals":254,"./netsimUtils":256,"./tweens":259}],239:[function(require,module,exports){
+},{"../utils":313,"./NetSimVizElement":241,"./dataConverters":249,"./netsimConstants":254,"./netsimUtils":257,"./tweens":260}],243:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var netsimConstants = require('./netsimConstants');
+var NetSimVizNode = require('./NetSimVizNode');
+
+var NodeType = netsimConstants.NodeType;
+
+var netsimGlobals = require('./netsimGlobals');
+
+/**
+ * @param {NetSimNode} sourceNode
+ * @constructor
+ * @augments NetSimVizNode
+ */
+var NetSimVizSimulationNode = module.exports = function (sourceNode) {
+  NetSimVizNode.call(this);
+
+  /**
+   * ID of the simulation node that this viz element represents.
+   * @type {number}
+   */
+  this.correspondingNodeID_ = sourceNode.entityID;
+
+  /**
+   * If we end up representing a router, we may need to hold the auto-dns address
+   * to pass to a fake auto-dns node.
+   * @type {string}
+   */
+  this.autoDnsAddress = undefined;
+
+  this.configureFrom(sourceNode);
+  this.render();
+};
+NetSimVizSimulationNode.inherits(NetSimVizNode);
+
+/**
+ *
+ * @param {NetSimNode} sourceNode
+ */
+NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
+  this.correspondingNodeID_ = sourceNode.entityID;
+
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (levelConfig.showHostnameInGraph) {
+    this.setName(sourceNode.getHostname());
+  } else {
+    this.setName(sourceNode.getShortDisplayName());
+  }
+
+  if (sourceNode.getNodeType() === NodeType.ROUTER) {
+    this.isRouter = true;
+    this.getRoot().addClass('router-node');
+    this.autoDnsAddress = sourceNode.getAutoDnsAddress();
+    if (levelConfig.broadcastMode) {
+      this.getRoot().css('display', 'none');
+    }
+  }
+};
+
+/**
+ * ID of the simulation entity that maps to this one.
+ * @returns {number}
+ */
+NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
+  return this.correspondingNodeID_;
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizSimulationNode.prototype.kill = function () {
+  NetSimVizSimulationNode.superPrototype.kill.call(this);
+  this.correspondingNodeID_ = undefined;
+};
+
+
+},{"../utils":313,"./NetSimVizNode":242,"./netsimConstants":254,"./netsimGlobals":255}],240:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var netsimGlobals = require('./netsimGlobals');
+var NetSimVizNode = require('./NetSimVizNode');
+
+/**
+ * @constructor
+ * @augments NetSimVizNode
+ */
+var NetSimVizAutoDnsNode = module.exports = function () {
+  NetSimVizNode.call(this);
+
+  this.getRoot().addClass('auto-dns-node');
+
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (levelConfig.showHostnameInGraph) {
+    this.setName('dns');
+  } else {
+    this.setName('DNS');
+  }
+
+  this.setIsDnsNode(true);
+  this.render();
+};
+NetSimVizAutoDnsNode.inherits(NetSimVizNode);
+
+
+},{"../utils":313,"./NetSimVizNode":242,"./netsimGlobals":255}],242:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var netsimConstants = require('./netsimConstants');
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var NetSimVizElement = require('./NetSimVizElement');
+var tweens = require('./tweens');
+
+var DnsMode = netsimConstants.DnsMode;
+
+var netsimGlobals = require('./netsimGlobals');
+
+/**
+ * The narrowest that a text bubble is allowed to be.
+ * @type {number}
+ * @const
+ */
+var TEXT_MIN_WIDTH = 30;
+
+/**
+ * Width to add to the bubble beyond the width of the student's name.
+ * @type {number}
+ * @const
+ */
+var TEXT_PADDING_X = 20;
+
+/**
+ * Height to add to the bubble beyond the height of the student's name.
+ * @type {number}
+ * @const
+ */
+var TEXT_PADDING_Y = 10;
+
+/**
+ * @constructor
+ * @augments NetSimVizElement
+ */
+var NetSimVizNode = module.exports = function () {
+  NetSimVizElement.call(this);
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
+
+  /**
+   * @type {boolean}
+   */
+  this.isRouter = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDnsNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
+  /**
+   *
+   * @type {jQuery}
+   * @private
+   */
+  jQuerySvgElement('circle')
+      .attr('cx', 0)
+      .attr('cy', 0)
+      .attr('r', radius)
+      .appendTo(root);
+
+  this.nameGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,0)')
+      .appendTo(root);
+
+  this.displayName_ = jQuerySvgElement('text')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset);
+
+  this.nameBox_ = jQuerySvgElement('rect')
+      .addClass('name-box');
+
+  this.nameGroup_
+      .append(this.nameBox_)
+      .append(this.displayName_);
+
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
+  this.addressBox_ = jQuerySvgElement('rect')
+      .addClass('address-box')
+      .appendTo(this.addressGroup_);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset)
+      .text('?')
+      .appendTo(this.addressGroup_);
+
+  // Set an initial default tween for zooming in from nothing.
+  this.snapToScale(0);
+  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
+};
+NetSimVizNode.inherits(NetSimVizElement);
+
+/**
+ * Flag this viz node as the simulation local node.
+ */
+NetSimVizNode.prototype.setIsLocalNode = function () {
+  this.isLocalNode = true;
+  this.getRoot().addClass('local-node');
+};
+
+/**
+ * Change the display name of the viz node
+ * @param {string} newName
+ */
+NetSimVizNode.prototype.setName = function (newName) {
+  this.displayName_.text(newName);
+  this.resizeNameBox_();
+};
+
+/** @private */
+NetSimVizNode.prototype.resizeNameBox_ = function () {
+  this.resizeRectToText_(this.nameBox_, this.displayName_);
+};
+
+/** @private */
+NetSimVizNode.prototype.resizeAddressBox_ = function () {
+  this.resizeRectToText_(this.addressBox_, this.addressText_);
+};
+
+/**
+ * Utility for resizing a background rounded-rect to fit the given text element.
+ * @param {jQuery} rect
+ * @param {jQuery} text
+ * @private
+ */
+NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
+  try {
+    var box = text[0].getBBox();
+    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+    var height = box.height + TEXT_PADDING_Y;
+    var halfWidth = width / 2;
+    var halfHeight = height / 2;
+    rect.attr('x', -halfWidth)
+        .attr('y', -halfHeight)
+        .attr('rx', halfHeight)
+        .attr('ry', halfHeight)
+        .attr('width', width)
+        .attr('height', height);
+  } catch (e) {
+    // Just allow this to be a no-op if it fails.  In some browsers,
+    // getBBox will throw if the element is not yet in the DOM.
+  }
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizNode.prototype.kill = function () {
+  NetSimVizNode.superPrototype.kill.call(this);
+  this.stopAllAnimation();
+  this.tweenToScale(0, 200, tweens.easeInQuad);
+};
+
+/**
+ * Provides drifting animation for nodes in the background.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVizNode.prototype.tick = function (clock) {
+  NetSimVizNode.superPrototype.tick.call(this, clock);
+  if (!this.isForeground && this.tweens_.length === 0) {
+    var randomX = 300 * Math.random() - 150;
+    var randomY = 300 * Math.random() - 150;
+    this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
+  } else if (this.isForeground && this.tweens_.length > 0) {
+    this.resizeNameBox_();
+    this.resizeAddressBox_();
+  }
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizNode.prototype.onDepthChange = function (isForeground) {
+  NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
+
+  // Don't add tweens if this node has been killed
+  if (this.isDying() || this.isDead()) {
+    return;
+  }
+
+  this.tweens_.length = 0;
+  if (isForeground) {
+    this.tweenToScale(1, 600, tweens.easeOutElastic);
+  } else {
+    this.tweenToScale(0.5, 600, tweens.easeOutElastic);
+  }
+};
+
+/**
+ * @param {string} address
+ */
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {DNSMode} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
+  // If we are never assigned an address, don't try to show one.
+  // In broadcast mode we will be assigned addresses but never use them, so
+  //   they should be hidden.
+  // Routers never show their address.
+  if (this.address_ === undefined || levelConfig.broadcastMode || this.isRouter) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
+  }
+  this.resizeAddressBox_();
+};
+
+
+},{"../utils":313,"./NetSimVizElement":241,"./netsimConstants":254,"./netsimGlobals":255,"./netsimUtils":257,"./tweens":260}],241:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var tweens = require('./tweens');
+
+/**
+ * A VizElement is an object that  has a representation in the network
+ * visualization.  Its role is to maintain that visual representation.
+ * A VizElement has helpers for positioning, scaling and tweening.
+ * Every VizElement has a root element which is a <g> tag, an SVG "group"
+ * that contains the other components that will actually draw.
+ *
+ * @constructor
+ */
+var NetSimVizElement = module.exports =  function () {
+  /**
+   * @type {number}
+   */
+  this.posX = 0;
+
+  /**
+   * @type {number}
+   */
+  this.posY = 0;
+
+  /**
+   * @type {number}
+   */
+  this.scale = 1;
+
+  /**
+   * @type {boolean}
+   */
+  this.isForeground = false;
+
+  /**
+   * Root SVG <g> (group) element for this object.
+   * @type {jQuery}
+   * @private
+   */
+  this.rootGroup_ = jQuerySvgElement('g');
+
+  /**
+   * Set of tweens we should currently be running on this node.
+   * Processed by tick()
+   * @type {Array.<exports.TweenValueTo>}
+   * @private
+   */
+  this.tweens_ = [];
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isDead_ = false;
+};
+
+/**
+ * @returns {jQuery} wrapper around root <g> element
+ */
+NetSimVizElement.prototype.getRoot = function () {
+  return this.rootGroup_;
+};
+
+/**
+ * Begins the process of destroying this VizElement.  Once started, this
+ * process cannot be stopped.
+ * This method can be overridden to trigger an "on-death" animation.
+ */
+NetSimVizElement.prototype.kill = function () {
+  this.isDead_ = true;
+};
+
+/**
+ * @returns {boolean} whether this entity is done with its death animation
+ *          and is ready to be cleaned up by the visualization manager.
+ *          The default implementation here returns TRUE as soon as kill()
+ *          is called and all animations are completed.
+ */
+NetSimVizElement.prototype.isDead = function () {
+  return this.isDead_ && this.tweens_.length === 0;
+};
+
+/**
+ * @returns {boolean} whether this entity is playing its final animation
+ *          and will be ready to be cleaned up by the visualization manager
+ *          soon.
+ */
+NetSimVizElement.prototype.isDying = function () {
+  return this.isDead_ && this.tweens_.length > 0;
+};
+
+/**
+ * Update all of the tweens currently running on this VizElement (which will
+ * probably modify its properties) and then remove any tweens that are completed
+ * from the list.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVizElement.prototype.tick = function (clock) {
+  this.tweens_.forEach(function (tween) {
+    tween.tick(clock);
+  });
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    return !tween.isFinished;
+  });
+};
+
+/**
+ * Update the root group's properties to reflect our current position
+ * and scale.
+ */
+NetSimVizElement.prototype.render = function () {
+  // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
+  //                   out of date.
+  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
+      ' scale(' + this.scale + ')';
+  this.rootGroup_.attr('transform', transform);
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizElement.prototype.onDepthChange = function (isForeground) {
+  this.isForeground = isForeground;
+};
+
+/**
+ * Throw away all existing tweens on this object.
+ */
+NetSimVizElement.prototype.stopAllAnimation = function () {
+  this.tweens_.length = 0;
+};
+
+/**
+ * Stops any existing motion animation and begins an animated motion to the
+ * given coordinates.  Note: This animates the VizElement's root group.
+ * @param {number} newX given in SVG points
+ * @param {number} newY given in SVG points
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
+    tweenFunction) {
+  // Don't accept new animation commands if we've already been killed
+  if (this.isDying() || this.isDead()) {
+    return;
+  }
+
+  // Remove any existing tweens controlling posX or posY
+  this.removeAllTweensOnProperties(['posX', 'posY']);
+
+  // Add two new tweens, one for each axis
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'posX', newX, duration,
+        tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'posY', newY, duration,
+        tweenFunction));
+  } else {
+    this.posX = newX;
+    this.posY = newY;
+  }
+
+};
+
+/**
+ * Alias for calling tweenToPosition with a zero duration
+ * @param {number} newX given in SVG points
+ * @param {number} newY given in SVG points
+ */
+NetSimVizElement.prototype.snapToPosition = function (newX, newY) {
+  this.tweenToPosition(newX, newY, 0);
+};
+
+/**
+ * Stops any existing animation of the entity's scale and begins an animated
+ * change to the given target scale value.  Note: this animates the VizElement's
+ * root group.
+ * @param {number} newScale where 1.0 is 100% (unscaled)
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizElement.prototype.tweenToScale = function (newScale, duration,
+    tweenFunction) {
+  // Remove existing scale tweens
+  this.removeAllTweensOnProperty('scale');
+
+  // On nonzero duration, add tween to target scale.  Otherwise just set it.
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'scale', newScale, duration,
+        tweenFunction));
+  } else {
+    this.scale = newScale;
+  }
+};
+
+NetSimVizElement.prototype.doAfterDelay = function (delay, callback) {
+  if (delay > 0) {
+    this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
+  } else {
+    callback();
+  }
+};
+
+/**
+ * Remove (stop) all active tweens that control the given property on this
+ * visualization entity.
+ * @param {string} propertyName
+ */
+NetSimVizElement.prototype.removeAllTweensOnProperty = function (propertyName) {
+  this.removeAllTweensOnProperties([propertyName]);
+};
+
+/**
+ * Remove (stop) all active tweens that control any of the given properties
+ * on this visualization entity.
+ * @param {string[]} propertyNames
+ */
+NetSimVizElement.prototype.removeAllTweensOnProperties = function (propertyNames) {
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    var targetsThisEntity = tween.target === this;
+    var isRemovableProperty = propertyNames.some(function (name) {
+      return tween.propertyName === name;
+    });
+
+    // Invert for filter() because we want to keep everything BUT the matched
+    // properties
+    return !(targetsThisEntity && isRemovableProperty);
+  }, this);
+};
+
+/**
+ * Alias for calling tweenToScale with a zero duration.
+ * @param {number} newScale where 1.0 is 100% (unscaled)
+ */
+NetSimVizElement.prototype.snapToScale = function (newScale) {
+  this.tweenToScale(newScale, 0);
+};
+
+
+},{"./netsimUtils":257,"./tweens":260}],260:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var valueOr = require('../utils').valueOr;
+
+/**
+ * Default tween duration in milliseconds
+ * @type {number}
+ * @const
+ */
+var DEFAULT_TWEEN_DURATION = 600;
+
+/**
+ * A four-arg interpolation function.
+ *
+ * @typedef {function} TweenFunction
+ * @param {number} t - current Time, in milliseconds since tween began
+ * @param {number} b - Begin value
+ * @param {number} c - final Change in value
+ * @param {number} d - total tween Duration
+ * @returns {number} the interpolated value for the current time
+ */
+
+/**
+ * Interpolates with a little back-and-forth over the target value at the end.
+ * @type {TweenFunction}
+ */
+exports.easeOutElastic = function (t, b, c, d) {
+  var s, p, a;
+  s=1.70158;
+  p=0;
+  a=c;
+  if (t===0) {
+    return b;
+  }
+  if ((t/=d)==1) {
+    return b+c;
+  }
+  if (!p) {
+    p=d*0.3;
+  }
+  if (a < Math.abs(c)) {
+    a=c;
+    s=p/4;
+  } else {
+    s = p/(2*Math.PI) * Math.asin (c/a);
+  }
+  return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+};
+
+/**
+ * Interpolates, accelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeInQuad = function (t, b, c, d) {
+  return c*(t/=d)*t + b;
+};
+
+/**
+ * Interpolates, decelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeOutQuad = function (t, b, c, d) {
+  return -c*(t/=d)*(t-2) + b;
+};
+
+exports.easeInOutQuad = function (t, b, c, d) {
+  if ((t/=d/2) < 1) {
+    return c/2*t*t + b;
+  }
+  return -c/2 * ((--t)*(t-2) - 1) + b;
+};
+
+/**
+ * Linear interpolation
+ * @type {TweenFunction}
+ */
+exports.linear = function (t, b, c, d) {
+  return c * (t / d) + b;
+};
+
+/**
+ * Wraps a tween method with the state it needs to animate a property.
+ * On creation, assumes that property's current value for start values.
+ * Must be ticked to progress toward completion.
+ *
+ * @param {!Object} target - The object owning the property we want to animate
+ * @param {!string} propertyName - Must be a valid property on target
+ * @param {!number} endValue - The desired final value of the property
+ * @param {number} [duration] - How long the tween should take in milliseconds,
+ *        default 600ms
+ * @param {TweenFunction} [tweenFunction] - A tween function, default linear
+ * @constructor
+ */
+exports.TweenValueTo = function (target, propertyName, endValue, duration,
+    tweenFunction) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = propertyName;
+
+  /**
+   * @type {TweenFunction}
+   * @private
+   */
+  this.tweenFunction_ = valueOr(tweenFunction, exports.linear);
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.startValue_ = target[propertyName];
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.deltaValue_ = endValue - this.startValue_;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = valueOr(duration, DEFAULT_TWEEN_DURATION);
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.TweenValueTo.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+
+  if (this.deltaValue_ !== 0) {
+    this.target[this.propertyName] = this.tweenFunction_(
+        timeSinceStart,
+        this.startValue_,
+        this.deltaValue_,
+        this.duration_
+    );
+  }
+
+  if (timeSinceStart >= this.duration_) {
+    this.target[this.propertyName] = this.startValue_ + this.deltaValue_;
+    this.isFinished = true;
+  }
+};
+
+exports.DoAfterDelay = function (target, duration, callback) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = null;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = duration;
+
+  /**
+   * Function to call when the duration has elapsed.
+   * @type {function}
+   */
+  this.callback_ = callback;
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.DoAfterDelay.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+  if (timeSinceStart >= this.duration_) {
+    this.callback_();
+    this.isFinished = true;
+  }
+};
+
+
+},{"../utils":313}],238:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3057,7 +4084,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimDnsTab":188,"./NetSimMyDeviceTab":208,"./NetSimRouterTab":226,"./NetSimTabsComponent.html.ejs":238,"./netsimConstants":253,"./netsimGlobals":254,"./netsimUtils":256}],238:[function(require,module,exports){
+},{"./NetSimDnsTab":188,"./NetSimMyDeviceTab":207,"./NetSimRouterTab":225,"./NetSimTabsComponent.html.ejs":237,"./netsimConstants":254,"./netsimGlobals":255,"./netsimUtils":257}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3089,7 +4116,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"./netsimConstants":253,"./netsimUtils":256,"ejs":483}],236:[function(require,module,exports){
+},{"./locale":251,"./netsimConstants":254,"./netsimUtils":257,"ejs":484}],235:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3188,7 +4215,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 };
 
 
-},{"../utils":312,"./NetSimPanel.js":214,"./NetSimStatusPanel.html.ejs":235}],235:[function(require,module,exports){
+},{"../utils":313,"./NetSimPanel.js":213,"./NetSimStatusPanel.html.ejs":234}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3219,7 +4246,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"ejs":483}],230:[function(require,module,exports){
+},{"./locale":251,"ejs":484}],229:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3796,7 +4823,7 @@ CleanLogs.prototype.onBegin_ = function () {
 };
 
 
-},{"../commands":101,"../utils":312,"./NetSimEntity":193,"./NetSimHeartbeat":195,"./NetSimLogEntry":198,"./NetSimLogger":202,"./NetSimMessage":204,"./NetSimNode":209,"./NetSimWire":245}],229:[function(require,module,exports){
+},{"../commands":101,"../utils":313,"./NetSimEntity":193,"./NetSimHeartbeat":194,"./NetSimLogEntry":197,"./NetSimLogger":201,"./NetSimMessage":203,"./NetSimNode":208,"./NetSimWire":246}],228:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3880,7 +4907,7 @@ NetSimShard.prototype.tick = function (clock) {
 };
 
 
-},{"../clientApi":99,"./NetSimTable":237}],237:[function(require,module,exports){
+},{"../clientApi":99,"./NetSimTable":236}],236:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4125,7 +5152,7 @@ NetSimTable.prototype.tick = function () {
 };
 
 
-},{"../ObservableEvent":2,"../utils":312}],228:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":313}],227:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4655,7 +5682,7 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":312,"./NetSimLogger":202,"./NetSimPacketEditor":211,"./NetSimPacketSizeControl":212,"./NetSimPanel":214,"./NetSimSendPanel.html.ejs":227,"./Packet":246,"./dataConverters":248,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254}],227:[function(require,module,exports){
+},{"../utils":313,"./NetSimLogger":201,"./NetSimPacketEditor":210,"./NetSimPacketSizeControl":211,"./NetSimPanel":213,"./NetSimSendPanel.html.ejs":226,"./Packet":247,"./dataConverters":249,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4678,7 +5705,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"./netsimConstants":253,"ejs":483}],226:[function(require,module,exports){
+},{"./locale":251,"./netsimConstants":254,"ejs":484}],225:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4869,7 +5896,7 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
 };
 
 
-},{"./NetSimBandwidthControl":177,"./NetSimMemoryControl":203,"./NetSimRouterLogTable":221,"./NetSimRouterStatsTable":224,"./NetSimRouterTab.html.ejs":225,"./netsimGlobals":254}],225:[function(require,module,exports){
+},{"./NetSimBandwidthControl":177,"./NetSimMemoryControl":202,"./NetSimRouterLogTable":220,"./NetSimRouterStatsTable":223,"./NetSimRouterTab.html.ejs":224,"./netsimGlobals":255}],224:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4891,7 +5918,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"ejs":483}],224:[function(require,module,exports){
+},{"./locale":251,"ejs":484}],223:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5180,7 +6207,7 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
 };
 
 
-},{"./NetSimLogEntry":198,"./NetSimRouterStatsTable.html.ejs":223,"./netsimUtils":256}],223:[function(require,module,exports){
+},{"./NetSimLogEntry":197,"./NetSimRouterStatsTable.html.ejs":222,"./netsimUtils":257}],222:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5228,7 +6255,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":312,"./netsimUtils":256,"ejs":483}],221:[function(require,module,exports){
+},{"../utils":313,"./netsimUtils":257,"ejs":484}],220:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5295,7 +6322,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimRouterLogTable.html.ejs":220}],220:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html.ejs":219}],219:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5339,7 +6366,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":246,"./locale":250,"./netsimConstants":253,"./netsimUtils":256,"ejs":483}],219:[function(require,module,exports){
+},{"./Packet":247,"./locale":251,"./netsimConstants":254,"./netsimUtils":257,"ejs":484}],218:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5522,7 +6549,7 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
 };
 
 
-},{"../utils":312,"./NetSimLogEntry":198,"./NetSimRouterLogModal.html.ejs":218,"./Packet":246,"./netsimGlobals":254}],218:[function(require,module,exports){
+},{"../utils":313,"./NetSimLogEntry":197,"./NetSimRouterLogModal.html.ejs":217,"./Packet":247,"./netsimGlobals":255}],217:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5574,7 +6601,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":246,"./locale":250,"./netsimGlobals":254,"ejs":483}],212:[function(require,module,exports){
+},{"./Packet":247,"./locale":251,"./netsimGlobals":255,"ejs":484}],211:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5653,7 +6680,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":234,"./locale":250}],211:[function(require,module,exports){
+},{"./NetSimSlider":233,"./locale":251}],210:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6568,7 +7595,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 };
 
 
-},{"../constants":102,"../utils":312,"./NetSimEncodingControl":192,"./NetSimLogPanel":201,"./NetSimPacketEditor.html.ejs":210,"./Packet":246,"./dataConverters":248,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254}],210:[function(require,module,exports){
+},{"../constants":102,"../utils":313,"./NetSimEncodingControl":192,"./NetSimLogPanel":200,"./NetSimPacketEditor.html.ejs":209,"./Packet":247,"./dataConverters":249,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6641,7 +7668,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":246,"./locale":250,"./netsimConstants":253,"./netsimUtils":256,"ejs":483}],208:[function(require,module,exports){
+},{"./Packet":247,"./locale":251,"./netsimConstants":254,"./netsimUtils":257,"ejs":484}],207:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6847,7 +7874,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
 };
 
 
-},{"./NetSimBitRateControl":180,"./NetSimChunkSizeControl":181,"./NetSimEncodingControl":192,"./NetSimMetronome":206,"./NetSimMyDeviceTab.html.ejs":207,"./NetSimPulseRateControl":215,"./netsimGlobals":254}],215:[function(require,module,exports){
+},{"./NetSimBitRateControl":180,"./NetSimChunkSizeControl":181,"./NetSimEncodingControl":192,"./NetSimMetronome":205,"./NetSimMyDeviceTab.html.ejs":206,"./NetSimPulseRateControl":214,"./netsimGlobals":255}],214:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6914,7 +7941,7 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"../utils":312,"./NetSimSlider":234,"./locale":250}],207:[function(require,module,exports){
+},{"../utils":313,"./NetSimSlider":233,"./locale":251}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6934,7 +7961,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],206:[function(require,module,exports){
+},{"ejs":484}],205:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7053,7 +8080,7 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
 };
 
 
-},{"./NetSimMetronome.html.ejs":205}],205:[function(require,module,exports){
+},{"./NetSimMetronome.html.ejs":204}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7145,7 +8172,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],203:[function(require,module,exports){
+},{"ejs":484}],202:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7198,7 +8225,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":312,"./NetSimSlider":234,"./netsimConstants":253,"./netsimUtils":256}],201:[function(require,module,exports){
+},{"../utils":313,"./NetSimSlider":233,"./netsimConstants":254,"./netsimUtils":257}],200:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7636,7 +8663,7 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":312,"./NetSimEncodingControl":192,"./NetSimLogPacket.html.ejs":199,"./NetSimLogPanel.html.ejs":200,"./NetSimPanel":214,"./Packet":246,"./locale":250,"./netsimGlobals":254}],200:[function(require,module,exports){
+},{"../utils":313,"./NetSimEncodingControl":192,"./NetSimLogPacket.html.ejs":198,"./NetSimLogPanel.html.ejs":199,"./NetSimPanel":213,"./Packet":247,"./locale":251,"./netsimGlobals":255}],199:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7656,7 +8683,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],199:[function(require,module,exports){
+},{"ejs":484}],198:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7796,7 +8823,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":246,"./dataConverters":248,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254,"./netsimUtils":256,"ejs":483}],197:[function(require,module,exports){
+},{"./Packet":247,"./dataConverters":249,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255,"./netsimUtils":257,"ejs":484}],196:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8597,7 +9624,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 };
 
 
-},{"../ObservableEvent":2,"../utils":312,"./NetSimClientNode":182,"./NetSimEntity":193,"./NetSimHeartbeat":195,"./NetSimLogger":202,"./NetSimMessage":204,"./NetSimRouterNode":222,"./netsimConstants":253,"./netsimGlobals":254}],196:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":313,"./NetSimClientNode":182,"./NetSimEntity":193,"./NetSimHeartbeat":194,"./NetSimLogger":201,"./NetSimMessage":203,"./NetSimRouterNode":221,"./netsimConstants":254,"./netsimGlobals":255}],195:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9099,7 +10126,7 @@ NetSimLobby.prototype.getShareLink = function () {
 };
 
 
-},{"../utils":312,"./NetSimClientNode":182,"./NetSimLogger":202,"./NetSimRemoteNodeSelectionPanel":217,"./NetSimRouterNode":222,"./NetSimShardSelectionPanel":232,"./locale":250,"./netsimGlobals":254,"./netsimNodeFactory":255}],232:[function(require,module,exports){
+},{"../utils":313,"./NetSimClientNode":182,"./NetSimLogger":201,"./NetSimRemoteNodeSelectionPanel":216,"./NetSimRouterNode":221,"./NetSimShardSelectionPanel":231,"./locale":251,"./netsimGlobals":255,"./netsimNodeFactory":256}],231:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9273,7 +10300,7 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
 };
 
 
-},{"../constants":102,"../utils":312,"./NetSimPanel":214,"./NetSimShardSelectionPanel.html.ejs":231,"./locale":250}],231:[function(require,module,exports){
+},{"../constants":102,"../utils":313,"./NetSimPanel":213,"./NetSimShardSelectionPanel.html.ejs":230,"./locale":251}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9305,7 +10332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"ejs":483}],222:[function(require,module,exports){
+},{"./locale":251,"ejs":484}],221:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11161,7 +12188,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 };
 
 
-},{"../ObservableEvent":2,"../utils":312,"./NetSimEntity":193,"./NetSimHeartbeat":195,"./NetSimLogEntry":198,"./NetSimLogger":202,"./NetSimMessage":204,"./NetSimNode":209,"./NetSimWire":245,"./Packet":246,"./dataConverters":248,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254,"./netsimNodeFactory":255,"./netsimUtils":256}],204:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":313,"./NetSimEntity":193,"./NetSimHeartbeat":194,"./NetSimLogEntry":197,"./NetSimLogger":201,"./NetSimMessage":203,"./NetSimNode":208,"./NetSimWire":246,"./Packet":247,"./dataConverters":249,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255,"./netsimNodeFactory":256,"./netsimUtils":257}],203:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11296,7 +12323,7 @@ NetSimMessage.prototype.buildRow = function () {
 };
 
 
-},{"../utils":312,"./NetSimEntity":193}],198:[function(require,module,exports){
+},{"../utils":313,"./NetSimEntity":193}],197:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11486,10 +12513,10 @@ NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
 };
 
 /**
- * @returns {string} 12-hour short time
+ * @returns {string} 12-hour time with milliseconds
  */
 NetSimLogEntry.prototype.getTimeString = function () {
-  return moment(this.timestamp).format('LT');
+  return moment(this.timestamp).format('h:mm:ss.SSS A');
 };
 
 /**
@@ -11510,7 +12537,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
 };
 
 
-},{"../utils":312,"./NetSimEntity":193,"./Packet":246,"./dataConverters":248,"./locale":250,"./netsimConstants":253,"./netsimNodeFactory":255,"moment":487}],487:[function(require,module,exports){
+},{"../utils":313,"./NetSimEntity":193,"./Packet":247,"./dataConverters":249,"./locale":251,"./netsimConstants":254,"./netsimNodeFactory":256,"moment":488}],488:[function(require,module,exports){
 //! moment.js
 //! version : 2.10.3
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -14622,7 +15649,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
     return _moment;
 
 }));
-},{}],255:[function(require,module,exports){
+},{}],256:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14676,7 +15703,7 @@ netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
 };
 
 
-},{"./NetSimClientNode":182,"./NetSimRouterNode":222,"./netsimConstants":253}],246:[function(require,module,exports){
+},{"./NetSimClientNode":182,"./NetSimRouterNode":221,"./netsimConstants":254}],247:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15038,7 +16065,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 };
 
 
-},{"./dataConverters":248,"./netsimGlobals":254,"./netsimUtils":256}],217:[function(require,module,exports){
+},{"./dataConverters":249,"./netsimGlobals":255,"./netsimUtils":257}],216:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15284,7 +16311,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 
 
 
-},{"../utils":312,"./NetSimPanel":214,"./NetSimRemoteNodeSelectionPanel.html.ejs":216,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254}],216:[function(require,module,exports){
+},{"../utils":313,"./NetSimPanel":213,"./NetSimRemoteNodeSelectionPanel.html.ejs":215,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255}],215:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -15521,7 +16548,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":312,"./locale":250,"./netsimConstants":253,"./netsimGlobals":254,"ejs":483}],195:[function(require,module,exports){
+},{"../utils":313,"./locale":251,"./netsimConstants":254,"./netsimGlobals":255,"ejs":484}],194:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15724,988 +16751,7 @@ NetSimHeartbeat.prototype.spoofExpired = function () {
 };
 
 
-},{"../utils":312,"./NetSimEntity":193}],194:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-require('../utils');
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizElement = require('./NetSimVizElement');
-var NetSimVizNode = require('./NetSimVizNode');
-
-/**
- * Represents a connection between two nodes that does not actually exist
- * in the simulation - original use case is for broadcast mode, where nodes
- * are ACTUALLY connected through a hub, but we want it to appear that they
- * are all connected to one another.
- *
- * @param {{nodeA:{number}, nodeB:{number}}} endpoints
- * @param {function} getEntityByID - Allows this wire to search
- *        for entities in the simulation
- * @constructor
- * @augments NetSimVizElement
- */
-var NetSimFakeVizWire = module.exports = function (endpoints, getEntityByID) {
-  NetSimVizElement.call(this);
-
-  var root = this.getRoot();
-  root.addClass('viz-wire');
-
-  /**
-   * @type {jQuery} wrapped around a SVGPathElement
-   * @private
-   */
-  this.line_ = jQuerySvgElement('path')
-      .appendTo(root);
-
-  /**
-   * Bound getEntityByID method from vizualization controller.
-   * @type {Function}
-   * @private
-   */
-  this.getEntityByID_ = getEntityByID;
-
-  this.localVizNode = null;
-  this.remoteVizNode = null;
-
-  this.configureFrom(endpoints);
-  this.render();
-};
-NetSimFakeVizWire.inherits(NetSimVizElement);
-
-/**
- * Configuring a wire means looking up the viz nodes that will be its endpoints.
- * @param {{nodeA:{number}, nodeB:{number}}} endpoints
- */
-NetSimFakeVizWire.prototype.configureFrom = function (endpoints) {
-  this.localVizNode = this.getEntityByID_(NetSimVizNode, endpoints.nodeA);
-  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, endpoints.nodeB);
-};
-
-/**
- * Node ID of local-end node, if it exists.
- * @returns {number|undefined}
- */
-NetSimFakeVizWire.prototype.localNodeID = function () {
-  if (this.localVizNode) {
-    return this.localVizNode.id;
-  }
-  return undefined;
-};
-
-/**
- * Node ID of remote-end node, if it exists.
- * @returns {number|undefined}
- */
-NetSimFakeVizWire.prototype.remoteNodeID = function () {
-  if (this.remoteVizNode) {
-    return this.remoteVizNode.id;
-  }
-  return undefined;
-};
-
-/**
- * Update path data for wire.
- */
-NetSimFakeVizWire.prototype.render = function () {
-  NetSimFakeVizWire.superPrototype.render.call(this);
-
-  var pathData = 'M 0 0';
-  if (this.localVizNode && this.remoteVizNode) {
-    pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
-    ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
-  }
-  this.line_.attr('d', pathData);
-};
-
-/**
- * Hide this wire - used to hide the incoming wire when we're trying to show
- * simplex mode.
- */
-NetSimFakeVizWire.prototype.hide = function () {
-  this.getRoot().addClass('hidden-wire');
-};
-
-/**
- * Killing a visualization node removes its ID so that it won't conflict with
- * another node of matching ID being added, and begins its exit animation.
- * @override
- */
-NetSimFakeVizWire.prototype.kill = function () {
-  NetSimFakeVizWire.superPrototype.kill.call(this);
-  this.localVizNode = null;
-  this.remoteVizNode = null;
-};
-
-/**
- * Adds/removes classes from the SVG root according to the given wire state.
- * Passing anything other than "1" or "0" will put the wire in an "unknown"
- * state, which begins a CSS transition fade back to gray.
- * @param {"0"|"1"|*} newState
- * @private
- */
-NetSimFakeVizWire.prototype.setWireClasses_ = function (newState) {
-  var stateOff = (newState === '0');
-  var stateOn = (!stateOff && newState === '1');
-  var stateUnknown = (!stateOff && !stateOn);
-
-  this.getRoot().toggleClass('state-on', stateOn);
-  this.getRoot().toggleClass('state-off', stateOff);
-  this.getRoot().toggleClass('state-unknown', stateUnknown);
-};
-
-
-},{"../utils":312,"./NetSimVizElement":241,"./NetSimVizNode":243,"./netsimUtils":256}],243:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-require('../utils');
-var netsimConstants = require('./netsimConstants');
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
-var tweens = require('./tweens');
-
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
-
-var netsimGlobals = require('./netsimGlobals');
-
-/**
- * The narrowest that a text bubble is allowed to be.
- * @type {number}
- * @const
- */
-var TEXT_MIN_WIDTH = 30;
-
-/**
- * Width to add to the bubble beyond the width of the student's name.
- * @type {number}
- * @const
- */
-var TEXT_PADDING_X = 20;
-
-/**
- * Height to add to the bubble beyond the height of the student's name.
- * @type {number}
- * @const
- */
-var TEXT_PADDING_Y = 10;
-
-/**
- * @param {NetSimNode} sourceNode
- * @constructor
- * @augments NetSimVizEntity
- */
-var NetSimVizNode = module.exports = function (sourceNode) {
-  NetSimVizEntity.call(this, sourceNode);
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.address_ = undefined;
-
-  /**
-   * @type {DnsMode}
-   * @private
-   */
-  this.dnsMode_ = undefined;
-
-  /**
-   * @type {number}
-   */
-  this.nodeID = undefined;
-
-  /**
-   * @type {boolean}
-   */
-  this.isRouter = false;
-
-  /**
-   * @type {boolean}
-   */
-  this.isLocalNode = false;
-
-  /**
-   * @type {boolean}
-   */
-  this.isDnsNode = false;
-
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
-
-  // Going for a diameter of _close_ to 75
-  var radius = 37;
-  var textVerticalOffset = 4;
-
-  /**
-   *
-   * @type {jQuery}
-   * @private
-   */
-  jQuerySvgElement('circle')
-      .attr('cx', 0)
-      .attr('cy', 0)
-      .attr('r', radius)
-      .appendTo(root);
-
-  this.nameGroup_ = jQuerySvgElement('g')
-      .attr('transform', 'translate(0,0)')
-      .appendTo(root);
-
-  this.displayName_ = jQuerySvgElement('text')
-      .attr('x', 0)
-      .attr('y', textVerticalOffset);
-
-  this.nameBox_ = jQuerySvgElement('rect')
-      .addClass('name-box');
-
-  this.nameGroup_
-      .append(this.nameBox_)
-      .append(this.displayName_);
-
-  this.addressGroup_ = jQuerySvgElement('g')
-      .attr('transform', 'translate(0,30)')
-      .hide()
-      .appendTo(root);
-
-  this.addressBox_ = jQuerySvgElement('rect')
-      .addClass('address-box')
-      .appendTo(this.addressGroup_);
-
-  this.addressText_ = jQuerySvgElement('text')
-      .addClass('address-box')
-      .attr('x', 0)
-      .attr('y', textVerticalOffset)
-      .text('?')
-      .appendTo(this.addressGroup_);
-
-  // Set an initial default tween for zooming in from nothing.
-  this.snapToScale(0);
-  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
-
-  this.configureFrom(sourceNode);
-  this.render();
-};
-NetSimVizNode.inherits(NetSimVizEntity);
-
-/**
- *
- * @param {NetSimNode} sourceNode
- */
-NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  var levelConfig = netsimGlobals.getLevelConfig();
-  if (levelConfig.showHostnameInGraph) {
-    this.setName(sourceNode.getHostname());
-  } else {
-    this.setName(sourceNode.getShortDisplayName());
-  }
-  this.nodeID = sourceNode.entityID;
-
-  if (sourceNode.getNodeType() === NodeType.ROUTER) {
-    this.isRouter = true;
-    this.getRoot().addClass('router-node');
-    if (levelConfig.broadcastMode) {
-      this.getRoot().css('display', 'none');
-    }
-  }
-};
-
-/**
- * Flag this viz node as the simulation local node.
- */
-NetSimVizNode.prototype.setIsLocalNode = function () {
-  this.isLocalNode = true;
-  this.getRoot().addClass('local-node');
-};
-
-/**
- * Change the display name of the viz node
- * @param {string} newName
- */
-NetSimVizNode.prototype.setName = function (newName) {
-  this.displayName_.text(newName);
-  this.resizeNameBox_();
-};
-
-/** @private */
-NetSimVizNode.prototype.resizeNameBox_ = function () {
-  this.resizeRectToText_(this.nameBox_, this.displayName_);
-};
-
-/** @private */
-NetSimVizNode.prototype.resizeAddressBox_ = function () {
-  this.resizeRectToText_(this.addressBox_, this.addressText_);
-};
-
-/**
- * Utility for resizing a background rounded-rect to fit the given text element.
- * @param {jQuery} rect
- * @param {jQuery} text
- * @private
- */
-NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
-  try {
-    var box = text[0].getBBox();
-    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
-    var height = box.height + TEXT_PADDING_Y;
-    var halfWidth = width / 2;
-    var halfHeight = height / 2;
-    rect.attr('x', -halfWidth)
-        .attr('y', -halfHeight)
-        .attr('rx', halfHeight)
-        .attr('ry', halfHeight)
-        .attr('width', width)
-        .attr('height', height);
-  } catch (e) {
-    // Just allow this to be a no-op if it fails.  In some browsers,
-    // getBBox will throw if the element is not yet in the DOM.
-  }
-};
-
-/**
- * Killing a visualization node removes its ID so that it won't conflict with
- * another node of matching ID being added, and begins its exit animation.
- * @override
- */
-NetSimVizNode.prototype.kill = function () {
-  NetSimVizNode.superPrototype.kill.call(this);
-  this.stopAllAnimation();
-  this.tweenToScale(0, 200, tweens.easeInQuad);
-};
-
-/**
- * Provides drifting animation for nodes in the background.
- * @param {RunLoop.Clock} clock
- */
-NetSimVizNode.prototype.tick = function (clock) {
-  NetSimVizNode.superPrototype.tick.call(this, clock);
-  if (!this.isForeground && this.tweens_.length === 0) {
-    var randomX = 300 * Math.random() - 150;
-    var randomY = 300 * Math.random() - 150;
-    this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
-  } else if (this.isForeground && this.tweens_.length > 0) {
-    this.resizeNameBox_();
-    this.resizeAddressBox_();
-  }
-};
-
-/**
- * @param {boolean} isForeground
- */
-NetSimVizNode.prototype.onDepthChange = function (isForeground) {
-  NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
-  this.tweens_.length = 0;
-  if (isForeground) {
-    this.tweenToScale(1, 600, tweens.easeOutElastic);
-  } else {
-    this.tweenToScale(0.5, 600, tweens.easeOutElastic);
-  }
-};
-
-/**
- * @param {string} address
- */
-NetSimVizNode.prototype.setAddress = function (address) {
-  this.address_ = address;
-  this.updateAddressDisplay();
-};
-
-/**
- * @param {DNSMode} newDnsMode
- */
-NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsMode_ = newDnsMode;
-  this.updateAddressDisplay();
-};
-
-/**
- * @param {boolean} isDnsNode
- */
-NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
-  this.isDnsNode = isDnsNode;
-  this.updateAddressDisplay();
-};
-
-NetSimVizNode.prototype.updateAddressDisplay = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
-
-  // If we are never assigned an address, don't try to show one.
-  // In broadcast mode we will be assigned addresses but never use them, so
-  //   they should be hidden.
-  // Routers never show their address.
-  if (this.address_ === undefined || levelConfig.broadcastMode || this.isRouter) {
-    this.addressGroup_.hide();
-    return;
-  }
-
-  this.addressGroup_.show();
-  if (this.dnsMode_ === DnsMode.NONE) {
-    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
-  } else {
-    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
-  }
-  this.resizeAddressBox_();
-};
-
-
-},{"../utils":312,"./NetSimVizEntity":242,"./netsimConstants":253,"./netsimGlobals":254,"./netsimUtils":256,"./tweens":259}],242:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-require('../utils'); // For Function.prototype.inherits
-var NetSimVizElement = require('./NetSimVizElement');
-
-/**
- * A VizEntity is a NetSimVizElement that maps to a NetSimEntity somewhere in
- * shared storage, and has a representation in the network visualization.
- * Its role is to maintain that visual representation and update it to reflect
- * the state of the stored entity it represents.
- *
- * In doing so, it has behaviors and a lifetime that don't directly represent
- * the stored entity because while quantities in our model snap to new values
- * or are created/destroyed in a single frame, we want their visual
- * representation to animate nicely.  Thus, a VizEntity has helpers for tweening
- * and may often be in progress toward the state of the entity it represents,
- * rather than an exact representation of that entity.  Likewise, a VizEntity
- * will outlive its actual entity, because it can have a 'death' animation.
- *
- * @constructor
- * @param {NetSimEntity} entity - the netsim Entity that this element represents
- */
-var NetSimVizEntity = module.exports =  function (entity) {
-  NetSimVizElement.call(this);
-
-  /**
-   * @type {number}
-   */
-  this.id = entity.entityID;
-};
-NetSimVizEntity.inherits(NetSimVizElement);
-
-/**
- * Begins the process of destroying this VizEntity.  Once started, this
- * process cannot be stopped.  Immediately clears its ID to remove any
- * association with the stored entity, which probably doesn't exist anymore.
- * This method can be overridden to trigger an "on-death" animation.
- */
-NetSimVizEntity.prototype.kill = function () {
-  this.id = undefined;
-  NetSimVizEntity.superPrototype.kill.call(this);
-};
-
-
-},{"../utils":312,"./NetSimVizElement":241}],241:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var tweens = require('./tweens');
-
-/**
- * A VizElement is an object that  has a representation in the network
- * visualization.  Its role is to maintain that visual representation.
- * A VizElement has helpers for positioning, scaling and tweening.
- * Every VizElement has a root element which is a <g> tag, an SVG "group"
- * that contains the other components that will actually draw.
- *
- * @constructor
- */
-var NetSimVizElement = module.exports =  function () {
-  /**
-   * @type {number}
-   */
-  this.posX = 0;
-
-  /**
-   * @type {number}
-   */
-  this.posY = 0;
-
-  /**
-   * @type {number}
-   */
-  this.scale = 1;
-
-  /**
-   * @type {boolean}
-   */
-  this.isForeground = false;
-
-  /**
-   * Root SVG <g> (group) element for this object.
-   * @type {jQuery}
-   * @private
-   */
-  this.rootGroup_ = jQuerySvgElement('g');
-
-  /**
-   * Set of tweens we should currently be running on this node.
-   * Processed by tick()
-   * @type {Array.<exports.TweenValueTo>}
-   * @private
-   */
-  this.tweens_ = [];
-
-  /**
-   * @type {boolean}
-   * @private
-   */
-  this.isDead_ = false;
-};
-
-/**
- * @returns {jQuery} wrapper around root <g> element
- */
-NetSimVizElement.prototype.getRoot = function () {
-  return this.rootGroup_;
-};
-
-/**
- * Begins the process of destroying this VizElement.  Once started, this
- * process cannot be stopped.
- * This method can be overridden to trigger an "on-death" animation.
- */
-NetSimVizElement.prototype.kill = function () {
-  this.isDead_ = true;
-};
-
-/**
- * @returns {boolean} whether this entity is done with its death animation
- *          and is ready to be cleaned up by the visualization manager.
- *          The default implementation here returns TRUE as soon as kill()
- *          is called and all animations are completed.
- */
-NetSimVizElement.prototype.isDead = function () {
-  return this.isDead_ && this.tweens_.length === 0;
-};
-
-/**
- * @returns {boolean} whether this entity is playing its final animation
- *          and will be ready to be cleaned up by the visualization manager
- *          soon.
- */
-NetSimVizElement.prototype.isDying = function () {
-  return this.isDead_ && this.tweens_.length > 0;
-};
-
-/**
- * Update all of the tweens currently running on this VizElement (which will
- * probably modify its properties) and then remove any tweens that are completed
- * from the list.
- * @param {RunLoop.Clock} clock
- */
-NetSimVizElement.prototype.tick = function (clock) {
-  this.tweens_.forEach(function (tween) {
-    tween.tick(clock);
-  });
-  this.tweens_ = this.tweens_.filter(function (tween) {
-    return !tween.isFinished;
-  });
-};
-
-/**
- * Update the root group's properties to reflect our current position
- * and scale.
- */
-NetSimVizElement.prototype.render = function () {
-  // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
-  //                   out of date.
-  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
-      ' scale(' + this.scale + ')';
-  this.rootGroup_.attr('transform', transform);
-};
-
-/**
- * @param {boolean} isForeground
- */
-NetSimVizElement.prototype.onDepthChange = function (isForeground) {
-  this.isForeground = isForeground;
-};
-
-/**
- * Throw away all existing tweens on this object.
- */
-NetSimVizElement.prototype.stopAllAnimation = function () {
-  this.tweens_.length = 0;
-};
-
-/**
- * Stops any existing motion animation and begins an animated motion to the
- * given coordinates.  Note: This animates the VizElement's root group.
- * @param {number} newX given in SVG points
- * @param {number} newY given in SVG points
- * @param {number} [duration=600] in milliseconds
- * @param {TweenFunction} [tweenFunction=linear]
- */
-NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
-    tweenFunction) {
-  // Remove any existing tweens controlling posX or posY
-  this.removeAllTweensOnProperties(['posX', 'posY']);
-
-  // Add two new tweens, one for each axis
-  if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'posX', newX, duration,
-        tweenFunction));
-    this.tweens_.push(new tweens.TweenValueTo(this, 'posY', newY, duration,
-        tweenFunction));
-  } else {
-    this.posX = newX;
-    this.posY = newY;
-  }
-
-};
-
-/**
- * Alias for calling tweenToPosition with a zero duration
- * @param {number} newX given in SVG points
- * @param {number} newY given in SVG points
- */
-NetSimVizElement.prototype.snapToPosition = function (newX, newY) {
-  this.tweenToPosition(newX, newY, 0);
-};
-
-/**
- * Stops any existing animation of the entity's scale and begins an animated
- * change to the given target scale value.  Note: this animates the VizElement's
- * root group.
- * @param {number} newScale where 1.0 is 100% (unscaled)
- * @param {number} [duration=600] in milliseconds
- * @param {TweenFunction} [tweenFunction=linear]
- */
-NetSimVizElement.prototype.tweenToScale = function (newScale, duration,
-    tweenFunction) {
-  // Remove existing scale tweens
-  this.removeAllTweensOnProperty('scale');
-
-  // On nonzero duration, add tween to target scale.  Otherwise just set it.
-  if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'scale', newScale, duration,
-        tweenFunction));
-  } else {
-    this.scale = newScale;
-  }
-};
-
-NetSimVizElement.prototype.doAfterDelay = function (delay, callback) {
-  if (delay > 0) {
-    this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
-  } else {
-    callback();
-  }
-};
-
-/**
- * Remove (stop) all active tweens that control the given property on this
- * visualization entity.
- * @param {string} propertyName
- */
-NetSimVizElement.prototype.removeAllTweensOnProperty = function (propertyName) {
-  this.removeAllTweensOnProperties([propertyName]);
-};
-
-/**
- * Remove (stop) all active tweens that control any of the given properties
- * on this visualization entity.
- * @param {string[]} propertyNames
- */
-NetSimVizElement.prototype.removeAllTweensOnProperties = function (propertyNames) {
-  this.tweens_ = this.tweens_.filter(function (tween) {
-    var targetsThisEntity = tween.target === this;
-    var isRemovableProperty = propertyNames.some(function (name) {
-      return tween.propertyName === name;
-    });
-
-    // Invert for filter() because we want to keep everything BUT the matched
-    // properties
-    return !(targetsThisEntity && isRemovableProperty);
-  }, this);
-};
-
-/**
- * Alias for calling tweenToScale with a zero duration.
- * @param {number} newScale where 1.0 is 100% (unscaled)
- */
-NetSimVizElement.prototype.snapToScale = function (newScale) {
-  this.tweenToScale(newScale, 0);
-};
-
-
-},{"./netsimUtils":256,"./tweens":259}],259:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-var valueOr = require('../utils').valueOr;
-
-/**
- * Default tween duration in milliseconds
- * @type {number}
- * @const
- */
-var DEFAULT_TWEEN_DURATION = 600;
-
-/**
- * A four-arg interpolation function.
- *
- * @typedef {function} TweenFunction
- * @param {number} t - current Time, in milliseconds since tween began
- * @param {number} b - Begin value
- * @param {number} c - final Change in value
- * @param {number} d - total tween Duration
- * @returns {number} the interpolated value for the current time
- */
-
-/**
- * Interpolates with a little back-and-forth over the target value at the end.
- * @type {TweenFunction}
- */
-exports.easeOutElastic = function (t, b, c, d) {
-  var s, p, a;
-  s=1.70158;
-  p=0;
-  a=c;
-  if (t===0) {
-    return b;
-  }
-  if ((t/=d)==1) {
-    return b+c;
-  }
-  if (!p) {
-    p=d*0.3;
-  }
-  if (a < Math.abs(c)) {
-    a=c;
-    s=p/4;
-  } else {
-    s = p/(2*Math.PI) * Math.asin (c/a);
-  }
-  return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-};
-
-/**
- * Interpolates, accelerating as it goes.
- * @type {TweenFunction}
- */
-exports.easeInQuad = function (t, b, c, d) {
-  return c*(t/=d)*t + b;
-};
-
-/**
- * Interpolates, decelerating as it goes.
- * @type {TweenFunction}
- */
-exports.easeOutQuad = function (t, b, c, d) {
-  return -c*(t/=d)*(t-2) + b;
-};
-
-exports.easeInOutQuad = function (t, b, c, d) {
-  if ((t/=d/2) < 1) {
-    return c/2*t*t + b;
-  }
-  return -c/2 * ((--t)*(t-2) - 1) + b;
-};
-
-/**
- * Linear interpolation
- * @type {TweenFunction}
- */
-exports.linear = function (t, b, c, d) {
-  return c * (t / d) + b;
-};
-
-/**
- * Wraps a tween method with the state it needs to animate a property.
- * On creation, assumes that property's current value for start values.
- * Must be ticked to progress toward completion.
- *
- * @param {!Object} target - The object owning the property we want to animate
- * @param {!string} propertyName - Must be a valid property on target
- * @param {!number} endValue - The desired final value of the property
- * @param {number} [duration] - How long the tween should take in milliseconds,
- *        default 600ms
- * @param {TweenFunction} [tweenFunction] - A tween function, default linear
- * @constructor
- */
-exports.TweenValueTo = function (target, propertyName, endValue, duration,
-    tweenFunction) {
-  /**
-   * Will be set to TRUE when tween is completed.
-   * @type {boolean}
-   */
-  this.isFinished = false;
-
-  /**
-   * Will be set on our first tick.
-   * @type {number}
-   * @private
-   */
-  this.startTime_ = undefined;
-
-  /**
-   * @type {Object}
-   */
-  this.target = target;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.propertyName = propertyName;
-
-  /**
-   * @type {TweenFunction}
-   * @private
-   */
-  this.tweenFunction_ = valueOr(tweenFunction, exports.linear);
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.startValue_ = target[propertyName];
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.deltaValue_ = endValue - this.startValue_;
-
-  /**
-   * Duration of tween in milliseconds
-   * @type {number}
-   * @private
-   */
-  this.duration_ = valueOr(duration, DEFAULT_TWEEN_DURATION);
-};
-
-/**
- * @param {RunLoop.clock} clock
- */
-exports.TweenValueTo.prototype.tick = function (clock) {
-  if (this.startTime_ === undefined) {
-    this.startTime_ = clock.time;
-  }
-
-  var timeSinceStart = clock.time - this.startTime_;
-
-  if (this.deltaValue_ !== 0) {
-    this.target[this.propertyName] = this.tweenFunction_(
-        timeSinceStart,
-        this.startValue_,
-        this.deltaValue_,
-        this.duration_
-    );
-  }
-
-  if (timeSinceStart >= this.duration_) {
-    this.target[this.propertyName] = this.startValue_ + this.deltaValue_;
-    this.isFinished = true;
-  }
-};
-
-exports.DoAfterDelay = function (target, duration, callback) {
-  /**
-   * Will be set to TRUE when tween is completed.
-   * @type {boolean}
-   */
-  this.isFinished = false;
-
-
-  /**
-   * Will be set on our first tick.
-   * @type {number}
-   * @private
-   */
-  this.startTime_ = undefined;
-
-  /**
-   * @type {Object}
-   */
-  this.target = target;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.propertyName = null;
-
-  /**
-   * Duration of tween in milliseconds
-   * @type {number}
-   * @private
-   */
-  this.duration_ = duration;
-
-  /**
-   * Function to call when the duration has elapsed.
-   * @type {function}
-   */
-  this.callback_ = callback;
-};
-
-/**
- * @param {RunLoop.clock} clock
- */
-exports.DoAfterDelay.prototype.tick = function (clock) {
-  if (this.startTime_ === undefined) {
-    this.startTime_ = clock.time;
-  }
-
-  var timeSinceStart = clock.time - this.startTime_;
-  if (timeSinceStart >= this.duration_) {
-    this.callback_();
-    this.isFinished = true;
-  }
-};
-
-
-},{"../utils":312}],188:[function(require,module,exports){
+},{"../utils":313,"./NetSimEntity":193}],188:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16828,7 +16874,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsManualControl":184,"./NetSimDnsModeControl":186,"./NetSimDnsTab.html.ejs":187,"./NetSimDnsTable":190,"./netsimConstants":253,"./netsimGlobals":254}],190:[function(require,module,exports){
+},{"./NetSimDnsManualControl":184,"./NetSimDnsModeControl":186,"./NetSimDnsTab.html.ejs":187,"./NetSimDnsTable":190,"./netsimConstants":254,"./netsimGlobals":255}],190:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16903,7 +16949,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsTable.html.ejs":189,"./netsimConstants":253}],189:[function(require,module,exports){
+},{"./NetSimDnsTable.html.ejs":189,"./netsimConstants":254}],189:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16946,7 +16992,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":253,"ejs":483}],187:[function(require,module,exports){
+},{"./netsimConstants":254,"ejs":484}],187:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16966,7 +17012,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],186:[function(require,module,exports){
+},{"ejs":484}],186:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17053,7 +17099,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
 };
 
 
-},{"./NetSimDnsModeControl.html.ejs":185,"./netsimConstants":253}],185:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html.ejs":185,"./netsimConstants":254}],185:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17084,7 +17130,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"./netsimConstants":253,"ejs":483}],184:[function(require,module,exports){
+},{"./locale":251,"./netsimConstants":254,"ejs":484}],184:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17170,7 +17216,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],182:[function(require,module,exports){
+},{"ejs":484}],182:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17293,7 +17339,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
 };
 
 
-},{"../utils":312,"./NetSimEntity":193,"./NetSimNode":209,"./NetSimWire":245,"./locale":250,"./netsimConstants":253}],209:[function(require,module,exports){
+},{"../utils":313,"./NetSimEntity":193,"./NetSimNode":208,"./NetSimWire":246,"./locale":251,"./netsimConstants":254}],208:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17447,7 +17493,7 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
 
-},{"../utils":312,"./NetSimEntity":193,"./NetSimWire":245,"./locale":250}],245:[function(require,module,exports){
+},{"../utils":313,"./NetSimEntity":193,"./NetSimWire":246,"./locale":251}],246:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17571,7 +17617,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
 };
 
 
-},{"../utils":312,"./NetSimEntity":193}],193:[function(require,module,exports){
+},{"../utils":313,"./NetSimEntity":193}],193:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17778,7 +17824,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":234,"./locale":250}],180:[function(require,module,exports){
+},{"./NetSimSlider":233,"./locale":251}],180:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17830,7 +17876,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":312,"./NetSimSlider":234,"./netsimUtils":256}],179:[function(require,module,exports){
+},{"../utils":313,"./NetSimSlider":233,"./netsimUtils":257}],179:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -18075,7 +18121,7 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":312,"./NetSimBitLogPanel.html.ejs":178,"./NetSimEncodingControl":192,"./NetSimLogger":202,"./NetSimPanel":214,"./locale":250,"./netsimGlobals":254}],254:[function(require,module,exports){
+},{"../utils":313,"./NetSimBitLogPanel.html.ejs":178,"./NetSimEncodingControl":192,"./NetSimLogger":201,"./NetSimPanel":213,"./locale":251,"./netsimGlobals":255}],255:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -18207,7 +18253,7 @@ module.exports = {
 };
 
 
-},{"seedrandom":643}],643:[function(require,module,exports){
+},{"seedrandom":644}],644:[function(require,module,exports){
 // A library of seedable RNGs implemented in Javascript.
 //
 // Usage:
@@ -18263,7 +18309,7 @@ sr.tychei = tychei;
 
 module.exports = sr;
 
-},{"./lib/tychei":644,"./lib/xor128":645,"./lib/xor4096":646,"./lib/xorshift7":647,"./lib/xorwow":648,"./seedrandom":649}],649:[function(require,module,exports){
+},{"./lib/tychei":645,"./lib/xor128":646,"./lib/xor4096":647,"./lib/xorshift7":648,"./lib/xorwow":649,"./seedrandom":650}],650:[function(require,module,exports){
 /*
 Copyright 2014 David Bau.
 
@@ -18507,7 +18553,7 @@ if ((typeof module) == 'object' && module.exports) {
   Math    // math: package containing random, pow, and seedrandom
 );
 
-},{"crypto":320}],320:[function(require,module,exports){
+},{"crypto":321}],321:[function(require,module,exports){
 'use strict';
 exports.randomBytes = exports.rng = require('randombytes')
 var prng = exports.prng = require('./prng');
@@ -18566,7 +18612,7 @@ each([
   }
 })
 
-},{"./pbkdf2":456,"./prng":457,"browserify-aes/inject":328,"browserify-sign/algos":339,"browserify-sign/inject":340,"create-ecdh/inject":386,"create-hash":408,"create-hmac":419,"diffie-hellman/inject":422,"public-encrypt/inject":428,"randombytes":455}],457:[function(require,module,exports){
+},{"./pbkdf2":457,"./prng":458,"browserify-aes/inject":329,"browserify-sign/algos":340,"browserify-sign/inject":341,"create-ecdh/inject":387,"create-hash":409,"create-hmac":420,"diffie-hellman/inject":423,"public-encrypt/inject":429,"randombytes":456}],458:[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 (function() {
@@ -18597,9 +18643,9 @@ each([
 }())
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"buffer":316,"crypto":315}],315:[function(require,module,exports){
-arguments[4][314][0].apply(exports,arguments)
-},{"dup":314}],456:[function(require,module,exports){
+},{"buffer":317,"crypto":316}],316:[function(require,module,exports){
+arguments[4][315][0].apply(exports,arguments)
+},{"dup":315}],457:[function(require,module,exports){
 'use strict';
 var pbkdf2Export = require('pbkdf2-compat/pbkdf2')
 
@@ -18614,7 +18660,7 @@ module.exports = function (crypto, exports) {
   return exports
 }
 
-},{"pbkdf2-compat/pbkdf2":427}],427:[function(require,module,exports){
+},{"pbkdf2-compat/pbkdf2":428}],428:[function(require,module,exports){
 (function (Buffer){
 module.exports = function(crypto) {
   function pbkdf2(password, salt, iterations, keylen, digest, callback) {
@@ -18702,7 +18748,7 @@ module.exports = function(crypto) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],455:[function(require,module,exports){
+},{"buffer":317}],456:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict';
 
@@ -18733,13 +18779,13 @@ function oldBrowser() {
     )
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":462,"buffer":316}],428:[function(require,module,exports){
+},{"_process":463,"buffer":317}],429:[function(require,module,exports){
 
 module.exports = function (exports, crypto) {
   exports.publicEncrypt = require('./publicEncrypt')(crypto);
   exports.privateDecrypt = require('./privateDecrypt')(crypto);
 };
-},{"./privateDecrypt":452,"./publicEncrypt":453}],453:[function(require,module,exports){
+},{"./privateDecrypt":453,"./publicEncrypt":454}],454:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -18828,7 +18874,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":429,"./xor":454,"bn.js":430,"buffer":316,"parse-asn1":436}],452:[function(require,module,exports){
+},{"./mgf":430,"./xor":455,"bn.js":431,"buffer":317,"parse-asn1":437}],453:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -18928,7 +18974,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":429,"./xor":454,"bn.js":430,"browserify-rsa":431,"buffer":316,"parse-asn1":436}],454:[function(require,module,exports){
+},{"./mgf":430,"./xor":455,"bn.js":431,"browserify-rsa":432,"buffer":317,"parse-asn1":437}],455:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -18937,51 +18983,51 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],436:[function(require,module,exports){
-arguments[4][367][0].apply(exports,arguments)
-},{"./aesid.json":433,"./asn1":434,"./fixProc":435,"buffer":316,"dup":367,"pemstrip":451}],451:[function(require,module,exports){
-arguments[4][382][0].apply(exports,arguments)
-},{"dup":382}],435:[function(require,module,exports){
-arguments[4][366][0].apply(exports,arguments)
-},{"./EVP_BytesToKey":432,"buffer":316,"dup":366}],432:[function(require,module,exports){
-arguments[4][363][0].apply(exports,arguments)
-},{"buffer":316,"dup":363}],434:[function(require,module,exports){
-arguments[4][365][0].apply(exports,arguments)
-},{"asn1.js":438,"asn1.js-rfc3280":437,"dup":365}],437:[function(require,module,exports){
+},{}],437:[function(require,module,exports){
 arguments[4][368][0].apply(exports,arguments)
-},{"asn1.js":438,"dup":368}],438:[function(require,module,exports){
-arguments[4][369][0].apply(exports,arguments)
-},{"./asn1/api":439,"./asn1/base":441,"./asn1/constants":445,"./asn1/decoders":447,"./asn1/encoders":449,"bn.js":430,"dup":369}],449:[function(require,module,exports){
-arguments[4][380][0].apply(exports,arguments)
-},{"./der":448,"dup":380}],448:[function(require,module,exports){
-arguments[4][379][0].apply(exports,arguments)
-},{"../../asn1":438,"buffer":316,"dup":379,"inherits":459}],447:[function(require,module,exports){
-arguments[4][378][0].apply(exports,arguments)
-},{"./der":446,"dup":378}],446:[function(require,module,exports){
-arguments[4][377][0].apply(exports,arguments)
-},{"../../asn1":438,"dup":377,"inherits":459}],445:[function(require,module,exports){
-arguments[4][376][0].apply(exports,arguments)
-},{"./der":444,"dup":376}],444:[function(require,module,exports){
-arguments[4][375][0].apply(exports,arguments)
-},{"../constants":445,"dup":375}],441:[function(require,module,exports){
-arguments[4][372][0].apply(exports,arguments)
-},{"./buffer":440,"./node":442,"./reporter":443,"dup":372}],443:[function(require,module,exports){
-arguments[4][374][0].apply(exports,arguments)
-},{"dup":374,"inherits":459}],442:[function(require,module,exports){
-arguments[4][373][0].apply(exports,arguments)
-},{"../base":441,"dup":373,"minimalistic-assert":450}],450:[function(require,module,exports){
-arguments[4][381][0].apply(exports,arguments)
-},{"dup":381}],440:[function(require,module,exports){
-arguments[4][371][0].apply(exports,arguments)
-},{"../base":441,"buffer":316,"dup":371,"inherits":459}],439:[function(require,module,exports){
-arguments[4][370][0].apply(exports,arguments)
-},{"../asn1":438,"dup":370,"inherits":459,"vm":481}],433:[function(require,module,exports){
+},{"./aesid.json":434,"./asn1":435,"./fixProc":436,"buffer":317,"dup":368,"pemstrip":452}],452:[function(require,module,exports){
+arguments[4][383][0].apply(exports,arguments)
+},{"dup":383}],436:[function(require,module,exports){
+arguments[4][367][0].apply(exports,arguments)
+},{"./EVP_BytesToKey":433,"buffer":317,"dup":367}],433:[function(require,module,exports){
 arguments[4][364][0].apply(exports,arguments)
-},{"dup":364}],431:[function(require,module,exports){
+},{"buffer":317,"dup":364}],435:[function(require,module,exports){
+arguments[4][366][0].apply(exports,arguments)
+},{"asn1.js":439,"asn1.js-rfc3280":438,"dup":366}],438:[function(require,module,exports){
+arguments[4][369][0].apply(exports,arguments)
+},{"asn1.js":439,"dup":369}],439:[function(require,module,exports){
+arguments[4][370][0].apply(exports,arguments)
+},{"./asn1/api":440,"./asn1/base":442,"./asn1/constants":446,"./asn1/decoders":448,"./asn1/encoders":450,"bn.js":431,"dup":370}],450:[function(require,module,exports){
+arguments[4][381][0].apply(exports,arguments)
+},{"./der":449,"dup":381}],449:[function(require,module,exports){
+arguments[4][380][0].apply(exports,arguments)
+},{"../../asn1":439,"buffer":317,"dup":380,"inherits":460}],448:[function(require,module,exports){
+arguments[4][379][0].apply(exports,arguments)
+},{"./der":447,"dup":379}],447:[function(require,module,exports){
+arguments[4][378][0].apply(exports,arguments)
+},{"../../asn1":439,"dup":378,"inherits":460}],446:[function(require,module,exports){
+arguments[4][377][0].apply(exports,arguments)
+},{"./der":445,"dup":377}],445:[function(require,module,exports){
+arguments[4][376][0].apply(exports,arguments)
+},{"../constants":446,"dup":376}],442:[function(require,module,exports){
+arguments[4][373][0].apply(exports,arguments)
+},{"./buffer":441,"./node":443,"./reporter":444,"dup":373}],444:[function(require,module,exports){
+arguments[4][375][0].apply(exports,arguments)
+},{"dup":375,"inherits":460}],443:[function(require,module,exports){
+arguments[4][374][0].apply(exports,arguments)
+},{"../base":442,"dup":374,"minimalistic-assert":451}],451:[function(require,module,exports){
+arguments[4][382][0].apply(exports,arguments)
+},{"dup":382}],441:[function(require,module,exports){
+arguments[4][372][0].apply(exports,arguments)
+},{"../base":442,"buffer":317,"dup":372,"inherits":460}],440:[function(require,module,exports){
+arguments[4][371][0].apply(exports,arguments)
+},{"../asn1":439,"dup":371,"inherits":460,"vm":482}],434:[function(require,module,exports){
+arguments[4][365][0].apply(exports,arguments)
+},{"dup":365}],432:[function(require,module,exports){
+arguments[4][343][0].apply(exports,arguments)
+},{"bn.js":431,"buffer":317,"dup":343}],431:[function(require,module,exports){
 arguments[4][342][0].apply(exports,arguments)
-},{"bn.js":430,"buffer":316,"dup":342}],430:[function(require,module,exports){
-arguments[4][341][0].apply(exports,arguments)
-},{"dup":341}],429:[function(require,module,exports){
+},{"dup":342}],430:[function(require,module,exports){
 (function (Buffer){
 module.exports = function (seed, len, crypto) {
   var t = new Buffer('');
@@ -18999,7 +19045,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],422:[function(require,module,exports){
+},{"buffer":317}],423:[function(require,module,exports){
 (function (Buffer){
 var primes = require('./primes.json');
 var DH = require('./dh');
@@ -19038,7 +19084,7 @@ module.exports = function (crypto, exports) {
 	};
 }
 }).call(this,require("buffer").Buffer)
-},{"./dh":420,"./generatePrime":421,"./primes.json":426,"buffer":316}],426:[function(require,module,exports){
+},{"./dh":421,"./generatePrime":422,"./primes.json":427,"buffer":317}],427:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -19073,7 +19119,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],420:[function(require,module,exports){
+},{}],421:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -19233,7 +19279,7 @@ function returnValue(bn, enc) {
 	}
 }
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":421,"bn.js":423,"buffer":316,"miller-rabin":424}],421:[function(require,module,exports){
+},{"./generatePrime":422,"bn.js":424,"buffer":317,"miller-rabin":425}],422:[function(require,module,exports){
 
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -19365,7 +19411,7 @@ function findPrime(bits, gen ,crypto) {
   }
 
 }
-},{"bn.js":423,"miller-rabin":424}],424:[function(require,module,exports){
+},{"bn.js":424,"miller-rabin":425}],425:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -19481,11 +19527,11 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return prime;
 };
 
-},{"bn.js":423,"brorand":425}],425:[function(require,module,exports){
-arguments[4][355][0].apply(exports,arguments)
-},{"dup":355}],423:[function(require,module,exports){
-arguments[4][341][0].apply(exports,arguments)
-},{"dup":341}],419:[function(require,module,exports){
+},{"bn.js":424,"brorand":426}],426:[function(require,module,exports){
+arguments[4][356][0].apply(exports,arguments)
+},{"dup":356}],424:[function(require,module,exports){
+arguments[4][342][0].apply(exports,arguments)
+},{"dup":342}],420:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('create-hash/browser');
@@ -19554,7 +19600,7 @@ Hmac.prototype.digest = function (enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":316,"create-hash/browser":408,"inherits":459,"stream":478}],408:[function(require,module,exports){
+},{"buffer":317,"create-hash/browser":409,"inherits":460,"stream":479}],409:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('sha.js')
@@ -19640,7 +19686,7 @@ Hash.prototype.digest = function (enc) {
   return outData
 }
 }).call(this,require("buffer").Buffer)
-},{"./md5":410,"buffer":316,"inherits":459,"ripemd160":411,"sha.js":413,"stream":478}],413:[function(require,module,exports){
+},{"./md5":411,"buffer":317,"inherits":460,"ripemd160":412,"sha.js":414,"stream":479}],414:[function(require,module,exports){
 var exports = module.exports = function (alg) {
   var Alg = exports[alg.toLowerCase()]
   if(!Alg) throw new Error(alg + ' is not supported (we accept pull requests)')
@@ -19654,7 +19700,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha1":414,"./sha224":415,"./sha256":416,"./sha384":417,"./sha512":418}],417:[function(require,module,exports){
+},{"./sha1":415,"./sha224":416,"./sha256":417,"./sha384":418,"./sha512":419}],418:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512');
@@ -19714,7 +19760,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":412,"./sha512":418,"buffer":316,"inherits":459}],418:[function(require,module,exports){
+},{"./hash":413,"./sha512":419,"buffer":317,"inherits":460}],419:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -19963,7 +20009,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":412,"buffer":316,"inherits":459}],415:[function(require,module,exports){
+},{"./hash":413,"buffer":317,"inherits":460}],416:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -20019,7 +20065,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":412,"./sha256":416,"buffer":316,"inherits":459}],416:[function(require,module,exports){
+},{"./hash":413,"./sha256":417,"buffer":317,"inherits":460}],417:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -20172,7 +20218,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":412,"buffer":316,"inherits":459}],414:[function(require,module,exports){
+},{"./hash":413,"buffer":317,"inherits":460}],415:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -20272,7 +20318,7 @@ module.exports = Sha1
 
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":412,"buffer":316,"inherits":459}],412:[function(require,module,exports){
+},{"./hash":413,"buffer":317,"inherits":460}],413:[function(require,module,exports){
 (function (Buffer){
 //prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -20345,7 +20391,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],411:[function(require,module,exports){
+},{"buffer":317}],412:[function(require,module,exports){
 (function (Buffer){
 /*
 CryptoJS v3.1.2
@@ -20555,7 +20601,7 @@ function ripemd160(message) {
 module.exports = ripemd160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],410:[function(require,module,exports){
+},{"buffer":317}],411:[function(require,module,exports){
 'use strict';
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -20712,7 +20758,7 @@ function bit_rol(num, cnt)
 module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
-},{"./helpers":409}],409:[function(require,module,exports){
+},{"./helpers":410}],410:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var intSize = 4;
@@ -20749,14 +20795,14 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],386:[function(require,module,exports){
+},{"buffer":317}],387:[function(require,module,exports){
 var ECDH = require('./ecdh');
 module.exports = function (crypto, exports) {
 	exports.createECDH = function (curve) {
 		return new ECDH(curve, crypto);
 	};
 };
-},{"./ecdh":385}],385:[function(require,module,exports){
+},{"./ecdh":386}],386:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -20828,49 +20874,49 @@ function returnValue(bn, enc) {
 	}
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":387,"buffer":316,"elliptic":388}],388:[function(require,module,exports){
-arguments[4][343][0].apply(exports,arguments)
-},{"../package.json":407,"./elliptic/curve":391,"./elliptic/curves":394,"./elliptic/ec":395,"./elliptic/hmac-drbg":398,"./elliptic/utils":399,"brorand":400,"dup":343}],407:[function(require,module,exports){
-arguments[4][362][0].apply(exports,arguments)
-},{"dup":362}],400:[function(require,module,exports){
-arguments[4][355][0].apply(exports,arguments)
-},{"dup":355}],399:[function(require,module,exports){
-arguments[4][354][0].apply(exports,arguments)
-},{"bn.js":387,"dup":354}],398:[function(require,module,exports){
-arguments[4][353][0].apply(exports,arguments)
-},{"../elliptic":388,"dup":353,"hash.js":401}],395:[function(require,module,exports){
-arguments[4][350][0].apply(exports,arguments)
-},{"../../elliptic":388,"./key":396,"./signature":397,"bn.js":387,"dup":350}],397:[function(require,module,exports){
-arguments[4][352][0].apply(exports,arguments)
-},{"../../elliptic":388,"bn.js":387,"dup":352}],396:[function(require,module,exports){
-arguments[4][351][0].apply(exports,arguments)
-},{"../../elliptic":388,"bn.js":387,"dup":351}],394:[function(require,module,exports){
-arguments[4][349][0].apply(exports,arguments)
-},{"../elliptic":388,"bn.js":387,"dup":349,"hash.js":401}],401:[function(require,module,exports){
-arguments[4][356][0].apply(exports,arguments)
-},{"./hash/common":402,"./hash/hmac":403,"./hash/ripemd":404,"./hash/sha":405,"./hash/utils":406,"dup":356}],406:[function(require,module,exports){
-arguments[4][361][0].apply(exports,arguments)
-},{"dup":361,"inherits":459}],405:[function(require,module,exports){
-arguments[4][360][0].apply(exports,arguments)
-},{"../hash":401,"dup":360}],404:[function(require,module,exports){
-arguments[4][359][0].apply(exports,arguments)
-},{"../hash":401,"dup":359}],403:[function(require,module,exports){
-arguments[4][358][0].apply(exports,arguments)
-},{"../hash":401,"dup":358}],402:[function(require,module,exports){
-arguments[4][357][0].apply(exports,arguments)
-},{"../hash":401,"dup":357}],391:[function(require,module,exports){
-arguments[4][346][0].apply(exports,arguments)
-},{"./base":389,"./edwards":390,"./mont":392,"./short":393,"dup":346}],393:[function(require,module,exports){
-arguments[4][348][0].apply(exports,arguments)
-},{"../../elliptic":388,"../curve":391,"bn.js":387,"dup":348,"inherits":459}],392:[function(require,module,exports){
-arguments[4][347][0].apply(exports,arguments)
-},{"../../elliptic":388,"../curve":391,"bn.js":387,"dup":347,"inherits":459}],390:[function(require,module,exports){
-arguments[4][345][0].apply(exports,arguments)
-},{"../../elliptic":388,"../curve":391,"bn.js":387,"dup":345,"inherits":459}],389:[function(require,module,exports){
+},{"bn.js":388,"buffer":317,"elliptic":389}],389:[function(require,module,exports){
 arguments[4][344][0].apply(exports,arguments)
-},{"../../elliptic":388,"bn.js":387,"dup":344}],387:[function(require,module,exports){
-arguments[4][341][0].apply(exports,arguments)
-},{"dup":341}],340:[function(require,module,exports){
+},{"../package.json":408,"./elliptic/curve":392,"./elliptic/curves":395,"./elliptic/ec":396,"./elliptic/hmac-drbg":399,"./elliptic/utils":400,"brorand":401,"dup":344}],408:[function(require,module,exports){
+arguments[4][363][0].apply(exports,arguments)
+},{"dup":363}],401:[function(require,module,exports){
+arguments[4][356][0].apply(exports,arguments)
+},{"dup":356}],400:[function(require,module,exports){
+arguments[4][355][0].apply(exports,arguments)
+},{"bn.js":388,"dup":355}],399:[function(require,module,exports){
+arguments[4][354][0].apply(exports,arguments)
+},{"../elliptic":389,"dup":354,"hash.js":402}],396:[function(require,module,exports){
+arguments[4][351][0].apply(exports,arguments)
+},{"../../elliptic":389,"./key":397,"./signature":398,"bn.js":388,"dup":351}],398:[function(require,module,exports){
+arguments[4][353][0].apply(exports,arguments)
+},{"../../elliptic":389,"bn.js":388,"dup":353}],397:[function(require,module,exports){
+arguments[4][352][0].apply(exports,arguments)
+},{"../../elliptic":389,"bn.js":388,"dup":352}],395:[function(require,module,exports){
+arguments[4][350][0].apply(exports,arguments)
+},{"../elliptic":389,"bn.js":388,"dup":350,"hash.js":402}],402:[function(require,module,exports){
+arguments[4][357][0].apply(exports,arguments)
+},{"./hash/common":403,"./hash/hmac":404,"./hash/ripemd":405,"./hash/sha":406,"./hash/utils":407,"dup":357}],407:[function(require,module,exports){
+arguments[4][362][0].apply(exports,arguments)
+},{"dup":362,"inherits":460}],406:[function(require,module,exports){
+arguments[4][361][0].apply(exports,arguments)
+},{"../hash":402,"dup":361}],405:[function(require,module,exports){
+arguments[4][360][0].apply(exports,arguments)
+},{"../hash":402,"dup":360}],404:[function(require,module,exports){
+arguments[4][359][0].apply(exports,arguments)
+},{"../hash":402,"dup":359}],403:[function(require,module,exports){
+arguments[4][358][0].apply(exports,arguments)
+},{"../hash":402,"dup":358}],392:[function(require,module,exports){
+arguments[4][347][0].apply(exports,arguments)
+},{"./base":390,"./edwards":391,"./mont":393,"./short":394,"dup":347}],394:[function(require,module,exports){
+arguments[4][349][0].apply(exports,arguments)
+},{"../../elliptic":389,"../curve":392,"bn.js":388,"dup":349,"inherits":460}],393:[function(require,module,exports){
+arguments[4][348][0].apply(exports,arguments)
+},{"../../elliptic":389,"../curve":392,"bn.js":388,"dup":348,"inherits":460}],391:[function(require,module,exports){
+arguments[4][346][0].apply(exports,arguments)
+},{"../../elliptic":389,"../curve":392,"bn.js":388,"dup":346,"inherits":460}],390:[function(require,module,exports){
+arguments[4][345][0].apply(exports,arguments)
+},{"../../elliptic":389,"bn.js":388,"dup":345}],388:[function(require,module,exports){
+arguments[4][342][0].apply(exports,arguments)
+},{"dup":342}],341:[function(require,module,exports){
 (function (Buffer){
 var sign = require('./sign');
 var verify = require('./verify');
@@ -20952,7 +20998,7 @@ Verify.prototype.verify = function verifyMethod(key, sig, enc) {
 	return verify(sig, Buffer.concat([this._tag, hash]), key);
 };
 }).call(this,require("buffer").Buffer)
-},{"./algos":339,"./sign":383,"./verify":384,"buffer":316,"inherits":459,"stream":478}],384:[function(require,module,exports){
+},{"./algos":340,"./sign":384,"./verify":385,"buffer":317,"inherits":460,"stream":479}],385:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var parseKeys = require('parse-asn1');
@@ -21032,7 +21078,7 @@ function checkValue(b, q) {
   }
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":341,"buffer":316,"elliptic":343,"parse-asn1":367}],383:[function(require,module,exports){
+},{"bn.js":342,"buffer":317,"elliptic":344,"parse-asn1":368}],384:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var parseKeys = require('parse-asn1');
@@ -21195,7 +21241,7 @@ function makeR(g, k, p, q) {
   return g.toRed(bn.mont(p)).redPow(k).fromRed().mod(q);
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":341,"browserify-rsa":342,"buffer":316,"elliptic":343,"parse-asn1":367}],367:[function(require,module,exports){
+},{"bn.js":342,"browserify-rsa":343,"buffer":317,"elliptic":344,"parse-asn1":368}],368:[function(require,module,exports){
 (function (Buffer){
 var pemstrip = require('pemstrip');
 var asn1 = require('./asn1');
@@ -21301,7 +21347,7 @@ function decrypt(crypto, data, password) {
   return Buffer.concat(out);
 }
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":364,"./asn1":365,"./fixProc":366,"buffer":316,"pemstrip":382}],382:[function(require,module,exports){
+},{"./aesid.json":365,"./asn1":366,"./fixProc":367,"buffer":317,"pemstrip":383}],383:[function(require,module,exports){
 exports.strip = function strip(artifact) {
   artifact = artifact.toString()
   var startRegex = /^-----BEGIN (.*)-----\n/;
@@ -21335,7 +21381,7 @@ exports.assemble = function assemble(info) {
   var endLine = "-----END " + tag + "-----";
   return startLine + "\n" + wrap(base64, 64) + "\n" + endLine + "\n";
 }
-},{}],366:[function(require,module,exports){
+},{}],367:[function(require,module,exports){
 (function (Buffer){
 var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m;
 var startRegex = /^-----BEGIN (.*)-----\n/;
@@ -21374,7 +21420,7 @@ function wrap(str) {
   return chunks.join("\n");
 }
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":363,"buffer":316}],363:[function(require,module,exports){
+},{"./EVP_BytesToKey":364,"buffer":317}],364:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function evp(crypto, password, salt, keyLen) {
@@ -21416,7 +21462,7 @@ module.exports = function evp(crypto, password, salt, keyLen) {
   return key;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],365:[function(require,module,exports){
+},{"buffer":317}],366:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 
@@ -21579,7 +21625,7 @@ exports.signature = asn1.define('signature', function() {
     this.key('s').int()
   );
 });
-},{"asn1.js":369,"asn1.js-rfc3280":368}],368:[function(require,module,exports){
+},{"asn1.js":370,"asn1.js-rfc3280":369}],369:[function(require,module,exports){
 try {
   var asn1 = require('asn1.js');
 } catch (e) {
@@ -21733,7 +21779,7 @@ var AttributeValue = asn1.define('AttributeValue', function() {
 });
 exports.AttributeValue = AttributeValue;
 
-},{"asn1.js":369}],369:[function(require,module,exports){
+},{"asn1.js":370}],370:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -21744,12 +21790,12 @@ asn1.constants = require('./asn1/constants');
 asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
-},{"./asn1/api":370,"./asn1/base":372,"./asn1/constants":376,"./asn1/decoders":378,"./asn1/encoders":380,"bn.js":341}],380:[function(require,module,exports){
+},{"./asn1/api":371,"./asn1/base":373,"./asn1/constants":377,"./asn1/decoders":379,"./asn1/encoders":381,"bn.js":342}],381:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
 
-},{"./der":379}],379:[function(require,module,exports){
+},{"./der":380}],380:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -22021,12 +22067,12 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":369,"buffer":316,"inherits":459}],378:[function(require,module,exports){
+},{"../../asn1":370,"buffer":317,"inherits":460}],379:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
 
-},{"./der":377}],377:[function(require,module,exports){
+},{"./der":378}],378:[function(require,module,exports){
 var inherits = require('inherits');
 
 var asn1 = require('../../asn1');
@@ -22328,7 +22374,7 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":369,"inherits":459}],376:[function(require,module,exports){
+},{"../../asn1":370,"inherits":460}],377:[function(require,module,exports){
 var constants = exports;
 
 // Helper
@@ -22349,7 +22395,7 @@ constants._reverse = function reverse(map) {
 
 constants.der = require('./der');
 
-},{"./der":375}],375:[function(require,module,exports){
+},{"./der":376}],376:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -22393,7 +22439,7 @@ exports.tag = {
 };
 exports.tagByName = constants._reverse(exports.tag);
 
-},{"../constants":376}],372:[function(require,module,exports){
+},{"../constants":377}],373:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -22401,7 +22447,7 @@ base.DecoderBuffer = require('./buffer').DecoderBuffer;
 base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
-},{"./buffer":371,"./node":373,"./reporter":374}],374:[function(require,module,exports){
+},{"./buffer":372,"./node":374,"./reporter":375}],375:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -22492,7 +22538,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":459}],373:[function(require,module,exports){
+},{"inherits":460}],374:[function(require,module,exports){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
 var assert = require('minimalistic-assert');
@@ -23069,7 +23115,7 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag, data) {
     throw new Error('Unsupported tag: ' + tag);
 };
 
-},{"../base":372,"minimalistic-assert":381}],381:[function(require,module,exports){
+},{"../base":373,"minimalistic-assert":382}],382:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -23082,7 +23128,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],371:[function(require,module,exports){
+},{}],372:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -23199,7 +23245,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":372,"buffer":316,"inherits":459}],370:[function(require,module,exports){
+},{"../base":373,"buffer":317,"inherits":460}],371:[function(require,module,exports){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
 var vm = require('vm');
@@ -23252,7 +23298,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":369,"inherits":459,"vm":481}],481:[function(require,module,exports){
+},{"../asn1":370,"inherits":460,"vm":482}],482:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -23392,7 +23438,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":482}],482:[function(require,module,exports){
+},{"indexof":483}],483:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -23403,7 +23449,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],364:[function(require,module,exports){
+},{}],365:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -23417,7 +23463,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],343:[function(require,module,exports){
+},{}],344:[function(require,module,exports){
 var elliptic = exports;
 
 elliptic.version = require('../package.json').version;
@@ -23430,7 +23476,7 @@ elliptic.curves = require('./elliptic/curves');
 // Protocols
 elliptic.ec = require('./elliptic/ec');
 
-},{"../package.json":362,"./elliptic/curve":346,"./elliptic/curves":349,"./elliptic/ec":350,"./elliptic/hmac-drbg":353,"./elliptic/utils":354,"brorand":355}],362:[function(require,module,exports){
+},{"../package.json":363,"./elliptic/curve":347,"./elliptic/curves":350,"./elliptic/ec":351,"./elliptic/hmac-drbg":354,"./elliptic/utils":355,"brorand":356}],363:[function(require,module,exports){
 module.exports={
   "name": "elliptic",
   "version": "1.0.1",
@@ -23479,7 +23525,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-1.0.1.tgz"
 }
 
-},{}],355:[function(require,module,exports){
+},{}],356:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -23538,7 +23584,7 @@ if (typeof window === 'object') {
   }
 }
 
-},{}],354:[function(require,module,exports){
+},{}],355:[function(require,module,exports){
 var bn = require('bn.js');
 
 var utils = exports;
@@ -23690,7 +23736,7 @@ function getJSF(k1, k2) {
 }
 utils.getJSF = getJSF;
 
-},{"bn.js":341}],353:[function(require,module,exports){
+},{"bn.js":342}],354:[function(require,module,exports){
 var hash = require('hash.js');
 var elliptic = require('../elliptic');
 var utils = elliptic.utils;
@@ -23804,7 +23850,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"../elliptic":343,"hash.js":356}],350:[function(require,module,exports){
+},{"../elliptic":344,"hash.js":357}],351:[function(require,module,exports){
 var bn = require('bn.js');
 var elliptic = require('../../elliptic');
 var utils = elliptic.utils;
@@ -23957,7 +24003,7 @@ EC.prototype.verify = function verify(msg, signature, key) {
   return p.getX().mod(this.n).cmp(r) === 0;
 };
 
-},{"../../elliptic":343,"./key":351,"./signature":352,"bn.js":341}],352:[function(require,module,exports){
+},{"../../elliptic":344,"./key":352,"./signature":353,"bn.js":342}],353:[function(require,module,exports){
 var bn = require('bn.js');
 
 var elliptic = require('../../elliptic');
@@ -24022,7 +24068,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":343,"bn.js":341}],351:[function(require,module,exports){
+},{"../../elliptic":344,"bn.js":342}],352:[function(require,module,exports){
 var bn = require('bn.js');
 
 var elliptic = require('../../elliptic');
@@ -24168,7 +24214,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"../../elliptic":343,"bn.js":341}],349:[function(require,module,exports){
+},{"../../elliptic":344,"bn.js":342}],350:[function(require,module,exports){
 var curves = exports;
 
 var hash = require('hash.js');
@@ -25098,7 +25144,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":343,"bn.js":341,"hash.js":356}],356:[function(require,module,exports){
+},{"../elliptic":344,"bn.js":342,"hash.js":357}],357:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -25115,7 +25161,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":357,"./hash/hmac":358,"./hash/ripemd":359,"./hash/sha":360,"./hash/utils":361}],361:[function(require,module,exports){
+},{"./hash/common":358,"./hash/hmac":359,"./hash/ripemd":360,"./hash/sha":361,"./hash/utils":362}],362:[function(require,module,exports){
 var utils = exports;
 var inherits = require('inherits');
 
@@ -25374,7 +25420,7 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":459}],360:[function(require,module,exports){
+},{"inherits":460}],361:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -25940,7 +25986,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":356}],359:[function(require,module,exports){
+},{"../hash":357}],360:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 
@@ -26086,7 +26132,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":356}],358:[function(require,module,exports){
+},{"../hash":357}],359:[function(require,module,exports){
 var hmac = exports;
 
 var hash = require('../hash');
@@ -26136,7 +26182,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":356}],357:[function(require,module,exports){
+},{"../hash":357}],358:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -26229,7 +26275,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":356}],346:[function(require,module,exports){
+},{"../hash":357}],347:[function(require,module,exports){
 var curve = exports;
 
 curve.base = require('./base');
@@ -26237,7 +26283,7 @@ curve.short = require('./short');
 curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
-},{"./base":344,"./edwards":345,"./mont":347,"./short":348}],348:[function(require,module,exports){
+},{"./base":345,"./edwards":346,"./mont":348,"./short":349}],349:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -27135,7 +27181,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":343,"../curve":346,"bn.js":341,"inherits":459}],347:[function(require,module,exports){
+},{"../../elliptic":344,"../curve":347,"bn.js":342,"inherits":460}],348:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -27300,7 +27346,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":343,"../curve":346,"bn.js":341,"inherits":459}],345:[function(require,module,exports){
+},{"../../elliptic":344,"../curve":347,"bn.js":342,"inherits":460}],346:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -27663,7 +27709,7 @@ Point.prototype.getY = function getY() {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":343,"../curve":346,"bn.js":341,"inherits":459}],344:[function(require,module,exports){
+},{"../../elliptic":344,"../curve":347,"bn.js":342,"inherits":460}],345:[function(require,module,exports){
 var bn = require('bn.js');
 var elliptic = require('../../elliptic');
 
@@ -27967,7 +28013,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":343,"bn.js":341}],342:[function(require,module,exports){
+},{"../../elliptic":344,"bn.js":342}],343:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 module.exports = crt;
@@ -28015,7 +28061,7 @@ function getr(priv, crypto) {
   return r;
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":341,"buffer":316}],341:[function(require,module,exports){
+},{"bn.js":342,"buffer":317}],342:[function(require,module,exports){
 // Utils
 
 function assert(val, msg) {
@@ -29939,7 +29985,7 @@ Mont.prototype.invm = function invm(a) {
   return res._forceRed(this);
 };
 
-},{}],339:[function(require,module,exports){
+},{}],340:[function(require,module,exports){
 (function (Buffer){
 exports['RSA-SHA224'] = exports.sha224WithRSAEncryption = {
   sign: 'rsa',
@@ -30012,7 +30058,7 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
   id: new Buffer('3020300c06082a864886f70d020505000410', 'hex')
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],328:[function(require,module,exports){
+},{"buffer":317}],329:[function(require,module,exports){
 module.exports = function (crypto, exports) {
   exports = exports || {};
   var ciphers = require('./encrypter')(crypto);
@@ -30028,7 +30074,7 @@ module.exports = function (crypto, exports) {
   exports.listCiphers = exports.getCiphers = getCiphers;
 };
 
-},{"./decrypter":325,"./encrypter":326,"./modes":329}],326:[function(require,module,exports){
+},{"./decrypter":326,"./encrypter":327,"./modes":330}],327:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -30155,7 +30201,7 @@ module.exports = function (crypto) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":321,"./aes":322,"./authCipher":323,"./cipherBase":324,"./modes":329,"./modes/cbc":330,"./modes/cfb":331,"./modes/cfb1":332,"./modes/cfb8":333,"./modes/ctr":334,"./modes/ecb":335,"./modes/ofb":336,"./streamCipher":337,"buffer":316,"inherits":459}],325:[function(require,module,exports){
+},{"./EVP_BytesToKey":322,"./aes":323,"./authCipher":324,"./cipherBase":325,"./modes":330,"./modes/cbc":331,"./modes/cfb":332,"./modes/cfb1":333,"./modes/cfb8":334,"./modes/ctr":335,"./modes/ecb":336,"./modes/ofb":337,"./streamCipher":338,"buffer":317,"inherits":460}],326:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -30299,7 +30345,7 @@ module.exports = function (crypto) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":321,"./aes":322,"./authCipher":323,"./cipherBase":324,"./modes":329,"./modes/cbc":330,"./modes/cfb":331,"./modes/cfb1":332,"./modes/cfb8":333,"./modes/ctr":334,"./modes/ecb":335,"./modes/ofb":336,"./streamCipher":337,"buffer":316,"inherits":459}],337:[function(require,module,exports){
+},{"./EVP_BytesToKey":322,"./aes":323,"./authCipher":324,"./cipherBase":325,"./modes":330,"./modes/cbc":331,"./modes/cfb":332,"./modes/cfb1":333,"./modes/cfb8":334,"./modes/ctr":335,"./modes/ecb":336,"./modes/ofb":337,"./streamCipher":338,"buffer":317,"inherits":460}],338:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -30327,7 +30373,7 @@ StreamCipher.prototype._final = function () {
   this._cipher.scrub();
 };
 }).call(this,require("buffer").Buffer)
-},{"./aes":322,"./cipherBase":324,"buffer":316,"inherits":459}],336:[function(require,module,exports){
+},{"./aes":323,"./cipherBase":325,"buffer":317,"inherits":460}],337:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 function getBlock(self) {
@@ -30343,14 +30389,14 @@ exports.encrypt = function (self, chunk) {
   return xor(chunk, pad);
 };
 }).call(this,require("buffer").Buffer)
-},{"../xor":338,"buffer":316}],335:[function(require,module,exports){
+},{"../xor":339,"buffer":317}],336:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block);
 };
 exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block);
 };
-},{}],334:[function(require,module,exports){
+},{}],335:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 function getBlock(self) {
@@ -30381,7 +30427,7 @@ function incr32(iv) {
   }
 }
 }).call(this,require("buffer").Buffer)
-},{"../xor":338,"buffer":316}],333:[function(require,module,exports){
+},{"../xor":339,"buffer":317}],334:[function(require,module,exports){
 (function (Buffer){
 function encryptByte(self, byte, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev);
@@ -30399,7 +30445,7 @@ exports.encrypt = function (self, chunk, decrypt) {
   return out;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],332:[function(require,module,exports){
+},{"buffer":317}],333:[function(require,module,exports){
 (function (Buffer){
 
 function encryptByte(self, byte, decrypt) {
@@ -30437,7 +30483,7 @@ function shiftIn(buffer, value) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],331:[function(require,module,exports){
+},{"buffer":317}],332:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 exports.encrypt = function (self, data, decrypt) {
@@ -30467,7 +30513,7 @@ function encryptStart(self, data, decrypt) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"../xor":338,"buffer":316}],330:[function(require,module,exports){
+},{"../xor":339,"buffer":317}],331:[function(require,module,exports){
 var xor = require('../xor');
 exports.encrypt = function (self, block) {
   var data = xor(block, self._prev);
@@ -30480,7 +30526,7 @@ exports.decrypt = function (self, block) {
   var out = self._cipher.decryptBlock(block);
   return xor(out, pad);
 };
-},{"../xor":338}],329:[function(require,module,exports){
+},{"../xor":339}],330:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -30652,7 +30698,7 @@ exports['aes-256-gcm'] = {
   mode: 'GCM',
   type: 'auth'
 };
-},{}],323:[function(require,module,exports){
+},{}],324:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -30755,7 +30801,7 @@ function xorTest(a, b) {
 
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":322,"./cipherBase":324,"./ghash":327,"./xor":338,"buffer":316,"inherits":459}],338:[function(require,module,exports){
+},{"./aes":323,"./cipherBase":325,"./ghash":328,"./xor":339,"buffer":317,"inherits":460}],339:[function(require,module,exports){
 (function (Buffer){
 module.exports = xor;
 function xor(a, b) {
@@ -30768,7 +30814,7 @@ function xor(a, b) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],327:[function(require,module,exports){
+},{"buffer":317}],328:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16);
 zeros.fill(0);
@@ -30869,7 +30915,7 @@ function xor(a, b) {
   ];
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],324:[function(require,module,exports){
+},{"buffer":317}],325:[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform;
 var inherits = require('inherits');
@@ -30909,7 +30955,7 @@ CipherBase.prototype.final = function (outputEnc) {
   return outData;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":316,"inherits":459,"stream":478}],478:[function(require,module,exports){
+},{"buffer":317,"inherits":460,"stream":479}],479:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -31038,13 +31084,13 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":458,"inherits":459,"readable-stream/duplex.js":467,"readable-stream/passthrough.js":474,"readable-stream/readable.js":475,"readable-stream/transform.js":476,"readable-stream/writable.js":477}],477:[function(require,module,exports){
+},{"events":459,"inherits":460,"readable-stream/duplex.js":468,"readable-stream/passthrough.js":475,"readable-stream/readable.js":476,"readable-stream/transform.js":477,"readable-stream/writable.js":478}],478:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":472}],476:[function(require,module,exports){
+},{"./lib/_stream_writable.js":473}],477:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":471}],475:[function(require,module,exports){
+},{"./lib/_stream_transform.js":472}],476:[function(require,module,exports){
 var Stream = require('stream'); // hack to fix a circular dependency issue when used with browserify
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = Stream;
@@ -31054,10 +31100,10 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":468,"./lib/_stream_passthrough.js":469,"./lib/_stream_readable.js":470,"./lib/_stream_transform.js":471,"./lib/_stream_writable.js":472,"stream":478}],474:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":469,"./lib/_stream_passthrough.js":470,"./lib/_stream_readable.js":471,"./lib/_stream_transform.js":472,"./lib/_stream_writable.js":473,"stream":479}],475:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":469}],469:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":470}],470:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -31105,7 +31151,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
   cb(null, chunk);
 };
 
-},{"./_stream_transform":471,"core-util-is":473,"inherits":459}],471:[function(require,module,exports){
+},{"./_stream_transform":472,"core-util-is":474,"inherits":460}],472:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -31317,10 +31363,10 @@ function done(stream, er) {
   return stream.push(null);
 }
 
-},{"./_stream_duplex":468,"core-util-is":473,"inherits":459}],467:[function(require,module,exports){
+},{"./_stream_duplex":469,"core-util-is":474,"inherits":460}],468:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":468}],468:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":469}],469:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -31413,7 +31459,7 @@ function forEach (xs, f) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_readable":470,"./_stream_writable":472,"_process":462,"core-util-is":473,"inherits":459}],472:[function(require,module,exports){
+},{"./_stream_readable":471,"./_stream_writable":473,"_process":463,"core-util-is":474,"inherits":460}],473:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -31803,7 +31849,7 @@ function endWritable(stream, state, cb) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":468,"_process":462,"buffer":316,"core-util-is":473,"inherits":459,"stream":478}],470:[function(require,module,exports){
+},{"./_stream_duplex":469,"_process":463,"buffer":317,"core-util-is":474,"inherits":460,"stream":479}],471:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -32789,7 +32835,7 @@ function indexOf (xs, x) {
 }
 
 }).call(this,require('_process'))
-},{"_process":462,"buffer":316,"core-util-is":473,"events":458,"inherits":459,"isarray":460,"stream":478,"string_decoder/":479}],479:[function(require,module,exports){
+},{"_process":463,"buffer":317,"core-util-is":474,"events":459,"inherits":460,"isarray":461,"stream":479,"string_decoder/":480}],480:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -33012,7 +33058,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":316}],473:[function(require,module,exports){
+},{"buffer":317}],474:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -33122,12 +33168,12 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],460:[function(require,module,exports){
+},{"buffer":317}],461:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],458:[function(require,module,exports){
+},{}],459:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -33430,7 +33476,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],459:[function(require,module,exports){
+},{}],460:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -33455,7 +33501,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],322:[function(require,module,exports){
+},{}],323:[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -33656,7 +33702,7 @@ AES.prototype._doCryptBlock = function(M, keySchedule, SUB_MIX, SBOX) {
 
   exports.AES = AES;
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],321:[function(require,module,exports){
+},{"buffer":317}],322:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function (crypto, password, keyLen, ivLen) {
@@ -33716,7 +33762,7 @@ module.exports = function (crypto, password, keyLen, ivLen) {
   };
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":316}],316:[function(require,module,exports){
+},{"buffer":317}],317:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -35034,7 +35080,7 @@ function decodeUtf8Char (str) {
   }
 }
 
-},{"base64-js":317,"ieee754":318,"is-array":319}],319:[function(require,module,exports){
+},{"base64-js":318,"ieee754":319,"is-array":320}],320:[function(require,module,exports){
 
 /**
  * isArray
@@ -35069,7 +35115,7 @@ module.exports = isArray || function (val) {
   return !! val && '[object Array]' == str.call(val);
 };
 
-},{}],318:[function(require,module,exports){
+},{}],319:[function(require,module,exports){
 exports.read = function(buffer, offset, isLE, mLen, nBytes) {
   var e, m,
       eLen = nBytes * 8 - mLen - 1,
@@ -35155,7 +35201,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128;
 };
 
-},{}],317:[function(require,module,exports){
+},{}],318:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -35281,7 +35327,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],648:[function(require,module,exports){
+},{}],649:[function(require,module,exports){
 // A Javascript implementaion of the "xorwow" prng algorithm by
 // George Marsaglia.  See http://www.jstatsoft.org/v08/i14/paper
 
@@ -35369,7 +35415,7 @@ if (module && module.exports) {
 
 
 
-},{}],647:[function(require,module,exports){
+},{}],648:[function(require,module,exports){
 // A Javascript implementaion of the "xorshift7" algorithm by
 // François Panneton and Pierre L'ecuyer:
 // "On the Xorgshift Random Number Generators"
@@ -35468,7 +35514,7 @@ if (module && module.exports) {
 );
 
 
-},{}],646:[function(require,module,exports){
+},{}],647:[function(require,module,exports){
 // A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
 //
 // This fast non-cryptographic random number generator is designed for
@@ -35616,7 +35662,7 @@ if (module && module.exports) {
   (typeof define) == 'function' && define   // present with an AMD loader
 );
 
-},{}],645:[function(require,module,exports){
+},{}],646:[function(require,module,exports){
 // A Javascript implementaion of the "xor128" prng algorithm by
 // George Marsaglia.  See http://www.jstatsoft.org/v08/i14/paper
 
@@ -35699,7 +35745,7 @@ if (module && module.exports) {
 
 
 
-},{}],644:[function(require,module,exports){
+},{}],645:[function(require,module,exports){
 // A Javascript implementaion of the "Tyche-i" prng algorithm by
 // Samuel Neves and Filipe Araujo.
 // See https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
@@ -35804,7 +35850,7 @@ if (module && module.exports) {
 
 
 
-},{}],214:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -35992,7 +36038,7 @@ NetSimPanel.prototype.getBody = function () {
 };
 
 
-},{"../utils":312,"./NetSimPanel.html.ejs":213}],213:[function(require,module,exports){
+},{"../utils":313,"./NetSimPanel.html.ejs":212}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -36012,7 +36058,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],192:[function(require,module,exports){
+},{"ejs":484}],192:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36136,7 +36182,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
 };
 
 
-},{"./NetSimEncodingControl.html.ejs":191,"./netsimConstants":253}],191:[function(require,module,exports){
+},{"./NetSimEncodingControl.html.ejs":191,"./netsimConstants":254}],191:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -36171,7 +36217,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":250,"./netsimConstants":253,"ejs":483}],178:[function(require,module,exports){
+},{"./locale":251,"./netsimConstants":254,"ejs":484}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -36218,7 +36264,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./dataConverters":248,"./locale":250,"./netsimConstants":253,"./netsimUtils":256,"ejs":483}],248:[function(require,module,exports){
+},{"./dataConverters":249,"./locale":251,"./netsimConstants":254,"./netsimUtils":257,"ejs":484}],249:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36676,7 +36722,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 };
 
 
-},{"../utils":312,"./netsimUtils":256}],177:[function(require,module,exports){
+},{"../utils":313,"./netsimUtils":257}],177:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36730,7 +36776,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":312,"./NetSimSlider":234,"./netsimConstants":253,"./netsimUtils":256}],256:[function(require,module,exports){
+},{"../utils":313,"./NetSimSlider":233,"./netsimConstants":254,"./netsimUtils":257}],257:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37098,7 +37144,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
 
 
 
-},{"../utils":312,"./NetSimLogger":202,"./locale":250,"./netsimConstants":253}],202:[function(require,module,exports){
+},{"../utils":313,"./NetSimLogger":201,"./locale":251,"./netsimConstants":254}],201:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37251,7 +37297,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
 };
 
 
-},{}],253:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37403,7 +37449,7 @@ exports.PacketUIColumnType = {
 };
 
 
-},{}],234:[function(require,module,exports){
+},{}],233:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37900,13 +37946,13 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
 };
 
 
-},{"../utils":312,"./NetSimSlider.html.ejs":233,"./locale":250}],250:[function(require,module,exports){
+},{"../utils":313,"./NetSimSlider.html.ejs":232,"./locale":251}],251:[function(require,module,exports){
 // locale for netsim
 
 module.exports = window.blockly.netsim_locale;
 
 
-},{}],233:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -37926,7 +37972,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":483}],176:[function(require,module,exports){
+},{"ejs":484}],176:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -38268,7 +38314,7 @@ CommandSequence.prototype.tick = function (clock) {
 };
 
 
-},{"./utils":312}],99:[function(require,module,exports){
+},{"./utils":313}],99:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -38546,7 +38592,7 @@ module.exports = {
 };
 
 
-},{"./utils":312}],4:[function(require,module,exports){
+},{"./utils":313}],4:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -38756,4 +38802,4 @@ ObservableEvent.prototype.notifyObservers = function () {
   });
 };
 
-},{}]},{},[251]);
+},{}]},{},[252]);

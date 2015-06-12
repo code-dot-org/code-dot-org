@@ -151,6 +151,11 @@ NetSimVizElement.prototype.stopAllAnimation = function () {
  */
 NetSimVizElement.prototype.tweenToPosition = function (newX, newY, duration,
     tweenFunction) {
+  // Don't accept new animation commands if we've already been killed
+  if (this.isDying() || this.isDead()) {
+    return;
+  }
+
   // Remove any existing tweens controlling posX or posY
   this.removeAllTweensOnProperties(['posX', 'posY']);
 
