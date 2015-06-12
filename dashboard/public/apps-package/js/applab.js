@@ -6180,7 +6180,7 @@ module.exports = React.createClass({displayName: "exports",
       verticalAlign: 'top',
       border: '1px solid #949ca2',
       margin: '0 0 8px 0',
-      padding: '3px 6px',
+      padding: '2px 6px',
       fontSize: 14
     };
     var buttonPrimary = {
@@ -6203,8 +6203,6 @@ module.exports = React.createClass({displayName: "exports",
       borderTopLeftRadius: 0
     }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
 
-    var wrapperStyle = {minHeight: 40};
-
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
         return React.createElement("option", {key: item}, item);
@@ -6223,7 +6221,7 @@ module.exports = React.createClass({displayName: "exports",
     }
 
     return (
-      React.createElement("div", {style: wrapperStyle, className: "justify-contents"}, 
+      React.createElement("div", {className: "justify-contents"}, 
         React.createElement("button", {
             id: "codeModeButton", 
             style: codeButtonStyle, 
