@@ -1358,21 +1358,24 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
     // Bind listener to palette/toolbox 'Hide' and 'Show' links
-    var hideToolboxLink = document.getElementById('hide-toolbox');
-    var showToolboxLink = document.getElementById('show-toolbox');
+    var hideToolboxHeader = document.getElementById('toolbox-header');
+    var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
     var showToolboxHeader = document.getElementById('show-toolbox-header');
-    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
-      hideToolboxLink.style.display = 'inline-block';
+    if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+      hideToolboxHeader.className += ' toggleable';
+      hideToolboxIcon.style.display = 'inline-block';
       var handleTogglePalette = (function() {
         if (this.editor) {
           this.editor.enablePalette(!this.editor.paletteEnabled);
           showToolboxHeader.style.display =
               this.editor.paletteEnabled ? 'none' : 'inline-block';
+          hideToolboxIcon.style.display =
+              !this.editor.paletteEnabled ? 'none' : 'inline-block';
           this.resizeToolboxHeader();
         }
       }).bind(this);
-      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
-      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
     }
 
     this.resizeToolboxHeader();

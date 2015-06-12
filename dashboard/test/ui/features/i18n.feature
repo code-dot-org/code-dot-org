@@ -1,7 +1,7 @@
 Feature: Hour of Code and Frozen tutorial in Spanish, Portuguese, and Arabic then reset back to English
 
 Scenario: HoC tutorial in Spanish
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/es"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/es?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I press "x-close"
@@ -27,7 +27,7 @@ Scenario: Frozen tutorial in Spanish
   And I wait for 2 seconds
 
 Scenario: HoC tutorial in Portuguese
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/pt-br"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/pt-br?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I press "x-close"
@@ -53,7 +53,7 @@ Scenario: Frozen tutorial in Portuguese
   And I wait for 2 seconds
 
 Scenario: HoC tutorial in Arabic
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/ar"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/ar?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I press "x-close"
