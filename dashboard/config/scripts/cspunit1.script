@@ -5,6 +5,7 @@ login_required 'true'
 
 stage "Innovation"
 level 'U1L1 Student Lesson Introduction'
+level 'U1L1 - FR computer science word association'
 
 stage "Sending Binary Messages"
 level 'U1L2 Student Lesson Introduction'

@@ -258,6 +258,26 @@ html[dir='rtl'] #codeWorkspace {
   color: white;
 }
 
+.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet-error {
+  background-image: url('#{$common_root}/gutterError.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.droplet-gutter-line.droplet-error, .droplet-gutter-line.droplet-warning {
+  background-position: 2px 35%;
+}
+
+.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet-warning {
+  background-image: url('#{$common_root}/gutterWarn.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.ace_gutter-cell.ace_error, .ace_gutter-cell.ace_warning {
+  background-position: 2px 0px;
+}
+
 #visualizationResizeBar {
   position: absolute;
   top: 0;
