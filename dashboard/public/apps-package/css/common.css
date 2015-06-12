@@ -142,7 +142,7 @@ div.droplet-palette-group-header-selected.orange {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 40px;
+  top: 30px;
   bottom: 0px;
   font-size: 14px;
   overflow: hidden; }
@@ -657,16 +657,16 @@ input[type="radio"] {
   text-align: center;
   white-space: nowrap;
   overflow-x: hidden;
-  height: 40px;
+  height: 30px;
   color: white; }
   .workspace-header .workspace-header-clickable:hover {
     cursor: pointer;
     color: #ffb81d; }
   .workspace-header span {
-    line-height: 40px; }
+    line-height: 30px; }
 
 #design-headers {
-  height: 40px;
+  height: 30px;
   background-color: #7665a0;
   overflow-y: hidden;
   -webkit-user-select: none;
@@ -675,7 +675,7 @@ input[type="radio"] {
   user-select: none; }
 
 #headers {
-  height: 40px;
+  height: 30px;
   background-color: #7665a0;
   overflow-y: hidden;
   -webkit-user-select: none;

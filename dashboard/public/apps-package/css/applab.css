@@ -7,7 +7,10 @@ div#visualization.with_padding {
   border: 1px solid #ddd; }
 
 div#visualizationResizeBar {
-  top: 40px; }
+  top: 30px; }
+
+#designToggleRow > div {
+  height: 30px; }
 
 /* Shrink the visualization area on small displays. */
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
