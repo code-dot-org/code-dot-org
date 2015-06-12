@@ -90,10 +90,15 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     event.stopPropagation();
   }.bind(this));
 
-  var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
-  if (chooseAssetLink) {
+  var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
+  if (chooseAsset) {
+    var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
     dom.addClickTouchEvent(chooseAssetLink, function(event) {
-      // TODO: show asset manager, insert chosen asset
+      cursorTooltip.tooltipster('hide');
+      chooseAsset(function(filename) {
+        console.log(filename);
+        aceEditor.onTextInput('"' + filename + '"');
+      });
       event.stopPropagation();
     }.bind(this));
   }
