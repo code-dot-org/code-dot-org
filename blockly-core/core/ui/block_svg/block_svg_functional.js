@@ -16,6 +16,11 @@ Blockly.BlockSvgFunctional = function (block, options) {
   this.patternId_ = null; // updated when we set colour
   this.inputMarkers_ = {};
   this.inputClickTargets_ = {};
+  /**
+   * Input names to forced width spacing amount
+   * @type {{string, number}}
+   */
+  this.forcedInputSpacings = {};
 
   Blockly.BlockSvg.call(this, block);
 };
@@ -27,7 +32,7 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function () {
   var lightColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.3);
   var lighterColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.8);
 
-  goog.base(this, 'initChildren');
+  Blockly.BlockSvgFunctional.superClass_.initChildren.call(this);
 
   var clip = Blockly.createSvgElement('clipPath', {
     id: 'blockClip' + this.block_.id
@@ -47,7 +52,7 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function () {
 
 Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
   this.createFunctionalMarkers_();
-  goog.base(this, 'renderDraw_', iconWidth, inputRows);
+  Blockly.BlockSvgFunctional.superClass_.renderDraw_.call(this, iconWidth, inputRows);
 
   this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
 
@@ -161,7 +166,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo,
     renderInfo.curY += this.rowBuffer;
   }
 
-  goog.base(this, 'renderDrawRight_', renderInfo, connectionsXY, inputRows, iconWidth);
+  Blockly.BlockSvgFunctional.superClass_.renderDrawRight_.call(this, renderInfo, connectionsXY, inputRows, iconWidth);
 
 };
 
@@ -184,6 +189,9 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   var notchPaths = input.connection.getNotchPaths();
 
   var inputSteps = [];
+
+  var forcedInputSpacing = this.forcedInputSpacings[input.name];
+  var inputWidthToTakeUp = forcedInputSpacing || input.renderWidth;
 
   inputSteps.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
   inputSteps.push('h', notchStart);
@@ -210,7 +218,8 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   this.inputClickTargets_[input.name].setAttribute('visibility',
     input.connection.targetConnection ? 'hidden' : 'visible');
 
-  renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+  //renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+  renderInfo.curX += inputWidthToTakeUp + BS.SEP_SPACE_X;
 
   // Create inline input connection.
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
@@ -223,7 +232,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
 };
 
 Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
-  goog.base(this, 'updateToColour_', hexColour);
+  Blockly.BlockSvgFunctional.superClass_.updateToColour_.call(this, hexColour);
 
   if (!this.divider_) {
     return;
@@ -237,7 +246,7 @@ Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
 };
 
 Blockly.BlockSvgFunctional.prototype.dispose = function () {
-  goog.base(this, 'dispose');
+  Blockly.BlockSvgFunctional.superClass_.dispose.call(this);
 
   this.blockClipRect_ = null;
   this.divider_ = null;

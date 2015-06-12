@@ -152,37 +152,63 @@ Blockly.ContractEditor.prototype.create_ = function() {
   );
 
   this.hiddenExampleBlocks_ = [];
-  /** @type {Blockly.SvgTextButton} */
-  this.addExampleButton = new Blockly.SvgTextButton(
-    canvasToDrawOn,
-    "Add Example", // TODO(bjordan): i18n
-    this.addNewExampleBlock_.bind(this)
-  );
+  this.exampleAreaDiv = goog.dom.createDom('div', 'exampleAreaDiv');
+  this.addExampleButton = goog.dom.createDom('button', 'testButton launch');
+  this.addExampleButton.innerHTML = "Add Example";
+  Blockly.bindEvent_(this.addExampleButton, 'click', this, this.addNewExampleBlock_);
+  goog.dom.append(this.exampleAreaDiv, this.addExampleButton);
+  this.exampleAreaDiv.style.display = 'block';
+  this.exampleAreaDiv.style.position = 'absolute';
+  goog.dom.insertChildAt(this.container_, this.exampleAreaDiv, 0);
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 2,
       headerText: "Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (currentY) {
+        var metrics = this.modalBlockSpace.getMetrics();
+
+        this.exampleAreaDiv.style.left = metrics.absoluteLeft + 'px';
+        this.exampleAreaDiv.style.top = metrics.absoluteTop + currentY + 'px';
+        this.exampleAreaDiv.style.width = metrics.viewWidth + 'px';
+
         var newY = currentY;
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
 
+        var maxWidth = +this.exampleBlocks.reduce(function (previousMax, block) {
+          var functionCallBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+          if (!functionCallBlock) {
+            return previousMax;
+          }
+          var width = functionCallBlock.getHeightWidth().width;
+          return Math.max(previousMax, width)
+        }, 0);
+
         this.exampleBlocks.forEach(function (block) {
+          block.svg_.forcedInputSpacings[Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME] = maxWidth;
+          //block.render();
           block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
           newY += block.getHeightWidth().height;
           newY += EXAMPLE_BLOCK_MARGIN_BELOW;
         }, this);
 
-        newY = this.addExampleButton.renderAt(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
+        this.addExampleButton.style.top = (newY - currentY) + 'px';
+        this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+        this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+        var addExampleHeight = +this.addExampleButton.offsetHeight;
+        newY += addExampleHeight;
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
+
+        this.exampleAreaDiv.style.height = (newY - currentY) + 'px';
+
         return newY;
       }, this),
       highlightBox: sharedHighlightBox,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
+        this.exampleAreaDiv.style.display = isNowCollapsed ? 'none' : 'block';
         this.hiddenExampleBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInExampleArea, this),
           this.hiddenExampleBlocks_);
-        this.addExampleButton.setVisible(!isNowCollapsed);
         this.position_();
       }, this)
     });
