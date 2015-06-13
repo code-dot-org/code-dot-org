@@ -904,6 +904,12 @@ $workspace-header-button-margin: ($workspace-headers-height -
     .fa-code {
       font-weight: bold;
     }
+    .blocks-glyph {
+      display: none;
+      height: 18px;
+      vertical-align: text-bottom;
+      padding-right: 8px;
+    }
   }
   #clear-puzzle-header:hover {
     background-color: $red;
@@ -948,6 +954,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
     float: left;
 
     .fa {
+      padding-right: 0;
+      padding-left: 8px;
+    }
+    .blocks-glyph {
+      @include horizontal-flip;
       padding-right: 0;
       padding-left: 8px;
     }
