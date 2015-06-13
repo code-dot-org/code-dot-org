@@ -6871,6 +6871,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
+  this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -7066,7 +7067,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
@@ -10731,7 +10732,13 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager() {
+function DropletTooltipManager(appMsg) {
+  /**
+   * App-specific strings (to override common msg)
+   * @type {Object.<String, Function>}
+   */
+  this.appMsg = appMsg || {};
+
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
@@ -10781,7 +10788,7 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
   dropletBlocks.forEach(function (dropletBlockDefinition) {
     this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(dropletBlockDefinition.func);
+      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition.func);
   }, this);
 };
 
@@ -10943,7 +10950,8 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
 
 /**
  * Stores a block's tooltip information and helps render it
- * Grabs much of the tooltip's information from the 'common' locale file,
+ * Grabs much of the tooltip's information from either app-specific locale
+ * file (passed in as appMsg) or, if not present, the 'common' locale file,
  * (apps/i18n/common/en_us.json), keyed by the function name.
  *
  * e.g.,
@@ -10975,30 +10983,35 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (functionName) {
+var DropletFunctionTooltip = function (appMsg, functionName) {
   /** @type {String} */
   this.functionName = functionName;
 
   /** @type {String} */
-  this.description = null;
-
-  if (msg.hasOwnProperty(this.descriptionKey())) {
-    this.description = msg[this.descriptionKey()]();
+  var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
+  if (description) {
+    this.description = description();
   }
 
-  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
-    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  var signatureOverride = appMsg[this.signatureOverrideKey()] ||
+                            msg[this.signatureOverrideKey()];
+  if (signatureOverride) {
+    this.signatureOverride = signatureOverride();
   }
 
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
   var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+  var paramName;
+  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
+                          msg[this.parameterNameKey(paramId)])) {
     var paramInfo = {};
-    paramInfo.name = msg[this.parameterNameKey(paramId)]();
-    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
-      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    paramInfo.name = paramName();
+    var paramDesc = appMsg[this.parameterNameKey(paramId)] ||
+                              msg[this.parameterNameKey(paramId)];
+    if (paramDesc) {
+      paramInfo.description = paramDesc();
     }
     this.parameterInfos.push(paramInfo);
     paramId++;
