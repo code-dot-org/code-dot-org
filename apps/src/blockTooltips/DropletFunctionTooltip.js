@@ -15,7 +15,8 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
 
 /**
  * Stores a block's tooltip information and helps render it
- * Grabs much of the tooltip's information from the 'common' locale file,
+ * Grabs much of the tooltip's information from either app-specific locale
+ * file (passed in as appMsg) or, if not present, the 'common' locale file,
  * (apps/i18n/common/en_us.json), keyed by the function name.
  *
  * e.g.,
@@ -47,30 +48,35 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (functionName) {
+var DropletFunctionTooltip = function (appMsg, functionName) {
   /** @type {String} */
   this.functionName = functionName;
 
   /** @type {String} */
-  this.description = null;
-
-  if (msg.hasOwnProperty(this.descriptionKey())) {
-    this.description = msg[this.descriptionKey()]();
+  var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
+  if (description) {
+    this.description = description();
   }
 
-  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
-    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  var signatureOverride = appMsg[this.signatureOverrideKey()] ||
+                            msg[this.signatureOverrideKey()];
+  if (signatureOverride) {
+    this.signatureOverride = signatureOverride();
   }
 
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
   var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+  var paramName;
+  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
+                          msg[this.parameterNameKey(paramId)])) {
     var paramInfo = {};
-    paramInfo.name = msg[this.parameterNameKey(paramId)]();
-    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
-      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    paramInfo.name = paramName();
+    var paramDesc = appMsg[this.parameterNameKey(paramId)] ||
+                              msg[this.parameterNameKey(paramId)];
+    if (paramDesc) {
+      paramInfo.description = paramDesc();
     }
     this.parameterInfos.push(paramInfo);
     paramId++;

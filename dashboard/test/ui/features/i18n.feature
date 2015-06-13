@@ -1,15 +1,14 @@
 Feature: Hour of Code and Frozen tutorial in Spanish, Portuguese, and Arabic then reset back to English
 
 Scenario: HoC tutorial in Spanish
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/es?noautoplay=true"
+  Given I am on "http://learn.code.org/hoc/15/lang/es"
   And I rotate to landscape
   And I wait to see "#x-close"
-  And I press "x-close"
-  Then element ".dialog-title" has text "Puzzle 16 de 20"
-  Then element ".modal-content p:nth-child(2)" has "es" text from key "data.level.instructions.maze_2_15"
+  Then element ".dialog-title" has text "Puzzle 15 de 20"
+  Then element ".modal-content p:nth-child(2)" has "es" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "es" text from key "data.level.instructions.maze_2_15"
+  Then element "#prompt" has "es" text from key "data.level.instructions.maze_2_14"
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -27,15 +26,14 @@ Scenario: Frozen tutorial in Spanish
   And I wait for 2 seconds
 
 Scenario: HoC tutorial in Portuguese
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/pt-br?noautoplay=true"
+  Given I am on "http://learn.code.org/hoc/15/lang/pt-br"
   And I rotate to landscape
   And I wait to see "#x-close"
-  And I press "x-close"
-  Then element ".dialog-title" has text "Desafio 16 de 20"
-  Then element ".modal-content p:nth-child(2)" has "pt-br" text from key "data.level.instructions.maze_2_15"
+  Then element ".dialog-title" has text "Desafio 15 de 20"
+  Then element ".modal-content p:nth-child(2)" has "pt-br" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "pt-br" text from key "data.level.instructions.maze_2_15"
+  Then element "#prompt" has "pt-br" text from key "data.level.instructions.maze_2_14"
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -53,15 +51,14 @@ Scenario: Frozen tutorial in Portuguese
   And I wait for 2 seconds
 
 Scenario: HoC tutorial in Arabic
-  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/ar?noautoplay=true"
+  Given I am on "http://learn.code.org/hoc/15/lang/ar"
   And I rotate to landscape
   And I wait to see "#x-close"
-  And I press "x-close"
-  Then element ".dialog-title" has text "اللغز 16 من 20"
-  Then element ".modal-content p:nth-child(2)" has "ar" text from key "data.level.instructions.maze_2_15"
+  Then element ".dialog-title" has text "اللغز 15 من 20"
+  Then element ".modal-content p:nth-child(2)" has "ar" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element "#prompt" has "ar" text from key "data.level.instructions.maze_2_15"
+  Then element "#prompt" has "ar" text from key "data.level.instructions.maze_2_14"
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
