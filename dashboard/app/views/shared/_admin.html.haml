@@ -1,0 +1,27 @@
+.admin
+  %h4
+    Admins:
+    %a{href: '#', onclick: 'return adminClick()'} [hide/show]
+  .content
+    = yield
+
+:javascript
+
+  var adminBox;
+
+  $().ready(function() {  
+    adminBox = $(".admin .content");
+    if (document.cookie.indexOf('hide-admin-menu') >= 0) {
+      adminBox.hide();
+    }
+  });
+
+  function adminClick() {
+    adminBox.toggle();
+    if (adminBox.is(":visible")) {
+      document.cookie = "hide-admin-menu=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    } else {
+      document.cookie="hide-admin-menu=true";
+    }
+    return false;
+  }
