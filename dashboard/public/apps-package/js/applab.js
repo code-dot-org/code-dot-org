@@ -1100,12 +1100,13 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
-  designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  designMode.changeScreen('screen1');
+  var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
+  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
+  designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
-    designMode.resetElementTray(allowDragging);
+    designMode.resetElementTray(isDesigning);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
@@ -2399,13 +2400,14 @@ designMode.onPropertyChange = function(element, name, value) {
   }
 
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
-    designMode.editElementProperties(element);
     handled = true;
   }
 
   if (!handled) {
     throw "unknown property name " + name;
   }
+
+  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -2416,7 +2418,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   $(element).remove();
 
   if (isScreen) {
-    designMode.changeScreen('screen1');
+    designMode.loadDefaultScreen();
   }
 
   designMode.clearProperties();
@@ -2514,7 +2516,7 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
   elementLibrary.resetIds();
   designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 function toggleDragging (enable) {
@@ -2544,7 +2546,7 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -2732,6 +2734,14 @@ designMode.changeScreen = function (screenId) {
   }
 
   designMode.editElementProperties(document.getElementById(screenId));
+};
+
+/**
+ * Load our default screen (ie. the first one in the DOM)
+ */
+designMode.loadDefaultScreen = function () {
+  var defaultScreen = $('.screen').first().attr('id');
+  designMode.changeScreen(defaultScreen);
 };
 
 designMode.renderDesignWorkspace = function(element) {
@@ -6459,7 +6469,11 @@ var DesignProperties = module.exports = React.createClass({displayName: "exports
     });
 
     var deleteButton;
-    if (this.props.element.id !== 'screen1') {
+    var element = this.props.element;
+    // First screen is not deletable
+    var firstScreen = elementType === elementLibrary.ElementType.SCREEN &&
+        element.parentNode.firstChild === element;
+    if (!firstScreen) {
       deleteButton = (React.createElement(DeleteElementButton, {
         shouldConfirm: elementType === elementLibrary.ElementType.SCREEN, 
         handleDelete: this.props.onDelete}));
