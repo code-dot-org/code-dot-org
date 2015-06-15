@@ -52753,7 +52753,7 @@ exports.createANTLRParser = function(name, config, root) {
 
 
 },{"../antlr/CLexer":1,"../antlr/CParser":3,"../antlr/JavaLexer":4,"../antlr/JavaParser":6,"../antlr/jvmBasicLexer":7,"../antlr/jvmBasicParser":9,"./helper.coffee":81,"./model.coffee":88,"./parser.coffee":90,"./treewalk.coffee":91,"antlr4":50}],79:[function(require,module,exports){
-var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
+var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getMostSevereAnnotationType, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
   hasProp = {}.hasOwnProperty,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -55559,7 +55559,7 @@ Editor.prototype.copyAceEditor = function() {
   return this.setValue_raw(this.getAceValue());
 };
 
-hook('populate', 0, function() {
+hook('populate', 1, function() {
   var acemode;
   this.aceElement = document.createElement('div');
   this.aceElement.className = 'droplet-ace';
@@ -56683,53 +56683,23 @@ hook('populate', 0, function() {
   this.gutter.appendChild(this.lineNumberWrapper);
   this.gutterVersion = -1;
   this.lineNumberTags = {};
-  return this.dropletElement.appendChild(this.gutter);
+  this.mainScroller.appendChild(this.gutter);
+  this.annotations = {};
+  this.breakpoints = {};
+  return this.aceEditor.on('guttermousedown', function(e) {
+    var row, target;
+    target = e.domEvent.target;
+    if (target.className.indexOf('ace_gutter-cell') === -1) {
+      return;
+    }
+    row = e.getDocumentPosition().row;
+    e.stop();
+    return this.fireEvent('guttermousedown', {
+      line: row,
+      event: e.domEvent
+    });
+  });
 });
-
-Editor.prototype.addGutterDecoration = function(row, className) {
-  var decorations;
-  if (!this.gutterDecorations[row]) {
-    this.gutterDecorations[row] = [];
-  }
-  decorations = this.gutterDecorations[row];
-  if (indexOf.call(decorations, className) >= 0) {
-    return;
-  }
-  decorations.push(className);
-  return this.redrawMain();
-};
-
-Editor.prototype.removeGutterDecoration = function(row, className) {
-  var decorations;
-  this.redrawMain();
-  if (!this.gutterDecorations[row]) {
-    return;
-  }
-  decorations = this.gutterDecorations[row];
-  if (indexOf.call(decorations, className) < 0) {
-    return;
-  }
-  decorations.splice(decorations.indexOf(className), 1);
-  if (decorations.length === 0) {
-    this.gutterDecorations[row] = null;
-  }
-  return this.redrawMain();
-};
-
-Editor.prototype.hasGutterDecoration = function(row, className) {
-  if (!this.gutterDecorations[row]) {
-    return false;
-  }
-  return indexOf.call(this.gutterDecorations[row], className) >= 0;
-};
-
-Editor.prototype.toggleGutterDecoration = function(row, className) {
-  if (this.hasGutterDecoration(row, className)) {
-    return this.removeGutterDecoration(row, className);
-  } else {
-    return this.addGutterDecoration(row, className);
-  }
-};
 
 hook('mousedown', 11, function(point, event, state) {
   var clickedLine, mainPoint, treeView;
@@ -56748,10 +56718,35 @@ hook('mousedown', 11, function(point, event, state) {
   return true;
 });
 
+Editor.prototype.setBreakpoint = function(row) {
+  this.aceEditor.session.setBreakpoint(row);
+  this.breakpoints[row] = true;
+  return this.redrawGutter(false);
+};
+
+Editor.prototype.getBreakpoints = function(row) {
+  return this.aceEditor.session.getBreakpoints();
+};
+
+Editor.prototype.setAnnotations = function(annotations) {
+  var base, el, i, j, len, name;
+  this.aceEditor.session.setAnnotations(annotations);
+  this.annotations = {};
+  for (i = j = 0, len = annotations.length; j < len; i = ++j) {
+    el = annotations[i];
+    if ((base = this.annotations)[name = el.row] == null) {
+      base[name] = [];
+    }
+    this.annotations[el.row].push(el);
+  }
+  console.log('Just set annotations. They are now', this.annotations);
+  return this.redrawGutter(false);
+};
+
 Editor.prototype.resizeGutter = function() {
-  var ref1, ref2;
+  var ref1, ref2, ref3;
   this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
-  return this.gutter.style.height = (Math.max(this.dropletElement.offsetHeight, (ref1 = (ref2 = this.view.getViewNodeFor(this.tree).totalBounds) != null ? ref2.height : void 0) != null ? ref1 : 0)) + "px";
+  return this.gutter.style.height = (Math.max(this.dropletElement.offsetHeight, ((ref1 = (ref2 = this.view.getViewNodeFor(this.tree).totalBounds) != null ? typeof ref2.bottom === "function" ? ref2.bottom() : void 0 : void 0) != null ? ref1 : 0) + ((ref3 = this.options.extraBottomHeight) != null ? ref3 : this.fontSize))) + "px";
 };
 
 Editor.prototype.addLineNumberForLine = function(line) {
@@ -56765,14 +56760,31 @@ Editor.prototype.addLineNumberForLine = function(line) {
     this.lineNumberTags[line] = lineDiv;
   }
   lineDiv.className = 'droplet-gutter-line';
-  if (this.gutterDecorations[line]) {
-    lineDiv.className += ' ' + this.gutterDecorations[line].join(' ');
+  if (this.annotations[line] != null) {
+    lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
+    lineDiv.title = this.annotations[line].map(function(x) {
+      return x.text;
+    }).join('\n');
   }
-  lineDiv.style.top = (treeView.bounds[line].y - this.scrollOffsets.main.y) + "px";
+  if (this.breakpoints[line]) {
+    lineDiv.className += ' droplet_breakpoint';
+  }
+  lineDiv.style.top = treeView.bounds[line].y + "px";
   lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
   lineDiv.style.height = treeView.bounds[line].height + 'px';
   lineDiv.style.fontSize = this.fontSize + 'px';
   return this.lineNumberWrapper.appendChild(lineDiv);
+};
+
+getMostSevereAnnotationType = function(arr) {
+  var el, i, j, len;
+  for (i = j = 0, len = arr.length; j < len; i = ++j) {
+    el = arr[i];
+    if (el.type === 'error') {
+      return 'error';
+    }
+  }
+  return 'warning';
 };
 
 Editor.prototype.findLineNumberAtCoordinate = function(coord) {
@@ -56802,7 +56814,14 @@ Editor.prototype.findLineNumberAtCoordinate = function(coord) {
 };
 
 hook('redraw_main', 0, function(changedBox) {
+  return this.redrawGutter(changedBox);
+});
+
+Editor.prototype.redrawGutter = function(changedBox) {
   var bottom, j, line, ref1, ref2, ref3, tag, top, treeView;
+  if (changedBox == null) {
+    changedBox = true;
+  }
   treeView = this.view.getViewNodeFor(this.tree);
   top = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y);
   bottom = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y + this.mainCanvas.height);
@@ -56818,9 +56837,9 @@ hook('redraw_main', 0, function(changedBox) {
     }
   }
   if (changedBox) {
-    return this.gutter.style.height = (Math.max(this.mainScroller.offsetHeight, treeView.totalBounds.height)) + "px";
+    return this.resizeGutter();
   }
-});
+};
 
 Editor.prototype.setPaletteWidth = function(width) {
   this.paletteWrapper.style.width = width + 'px';
