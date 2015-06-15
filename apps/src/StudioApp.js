@@ -1,5 +1,6 @@
 /* global Blockly, ace:true, $, requirejs, marked */
 
+var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -1157,6 +1158,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
+  this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -1185,7 +1187,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
 // Overwritten by applab.
 StudioApp.prototype.runButtonClickWrapper = function (callback) {
-  $(window).trigger('run_button_pressed');
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+    $(window).trigger('appModeChanged');
+  }
   callback();
 };
 
@@ -1327,9 +1332,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
-    // Note (brent): this mode is currently defined in applab, which means we
-    // dont have it available to us in all apps, and ends up with a 404 as it
-    // tries to hit the network. At some point this should be cleaned up
+
+    // Init and define our custom ace mode:
+    aceMode.defineForAce(options.dropletConfig, this.editor);
+    // Now set the editor to that mode:
     this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
@@ -1348,26 +1354,29 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
     // Bind listener to palette/toolbox 'Hide' and 'Show' links
-    var hideToolboxLink = document.getElementById('hide-toolbox');
-    var showToolboxLink = document.getElementById('show-toolbox');
+    var hideToolboxHeader = document.getElementById('toolbox-header');
+    var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
     var showToolboxHeader = document.getElementById('show-toolbox-header');
-    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
-      hideToolboxLink.style.display = 'inline-block';
+    if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+      hideToolboxHeader.className += ' toggleable';
+      hideToolboxIcon.style.display = 'inline-block';
       var handleTogglePalette = (function() {
         if (this.editor) {
           this.editor.enablePalette(!this.editor.paletteEnabled);
           showToolboxHeader.style.display =
               this.editor.paletteEnabled ? 'none' : 'inline-block';
+          hideToolboxIcon.style.display =
+              !this.editor.paletteEnabled ? 'none' : 'inline-block';
           this.resizeToolboxHeader();
         }
       }).bind(this);
-      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
-      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
     }
 
     this.resizeToolboxHeader();

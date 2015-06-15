@@ -39,6 +39,10 @@ Room: A8
 Ellicott City, MD 21042
 <br />
 
+### Parking
+There are 20 spaces available at the Applications and Research Laboratory (ARL). Additional parking will be at the school next door.  
+
+
 ### What do I bring to Phase 2?
 
 Water Bottle

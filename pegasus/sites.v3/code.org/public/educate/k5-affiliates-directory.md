@@ -78,7 +78,6 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 
 <p style="clear:both">&nbsp;</p>
 <br />
-<br />
 
 <a id="al"></a>
 ## Alabama

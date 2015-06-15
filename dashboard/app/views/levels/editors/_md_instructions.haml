@@ -7,20 +7,7 @@
   = f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
   #markdown-instructions-preview
 
-%script{src: '/blockly/js/marked/marked.js', type: 'text/javascript'}
 :javascript
   var mdEditor = codeMirror('markdown_instructions', 'markdown', function (editor, change) {
     $('#markdown-instructions-preview').html(marked(editor.getValue()));
-  });
-  inlineAttach.attachToCodeMirror(mdEditor, {
-    uploadUrl: '/level_assets/upload',
-    uploadFieldName: 'file',
-    downloadFieldName: 'newAssetUrl',
-    allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
-    progressText: '![Uploading file...]()',
-    urlText: "![]({filename})", // `{filename}` tag gets replaced with URL
-    errorText: "Error uploading file",
-    extraHeaders: {
-      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-    }
-  });
+  }, true);

@@ -260,13 +260,14 @@ designMode.onPropertyChange = function(element, name, value) {
   }
 
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
-    designMode.editElementProperties(element);
     handled = true;
   }
 
   if (!handled) {
     throw "unknown property name " + name;
   }
+
+  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -277,7 +278,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   $(element).remove();
 
   if (isScreen) {
-    designMode.changeScreen('screen1');
+    designMode.loadDefaultScreen();
   }
 
   designMode.clearProperties();
@@ -338,10 +339,12 @@ designMode.onDepthChange = function (element, depthDirection) {
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
   // Children are screens. Want to operate on grandchildren
-  makeUndraggable(divApplab.children().children());
-  var s = new XMLSerializer().serializeToString(divApplab[0]);
-  makeDraggable(divApplab.children().children());
-  Applab.levelHtml = s;
+  var madeUndraggable = makeUndraggable(divApplab.children().children());
+  var serialization = new XMLSerializer().serializeToString(divApplab[0]);
+  if (madeUndraggable) {
+    makeDraggable(divApplab.children().children());
+  }
+  Applab.levelHtml = serialization;
 };
 
 /**
@@ -373,7 +376,7 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
   elementLibrary.resetIds();
   designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 function toggleDragging (enable) {
@@ -403,7 +406,7 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -417,11 +420,12 @@ function getInnerElement(outerElement) {
 
 /**
  *
- * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
+ *   draggable.
  */
-function makeDraggable (jq) {
+function makeDraggable (jqueryElements) {
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
-  jq.each(function () {
+  jqueryElements.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
       alsoResize: elm,
@@ -472,7 +476,10 @@ function makeDraggable (jq) {
 
         designMode.renderDesignWorkspace(elm[0]);
       }
-    }).css('position', 'absolute');
+    }).css({
+      position: 'absolute',
+      lineHeight: '0px'
+    });
 
     wrapper.css({
       top: elm.css('top'),
@@ -493,22 +500,29 @@ function makeDraggable (jq) {
 
 /**
  * Inverse of `makeDraggable`.
- * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
+ *   undraggable.
+ * @returns {boolean} True if we made something undraggable
  */
-function makeUndraggable(jq) {
-  jq.each(function () {
+function makeUndraggable(jqueryElements) {
+  var foundOne = false;
+  jqueryElements.each(function () {
     var wrapper = $(this);
     var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
-    if (!wrapper.data('uiDraggable')) {
+    if (!wrapper.hasClass('ui-draggable')) {
       return;
     }
+
+    foundOne = true;
 
     wrapper.resizable('destroy').draggable('destroy');
     elm.css('position', 'absolute');
     elm.unwrap();
   });
+
+  return foundOne;
 }
 
 designMode.configureDragAndDrop = function () {
@@ -562,9 +576,7 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // Simulate a run button click, to load the channel id.
-    var designModeClick = studioApp.runButtonClickWrapper.bind(
-        studioApp, Applab.onDesignModeButton);
+    var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
     React.render(
@@ -580,6 +592,14 @@ designMode.changeScreen = function (screenId) {
   }
 
   designMode.editElementProperties(document.getElementById(screenId));
+};
+
+/**
+ * Load our default screen (ie. the first one in the DOM)
+ */
+designMode.loadDefaultScreen = function () {
+  var defaultScreen = $('.screen').first().attr('id');
+  designMode.changeScreen(defaultScreen);
 };
 
 designMode.renderDesignWorkspace = function(element) {

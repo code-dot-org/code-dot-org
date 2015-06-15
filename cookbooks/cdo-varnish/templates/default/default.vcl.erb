@@ -353,7 +353,6 @@ sub vcl_recv
   if(req.http.Cookie) {
     cookie.parse(req.http.Cookie);
   }
-  <% unless rack_env?(:production) %>
   # Filter https_ok cookie from incoming request
   if (cookie.isset("https_ok")) {
     cookie.delete("https_ok");
@@ -364,7 +363,6 @@ sub vcl_recv
   if(req.http.X-Forwarded-Proto !~ "(?i)https" && req.http.X-Https-Ok == "1") {
     error 751 "https://" + req.http.host + req.url;
   }
-  <% end %>
 
   C{
       vcl_rewrite_accept_language(sp);
@@ -571,17 +569,16 @@ sub vcl_fetch {
   set beresp.grace = 1h;
 }
 
-# Set a header to track a cache HIT/MISS.
 sub vcl_deliver {
-  <% unless rack_env?(:production) %>
+  # Add HTTP Strict Transport Security header and https_ok cookie to response
   if (req.http.X-Forwarded-Proto ~ "(?i)https") {
     set resp.http.Strict-Transport-Security = "max-age=3600";
     if(req.http.X-Https-Ok != "1") {
       header.append(resp.http.Set-Cookie,"https_ok=1; Path=/; Expires=" + cookie.format_rfc1123(now, 5h) + "; HttpOnly");
     }
   }
-  <% end %>
 
+  # Set a header to track a cache HIT/MISS.
   if (obj.hits > 0) {
     set resp.http.X-Varnish-Cache = "HIT";
   }

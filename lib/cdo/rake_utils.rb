@@ -17,10 +17,10 @@ module RakeUtils
   end
 
   def self.start_service(id)
-    sudo 'service', id.to_s, 'start' if OS.linux?
+    sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
   def self.stop_service(id)
-    sudo 'service', id.to_s, 'stop' if OS.linux?
+    sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
   def self.system_(*args)
@@ -92,6 +92,12 @@ module RakeUtils
     end
   end
 
+  # Updates list of global npm packages if outdated
+  def self.npm_update_g(*args)
+    output = `npm outdated --global --parseable --long --depth=0 #{args.join ' '}`.strip
+    RakeUtils.sudo 'npm', 'update', '--quiet', '-g', *args unless output.empty?
+  end
+
   def self.npm_install(*args)
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
@@ -103,8 +109,10 @@ module RakeUtils
     RakeUtils.system *commands
   end
 
+  # Installs list of global npm packages if not already installed
   def self.npm_install_g(*args)
-    RakeUtils.sudo 'npm', 'install', '--quiet', '-g', *args
+    output = `npm list --global --parseable --long --depth=0 #{args.join ' '}`.strip
+    RakeUtils.sudo 'npm', 'install', '--quiet', '-g', *args if output.empty?
   end
 
   def self.rake(*args)
