@@ -563,6 +563,17 @@ designMode.configureDesignToggleRow = function () {
 };
 
 /**
+ * Create a new screen
+ * @returns {string} The id of the newly created screen
+ */
+designMode.createScreen = function () {
+  var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
+  $("#divApplab").append(newScreen);
+
+  return newScreen.getAttribute('id');
+};
+
+/**
  * Changes the active screen by toggling all screens to be non-visible, unless
  * they match the provided screenId. Also updates our dropdown to reflect the
  * change, and opens the element property editor for the new screen.
@@ -585,7 +596,8 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
-        onScreenChange: designMode.changeScreen
+        onScreenChange: designMode.changeScreen,
+        onScreenCreate: designMode.createScreen
       }),
       designToggleRow
     );
