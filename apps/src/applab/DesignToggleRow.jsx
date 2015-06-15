@@ -3,6 +3,8 @@
 var React = require('react');
 var msg = require('../locale');
 
+var NEW_SCREEN = 'New screen...';
+
 var Mode = {
   CODE: 'CODE',
   DESIGN: 'DESIGN'
@@ -41,7 +43,7 @@ module.exports = React.createClass({
 
   handleScreenChange: function (evt) {
     var screenId = evt.target.value;
-    if (screenId === 'New screen...') {
+    if (screenId === NEW_SCREEN) {
       screenId = this.props.onScreenCreate();
     }
     this.props.onScreenChange(screenId);
@@ -103,7 +105,7 @@ module.exports = React.createClass({
           onChange={this.handleScreenChange}
           disabled={Applab.isRunning()}>
           {options}
-          <option>New screen...</option>
+          <option>{NEW_SCREEN}</option>
         </select>
       );
     }
