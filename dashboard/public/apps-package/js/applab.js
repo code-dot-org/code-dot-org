@@ -2713,6 +2713,17 @@ designMode.configureDesignToggleRow = function () {
 };
 
 /**
+ * Create a new screen
+ * @returns {string} The id of the newly created screen
+ */
+designMode.createScreen = function () {
+  var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
+  $("#divApplab").append(newScreen);
+
+  return newScreen.getAttribute('id');
+};
+
+/**
  * Changes the active screen by toggling all screens to be non-visible, unless
  * they match the provided screenId. Also updates our dropdown to reflect the
  * change, and opens the element property editor for the new screen.
@@ -2735,7 +2746,8 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
-        onScreenChange: designMode.changeScreen
+        onScreenChange: designMode.changeScreen,
+        onScreenCreate: designMode.createScreen
       }),
       designToggleRow
     );
@@ -6141,6 +6153,8 @@ module.exports = React.createClass({displayName: "exports",
 var React = require('react');
 var msg = require('../locale');
 
+var NEW_SCREEN = 'New screen...';
+
 var Mode = {
   CODE: 'CODE',
   DESIGN: 'DESIGN'
@@ -6152,7 +6166,8 @@ module.exports = React.createClass({displayName: "exports",
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired
+    onScreenChange: React.PropTypes.func.isRequired,
+    onScreenCreate: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -6177,7 +6192,11 @@ module.exports = React.createClass({displayName: "exports",
   },
 
   handleScreenChange: function (evt) {
-    this.props.onScreenChange(evt.target.value);
+    var screenId = evt.target.value;
+    if (screenId === NEW_SCREEN) {
+      screenId = this.props.onScreenCreate();
+    }
+    this.props.onScreenChange(screenId);
   },
 
   componentWillReceiveProps: function (newProps) {
@@ -6235,7 +6254,8 @@ module.exports = React.createClass({displayName: "exports",
           value: this.state.activeScreen, 
           onChange: this.handleScreenChange, 
           disabled: Applab.isRunning()}, 
-          options
+          options, 
+          React.createElement("option", null, NEW_SCREEN)
         )
       );
     }
