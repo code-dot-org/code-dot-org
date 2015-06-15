@@ -89,6 +89,18 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     this.dropletTooltipManager.showDocFor(functionName);
     event.stopPropagation();
   }.bind(this));
+
+  var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
+  if (chooseAsset) {
+    var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
+    dom.addClickTouchEvent(chooseAssetLink, function(event) {
+      cursorTooltip.tooltipster('hide');
+      chooseAsset(function(filename) {
+        aceEditor.onTextInput('"' + filename + '"');
+      });
+      event.stopPropagation();
+    }.bind(this));
+  }
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
