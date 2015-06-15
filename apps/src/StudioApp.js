@@ -1403,10 +1403,6 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     options.afterEditorReady();
   }
 
-  // Since the droplet editor loads asynchronously, we must call onInitialize
-  // here once loading is complete.
-  this.onInitialize();
-
   if (options.afterInject) {
     options.afterInject();
   }
