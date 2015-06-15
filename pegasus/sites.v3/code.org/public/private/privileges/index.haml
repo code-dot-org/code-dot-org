@@ -22,14 +22,23 @@
       if PERMISSIONS.where(user_id:user[:id], permission:permission_name).count > 0
         return "#{email} already has '#{permission_name}'"
       else
-        if permission_name == 'teacher' || permission_name == 'admin'
+        if permission_name == 'teacher'
           if user[:user_type] == permission_name
-            message = "#{email} already has '#{permission_name}'"
+            message = "#{email} already has 'teacher'"
           else
             USERS.where(email: email).update(user_type: permission_name)
-            message = "#{email} already has '#{permission_name}'"
+            message = "#{email} granted 'teacher'"
           end
           exit = true
+        elsif permission_name == 'admin'
+          if user[:admin]
+            message = "#{email} already has 'admin'"
+          else
+            USERS.where(email: email).update(admin: 1)
+            message = "#{email} granted 'admin'"
+          end
+          exit = true
+        end
         end
 
         if permission_name == 'affiliate' && user[:user_type] != 'teacher'
