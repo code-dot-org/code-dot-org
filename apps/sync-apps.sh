@@ -30,4 +30,6 @@ for locale in $locales; do
     ruby ../i18n/code.org/lib/merge-all-locales.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
   done
 
+  ruby ../i18n/code.org/lib/copy-untranslated-apps.rb
+
 done
