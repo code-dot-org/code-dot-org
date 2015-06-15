@@ -79,7 +79,7 @@ git push
 
 ### Apps
 1. Make changes in `apps/i18n/<app>/en_us.json`
-2. From home directory, run `cd i18n/code.org && ./sync-apps.sh`
+2. From apps directory, run `./sync-apps.sh`
 3. Commit all .json files in i18n/locales and apps/i18n
 
 ### Dashboard
