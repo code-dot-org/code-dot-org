@@ -41,9 +41,7 @@ Blockly.Blocks.functional_example = {
     this.setHSV(94, 0.84, 0.60);
     this.setFunctional(true, { headerHeight: 0, rowBuffer: 3 });
     this.setFunctionalOutput(false);
-    this.appendDummyInput()
-        .appendTitle(Blockly.Msg.EXAMPLE)
-        .appendTitle('(' + [Blockly.Msg.ACTUAL, Blockly.Msg.EXPECTED].join(', ') + ')');
+    // TODO(bjordan): maybe add a bit of space here for a handle? TOP_HANDLE input type?
     this.appendFunctionalInput('ACTUAL').setAlign(Blockly.ALIGN_CENTRE);
     this.appendFunctionalInput('EXPECTED').setAlign(Blockly.ALIGN_CENTRE).setInline(true);
     this.setTooltip(Blockly.Msg.EXAMPLE_DESCRIPTION);

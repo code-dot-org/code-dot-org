@@ -218,8 +218,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   this.inputClickTargets_[input.name].setAttribute('visibility',
     input.connection.targetConnection ? 'hidden' : 'visible');
 
-  //renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
-  renderInfo.curX += inputWidthToTakeUp + BS.SEP_SPACE_X;
+  renderInfo.curX += this.inputWidthToOccupy_(input) + BS.SEP_SPACE_X;
 
   // Create inline input connection.
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;

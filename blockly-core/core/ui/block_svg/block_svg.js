@@ -792,7 +792,7 @@ function inputTitleRenderSize (input, iconWidth) {
 function widthInlineRow(row) {
   var width = BS.SEP_SPACE_X;
   for (var i = 0, input; input = row[i]; i++) {
-    width += input.renderWidth + BS.SEP_SPACE_X;
+    width += BS.SEP_SPACE_X + this.inputWidthToOccupy_(input);
   }
 
   return width;
@@ -1138,7 +1138,9 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   // out how much space they will take up, so that we can center the set of them.
   if (row[0].type === Blockly.FUNCTIONAL_INPUT) {
     var widths = BS.SEP_SPACE_X * (row.length - 1);
-    row.forEach(function (input) { widths += input.renderWidth; } );
+    row.forEach(function (input) {
+      widths += this.inputWidthToOccupy_(input);
+    });
     if (inputRows.rightEdge > widths && align === Blockly.ALIGN_CENTRE) {
       renderInfo.curX = (inputRows.rightEdge - widths) / 2;
     }
@@ -1217,6 +1219,15 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
     renderInfo.highlight.push('v', row.height - 2);
   }
 };
+
+/**
+ * Given an input, returns the amount of space it should occupy
+ * @param {Blockly.Input} input
+ * @returns {number}
+ */
+Blockly.BlockSvg.prototype.inputWidthToOccupy_ = function (input) {
+  return input.renderWidth + (input.extraSpace || 0);
+}
 
 /**
  * Render a function input that is inlined

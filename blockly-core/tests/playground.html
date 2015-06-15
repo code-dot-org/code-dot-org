@@ -8,6 +8,7 @@
 <script type="text/javascript">
 'use strict';
 goog.require('Blockly');
+goog.require('goog.tweak');
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
 var block = null;
@@ -291,6 +292,23 @@ h1 {
       document.write('[ &larr; RTL. Switch to <A HREF="?ltr">LTR</A>. ]');
     } else {
       document.write('[ &rarr; LTR. Switch to <A HREF="?rtl">RTL</A>. ]');
+    }
+  </script>
+
+  <script type="text/javascript">
+    goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
+    if(goog.tweak.getBoolean('openContract')) {
+      setTimeout(function() {
+        window.newContractEditor();
+        Blockly.contractEditor.exampleBlocks[0].getInputTargetBlock('ACTUAL').dispose();
+        Blockly.contractEditor.addNewExampleBlock_();
+        Blockly.contractEditor.addParameter('test');
+        Blockly.contractEditor.addParameter('test2');
+        Blockly.contractEditor.refreshParamsEverywhere();
+        Blockly.contractEditor.examplesSectionView_.toggleCollapse();
+        Blockly.contractEditor.examplesSectionView_.toggleCollapse();
+      }, 500); // TODO(bjordan): remove
+
     }
   </script>
 
