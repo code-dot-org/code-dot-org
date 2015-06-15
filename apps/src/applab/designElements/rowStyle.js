@@ -17,8 +17,3 @@ module.exports.input = {
 module.exports.container = {
   paddingLeft: 20
 };
-
-module.exports.idRowContainer = {
-  backgroundColor: '#a69bc1',
-  width: 245
-};

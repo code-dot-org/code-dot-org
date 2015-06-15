@@ -1,6 +1,6 @@
 /* global $ */
 var React = require('react');
-var rowStyle = require('./rowStyle.jsx');
+var rowStyle = require('./rowStyle');
 
 var OptionsSelectRow = React.createClass({
   propTypes: {

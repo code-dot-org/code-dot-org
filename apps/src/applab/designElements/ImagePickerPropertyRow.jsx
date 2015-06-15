@@ -1,6 +1,6 @@
 var React = require('react');
 var showAssetManager = require('../assetManagement/show.js');
-var rowStyle = require('./rowStyle.jsx');
+var rowStyle = require('./rowStyle');
 
 var PropertyRow = React.createClass({
   propTypes: {

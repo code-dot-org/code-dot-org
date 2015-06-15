@@ -1,5 +1,5 @@
 var React = require('react');
-var rowStyle = require('./rowStyle.jsx');
+var rowStyle = require('./rowStyle');
 
 var BooleanPropertyRow = React.createClass({
   propTypes: {

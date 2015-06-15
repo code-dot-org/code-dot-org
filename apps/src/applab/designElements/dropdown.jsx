@@ -6,7 +6,6 @@ var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var OptionsSelectRow = require('./OptionsSelectRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
-var rowStyle = require('./rowStyle.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -26,7 +25,7 @@ var DropdownProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          extraRowStyle={rowStyle.idRowContainer} />
+          isIdRow={true} />
         <OptionsSelectRow
           desc={'options'}
           element={element}
