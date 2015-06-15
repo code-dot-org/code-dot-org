@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 # Background
 
-The Minimum Spanning Tree is a type of problem known as Graph Theory. Graph are often used to solve problems in networks, schedules, and logistics and are common in computer science. The MST problem is especially interesting because it might have multiple “best” solutions.
+One of the more common (and interesting) fields investigated in computer science is graph theory. Graph theory investigates connections - between people, locations, computers, ideas, information, or anything else. The Minimum Spanning Tree (MST) is a problem in the field of graph theory. The MST problem is especially interesting because it might have multiple “best” solutions.
 
 # Vocabulary
 

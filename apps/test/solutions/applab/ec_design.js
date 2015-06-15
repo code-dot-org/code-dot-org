@@ -142,5 +142,87 @@ module.exports = {
       },
     },
 
+    {
+      description: "hidden items",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // We don't load our style sheets in mochaTests, so we instead ddepend
+        // on checking classes.
+        // An element will be set to opacity 0.3 if it has the class design-mode-hidden
+        // and divApplab does not have the class divApplabDesignMode
+        var isFaded = function (selector) {
+          var element = $(selector);
+          return element.hasClass('design-mode-hidden') &&
+            $('#divApplab').hasClass('divApplabDesignMode');
+        };
+        var isHidden = function (selector) {
+          var element = $(selector);
+          return element.hasClass('design-mode-hidden') &&
+            !$('#divApplab').hasClass('divApplabDesignMode');
+        };
+
+        $("#designModeButton").click();
+        testUtils.dragToVisualization('BUTTON', 10, 10);
+        validatePropertyRow(1, 'id', 'button1', assert);
+        var toggleHidden = $('.custom-checkbox')[0];
+
+        assert.equal(isFaded('#button1'), false);
+        assert.equal(isHidden('#button1'), false);
+
+        ReactTestUtils.Simulate.click(toggleHidden);
+
+        assert.equal($(toggleHidden).hasClass('fa-check-square-o'), true);
+        assert.equal(isFaded('#button1'), true);
+        assert.equal(isHidden('#button1'), false);
+
+        // Enter code mode
+        $("#codeModeButton").click();
+        assert.equal(isFaded('#button1'), false);
+        assert.equal(isHidden('#button1'), true);
+
+        // Back to design mode
+        $("#designModeButton").click();
+        assert.equal(isFaded('#button1'), true);
+        assert.equal(isHidden('#button1'), false);
+
+        // Enter run mode
+        $("#runButton").click();
+        assert.equal(isFaded('#button1'), false);
+        assert.equal(isHidden('#button1'), true);
+
+        $("#resetButton").click();
+        assert.equal(isFaded('#button1'), true);
+        assert.equal(isHidden('#button1'), false);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "entering design mode while running",
+      editCode: true,
+      xml: 'button("my_button", "text");',
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          assert.equal($('#my_button').length, 1);
+
+          $("#designModeButton").click();
+
+          assert.equal($('#my_button').length, 0, 'API created element should be gone');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    }
   ]
 };

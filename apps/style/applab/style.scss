@@ -1,5 +1,6 @@
 @import "color";
 @import "colpick.css";
+@import "style-constants";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -15,7 +16,11 @@ div#visualization.with_padding {
 }
 
 div#visualizationResizeBar {
-  top: 40px;
+  top: $workspace-headers-height;
+}
+
+#designToggleRow > div {
+  height: $workspace-headers-height;
 }
 
 /* Shrink the visualization area on small displays. */

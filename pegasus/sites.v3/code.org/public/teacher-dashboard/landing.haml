@@ -2,51 +2,51 @@
 layout: none
 theme: none
 ---
--if dashboard_user[:admin]
-  %h1
-    Ops Dashboard
-  %a{href:'/ops-dashboard#/districts'}
-    %h3
-      Manage Districts
--if dashboard_user[:admin] || have_permission?('facilitator')
-  -if !dashboard_user[:admin]
+
+.teacher-announcements
+  = view :teacher_announcements
+
+.ops-workshops
+  -if dashboard_user[:admin]
     %h1
-      Facilitator Dashboard
-  %a{href:'/ops-dashboard#/workshops'}
-    %h3
-      Manage PD Workshops
--elsif have_permission?('district_contact')
-  %h1
-    District Dashboard
-  %a{href:'/ops-dashboard#/workshops'}
-    %h3
-      View PD Workshops
--if dashboard_user[:admin] || have_permission?('district_contact')
-  %a{href:'/ops-dashboard#/teacher-cohorts'}
-    %h3
-      Manage Teacher Cohorts
--if dashboard_user[:admin] || have_permission?('create_professional_development_workshop')
-  %h1
-    Affiliate Dashboard
-  %a{href:'/manage-professional-development-workshops'}
-    %h3
-      Manage Workshops
-  %a{href:'/professional-development-workshops'}
-    %h3
-      View Workshop Map
-  %a{href:'https://docs.google.com/a/code.org/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit'}
-    %h3
-      View Affiliate Playbook
+      Ops Dashboard
+    %a{href:'/ops-dashboard#/districts'}
+      %h3
+        Manage Districts
+  -if dashboard_user[:admin] || have_permission?('facilitator')
+    -if !dashboard_user[:admin]
+      %h1
+        Facilitator Dashboard
+    %a{href:'/ops-dashboard#/workshops'}
+      %h3
+        Manage PD Workshops
+  -elsif have_permission?('district_contact')
+    %h1
+      District Dashboard
+    %a{href:'/ops-dashboard#/workshops'}
+      %h3
+        View PD Workshops
+  -if dashboard_user[:admin] || have_permission?('district_contact')
+    %a{href:'/ops-dashboard#/teacher-cohorts'}
+      %h3
+        Manage Teacher Cohorts
+  -if dashboard_user[:admin] || have_permission?('create_professional_development_workshop')
+    %h1
+      Affiliate Dashboard
+    %a{href:'/manage-professional-development-workshops'}
+      %h3
+        Manage Workshops
+    %a{href:'/professional-development-workshops'}
+      %h3
+        View Workshop Map
+    %a{href:'https://docs.google.com/a/code.org/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit'}
+      %h3
+        View Affiliate Playbook
 
 %div
   %div{style: "float:left; width:100%"}
     %h1{style: "margin-bottom:10px"}= I18n.t('dashboard_landing_title')
 
-    %p
-      = I18n.t('dashboard_landing_welcome')
-      %a{href: "/dashboard-update", target: "_blank"}= I18n.t('dashboard_landing_video')
-      = I18n.t('dashboard_landing_watch_video')
-    %br/
 
 %div.tile
   = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/fit-606/logo_student_accounts_progress.jpg", title: I18n.t('dashboard_navigation_section_student_progress'), text:""

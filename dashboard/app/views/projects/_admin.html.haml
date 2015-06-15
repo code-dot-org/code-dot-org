@@ -1,10 +1,6 @@
-- if current_user.try(:admin?)
-  .admin
-    %h4
-      Admins:
-      %a{href: '#', onclick: '$(".admin .content").toggle(); return false;'} [hide/show]
-    .content
-      %h3 Debug
-      %h4 projects ({{projects.length}} total including hidden)
-      %pre
-        {{ projects | json }}
+- if current_user && current_user.admin?
+  = render layout: 'shared/admin' do
+    %h3 Debug
+    %h4 projects ({{projects.length}} total including hidden)
+    %pre
+      {{ projects | json }}

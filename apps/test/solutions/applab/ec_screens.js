@@ -21,7 +21,7 @@ function validatePropertyRow(index, label, value, assert) {
   assert.equal(tableRow.children(1).children(0).val(), value);
 }
 
-function validationEmptyDesignProperties(assert) {
+function validateEmptyDesignProperties(assert) {
   var designProperties = document.getElementById('design-properties');
   assert.equal(designProperties.children.length, 1);
   assert.equal(designProperties.children[0].tagName, 'P');
@@ -159,7 +159,7 @@ module.exports = {
 
         ReactTestUtils.Simulate.click($("#design-properties button").eq(-1)[0]);
 
-        validationEmptyDesignProperties(assert);
+        validateEmptyDesignProperties(assert);
         assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
         assert.equal($(screenSelector).val(), 'screen1');
 
@@ -169,6 +169,16 @@ module.exports = {
         validatePropertyRow(1, 'id', 'screen1', assert);
 
         // One button, and it isn't delete
+        assert.equal($("#design-properties button").length, 1);
+        assert.equal($("#design-properties button").text(), '');
+
+        // Change name
+        var inputId = $('#design-properties input').first();
+        ReactTestUtils.Simulate.change(inputId[0],
+          { target: { value: 'renamed_screen' } });
+        assert(document.getElementById('renamed_screen'));
+
+        // Still can't delete
         assert.equal($("#design-properties button").length, 1);
         assert.equal($("#design-properties button").text(), '');
 
