@@ -10777,7 +10777,7 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
   dropletBlocks.forEach(function (dropletBlockDefinition) {
     this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition.func);
+      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
   }, this);
 };
 
@@ -10972,9 +10972,9 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (appMsg, functionName) {
+var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {String} */
-  this.functionName = functionName;
+  this.functionName = definition.func;
 
   /** @type {String} */
   var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
@@ -11001,6 +11001,9 @@ var DropletFunctionTooltip = function (appMsg, functionName) {
                               msg[this.parameterNameKey(paramId)];
     if (paramDesc) {
       paramInfo.description = paramDesc();
+    }
+    if (definition.assetTooltip) {
+      paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
     paramId++;
@@ -11321,6 +11324,18 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     this.dropletTooltipManager.showDocFor(functionName);
     event.stopPropagation();
   }.bind(this));
+
+  var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
+  if (chooseAsset) {
+    var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
+    dom.addClickTouchEvent(chooseAssetLink, function(event) {
+      cursorTooltip.tooltipster('hide');
+      chooseAsset(function(filename) {
+        aceEditor.onTextInput('"' + filename + '"');
+      });
+      event.stopPropagation();
+    }.bind(this));
+  }
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
@@ -11623,7 +11638,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };
