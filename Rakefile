@@ -71,6 +71,9 @@ namespace :build do
       HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
+      HipChat.log 'Updating <b>apps</b> i18n strings...'
+      RakeUtils.system './sync-apps.sh'
+
       HipChat.log 'Building <b>apps</b>...'
       if CDO.localize_apps
         RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
