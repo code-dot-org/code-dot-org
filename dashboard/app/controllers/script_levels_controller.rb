@@ -108,6 +108,7 @@ class ScriptLevelsController < ApplicationController
 
     user = User.find(params[:user_id])
 
+    # TODO this should use cancan/authorize
     if user.student_of?(current_user)
       @user = user
       @user_level = @user.user_level_for(@script_level)
@@ -118,6 +119,7 @@ class ScriptLevelsController < ApplicationController
     if params[:section_id]
       section = Section.find(params[:section_id])
 
+      # TODO this should use cancan/authorize
       if section.user == current_user
         @section = section
       end
