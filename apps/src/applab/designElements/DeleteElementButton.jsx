@@ -51,14 +51,14 @@ var DeleteElementButton = React.createClass({
         <div>
           Delete?
           <button
-            style={redButtonStyle}
-            onClick={this.finishDelete}>
-            Yes
-          </button>
-          <button
             style={buttonStyle}
             onClick={this.abortDelete}>
             No
+          </button>
+          <button
+            style={redButtonStyle}
+            onClick={this.finishDelete}>
+            Yes
           </button>
         </div>
       );

@@ -73,6 +73,7 @@ module.exports = {
     element.type = 'checkbox';
     element.style.width = '12px';
     element.style.height = '12px';
+    element.style.margin = '0px';
 
     this.onDeserialize(element);
 

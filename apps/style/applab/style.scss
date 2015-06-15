@@ -1,5 +1,6 @@
 @import "color";
 @import "colpick.css";
+@import "style-constants";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -15,7 +16,11 @@ div#visualization.with_padding {
 }
 
 div#visualizationResizeBar {
-  top: 40px;
+  top: $workspace-headers-height;
+}
+
+#designToggleRow > div {
+  height: $workspace-headers-height;
 }
 
 /* Shrink the visualization area on small displays. */
@@ -514,18 +519,6 @@ button.arrow:focus {
   font-size: 14px;
 }
 
-.ace_gutter-cell.ace_error {
-  background-image: url('/blockly/media/skins/applab/gutterError.png');
-  background-size: 16px 16px;
-  background-position: 2px 0px;
-}
-
-.ace_gutter-cell.ace_warning {
-  background-image: url('/blockly/media/skins/applab/gutterWarn.png');
-  background-size: 16px 16px;
-  background-position: 2px 0px;
-}
-
 .design-mode-hidden {
   visibility: hidden;
 
@@ -554,7 +547,7 @@ button.arrow:focus {
 }
 
 .chooseAssetDropdownOption {
-  color: #0596CE;
+  color: $link_color;
   text-decoration: underline;
 }
 

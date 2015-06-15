@@ -12,21 +12,34 @@ var BooleanPropertyRow = React.createClass({
     };
   },
 
-  handleChangeInternal: function(event) {
-    var value = event.target.checked;
-    this.props.handleChange(value);
-    this.setState({isChecked: value});
+  handleClick: function () {
+    var checked = !this.state.isChecked;
+    this.props.handleChange(checked);
+    this.setState({isChecked: checked});
   },
 
-  render: function() {
+  render: function () {
+    var classes = 'custom-checkbox fa';
+    if (this.state.isChecked) {
+      classes += ' fa-check-square-o';
+    } else {
+      classes += ' fa-square-o';
+    }
+
+    var style = {
+      width: 20,
+      height: 20,
+      fontSize: 20
+    };
+
     return (
       <tr>
         <td>{this.props.desc}</td>
         <td>
-          <input
-            type="checkbox"
-            checked={this.state.isChecked}
-            onChange={this.handleChangeInternal}/>
+          <div
+            className={classes}
+            style={style}
+            onClick={this.handleClick}/>
         </td>
       </tr>
     );
