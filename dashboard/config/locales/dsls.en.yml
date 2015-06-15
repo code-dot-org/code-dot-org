@@ -140,8 +140,6 @@ en:
         title: title
       ECSPD Online Welcome:
         Welcome to ECS PD Online!: Welcome to ECS PD Online!
-        Welcome to Online ECS PD!: Welcome to Online ECS PD!
-        description here: description here
       ECSPD Online intro:
         Introduction: Introduction
       ECSPD PD Phases:
@@ -2242,7 +2240,6 @@ en:
         'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
         Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
       U2L05 Assessment 1:
-        Packets Assessment: Packets Assessment
         ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
         : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
         'Packets: Assessment': 'Packets: Assessment'
@@ -3039,7 +3036,6 @@ en:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
       U2L05 Reflection 1:
         Enter your reflection here.: Enter your reflection here.
-        Packets Reflection: Packets Reflection
         'Packets: Reflection': 'Packets: Reflection'
       U2L08 Free Response 1:
         'Router Table: Reflection': 'Router Table: Reflection'
