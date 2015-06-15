@@ -1,4 +1,7 @@
 :ruby
+  authentication_required!
+  forbidden! unless dashboard_user[:admin]
+
   DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
   USERS = DASHBOARD_DB[:users]
   PERMISSIONS = DASHBOARD_DB[:user_permissions]
