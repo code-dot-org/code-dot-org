@@ -260,13 +260,14 @@ designMode.onPropertyChange = function(element, name, value) {
   }
 
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
-    designMode.editElementProperties(element);
     handled = true;
   }
 
   if (!handled) {
     throw "unknown property name " + name;
   }
+
+  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -277,7 +278,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   $(element).remove();
 
   if (isScreen) {
-    designMode.changeScreen('screen1');
+    designMode.loadDefaultScreen();
   }
 
   designMode.clearProperties();
@@ -375,7 +376,7 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
   elementLibrary.resetIds();
   designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 function toggleDragging (enable) {
@@ -405,7 +406,7 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -575,9 +576,7 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // Simulate a run button click, to load the channel id.
-    var designModeClick = Applab.serializeAndSave.bind(
-        Applab, Applab.onDesignModeButton);
+    var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
     React.render(
@@ -593,6 +592,14 @@ designMode.changeScreen = function (screenId) {
   }
 
   designMode.editElementProperties(document.getElementById(screenId));
+};
+
+/**
+ * Load our default screen (ie. the first one in the DOM)
+ */
+designMode.loadDefaultScreen = function () {
+  var defaultScreen = $('.screen').first().attr('id');
+  designMode.changeScreen(defaultScreen);
 };
 
 designMode.renderDesignWorkspace = function(element) {

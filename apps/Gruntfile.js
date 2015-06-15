@@ -95,7 +95,6 @@ config.clean = {
 
 var ace_suffix = DEV ? '' : '-min';
 var dotMinIfNotDev = DEV ? '' : '.min';
-var requirejs_dir = DEV ? 'full' : 'min';
 
 config.copy = {
   src: {
@@ -149,12 +148,6 @@ config.copy = {
         cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
         src: ['**/*.js'],
         dest: 'build/package/js/ace/'
-      },
-      {
-        expand: true,
-        cwd: 'lib/requirejs/' + requirejs_dir + '/',
-        src: ['require.js'],
-        dest: 'build/package/js/requirejs/'
       },
       {
         expand: true,

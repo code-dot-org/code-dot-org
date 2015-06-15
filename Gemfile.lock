@@ -494,3 +494,6 @@ DEPENDENCIES
   unicorn (~> 4.8.2)
   user_agent_parser
   videojs_rails
+
+BUNDLED WITH
+   1.10.3
