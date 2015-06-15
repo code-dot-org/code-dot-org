@@ -870,7 +870,7 @@ Applab.serializeAndSave = function (callback, runButtonClick) {
   } else {
     // Otherwise, makes sure we don't hit our callback until after we've created
     // a channel
-    $(window).trigger('appModeChanged', callback());
+    $(window).trigger('appModeChanged', callback);
   }
 };
 
