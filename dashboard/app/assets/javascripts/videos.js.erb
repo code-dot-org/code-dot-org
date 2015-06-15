@@ -148,7 +148,7 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
 }
 
 function onYouTubeBlocked(callback) {
-  onURLBlocked(youTubeAvailabilityEndpointURL(), callback);
+  testURL(youTubeAvailabilityEndpointURL(), function(){}, callback);
 }
 
 function youTubeAvailabilityEndpointURL() {
