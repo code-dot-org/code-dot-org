@@ -142,7 +142,7 @@ div.droplet-palette-group-header-selected.orange {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 40px;
+  top: 30px;
   bottom: 0px;
   font-size: 14px;
   overflow: hidden; }
@@ -657,16 +657,18 @@ input[type="radio"] {
   text-align: center;
   white-space: nowrap;
   overflow-x: hidden;
-  height: 40px;
+  height: 30px;
   color: white; }
   .workspace-header .workspace-header-clickable:hover {
     cursor: pointer;
     color: #ffb81d; }
   .workspace-header span {
-    line-height: 40px; }
+    line-height: 30px; }
+  .workspace-header .fa {
+    font-size: 18px; }
 
 #design-headers {
-  height: 40px;
+  height: 30px;
   background-color: #7665a0;
   overflow-y: hidden;
   -webkit-user-select: none;
@@ -675,21 +677,42 @@ input[type="radio"] {
   user-select: none; }
 
 #headers {
-  height: 40px;
+  height: 30px;
   background-color: #7665a0;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  #headers #show-toolbox-icon, #headers #hide-toolbox-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    line-height: 30px;
+    color: #cfc9de; }
+  #headers #hide-toolbox-icon {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1); }
   #headers #toolbox-header {
     width: 270px;
     border-right: 1px solid gray;
     float: left; }
+    #headers #toolbox-header.toggleable {
+      cursor: pointer; }
+      #headers #toolbox-header.toggleable:hover .fa {
+        color: white; }
   #headers #show-toolbox-header {
     border: 0;
     float: left;
-    padding: 0 10px; }
+    padding: 0 10px;
+    cursor: pointer; }
+    #headers #show-toolbox-header:hover .fa {
+      color: white; }
+    #headers #show-toolbox-header > span {
+      margin: auto 18px; }
   #headers #blockCounter, #headers #blockUsed {
     display: inline-block; }
   #headers #clear-puzzle-header, #headers #show-code-header {
@@ -702,10 +725,6 @@ input[type="radio"] {
       padding: 0 20px; }
   #headers #clear-puzzle-header:hover {
     background-color: #c00; }
-  #headers #hide-toolbox, #headers #show-toolbox {
-    cursor: pointer; }
-    #headers #hide-toolbox:hover, #headers #show-toolbox:hover {
-      color: #ffb81d; }
   #headers .block-counter-default {
     color: white; }
   #headers .block-counter-overflow {
@@ -713,6 +732,21 @@ input[type="radio"] {
 
 #headers[dir=rtl] div {
   margin-right: 0; }
+#headers[dir=rtl] #show-toolbox-icon, #headers[dir=rtl] #hide-toolbox-icon {
+  left: auto;
+  right: 8px; }
+#headers[dir=rtl] #show-toolbox-icon {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+#headers[dir=rtl] #hide-toolbox-icon {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none; }
 #headers[dir=rtl] #toolbox-header {
   border-right: 0;
   border-left: 1px solid gray;
@@ -995,14 +1029,17 @@ body.readonly #codeWorkspace > svg {
 body.readonly.embed-block #codeWorkspace .userHidden {
   display: none; }
 
-.tooltip-example-link {
+.tooltip-example-link, .tooltip-choose-link {
   margin-top: 5px;
   float: right; }
 
-.tooltip-example-link > a:hover, .tooltip-example-link > a:link, .tooltip-example-link > a:active, .tooltip-example-link > a:visited {
+.tooltip-example-link > a:hover, .tooltip-example-link > a:link, .tooltip-example-link > a:active, .tooltip-example-link > a:visited, .tooltip-choose-link > a:hover, .tooltip-choose-link > a:link, .tooltip-choose-link > a:active, .tooltip-choose-link > a:visited {
   border-bottom: 3px solid #ffb81d;
   color: white;
   font-family: "Gotham 5r", sans-serif; }
+
+.tooltip-choose-link {
+  float: left; }
 
 .function-name {
   font-family: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;

@@ -5,66 +5,49 @@ nav: about_nav
 
 # Job Openings at Code.org
 
-- [Evaluation Manager](#Eval)	
-- [District Manager (Seattle, New York City)](#reg-PM)
-- [Data Engineer](#data-engineer)
-- [Software Engineer](#engineer)
-- [Video Production] (#video)
+**We are currently hiring for:**
 
-## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
+- [Customer Support Associate](#support)	
+- [Data Engineer](#data-engineer)
+- [District Manager (Seattle, New York City)](#reg-PM)
+- [Evaluation Manager](#Eval)
+- [Software Engineer](#engineer)
+- [Video Production](#video)
+
+**[Working at Code.org](#info)**
+
+## <a name="support" href="#support">Customer Support Associate (Seattle, WA)</a>
 
 **Job Summary:**
 
-The Evaluation Manager plays a critical role in managing and directing the evaluation of Code.org programs including the relationship with Code.org’s external evaluator. Candidates considered for this role must have direct experience in evaluation of a high-scale K-12 educational program. Responsibilities of the position include:
+Code.org is recruiting for a tech-savvy customer support associate who is passionate about helping others. This is a full-time position for a candidate who can effectively solve customer issues and positively represent Code.org. 
 
-- Collaborating with cross-organizational teams to develop a comprehensive organizational strategy for K-12 program evaluation and identify key programmatic and strategic questions for evaluation design
-- Advising the Education team on program improvements as a result of evaluation results
-Act as liaison between Code.org and all external evaluation projects and organizations
-- Developing evaluation reports, analyzing and summarizing key findings to share with internal and external parties (funders, districts, educators)
-- Designing and implementing data collection instruments to measure and improve the K-12 professional development programs and student learning outcomes, such as pre/post-tests, surveys, assessments, interview guides, and focus group protocols
-- Working closely with the Data Engineer to develop questions and reports for automation
-- Working closely with Code.org’s fundraising team to provide outcome information for proposal writing and author text for evaluation plans
-- Promoting a culture of reflection, learning, and data-based decision making among Code.org staff and affiliates
+Responsibilities of the position include:
 
-**Qualifications:**
+- Managing end-to-end customer support for Code.org including answering tickets, developing resources such as customer FAQ, and setting and measuring metrics for support 
+- Answering forum questions and providing clear, friendly guidance on behalf of Code.org
+- Trouble shooting and reproducing customer bugs; escalating issues to the development, education, or operations teams when necessary
+- Providing additional support to the operations team (i.e. helping with workshop planning, coordination and communications) as needed 
+
+This person must be able to work in a fast paced environment while maintaining our excellent standard for customer service.
+
+**Skills & Qualifications:**
 
 The ideal candidate has the following qualifications:
 
-- A Bachelor’s degree (Master’s preferred) in Education or a related field that includes a background in research and evaluation, outcome measurement, or statistics; deep familiarity with computer science, math, or science K-12 evaluation strongly preferred. 
-- Minimum of 5 years of experience in formal K-12 program evaluation 
-- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
-- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. 
-- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, especially spreadsheets.
+- 1-2 years experience using ZenDesk and/or customer service in a tech environment
+- Strong technical aptitude and ability to learn and utilize technology to solve problems quickly  
+- Excellent written and verbal communication skills
+- Bachelors degree preferred  
+- Background in education and communicating with educators preferred
+- Experience managing online forums a plus
 
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+In addition, candidates:
 
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
 
-## <a name="reg-PM" href="#reg-PM">District Manager (Seattle, New York City)</a>
-
-**Job Summary:** 
-
-Code.org is recruiting for District Managers in New York City and Seattle to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
-
-**Qualifications:**
-
-- At least a Bachelor's degree, preferably in Education or Computer Science
-- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
-- Advanced organization and problem solving skills
-- Understanding of and passion for equity in computer science and K-12 education
- 
-Additional desired strengths include:
-
-- Experience working with local school districts in a project implementation capacity
-- For New York District, established relationship or prior experience with the Department of Education   
-- Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
-
-Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-Ability and willingness to travel up to 25% of the time is required.
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
@@ -89,7 +72,7 @@ At its core this is primarily an engineering role. Job responsibilities will inc
 - Collaborating with Evaluation Manager and our third party evaluator to help evaluate and improve our work, as well as with university/academic groups to provide deeper research to help drive key insights which improve the outcomes of our work and the computer science education community as a whole
 
 
-**Qualifications:**
+**Skills and Qualifications:**
 
 The ideal candidate has a breadth of experience and qualifications:
 
@@ -110,20 +93,67 @@ Ideally the position is in Seattle, but for an exceptional candidate working rem
 Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-
-## <a name="ops-dev" href="#ops-dev">Operations/Developer (Seattle, WA)</a>
+## <a name="reg-PM" href="#reg-PM">District Manager (Seattle, New York City)</a>
 
 **Job Summary:** 
 
-Code.org is recruiting for an operations-focused Ruby developer to run and enhance our continuous integration system.  Day-to-day tasks include monitoring, upgrading, and scaling our AWS instances and infrastructure (e.g. EC2, RDS, S3, DNS, etc.); managing integrations between our CI system and the services we use (e.g. GitHub, NewRelic, HoneyBadger, HipChat, BrowserStack, etc.); and stability and feature work within the CI system using Ruby (e.g. building out our automated test platform, monitoring and reporting scripts, installation scripts, etc.).  Full-time, salaried.
+Code.org is recruiting for District Managers in New York City and Seattle to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. This is a full-time, salaried position. 
 
-**Qualifications:**
+Responsibilities of the position include:
 
-- Minimum of 3 years of experience as an operations focused developer
-- Ideally: deep expertise in Ruby, build systems, and Amazon Web Services
-- Ideally: has experienced startup culture
+- Recruiting school districts for potential Code.org educational partnerships 
+- Managing all partnership implementation activities with  district personnel
+- Marketing and supporting Code.org's program in the region
+
+**Skills and Qualifications:**
+
+- At least a Bachelor's degree, preferably in Education or Computer Science
+- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
+- Advanced organization and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+ 
+Additional desired strengths include:
+
+- Experience working with local school districts in a project implementation capacity
+- For New York District, established relationship or prior experience with the Department of Education   
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+
+Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
+
+**Job Summary:**
+
+The Evaluation Manager plays a critical role in managing and directing the evaluation of Code.org programs including the relationship with Code.org’s external evaluator. Candidates considered for this role must have direct experience in evaluation of a high-scale K-12 educational program. Responsibilities of the position include:
+
+- Collaborating with cross-organizational teams to develop a comprehensive organizational strategy for K-12 program evaluation and identify key programmatic and strategic questions for evaluation design
+- Advising the Education team on program improvements as a result of evaluation results
+Act as liaison between Code.org and all external evaluation projects and organizations
+- Developing evaluation reports, analyzing and summarizing key findings to share with internal and external parties (funders, districts, educators)
+- Designing and implementing data collection instruments to measure and improve the K-12 professional development programs and student learning outcomes, such as pre/post-tests, surveys, assessments, interview guides, and focus group protocols
+- Working closely with the Data Engineer to develop questions and reports for automation
+- Working closely with Code.org’s fundraising team to provide outcome information for proposal writing and author text for evaluation plans
+- Promoting a culture of reflection, learning, and data-based decision making among Code.org staff and affiliates
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- A Bachelor’s degree (Master’s preferred) in Education or a related field that includes a background in research and evaluation, outcome measurement, or statistics; deep familiarity with computer science, math, or science K-12 evaluation strongly preferred. 
+- Minimum of 5 years of experience in formal K-12 program evaluation 
+- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
+- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. 
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, especially spreadsheets.
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 
 ## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
 
@@ -131,12 +161,12 @@ Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.o
 
 Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
 
-**Qualifications:**
+**Skills and Qualifications:**
 
 - A Bachelor's degree or greater in Computer Science
 - Minimum of 3-5 years of experience as a software engineer working on Web sites or services
-- Ideally: deep expertise in either JavaScript or Ruby
-- Ideally: has experienced startup culture
+- Deep expertise in either JavaScript or Ruby preferred 
+- Experience with startup culture preferred 
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -170,17 +200,21 @@ The ideal candidate has the following qualifications:
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## Benefits 
 
-Code.org offers a competitive employee benefits package that includes:
+## <a name="info" href="#info">Working at Code.org</a>
+
+
+
+Code.org offers a comprehensive employee benefits package that includes:
 
 - Competitive Salary
 - Technology subsidy consistent with our Bring Your Own Device environment 
 - Flexible, engaging working environment
 - Monthly unlimited ORCA pass or equal value transit subsidy; located near public transit hub in Seattle, WA
 - Paid vacation (3 weeks annually) and sick leave
-- Medical, dental and vision premiums paid at 100% for FT positions
+- Medical, dental and vision premiums paid at 100% for FT positions and their dependents
 - Option to participate in 403b retirement savings plan
+- The opportunity to help students learn better and change the face of computer science
 
 
 **Must be a U.S. Citizen or Permanent Resident and be capable of passing a pre-employment background check**

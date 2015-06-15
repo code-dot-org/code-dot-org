@@ -3,6 +3,12 @@
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
+var showAssetManager = require('../applab/assetManagement/show.js');
+
+// Flip the argument order so we can bind `typeFilter`.
+function chooseAsset(typeFilter, callback) {
+  showAssetManager(callback, typeFilter);
+}
 
 var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_BLUE = '#19C3E1';
@@ -35,10 +41,10 @@ module.exports.blocks = [
   {'func': 'radioButton', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "false", '"group"'], 'dropdown': { 1: [ "true", "false" ] } },
   {'func': 'getChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
   {'func': 'setChecked', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','checked'], 'params': ['"id"', "true"], 'dropdown': { 1: [ "true", "false" ] } },
-  {'func': 'image', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'], 'dropdown': { 1: function () { return Applab.getAssetDropdown('image'); } } },
+  {'func': 'image', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'], 'dropdown': { 1: function () { return Applab.getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
   {'func': 'getImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'], 'dropdown': { 1: function () { return Applab.getAssetDropdown('image'); } } },
-  {'func': 'playSound', 'parent': api, 'category': 'UI controls', 'paletteParams': ['url'], 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'], 'dropdown': { 0: function () { return Applab.getAssetDropdown('audio'); } } },
+  {'func': 'setImageURL', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id','url'], 'params': ['"id"', '"http://code.org/images/logo.png"'], 'dropdown': { 1: function () { return Applab.getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
+  {'func': 'playSound', 'parent': api, 'category': 'UI controls', 'paletteParams': ['url'], 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'], 'dropdown': { 0: function () { return Applab.getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
   {'func': 'showElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
   {'func': 'hideElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },
   {'func': 'deleteElement', 'parent': api, 'category': 'UI controls', 'paletteParams': ['id'], 'params': ['"id"'] },

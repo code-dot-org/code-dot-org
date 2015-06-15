@@ -62,7 +62,7 @@ module.exports = React.createClass({
       verticalAlign: 'top',
       border: '1px solid #949ca2',
       margin: '0 0 8px 0',
-      padding: '3px 6px',
+      padding: '2px 6px',
       fontSize: 14
     };
     var buttonPrimary = {
@@ -85,8 +85,6 @@ module.exports = React.createClass({
       borderTopLeftRadius: 0
     }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
 
-    var wrapperStyle = {minHeight: 40};
-
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
         return <option key={item}>{item}</option>;
@@ -105,7 +103,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <div style={wrapperStyle} className="justify-contents">
+      <div className="justify-contents">
         <button
             id='codeModeButton'
             style={codeButtonStyle}
