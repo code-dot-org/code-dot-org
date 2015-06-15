@@ -1,4 +1,4 @@
-Feature: Hour of Code and Frozen tutorial in Spanish, Portuguese, and Arabic then reset back to English
+Feature: Hour of Code and Frozen tutorial in Spanish and Portuguese
 
 Scenario: HoC tutorial in Spanish
   Given I am on "http://learn.code.org/hoc/15/lang/es"
@@ -49,28 +49,4 @@ Scenario: Frozen tutorial in Portuguese
   Then element "#prompt" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   Given I am on "http://learn.code.org/reset_session/lang/en"
   And I wait for 2 seconds
-
-Scenario: HoC tutorial in Arabic
-  Given I am on "http://learn.code.org/hoc/15/lang/ar"
-  And I rotate to landscape
-  And I wait to see "#x-close"
-  Then element ".dialog-title" has text "اللغز 15 من 20"
-  Then element ".modal-content p:nth-child(2)" has "ar" text from key "data.level.instructions.maze_2_14"
-  Then element "#runButton" is visible
-  And element "#resetButton" is hidden
-  Then element "#prompt" has "ar" text from key "data.level.instructions.maze_2_14"
-  Given I am on "http://learn.code.org/reset_session/lang/en"
-  And I wait for 2 seconds
-
-Scenario: Frozen tutorial in Arabic
-  Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/ar"
-  And I rotate to landscape
-  And I wait to see "#x-close"
-  Then element ".dialog-title" has text "اللغز 2 من 20"
-  Then element ".modal-content p:nth-child(2)" has "ar" text from key "data.instructions.frozen perpendicular_instruction"
-  And I press "x-close"
-  Then element "#runButton" is visible
-  And element "#resetButton" is hidden
-  Then element "#prompt" has "ar" text from key "data.instructions.frozen perpendicular_instruction"
-  Given I am on "http://learn.code.org/reset_session/lang/en"
-  And I wait for 2 seconds
+  

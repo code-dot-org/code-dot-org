@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Tests for cdo apps",
   "browser": {
-    "blockly": "../build/package/js/blockly.js",
-    "requirejs": "../lib/requirejs/full/require.js"
+    "blockly": "../build/package/js/blockly.js"
   },
   "browserify": {
     "transform": [
@@ -15,9 +14,6 @@
   "browserify-shim": {
     "blockly": {
       "exports": "Blockly"
-    },
-    "requirejs": {
-      "exports": "requirejs"
     }
   }
 }
