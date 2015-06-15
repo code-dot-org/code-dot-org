@@ -610,7 +610,6 @@ if (appOptions.droplet) {
   loadStyle('tooltipster/tooltipster.min');
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('marked/marked'))
-      .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
