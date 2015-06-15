@@ -204,5 +204,25 @@ module.exports = {
       },
     },
 
+    {
+      description: "entering design mode while running",
+      editCode: true,
+      xml: 'button("my_button", "text");',
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          assert.equal($('#my_button').length, 1);
+
+          $("#designModeButton").click();
+
+          assert.equal($('#my_button').length, 0, 'API created element should be gone');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    }
   ]
 };
