@@ -2,11 +2,6 @@
 
 set -e
 
-function cp_in() {
-  echo "$1 => $2"
-  cp $1 $2
-}
-
 # Bring in new strings to i18n/locales
 orig_dir=i18n
 loc_dir=../i18n/locales/source/blockly-mooc
@@ -15,7 +10,8 @@ mkdir -p $loc_dir
 # Copy JSON files.
 for file in $(find $orig_dir -name 'en_us.json'); do
   relname=${file#$orig_dir}
-  cp_in $file $loc_dir${relname%/en_us.json}.json
+  echo "$file => $loc_dir${relname%/en_us.json}.json"
+  cp $file $loc_dir${relname%/en_us.json}.json
 done
 
 locales=$(ls ../i18n/locales | grep -v 'en-US' | grep -v 'source')
