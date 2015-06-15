@@ -22,7 +22,7 @@
       if PERMISSIONS.where(user_id:user[:id], permission:permission_name).count > 0
         return "#{email} already has '#{permission_name}'"
       else
-        if permission_name == 'teacher' || 'admin'
+        if permission_name == 'teacher' || permission_name == 'admin'
           if user[:user_type] == permission_name
             message = "#{email} already has '#{permission_name}'"
           else
