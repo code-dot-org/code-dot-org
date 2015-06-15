@@ -40,6 +40,7 @@ var JSInterpreter = module.exports = function (options) {
 
   var self = this;
   var initFunc = function (interpreter, scope) {
+    self.globalScope = scope;
     codegen.initJSInterpreter(interpreter, options.blocks, scope);
 
     // Only allow five levels of depth when marshalling the return value
@@ -434,4 +435,15 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
     }
   }
   return userCodeRow;
+};
+
+/**
+ * Returns the interpreter function object corresponding to 'funcName' if a
+ * function with that name is found in the interpreter's global scope.
+ */
+JSInterpreter.prototype.findGlobalFunction = function (funcName) {
+  var funcObj = this.interpreter.getProperty(this.globalScope, funcName);
+  if (funcObj.type === 'function') {
+    return funcObj;
+  }
 };

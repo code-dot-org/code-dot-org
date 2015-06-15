@@ -4721,7 +4721,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <span>', escape((86,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n          <span id="hide-toolbox" style="display:none;">&nbsp;', escape((87,  msg.hideToolbox() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((89,  msg.showToolbox() )), '</span></div>\n        <div id="show-code-header" class="workspace-header"><span>', escape((90,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header"><span>', escape((91,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((93,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((95,  data.blockCounterClass )), '>\n              ', escape((96,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((99,  data.idealBlockNumber )), '</span>\n            <span> ', escape((100,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');105; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');107; } ; buf.push('\n    ');108; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (109,  data.extraControlRows ), '\n    ');110; } ; buf.push('\n  </div>\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');115; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;">\n          <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((91,  msg.showToolbox() )), '</span>\n        </div>\n        <div id="show-code-header" class="workspace-header"><span>', escape((93,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header"><span>', escape((94,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((96,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((98,  data.blockCounterClass )), '>\n              ', escape((99,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((102,  data.idealBlockNumber )), '</span>\n            <span> ', escape((103,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');108; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');110; } ; buf.push('\n    ');111; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (112,  data.extraControlRows ), '\n    ');113; } ; buf.push('\n  </div>\n  ');115; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');118; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -6871,6 +6871,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
+  this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -7066,26 +7067,29 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
     // Bind listener to palette/toolbox 'Hide' and 'Show' links
-    var hideToolboxLink = document.getElementById('hide-toolbox');
-    var showToolboxLink = document.getElementById('show-toolbox');
+    var hideToolboxHeader = document.getElementById('toolbox-header');
+    var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
     var showToolboxHeader = document.getElementById('show-toolbox-header');
-    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
-      hideToolboxLink.style.display = 'inline-block';
+    if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+      hideToolboxHeader.className += ' toggleable';
+      hideToolboxIcon.style.display = 'inline-block';
       var handleTogglePalette = (function() {
         if (this.editor) {
           this.editor.enablePalette(!this.editor.paletteEnabled);
           showToolboxHeader.style.display =
               this.editor.paletteEnabled ? 'none' : 'inline-block';
+          hideToolboxIcon.style.display =
+              !this.editor.paletteEnabled ? 'none' : 'inline-block';
           this.resizeToolboxHeader();
         }
       }).bind(this);
-      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
-      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
     }
 
     this.resizeToolboxHeader();
@@ -10728,7 +10732,13 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager() {
+function DropletTooltipManager(appMsg) {
+  /**
+   * App-specific strings (to override common msg)
+   * @type {Object.<String, Function>}
+   */
+  this.appMsg = appMsg || {};
+
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
@@ -10778,7 +10788,7 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
   dropletBlocks.forEach(function (dropletBlockDefinition) {
     this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(dropletBlockDefinition.func);
+      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition.func);
   }, this);
 };
 
@@ -10940,7 +10950,8 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
 
 /**
  * Stores a block's tooltip information and helps render it
- * Grabs much of the tooltip's information from the 'common' locale file,
+ * Grabs much of the tooltip's information from either app-specific locale
+ * file (passed in as appMsg) or, if not present, the 'common' locale file,
  * (apps/i18n/common/en_us.json), keyed by the function name.
  *
  * e.g.,
@@ -10972,30 +10983,35 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (functionName) {
+var DropletFunctionTooltip = function (appMsg, functionName) {
   /** @type {String} */
   this.functionName = functionName;
 
   /** @type {String} */
-  this.description = null;
-
-  if (msg.hasOwnProperty(this.descriptionKey())) {
-    this.description = msg[this.descriptionKey()]();
+  var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
+  if (description) {
+    this.description = description();
   }
 
-  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
-    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  var signatureOverride = appMsg[this.signatureOverrideKey()] ||
+                            msg[this.signatureOverrideKey()];
+  if (signatureOverride) {
+    this.signatureOverride = signatureOverride();
   }
 
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
   var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+  var paramName;
+  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
+                          msg[this.parameterNameKey(paramId)])) {
     var paramInfo = {};
-    paramInfo.name = msg[this.parameterNameKey(paramId)]();
-    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
-      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    paramInfo.name = paramName();
+    var paramDesc = appMsg[this.parameterNameKey(paramId)] ||
+                              msg[this.parameterNameKey(paramId)];
+    if (paramDesc) {
+      paramInfo.description = paramDesc();
     }
     this.parameterInfos.push(paramInfo);
     paramId++;
@@ -12905,6 +12921,7 @@ var JSInterpreter = module.exports = function (options) {
 
   var self = this;
   var initFunc = function (interpreter, scope) {
+    self.globalScope = scope;
     codegen.initJSInterpreter(interpreter, options.blocks, scope);
 
     // Only allow five levels of depth when marshalling the return value
@@ -13299,6 +13316,17 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
     }
   }
   return userCodeRow;
+};
+
+/**
+ * Returns the interpreter function object corresponding to 'funcName' if a
+ * function with that name is found in the interpreter's global scope.
+ */
+JSInterpreter.prototype.findGlobalFunction = function (funcName) {
+  var funcObj = this.interpreter.getProperty(this.globalScope, funcName);
+  if (funcObj.type === 'function') {
+    return funcObj;
+  }
 };
 
 

@@ -1158,6 +1158,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
+  this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -1352,26 +1353,29 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager();
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
   this.dropletTooltipManager.registerBlocksFromList(
     dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
-  var hideToolboxLink = document.getElementById('hide-toolbox');
-  var showToolboxLink = document.getElementById('show-toolbox');
+  var hideToolboxHeader = document.getElementById('toolbox-header');
+  var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
   var showToolboxHeader = document.getElementById('show-toolbox-header');
-  if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
-    hideToolboxLink.style.display = 'inline-block';
+  if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+    hideToolboxHeader.className += ' toggleable';
+    hideToolboxIcon.style.display = 'inline-block';
     var handleTogglePalette = (function() {
       if (this.editor) {
         this.editor.enablePalette(!this.editor.paletteEnabled);
         showToolboxHeader.style.display =
             this.editor.paletteEnabled ? 'none' : 'inline-block';
+        hideToolboxIcon.style.display =
+            !this.editor.paletteEnabled ? 'none' : 'inline-block';
         this.resizeToolboxHeader();
       }
     }).bind(this);
-    dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
-    dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+    dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
+    dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
   }
 
   this.resizeToolboxHeader();

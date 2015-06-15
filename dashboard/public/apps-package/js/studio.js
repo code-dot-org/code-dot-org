@@ -608,6 +608,15 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+Studio.initAutoHandlers = function (map) {
+  for (var funcName in map) {
+    var func = Studio.JSInterpreter.findGlobalFunction(funcName);
+    if (func) {
+      registerEventHandler(Studio.eventHandlers, map[funcName], func);
+    }
+  }
+};
+
 /**
  * Performs movement on a list of Projectiles or Items. Removes items from the
  * list automatically when they move out of bounds
@@ -1162,6 +1171,8 @@ Studio.initReadonly = function(config) {
   level = config.level;
   loadLevel();
 
+  config.appMsg = studioMsg;
+
   Studio.initSprites();
 
   studioApp.initReadonly(config);
@@ -1331,6 +1342,8 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+
+  config.appMsg = studioMsg;
 
   Studio.initSprites();
 
@@ -1845,6 +1858,16 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
+    var autoHandlerMap = {
+      whenDown: 'when-down',
+      whenUp: 'when-up',
+      whenLeft: 'when-left',
+      whenRight: 'when-right',
+      whenTouchItem: 'whenSpriteCollided-' +
+                      (Studio.protagonistSpriteIndex || 0) +
+                      '-any_item',
+    };
+    Studio.initAutoHandlers(autoHandlerMap);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
