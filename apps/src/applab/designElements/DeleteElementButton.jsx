@@ -1,6 +1,6 @@
 /* global $ */
 var React = require('react');
-var rowStyle = require('./rowStyle.jsx');
+var rowStyle = require('./rowStyle');
 
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is

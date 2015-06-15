@@ -6,7 +6,7 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
-var rowStyle = require('./rowStyle.jsx');
+var rowStyle = require('./rowStyle');
 
 var elementUtils = require('./elementUtils');
 
@@ -26,7 +26,7 @@ var ImageProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          extraRowStyle={rowStyle.idRowContainer} />
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           initialValue={$(element).text()}

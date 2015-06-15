@@ -7,7 +7,6 @@ var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
-var rowStyle = require('./rowStyle.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -27,7 +26,7 @@ var ButtonProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          extraRowStyle={rowStyle.idRowContainer} />
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           initialValue={$(element).text()}

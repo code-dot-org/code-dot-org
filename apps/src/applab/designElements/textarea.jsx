@@ -5,7 +5,6 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
-var rowStyle = require('./rowStyle.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -25,7 +24,7 @@ var TextAreaProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          extraRowStyle={rowStyle.idRowContainer} />
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           isMultiLine={true}

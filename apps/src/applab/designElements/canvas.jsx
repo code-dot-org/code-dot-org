@@ -2,7 +2,6 @@ var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
-var rowStyle = require('./rowStyle.jsx');
 
 var CanvasProperties = React.createClass({
   propTypes: {
@@ -20,7 +19,7 @@ var CanvasProperties = React.createClass({
           desc={'id'}
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          extraRowStyle={rowStyle.idRowContainer} />
+          isIdRow={true} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
