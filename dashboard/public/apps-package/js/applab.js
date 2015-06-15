@@ -1182,7 +1182,7 @@ Applab.serializeAndSave = function (callback, runButtonClick) {
   } else {
     // Otherwise, makes sure we don't hit our callback until after we've created
     // a channel
-    $(window).trigger('appModeChanged', callback());
+    $(window).trigger('appModeChanged', callback);
   }
 };
 
@@ -2719,9 +2719,7 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // Simulate a run button click, to load the channel id.
-    var designModeClick = Applab.serializeAndSave.bind(
-        Applab, Applab.onDesignModeButton);
+    var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
     React.render(
