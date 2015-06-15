@@ -74,20 +74,17 @@
   if facilitator_id
     workshops = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshop', user_id:facilitator_id)
     workshops_ids = []
-    workshops.each do |workshop|
-      workshops_ids << workshop[:id]
-    end
-
-    individual_survey_totals = total_survey_data(all_surveys, workshops_ids)
-    all_surveys_totals = total_survey_data(all_surveys, false)
-
     total_attendees = 0
     workshops.each do |workshop|
+      workshops_ids << workshop[:id]
       data = JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data]))
       if data['total_attendee_count_i']
         total_attendees += data['total_attendee_count_i']
       end
     end
+
+    individual_survey_totals = total_survey_data(all_surveys, workshops_ids)
+    all_surveys_totals = total_survey_data(all_surveys, false)
   end
 
 :javascript
@@ -99,8 +96,6 @@
 
 %h1
   K-5 Facilitator Profile
-%h3
-  #{workshops_ids}
 %select#facilitator_dropdown
   %option{value:"/private/k5survey"}
     Select a Facilitator
