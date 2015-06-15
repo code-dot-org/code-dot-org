@@ -10,5 +10,4 @@
   %h1= @page_title
 = render partial: "levels/blockly", locals: { slider_speed: "0.9" }
 
-- if current_user.try(:admin) && current_user.admin?
-  = render partial: 'level_sources/admin'
+= render partial: 'level_sources/admin'
