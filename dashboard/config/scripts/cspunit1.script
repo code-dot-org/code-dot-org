@@ -5,6 +5,7 @@ login_required 'true'
 
 stage "Innovation"
 level 'U1L1 Student Lesson Introduction'
+level 'U1L1 - FR computer science word association'
 
 stage "Sending Binary Messages"
 level 'U1L2 Student Lesson Introduction'
@@ -100,6 +101,9 @@ level 'Pixelation Flappy'
 level 'Pixelation Bee'
 level 'Pixelation - Lesson 15 - Favicon Instructions'
 level 'Pixelation - Lesson 15 - Color Free Play'
+
+stage 'Lossy Compression and File Formats'
+level 'U1L16 - Matching File Compression Types'
 
 stage 'Assessment: Encoding Complex Information'
 level 'U1L16 Student Lesson Introduction'

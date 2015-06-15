@@ -31,9 +31,12 @@ Breakfast and lunch will be served.
 <br />
 
 #### Location
+Please note that the Locaiton has changed form the usual locaiton of PACCAR 107 to PACCAR **007**
+<br />
+<br />
 Gonzaga University
 <br />
-PACCAR 107
+PACCAR **007**
 <br />
 502 E. Boone Avenue
 <br />

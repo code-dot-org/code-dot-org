@@ -713,6 +713,7 @@ Applab.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+  config.appMsg = applabMsg;
   loadLevel();
 
   // Applab.initMinimal();
@@ -729,7 +730,8 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.current) {
+  if (window.dashboard && dashboard.project.current &&
+      dashboard.project.current.id) {
     clientApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
@@ -865,6 +867,8 @@ Applab.init = function(config) {
 
   config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
   config.nativeVizWidth = Applab.appWidth;
+
+  config.appMsg = applabMsg;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
@@ -1100,12 +1104,13 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
-  designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  designMode.changeScreen('screen1');
+  var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
+  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
+  designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
-    designMode.resetElementTray(allowDragging);
+    designMode.resetElementTray(isDesigning);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
@@ -1178,7 +1183,7 @@ Applab.serializeAndSave = function (callback, runButtonClick) {
   } else {
     // Otherwise, makes sure we don't hit our callback until after we've created
     // a channel
-    $(window).trigger('appModeChanged', callback());
+    $(window).trigger('appModeChanged', callback);
   }
 };
 
@@ -2399,13 +2404,14 @@ designMode.onPropertyChange = function(element, name, value) {
   }
 
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
-    designMode.editElementProperties(element);
     handled = true;
   }
 
   if (!handled) {
     throw "unknown property name " + name;
   }
+
+  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -2416,7 +2422,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   $(element).remove();
 
   if (isScreen) {
-    designMode.changeScreen('screen1');
+    designMode.loadDefaultScreen();
   }
 
   designMode.clearProperties();
@@ -2514,7 +2520,7 @@ designMode.onClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
   elementLibrary.resetIds();
   designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 function toggleDragging (enable) {
@@ -2544,7 +2550,7 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -2714,9 +2720,7 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // Simulate a run button click, to load the channel id.
-    var designModeClick = Applab.serializeAndSave.bind(
-        Applab, Applab.onDesignModeButton);
+    var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
     React.render(
@@ -2732,6 +2736,14 @@ designMode.changeScreen = function (screenId) {
   }
 
   designMode.editElementProperties(document.getElementById(screenId));
+};
+
+/**
+ * Load our default screen (ie. the first one in the DOM)
+ */
+designMode.loadDefaultScreen = function () {
+  var defaultScreen = $('.screen').first().attr('id');
+  designMode.changeScreen(defaultScreen);
 };
 
 designMode.renderDesignWorkspace = function(element) {
@@ -6180,7 +6192,7 @@ module.exports = React.createClass({displayName: "exports",
       verticalAlign: 'top',
       border: '1px solid #949ca2',
       margin: '0 0 8px 0',
-      padding: '3px 6px',
+      padding: '2px 6px',
       fontSize: 14
     };
     var buttonPrimary = {
@@ -6203,8 +6215,6 @@ module.exports = React.createClass({displayName: "exports",
       borderTopLeftRadius: 0
     }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
 
-    var wrapperStyle = {minHeight: 40};
-
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
         return React.createElement("option", {key: item}, item);
@@ -6223,7 +6233,7 @@ module.exports = React.createClass({displayName: "exports",
     }
 
     return (
-      React.createElement("div", {style: wrapperStyle, className: "justify-contents"}, 
+      React.createElement("div", {className: "justify-contents"}, 
         React.createElement("button", {
             id: "codeModeButton", 
             style: codeButtonStyle, 
@@ -6461,7 +6471,11 @@ var DesignProperties = module.exports = React.createClass({displayName: "exports
     });
 
     var deleteButton;
-    if (this.props.element.id !== 'screen1') {
+    var element = this.props.element;
+    // First screen is not deletable
+    var firstScreen = elementType === elementLibrary.ElementType.SCREEN &&
+        element.parentNode.firstChild === element;
+    if (!firstScreen) {
       deleteButton = (React.createElement(DeleteElementButton, {
         shouldConfirm: elementType === elementLibrary.ElementType.SCREEN, 
         handleDelete: this.props.onDelete}));
