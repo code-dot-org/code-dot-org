@@ -442,8 +442,7 @@ button.arrow:focus {
   background: #cfc9de; }
 
 #divApplab {
-  box-sizing: border-box;
-  padding: 2px; }
+  box-sizing: border-box; }
 
 #divApplab input {
   box-sizing: border-box; }
@@ -479,3 +478,6 @@ button.arrow:focus {
 
 .droplet-dropdown {
   z-index: 500 !important; }
+
+*[contenteditable] {
+  -webkit-user-select: auto !important; }
