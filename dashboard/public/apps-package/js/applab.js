@@ -592,7 +592,7 @@ var drawDiv = function () {
   divApplab.style.height = Applab.appHeight + "px";
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
-    designMode.onClear();
+    designMode.loadDefaultScreen();
     designMode.serializeToLevelHtml();
   }
 };
@@ -960,11 +960,6 @@ Applab.init = function(config) {
 
     // Start out in regular mode. Eventually likely want this to be a level setting
     designMode.toggleDesignMode(false);
-
-    var designModeClear = document.getElementById('designModeClear');
-    if (designModeClear) {
-      dom.addClickTouchEvent(designModeClear, designMode.onClear);
-    }
 
     designMode.configureDragAndDrop();
   }
@@ -2245,18 +2240,13 @@ designMode.clearProperties = function () {
 };
 
 /**
- * Enable (or disable) dragging of new elements from the element tray,
- * and show (or hide) the 'Clear' button.
+ * Enable (or disable) dragging of new elements from the element tray
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
   $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
-  var designModeClear = document.getElementById('designModeClear');
-  if (designModeClear) {
-    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
-  }
 };
 
 /**
@@ -2519,16 +2509,6 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   });
 };
 
-designMode.onClear = function() {
-  // TODO (brent) - have this clear just the current screen instead of everything
-  // (along with a confirmation experience). Consider the case where this gets
-  // called on load too - might need to two separate funcs
-  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
-  elementLibrary.resetIds();
-  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.loadDefaultScreen();
-};
-
 function toggleDragging (enable) {
   var grandChildren = $('#divApplab').children().children();
   if (enable) {
@@ -2636,13 +2616,14 @@ function makeDraggable (jqueryElements) {
       left: elm.css('left')
     });
 
-    // Chrome has a nasty bug where when we wrap the element in a div, it
-    // occasionally chooses not to rerender our element for some reason. This
-    // is a hacky that causes Chrome to rerender the parent, thus not causing
-    // our element to disappear.
-    var currHeight = wrapper.parent().height();
-    wrapper.parent().height(currHeight + 1);
-    wrapper.parent().height(currHeight);
+    // Chrome/Safari both have issues where they don't properly render the
+    // wrapper if the inner element is a div. This is a hack that causes a
+    // rerender to happen.
+    if (this.tagName === 'DIV') {
+      setTimeout(function () {
+        wrapper.hide().show(0);
+      }, 0);
+    }
 
     elm.css('position', 'static');
   });
@@ -2713,6 +2694,17 @@ designMode.configureDesignToggleRow = function () {
 };
 
 /**
+ * Create a new screen
+ * @returns {string} The id of the newly created screen
+ */
+designMode.createScreen = function () {
+  var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
+  $("#divApplab").append(newScreen);
+
+  return newScreen.getAttribute('id');
+};
+
+/**
  * Changes the active screen by toggling all screens to be non-visible, unless
  * they match the provided screenId. Also updates our dropdown to reflect the
  * change, and opens the element property editor for the new screen.
@@ -2735,7 +2727,8 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
-        onScreenChange: designMode.changeScreen
+        onScreenChange: designMode.changeScreen,
+        onScreenCreate: designMode.createScreen
       }),
       designToggleRow
     );
@@ -2745,10 +2738,16 @@ designMode.changeScreen = function (screenId) {
 };
 
 /**
- * Load our default screen (ie. the first one in the DOM)
+ * Load our default screen (ie. the first one in the DOM), creating a screen
+ * if we have none.
  */
 designMode.loadDefaultScreen = function () {
-  var defaultScreen = $('.screen').first().attr('id');
+  var defaultScreen;
+  if ($('.screen').length === 0) {
+    defaultScreen = designMode.createScreen();
+  } else {
+    defaultScreen = $('.screen').first().attr('id');
+  }
   designMode.changeScreen(defaultScreen);
 };
 
@@ -6141,6 +6140,8 @@ module.exports = React.createClass({displayName: "exports",
 var React = require('react');
 var msg = require('../locale');
 
+var NEW_SCREEN = 'New screen...';
+
 var Mode = {
   CODE: 'CODE',
   DESIGN: 'DESIGN'
@@ -6152,7 +6153,8 @@ module.exports = React.createClass({displayName: "exports",
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired
+    onScreenChange: React.PropTypes.func.isRequired,
+    onScreenCreate: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -6177,7 +6179,11 @@ module.exports = React.createClass({displayName: "exports",
   },
 
   handleScreenChange: function (evt) {
-    this.props.onScreenChange(evt.target.value);
+    var screenId = evt.target.value;
+    if (screenId === NEW_SCREEN) {
+      screenId = this.props.onScreenCreate();
+    }
+    this.props.onScreenChange(screenId);
   },
 
   componentWillReceiveProps: function (newProps) {
@@ -6235,7 +6241,8 @@ module.exports = React.createClass({displayName: "exports",
           value: this.state.activeScreen, 
           onChange: this.handleScreenChange, 
           disabled: Applab.isRunning()}, 
-          options
+          options, 
+          React.createElement("option", null, NEW_SCREEN)
         )
       );
     }
@@ -6403,8 +6410,7 @@ module.exports = React.createClass({displayName: "exports",
           React.createElement("div", {"data-element-type": "DROPDOWN", className: "new-design-element"}, "dropdown"), 
           React.createElement("div", {"data-element-type": "IMAGE", className: "new-design-element"}, "image"), 
           React.createElement("div", {"data-element-type": "CANVAS", className: "new-design-element"}, "canvas"), 
-          React.createElement("div", {"data-element-type": "SCREEN", className: "new-design-element"}, "screen"), 
-          React.createElement("button", {id: "designModeClear", className: "share"}, "Clear"), React.createElement("br", null)
+          React.createElement("div", {"data-element-type": "SCREEN", className: "new-design-element"}, "screen")
         ), 
         React.createElement("div", {id: "design-properties", style: styles.designProperties}, 
           React.createElement(DesignProperties, {
@@ -6941,6 +6947,7 @@ module.exports = {
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
+    element.style.padding = '2px';
 
     return element;
   }

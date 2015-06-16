@@ -65,7 +65,7 @@ module.exports = {
           'expected Code button to have orange background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
-        assert.equal(screenSelector.options.length, 1, 'expected 1 screen');
+        assert.equal(screenSelector.options.length, 2, 'expected 2 options');
         assert.equal($(screenSelector).val(), 'screen1');
         assert.equal($('#designWorkspace').is(':visible'), true);
 
@@ -97,7 +97,7 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
+        assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
         validatePropertyRow(1, 'id', 'screen2', assert);
@@ -143,7 +143,7 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
+        assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
         validatePropertyRow(1, 'id', 'screen2', assert);
@@ -278,7 +278,6 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-
     {
       description: "return to screen1 when entering code mode",
       editCode: true,
@@ -400,6 +399,38 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-    }
+    },
+
+    {
+      description: "screen dropdown",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeButton").click();
+
+        // drag a new screen in
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+        assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
+        validatePropertyRow(1, 'id', 'screen2', assert);
+
+        assert.equal($("#screenSelector").children().length, 3);
+        assert.equal($("#screenSelector").children().eq(2).text(), "New screen...");
+
+        // New screen via dropdown
+        ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
+          { target: { value: 'New screen...' } });
+
+        assert.equal($("#divApplab").children().length, 3, 'has three screen divs');
+        assert.equal($("#screenSelector").children().length, 4);
+        validatePropertyRow(1, 'id', 'screen3', assert);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };
