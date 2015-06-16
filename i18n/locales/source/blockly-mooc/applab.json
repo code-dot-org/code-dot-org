@@ -428,6 +428,8 @@
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
+  "submitYourProject": "Submit your project",
+  "submitYourProjectConfirm": "You cannot edit your project after submitting it, really submit?",
   "viewData": "View Data",
   "yes": "Yes"
 }
