@@ -1029,14 +1029,17 @@ body.readonly #codeWorkspace > svg {
 body.readonly.embed-block #codeWorkspace .userHidden {
   display: none; }
 
-.tooltip-example-link {
+.tooltip-example-link, .tooltip-choose-link {
   margin-top: 5px;
   float: right; }
 
-.tooltip-example-link > a:hover, .tooltip-example-link > a:link, .tooltip-example-link > a:active, .tooltip-example-link > a:visited {
+.tooltip-example-link > a:hover, .tooltip-example-link > a:link, .tooltip-example-link > a:active, .tooltip-example-link > a:visited, .tooltip-choose-link > a:hover, .tooltip-choose-link > a:link, .tooltip-choose-link > a:active, .tooltip-choose-link > a:visited {
   border-bottom: 3px solid #ffb81d;
   color: white;
   font-family: "Gotham 5r", sans-serif; }
+
+.tooltip-choose-link {
+  float: left; }
 
 .function-name {
   font-family: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;

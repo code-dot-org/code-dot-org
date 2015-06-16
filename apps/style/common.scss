@@ -1291,17 +1291,21 @@ $examples-link-font: $gotham-extra-bold;
 
 $see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link {
+.tooltip-example-link, .tooltip-choose-link {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a {
+.tooltip-example-link > a, .tooltip-choose-link > a {
   &:hover, &:link, &:active, &:visited {
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
     font-family: $gotham-bold;
   }
+}
+
+.tooltip-choose-link {
+  float: left;
 }
 
 .function-name {

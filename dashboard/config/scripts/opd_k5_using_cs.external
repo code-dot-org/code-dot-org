@@ -2,33 +2,32 @@ name 'OPD-K5 Using CS'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# PLANNING > Using Code Studio with Students
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+
+### PLANNING > Using Code Studio with Students
 
 Let's take a look at how Code Studio works for your students, if they're completing Course 1-4 or our accelerated course.
 
-On the Teacher Dashboard, go to the "Your Course Progress" tile to see a list of all courses and how far you've progressed as a learner. You'll notice that you have a good deal of progress in this PD course, if you've been following along through Stages 1-8. You can also begin courses here that you have not yet started, to get a feel for the courses as your students will see them.
-
-The display of Code.org's student courses is similar to the one for this online PD course. Here's an example of Course 1's overview.
+#### Course Overview Pages
+The display of Code.org's student courses is similar to the one for this online PD course. Here's an example of Course 1's overview page, as it appears when you are logged into a "Teacher" account.
 <br>
-<img src="http://staging.code.org/images/course1stagemap.png">
+<img src="https://images.code.org/937460d242248af59318bc16d914e4a5-image-1434410876549.png">
 <br>
+<br>
+Each course has an overview page. Each row, or **stage,** in a course, is a lesson. Some stages are unplugged lessons, which are lessons that you will lead for your classrooms without the use of computers. We covered unplugged lessons in Stage 8.
+<br><br>
 
-Each course has an overview page. Each row, or stage, in a course, is a lesson. Some stages are unplugged lessons, which are lessons that you will lead for your classrooms without the use of computers. We covered unplugged lessons in Stage 8.
+The **online stages** are the rows with many numbered circles on them. Each circle represents a puzzle where a student has to write a computer program to complete the goal of the puzzle. In these lessons, students can work at their own pace to complete all the puzzles in a stage, in order. There are tutorial videos and hints along the way that will help them complete these challenges.
 
-The online stages are the rows with many numbered circles on them. Each circle represents a puzzle where a student has to write a computer program to complete the goal of the puzzle. In these lessons, students can work at their own pace to complete all the puzzles in a stage, in order. There are tutorial videos and hints along the way that will help them complete these challenges.
+#### Course Lesson Plans
+Each lesson comes with a **lesson plan** that is available when you click "View lesson plan" under the name of each lesson. On the Teacher Dashboard, you will also have access to the "unplugged activities" as well as the student-facing online activities.
 
-Each lesson comes with a lesson plan that is available when you click "View lesson plan" under the name of each lesson. On the Teacher Dashboard, you will also have access to the "unplugged activities" as well as the student-facing online activities.
-
-These teacher-facing lesson plans and videos are different from the videos that are presented to students while they go through the Code Studio courses. For example, check out this teacher-facing on how to do an unplugged activity from Course 1:
-
-<iframe width="640" height="390" src="https://www.youtube.com/embed/icVRxFr39AU" frameborder="0" allowfullscreen></iframe>
-
-[Can't see the video? Click here.](https://www.dropbox.com/s/5mclbei2zcmur3r/Course%201%20-%20Real-Life%20Algorithms.mp4?dl=0)
-
-These videos and plans are intended for your use in planning, and not for sharing with students.
+>**Note:** You can only access lesson plans when you are logged in with a teacher account. These teacher-facing lesson plans and videos are different from the videos that are presented to students while they go through the Code Studio courses. These videos and plans are intended for your use in planning, and not for sharing with students.
 
 * * * 
 Now we'll look at other curriculum resources to which you have access.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

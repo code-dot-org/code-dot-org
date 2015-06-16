@@ -1,0 +1,16 @@
+name 'ECSPD Online U1D1-2 Forum'
+title 'U1D1-2 Forum'
+markdown <<MARKDOWN
+## Unit 1, Day 1-2: What is a Computer? Forum 
+
+What aspects of this lesson are you looking forward to? What do you have questions about? 
+
+If you have any other thoughts or questions about this lesson, feel free to post those in the forum as well!
+
+
+<div id="discourse-comments"></div>
+
+</br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

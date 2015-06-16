@@ -1,0 +1,16 @@
+title 'Exploring Computer Science PD: Blended Summer Study'
+description 'Blended Summer Study'
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'ECSPD Online Welcome'
+level 'ECSPD Online intro'
+level 'ECSPD course goals'
+level 'ECSPD strategies'
+level 'ECSPD Online Units'
+
+stage 'Unit 1, Days 1-2'
+level 'ECSPD Online U1D1-2'
+level 'ECSPD Online U1D1-2 Reflection'
+level 'ECSPD Online U1D1-2 Forum'
