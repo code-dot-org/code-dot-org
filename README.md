@@ -135,7 +135,7 @@ We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android b
 
 #### Unit tests
 
-For dashboard changes, be sure to test your changes using `rake test`. For [blockly](./blockly) changes, see our [grunt testing instructions](./blockly#running-tests).
+For dashboard changes, be sure to test your changes using `rake test`. For [apps or blockly](./apps) changes, see our [grunt testing instructions](./apps#running-tests).
 
 #### UI tests
 
