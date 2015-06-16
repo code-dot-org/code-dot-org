@@ -14,11 +14,9 @@ function updateGutter() {
   }
 
   if (dropletEditor) {
-    console.log('Setting droplet editor annotations');
     dropletEditor.setAnnotations(annotations);
   }
   else {
-    console.log('Setting ace editor annotations only');
     aceSession.setAnnotations(annotations);
   }
 }
@@ -32,16 +30,11 @@ function updateGutter() {
  */
 module.exports = {
   detachFromSession: function () {
-    console.log('Detaching from session.');
     aceSession = null;
     dropletEditor = null;
   },
 
   attachToSession: function (session, editor) {
-    console.log('Attaching to session', session, editor);
-    if (!editor) {
-      debugger
-    }
     if (aceSession && session !== aceSession) {
       throw new Error('Already attached to ace session');
     }
