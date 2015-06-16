@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-06-15
+ * Date: 2015-06-16
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -52753,7 +52753,7 @@ exports.createANTLRParser = function(name, config, root) {
 
 
 },{"../antlr/CLexer":1,"../antlr/CParser":3,"../antlr/JavaLexer":4,"../antlr/JavaParser":6,"../antlr/jvmBasicLexer":7,"../antlr/jvmBasicParser":9,"./helper.coffee":81,"./model.coffee":88,"./parser.coffee":90,"./treewalk.coffee":91,"antlr4":50}],79:[function(require,module,exports){
-var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getMostSevereAnnotationType, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
+var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TYPE_FROM_SEVERITY, TYPE_SEVERITY, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getMostSevereAnnotationType, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
   hasProp = {}.hasOwnProperty,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -56093,18 +56093,24 @@ hook('redraw_palette', 0, function() {
 });
 
 hook('populate', 0, function() {
+  var metrics;
   this.fontSize = 15;
   this.fontFamily = 'Courier New';
-  return this.fontAscent = helper.fontMetrics(this.fontFamily, this.fontSize).prettytop;
+  metrics = helper.fontMetrics(this.fontFamily, this.fontSize);
+  this.fontAscent = metrics.prettytop;
+  return this.fontDescent = metrics.descent;
 });
 
 Editor.prototype.setFontSize_raw = function(fontSize) {
+  var metrics;
   if (this.fontSize !== fontSize) {
     this.fontSize = fontSize;
     this.paletteHeader.style.fontSize = fontSize + "px";
     this.gutter.style.fontSize = fontSize + "px";
     this.view.opts.textHeight = this.dragView.opts.textHeight = helper.getFontHeight(this.fontFamily, this.fontSize);
-    this.fontAscent = helper.fontMetrics(this.fontFamily, this.fontSize).prettytop;
+    metrics = helper.fontMetrics(this.fontFamily, this.fontSize);
+    this.fontAscent = metrics.prettytop;
+    this.fontDescent = metrics.descent;
     this.view.clearCache();
     this.dragView.clearCache();
     this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
@@ -56755,7 +56761,6 @@ Editor.prototype.setAnnotations = function(annotations) {
     }
     this.annotations[el.row].push(el);
   }
-  console.log('Just set annotations. They are now', this.annotations);
   return this.redrawGutter(false);
 };
 
@@ -56778,7 +56783,6 @@ Editor.prototype.addLineNumberForLine = function(line) {
   lineDiv.className = 'droplet-gutter-line';
   if (this.annotations[line] != null) {
     lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
-    lineDiv.style.backgroundPosition = "2px " + (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
     lineDiv.title = this.annotations[line].map(function(x) {
       return x.text;
     }).join('\n');
@@ -56788,20 +56792,27 @@ Editor.prototype.addLineNumberForLine = function(line) {
   }
   lineDiv.style.top = treeView.bounds[line].y + "px";
   lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
+  lineDiv.style.paddingBottom = "" + (treeView.distanceToBase[line].below - this.fontDescent);
   lineDiv.style.height = treeView.bounds[line].height + 'px';
   lineDiv.style.fontSize = this.fontSize + 'px';
   return this.lineNumberWrapper.appendChild(lineDiv);
 };
 
+TYPE_SEVERITY = {
+  'error': 2,
+  'warning': 1,
+  'info': 0
+};
+
+TYPE_FROM_SEVERITY = ['info', 'warning', 'error'];
+
 getMostSevereAnnotationType = function(arr) {
-  var el, i, j, len;
-  for (i = j = 0, len = arr.length; j < len; i = ++j) {
-    el = arr[i];
-    if (el.type === 'error') {
-      return 'error';
-    }
-  }
-  return 'warning';
+  var result;
+  result = TYPE_FROM_SEVERITY[Math.max.apply(this, arr.map(function(x) {
+    return TYPE_SEVERITY[x.type];
+  }))];
+  console.log('annotation type', result);
+  return result;
 };
 
 Editor.prototype.findLineNumberAtCoordinate = function(coord) {
