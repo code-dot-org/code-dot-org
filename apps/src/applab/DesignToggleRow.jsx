@@ -3,6 +3,8 @@
 var React = require('react');
 var msg = require('../locale');
 
+var NEW_SCREEN = 'New screen...';
+
 var Mode = {
   CODE: 'CODE',
   DESIGN: 'DESIGN'
@@ -14,7 +16,8 @@ module.exports = React.createClass({
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired
+    onScreenChange: React.PropTypes.func.isRequired,
+    onScreenCreate: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -39,7 +42,11 @@ module.exports = React.createClass({
   },
 
   handleScreenChange: function (evt) {
-    this.props.onScreenChange(evt.target.value);
+    var screenId = evt.target.value;
+    if (screenId === NEW_SCREEN) {
+      screenId = this.props.onScreenCreate();
+    }
+    this.props.onScreenChange(screenId);
   },
 
   componentWillReceiveProps: function (newProps) {
@@ -98,6 +105,7 @@ module.exports = React.createClass({
           onChange={this.handleScreenChange}
           disabled={Applab.isRunning()}>
           {options}
+          <option>{NEW_SCREEN}</option>
         </select>
       );
     }

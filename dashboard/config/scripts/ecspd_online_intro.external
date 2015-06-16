@@ -1,0 +1,11 @@
+name 'ECSPD Online intro'
+title 'Introduction'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Introduction
+
+On the next two pages you'll see your course goals and teaching strategies that you documented during phase 1. Here you'll have a chance to update them based on your experience your in-person workshop.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

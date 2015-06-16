@@ -27,9 +27,16 @@ p{
 	margin: 0 0 15px 15px;
 }
 ul{
-	margin: 10px 0 30px 60px;
+	margin-top: 10px;
+	margin-bottom: 30px;
 	padding: 0 0 0 20px;
 }
+
+li{
+	margin-left: 20px;
+	padding: 0 0 0 20px;
+}
+
 
 .plc{
 	background: rgba(119, 100, 160, 1);
@@ -50,4 +57,9 @@ button{
 .lefted {
 	float: left;
 	margin: 0 40px 0 0;
+}
+
+.righted {
+	float: right;
+	margin: 0 0 0 40px;
 }
