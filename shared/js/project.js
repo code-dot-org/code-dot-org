@@ -43,7 +43,7 @@ module.exports = {
         }
 
         $(window).on(events.appModeChanged, (function(event, callback) {
-          this.save(callback);
+          this.save(dashboard.getEditorSource(), callback);
         }).bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -63,9 +63,9 @@ module.exports = {
           if (appOptions.droplet || hasProjectChanged) {
             var source = dashboard.getEditorSource();
             if (this.current.levelSource !== source) {
-              this.save(function() {
+              this.save(source, function() {
                 hasProjectChanged = false;
-              }, source);
+              });
             } else {
               hasProjectChanged = false;
             }
@@ -142,13 +142,12 @@ module.exports = {
   },
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided. If `overrideSource` is set it will save that
-   * string instead of calling `dashboard.getEditorSource()`.
+   * callback function was provided.
    */
-  save: function(callback, overrideSource) {
+  save: function(source, callback) {
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = this.current.id;
-    this.current.levelSource = overrideSource || dashboard.getEditorSource();
+    this.current.levelSource = source;
     this.current.levelHtml = window.Applab && Applab.getHtml();
     this.current.level = this.appToProjectUrl();
     if (channelId && this.current.isOwner) {
@@ -178,18 +177,18 @@ module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    dashboard.project.current.name = newName;
-    dashboard.project.save(callback);
+    this.current.name = newName;
+    this.save(dashboard.getEditorSource(), callback);
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    */
   copy: function(newName, callback) {
-    delete dashboard.project.current.id;
-    delete dashboard.project.current.hidden;
-    dashboard.project.current.name = newName;
-    dashboard.project.save(callback);
+    delete this.current.id;
+    delete this.current.hidden;
+    this.current.name = newName;
+    this.save(dashboard.getEditorSource(), callback);
   },
   delete: function(callback) {
     var channelId = this.current.id;
