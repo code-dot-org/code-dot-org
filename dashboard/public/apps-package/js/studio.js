@@ -206,6 +206,8 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
+  Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
+
   // Height and width of the goal and obstacles.
   Studio.MARKER_HEIGHT = 100;
   Studio.MARKER_WIDTH = 100;
@@ -797,9 +799,11 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
  * executeCollision, which is expected to be called afterwards by the caller.
  */
 function handleActorCollisionsWithCollidableList (
-           spriteIndex, xCenter, yCenter, list)
+           spriteIndex, xCenter, yCenter, list, autoDisappear)
 {
-  for (var i = 0; i < list.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = list.length - 1; i >= 0; i--) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
     if (collisionTest(
@@ -819,6 +823,13 @@ function handleActorCollisionsWithCollidableList (
         // tracked on the collidable in this case
         handleCollision(spriteIndex, collidable.className, true);
         Studio.currentEventParams = null;
+
+        // Make the projectile/item disappear automatically if this parameter
+        // is set:
+        if (autoDisappear) {
+          collidable.removeElement();
+          list.splice(i, 1);
+        }
       }
     } else {
       collidable.endCollision(spriteIndex);
@@ -919,8 +930,15 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
 
-    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.projectiles);
-    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.items);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.items,
+                                            level.removeItemsWhenActorCollides);
 
     handleEdgeCollisions(
         sprite,
@@ -1529,6 +1547,9 @@ Studio.reset = function(first) {
     }
   }
 
+  // Create Items that are specified on the map:
+  Studio.createLevelItems(svg);
+
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
     goalAsset = skin[level.goalOverride.goal];
@@ -2046,6 +2067,17 @@ function spriteTotalFrames (index) {
     sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
 
+/* Return the frame count for items or projectiles
+*/
+function getFrameCount (className, exceptionList, defaultCount) {
+  if (/.gif$/.test(skin[className])) {
+    return 1;
+  } else if (exceptionList && exceptionList[className]) {
+    return exceptionList[className];
+  }
+  return defaultCount;
+}
+
 function cellId(prefix, row, col) {
   return prefix + '_' + row + '_' + col;
 }
@@ -2082,6 +2114,37 @@ Studio.drawWallTile = function (svg, row, col) {
   text.textContent = 'X';
   group.appendChild(text);
   svg.appendChild(group);
+};
+
+Studio.createLevelItems = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      for (var index = 0; index < skin.ItemClassNames.length; index++) {
+        if (constants.squareHasItemClass(index, mapVal)) {
+          var className = skin.ItemClassNames[index];
+          // Create item:
+          var itemOptions = {
+            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            className: className,
+            dir: Direction.NONE,
+            image: skin[className],
+            loop: true,
+            x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
+          };
+
+          var item = new Item(itemOptions);
+
+          item.createElement(svg);
+          // Display immediately (we can't assume it will be updated in onTick
+          // right away since this is called after 'Reset' as well as 'Run'
+          item.display();
+          Studio.items.push(item);
+        }
+      }
+    }
+  }
 };
 
 Studio.drawMapTiles = function (svg) {
@@ -2398,16 +2461,6 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.addItemsToScene = function (opts) {
-  var frames;
-
-  if (/.gif$/.test(skin[opts.className])) {
-    frames = 1;
-  } else if (skin.specialItemFrames && skin.specialItemFrames[opts.className]) {
-    frames = skin.specialItemFrames[opts.className];
-  } else {
-    frames = skin.itemFrames;
-  }
-
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -2419,37 +2472,54 @@ Studio.addItemsToScene = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  var halfSquare = Studio.SQUARE_SIZE / 2;
+  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // otherwise, create randomly placed items travelling in a random direction
+
+  var generateRandomItemPosition = function () {
+    // TODO (cpirich): check for edge collisions? (currently avoided by placing
+    // the items within the coordinate space (x/y min of Studio.HALF_SQUARE,
+    // max of max - Studio.HALF_SQUARE)
+
+    var pos = {};
+    if (level.gridAlignedMovement) {
+      pos.x = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
+      pos.y = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
+    } else {
+      pos.x = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+      pos.y = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+    }
+    return pos;
+  };
 
   for (var i = 0; i < opts.number; i++) {
+    var direction = level.gridAlignedMovement ? Direction.NONE :
+                      directions[Math.floor(Math.random() * directions.length)];
+    var pos = generateRandomItemPosition();
     var itemOptions = {
-      frames: frames,
+      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
       className: opts.className,
-      dir: directions[Math.floor(Math.random() * directions.length)],
+      dir: direction,
       image: skin[opts.className],
       loop: true,
-      x: halfSquare +
-        Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE)),
-      y: halfSquare +
-        Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE)),
+      x: pos.x,
+      y: pos.y,
     };
 
     var item = new Item(itemOptions);
 
     if (level.blockMovingIntoWalls) {
-      // TODO: just move within the map looking for open spaces instead of
-      // randomly retrying random numbers
-
-      // TODO: check for edge collisions? (currently avoided by placing the
-      // items within the coordinate space (x/y min of halfSquare,
-      // max of max - halfSquare)
+      // TODO (cpirich): just move within the map looking for open spaces instead
+      // of randomly retrying random numbers
 
       var numTries = 0;
       while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
-        item.x = halfSquare +
-          Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
-        item.y = halfSquare +
-          Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+        var newPos = generateRandomItemPosition();
+        item.x = newPos.x;
+        item.y = newPos.y;
         numTries++;
         if (numTries > 100) {
           break;
@@ -2885,18 +2955,8 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
-  var frames;
-
-  if (/.gif$/.test(skin[options.className])) {
-    frames = 1;
-  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
-    frames = skin.specialProjectileFrames[options.className];
-  } else {
-    frames = skin.projectileFrames;
-  }
-
   var projectileOptions = {
-    frames: frames,
+    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -8792,6 +8852,7 @@ var Dir = exports.Direction;
  * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
+UNIT_VECTOR[Dir.NONE] =  { x: 0, y: 0};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
@@ -8940,12 +9001,39 @@ exports.DEFAULT_SPRITE_SIZE = 1;
  * @enum {number}
  */
 exports.SquareType = {
-  OPEN: 0,
+  OPEN:         0,
   SPRITEFINISH: 1,
-  WALL: 4,
-  SPRITESTART: 16
+  NOT_USED_2:   2,
+  WALL:         4,
+  NOT_USED_8:   8,
+  SPRITESTART:  16,
+  ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
+  ITEM_CLASS_1: 64,
+  ITEM_CLASS_2: 128,
+  ITEM_CLASS_3: 256,
+  ITEM_CLASS_4: 512,
+  ITEM_CLASS_5: 1024,
+  ITEM_CLASS_6: 2048,
+  ITEM_CLASS_7: 4096,
 };
 
+exports.SquareItemClassMask =
+  exports.SquareType.ITEM_CLASS_0 |
+  exports.SquareType.ITEM_CLASS_1 |
+  exports.SquareType.ITEM_CLASS_2 |
+  exports.SquareType.ITEM_CLASS_3 |
+  exports.SquareType.ITEM_CLASS_4 |
+  exports.SquareType.ITEM_CLASS_5 |
+  exports.SquareType.ITEM_CLASS_6 |
+  exports.SquareType.ITEM_CLASS_7;
+
+exports.SquareItemClassShift = 5;
+
+exports.squareHasItemClass = function (itemClassIndex, squareValue) {
+  var classesEnabled =
+    (squareValue & exports.SquareItemClassMask) >>> exports.SquareItemClassShift;
+  return Math.pow(2, itemClassIndex) & classesEnabled;
+};
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';

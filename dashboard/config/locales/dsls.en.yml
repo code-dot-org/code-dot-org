@@ -138,6 +138,10 @@ en:
       Code Logo v3:
         Create images with bits and bytes.: Create images with bits and bytes.
         title: title
+      ECSPD Online Welcome:
+        Welcome to ECS PD Online!: Welcome to ECS PD Online!
+      ECSPD Online intro:
+        Introduction: Introduction
       ECSPD PD Phases:
         ECSPD PD Phases: ECSPD PD Phases
       ECSPD PD details:
@@ -458,6 +462,9 @@ en:
       U1L16 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L17 Student Lesson Introduction:
+        description here: description here
+        title: title
       U1L2 Student Lesson Introduction:
         description here: description here
         title: title
@@ -667,6 +674,8 @@ en:
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
       broadcast lesson plan: {}
+      equity Intro:
+        Introduction to Equity PD: Introduction to Equity PD
       facilitator test: {}
       k5 what next 1: {}
       sciPD Course Overview: {}
@@ -2230,6 +2239,14 @@ en:
         IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
         'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
         Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+      U2L05 Assessment 1:
+        ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
+        : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
+        'Packets: Assessment': 'Packets: Assessment'
+        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
+        TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP must account for the fact that packets may not arrive at a destination computer in the intended order
       'U2L06 - MC: Which is an MST?':
         ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
@@ -2248,6 +2265,15 @@ en:
         The shortest path from a particular point in the graph to another point in the graph: The shortest path from a particular point in the graph to another point in the graph
         What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents a network
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+        ? Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
+        : Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
+        Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
@@ -3008,6 +3034,15 @@ en:
         'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L05 Reflection 1:
+        Enter your reflection here.: Enter your reflection here.
+        'Packets: Reflection': 'Packets: Reflection'
+      U2L08 Free Response 1:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 2:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 3:
+        'Router Table: Reflection': 'Router Table: Reflection'
       U2L09 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L09 Free Response Wrap Up:

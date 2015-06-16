@@ -5206,12 +5206,7 @@ module.exports = function(app, levels, options) {
     } else {
       app.init(options);
       if (options.onInitialize) {
-        if (studioApp.editCode) {
-          // for editCode levels, we can't call the onInitialize callback
-          // immediately. it will be called when the droplet editor has loaded.
-        } else {
-          options.onInitialize();
-        }
+        options.onInitialize();
       }
     }
   });
@@ -5711,7 +5706,7 @@ function installWhenRun(blockly, skin, isK1) {
 
 
 },{"./locale":145}],5:[function(require,module,exports){
-/* global Blockly, ace:true, $, requirejs, marked */
+/* global Blockly, ace:true, $, droplet, marked */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -7023,108 +7018,102 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 };
 
 StudioApp.prototype.handleEditCode_ = function (options) {
-  requirejs(['droplet'], _.bind(function(droplet) {
-    var displayMessage, examplePrograms, messageElement, onChange, startingText;
+  var displayMessage, examplePrograms, messageElement, onChange, startingText;
 
-    // Ensure global ace variable is the same as window.ace
-    // (important because they can be different in our test environment)
+  // Ensure global ace variable is the same as window.ace
+  // (important because they can be different in our test environment)
 
-    /* jshint ignore:start */
-    ace = window.ace;
-    /* jshint ignore:end */
+  /* jshint ignore:start */
+  ace = window.ace;
+  /* jshint ignore:end */
 
-    var fullDropletPalette = dropletUtils.generateDropletPalette(
-      options.codeFunctions, options.dropletConfig);
-    this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-      mode: 'javascript',
-      modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
-      palette: fullDropletPalette,
-      showPaletteInTextMode: true,
-      enablePaletteAtStart: !options.readOnly,
-      textModeAtStart: options.textModeAtStart
-    });
+  var fullDropletPalette = dropletUtils.generateDropletPalette(
+    options.codeFunctions, options.dropletConfig);
+  this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+    mode: 'javascript',
+    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
+    palette: fullDropletPalette,
+    showPaletteInTextMode: true,
+    enablePaletteAtStart: !options.readOnly,
+    textModeAtStart: options.textModeAtStart
+  });
 
-    this.editor.aceEditor.setShowPrintMargin(false);
+  this.editor.aceEditor.setShowPrintMargin(false);
 
-    // Init and define our custom ace mode:
-    aceMode.defineForAce(options.dropletConfig, this.editor);
-    // Now set the editor to that mode:
-    this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  // Init and define our custom ace mode:
+  aceMode.defineForAce(options.dropletConfig, this.editor);
+  // Now set the editor to that mode:
+  this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
-    // Add an ace completer for the API functions exposed for this level
-    if (options.dropletConfig) {
-      var functionsFilter = null;
-      if (options.autocompletePaletteApisOnly) {
-         functionsFilter = options.codeFunctions;
+  // Add an ace completer for the API functions exposed for this level
+  if (options.dropletConfig) {
+    var functionsFilter = null;
+    if (options.autocompletePaletteApisOnly) {
+       functionsFilter = options.codeFunctions;
+    }
+    var langTools = window.ace.require("ace/ext/language_tools");
+    langTools.addCompleter(
+      dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
+  }
+
+  this.editor.aceEditor.setOptions({
+    enableBasicAutocompletion: true,
+    enableLiveAutocompletion: true
+  });
+
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
+  this.dropletTooltipManager.registerBlocksFromList(
+    dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+
+  // Bind listener to palette/toolbox 'Hide' and 'Show' links
+  var hideToolboxHeader = document.getElementById('toolbox-header');
+  var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
+  var showToolboxHeader = document.getElementById('show-toolbox-header');
+  if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+    hideToolboxHeader.className += ' toggleable';
+    hideToolboxIcon.style.display = 'inline-block';
+    var handleTogglePalette = (function() {
+      if (this.editor) {
+        this.editor.enablePalette(!this.editor.paletteEnabled);
+        showToolboxHeader.style.display =
+            this.editor.paletteEnabled ? 'none' : 'inline-block';
+        hideToolboxIcon.style.display =
+            !this.editor.paletteEnabled ? 'none' : 'inline-block';
+        this.resizeToolboxHeader();
       }
-      var langTools = window.ace.require("ace/ext/language_tools");
-      langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
-    }
+    }).bind(this);
+    dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
+    dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
+  }
 
-    this.editor.aceEditor.setOptions({
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
+  this.resizeToolboxHeader();
 
-    this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
-    this.dropletTooltipManager.registerBlocksFromList(
-      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+  if (options.startBlocks) {
+    // Don't pass CRLF pairs to droplet until they fix CR handling:
+    this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+    // Reset droplet Undo stack:
+    this.editor.clearUndoStack();
+    // Reset ace Undo stack:
+    var UndoManager = window.ace.require("ace/undomanager").UndoManager;
+    this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
+  }
 
-    // Bind listener to palette/toolbox 'Hide' and 'Show' links
-    var hideToolboxHeader = document.getElementById('toolbox-header');
-    var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
-    var showToolboxHeader = document.getElementById('show-toolbox-header');
-    if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
-      hideToolboxHeader.className += ' toggleable';
-      hideToolboxIcon.style.display = 'inline-block';
-      var handleTogglePalette = (function() {
-        if (this.editor) {
-          this.editor.enablePalette(!this.editor.paletteEnabled);
-          showToolboxHeader.style.display =
-              this.editor.paletteEnabled ? 'none' : 'inline-block';
-          hideToolboxIcon.style.display =
-              !this.editor.paletteEnabled ? 'none' : 'inline-block';
-          this.resizeToolboxHeader();
-        }
-      }).bind(this);
-      dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
-      dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
-    }
+  if (options.readOnly) {
+    // When in readOnly mode, show source, but do not allow editing,
+    // disable the palette, and hide the UI to show the palette:
+    this.editor.setReadOnly(true);
+    showToolboxHeader.style.display = 'none';
+  }
 
-    this.resizeToolboxHeader();
+  // droplet may now be in code mode if it couldn't parse the code into
+  // blocks, so update the UI based on the current state:
+  this.onDropletToggle_();
 
-    if (options.startBlocks) {
-      // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
-      // Reset droplet Undo stack:
-      this.editor.clearUndoStack();
-      // Reset ace Undo stack:
-      var UndoManager = window.ace.require("ace/undomanager").UndoManager;
-      this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
-    }
+  this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
-    if (options.readOnly) {
-      // When in readOnly mode, show source, but do not allow editing,
-      // disable the palette, and hide the UI to show the palette:
-      this.editor.setReadOnly(true);
-      showToolboxHeader.style.display = 'none';
-    }
-
-    // droplet may now be in code mode if it couldn't parse the code into
-    // blocks, so update the UI based on the current state:
-    this.onDropletToggle_();
-
-    this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
-
-    if (options.afterEditorReady) {
-      options.afterEditorReady();
-    }
-
-    // Since the droplet editor loads asynchronously, we must call onInitialize
-    // here once loading is complete.
-    this.onInitialize();
-  }, this));
+  if (options.afterEditorReady) {
+    options.afterEditorReady();
+  }
 
   if (options.afterInject) {
     options.afterInject();
@@ -10788,7 +10777,7 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
   dropletBlocks.forEach(function (dropletBlockDefinition) {
     this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition.func);
+      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
   }, this);
 };
 
@@ -10983,9 +10972,9 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (appMsg, functionName) {
+var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {String} */
-  this.functionName = functionName;
+  this.functionName = definition.func;
 
   /** @type {String} */
   var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
@@ -11012,6 +11001,9 @@ var DropletFunctionTooltip = function (appMsg, functionName) {
                               msg[this.parameterNameKey(paramId)];
     if (paramDesc) {
       paramInfo.description = paramDesc();
+    }
+    if (definition.assetTooltip) {
+      paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
     paramId++;
@@ -11332,6 +11324,18 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     this.dropletTooltipManager.showDocFor(functionName);
     event.stopPropagation();
   }.bind(this));
+
+  var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
+  if (chooseAsset) {
+    var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
+    dom.addClickTouchEvent(chooseAssetLink, function(event) {
+      cursorTooltip.tooltipster('hide');
+      chooseAsset(function(filename) {
+        aceEditor.onTextInput('"' + filename + '"');
+      });
+      event.stopPropagation();
+    }.bind(this));
+  }
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
@@ -11634,7 +11638,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };

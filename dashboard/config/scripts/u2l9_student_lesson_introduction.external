@@ -9,11 +9,11 @@ markdown <<MARKDOWN
 
 # Background
 
-It would be impossible for packets to be routed across the internet without IP addresses. The problem with this system is that, while computers are good at referring to other computers by numbers, humans are not. The DNS solves this problem so that we can identify a webpage by its name, even when the IP addresses change.
+It would be impossible for packets to be routed across the internet without IP addresses. The problem with this system is that, while computers are good at referring to other computers by numbers, humans are not. The Domain Name System (DNS) solves this problem so that we can identify a webpage by its name, even when the IP addresses change.
 
 # Vocabulary
 
-DNS: an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses. 
+<strong>DNS</strong>: an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses. 
 
 # Lesson
 
