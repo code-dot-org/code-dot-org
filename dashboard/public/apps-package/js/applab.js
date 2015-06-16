@@ -6961,6 +6961,7 @@ module.exports = {
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
+    element.style.padding = '2px';
 
     return element;
   }

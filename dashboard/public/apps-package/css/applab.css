@@ -442,8 +442,7 @@ button.arrow:focus {
   background: #cfc9de; }
 
 #divApplab {
-  box-sizing: border-box;
-  padding: 2px; }
+  box-sizing: border-box; }
 
 #divApplab input {
   box-sizing: border-box; }
