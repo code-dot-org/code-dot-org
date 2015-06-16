@@ -2,9 +2,12 @@ name 'OPD-K5 Stage9Go'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# PLANNING > Review
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
+### PLANNING > Review
 
+<img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+<br><br>
 In this stage, you should have:
 
 - Reviewed Code Studio and the Teacher Dashboard
@@ -18,5 +21,6 @@ In Stage 10, our final stage, you will
 - Plan for next steps you can take to continue your learning
 - Connect with a global community of fellow educators interested in computer science education
 
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

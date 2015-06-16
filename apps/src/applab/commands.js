@@ -475,7 +475,9 @@ applabCommands.createCanvas = function (opts) {
     newElement.height = height;
     newElement.style.width = width + 'px';
     newElement.style.height = height + 'px';
-    newElement.style.position = 'relative';
+    // Unlike other elements, we use absolute position, otherwise our z-index
+    // doesn't work
+    newElement.style.position = 'absolute';
     if (!opts.turtleCanvas) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";

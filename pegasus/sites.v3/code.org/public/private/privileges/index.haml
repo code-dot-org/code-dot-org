@@ -1,0 +1,98 @@
+:ruby
+  authentication_required!
+  forbidden! unless dashboard_user[:admin]
+
+  DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
+  USERS = DASHBOARD_DB[:users]
+  PERMISSIONS = DASHBOARD_DB[:user_permissions]
+
+  if params['emails']
+    emails = params['emails'].gsub(/\s+/, "").downcase.split(',')
+  end
+
+  permission_name = params['permission_name']
+  messages = []
+
+  def grant_permission_to_email(email, permission_name)
+    exit = false
+
+    if user = USERS.where(email:email).first
+      #user = USERS.where(email:email).first
+
+      if PERMISSIONS.where(user_id:user[:id], permission:permission_name).count > 0
+        return "#{email} already has '#{permission_name}'"
+      else
+        if permission_name == 'teacher'
+          if user[:user_type] == permission_name
+            message = "#{email} already has 'teacher'"
+          else
+            USERS.where(email: email).update(user_type: permission_name)
+            message = "#{email} granted 'teacher'"
+          end
+          exit = true
+        elsif permission_name == 'admin'
+          if user[:admin]
+            message = "#{email} already has 'admin'"
+          else
+            USERS.where(email: email).update(admin: 1)
+            message = "#{email} granted 'admin'"
+          end
+          exit = true
+        end
+
+        if permission_name == 'affiliate' && user[:user_type] != 'teacher'
+          message = "Cannot grant #{email} 'affiliate' because #{email} is not a teacher"
+          exit = true
+        end
+
+        if !exit
+          created_at = DateTime.now
+          PERMISSIONS.insert(user_id:user[:id], permission:permission_name, created_at:created_at, updated_at:created_at)
+          message = "#{email} granted '#{permission_name}'"
+        end
+        return message
+      end
+    else
+      return "#{email} is not a user"
+    end
+  end
+
+  if emails && permission_name != ""
+    emails.each do |email|
+      messages << grant_permission_to_email(email, permission_name)
+    end
+  else
+    messages << "Missing emails or permission"
+  end
+
+%h1
+  Grant Permissions
+%ul
+  - messages.each do |message|
+    %li
+      #{message}
+%form.panel.panel-default#bulk_import{action:'/private/privileges', method:'POST'}
+  .panel-heading
+    Please enter emails separated by commas
+  .panel-body
+    %textarea{name:'emails'}
+    %h3
+      Select a Permission
+    %select{name:'permission_name'}
+      %option
+      %option
+        create_professional_development_workshop
+      %option
+        teacher
+      %option
+        admin
+    %br
+    %br
+    %input.btn.btn-primary{type:'submit', value:'Grant Permissions'}
+
+:css
+  #bulk_import textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+  }

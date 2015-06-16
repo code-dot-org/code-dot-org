@@ -1,0 +1,15 @@
+name 'ECSPD Online U1D5-7'
+title ''
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 1 Day 5-7: Search Engines
+
+You can check out the lesson for Unit 1, day 5-7 on page 34 of your curriculum book, or by following this [link](http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=34). Note that this is the first lesson that was taught by one of the teaching groups during the workshop. 
+
+Read over the lesson and flip back to the previous lesson (building a computer). Pay close attention to any resources and tools that are mentioned. Note that some of the links are no longer active, and you'll have space in the forum to share other resources that might work well. 
+
+Make a note of whatever questions you have and challenge you may face in teaching this lesson. On the following levels you have space to post to the forum about this lesson and you'll also have a chance to reflect on how you plan to tackle this lesson.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
