@@ -73,8 +73,8 @@ var DropletFunctionTooltip = function (appMsg, definition) {
                           msg[this.parameterNameKey(paramId)])) {
     var paramInfo = {};
     paramInfo.name = paramName();
-    var paramDesc = appMsg[this.parameterNameKey(paramId)] ||
-                              msg[this.parameterNameKey(paramId)];
+    var paramDesc = appMsg[this.parameterDescriptionKey(paramId)] ||
+                              msg[this.parameterDescriptionKey(paramId)];
     if (paramDesc) {
       paramInfo.description = paramDesc();
     }
