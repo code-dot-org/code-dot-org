@@ -280,7 +280,7 @@ var drawDiv = function () {
   divApplab.style.height = Applab.appHeight + "px";
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
-    designMode.onClear();
+    designMode.loadDefaultScreen();
     designMode.serializeToLevelHtml();
   }
 };
@@ -648,11 +648,6 @@ Applab.init = function(config) {
 
     // Start out in regular mode. Eventually likely want this to be a level setting
     designMode.toggleDesignMode(false);
-
-    var designModeClear = document.getElementById('designModeClear');
-    if (designModeClear) {
-      dom.addClickTouchEvent(designModeClear, designMode.onClear);
-    }
 
     designMode.configureDragAndDrop();
   }
