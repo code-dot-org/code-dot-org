@@ -18,14 +18,14 @@ module.exports = {
   init: function () {
     if (appOptions.level.isProjectLevel || this.current) {
 
-      $(window).on(events.hashchange, (function () {
+      $(window).on(events.hashchange, function () {
         var hashData = parseHash();
         if ((this.current &&
             hashData.channelId !== this.current.id) ||
             hashData.isEditingProject !== this.isEditing) {
           location.reload();
         }
-      }).bind(this));
+      }.bind(this));
 
       if (this.current && this.current.levelHtml) {
         appOptions.level.levelHtml = this.current.levelHtml;
@@ -42,19 +42,19 @@ module.exports = {
           };
         }
 
-        $(window).on(events.appModeChanged, (function(event, callback) {
+        $(window).on(events.appModeChanged, function(event, callback) {
           this.save(dashboard.getEditorSource(), callback);
-        }).bind(this));
+        }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
-        $(window).on(events.appInitialized, (function () {
+        $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
           this.current.levelSource = dashboard.getEditorSource();
-        }).bind(this));
+        }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval((function () {
+        window.setInterval(function () {
           // Bail if a baseline levelSource doesn't exist (app not yet initialized)
           if (this.current.levelSource === undefined) {
             return;
@@ -70,7 +70,7 @@ module.exports = {
               hasProjectChanged = false;
             }
           }
-        }).bind(this), AUTOSAVE_INTERVAL);
+        }.bind(this), AUTOSAVE_INTERVAL);
 
         if (!this.current.hidden) {
           if (this.current.isOwner || location.hash === '') {
@@ -106,7 +106,7 @@ module.exports = {
     // Important to call determineNoPadding() after setting hideSource value
     appOptions.noPadding = this.determineNoPadding();
   },
-  determineNoPadding: function() {
+  determineNoPadding: function () {
     switch (appOptions.app) {
       case 'applab':
       case 'flappy':
@@ -117,7 +117,7 @@ module.exports = {
         return false;
     }
   },
-  updateTimestamp: function() {
+  updateTimestamp: function () {
     if (this.current.updatedAt) {
       // TODO i18n
       $('.project_updated_at').empty().append("Saved ")  // TODO i18n
