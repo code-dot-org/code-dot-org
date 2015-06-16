@@ -54,23 +54,7 @@ module.exports = {
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval(function () {
-          // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-          if (this.current.levelSource === undefined) {
-            return;
-          }
-          // `dashboard.getEditorSource()` is expensive for Blockly so only call if `workspaceChange` fires
-          if (appOptions.droplet || hasProjectChanged) {
-            var source = dashboard.getEditorSource();
-            if (this.current.levelSource !== source) {
-              this.save(source, function() {
-                hasProjectChanged = false;
-              });
-            } else {
-              hasProjectChanged = false;
-            }
-          }
-        }.bind(this), AUTOSAVE_INTERVAL);
+        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
         if (!this.current.hidden) {
           if (this.current.isOwner || location.hash === '') {
@@ -172,6 +156,30 @@ module.exports = {
         }
       }.bind(this, callback));
     }
+  },
+  /**
+   * Autosave the code if things have changed
+   */
+  autosave_: function () {
+    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
+    if (this.current.levelSource === undefined) {
+      return;
+    }
+    // `dashboard.getEditorSource()` is expensive for Blockly so only call
+    // after `workspaceChange` has fired
+    if (!appOptions.droplet && !hasProjectChanged) {
+      return;
+    }
+
+    var source = dashboard.getEditorSource();
+    if (this.current.levelSource === source) {
+      hasProjectChanged = false;
+      return;
+    }
+
+    this.save(source, function () {
+      hasProjectChanged = false;
+    });
   },
   /**
    * Renames and saves the project.
