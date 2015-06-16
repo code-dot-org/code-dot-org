@@ -95,18 +95,13 @@ designMode.clearProperties = function () {
 };
 
 /**
- * Enable (or disable) dragging of new elements from the element tray,
- * and show (or hide) the 'Clear' button.
+ * Enable (or disable) dragging of new elements from the element tray
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
   $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
-  var designModeClear = document.getElementById('designModeClear');
-  if (designModeClear) {
-    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
-  }
 };
 
 /**
@@ -369,16 +364,6 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   });
 };
 
-designMode.onClear = function() {
-  // TODO (brent) - have this clear just the current screen instead of everything
-  // (along with a confirmation experience). Consider the case where this gets
-  // called on load too - might need to two separate funcs
-  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
-  elementLibrary.resetIds();
-  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.loadDefaultScreen();
-};
-
 function toggleDragging (enable) {
   var grandChildren = $('#divApplab').children().children();
   if (enable) {
@@ -607,10 +592,16 @@ designMode.changeScreen = function (screenId) {
 };
 
 /**
- * Load our default screen (ie. the first one in the DOM)
+ * Load our default screen (ie. the first one in the DOM), creating a screen
+ * if we have none.
  */
 designMode.loadDefaultScreen = function () {
-  var defaultScreen = $('.screen').first().attr('id');
+  var defaultScreen;
+  if ($('.screen').length === 0) {
+    defaultScreen = designMode.createScreen();
+  } else {
+    defaultScreen = $('.screen').first().attr('id');
+  }
   designMode.changeScreen(defaultScreen);
 };
 
