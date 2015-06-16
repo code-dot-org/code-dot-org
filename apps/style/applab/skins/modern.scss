@@ -1,0 +1,30 @@
+// Modern skin for applab apps
+
+#divApplab.appModern {
+
+  button {
+    border: 0;
+    border-radius: 0;
+    background: #1abc9c;
+    color: #fff;
+
+    &:hover {
+      background: #45c9af;
+      box-shadow: none;
+    }
+    &:active {
+      background: #16a085;
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0 40px 0 10px;
+    color: #fff;
+    background: #1abc9c url("/blockly/media/applab/dropdown.png") no-repeat center right;
+    &:hover {
+      background-color: #45c9af;
+    }
+  }
+}
