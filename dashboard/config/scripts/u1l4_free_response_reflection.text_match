@@ -7,6 +7,6 @@ placeholder 'Enter your reflection here.'
 markdown <<MARKDOWN
 A binary message was recorded as a wave as shown in the image below. Can you decode the message? Explain what information you would need in order to successfully decode the message into A’s and B’s.
 
-<img align="center" src="http://staging.code.org/images/cspunit1/BinaryMessageU1L04.png">
+![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
 
 MARKDOWN
