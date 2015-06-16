@@ -48,9 +48,9 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (appMsg, functionName) {
+var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {String} */
-  this.functionName = functionName;
+  this.functionName = definition.func;
 
   /** @type {String} */
   var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
@@ -77,6 +77,9 @@ var DropletFunctionTooltip = function (appMsg, functionName) {
                               msg[this.parameterNameKey(paramId)];
     if (paramDesc) {
       paramInfo.description = paramDesc();
+    }
+    if (definition.assetTooltip) {
+      paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
     paramId++;
