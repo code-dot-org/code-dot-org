@@ -13,10 +13,10 @@ module Rack
     def call(env)
       request = Rack::Request.new(env)
       if !request.ssl? &&
-          request.path_info !~ /\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$/i &&
-          request.cookies['https-blocked'].nil? &&
-          request.cookies['https_ok'].nil? &&
-          request.env['HTTP_X-HTTPS-OK'].nil?
+        request.path_info !~ /\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$/i &&
+        request.cookies['https-blocked'].nil? &&
+        request.cookies['https_ok'].nil? &&
+        request.env['HTTP_X-HTTPS-OK'].nil?
 
         html = ::File.read(shared_dir('middleware/https_test.html'))
         return Rack::Response.new(html, 200, {'Content-Type' => 'text/html'}).finish
