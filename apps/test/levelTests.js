@@ -73,6 +73,11 @@ describe('Level tests', function() {
       Item.__resetIds();
       Studio.JSInterpreter = undefined;
     }
+
+    if (window.Applab) {
+      var elementLibrary = require('@cdo/apps/applab/designElements/library');
+      elementLibrary.resetIds();
+    }
   });
 
   testCollectionUtils.getCollections().forEach(runTestCollection);
