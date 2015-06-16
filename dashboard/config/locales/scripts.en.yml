@@ -395,6 +395,7 @@ en:
           Applab: Applab
           The Artist: The Artist
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Events
           description: ''
@@ -921,3 +922,11 @@ en:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
           Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD

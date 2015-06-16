@@ -1,0 +1,7 @@
+title 'Exploring Computer Science PD: Blended Summer Study'
+description 'Blended Summer Study'
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+

@@ -12896,7 +12896,7 @@ var _ = utils.getLodash();
 var JSInterpreter = module.exports = function (options) {
 
   this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return false; };
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.onNextStepChanged = options.onNextStepChanged || function() {};
   this.onPause = options.onPause || function() {};
@@ -12904,6 +12904,7 @@ var JSInterpreter = module.exports = function (options) {
   this.onExecutionWarning = options.onExecutionWarning || function() {};
 
   this.paused = false;
+  this.yieldExecution = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
@@ -12975,7 +12976,7 @@ JSInterpreter.StepType = {
 JSInterpreter.prototype.nativeGetCallback = function () {
   var retVal = this.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    this.seenEmptyGetCallbackDuringExecution = true;
+    this.yield();
   }
   return retVal;
 };
@@ -13014,6 +13015,14 @@ JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
   });
 };
 
+/**
+ * Yield execution (causes executeInterpreter loop to break out if this is
+ * called by APIs called by interpreted code)
+ */
+JSInterpreter.prototype.yield = function () {
+  this.yieldExecution = true;
+};
+
 
 var StepType = JSInterpreter.StepType;
 
@@ -13037,7 +13046,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   if (runUntilCallbackReturn) {
     delete this.lastCallbackRetVal;
   }
-  this.seenEmptyGetCallbackDuringExecution = false;
+  this.yieldExecution = false;
   this.seenReturnFromCallbackDuringExecution = false;
 
   var atInitialBreakpoint = this.paused &&
@@ -13092,7 +13101,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
-        this.seenEmptyGetCallbackDuringExecution ||
+        this.yieldExecution ||
         (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR

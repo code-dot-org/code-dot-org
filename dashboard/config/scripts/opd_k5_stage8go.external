@@ -2,23 +2,30 @@ name 'OPD-K5 Stage8Go'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# BEST PRACTICES > Reflection
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
+### BEST PRACTICES > Reflection
+<br><br>
 Stage 8 introduced you to a number of best practices for teaching computer science. Take a moment to consider which strategies covered in this stage you might use in your practice. In the next stage, you'll create a simple plan and reflect on the course as a whole.
+<br><br>
 
-What strategies will you use when facilitating computer science learning in your classroom? Here are some examples from our teacher community:
+#### What strategies will you use when facilitating computer science learning in your classroom? 
+Here are some examples from our teacher community:
 
 - Implement the "Ask 3 and then me" rule in your classroom, which is when students have to ask 3 classmates for help before they can ask the teacher that same question. This reduces the number of students that you have to answer individually and promotes peer learning.
 - Be calm yet persistent when problems arise (which they will) because your reaction sets the tone for students. If at the first sign of an issue, you proclaim "I'm terrible at technology. I give up," your students will think it's okay to do that too.
 - Take pride in their programs. Show them off, put them to work, post them online. This is a big accomplishment for you and your students that should be celebrated.
 - Ask probing questions to a student (even if you don't know the answer to the questions). Or ask the class if anyone has the answer. Or say "I don't know; let's figure this out together"
+<br><br>
 
+>### Reflect
 Review more strategies or add your own <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">in our forums</a>:
-
-<a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4"><button>Discuss >></button></a>
-
+<br><br>
+<a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank"><button class="plc">Share your strategies >></button></a><br>
+<br><br>
 
 After exploring the forum thread and adding your thoughts, click below to move on to Stage 9.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
