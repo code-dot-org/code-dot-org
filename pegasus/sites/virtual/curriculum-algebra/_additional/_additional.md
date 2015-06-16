@@ -10,4 +10,11 @@ CS in Algebra is aligned to Common Core Standards for Mathematics, making it pos
 
 To offer CS in Algebra in your school, teachers are required to attend a multi-phased professional development program. The professional development program is only available in the context of a full school district partnership with Code.org. [Inquire about a District Partnership](/educate/districts) to bring CS in Algebra to your entire district. Or learn more about [middle school professional development](/educate/professional-development).
 
+<%= partial('course_block', 
+	:url => "https://studio.code.org/s/algebra", 
+	:image => "/shared/images/courses/logo_algebra.png",
+	:title => "CS in Algebra", 
+	:description => "Code.org CS in Algebra is a block-based adaptation of the Bootstrap curriculum, designed to provide scaffolded support to both students and teachers who are new to computer science. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video games." 
+	) %>  
+
 ## Curriculum Documents
