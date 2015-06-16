@@ -1,6 +1,5 @@
 // Tests a URL for response.
 // Use a small image element appended to the body to workaround CORS security.
-// Uses the imagesloaded library for cross-browser support.
 function testURL(url, successCallback, failureCallback, timeoutMs) {
   var img = document.createElement('img');
   img.width = 1;
