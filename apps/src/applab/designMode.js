@@ -471,13 +471,14 @@ function makeDraggable (jqueryElements) {
       left: elm.css('left')
     });
 
-    // Chrome has a nasty bug where when we wrap the element in a div, it
-    // occasionally chooses not to rerender our element for some reason. This
-    // is a hacky that causes Chrome to rerender the parent, thus not causing
-    // our element to disappear.
-    var currHeight = wrapper.parent().height();
-    wrapper.parent().height(currHeight + 1);
-    wrapper.parent().height(currHeight);
+    // Chrome/Safari both have issues where they don't properly render the
+    // wrapper if the inner element is a div. This is a hack that causes a
+    // rerender to happen.
+    if (this.tagName === 'DIV') {
+      setTimeout(function () {
+        wrapper.hide().show(0);
+      }, 0);
+    }
 
     elm.css('position', 'static');
   });
