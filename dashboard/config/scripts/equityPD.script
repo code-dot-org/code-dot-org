@@ -3,5 +3,6 @@ description "How to lead a discussion on equity in a Code.org PD"
 login_required 'true'
 pd 'true'
 
-stage 'Introduction to the Equity PD'
+stage 'Code.org Equity PD'
 level 'equity Intro'
+level 'equity v equality'

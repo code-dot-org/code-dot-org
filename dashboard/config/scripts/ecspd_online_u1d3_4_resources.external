@@ -1,0 +1,21 @@
+name 'ECSPD Online U1D3-4 Resources'
+description 'Unit 1 Day 3-4: Resources'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 1 Day 3-4 Resources
+
+<br/>
+
+
+![](https://images.code.org/3189ed5f577131839416b515a33bcc6d-image-1434474953267.gif)
+
+<i>Image from [Carnegie Mellon University](http://www.carnegiecyberacademy.com/facultyPages/computer/computers.html)</i>
+
+What are all the inside parts of the computer? Take a look at these sites for detailed information.
+
+* [How Computers Work](http://www.carnegiecyberacademy.com/facultyPages/computer/computers.html)
+* [Computer Basics: Inside a Computer](http://www.gcflearnfree.org/computerbasics/7)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

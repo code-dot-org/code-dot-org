@@ -1,11 +1,11 @@
 name 'U2L5 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'Packets and Making a Reliable Internet'
+
 css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 5 - The Need for Packets
+## Unit 2: Lesson 5 - Packets and Making a Reliable Internet
 
 # Background
 
