@@ -56686,19 +56686,23 @@ hook('populate', 0, function() {
   this.mainScroller.appendChild(this.gutter);
   this.annotations = {};
   this.breakpoints = {};
-  return this.aceEditor.on('guttermousedown', function(e) {
-    var row, target;
-    target = e.domEvent.target;
-    if (target.className.indexOf('ace_gutter-cell') === -1) {
-      return;
-    }
-    row = e.getDocumentPosition().row;
-    e.stop();
-    return this.fireEvent('guttermousedown', {
-      line: row,
-      event: e.domEvent
-    });
-  });
+  return this.aceEditor.on('guttermousedown', (function(_this) {
+    return function(e) {
+      var row, target;
+      target = e.domEvent.target;
+      if (target.className.indexOf('ace_gutter-cell') === -1) {
+        return;
+      }
+      row = e.getDocumentPosition().row;
+      e.stop();
+      return _this.fireEvent('guttermousedown', [
+        {
+          line: row,
+          event: e.domEvent
+        }
+      ]);
+    };
+  })(this));
 });
 
 hook('mousedown', 11, function(point, event, state) {
@@ -56721,6 +56725,18 @@ hook('mousedown', 11, function(point, event, state) {
 Editor.prototype.setBreakpoint = function(row) {
   this.aceEditor.session.setBreakpoint(row);
   this.breakpoints[row] = true;
+  return this.redrawGutter(false);
+};
+
+Editor.prototype.clearBreakpoint = function(row) {
+  this.aceEditor.session.clearBreakpoint(row);
+  this.breakpoints[row] = false;
+  return this.redrawGutter(false);
+};
+
+Editor.prototype.clearBreakpoints = function(row) {
+  this.aceEditor.session.clearBreakpoints();
+  this.breakpoints = {};
   return this.redrawGutter(false);
 };
 
@@ -56762,6 +56778,7 @@ Editor.prototype.addLineNumberForLine = function(line) {
   lineDiv.className = 'droplet-gutter-line';
   if (this.annotations[line] != null) {
     lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
+    lineDiv.style.backgroundPosition = "2px " + (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
     lineDiv.title = this.annotations[line].map(function(x) {
       return x.text;
     }).join('\n');
