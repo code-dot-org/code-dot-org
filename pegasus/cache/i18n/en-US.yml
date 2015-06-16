@@ -375,6 +375,8 @@ en-US:
   dashboard_teacher_worksheet: "teacher worksheet"
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: "K"
   dashboard_grade_other: "Other"
   dashboard_login_word: "Word"
