@@ -169,6 +169,9 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
+  Studio.slowJSExecutionFactor = level.slowJSExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJSExecutionFactor +
+                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -652,17 +655,19 @@ Studio.callApiCode = function (name, func) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  var animationOnlyFrame = false;
+
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
   }
 
+  if (Studio.tickCount === 1) {
+    callHandler('whenGameStarts');
+  }
+  Studio.executeQueue('whenGameStarts');
+
   if (Studio.JSInterpreter) {
-    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
-  } else {
-    if (Studio.tickCount === 1) {
-      callHandler('whenGameStarts');
-    }
-    Studio.executeQueue('whenGameStarts');
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJSExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -672,81 +677,89 @@ Studio.onTick = function() {
     Studio.executeQueue('whenSpriteClicked-' + i);
   }
 
-  // Run key event handlers for any keys that are down:
-  for (var key in KeyCodes) {
-    if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] === "keydown") {
-      switch (KeyCodes[key]) {
-        case KeyCodes.LEFT:
+  if (!animationOnlyFrame) {
+    // Run key event handlers for any keys that are down:
+    for (var key in KeyCodes) {
+      if (Studio.keyState[KeyCodes[key]] &&
+          Studio.keyState[KeyCodes[key]] === "keydown") {
+        switch (KeyCodes[key]) {
+          case KeyCodes.LEFT:
+            callHandler('when-left');
+            break;
+          case KeyCodes.UP:
+            callHandler('when-up');
+            break;
+          case KeyCodes.RIGHT:
+            callHandler('when-right');
+            break;
+          case KeyCodes.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var btn in ArrowIds) {
+      if (Studio.btnState[ArrowIds[btn]] &&
+          Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+        switch (ArrowIds[btn]) {
+          case ArrowIds.LEFT:
+            callHandler('when-left');
+            break;
+          case ArrowIds.UP:
+            callHandler('when-up');
+            break;
+          case ArrowIds.RIGHT:
+            callHandler('when-right');
+            break;
+          case ArrowIds.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var gesture in Studio.gesturesObserved) {
+      switch (gesture) {
+        case 'left':
           callHandler('when-left');
           break;
-        case KeyCodes.UP:
+        case 'up':
           callHandler('when-up');
           break;
-        case KeyCodes.RIGHT:
+        case 'right':
           callHandler('when-right');
           break;
-        case KeyCodes.DOWN:
+        case 'down':
           callHandler('when-down');
           break;
       }
-    }
-  }
-
-  for (var btn in ArrowIds) {
-    if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
-      switch (ArrowIds[btn]) {
-        case ArrowIds.LEFT:
-          callHandler('when-left');
-          break;
-        case ArrowIds.UP:
-          callHandler('when-up');
-          break;
-        case ArrowIds.RIGHT:
-          callHandler('when-right');
-          break;
-        case ArrowIds.DOWN:
-          callHandler('when-down');
-          break;
+      if (0 === Studio.gesturesObserved[gesture]--) {
+        delete Studio.gesturesObserved[gesture];
       }
     }
-  }
 
-  for (var gesture in Studio.gesturesObserved) {
-    switch (gesture) {
-      case 'left':
-        callHandler('when-left');
-        break;
-      case 'up':
-        callHandler('when-up');
-        break;
-      case 'right':
-        callHandler('when-right');
-        break;
-      case 'down':
-        callHandler('when-down');
-        break;
-    }
-    if (0 === Studio.gesturesObserved[gesture]--) {
-      delete Studio.gesturesObserved[gesture];
-    }
+    Studio.executeQueue('when-left');
+    Studio.executeQueue('when-up');
+    Studio.executeQueue('when-right');
+    Studio.executeQueue('when-down');
   }
-
-  Studio.executeQueue('when-left');
-  Studio.executeQueue('when-up');
-  Studio.executeQueue('when-right');
-  Studio.executeQueue('when-down');
 
   checkForCollisions();
 
+  if (Studio.JSInterpreter && !animationOnlyFrame) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
+  }
+
   for (i = 0; i < Studio.spriteCount; i++) {
-    performQueuedMoves(i);
+    if (!animationOnlyFrame) {
+      performQueuedMoves(i);
+    }
 
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
@@ -1518,6 +1531,8 @@ Studio.reset = function(first) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
+      displayX: Studio.spriteStart_[i].x,
+      displayY: Studio.spriteStart_[i].y,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
@@ -2003,9 +2018,9 @@ frameDirTableWalking[Direction.SOUTHWEST]  = 7;
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
-// Number of ticks between the last time the sprite moved and when we reset them
-// to face south.
-var TICKS_BEFORE_FACE_SOUTH = 5;
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
@@ -2251,17 +2266,33 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y - yOffset);
+  if (level.gridAlignedMovement) {
+    if (sprite.x > sprite.displayX) {
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.x < sprite.displayX) {
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+    if (sprite.y > sprite.displayY) {
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.y < sprite.displayY) {
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+  } else {
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
+  }
 
-  spriteClipRect.setAttribute('x', sprite.x);
-  spriteClipRect.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+
+  spriteClipRect.setAttribute('x', sprite.displayX);
+  spriteClipRect.setAttribute('y', sprite.displayY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.x);
-  unusedSpriteClipRect.setAttribute('y', sprite.y);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2408,6 +2439,34 @@ Studio.callCmd = function (cmd) {
     case 'move':
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
+      break;
+    case 'moveEast':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.EAST,
+      });
+      break;
+    case 'moveWest':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.WEST,
+      });
+      break;
+    case 'moveNorth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.NORTH,
+      });
+      break;
+    case 'moveSouth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.SOUTH,
+      });
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
@@ -3220,8 +3279,8 @@ Studio.setSpritePosition = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({'spriteIndex': opts.spriteIndex,
                'dontResetCollisions': samePosition});
-  sprite.x = opts.x;
-  sprite.y = opts.y;
+  sprite.displayX = sprite.x = opts.x;
+  sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -3237,8 +3296,8 @@ Studio.setSpriteXY = function (opts) {
     'spriteIndex': opts.spriteIndex,
     'dontResetCollisions': samePosition
   });
-  sprite.x = x;
-  sprite.y = y;
+  sprite.displayX = sprite.x = x;
+  sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -3290,6 +3349,9 @@ Studio.moveSingle = function (opts) {
         sprite.x = 0;
       }
       break;
+  }
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    Studio.JSInterpreter.yield();
   }
 };
 
@@ -5783,17 +5845,15 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'map': [
+    [0,16, 0, 0, 0,16, 0,32],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 0, 0, 0, 4, 0],
-    [0,16, 4, 0, 0,16, 4, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
@@ -5848,6 +5908,60 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
+levels.hoc2015_1 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4,16, 0,256,1, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+  },
+};
+
+levels.hoc2015_2 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 0, 0,256,4, 4],
+    [4, 4, 4, 0, 4, 0, 4, 4],
+    [4, 4, 4, 1,16,256,4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+  },
+};
+
 
 },{"../block_utils":70,"../utils":313,"./constants":271,"./locale":277}],275:[function(require,module,exports){
 module.exports= (function() {
@@ -5877,6 +5991,10 @@ module.exports.blocks = [
   {'func': 'setSprite', 'parent': api, 'category': 'Play Lab', 'params': ["0", "'cat'"] },
   {'func': 'setBackground', 'parent': api, 'category': 'Play Lab', 'params': ["'night'"] },
   {'func': 'move', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'moveEast', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveWest', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveNorth', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveSouth', 'parent': api, 'category': 'Play Lab', },
   {'func': 'playSound', 'parent': api, 'category': 'Play Lab', 'params': ["'slap'"] },
   {'func': 'changeScore', 'parent': api, 'category': 'Play Lab', 'params': ["1"] },
   {'func': 'setSpritePosition', 'parent': api, 'category': 'Play Lab', 'params': ["0", "7"] },
@@ -8381,6 +8499,22 @@ exports.move = function(spriteIndex, dir) {
     'spriteIndex': spriteIndex,
     'dir': dir
   });
+};
+
+exports.moveEast = function() {
+  Studio.queueCmd(null, 'moveEast');
+};
+
+exports.moveWest = function() {
+  Studio.queueCmd(null, 'moveWest');
+};
+
+exports.moveNorth = function() {
+  Studio.queueCmd(null, 'moveNorth');
+};
+
+exports.moveSouth = function() {
+  Studio.queueCmd(null, 'moveSouth');
 };
 
 exports.changeScore = function(value) {
