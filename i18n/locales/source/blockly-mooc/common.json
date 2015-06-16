@@ -204,6 +204,7 @@
   "showToolbox": "Show Toolbox",
   "signup": "Sign up for the intro course",
   "stringEquals": "string=?",
+  "submit": "Submit",
   "subtitle": "a visual programming environment",
   "textVariable": "text",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
