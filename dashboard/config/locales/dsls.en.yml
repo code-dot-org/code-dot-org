@@ -138,6 +138,26 @@ en:
       Code Logo v3:
         Create images with bits and bytes.: Create images with bits and bytes.
         title: title
+      ECSPD Online U1D1-2:
+        Unit 1 Day 1-2: Unit 1 Day 1-2
+        description here: description here
+      ECSPD Online U1D1-2 Forum:
+        U1D1-2 Forum: U1D1-2 Forum
+      ECSPD Online U1D1-2 Resources:
+        Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
+        description here: description here
+      ECSPD Online U1D10: {}
+      ECSPD Online U1D10 Resources: {}
+      ECSPD Online U1D3-4:
+        'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
+      ECSPD Online U1D3-4 Resources:
+        'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
+      ECSPD Online U1D5-7: {}
+      ECSPD Online U1D5-7 Resources: {}
+      ECSPD Online U1D8-9: {}
+      ECSPD Online U1D8-9 Resources: {}
+      ECSPD Online Units:
+        Units covered: Units covered
       ECSPD Online Welcome:
         Welcome to ECS PD Online!: Welcome to ECS PD Online!
       ECSPD Online intro:
@@ -514,6 +534,7 @@ en:
       U2L16 Student Lesson Introduction:
         Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
       U2L17 Student Lesson Introduction:
+        Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
         description here: description here
         title: title
       U2L18 Student Lesson Introduction:
@@ -532,6 +553,7 @@ en:
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         description here: description here
         title: title
       U2L6 Student Lesson Introduction:
@@ -676,6 +698,8 @@ en:
       broadcast lesson plan: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
+      equity v equality:
+        Equity Vs. Equality: Equity Vs. Equality
       facilitator test: {}
       k5 what next 1: {}
       sciPD Course Overview: {}
@@ -2201,6 +2225,7 @@ en:
         ? When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
         : When sending a response to a question with four possible answers, the most efficient method will require no more than what number of bits?
       U1L4 Multiple Choice:
+        '': ''
         ? A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?
         : A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?
         AAAA: AAAA
@@ -2209,6 +2234,7 @@ en:
         ABBB: ABBB
         BBBB: BBBB
         'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination and Binary Messages'
+        'hi ': 'hi '
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -2770,14 +2796,22 @@ en:
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
+        ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))
+        ((1 < x) And (x < 5) Or (8 < x) And (x < 10)): ((1 < x) And (x < 5) Or (8 < x) And (x < 10))
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8 < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
         (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) && (x < 10)
+        (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x) AND (x < 10)
+        (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x) And (x < 10)
+        (1 < x) and (x < 5) or (8 < x) and (x < 10): (1 < x) and (x < 5) or (8 < x) and (x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -2853,6 +2887,22 @@ en:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD Online U1D1-2 Reflection:
+        Unit 1 Day 1-2 Reflection: Unit 1 Day 1-2 Reflection
+        'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is a Computer? Reflection'
+      ECSPD Online U1D10 Reflection:
+        ? During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom?
+        : During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom?
+        Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+      ECSPD Online U1D3-4 Reflection:
+        Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
+        'What challenges do you think you and your students might have with the material covered in this lesson? ': 'What challenges do you think you and your students might have with the material covered in this lesson? '
+      ECSPD Online U1D5-7 Reflection:
+        Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
+        'What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson? ': 'What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson? '
+      ECSPD Online U1D8-9 Reflection:
+        Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
+        What challenges do you think you and your students might have with the material covered in this lesson?: What challenges do you think you and your students might have with the material covered in this lesson?
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -3071,6 +3121,23 @@ en:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L17 Assessment 1:
+        Assessment Question 1: Assessment Question 1
+        Describe what it means for a problem to be "computationally hard": Describe what it means for a problem to be "computationally hard"
+        Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
+        What does "computationally hard" mean?: What does "computationally hard" mean?
+      U2L17 Assessment 2:
+        Assessment Question 2: Assessment Question 2
+        How are computationally hard problems related to encryption?: How are computationally hard problems related to encryption?
+      U2L17 Free Response Getting Started:
+        Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
+        'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
+        ? List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
+        : List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
+      U2L17 Free Response Wrap Up:
+        'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
+        ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
+        : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
       U2L18 Free Response Getting Started:
