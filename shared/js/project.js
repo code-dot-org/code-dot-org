@@ -134,28 +134,30 @@ module.exports = {
     this.current.levelSource = source;
     this.current.levelHtml = window.Applab && Applab.getHtml();
     this.current.level = this.appToProjectUrl();
+
     if (channelId && this.current.isOwner) {
-      channels.update(channelId, this.current, function(callback, data) {
-        if (data) {
-          this.current = data;
-          this.updateTimestamp();
-          callbackSafe(callback, data);
-        }  else {
-          $('.project_updated_at').text('Error saving project');  // TODO i18n
-        }
-      }.bind(this, callback));
+      channels.update(channelId, this.current, function (data) {
+        this.updateCurrentData_(data, false);
+        callbackSafe(callback, data);
+      }.bind(this));
     } else {
-      channels.create(this.current, function(callback, data) {
-        if (data) {
-          this.current = data;
-          location.href = this.current.level + '#' + this.current.id + '/edit';
-          this.updateTimestamp();
-          callbackSafe(callback, data);
-        } else {
-          $('.project_updated_at').text('Error saving project');  // TODO i18n
-        }
-      }.bind(this, callback));
+      channels.create(this.current, function (data) {
+        this.updateCurrentData_(data, true);
+        callbackSafe(callback, data);
+      }.bind(this));
     }
+  },
+  updateCurrentData_: function (data, isNewChannel) {
+    if (!data) {
+      $('.project_updated_at').text('Error saving project');  // TODO i18n
+      return;
+    }
+
+    this.current = data;
+    if (isNewChannel) {
+      location.href = this.current.level + '#' + this.current.id + '/edit';
+    }
+    this.updateTimestamp();
   },
   /**
    * Autosave the code if things have changed
