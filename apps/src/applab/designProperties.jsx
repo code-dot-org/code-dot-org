@@ -67,6 +67,23 @@ var DesignProperties = module.exports = React.createClass({
     var borderColor = '#c6cacd';
     var bgColor = '#e7e8ea';
 
+    // Diagram of how tabs outlines are drawn. 'x' represents solid border.
+    // '-' and '|' represent no border.
+    //
+    // x----------------------------------------------------------------------|
+    // x designWorkspaceTabs                                                  |
+    // x                                                                      |
+    // x  |xxxxxxxxxxxxxx  |xxxxxxxxxxxxxx  |xxxxxxxxxxxxxx  |-------------|  |
+    // x  | inactiveTab x  |  activeTab  x  | inactiveTab x  |  emptyTab   |  |
+    // x  |xxxxxxxxxxxxxx  |-------------x  |xxxxxxxxxxxxxx  |xxxxxxxxxxxxx|  |
+    // x                                                                      |
+    // x----------------------------------------------------------------------|
+    //
+    // x----------------------------------------------------------------------x
+    // x designWorkspaceBody                                                  x
+    // x                                                                      x
+    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
     var defaultTabStyle = {
       borderColor: borderColor,
       borderStyle: 'solid',
