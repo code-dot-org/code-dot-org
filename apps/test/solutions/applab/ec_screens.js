@@ -57,12 +57,12 @@ module.exports = {
         // click design mode button
         $(designModeButton).click();
 
-        var lightestGray = 'rgb(231, 232, 234)';
         var orange = 'rgb(255, 160, 0)';
-        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
-          'expected Design button to have lightest gray background.');
-        assert.equal(orange, $("#codeModeButton").css('background-color'),
-          'expected Code button to have orange background.');
+        var white = 'rgb(255, 255, 255)';
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button (active) to have orange background.');
+        assert.equal(white, $("#codeModeButton").css('background-color'),
+          'expected Code button (inactive) to have white background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
         assert.equal(screenSelector.options.length, 2, 'expected 2 options');
@@ -285,12 +285,12 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $("#designModeButton").click();
-        var lightestGray = 'rgb(231, 232, 234)';
         var orange = 'rgb(255, 160, 0)';
-        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
-          'expected Design button to have lightest gray background.');
-        assert.equal(orange, $("#codeModeButton").css('background-color'),
-          'expected Code button to have orange background.');
+        var white = 'rgb(255, 255, 255)';
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button (active) to have orange background.');
+        assert.equal(white, $("#codeModeButton").css('background-color'),
+          'expected Code button (inactive) to have white background.');
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(0, 'id', 'screen2', assert);
@@ -299,10 +299,10 @@ module.exports = {
 
         // return to code mode
         $("#codeModeButton").click();
-        assert.equal(orange, $("#designModeButton").css('background-color'),
-          'expected Design button to have orange background.');
-        assert.equal(lightestGray, $("#codeModeButton").css('background-color'),
-          'expected Code button to have lightest gray background.');
+        assert.equal(white, $("#designModeButton").css('background-color'),
+          'expected Design button (inactive) to have white background.');
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
+          'expected Code button (active) to have orange background.');
 
         // should be on screen 1
         assert.equal($('#screen1')[0].style.display === 'none', false, 'screen 1 visible');
