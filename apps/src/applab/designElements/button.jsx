@@ -95,8 +95,8 @@ module.exports = {
     element.style.height = '40px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = '#000000';
-    element.style.backgroundColor = '#eeeeee';
+    element.style.color = '#fff';
+    element.style.backgroundColor = '#1abc9c';
 
     return element;
   }

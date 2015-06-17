@@ -5,15 +5,16 @@
   button {
     border: 0;
     border-radius: 0;
-    background: #1abc9c;
-    color: #fff;
 
     &:hover {
-      background: #45c9af;
+      background-image: url("/blockly/media/applab/brighter.png");
       box-shadow: none;
     }
     &:active {
-      background: #16a085;
+      background-image: url("/blockly/media/applab/darker.png");
+    }
+    &:focus {
+      outline: 0;
     }
   }
 
