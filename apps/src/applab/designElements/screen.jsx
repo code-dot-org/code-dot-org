@@ -16,15 +16,12 @@ var ScreenProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
@@ -33,7 +30,7 @@ var ScreenProperties = React.createClass({
           desc={'image'}
           initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
-      </table>);
+      </div>);
   }
 });
 

@@ -12,13 +12,13 @@ var ReactTestUtils = React.addons.TestUtils;
 // without too much difficulty
 
 function validatePropertyRow(index, label, value, assert) {
-  var table = $("#design-properties table")[0];
-  assert(table, 'has design properties table');
+  var container = $("#propertyRowContainer")[0];
+  assert(container, 'has design properties container');
 
-  var tableRow = $("#design-properties table tr").eq(index);
-  assert.equal(tableRow.children(0).text(), label);
+  var propertyRow = $("#propertyRowContainer > div").eq(index);
+  assert.equal(propertyRow.children(0).text(), label);
   // second col has an input with val screen 2
-  assert.equal(tableRow.children(1).children(0).val(), value);
+  assert.equal(propertyRow.children(1).children(0).val(), value);
 }
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
 
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
@@ -118,7 +118,7 @@ module.exports = {
 
         $("#designModeButton").click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
         shouldBeResizable();
 
         $("#codeModeButton").click();
@@ -165,7 +165,7 @@ module.exports = {
 
         $("#designModeButton").click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
         var toggleHidden = $('.custom-checkbox')[0];
 
         assert.equal(isFaded('#button1'), false);

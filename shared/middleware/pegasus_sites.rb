@@ -18,12 +18,12 @@ class PegasusSites
 
     # /dashboardapi at either host goes to dashboard
     if request.path =~ /^\/dashboardapi\//
-      env['HTTP_HOST'] = canonical_hostname('studio.code.org') + (CDO.proxy ? '' : ":#{CDO.dashboard_port}")
+      env['HTTP_HOST'] = canonical_hostname('studio.code.org') + (CDO.https_development ? '' : ":#{CDO.dashboard_port}")
     end
 
     # /v2 at either host goes to pegasus
     if request.path =~ /^\/v2\//
-      env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.proxy ? '' : ":#{CDO.pegasus_port}")
+      env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.https_development ? '' : ":#{CDO.pegasus_port}")
     end
 
     if @pegasus_hosts.include?(request.host)
