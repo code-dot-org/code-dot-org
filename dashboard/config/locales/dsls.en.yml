@@ -147,9 +147,16 @@ en:
         Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
         description here: description here
       ECSPD Online U1D10: {}
+      ECSPD Online U1D10 Forum:
+        Forum Pending: Forum Pending
+        Unit 1 Day 10 Forum: Unit 1 Day 10 Forum
       ECSPD Online U1D10 Resources: {}
       ECSPD Online U1D11-14:
         title: title
+      ECSPD Online U1D11-14 Resources: {}
+      ECSPD Online U1D15-16: {}
+      ECSPD Online U1D15-16 Resources: {}
+      ECSPD Online U1D17-19: {}
       ECSPD Online U1D3-4:
         'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
       ECSPD Online U1D3-4 Resources:
@@ -458,6 +465,7 @@ en:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Student Lesson Introduction:
+        Impact of Innovation: Impact of Innovation
         description here: description here
         title: title
       U1L10 Student Lesson Introduction:
@@ -482,6 +490,7 @@ en:
         description here: description here
         title: title
       U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
         title: title
       U1L17 Student Lesson Introduction:
@@ -697,6 +706,10 @@ en:
       broadcast lesson plan: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
+      equity in CS:
+        Equity in Computer Science: Equity in Computer Science
+      equity is more:
+        Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
       equity v equality:
         Equity Vs. Equality: Equity Vs. Equality
       facilitator test: {}
@@ -1034,6 +1047,21 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECSPD Online U1D10 Assessment 1:
+        Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions drawn from the data will be limited by the (relatively) small amount of data.
+        ? Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.
+        : Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.
+        ? Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.
+        : Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.
+        'Image: Advantages': 'Image: Advantages'
+        'Image: Disadvantages': 'Image: Disadvantages'
+        'List of objects: Advantages': 'List of objects: Advantages'
+        'List of objects: Disadvantages': 'List of objects: Disadvantages'
+        ? More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.
+        : More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.
+        ? Take a look at the image of the room and compare it to the list of objects in the room. Match the method of representing data with its advantage or disadvantage.
+        : Take a look at the image of the room and compare it to the list of objects in the room. Match the method of representing data with its advantage or disadvantage.
+        Tell a Story with Data: Tell a Story with Data
       ECSPD phase matching:
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum
         Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
@@ -1774,6 +1802,15 @@ en:
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      ECSPD Online U1D10 Assessment 2:
+        Connecting several data sets allows a more accurate representation of the underlying information.: Connecting several data sets allows a more accurate representation of the underlying information.
+        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us
+        Different representations of data can help us draw more meaningful conclusions about it.: Different representations of data can help us draw more meaningful conclusions about it.
+        ? In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
+        : In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
+        Tell a Story with Data: Tell a Story with Data
+        The way data is represented can help us understand the data by telling a meaningful story.: The way data is represented can help us understand the data by telling a meaningful story.
+        description here: description here
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
@@ -2331,6 +2368,21 @@ en:
         The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
         They are not - humans are better as breaking Vigenere encryptions than computers.: They are not - humans are better as breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
+        'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol: Assessment 1'
+      U2L3 Assessment 3:
+        ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+        : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+        'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol: Assessment 2'
+        abstraction: abstraction
+        hierarchy: hierarchy
+        packet: packet
+        protocol: protocol
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -2882,12 +2934,23 @@ en:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD Online U1D1-2 Assessment 1:
+        What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:
         'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is a Computer? Reflection'
       ECSPD Online U1D10 Reflection:
         ? During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom?
         : During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom?
         Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+        ? You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+        : You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+      ECSPD Online U1D11-14 Reflection:
+        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: How do you feel about the tools for this lesson? What challenges might they pose in your classroom?
+        Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
+      ECSPD Online U1D15-16 Reflection:
+        Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
+        ? What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
+        : What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
       ECSPD Online U1D3-4 Reflection:
         Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
         'What challenges do you think you and your students might have with the material covered in this lesson? ': 'What challenges do you think you and your students might have with the material covered in this lesson? '
@@ -3145,6 +3208,9 @@ en:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L20 Free Response Wrap Up:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L3 Assessment 4:
+        'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing Protocol: Assessment 3'
+        Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
       U2L3 Free Response Wrap Up:
