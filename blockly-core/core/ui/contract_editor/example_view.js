@@ -31,6 +31,7 @@ Blockly.ExampleView = function (dom, svg) {
   //</button>
   this.testExampleButton = this.initializeTestButton("Test", "run26", this.testExample_.bind(this));
   this.resetExampleButton = this.initializeTestButton("Reset", "reset26", this.resetExample_.bind(this));
+  goog.dom.classes.add(this.resetExampleButton, 'resetButton');
   goog.dom.append(this.domParent_, this.testExampleButton);
   goog.dom.append(this.domParent_, this.resetExampleButton);
   this.refreshButtons();
