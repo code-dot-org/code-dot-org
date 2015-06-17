@@ -30,20 +30,24 @@ var ZOrderRow = React.createClass({
     var squareButton = {
       width: 42,
       height: 42,
+      marginLeft: 0,
+      marginRight: 10,
       backgroundColor: '#0094ca' // $cyan
     };
 
     var squareButtonDisabled = {
       width: 42,
-      height: 42
+      height: 42,
+      marginLeft: 0,
+      marginRight: 10
     };
 
     return (
       <div style={rowStyle.container}>
-        <div>
+        <div style={rowStyle.description}>
           depth
         </div>
-        <div style={{marginLeft: -7}}>
+        <div>
           <button
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}

@@ -39,7 +39,6 @@ var DeleteElementButton = React.createClass({
       paddingTop: '5px',
       paddingBottom: '5px',
       fontSize: '14px',
-      marginLeft: 18
     };
 
     var redButtonStyle = $.extend({}, buttonStyle, {
@@ -50,7 +49,7 @@ var DeleteElementButton = React.createClass({
     var confirm;
     if (this.state.confirming) {
       return (
-        <div>
+        <div style={{marginLeft: 20}}>
           Delete?
           <button
             style={buttonStyle}
@@ -66,7 +65,7 @@ var DeleteElementButton = React.createClass({
       );
     }
     return (
-      <div>
+      <div style={{marginLeft: 15}}>
         <button
           style={redButtonStyle}
           onClick={this.handleDeleteInternal}>
