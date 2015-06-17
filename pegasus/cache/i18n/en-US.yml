@@ -1,4 +1,4 @@
-"en-US":
+en-US:
   hello: "Hello world"
   select_language: "Please select your language"
   computer_science: "Computer Science"
@@ -528,7 +528,7 @@
   scratch_platformtext: "Desktop-only web browsers (not tablets)"
   lightbot_platformtext: "ALL browsers and iOS, Android, or Game Console"
   thinkersmith_platformtext: "Unplugged"
-  condcards_platformtext: "Unuplugged"
+  condcards_platformtext: "Unplugged"
   lightbotintl_platformtext: "iOS, Android (or web browser)"
   codehs_platformtext: "Modern browsers. (Follow-on course requires  $$)"
   codecademy_platformtext: "Modern web browsers. iOS, Android apps"
