@@ -633,6 +633,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
+
+    // TODO: Move this handler to the react button above the app view
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
       // Simulate a run button click, to load the channel id.
