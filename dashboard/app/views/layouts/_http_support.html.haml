@@ -32,10 +32,11 @@
       expanded.slideDown('fast');
       collapsed.slideUp('fast');
     });
-    $(window).load(function () {
-      onURLBlocked("#{ CDO.studio_url('test-image.png', 'https:') }", function () {
-        trackEvent("HTTPS Test", "blocked");
+    testImageAccess("#{ CDO.studio_url('test-image.png', 'https:') }",
+      function() {},
+      function () {
+        $(window).load(function () { trackEvent("HTTPS Test", "blocked"); });
         showWarning();
         document.cookie = "https-blocked=1; path=/";
-      });
-    });
+      }
+    );

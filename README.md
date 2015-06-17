@@ -36,6 +36,10 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `sudo aptitude upgrade`
 1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
   * **Hit enter and select default options for any configuration popups**
+1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
+  * `sudo add-apt-repository ppa:chris-lea/node.js  `
+  * `sudo apt-get update`
+  * `sudo apt-get install nodejs`
 1. Either setup RBENV or configure your default ruby and gem version to 2.0
   1. Option A - RBENV: ([instructions](https://github.com/sstephenson/rbenv#installation))
   1. Option B - Symlinks:
@@ -45,7 +49,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ## Common setup
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler`
+1. `gem install bundler -v 1.10.4`
 1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
