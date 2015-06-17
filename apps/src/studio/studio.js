@@ -1168,6 +1168,10 @@ Studio.init = function(config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.registerTestHandler(Studio.runTest);
+      }
     }
 
     drawMap();
@@ -1397,6 +1401,21 @@ Studio.reset = function(first) {
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
+};
+
+Studio.runTest = function (exampleBlock) {
+  var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
+  var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
+  if (exampleCode) {
+    var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+      StudioApp: studioApp,
+      Studio: api,
+      Globals: Studio.Globals
+    });
+    return resultBoolean ? "Matches definition." : "Does not match definition.";
+  }
+
+  return "Evaluation failed";
 };
 
 /**
