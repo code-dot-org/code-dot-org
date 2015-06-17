@@ -1,6 +1,7 @@
 // Tests whether the browser can access an image URL.
 // Useful as a workaround for CORS security to test access to an origin.
 function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
+  timeoutMs = typeof timeoutMs !== 'undefined' ?  timeoutMs : 5000;
   var img = document.createElement('img');
   img.width = 1;
   img.height = 1;
