@@ -253,10 +253,19 @@ Blockly.ContractEditor.prototype.create_ = function() {
             var block = this.exampleBlocks[i];
             var canReuse = this.exampleViews_.length > i;
             if (!canReuse) {
-              this.exampleViews_.push(new Blockly.ExampleView(this.exampleAreaDiv, examplesTableGroup, function (block) {
+              var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv, examplesTableGroup, function (block) {
+                this.exampleViews_.forEach(function (exampleView) {
+                  exampleView.resetExample_();
+                });
+
+                // TODO(bjordan): Reset main workspace runner esp. if visualizing?
+
                 this.contractSectionView_.setCollapsed(true);
                 return this.testHandler_(block);
-              }.bind(this)));
+              }.bind(this), function () {
+                // TODO(bjordan): call a resetHandler that can e.g. reset visualizations
+              });
+              this.exampleViews_.push(newExampleView);
             }
             newY = this.exampleViews_[i].placeExampleAndGetNewY(block, newY, maxWidth,
               EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset);

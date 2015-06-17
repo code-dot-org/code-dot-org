@@ -8,11 +8,13 @@ goog.provide('Blockly.ExampleView');
  * @param {Element} dom
  * @param {SVGElement} svg
  * @param {Function} onExampleRun
+ * @param {Function} onExampleReset
  */
-Blockly.ExampleView = function (dom, svg, onExampleRun) {
+Blockly.ExampleView = function (dom, svg, onExampleRun, onExampleReset) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
   this.onExampleRun_ = onExampleRun;
+  this.onExampleReset_ = onExampleReset;
 
   this.testRunning_ = false;
 
@@ -48,13 +50,14 @@ Blockly.ExampleView.prototype.initializeTestButton = function (buttonText, iconC
 };
 
 Blockly.ExampleView.prototype.testExample_ = function () {
+  this.resultText.innerHTML = this.onExampleRun_(this.block_);
   this.testRunning_ = true;
   this.refreshButtons();
-  this.resultText.innerHTML = this.onExampleRun_(this.block_);
   // TODO(bjordan): UI re-layout post-result?
 };
 
 Blockly.ExampleView.prototype.resetExample_ = function () {
+  this.onExampleReset_();
   this.testRunning_ = false;
   this.refreshButtons();
 };
