@@ -54,12 +54,12 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {string} */
   this.functionName = definition.func;
 
-  var description = getLocalization(this.descriptionKey());
+  var description = this.getLocalization(this.descriptionKey());
   if (description) {
     this.description = description();
   }
 
-  var signatureOverride = getLocalization(this.signatureOverrideKey());
+  var signatureOverride = this.getLocalization(this.signatureOverrideKey());
   if (signatureOverride) {
     this.signatureOverride = signatureOverride();
   }
@@ -68,14 +68,14 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   this.parameterInfos = [];
 
   for (var paramId = 0; ; paramId++) {
-    var paramName = getLocalization(this.parameterNameKey(paramId));
+    var paramName = this.getLocalization(this.parameterNameKey(paramId));
     if (!paramName) {
       break;
     }
 
     var paramInfo = {};
     paramInfo.name = paramName();
-    var paramDesc = getLocalization(this.parameterDescriptionKey(paramId));
+    var paramDesc = this.getLocalization(this.parameterDescriptionKey(paramId));
     if (paramDesc) {
       paramInfo.description = paramDesc();
     }
@@ -90,9 +90,9 @@ var DropletFunctionTooltip = function (appMsg, definition) {
  * @param {string} key
  * @returns {Function}
  */
-function getLocalization(key) {
+DropletFunctionTooltip.prototype.getLocalization = function (key) {
   return this.appMsg[key] || msg[key];
-}
+};
 
 /**
  * @returns {string}
