@@ -1,0 +1,15 @@
+name 'equity in CS'
+title 'Equity in Computer Science'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### The Need for Equity in Computer Science
+
+<br/>
+
+So why the push for equity in computer science?  Shouldn't the industry be content to realize that some people are just not interested, and leave it at that?
+
+It's not just about industry.  Coding is a skill like reading and writing, and those who don't receive a good CS education will be left behind.
+MARKDOWN

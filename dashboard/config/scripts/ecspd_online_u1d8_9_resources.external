@@ -1,0 +1,18 @@
+name 'ECSPD Online U1D8-9 Resources'
+title ''
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 1 Day 8-9: Additional Resources
+
+Below, you will find a few additional resources related to internet communication.
+
+* [The Internet Is Changing the Way We Communicate for the Better](http://www.psmag.com/nature-and-technology/networks-changed-social-media-internet-communication-82554) 
+
+* [Can't Ask That? Some Job Interviewers Go To Social Media Instead](http://www.npr.org/sections/alltechconsidered/2014/04/11/301791749/cant-ask-that-some-job-interviewers-go-to-social-media-instead)
+
+* [The Internet as a Communication Tool](https://techforinstructionandassessment.wikispaces.com/The+Internet+as+a+Communication+Tool)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

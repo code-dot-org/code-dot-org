@@ -854,6 +854,16 @@
   alice_beyond_longdescription: 愛麗絲計劃利用一種創新的程式設計環境支援3D 動畫創作 ，及提供跨年齡和年級的教學工具和教材來訓練學生的計算思維、
     解決問題技巧和電腦程式設計。
   sphero_beyond_longdescription: 無論你是一位教育家或父母， SPRK 給孩子一個有趣速成的機器人程式設計課程，並同時磨練孩子的數學和科學的技能。
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_curriculum: Curriculum
+  dashboard_overview: Overview
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click

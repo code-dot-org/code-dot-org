@@ -19,7 +19,7 @@ module.exports = React.createClass({
       container: {
         position: 'absolute',
         width: '100%',
-        top: 40,
+        top: 30,
         bottom: 0,
         backgroundColor: 'white',
         boxSizing: 'border-box',
@@ -62,7 +62,6 @@ module.exports = React.createClass({
           <div data-element-type="IMAGE" className="new-design-element">image</div>
           <div data-element-type="CANVAS" className="new-design-element">canvas</div>
           <div data-element-type="SCREEN" className="new-design-element">screen</div>
-          <button id="designModeClear" className="share">Clear</button><br/>
         </div>
         <div id="design-properties" style={styles.designProperties}>
           <DesignProperties

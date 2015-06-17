@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## turnLeft(angle)
+## turnRight(angle)
 
 [/name]
 

@@ -499,6 +499,10 @@ button.arrow:focus {
   }
 }
 
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
 .chooseAssetDropdownOption {
   color: $link_color;
   text-decoration: underline;
@@ -506,4 +510,10 @@ button.arrow:focus {
 
 .droplet-dropdown {
   z-index: 500 !important;
+}
+
+// We don't want -webkit-user-select: none for our contenteditable div, otherwise
+// we're unable to add text to the div in Safari.
+*[contenteditable] {
+  -webkit-user-select: auto !important;
 }
