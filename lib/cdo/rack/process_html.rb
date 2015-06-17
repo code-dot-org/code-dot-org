@@ -1,6 +1,6 @@
 # Base Rack middleware class for processing html through a Nokogiri filter on every request.
 require 'rack/utils'
-require 'nokogiri'
+require 'nokogumbo'
 require 'cdo/pegasus/string'
 
 module Rack
@@ -39,11 +39,9 @@ module Rack
       content = ''
       body.each{|x|content += x}
       body.close if body.respond_to? :close
-      doc = ::Nokogiri::HTML(content)
-      process_doc(doc)
-      content = doc.to_html
+      content = process_doc(::Nokogiri::HTML5(content)).to_html if content.include?('<html')
       # Update content-length after transform
-      headers['content-length'] = content.bytesize.to_s
+      headers['Content-Length'] = content.bytesize.to_s
       response = [content]
 
       [status, headers, response]
@@ -55,6 +53,7 @@ module Rack
       nodes = ::Nokogiri::XML::NodeSet.new(doc)
       nodes += doc.xpath(@xpath) unless @xpath.nil?
       @block.call(nodes) unless nodes.empty?
+      doc
     end
 
     def should_process?(env, status, headers, body)

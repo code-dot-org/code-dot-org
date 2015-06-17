@@ -223,6 +223,8 @@ GEM
     newrelic_rpm (3.10.0.279)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    nokogumbo (1.4.2)
+      nokogiri
     oauth (0.4.7)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -454,6 +456,7 @@ DEPENDENCIES
   naturally
   newrelic_rpm (~> 3.10.0.279)
   nokogiri (= 1.6.1)
+  nokogumbo (~> 1.4.2)
   omniauth-clever!
   omniauth-facebook
   omniauth-google-oauth2

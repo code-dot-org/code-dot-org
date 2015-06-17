@@ -90,7 +90,8 @@ gem 'haml'
 
 gem 'jquery-ui-rails', '~> 5.0.3'
 
-gem 'nokogiri', '1.6.1'
+gem 'nokogiri', '1.6.1'     # libxml2 (HTML4 parser) bindings
+gem 'nokogumbo', '~> 1.4.2' # Gumbo (Spec-compliant HTML5 parser) bindings
 
 gem 'highline', '~> 1.6.21'
 
