@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pozri si Video"},
 "when":function(d){return "keď"},
 "whenRun":function(d){return "pri spustení"},
-"workspaceHeaderShort":function(d){return "Pracovná plocha: "}};
+"workspaceHeaderShort":function(d){return "Pracovná plocha: "},
+"showTextHeader":function(d){return "Show Text"}};

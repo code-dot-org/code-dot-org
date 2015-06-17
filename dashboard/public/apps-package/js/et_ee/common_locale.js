@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Vaata videot"},
 "when":function(d){return "kui"},
 "whenRun":function(d){return "kui käib"},
-"workspaceHeaderShort":function(d){return "Tööruum: "}};
+"workspaceHeaderShort":function(d){return "Tööruum: "},
+"showTextHeader":function(d){return "Show Text"}};

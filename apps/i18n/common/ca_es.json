@@ -614,5 +614,6 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "showTextHeader": "Show Text"
 }

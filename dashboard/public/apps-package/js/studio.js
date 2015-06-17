@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({278:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({279:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":9,"./blocks":269,"./levels":276,"./skins":282,"./studio":283}],283:[function(require,module,exports){
+},{"../appMain":9,"./blocks":270,"./levels":277,"./skins":283,"./studio":284}],284:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -123,6 +123,17 @@ Studio.BLOCK_Y_COORDINATE = 20;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
+var AUTO_HANDLER_MAP = {
+  whenRun: 'whenGameStarts',
+  whenDown: 'when-down',
+  whenUp: 'when-up',
+  whenLeft: 'when-left',
+  whenRight: 'when-right',
+  whenTouchItem: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-any_item',
+};
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -212,8 +223,8 @@ function loadLevel() {
   Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
 
   // Height and width of the goal and obstacles.
-  Studio.MARKER_HEIGHT = 100;
-  Studio.MARKER_WIDTH = 100;
+  Studio.MARKER_HEIGHT = level.markerHeight || 100;
+  Studio.MARKER_WIDTH = level.markerWidth || 100;
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
@@ -1373,6 +1384,10 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+  config.unusedConfig = [];
+  for (var handlerName in AUTO_HANDLER_MAP) {
+    config.unusedConfig.push(handlerName);
+  }
 
   config.appMsg = studioMsg;
 
@@ -1894,16 +1909,7 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
-    var autoHandlerMap = {
-      whenDown: 'when-down',
-      whenUp: 'when-up',
-      whenLeft: 'when-left',
-      whenRight: 'when-right',
-      whenTouchItem: 'whenSpriteCollided-' +
-                      (Studio.protagonistSpriteIndex || 0) +
-                      '-any_item',
-    };
-    Studio.initAutoHandlers(autoHandlerMap);
+    Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -3528,7 +3534,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":263,"../templates/page.html.ejs":291,"../utils":313,"../xml":314,"./Item":265,"./api":266,"./bigGameLogic":268,"./blocks":269,"./collidable":270,"./constants":271,"./controls.html.ejs":272,"./dropletConfig":274,"./extraControlRows.html.ejs":275,"./locale":277,"./projectile":279,"./rocketHeightLogic":280,"./samBatLogic":281,"./visualization.html.ejs":284}],284:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":96,"../canvg/canvg.js":97,"../canvg/rgbcolor.js":98,"../canvg/svg_todataurl":99,"../codegen":101,"../constants":103,"../dom":104,"../dropletUtils":105,"../locale":146,"../skins":264,"../templates/page.html.ejs":292,"../utils":314,"../xml":315,"./Item":266,"./api":267,"./bigGameLogic":269,"./blocks":270,"./collidable":271,"./constants":272,"./controls.html.ejs":273,"./dropletConfig":275,"./extraControlRows.html.ejs":276,"./locale":278,"./projectile":280,"./rocketHeightLogic":281,"./samBatLogic":282,"./visualization.html.ejs":285}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3548,7 +3554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],281:[function(require,module,exports){
+},{"ejs":485}],282:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3673,7 +3679,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":100,"../constants":102,"./api":266,"./constants":271,"./customGameLogic":273}],280:[function(require,module,exports){
+},{"../codegen":101,"../constants":103,"./api":267,"./constants":272,"./customGameLogic":274}],281:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3736,7 +3742,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":100,"./api":266,"./constants":271,"./customGameLogic":273}],279:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272,"./customGameLogic":274}],280:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3954,7 +3960,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":270,"./constants":271}],282:[function(require,module,exports){
+},{"./collidable":271,"./constants":272}],283:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -4397,7 +4403,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":263,"./constants":271,"./locale":277}],276:[function(require,module,exports){
+},{"../skins":264,"./constants":272,"./locale":278}],277:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -5926,12 +5932,14 @@ levels.hoc2015_1 = {
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
   },
 };
 
@@ -5953,17 +5961,19 @@ levels.hoc2015_2 = {
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
   },
 };
 
 
-},{"../block_utils":70,"../utils":313,"./constants":271,"./locale":277}],275:[function(require,module,exports){
+},{"../block_utils":71,"../utils":314,"./constants":272,"./locale":278}],276:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5983,7 +5993,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],274:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],275:[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
@@ -6014,7 +6024,7 @@ module.exports.categories = {
 };
 
 
-},{"./apiJavascript.js":267,"./locale":277}],272:[function(require,module,exports){
+},{"./apiJavascript.js":268,"./locale":278}],273:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6034,7 +6044,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],269:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],270:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -8109,13 +8119,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":5,"../codegen":100,"../locale":145,"../sharedFunctionalBlocks":262,"../utils":313,"./constants":271,"./locale":277}],277:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":101,"../locale":146,"../sharedFunctionalBlocks":263,"../utils":314,"./constants":272,"./locale":278}],278:[function(require,module,exports){
 // locale for studio
 
 module.exports = window.blockly.studio_locale;
 
 
-},{}],268:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -8349,7 +8359,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":100,"./api":266,"./constants":271,"./customGameLogic":273}],273:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272,"./customGameLogic":274}],274:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -8419,7 +8429,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":100,"./api":266,"./constants":271}],267:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272}],268:[function(require,module,exports){
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
@@ -8550,7 +8560,7 @@ exports.onEvent = function (eventName, func) {
 };
 
 
-},{}],266:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = constants.SpriteSpeed;
@@ -8709,7 +8719,7 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":271}],265:[function(require,module,exports){
+},{"./constants":272}],266:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -8830,7 +8840,7 @@ Item.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":270,"./constants":271}],270:[function(require,module,exports){
+},{"./collidable":271,"./constants":272}],271:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -8949,7 +8959,7 @@ Collidable.prototype.outOfBounds = function () {
 };
 
 
-},{"../StudioApp":5,"./constants":271}],271:[function(require,module,exports){
+},{"../StudioApp":5,"./constants":272}],272:[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -9175,4 +9185,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[278]);
+},{}]},{},[279]);
