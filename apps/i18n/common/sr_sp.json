@@ -614,5 +614,6 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "када се извршава",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "showTextHeader": "Show Text"
 }

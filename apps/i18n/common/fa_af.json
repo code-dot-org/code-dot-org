@@ -614,5 +614,6 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "فضای تمرین : "
+  "workspaceHeaderShort": "فضای تمرین : ",
+  "showTextHeader": "Show Text"
 }

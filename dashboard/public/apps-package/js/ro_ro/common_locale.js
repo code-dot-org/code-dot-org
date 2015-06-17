@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Urmărește clipul video"},
 "when":function(d){return "când"},
 "whenRun":function(d){return "când rulezi"},
-"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "}};
+"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "},
+"showTextHeader":function(d){return "Show Text"}};

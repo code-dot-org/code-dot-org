@@ -614,5 +614,6 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "під час виконання",
-  "workspaceHeaderShort": "Робоча область: "
+  "workspaceHeaderShort": "Робоча область: ",
+  "showTextHeader": "Show Text"
 }
