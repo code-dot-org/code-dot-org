@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویدیو را ببینید"},
 "when":function(d){return "وقتی"},
 "whenRun":function(d){return "زمان اجرا"},
-"workspaceHeaderShort":function(d){return "فضای تمرین : "}};
+"workspaceHeaderShort":function(d){return "فضای تمرین : "},
+"showTextHeader":function(d){return "Show Text"}};

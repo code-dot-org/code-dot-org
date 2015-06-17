@@ -1,0 +1,16 @@
+name 'ECSPD Online U1D15-16 Resources'
+title ''
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+## Unit 1 Day 15-16 Additional Resources
+
+Here is a TEDx video of Christopher Steiner talking about Algorithms and their uses.
+
+<iframe width="850" height="500" src="https://www.youtube.com/embed/H_aLU-NOdHM" frameborder="0" allowfullscreen></iframe>
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

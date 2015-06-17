@@ -1,5 +1,8 @@
-#prompt-table {
+.hidden {
   display: none; }
+
+#netsim #prompt-table td {
+  border: none; }
 
 .clearfix {
   clear: both; }

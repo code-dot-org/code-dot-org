@@ -614,5 +614,6 @@
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: "
+  "workspaceHeaderShort": "Pracovní prostor: ",
+  "showTextHeader": "Show Text"
 }

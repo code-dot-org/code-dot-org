@@ -977,6 +977,16 @@
     solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
   sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을
     통해 수학 과학 능력을 향상시킬 수 있습니다.
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_curriculum: Curriculum
+  dashboard_overview: Overview
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click

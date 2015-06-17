@@ -53905,6 +53905,7 @@ hook('mouseup', 1, function(point, event, state) {
         this.spliceOut(this.draggingBlock);
       }
       this.clearHighlightCanvas();
+      this.fireEvent('sound', [this.lastHighlight.type]);
       switch (this.lastHighlight.type) {
         case 'indent':
         case 'socket':
@@ -56877,7 +56878,8 @@ hook('populate', 1, function() {
           str = str.replace(/^\n*|\n*$/g, '');
           blocks = _this.mode.parse(str);
           _this.addMicroUndoOperation('CAPTURE_POINT');
-          if (_this.lassoSegment != null) {
+          if ((_this.lassoSegment != null) && _this.inTree(_this.lassoSegment)) {
+            _this.moveCursorTo(_this.lassoSegment.end.nextVisibleToken(), true);
             _this.addMicroUndoOperation(new PickUpOperation(_this.lassoSegment));
             _this.spliceOut(_this.lassoSegment);
             _this.lassoSegment = null;
@@ -59272,7 +59274,9 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       }
       if (node.type.match(/Expression$/) != null) {
         return [node.type, 'mostly-value'];
-      } else if (node.type.match(/(Statement|Declaration)$/) != null) {
+      } else if (node.type.match(/Declaration$/) != null) {
+        return [node.type, 'block-only'];
+      } else if (node.type.match(/Statement$/) != null) {
         return [node.type, 'mostly-block'];
       } else {
         return [node.type, 'any-drop'];
@@ -59510,18 +59514,6 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         }
         return results4;
         break;
-      case 'ForStatement':
-        this.jsBlock(node, depth, bounds);
-        if (node.init != null) {
-          this.jsSocketAndMark(indentDepth, node.init, depth + 1, NEVER_PAREN, null, ['for-statement-init']);
-        }
-        if (node.test != null) {
-          this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
-        }
-        if (node.update != null) {
-          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10);
-        }
-        return this.mark(indentDepth, node.body, depth + 1);
       case 'ForInStatement':
         this.jsBlock(node, depth, bounds);
         if (node.left != null) {
@@ -59559,7 +59551,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
         }
         if (node.update != null) {
-          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10);
+          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
         }
         return this.mark(indentDepth, node.body, depth + 1);
       case 'BlockStatement':
@@ -59796,7 +59788,7 @@ JavaScriptParser.drop = function(block, context, pred) {
       } else {
         return helper.FORBID;
       }
-    } else if (indexOf.call(block.classes, 'value-only') >= 0 || indexOf.call(block.classes, 'mostly-value') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || indexOf.call(context.classes, 'for-statement-init') >= 0) {
+    } else if (indexOf.call(block.classes, 'value-only') >= 0 || indexOf.call(block.classes, 'mostly-value') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || indexOf.call(context.classes, 'for-statement-init') >= 0 || (indexOf.call(block.classes, 'mostly-block') >= 0 && indexOf.call(context.classes, 'for-statement-update') >= 0)) {
       return helper.ENCOURAGE;
     } else if (indexOf.call(block.classes, 'mostly-block') >= 0) {
       return helper.DISCOURAGE;
