@@ -10,7 +10,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. `cd code-dot-org`
   1. `vagrant up`
   1. `vagrant ssh`
-  1. Goto step 2 of the common setup instructions
+  1. Goto step 2 of the commbundleon setup instructions
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Install OS-specific prerequisites
@@ -49,7 +49,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ## Common setup
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler`
+1. `gem install bundler -v 1.10.4`
 1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
