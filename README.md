@@ -10,7 +10,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. `cd code-dot-org`
   1. `vagrant up`
   1. `vagrant ssh`
-  1. Goto step 2 of the commbundleon setup instructions
+  1. Goto step 2 of the common setup instructions
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Install OS-specific prerequisites
