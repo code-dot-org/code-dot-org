@@ -5,7 +5,6 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
-var rowStyle = require('./rowStyle');
 
 var elementUtils = require('./elementUtils');
 
