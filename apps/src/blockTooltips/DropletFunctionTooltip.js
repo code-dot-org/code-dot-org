@@ -67,10 +67,13 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
-  var paramId = 0;
-  var paramName;
-  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
-                          msg[this.parameterNameKey(paramId)])) {
+  for (var paramId = 0; ; paramId++) {
+    var nameKey = this.parameterNameKey(paramId);
+    var paramName = appMsg[nameKey] || msg[nameKey];
+    if (!paramName) {
+      break;
+    }
+
     var paramInfo = {};
     paramInfo.name = paramName();
     var paramDesc = appMsg[this.parameterDescriptionKey(paramId)] ||
@@ -82,7 +85,6 @@ var DropletFunctionTooltip = function (appMsg, definition) {
       paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
-    paramId++;
   }
 };
 
