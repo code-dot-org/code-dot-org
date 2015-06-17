@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-06-16
+ * Date: 2015-06-17
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -53061,6 +53061,7 @@ exports.Editor = Editor = (function() {
       fn1(eventName, elements);
     }
     this.tree = new model.Segment();
+    this.tree.isRoot = true;
     this.tree.start.insert(this.cursor);
     this.resizeBlockMode();
     this.redrawMain();
@@ -53759,7 +53760,7 @@ hook('mousemove', 1, function(point, event, state) {
               w: 0,
               h: 0,
               acceptLevel: acceptLevel,
-              _ice_node: head.container
+              _droplet_node: head.container
             });
           }
         }
@@ -53832,8 +53833,8 @@ hook('mousemove', 0, function(point, event, state) {
             distance = mainPoint.from(point);
             distance.y *= 2;
             distance = distance.magnitude();
-            if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._ice_node).highlightArea != null)) {
-              best = point._ice_node;
+            if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
+              best = point._droplet_node;
               return min = distance;
             }
           }
@@ -53905,6 +53906,7 @@ hook('mouseup', 1, function(point, event, state) {
         this.spliceOut(this.draggingBlock);
       }
       this.clearHighlightCanvas();
+      this.fireEvent('sound', [this.lastHighlight.type]);
       switch (this.lastHighlight.type) {
         case 'indent':
         case 'socket':
@@ -55753,6 +55755,9 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       div.style.width = this.gutter.offsetWidth + "px";
       translatingElements.push(div);
       div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
+      if (this.annotations[line] != null) {
+        div.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
+      }
       div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
       this.dropletElement.appendChild(div);
       fn2(div, line);
@@ -55907,6 +55912,9 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
           div.style.left = 0;
           div.style.top = (_this.aceEditor.session.documentToScreenRow(line, 0) * lineHeight - aceScrollTop) + "px";
           div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
+          if (_this.annotations[line] != null) {
+            div.className += ' droplet_' + getMostSevereAnnotationType(_this.annotations[line]);
+          }
           div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
           translatingElements.push(div);
           _this.dropletElement.appendChild(div);
@@ -56107,6 +56115,7 @@ Editor.prototype.setFontSize_raw = function(fontSize) {
     this.fontSize = fontSize;
     this.paletteHeader.style.fontSize = fontSize + "px";
     this.gutter.style.fontSize = fontSize + "px";
+    this.tooltipElement.style.fontSize = fontSize + "px";
     this.view.opts.textHeight = this.dragView.opts.textHeight = helper.getFontHeight(this.fontFamily, this.fontSize);
     metrics = helper.fontMetrics(this.fontFamily, this.fontSize);
     this.fontAscent = metrics.prettytop;
@@ -56127,6 +56136,7 @@ Editor.prototype.setFontFamily = function(fontFamily) {
   this.view.clearCache();
   this.dragView.clearCache();
   this.gutter.style.fontFamily = fontFamily;
+  this.tooltipElement.style.fontFamily = fontFamily;
   this.redrawMain();
   return this.rebuildPalette();
 };
@@ -56692,6 +56702,9 @@ hook('populate', 0, function() {
   this.mainScroller.appendChild(this.gutter);
   this.annotations = {};
   this.breakpoints = {};
+  this.tooltipElement = document.createElement('div');
+  this.tooltipElement.className = 'droplet-tooltip';
+  this.dropletElement.appendChild(this.tooltipElement);
   return this.aceEditor.on('guttermousedown', (function(_this) {
     return function(e) {
       var row, target;
@@ -56771,7 +56784,7 @@ Editor.prototype.resizeGutter = function() {
 };
 
 Editor.prototype.addLineNumberForLine = function(line) {
-  var lineDiv, treeView;
+  var lineDiv, title, treeView;
   treeView = this.view.getViewNodeFor(this.tree);
   if (line in this.lineNumberTags) {
     lineDiv = this.lineNumberTags[line];
@@ -56783,9 +56796,26 @@ Editor.prototype.addLineNumberForLine = function(line) {
   lineDiv.className = 'droplet-gutter-line';
   if (this.annotations[line] != null) {
     lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
-    lineDiv.title = this.annotations[line].map(function(x) {
+    title = this.annotations[line].map(function(x) {
       return x.text;
     }).join('\n');
+    lineDiv.addEventListener('mouseover', (function(_this) {
+      return function() {
+        _this.tooltipElement.innerText = _this.tooltipElement.textContent = title;
+        return _this.tooltipElement.style.display = 'block';
+      };
+    })(this));
+    lineDiv.addEventListener('mousemove', (function(_this) {
+      return function(event) {
+        _this.tooltipElement.style.left = event.pageX;
+        return _this.tooltipElement.style.top = event.pageY;
+      };
+    })(this));
+    lineDiv.addEventListener('mouseout', (function(_this) {
+      return function() {
+        return _this.tooltipElement.style.display = 'none';
+      };
+    })(this));
   }
   if (this.breakpoints[line]) {
     lineDiv.className += ' droplet_breakpoint';
@@ -56807,12 +56837,9 @@ TYPE_SEVERITY = {
 TYPE_FROM_SEVERITY = ['info', 'warning', 'error'];
 
 getMostSevereAnnotationType = function(arr) {
-  var result;
-  result = TYPE_FROM_SEVERITY[Math.max.apply(this, arr.map(function(x) {
+  return TYPE_FROM_SEVERITY[Math.max.apply(this, arr.map(function(x) {
     return TYPE_SEVERITY[x.type];
   }))];
-  console.log('annotation type', result);
-  return result;
 };
 
 Editor.prototype.findLineNumberAtCoordinate = function(coord) {
@@ -56924,7 +56951,8 @@ hook('populate', 1, function() {
           str = str.replace(/^\n*|\n*$/g, '');
           blocks = _this.mode.parse(str);
           _this.addMicroUndoOperation('CAPTURE_POINT');
-          if (_this.lassoSegment != null) {
+          if ((_this.lassoSegment != null) && _this.inTree(_this.lassoSegment)) {
+            _this.moveCursorTo(_this.lassoSegment.end.nextVisibleToken(), true);
             _this.addMicroUndoOperation(new PickUpOperation(_this.lassoSegment));
             _this.spliceOut(_this.lassoSegment);
             _this.lassoSegment = null;
@@ -59319,7 +59347,9 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       }
       if (node.type.match(/Expression$/) != null) {
         return [node.type, 'mostly-value'];
-      } else if (node.type.match(/(Statement|Declaration)$/) != null) {
+      } else if (node.type.match(/Declaration$/) != null) {
+        return [node.type, 'block-only'];
+      } else if (node.type.match(/Statement$/) != null) {
         return [node.type, 'mostly-block'];
       } else {
         return [node.type, 'any-drop'];
@@ -59557,18 +59587,6 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         }
         return results4;
         break;
-      case 'ForStatement':
-        this.jsBlock(node, depth, bounds);
-        if (node.init != null) {
-          this.jsSocketAndMark(indentDepth, node.init, depth + 1, NEVER_PAREN, null, ['for-statement-init']);
-        }
-        if (node.test != null) {
-          this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
-        }
-        if (node.update != null) {
-          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10);
-        }
-        return this.mark(indentDepth, node.body, depth + 1);
       case 'ForInStatement':
         this.jsBlock(node, depth, bounds);
         if (node.left != null) {
@@ -59606,7 +59624,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
         }
         if (node.update != null) {
-          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10);
+          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
         }
         return this.mark(indentDepth, node.body, depth + 1);
       case 'BlockStatement':
@@ -59843,7 +59861,7 @@ JavaScriptParser.drop = function(block, context, pred) {
       } else {
         return helper.FORBID;
       }
-    } else if (indexOf.call(block.classes, 'value-only') >= 0 || indexOf.call(block.classes, 'mostly-value') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || indexOf.call(context.classes, 'for-statement-init') >= 0) {
+    } else if (indexOf.call(block.classes, 'value-only') >= 0 || indexOf.call(block.classes, 'mostly-value') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || indexOf.call(context.classes, 'for-statement-init') >= 0 || (indexOf.call(block.classes, 'mostly-block') >= 0 && indexOf.call(context.classes, 'for-statement-update') >= 0)) {
       return helper.ENCOURAGE;
     } else if (indexOf.call(block.classes, 'mostly-block') >= 0) {
       return helper.DISCOURAGE;
