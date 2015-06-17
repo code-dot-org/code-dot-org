@@ -551,8 +551,11 @@ Blockly.BlockSvg.prototype.removeSpotlight = function() {
 /**
  * Render the block.
  * Lays out and reflows a block based on its contents and settings.
+ * @param {boolean} selfOnly - whether to render only this block and NOT also
+ * its parents which in turn would trigger a window resize event. Defaults to
+ * false.
  */
-Blockly.BlockSvg.prototype.render = function() {
+Blockly.BlockSvg.prototype.render = function(selfOnly) {
   this.block_.rendered = true;
 
   var cursorX = oppositeIfRTL(BS.SEP_SPACE_X);
@@ -568,13 +571,15 @@ Blockly.BlockSvg.prototype.render = function() {
   var inputRows = this.renderCompute_(cursorX);
   this.renderDraw_(cursorX, inputRows);
 
-  // Render all blocks above this one (propagate a reflow).
-  var parentBlock = this.block_.getParent();
-  if (parentBlock) {
-    parentBlock.render();
-  } else {
-    // Top-most block.  Fire an event to allow scrollbars to resize.
-    Blockly.fireUiEvent(window, 'resize');
+  if (!selfOnly) {
+    // Render all blocks above this one (propagate a reflow).
+    var parentBlock = this.block_.getParent();
+    if (parentBlock) {
+      parentBlock.render();
+    } else {
+      // Top-most block.  Fire an event to allow scrollbars to resize.
+      Blockly.fireUiEvent(window, 'resize');
+    }
   }
 };
 

@@ -90,6 +90,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
 
   var input = block.getInput(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   if (input.type == Blockly.FUNCTIONAL_INPUT) {
+    var originalExtraSpace = input.extraSpace;
     var width = 40; // TODO(bjordan): actually calculate empty input
     var functionCallBlock = block.getInputTargetBlock(
       Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
@@ -97,9 +98,13 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
       width = functionCallBlock.getHeightWidth().width;
     }
     input.extraSpace = maxWidth - width;
+    if (input.extraSpace !== originalExtraSpace) {
+      block.getSvgRenderer().render(true);
+    }
   }
 
   block.moveTo(marginLeft, newY);
+
   newY += block.getHeightWidth().height;
 
   newY += commonMargin;
