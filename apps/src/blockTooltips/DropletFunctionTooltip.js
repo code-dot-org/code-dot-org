@@ -51,10 +51,9 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
 var DropletFunctionTooltip = function (appMsg, definition) {
   this.appMsg = appMsg;
 
-  /** @type {String} */
+  /** @type {string} */
   this.functionName = definition.func;
 
-  /** @type {String} */
   var description = getLocalization(this.descriptionKey());
   if (description) {
     this.description = description();
@@ -87,6 +86,10 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   }
 };
 
+/**
+ * @param {string} key
+ * @returns {Function}
+ */
 function getLocalization(key) {
   return this.appMsg[key] || msg[key];
 }
