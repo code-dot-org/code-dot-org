@@ -5,6 +5,9 @@
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
   <% if (debugButtons) { %>
   <div id="debug-area-header">
+    <div id="debug-commands-header" class="workspace-header">
+      <span>Debug Commands</span>
+    </div>
     <div id="slider-cell">
       <svg id="applab-slider"
            xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +63,9 @@
   <% } %>
 
   <% if (debugConsole) { %>
+  <div id="debug-commands" class="debug-commands">
+
+  </div>
   <div id="debug-console" class="debug-console">
     <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
