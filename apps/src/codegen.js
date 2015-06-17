@@ -521,7 +521,7 @@ exports.selectCurrentCode = function (interpreter,
         // NOTE: replace markLine with this new mark() call once we have a new
         // version of droplet
 
-        // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
+        //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
         var selection = editor.aceEditor.getSelection();
