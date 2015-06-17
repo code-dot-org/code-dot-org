@@ -72,25 +72,26 @@ module.exports = React.createClass({
       padding: '2px 6px',
       fontSize: 14
     };
-    var buttonPrimary = {
-      backgroundColor: '#ffa000',
-      color: '#fff'
-    };
-    var buttonSecondary = {
-      backgroundColor: '#e7e8ea',
-      color: '#949ca2'
-    };
-
     var codeButtonStyle = $.extend({}, buttonStyle, {
       borderBottomRightRadius: 0,
       borderTopRightRadius: 0,
       borderRightWidth: 0
-    }, (this.state.mode === Mode.CODE ? buttonSecondary : buttonPrimary));
-
+    });
     var designButtonStyle = $.extend({}, buttonStyle, {
       borderBottomLeftRadius: 0,
       borderTopLeftRadius: 0
-    }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
+    });
+    var active = {
+      backgroundColor: '#ffa000',
+      color: '#fff',
+      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3) inset'
+    };
+    var inactive = {
+      backgroundColor: '#fff',
+      color: '#949ca2',
+      boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
+    };
+
 
     if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
@@ -114,14 +115,16 @@ module.exports = React.createClass({
       <div className="justify-contents">
         <button
             id='codeModeButton'
-            style={codeButtonStyle}
+            style={$.extend({}, codeButtonStyle,
+                this.state.mode === Mode.CODE ? active : inactive)}
             className='no-outline'
             onClick={this.handleSetMode.bind(this, Mode.CODE)}>
           {msg.codeMode()}
         </button>
         <button
             id='designModeButton'
-            style={designButtonStyle}
+            style={$.extend({}, designButtonStyle,
+                this.state.mode === Mode.DESIGN ? active : inactive)}
             className='no-outline'
             onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
           {msg.designMode()}
