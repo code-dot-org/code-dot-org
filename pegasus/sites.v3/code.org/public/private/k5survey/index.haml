@@ -1,7 +1,7 @@
 :ruby
   facilitator_id = params['user_id']
 
-  all_facilitators = DB.fetch('SELECT DISTINCT user_id, name, email FROM forms WHERE kind="ProfessionalDevelopmentWorkshop" ORDER BY name;')
+  all_facilitators = DB.fetch('SELECT user_id, name FROM pegasus_development.forms WHERE kind="ProfessionalDevelopmentWorkshop" GROUP BY user_id ORDER BY name, created_at;')
   all_surveys = DB.fetch('SELECT * FROM forms WHERE kind="K5ProfessionalDevelopmentSurvey"')
 
   def satisfaction_s_to_i(value)
@@ -101,7 +101,7 @@
     Select a Facilitator
   - all_facilitators.each do |facilitator|
     %option{value:'/private/k5survey?user_id=' + facilitator[:user_id].to_s}
-      #{facilitator[:name]} - #{facilitator[:user_id].to_s} - #{facilitator[:email]}
+      #{facilitator[:name]} - #{facilitator[:user_id].to_s}
 
 - if workshops
   %h2
