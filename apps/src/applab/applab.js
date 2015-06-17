@@ -634,16 +634,6 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
 
-    // TODO: Move this handler to the react button above the app view
-    var viewDataButton = document.getElementById('viewDataButton');
-    if (viewDataButton) {
-      // Simulate a run button click, to load the channel id.
-      var viewDataClick = studioApp.runButtonClickWrapper.bind(
-          studioApp, Applab.onViewData);
-      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
-    }
-
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();

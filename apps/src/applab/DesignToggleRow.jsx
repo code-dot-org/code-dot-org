@@ -17,6 +17,7 @@ module.exports = React.createClass({
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
+    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired
   },
@@ -105,7 +106,8 @@ module.exports = React.createClass({
         <button
             id='viewDataButton'
             style={showDataButtonStyle}
-            className='no-outline'>
+            className='no-outline'
+            onClick={this.props.onViewDataButton}>
           <i className='fa fa-database' style={iconStyle}></i>
           {applabMsg.viewData()}
         </button>
