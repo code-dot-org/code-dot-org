@@ -6060,6 +6060,7 @@ StudioApp.prototype.init = function(config) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
+      unusedConfig: config.unusedConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -7041,7 +7042,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(options.dropletConfig, this.editor);
+  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
@@ -10993,12 +10994,12 @@ var DropletFunctionTooltip = function (appMsg, definition) {
 
   var paramId = 0;
   var paramName;
-  var nameKey = this.parameterNameKey(paramId);
-  while (!!(paramName = appMsg[nameKey] || msg[nameKey])) {
+  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
+                          msg[this.parameterNameKey(paramId)])) {
     var paramInfo = {};
     paramInfo.name = paramName();
-    var descKey = this.parameterDescriptionKey(paramId);
-    var paramDesc = appMsg[descKey] || msg[descKey];
+    var paramDesc = appMsg[this.parameterDescriptionKey(paramId)] ||
+                              msg[this.parameterDescriptionKey(paramId)];
     if (paramDesc) {
       paramInfo.description = paramDesc();
     }
@@ -12515,15 +12516,10 @@ process.umask = function() { return 0; };
 
 },{}],8:[function(require,module,exports){
 /* global ace */
-var _dropletConfig;
-var _dropletEditor;
-
 var dropletUtils = require('../dropletUtils');
 var annotationList = require('./annotationList');
 
-exports.defineForAce = function (dropletConfig, dropletEditor) {
-  _dropletConfig = dropletConfig;
-  _dropletEditor = dropletEditor;
+exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
   // define ourselves for ace, so that it knows where to get us
   ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -12589,15 +12585,24 @@ exports.defineForAce = function (dropletConfig, dropletEditor) {
           unused: true,
           undef: true,
           predef: {
-          }
+          },
+          exported: {
+          },
         };
         // Mark all of our blocks as predefined so that linter doesnt complain about
         // using undefined variables
-        dropletUtils.getAllAvailableDropletBlocks(_dropletConfig).forEach(function (block) {
+        dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
           newOptions.predef[block.func] = false;
         });
 
-        annotationList.attachToSession(session, _dropletEditor);
+        // Do the same with unusedConfig if available
+        if (unusedConfig) {
+          unusedConfig.forEach(function (unusedVar) {
+            newOptions.exported[unusedVar] = false;
+          });
+        }
+
+        annotationList.attachToSession(session, dropletEditor);
 
         worker.send("changeOptions", [newOptions]);
 
@@ -14019,6 +14024,9 @@ standardConfig.categories = {
     'rgb': COLOR_GREEN,
     'blocks': []
   },
+  // create blank category in case level builders want to move all blocks here
+  // (which will cause the palette header to disappear)
+  '' : { 'blocks': [] },
 };
 
 /**

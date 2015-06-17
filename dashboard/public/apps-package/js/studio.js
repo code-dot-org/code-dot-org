@@ -123,6 +123,17 @@ Studio.BLOCK_Y_COORDINATE = 20;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
+var AUTO_HANDLER_MAP = {
+  whenRun: 'whenGameStarts',
+  whenDown: 'when-down',
+  whenUp: 'when-up',
+  whenLeft: 'when-left',
+  whenRight: 'when-right',
+  whenTouchItem: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-any_item',
+};
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -212,8 +223,8 @@ function loadLevel() {
   Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
 
   // Height and width of the goal and obstacles.
-  Studio.MARKER_HEIGHT = 100;
-  Studio.MARKER_WIDTH = 100;
+  Studio.MARKER_HEIGHT = level.markerHeight || 100;
+  Studio.MARKER_WIDTH = level.markerWidth || 100;
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
@@ -1373,6 +1384,10 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+  config.unusedConfig = [];
+  for (var handlerName in AUTO_HANDLER_MAP) {
+    config.unusedConfig.push(handlerName);
+  }
 
   config.appMsg = studioMsg;
 
@@ -1894,16 +1909,7 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
-    var autoHandlerMap = {
-      whenDown: 'when-down',
-      whenUp: 'when-up',
-      whenLeft: 'when-left',
-      whenRight: 'when-right',
-      whenTouchItem: 'whenSpriteCollided-' +
-                      (Studio.protagonistSpriteIndex || 0) +
-                      '-any_item',
-    };
-    Studio.initAutoHandlers(autoHandlerMap);
+    Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -5926,12 +5932,14 @@ levels.hoc2015_1 = {
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
   },
 };
 
@@ -5953,12 +5961,14 @@ levels.hoc2015_2 = {
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
   },
 };
 

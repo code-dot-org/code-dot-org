@@ -1,3 +1,4 @@
+%script{src: '/shared/js/url_test/url_test.js'}
 :css
   #warning-banner-https {
     padding: 5px 20px;
@@ -52,10 +53,11 @@
       expanded.slideDown('fast');
       collapsed.slideUp('fast');
     });
-    $(window).load(function () {
-      onURLBlocked("#{ CDO.code_org_url('test-image.png', 'https:') }", function () {
-        trackEvent("HTTPS Test", "blocked");
+    testImageAccess("#{ CDO.code_org_url('test-image.png', 'https:') }",
+      function() {},
+      function () {
+        $(window).load(function () { trackEvent("HTTPS Test", "blocked"); });
         showWarning();
         document.cookie = "https-blocked=1; path=/";
-      });
-    });
+      }
+    );
