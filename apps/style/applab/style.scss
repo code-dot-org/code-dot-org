@@ -295,19 +295,37 @@ img#turtleImage {
   height: $workspace-headers-height;
   left: 0;
   right: 0;
+  background-color: $light_purple;
+}
+
+$debug-commands-column-width: 270px;
+
+#debug-commands-header {
+  width: $debug-commands-column-width;
+  float: left;
+  border-right: 1px solid gray;
 }
 
 #spinner {
   margin-left: -5px;
 }
 
-.debug-console {
+.debug-commands, .debug-console {
   display: block;
   border: 1px solid #ddd;
   position: absolute;
   top: $resize-bar-width + $workspace-headers-height;
   bottom: 0;
+}
+
+.debug-commands {
   left: 0;
+  width: $debug-commands-column-width;
+  background-color: $white;
+}
+
+.debug-console {
+  left: $debug-commands-column-width;
   right: 0;
 }
 
