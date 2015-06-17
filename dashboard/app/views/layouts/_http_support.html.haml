@@ -32,7 +32,7 @@
       expanded.slideDown('fast');
       collapsed.slideUp('fast');
     });
-    testURL("#{ CDO.studio_url('test-image.png', 'https:') }",
+    testImageAccess("#{ CDO.studio_url('test-image.png', 'https:') }",
       function() {},
       function () {
         $(window).load(function () { trackEvent("HTTPS Test", "blocked"); });

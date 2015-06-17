@@ -53,7 +53,7 @@
       expanded.slideDown('fast');
       collapsed.slideUp('fast');
     });
-    testURL("#{ CDO.code_org_url('test-image.png', 'https:') }",
+    testImageAccess("#{ CDO.code_org_url('test-image.png', 'https:') }",
       function() {},
       function () {
         $(window).load(function () { trackEvent("HTTPS Test", "blocked"); });
