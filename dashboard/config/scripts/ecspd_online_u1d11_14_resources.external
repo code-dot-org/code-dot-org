@@ -1,0 +1,19 @@
+name 'ECSPD Online U1D11-14 Resources'
+title ''
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+## Unit 1 Day 11-14 Resources
+
+Here are a couple examples of how computers are used as tools for visualizing data, creating art, and generating models and designs.
+
+* [Elon Musk talks 3D CAD at Spacex](https://www.youtube.com/watch?v=xNqs_S-zEBY)
+
+* [Optitex - Fashion Design Software](https://www.youtube.com/watch?v=Wfm4cwJlYI4)
+
+* [Creating Avatar](https://www.youtube.com/watch?v=HmPitTWKudI)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
