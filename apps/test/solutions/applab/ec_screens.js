@@ -412,7 +412,7 @@ module.exports = {
         // drag a new screen in
         testUtils.dragToVisualization('SCREEN', 10, 10);
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
 
         assert.equal($("#screenSelector").children().length, 3);
         assert.equal($("#screenSelector").children().eq(2).text(), "New screen...");
@@ -423,7 +423,7 @@ module.exports = {
 
         assert.equal($("#divApplab").children().length, 3, 'has three screen divs');
         assert.equal($("#screenSelector").children().length, 4);
-        validatePropertyRow(1, 'id', 'screen3', assert);
+        validatePropertyRow(0, 'id', 'screen3', assert);
 
         Applab.onPuzzleComplete();
       },
