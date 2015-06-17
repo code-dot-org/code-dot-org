@@ -12,13 +12,13 @@ var ReactTestUtils = React.addons.TestUtils;
 // without too much difficulty
 
 function validatePropertyRow(index, label, value, assert) {
-  var table = $("#design-properties table")[0];
-  assert(table, 'has design properties table');
+  var container = $("#propertyRowContainer")[0];
+  assert(container, 'has design properties container');
 
-  var tableRow = $("#design-properties table tr").eq(index);
-  assert.equal(tableRow.children(0).text(), label);
+  var propertyRow = $("#propertyRowContainer > div").eq(index);
+  assert.equal(propertyRow.children(0).text(), label);
   // second col has an input with val screen 2
-  assert.equal(tableRow.children(1).children(0).val(), value);
+  assert.equal(propertyRow.children(1).children(0).val(), value);
 }
 
 function validateEmptyDesignProperties(assert) {
@@ -69,9 +69,9 @@ module.exports = {
         assert.equal($(screenSelector).val(), 'screen1');
         assert.equal($('#designWorkspace').is(':visible'), true);
 
-        // initially no design properties table
-        assert.equal($("#design-properties table").length, 0,
-            'expected no design properties table');
+        // initially no property row container
+        assert.equal($("#propertyRowContainer").length, 0,
+            'expected no design property row container');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -100,12 +100,12 @@ module.exports = {
         assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
 
         // drag a button onto our new screen
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
         var buttonElement = document.getElementById('button1');
         var buttonParent = buttonElement.parentNode;
         assert($(buttonParent).hasClass('ui-draggable'));
@@ -116,7 +116,7 @@ module.exports = {
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
           { target: { value: 'screen1' } });
 
-        validatePropertyRow(1, 'id', 'screen1', assert);
+        validatePropertyRow(0, 'id', 'screen1', assert);
         assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
@@ -146,7 +146,7 @@ module.exports = {
         assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
 
         var deleteButton = $("#design-properties button").eq(-1);
         assert.equal(deleteButton.text(), 'Delete');
@@ -166,7 +166,7 @@ module.exports = {
         // click on screen 1 (use jquery instead of React since screen1 is not
         // a react component)
         $("#screen1").click();
-        validatePropertyRow(1, 'id', 'screen1', assert);
+        validatePropertyRow(0, 'id', 'screen1', assert);
 
         // One button, and it isn't delete
         assert.equal($("#design-properties button").length, 1);
@@ -293,7 +293,7 @@ module.exports = {
           'expected Code button to have orange background.');
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
         assert.equal($('#screen1')[0].style.display === 'none', true, 'screen 1 hidden');
         assert.equal($('#screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
@@ -370,7 +370,7 @@ module.exports = {
 
         $("#screen1").click();
 
-        validatePropertyRow(1, 'id', 'screen1', assert);
+        validatePropertyRow(0, 'id', 'screen1', assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001

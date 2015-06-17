@@ -1,4 +1,5 @@
 var React = require('react');
+var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({
   propTypes: {
@@ -29,20 +30,24 @@ var ZOrderRow = React.createClass({
     var squareButton = {
       width: 42,
       height: 42,
+      marginLeft: 0,
+      marginRight: 10,
       backgroundColor: '#0094ca' // $cyan
     };
 
     var squareButtonDisabled = {
       width: 42,
-      height: 42
+      height: 42,
+      marginLeft: 0,
+      marginRight: 10
     };
 
     return (
-      <tr>
-        <td>
+      <div style={rowStyle.container}>
+        <div style={rowStyle.description}>
           depth
-        </td>
-        <td>
+        </div>
+        <div>
           <button
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
@@ -71,8 +76,8 @@ var ZOrderRow = React.createClass({
             title='Send to Front'>
             <i className="fa fa-angle-double-right"></i>
           </button>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });
