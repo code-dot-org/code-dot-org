@@ -214,12 +214,20 @@ div#visualizationResizeBar {
   z-index: -1;
 }
 
+$resize-bar-width: 13px;
+
 #visualizationResizeBar {
   margin-left: 2px;
-  width: 13px;
+  width: $resize-bar-width;
 }
 
 #debugResizeBar {
+  width: 100%;
+  height: $resize-bar-width;
+  line-height: $resize-bar-width;
+  color: $lighter_gray;
+  font-size: 24px;
+  text-align: center;
   cursor: ns-resize;
   white-space: nowrap;
 }
@@ -281,6 +289,14 @@ img#turtleImage {
   right: 0;
 }
 
+#debug-area-header {
+  position: absolute;
+  top: $resize-bar-width;
+  height: $workspace-headers-height;
+  left: 0;
+  right: 0;
+}
+
 #spinner {
   margin-left: -5px;
 }
@@ -289,7 +305,7 @@ img#turtleImage {
   display: block;
   border: 1px solid #ddd;
   position: absolute;
-  top: 38px;
+  top: $resize-bar-width + $workspace-headers-height;
   bottom: 0;
   left: 0;
   right: 0;
