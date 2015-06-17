@@ -60,33 +60,34 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.inject');
 goog.require('Blockly.utils');
 
-/**
- * TODO(bjordan): These can be used to hint the deps bundler to include these
- * during analysis, in compilation they get built out into a separate package
- *     goog.require('Blockly.Blocks.colour');
- *     goog.require('Blockly.Blocks.functionalExamples');
- *     goog.require('Blockly.Blocks.functionalParameters');
- *     goog.require('Blockly.Blocks.functionalProcedures');
- *     goog.require('Blockly.Blocks.lists');
- *     goog.require('Blockly.Blocks.logic');
- *     goog.require('Blockly.Blocks.loops');
- *     goog.require('Blockly.Blocks.math');
- *     goog.require('Blockly.Blocks.procedures');
- *     goog.require('Blockly.Blocks.text');
- *     goog.require('Blockly.Blocks.variables');
- *     goog.require('Blockly.JavaScript');
- *     goog.require('Blockly.JavaScript.colour');
- *     goog.require('Blockly.JavaScript.functionalExamples');
- *     goog.require('Blockly.JavaScript.functionalParameters');
- *     goog.require('Blockly.JavaScript.functionalProcedures');
- *     goog.require('Blockly.JavaScript.lists');
- *     goog.require('Blockly.JavaScript.logic');
- *     goog.require('Blockly.JavaScript.loops');
- *     goog.require('Blockly.JavaScript.math');
- *     goog.require('Blockly.JavaScript.procedures');
- *     goog.require('Blockly.JavaScript.text');
- *     goog.require('Blockly.JavaScript.variables');
-*/
+///**
+// * TODO(bjordan): These can be used to hint the deps bundler to include these
+// * during analysis, in compilation they get built out into a separate package
+//closure-library-read-only/closure/bin/build/depswriter.py --root_with_prefix="closure-library-read-only ../../../closure-library-read-only" --root_with_prefix="core ../../../core" --root_with_prefix="blocks ../../../blocks" --root_with_prefix="generators ../../../generators" --root_with_prefix="msg ../../../msg"  > core/initialization/deps.js
+// goog.require('Blockly.Blocks.colour');
+// goog.require('Blockly.Blocks.functionalExamples');
+// goog.require('Blockly.Blocks.functionalParameters');
+// goog.require('Blockly.Blocks.functionalProcedures');
+// goog.require('Blockly.Blocks.lists');
+// goog.require('Blockly.Blocks.logic');
+// goog.require('Blockly.Blocks.loops');
+// goog.require('Blockly.Blocks.math');
+// goog.require('Blockly.Blocks.procedures');
+// goog.require('Blockly.Blocks.text');
+// goog.require('Blockly.Blocks.variables');
+// goog.require('Blockly.JavaScript');
+// goog.require('Blockly.JavaScript.colour');
+// goog.require('Blockly.JavaScript.functionalExamples');
+// goog.require('Blockly.JavaScript.functionalParameters');
+// goog.require('Blockly.JavaScript.functionalProcedures');
+// goog.require('Blockly.JavaScript.lists');
+// goog.require('Blockly.JavaScript.logic');
+// goog.require('Blockly.JavaScript.loops');
+// goog.require('Blockly.JavaScript.math');
+// goog.require('Blockly.JavaScript.procedures');
+// goog.require('Blockly.JavaScript.text');
+// goog.require('Blockly.JavaScript.variables');
+//*/
 
 // Closure dependencies.
 goog.require('goog.dom');
