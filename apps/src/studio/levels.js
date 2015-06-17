@@ -1526,12 +1526,14 @@ levels.hoc2015_1 = {
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
   },
 };
 
@@ -1553,11 +1555,13 @@ levels.hoc2015_2 = {
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
   },
 };
