@@ -710,7 +710,7 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
   for (i = 0; currentRow = inputRows[i]; i++) {
     if (currentRow.type === INLINE_ROW) {
       inputRows.rightEdge = Math.max(inputRows.rightEdge,
-        widthInlineRow(currentRow));
+        this.widthInlineRow(currentRow));
     }
   }
 
@@ -789,14 +789,14 @@ function inputTitleRenderSize (input, iconWidth) {
 /**
  * Given a row, calculates the width, including padding, from the set of inputs
  */
-function widthInlineRow(row) {
+Blockly.BlockSvg.prototype.widthInlineRow = function (row) {
   var width = BS.SEP_SPACE_X;
   for (var i = 0, input; input = row[i]; i++) {
     width += BS.SEP_SPACE_X + this.inputWidthToOccupy_(input);
   }
 
   return width;
-}
+};
 
 /**
  * Draw the path of the block.
@@ -1140,7 +1140,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
     var widths = BS.SEP_SPACE_X * (row.length - 1);
     row.forEach(function (input) {
       widths += this.inputWidthToOccupy_(input);
-    });
+    }, this);
     if (inputRows.rightEdge > widths && align === Blockly.ALIGN_CENTRE) {
       renderInfo.curX = (inputRows.rightEdge - widths) / 2;
     }
@@ -1227,7 +1227,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
  */
 Blockly.BlockSvg.prototype.inputWidthToOccupy_ = function (input) {
   return input.renderWidth + (input.extraSpace || 0);
-}
+};
 
 /**
  * Render a function input that is inlined
