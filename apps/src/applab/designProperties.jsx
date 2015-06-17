@@ -84,86 +84,103 @@ var DesignProperties = module.exports = React.createClass({
     // x                                                                      x
     // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-    var defaultTabStyle = {
+    var baseTabStyle = {
       borderColor: borderColor,
       borderStyle: 'solid',
-      borderWidth: '1px 1px 1px 0',
       boxSizing: 'border-box',
       height: tabHeight,
       padding: '0 10px'
     };
-    var activeTabStyle = {
-      backgroundColor: bgColor,
-      borderWidth: '1px 1px 0 0'
-    };
-    var propertiesTabStyle = $.extend({}, defaultTabStyle, {
-      float: 'left'
-    }, this.state.selectedTab === TabType.PROPERTIES ? activeTabStyle : {});
-    var eventsTabStyle = $.extend({}, defaultTabStyle, {
-      float: 'left'
-    }, this.state.selectedTab === TabType.EVENTS ? activeTabStyle : {});
-    var emptyTabStyle = $.extend({}, defaultTabStyle, {
-      width: '100%',
-      borderWidth: '0 0 1px 0'
-    });
 
-    var workspaceDescriptionStyle = {
-      height: 28,
-      overflow: 'hidden'
-    };
-
-    var workspaceTabsStyle = {
-      borderColor: borderColor,
-      borderStyle: 'solid',
-      borderWidth: '0 0 0 1px'
-    };
-
-    var tabLabelStyle = {
-      lineHeight: tabHeight + 'px',
-      WebkitUserSelect: 'none',
-      MozUserSelect: 'none',
-      msUserSelect: 'none',
-      userSelect: 'none'
-    };
-
-    var workspaceBodyStyle = {
-      height: 'calc(100% - 83px)',
-      padding: '10px 10px 10px 0',
-      borderColor: borderColor,
-      borderStyle: 'solid',
-      borderWidth: '0 1px 1px 1px',
-      backgroundColor: bgColor
-    };
-
-    var propertiesBodyStyle = {
-      display: this.state.selectedTab === TabType.PROPERTIES ? '' : 'none',
-      height: '100%',
-      overflowY: 'scroll'
-    };
-    var eventsBodyStyle = {
-      minHeight: 200,
-      display: this.state.selectedTab === TabType.EVENTS ? '' : 'none'
+    /** @constant {Object} */
+    var styles = {
+      activeTab: $.extend({}, baseTabStyle, {
+        backgroundColor: bgColor,
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 0,
+        borderLeftWidth: 0,
+        float: 'left'
+      }),
+      inactiveTab: $.extend({}, baseTabStyle, {
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        borderLeftWidth: 0,
+        float: 'left'
+      }),
+      emptyTab: $.extend({}, baseTabStyle, {
+        borderTopWidth: 0,
+        borderRightWidth: 0,
+        borderBottomWidth: 1,
+        borderLeftWidth: 0,
+        width: '100%'
+      }),
+      workspaceDescription: {
+        height: 28,
+        overflow: 'hidden'
+      },
+      workspaceTabs: {
+        borderColor: borderColor,
+        borderStyle: 'solid',
+        borderTopWidth: 0,
+        borderRightWidth: 0,
+        borderBottomWidth: 0,
+        borderLeftWidth: 1
+      },
+      tabLabel: {
+        lineHeight: tabHeight + 'px',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
+        userSelect: 'none'
+      },
+      workspaceBody: {
+        height: 'calc(100% - 83px)',
+        padding: '10px 10px 10px 0',
+        borderColor: borderColor,
+        borderStyle: 'solid',
+        borderTopWidth: 0,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        borderLeftWidth: 1,
+        backgroundColor: bgColor
+      },
+      activeBody: {
+        height: '100%',
+        overflowY: 'scroll'
+      },
+      inactiveBody: {
+        display: 'none',
+        height: '100%',
+        overflowY: 'scroll'
+      }
     };
 
     return (
       <div style={{height: '100%'}}>
-        <div id="designDescription" style={workspaceDescriptionStyle}>
+        <div id="designDescription" style={styles.workspaceDescription}>
           <p>{applabMsg.designWorkspaceDescription()}</p>
         </div>
-        <div id="designWorkspaceTabs" style={workspaceTabsStyle}>
-          <div id="propertiesTab" style={propertiesTabStyle} className="hover-pointer"
+        <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
+          <div id="propertiesTab"
+              style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeTab : styles.inactiveTab}
+              className="hover-pointer"
               onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}>
-            <span style={tabLabelStyle}>PROPERTIES</span>
+            <span style={styles.tabLabel}>PROPERTIES</span>
           </div>
-          <div id="eventsTab" style={eventsTabStyle} className="hover-pointer"
+          <div id="eventsTab"
+              style={this.state.selectedTab === TabType.EVENTS ? styles.activeTab : styles.inactiveTab}
+              className="hover-pointer"
               onClick={this.handleTabClick.bind(this, TabType.EVENTS)}>
-            <span style={tabLabelStyle}>EVENTS</span>
+            <span style={styles.tabLabel}>EVENTS</span>
           </div>
-          <div id="emptyTab" style={emptyTabStyle}>
+          <div id="emptyTab" style={styles.emptyTab}>
           </div>
         </div>
-        <div id="designWorkspaceBody" style={workspaceBodyStyle}>
-          <div id="propertiesBody" style={propertiesBodyStyle}>
+        <div id="designWorkspaceBody" style={styles.workspaceBody}>
+          <div id="propertiesBody"
+              style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeBody : styles.inactiveBody}>
             {/* We provide a key to the outer div so that element foo and element bar are
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
@@ -172,7 +189,8 @@ var DesignProperties = module.exports = React.createClass({
               {deleteButton}
             </div>
           </div>
-          <div id="eventsBody" style={eventsBodyStyle}>
+          <div id="eventsBody"
+              style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}>
             coming soon...
           </div>
         </div>
