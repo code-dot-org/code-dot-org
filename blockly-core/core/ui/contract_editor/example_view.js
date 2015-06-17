@@ -5,12 +5,14 @@ goog.provide('Blockly.ExampleView');
 /**
  * Handles laying out an example block with a test button
  * @constructor
- * @param {SVGElement} canvas
- * @param {Object} opt_options
+ * @param {Element} dom
+ * @param {SVGElement} svg
+ * @param {Function} onExampleRun
  */
-Blockly.ExampleView = function (dom, svg) {
+Blockly.ExampleView = function (dom, svg, onExampleRun) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
+  this.onExampleRun_ = onExampleRun;
 
   this.testRunning_ = false;
 
@@ -21,14 +23,7 @@ Blockly.ExampleView = function (dom, svg) {
   this.grayBackdrop = Blockly.createSvgElement('rect', {
     'fill': '#DDD'
   }, this.svgParent_, {'belowExisting': true});
-  //<button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
-  //  <div><%= msg.runProgram() %></div>
-  //  <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
-  //  </button>
-  //<button id="resetButton" class="launch blocklyLaunch" style="display: none">
-  //  <div><%= msg.resetProgram() %></div>
-  //  <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
-  //</button>
+
   this.testExampleButton = this.initializeTestButton("Test", "run26", this.testExample_.bind(this));
   this.resetExampleButton = this.initializeTestButton("Reset", "reset26", this.resetExample_.bind(this));
   goog.dom.classes.add(this.resetExampleButton, 'resetButton');
@@ -55,6 +50,7 @@ Blockly.ExampleView.prototype.initializeTestButton = function (buttonText, iconC
 Blockly.ExampleView.prototype.testExample_ = function () {
   this.testRunning_ = true;
   this.refreshButtons();
+  this.resultText.innerHTML = this.onExampleRun_(this.block_);
   // TODO(bjordan): UI re-layout post-result?
 };
 
@@ -84,6 +80,7 @@ Blockly.ExampleView.prototype.refreshButtons = function () {
  */
 Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
   block, currentY, maxWidth, marginLeft, marginBelow, fullWidth, midLineX) {
+  this.block_ = block;
   var newY = currentY;
 
   var commonMargin = marginBelow / 2;

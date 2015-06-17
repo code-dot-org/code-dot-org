@@ -32,7 +32,7 @@ goog.require('Blockly.JavaScript');
  * with expected and actual code blocks
  */
 Blockly.JavaScript.functional_example = function() {
-  var expectedValue = Blockly.JavaScript.valueToCode(this, 'EXPECTED', Blockly.JavaScript.ORDER_NONE) || 'null';
-  var actualValue = Blockly.JavaScript.valueToCode(this, 'ACTUAL', Blockly.JavaScript.ORDER_NONE) || 'null';
-  return '(' + expectedValue + " == " + actualValue + ')';
+  var expectedValue = Blockly.JavaScript.statementToCode(this, 'EXPECTED', Blockly.JavaScript.ORDER_NONE) || 'null';
+  var actualValue = Blockly.JavaScript.statementToCode(this, 'ACTUAL', Blockly.JavaScript.ORDER_NONE) || 'null';
+  return ['(' + expectedValue + " == " + actualValue + ')', 0];
 };

@@ -260,7 +260,7 @@ Blockly.Css.CONTENT = [
   '}',
   '.testButton {',
   '  padding: 3px 0 !important;',
-  '  min-width: 0 !important;',
+  '  min-width: 95px !important;',
   '}',
   '.resetButton {',
   '  border: 1px solid #0094ca !important;',

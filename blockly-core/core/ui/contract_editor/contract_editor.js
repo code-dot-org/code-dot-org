@@ -113,6 +113,14 @@ Blockly.ContractEditor = function(configuration) {
    * @private
    */
   this.autoOpenConfig_ = null;
+
+  /**
+   * @returns {string}
+   * @private
+   */
+  this.testHandler_ = function (block) {
+    return "Block ID is " + block.id;
+  }
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -215,42 +223,55 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
         var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
 
+        var exampleSectionVisible = this.exampleBlocks.length;
+
         var newY = currentY;
-        newY += blockSplitMargin;
 
-        callText.style.top = newY + 'px';
-        callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+        if (exampleSectionVisible) {
+          newY += blockSplitMargin;
 
-        resultText.style.top = newY + 'px';
-        resultText.style.left = verticalMidlineOffset + 'px';
+          callText.style.top = newY + 'px';
+          callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
 
-        newY += callText.offsetHeight;
+          resultText.style.top = newY + 'px';
+          resultText.style.left = verticalMidlineOffset + 'px';
 
+          newY += callText.offsetHeight;
 
-        newY += blockSplitMargin;
+          newY += blockSplitMargin;
 
-        topHorizontalLine.setAttribute('transform', 'translate(' + 0 + ',' + newY + ')');
-        topHorizontalLine.setAttribute('width', this.getFullWidth());
+          topHorizontalLine.setAttribute('transform', 'translate(' + 0 + ',' + newY + ')');
+          topHorizontalLine.setAttribute('width', this.getFullWidth());
 
-        var verticalMidlineY = newY;
-        verticalMidline.setAttribute('transform', 'translate(' + verticalMidlineOffset + ',' + newY + ')');
+          var verticalMidlineY = newY;
+          verticalMidline.setAttribute('transform', 'translate(' + verticalMidlineOffset + ',' + newY + ')');
 
-        var i = 0;
-        for (; i < this.exampleBlocks.length; i++) {
-          var block = this.exampleBlocks[i];
-          var canReuse = this.exampleViews_.length > i;
-          if (!canReuse) {
-            this.exampleViews_.push(new Blockly.ExampleView(this.exampleAreaDiv, examplesTableGroup));
+          verticalMidline.setAttribute('height', newY - verticalMidlineY);
+
+          var i = 0;
+          for (; i < this.exampleBlocks.length; i++) {
+            var block = this.exampleBlocks[i];
+            var canReuse = this.exampleViews_.length > i;
+            if (!canReuse) {
+              this.exampleViews_.push(new Blockly.ExampleView(this.exampleAreaDiv, examplesTableGroup, function (block) {
+                this.contractSectionView_.setCollapsed(true);
+                return this.testHandler_(block);
+              }.bind(this)));
+            }
+            newY = this.exampleViews_[i].placeExampleAndGetNewY(block, newY, maxWidth,
+              EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset);
           }
-          newY = this.exampleViews_[i].placeExampleAndGetNewY(block, newY, maxWidth,
-            EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset);
         }
-        for (; i < this.exampleViews_.length; i++) {
-          this.exampleViews_[i].dispose();
+
+        for (var j = this.exampleBlocks.length; j < this.exampleViews_.length; j++) {
+          this.exampleViews_[j].dispose();
         }
         this.exampleViews_.length = this.exampleBlocks.length;
 
-        verticalMidline.setAttribute('height', newY - verticalMidlineY);
+        verticalMidline.style.display = exampleSectionVisible ? 'block' : 'none';
+        topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
+        callText.style.display = exampleSectionVisible ? 'block' : 'none';
+        resultText.style.display = exampleSectionVisible ? 'block' : 'none';
 
         newY += blockSplitMargin;
 
@@ -444,6 +465,10 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   exampleBlocks.forEach(function(exampleBlock) {
     this.addExampleBlockFromMainBlockSpace(exampleBlock)
   }, this);
+};
+
+Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
+  this.testHandler_ = testHandler;
 };
 
 Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
