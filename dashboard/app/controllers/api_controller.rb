@@ -67,7 +67,6 @@ class ApiController < ApplicationController
   private
 
   def load_student
-    puts "load student"
     @student = User.find(params[:student_id])
     authorize! :read, @student
   end
