@@ -614,5 +614,6 @@
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når køyrer",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "showTextHeader": "Show Text"
 }

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({278:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({279:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":9,"./blocks":269,"./levels":276,"./skins":282,"./studio":283}],283:[function(require,module,exports){
+},{"../appMain":9,"./blocks":270,"./levels":277,"./skins":283,"./studio":284}],284:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -123,6 +123,17 @@ Studio.BLOCK_Y_COORDINATE = 20;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
+var AUTO_HANDLER_MAP = {
+  whenRun: 'whenGameStarts',
+  whenDown: 'when-down',
+  whenUp: 'when-up',
+  whenLeft: 'when-left',
+  whenRight: 'when-right',
+  whenTouchItem: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-any_item',
+};
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -169,6 +180,9 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
+  Studio.slowJSExecutionFactor = level.slowJSExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJSExecutionFactor +
+                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -206,9 +220,11 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
+  Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
+
   // Height and width of the goal and obstacles.
-  Studio.MARKER_HEIGHT = 100;
-  Studio.MARKER_WIDTH = 100;
+  Studio.MARKER_HEIGHT = level.markerHeight || 100;
+  Studio.MARKER_WIDTH = level.markerWidth || 100;
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
@@ -650,17 +666,19 @@ Studio.callApiCode = function (name, func) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  var animationOnlyFrame = false;
+
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
   }
 
+  if (Studio.tickCount === 1) {
+    callHandler('whenGameStarts');
+  }
+  Studio.executeQueue('whenGameStarts');
+
   if (Studio.JSInterpreter) {
-    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
-  } else {
-    if (Studio.tickCount === 1) {
-      callHandler('whenGameStarts');
-    }
-    Studio.executeQueue('whenGameStarts');
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJSExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -670,81 +688,89 @@ Studio.onTick = function() {
     Studio.executeQueue('whenSpriteClicked-' + i);
   }
 
-  // Run key event handlers for any keys that are down:
-  for (var key in KeyCodes) {
-    if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] === "keydown") {
-      switch (KeyCodes[key]) {
-        case KeyCodes.LEFT:
+  if (!animationOnlyFrame) {
+    // Run key event handlers for any keys that are down:
+    for (var key in KeyCodes) {
+      if (Studio.keyState[KeyCodes[key]] &&
+          Studio.keyState[KeyCodes[key]] === "keydown") {
+        switch (KeyCodes[key]) {
+          case KeyCodes.LEFT:
+            callHandler('when-left');
+            break;
+          case KeyCodes.UP:
+            callHandler('when-up');
+            break;
+          case KeyCodes.RIGHT:
+            callHandler('when-right');
+            break;
+          case KeyCodes.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var btn in ArrowIds) {
+      if (Studio.btnState[ArrowIds[btn]] &&
+          Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+        switch (ArrowIds[btn]) {
+          case ArrowIds.LEFT:
+            callHandler('when-left');
+            break;
+          case ArrowIds.UP:
+            callHandler('when-up');
+            break;
+          case ArrowIds.RIGHT:
+            callHandler('when-right');
+            break;
+          case ArrowIds.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var gesture in Studio.gesturesObserved) {
+      switch (gesture) {
+        case 'left':
           callHandler('when-left');
           break;
-        case KeyCodes.UP:
+        case 'up':
           callHandler('when-up');
           break;
-        case KeyCodes.RIGHT:
+        case 'right':
           callHandler('when-right');
           break;
-        case KeyCodes.DOWN:
+        case 'down':
           callHandler('when-down');
           break;
       }
-    }
-  }
-
-  for (var btn in ArrowIds) {
-    if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
-      switch (ArrowIds[btn]) {
-        case ArrowIds.LEFT:
-          callHandler('when-left');
-          break;
-        case ArrowIds.UP:
-          callHandler('when-up');
-          break;
-        case ArrowIds.RIGHT:
-          callHandler('when-right');
-          break;
-        case ArrowIds.DOWN:
-          callHandler('when-down');
-          break;
+      if (0 === Studio.gesturesObserved[gesture]--) {
+        delete Studio.gesturesObserved[gesture];
       }
     }
-  }
 
-  for (var gesture in Studio.gesturesObserved) {
-    switch (gesture) {
-      case 'left':
-        callHandler('when-left');
-        break;
-      case 'up':
-        callHandler('when-up');
-        break;
-      case 'right':
-        callHandler('when-right');
-        break;
-      case 'down':
-        callHandler('when-down');
-        break;
-    }
-    if (0 === Studio.gesturesObserved[gesture]--) {
-      delete Studio.gesturesObserved[gesture];
-    }
+    Studio.executeQueue('when-left');
+    Studio.executeQueue('when-up');
+    Studio.executeQueue('when-right');
+    Studio.executeQueue('when-down');
   }
-
-  Studio.executeQueue('when-left');
-  Studio.executeQueue('when-up');
-  Studio.executeQueue('when-right');
-  Studio.executeQueue('when-down');
 
   checkForCollisions();
 
+  if (Studio.JSInterpreter && !animationOnlyFrame) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
+  }
+
   for (i = 0; i < Studio.spriteCount; i++) {
-    performQueuedMoves(i);
+    if (!animationOnlyFrame) {
+      performQueuedMoves(i);
+    }
 
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
@@ -797,9 +823,11 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
  * executeCollision, which is expected to be called afterwards by the caller.
  */
 function handleActorCollisionsWithCollidableList (
-           spriteIndex, xCenter, yCenter, list)
+           spriteIndex, xCenter, yCenter, list, autoDisappear)
 {
-  for (var i = 0; i < list.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = list.length - 1; i >= 0; i--) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
     if (collisionTest(
@@ -819,6 +847,13 @@ function handleActorCollisionsWithCollidableList (
         // tracked on the collidable in this case
         handleCollision(spriteIndex, collidable.className, true);
         Studio.currentEventParams = null;
+
+        // Make the projectile/item disappear automatically if this parameter
+        // is set:
+        if (autoDisappear) {
+          collidable.removeElement();
+          list.splice(i, 1);
+        }
       }
     } else {
       collidable.endCollision(spriteIndex);
@@ -919,8 +954,15 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
 
-    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.projectiles);
-    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.items);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.items,
+                                            level.removeItemsWhenActorCollides);
 
     handleEdgeCollisions(
         sprite,
@@ -1297,10 +1339,10 @@ Studio.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
-                             delegate(this,
-                                      Studio.onArrowButtonUp,
-                                      ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+                               delegate(this,
+                                        Studio.onArrowButtonUp,
+                                        ArrowIds[btn]));
       dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
                                  delegate(this,
                                           Studio.onArrowButtonDown,
@@ -1342,6 +1384,10 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+  config.unusedConfig = [];
+  for (var handlerName in AUTO_HANDLER_MAP) {
+    config.unusedConfig.push(handlerName);
+  }
 
   config.appMsg = studioMsg;
 
@@ -1500,6 +1546,8 @@ Studio.reset = function(first) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
+      displayX: Studio.spriteStart_[i].x,
+      displayY: Studio.spriteStart_[i].y,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
@@ -1528,6 +1576,9 @@ Studio.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
+
+  // Create Items that are specified on the map:
+  Studio.createLevelItems(svg);
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
@@ -1858,16 +1909,7 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
-    var autoHandlerMap = {
-      whenDown: 'when-down',
-      whenUp: 'when-up',
-      whenLeft: 'when-left',
-      whenRight: 'when-right',
-      whenTouchItem: 'whenSpriteCollided-' +
-                      (Studio.protagonistSpriteIndex || 0) +
-                      '-any_item',
-    };
-    Studio.initAutoHandlers(autoHandlerMap);
+    Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -1982,9 +2024,9 @@ frameDirTableWalking[Direction.SOUTHWEST]  = 7;
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
-// Number of ticks between the last time the sprite moved and when we reset them
-// to face south.
-var TICKS_BEFORE_FACE_SOUTH = 5;
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
@@ -2046,6 +2088,17 @@ function spriteTotalFrames (index) {
     sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
 
+/* Return the frame count for items or projectiles
+*/
+function getFrameCount (className, exceptionList, defaultCount) {
+  if (/.gif$/.test(skin[className])) {
+    return 1;
+  } else if (exceptionList && exceptionList[className]) {
+    return exceptionList[className];
+  }
+  return defaultCount;
+}
+
 function cellId(prefix, row, col) {
   return prefix + '_' + row + '_' + col;
 }
@@ -2082,6 +2135,37 @@ Studio.drawWallTile = function (svg, row, col) {
   text.textContent = 'X';
   group.appendChild(text);
   svg.appendChild(group);
+};
+
+Studio.createLevelItems = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      for (var index = 0; index < skin.ItemClassNames.length; index++) {
+        if (constants.squareHasItemClass(index, mapVal)) {
+          var className = skin.ItemClassNames[index];
+          // Create item:
+          var itemOptions = {
+            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            className: className,
+            dir: Direction.NONE,
+            image: skin[className],
+            loop: true,
+            x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
+          };
+
+          var item = new Item(itemOptions);
+
+          item.createElement(svg);
+          // Display immediately (we can't assume it will be updated in onTick
+          // right away since this is called after 'Reset' as well as 'Run'
+          item.display();
+          Studio.items.push(item);
+        }
+      }
+    }
+  }
 };
 
 Studio.drawMapTiles = function (svg) {
@@ -2188,17 +2272,33 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y - yOffset);
+  if (level.gridAlignedMovement) {
+    if (sprite.x > sprite.displayX) {
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.x < sprite.displayX) {
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+    if (sprite.y > sprite.displayY) {
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.y < sprite.displayY) {
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+  } else {
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
+  }
 
-  spriteClipRect.setAttribute('x', sprite.x);
-  spriteClipRect.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+
+  spriteClipRect.setAttribute('x', sprite.displayX);
+  spriteClipRect.setAttribute('y', sprite.displayY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.x);
-  unusedSpriteClipRect.setAttribute('y', sprite.y);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2346,6 +2446,34 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
+    case 'moveEast':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.EAST,
+      });
+      break;
+    case 'moveWest':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.WEST,
+      });
+      break;
+    case 'moveNorth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.NORTH,
+      });
+      break;
+    case 'moveSouth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.SOUTH,
+      });
+      break;
     case 'moveDistance':
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
@@ -2398,16 +2526,6 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.addItemsToScene = function (opts) {
-  var frames;
-
-  if (/.gif$/.test(skin[opts.className])) {
-    frames = 1;
-  } else if (skin.specialItemFrames && skin.specialItemFrames[opts.className]) {
-    frames = skin.specialItemFrames[opts.className];
-  } else {
-    frames = skin.itemFrames;
-  }
-
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -2419,37 +2537,54 @@ Studio.addItemsToScene = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  var halfSquare = Studio.SQUARE_SIZE / 2;
+  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // otherwise, create randomly placed items travelling in a random direction
+
+  var generateRandomItemPosition = function () {
+    // TODO (cpirich): check for edge collisions? (currently avoided by placing
+    // the items within the coordinate space (x/y min of Studio.HALF_SQUARE,
+    // max of max - Studio.HALF_SQUARE)
+
+    var pos = {};
+    if (level.gridAlignedMovement) {
+      pos.x = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
+      pos.y = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
+    } else {
+      pos.x = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+      pos.y = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+    }
+    return pos;
+  };
 
   for (var i = 0; i < opts.number; i++) {
+    var direction = level.gridAlignedMovement ? Direction.NONE :
+                      directions[Math.floor(Math.random() * directions.length)];
+    var pos = generateRandomItemPosition();
     var itemOptions = {
-      frames: frames,
+      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
       className: opts.className,
-      dir: directions[Math.floor(Math.random() * directions.length)],
+      dir: direction,
       image: skin[opts.className],
       loop: true,
-      x: halfSquare +
-        Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE)),
-      y: halfSquare +
-        Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE)),
+      x: pos.x,
+      y: pos.y,
     };
 
     var item = new Item(itemOptions);
 
     if (level.blockMovingIntoWalls) {
-      // TODO: just move within the map looking for open spaces instead of
-      // randomly retrying random numbers
-
-      // TODO: check for edge collisions? (currently avoided by placing the
-      // items within the coordinate space (x/y min of halfSquare,
-      // max of max - halfSquare)
+      // TODO (cpirich): just move within the map looking for open spaces instead
+      // of randomly retrying random numbers
 
       var numTries = 0;
       while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
-        item.x = halfSquare +
-          Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
-        item.y = halfSquare +
-          Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+        var newPos = generateRandomItemPosition();
+        item.x = newPos.x;
+        item.y = newPos.y;
         numTries++;
         if (numTries > 100) {
           break;
@@ -2885,18 +3020,8 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
-  var frames;
-
-  if (/.gif$/.test(skin[options.className])) {
-    frames = 1;
-  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
-    frames = skin.specialProjectileFrames[options.className];
-  } else {
-    frames = skin.projectileFrames;
-  }
-
   var projectileOptions = {
-    frames: frames,
+    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -3160,8 +3285,8 @@ Studio.setSpritePosition = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({'spriteIndex': opts.spriteIndex,
                'dontResetCollisions': samePosition});
-  sprite.x = opts.x;
-  sprite.y = opts.y;
+  sprite.displayX = sprite.x = opts.x;
+  sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -3177,8 +3302,8 @@ Studio.setSpriteXY = function (opts) {
     'spriteIndex': opts.spriteIndex,
     'dontResetCollisions': samePosition
   });
-  sprite.x = x;
-  sprite.y = y;
+  sprite.displayX = sprite.x = x;
+  sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -3230,6 +3355,9 @@ Studio.moveSingle = function (opts) {
         sprite.x = 0;
       }
       break;
+  }
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    Studio.JSInterpreter.yield();
   }
 };
 
@@ -3406,7 +3534,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":95,"../canvg/canvg.js":96,"../canvg/rgbcolor.js":97,"../canvg/svg_todataurl":98,"../codegen":100,"../constants":102,"../dom":103,"../dropletUtils":104,"../locale":145,"../skins":263,"../templates/page.html.ejs":291,"../utils":313,"../xml":314,"./Item":265,"./api":266,"./bigGameLogic":268,"./blocks":269,"./collidable":270,"./constants":271,"./controls.html.ejs":272,"./dropletConfig":274,"./extraControlRows.html.ejs":275,"./locale":277,"./projectile":279,"./rocketHeightLogic":280,"./samBatLogic":281,"./visualization.html.ejs":284}],284:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":96,"../canvg/canvg.js":97,"../canvg/rgbcolor.js":98,"../canvg/svg_todataurl":99,"../codegen":101,"../constants":103,"../dom":104,"../dropletUtils":105,"../locale":146,"../skins":264,"../templates/page.html.ejs":292,"../utils":314,"../xml":315,"./Item":266,"./api":267,"./bigGameLogic":269,"./blocks":270,"./collidable":271,"./constants":272,"./controls.html.ejs":273,"./dropletConfig":275,"./extraControlRows.html.ejs":276,"./locale":278,"./projectile":280,"./rocketHeightLogic":281,"./samBatLogic":282,"./visualization.html.ejs":285}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3426,7 +3554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],281:[function(require,module,exports){
+},{"ejs":485}],282:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3551,7 +3679,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":100,"../constants":102,"./api":266,"./constants":271,"./customGameLogic":273}],280:[function(require,module,exports){
+},{"../codegen":101,"../constants":103,"./api":267,"./constants":272,"./customGameLogic":274}],281:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3614,7 +3742,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":100,"./api":266,"./constants":271,"./customGameLogic":273}],279:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272,"./customGameLogic":274}],280:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3832,7 +3960,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":270,"./constants":271}],282:[function(require,module,exports){
+},{"./collidable":271,"./constants":272}],283:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -4275,7 +4403,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":263,"./constants":271,"./locale":277}],276:[function(require,module,exports){
+},{"../skins":264,"./constants":272,"./locale":278}],277:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -5723,17 +5851,15 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'map': [
+    [0,16, 0, 0, 0,16, 0,32],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 0, 0, 0, 4, 0],
-    [0,16, 4, 0, 0,16, 4, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
@@ -5788,8 +5914,66 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
+levels.hoc2015_1 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4,16, 0,256,1, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};
 
-},{"../block_utils":70,"../utils":313,"./constants":271,"./locale":277}],275:[function(require,module,exports){
+levels.hoc2015_2 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 0, 0,256,4, 4],
+    [4, 4, 4, 0, 4, 0, 4, 4],
+    [4, 4, 4, 1,16,256,4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};
+
+
+},{"../block_utils":71,"../utils":314,"./constants":272,"./locale":278}],276:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5809,7 +5993,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],274:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],275:[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
@@ -5817,6 +6001,10 @@ module.exports.blocks = [
   {'func': 'setSprite', 'parent': api, 'category': 'Play Lab', 'params': ["0", "'cat'"] },
   {'func': 'setBackground', 'parent': api, 'category': 'Play Lab', 'params': ["'night'"] },
   {'func': 'move', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'moveEast', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveWest', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveNorth', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveSouth', 'parent': api, 'category': 'Play Lab', },
   {'func': 'playSound', 'parent': api, 'category': 'Play Lab', 'params': ["'slap'"] },
   {'func': 'changeScore', 'parent': api, 'category': 'Play Lab', 'params': ["1"] },
   {'func': 'setSpritePosition', 'parent': api, 'category': 'Play Lab', 'params': ["0", "7"] },
@@ -5836,7 +6024,7 @@ module.exports.categories = {
 };
 
 
-},{"./apiJavascript.js":267,"./locale":277}],272:[function(require,module,exports){
+},{"./apiJavascript.js":268,"./locale":278}],273:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5856,7 +6044,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],269:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],270:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7931,13 +8119,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":5,"../codegen":100,"../locale":145,"../sharedFunctionalBlocks":262,"../utils":313,"./constants":271,"./locale":277}],277:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":101,"../locale":146,"../sharedFunctionalBlocks":263,"../utils":314,"./constants":272,"./locale":278}],278:[function(require,module,exports){
 // locale for studio
 
 module.exports = window.blockly.studio_locale;
 
 
-},{}],268:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -8171,7 +8359,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":100,"./api":266,"./constants":271,"./customGameLogic":273}],273:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272,"./customGameLogic":274}],274:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -8241,7 +8429,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":100,"./api":266,"./constants":271}],267:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272}],268:[function(require,module,exports){
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
@@ -8323,6 +8511,22 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
+exports.moveEast = function() {
+  Studio.queueCmd(null, 'moveEast');
+};
+
+exports.moveWest = function() {
+  Studio.queueCmd(null, 'moveWest');
+};
+
+exports.moveNorth = function() {
+  Studio.queueCmd(null, 'moveNorth');
+};
+
+exports.moveSouth = function() {
+  Studio.queueCmd(null, 'moveSouth');
+};
+
 exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
@@ -8356,7 +8560,7 @@ exports.onEvent = function (eventName, func) {
 };
 
 
-},{}],266:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = constants.SpriteSpeed;
@@ -8515,7 +8719,7 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":271}],265:[function(require,module,exports){
+},{"./constants":272}],266:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -8636,7 +8840,7 @@ Item.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":270,"./constants":271}],270:[function(require,module,exports){
+},{"./collidable":271,"./constants":272}],271:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -8755,7 +8959,7 @@ Collidable.prototype.outOfBounds = function () {
 };
 
 
-},{"../StudioApp":5,"./constants":271}],271:[function(require,module,exports){
+},{"../StudioApp":5,"./constants":272}],272:[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -8792,6 +8996,7 @@ var Dir = exports.Direction;
  * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
+UNIT_VECTOR[Dir.NONE] =  { x: 0, y: 0};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
@@ -8940,12 +9145,39 @@ exports.DEFAULT_SPRITE_SIZE = 1;
  * @enum {number}
  */
 exports.SquareType = {
-  OPEN: 0,
+  OPEN:         0,
   SPRITEFINISH: 1,
-  WALL: 4,
-  SPRITESTART: 16
+  NOT_USED_2:   2,
+  WALL:         4,
+  NOT_USED_8:   8,
+  SPRITESTART:  16,
+  ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
+  ITEM_CLASS_1: 64,
+  ITEM_CLASS_2: 128,
+  ITEM_CLASS_3: 256,
+  ITEM_CLASS_4: 512,
+  ITEM_CLASS_5: 1024,
+  ITEM_CLASS_6: 2048,
+  ITEM_CLASS_7: 4096,
 };
 
+exports.SquareItemClassMask =
+  exports.SquareType.ITEM_CLASS_0 |
+  exports.SquareType.ITEM_CLASS_1 |
+  exports.SquareType.ITEM_CLASS_2 |
+  exports.SquareType.ITEM_CLASS_3 |
+  exports.SquareType.ITEM_CLASS_4 |
+  exports.SquareType.ITEM_CLASS_5 |
+  exports.SquareType.ITEM_CLASS_6 |
+  exports.SquareType.ITEM_CLASS_7;
+
+exports.SquareItemClassShift = 5;
+
+exports.squareHasItemClass = function (itemClassIndex, squareValue) {
+  var classesEnabled =
+    (squareValue & exports.SquareItemClassMask) >>> exports.SquareItemClassShift;
+  return Math.pow(2, itemClassIndex) & classesEnabled;
+};
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
@@ -8953,4 +9185,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[278]);
+},{}]},{},[279]);

@@ -614,5 +614,6 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: "
+  "workspaceHeaderShort": "Área de trabalho: ",
+  "showTextHeader": "Show Text"
 }

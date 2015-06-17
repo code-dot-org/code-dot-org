@@ -1,5 +1,6 @@
 var React = require('react');
 var showAssetManager = require('../assetManagement/show.js');
+var rowStyle = require('./rowStyle');
 
 var PropertyRow = React.createClass({
   propTypes: {
@@ -34,18 +35,19 @@ var PropertyRow = React.createClass({
 
   render: function() {
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div style={rowStyle.container}>
+        <div style={rowStyle.description}>{this.props.desc}</div>
+        <div>
           <input
             value={this.state.value}
-            onChange={this.handleChangeInternal}/>
+            onChange={this.handleChangeInternal}
+            style={rowStyle.input} />
           &nbsp;
           <a onClick={this.handleButtonClick}>
             Choose...
           </a>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

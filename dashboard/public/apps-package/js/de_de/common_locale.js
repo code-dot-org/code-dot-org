@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Video anschauen"},
 "when":function(d){return "wenn"},
 "whenRun":function(d){return "wenn ausführen"},
-"workspaceHeaderShort":function(d){return "Arbeitsbereich: "}};
+"workspaceHeaderShort":function(d){return "Arbeitsbereich: "},
+"showTextHeader":function(d){return "Show Text"}};

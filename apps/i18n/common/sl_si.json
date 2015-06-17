@@ -614,5 +614,6 @@
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "showTextHeader": "Show Text"
 }

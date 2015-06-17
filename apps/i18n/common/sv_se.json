@@ -614,5 +614,6 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "när startat",
-  "workspaceHeaderShort": "Arbetsyta: "
+  "workspaceHeaderShort": "Arbetsyta: ",
+  "showTextHeader": "Show Text"
 }

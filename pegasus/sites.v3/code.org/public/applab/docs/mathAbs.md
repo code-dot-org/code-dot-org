@@ -42,7 +42,7 @@ ____________________________________________________
 
 [example]
 
-**Distance between two points.** In this example, we use coordinates to calculate the horizontal and vertical distance between two points. This example also uses [Math.round](/applab/docs1/mathRound) to display results.
+**Distance between two points.** In this example, we use coordinates to calculate the horizontal and vertical distance between two points. This example also uses [Math.round](/applab/docs/mathRound) to display results.
 
 <pre>
 show(); //Display the turtle

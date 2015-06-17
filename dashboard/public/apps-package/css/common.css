@@ -715,14 +715,35 @@ input[type="radio"] {
       margin: auto 18px; }
   #headers #blockCounter, #headers #blockUsed {
     display: inline-block; }
-  #headers #clear-puzzle-header, #headers #show-code-header {
+  #headers .workspace-header-button {
     cursor: pointer;
     float: right;
-    border-left: 1px solid gray; }
-    #headers #clear-puzzle-header:hover, #headers #show-code-header:hover {
+    overflow: hidden;
+    background-color: #a69bc1;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    margin-left: 0;
+    border: 1px groove #949ca2;
+    height: 22px;
+    border-radius: 4px;
+    font-family: "Gotham 5r", sans-serif; }
+    #headers .workspace-header-button:hover {
       background-color: #0094ca; }
-    #headers #clear-puzzle-header span, #headers #show-code-header span {
-      padding: 0 20px; }
+    #headers .workspace-header-button span {
+      padding: 0 12px;
+      line-height: 22px; }
+    #headers .workspace-header-button .fa {
+      line-height: 22px;
+      padding-right: 8px;
+      font-size: 15px; }
+    #headers .workspace-header-button .fa-code {
+      font-weight: bold; }
+    #headers .workspace-header-button .blocks-glyph {
+      display: none;
+      height: 18px;
+      vertical-align: text-bottom;
+      padding-right: 8px; }
   #headers #clear-puzzle-header:hover {
     background-color: #c00; }
   #headers .block-counter-default {
@@ -753,10 +774,21 @@ input[type="radio"] {
   float: right; }
 #headers[dir=rtl] #show-toolbox-header {
   float: right; }
-#headers[dir=rtl] #clear-puzzle-header, #headers[dir=rtl] #show-code-header {
-  border-left: 0;
-  border-right: 1px solid gray;
+#headers[dir=rtl] .workspace-header-button {
+  margin-left: 3px;
+  margin-right: 0;
   float: left; }
+  #headers[dir=rtl] .workspace-header-button .fa {
+    padding-right: 0;
+    padding-left: 8px; }
+  #headers[dir=rtl] .workspace-header-button .blocks-glyph {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    padding-right: 0;
+    padding-left: 8px; }
 
 #rotateContainer {
   position: fixed;

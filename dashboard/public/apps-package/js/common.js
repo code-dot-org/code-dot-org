@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({144:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({145:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -58,7 +58,7 @@ exports.define = function(name) {
 };
 
 
-},{}],98:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -282,7 +282,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 }
 
 
-},{}],97:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -573,7 +573,7 @@ function RGBColor(color_string)
 
 
 
-},{}],96:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3542,7 +3542,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 }
 
 
-},{}],95:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4155,7 +4155,7 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],262:[function(require,module,exports){
+},{}],263:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4706,7 +4706,7 @@ function installCond(blockly, generator) {
 }
 
 
-},{"./locale":145,"./utils":313}],291:[function(require,module,exports){
+},{"./locale":146,"./utils":314}],292:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4721,7 +4721,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;">\n          <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((91,  msg.showToolbox() )), '</span>\n        </div>\n        <div id="show-code-header" class="workspace-header"><span>', escape((93,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header"><span>', escape((94,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((96,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((98,  data.blockCounterClass )), '>\n              ', escape((99,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((102,  data.idealBlockNumber )), '</span>\n            <span> ', escape((103,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');108; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');110; } ; buf.push('\n    ');111; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (112,  data.extraControlRows ), '\n    ');113; } ; buf.push('\n  </div>\n  ');115; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');118; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;">\n          <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((91,  msg.showToolbox() )), '</span>\n        </div>\n        <div id="show-code-header" class="workspace-header workspace-header-button"><span><img src="', escape((93,  assetUrl('media/applab/blocks_glyph.gif') )), '" class="blocks-glyph" /><i class="fa fa-code"></i>', escape((93,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header workspace-header-button"><span><i class="fa fa-undo"></i>', escape((94,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">', escape((96,  msg.workspaceHeaderShort())), ' </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((98,  data.blockCounterClass )), '>\n              ', escape((99,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((102,  data.idealBlockNumber )), '</span>\n            <span> ', escape((103,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');108; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');110; } ; buf.push('\n    ');111; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (112,  data.extraControlRows ), '\n    ');113; } ; buf.push('\n  </div>\n  ');115; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');118; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4729,7 +4729,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],264:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],265:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -4995,7 +4995,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":103}],263:[function(require,module,exports){
+},{"./dom":104}],264:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5070,7 +5070,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],297:[function(require,module,exports){
+},{}],298:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -5213,7 +5213,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":5,"./blocksCommon":71,"./dom":103,"./required_block_utils":261,"./utils":313}],261:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":72,"./dom":104,"./required_block_utils":262,"./utils":314}],262:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5536,7 +5536,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":70,"./locale":145,"./utils":313,"./xml":314}],71:[function(require,module,exports){
+},{"./block_utils":71,"./locale":146,"./utils":314,"./xml":315}],72:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5705,7 +5705,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 
-},{"./locale":145}],5:[function(require,module,exports){
+},{"./locale":146}],5:[function(require,module,exports){
 /* global Blockly, ace:true, $, droplet, marked */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
@@ -6060,6 +6060,7 @@ StudioApp.prototype.init = function(config) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
+      unusedConfig: config.unusedConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -7041,7 +7042,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(options.dropletConfig, this.editor);
+  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
@@ -7237,9 +7238,28 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
-    msg.showBlocksHeader();
-  showCodeHeader.firstChild.textContent = newButtonTitle;
+  var contentSpan = showCodeHeader.firstChild;
+  var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bfa\b/.test(node.className);
+  });
+  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bblocks-glyph\b/.test(node.className);
+  });
+
+  // Change glyph
+  if (usingBlocks) {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'inline-block';
+      imgBlocksGlyph.style.display = 'none';
+    }
+    contentSpan.lastChild.textContent = msg.showTextHeader();
+  } else {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'none';
+      imgBlocksGlyph.style.display = 'inline-block';
+    }
+    contentSpan.lastChild.textContent = msg.showBlocksHeader();
+  }
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
@@ -7342,7 +7362,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":68,"./block_utils":70,"./constants.js":102,"./dom":103,"./dropletUtils":104,"./feedback":124,"./locale":145,"./templates/builder.html.ejs":285,"./templates/buttons.html.ejs":286,"./templates/instructions.html.ejs":288,"./templates/learn.html.ejs":289,"./templates/makeYourOwn.html.ejs":290,"./utils":313,"./xml":314,"url":481}],481:[function(require,module,exports){
+},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":69,"./block_utils":71,"./constants.js":103,"./dom":104,"./dropletUtils":105,"./feedback":125,"./locale":146,"./templates/builder.html.ejs":286,"./templates/buttons.html.ejs":287,"./templates/instructions.html.ejs":289,"./templates/learn.html.ejs":290,"./templates/makeYourOwn.html.ejs":291,"./utils":314,"./xml":315,"url":482}],482:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8051,13 +8071,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":464,"querystring":467}],467:[function(require,module,exports){
+},{"punycode":465,"querystring":468}],468:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":465,"./encode":466}],466:[function(require,module,exports){
+},{"./decode":466,"./encode":467}],467:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8144,7 +8164,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],465:[function(require,module,exports){
+},{}],466:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8230,7 +8250,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],464:[function(require,module,exports){
+},{}],465:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8741,7 +8761,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],290:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8761,7 +8781,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],289:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],290:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8783,7 +8803,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],288:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],289:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8803,7 +8823,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],285:[function(require,module,exports){
+},{"ejs":485}],286:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8823,7 +8843,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],124:[function(require,module,exports){
+},{"ejs":485}],125:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10056,7 +10076,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":100,"./constants":102,"./dom":103,"./feedbackBlocks":125,"./locale":145,"./templates/buttons.html.ejs":286,"./templates/code.html.ejs":287,"./templates/shareFailure.html.ejs":293,"./templates/sharing.html.ejs":294,"./templates/showCode.html.ejs":295,"./templates/trophy.html.ejs":296,"./utils":313,"./xml":314}],296:[function(require,module,exports){
+},{"./codegen":101,"./constants":103,"./dom":104,"./feedbackBlocks":126,"./locale":146,"./templates/buttons.html.ejs":287,"./templates/code.html.ejs":288,"./templates/shareFailure.html.ejs":294,"./templates/sharing.html.ejs":295,"./templates/showCode.html.ejs":296,"./templates/trophy.html.ejs":297,"./utils":314,"./xml":315}],297:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10076,7 +10096,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],295:[function(require,module,exports){
+},{"ejs":485}],296:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10096,7 +10116,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],294:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],295:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10116,7 +10136,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],293:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],294:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10136,7 +10156,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],287:[function(require,module,exports){
+},{"ejs":485}],288:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10156,7 +10176,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],286:[function(require,module,exports){
+},{"ejs":485}],287:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10176,7 +10196,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":145,"ejs":484}],125:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],126:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10306,7 +10326,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":102,"./templates/readonly.html.ejs":292}],292:[function(require,module,exports){
+},{"./constants":103,"./templates/readonly.html.ejs":293}],293:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10327,7 +10347,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],102:[function(require,module,exports){
+},{"ejs":485}],103:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -10406,7 +10426,7 @@ exports.KeyCodes = {
 };
 
 
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -10705,7 +10725,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":314}],68:[function(require,module,exports){
+},{"./xml":315}],69:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -10813,7 +10833,7 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 module.exports = DropletTooltipManager;
 
 
-},{"./DropletAutocompleteParameterTooltipManager":62,"./DropletAutocompletePopupTooltipManager":63,"./DropletBlockTooltipManager":64,"./DropletFunctionTooltip":66}],64:[function(require,module,exports){
+},{"./DropletAutocompleteParameterTooltipManager":63,"./DropletAutocompletePopupTooltipManager":64,"./DropletBlockTooltipManager":65,"./DropletFunctionTooltip":67}],65:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -10921,7 +10941,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
 module.exports = DropletBlockTooltipManager;
 
 
-},{"../dom":103,"./DropletFunctionTooltip":66,"./DropletFunctionTooltip.html.ejs":65}],66:[function(require,module,exports){
+},{"../dom":104,"./DropletFunctionTooltip":67,"./DropletFunctionTooltip.html.ejs":66}],67:[function(require,module,exports){
 var msg = require('../locale');
 var utils = require('../utils');
 
@@ -10973,17 +10993,17 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  * @constructor
  */
 var DropletFunctionTooltip = function (appMsg, definition) {
-  /** @type {String} */
+  this.appMsg = appMsg;
+
+  /** @type {string} */
   this.functionName = definition.func;
 
-  /** @type {String} */
-  var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
+  var description = this.getLocalization(this.descriptionKey());
   if (description) {
     this.description = description();
   }
 
-  var signatureOverride = appMsg[this.signatureOverrideKey()] ||
-                            msg[this.signatureOverrideKey()];
+  var signatureOverride = this.getLocalization(this.signatureOverrideKey());
   if (signatureOverride) {
     this.signatureOverride = signatureOverride();
   }
@@ -10991,14 +11011,15 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
-  var paramId = 0;
-  var paramName;
-  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
-                          msg[this.parameterNameKey(paramId)])) {
+  for (var paramId = 0; ; paramId++) {
+    var paramName = this.getLocalization(this.parameterNameKey(paramId));
+    if (!paramName) {
+      break;
+    }
+
     var paramInfo = {};
     paramInfo.name = paramName();
-    var paramDesc = appMsg[this.parameterNameKey(paramId)] ||
-                              msg[this.parameterNameKey(paramId)];
+    var paramDesc = this.getLocalization(this.parameterDescriptionKey(paramId));
     if (paramDesc) {
       paramInfo.description = paramDesc();
     }
@@ -11006,8 +11027,15 @@ var DropletFunctionTooltip = function (appMsg, definition) {
       paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
-    paramId++;
   }
+};
+
+/**
+ * @param {string} key
+ * @returns {Function}
+ */
+DropletFunctionTooltip.prototype.getLocalization = function (key) {
+  return this.appMsg[key] || msg[key];
 };
 
 /**
@@ -11057,13 +11085,13 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
 module.exports = DropletFunctionTooltip;
 
 
-},{"../locale":145,"../utils":313}],145:[function(require,module,exports){
+},{"../locale":146,"../utils":314}],146:[function(require,module,exports){
 // base locale
 
 module.exports = window.blockly.common_locale;
 
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
@@ -11207,7 +11235,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
 module.exports = DropletAutocompletePopupTooltipManager;
 
 
-},{"../dom":103,"./DropletFunctionTooltip.html.ejs":65}],65:[function(require,module,exports){
+},{"../dom":104,"./DropletFunctionTooltip.html.ejs":66}],66:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11232,7 +11260,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],62:[function(require,module,exports){
+},{"ejs":485}],63:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -11364,7 +11392,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
 module.exports = DropletAutocompleteParameterTooltipManager;
 
 
-},{"../dom":103,"./DropletParameterTooltip.html.ejs":67,"./tooltipUtils.js":69}],103:[function(require,module,exports){
+},{"../dom":104,"./DropletParameterTooltip.html.ejs":68,"./tooltipUtils.js":70}],104:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -11477,7 +11505,7 @@ exports.isIOS = function() {
 };
 
 
-},{}],69:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -11621,7 +11649,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":313}],67:[function(require,module,exports){
+},{"../utils":314}],68:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11646,7 +11674,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":484}],484:[function(require,module,exports){
+},{"ejs":485}],485:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12001,7 +12029,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":485,"./utils":486,"fs":315,"path":462}],486:[function(require,module,exports){
+},{"./filters":486,"./utils":487,"fs":316,"path":463}],487:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12025,7 +12053,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],485:[function(require,module,exports){
+},{}],486:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12224,7 +12252,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],462:[function(require,module,exports){
+},{}],463:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12452,7 +12480,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":463}],463:[function(require,module,exports){
+},{"_process":464}],464:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12511,19 +12539,14 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],315:[function(require,module,exports){
+},{}],316:[function(require,module,exports){
 
 },{}],8:[function(require,module,exports){
 /* global ace */
-var _dropletConfig;
-var _dropletEditor;
-
 var dropletUtils = require('../dropletUtils');
 var annotationList = require('./annotationList');
 
-exports.defineForAce = function (dropletConfig, dropletEditor) {
-  _dropletConfig = dropletConfig;
-  _dropletEditor = dropletEditor;
+exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
   // define ourselves for ace, so that it knows where to get us
   ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -12589,15 +12612,24 @@ exports.defineForAce = function (dropletConfig, dropletEditor) {
           unused: true,
           undef: true,
           predef: {
-          }
+          },
+          exported: {
+          },
         };
         // Mark all of our blocks as predefined so that linter doesnt complain about
         // using undefined variables
-        dropletUtils.getAllAvailableDropletBlocks(_dropletConfig).forEach(function (block) {
+        dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
           newOptions.predef[block.func] = false;
         });
 
-        annotationList.attachToSession(session, _dropletEditor);
+        // Do the same with unusedConfig if available
+        if (unusedConfig) {
+          unusedConfig.forEach(function (unusedVar) {
+            newOptions.exported[unusedVar] = false;
+          });
+        }
+
+        annotationList.attachToSession(session, dropletEditor);
 
         worker.send("changeOptions", [newOptions]);
 
@@ -12620,7 +12652,7 @@ exports.defineForAce = function (dropletConfig, dropletEditor) {
 };
 
 
-},{"../dropletUtils":104,"./annotationList":6}],6:[function(require,module,exports){
+},{"../dropletUtils":105,"./annotationList":6}],6:[function(require,module,exports){
 var errorMapper = require('./errorMapper');
 
 var annotations = [];
@@ -12896,7 +12928,7 @@ var _ = utils.getLodash();
 var JSInterpreter = module.exports = function (options) {
 
   this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return false; };
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.onNextStepChanged = options.onNextStepChanged || function() {};
   this.onPause = options.onPause || function() {};
@@ -12904,6 +12936,7 @@ var JSInterpreter = module.exports = function (options) {
   this.onExecutionWarning = options.onExecutionWarning || function() {};
 
   this.paused = false;
+  this.yieldExecution = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
@@ -12975,7 +13008,7 @@ JSInterpreter.StepType = {
 JSInterpreter.prototype.nativeGetCallback = function () {
   var retVal = this.eventQueue.shift();
   if (typeof retVal === "undefined") {
-    this.seenEmptyGetCallbackDuringExecution = true;
+    this.yield();
   }
   return retVal;
 };
@@ -13014,6 +13047,14 @@ JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
   });
 };
 
+/**
+ * Yield execution (causes executeInterpreter loop to break out if this is
+ * called by APIs called by interpreted code)
+ */
+JSInterpreter.prototype.yield = function () {
+  this.yieldExecution = true;
+};
+
 
 var StepType = JSInterpreter.StepType;
 
@@ -13037,7 +13078,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   if (runUntilCallbackReturn) {
     delete this.lastCallbackRetVal;
   }
-  this.seenEmptyGetCallbackDuringExecution = false;
+  this.yieldExecution = false;
   this.seenReturnFromCallbackDuringExecution = false;
 
   var atInitialBreakpoint = this.paused &&
@@ -13092,7 +13133,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
-        this.seenEmptyGetCallbackDuringExecution ||
+        this.yieldExecution ||
         (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
@@ -13334,7 +13375,7 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
 };
 
 
-},{"./codegen":100,"./utils":313}],100:[function(require,module,exports){
+},{"./codegen":101,"./utils":314}],101:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -13883,7 +13924,7 @@ exports.selectCurrentCode = function (interpreter,
 };
 
 
-},{"./dropletUtils":104}],104:[function(require,module,exports){
+},{"./dropletUtils":105}],105:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -14010,6 +14051,9 @@ standardConfig.categories = {
     'rgb': COLOR_GREEN,
     'blocks': []
   },
+  // create blank category in case level builders want to move all blocks here
+  // (which will cause the palette header to disappear)
+  '' : { 'blocks': [] },
 };
 
 /**
@@ -14280,7 +14324,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":313}],313:[function(require,module,exports){
+},{"./utils":314}],314:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -14571,7 +14615,7 @@ exports.getPegasusHost = function() {
 };
 
 
-},{"./hammer":136,"./lodash":146,"./xml":314}],314:[function(require,module,exports){
+},{"./hammer":137,"./lodash":147,"./xml":315}],315:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -14600,7 +14644,7 @@ exports.parseElement = function(text) {
 };
 
 
-},{}],146:[function(require,module,exports){
+},{}],147:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -18093,7 +18137,7 @@ exports.parseElement = function(text) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],136:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
