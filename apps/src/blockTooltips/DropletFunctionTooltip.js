@@ -69,12 +69,12 @@ var DropletFunctionTooltip = function (appMsg, definition) {
 
   var paramId = 0;
   var paramName;
-  var nameKey = this.parameterNameKey(paramId);
-  while (!!(paramName = appMsg[nameKey] || msg[nameKey])) {
+  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
+                          msg[this.parameterNameKey(paramId)])) {
     var paramInfo = {};
     paramInfo.name = paramName();
-    var descKey = this.parameterDescriptionKey(paramId);
-    var paramDesc = appMsg[descKey] || msg[descKey];
+    var paramDesc = appMsg[this.parameterDescriptionKey(paramId)] ||
+                              msg[this.parameterDescriptionKey(paramId)];
     if (paramDesc) {
       paramInfo.description = paramDesc();
     }
