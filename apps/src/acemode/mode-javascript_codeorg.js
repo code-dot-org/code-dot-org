@@ -1,13 +1,8 @@
 /* global ace */
-var _dropletConfig;
-var _dropletEditor;
-
 var dropletUtils = require('../dropletUtils');
 var annotationList = require('./annotationList');
 
-exports.defineForAce = function (dropletConfig, dropletEditor) {
-  _dropletConfig = dropletConfig;
-  _dropletEditor = dropletEditor;
+exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
   // define ourselves for ace, so that it knows where to get us
   ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -73,15 +68,24 @@ exports.defineForAce = function (dropletConfig, dropletEditor) {
           unused: true,
           undef: true,
           predef: {
-          }
+          },
+          exported: {
+          },
         };
         // Mark all of our blocks as predefined so that linter doesnt complain about
         // using undefined variables
-        dropletUtils.getAllAvailableDropletBlocks(_dropletConfig).forEach(function (block) {
+        dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
           newOptions.predef[block.func] = false;
         });
 
-        annotationList.attachToSession(session, _dropletEditor);
+        // Do the same with unusedConfig if available
+        if (unusedConfig) {
+          unusedConfig.forEach(function (unusedVar) {
+            newOptions.exported[unusedVar] = false;
+          });
+        }
+
+        annotationList.attachToSession(session, dropletEditor);
 
         worker.send("changeOptions", [newOptions]);
 

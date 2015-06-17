@@ -352,6 +352,7 @@ StudioApp.prototype.init = function(config) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
+      unusedConfig: config.unusedConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -1333,7 +1334,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(options.dropletConfig, this.editor);
+  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
