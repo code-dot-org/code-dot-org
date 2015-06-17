@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Se denne video"},
 "when":function(d){return "når"},
 "whenRun":function(d){return "når programmet kører"},
-"workspaceHeaderShort":function(d){return "Arbejdsområde: "}};
+"workspaceHeaderShort":function(d){return "Arbejdsområde: "},
+"showTextHeader":function(d){return "Show Text"}};

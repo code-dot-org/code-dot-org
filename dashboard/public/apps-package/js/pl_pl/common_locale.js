@@ -769,4 +769,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Obejrzyj wideo"},
 "when":function(d){return "kiedy"},
 "whenRun":function(d){return "po uruchomieniu"},
-"workspaceHeaderShort":function(d){return "Obszar roboczy: "}};
+"workspaceHeaderShort":function(d){return "Obszar roboczy: "},
+"showTextHeader":function(d){return "Show Text"}};
