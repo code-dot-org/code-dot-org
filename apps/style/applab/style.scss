@@ -274,7 +274,8 @@ img#turtleImage {
   outline-style: none;
 }
 
-.debugger_button>img {
+.debugger_button > img {
+  float: left;
   opacity: 1;
 }
 
