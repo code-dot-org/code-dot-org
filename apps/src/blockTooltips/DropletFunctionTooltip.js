@@ -49,17 +49,17 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  * @constructor
  */
 var DropletFunctionTooltip = function (appMsg, definition) {
-  /** @type {String} */
+  this.appMsg = appMsg;
+
+  /** @type {string} */
   this.functionName = definition.func;
 
-  /** @type {String} */
-  var description = appMsg[this.descriptionKey()] || msg[this.descriptionKey()];
+  var description = this.getLocalization(this.descriptionKey());
   if (description) {
     this.description = description();
   }
 
-  var signatureOverride = appMsg[this.signatureOverrideKey()] ||
-                            msg[this.signatureOverrideKey()];
+  var signatureOverride = this.getLocalization(this.signatureOverrideKey());
   if (signatureOverride) {
     this.signatureOverride = signatureOverride();
   }
@@ -67,14 +67,15 @@ var DropletFunctionTooltip = function (appMsg, definition) {
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
-  var paramId = 0;
-  var paramName;
-  while (!!(paramName = appMsg[this.parameterNameKey(paramId)] ||
-                          msg[this.parameterNameKey(paramId)])) {
+  for (var paramId = 0; ; paramId++) {
+    var paramName = this.getLocalization(this.parameterNameKey(paramId));
+    if (!paramName) {
+      break;
+    }
+
     var paramInfo = {};
     paramInfo.name = paramName();
-    var paramDesc = appMsg[this.parameterDescriptionKey(paramId)] ||
-                              msg[this.parameterDescriptionKey(paramId)];
+    var paramDesc = this.getLocalization(this.parameterDescriptionKey(paramId));
     if (paramDesc) {
       paramInfo.description = paramDesc();
     }
@@ -82,8 +83,15 @@ var DropletFunctionTooltip = function (appMsg, definition) {
       paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
-    paramId++;
   }
+};
+
+/**
+ * @param {string} key
+ * @returns {Function}
+ */
+DropletFunctionTooltip.prototype.getLocalization = function (key) {
+  return this.appMsg[key] || msg[key];
 };
 
 /**
