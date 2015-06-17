@@ -614,5 +614,6 @@
   "watchVideo": "ビデオを見る",
   "when": "とき",
   "whenRun": "実行時",
-  "workspaceHeaderShort": "ワークスペース："
+  "workspaceHeaderShort": "ワークスペース：",
+  "showTextHeader": "Show Text"
 }
