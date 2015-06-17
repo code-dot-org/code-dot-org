@@ -6368,7 +6368,7 @@ module.exports = React.createClass({displayName: "exports",
       container: {
         position: 'absolute',
         width: '100%',
-        top: 40,
+        top: 30,
         bottom: 0,
         backgroundColor: 'white',
         boxSizing: 'border-box',
