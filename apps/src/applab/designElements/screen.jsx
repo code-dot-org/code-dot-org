@@ -16,7 +16,7 @@ var ScreenProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <div>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
