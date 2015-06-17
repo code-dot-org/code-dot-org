@@ -1,7 +1,7 @@
 :ruby
   facilitator_id = params['user_id']
 
-  all_facilitators = DB.fetch('SELECT DISTINCT user_id, name FROM forms WHERE kind="ProfessionalDevelopmentWorkshop" ORDER BY name;')
+  all_facilitators = DB.fetch('SELECT user_id, name FROM forms WHERE kind="ProfessionalDevelopmentWorkshop" GROUP BY user_id ORDER BY name, created_at;')
   all_surveys = DB.fetch('SELECT * FROM forms WHERE kind="K5ProfessionalDevelopmentSurvey"')
 
   def satisfaction_s_to_i(value)
@@ -19,7 +19,7 @@
     end
   end
 
-  def total_survey_data(surveys)
+  def total_survey_data(surveys, workshops)
     responses = 0.0
     totals = {}
     fields_to_count =
@@ -42,25 +42,29 @@
 
     surveys.each do |survey|
       data = JSON.parse(survey[:data]).merge(JSON.parse(survey[:processed_data]))
-      responses += 1
 
-      if data['teacher_type_s'] == 'in-service teacher, currently teaching'
-        totals['teacher_type_s'] += 1
-      end
-      if data['school_type_s'] != 'home school' && data['school_type_s'] != 'other'
-        totals['school_type_s'] += 1
-      end
-      if data['course_offering_s'] == 'yes'
-        totals['course_offering_s'] += 1
-      end
-      if data['improve_pd_s'] != ""
-        totals['improve_pd_s'] << data['improve_pd_s']
-      end
+      if (!workshops) || (workshops.include? data['workshop_id_i'].to_i)
 
-      totals['satisfaction_s'] += satisfaction_s_to_i(data['satisfaction_s'])
+        responses += 1
 
-      fields_to_count.each do |field|
-        totals[field] += data[field].to_i
+        if data['teacher_type_s'] == 'in-service teacher, currently teaching'
+          totals['teacher_type_s'] += 1
+        end
+        if data['school_type_s'] != 'home school' && data['school_type_s'] != 'other'
+          totals['school_type_s'] += 1
+        end
+        if data['course_offering_s'] == 'yes'
+          totals['course_offering_s'] += 1
+        end
+        if data['improve_pd_s'] != ""
+          totals['improve_pd_s'] << data['improve_pd_s']
+        end
+
+        totals['satisfaction_s'] += satisfaction_s_to_i(data['satisfaction_s'])
+
+        fields_to_count.each do |field|
+          totals[field] += data[field].to_i
+        end
       end
     end
     totals['responses'] = responses
@@ -69,26 +73,18 @@
 
   if facilitator_id
     workshops = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshop', user_id:facilitator_id)
-
-    query = "SELECT * FROM forms WHERE kind='K5ProfessionalDevelopmentSurvey' AND "
-    workshops.each do |workshop|
-      query += "data LIKE '%\"workshop_id_i\":\""
-      query += workshop[:id].to_s + "\"%\' OR "
-    end
-    query = query[0, query.length - 3]
-
-    individual_surveys = DB.fetch(query)
-
-    individual_survey_totals = total_survey_data(individual_surveys)
-    all_surveys_totals = total_survey_data(all_surveys)
-
+    workshops_ids = []
     total_attendees = 0
     workshops.each do |workshop|
+      workshops_ids << workshop[:id]
       data = JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data]))
       if data['total_attendee_count_i']
         total_attendees += data['total_attendee_count_i']
       end
     end
+
+    individual_survey_totals = total_survey_data(all_surveys, workshops_ids)
+    all_surveys_totals = total_survey_data(all_surveys, false)
   end
 
 :javascript
@@ -105,13 +101,13 @@
     Select a Facilitator
   - all_facilitators.each do |facilitator|
     %option{value:'/private/k5survey?user_id=' + facilitator[:user_id].to_s}
-      #{facilitator[:user_id].to_s + ' - ' + facilitator[:name]}
+      #{facilitator[:name]} - #{facilitator[:user_id].to_s}
 
 - if workshops
   %h2
     #{workshops.first[:name]}
 
-- if params['user_id'] && individual_surveys.count > 0
+- if params['user_id'] && individual_survey_totals['responses'] > 0
   %table{style:'width:970px; layout:fixed;'}
     %colgroup
       %col{width: "400"}

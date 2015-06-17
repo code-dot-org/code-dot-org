@@ -146,6 +146,9 @@ NetSimTabsComponent.prototype.render = function () {
   // Clone the reference area (with handlers) before we re-render
   var referenceArea = $('#reference_area').first().clone(true);
 
+  // Remove the instructions area, to reattach in a minute.
+  var instructionsArea = $('#bubble').first().detach();
+
   var rawMarkup = buildMarkup({
     level: levelConfig
   });
@@ -157,9 +160,9 @@ NetSimTabsComponent.prototype.render = function () {
   });
 
   if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
-    // Move the reference area into the instructions tab
-    referenceArea.insertBefore(
-        this.rootDiv_.find('#tab_instructions button').first());
+    var continueButton = this.rootDiv_.find('#tab_instructions button').first();
+    instructionsArea.insertBefore(continueButton);
+    referenceArea.insertBefore(continueButton);
     this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
       if (!$(jQueryEvent.target).is(':disabled')) {
         netsimGlobals.completeLevelAndContinue();

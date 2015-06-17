@@ -387,6 +387,40 @@ th a:link, th a:visited, th a:hover, th a:active {
   margin-left:20px;
 }
 
+.courseblock {
+  background-color: #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+.courseblock a {
+  text-decoration: none;
+  font-weight: normal;
+  color: dimgray;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+.courseblock h3 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24px;
+}
+
+.courseblock img {
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  max-height: 150px;
+  width: auto;
+}
+
 .teacher-button {
   background-color: #59b9dc; border-color: #59b9dc
 }

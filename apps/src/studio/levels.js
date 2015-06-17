@@ -1445,17 +1445,15 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'map': [
+    [0,16, 0, 0, 0,16, 0,32],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 0, 0, 0, 4, 0],
-    [0,16, 4, 0, 0,16, 4, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 4, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
@@ -1509,3 +1507,61 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   },
   'startBlocks': "",
 });
+
+levels.hoc2015_1 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4,16, 0,256,1, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};
+
+levels.hoc2015_2 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 0, 0,256,4, 4],
+    [4, 4, 4, 0, 4, 0, 4, 4],
+    [4, 4, 4, 1,16,256,4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};

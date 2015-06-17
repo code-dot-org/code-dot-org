@@ -820,6 +820,12 @@ $aniGifPreviewHeight: 60px;
   user-select: none;
 }
 
+$workspace-header-button-border-width: 1px;
+$workspace-header-button-height: 22px;
+$workspace-header-button-margin: ($workspace-headers-height -
+    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
+    ) / 2;
+
 #headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -869,15 +875,40 @@ $aniGifPreviewHeight: 60px;
   #blockCounter, #blockUsed {
     display: inline-block;
   }
-  #clear-puzzle-header, #show-code-header {
+
+  .workspace-header-button {
     cursor: pointer;
     float: right;
-    border-left: 1px solid gray;
+    overflow: hidden;
+    background-color: $light_purple;
+    margin-top: $workspace-header-button-margin;
+    margin-bottom: $workspace-header-button-margin;
+    margin-right: $workspace-header-button-margin;
+    margin-left: 0;
+    border: $workspace-header-button-border-width groove $light_gray;
+    height: $workspace-header-button-height;
+    border-radius: 4px; // TODO: Make mixin
+    font-family: $gotham-bold;
     &:hover {
       background-color: $cyan;
     }
     span {
-      padding: 0 20px;
+      padding: 0 12px;
+      line-height: $workspace-header-button-height;
+    }
+    .fa {
+      line-height: $workspace-header-button-height;
+      padding-right: 8px;
+      font-size: 15px;
+    }
+    .fa-code {
+      font-weight: bold;
+    }
+    .blocks-glyph {
+      display: none;
+      height: 18px;
+      vertical-align: text-bottom;
+      padding-right: 8px;
     }
   }
   #clear-puzzle-header:hover {
@@ -917,10 +948,20 @@ $aniGifPreviewHeight: 60px;
   #show-toolbox-header {
     float: right;
   }
-  #clear-puzzle-header, #show-code-header {
-    border-left: 0;
-    border-right: 1px solid gray;
+  .workspace-header-button {
+    margin-left: $workspace-header-button-margin;
+    margin-right: 0;
     float: left;
+
+    .fa {
+      padding-right: 0;
+      padding-left: 8px;
+    }
+    .blocks-glyph {
+      @include horizontal-flip;
+      padding-right: 0;
+      padding-left: 8px;
+    }
   }
 }
 

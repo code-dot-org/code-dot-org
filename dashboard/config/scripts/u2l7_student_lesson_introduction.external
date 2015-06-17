@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 # Background
 
-Do you know the quickest route from your home to the most common place you go? How closely related are protein A, which is found in blueberries, and protein B, which is known to prevent cancer? How are these two questions related? Both involve the shortest path problem and graph theory. Finding the shortest path can save you a lot of time and can help you find meaningful connections in information - because of this, it is a very common application in computer science. Since computer scientists often work with large amounts of information, we care about finding the shortest path <i>efficiently</i>, no matter how much information we are working with. In this lesson, you will be able to investigate the shortest path problem as well as a famous shortest path algorithm. As you go, pay attention to the number of steps required for a computer to come to an answer.
+Do you know the quickest route from your home to the most common place you go? How closely related are protein A, which is found in blueberries, and protein B, which is known to prevent cancer? How are these two questions related? Both involve the shortest path problem and graph theory. Finding the shortest path can save you a lot of time and can help you find meaningful connections in information. Because computer scientists often work with large amounts of information, we care about finding the shortest path <i>efficiently</i>, no matter how much information we are working with. In this lesson, you will investigate the shortest path problem, as well as a famous shortest path algorithm. As you go, pay attention to the number of steps required for a computer to find an answer.
 
 # Vocabulary
 

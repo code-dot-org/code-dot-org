@@ -313,7 +313,7 @@
     de K-5.
   dashboard_landing_new_k5courses: ¡Nuevo! Pruebe nuestros cursos para los alumnos
     de K-5.
-  dashboard_landing_useful_links: Otros links útiles (sólo en Inglés)
+  dashboard_landing_useful_links: Other useful links (in English only)
   dashboard_landing_office_hours: ¡Pregunta en persona! Utiliza nuesta horas mensuales
     para consultas por vídeo.
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que
@@ -1170,6 +1170,16 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_curriculum: Curriculum
+  dashboard_overview: Overview
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
