@@ -12,6 +12,8 @@ Blockly.ExampleView = function (dom, svg) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
 
+  this.testRunning_ = false;
+
   this.horizontalLine = Blockly.createSvgElement('rect', {
     'fill': '#000',
     'height': 2.0
@@ -19,18 +21,54 @@ Blockly.ExampleView = function (dom, svg) {
   this.grayBackdrop = Blockly.createSvgElement('rect', {
     'fill': '#DDD'
   }, this.svgParent_, {'belowExisting': true});
-  this.testExampleButton = goog.dom.createDom('button', 'testButton launch');
-  this.testExampleButton.innerHTML = "Test";
-  Blockly.bindEvent_(this.testExampleButton, 'click', this, this.runExample_);
+  //<button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+  //  <div><%= msg.runProgram() %></div>
+  //  <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+  //  </button>
+  //<button id="resetButton" class="launch blocklyLaunch" style="display: none">
+  //  <div><%= msg.resetProgram() %></div>
+  //  <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+  //</button>
+  this.testExampleButton = this.initializeTestButton("Test", "run26", this.testExample_.bind(this));
+  this.resetExampleButton = this.initializeTestButton("Reset", "reset26", this.resetExample_.bind(this));
   goog.dom.append(this.domParent_, this.testExampleButton);
-
+  goog.dom.append(this.domParent_, this.resetExampleButton);
+  this.refreshButtons();
   this.resultText = goog.dom.createDom('div', 'example-result-text');
   this.resultText.innerHTML = "Result: not ran yet";
   goog.dom.append(this.domParent_, this.resultText);
 };
 
-Blockly.ExampleView.prototype.runExample_ = function () {
-  console.log("Running example");
+Blockly.ExampleView.prototype.initializeTestButton = function (buttonText, iconClass, callback) {
+  var newButton = goog.dom.createDom('button', 'testButton launch blocklyLaunch exampleAreaButton');
+  var testText = goog.dom.createDom('div');
+  testText.innerHTML = buttonText;
+  var runImage = goog.dom.createDom('img', iconClass);
+  runImage.setAttribute('src', Blockly.assetUrl('media/1x1.gif'));
+  goog.dom.append(newButton, runImage);
+  goog.dom.append(newButton, testText);
+  Blockly.bindEvent_(newButton, 'click', null, callback);
+  return newButton;
+};
+
+Blockly.ExampleView.prototype.testExample_ = function () {
+  this.testRunning_ = true;
+  this.refreshButtons();
+  // TODO(bjordan): UI re-layout post-result?
+};
+
+Blockly.ExampleView.prototype.resetExample_ = function () {
+  this.testRunning_ = false;
+  this.refreshButtons();
+};
+
+Blockly.ExampleView.prototype.getVisibleButton_ = function () {
+  return this.testRunning_ ? this.resetExampleButton : this.testExampleButton;
+};
+
+Blockly.ExampleView.prototype.refreshButtons = function () {
+  goog.style.showElement(this.testExampleButton, !this.testRunning_);
+  goog.style.showElement(this.resetExampleButton, this.testRunning_);
 };
 
 /**
@@ -66,15 +104,18 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
 
   newY += commonMargin;
 
-  this.testExampleButton.style.top = newY + 'px';
   var exampleButtonX = midLineX + commonMargin;
-  this.testExampleButton.style.left = exampleButtonX + 'px';
+  [this.testExampleButton, this.resetExampleButton].forEach(function (button) {
+    button.style.top = newY + 'px';
+    button.style.left = exampleButtonX + 'px';
+  });
 
+  var visibleTestButton = this.getVisibleButton_();
   this.resultText.style.top = newY + 'px';
-  var exampleButtonRight = exampleButtonX + this.testExampleButton.offsetWidth;
+  var exampleButtonRight = exampleButtonX + visibleTestButton.offsetWidth;
   this.resultText.style.left = commonMargin + exampleButtonRight + 'px';
 
-  newY += this.testExampleButton.offsetHeight;
+  newY += visibleTestButton.offsetHeight;
 
   newY += commonMargin;
 
@@ -93,5 +134,6 @@ Blockly.ExampleView.prototype.dispose = function () {
   goog.dom.removeNode(this.horizontalLine);
   goog.dom.removeNode(this.grayBackdrop);
   goog.dom.removeNode(this.testExampleButton);
+  goog.dom.removeNode(this.resetExampleButton);
   goog.dom.removeNode(this.resultText);
 };
