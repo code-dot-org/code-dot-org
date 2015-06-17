@@ -2,14 +2,7 @@
 // Useful as a workaround for CORS security to test access to an origin.
 function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
   timeoutMs = typeof timeoutMs !== 'undefined' ?  timeoutMs : 5000;
-  var img = document.createElement('img');
-  img.width = 1;
-  img.height = 1;
-  img.style.position = 'absolute';
-  img.style.bottom = 0;
-  img.style.width = 1;
-  img.style.height = 1;
-  img.style.visibility = 'hidden';
+  var img = new Image();
   var called = false;
   function finish(callback) {
     return function() {
@@ -17,21 +10,16 @@ function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
         return;
       }
       called = true;
-      document.body.removeChild(img);
-      window.clearInterval(interval);
       window.clearTimeout(timeout);
       callback();
     }
   }
-  var interval = window.setInterval(function() {
-    if(img.complete) {
-      finish(successCallback)();
-    }
-  }, 250);
   var timeout = window.setTimeout(finish(failureCallback), timeoutMs);
   img.addEventListener('error', finish(failureCallback));
   img.addEventListener('load', finish(successCallback));
   img.src = url;
-  document.body.appendChild(img);
+  // store a reference to the Image so it doesn't get collected
+  window.testImages = window.testImages || [];
+  window.testImages.push(img);
 }
 window.testImageAccess = testImageAccess;
