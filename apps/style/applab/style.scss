@@ -267,10 +267,7 @@ img#turtleImage {
   margin-right: 3px;
   padding: 3px 6px;
   font-size: 14px;
-}
-
-#pauseButton, #continueButton {
-  min-width: 110px;
+  min-width: 120px;
 }
 
 .debugger_button:focus {
@@ -322,6 +319,7 @@ $debug-commands-column-width: 270px;
   left: 0;
   width: $debug-commands-column-width;
   background-color: $white;
+  text-align: center;
 }
 
 .debug-console {
