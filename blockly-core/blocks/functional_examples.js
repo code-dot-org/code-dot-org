@@ -38,7 +38,7 @@ Blockly.Blocks.functional_example = {
     return false;
   },
   init: function() {
-    this.setHSV(94, 0.84, 0.60);
+    this.setHSV(0.0, 0.0, .49);
     this.setFunctional(true, { headerHeight: 0, rowBuffer: 3 });
     this.setFunctionalOutput(false);
     // TODO(bjordan): maybe add a bit of space here for a handle? TOP_HANDLE input type?
