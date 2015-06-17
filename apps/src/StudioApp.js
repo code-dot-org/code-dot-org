@@ -1530,9 +1530,28 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
-    msg.showBlocksHeader();
-  showCodeHeader.firstChild.textContent = newButtonTitle;
+  var contentSpan = showCodeHeader.firstChild;
+  var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bfa\b/.test(node.className);
+  });
+  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bblocks-glyph\b/.test(node.className);
+  });
+
+  // Change glyph
+  if (usingBlocks) {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'inline-block';
+      imgBlocksGlyph.style.display = 'none';
+    }
+    contentSpan.lastChild.textContent = msg.showTextHeader();
+  } else {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'none';
+      imgBlocksGlyph.style.display = 'inline-block';
+    }
+    contentSpan.lastChild.textContent = msg.showBlocksHeader();
+  }
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
