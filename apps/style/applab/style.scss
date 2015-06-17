@@ -294,6 +294,16 @@ img#turtleImage {
   left: 0;
   right: 0;
   background-color: $light_purple;
+
+  .workspace-header-button {
+    background-color: $lightest_purple;
+    color: $charcoal;
+
+    &:hover {
+      background-color: $cyan;
+      color: $white;
+    }
+  }
 }
 
 $debug-commands-column-width: 270px;

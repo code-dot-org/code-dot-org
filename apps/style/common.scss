@@ -810,6 +810,47 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+$workspace-header-button-border-width: 1px;
+$workspace-header-button-height: 22px;
+$workspace-header-button-margin: ($workspace-headers-height -
+    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
+    ) / 2;
+.workspace-header-button {
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+  background-color: $light_purple;
+  margin-top: $workspace-header-button-margin;
+  margin-bottom: $workspace-header-button-margin;
+  margin-right: $workspace-header-button-margin;
+  margin-left: 0;
+  border: $workspace-header-button-border-width groove $light_gray;
+  height: $workspace-header-button-height;
+  border-radius: 4px; // TODO: Make mixin
+  font-family: $gotham-bold;
+  &:hover {
+    background-color: $cyan;
+  }
+  span {
+    padding: 0 12px;
+    line-height: $workspace-header-button-height;
+  }
+  .fa {
+    line-height: $workspace-header-button-height;
+    padding-right: 8px;
+    font-size: 15px;
+  }
+  .fa-code {
+    font-weight: bold;
+  }
+  .blocks-glyph {
+    display: none;
+    height: 18px;
+    vertical-align: text-bottom;
+    padding-right: 8px;
+  }
+}
+
 #design-headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -819,12 +860,6 @@ $aniGifPreviewHeight: 60px;
   -ms-user-select: none;
   user-select: none;
 }
-
-$workspace-header-button-border-width: 1px;
-$workspace-header-button-height: 22px;
-$workspace-header-button-margin: ($workspace-headers-height -
-    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
-    ) / 2;
 
 #headers {
   height: $workspace-headers-height;
@@ -876,41 +911,6 @@ $workspace-header-button-margin: ($workspace-headers-height -
     display: inline-block;
   }
 
-  .workspace-header-button {
-    cursor: pointer;
-    float: right;
-    overflow: hidden;
-    background-color: $light_purple;
-    margin-top: $workspace-header-button-margin;
-    margin-bottom: $workspace-header-button-margin;
-    margin-right: $workspace-header-button-margin;
-    margin-left: 0;
-    border: $workspace-header-button-border-width groove $light_gray;
-    height: $workspace-header-button-height;
-    border-radius: 4px; // TODO: Make mixin
-    font-family: $gotham-bold;
-    &:hover {
-      background-color: $cyan;
-    }
-    span {
-      padding: 0 12px;
-      line-height: $workspace-header-button-height;
-    }
-    .fa {
-      line-height: $workspace-header-button-height;
-      padding-right: 8px;
-      font-size: 15px;
-    }
-    .fa-code {
-      font-weight: bold;
-    }
-    .blocks-glyph {
-      display: none;
-      height: 18px;
-      vertical-align: text-bottom;
-      padding-right: 8px;
-    }
-  }
   #clear-puzzle-header:hover {
     background-color: $red;
   }
