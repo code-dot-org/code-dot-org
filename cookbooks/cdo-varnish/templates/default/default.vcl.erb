@@ -642,7 +642,7 @@ Redirecting to <a href='https://code.org'>HTTPS</a>..
 <script type="text/javascript" src="/shared/js/url_test/url_test.js"></script>
 <script type='text/javascript'>
   var testImage = 'https://' + window.location.hostname + '/test-image.png';
-  testURL(testImage,
+  testImageAccess(testImage,
       function () {
         document.cookie = 'https_ok=1; path=/';
         window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
