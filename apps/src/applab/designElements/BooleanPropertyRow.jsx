@@ -1,4 +1,5 @@
 var React = require('react');
+var rowStyle = require('./rowStyle');
 
 var BooleanPropertyRow = React.createClass({
   propTypes: {
@@ -33,15 +34,15 @@ var BooleanPropertyRow = React.createClass({
     };
 
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div style={rowStyle.container}>
+        <div style={rowStyle.description}>{this.props.desc}</div>
+        <div>
           <div
             className={classes}
             style={style}
             onClick={this.handleClick}/>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

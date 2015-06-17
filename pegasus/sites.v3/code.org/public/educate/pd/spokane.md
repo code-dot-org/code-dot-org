@@ -25,7 +25,9 @@ Milestone Complete!
 #### Save the Dates
 Thursday, June 18th - Saturday, June 20th
 <br />
-8:30am - 3:30pm
+**Th - 2:00pm - 7:00pm**
+<br />
+F & S - 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
 <br />

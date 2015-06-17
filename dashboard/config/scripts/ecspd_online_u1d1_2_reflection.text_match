@@ -1,6 +1,8 @@
 name 'ECSPD Online U1D1-2 Reflection'
 title 'Unit 1 Day 1-2: What is a Computer? Reflection'
+skip_sound true
+hide_submit true
 
 markdown <<MARKDOWN
-During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom? 
+You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a video defining computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
 MARKDOWN
