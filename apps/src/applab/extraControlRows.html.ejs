@@ -3,8 +3,8 @@
 
 <div id="debug-area">
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
-  <% if (debugButtons) { %>
   <div id="debug-area-header">
+    <% if (debugButtons) { %>
     <div id="debug-commands-header" class="workspace-header">
       <span>Debug Commands</span>
     </div>
@@ -31,7 +31,11 @@
       </svg>
     </div>
     <img id="spinner" style="visibility: hidden;" src="<%= assetUrl('media/applab/spinner-big.gif') %>" height=16 width=16>
+    <% } %>
+  </div>
 
+  <% if (debugButtons) { %>
+  <div id="debug-commands" class="debug-commands">
     <div id="debug-buttons">
       <button id="pauseButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
@@ -61,11 +65,7 @@
     </div>
   </div>
   <% } %>
-
   <% if (debugConsole) { %>
-  <div id="debug-commands" class="debug-commands">
-
-  </div>
   <div id="debug-console" class="debug-console">
     <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
