@@ -109,6 +109,7 @@ var DesignProperties = module.exports = React.createClass({
         borderLeftWidth: 0,
         float: 'left'
       }),
+      // This tab should fill the remaining horizontal space.
       emptyTab: $.extend({}, baseTabStyle, {
         borderTopWidth: 0,
         borderRightWidth: 0,

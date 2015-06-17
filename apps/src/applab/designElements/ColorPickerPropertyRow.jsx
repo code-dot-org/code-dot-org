@@ -57,7 +57,7 @@ var ColorPickerPropertyRow = React.createClass({
     };
     return (
       <div style={rowStyle.container}>
-        <div>{this.props.desc}</div>
+        <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           <input
             value={this.state.value}

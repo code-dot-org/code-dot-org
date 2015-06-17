@@ -83,7 +83,7 @@ var PropertyRow = React.createClass({
 
     return (
       <div style={this.props.isIdRow ? idRowStyle : rowStyle.container}>
-        <div>{this.props.desc}</div>
+        <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           {inputElement}
           {lockIcon}

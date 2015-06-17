@@ -3,7 +3,7 @@ module.exports.input = {
   height: 20,
   padding: '4px 6px',
   marginBottom: 10,
-  marginLeft: -2,
+  marginLeft: 0,
   fontSize: 14,
   lineHeight: '20px',
   color: '#5b6770',
@@ -16,4 +16,8 @@ module.exports.input = {
 
 module.exports.container = {
   paddingLeft: 20
+};
+
+module.exports.description = {
+  paddingLeft: 2
 };

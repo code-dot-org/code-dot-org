@@ -36,7 +36,7 @@ var OptionsSelectRow = React.createClass({
     });
     return (
       <div style={rowStyle.container}>
-        <div>{this.props.desc}</div>
+        <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           <textarea
             onChange={this.handleChangeInternal}
