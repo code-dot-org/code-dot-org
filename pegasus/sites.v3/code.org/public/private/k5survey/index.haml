@@ -1,7 +1,7 @@
 :ruby
   facilitator_id = params['user_id']
 
-  all_facilitators = DB.fetch('SELECT user_id, name FROM pegasus_development.forms WHERE kind="ProfessionalDevelopmentWorkshop" GROUP BY user_id ORDER BY name, created_at;')
+  all_facilitators = DB.fetch('SELECT user_id, name FROM forms WHERE kind="ProfessionalDevelopmentWorkshop" GROUP BY user_id ORDER BY name, created_at;')
   all_surveys = DB.fetch('SELECT * FROM forms WHERE kind="K5ProfessionalDevelopmentSurvey"')
 
   def satisfaction_s_to_i(value)
