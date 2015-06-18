@@ -1,14 +1,12 @@
 name 'ECSPD Online U1D17-19'
-title ''
 css 'unplugged'
-markdown <<MARKDOWN
-## Unt 1 Day 17-19: What is Intelligence?
 
-You can check out the lesson for Unit 1, day 17-19 on page 69 of your curriculum book, or by following this [link](http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=69). Note that this lesson was not planned or taught during PD. 
+markdown <<MARKDOWN
+## Unit 1 Day 17-19: What is Intelligence?
+
+Look at the lesson for Unit 1, day 17-19 on page 69 of your curriculum book, or by following this [link](http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=69). Note that this lesson was not planned or taught during PD. 
  
 Read over the lesson and flip back to the previous lesson (following directions/peanut butter and jelly). Make a note of whatever questions you have and challenge you may face in teaching this lesson. On the following levels you have space to post to the forum about this lesson and you'll also have a chance to reflect on how you plan to tackle this lesson.
 
 Be sure to check out the resources linked in this lesson. Note that some of the links are no longer active, and you'll have space in the forum to share other resources that might work well.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

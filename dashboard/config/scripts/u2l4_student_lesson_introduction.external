@@ -5,15 +5,17 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 4 - Routers and Addresses as Numbers
+## Unit 2: Lesson 4 - Routers and Redundancy
 
 # Background
 
 Just like the post office uses standardized zip codes and addresses, the Internet uses a standardized numeric addressing system called Internet Protocol (IP) to route messages to specific locations.  Numeric IP addresses have a structure and hierarchy in much the same way that telephone numbers have a structure and hierarchy (with country and area codes first).
 
+Routing on the Internet also mirrors routing in the postal network in that there are multiple ways that a message can travel from sender to receiver in response to conditions in the network. For a letter in the mail this might mean a mailperson choosing a different route through a city in response to construction. For a message on the Internet, this means travelling to different routers based on the traffic of bits travelling across the network.
+
 # Vocabulary
 
-<strong>IP address</strong>: a unique string of numbers separated by periods that identifies each computer using the Internet Protocol to communicate over a network.
+<strong>Router</strong>: a computer which receives messages travelling across a network and redirects them towards their intended destinations based on the addressing information included with the message.
 
 # Lesson
 
@@ -24,7 +26,7 @@ Just like the post office uses standardized zip codes and addresses, the Interne
 
 # Resources
 
-* Activity: <a href="https://docs.google.com/document/d/1TAcPCX3ubUt7qYeZMViFAZmzGpjV9ig8f0DeCW1oytM” target="_blank"> Real IP Addresses </a>
+* Activity: <a href="https://docs.google.com/document/d/1LXVhisxGinMbQkur59R8AguItQMxB1w8x5CLnQuPAng/edit?usp=sharing” target="_blank"> Routers and Addresses </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
