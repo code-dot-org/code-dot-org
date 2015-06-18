@@ -222,6 +222,7 @@ div.droplet-palette-group-header-selected.orange {
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
+  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
 }
 
 #codeTextbox.pin_bottom {
