@@ -260,14 +260,19 @@ img#turtleImage {
 }
 
 .debugger_button {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
+  border: 1px solid $cyan;
+  background-color: $cyan;
   color: #fff;
   margin-left: 0px;
   margin-right: 3px;
   padding: 3px 6px;
   font-size: 14px;
   min-width: 120px;
+}
+
+#continueButton {
+  border-color: $orange;
+  background-color: $orange;
 }
 
 .debugger_button:focus {
