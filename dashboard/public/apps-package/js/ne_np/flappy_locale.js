@@ -255,7 +255,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareFlappyTwitter":function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your game:"},
 "soundRandom":function(d){return "random"},
-"soundBounce":function(d){return "bounce"},
+"soundBounce":function(d){return "नमिल्नु"},
 "soundCrunch":function(d){return "crunch"},
 "soundDie":function(d){return "sad"},
 "soundHit":function(d){return "smash"},

@@ -261,7 +261,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundHit":function(d){return "Distruge"},
 "soundPoint":function(d){return "punct"},
 "soundSwoosh":function(d){return "swoosh"},
-"soundWing":function(d){return "aripa"},
+"soundWing":function(d){return "aripă"},
 "soundJet":function(d){return "Jet"},
 "soundCrash":function(d){return "accident"},
 "soundJingle":function(d){return "Jingle"},

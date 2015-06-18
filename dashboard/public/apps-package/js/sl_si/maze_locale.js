@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale
 s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "pri satovju"},
-"atFlower":function(d){return "v roži"},
+"atFlower":function(d){return "v cvetu"},
 "avoidCowAndRemove":function(d){return "izogni se kravi in odstrani 1"},
 "continue":function(d){return "Nadaljuj"},
 "dig":function(d){return "odstrani 1"},

@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_lo
 s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "studsa bollen"},
-"bounceBallTooltip":function(d){return "Studsa en boll av ett objekt."},
+"bounceBallTooltip":function(d){return "Studsa en boll på ett objekt."},
 "continue":function(d){return "Fortsätt"},
 "dirE":function(d){return "Ö"},
 "dirN":function(d){return "N"},
