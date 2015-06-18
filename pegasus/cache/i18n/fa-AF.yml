@@ -21,7 +21,7 @@
     پیوندید.'
   petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
     #دیگران بپیوندید.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'به #دیگران ملحق شوید'
   name: نام
   email: ایمیل
   zipcode: کدپستی یا کشور
@@ -180,30 +180,30 @@
     &ldquo;اگر شما کد بزنید، می توانید مسیر زندگیتان را مشخص و انتخاب کنید.&rdquo;
     کریس بوش
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;این مهارت ها آینده ی من را تغییر دادند. لازم به ذکر نیست، این فقط تفریح ساده است.&rdquo;
+    لونا، کلاس هفتم
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;من هیچ وقت، هرگز بچه هامو درباره ی یادگیری اینقدر هیجان زده ندیده ام.&rdquo;
+    میشل، معلم
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+    &ldquo; علوم کامپیوتر رشته ای است که چه خوشتان بیاید چه نه نمی توانید قبل از امتحان کردنش آن را بشناسید.&rdquo;
+    جکسون، کلاس ششم
+  homepage_hero_text_student4: |
+    &ldquo; شما با برنامه نویسی می توانید هرکاری که ذهنتان می خواهد انجام دهید.&rdquo;
+    مایا، کلاس دوم
+  homepage_hero_text_student5: |
+    &ldquo;علوم کامپیوتر برای کس دیگری نیست. برای شماست، اینجا، حالا.&rdquo;
+    جرالدو، معلم
+  homepage_hero_text_teacher1: |
+    &ldquo; کد زدن خلاقیت، الهام گرفتن و نوآوری را پرورش می دهد&mdash; که همه ی آن ها در هر شغلی اساسی هستند.&rdquo;
+    فلوریسا، معلم
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;صد درصد دانش آموزان من در این برنامه درگیر شدند، حضور پیدا و شرکت کردند.&rdquo;
+    آدام، معلم
+  homepage_hero_text_stat_loc: 'خطوط #کد نوشته شده توسط دانش آموزان'
+  homepage_hero_text_stat_students: '#دانش آموز- حساب کاربری نگه دارنده سوابق و اطلاعات
+    دانش آموز در استودیو ی کد'
+  homepage_hero_text_stat_served: 'ساعت کد نویسی: # طی شده گذرانده'
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard
@@ -213,12 +213,12 @@
   homepage_slot_text_flappy: کدنویسی Flappy
   homepage_action_text_codevideo: فیلم را تماشا کنید
   homepage_action_text_teachervideo: فیلم را تماشا کنید
-  homepage_action_text_learn: امروز یادگیری را شروع کنید
+  homepage_action_text_learn: یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع
+    علوم کامپیوتر را بهبود ببخشند.
+  homepage_banner_text_link: بیشتر بیاموزید
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -237,7 +237,7 @@
   homepage_slot_text_title_advocates: مدافعان
   homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
   homepage_slot_text_link_stats: آمار ها را ببینید
-  homepage_slot_text_link_buy: یک کلاه یا تی شرت بخرید
+  homepage_slot_text_link_buy: شرکت کنید
   homepage_slot_text_link_donate: پولی اهدا کنید
   homepage_header_codestudio: ابداعات دانش آموزان استودیو ی کد
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
@@ -427,11 +427,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     اینجا را کلیک کنید</a> برای مشاهده سند حریم خصوصی ما، که می توانید آن رابرای دانش
     آموزان خود به اشتراک بگذارید یا چاپ نمایید.
-  dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: مشاهده تمام برنامه های درسی
   dashboard_course1: 'دوره 1:'
   dashboard_course2: 'دوره 2:'
   dashboard_course3: 'دوره 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
+  dashboard_overview: Overview
   dashboard_sequence: دنباله
   dashboard_framework: چارچوب کار
   dashboard_standards: استانداردها
@@ -442,6 +449,10 @@
   dashboard_puzzle_solving: 'حل پازل:'
   dashboard_student_worksheet: ورقه کار دانش آموزان
   dashboard_teacher_worksheet: ورقه کار معلم
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: دیگر
   dashboard_login_word: واژه
@@ -477,6 +488,7 @@
     روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای یک
     بخش انتخاب کنید کمک می کند.
   dashboard_faq: پرسش و پاسخ‌های متداول
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
@@ -603,7 +615,7 @@
   scratch_platformtext: تنها مرورگر های وب دسک تاپ (نه تبلت)
   lightbot_platformtext: تمام مرورگر ها و iOS، اندروید، یا کنسول های بازی
   thinkersmith_platformtext: آنپلاگد
-  condcards_platformtext: Unuplugged
+  condcards_platformtext: آنپلاگد
   lightbotintl_platformtext: iOS, Android  (یا مرورگر وب)
   codehs_platformtext: مرورگر های به روز. (پیشرفت دوره نیاز به پول دارد)
   codecademy_platformtext: مرورگرهای وب مدرن. نرم افزار آندروید و iOS
@@ -1167,20 +1179,8 @@
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: مخفی کردن هشدار
