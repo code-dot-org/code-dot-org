@@ -11,7 +11,8 @@ module.exports = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(error, null);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
     });
   },
 
@@ -24,7 +25,8 @@ module.exports = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(error, undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -36,7 +38,8 @@ module.exports = {
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
-      callback(error, false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   },
 
@@ -48,7 +51,8 @@ module.exports = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(error, undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -61,7 +65,8 @@ module.exports = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(error, false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   }
 };
