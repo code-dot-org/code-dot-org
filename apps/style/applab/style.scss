@@ -1,6 +1,8 @@
 @import "color";
 @import "colpick.css";
 @import "style-constants";
+@import "skins/base.scss";
+@import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -192,28 +194,6 @@ div#visualizationResizeBar {
 
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
-#divApplab {
-  overflow: hidden;
-  outline: none;
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#divApplab canvas {
-  position: absolute;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
-
 #visualizationResizeBar {
   margin-left: 2px;
   width: 13px;
@@ -227,18 +207,6 @@ div#visualizationResizeBar {
 #debug-buttons {
   display: inline;
   white-space: normal;
-}
-
-#divApplab img {
-  opacity: 1.0;
-}
-
-#divApplab label {
-  display: inline-block;
-}
-
-#divApplab div {
-  overflow: hidden;
 }
 
 #runButton, #resetButton {
@@ -502,20 +470,6 @@ button.arrow:focus {
 
 .assetRow:hover {
   background: $lighter_purple;
-}
-
-#divApplab {
-  box-sizing: border-box;
-}
-
-#divApplab input {
-  box-sizing: border-box;
-}
-
-#divApplab button {
-  padding: 7px 12px;
-  margin: 2px;
-  font-size: 14px;
 }
 
 .design-mode-hidden {
