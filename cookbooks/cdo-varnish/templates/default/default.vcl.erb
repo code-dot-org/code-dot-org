@@ -371,7 +371,9 @@ sub vcl_recv
 
     # Render https-test page if neither 'https_ok' nor 'https-blocked' cookies are set
     if(req.http.X-Https-Ok != "1" && req.http.X-Https-Blocked != "1" &&
-       req.url !~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
+       req.url !~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$" &&
+       (req.http.Host ~ "studio.code.org" && req.url ~ "/(p|s|hoc|k8intro|editcode|2014|flappy|jigsaw)/")
+      ) {
       error 752;
     }
   }

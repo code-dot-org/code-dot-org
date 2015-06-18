@@ -14,6 +14,7 @@ module Rack
       request = Rack::Request.new(env)
       if !request.ssl? &&
         request.path_info !~ /\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$/i &&
+        request.path_info =~ /\A\/(p|s|hoc|k8intro|editcode|2014|flappy|jigsaw)\// &&
         request.cookies['https-blocked'].nil? &&
         request.cookies['https_ok'].nil? &&
         request.env['HTTP_X-HTTPS-OK'].nil?

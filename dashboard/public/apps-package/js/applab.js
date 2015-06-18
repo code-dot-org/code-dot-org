@@ -945,21 +945,13 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
-    var viewDataButton = document.getElementById('viewDataButton');
-    if (viewDataButton) {
-      // Simulate a run button click, to load the channel id.
-      var viewDataClick = studioApp.runButtonClickWrapper.bind(
-          studioApp, Applab.onViewData);
-      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
-    }
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow();
+    designMode.configureDesignToggleRow(config.level.hideDesignMode);
 
-    // Start out in regular mode. Eventually likely want this to be a level setting
-    designMode.toggleDesignMode(false);
+    var startInDesignMode = !!config.level.designModeAtStart;
+    designMode.toggleDesignMode(startInDesignMode);
 
     designMode.configureDragAndDrop();
   }
@@ -1627,7 +1619,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div id="debugResizeBar">\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="38">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((19,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((25,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    <img id="spinner" style="visibility: hidden;" src="', escape((29,  assetUrl('media/applab/spinner-big.gif') )), '" height=16 width=16>\n\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((34,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((38,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((42,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((46,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((50,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button">\n        ', escape((53,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');57; } ; buf.push('\n\n  ');59; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');67; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div id="debugResizeBar">\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="38">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((19,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((25,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    <img id="spinner" style="visibility: hidden;" src="', escape((29,  assetUrl('media/applab/spinner-big.gif') )), '" height=16 width=16>\n\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((34,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((38,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((42,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((46,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((50,  applabMsg.stepOut() )), '\n      </button>\n    </div>\n  </div>\n  ');54; } ; buf.push('\n\n  ');56; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');64; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2683,10 +2675,14 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configureDesignToggleRow = function (hidden) {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
+  }
+
+  if (hidden) {
+    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
@@ -2721,12 +2717,18 @@ designMode.changeScreen = function (screenId) {
     var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
+    // View Data must simulate a run button click, to load the channel id.
+    var viewDataClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onViewData);
+    var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+
     React.render(
       React.createElement(DesignToggleRow, {
         initialScreen: screenId,
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
+        onViewDataButton: throttledViewDataClick,
         onScreenChange: designMode.changeScreen,
         onScreenCreate: designMode.createScreen
       }),
@@ -6139,6 +6141,7 @@ module.exports = React.createClass({displayName: "exports",
 
 var React = require('react');
 var msg = require('../locale');
+var applabMsg = require('./locale');
 
 var NEW_SCREEN = 'New screen...';
 
@@ -6153,6 +6156,7 @@ module.exports = React.createClass({displayName: "exports",
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
+    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired
   },
@@ -6191,6 +6195,7 @@ module.exports = React.createClass({displayName: "exports",
   },
 
   render: function () {
+    var showDataButton;
     var selectDropdown;
     var dropdownStyle = {
       display: 'inline-block',
@@ -6229,8 +6234,24 @@ module.exports = React.createClass({displayName: "exports",
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
 
+    var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
 
-    if (this.state.mode === Mode.DESIGN) {
+    var iconStyle = {
+      margin: '0 0.3em'
+    };
+
+    if (this.state.mode === Mode.CODE) {
+      showDataButton = (
+        React.createElement("button", {
+            id: "viewDataButton", 
+            style: showDataButtonStyle, 
+            className: "no-outline", 
+            onClick: this.props.onViewDataButton}, 
+          React.createElement("i", {className: "fa fa-database", style: iconStyle}), 
+          applabMsg.viewData()
+        )
+      );
+    } else if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
         return React.createElement("option", {key: item}, item);
       });
@@ -6267,14 +6288,15 @@ module.exports = React.createClass({displayName: "exports",
           msg.designMode()
         ), 
         ' ', /* Needed for "text-align: justify;" to work. */ 
-        selectDropdown
+        selectDropdown, 
+        showDataButton
       )
     );
   }
 });
 
 
-},{"../locale":146,"react":644}],11:[function(require,module,exports){
+},{"../locale":146,"./locale":57,"react":644}],11:[function(require,module,exports){
 var React = require('react');
 var applabMsg = require('./locale');
 var msg = require('../locale');
