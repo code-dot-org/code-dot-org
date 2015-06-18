@@ -61,7 +61,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `cd code-dot-org/aws`
 1. `bundle install`
 1. `cd ..`
-1. <code>sudo chown \`whoami\` ../.npm</code>
+1. `sudo chown $(whoami) $HOME/.npm`
 1. `rake install`
 
 ## Organizational Structure
