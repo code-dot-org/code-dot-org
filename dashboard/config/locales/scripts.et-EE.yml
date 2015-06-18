@@ -12,10 +12,10 @@
           description: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Pusle: õpi lohistama ja paika seadma'
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labürint: Jada'
           'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          'Artist 1: Intro': 'Artist 1: Sissejuhatus'
+          Artists 2: Artistid 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'Bee 1: Intro'
@@ -24,7 +24,7 @@
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: Course 1
+          title: Kursus 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
@@ -52,7 +52,7 @@
           Suzi: Suzi
           The Artist: Kunstnik
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: Põrkama
           'Studio: Create a Story': 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -76,7 +76,7 @@
             prior programming experience. In this course students will create programs
             to solve problems and develop interactive games or stories they can share.
             Recommended for grades 2-5.
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labürint: Jada'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
           'Artist: Loops': 'Artist: Loops'
@@ -103,7 +103,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Põrkama
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Arvutuslik mõtlemine
@@ -214,7 +214,7 @@
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labürint: Jada'
         hourofcode:
           Maze: Maze
           title: Koodi Tund
@@ -270,7 +270,7 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labürint: Jada'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -419,11 +419,11 @@
           Song Writing: Laulu kirjutamine
           The Farmer 2: Talunik tase 2
           Abstraction: Abstraction
-          The Artist 4: The Artist 4
+          The Artist 4: Artist 4
           Relay Programming: Relay Programming
           The Farmer 3: The Farmer 3
           The Internet: Internet
-          The Artist 5: The Artist 5
+          The Artist 5: Artist 5
           Wrap-up: Kokkuvõte
         edit-code:
           title: Muuda koodi
@@ -432,22 +432,23 @@
           Applab: Applab
           The Artist: Kunstnik
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Sündmused
           description: ''
-          Bounce: Bounce
+          Bounce: Põrkama
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy Code
+          title: Flappy kood
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
-          Flappy Code: Flappy Code
+          Flappy Code: Flappy kood
         jigsaw:
-          title: Jigsaw
+          title: Pusle
           description: ''
-          Jigsaw: Jigsaw
+          Jigsaw: Pusle
         step:
           title: samm
           description: ''
@@ -493,7 +494,7 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labürint: Jada'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -535,6 +536,7 @@
             Information'
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -884,6 +886,7 @@
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -904,14 +907,14 @@
           Big Game - Collision Detection: Big Game - Collision Detection
           Free Play: Free Play
         allthethings:
-          Jigsaw: Jigsaw
+          Jigsaw: Pusle
           Maze: Maze
           Artist: Artist
           Bee: Mesilane
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: Bounce
+          Bounce: Põrkama
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -926,6 +929,7 @@
           Odometer: Odometer
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -964,6 +968,9 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
           Introduction to PD: Introduction to PD
           K-5 Courses: K-5 Courses
           Writing computer programs: Writing computer programs
@@ -987,3 +994,26 @@
             Computer Science
           Planning: Planning
           Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Koodi Tund

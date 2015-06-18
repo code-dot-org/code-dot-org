@@ -523,6 +523,7 @@
         csp_textcompression: 텍스트 압축 도구
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: 대수학 CS - 소개
         alg_2_eval_block: 대수학 CS - 블록 평가
         alg_3_pemdas: 대수학 CS - 작업 순서

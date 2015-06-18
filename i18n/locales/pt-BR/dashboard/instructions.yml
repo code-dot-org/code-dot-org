@@ -28,7 +28,9 @@ pt-BR:
         Substitua esse código por um bloco "repita vezes"
         para desenhar a mesma casa usando apenas 3 blocos.
       2-3 Artist 6_instruction: 'Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
-      2-3 Artist 7_instruction: 'Termine de desenhar a metade direita da última janela. Cada quadrado da janela tem 25 pixels. '
+      2-3 Artist 7_instruction: |
+        Termine de desenhar a metade direita da última janela.
+        Cada quadrado da janela tem 25 pixels. 
       2-3 Artist 8_instruction: |2
         Complete os quartos para cada um dos animais dividindo
          o retângulo em 2 quadrados de mesmo tamanho. O retângulo tem 200 pixels de largura
@@ -2265,6 +2267,12 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -2701,9 +2709,9 @@ pt-BR:
         cada triângulo é 25 pixels maior que o anterior. O primeiro triângulo tem 25
         pixels.
       NEW Course 4 Artist Params 8_instruction: |
-        Você pode desenhar cada um desses triângulos
-        com a nova função? O primeiro tem 25 pixels de comprimento, o segundo 50 e
-        o terceiro 75. Dica: comece clicando em "editar" no bloco da função.
+        O código da função deste triângulo
+        está corrompido. Você consegue editar a função para corrigi-lo e criar triângulos
+        de 25, 50 e 75 pixels de comprimento?
       NEW Course 4 Artist Params 9_instruction: |
         Clique em "editar" para preencher a definição
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
@@ -3042,10 +3050,27 @@ pt-BR:
         Esse poema foi comprimido com
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
         outro padrão comum para comprimir ainda mais o poema?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
         Envie uma mensagem configurando o estado do
         fio como A ou B.
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

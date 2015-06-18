@@ -98,168 +98,142 @@
       2-3 Artist Functions 13_instruction: |
         Σου παρέχουμε τέσσερις συναρτήσεις.
         Χρησιμοποίησέ τις με οποιονδήποτε τρόπο θέλεις μέσα σε έναν ή περισσότερους βρόχους για να δημιουργήσεις εικόνες που μπορείς να μοιραστείς με τους φίλους σου. Πάτησε τρέξε για να δεις ένα παράδειγμα.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
+      2-3 Artist Functions 2_instruction: Με τις συναρτήσεις μπορείτε να καθορίσετε
+        νέα μπλοκ! Έχουμε μετακινήσει τα μπλοκ για να σχεδιάσετε ένα τετράγωνο σε
+        μία συνάρτηση που ονομάζεται "Σχεδιάστε ένα τετράγωνο". Μπορείτε να χρησιμοποιήσετε
+        την συνάρτηση "Σχεδιάστε ένα τετράγωνο" για να δημιουργήσετε τα γυαλιά; Τα
+        τετράγωνα απέχουν 75 εικονοστοιχεία το ένα από το άλλο.
+      2-3 Artist Functions 3_instruction: Επεξεργαστείτε τη συνάρτηση για να σχεδιάστε
+        ένα τετράγωνο με μήκος πλευράς 115 και σχεδιάστε τα μεγαλύτερα γυαλιά. Τα
+        τετράγωνα απέχουν τώρα 45 εικονοστοιχεία το ένα από το άλλο.
       2-3 Artist Functions 4_instruction: Χρησιμοποίησε το κουτι "Επανάληψη" για να
         σχεδιάσεις αυτά τα 3 τετράγωνα.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
+      2-3 Artist Functions 7_instruction: 'Χρησιμοποιήστε τη συνάρτηση "Σχεδιάστε
+        ένα σπίτι", για να σχεδιάσετε δύο σπίτια, χρησιμοποιώντας δύο διαφορετικές
+        παραμέτρους. (Υπόδειξη: το πρώτο σπίτι είναι 100 pixels).'
+      2-3 Artist Functions 9_instruction: Εδώ είναι μια συνάρτηση νιφάδας χιονιού.
+        Πειραματιστείτε με αυτή για να δημιουργήσετε ένα χειμωνιάτικο σκηνικό! Αυτό
+        είναι ένα επίπεδο ελεύθερου παιχνιδιού, δεν υπάρχει κάποιο παζλ να επιλύσετε.
+        Διασκεδάστε!
       2-3 Artist Loops 1_instruction: Μπορείτε να κάνετε ένα εξάγωνο με πλευρές που
         είναι 100 pixels σε μήκος ώστε να τελειώσετε το κελί; Θυμηθείτε, αυτό σημαίνει
         ότι χρειάζεται μόνο να στρίψετε 60 μοίρες!
       2-3 Artist Loops 10_instruction: Τι συμβαίνει στο σχέδιο όταν κάνουμε το τελευταίο
         βήμα στο μισό μήκος;
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
+      2-3 Artist Loops 11_instruction: Τώρα ας θέσουμε *ακόμη ένα * βρόχο γύρω από
+        όλο το σχέδιό μας!  Μην ξεχάσετε να προσθέσετε μια γωνία στο τέλος του εξωτερικού
+        βρόχου.
+      2-3 Artist Loops 2_instruction: Τώρα, χρησιμοποιήστε ένα μπλοκ επανάληψης για
+        να μετατρέψετε το κελί σε ένα κέλυφος.
+      2-3 Artist Loops 4_instruction: Θέλετε να δείτε τι θα συμβεί όταν επαναλάβουμε
+        το σχήμα ξανά και ξανά, χρησιμοποιώντας ένα βρόχο;
+      2-3 Artist Loops 5_instruction: Τώρα ας κάνουμε μια μικρή αλλαγή στον βρόχο
+        και να δούμε πόσο διαφορετική η εικόνα μας γίνεται.
       2-3 Artist Loops 6_instruction: 'Πρόσθεσε άλλη μία κίνηση και άλλη μία στροφή
         στην επανάληψη και δες πως αλλάζει το σχέδιο. '
       2-3 Artist Loops 7_instruction: Μπορούμε να χρησιμοποιήσουμε επαναλήψεις για
         να κάνουμε οποιοδήποτε πολύγωνο. Μπορείς να δημιουργήσεις έναν ρόμβο μέσα
         σε ένα εξάγωνο;
       2-3 Artist Loops 8_instruction: Ας βάλουμε τα δύο στοιχεία σε μία επανάληψη.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops 9_instruction: "Θα επαναλάβουμε τα ίδια στοιχεία, αλλά τώρα
+        θα προσθέσουμε κάποια απόσταση μεταξύ τους. \r \nΧρρησιμοποιήστε το ίδιο κώδικα
+        με προηγουμένως, αλλά προσθέστε ένα βήμα προς τα εμπρός στο τέλος του εξωτερικού
+        βρόχου."
+      2-3 Artist Loops New 1_instruction: Ας σχεδιάσουμε το κεφάλι του ρομπότ! Μπορείτε
+        να σχεδιάσετε ένα τετράγωνο με πλευρές των 100 εικονοστοιχείων;
+      2-3 Artist Loops New 10_instruction: Τώρα ας συνδέσουμε πολλά V, βάζοντάς τα
+        σε έναν βρόχο.
+      2-3 Artist Loops New 11_instruction: Αυτή τη φορά ας το σχεδιάσουμε 24 φορές.
+        Προσθέσετε μια αριστερή στροφή 30 μοιρών σε αυτόν τον κώδικα και να τα βάλουμε
+        όλα σε ένα μπλοκ επανάληψης.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
+        Σχεδιάσετε ένα διαμάντι με πλευρές των 100 εικονοστοιχείων.
+      2-3 Artist Loops New 13_instruction: Τώρα σχεδιάστε το διαμάντι 3 φορές σε έναν
+        βρόχο.
+      2-3 Artist Loops New 14_instruction: Τώρα ας σχεδιάσουμε το διαμάντι 10 φορές
+        αλλά περιστρέψτε 90 μοίρες μεταξύ κάθε διαμαντιού.
       2-3 Artist Loops New 15_instruction: Σχεδίασε κάτι αστείο.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
-        Be careful not to collect nectar from a purple flower if it doesn't\nhave
-        any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+      2-3 Artist Loops New 2_instruction: Εδώ είναι ένα κομμάτι από τον κώδικα που
+        χρησιμοποιήσατε για να σχεδιάσετε αυτό το τετράγωνο. Τι θα συμβεί αν χρησιμοποιήσετε
+        το μπλοκ επανάληψης για να τρέξετε αυτόν τον κώδικα 4 φορές;
+      2-3 Artist Loops New 9_instruction: Σχεδιάστε ένα απλό V, του οποίου και οι
+        δύο πλευρές είναι 50 εικονοστοιχεία, για να ολοκληρωθεί το βέλος.
+      2-3 Artist Match Hex Pic_instruction: 'Ενώστε: Βοηθήστε να ολοκληρωθεί το Εξάγωνο.'
+      2-3 Artist Match Rho Pic_instruction: 'Ενώστε: Ολοκληρώστε τον κώδικα που λείπει.'
+      2-3 Artist Match Sq Pic_instruction: 'Ενώστε: Συμπληρώστε τον κώδικα που λείπει'
+      2-3 Artist Match Tri pic_instruction: 'Ταίριασμα: Συμπληρώστε τον κώδικα που
+        λείπει.'
+      2-3 Artist Nested Loops 1_instruction: "Έχετε χρησιμοποιήσει βρόχους για να
+        σχεδιάσετε σχήματα προηγουμένως, αλλά ξέρατε ότι μπορείτε να βάλετε ένα βρόχο
+        μέσα σε ένα άλλο βρόχο; \r \nΕπαναλάβετε όλο αυτό το μπλοκ κώδικα 3 φορές
+        για να  σχεδιάσετε το μοτίβο."
+      2-3 Artist Nested Loops 10_instruction: Επαναλάβετε αυτό τον κώδικα 12 φορές
+        για να ολοκληρωθεί το μοτίβο.
+      2-3 Artist Nested Loops 11_instruction: Επαναλάβετε αυτόν τον κώδικα 4 φορές
+        για να ολοκληρωθεί το μοτίβο, περιστρέψτε 90 μοίρες μετά από κάθε κύκλο.
+      2-3 Artist Nested Loops 12_instruction: Επαναλάβετε αυτό τον κώδικα 12 φορές
+        για να ολοκληρώσετε τις ππεριστροφές.
+      2-3 Artist Nested Loops 2_instruction: Τώρα επαναλάβετε το τρίγωνο 6 φορές.
+        Μετά από κάθε τρίγωνο, θα χρειαστεί να περιστρέψετε κατά 60 μοίρες προτού
+        σχεδιάσετε το επόμενο.
+      2-3 Artist Nested Loops 3_instruction: Θα χρειαστείτε να επαναλάβετε το τρίγωνο
+        12 φορές για να σχεδιάσετε το μοτίβο. Διαιρέστε τον αριθμό των μοιρών σε ένα
+        κύκλο (360) με τον αριθμό των σχημάτων που σχεδιάζετε (12) για να καταλάβετε
+        πόσο να το γυρίσετε μετά από κάθε σχήμα.
+      2-3 Artist Nested Loops 4_instruction: 'Επαναλάβετε το διαμάντι 12 φορές για
+        να σχεδιάσετε ένα λουλούδι. Υπόδειξη: 12 διαμάντια είναι ακριβώς όπως τα 12
+        τρίγωνα που κάνατε - πόσο θα πρέπει να γυρίσει μετά από κάθε σχήμα;'
+      2-3 Artist Nested Loops 5_instruction: Συμπληρώστε τα παράθυρα αυτού του κτηρίου
+        με ένα ένθετο βρόχο. Τα παράθυρα έχουν μήκος 20 εικονοστοιχεία και απέχουν
+        20 εικονοστοιχεία.
+      2-3 Artist Nested Loops 6_instruction: Αυτό το δεινόσαυρος έχει 8 ακίδες στην
+        ουρά του. Κάθε ακίδα έχει μήκος 30 εικονοστοιχεία. Επαναλάβετε το τρίγωνο
+        8 φορές, αλλά βεβαιωθείτε πως προχωράτε εμπρός μετά από κάθε έναν.
+      2-3 Artist Nested Loops 7_instruction: Επαναλάβετε αυτό το τρίγωνο 10 φορές
+        να σχεδιάσετε τον ήλιο. Θα χρειαστεί να μετακινήσετε και να γυρίσετε μετά
+        από κάθε τρίγωνο. Μπορείτε να υπολογίσετε πόσο να γυρίσετε διαιρώντας τον
+        αριθμό των μοιρών σε ένα κύκλο με τον αριθμό των σχημάτων που το συνθέτουν.
+      2-3 Artist Nested Loops 8_instruction: Τώρα ας προσθέσουμε χλόη στην εικόνα
+        μας. Κάθε τούφα της χλόης απέχει 50 εικονοστοιχεία από την άλλη.
+      2-3 Artist Nested Loops 9_instruction: Θα τελειώσουμε αυτήν την εικόνα  προσθέτωντας
+        ένα λουλούδι. Επαναλάβετε το διαμάντι 12 φορές για να σχεδιάσετε το λουλούδι.
+      2-3 Artist Nested Loops Free Play_instruction: Ελεύθερο παιχνίδι! Σχεδιάστε
+        κάτι όμορφο με ένθετους βρόχους.
+      2-3 Bee Conditionals 1_instruction: Γεια! Είμαι μια μέλισσα. Βοήθησέ με να πάρω
+        το νέκταρ από το λουλούδι.
+      2-3 Bee Conditionals 10_instruction: "Μωβ λουλούδια μπορεί να έχουν είτε 1 ή
+        0 νέκταρ. Προσέξτε να μην συλλέξετε νέκταρ από ένα μωβ λουλούδι αν δεν έχει
+        καθόλου νέκταρ. \r\n"
+      2-3 Bee Conditionals 11_instruction: Συλλέξτε το νέκταρ από όπου τα λουλούδια
+        έχουν νέκταρ.
+      2-3 Bee Conditionals 12_instruction: Χρησιμοποιήσετε βρόγχο για να ελέγξετε
+        και να συλλέξετε το νέκταρ από όλα αυτά τα λουλούδια.
+      2-3 Bee Conditionals 13_instruction: 'Συλλέξτε το νέκταρ και δημιουργήστε μέλι.
+        Υπόδειξη: τι συμβαίνει εάν χρησιμοποιείτε την "αν νέκταρ" συνθήκη σε ένα κόκκινο
+        λουλούδι; Μπορείτε να το ολοκληρώσετε αυτό με έναν βρόχο;'
+      2-3 Bee Conditionals 14_instruction: Συλλέξτε το νέκταρ και δημιουργήστε μέλι.
+        Προσέξτε να μην συλλέξετε νέκταρ από ένα μωβ λουλούδι, αν δεν έχει καθόλου
+        νέκταρ.
+      2-3 Bee Conditionals 15_instruction: Συλλέξτε το νέκταρ από τα τέσσερα λουλούδια.
+      2-3 Bee Conditionals 2_instruction: Γεια σου, είμαι μια μέλισσα! Βοήθησέ με
+        να συλλέξω όλο το νέκταρ από τα λουλούδια. Χρησιμοποιήστε έναν βρόχο.
+      2-3 Bee Conditionals 3_instruction: Βοηθήστε με να συλλέξω όλο το νέκταρ από
+        τα λουλούδια και να δημιουργήσω μέλι. Χρησιμοποιήστε έναν βρόχο.
+      2-3 Bee Conditionals 4_instruction: Βοηθήστε με να συλλέξω όλο το νέκταρ από
+        τα λουλούδια και να δημιουργήσω το μέλι.
+      2-3 Bee Conditionals 5_instruction: Τα μωβ λουλούδια μπορεί να έχουν είτε 1
+        ή 0 νέκταρ, αλλά δεν γνωρίζετε ποιο από τα δύο! Προσέξτε να μην συλλέξετε
+        νέκταρ από ένα μωβ λουλούδι, αν δεν έχει καθόλου. Ελέγξτε αν το νέκταρ είναι
+        ίσο με 1 χρησιμοποιώντας το μπλοκ "αν".
+      2-3 Bee Conditionals 6_instruction: Ελέγξτε αυτό το λουλούδι με ένα μπλοκ "αν"
+        για να δείτε αν υπάρχει διαθέσιμο νέκταρ.
+      2-3 Bee Conditionals 7_instruction: Συλλέξτε νέκταρ από κάθε λουλούδι, αν έχει.
+      2-3 Bee Conditionals 8_instruction: Αυτό το πεδίο έχει κόκκινα και μοβ λουλούδια.
+        Τα κόκκινα λουλούδια έχουν ένα γνωστό ποσό νέκταρ, αλλά τα μωβ λουλούδια δεν
+        έχουν γνωστή ποσότητα νέκταρ. Συλλέξτε όλο το νέκταρ.
+      2-3 Bee Conditionals 9_instruction: Συλλέξτε όλο το νέκταρ από κάθε λουλούδι.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Αξιολόγηση: Συλλέξτε όλο το
+        νέκταρ. Προσέξτε να μην συλλέξετε νέκταρ από ένα μωβ λουλούδι, αν δεν έχει.'
       2-3 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
@@ -306,7 +280,7 @@
         Functions are blocks of code that perform
         a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
         use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: Συλλέξτε όλο το νέκταρ από κάθε λουλούδι.
       2-3 Bee Functions 4_instruction: |
         The "move and get nectar" function turns
         the bee, collects nectar, and then returns the bee to where it started. Use
@@ -448,13 +422,12 @@
       2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
       2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
       2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
-      2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
+      2-3 maze sq12_instruction: Μπορείτε να αντικαταστήσετε την προηγούμενη απάντηση
+        με έναν βρόχο, χρησιμοποιώντας ένα μπλοκ "επαναλάβετε φορές";
+      2-3 maze sq13_instruction: Αγαπητέ πρόσωπο. Εγώ ζόμπι. Πρέπει να...... φτάσει....στους
+        ηλίανθους. Δημιουργήστε το βρόχο με "επαναλάβετε μέχρι" μπλοκ.
+      2-3 maze sq14_instruction: Μπορείτε να φτάσετε στον ηλίανθο, χρησιμοποιώντας
+        μόνο τέσσερα μπλοκ;
       2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
       2-3 maze sq16_instruction: |
         Ok, this is similar, but slightly different. Can
@@ -794,7 +767,8 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: Μπορείτε να φτάσετε στον ηλίανθο, χρησιμοποιώντας μόνο
+        τέσσερα μπλοκ;
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -2011,13 +1985,13 @@
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin
         the name of a food and produces a String that says how you feel about that\nfood.
         For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic
@@ -2081,11 +2055,11 @@
         Let's look inside that green-triangle function
         to see how it works. Can you modify it so that the green-triangle function
         always draws outlined green triangles?
-      Eval Define Funcs 3_instruction: "Here's the start of another new function\ncalled
-        purple-circle with a domain of one Number (the radius) and a range\nof Image.
-        The body of the function is broken though, it always draws a circle\nof 50
-        pixel radius instead of using the radius parameter. Replace the current\nNumber
-        with the radius block from the domain. \n"
+      Eval Define Funcs 3_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -2136,10 +2110,11 @@
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2184,8 +2159,8 @@
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2247,6 +2222,12 @@
       frozen square snowflake_instruction: Μπορείς να δημιουργήσεις μια νιφάδα χιονιού
         χρησιμοποιώντας το μπλοκ «Επανάληψη», για να κάνεις ένα τετράγωνο 10 φορές,
         και το μπλοκ "Στροφή" για να περιστρέψεις 36 μοίρες το κάθε τετράγωνο;
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: Μπορείς να κάνεις την Έλσα ("ηθοποιός 2)  να φτάσει
         την Άννα χρησιμοποιώντας τα βελάκια;
       Infinity_finale_instruction: Δημιουργήστε κάτι που σας αρέσει και μοιραστείτε
@@ -2799,11 +2780,11 @@
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: Με τις συναρτήσεις μπορείτε να καθορίσετε νέα
+        μπλοκ! Έχουμε μετακινήσει τα μπλοκ για να σχεδιάσετε ένα τετράγωνο σε μία
+        συνάρτηση που ονομάζεται "Σχεδιάστε ένα τετράγωνο". Μπορείτε να χρησιμοποιήσετε
+        την συνάρτηση "Σχεδιάστε ένα τετράγωνο" για να δημιουργήσετε τα γυαλιά; Τα
+        τετράγωνα απέχουν 75 εικονοστοιχεία το ένα από το άλλο.
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -2922,9 +2903,9 @@
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -3015,10 +2996,27 @@
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
-      U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
+      U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
+        you to use Internet Simulator to relay a message. See the worksheet\nfor more
+        detailed instructions.  \n"
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

@@ -12,7 +12,7 @@ ja-JP:
   petition_message: すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです
   petition_sign_message: 同意して、署名をする。参加する
   petition_sign_message_support: 私たちを支援して頂けるなら、あなたのお名前の署名をお願いします。＃ 他に参加をします。
-  petition_join_others: 'Join # others'
+  petition_join_others: '参加する # ほか'
   name: 名前
   email: Eメール
   zipcode: 郵便番号または国名
@@ -157,9 +157,9 @@ ja-JP:
   homepage_hero_text_student5: '&ldquo;コンピューターサイエンスは他の人のためにあるんじゃない。あなたのためにあるのだ。いま、ここから始めよう。&rdquo;ジェラルド先生'
   homepage_hero_text_teacher1: '&ldquo;コーディングは創造性、インスピレーション、革新性が育てられます&mdash;これらは、どのような仕事でも大事なことです」&rdquo;フローレサ先生'
   homepage_hero_text_teacher2: '&ldquo;生徒全員がこのプログラムに興味を持ち、集中して取り組みました。&rdquo;アダム、教師'
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: 生徒によってコードの＃locラインが書かれました。
+  homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
+  homepage_hero_text_stat_served: 'Hour of Code:  #served 提供'
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: 「アナと雪の女王」のアナとエルサ
   homepage_slot_text_teacher: Teacher Dashboard
@@ -344,11 +344,18 @@ ja-JP:
   dashboard_students_print_page: このページを印刷
   dashboard_students_url: URL
   dashboard_privacy_document_link: '個人情報の扱いを参照したり印刷したりする場合は<a href="/privacy/student-privacy", target="_blank">ここをクリック</a>'
-  dashboard_curriculum_overview: K 5 カリキュラム概要
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: すべてのレッスン プランを表示します。
   dashboard_course1: コース1
   dashboard_course2: コース2
   dashboard_course3: コース3
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K 5 カリキュラム概要
+  dashboard_overview: Overview
   dashboard_sequence: 連続
   dashboard_framework: フレームワーク
   dashboard_standards: 基準
@@ -359,6 +366,10 @@ ja-JP:
   dashboard_puzzle_solving: パズルを解く：
   dashboard_student_worksheet: 生徒用ワークシート
   dashboard_teacher_worksheet: 教員用ワークシート
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: その他
   dashboard_login_word: 単語
@@ -386,6 +397,7 @@ ja-JP:
   dashboard_sections_password_account_creation: 生徒が作成したテキストのパスワード
   dashboard_sections_login_type_explanation: 'この表は、セクションを選択するとき、<b>画像、単語、またはEメール</b>、などのログイン タイプ説明するのに役立ちます。'
   dashboard_faq: よくある質問
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Hour of Codeはこちら - 12月8日 - 14日です！'
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   learn_more: さらに詳しく
@@ -813,3 +825,6 @@ ja-JP:
   processing_beyond_longdescription: Processing はプログラミング言語のひとつであり、また開発環境のひとつでもあり、オンラインのコミュニティでもあります。2001 年に生まれてから、ビジュアルアートの分野でのプログラミングを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
   alice_beyond_longdescription: 3Dアニメーションの作成をサポートする革新的なプログラミング環境を使いながら、Aliceプロジェクトでは、幅広い年代の人に対して、コンピューターでの考え方、問題解決方法、コンピュータープログラミングを教えたり学んだりするための資料やツールを提供しています。
   sphero_beyond_longdescription: SPRK のレッスンなら、ご自身の立場が先生であろうと保護者であろうと、子どもたちに楽しくロボットのプログラミングについて学ぶ機会を提供できます。その過程で、算数と科学のスキルも身につきます。
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: この警告を非表示

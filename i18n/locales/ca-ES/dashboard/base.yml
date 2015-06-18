@@ -330,7 +330,9 @@ ca:
     classroom_activity: Activitat sense connexió
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Informació general dels cursos 1, 2 i 3
     lesson_plans: Unitats didàctiques
     signin_message: 'Ja estàs registrat? %{link}'
@@ -399,6 +401,10 @@ ca:
     autoplay_option: Reprodueix automàticament els vídeos
     download: Descarregar vídeo
   compatability:
+    https:
+      header: Si us plau accepta HTTPS per a Code.org.
+      message: "Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'> feu clic aquí</a> per aprendre com permetre HTTPS per Code.org."
+      hide_this_warning: Amaga aquest avís
     working:
       header: Estem treballant per a afegir suport per al teu navegador.
       message: "Code.org utilitza moderna tecnologia web. Això fa el lloc més ràpid d'utilitzar. El teu navegador no suporta totes les característiques necessàries, i pots experimentar problemes mentre utilitzes aquesta part del lloc. Si us plau ajuda'ns <a href='%{report_issue_url}'> informant de qualsevol problema que trobis</a>. També post <a href='%{supported_browsers_url}'> actualitzar el teu navegador a una versió compatible</a>."
@@ -559,7 +565,7 @@ ca:
     projects: Projectes
     create: Crear un projecte
     create_a_project: 'Crear un nou projecte:'
-    new: Create New
+    new: Crea nou
     rename: Canviar el nom
     save: Desa
     delete: Elimina

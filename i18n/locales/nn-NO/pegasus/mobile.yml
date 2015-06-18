@@ -12,7 +12,7 @@ nn-NO:
   petition_message: Alle elevar på alle skular burde få høve til å lære koding
   petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
   petition_sign_message_support: 'Signer dette dersom du ønsker å støtte oss. Gjør som # andre.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Bli med # andre'
   name: Navn
   email: E-post
   zipcode: Postnummer eller land
@@ -160,9 +160,9 @@ nn-NO:
     "Dette programmet har fått 100 % av elevene 
     engasjert, involvert og delaktige."
     Adam, lærer
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc linjer med kode skrevet av elever'
+  homepage_hero_text_stat_students: '#student_count studentkontoer på koden Studio'
+  homepage_hero_text_stat_served: 'Time kode: #served servert'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -347,11 +347,18 @@ nn-NO:
   dashboard_students_print_page: Skriv ut denne sida
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Klikk her</a> for vårt personverndokument som kan delast digitalt eller skrivast ut til elevane.'
-  dashboard_curriculum_overview: Oversikt for barnetrinnet
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Vis oversikt over alle leksjonar
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Oversikt for barnetrinnet
+  dashboard_overview: Overview
   dashboard_sequence: Sekvens
   dashboard_framework: Rammeverk
   dashboard_standards: Læreplanmål (amerikansk)
@@ -362,6 +369,10 @@ nn-NO:
   dashboard_puzzle_solving: 'Problemløysing:'
   dashboard_student_worksheet: arbeidsark for elevar
   dashboard_teacher_worksheet: arbeidsark for lærarar
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Anna
   dashboard_login_word: Ord
@@ -389,6 +400,7 @@ nn-NO:
   dashboard_sections_password_account_creation: Passord-tekst gitt av elevane
   dashboard_sections_login_type_explanation: 'Denne tabellen bidrar til å forklare kva av disse innloggingsalternativa, <b>bilde, ord, eller e-post</b>, du vil velge for ein seksjon.'
   dashboard_faq: Ofte stilte spørsmål
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Kodetimen er her - 8.- 14. desember!'
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   learn_more: Lær meir
@@ -804,3 +816,6 @@ nn-NO:
   processing_beyond_longdescription: Processing er et programmeringsspråk, utviklingsmiljø, og nettsamfunn. Siden 2001 har Processing fremmet programvareferdighet innenfor visuell kunst og visuell kompetanse innen teknologi. Opprinnelig opprettet for å tjene som en skissebok innen programvare og å lære grunnleggende dataprogrammering innenfor en visuell sammenheng, Processing utviklet seg til et utviklingsverktøy for fagfolk. I dag er det titusener av studenter, kunstnere, designere, forskere og amatører som bruker Processing for læring, prototyper og produksjon.
   alice_beyond_longdescription: Alice Project bruker et nyskapende programmeringsmiljø som støtte til å lage 3D-animasjoner, og tilbyr verktøy og materialer for undervisning i og læring av beregningsorientert tenkning, problemløsning og programmering over et bredt spekter av aldre og klassetrinn.
   sphero_beyond_longdescription: Enten du er lærer eller foresatt, SPRK-leksjoner gir barna et morsomt intensivkurs i å programmere roboter, samtidig som de skjerper sine ferdigheter i matematikk og naturfag.
+  compatibility_https_header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
+  compatibility_https_message: "For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS. <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Skjul denne advarselen

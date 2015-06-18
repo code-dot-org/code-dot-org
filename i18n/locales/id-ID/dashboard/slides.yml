@@ -172,15 +172,14 @@ id:
           Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Sekarang, mendapatkan mereka zombie di tempat mereka berasal!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: pernyataan if-else adalah keputusan antara dua hal. Mari kita lihat bagaimana kita dapat menggunakan pernyataan if-else dengan teman Scrat tupai kami .
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Blok ini terlihat sama dengan blok "jika"/"if" tetapi ada bagian tambahan di bawah yang mengatakan "else"/"kecuali". Jika saya menempatkan blok "move forward"/"bergerak maju" di blok yang mengatakan "do"/"lakukan" dan blok "turn left/ "belok kiri" di blok yang mengatakan "else"/"kecuali", itu berarti Scrat si tupai akan bergerak maju jika ada jalan di depan. Jika tidak ada jalan di depan, Scrat akan berbelok ke kiri.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: |-
@@ -275,10 +274,10 @@ id:
         text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Anda akan menciptakan kepingan salju dan pola seperti skate es Anda dan membuat wonderland musim dingin yang kemudian dapat berbagi dengan teman-teman Anda.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Dalam satu jam berikutnya, Anda akan mempelajari dasar-dasar bagaimana membuat kode. Pemrograman tradisional biasanya dalam teks, tapi kami akan menggunakan Blockly, yang menggunakan blok visual yang dapat Anda drag dan drop dalam menulis program. Inilah cara bagaimana mahasiswa mempelajari dasar-dasar pemograman. Di mana saja, Anda tetap bisa membuat kode.
       4:
         image: notes/frozen1_4.jpg
         text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
@@ -327,13 +326,13 @@ id:
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: Setelah Anda telah diajarkan komputer bagaimana melakukan tindakan sekali menggunakan urutan perintah, Anda dapat membuat nama Anda sendiri untuk tindakan tersebut sehingga mudah untuk mengulanginya nanti. Ketika Anda mendefinisikan perintah Anda sendiri dan memberinya nama, hal itu disebut fungsi.
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: Hi, Saya Jess. Ketika pemrograman dengan blok, Anda akan menggunakan fungsi jika ada serangkaian tindakan yang Anda ingin menggunakan banyak kali. Misalnya, Anda telah menulis kode untuk membuat persegi.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Anda bisa mendefinisikan ini sebagai fungsi yang disebut "create a square." /"menciptakan sebuah persegi." '
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple squares.
@@ -371,29 +370,27 @@ id:
           In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Mulai dan pada akhir, Anda akan dapat membuat game sendiri dengan segala macam pemain yang dapat berinteraksi, berubah bahagia atau sedih, mencetak poin, atau melempar bola api, atau bahkan lenyap satu sama lain. Semuanya terserah pada Anda dan permainan yang ingin Anda buat.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Sekarang, kita akan belajar tentang sesuatu yang semua pemrogram permainan menggunakan setiap hari. Mereka disebut event/peristiwa. sebuah event memberitahu program Anda untuk mendengarkan ketika sesuatu terjadi. Ketika hal itu terjadi, program anda melakukan tindakan.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Beberapa contoh peristiwa seperti listening/mendengarkan sebuah mouse click/klik mouse, arrow button/tombol panah atau tap on the screen/Tekan pada layar.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Di sini, kita akan membuat ruang bot menyambut para penduduk dunia saat pemain mengklik dirinya. Kami akan gunakan blok "when clicked"/"saat diklik"  dan memasang block "say"/"katakan"  padanya. Ketika pemain mengklik pada ruang bot , segala sesuatu yang melekat pada   event blok "when clicked"/"ketika diklik" ini akan dilaksanakan. Apa tanggapan alien Anda ?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'disana juga terdapat blok  "when arrow"/"ketika panah menunjukan". Jika Anda menghubungkan blok "move"/"bergerak" untuk ini, Anda dapat mulai menggerakkan aktor Anda ke atas, bawah, kiri, atau kanan. Langkah demi langkah, permainan Anda semakin interaktif.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Ini adalah blok "repeat forever"/ "Ulangi selamanya". Segala hal di dalam blok ini akan terjadi selamanya dalam permainan.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Jika kita ingin aktor untuk melakukan sesuatu yang berulang-ulang, tanpa pemain harus melakukan sesuatu, kami akan menempatkan blok tersebut di dalam blok "repeat forever"/"Ulangi selamanya".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: Dalam teka-teki berikutnya, tujuan kami adalah untuk membantu wizard berpatroli di batas-batas kerajaan, kiri dan kanan secara terus menerus. Belajar bagaimana ulangi perintah kerja, akan menghemat satu ton waktu nanti ketika Anda membangun permainan Anda sendiri.

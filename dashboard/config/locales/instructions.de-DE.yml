@@ -745,31 +745,30 @@
       4-5 Nested Loops 10_instruction: Zeichne die letzte Reihe Sterne auf dieser
         Flagge indem du die gegebenen Blöcke umschlingst. Die Sterne sind 50 Pixel
         auseinander, aber vergiss nicht, dass die Sterne selbst 30 Pixel breit sind.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
-        loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 11_instruction: Kannst du diese 10 Quadrate für den Bürgersteig
+        mit einer verschachtelten Schleife zeichnen? Jedes Quadrat hat eine Seitenlänge
+        von 30 Pixel.
+      4-5 Nested Loops 12_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten
+        Schleife zeichnen?
+      4-5 Nested Loops 2_instruction: 'Jetzt verwende diese Schleife in einer anderen
+        Schleife um 10 Dreiecke zu zeichnen.  Dies nennt man eine verschachtelte Schleife
+        (nested loop).  Hinweis: Die 10 Dreiecke sind eine komplette 360-Grad-Drehung.  '
+      4-5 Nested Loops 3_instruction: 'Male eine Sonne indem Du den Startcode in einer
+        anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife (nested
+        loop). '
+      4-5 Nested Loops 5_instruction: Benutze den angegebenen Code in einer Schleife
+        um eine Windmühle zu erstellen.
+      4-5 Nested Loops 6_instruction: Kannst Du ein Sechseck zeichnen indem Du den
+        Dreieck-Code in einer Schleife verwendest?
+      4-5 Nested Loops 7_instruction: 'Führe das 10 mal aus. Um wie viel Grad musst
+        Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was sind 360 Grad geteilt
+        durch 10?)'
+      4-5 Nested Loops 8_instruction: 'Führe das 6 mal aus. Um wie viel Grad musst
+        Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was sind 360 Grad geteilt
+        durch 6?)'
       4-5 Nested Loops 9_instruction: Zeichne die Zähne im Mund des Alligators!
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
+      4-5 Nested Loops Assessment 1_instruction: Benutze eine verschachtelte Schleife
+        (nested loop) um das Muster fertig zu stellen.
       4-5 While Loops 1_instruction: Bewege mich zu dem Loch und fülle es mit zwei
         Schaufeln voll Erde, indem du den "füllen" Block benutzt.
       4-5 While Loops 2_instruction: |
@@ -1356,9 +1355,8 @@
         will need - you're missing one block, which one is it?
       Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
         that \"counter\" variable block again to draw this cool picture. \n"
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
+      Course 4 Artist For Loops 6_instruction: Spiel ein Bisschen herum! Benutze eine
+        for-Schleife um eine Form Deiner Wahl immer größer werden zu lassen.
       Course 4 Artist For Loops 7_instruction: |
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
@@ -1613,13 +1611,12 @@
         "right" variables to control direction. Fill in the rest of the function
         definition and then click "Save and Close."
       Course 4 Bee Params 4 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
+        Versuche deine neuen Funktionen auszuprobieren,
+        um alle Blumen zu sammeln. Denke an: 0 = links und 1 = rechts.
       Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
+        Wäre es nicht schön, wenn wir das ganze Nektar mit
+        einer Funktion sammeln könnten? Versuche einen neuen Paramater, namens "nectars" in deine Funktion einzubauen, um einstellen zu können, wie viel Nektar
+        gesammelt werden soll. Du wirst es wahrscheinlich auch umnennen wollen.
       Course 4 Bee Params 4_instruction: |
         Try using your new function to collect
         all of the flowers. Remember to use the left and right variables.
@@ -1879,13 +1876,13 @@
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin
         the name of a food and produces a String that says how you feel about that\nfood.
         For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic
@@ -1949,11 +1946,11 @@
         Let's look inside that green-triangle function
         to see how it works. Can you modify it so that the green-triangle function
         always draws outlined green triangles?
-      Eval Define Funcs 3_instruction: "Here's the start of another new function\ncalled
-        purple-circle with a domain of one Number (the radius) and a range\nof Image.
-        The body of the function is broken though, it always draws a circle\nof 50
-        pixel radius instead of using the radius parameter. Replace the current\nNumber
-        with the radius block from the domain. \n"
+      Eval Define Funcs 3_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -2004,10 +2001,11 @@
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2052,8 +2050,8 @@
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2126,6 +2124,12 @@
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2802,9 +2806,9 @@
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2898,10 +2902,27 @@
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
-      U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
+      U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
+        you to use Internet Simulator to relay a message. See the worksheet\nfor more
+        detailed instructions.  \n"
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

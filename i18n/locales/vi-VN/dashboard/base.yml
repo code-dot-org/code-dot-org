@@ -190,11 +190,11 @@ vi:
       teacher:
         earned: 'Với số học viên là 15 hoặc nhiều hơn thu thập đủ  %{num_trophies} danh hiệu, Bạn sẽ được nhận 1 phần thưởng cho giáo viên! (Chỉ dành cho giáo viên Hoa Kỳ)'
         not_earned_title: 'Dạy cho các lớp học, kiếm được lên đến $1,000 trong <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (chỉ dành cho giáo viên Hoa Kỳ)'
-        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+        not_earned: 'Như một phần thưởng cho những giáo viên dạy lập trình lần đầu tiên, bạn có thể nhận được tối đa $1,000 trong khoản tín dụng  <a href="http://DonorsChoose.org">DonorsChoose.org</a> từ việc hướng dẫn một lớp học thông qua khóa học K-8 cơ bản. Để đạt đủ điều kiện, bạn cần hướng dẫn thành công một lớp học K-8 cơ bản với ít nhất 15 học sinh, với tất cả 15 học sinh (hoặc nhiều hơn) hoàn thành tất cả bài học và đạt được tất cả  %{num_trophies} danh hiệu. Nếu 7 học sinh hoặc nhiều hơn đạt được tất cả danh hiệu, mà các học sinh này là nữ, phần thưởng của bạn là $1,000 trong   khoản tín dụng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Nếu không, phần thưởng của bạn là $750 trong khoản tín dụng  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Khoản tín dụng  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> chỉ có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.'
         bonus:
           not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
           earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
-          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+          not_earned: 'Nếu ít nhất 7 học sinh của bạn đạt được tất cả  %{num_trophies} các danh hiệu, mà các học sinh này là nữ, phần thưởng của bạn là $250 trong khoản tín dụng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Khoản tính dụng  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> chỉ có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.'
   crud:
     new_model: 'New %{model}'
     show: HIẻn thị
@@ -252,8 +252,8 @@ vi:
       levels_key: Levels key
       perfect: Completed, perfect
       completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
+      tried: Đã cố gắng, nhưng chưa hoàn thành
+      not_tried: Chưa thử
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
       trophies: những danh hiệu
@@ -265,7 +265,7 @@ vi:
       dashboard: Go to Teacher Dashboard
       add: Thêm học sinh
       remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      confirm_remove: Bạn có chắc muốn loại bỏ sinh viên/học sinh này?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
@@ -296,14 +296,14 @@ vi:
     cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Xem câu trả lời
       student: học sinh
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Xem đáp án
+      try_it_yourself: Hãy thử làm bài tập này
       section: Section
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
+    email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
@@ -321,9 +321,11 @@ vi:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    lesson_plans: Giáo án
     signin_message: 'Already registered? %{link}'
     student_reg_link: Sinh viên đăng ký
     teacher_reg_link: Giáo viên đăng ký
@@ -331,7 +333,7 @@ vi:
     teacher_dashboard: See progress dashboard
     teacher_student_count_one: 'You have %{count} student.'
     teacher_student_count: 'You have %{count} students.'
-    teacher_averages: 'On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.'
+    teacher_averages: 'Bình quân, học sinh của bạn đạt được %{trophy_average} trong tổng số %{trophy_max} danh hiệu "Thành Thạo Khái Niệm".'
     teacher_print_certificates: In giấy chứng nhận cho học sinh hoàn thành khóa học này
     teacher_read_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog giáo dục của chúng tôi
     classroom: Lớp học của bạn
@@ -389,6 +391,10 @@ vi:
     autoplay_option: Tự phát video
     download: Tải video xuống
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Hide this warning
     working:
       header: Chúng tôi đang làm việc để hỗ trợ cho trình duyệt của bạn.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
@@ -448,7 +454,7 @@ vi:
       title: Frozen
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

@@ -12,7 +12,7 @@ tr-TR:
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için fırsatı olmalıdır
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
   petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek # ile bize katılabilirsiniz.'
-  petition_join_others: 'Join # others'
+  petition_join_others: '# Diğerlerine katılın'
   name: İsim
   email: e-posta
   zipcode: Posta kodu ya da ülke
@@ -160,9 +160,9 @@ tr-TR:
   homepage_hero_text_teacher2: |
     &ldquo;Bu program, öğrencilerimin %100'ünün ilgisinde ve katılımında.&rdquo;
     Adam, öğretmen
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: 'öğrenciler tarafından #loc satır kod yazılmıştır'
+  homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
+  homepage_hero_text_stat_served: "Code Stüdyo'da #student_count tane öğrenci hesabı"
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
   homepage_slot_text_teacher: Teacher Dashboard
@@ -349,11 +349,18 @@ tr-TR:
   dashboard_students_print_page: Bu Sayfayı Yazdır
   dashboard_students_url: URL
   dashboard_privacy_document_link: 'Gizlilik dökümanımızı öğrencileriniz ile paylaşmak ya da yazdırmak için <a href="/privacy/student-privacy", target="_blank">buraya tıklayın.</a>'
-  dashboard_curriculum_overview: K-5 Eğitim Programına genel bakış
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Tüm ders planlarını görüntüleyin
   dashboard_course1: 'Ders 1:'
   dashboard_course2: 'Ders 2:'
   dashboard_course3: 'Ders 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 Eğitim Programına genel bakış
+  dashboard_overview: Overview
   dashboard_sequence: Sıra
   dashboard_framework: Taslak
   dashboard_standards: Standartlar
@@ -364,6 +371,10 @@ tr-TR:
   dashboard_puzzle_solving: 'Bulmaca çözme:'
   dashboard_student_worksheet: Öğrenci çalışma sayfası
   dashboard_teacher_worksheet: Öğretmen çalışma sayfası
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Diğer
   dashboard_login_word: Sözcük
@@ -391,6 +402,7 @@ tr-TR:
   dashboard_sections_password_account_creation: Öğrencinin oluşturduğu metin şifresi
   dashboard_sections_login_type_explanation: 'Bu tablo; seçmek istediğiniz kısımla ilgili oturum açma tiplerini, <b> resim, yazı ya da mail adresi gibi </b>, açıklamaya yardımcı olur.'
   dashboard_faq: Sık sorulan sorular
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Kod Saati burada - Aralık 8-14!'
   code_sign_up: "CS Education Week' e katılmak için kaydolun."
   learn_more: Daha Fazla Bilgi Edinin
@@ -806,3 +818,6 @@ tr-TR:
   processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
   alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
   sphero_beyond_longdescription: Öğretmen veya ebeveyn olun,SPRK dersleri çocukların matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Bu uyarıyı gizle

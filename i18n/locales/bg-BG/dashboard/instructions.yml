@@ -385,13 +385,13 @@ bg:
         function takes the target's current x value, and returns an updated value.
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
-      Big Game Animation 2_instruction: 'Задачата на "актуализиране-цел" функцията е да  следи текущата стойност на x и да връща актуализираната ѝ стойност. Завършете "актуализиране-цел" функцията, така че тя да добавя стойността на х, всеки път, щом е извикана. Колкото повече добавяте към x, толкова по-бързо целта ще се движи.'
+      Big Game Animation 2_instruction: 'Задачата на "актуализиране-цел" функцията е да  следи текущата стойност на x и да връща актуализираната ѝ стойност. Завършете "актуализиране-цел" функцията така, че тя да добавя стойността на х, всеки път, щом е извикана. Колкото повече добавяте към x- толкова по-бързо целта ще се движи.'
       Big Game Animation 3_instruction: 'Функцията "актуализиране-опасност" трябва да работи точно както "актуализиране-цел", с изключение, че опасността трябва да се движи отдясно наляво. Допълнете функцията "актуализиране-опасност" да задвижи опасността да лети по екрана.'
       Big Game Animation 4_instruction: В този момент опасността в играта ви трябва да се движи на екрана отдясно наляво, а вашата цел трябва да се задвижи отляво надясно. Те няма да се върнат на екрана ако излязат от него, но ние ще се погрижим за това по-късно. Поиграйте си с играта за да се уверите, че работи като искате, и след това щракнете върху Готово, за да продължите.
       Big Game Booleans 1_instruction: Когато последно работехте върху играта си добавихте целта и опасността да летят на екрана, но не да се връщат като стигнат края на полето. Щракнете върху Старт за да видите как играта в момента работи и след това ние ще поработим за да направим тези обекти да се връщат на екрана, след като са излезли от него.
-      Big Game Booleans 2_instruction: 'Сега, това ли е екранът Ви? Чрез функциите Сейф-ляво? и сейф дясно? Ние проверяваме може да изпълни действие. Преминете към раздела "Функции" на кутията с инструменти и довършете Сейф-ляво? функцията, така че тя да връща true ако стойността х на Спрайта е  по-голяма от -50. Ако сте успели да я довършите правилно, то трябва да видите опасността да напуска лявата страна на екрана и, след това, да се връща от дясната страна.'
+      Big Game Booleans 2_instruction: ' Преминете към раздела "Функции" на кутията с инструменти и довършете Сейф-ляво? функцията така, че тя да връща true ако стойността х на Спрайта е  по-голяма от -50. Ако сте успели да я довършите правилно, трябва да видите опасността да напуска лявата страна на екрана и да се връща от дясната страна.'
       Big Game Booleans 3_instruction: Сега, след като имате Сейф ляво?, да попълним Сейф-дясно? -Тя трябва да проверява Спрайт x координата и да връща true, ако тя е по-малка от 450. След като Сейф-дясно? е завършена, трябва да видите дали целта излиза от дясната страна на екрана и се връща от ляво.
-      Big Game Booleans 4_instruction: 'Ние сме предоставили няколко празни функции за Сейф-ляво? и сейф дясно? Първото нещо, което трябва да направите е да довършите onscreen? функцията, така че тя да проверява дали двете Сейф-ляво? и сейф дясно? са верни. СЪВЕТ - дори след прибавянето на сейф-ляво? и сейф дясно? Вашите спрайтове няма да се върнат на екрана - Защо е така?'
+      Big Game Booleans 4_instruction: 'Довършете onscreen? функцията, така че тя да проверява  дали Сейф-ляво? и сейф дясно? са верни.'
       Big Game Booleans 5_instruction: В този момент, в играта ви опасността трябва да се движи на екрана отдясно наляво и вашата цел също трябва да се движи, но отляво надясно. В един момент двете трябва да обърнат на противоположната страна. Пробвайте, за да се уверите, че вашата игра работи като искате, и след това щракнете върху Готово, за да продължите.
       Big Game Collision 1 (copy 1)_instruction: Когато последно работехте върху играта си, добавихте целта и опасността да летят на екрана, но не да се връщат като стигнат края му. Щракнете върху Старт, за да видите как играта в момента работи и след това ние ще поработим, за да направим тези обекти да се връщат на екрана, след като са излезли от него.
       Big Game Collision 1_instruction: 'На този етап, Вие сте програмирани видео игра с подвижна мишена и опасност (и двете се връщат на екрана, след като са излезли от него) и един играч, който отговаря на натискане на клавиши. Щракнете върху Старт, за да видите как играта работи, а след това ние ще програмираме последната липсваща част - отчитане на сблъсък!'
@@ -406,13 +406,13 @@ bg:
       Big Game Complete (copy 1)_instruction: 'Демо на завършен CS в алгебрата: проект "Голямата игра"'
       Big Game Complete_instruction: 'Демо на завършен CS в алгебрата: проект "Голямата игра"'
       Big Game Final_instruction: Ти го направи! Сега, играта трябва да бъде напълно функционираща! Ще отнеме известно време да се насладите на новата си игра, но трябва да направим някои крайни настройки. Когато сте доволни от крайния продукт, щракнете върху Готово и ще имате възможност да споделите връзка към играта си. Добра работа!
-      Big Game Player 1_instruction: Ние се приближаваме до завършване на играта! Последния път, когато работихте върху играта си, използвахте булеви стойности, за да направите вашата цел и опасността да се връщат след като са стигнали края на екрана. Щракнете върху Старт, за да видите как играта изглежда в момента, и след това ние ще се заемем да направим своя играч да се движи нагоре и надолу.
-      Big Game Player 2_instruction: 'За да преместим играча нагоре и надолу, ние ще трябва да използваме условен блок, който да разбере кой клавиш е натиснат и да реагира по съответния начин. Компютрите разчитат клавишите като цифрови кодове - стрелка нагоре е 38, а стрелката надолу е 40. Можете да погледнете и други цифрови кодове във вашата работна книга. Редактирайте "актуализира-играч" функцията, така че играчът се движи нагоре когато се натисне стрелка нагоре или надолу когато се натисне стрелка надолу.'
+      Big Game Player 1_instruction: Ние се приближаваме до завършване на играта! Последния път, когато работихте върху играта си, използвахте булеви стойности, за да направите вашата цел и опасността да се връщат след като са стигнали края на екрана. Щракнете върху Старт, за да видите как играта изглежда на този етап. След това ние ще се заемем да направим Вашия играч да се движи нагоре и надолу.
+      Big Game Player 2_instruction: ' Редактирайте "актуализира-играч" функцията така, че играчът да се движи нагоре когато се натисне стрелка нагоре или надолу когато се натисне стрелка надолу.'
       Big Game Testing_instruction: 'Демо на завършен CS в алгебрата: проект "Голямата игра"'
       Big Game Vars 1 (copy 1)_instruction: 'Нека да започнем с Вашата голяма игра! Тук ще видите един куп с кодове, които в крайна сметка ще замените със собствените си, но за сега само ще се тревожим за дефиниране на променливи. Щракнете върху "Старт", за да видите как играта изглежда със стойностите по подразбиране.'
       Big Game Vars 1_instruction: 'Нека да започнем с Вашата голяма игра! Тук ще видите един куп с кодове, които в крайна сметка ще замените със собствените си, но за сега само ще се тревожим за дефиниране на променливи. Щракнете върху "Старт", за да видите как играта изглежда със стойностите по подразбиране.'
       Big Game Vars 2 (copy 1)_instruction: 'Първата стъпка  да направите тази игра ваша, е да ѝ се даде добро заглавие. Щракнете върху Редактиране на "заглавие" и "подзаглавие" променливите и ги променете с нещо ново.'
-      Big Game Vars 2_instruction: 'Първата стъпка  да направите тази игра ваша, е да ѝ се даде добро заглавие. Щракнете върху Редактиране на "заглавие" и "подзаглавие" променливите и ги променете с нещо ново.'
+      Big Game Vars 2_instruction: 'Първата стъпка в правенето на вашата игра е даването на добро заглавие. Щракнете върху Редактиране на "заглавие" и "подзаглавие" променливите и ги променете с нещо ново.'
       Big Game Vars 3 (copy 1)_instruction: |
         Now let's set the background for your
         new game. Edit the 'bg' variable and select a new background Image from
@@ -899,7 +899,7 @@ bg:
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
-      Eval Booleans 1_instruction: 'Булевите оператори (като >, <, =) ни позволяват да сравнявате различни стойности, връща "истина" или "лъжа". Щракнете върху "Старт", за да видите как този израз дава резултат.'
+      Eval Booleans 1_instruction: 'Булевите оператори (като >, <, =) ни позволяват да сравняваме различни стойности, връщайки "истина" или "лъжа". Щракнете върху "Старт", за да видите как този израз дава резултат.'
       Eval Booleans 2_instruction: |
         Can you set the values so that this expression
         evaluates as true?
@@ -956,13 +956,13 @@ bg:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1017,9 +1017,8 @@ bg:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1070,10 +1069,11 @@ bg:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1118,8 +1118,8 @@ bg:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -1143,6 +1143,12 @@ bg:
       frozen square loop 3x_instruction: Нека създадем три квадрата, като след всеки се завъртаме под ъгъл от 120 градуса.
       frozen square loop_instruction: 'Здравейте аз съм Анна от Арендел! Нека направим квадрат с блок за повторение, който ни позволява да ползваме по-малко блокове. Колко пъти (?) трябва да повторим действието в  блока за повторение за да начертаем квадрат?'
       frozen square snowflake_instruction: 'Можете ли да създадете снежинка с помощта на  блок за повторение? Повторете квадрата 10 пъти и се завъртайте на 36 градуса между всеки квадрат.'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: 'Можете ли да накарате Елза ("актьор 2"), използвайки клавишите със стрелки, да достигне Анна?'
       Infinity_finale_instruction: 'Създайте нещо, което ви харесва и  го споделете!'
       Infinity_move_collide_instruction: 'Хиро е "актьор 1".  Преместете го към Баумах и когато те се докоснат трябва да се възпроизведе звук.'
@@ -1518,7 +1524,7 @@ bg:
       Pixelation 4x4 Empty_instruction: |
         The width and height are now encoded in
         the pixel data. Can you figure out how to adjust the dimensions?
-      Play Lab Rocket 1_instruction: 'Ракетата се взриви, пътувайки с 15 метра в секунда... натиснете "Старт", за да видите как тази текстов проблем изглежда като анимация.'
+      Play Lab Rocket 1_instruction: 'Ракетата се изстреля, пътувайки с 15 метра в секунда... натиснете "Старт", за да видите как това текстово описание изглежда като анимация.'
       Play Lab Rocket 2 (copy 1)_instruction: |
         We've added your contract and two
         examples into the Design Recipe for rocket-height. Now write the function
@@ -1600,9 +1606,9 @@ bg:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -1647,8 +1653,25 @@ bg:
       Standalone_Artist_9_instruction: Сега, върви напред и направи картина, каквато искаш! Дори имаш празна функция, която може да направи каквото си поискаш!
       Standalone_Artist_v2_instruction: Добре дошли при Художника! Първо, нека се опитаме да направим прост квадрат с помощта на блок за завъртане надясно и блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
       Text Compression Peter Piper_instruction: Това стихотворение е компресирано чрез замяна на две общи фрази със символи в речника. Можете ли да посочите друг общ модел за допълнително компресиране на поемата?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: Изпратете съобщение чрез задаване на (кода на) щата/държавата за свързване до точка А или точка Б.
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

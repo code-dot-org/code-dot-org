@@ -153,6 +153,39 @@
         Create images with bits and bytes.: Создавайте картинки при помощи битов и
           байтов.
         title: название
+      ECSPD Online U1D1-2:
+        Unit 1 Day 1-2: Unit 1 Day 1-2
+        description here: Описание здесь
+      ECSPD Online U1D1-2 Forum:
+        U1D1-2 Forum: U1D1-2 Forum
+      ECSPD Online U1D1-2 Resources:
+        Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
+        description here: Описание здесь
+      ECSPD Online U1D10: []
+      ECSPD Online U1D10 Forum:
+        Forum Pending: Forum Pending
+        Unit 1 Day 10 Forum: Unit 1 Day 10 Forum
+      ECSPD Online U1D10 Resources: []
+      ECSPD Online U1D11-14:
+        title: название
+      ECSPD Online U1D11-14 Resources: []
+      ECSPD Online U1D15-16: []
+      ECSPD Online U1D15-16 Resources: []
+      ECSPD Online U1D17-19: []
+      ECSPD Online U1D3-4:
+        'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
+      ECSPD Online U1D3-4 Resources:
+        'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
+      ECSPD Online U1D5-7: []
+      ECSPD Online U1D5-7 Resources: []
+      ECSPD Online U1D8-9: []
+      ECSPD Online U1D8-9 Resources: []
+      ECSPD Online Units:
+        Units covered: Units covered
+      ECSPD Online Welcome:
+        Welcome to ECS PD Online!: Welcome to ECS PD Online!
+      ECSPD Online intro:
+        Introduction: Введение
       ECSPD PD Phases:
         ECSPD PD Phases: ECSPD PD Phases
       ECSPD PD details:
@@ -216,8 +249,10 @@
       OPD-K5 Keep Learning: []
       OPD-K5 Loops: []
       OPD-K5 Other Courses: []
+      OPD-K5 Outline: []
       OPD-K5 Pair: []
       OPD-K5 Participation: []
+      OPD-K5 PreSurvey: []
       OPD-K5 Problem Solving: []
       OPD-K5 Program: []
       OPD-K5 Puzzles: []
@@ -243,8 +278,10 @@
       OPD-K5 Using CS: []
       OPD-K5 Vocabulary: []
       OPD-K5 Welcome: []
+      OPD-K5 Welcome 2: []
       OPD-K5 What is CS: []
       OPD-K5 Why teach CS: []
+      OPD-K5 Younger Grades: []
       OPD-K5 Your Plan: []
       Odometer:
         Odometer: Odometer
@@ -465,8 +502,8 @@
           repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Student Lesson Introduction:
+        Impact of Innovation: Impact of Innovation
         description here: Описание здесь
-        title: название
       U1L10 Student Lesson Introduction:
         description here: Описание здесь
         title: название
@@ -490,6 +527,9 @@
         description here: Описание здесь
         title: название
       U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
+        description here: Описание здесь
+      U1L17 Student Lesson Introduction:
         description here: Описание здесь
         title: название
       U1L2 Student Lesson Introduction:
@@ -528,8 +568,7 @@
       U2L10 Student Lesson Introduction:
         DNS in the Real World: 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
-        description here: Описание здесь
-        title: название
+        HTTP and Abstraction: HTTP and Abstraction
       U2L12 Student Lesson Introduction:
         description here: Описание здесь
         title: название
@@ -540,11 +579,10 @@
       U2L15 Student Lesson Introduction:
         Encryption Algorithms: Encryption Algorithms
       U2L16 Student Lesson Introduction:
-        description here: Описание здесь
-        title: название
+        Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
       U2L17 Student Lesson Introduction:
+        Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
         description here: Описание здесь
-        title: название
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
@@ -562,11 +600,10 @@
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
-        description here: Описание здесь
-        title: название
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       U2L6 Student Lesson Introduction:
-        description here: Описание здесь
-        title: название
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning
+          Tree
       U2L7 Student Lesson Introduction:
         description here: Описание здесь
         title: название
@@ -717,6 +754,14 @@
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
       broadcast lesson plan: []
+      equity Intro:
+        Introduction to Equity PD: Introduction to Equity PD
+      equity in CS:
+        Equity in Computer Science: Equity in Computer Science
+      equity is more:
+        Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
+      equity v equality:
+        Equity Vs. Equality: Equity Vs. Equality
       facilitator test: []
       k5 what next 1: []
       sciPD Course Overview: []
@@ -854,6 +899,8 @@
       unique level name here:
         description here: Описание здесь
         title: название
+      wn scratchjr 1:
+        Scratch Jr: Scratch Jr
     match:
       2-3 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -1082,6 +1129,30 @@
           каждому персонажу?
         Ninjacat: Кот Ниндзя
         Ruby: Язык Ruby
+      ECSPD Online U1D10 Assessment 1:
+        Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions
+          drawn from the data will be limited by the (relatively) small amount of
+          data.
+        0: '? Difficult for a computer to draw conclusions. Not easily converted to
+          a graph or data set. Difficult to compare empirically or quantitatively
+          with similar representations of data.'
+        1: ': Difficult for a computer to draw conclusions. Not easily converted to
+          a graph or data set. Difficult to compare empirically or quantitatively
+          with similar representations of data.'
+        2: '? Easily converted to a graph or data table. Can easily generate statistics
+          and draw simple conclusions. Can easily compare with similar representations
+          of data.'
+        3: ': Easily converted to a graph or data table. Can easily generate statistics
+          and draw simple conclusions. Can easily compare with similar representations
+          of data.'
+        'Image: Advantages': 'Image: Advantages'
+        'Image: Disadvantages': 'Image: Disadvantages'
+        'List of objects: Advantages': 'List of objects: Advantages'
+        'List of objects: Disadvantages': 'List of objects: Disadvantages'
+        4: '? More comprehensive set of data. Can be used to generate multiple different
+          data sets. Easy for a person to draw intuitive conclusions.'
+        5: ': More comprehensive set of data. Can be used to generate multiple different
+          data sets. Easy for a person to draw intuitive conclusions.'
       ECSPD phase matching:
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended
           in-person and online PD, focused on building pedagogical strategies and
@@ -1301,20 +1372,20 @@
           code
         Number: Number
         String: String
-        http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
-        http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
-        http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
+        https://studio.code.org/script_assets/pd/blue.png: https://studio.code.org/script_assets/pd/blue.png
+        https://studio.code.org/script_assets/pd/purple.png: https://studio.code.org/script_assets/pd/purple.png
+        https://studio.code.org/script_assets/pd/teal.png: https://studio.code.org/script_assets/pd/teal.png
       PDAlg block match:
         Block match: Block match
         Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match
           the expressions with the appropriate Circle of Evaluation or Evaluation
           Block
-        http://staging.studio.code.org/script_assets/pd/block1.png: http://staging.studio.code.org/script_assets/pd/block1.png
-        http://staging.studio.code.org/script_assets/pd/block2.png: http://staging.studio.code.org/script_assets/pd/block2.png
-        http://staging.studio.code.org/script_assets/pd/block3.png: http://staging.studio.code.org/script_assets/pd/block3.png
-        http://staging.studio.code.org/script_assets/pd/circle1.png: http://staging.studio.code.org/script_assets/pd/circle1.png
-        http://staging.studio.code.org/script_assets/pd/circle2.png: http://staging.studio.code.org/script_assets/pd/circle2.png
-        http://staging.studio.code.org/script_assets/pd/circle3.png: http://staging.studio.code.org/script_assets/pd/circle3.png
+        https://studio.code.org/script_assets/pd/block1.png: https://studio.code.org/script_assets/pd/block1.png
+        https://studio.code.org/script_assets/pd/block2.png: https://studio.code.org/script_assets/pd/block2.png
+        https://studio.code.org/script_assets/pd/block3.png: https://studio.code.org/script_assets/pd/block3.png
+        https://studio.code.org/script_assets/pd/circle1.png: https://studio.code.org/script_assets/pd/circle1.png
+        https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
+        https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
           Year Development: 2 days in-person and 10 hours online'
@@ -1367,6 +1438,25 @@
         Answer 1: Ответ 1
         Question: Вопрос
         What is an unplugged activity?: Что такое урок без компьютера?
+      U1L16 - Matching File Compression Types:
+        BMP: BMP
+        Compressed Image - Lossless: Compressed Image - Lossless
+        Compressed Image - Lossless (256 color limit): Compressed Image - Lossless
+          (256 color limit)
+        Compressed Image - Lossy: Compressed Image - Lossy
+        Compressed Sound - Lossy: Compressed Sound - Lossy
+        Compressed Text - Lossless: Compressed Text - Lossless
+        GIF: GIF
+        JPEG: JPEG
+        MP3: MP3
+        Match the type of file with the description: Match the type of file with the
+          description
+        PNG: PNG
+        Uncompressed Image: Uncompressed Image
+        Uncompressed Sound: Uncompressed Sound
+        WAV: WAV
+        ZIP: ZIP
+        description here: Описание здесь
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -1558,21 +1648,6 @@
         Where is Brendan from?: Откуда Брендан?
         blue: синий
         salt: соль
-      unique level name here:
-        A: A
-        B: B
-        C: C
-        Cycle: Cycle
-        D: D
-        E: В
-        Edge: Edge
-        Graph: Graph
-        Graph Terminology: Graph Terminology
-        Look at diagram below and then match the proper term with what each label is pointing to.: Look
-          at diagram below and then match the proper term with what each label is
-          pointing to.
-        Node: Node
-        Weight: Weight
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
@@ -1974,6 +2049,26 @@
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      ECSPD Online U1D10 Assessment 2:
+        Connecting several data sets allows a more accurate representation of the underlying information.: Connecting
+          several data sets allows a more accurate representation of the underlying
+          information.
+        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data
+          mining is becoming so advanced it may one day be used to automatically generate
+          public policy decisions for us
+        Different representations of data can help us draw more meaningful conclusions about it.: Different
+          representations of data can help us draw more meaningful conclusions about
+          it.
+        0: '? In the previous video, David McCandless made several important points
+          about the representation and use of data. Which of the following was *not*
+          a main point of his?'
+        1: ': In the previous video, David McCandless made several important points
+          about the representation and use of data. Which of the following was *not*
+          a main point of his?'
+        Tell a Story with Data: Tell a Story with Data
+        The way data is represented can help us understand the data by telling a meaningful story.: The
+          way data is represented can help us understand the data by telling a meaningful
+          story.
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Рост Мышления в Классе
         How can we use praise to encourage Growth Mindset in our students?: Как мы
@@ -2270,7 +2365,7 @@
         Strings and Images Multiple Choice: 'Несколько вариантов: строки и изображения'
         Which of these Evaluation Blocks will draw the image on the left?: Which of
           these Evaluation Blocks will draw the image on the left?
-        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
       PDAlg Blocks Video:
         In which area of the screen do you click blocks together to write a program?: In
           which area of the screen do you click blocks together to write a program?
@@ -2440,6 +2535,15 @@
           * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: высота ракеты(секунды) = секунды
           * 7 + 3
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: В
+        Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
+        Which one is the shortest path tree from the source node indicated?: Which
+          one is the shortest path tree from the source node indicated?
       U1L10 Assessment 1:
         2 bits: 2 бита
         3 bits: 3 бита
@@ -2509,14 +2613,6 @@
           most efficient method will require no more than what number of bits?'
         1: ': When sending a response to a question with four possible answers, the
           most efficient method will require no more than what number of bits?'
-      U1L4 Multiple Choice:
-        AAAA: AAAA
-        AABB: AABB
-        ABAB: ABAB
-        ABBB: ABBB
-        BBBB: BBBB
-        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination
-          and Binary Messages'
       U1L6 Assessment multiple choice:
         10: '10'
         12: '12'
@@ -2561,6 +2657,19 @@
         Why does the IP address of every device at a particular location start with the same numbers?: Why
           does the IP address of every device at a particular location start with
           the same numbers?
+      U2L05 Assessment 1:
+        'Packets: Assessment': 'Packets: Assessment'
+        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick
+          Two: Pick the two statements about packets and routing on the Internet which
+          are true.'
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP
+          depends on the infrastructure of the Internet to be reliable enough to ensure
+          no packets are lost in transmission
+        TCP ensures messages can be reliably transmitted across the Internet: TCP
+          ensures messages can be reliably transmitted across the Internet
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP
+          must account for the fact that packets may not arrive at a destination computer
+          in the intended order
       'U2L06 - MC: Which is an MST?':
         A: A
         B: B
@@ -2588,6 +2697,23 @@
           spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents
           a network
+      U2L08 Assessment 1:
+        11: '11'
+        5: '5'
+        6: '6'
+        8: '8'
+        9: '9'
+        12: '? Here is another router network. The table displays the current state
+          of the router table for router A. Take the role of a new router, Z, that
+          has just been connected to the network through router A. You have just compared
+          router tables with router A. Based on your current knowledge as router Z,
+          what is the cost of the most efficient way to send traffic to router E?'
+        13: ': Here is another router network. The table displays the current state
+          of the router table for router A. Take the role of a new router, Z, that
+          has just been connected to the network through router A. You have just compared
+          router tables with router A. Based on your current knowledge as router Z,
+          what is the cost of the most efficient way to send traffic to router E?'
+        Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It
           is inefficient to have everyone on the Internet maintain their own list
@@ -2640,6 +2766,26 @@
           are not - humans are better as breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why
           are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many users would an fixed-length IP address system using 6 bits support?: How
+          many users would an fixed-length IP address system using 6 bits support?
+        'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol:
+          Assessment 1'
+      U2L3 Assessment 3:
+        ? '? ''IP addresses contain information similar to addressing a letter where
+          you need include the state, zip code, street and number. This is called:'''
+        : 'IP addresses contain information similar to addressing a letter where you
+          need include the state, zip code, street and number. This is called:'
+        'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol:
+          Assessment 2'
+        abstraction: abstraction
+        hierarchy: hierarchy
+        packet: packet
+        protocol: protocol
       U3L01 Assessment2:
         Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the
           other, faces together
@@ -3153,12 +3299,6 @@
         This multiple choice is all about the presidents of the United States.: Этот
           множественный выбор будет касаться президентов Соединенных Штатов.
         Who was the first president of the USA?: Кто был первым президентом США?
-      unique level name here:
-        Question: Вопрос
-        description here: Описание здесь
-        right answer: правильный ответ
-        title: название
-        wrong answer: неправильный ответ
       valid contracts multi:
         Pick the best answer to the question.: Выберите лучший ответ на вопрос.
         Valid Contracts: Действующие определения
@@ -3216,18 +3356,34 @@
           Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
           or ((8 < x) and (x < 10)))
+        ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x)
+          && (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8
+          < x) AND (x < 10))
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) И (x < 5)) ИЛИ ((8
           < x) И (x < 10))
+        ((1 < x) And (x < 5) Or (8 < x) And (x < 10)): ((1 < x) And (x < 5) Or (8
+          < x) And (x < 10))
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
           ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8
+          < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) И (x < 5)) ИЛИ ((8
           < x) И (x < 10))
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
         (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) &&
+          (x < 10)
+        (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x)
+          AND (x < 10)
+        (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x)
+          And (x < 10)
+        (1 < x) and (x < 5) or (8 < x) and (x < 10): (1 < x) and (x < 5) or (8 < x)
+          and (x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
           500
         Convert Blocks to Math: Преобразование блоков в математические выражения
@@ -3323,6 +3479,51 @@
           PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD Online U1D1-2 Assessment 1:
+        What is a Computer?: What is a Computer?
+      ECSPD Online U1D1-2 Reflection:
+        'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is
+          a Computer? Reflection'
+      ECSPD Online U1D10 Reflection:
+        Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+        0: '? You have experienced the lesson both online and on the first day of
+          the in-person PD. Additionally, you have watched a TED talk about the representation
+          of data. What have you learned that you can take back to your classroom?
+          Use this space to record your ideas for this lesson. You will have a chance
+          to share your ideas and questions in a forum in the following level.'
+        1: ': You have experienced the lesson both online and on the first day of
+          the in-person PD. Additionally, you have watched a TED talk about the representation
+          of data. What have you learned that you can take back to your classroom?
+          Use this space to record your ideas for this lesson. You will have a chance
+          to share your ideas and questions in a forum in the following level.'
+      ECSPD Online U1D11-14 Reflection:
+        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: How
+          do you feel about the tools for this lesson? What challenges might they
+          pose in your classroom?
+        Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
+      ECSPD Online U1D15-16 Reflection:
+        Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
+        0: '? What can you take away from how you saw this lessons taught in PD? How
+          do you feel about the part of the lesson that was not taught in PD? How
+          do you plan to teach this lesson?'
+        1: ': What can you take away from how you saw this lessons taught in PD? How
+          do you feel about the part of the lesson that was not taught in PD? How
+          do you plan to teach this lesson?'
+      ECSPD Online U1D3-4 Reflection:
+        Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
+        What challenges do you think you and your students might have with the material covered in this lesson?: 'What
+          challenges do you think you and your students might have with the material
+          covered in this lesson? '
+      ECSPD Online U1D5-7 Reflection:
+        Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
+        What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson?: 'What
+          can you take away from how you saw this lessons taught in PD? How do you
+          plan to teach this lesson? '
+      ECSPD Online U1D8-9 Reflection:
+        Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
+        What challenges do you think you and your students might have with the material covered in this lesson?: What
+          challenges do you think you and your students might have with the material
+          covered in this lesson?
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -3425,6 +3626,7 @@
         Enter title here: Введите название здесь
       Trent Test Level:
         Enter title here: Введите название здесь
+      U1L1 - FR computer science word association: []
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
@@ -3549,6 +3751,15 @@
         'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L05 Reflection 1:
+        Enter your reflection here.: Enter your reflection here.
+        'Packets: Reflection': 'Packets: Reflection'
+      U2L08 Free Response 1:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 2:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 3:
+        'Router Table: Reflection': 'Router Table: Reflection'
       U2L09 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L09 Free Response Wrap Up:
@@ -3578,6 +3789,26 @@
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L17 Assessment 1:
+        Assessment Question 1: Assessment Question 1
+        Describe what it means for a problem to be "computationally hard.": Describe
+          what it means for a problem to be "computationally hard."
+      U2L17 Assessment 2:
+        Assessment Question 2: Assessment Question 2
+        How are computationally hard problems related to encryption?: How are computationally
+          hard problems related to encryption?
+      U2L17 Free Response Getting Started:
+        'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
+        0: '? List two problems that you think computers can not solve? What are the
+          characteristics of problems that are "hard" for computers?'
+        1: ': List two problems that you think computers can not solve? What are the
+          characteristics of problems that are "hard" for computers?'
+      U2L17 Free Response Wrap Up:
+        'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
+        0: '? If the TSP is unsolvable for finding an exact solution, how do you think
+          package delivery companies optimize their delivery routes?'
+        1: ': If the TSP is unsolvable for finding an exact solution, how do you think
+          package delivery companies optimize their delivery routes?'
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
       U2L18 Free Response Getting Started:
@@ -3594,6 +3825,12 @@
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L20 Free Response Wrap Up:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L3 Assessment 4:
+        'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing
+          Protocol: Assessment 3'
+        Why does it not make sense for users to be identified by their real names on the Internet?: Why
+          does it not make sense for users to be identified by their real names on
+          the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol:
           Getting Started'

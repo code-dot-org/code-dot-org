@@ -325,7 +325,9 @@ lv:
     classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: 'Jau reģistrējies? %{link}'
@@ -392,6 +394,10 @@ lv:
     autoplay_option: Automātiski atskaņot videoklipu
     download: Lejupielādēt videoklipu
   compatability:
+    https:
+      header: Lūdzu iespējo HTTPS priekš Code.org.
+      message: "Lai uzlabotu drošību, mēs pāriesim uz HTTPS protokolu no %{https_date}. Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied šeit</a> un izlasi, kā iespējot HTTPS Code.org."
+      hide_this_warning: Nerādīt šo brīdinājumu
     working:
       header: Mēs strādājam pie atbalsta jūsu pārlūkam.
       message: "Code.org izmanto mūsdienīgas tīmekļa lapu tehnoloģijas. Tas palīdz lapai ātrāk darboties. Tava pārlūkprogramma neatbalsta visas nepieciešamās funkcijas un tev varētu būt nelieli traucējumi, kamēr izmanto šo lapas daļu. Lūdzu, palīdzi mums, <a href='%{report_issue_url}'> ziņojot visus traucējumus, ko atrod</a>. Tu vari arī <a href='%{supported_browsers_url}'> nomainīt savu pārlūkprogrammu uz atbalstītu versiju</a>."

@@ -17,7 +17,7 @@
     الآلي
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
   petition_sign_message_support: اذا اردت مساعدتنا , سجل أسمك. انضم مع الاخرين.
-  petition_join_others: 'Join # others'
+  petition_join_others: انضم الى اﻷخرين
   name: الاسم
   email: البريد الإلكتروني
   zipcode: الرمز البريدي أو اسم البلد
@@ -410,11 +410,18 @@
   dashboard_students_url: عنوان URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     انقر هنا</a> للحصول على مستند الخصوصية الذي يمكن مشاركته أو طباعته لطلابك .
-  dashboard_curriculum_overview: نظرة عامة على منهاج الروضة - صف 5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: عرض جميع خطط الدرس
   dashboard_course1: 'الدرس الأول :'
   dashboard_course2: 'الدرسة الثاني:'
   dashboard_course3: 'الدرس الثالت:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: نظرة عامة على منهاج الروضة - صف 5
+  dashboard_overview: Overview
   dashboard_sequence: المتسلسلة
   dashboard_framework: المنصة
   dashboard_standards: المعايير
@@ -425,6 +432,10 @@
   dashboard_puzzle_solving: 'حل اللغز:'
   dashboard_student_worksheet: ورقة عمل التلمبد
   dashboard_teacher_worksheet: ورقة عمل المدرس
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: روضة
   dashboard_grade_other: الأخرى
   dashboard_login_word: كلمة
@@ -456,6 +467,7 @@
   dashboard_sections_login_type_explanation: هذا الجدول يساعد على تفسير أي من أنواع
     تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع.
   dashboard_faq: الأسئلة الشائعة
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: التعرف على المزيد
@@ -1098,20 +1110,8 @@
     وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
   sphero_beyond_longdescription: سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة
     للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: إخفاء هذا التحذير

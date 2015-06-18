@@ -250,10 +250,7 @@ sv:
         Complete the 'draw waves' function.  Each
         wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
         waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+      4-5 Artist Functions 13 Free play_instruction: Här är några funktioner för att rita planeter, stjärnor, raketer och robotar. Använd dem hur du vill för att skapa bilder du kan dela med dina vänner.
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops
@@ -409,16 +406,16 @@ sv:
       4-5 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Can you
         fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 10_instruction: Hitta felen och rätta dem.
       4-5 Bee Debugging 11_instruction: Does this count correctly?
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 3_instruction: Hitta felen och rätta dem.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
-      4-5 Bee Debugging 5_instruction: "Something isn't right here..."
+      4-5 Bee Debugging 5_instruction: Något är inte rätt här...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
+      4-5 Bee Debugging 7_instruction: Funktionen saknar något...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
         properly.
@@ -437,7 +434,7 @@ sv:
       4-5 Bee Nested Loops 5_instruction: |
         Collect all of the nectar by creating
         a nested loop.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
+      4-5 Bee Nested Loops 6_instruction: Samla all nektar.
       4-5 Bee Nested Loops 7_instruction: |
         Put this loop inside another loop to create
         a nested loop and collect all of the nectar from the flowers.
@@ -1091,7 +1088,7 @@ sv:
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
+      Course 4 Artist Binary 7_instruction: Slutför denna ritning.
       Course 4 Artist Binary Free Play 2_instruction: |
         Free Play: Here's a higher
         resolution canvas to draw on - 16 bits by 16 bits!
@@ -1478,7 +1475,7 @@ sv:
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: Undvik TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
       Course 4 Maze 5_instruction: |
@@ -1687,13 +1684,13 @@ sv:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1748,9 +1745,8 @@ sv:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1801,10 +1797,11 @@ sv:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1849,8 +1846,8 @@ sv:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -1923,6 +1920,12 @@ sv:
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -1973,7 +1976,7 @@ sv:
         This one needs two loops: one to go up the
         stairs and one to go down.
       K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
-      K-1 Artist Loops 8_instruction: This staircase has longer steps.
+      K-1 Artist Loops 8_instruction: Denna trappa har längre steg.
       K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
       K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
       K-1 Artist1 1_instruction: Draw the foot of the man with one line
@@ -1997,9 +2000,9 @@ sv:
         Draw the dashed line by using both the jump and
         draw blocks
       K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
-      K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
+      K-1 Artist1 Assessment 1_instruction: Rita de korta och långa linjerna!
       K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
-      K-1 Artist2 1_instruction: Draw a square below the triangle.
+      K-1 Artist2 1_instruction: Rita en fyrkant under triangeln.
       K-1 Artist2 2_instruction: Jump and draw a square next to the house.
       K-1 Artist2 3_instruction: Draw a square above the other square
       K-1 Artist2 4_instruction: Draw a rectangle to complete the bridge.
@@ -2008,7 +2011,7 @@ sv:
       K-1 Artist2 Assessment1_instruction: |
         Assessment: Draw a square next to the
         other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
+      K-1 Artist2 Free Draw_instruction: Rita vad som helst!
       K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
       K-1 Bee 1_instruction: |
         Move me to the flower, get the nectar, then move me
@@ -2601,9 +2604,9 @@ sv:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2686,10 +2689,28 @@ sv:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

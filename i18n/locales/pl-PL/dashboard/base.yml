@@ -325,7 +325,9 @@ pl:
     classroom_activity: Aktywność unplugged (bez komputera)
   home:
     title: Studio Code
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINIE KODU NAPISANEGO PRZEZ UCZNIÓW'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Streszczenie kursów 1, 2 i 3
     lesson_plans: Plany lekcji
     signin_message: 'Jesteś już zarejestrowany? %{link}'
@@ -392,6 +394,10 @@ pl:
     autoplay_option: Odtwarzaj filmy automatycznie
     download: Pobierz wideo
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Ukryj to ostrzeżenie
     working:
       header: Pracujemy nad wsparciem dla Twojej przeglądarki.
       message: "Code.org wykorzystuje nowoczesną technologię sieciową. Dzięki temu można szybciej korzystać ze stron. Twoja przeglądarka nie obsługuje wszystkich wymaganych funkcji i mogą wystąpić problemy podczas korzystania z tej części witryny. Pomóż nam <a href='%{report_issue_url}'> zgłaszając problemy, na które się natknąłeś</a>. Możesz także<a href='%{supported_browsers_url}'> uaktualnić swoją przeglądarkę do obsługiwanej wersji</a>."

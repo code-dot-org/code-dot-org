@@ -3,7 +3,7 @@ da:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Puslespil: Lær at trække og slippe'
+          "Jigsaw: Learn to drag and drop": 'Øvelse: Lær at trække og slippe'
           The Maze: Labyrinten
           Multi: Multi
           Match: Match
@@ -11,16 +11,16 @@ da:
           title: Test banen
           description: Bare en intern test bane.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Puslespil: Lær at trække og slippe'
+          "Jigsaw: Learn to drag and drop": 'Øvelse: Lær at trække og slippe'
           "Maze: Sequence": 'Labyrint: Sekvens'
           "Maze: Debugging": 'Labyrint: Fejlfinding'
           "Artist 1: Intro": 'Kunstner 1: Intro'
           Artists 2: Kunstnere 2
-          Spelling Bee: Stave bien
+          Spelling Bee: Stave-bien
           Spelling Bee not blockly: 'Stave bien - Ikke blockly'
           "Bee 1: Intro": 'Bi 1: Intro'
           "Maze 2: Loops": 'Labyrint 2: Sløjfer'
-          "Bee 2: Loops": 'Bi 2: Sløjfer'
+          "Bee 2: Loops": 'Bi 2: Løkker'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: 'Flappy - ikke blockly'
@@ -33,12 +33,12 @@ da:
           Getting Loopy: Blive Svimmel
           The Big Event: Den store begivenhed
           Going Places Safely: Gå til sikre steder
-          description: Kursus 1 er designet til at give tidlige læsere mulighed for at lave programmer, som vil hjælpe dem med at lære at samarbejde med andre, løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved slutningen af dette kursus opretter eleven sit helt eget spil eller historie, som kan deles med andre. Anbefales til 1. klasses elever.
+          description: Kursus 1 er designet til at give tidlige læsere mulighed for at lave programmer, som vil hjælpe dem med at lære at samarbejde med andre, løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved slutningen af dette kursus opretter eleven sit helt eget spil eller historie, som kan deles med andre. Anbefales til elever i 1. klasse.
           "Bee: Sequence": 'Bi: Sekvens'
           "Artist: Sequence": 'Kunstner: Sekvens'
           "Artist: Shapes": 'Kunstner: Figurer'
-          "Maze: Loops": 'Labyrint: Sløjfer'
-          "Bee: Loops": 'Bi: Sløjfer'
+          "Maze: Loops": 'Labyrint: Løkker'
+          "Bee: Loops": 'Bi: Løkker'
           "Studio: Create a Story": 'Spil Lab - Opret en historie'
           "Artist: Loops": 'Kunstner: Sløjfer'
           description_audience: Fra 4 år (ikke-læsere)
@@ -54,7 +54,7 @@ da:
           Bee Conditionals: Bi betingelser
           Flappy: Flappy
           title: Kursus 2
-          Bee Loops: Bi sløjfer
+          Bee Loops: Bi Løkker
           Artist Functions: Kunstner funktioner
           The Artist Debugging: Kunstneren fejlfinding
           Bee Debugging: Bi fejlfinding
@@ -68,12 +68,12 @@ da:
           Binary Bracelets: Binære armbånd
           The Big Event: Den store begivenhed
           Your Digital Footprint: Dit digitale fodspor
-          description: 'Kursus 2 er designet til studerende, der kan læse og har ingen forudgående erfaring med programmering. I dette kursus vil studerende skabe programmer til at løse problemer og udvikle interaktive spil eller historier der kan deles. Anbefales af 2. - 5. klasses elever.'
+          description: Kursus 2 er designet til elever der kan læse, men uden forudgående erfaring med programmering. I dette kursus vil elever løse problemer ved at lave programmer, og udvikle interaktive spil eller historier der kan deles. Anbefales til elever i 2.-5. klasse.
           "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Kunstner: Sekvens'
-          "Maze: Loops": 'Labyrint: Sløjfer'
+          "Maze: Loops": 'Labyrint: Løkker'
           "Artist: Loops": 'Kunstner: Sløjfer'
-          "Bee: Loops": 'Bi: Sløjfer'
+          "Bee: Loops": 'Bi: Løkker'
           "Bee: Debugging": 'Bi: Fejlfinding'
           "Artist: Debugging": 'Kunstner: Fejlfinding'
           "Bee: Conditionals": 'Bi: Betingelser'
@@ -107,7 +107,7 @@ da:
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital statsborgerskab
           Farmer - While Loops: 'Landmand - Når sløjfer'
-          description: Kursus 3 er udviklet til studerende, der har taget kursus 2. Studerende vil dykke dybere ned i programmering emner introduceret i tidligere kurser til fleksible løsninger til mere komplekse problemer. Ved slutningen af dette kursus oprette studerende interaktive historier og spil de kan dele med nogen. Anbefales til 4. -5. klasses elever.
+          description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne kommer til at dykke dybere ned i emnerne introduceret i tidligere kurser, for at finde fleksible løsninger til mere komplekse problemer. Ved slutningen af dette kursus vil eleverne have produceret interaktive historier og spil de kan dele. Anbefales til elever i 4. -5. klasse.
           "Studio: Create a Game": 'Play Lab: Opret et spil'
           Maze: Labyrint
           Artist: Kunstner
@@ -209,7 +209,9 @@ da:
           description_short: Lad os bruge noget kode for at slutte os til Anna og Elsa, når de går på opdagelse i magien og isens skønhed.
         course4:
           description_short: Elever der tager kursus 4 skal allerede have gennemført kursus 2 og 3.
-          description: 'Kursus 4 er udviklet til elever, der har taget kursus 2. Elever der vil dykke dybere ned i programmeringsemner, som der er blevet introduceret til i tidligere kurser,  fra fleksible løsninger over til mere komplekse problemer. Ved slutningen af dette kursus kan elever oprette  interaktive historier og spil, som de kan dele med andre. Anbefales til 4. -5. klasses elever.'
+          description: |
+            Kursus 4 er udviklet til elever, der har taget Kursus 2 og 3. Eleverne  kan dykke dybere ned i emner, som er blevet introduceret i tidligere kurser,  og lave fleksible løsninger på mere komplekse problemer. Ved slutningen af dette kursus kan eleverne dele de interaktive historier og spil, de har lavet. 
+            Anbefales til elever i 4.-8. klasse.
           "Artist: Variables": 'Kunstner: variabler'
           "Bee: For Loops": 'Bee: For loops/sløjfer'
           title: Kursus 4
@@ -393,6 +395,7 @@ da:
           Applab: Applab
           The Artist: Kunstneren
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Hændelser
           description: ""
@@ -409,9 +412,9 @@ da:
           description: ""
           Jigsaw: Puslespil
         step:
-          title: Trin
+          title: Tip!
           description: ""
-          Step: Trin
+          Step: Tip!
         Hour of Code:
           title: Hour of Code 2013
           description: ""
@@ -492,6 +495,7 @@ da:
           "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -814,6 +818,7 @@ da:
           One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -856,6 +861,7 @@ da:
           Odometer: Odometer
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -894,6 +900,8 @@ da:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
           Introduction to PD: Introduction to PD
           K-5 Courses: K-5 Courses
           Writing computer programs: Writing computer programs
@@ -916,3 +924,26 @@ da:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
           Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Hour of Code

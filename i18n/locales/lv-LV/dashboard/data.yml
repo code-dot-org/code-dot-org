@@ -203,7 +203,7 @@ lv:
         turtle_3_5: 'Tagad izveido jaunu "zīmēt māju" funkciju un izmanto to lai izveidotu māju abiem kaķiem. Padoms: Izveido jaunu funkciju izmantojot "dari kaut ko" programmas bloku un ievadi pats savu tekstu lai nosauktu bloku.'
         turtle_3_6: 'Izmantojot "zīmēt kvadrātu" kā piemēru, pievieno ievadi ar nosaukumu "garums" pie "zīmē trīsstūri". Tad uzzīmē trīsstūrus ar dažādiem izmēriem. (Padoms: uzklikšķini uz zvaigznes, lai pievienotu ievadi funkcijai)'
         turtle_3_7: 'Pievieno ievadi ar nosaukumu "garums" funkcijai "zīmēt māju" un uzzīmē lielu māju zilonim (malu garums 150 pikseļi)'
-        turtle_3_8: "Rediģē ''uzzīmē māju'' tā, lai tas atrastos labajā, lejējā stūrī pēc jaunas mājas zīmēšanas. Lieto šo modificēto fukciju, lai uzzīmētu māju kokā."
+        turtle_3_8: "Rediģē ''uzzīmē māju'' tā, lai tas atrastos labajā apakšējā stūrī pēc jaunas mājas zīmēšanas. Lieto šo modificēto funkciju, lai uzzīmētu trīs mājas."
         turtle_3_9: |
           Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
           
@@ -247,7 +247,7 @@ lv:
         flappy_6: Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk vai lēnāk.
         flappy_7: 'Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.'
         flappy_8: Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.
-        flappy_9: Lai pamainītu lietas, tā vietā, lai tad, kad atduries pret ščērsli beigtu spēli, iestati punktu skaitu atpakaļ uz 0.
+        flappy_9: Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.
         flappy_11: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
         flappy_k1_1: Spēlēt Flappy spēli
         flappy_k1_2: 'Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.'
@@ -327,7 +327,7 @@ lv:
         maze_wordsearch_k_15: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu BELOW
         maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad citu, lai pateiktu STORY
-        applab_ec_simple: Izveido savu aplikāciju lietojot rīkus, kas atrodas instrumentu kastē.
+        applab_ec_simple: Izveido savu aplikāciju, lietojot rīkus, kas atrodas instrumentu kastē.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu, lietojot jauno "pildspalvas krāsa" bloku.'
         turtle_ec_1_10: 'Tu to paveici! Tagad uzzīmē ko vēlies. Dažas idejas: vienkāršs cilvēciņš, sniegpārsla vai spirāle. Izmēģini arī jauno bloku "pildspalvas platums". Lai jautri!'
         studio_ec_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
@@ -431,10 +431,10 @@ lv:
         playlab_intro: Ievads spēļu laboratorijā
         playlab_events: Spēļu laboratorijas notikumi
         playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
-        tutorial_puzzle_challenge: Apmācība Mīklas Izaicinājumā
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        tutorial_puzzle_challenge: Nodarbība Puzzle Challange
+        infinity_playlab_intro: 'Spēļu laboratorija - ievads'
+        infinity_playlab_events: 'Spēļu laboratorija - notikumi'
+        infinity_playlab_repeat_forever: 'Spēļu laboratorija - mūžīgie cikli'
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -444,6 +444,7 @@ lv:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'
@@ -527,8 +528,8 @@ lv:
         arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
         right_arrow_fireball: Izmanto labo bultu, lai sašautu ugunsbumbas
         name_function: Raksti te savas funkcijas nosaukumu
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: Pievieno pārvietošanas bloku šeit
+        Infinity_move_directions_callout: Kurš bloks liks Maymax kustēties augšup, kad būs piespiesta bulta uz augšu?
+        Infinity_move_directions_callout_arrow: Izmanto šīs bultiņas, lai vadītu
+        Infinity_move_collide_callout: Atskaņot skaņu, kad notiek šis notikums.
+        Infinity_repeat_callout: Novieto pārvietošanas blokus šeit iekšā

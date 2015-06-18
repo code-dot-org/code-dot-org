@@ -419,11 +419,18 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: View all lesson plans
   dashboard_course1: 'Course 1:'
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_overview: Overview
   dashboard_sequence: chuỗi
   dashboard_framework: Framework
   dashboard_standards: Standards
@@ -434,6 +441,10 @@
   dashboard_puzzle_solving: 'Giải quyết các câu đố:'
   dashboard_student_worksheet: bảng sinh viên
   dashboard_teacher_worksheet: bảng giáo viên
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Khác
   dashboard_login_word: Từ
@@ -465,6 +476,7 @@
   dashboard_sections_login_type_explanation: Bảng này sẽ giúp giải thích các loại
     đăng nhập, <b>hình ảnh, từ, hoặc email</b>, bạn sẽ muốn chọn cho một phần.
   dashboard_faq: Câu hỏi thường gặp
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
   code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   learn_more: Tìm hiểu thêm
@@ -498,7 +510,7 @@
     vào tất cả các hướng dẫn, nâng cấp lên một <a href="http://browsehappy.com/" target="_blank">Trình
     duyệt Web mới nhất.</a>
   mobile_devices: Hướng dẫn cho thiết bị di động
-  frozen_name: Mã hóa với Anna và Elsa
+  frozen_name: Mã hóa cùng  Anna và Elsa
   codeorg_name: Viết chương trình máy tính đầu tiên của bạn
   codeintl_name: Viết chương trình máy tính đầu tiên của bạn
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -1124,18 +1136,6 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click

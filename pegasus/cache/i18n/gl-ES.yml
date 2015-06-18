@@ -428,11 +428,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haga
     clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
     o imprimirse para sus alumnos.
-  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Ver todos los planes de estudio
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_overview: Overview
   dashboard_sequence: Secuencia
   dashboard_framework: Marco de trabajo
   dashboard_standards: Estándares
@@ -443,6 +450,10 @@
   dashboard_puzzle_solving: 'Resolución de rompecabezas:'
   dashboard_student_worksheet: hoja de trabajo del estudiante
   dashboard_teacher_worksheet: hoja de trabajo del maestro
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -476,6 +487,7 @@
     tipos de inicio de sesión, <b>imagen, palabra o correo electrónico</b>, querrá
     elegir para una sección.
   dashboard_faq: Preguntas frecuentes
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -1170,18 +1182,6 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
