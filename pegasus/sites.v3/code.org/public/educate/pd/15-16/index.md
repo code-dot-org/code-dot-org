@@ -58,6 +58,8 @@ nav: pd2_nav
 <br />
 [TX - Houston](/educate/pd/15-16/houston)
 <br />
+[VA - CodeVA](/educate/pd/15-16/codeva)
+<br />
 [WA - Seattle](/educate/pd/15-16/seattle)
 <br />
 [WA - Spokane](/educate/pd/15-16/spokane)

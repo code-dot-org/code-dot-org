@@ -901,7 +901,7 @@ en:
           Text Compression Lesson: Text Compression Lesson
         OnlinePD-K5:
           title: 'Teaching Kids to Code: The Basics'
-          description: 'Learn to code and how to teach computer science basics to your students with this free, self-paced online course.'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
           Introduction to PD: Introduction to PD
           K-5 Courses: K-5 Courses
           Writing computer programs: Writing computer programs
@@ -942,3 +942,8 @@ en:
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Hour of Code
