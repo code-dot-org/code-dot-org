@@ -294,6 +294,12 @@ img#turtleImage {
   left: 0;
   right: 0;
   background-color: $light_purple;
+  text-align: center;
+
+  & > span {
+    line-height: $workspace-headers-height;
+    color: $white;
+  }
 
   .workspace-header-button {
     background-color: $lightest_purple;
@@ -312,10 +318,10 @@ $debug-commands-column-width: 270px;
   width: $debug-commands-column-width;
   float: left;
   border-right: 1px solid gray;
-}
 
-#spinner {
-  margin-left: -5px;
+  .fa {
+    margin: 0 0.25em;
+  }
 }
 
 .debug-commands, .debug-console {
@@ -384,6 +390,7 @@ $debug-commands-column-width: 270px;
 }
 
 #slider-cell {
+  float: left;
   cursor: default;
 }
 
