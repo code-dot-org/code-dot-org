@@ -29,7 +29,6 @@ var DropdownProperties = React.createClass({
         <OptionsSelectRow
           desc={'options'}
           element={element}
-          initialValue={'Option 1\nOption 2'}
           handleChange={this.props.handleChange.bind(this, 'options')} />
         <PropertyRow
           desc={'width (px)'}
@@ -91,6 +90,14 @@ module.exports = {
     element.style.margin = '0';
     element.style.color = '#fff';
     element.style.backgroundColor = '#1abc9c';
+
+    var option1 = document.createElement('option');
+    option1.innerHTML = 'Option 1';
+    element.appendChild(option1);
+
+    var option2 = document.createElement('option');
+    option2.innerHTML = 'Option 2';
+    element.appendChild(option2);
 
     return element;
   }
