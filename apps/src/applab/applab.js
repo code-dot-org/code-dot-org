@@ -47,15 +47,9 @@ var TestResults = studioApp.TestResults;
 var Applab = module.exports;
 
 //Debug console history
-/*
 Applab.debugConsoleHistory = {
   'history': [],
   'currentHistoryIndex': 0
-};
-*/
-Applab.dc = {
-  'hist': [],
-  'i': 0
 };
 
 var errorHandler = require('./errorHandler');
@@ -311,30 +305,30 @@ function queueOnTick() {
 }
 
 function updateDebugConsoleHistory(commandText) {
-  Applab.dc.i = Applab.dc.hist.length + 1;
-  Applab.dc.hist[Applab.dc.i - 1] = commandText;
+  Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
+  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
 }
 
 function moveUpDebugConsoleHistory(currentInput) {
-  if (Applab.dc.i > 0) {
-    Applab.dc.i -= 1;
+  if (Applab.debugConsoleHistory.currentHistoryIndex > 0) {
+    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
   }
-  if (typeof Applab.dc.hist[Applab.dc.i] !== 'undefined') {
-    return Applab.dc.hist[Applab.dc.i];
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
   }
   return currentInput;
 }
 
 function moveDownDebugConsoleHistory(currentInput) {
-  if (Applab.dc.i < Applab.dc.hist.length) {
-    Applab.dc.i += 1;
+  if (Applab.debugConsoleHistory.currentHistoryIndex < Applab.debugConsoleHistory.history.length) {
+    Applab.debugConsoleHistory.currentHistoryIndex += 1;
   }
-  if (Applab.dc.i == Applab.dc.hist.length &&
-      currentInput == Applab.dc.hist[Applab.dc.i - 1]) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex == Applab.debugConsoleHistory.history.length &&
+      currentInput == Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1]) {
     return '';
   }
-  if (typeof Applab.dc.hist[Applab.dc.i] !== 'undefined') {
-    return Applab.dc.hist[Applab.dc.i];
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
   }
   return currentInput;
 }
