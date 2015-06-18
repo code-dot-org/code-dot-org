@@ -4,8 +4,11 @@
 <div id="debug-area">
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
   <div id="debug-area-header">
+    <span>Debug Console</span>
     <% if (debugButtons) { %>
     <div id="debug-commands-header" class="workspace-header">
+      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>
+      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
       <span>Debug Commands</span>
     </div>
     <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
@@ -31,7 +34,6 @@
               clip-path="url(#fastClipPath)" />
       </svg>
     </div>
-    <img id="spinner" style="visibility: hidden;" src="<%= assetUrl('media/applab/spinner-big.gif') %>" height=16 width=16>
     <% } %>
   </div>
 

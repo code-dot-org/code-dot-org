@@ -726,9 +726,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   Applab.tickCount = 0;
 
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
   if (spinner) {
-    spinner.style.visibility = 'hidden';
+    spinner.style.display = 'none';
+  }
+
+  var pausedIcon = document.getElementById('paused-icon');
+  if (pausedIcon) {
+    pausedIcon.style.display = 'none';
   }
 
   var pauseButton = document.getElementById('pauseButton');
@@ -822,9 +827,13 @@ Applab.reset = function(first) {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
+    }
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
     var debugOutput = document.getElementById('debug-output');
     if (debugOutput) {
@@ -1022,9 +1031,13 @@ Applab.execute = function() {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+    }
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
   }
 
@@ -1060,18 +1073,21 @@ Applab.onPauseContinueButton = function() {
 Applab.updatePauseUIState = function() {
   var pauseButton = document.getElementById('pauseButton');
   var continueButton = document.getElementById('continueButton');
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
+  var pausedIcon = document.getElementById('paused-icon');
 
-  if (pauseButton && continueButton && spinner) {
+  if (pauseButton && continueButton && spinner && pausedIcon) {
     if (Applab.JSInterpreter.paused &&
         Applab.JSInterpreter.nextStep === StepType.RUN) {
       pauseButton.style.display = "none";
       continueButton.style.display = "inline-block";
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
+      pausedIcon.style.display = 'inline-block';
     } else {
       pauseButton.style.display = "inline-block";
       continueButton.style.display = "none";
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+      pausedIcon.style.display = 'none';
     }
   }
 };
