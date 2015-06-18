@@ -31,13 +31,18 @@ Breakfast and lunch will be served.
 
 #### Location 
 
-The University of Massachusetts Venture Development Center
-<br />
 University of Massachusetts Boston
+<br />
+Wheatley Building
+<br />
+3rd floor, Venture Development Center
 <br />
 100 Morrissey Boulevard
 <br />
 Boston, MA 02125 
+
+For directions and parking information, please visit[https://www.umb.edu/the_university/getting_here/directions](https://www.umb.edu/the_university/getting_here/directions). If driving, we suggest the Bayside Parking Lot behind the Doubletree for $6 parking per day.
+
 
 #### What do I bring to Phase 4 PD? ####
 Exploring Computer Science binder with curriculum
