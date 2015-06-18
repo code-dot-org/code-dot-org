@@ -45,4 +45,20 @@
     box-sizing: border-box;
     line-height: 1.2em;
   }
+
+  .design-mode-hidden {
+    visibility: hidden;
+  }
+}
+
+#divApplab.divApplabDesignMode {
+
+  canvas {
+    background-color: #eee;
+  }
+
+  .design-mode-hidden {
+    visibility: visible;
+    opacity: 0.3;
+  }
 }
