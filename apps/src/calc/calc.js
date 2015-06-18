@@ -201,6 +201,12 @@ Calc.init = function(config) {
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
+
+    if (Blockly.contractEditor) {
+      Blockly.contractEditor.registerTestHandler(function () {
+        return "Calc test result!";
+      });
+    }
   };
 
   studioApp.init(config);
