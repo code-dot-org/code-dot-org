@@ -14,6 +14,8 @@ function updateGutter() {
   }
 
   if (dropletEditor) {
+    // Droplet will call aceSession.setAnnotations() under the hood
+    // for us
     dropletEditor.setAnnotations(annotations);
   }
   else {
