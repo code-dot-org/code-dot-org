@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 # Background
 
-The “building blocks” of a programming language are the most basic commands the programming language can describe, but do not need to be at the "digital" level. They vary from programming language to programming language to fit the purpose of the language.
+Last time, you created instructions for people to follow. This time, you are going to explore the “building blocks” of a programming language to create instructions for the computer to follow. All programming languages have basic “building blocks” which are the most fundamental commands. They can be combined, recombined, and built up to eventually do very sophisticated things. In this lesson we provide you with a very few blocks (only 4) to help you understand the basic principles of building and structuring programs. 
 
 # Lesson
 

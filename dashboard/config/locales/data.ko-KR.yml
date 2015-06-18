@@ -246,8 +246,8 @@
           그 다음에 다른 크기의 삼각형들을 그리면 됩니다. (힌트: 별 모양을 눌러 함수에게 어떤 값을 사용하도록 할 수 있습니다.)'
         turtle_3_7: '"집 그리기" 함수에 "길이"를 전달할 수 있도록 추가해서 코끼리 집을 만들어 보세요. (각 선의 길이는 150
           픽셀)'
-        turtle_3_8: 이전 퍼즐에서 사용된 블럭들이 모두 있습니다. "집 그리기" 함수를 수정해서 사용하고, 모든 집을 그린 후에는
-          마지막 집의 오른쪽 아래에 위치할 수 있도록 해보세요. 주어진 함수 블럭을 수정해서 3개의 집을 지으면 됩니다.
+        turtle_3_8: 새로운 집 그리기가 완료되면 오른쪽 하단에서 끝나도록 "집 그리기"를 수정하세요. 이 수정된 함수를 사용해서 3개의
+          집을 그리세요.
         turtle_3_9: '"집 그리기" 함수를 아무 도움 없이 스스로 만들 수 있을까요? 도전해 보세요.'
         turtle_3_10: 지금까지 많은 것을 배웠습니다! 이제, 아무거나 원하는 것을 그려보세요. 별, 달팽이 나선, 눈 결정 등 멋진
           것들을 상상하고 그려보세요.
@@ -308,8 +308,7 @@
         flappy_7: 자 이번에는 "실행하면" 블럭에 다른 블럭을 붙여 배경 그림을 바꾸어보세요.
         flappy_8: 화면에 보이는 것들은 언제 든지 바꿀 수 있습니다. 물체를 피해 통과하는 것과 같은 이벤트들이 발생했을 때 랜덤 배경으로
           바뀌도록 해보세요.
-        flappy_9: 게임을 끝내지 말고 땅에 떨어지거나 물체에 닿거나 등등 여러 가지 상황에 대해서 생각해서, 점수를 0점이 되게 해
-          보세요.
+        flappy_9: 사물들을 뒤섞으려면, 장애물에 부딪혔을 때 게임을 끝내는 대신 점수를 0으로 설정하세요.
         flappy_11: 자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로 만들어보세요. 친구들이
           스마트폰에서 해볼 수 있도록 공유해 보세요.
         flappy_k1_1: 플래피 버드
@@ -511,34 +510,37 @@
         playlab_intro: 플레이 랩 소개
         playlab_events: 플레이 랩 이벤트
         playlab_repeat_forever: 플레이 랩 무한 반복
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        tutorial_puzzle_challenge: 튜토리얼 퍼즐 첼린지
         infinity_playlab_intro: 플레이 랩 - 소개
         infinity_playlab_events: 플레이 랩 - 이벤트
         infinity_playlab_repeat_forever: 플레이 랩 - 무한 반복
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_concept_rgb: 픽셀에 관해서 조금
+        csp_pixelation_color_1: 픽셀 색상 위젯 - 1부
+        csp_pixelation_color_2: 픽셀 색상 위젯 - 2부
+        csp_pixelation_color_3: 픽셀 색상 위젯 - 3부
+        csp_pixelation_bw: 흑백 픽셀 위젯
+        csp_U1L14_tipstricks: 유닛 1 레슨 14 교사 팁 & 트릭
+        csp_textcompression: 텍스트 압축 도구
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: 대수학 CS - 소개
+        alg_2_eval_block: 대수학 CS - 블록 평가
+        alg_3_pemdas: 대수학 CS - 작업 순서
+        alg_4_data_types: 대수학 CS - 데이터 형식
+        alg_5_contracts: 대수학 CS - 계약
+        alg_6_variables: 대수학 CS - 변수
+        alg_7_function: 대수학 CS - 함수
+        alg_8_design_recipe: 대수학 CS - 디자인 레시피
+        alg_9_booleans: 대수학 CS - 부울 :1과0만 사용
+        alg_10_conditionals: 대수학 CS - 조건문
+        alg_11_coordinate_plane: 대수학 CS - 좌표 평면
+        alg_12_biggame_variables: 대수학 CS - 빅게임 변수
+        alg_13_biggame_animation: 대수학 CS - 빅게임 영상
+        alg_14_biggame_booleans: '대수학 CS - 빅게임 불: 1과0만 사용'
+        alg_15_biggame_update_player: 대수학 CS - 빅게임 플레이어 업데이트
+        alg_16_biggame_collision_detection: 대수학 CS - 빅게임 충돌 감지
+        alg_17_sambat_compound_booleans: 대수학 CS - 복합 부울
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

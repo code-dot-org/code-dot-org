@@ -1,7 +1,6 @@
 bs:
   data:
     instructions:
-      2-3 _instruction: Ljubičasti cvjetovi mogu imati 1 ili 0 za nektar. Obrati pažnju da ne sakupiš nektar iz ljubičastog cvijeta ako on ne sadrži nektar.
       2-3 Artist 1 new_instruction: Zdravo, ja sam umjetnik. Možeš napisati kod pomoću kojeg ću ja nacrtati skoro sve što želiš. Koristi nekoliko blokova da bih ja nacrtao sive linije u slici. (Svaka linija je 100 piksela duga)
       2-3 Artist 11_instruction: 'Dodaj ivicu ovom stop znaku tako što ćeš napraviti osmougaonik gdje je svaka od osam strana 100 piksela duga. Za koliko stepeni moraš okretati? (Savjet: Koliko je 360 podijeljeno sa 8?)'
       2-3 Artist 12_instruction: 'Postavi "ponavljaj puta" blok tako da bi se napravio "krug" koji čini oko. Ako svaki pokret okreće na desno za jedan stepen, koliko puta moraš ponoviti da bi dobio cijeli krug? 180? 360? 500?'
@@ -185,7 +184,9 @@ bs:
       2-3 Maze Loops 20_instruction: Dovedi me do suncokreta!
       2-3 Maze Loops 21_instruction: Dovedi me do suncokreta!
       2-3 Maze Loops Assessment 1_instruction: 'Procjena: Dovedi me do suncokreta koristeći samo 5 blokova! '
-      2-3 Maze sq1 _instruction: Ova svinja mi uvijek nakostriješi perje. Pomozi mi da je nađem!
+      2-3 Maze sq1_instruction: |
+        This pig is ruffling my feathers.  Help me find
+        him!
       2-3 Maze sq10_instruction: Dovedi me do svinje! Koji blokovi su se ponovili?
       2-3 Maze sq10v2_instruction: Dovedi me do svinje! Koji blokovi su se ponovili?
       2-3 maze sq11_instruction: Dovedi me do svinje! Koji blokovi su se ponovili?
@@ -202,6 +203,9 @@ bs:
       2-3 Maze sq7_instruction: Dovedi me do zelenog nametljivca koristeći samo tri bloka.
       2-3 Maze sq8_instruction: 'Dovedi me do svinje! (Gdje je taj "ponovi puta" blok kada ga trebam?)'
       2-3 Maze sq9_instruction: Kreiraj petlje da bi došao/la do svinje koristeći manje blokova.
+      2-3_instruction: |
+        Purple flowers may have either 1 or 0 nectar. Be careful
+        not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Pomjeranjem naprijed pomozi ptici da uhvati nevaljalu svinju
       4-5 Artist 1_instruction: 'Pomozi mi da završim crtanjem moje kutije. (Svaka linija je duga 300 piksela) '
       4-5 Artist 10_instruction: 'Pritisni "Pokreni" da bi provjerio/la svoj kod. Onda ga ponovi dovoljno puta da bi se crtanje dovršilo. Boje će biti različite pri svakom pokretanju.'
@@ -429,8 +433,8 @@ bs:
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The 'update-target' function takes the
-        target's current x value, and returns an updated value. Complete the 'update-target'
+        The update-target function takes the target's
+        current x value, and returns an updated value. Complete the update-target
         function so that it adds to the x value each time it is called. The more you
         add to x, the faster the target will go.
       Big Game Animation 3_instruction: 'Funkcija "ažuriraj-opasnost" bi trebala raditi kao funkcija "ažuriraj-metu" sa razlikom da se opasnost kreće s desne na lijevu stranu. Dovrši "ažuriraj-opasnost" funkciju da bi omogućio/la opasnosti da leti preko ekrana.'
@@ -442,11 +446,10 @@ bs:
         working like you want it to, and then click finish to move on.
       Big Game Booleans 1_instruction: 'Kada si zadnji put radio/la na tvojoj igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda klikni na završi. Kasnije ćemo raditi na tome da se tvoji likovi pojave opet na ekranu nakon što su otišli.'
       Big Game Booleans 2_instruction: |
-        Now that your onscreen? function is checking
-        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
-        section of the toolbox and complete the safe-left? function so that it returns
-        true if the sprite's x coordinate is greater than -50. If you're successful
-        you should see the Danger go off the left side and then return on right side.
+        Go to the Functions section of the toolbox
+        and complete the safe-left? function so that it returns true if the sprite's
+        x coordinate is greater than -50. If you're successful you should see the
+        Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
@@ -454,11 +457,8 @@ bs:
         should see the Target go off the right side of the screen and return on the
         left.
       Big Game Booleans 4_instruction: |
-        We've provided a couple of empty functions
-        for safe-left? and safe-right? The first thing you need to do is complete
-        the onscreen? function so that it checks whether both safe-left? and safe-right?
-        are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen - why do you think that is?
+        Complete the onscreen? function so that it
+        checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
@@ -480,33 +480,24 @@ bs:
         workbook. Edit the 'update-player' function so that if moves the player
         up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        Let's fix this distance function so our
-        collision detection works properly. Use the Distance Formula, so the distance
+        Use the Distance Formula, so the distance
         function returns the distance between the player's center coordinates (px,
-        py) and another sprite's center coordinates (cx, cy). We've provided a working
-        line-length function to help you out.
+        py) and another sprite's center coordinates (cx, cy).
       Big Game Collision 4_instruction: |
-        The 'distance' function returns the distance
-        between two sprites. Complete the 'collide?' function so that it returns
-        true if the distance between two points is less than 100 pixels apart. If
-        you're successful, your sprites will instantly collide - why do you think
-        that is?
+        Complete the collide? function so that it
+        returns true if the distance between two points is less than 100 pixels apart.
       Big Game Complete (copy 1)_instruction: 'Demo dovršenog projekta Velika Igra - Algebra pomoću računarstva'
       Big Game Complete_instruction: 'Demo dovršenog projekta Velika Igra - Algebra pomoću računarstva'
       Big Game Final_instruction: Uspjeo/la si! U ovom trenutku bi tvoja igrica trebala biti potpuno funkcionalna. Uživaj u svojoj igrici i napravi završne promjene. Kada si sretan/na sa svojim finalnim uradkom, klikni na Završi i onda možeš podijeliti link na tvoju igricu. Dobro odrađeno!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!
-        Last time you worked on your game, you used booleans to make your Target and
-        Danger return to the screen once they've left. Click Run to see how your
-        game looks right now, and then we'll get to making your Player move up and
-        down.
+        We're getting really close to a finished game!Last
+        time you worked on your game, you used booleans to make your Target and Danger
+        return to the screen once they've left. Click Run to see how your game looks
+        right now, and then we'll get to making your Player move up and down.
       Big Game Player 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so the player moves up when
-        the up arrow is pressed, and moves down when the down arrow is pressed.
+        Edit the update-player function so the player
+        moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
+        40) when the down arrow is pressed.
       Big Game Testing_instruction: 'Demo dovršenog projekta Velika Igra - Algebra pomoću računarstva'
       Big Game Vars 1 (copy 1)_instruction: 'Hajde da počnemo sa svojom Velikom Igrom! Ovdje ćeš naći puno baznog koda kojeg češ eventualno zamijeniti svojim kodom, ali za sada ćemo samo brinuti oko toga kako definirati varijable. Klikni na "Pokreni" da vidiš kako igra izgleda sa podrazumijevanim vrijednostima.'
       Big Game Vars 1_instruction: 'Hajde da počnemo sa svojom Velikom Igrom! Ovdje ćeš naći puno baznog koda kojeg češ eventualno zamijeniti svojim kodom, ali za sada ćemo samo brinuti oko toga kako definirati varijable. Klikni na "Pokreni" da vidiš kako igra izgleda sa podrazumijevanim vrijednostima.'
@@ -569,8 +560,8 @@ bs:
         every time; create a function called 'times-ten' that should take a parameter
         'x' and return x * 10. Once you've created the function, run times-ten(50).
       Calc Define Funcs 4_instruction: |
-        Write a function called 'half' that takes
-        a number 'x' and returns half that number. Once you've written the function,
+        Write a function called half that takes a
+        number x and returns half that number. Once you've written the function,
         use it to calculate half(21)
       Calc Define Funcs 5 - multiply 1_instruction: |
         Oh no! We lost our multiply
@@ -579,35 +570,35 @@ bs:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "cube" - this function should have a domain of Number, range
+        function called cube - this function should have a domain of Number, range
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `sales` which takes in
+        Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
         to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
         Using the two functions we just wrote, write
-        the function `profit`, which takes in the number of cookies you sold, and
-        gives you back the total profit you make from selling your cookies, accounting
-        for the cost of baking them.
+        the function profit, which takes in the number of cookies you sold, and gives
+        you back the total profit you make from selling your cookies, accounting for
+        the cost of baking them.
       Calc Free Play_instruction: 'Vrijeme za slobodno igranje: Napiši funkcije i algorithme po tvom vlastitom izboru!'
       Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 1_instruction: "U posljednjem zadatku si napisao/la ugovor za funkciju \"visina-rakete\" koja ima Brojeve kao kodomenu i domenu, i koja vraća visinu rakete koja ide brzinom od 15 m/s nakon datog broja sekundi. Hajde sada da napišemo primjer za visinu rakete u trećoj sekundi.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n "
       Calc Rocket 2_instruction: Odlično! Hadje da uradimo još jedan primjer prije nego napišemo funkciju. Koju visinu bi raketa trebala imati nakon 30 sekundi?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years.
-        Can you write an expression that calculates "age" in days?
+        Here we've set the age variable to 17 years. Can
+        you write an expression that calculates age in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age". Set its value to your age and click run.
+        called age. Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: 'Ovdje smo postavili varijablu "dob" na 17. Možeš li napisati izraz koji računa "dob" izraženu u mjesecima?'
       Calc Vars 2.1_instruction: |
-        Here's a new variable called "age-in-months"
-        - use the variable "age" to set "age-in-months"
+        Here's a new variable called age-in-months - use
+        the variable age to set age-in-months.
       Calc Vars 2_instruction: 'Možeš li napisati izraz koji računa "dob" izraženu u godinama?'
       Calc Vars 3 (copy 1)_instruction: 'Možeš li nadopuniti ovaj kod tako da može računati koliko sati ima u "dob" godina?'
       Calc Vars 3_instruction: |
@@ -718,7 +709,6 @@ bs:
         i dodaje stranicu po stranicu sve dok ne nacrta desetougaonik (10 stranica). Svaka stranica bi trebala biti duga 100 piksela. Savjet: 360 podijeljeno sa brojem stranica koje oblik ima daje broj stepeni za koji trebaš rotirati.
       Course 4 Artist For Loops 12_instruction: 'To baš izgleda cool. Ali sada bih želio nacrtati oblike jedan do drugog. Sada je svaka stranica duga 20 piksela. Koristi blok za skakanje naprijed za 40 piksela nakon crtanja svakog od oblika. '
       Course 4 Artist For Loops 13_instruction: Hmmm, ovi oblici postaju sve veći i veći! Zar već nismo prethodno riješili ovaj problem koristeći varijable? Kako možemo upotrijebiti brojač varijablu za smanjivanje dužine stranica pri rastu njihovog broja? Umjesto kretanja naprijed za određenu vrijednost, pokušaj se kretati za (100 / brojač) piksela.
-      Course 4 Artist For Loops 14 _instruction: Okretanje manje ili više nego što je neophodno za određeni oblik daje lijep efekat. Probaj okretati za 89 stepeni da bi kreirao/la uvrnutu kvadratnu spiralu.
       Course 4 Artist For Loops 14_instruction: Okretanje manje ili više nego što je neophodno za određeni oblik daje lijep efekat. Probaj okretati za 89 stepeni da bi kreirao/la uvrnutu kvadratnu spiralu.
       Course 4 Artist For Loops 15_instruction: 'Vrijeme za slobodno igranje! Pokušaj napraviti crteže po svom izboru koristeći "od-do" petlje. Možeš koristiti nekoliko generičkih varijabli koje smo dodali za tebe.'
       Course 4 Artist For Loops 2_instruction: |
@@ -780,7 +770,9 @@ bs:
       Course 4 Artist Vars 8_instruction: 'Vrijeme za slobodno igranje! Eksperimentiši sa brojem stranica koje oblik ima. Možeš li promijeniti algoritam tako da ukupna veličina oblika ostaje nepromijenjena, bez obzira na koliko stranica oblik ima? Savjet: Možda ćeš morati koristiti matematičke blokove (360 podijeljeno sa "stranice" na dva mjesta ovog puta) '
       Course 4 Artist Vars 9_instruction: 'Promijeni ovaj algoritam tako da on koristi varijablu "stranice" umjesto fiksnog broja pri crtanju trokuta. Zamijeni broj 3 sa "stranice" varijablom, i koristi "postavi stranice na" blok.'
       Course 4 Bee 1_instruction: 'Pčela ne može razaznati da li je ovo cvijet ili saće meda. Prvo provjeri da li je ovo cvijet ili saće meda, a zatim pokupi nektar samo ako je u pitanju cvijet. '
-      Course 4 Bee 2_instruction: 'Provjeri svaki objekat da vidiš da li je u pitanju cvijet - ako jeste, pokupi nektar.'
+      Course 4 Bee 2_instruction: |
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: Nepoznati objekat je ili cvijet ili saće meda. Upotrijebi ako/inače blok za sakupljanje nektra u pitanju cvijeta. Inače napravi med (jer je onda u pitanju saće meda).
       Course 4 Bee 4_instruction: Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za nektar. Ovje je ako-inače blok kombinovan sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra.
       Course 4 Bee For Loops 1_instruction: Upotrijebi petlju za sakupljanje nektra iz svakog cvijeta.
@@ -862,8 +854,8 @@ bs:
       Course1MazeAssessment2_instruction: "Ovo je test!\r\nKreći se u jednom smjeru, a zatim u drugom da bi me doveo/la do svinje."
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
-        compare different values, returning either "true" or "false." Click "Run"
-        to see how this expression evaluates.
+        compare different values, returning either true or false. Click "Run" to
+        see how this expression evaluates.
       Eval Booleans 2_instruction: 'Možeš li postaviti vrijednosti tako da ovaj izraz vraća vrijednost "istinito"?'
       Eval Booleans 3_instruction: 'Funkcija "dužina-niza-karaktera" vraća broj karaktera u nizu karaktera (uključujući i razmake!). Napravi da ovaj kod vraća vrijednost "istinito".'
       Eval Booleans 4_instruction: Evo Blok Izvršenja naziva I. Ovaj blok vraća istinito ako su obja parametra istinita, inače vraća neistinito. Uredi x varijablu tako da izraz vraća istinito.
@@ -882,11 +874,11 @@ bs:
       Eval Cond 3 (copy 1)_instruction: 'Možeš li napisati uslov koji provjerava varijablu "dob" i vraća "Dovoljna dob za glasanje i vozačku dozvolu" ako dob > 17, "Dovoljna dob za vozačku dozvolu" ako je dob  > 15, i "Ne može glasati ili voziti" ako nijedan od uslova nije tačan. Savjet: Prvi uslov za vraćanje istinito pobjeđuje. Pobrinir se da staviš uvjete u pravom redoslijedu.'
       Eval Cond 3_instruction: 'Možeš li napisati uslov koji provjerava varijablu "dob" i vraća "Dovoljna dob za glasanje i vozačku dozvolu" ako dob > 17, "Dovoljna dob za vozačku dozvolu" ako je dob  > 15, i "Ne može glasati ili voziti" ako nijedan od uslova nije tačan. Savjet: Prvi uslov za vraćanje istinito pobjeđuje. Pobrinir se da staviš uvjete u pravom redoslijedu.'
       Eval Cond 4_instruction: |
-        We can use the "string=?" function to make conditionals
-        that respond to text input. Here's a function called "green shape" that
-        takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "circle," "triangle,"
-        "square," or "rectangle."
+        We can use the string=? function to make conditionals
+        that respond to text input. Here's a function called green shape that takes
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: 'Evo slična funkcija "crveni oblik" sa dodatnim parametrom za veličinu. Dovrši uvjete tako da je ispravan oblik nacrtan pri pozivu sa "krug", "trokut" i "zvijezda".'
       Eval Cond 6_instruction: "Napiši funkciju pod nazvimo gastro-kritičar koja uzima ime hrane kao ulazni argument i vraća niz karaktera koji kažu šta ti misliš o toj hrani. Na primjer, (gastro-kritičar \"pizza\") bi mogao reći \"ukusno\", ali (gastro-kritičar \"pokvarena jaja\") bi rekao da je to \"užasno\"! Izaberi dvije vrste hrane za kritiku, ali možeš uraditi i više ako želiš! Ne zaboravi da dodaš \"inače\" izraz!\r\nJedan primjer - i dio definicije - smo već odradili za tebe!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
@@ -898,18 +890,18 @@ bs:
       Eval Contracts 3_instruction: 'Pokušaj upotrijebiti "tekst" funkciju za pisanje ovog tirkiznog teksta veličine 40.'
       Eval Contracts 4 A_instruction: 'Funkcija "skaliraj" vraća sliku koja je ili veća ili manja od orginalne ulazne slike. Pokušaj skalirati ovaj kurg za faktor 10. Kako bi rezultirajuća slika bila drugačija kada bi se ispočetka napravio krug te veličine?'
       Eval Contracts 4_instruction: |
-        The "scale" function returns an image that
-        is either larger or smaller than the input image. Try scaling this circle
-        by a factor of 10. How is the returned image different than if you'd just
-        made a circle of that size in the first place?
+        The scale function returns an image that is
+        either larger or smaller than the input image. Try scaling this circle by
+        a factor of 10. How is the returned image different than if you'd just made
+        a circle of that size in the first place?
       Eval Contracts 8A_instruction: Možeš li dovršiti ovaj zadatak? Veliki trokut je ljubičast i veličine od 200 piksela.
       Eval Contracts A_instruction: |
-        Use the "star" function to produce a solid
-        red star with a 60 pixel radius
+        Use the star function to produce a solid red
+        star with a 60 pixel radius
       Eval Contracts C_instruction: 'Provjeri ovu "rotiraj" funkciju. Možeš li je upotrijebiti da zarotiraš ovaj zeleni kvadrat od 90 piksela veličine za 45 stepeni?'
       Eval Contracts E_instruction: |
-        Try using the "text" function to write this
-        "Hello, world!" in teal at size 40.
+        Try using the text function to write this "Hello,
+        world!" in teal at size 40.
       Eval Contracts shrink_instruction: 'Možeš li dovršiti ovu sliku koristeći "smanji" funkciju? Prečnik je 20. '
       Eval Define Funcs 1_instruction: 'Evo nove funkcije pod nazivom "zeleni-trokut" koja uzima jedan Broj za veličinu i daje zeleni trokut. Upotrijebi novu funkciju za pravljenje zelenog trokuta od 125 piksela'
       Eval Define Funcs 2_instruction: 'Hajde da pogledamo unutar ove "zeleni-trokut" funkcije da vidimo kakoradi. Možeš li je promijeniti tako da "zeleni-trokut" funkcija uvijek crta zeleni trokut sa konturom?'
@@ -922,22 +914,22 @@ bs:
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function definition (you will see two examples provided).
+        called square-circle with domain Number String and range Image. Click Edit
+        to write the function definition (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: Napisati ćemo funkciju koja crta puni pravougaonik bilo koje boje koji je dva puta širi nego što je visok. Počni sa primjerom. Nacrtaj puni zeleni pravougaonik koji ima visinu od 100 piksela.
       Eval Design Recipe 1_instruction: 'Dobro. Sada imamo Ugovor širok-pravougaonik: Brojčani Niz Karaktera -> Slika. Napiši primjer. Nacrtaj puni zeleni pravougaonik visine 100 piksela.'
       Eval Design Recipe 2 (copy 1)_instruction: Hajde da napravimo još jedan primjer prije nego napišemo definiciju funkcije. Ovaj puta nacrta puni crveni pravougaonik visine 75 piksela.
       Eval Design Recipe 2_instruction: Hajde da napravimo još jedan primjer prije nego napišemo definiciju funkcije. Ovaj puta nacrta puni crveni pravougaonik visine 75 piksela.
       Eval Design Recipe 3_instruction: |
-        The design recipe for "wide-rect" already
+        The design recipe for wide-rect already
         has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should produce a rectangle of given
+        the definition. The wide-rect function should produce a rectangle of given
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that has two domains. 1) a number of points and 2) a radius.
-        "starburst" returns a yellow radial star with given points, and an inner
-        radius that is half the outer radius.
+        starburst that has two domains. 1) a number of points and 2) a radius. starburst
+        returns a yellow radial star with given points, and an inner radius that is
+        half the outer radius.
       Eval Design Recipe 5_instruction: 'Koristeći Recept za Crtež, napiši funkciju "prugasta-zvijezda" koja uzima dvije boje i pravi zastavu koja je 250 piksela široka, 150 piksela visoka, sa tri horizontalne pruge datih boja slijedećeg redoslijeda: boja2, boja1, boja2.'
       Eval Design Recipe 6_instruction: 'Koristeći Recept za Crtež, napiši funkciju "veliki-poligon" koja bi trebala dati poligon datih stranica i boje koji zauzima većinu prozora, bez obzira ne broj stranica. Da bi bio siguran/na da poligon nije prevelik pri povećanju broja stranica, dužina stranice bi trebala biti obrnuto proporcionalna broju stranica, sa dužinom od (800/broj stranica).'
       Eval Design Recipe Free Play_instruction: Vrijeme za slobodno igranje! Upotrijevi recept za crtež da napraviš vlastitu funkciju po svom izboru
@@ -946,8 +938,8 @@ bs:
       Eval Strings Images .2_instruction: 'Funkcija "nanodaj_na_niz_karaktera" uzima dva Niza karaktera i vraća jedan kombinovani niz karaktera. Dodaj Niz karaktera "Svemir" na drugi argument "nanodaj_na_niz_karaktera".'
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
-        use is an Image. This "star" function takes in a Number and two Strings,
-        and it evaluates to an Image. Use this function to make a solid red star with
+        use is an Image. This star function takes in a Number and two Strings, and
+        it evaluates to an Image. Use this function to make a solid red star with
         radius of 100.
       Eval Strings Images 2_instruction: |
         Free Play: Every Evaluation Block is color-coded
@@ -960,19 +952,19 @@ bs:
         controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
-        Try using the "rectangle" block to draw
-        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
+        Try using the rectangle block to draw this
+        solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: 'Pokušaj upotrijebiti ovaj novi Blok Izvršenja pod nazivom "prekrivanje" koji će postaviti bijeli trokut od 100 piksela preko crvenog kruga od 200 piksela.'
       Eval Strings Images 6_instruction: Upotrijebi funkciju prekrivanja da postaviš žutu zvijezdu od 75 piksela preko plavog pravougaonika dugog 150 piksela.
       Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
+        The offset block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
         square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
-        - it's called "radial-star" and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        - it's called radial-star and it allows you to draw stars with any number
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -996,6 +988,12 @@ bs:
       frozen square loop 3x_instruction: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
       frozen square loop_instruction: 'Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? '
       frozen square snowflake_instruction: 'Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -1148,8 +1146,8 @@ bs:
       K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig."
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
-        type the name of a topping into the "cost" function, and we'll return the
-        price of that pizza. Try ordering a pepperoni pizza to start.
+        type the name of a topping into the cost function, and we'll return the price
+        of that pizza. Try ordering a pepperoni pizza to start.
       Luigi's Pizza 2 (copy 1)_instruction: |
         Right now there are only four choices
         available at Luigi's pizza - let's fix that! Add a couple of new toppings
@@ -1158,8 +1156,8 @@ bs:
       Luigi's Pizza 2_instruction: |
         Right now there are only four choices available
         at Luigi's pizza - let's fix that! Add a couple of new toppings to the conditional
-        block in the "cost" function. Once you've added your toppings, test out
-        the function to make sure it works.
+        block in the cost function. Once you've added your toppings, test out the
+        function to make sure it works.
       Luigi's Pizza 3 (copy 1)_instruction: |
         That's better, everyone loves more
         variety in their pizza toppings! But you still can't please everyone, and
@@ -1170,10 +1168,12 @@ bs:
         That's better, everyone loves more variety in
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
-        to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer? Let's charge $10,000
+        to those people, could you update the else clause so that we charge them a
+        premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: |
+        Free Play: What can you do to make Luigi's cost
+        function even more useful?
       MSM Big Game Empty_instruction: Sve varijable i funkcije su trenutno prazne. Svaki nivo predstavlja napredak i definisanje funkcija, što će povećati funkcionalnost.
       MSM Big Game Vars 1 (copy 1)_instruction: U alatnoj traci za Varijable ćeš vidjeti nekoliko varijabli koje definišu kako će karakteri u tvojoj igrici izgledati, kako će se kretati i kakvu će imati interakciju sa drugim likovima
       MSM Big Game Vars 1_instruction: U alatnoj traci za Varijable ćeš vidjeti nekoliko varijabli koje definišu kako će karakteri u tvojoj igrici izgledati, kako će se kretati i kakvu će imati interakciju sa drugim likovima
@@ -1192,18 +1192,18 @@ bs:
       MSM Defining Vars 2_instruction: |
         If we wanted to make fifty green triangles,
         it would be a pain to repeat that block of code 50 times. Let's create a
-        variable called "my-shape" and put the code for a 50 pixel solid green triangle
+        variable called my-shape and put the code for a 50 pixel solid green triangle
         inside.
       MSM Defining Vars 3 (copy 1)_instruction: |
         Take your "my-shape" variable
         and use it with this provided code to draw two identical green triangles.
       MSM Defining Vars 3_instruction: |
-        Take your "my-shape" variable and use it
-        with this provided code to draw two identical green triangles that are 50
-        pixels in size.
+        Take your my-shape variable and use it with
+        this provided code to draw two identical green triangles that are 50 pixels
+        in size.
       MSM Defining Vars 4_instruction: |
-        Edit your "my-shape" variable so that it
-        draws 75 pixel solid red stars.
+        Edit your my-shape variable so that it draws
+        75 pixel solid red stars.
       MSM Play Lab Butterfly 1_instruction: |
         Help Sam stay on the screen so that
         you can always see at least a little piece of him. Using the arrow keys, see
@@ -1285,7 +1285,6 @@ bs:
       NEW Course 4 Artist Params 13_instruction: 'Hajde da preuredimo ovu "nacrtaj oblik" funkciju koja već ima "dužinu" kao parametar. Dodajmo sada parametar za "stranice". Sjeti se da je ugao za okretanje datog oblika jednak 360 podijeljeno sa brojem stranica tog oblika. Savjet: dužina stranica za trokut je 100 piksela, za šestougaonik je 25 piksela, i za kvadrat je 50 piksela.'
       NEW Course 4 Artist Params 14_instruction: 'Možeš li ponovo napraviti ove oblike? Dovuci "dužina" parametar u definiciju funkcije. '
       NEW Course 4 Artist Params 15_instruction: Vrijeme za slobodno igranje! Evo funkcija koje si napisao/la i još nekih dodatnih. Nacrtaj nešto fantastično!
-      NEW Course 4 Artist Params 2 _instruction: 'Napravi ispočetka "nacrtaj trokut" funkciju sa stranicama dužine od 50 piksela'
       NEW Course 4 Artist Params 2_instruction: 'Napravi ispočetka "nacrtaj trokut" funkciju sa stranicama dužine od 50 piksela'
       NEW Course 4 Artist Params 3_instruction: "Hajde sada da upotrijebimo funkciju za crtanje 3 trokuta u nizu iz posljednjeg zadatka. Savjet: trokutovi su razmaknuti za 50 piksela.\r\n"
       NEW Course 4 Artist Params 4_instruction: 'Primjetiš li nešto drugačije u vezi ovih funkcijskih blokova? Klikni na "Pokreni" da vidiš šta će se desiti.'
@@ -1321,6 +1320,11 @@ bs:
       New Play Lab Project_instruction: Napravi svoju vlastitu priču ili igru! Tvoj kod je spremljen kao projekat i možeš mu se vratiti u bilo koje vrijeme.
       Ninjacat Demo B (copy 1)_instruction: "\r\nHajde da počnemo istraživati jednostavnu video igricu, i da otkrijemo kako radi. Možeš koristiti tipke sa strelicama za kretanje ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
@@ -1433,27 +1437,27 @@ bs:
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
-        sure he doesn't go too far out of the yard. Here's a function called "safe-left?"
+        sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
         and return true if he's inside the left boundary of the yard (x > -25). If
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        on the left, now let's do the same thing on the right. Fill out the safe-right?
         function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block to program the function
-        "on-screen?" to check if Sam is safe-left? AND safe-right?
+        from going either direction? Try using the AND block to program the function
+        on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
-        an additional parameter 'y' to the 'onscreen?' function. Can you update
-        your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program by moving Sam as far as he can go in all four directions.
-        Click Finish when Sam is completely protected.
+        an additional parameter y to the onscreen? function. Can you update your program
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -1538,9 +1542,28 @@ bs:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
+      U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -1549,11 +1572,11 @@ bs:
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame you just played in person, but this time using the Internet Simulator.\nJoin a room to be connected to your group, and then follow the instructions\non the worksheet handed out by your teacher.\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
       U2L3 NetSim Hub Mode_instruction: |
-        With your group, invent a standard addressing
-        scheme for the "Game of Messages" game, and try it out using the Internet
-        Simulator. 
+        Use the Internet Simulator to test out your
+        group's binary communication protocol for battleship. How short can you make
+        the message and response?
       U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
       U2L7 NetSim Need for Packets_instruction: |

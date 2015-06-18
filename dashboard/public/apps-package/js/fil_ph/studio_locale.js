@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "aktor"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Pagsugod ng mga Alien!"},
 "backgroundBlack":function(d){return "itim"},
 "backgroundCave":function(d){return "kuweba"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Magpatuloy"},
 "decrementPlayerScore":function(d){return "alisin ang point"},
 "defaultSayText":function(d){return "mag-type dito"},
+"dropletBlock_changeScore_description":function(d){return "Magdagdag o mag-alis ng isang point sa score."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Nilalagay ang larawan sa background"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "sine-set ang mood ng aktor"},
+"dropletBlock_setSpritePosition_description":function(d){return "Agad na naglilipat ng isang aktor sa tinukoy na lokasyon."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Sini-set ang bilis ng aktor"},
+"dropletBlock_setSprite_description":function(d){return "I-set ang imahe ng aktor"},
+"dropletBlock_throw_description":function(d){return "Itatapon ang isang projectile mula sa tinukoy na aktor ."},
+"dropletBlock_vanish_description":function(d){return "Mawawala ang aktor ."},
 "emotion":function(d){return "mood"},
 "finalLevel":function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."},
 "for":function(d){return "para sa"},
 "hello":function(d){return "kumusta"},
 "helloWorld":function(d){return "Mabuhay!"},
-"incrementPlayerScore":function(d){return "score point"},
+"incrementPlayerScore":function(d){return "puntos"},
+"itemBlueFireball":function(d){return "asul na fireball"},
+"itemPurpleFireball":function(d){return "purple na fireball"},
+"itemRedFireball":function(d){return "red na fireball"},
+"itemYellowHearts":function(d){return "dilaw na mga puso"},
+"itemPurpleHearts":function(d){return "purple na puso"},
+"itemRedHearts":function(d){return "pulang puso"},
+"itemRandom":function(d){return "nang hindi pinipili"},
+"itemAnna":function(d){return "hook"},
+"itemElsa":function(d){return "sparkle"},
+"itemHiro":function(d){return "microbots"},
+"itemBaymax":function(d){return "rocket"},
+"itemRapunzel":function(d){return "saucepan"},
+"itemCherry":function(d){return "cherry"},
+"itemIce":function(d){return "ice"},
+"itemDuck":function(d){return "duck"},
 "makeProjectileDisappear":function(d){return "mawala"},
 "makeProjectileBounce":function(d){return "bounce"},
 "makeProjectileBlueFireball":function(d){return "gumawa ng blue na fireball"},

@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-06-01T13:51:25.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "CSP materials walkthrough",
+    "markdown": "## Overview of curricular materials\n\nCheck out this video, which walks through the types of materials available for a lesson. \n<br>\n<iframe width=\"960\" height=\"720\" src=\"https://www.youtube.com/embed/gS9TlF_PRRM?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n<br>\n**[having trouble viewing this video? click here to watch it!](https://drive.google.com/file/d/0B60yN79VbSzTellvZGp5ekZNaVk/view?usp=sharing)**\n<br>\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n \n"
+  }
+}]]></config>
+</External>

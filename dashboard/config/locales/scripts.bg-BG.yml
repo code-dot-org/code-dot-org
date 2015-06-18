@@ -33,13 +33,13 @@
           Getting Loopy: Да повтаряме
           The Big Event: Голямото събитие
           Going Places Safely: Придвижваме се безопасно
-          description: Курс 1 е предназначен за малките читатели, които искат за създават
-            компютърни програми. Курсът ще им помогне да се научат да си сътрудничат
-            с други ученици, ще подпомогне развитието на умения за решаване на проблеми
-            и взимане на решения при решаване на трудни ситуации. До края на този
-            курс, учениците ще могат да създават собствени персонализирани игри или
-            истории, които могат да споделят с приятели. Препоръчва за клас K-1/I
-            клас/.
+          description: Курс 1 е предназначен за децата, които се учат да четат, но
+            искат и да създават компютърни програми. Курсът ще им помогне да се научат
+            да си сътрудничат с други ученици, ще подпомогне развитието на умения
+            за решаване на проблеми и взимане на решения при решаване на трудни ситуации.
+            До края на този курс, учениците ще могат да създават собствени персонализирани
+            игри или истории, които могат да споделят с приятели. Препоръчва за клас
+            K-1/I клас/.
           'Bee: Sequence': 'Пчела: последователност'
           'Artist: Sequence': 'Художник: последователност'
           'Artist: Shapes': 'Художник: фигури'
@@ -47,8 +47,8 @@
           'Bee: Loops': 'Пчела: цикли'
           'Studio: Create a Story': 'Театрална лаборатория: Създаване на история'
           'Artist: Loops': Художник - цикли
-          description_audience: Възраст 4 + (за не можещи да четат)
-          description_short: Курс 1 е предназначен за начинаещи читатели.
+          description_audience: Възраст 4 + (за учещи се да четат)
+          description_short: Курс 1 е предназначен за учещи се да четат деца.
         course2:
           The Maze: Лабиринт
           Suzi: Сузи
@@ -74,10 +74,10 @@
           Binary Bracelets: Двоични гривни
           The Big Event: Голямото събитие
           Your Digital Footprint: Вашите дигитални отпечатъци
-          description: Курс 2 е предназначен за ученици, които могат да четат и нямат
-            предишен опит в програмирането. В този курс те ще създават програми за
-            да решават проблемни ситуации и ще разработват интерактивни игри или истории,
-            които ще могат да споделят с приятели. Препоръчва се за 2-5 клас.
+          description: Курс 2 е предназначен за ученици, които могат да четат, но
+            нямат предишен опит в програмирането. В този курс те ще създават програми,
+            за да решават проблемни ситуации и ще разработват интерактивни игри или
+            истории, които ще могат да споделят с приятели. Препоръчва се за 2-5 клас.
           'Maze: Sequence': 'Лабиринт: последователност'
           'Artist: Sequence': 'Художник: последователност'
           'Maze: Loops': 'Лабиринт: цикли'
@@ -89,7 +89,7 @@
           'Artist: Sequence2': 'Художник: последователност 2'
           'Maze: Sequence2': 'Лабиринт: последователност 2'
           'Artist: Nested Loops': 'Художник: въвеждане на цикли'
-          description_audience: Възраст 6 + (умения за четене са необходими)
+          description_audience: Възраст 6 + (необходими са умения за четене)
           description_short: Курс 2 е предназначен за ученици, които могат да четат.
         course3:
           The Maze: Лабиринт
@@ -119,7 +119,7 @@
           description: Курс 3 е предназначен за ученици, които са преминали курс 2.
             Учениците ще задълбочат и разширят уменията и знанията си за програмирането,
             получени в предишните курсове, за да се научат да вземат гъвкави решения
-            при разрешаването на по-сложни проблеми. До края на този курс, учениците
+            при разрешаването на по-сложни проблеми. До края на този курс учениците
             ще създават интерактивни истории и игри, които да споделят с всички. Препоръчва
             се за 4-5 клас.
           'Studio: Create a Game': Театрална лаборатория - Създаване на игра
@@ -223,10 +223,9 @@
         hourofcode:
           Maze: Лабиринт
           title: Час на Кодирането
-          description: Опитайте основите на компютърните науки с герои отAngry Birds,
+          description: Опитайте основите на програмирането с героите отAngry Birds,
             Plants vs. Zombies и Scrat от Ледена епоха!
-          description_short: Опитайте основите на компютърните науки с много забавни
-            герои!
+          description_short: Опитайте основите на програмирането с много забавни герои!
         frozen:
           title: Кодиране с Анна и Елза
           description: Нека да използваме кода, за да се присъединим към Анна и Елза,
@@ -234,8 +233,8 @@
             и модели в градината на своята зимна приказка, която след това можете
             да споделите с приятелите си!
           Artist: Художник
-          description_short: Нека да използваме кода за да се присъединим към Анна
-            и Елза, и заедно с тях опознаем  магията и красотата на леда.
+          description_short: Нека да използваме кода, за да се присъединим към Анна
+            и Елза и заедно  опознаем  магията и красотата на леда.
         course4:
           description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове
             2 и 3.
@@ -291,9 +290,9 @@
           Intro: Въведение
           Variables and For Loops: Променливи и "за" цикли
           Functions and Functions with Parameters: Функции и функции с параметри
-          title: Тест за ползваемост
+          title: Тест за приложимост
           description_short: ''
-          description: Избор на курс 4 нива за ползваемост.
+          description: Селектирани нива от курс 4 нива за тестване на приложимостта.
           Variables: Променливи
           For Loops: За циклите
           Binary: Двоичен код
@@ -309,9 +308,9 @@
           Special: Специален
           Binary: Двоичен код
         usabilitymsm:
-          title: Използване в средното училище на математика
-          description_short: Използване на тестване в средното училище по математика
-          description: Използване на тестване в средното училище по математика
+          title: Прилагане на математиката в средното училище
+          description_short: Тестване на приложимостта по математика в средното училище
+          description: Тестване на приложимостта по математика в средното училище
           Usability testing for MSM: Тестиране за ползваемост за MSM
           Evaluation Blocks: Блокове за оценка
           Blocks to Math: Блокове за математика
@@ -340,7 +339,7 @@
           'Play Lab: Animation (Big Game)': Голямата игра - анимация
           'Unplugged: Booleans': 'Ънплъгд: Booleans и логика'
           'Eval: Boolean Operators': Booleans оператори
-          'Play Lab: Booleans': Сам прилепът
+          'Play Lab: Booleans': Сам, прилепът
           'Play Lab: Boolean (Big Game)': Голямата игра - Booleans
           'Unplugged: Conditionals and Piecewise Functions': 'Ънплъгд: Условия и Piecewise
             функции'
@@ -357,12 +356,12 @@
           Play Lab: Театрална лаборатория
           Infinity: Инфинити
         algebrademo:
-          title: Алгебра демо
+          title: 'Алгебра: демо'
           description_short: Една шепа  пъзели, за демонстриране на  средата и езика
             за програмиране, които се използвт в Code.org CS и в алгебрата
           description: Една шепа  пъзели, за демонстриране на  средата и езика за
             програмиране, които се използвт в Code.org CS и в алгебрата
-          Algebra Demo: Алгебра демо
+          Algebra Demo: 'Алгебра: демо'
           Evaluation Blocks: Блокове за оценка
           Making Pictures: Правене на снимки
           Defining Variables: Дефиниране на променливите
@@ -370,16 +369,16 @@
           The Design Recipe: Рецепта за дизайн
         K5PD:
           title: K5 Професионално развитие
-          description: Професионално развитие за K5 курсове
-          description_short: Професионално развитие за K5 курсове
+          description: K5 курсове за професионално развитие
+          description_short: K5 курсове за професионално развитие
           Introduction to PD: Въведение в PD
           Blockly Basics: Основи на Blockly
           Writing computer programs: Писане на компютърни програми
           Navigating the teacher dashboard: Навигиране към учителското табло
           Unplugged lessons: Уроци без компютър
           Classroom Culture: Култура на класната стая
-          Ways to go beyond Courses 1, 2, and 3: Начини да се образовате след курсове
-            1, 2 и 3
+          Ways to go beyond Courses 1, 2, and 3: Как да учите след курсове 1, 2 и
+            3
           K-5 Courses: Курсове за K-5
           Writing computer programs in Blockly: Писане компютърни програми в Blockly
           Teacher Dashboard: Учителско табло
@@ -388,10 +387,10 @@
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Programming Concepts: Концепсии на програмиране
           Reflection: Рефлексия
-          'Programming Concept: Loops': 'Програмиране концепция: Цикли'
-          'Programming Concept: Conditionals': 'Програмиране концепция: Условия'
-          'Programming Concept: Functions': 'Програмиране концепция: функции'
-          'Programming Concept: Events': 'Програмиране концепция: събития'
+          'Programming Concept: Loops': 'Концепции на програмирането: Цикли'
+          'Programming Concept: Conditionals': 'Концепции на програмирането: Условия'
+          'Programming Concept: Functions': 'Концепции на програмирането: функции'
+          'Programming Concept: Events': 'Концепции на програмирането: събития'
         netsim:
           title: Интернет симулатор
           description_short: ''
@@ -403,7 +402,7 @@
           Routing and DNS: Маршрутизиране и DNS
           'Unit 1: Sending Bits': 'Урок 1: Изпращане на битове'
           'Unit 2: Routing and DNS': 'Раздел 2: Маршрут и DNS'
-          Internet Simulator Templates: Интернет симулатор шаблони
+          Internet Simulator Templates: 'Интернет симулатор: шаблони'
         pixelation:
           title: Пикселизация
           description: Създаване на изображения с битове и байтове.
@@ -440,6 +439,7 @@
           Applab: Лаборатория за приложения
           The Artist: Художникът
           Play Lab: Театрална лаборатория
+          Play Lab 2015: Play Lab 2015
         events:
           title: Събития
           description: ''
@@ -449,8 +449,8 @@
           Eval: Оценяване
         flappy:
           title: Flappy код
-          description: Искате ли да напишете своя собствена игра по-малко от 10 минути?
-            Опитайте нашите Flappy код уроци!
+          description: Искате ли да напишете своя собствена игра за по-малко от 10
+            минути? Опитайте нашите Flappy код уроци!
           Flappy Code: Flappy код
         jigsaw:
           title: Мозайка
@@ -465,40 +465,40 @@
           description: ''
           Hour of Code 2013: Час на кодирането 2013
         Code Studio Puzzle Challenge:
-          title: Код студио пъзел предизвикателство
+          title: 'Код студио: Пъзел предизвикателство'
           description_short: Предизвикай себе си!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         CodeStudioPuzzleChallenge:
-          title: Код студио пъзел предизвикателство
+          title: 'Код студио: Пъзел предизвикателство'
           description_short: Предизвикай себе си!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         Test - Code Studio Puzzle Challenge:
           title: Тествай  пъзел предизвикателството на Студиото по кодиране
           description_short: Предизвикай себе си!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         How to do the Code Studio Puzzle Challenge:
           title: Тествай  пъзел предизвикателството на Студиото по кодиране
           description_short: Предизвикай себе си!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         Tutorial - Code Studio Puzzle Challenge:
-          title: Урок - Студио по кодиране пъзел предизвикателство
+          title: 'Урок - Студио по кодиране: пъзел предизвикателство'
           description_short: Предизвикай себе си!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Урок - Студио по кодиране пъзел предизвикателство
+          title: 'Урок - Студио по кодиране: пъзел предизвикателство'
           description_short: Предизвикай себе си!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         course4pre:
           title: Курс 4 предпоставка (необходимо условие)
@@ -518,10 +518,10 @@
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
         cspunit1:
           title: CSP Част 1 - Дигитална информация
-          description_short: Изследвай как цифрова информация е представена и преведена
+          description_short: Изследвай как цифрова информация е представена и предадена
           description: Тази част изследва техническите предизвикателства и въпроси,
             които възникват от необходимостта да се въвежда цифровата информация в
-            компютрите и как се предава тя между хората и изчислителните устройства.
+            компютрите, и как се предава тя между хората и изчислителните устройства.
           Lesson14: Урок14
           Lesson 14: Урок 14
           Lesson 14 v2: Урок 14 v2
@@ -541,7 +541,7 @@
           Sending Bits in the Real World: Изпращане на битове в реалния свят
           Number Systems: Бройни системи
           Binary Numbers: Бинарни числа
-          Sending Numbers: Изпращане на номера
+          Sending Numbers: Изпращане на числа
           Encoding Numbers in the Real World: Кодиране на числата в реалния свят
           Encoding and Sending Text: Кодиране и изпращане на текст
           Sending Formatted Text: Изпращане на форматиран текст
@@ -551,9 +551,10 @@
             информация'
           Encoding B&W Images: Кодиране черно-бели изображения
           Encoding Color Images: Кодиране на цветни изображения
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Компютърни науки в алгебрата
-          description: Научете функционално програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
           'Unplugged: Video Games and Coordinate Planes': 'Ънплъгд: видео игрите и
             координатните системи'
           'Calc: Evaluation Blocks': 'Калколиране: Оценка блокове'
@@ -588,10 +589,10 @@
           The Design Recipe: Рецепта за дизайн
           Your Game - Animation: Вашата игра - анимация
           Booleans: Booleans
-          Sam the Bat: Сам прилепът
+          Sam the Bat: Сам, прилепът
           Your Game - Booleans: Вашата игра - Booleans
           Conditionals and Piecewise Functions: Условни и линейни функции
-          Rocket-Height: Ракетна височина
+          Rocket-Height: Ракета - височина
           Design Recipe Practice: Дизайн на рецепта - практика
           Introduction to PD: Въведение в PD
           Course Overview: Преглед на курса
@@ -605,13 +606,13 @@
           description: Научи алгебра чрез функционално програмиране
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
-          Rocket-Height: Ракетна височина
+          Rocket-Height: Ракета - височина
           Design Recipe Practice: Дизайн на рецепта - практика
           Your Game - Animation: Вашата игра - анимация
           Booleans: Booleans
-          Sam the Bat: Сам прилепът
+          Sam the Bat: Сам, прилепът
           Your Game - Booleans: Вашата игра - Booleans
-          Luigi's Pizza: Луиджи пица
+          Luigi's Pizza: Пицата на Луиджи
           'Play Lab: Collision Detection (Big Game)': 'Игрална лаборатория: Collision
             Detection (голямата игра)'
           Your Game - Player Movement: Вашата игра - движение на героя
@@ -623,10 +624,10 @@
         CSPPD:
           new stage: нов етап
           Introduction to PD: Въведение в PD
-          title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          What is CSP?: What is CSP?
-          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          title: ' PD принципите на Компютърни науки'
+          description: Онлайн въведение в ECP
+          What is CSP?: Какво е CSP?
+          Exploring CSP Instructional Materials: Проучване на CSP учебни материали
           Impact of Computer Science: Въздействието на компютърните науки
           Growth Mindset: Нагласи за разтеж
           Teaching Strategies: Стратегии за преподаване
@@ -707,7 +708,7 @@
           Compound Conditionals: Комбинирани условия
           Strings and Substrings: низ и поднизове
           While Loop Basics: 'Докато цикли: основи'
-          While Loops_ Counting Flips: Докато Loops_ преброяване на превъртания
+          While Loops_ Counting Flips: Докато {ru.r_ преброяване на превъртания
           Arrays_ Intro: Arrays_ интро
           Arrays_ Photo Album: Arrays_ фото албум
           Images are Arrays: Изображенията са Arrays
@@ -719,13 +720,16 @@
           Cookie Clicker: Бисквитка кликер
           Clicker Variable Basics: Clicker Variable Basics
           Events Unplugged: Ънплъгд събития
-          Beyond Buttons Toward Apps: Отвъд бутоните към приложения
+          Beyond Buttons Toward Apps: Отвъд бутоните на приложенията
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
-          Introduction to the new Computer Science in Algebra: Въведение на компютърните
+          Introduction to the new Computer Science in Algebra: Използване на компютърните
             науки в алгебрата
           Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
@@ -749,8 +753,8 @@
           new stage: нов етап
           title: 'Glenallan Ден на кариерата: демо'
           description_short: Да направим пъзели!
-          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
-            възможно!
+          description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто
+            от себе си!
           Puzzles: Пъзели
         ECSPD-NexTech:
           Introduction to PD: Въведение в PD
@@ -840,7 +844,7 @@
           Multi: Мулти
           Big Game: Голямата игра
         sciencePD2:
-          Phase 2 Summer Workshop: Фаза 2 Летен семинар
+          Phase 2 Summer Workshop: 'Фаза 2: Летен семинар'
           Welcome: Welcome
           Resources: Resources
           Discussion Forums: Discussion Forums
@@ -880,9 +884,29 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Интернет
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Компютърни науки в алгебрата
-          description: Научете функционално програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
           Defining Variables: Дефиниране на променливите
@@ -891,13 +915,14 @@
           The Design Recipe: Рецепта за дизайн
           Big Game - Animation: Big Game - Animation
           Booleans: Booleans
-          Sam the Bat: Сам прилепът
+          Sam the Bat: Сам, прилепът
           Big Game - Booleans: Big Game - Booleans
-          Luigi's Pizza: Луиджи пица
+          Luigi's Pizza: Пицата на Луиджи
           Big Game - Player Movement: Big Game - Player Movement
           Big GAme - Collision Detection: Big GAme - Collision Detection
-          Rocket-Height: Ракетна височина
+          Rocket-Height: Ракета - височина
           Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Свободна игра
         allthethings:
           Jigsaw: Мозайка
           Maze: Лабиринт
@@ -914,16 +939,17 @@
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
-          AppLab: AppLab
-          Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          AppLab: Лаборатория за приложения
+          Online PD: Онлайн PD
+          title: Всички неща!
+          description: Всички типове нива за тестване на потребителски интерфейс
+          Odometer: Километраж
           Text Compression: Компресия на текста
           Pixelation: Пикселизация
+          Multi2: Multi2
         algebraPD2b:
           title: Компютърни науки в алгебрата
-          description: Научете функционално програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
           Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
@@ -932,9 +958,79 @@
           Writing Contracts: Писане на Договори
           Defining Variables: Дефиниране на променливите
           Defining Functions: Дефиниране на функции
-          Rocket-Height: Ракетна височина
+          Rocket-Height: Ракета - височина
           Booleans: Booleans
           'Eval: Conditionals': 'Оценка: Условия'
           Next Steps: Следващи стъпки
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Оценка: Дефиниране на функции'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Интернет симулатор
+          App Lab: Лаборатория за приложения
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Добре дошли!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Добре дошли!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Интернет симулатор
+          App Lab: Лаборатория за приложения
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Introduction to PD: Въведение в PD
+          K-5 Courses: Курсове за K-5
+          Writing computer programs: Писане на компютърни програми
+          'Programming Concept: Loops': 'Концепции на програмирането: Цикли'
+          Unplugged lessons: Уроци без компютър
+          'Programming Concept: Conditionals': 'Концепции на програмирането: Условия'
+          Computer Science Pedagogy: Педагогика на Компютърните науки
+          'Programming Concept: Functions': 'Концепции на програмирането: функции'
+          Teacher Dashboard: Учителско табло
+          'Programming Concept: Events': 'Концепции на програмирането: събития'
+          Reflection: Рефлексия
+          Next Steps: Следващи стъпки
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Добре дошли!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Час на Кодирането

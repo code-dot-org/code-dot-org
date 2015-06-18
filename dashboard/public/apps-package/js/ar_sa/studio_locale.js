@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "الممثل"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "غزو الكائنات الفضائية!"},
 "backgroundBlack":function(d){return "الأسود"},
 "backgroundCave":function(d){return "كهف"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "أستمر"},
 "decrementPlayerScore":function(d){return "إزالة نقطة"},
 "defaultSayText":function(d){return "اكتب هنا"},
+"dropletBlock_changeScore_description":function(d){return "إضافة أو إزالة نقطة ليسجل."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "تحديد صورة الخلفية"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "يحدد مزاج الممثل"},
+"dropletBlock_setSpritePosition_description":function(d){return "على الفور تحرك فاعل للموقع المحدد."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "تعيين سرعة فاعل"},
+"dropletBlock_setSprite_description":function(d){return "تعيين صورة الفاعل"},
+"dropletBlock_throw_description":function(d){return "يلقي قذيفة من الفاعل المحدد."},
+"dropletBlock_vanish_description":function(d){return "يختفي الممثل ."},
 "emotion":function(d){return "الحالة"},
 "finalLevel":function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."},
 "for":function(d){return "لـ"},
 "hello":function(d){return "مرحباً"},
 "helloWorld":function(d){return "مرحباً بالعالم!"},
 "incrementPlayerScore":function(d){return "عدد النقاط"},
+"itemBlueFireball":function(d){return "كرة ملتهبة زرقاء"},
+"itemPurpleFireball":function(d){return "كرة ملتهبة أرجوانية"},
+"itemRedFireball":function(d){return "كرة ملتهبة حمراء"},
+"itemYellowHearts":function(d){return "قلوب صفراء"},
+"itemPurpleHearts":function(d){return "قلوب أرجوانية"},
+"itemRedHearts":function(d){return "قلوب حمراء"},
+"itemRandom":function(d){return "عشوائي"},
+"itemAnna":function(d){return "خطاف"},
+"itemElsa":function(d){return "بريق"},
+"itemHiro":function(d){return "بوتات مجهرية"},
+"itemBaymax":function(d){return "صاروخ"},
+"itemRapunzel":function(d){return "مقلاة الصلصة"},
+"itemCherry":function(d){return "كرز"},
+"itemIce":function(d){return "ثلج"},
+"itemDuck":function(d){return "بطة"},
 "makeProjectileDisappear":function(d){return "يختفي"},
 "makeProjectileBounce":function(d){return "إرتداد"},
 "makeProjectileBlueFireball":function(d){return "اصنع كرة نارية زرقاء"},

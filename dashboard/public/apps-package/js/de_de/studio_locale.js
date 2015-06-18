@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "Schauspieler"},
+"addItems1":function(d){return "1 Element dieses Typs hinzufügen"},
+"addItems2":function(d){return "2 Elemente dieses Typs hinzufügen"},
+"addItems3":function(d){return "3 Elemente dieses Typs hinzufügen"},
+"addItems5":function(d){return "5 Elemente dieses Typs hinzufügen"},
+"addItems10":function(d){return "10 Elemente dieses Typs hinzufügen"},
+"addItemsRandom":function(d){return "Zufällige Anzahl von Elementen dieses Typs hinzufügen"},
+"addItemsTooltip":function(d){return "Elemente der Szene hinzufügen."},
 "alienInvasion":function(d){return "Alien invasion!"},
 "backgroundBlack":function(d){return "schwarz"},
 "backgroundCave":function(d){return "Höhle"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Weiter"},
 "decrementPlayerScore":function(d){return "Punkt abziehen"},
 "defaultSayText":function(d){return "Hier eingeben"},
+"dropletBlock_changeScore_description":function(d){return "Addiere oder subtrahiere einen Punkt von der Punktzahl."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Hintergrundbild setzen"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Legt die Stimmung der Figur fest"},
+"dropletBlock_setSpritePosition_description":function(d){return "Bewegt das Element sofort an die angegebene Position."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Legt die Geschwindigkeit eines Elements fest"},
+"dropletBlock_setSprite_description":function(d){return "Legt das Aussehen der Figur fest"},
+"dropletBlock_throw_description":function(d){return "Lässt die angegebene Figur ein Geschoss werfen."},
+"dropletBlock_vanish_description":function(d){return "Lässt die Figur verschwinden."},
 "emotion":function(d){return "Stimmung"},
 "finalLevel":function(d){return "Glückwunsch! Du hast die letzte Aufgabe abgeschlossen."},
 "for":function(d){return "für"},
 "hello":function(d){return "Hallo"},
 "helloWorld":function(d){return "Hallo Welt!"},
 "incrementPlayerScore":function(d){return "Punkt"},
+"itemBlueFireball":function(d){return "Blauer Feuerball"},
+"itemPurpleFireball":function(d){return "Lila Feuerball"},
+"itemRedFireball":function(d){return "Roter Feuerball"},
+"itemYellowHearts":function(d){return "gelbe Herzen"},
+"itemPurpleHearts":function(d){return "lila Herzen"},
+"itemRedHearts":function(d){return "rote Herzen"},
+"itemRandom":function(d){return "zufällig"},
+"itemAnna":function(d){return "Haken"},
+"itemElsa":function(d){return "funkeln"},
+"itemHiro":function(d){return "Mikrobots"},
+"itemBaymax":function(d){return "Rakete"},
+"itemRapunzel":function(d){return "Kochtopf"},
+"itemCherry":function(d){return "Kirsche"},
+"itemIce":function(d){return "Eis"},
+"itemDuck":function(d){return "Ente"},
 "makeProjectileDisappear":function(d){return "verschwinden"},
 "makeProjectileBounce":function(d){return "abprallen"},
 "makeProjectileBlueFireball":function(d){return "Mache blauen Feuerball"},

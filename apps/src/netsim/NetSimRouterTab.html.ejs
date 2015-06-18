@@ -13,4 +13,7 @@ var i18n = require('./locale');
     <div class="memory-control"></div>
   <% } %>
   <div class="router_log_table"></div>
+  <% if (level.showLogBrowserButton) { %>
+    <span class="secondary netsim-button large-button" id="show-router-log-modal-two" data-toggle="modal" data-target="#router-log-modal"><%= i18n.logBrowserButton() %></span>
+  <% } %>
 </div>

@@ -1,0 +1,29 @@
+name 'U3L10 Student Lesson Introduction'
+title 'Scene Design Part 2: Code'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 10 - Scene Design Part 2: Code
+
+# Background
+
+Collaborative projects require dedication and attention to detail. Thorough plans for such projects can guide programmers toward a successful project. However, periodic progress checks and reflections are important elements of meeting goals and staying on schedule.
+
+# Lesson
+
+* Create a digital design with repeat loops, random numbers and parameterized functions.
+* Combine code from team members to create a larger project. 
+  
+# Resources 
+(for reference from the previous lesson)
+
+* Rubric: <a href="https://docs.google.com/a/iit.edu/document/d/1NVuLJRPQFZWZ8_6JERQyDyUM6LXtqE775quJ7SQPnzU" target="_blank">
+Digital Scene Design
+</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1EzHd3TNWBu5LaC2mLkW8dzce1ihxgNDID3ZsEvrqT74" target="_blank"> Individual Planning Document
+</a>
+* Worksheet: <a href="https://docs.google.com/a/iit.edu/document/d/1dl2b1iY3ibygfnVmecz_DwMqU78g16qpGATiqira3fQ" target="_blank"> 
+Group Planning Document
+</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

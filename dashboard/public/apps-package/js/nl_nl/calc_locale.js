@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Je programma resulteert in een deling door nul."},
-"emptyComputeBlock":function(d){return "Je moet een blok aan het \"evalueren\" blok koppelen."},
-"equivalentExpression":function(d){return "Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen."},
-"evaluate":function(d){return "evalueren"},
-"extraTopBlocks":function(d){return "Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze aan het \"evalueren\" blok te koppelen?"},
-"failedInput":function(d){return "Jouw functie geeft niet het juiste resultaat voor alle waardes."},
-"goal":function(d){return "Doel:"},
-"levelIncompleteError":function(d){return "Jouw expressie komt niet overeen met het doel."},
-"missingFunctionError":function(d){return "Je moeten een functie genaamd "+calc_locale.v(d,"functionName")+" definiëren."},
-"missingVariableX":function(d){return "Variabele "+calc_locale.v(d,"var")+" ontbreekt in jouw expressie."},
-"reinfFeedbackMsg":function(d){return "Hier is jouw berekening! Je kan er verder aan werken, of naar de volgende puzzel gaan!"},
-"yourExpression":function(d){return "Jouw expressie:"},
-"wrongInput":function(d){return "Je roept jouw functie met de verkeerde waarde aan."},
-"wrongOtherValuesX":function(d){return "Jouw expressie resulteert in de verkeerde waarde wanneer we "+calc_locale.v(d,"var")+" aanpassen."},
-"wrongResult":function(d){return "Jouw expressie geeft niet het juiste resultaat terug."}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

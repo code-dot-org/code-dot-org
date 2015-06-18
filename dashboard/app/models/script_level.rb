@@ -116,4 +116,8 @@ class ScriptLevel < ActiveRecord::Base
     @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
     @@script_level_map[id]
   end
+
+  def to_param
+    position.to_s
+  end
 end

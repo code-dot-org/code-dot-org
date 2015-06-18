@@ -64,8 +64,8 @@ nn:
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} elever har allerede registrert seg.'
+    teacher_count: '%{count} lærere har allerede registrert seg.'
     overview_student: 'Registrer ein konto for å følgje med på framgangen din. Epostadressa din blir hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette passord. For meir informasjon, sjå våre <a href="http://code.org/privacy">rettningsliner for personvern</a>.'
     overview_teacher: 'Lær datavitskap i klasserommet ved å registrere deg med ein konto. <p/> Du vil kunne legge til elevane og følge framdrifta deira.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">bla gjennom de forskjellige nivåene og oppgavene</a>, men du må registrere deg for å lagre hvor langt du har nådd.'
@@ -221,7 +221,7 @@ nn:
         artist: Teikn noko
     user:
       classroom: Lærar heimeside
-      district_dashboard: District Dashboard
+      district_dashboard: Distrikt skrivebord
       label: 'Hei %{username}'
       stats: Min fremdrift
       settings: Min konto
@@ -231,7 +231,7 @@ nn:
       signup: Meld deg på
       already_registered: Alt registrert?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: "%{name}'s fremgang"
       progress: Din fremdrift
       lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
@@ -300,9 +300,11 @@ nn:
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernast som læraren din fordi du ikkje har registrert ei e-postadresse'
     student_teacher_disassociated: '%{teacher_name} er fjerna som lærar for %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Svar visning
       student: student
-      try_it_yourself: Try it yourself
+      viewing_solution: Viser løsning
+      try_it_yourself: Prøv selv
+      section: Seksjon
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
@@ -323,7 +325,9 @@ nn:
     classroom_activity: Aktivitet utan datamaskinar
   home:
     title: Kodestudio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Planer over leksjonane
     signin_message: 'Alt registrert? %{link}'
@@ -357,7 +361,7 @@ nn:
     heading_apps: '<h2>Moro for</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>'
     your_gallery: Galleri
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Prøv et kurs på Code Studio
   gender:
     male: Mann
     female: Kvinne
@@ -390,6 +394,10 @@ nn:
     autoplay_option: Autovisning av videoer
     download: Last ned video
   compatability:
+    https:
+      header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
+      message: "For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS. <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer HTTPS for Code.org."
+      hide_this_warning: Skjul denne advarselen
     working:
       header: Vi arbeider med å lage støtte for din nettleser.
       message: "Code.org brukar moderne web-teknologi. Dette gjør nettstaden raskare å bruke. Nettlesaren støtter ikkje alle nødvnedige funksjonar, og det kan oppstå problemer medan du brukar denne delen av nettstaden. Hjelp oss ved å <a href='%{report_issue_url}'> sei frå om dei feila du finn</a>. Du kan også <a href='%{supported_browsers_url}'> oppgradere nettlesaren til ein versjon som blir støtta</a>."
@@ -448,8 +456,8 @@ nn:
     frozen:
       title: Frost
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Infinity Spill-Lab
+      body: Bruk Spill-Lab for å lage en historie eller spill med Disney Infinity figurer.
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!
@@ -483,16 +491,16 @@ nn:
     correct_body: Det er rett svar.
   contract_match:
     wrong_title: Feil svar
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    badname: Kontrakten har feil navn.
+    badname_case: Funksjonsnavn er tegn sensitiv. Prøv å endre tegnet på din kontraknavn.
+    badrange: Din kontrakt har feil område.
+    baddomainsize: Kontrakten har ikke riktig antall elementer i domenet.
+    baddomainname: En eller flere av domene elementene har feil navn.
+    baddomaintype: En eller flere av domene elementene er feil type, eller de er i feil rekkefølge.
   text_match:
     placeholder: Gi svaret ditt her
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Takk
+    open_response_body: Takk for ditt svar!
   dialog:
     ok: OK
   time:
@@ -549,7 +557,7 @@ nn:
   project:
     projects: Prosjekter
     create: Opprett prosjekt
-    create_a_project: 'Create a new project:'
+    create_a_project: 'Opprett et nytt prosjekt:'
     new: Opprett ny
     rename: Gi nytt navn
     save: Lagre
@@ -564,7 +572,7 @@ nn:
     name: Navn
     updated: Oppdatert
     project_type: Prosjekttype
-    help_text: 'Klikk <strong>Lag en App</strong> eller <strong>Tegn noe</strong> nedenfor for å lage et nytt spill eller kunstprosjekt!<br/>Du kan komme tilbake og arbeide videre på prosjektene når som helst.'
+    help_text: 'Klikk <strong>Lag en App</strong> eller <strong>Tegn noe</strong> nedenfor for å lage et nytt Spill-Lab eller kunstprosjekt!<br/>Du kan komme tilbake og arbeide videre på prosjektene når som helst.'
     need_help: Trenger du hjelp for å komme i gang?
     really_delete: Slette?
     delete_yes: Ja
@@ -576,4 +584,5 @@ nn:
     delete_confirm_text: Slettes prosjektet, fjernes det permanent fra listen Mine prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
     remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: |-
+      Klikk 'Remix"til spin-off din egen versjon!

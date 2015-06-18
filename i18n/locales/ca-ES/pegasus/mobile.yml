@@ -3,7 +3,7 @@ ca-ES:
   select_language: "Seleccioneu l'idioma"
   computer_science: Informàtica
   computer_science_edweek: "Setmana de l'Educació en Informàtica"
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 de desembre de 2014
   csedweek_banner_hoc: |-
     S'acosta l' <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hora del Codi</a>. Cridant a tots els professors i organitzadors, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planifica la teva Hora del Codi</a>
   csedweek_banner_teachers: |-
@@ -13,7 +13,8 @@ ca-ES:
   learn_now: Aprèn ara
   petition_message: "Cada alumne en cada escola ha de tenir l'oportunitat d'aprendre informàtica"
   petition_sign_message: "Si estàs d'acord, signa amb el teu nom.  Uneix-te als altres #."
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Signa si ens dónes suport. Uneix-te a # altres.'
+  petition_join_others: 'Uneix-te a # altres'
   name: Nom
   email: Correu electrònic
   zipcode: Codi postal o país
@@ -109,8 +110,9 @@ ca-ES:
   start_hoc: "Comenceu l'Hora del Codi ara"
   contact_form_topic_press: Premsa/mitjans de comunicació (entrevista)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_student: '"Sabia que era una oportunitat <b>irrepetible</b>." -Mariana Alzate, 5è curs'
+  stats_michael: |-
+    <b>Mai</b> no havia vist els meus alumnes tan entusiasmats amb l'aprenentatge." -Michael Clark, professor
   studiobar_title: "Explora el <a href='http://studio.code.org'> Code Studio</a>"
   studiobar_title_nolink: Explora el Code Studio
   studiobar_elementary_title: Cursos elementals
@@ -125,8 +127,8 @@ ca-ES:
   studiobar_frozen_body: "Creeu un món fantàstic d'hivern amb l'Anna i l'Elsa"
   studiobar_donate_title: Fes una donació
   studiobar_donate_body: Un infant aprèn per cada dòlar que dongui
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Botiga
+  studiobar_shop_body: Trencar els estereotips. Portar el nostre logotip amb orgull.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
@@ -179,43 +181,46 @@ ca-ES:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc línies de codi escrites pels alumnes'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "L'Hora de Codi"
   homepage_slot_text_frozen: "Frozen amb l'Anna i l'Elsa"
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Tots els nostres tutorials
   homepage_slot_text_course4: Curs 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Botiga
   homepage_slot_text_flappy: Codi Flappy
   homepage_action_text_codevideo: Mira el vídeo
   homepage_action_text_teachervideo: Mira el vídeo
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Comença a aprendre
   homepage_action_text_signpetition: Signa la petició
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_banner_text_main: Code.org i el College Board formen una aliança per millorar la diversitat en informàtica.
+  homepage_banner_text_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: "Proveu l'Hora de programació"
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Alumnes
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_blurb_students: Explora tots els nostres tutorials
+  homepage_slot_text_link_codestudio: Prova el Code Studio
+  homepage_slot_text_link_local: Troba una classe a prop teu
   homepage_slot_text_link_othercourses: Altres cursos online
   homepage_slot_text_title_educators: Educadors
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_blurb_educators: Ensenya als teus estudiants
+  homepage_slot_text_link_k5: Cursos per als graus K-5
+  homepage_slot_text_link_fullcurriculum: Mira el nostre programa complet
   homepage_slot_text_link_pd: Desenvolupament professional
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_blurb_advocates: Recolza la nostra feina
+  homepage_slot_text_link_stats: Veure les estadístiques
+  homepage_slot_text_link_buy: "Involucra't"
   homepage_slot_text_link_donate: Fes una donació
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_codestudio: "Creacions d'estudiants del Code Studio"
+  homepage_header_donors: Code.org dóna gràcies als seus seguidors
+  homepage_donors_seall: Mostra-ho tot
   homepage_donors_donate: Fes una donació
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
@@ -297,8 +302,8 @@ ca-ES:
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: Vols suprimir?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Esborra
+  dashboard_action_remove_confirm: Esborrar?
   dashboard_action_done: Fet
   dashboard_action_required: obligatori
   dashboard_navigation_home_page: "Pàgina d'inici de mestre"
@@ -337,7 +342,7 @@ ca-ES:
   dashboard_students_new_section: 'Has creat una secció nova! Ara afegeix els teus alumnes utilitzant els botons de <b>Afegeix alumne</b>i<b>Afegeix múltiples alumnes</b>.'
   dashboard_students_placeholder_name: "Nom de l'alumne"
   dashboard_students_name: Nom
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Progrés
   dashboard_students_age: Edat
   dashboard_students_gender: Sexe
   dashboard_students_male: Home
@@ -363,11 +368,18 @@ ca-ES:
   dashboard_students_print_page: Imprimeix aquesta pàgina
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Fes clic aquí</a> per veure el nostre document de privacitat, que pot ser compartit o imprès per als teus alumnes.'
-  dashboard_curriculum_overview: Resum del curriculum de cicle superior de primària
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Veure totes les unitats didàctiques
   dashboard_course1: 'Curs 1:'
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Resum del curriculum de cicle superior de primària
+  dashboard_overview: Overview
   dashboard_sequence: Seqüència
   dashboard_framework: Marc de treball
   dashboard_standards: Estàndards
@@ -378,6 +390,10 @@ ca-ES:
   dashboard_puzzle_solving: 'Resol el trencaclosques:'
   dashboard_student_worksheet: "Full de l'alumne"
   dashboard_teacher_worksheet: Full del professor
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Altres
   dashboard_login_word: Paraula
@@ -406,6 +422,7 @@ ca-ES:
   dashboard_sections_password_account_creation: Contrasenya de text creat per alumne
   dashboard_sections_login_type_explanation: "Aquesta taula t'explica quin d'aquests tipus d'inici de sessió,<b>imatge, paraula o correu electrònic</b>, vols triar per a la secció."
   dashboard_faq: Preguntes freqüents
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació
@@ -426,7 +443,7 @@ ca-ES:
   carousel_heading_robots: Aprèn a programar amb robots
   carousel_heading_ide: Plataformes populars entre professors
   educator_notes: "Notes d'educador"
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Com ensenyar una Hora de Codi
   more_resources_educators: Més recursos per a mestres i educadors
   participants: Participants
   teachers_notes: Notes del professor
@@ -825,3 +842,6 @@ ca-ES:
   processing_beyond_longdescription: "El Processing és un llenguatge de programació, un entorn de desenvolupament i una comunitat en línia. Des del 2001, el Processing ha promogut alfabetització del programari dins de les arts visuals i l'alfabetització visual dins la tecnologia. Creat inicialment per provar maquetes i ensenyar els fonaments de la programació en un entorn visual, el Processing ha evolucionat i s'ha convertit en una eina de desenvolupament per als professionals. Avui dia, hi ha desenes de milers d'estudiants, artistes, dissenyadors, investigadors i aficionats que utilitza Processing per a l'aprenentatge, el prototipatge i la producció."
   alice_beyond_longdescription: "El projecte Alice utilitzant un entorn de programació innovadora per donar suport a la creació d'animacions 3D, proporciona eines i materials d'ensenyament i aprenentatge de pensament computacional, resolució de problemes i la programació informàtica a través d'un espectre d'edats i nivells de qualificació."
   sphero_beyond_longdescription: 'Si ets educador o un pare, les lliçons SPRK donen als nens un divertit curs accelerat a la programació de robots de mentre  milloren les seves habilitats en matemàtiques i ciències.'
+  compatibility_https_header: Si us plau accepta HTTPS per a Code.org.
+  compatibility_https_message: "Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'> feu clic aquí</a> per aprendre com permetre HTTPS per Code.org."
+  compatibility_https_hide_this_warning: Amaga aquest avís

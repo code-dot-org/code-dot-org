@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "veikėjas"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Ateivių įsiveržimas!"},
 "backgroundBlack":function(d){return "juoda"},
 "backgroundCave":function(d){return "uola"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tęsti"},
 "decrementPlayerScore":function(d){return "atimk tašką"},
 "defaultSayText":function(d){return "rašyk čia"},
+"dropletBlock_changeScore_description":function(d){return "Pakeisti rezultato reikšmę."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Nustato fono paveikslėlį"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Nustato veikėjo nuotaiką"},
+"dropletBlock_setSpritePosition_description":function(d){return "Iškart perkelia veikėją į nurodytą vietą."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Nustato veikėjo greitį"},
+"dropletBlock_setSprite_description":function(d){return "Nustato veikėjo išvaizdą"},
+"dropletBlock_throw_description":function(d){return "Nurodytas veikėjas išmeta objektą (pvz, ugnies kamuolį)."},
+"dropletBlock_vanish_description":function(d){return "Pašalina veikėją"},
 "emotion":function(d){return "nuotaika"},
 "finalLevel":function(d){return "Sveikinu! Tu išsprendei paskutinį galvosūkį."},
 "for":function(d){return "for"},
 "hello":function(d){return "labas"},
 "helloWorld":function(d){return "Labas, Pasauli!"},
 "incrementPlayerScore":function(d){return "pridėk tašką"},
+"itemBlueFireball":function(d){return "mėlynas ugnies kamuolys"},
+"itemPurpleFireball":function(d){return "violetinis ugnies kamuolys"},
+"itemRedFireball":function(d){return "raudonas ugnies kamuolys"},
+"itemYellowHearts":function(d){return "geltonos širdutės"},
+"itemPurpleHearts":function(d){return "violetinės širdutės"},
+"itemRedHearts":function(d){return "raudonos širdutės"},
+"itemRandom":function(d){return "atsitiktinis"},
+"itemAnna":function(d){return "kablys"},
+"itemElsa":function(d){return "žibėti"},
+"itemHiro":function(d){return "mikro robotai"},
+"itemBaymax":function(d){return "raketa"},
+"itemRapunzel":function(d){return "puodas"},
+"itemCherry":function(d){return "vyšnia"},
+"itemIce":function(d){return "ledas"},
+"itemDuck":function(d){return "antis"},
 "makeProjectileDisappear":function(d){return "pradink"},
 "makeProjectileBounce":function(d){return "atsitrenkimas"},
 "makeProjectileBlueFireball":function(d){return "mėlynas ugnies kamuolys"},

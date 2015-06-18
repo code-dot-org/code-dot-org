@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "actor"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Invasió alienígena!"},
 "backgroundBlack":function(d){return "negre"},
 "backgroundCave":function(d){return "cova"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuar"},
 "decrementPlayerScore":function(d){return "treure un punt"},
 "defaultSayText":function(d){return "Escriviu aquí"},
+"dropletBlock_changeScore_description":function(d){return "Afegir o treure un punt al marcador."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Estableix l'imatge de l'escena"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Estableix l'estat d'ànim de l'actor"},
+"dropletBlock_setSpritePosition_description":function(d){return "Instantàniament mou un actor a la ubicació especificada."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Estableix la velocitat d'actor"},
+"dropletBlock_setSprite_description":function(d){return "Estableix la imatge d'actor"},
+"dropletBlock_throw_description":function(d){return "Llança un projectil de l'actor especificat."},
+"dropletBlock_vanish_description":function(d){return "Desapareix l'actor."},
 "emotion":function(d){return "estat d'ànim"},
 "finalLevel":function(d){return "Felicitats! Has resolt el puzzle final."},
 "for":function(d){return "per a"},
 "hello":function(d){return "hola"},
 "helloWorld":function(d){return "Hola món!"},
 "incrementPlayerScore":function(d){return "punt"},
+"itemBlueFireball":function(d){return "bola de foc blava"},
+"itemPurpleFireball":function(d){return "bola de foc porpra"},
+"itemRedFireball":function(d){return "bola de foc vermella"},
+"itemYellowHearts":function(d){return "cors grocs"},
+"itemPurpleHearts":function(d){return "cors porpres"},
+"itemRedHearts":function(d){return "cors vermells"},
+"itemRandom":function(d){return "atzar"},
+"itemAnna":function(d){return "hook"},
+"itemElsa":function(d){return "sparkle"},
+"itemHiro":function(d){return "microbots"},
+"itemBaymax":function(d){return "rocket"},
+"itemRapunzel":function(d){return "saucepan"},
+"itemCherry":function(d){return "cherry"},
+"itemIce":function(d){return "ice"},
+"itemDuck":function(d){return "duck"},
 "makeProjectileDisappear":function(d){return "desaparèixer"},
 "makeProjectileBounce":function(d){return "bota"},
 "makeProjectileBlueFireball":function(d){return "fer bola de foc blava"},

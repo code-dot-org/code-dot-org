@@ -302,7 +302,9 @@ sl:
     panel:
       answer_viewer: Answer Viewer
       student: Učenec
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Razdelek
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -323,7 +325,9 @@ sl:
     classroom_activity: Dejavnost brez prijave
   home:
     title: Studio za kodiranje
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
     signin_message: 'Že registrirani? %{link}'
@@ -390,6 +394,10 @@ sl:
     autoplay_option: Samodejno predvajanje videoposnetkov
     download: Prenos videa
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Skrij to opozorilo
     working:
       header: Delamo na podpori za vaš brskalnik.
       message: "Code.org uporablja sodobne spletne tehnologije, ker želimo, da se hitreje izvaja. Vaš brskalnik ne podpira vseh funkcij, ki so za to potrebne, in lahko izkusite težave med uporabo tega dela spletišča. Prosim, <a href='%{report_issue_url}'>sporočite nam morebitne težave</a>. Lahko pa tudi <a href='%{supported_browsers_url}'>nadgradite vaš brskalnik</a>."

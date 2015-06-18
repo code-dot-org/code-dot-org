@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -23,7 +24,7 @@ Stops the turtle from drawing a trail behind it as it moves.
 
 [/short_description]
 
-**Note**: [penDown()](/applab/docs/penDown) is often used with penUp.  
+**Note**: [penDown()](/applab/docs/penDown) is often used with penUp.
 **Note**: If you are not seeing the turtle's movement, slow the program execution down by adjusting the slider bar under the blue reset button.
 
 [/description]
@@ -133,3 +134,5 @@ No return value. Outputs to the display only.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

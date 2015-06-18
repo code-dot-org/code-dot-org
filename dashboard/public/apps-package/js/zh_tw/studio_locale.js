@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "演員"},
+"addItems1":function(d){return "增加1個類型的項目"},
+"addItems2":function(d){return "增加2個類型的項目"},
+"addItems3":function(d){return "增加3個類型的項目"},
+"addItems5":function(d){return "增加5個類型的項目"},
+"addItems10":function(d){return "增加10個類型的項目"},
+"addItemsRandom":function(d){return "增加隨機類型的項目"},
+"addItemsTooltip":function(d){return "增加一些項目到場景"},
 "alienInvasion":function(d){return "外星人入侵 !"},
 "backgroundBlack":function(d){return "黑"},
 "backgroundCave":function(d){return "洞穴"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "繼續 "},
 "decrementPlayerScore":function(d){return "減少一分"},
 "defaultSayText":function(d){return "在此處輸入"},
+"dropletBlock_changeScore_description":function(d){return "將得分增加或減少一分"},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "顏色"},
+"dropletBlock_setBackground_description":function(d){return "設置背景圖像"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "設置演員的情緒"},
+"dropletBlock_setSpritePosition_description":function(d){return "立即將一個角色移動到指定的位置。"},
+"dropletBlock_setSpriteSpeed_description":function(d){return "設為角色的速度"},
+"dropletBlock_setSprite_description":function(d){return "設定角色的影像"},
+"dropletBlock_throw_description":function(d){return "由指定的主角發射導彈。"},
+"dropletBlock_vanish_description":function(d){return "讓演員消失。"},
 "emotion":function(d){return "情緒"},
 "finalLevel":function(d){return "恭喜！你已經完成最後的關卡。"},
 "for":function(d){return "為"},
 "hello":function(d){return "你好"},
 "helloWorld":function(d){return "Hello World!"},
 "incrementPlayerScore":function(d){return "得分"},
+"itemBlueFireball":function(d){return "藍色火球"},
+"itemPurpleFireball":function(d){return "紫色火球"},
+"itemRedFireball":function(d){return "紅色火球"},
+"itemYellowHearts":function(d){return "黃色愛心"},
+"itemPurpleHearts":function(d){return "紫色愛心"},
+"itemRedHearts":function(d){return "紅色愛心"},
+"itemRandom":function(d){return "隨機"},
+"itemAnna":function(d){return "鉤"},
+"itemElsa":function(d){return "火花"},
+"itemHiro":function(d){return "微型機器人"},
+"itemBaymax":function(d){return "火箭"},
+"itemRapunzel":function(d){return "平底鍋"},
+"itemCherry":function(d){return "櫻桃"},
+"itemIce":function(d){return "冰"},
+"itemDuck":function(d){return "鴨"},
 "makeProjectileDisappear":function(d){return "消失"},
 "makeProjectileBounce":function(d){return "彈跳"},
 "makeProjectileBlueFireball":function(d){return "製造藍色火球"},

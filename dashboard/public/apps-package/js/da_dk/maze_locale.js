@@ -23,7 +23,7 @@ var maze_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,7 +154,7 @@ v:function(d,k){maze_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).maze_locale = {
-"atHoneycomb":function(d){return "på bistaden"},
+"atHoneycomb":function(d){return "på bistadet"},
 "atFlower":function(d){return "på blomsten"},
 "avoidCowAndRemove":function(d){return "undgå koen og fjern 1"},
 "continue":function(d){return "Fortsæt"},
@@ -179,14 +179,14 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "honey":function(d){return "lav honning"},
 "honeyAvailable":function(d){return "honning"},
 "honeyTooltip":function(d){return "Lav honning af nektar"},
-"honeycombFullError":function(d){return "Denne bistade har ikke plads til mere honning."},
+"honeycombFullError":function(d){return "Dette bistade har ikke plads til mere honning."},
 "ifCode":function(d){return "hvis"},
 "ifInRepeatError":function(d){return "Du har brug for en \"hvis\" blok inde i en \"gentag\" blok. Hvis du har problemer, prøv det tidligere niveau igen for at se, hvordan det virkede."},
 "ifPathAhead":function(d){return "hvis stien fortsætter"},
 "ifTooltip":function(d){return "Hvis der er en sti i den angivne retning, så udfør nogle handlinger."},
 "ifelseTooltip":function(d){return "Hvis der er en sti i den angivne retning, så udfør den første blok af handlinger. Ellers udfør den anden blok af handlinger."},
-"ifFlowerTooltip":function(d){return "Hvis der er en blomst/bistade i den angivne retning, så udfør nogle handlinger."},
-"ifelseFlowerTooltip":function(d){return "Hvis der er en blomst/bistade i den angivne retning, så udfør den første blok af handlinger. Ellers udfør den anden blok af handlinger."},
+"ifFlowerTooltip":function(d){return "Hvis der er en blomst/et bistade i den angivne retning, så udfør nogle handlinger."},
+"ifelseFlowerTooltip":function(d){return "Hvis der er en blomst/et bistade i den angivne retning, så udfør den første gruppe af handlinger. Ellers udfør den anden gruppe af handlinger."},
 "insufficientHoney":function(d){return "Du bruger alle de rigtige blokke, men du skal lave den rigtige mængde af honning."},
 "insufficientNectar":function(d){return "Du bruger alle de rigtige blokke, men du har brug for at indsamle den rigtige mængde af nektar."},
 "make":function(d){return "lav"},
@@ -198,16 +198,16 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveSouthTooltip":function(d){return "Flyt mig én plads syd."},
 "moveTooltip":function(d){return "Flyt mig én plads fremad/bagud"},
 "moveWestTooltip":function(d){return "Flyt mig et felt mod vest."},
-"nectar":function(d){return "få nektar"},
+"nectar":function(d){return "hent nektar"},
 "nectarRemaining":function(d){return "nektar"},
-"nectarTooltip":function(d){return "Få nektar fra en blomst"},
+"nectarTooltip":function(d){return "Hent nektar fra en blomst"},
 "nextLevel":function(d){return "Tillykke! Du har fuldført denne opgave."},
 "no":function(d){return "Nej"},
 "noPathAhead":function(d){return "stien er blokeret"},
 "noPathLeft":function(d){return "ingen sti til venstre"},
 "noPathRight":function(d){return "ingen sti til højre"},
-"notAtFlowerError":function(d){return "Du kan kun få nektar fra en blomst."},
-"notAtHoneycombError":function(d){return "Du kan kun lave honning på en bistade."},
+"notAtFlowerError":function(d){return "Du kan kun hente nektar fra en blomst."},
+"notAtHoneycombError":function(d){return "Du kan kun lave honning på et bistade."},
 "numBlocksNeeded":function(d){return "Denne opgave kan løses med %1 blokke."},
 "pathAhead":function(d){return "sti forude"},
 "pathLeft":function(d){return "hvis sti til venstre"},
@@ -223,7 +223,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "gentag indtil"},
 "repeatUntilBlocked":function(d){return "mens sti forude"},
 "repeatUntilFinish":function(d){return "gentag indtil færdig"},
-"step":function(d){return "Trin"},
+"step":function(d){return "Tip!"},
 "totalHoney":function(d){return "Honning ialt"},
 "totalNectar":function(d){return "Nektar ialt"},
 "turnLeft":function(d){return "drej til venstre"},

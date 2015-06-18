@@ -36,9 +36,11 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
     "custom_game_type": "Big Game",
-    "min_workspace_height": "1500"
+    "min_workspace_height": "1500",
+    "markdown_instructions": "At this point your game your danger should run across the screen from right to left, and your target should run across from left to right.\r\n\r\nThey don't ever come back on screen once they've left, but we'll take care of that later.\r\n\r\nTake a minute to make sure your game is working like you want it to, and then click finish to move on.",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks/>

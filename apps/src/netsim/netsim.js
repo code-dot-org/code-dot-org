@@ -15,6 +15,7 @@
 */
 /* global -Blockly */
 /* global $ */
+/* global sendReport */
 'use strict';
 
 var utils = require('../utils');
@@ -31,6 +32,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimLogPanel = require('./NetSimLogPanel');
+var NetSimRouterLogModal = require('./NetSimRouterLogModal');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
@@ -201,6 +203,12 @@ NetSim.prototype.init = function(config) {
    */
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
+  /**
+   * Configuration for reporting level completion
+   * @type {Object}
+   */
+  this.reportingInfo_ = config.report;
+
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
@@ -337,6 +345,9 @@ NetSim.prototype.initWithUserName_ = function (user) {
         expireHeartbeat: this.expireHeartbeat.bind(this)
       });
 
+  if (this.level.showLogBrowserButton) {
+    this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
+  }
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -366,7 +377,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
     this.tabs_.attachToRunLoop(this.runLoop_);
-}
+  }
 
   this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level,
       this);
@@ -987,6 +998,10 @@ NetSim.prototype.render = function () {
     this.lobby_.render();
   }
 
+  if (this.routerLogModal_) {
+    this.routerLogModal_.render();
+  }
+
   this.updateLayout();
 };
 
@@ -1010,6 +1025,11 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
     this.eventKeys.remoteChange = localNode.remoteChange.register(
         this.onRemoteChange_.bind(this));
     this.eventKeys.registeredWithLocalNode = localNode;
+  }
+
+  // Update the log viewer's shard reference so it can get current data.
+  if (this.routerLogModal_) {
+    this.routerLogModal_.setShard(shard);
   }
 
   // Shard changes almost ALWAYS require a re-render
@@ -1222,4 +1242,38 @@ NetSim.prototype.updateLayout = function () {
 
   // Manually adjust the logwrap to the remaining height
   logWrap.css('height', rightColumnHeight - sendPanelHeight);
+};
+
+/**
+ * Appropriate steps for when the student hits the "Continue to next level"
+ * button.  Should mark the level as complete and navigate to the next level.
+ */
+NetSim.prototype.completeLevelAndContinue = function () {
+  // Avoid multiple simultaneous submissions.
+  $('.submitButton').attr('disabled', true);
+
+  sendReport({
+    fallbackResponse: this.reportingInfo_.fallback_response,
+    callback: this.reportingInfo_.callback,
+    app: 'netsim',
+    level: this.level.id,
+    result: true,
+    testResult: 100,
+    onComplete: function (serverResponse) {
+
+      // Re-enable submit button, in case there's nowhere to go.
+      $('.submitButton').attr('disabled', false);
+
+      // If there's somewhere to go, disconnect and go!
+      if (serverResponse.redirect) {
+        if (this.isConnectedToRemote()) {
+          this.disconnectFromRemote(function () {
+            window.location.href = serverResponse.redirect;
+          });
+        } else {
+          window.location.href = serverResponse.redirect;
+        }
+      }
+    }.bind(this)
+  });
 };

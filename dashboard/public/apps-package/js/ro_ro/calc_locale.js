@@ -23,7 +23,7 @@ var calc_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,18 +154,18 @@ v:function(d,k){calc_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).calc_locale = {
-"divideByZeroError":function(d){return "Programul rezultă prin împărţirea la zero."},
-"emptyComputeBlock":function(d){return "Trebuie să ataşaţi un block la block-ul \"evalueză\"."},
-"equivalentExpression":function(d){return "Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie."},
-"evaluate":function(d){return "evaluează"},
-"extraTopBlocks":function(d){return "Aveţi block-uri neataşate. Aţi vrut să ataşaţi aceste block-uri la block-ul \"evalueză\"?"},
-"failedInput":function(d){return "Funcția ta nu returnează rezultatul corect pentru toate valorile."},
-"goal":function(d){return "Obiectiv:"},
-"levelIncompleteError":function(d){return "Expresia nu se potriveşte obiectivului."},
-"missingFunctionError":function(d){return "Trebuie să definiţi o funcţie prin nume "+calc_locale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "În expresia ta lipsește variabila "+calc_locale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "Aici este calculul tău! Continuă să lucrezi la el, sau treci la următorul puzzle!"},
-"yourExpression":function(d){return "Expresia dvs.:"},
-"wrongInput":function(d){return "Apelezi funcţia cu o valoare greşită."},
-"wrongOtherValuesX":function(d){return "Rezultatul expresiei tale este greșit dacă modificăm valoarea variabilei "+calc_locale.v(d,"var")+"."},
-"wrongResult":function(d){return "Expresia nu se întoarce rezultatul corect."}};
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"evaluate\" block."},
+"equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
+"failedInput":function(d){return "Your function does not return the right result for all values."},
+"goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
+"yourExpression":function(d){return "Your expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

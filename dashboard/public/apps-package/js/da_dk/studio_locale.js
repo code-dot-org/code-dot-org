@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "spiller"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Invasion af fremmede!"},
 "backgroundBlack":function(d){return "sort"},
 "backgroundCave":function(d){return "grotte"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Fortsæt"},
 "decrementPlayerScore":function(d){return "fjern point"},
 "defaultSayText":function(d){return "Skriv her"},
+"dropletBlock_changeScore_description":function(d){return "Tilføj eller fjern et point til scoren."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Indstiller baggrundsbilledet"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Sætter spillerhumør"},
+"dropletBlock_setSpritePosition_description":function(d){return "Flytter straks en spiller til den angivne placering."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Indstiller spillererens hastigheden"},
+"dropletBlock_setSprite_description":function(d){return "Indstiller spillererens billede"},
+"dropletBlock_throw_description":function(d){return "Kaster et projektil fra den angivne spiller."},
+"dropletBlock_vanish_description":function(d){return "Lader spilleren forsvinde."},
 "emotion":function(d){return "humør"},
 "finalLevel":function(d){return "Tillykke! Du har løst den sidste opgave."},
 "for":function(d){return "for"},
 "hello":function(d){return "hej"},
 "helloWorld":function(d){return "Hej verden!"},
 "incrementPlayerScore":function(d){return "score point"},
+"itemBlueFireball":function(d){return "blå ildkugle"},
+"itemPurpleFireball":function(d){return "lilla ildkugle"},
+"itemRedFireball":function(d){return "rød ildkugle"},
+"itemYellowHearts":function(d){return "gule hjerter"},
+"itemPurpleHearts":function(d){return "lilla hjerter"},
+"itemRedHearts":function(d){return "røde hjerter"},
+"itemRandom":function(d){return "tilfældig"},
+"itemAnna":function(d){return "krog"},
+"itemElsa":function(d){return "funkle"},
+"itemHiro":function(d){return "mikrobots"},
+"itemBaymax":function(d){return "raket"},
+"itemRapunzel":function(d){return "gryde"},
+"itemCherry":function(d){return "kirsebær"},
+"itemIce":function(d){return "Is"},
+"itemDuck":function(d){return "and"},
 "makeProjectileDisappear":function(d){return "forsvinde"},
 "makeProjectileBounce":function(d){return "hop"},
 "makeProjectileBlueFireball":function(d){return "lav blå ildkugle"},
@@ -249,7 +281,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "positionTopRight":function(d){return "til øverste, højre position"},
 "positionTopOutRight":function(d){return "til toppen uden for højre position"},
 "positionMiddleLeft":function(d){return "i den midterste venstre position"},
-"positionMiddleCenter":function(d){return "den midterste center holdning"},
+"positionMiddleCenter":function(d){return "den midterste center position"},
 "positionMiddleRight":function(d){return "i den midterste højre position"},
 "positionBottomOutLeft":function(d){return "til bunden udenfor venstre position"},
 "positionBottomLeft":function(d){return "til den nederste venstre position"},

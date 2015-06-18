@@ -443,6 +443,9 @@ el:
         csp_pixelation_bw: Βοήθημα Ασπρόμαυρης εικονοστοιχειοποίησης
         csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
         csp_textcompression: Εργαλείο συμπίεσης κειμένου
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS στην Άλγεβρα - Εισαγωγή'
         alg_2_eval_block: 'Πληροφορική στην Άλγεβρα - Πλακάκια αξιολόγησης'
         alg_3_pemdas: 'Πληροφορική στην Άλγεβρα - Σειρά πράξεων'

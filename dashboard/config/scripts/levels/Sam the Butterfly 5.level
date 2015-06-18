@@ -14,7 +14,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Free Play: Awesome, now Sam can't leave the yard from the left or the right, but what about up and down? We've added an additional parameter 'y' to the 'onscreen?' function. Can you update your program so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test your program by moving Sam as far as he can go in all four directions. Click Finish when Sam is completely protected.",
+    "instructions": "Free Play: Awesome, now Sam can't leave the yard from the left or the right, but what about up and down? We've added an additional parameter y to the onscreen? function. Can you update your program so Sam can't leave from the top (425) or bottom (-25) either? Test your program by moving Sam as far as he can go in all four directions. Click Finish when Sam is completely protected.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -44,9 +44,9 @@
     "custom_game_type": "Sam the Bat",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 5 2\",\r\n  \"callout_text\": \"You can create new functions to check safe-up? and safe-down?\",\r\n  \"element_id\": \"[id=':3.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_examples": "false",
+    "markdown_instructions": "Free Play: Awesome, now Sam can't leave the yard from the left or the right, but what about up and down? We've added an additional parameter _y_ to the _onscreen?_ function. Can you update your program so Sam can't leave from the top (425) or bottom (-25) either? Test your program by moving Sam as far as he can go in all four directions. Click Finish when Sam is completely protected.",
     "maze_data": null
-  },
-  "md5": "bd90f776afb9b3a0f31eb3a5f0c582a1"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

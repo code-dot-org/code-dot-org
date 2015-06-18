@@ -15,6 +15,7 @@
   petition_message: すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです
   petition_sign_message: 同意して、署名をする。参加する
   petition_sign_message_support: 私たちを支援して頂けるなら、あなたのお名前の署名をお願いします。＃ 他に参加をします。
+  petition_join_others: '参加する # ほか'
   name: 名前
   email: Eメール
   zipcode: 郵便番号または国名
@@ -100,7 +101,7 @@
   learn_classes: 近くのクラスを見つける
   hoc_is_here: '#HourOfCode はここです - 見つける @codeorg'
   just_did_hoc: '私は #HourOfCode に挑戦しました - 見つける @codeorg'
-  twitter_teach_cs: なぜ学校の多くはコンピューター科学を教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については
+  twitter_teach_cs: なぜもっと多くの学校がコンピューターサイエンスを教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については
     http://code.org/を参照してください。
   learn_hoc: Hour of Codeを学ぶ
   beyond_hoc: 1 時間を超えて
@@ -135,7 +136,7 @@
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: ショップ
   studiobar_shop_body: いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。
-  homepage_hero_text_malala: "&ldquo;私は各国々の女の子達にHour of Codeを１つ試させる事に挑戦しています。&rdquo;
+  homepage_hero_text_malala: "&ldquo;すべての国の女の子に Hour of Code を 1 つ学ぶよう働きかけてください。&rdquo;
     \nマララ, ノーベル平和賞受賞者\n"
   homepage_hero_text_susan: |
     &ldquo;テクノロジーで世界を変える事ができます。&rdquo;
@@ -144,12 +145,9 @@
     &ldquo;携帯で遊んでないで、それをプログラミングしてみなさい。&rdquo;
     バラク・オバマ大統領
   homepage_hero_text_sheryl: |
-    &ldquo;私の子供達 &mdash; 女の子を含んだ &mdash;
-    はコンピューター科学を学ぶ機会が必要です。&rdquo;
-    シェリル,  Facebook COO
-  homepage_hero_text_satya: |
-    &ldquo;コンピューター科学は世界中で最高の機会をアンロックする事ができます。&rdquo;
-    サティヤ, Microsoft CEO
+    &ldquo; &mdash; 女の子を含む &mdash;子どもたちはコンピューターサイエンスを学ぶ機会が必要です。&rdquo;
+    シェリル, COO of Facebook
+  homepage_hero_text_satya: 「コンピュータサイエンスを学べば世界中であらゆることに挑戦できます。」サティヤ、Microsoft CEO
   homepage_hero_text_bosh: |
     &ldquo;コーディングするということは、あなたの人生のコースを選択できるということです。&rdquo;
     クリス ボッシュ, NBAプレーヤー
@@ -157,59 +155,55 @@
     &ldquo;これらのスキルは私の人生を変えました。言うまでもないけど、単純に楽しいです。&rdquo;
     ルナ, 中学１年生
   homepage_hero_text_student2: |
-    &ldquo;今までにこれほど子供達が学ぶことを楽しんでいる姿を見たことがありません。&rdquo;
+    &ldquo;こんなに学ぶことを楽しんでいる子どもたちは見たことがありません。&rdquo;
     マイケル, 教師
   homepage_hero_text_student3: |
-    &ldquo;コンピューター科学とは試してみる前から好きかどうかなんてわからない分野です。&rdquo;
+    &ldquo;コンピューターサイエンスは試してみないと好きかどうかなんて分かりません。&rdquo;
     ジャクソン, 小学６年生
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+  homepage_hero_text_student4: '&ldquo;プログラミングができれば、思ったことをなんでもできるようになる&rdquo;マヤ、小学2年生。'
+  homepage_hero_text_student5: '&ldquo;コンピューターサイエンスは他の人のためにあるんじゃない。あなたのためにあるのだ。いま、ここから始めよう。&rdquo;ジェラルド先生'
+  homepage_hero_text_teacher1: '&ldquo;コーディングは創造性、インスピレーション、革新性が育てられます&mdash;これらは、どのような仕事でも大事なことです」&rdquo;フローレサ先生'
+  homepage_hero_text_teacher2: '&ldquo;生徒全員がこのプログラムに興味を持ち、集中して取り組みました。&rdquo;アダム、教師'
+  homepage_hero_text_stat_loc: 生徒によってコードの＃locラインが書かれました。
+  homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
+  homepage_hero_text_stat_served: 'Hour of Code:  #served 提供'
   homepage_slot_text_hoc: Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: 「アナと雪の女王」のアナとエルサ
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: すべてのチュートリアル
   homepage_slot_text_course4: コース4
   homepage_slot_text_shop: ショップ
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_action_text_codevideo: ビデオを見る
+  homepage_action_text_teachervideo: ビデオを見る
+  homepage_action_text_learn: 学習を始める
+  homepage_action_text_signpetition: 請願書に署名します。
+  homepage_signpetition_dropdown: 請願書に署名します &#x25BE;
+  homepage_banner_text_main: Code.orgとCollege Boardはコンピュータ・サイエンス分野での人材の多様性を向上するために協力して活動していきます。
+  homepage_banner_text_link: 詳しく
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Hour of Code を主催する
+  homepage_slot_text_link_hocserved: '# 人が試しました'
   homepage_slot_text_title_students: 生徒
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: チュートリアルをすべて見る
+  homepage_slot_text_link_codestudio: Code Studioを試す
+  homepage_slot_text_link_local: 地元のクラスを探す
+  homepage_slot_text_link_othercourses: その他のオンラインコース
+  homepage_slot_text_title_educators: 先生
+  homepage_slot_text_blurb_educators: 学生たちに教えよう
+  homepage_slot_text_link_k5: 小学生以下向けのコース
+  homepage_slot_text_link_fullcurriculum: すべてのカリキュラムを見る
+  homepage_slot_text_link_pd: プロになるために
+  homepage_slot_text_title_advocates: 応援してくださる方へ
+  homepage_slot_text_blurb_advocates: 支援しよう
+  homepage_slot_text_link_stats: 統計情報を表示
+  homepage_slot_text_link_buy: 参加しよう
+  homepage_slot_text_link_donate: 寄付をする
+  homepage_header_codestudio: Code Studio の生徒作品
+  homepage_header_donors: Code.orgは支援者の皆様に感謝します。
+  homepage_donors_seall: 全て見る
   homepage_donors_donate: 寄付する
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
@@ -358,11 +352,18 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: 個人情報の扱いを参照したり印刷したりする場合は<a href="/privacy/student-privacy",
     target="_blank">ここをクリック</a>
-  dashboard_curriculum_overview: K 5 カリキュラム概要
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: すべてのレッスン プランを表示します。
   dashboard_course1: コース1
   dashboard_course2: コース2
   dashboard_course3: コース3
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K 5 カリキュラム概要
+  dashboard_overview: Overview
   dashboard_sequence: 連続
   dashboard_framework: フレームワーク
   dashboard_standards: 基準
@@ -373,6 +374,10 @@
   dashboard_puzzle_solving: パズルを解く：
   dashboard_student_worksheet: 生徒用ワークシート
   dashboard_teacher_worksheet: 教員用ワークシート
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: その他
   dashboard_login_word: 単語
@@ -381,7 +386,7 @@
   dashboard_new_password: '新規パスワード:'
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
+  dashboard_progress_not_completed: 完了していません。
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
@@ -401,6 +406,7 @@
   dashboard_sections_login_type_explanation: この表は、セクションを選択するとき、<b>画像、単語、またはEメール</b>、などのログイン
     タイプ説明するのに役立ちます。
   dashboard_faq: よくある質問
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   learn_more: さらに詳しく
@@ -532,7 +538,7 @@
   lightbotintl_platformtext: iOS、Android (またはweb ブラウザ)
   codehs_platformtext: 最新ブラウザ（継続コースは費用がかかります)
   codecademy_platformtext: 最新web ブラウザ、iOS、Android アプリケーション
-  codecombat_platformtext: 最近のブラウザー。 (続くコースでは$$が必要になります)
+  codecombat_platformtext: 最近のウェブブラウザー（以降のコースは有料になります）
   codemonkey_platformtext: 最新Webブラウザ
   codeavengers_platformtext: 最新Webブラウザ
   processing_platformtext: 最新Webブラウザ
@@ -632,7 +638,7 @@
   flappy_longdescription: ドラッグ&ドロップによるプログラミングであなた独自のFlappyバードのゲームを作ります。見た目をカスタマイズしてみましょう
     (Flappyザメ、Flappyサンタなど)。そして、あなたの携帯にそのゲームを1クリックで登録しましょう
   bitsbox_longdescription: あなた独自の仮想タブレットをカスタマイズし、アプリを作って、遊んで、共有しましょう。簡単なチュートリアルが用意されているので、小さなお子さんでも本当のJavaScriptでプログラムを作成することができます。そのあとより高度なことに進むことになるでしょう。
-  makegameswithus_longdescription: Swiftと呼ばれる初心者用のプログラミング言語を使って、iPhone用ゲームの作り方を勉強しまそう。あなたのモンスターの動きを制御するコードを描いて、ポケモン風のアクションゲームを作ります。モンスターを勝たせるために、変数、メソッド、オブジェクトなどの使い方を勉強します。
+  makegameswithus_longdescription: Swiftと呼ばれる初心者用の新しいプログラミング言語を使って、iPhone用ゲームの作り方を勉強しましょう！ポケモン風のアクションゲームを作って、モンスターに新しい動きをプログラミングします。モンスターを勝たせるために、変数、メソッド、オブジェクトなどの使い方を学びましょう。
   touchdevelop_longdescription: タッチで簡単に操作できるエディターを使って、ピクセルアートを作ったり、パズルを解いたり、鳥がジャンプするあなた独自のゲームを作成します
   appinventor_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour
     of Codeでは、事前に何も知らなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています
@@ -767,9 +773,9 @@
   hopscotch_beyond_shortdescription: IPad でビジュアルプログラミングを学びます
   pocketcode_beyond_shortdescription: あなたのスマートフォンで動くゲームを作って、友達に遊んでもらいましょう！
   groklearning_beyond_shortdescription: pythonプログラミング入門
-  hacketyhack_beyond_shortdescription: ゼロからのRuby学習
+  hacketyhack_beyond_shortdescription: Rubyを基礎から学ぶ
   robomind_beyond_shortdescription: バーチャルロボットのためのコードを書く
-  makegameswithus_beyond_shortdescription: １時間でiPhoneのゲームを作る
+  makegameswithus_beyond_shortdescription: iPhoneのゲームを1時間で作る方法を学ぼう
   appinventor_beyond_shortdescription: あなたのアプリケーションを作りましょう！(Android限定)
   touchdevelop_beyond_shortdescription: スマートフォンやタブレット、ラップトップで動くアプリケーションを作る
   codehs_beyond_shortdescription: 楽しいビジュアル環境でJavaScriptのプログラミングを学ぶ
@@ -781,65 +787,83 @@
   teachingtree_beyond_shortdescription: 'オンラインの知識: 素早く自由な'
   kodu_beyond_shortdescription: 3Dゲームの世界をデザインする
   cargobot_beyond_shortdescription: iPadでロボットアームをプログラミングする
-  kidsruby_beyond_shortdescription: Rubyを使ってプログラムを学ぶ
+  kidsruby_beyond_shortdescription: Rubyでプログラミングを学ぶ
   w3schools_beyond_shortdescription: ウェブサイトの作り方を学ぶ
   codeavengers_beyond_shortdescription: ゲームやウェブサイトの作り方を学ぶ
   mozilla_beyond_shortdescription: ウェブページを作成して共有する
-  codecombat_beyond_shortdescription: ゲームで遊んでJavaScriptの学習をする
+  codecombat_beyond_shortdescription: ゲームで遊んでJavaScriptを学習する
   codea_beyond_shortdescription: iPadのアプリを作る
   lego_beyond_shortdescription: ロボットを作ってプログラムする
   finch_beyond_shortdescription: コンピュータサイエンス教育用のロボット
-  arduino_beyond_shortdescription: SparkfunのDigital Sandboxを使ってArduinoについて学ぶ
-  processing_beyond_shortdescription: Processing言語を学ぶ
-  alice_beyond_shortdescription: 3D環境でのプログラミングを教える
-  sphero_beyond_shortdescription: SPRKでは子供たちにロボットプログラミングの速習コースを用意しています。算数や科学のスキルを鍛えます。
+  arduino_beyond_shortdescription: Sparkfun の Digital Sandbox を使って Arduino について学ぶ
+  processing_beyond_shortdescription: Processing 言語を学ぶ
+  alice_beyond_shortdescription: 3D環境でプログラミングを教える
+  sphero_beyond_shortdescription: SPRK では子供たちにロボットプログラミングの速習コースを用意しています。算数や科学のスキルを鍛えます。
   codeorg_beyond_longdescription: ドラッグ＆ドロップによるプログラミングでコンピューターサイエンスの基礎的な概念について学びます。３つのコースが用意されており、それぞれ15-20個のレッスンから構成されています。ゲームのように独習できるチュートリアルや、ネット環境を必要としないクラスルーム用の課題も用意されています。ビデオレクチャにはビルゲイツ、マークザッカーバーグ、アングリーバード、プランツ対ゾンビなどが出演しています。繰り返しループ、条件分岐、基本的なアルゴリズム、関数、変数などを学びましょう
   khan_beyond_longdescription: 楽しくお絵かきをしながらJavaScriptのプログラミングの基本を学びます。自分でやったり、クラスで取り組んだりすることができます
-  tynker_beyond_longdescription: Tynkerでは楽しく簡単にプログラミングを学習できます。視覚的なので、コードのブロックを並べ替えることで、子供でもゲームやモバイルアプリを作ることができます。プログラミングの文法を知る必要はありません。子供たちは自分たちのアイディアを、アニメーションのお話や算数を使ったアートといった形にすることができます。段階をおって学習ができます。基礎を学んだら、Tynkerでは、プログラミングの文法などより高度な内容の学習にすすむことができます。
+  tynker_beyond_longdescription: Tynker では楽しく簡単にプログラミングを学習できます。視覚的なので、コードのブロックを並べ替えることで、子供でもゲームやモバイルアプリを作ることができます。プログラミングの文法を知る必要はありません。子供たちは自分たちのアイディアを、アニメーションのお話や算数を使ったアートといった形にすることができます。段階をおって学習ができます。基礎を学んだら、Tynker
+    では、プログラミングの文法などより高度な内容の学習にすすむことができます。
   scratch_beyond_longdescription: Scratchをつかうと、あなた独自のゲーム、ストーリー、アニメーションを作成&mdash; 友達と共有することができます。あなたの名前をアニメーションにしてホリデーカードをつくったり、ピンポンゲームをつくったりするところから始めましょう
   lightbot_beyond_longdescription: iOSやAndroid (Webブラウザ) を使って、プログラミングのロジックを学びます。４才以上を対象とした非常に基本的なものから始めます。コマンドの逐次実行、パターンの特定、関数の呼び出し、ループの利用といったことを学習します！
   codecademy_beyond_longdescription: Codeacademyはインタラクティブで、生徒が自分で学びながら、JavaScriptを通じてコンピュータサイエンスの基礎を学べる入門コースです。JavaScriptは、世界中で数千万人もの生徒が使っています。クイズ、スライド、生徒用のプロジェクトなど、まずは生徒の皆さんがすぐにスタートできるHour
     of Codeの体験をご用意しました
   kodable_beyond_longdescription: Kodableはプログラミング基本を５才以上のこどもに紹介する独習用のiPadのゲームです。近くに先生や保護者がいるといいですが、いなくても大丈夫です
-  scratchjr_beyond_longdescription: ScratchJrはインタラクティブなお話やゲームを子供たちが作れる入門用プログラミング言語です。グラフィカルなプログラミングブロックを組合せ、キャラクターを動かしたり、ジャンプさせたり、ダンスさせたり、うたわせたりすることができます。
-  hopscotch_beyond_longdescription: Hopscotchプログラミング言語を使ってのiPad用の独習教材です。生徒はiPad用のアプリやゲームを作ることができます。生徒は個人でも友人と一緒にでも作業することができます(１台のiPadにつき３人まで)。
-  pocketcode_beyond_longdescription: Pocket Codeを使ってスマートフォン用のゲームを作りましょう！スカイダイバーのスティーブが小包を配達するので、それを助けてあげましょう。友達やほかのユーザーと共有することもできます！
-  groklearning_beyond_longdescription: プログラミングの経験がない人用の、Pythonというプログラミング言語を使った入門コースです。ユニークな入門用コンテンツと課題の組み合わせが用意されているので、Pyhthonとプログラミングについて理解できるようになります。私たちは、いろんな年代、いろんな背景をもつ生徒にこの教材を使ってきたので、あなたもきっとできると確信しています。
-  hacketyhack_beyond_longdescription: Hackety Hackでは、ゼロからプログラミングの基礎について学ぶことができます。未経験でも大丈夫です！Hackety
-    HackではRubyというプログラミング言語について学びます。Rubyはデスクトップアプリからウェブサイトを含む、様々なプログラミングでつかわれています[注：デスクトップへのインストールが必要です]。
-  robomind_beyond_longdescription: 'バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。 '
-  makegameswithus_beyond_longdescription: 既にObjectiveCを知ってますか？1時間でiPhoneゲームを作り方を学びましょう！コード、テスト、プレイといった全てのプロセスをブラウザ上で学ぶことができます。できたものは、Facebookに共有して友達に遊んでもらいましょう。iPhoneでの開発経験は必要ありません。変数、メソッド、オブジェクトがどのようなものなのか理解しなくてはなりません。
+  scratchjr_beyond_longdescription: ScratchJr はインタラクティブなお話やゲームを子供たちが作れる入門用プログラミング言語です。グラフィカルなプログラミングブロックを組合せ、キャラクターを動かしたり、ジャンプさせたり、ダンスさせたり、うたわせたりすることができます。
+  hopscotch_beyond_longdescription: Hopscotch プログラミング言語を使っての iPad 用の独習教材です。生徒は iPad
+    用のアプリやゲームを作ることができます。生徒は個人でも友人と一緒にでも作業することができます(１台の iPad につき３人まで)。
+  pocketcode_beyond_longdescription: Pocket Code を使ってスマートフォン用のゲームを作りましょう！スカイダイバーのスティーブが小包を配達するので、それを助けてあげましょう。友達やほかのユーザーと共有することもできます！
+  groklearning_beyond_longdescription: プログラミングの経験がない人用の、Python というプログラミング言語を使った入門コースです。ユニークな入門用コンテンツと課題の組み合わせが用意されているので、Pyhthon
+    とプログラミングについて理解できるようになります。私たちは、いろんな年代、いろんな背景をもつ生徒にこの教材を使ってきたので、あなたもきっとできると確信しています。
+  hacketyhack_beyond_longdescription: Hackety Hack では、ゼロからプログラミングの基礎について学ぶことができます。未経験でも大丈夫です！Hackety
+    Hack では Ruby というプログラミング言語について学びます。Ruby はデスクトップアプリからウェブサイトを含む、様々なプログラミングでつかわれています[注：デスクトップへのインストールが必要です]。
+  robomind_beyond_longdescription: 'バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、プログラミングの実習をサポートするための簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。 '
+  makegameswithus_beyond_longdescription: 既に ObjectiveC を知ってますか？1時間で iPhone ゲームを作り方を学びましょう！コード、テスト、プレイといった全てのプロセスをブラウザ上で学ぶことができます。できたものは、Facebook
+    に共有して友達に遊んでもらいましょう。iPhone での開発経験は必要ありません。変数、メソッド、オブジェクトがどのようなものなのか理解しなくてはなりません。
   appinventor_beyond_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour
     of Codeでは、事前に何も知らなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています
-  touchdevelop_beyond_longdescription: TouchDevelopを使うとiPad, iPhone, Android, PC,
-    Mac, Windows Phoneで動くアプリを作ることができます。あなたのフォンやタブレットの上でも、タッチ対応のエディタを使って楽しく作業ができます。
-  codehs_beyond_longdescription: 犬のカレルと一緒にプログラミングの基礎について学びましょう。コンピューターに命令することは、犬に指示を出すのと同じようなことです。このチュートリアルは、先生が実施するのに最適ですが、個人で取り組むこともできます
+  touchdevelop_beyond_longdescription: TouchDevelop を使うと iPad, iPhone, Android, PC,
+    Mac, Windows Phone で動くアプリを作ることができます。あなたのフォンやタブレットの上でも、タッチ対応のエディタを使って楽しく作業ができます。
+  codehs_beyond_longdescription: 犬のカレルと一緒にプログラミングの基礎について学びましょう。楽しくてわかりやすいビジュアルな基礎コースで、犬に指示を出すのと同じような感覚でコンピューターのコマンドを入力します。このチュートリアルは、先生に主導してもらうのが理想的ですが、個人で学ぶこともできます
     [注：有料です]。
-  udemy_beyond_longdescription: コードを見たことがなくても、コードで生計を立てていたとしても、プロの先生によるUdemyのコースがあります[注：有料です]。
-  lynda_beyond_longdescription: コーディングの方法を学習してウェブアプリを作りましょう。CやC++でのオブジェクト指向の基礎から、Javaの書き方を学びます。私たちの開発用チュートリアルでは、PHPやMySQLデータベースを使ったモバイルアプリの作り方が学習できます。Rという統計情報処理用の言語など色々なことが学べます
+  udemy_beyond_longdescription: コードを見たことがなくても、コードで生計を立てていたとしても、プロの先生による Udemy のコースがあります[注：有料です]。
+  lynda_beyond_longdescription: コーディングの方法を学習してウェブアプリを作りましょう。C や C++ でのオブジェクト指向の基礎から、Java
+    の書き方を学びます。私たちの開発用チュートリアルでは、PHP や MySQL データベースを使ったモバイルアプリの作り方が学習できます。R という統計情報処理用の言語など色々なことが学べます
     [注：有料]。
-  edx_beyond_longdescription: CS50xはハーバード大学の入門用コースです。プログラミング経験の有無やプログラミング専攻に関わらず、プログラミングの芸術的側面やコンピューターサイエンスの知的な側面について学びます。抽象化、アルゴリズム、データ構造、カプセル化、リソース管理、セキュリティ、ソフトウェアエンジニアリング、ウェブ開発といったトピックがカバーされています。C,
-    PHP, JavaScript, SQL, CSS, HTMLという言語を使用します。CS50xはハーバード大学のキャンパスで２番目に人数が多いコースです。
-  coursera_beyond_longdescription: Nick Parlanteによるスタンフォードのコンピュータサイエンス入門コース（CS101）です
-    (無料!)。CS101では、未経験の方でもコンピューターサイエンスの本質的な考え方について学べます。短いコードを使って、実験したり遊んだりします。CS101ではコンピューターとは、ハードウェアとは、ソフトウェアとは、インターネットとは、など今日のコンピューターの一般的な背景についても学びます。ウェブブラウザを使えれば十分で、特別な経験は不要です。
-  udacity_beyond_longdescription: このコースでは、コンピューターサイエンスの基本的なコンセプトについて学ぶとともに、ウェブクローラーを作る過程を通してコンピュータープログラムを作成する方法を学びます。このコースでは事前の経験は必要ありません。初心者も歓迎です！コース終了時には、コンピューターサイエンスの基礎的概念を習得し、あなたの問題を解決をするためのPythonプログラムを書けるようになっているでしょう。このコースは、コンピューターの中程度レベルに進む前の準備段階となることを意図しています。
-  teachingtree_beyond_longdescription: TeachingTreeは誰でも教育用コンテンツを提供できるオープンなプラットフォームです。私たちのゴールは生徒が個々の概念を学ぶ上で適切なクリップを素早く見つけられるようにすることです。ビデオとそれに関連する概念を紐づけて、私たちのサイトに追加してください。
-  kodu_beyond_longdescription: KudoはPCやXbox用のゲームをつくるための視覚的なプログラミング言語です。Kutoはプログラミングと同時に、創造性、問題解決、物語の作成方法を教えるためにも利用できます。子供も大人も、デザインやプログラミングのスキルがなかったとしても、だれでもKudoでゲームを作ることができます。PC用のKudoは無料でダウンロードできます。Xbox用のKudoは米国で利用可能でXboxマーケットプレースのインディーズゲームで５＄で購入することができます。
-  cargobot_beyond_longdescription: Cargo-Botはロボットに木箱を動かす方法を教えるパズルゲームです。簡単そうに聞こえますよね？恐怖の音楽と驚くほどきれいなグラフィックスからなる36個のすごく面白いパズルが用意されています。あなたの解き方を記録して、YouTubeに共有してともだちに見せることもできます。
-  kidsruby_beyond_longdescription: Rubyを使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生にはRubyプログラミングの勉強をしているといっておきましょう
-    :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。
-  w3schools_beyond_longdescription: あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びます。ウェブサイトにデータベースを追加しましょう。
+  edx_beyond_longdescription: CS50x はハーバード大学の入門用コースです。プログラミング経験の有無やプログラミング専攻に関わらず、プログラミングの芸術的側面やコンピューターサイエンスの知的な側面について学びます。抽象化、アルゴリズム、データ構造、カプセル化、リソース管理、セキュリティ、ソフトウェアエンジニアリング、ウェブ開発といったトピックがカバーされています。C,
+    PHP, JavaScript, SQL, CSS, HTML という言語を使用します。CS50x はハーバード大学のキャンパスで２番目に人数が多いコースです。
+  coursera_beyond_longdescription: Nick Parlante によるスタンフォードのコンピュータサイエンス入門コース（CS101）です
+    (無料!)。CS101 では、未経験の方でもコンピューターサイエンスの本質的な考え方について学べます。短いコードを使って、実験したり遊んだりします。CS101
+    ではコンピューターとは、ハードウェアとは、ソフトウェアとは、インターネットとは、など今日のコンピューターの一般的な背景についても学びます。ウェブブラウザを使えれば十分で、特別な経験は不要です。
+  udacity_beyond_longdescription: このコースでは、コンピューターサイエンスの基本的なコンセプトについて学ぶとともに、ウェブクローラーを作る過程を通してコンピュータープログラムを作成する方法を学びます。このコースでは事前の経験は必要ありません。初心者も歓迎です！コース終了時には、コンピューターサイエンスの基礎的概念を習得し、あなたの問題を解決をするための
+    Python プログラムを書けるようになっているでしょう。このコースは、コンピューターの中程度レベルに進む前の準備段階となることを意図しています。
+  teachingtree_beyond_longdescription: TeachingTree は誰でも教育用コンテンツを提供できるオープンなプラットフォームです。私たちのゴールは生徒が個々の概念を学ぶ上で適切なクリップを素早く見つけられるようにすることです。ビデオとそれに関連する概念を紐づけて、私たちのサイトに追加してください。
+  kodu_beyond_longdescription: Kudo は PC や Xbox 用のゲームをつくるための視覚的なプログラミング言語です。Kudo はプログラミングと同時に、創造性、問題解決、物語の作成方法を教えるためにも利用できます。子供も大人も、デザインやプログラミングのスキルがなかったとしても、だれでも
+    Kudo でゲームを作ることができます。PC 用の Kudo は無料でダウンロードできます。Xbox 用の Kudo は米国で利用可能で Xbox マーケットプレースのインディーズゲームで
+    5 ドルで購入することができます。
+  cargobot_beyond_longdescription: Cargo-Bot はロボットに木箱を動かす方法を教えるパズルゲームです。簡単そうに聞こえますよね？恐怖の音楽と驚くほどきれいなグラフィックスからなる
+    36 個のすごく面白いパズルが用意されています。あなたの解き方を記録して、YouTube に共有してともだちに見せることもできます。
+  kidsruby_beyond_longdescription: Ruby を使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生には Ruby
+    プログラミングの勉強をしているといっておきましょう :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。
+  w3schools_beyond_longdescription: あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びましょう。ウェブサイトにデータベースを追加する方法を学びましょう。
   codeavengers_beyond_longdescription: |
     どうやってゲームやアプリ、ウェブサイトを作るか知ることができます。専門家が初心者のために難易度を設定しています。説明はわかりやすく、必要なときに使えるヘルプもあります。
-    HTML、CSS、そしてJavaScriptのコースはコード・チャレンジと復習ゲームが含まれており、すべての年齢層へ楽しく効果的に学習できるようになっています。
-  mozilla_beyond_longdescription: Thimbleを使うと、ウェブページの作成と共有が驚くほど簡単になります。HTMLとCSSをブラウザの中で編集し、その結果を簡単にプレビューすることができます。クリック一つで歓声したプロジェクトを共有できます。初心者にもエキスパートにも適しています。
-  codecombat_beyond_longdescription: Codeという呪文を唱える魔法使いとして、ヒーローを操作し、迷路をすすみ、鬼をたおし、敵をあざむき、仲間をすくえ！このゲームでJavaScriptを学び、初心者を卒業しよう。
-  codea_beyond_longdescription: iPadアプリのCodeaではゲーム作り、またはあなたの持っているアイデアを表現することができます。タッチ機能や加速度計を使って、そのアイデアを作品にしてみよう。Codeaでは一番きれいに、一番かんたんにプログラムを作ることができます。さらに、あなたのプログラムにタッチすることもできます。数字を変えたい？色は？画像は？タッチしてプログラミングをする、まさにあなたの求めていたものです。
-  lego_beyond_longdescription: LEGOブロックを使って小さなロボットを作ってみよう。
-  finch_beyond_longdescription: Finchは最新のロボットです。この分野でトップのカーネギーメロン大学という大学のCREATEラボから生まれました。Finchは初心者向けのプログラミングアートをサポートします。Finchは何十ものプログラミング言語と開発環境、そして8歳前後の生徒に適した開発環境もサポートしています。Finchはインタラクティブなプログラムを作りたい生徒をサポートするために作られました。
-  arduino_beyond_longdescription: Arduino はアーティストやデザイナーに向けて作られたプラットフォームで、本物のセンサーやLED、ブザーなどを使うことができます。Sparkfun
+    HTML、CSS、そして JavaScript のコースはコード・チャレンジと復習ゲームが含まれており、すべての年齢層へ楽しく効果的に学習できるようになっています。
+  mozilla_beyond_longdescription: Thimble を使うと、ウェブページの作成と共有が驚くほど簡単になります。HTML と CSS
+    をブラウザの中で編集し、その結果を簡単にプレビューすることができます。クリック一つで歓声したプロジェクトを共有できます。初心者にもエキスパートにも適しています。
+  codecombat_beyond_longdescription: Code という呪文を唱える魔法使いとして、ヒーローを操作し、迷路をすすみ、鬼をたおし、敵をあざむき、仲間をすくえ！このゲームで
+    JavaScript を学び、初心者を卒業しよう。
+  codea_beyond_longdescription: iPad アプリの Codea ではゲーム作り、またはあなたの持っているアイデアを表現することができます。タッチ機能や加速度計を使って、そのアイデアを作品にしてみよう。Codea
+    では一番きれいに、一番かんたんにプログラムを作ることができます。さらに、あなたのプログラムにタッチすることもできます。数字を変えたい？色は？画像は？タッチしてプログラミングをする、まさにあなたの求めていたものです。
+  lego_beyond_longdescription: LEGO ブロックを使って小さなロボットを作ってみよう。
+  finch_beyond_longdescription: Finchは、コンピューターサイエンスを教育するための最新のロボットです。カーネギーメロン大学のCREATEラボにおける４年間の研究の結果から生まれました。Finchは初心者向けのプログラミングの基礎技術の学習をサポートします。Finchは何十ものプログラミング言語と開発環境、そして8歳前後の児童に適した開発環境もサポートしています。Finchは学生がインタラクティブなプログラムを作れるようサポートために設計されました。。
+  arduino_beyond_longdescription: Arduino はアーティストやデザイナーに向けの人気のあるプラットフォームで、本物のセンサーやLED、ブザーなどを使うことができます。Sparkfun
     Virtual Sandbox は実際のArduinoコードをブラウザ上で教えてくれます。
   processing_beyond_longdescription: Processing はプログラミング言語のひとつであり、また開発環境のひとつでもあり、オンラインのコミュニティでもあります。2001
     年に生まれてから、ビジュアルアートの分野でのプログラミングを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
   alice_beyond_longdescription: 3Dアニメーションの作成をサポートする革新的なプログラミング環境を使いながら、Aliceプロジェクトでは、幅広い年代の人に対して、コンピューターでの考え方、問題解決方法、コンピュータープログラミングを教えたり学んだりするための資料やツールを提供しています。
-  sphero_beyond_longdescription: あなたが教育者であろうと保護者であろうと、SPRKのレッスンではロボットのプログラミングについて楽しく学ぶことができます。算数と科学のスキルも鍛えられます。
+  sphero_beyond_longdescription: SPRK のレッスンなら、ご自身の立場が先生であろうと保護者であろうと、子どもたちに楽しくロボットのプログラミングについて学ぶ機会を提供できます。その過程で、算数と科学のスキルも身につきます。
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: この警告を非表示

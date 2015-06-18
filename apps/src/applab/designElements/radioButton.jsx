@@ -17,15 +17,12 @@ var RadioButtonProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
         <PropertyRow
           desc={'group id'}
           initialValue={element.getAttribute('name') || ''}
@@ -61,11 +58,10 @@ var RadioButtonProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
 
     // TODO:
     // enabled (p2)
-    // send back/forward
   }
 });
 
@@ -77,6 +73,7 @@ module.exports = {
     element.type = 'radio';
     element.style.width = '12px';
     element.style.height = '12px';
+    element.style.margin = '0px';
 
     this.onDeserialize(element);
 

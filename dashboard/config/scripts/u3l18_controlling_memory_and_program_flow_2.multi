@@ -7,7 +7,7 @@ question 'Select two (2) of programming categories below that are the best fit f
 right ‘Remember things during play’
 right ‘Make decisions’
 wrong ‘Make calculations’
-wrong ‘Track of time’
+wrong ‘Keep track of time’
 wrong ‘Store information permanently’
 
 

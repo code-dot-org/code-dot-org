@@ -104,7 +104,7 @@
         TextMatch: Teksttreff
         StudioEC: Spill-Lab
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Internett Simulator
     trophy:
       name:
         Bronze: Bronse
@@ -317,9 +317,8 @@
           en funksjon)'
         turtle_3_7: Legg til et parameter kalt "lengde" til "tegn et hus"-funksjonen,
           og bygg et stort hus for elefanten (med sider som er 150 piksler lange)
-        turtle_3_8: Her er alle blokkene fra den forrige utfordringen.  Endre "tegne
-          et hus" så jeg ender opp på nedre høyre hjørnet etter et å ha tegnet et
-          nytt hus. Bruk denne endrede funksjonen til å tegne tre hus.
+        turtle_3_8: Endre "tegne et hus" så jeg ender opp på nedre høyre hjørne etter
+          et nytt hus. Bruk endrede funksjonen til å trekke tre hus.
         turtle_3_9: Kan du gjenskape funksjonen "tegn et hus" uten hjelp? Prøv det,
           og tegn deretter en rekke med hus.
         turtle_3_10: Du har lært mye! Bruk det for å tegne hva du vil. Prøv å tegn
@@ -412,8 +411,8 @@
         flappy_8: Du kan angi visuelle effekter når som helst, ikke bare når spillet
           starter. Prøv å angi en tilfeldig scene når andre hendelser skjer, for eksempel
           når du passerer en hindring.
-        flappy_9: For gjøre en vri, når Flakse treffer et hinder eller bakken, i stedet
-          for å avslutte spillet sett poengene tilbake til 0.
+        flappy_9: For å blande ting, når du treffer et hinder, i stedet for å avslutte
+          spillet Prøv innstillingen score tilbake til 0.
         flappy_11: Lag ditt eget Flakse-spill! Du kan endre alle bilder og alle regler,
           selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene
           dine prøve spillet på sine telefoner.
@@ -547,7 +546,7 @@
         maze_wordsearch_k_16: Flytt meg en vei, så en annen for å stave ordet UNDER
         maze_wordsearch_k_20: Dette er en test! Flytt meg en vei, så en annen for
           å stave ordet HISTORIE
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Opprette app med blokker i verktøykassen.
         turtle_ec_1_2: 'Nå, tegn et kvadrat. MERK: bruk din favorittfarge ved å velge
           den i den nye «pennFarge» blokken.'
         turtle_ec_1_10: 'Du klarte det! Nå, tegn akkurat det du vil. Noen morsome
@@ -626,7 +625,7 @@
         C3_bee_nested_loops: Nøstede Løkker
         C3_bee_debugging: Bie feilsøking
         C3_bounce: sprett
-        C3_playlab_create_game: Spill Lab - lage et spill
+        C3_playlab_create_game: Spill-Lab – lage et spill
         C3_computational_thinking: Programmeringstenkning
         C3_dice_race: Terningskappløp
         C3_internet: Internett
@@ -636,7 +635,7 @@
         C4_intro: Introduksjon
         C4_bee_conditional: Bie Betingelser
         C4_variables_artist: Variabler - Kunstner
-        C4_variables_playlab: Variabler - SpillLab
+        C4_variables_playlab: Variabler – Spill-Lab
         C4_for_loops: For-løkker
         C4_math_artist: Programmere Kunstneren med Matematikk
         C4_function_edit: Redigere Funksjoner
@@ -647,18 +646,18 @@
         C4_unplugged_madlibs: Sprø Bibliotek
         C4_unplugged_variables: Variabler i konvolutter
         C4_unplugged_forloops: For-løkker
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Låtskriving med parametere
         C4_unplugged_binary: Binær
         frozen_intro: Kodetimen Intro
         frozen_loops: Introduksjon til løkker
         frozen_functions: Introduksjon til funksjoner
-        playlab_intro: Introduksjon til SpilleLab
-        playlab_events: SpillLab Arrangement
-        playlab_repeat_forever: Spille Lab Gjenta for alltid
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: Play Lab - Introduction
-        infinity_playlab_events: Play Lab - Events
-        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        playlab_intro: Introduksjon til Spill-Lab
+        playlab_events: Spill-Lab arrangement
+        playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        tutorial_puzzle_challenge: Opplæring Puzzle utfordring
+        infinity_playlab_intro: Spill-Lab – introduksjon
+        infinity_playlab_events: Spill-Lab – hendelser
+        infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
         csp_concept_rgb: Litt om pixler
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -666,6 +665,9 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations
@@ -777,9 +779,9 @@
         arrows_move_actor: Bruk pilene til å flytte skuespilleren
         right_arrow_fireball: Bruk pil-høyre til å skyte ildkuler
         name_function: Skriv navnet på funksjonen din her
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_right_runbutton: Legg til Flytt blokk her
+        Infinity_move_directions_callout: Hvilken blokk vil få Baymax til å flytte
+          opp når du trykker på pil opp?
+        Infinity_move_directions_callout_arrow: Bruk disse pilene til å styre
         Infinity_move_collide_callout: Spill en lyd når denne hendelsen inntreffer.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_repeat_callout: Plasser flytte blokker her

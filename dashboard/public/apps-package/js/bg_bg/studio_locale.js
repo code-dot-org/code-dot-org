@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "актьор"},
+"addItems1":function(d){return "Добавяне на 1 елемент от тип"},
+"addItems2":function(d){return "Добавяне на 2 елемента от тип"},
+"addItems3":function(d){return "Добавяне на 3 елемента от тип"},
+"addItems5":function(d){return "Добавяне на 5 елемента от тип"},
+"addItems10":function(d){return "Добавяне на 10 елемента от тип"},
+"addItemsRandom":function(d){return "Добавяне на случайни елементи от тип"},
+"addItemsTooltip":function(d){return "Добавяне на елементи към сцената."},
 "alienInvasion":function(d){return "Извънземна инвазия!"},
 "backgroundBlack":function(d){return "черно"},
 "backgroundCave":function(d){return "пещера"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Напред"},
 "decrementPlayerScore":function(d){return "премахване на точка"},
 "defaultSayText":function(d){return "Въведете тук"},
+"dropletBlock_changeScore_description":function(d){return "Добавяне или премахване на точка към резултата."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Този блок променя изображението на фона на играта."},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Задава настроението на Актьора"},
+"dropletBlock_setSpritePosition_description":function(d){return "Веднага придвижва актьор към указаното местоположение."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Задава скоростта на актьор"},
+"dropletBlock_setSprite_description":function(d){return "Задава изображение на актьора"},
+"dropletBlock_throw_description":function(d){return "Хвърляне на снаряд от определен актьор."},
+"dropletBlock_vanish_description":function(d){return "Изчезване на актьор."},
 "emotion":function(d){return "настроение"},
 "finalLevel":function(d){return "Поздравления! Вие решихте последния пъзел."},
 "for":function(d){return "за"},
 "hello":function(d){return "Здравейте"},
 "helloWorld":function(d){return "Здравей, свят!"},
 "incrementPlayerScore":function(d){return "получава точка"},
+"itemBlueFireball":function(d){return "синя огнена топка"},
+"itemPurpleFireball":function(d){return "лилава огнена топка"},
+"itemRedFireball":function(d){return "червена огнена топка"},
+"itemYellowHearts":function(d){return "жълти сърца"},
+"itemPurpleHearts":function(d){return "лилави сърца"},
+"itemRedHearts":function(d){return "червени сърца"},
+"itemRandom":function(d){return "случаен"},
+"itemAnna":function(d){return "кука"},
+"itemElsa":function(d){return "блясък"},
+"itemHiro":function(d){return "микроботи"},
+"itemBaymax":function(d){return "ракета"},
+"itemRapunzel":function(d){return "тиган"},
+"itemCherry":function(d){return "череша"},
+"itemIce":function(d){return "лед"},
+"itemDuck":function(d){return "патица"},
 "makeProjectileDisappear":function(d){return "изчезва"},
 "makeProjectileBounce":function(d){return "скача"},
 "makeProjectileBlueFireball":function(d){return "направи синя огнена топка"},

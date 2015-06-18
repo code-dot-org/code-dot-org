@@ -11,7 +11,8 @@ bn-BD:
   learn_now: এবার শিখুন
   petition_message: প্রত্যেক স্কুলের প্রতিটি ছাত্রের কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ থাকা উচিত
   petition_sign_message: 'আপনি যদি সহমত হন, তবে আপনার নাম সই করুন।  # অন্যদের যোগ দিতে বলুন।'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: আমাদের সমর্থন করলে, আপনার নাম সই করুন। অন্যদের যোগ দিতে বলুন।
+  petition_join_others: '# অন্যদের যোগ দিন'
   name: নাম
   email: ই-মেইল
   zipcode: ZIP কোড বা দেশ
@@ -92,7 +93,7 @@ bn-BD:
   learn_classes: স্থানীয় শ্রেণি খুঁজুন
   hoc_is_here: '#HourOfCode  এসেছে, @codeorg -এ দেখুন'
   just_did_hoc: '#HourOfCode সম্পন্ন করেছি @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: কেন একাধিক স্কুল কম্পিউটার বিজ্ঞান শিক্ষা দেবেন না? আমরা এটি সামাধান করতে পারি। http://youtu.be/nKIu9yen5nc। Http://code.org/ আরও জানতে ভিজিট করুন.
   learn_hoc: সম্পন্ন করুন Hour of Code
   beyond_hoc: এক ঘণ্টারও বেশি
   what_gender: আপনার লিঙ্গ কি?
@@ -111,7 +112,7 @@ bn-BD:
   stats_student: '"আমি জানতাম এটা আমার <b>সারা জীবনের একমাত্র</b> সুযোগ ছিল।" - মারিয়ানা অ্যালজেট, পঞ্চম গ্রেডের শিক্ষার্থী'
   stats_michael: '"আমি  <b>কখনোই,  </b> আমার ছাত্রদের শেখার ব্যাপারে এত উত্তেজিত হতে দেখিনি।" - মাইকেল ক্লার্ক , শিক্ষক'
   studiobar_title: "<a href='http://studio.code.org'> কোড স্টুডিও</a> অনুসন্ধান করো।"
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title_nolink: কোড স্টুডিও অনুসন্ধান করুন
   studiobar_elementary_title: মৌলিক কোর্স।
   studiobar_elementary_body: 'আমাদের তিনটি নতুন কোর্স জন্য K &#8209; 5'
   studiobar_hoc_title: কোডিং এর এক ঘণ্টা
@@ -126,95 +127,62 @@ bn-BD:
   studiobar_donate_body: আপনার প্রতি ডলার অর্থায়নে একটি শিশু শেখে
   studiobar_shop_title: দোকান
   studiobar_shop_body: বাঁধাধরা নিয়ম থেকে বেরিয়ে এসে গর্বের সাথে আমাদের লোগো লাগাও।
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
-  homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
-  homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+  homepage_hero_text_malala: "''আমি এক ঘন্টার মধ্যে কোড জানুন মেয়েদের প্রতি একক দেশের মোকাবিলা'' ও নোবেল শান্তি পুরস্কার বিজয়ী মালালা"
+  homepage_hero_text_susan: '"প্রযুক্তি পরিবর্তন করতে পারেন, তাহলে আপনি পৃথিবীর পরিবর্তন করতে পারেন" সুসান, CEO, ইউটিউব'
+  homepage_hero_text_fistbump: "'' না শুধু আপনার ফোনে চালান, আর প্রোগ্রাম'' প্রেসিডেন্ট বারাক ওবামা"
+  homepage_hero_text_sheryl: '"আমাদের বাচ্চাদের &mdash; সহ আমাদের মেয়েরা &mdash; কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ দরকার" Sheryl, ফেইসবুক COO'
+  homepage_hero_text_satya: "''কম্পিউটার বিজ্ঞানের পারে মুক্ত জগতের সবচেয়ে ভালো সুযোগ''  Satya, CEO of Microsoft"
+  homepage_hero_text_bosh: "''যদি আপনি কোড, আপনি বেছে নিন এবং জীবন। কোর্স পছন্দ করতে পারেন।'' ক্রিস বস"
+  homepage_hero_text_student1: |-
+    "এই দক্ষতা আমার ভবিষ্যৎ পরিবর্তন করেছে। উল্লেখ না করতে, এটা শুধুই মজা'' লুনা, ৭ম শ্রেণীর ছাত্রী
+  homepage_hero_text_student2: "''আমি কখনোই, কখনও আমার বাচ্চাদের কোন কিছু শেখা নিয়ে এত উত্তেজিত হতে দেখিনি'' মাইকেল, শিক্ষক"
+  homepage_hero_text_student3: |-
+    ''কম্পিউটার বিজ্ঞান এমন একটি ক্ষেত্র ,আপনি চেষ্টা করার আগে জানতে পারবেন না আপনি এটা পছন্দ করেন কি না"   জ্যাকসন,ষষ্ঠ শ্রেণী
+  homepage_hero_text_student4: '"প্রোগ্রামিং নিয়ে আপনার মন যা চায় আপনি তাই করতে পারেন" মায়া, দ্বিতীয় গ্রেড'
+  homepage_hero_text_student5: |-
+    "কম্পিউটার বিজ্ঞানের অন্য কারো জন্য নয়। এটা তোমার জন্য, এখানে, এখন।'' গিরালদো, শিক্ষক
+  homepage_hero_text_teacher1: '"কোডিং  সৃষ্টিশীলতার স্ফুলিঙ্গ, অনুপ্রেরণা ও উদ্ভাবন; সব যা কোন পেশায় অপরিহার্য" ফ্লোরেসা, শিক্ষক'
+  homepage_hero_text_teacher2: '"এই প্রোগ্রামটি আমার ১০০ ভাগ ছাত্রছাত্রীকে ব্রতী করে , জড়িয়ে ফেলে এবং অংশগ্রহণ করায়।" আদম, শিক্ষক'
+  homepage_hero_text_stat_loc: '#লক লাইনের কোড ছাত্রছাত্রীদের দিয়ে লেখা'
+  homepage_hero_text_stat_students: '#student_count  কোড স্টুডিওতে ছাত্রছাত্রীদের হিসাব'
+  homepage_hero_text_stat_served: 'ঘন্টার কোড: #সেবা সেবা'
   homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: আন্না এবং এলসার সাথে ফ্রোজেন
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: আমাদের সব টিউটোরিয়াল
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: দোকান
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_action_text_codevideo: ভিডিও দেখুন
+  homepage_action_text_teachervideo: ভিডিও দেখুন
+  homepage_action_text_learn: শেখা শুরু করুন।
+  homepage_action_text_signpetition: পিটিশন স্বাক্ষর করুন
+  homepage_signpetition_dropdown: ▾ একমত;
+  homepage_banner_text_main: কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org ও কলেজ বোর্ড গঠন করে।
+  homepage_banner_text_link: আরও জানুন
   homepage_slot_text_title_hoc: এক ঘন্টার কোড
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: যে কেউ শিখতে পারে। আজ শুরু করুন
   homepage_slot_text_link_hoc: Try the Hour of Code
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: কোডের ঘন্টার নিমন্ত্রক হন
+  homepage_slot_text_link_hocserved: '# সেবা'
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: আমাদের সব টিউটোরিয়াল অনুসন্ধান করুন
+  homepage_slot_text_link_codestudio: কোড স্টুডিও চেষ্টা করুন।
+  homepage_slot_text_link_local: স্থানীয় শ্রেণী সন্ধান করুন
+  homepage_slot_text_link_othercourses: অন্যান্য অনলাইন কোর্স
+  homepage_slot_text_title_educators: জ্ঞাপিত
+  homepage_slot_text_blurb_educators: আপনার ছাত্রদের শেখান
+  homepage_slot_text_link_k5: কোর্সগুলো কে-৫ শ্রেণীর জন্য
+  homepage_slot_text_link_fullcurriculum: আমাদের পুরো কারিকুলাম দেখুন
+  homepage_slot_text_link_pd: পেশাগত উন্নয়ন
+  homepage_slot_text_title_advocates: সমর্থনকারীরা
+  homepage_slot_text_blurb_advocates: আমাদের কাজ সমর্থন করে
+  homepage_slot_text_link_stats: শুরুটা দেখুন
+  homepage_slot_text_link_buy: জড়িত
+  homepage_slot_text_link_donate: দান করুন
+  homepage_header_codestudio: কোড স্টুডিও ছাত্র সৃষ্টি
+  homepage_header_donors: Code.org তার সমর্থকদের ধন্যবাদ দেয়
+  homepage_donors_seall: সব দেখুন
   homepage_donors_donate: স্বেচ্ছায় অর্থায়ন করুন
   contact_form_topic_student: আমি একজন ছাত্র
   contact_form_topic_parent: আমি ছাত্রের বাবা/মা
@@ -324,9 +292,9 @@ bn-BD:
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: শাখার নাম
-  dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
-  dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
-  dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
+  dashboard_sections_choose_secret: 'আপনি কি আপনার ছাত্রদের হিসাবে প্রদান করতে চান, তাহলে গুপ্ত ধরনের "শব্দ" বা ওই অংশের জন্য "চিত্র" চয়ন করুন।'
+  dashboard_sections_secret_word: 'A <b>শব্দের</b> জন্য প্রত্যেক ছাত্র গুপ্ত শব্দের বিন্যাস করতে আপনাকে সম্মতি দেয়।'
+  dashboard_sections_secret_picture: '<b>ছবির</b> জন্য প্রত্যেক ছাত্র, আদর্শ ছোট ছোট ছাত্রদের জন্য যারা এখনও টাইপ করতে পারে না,গুপ্ত ছবি সেট করতে আপনাকে সম্মতি দেয়।'
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
   dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
@@ -362,11 +330,18 @@ bn-BD:
   dashboard_students_print_page: এই পৃষ্ঠা মুদ্রণ করুন
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
-  dashboard_curriculum_overview: K-5 কারিকুলাম তথ্যাবলী
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Lesson এর সকল পরিকল্পনাসমূহ প্রদর্শন করুন
   dashboard_course1: 'কোর্স 1:'
   dashboard_course2: 'কোর্স 2:'
   dashboard_course3: 'কোর্স 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 কারিকুলাম তথ্যাবলী
+  dashboard_overview: Overview
   dashboard_sequence: অনুক্রম
   dashboard_framework: ফ্রেমওয়ার্ক
   dashboard_standards: মানের
@@ -377,6 +352,10 @@ bn-BD:
   dashboard_puzzle_solving: 'ধাঁধা-সমাধান:'
   dashboard_student_worksheet: ছাত্র কর্মসূচি
   dashboard_teacher_worksheet: শিক্ষক কর্মসূচি
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: অন্যান্য
   dashboard_login_word: শব্দ
@@ -404,6 +383,7 @@ bn-BD:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: বহুবার আলোচিত প্রশ্ন সমূহ
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: আরও জানুন
@@ -821,3 +801,6 @@ bn-BD:
   processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
   alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Hide this warning

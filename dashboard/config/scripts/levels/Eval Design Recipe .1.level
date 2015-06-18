@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a Design Recipe for a function called \"square-circle\" with domain Number String and range Image. Click Edit to write the function definition (you will see two examples provided).",
+    "instructions": "Here's a Design Recipe for a function called square-circle with domain Number String and range Image. Click Edit to write the function definition (you will see two examples provided).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,9 +27,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "video_key": "alg_8_design_recipe",
-    "disable_examples": "false"
-  },
-  "md5": "97f3210eb4da03d437df4acc6192fc01"
+    "disable_examples": "false",
+    "markdown_instructions": "Here's a Design Recipe for a function called _square-circle_ with domain Number String and range Image. Click Edit to write the function definition (you will see two examples provided)."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

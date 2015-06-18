@@ -23,7 +23,7 @@ var maze_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -154,8 +154,8 @@ v:function(d,k){maze_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).maze_locale = {
-"atHoneycomb":function(d){return "at honeycomb"},
-"atFlower":function(d){return "at flower"},
+"atHoneycomb":function(d){return "ที่รังผึ้ง"},
+"atFlower":function(d){return "ที่ดอกไม้"},
 "avoidCowAndRemove":function(d){return "avoid the cow and remove 1"},
 "continue":function(d){return "ต่อไป\n"},
 "dig":function(d){return "remove 1"},
@@ -175,9 +175,9 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
 "get":function(d){return "ได้รับ"},
 "heightParameter":function(d){return "ความสูง"},
-"holePresent":function(d){return "there is a hole"},
-"honey":function(d){return "make honey"},
-"honeyAvailable":function(d){return "honey"},
+"holePresent":function(d){return "มีรูอยู่"},
+"honey":function(d){return "ผลิตน้ำผึ้ง"},
+"honeyAvailable":function(d){return "น้ำผึ้ง"},
 "honeyTooltip":function(d){return "Make honey from nectar"},
 "honeycombFullError":function(d){return "This honeycomb does not have room for more honey."},
 "ifCode":function(d){return "ถ้า"},

@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "персонаж"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Вторжение инопланетян!"},
 "backgroundBlack":function(d){return "черный"},
 "backgroundCave":function(d){return "пещера"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Продолжить"},
 "decrementPlayerScore":function(d){return "отнять очко"},
 "defaultSayText":function(d){return "Введи здесь"},
+"dropletBlock_changeScore_description":function(d){return "Добавить или отнять очко."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Установить на задний план изображение"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Установить настроение актера"},
+"dropletBlock_setSpritePosition_description":function(d){return "Мгновенно перемещает персонажа в указанное место."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Установите скорость персонажа"},
+"dropletBlock_setSprite_description":function(d){return "Установить изображение персонажа"},
+"dropletBlock_throw_description":function(d){return "Кидает снаряд от указанного персонажа."},
+"dropletBlock_vanish_description":function(d){return "Заставляет персонажа исчезнуть."},
 "emotion":function(d){return "настроение"},
 "finalLevel":function(d){return "Поздравляю! Последняя головоломка решена."},
 "for":function(d){return "для"},
 "hello":function(d){return "привет"},
 "helloWorld":function(d){return "Привет, мир!"},
 "incrementPlayerScore":function(d){return "оценка точки"},
+"itemBlueFireball":function(d){return "синий огненный шар"},
+"itemPurpleFireball":function(d){return "фиолетовый огненный шар"},
+"itemRedFireball":function(d){return "красный огненный шар"},
+"itemYellowHearts":function(d){return "желтые сердца"},
+"itemPurpleHearts":function(d){return "фиолетовые сердца"},
+"itemRedHearts":function(d){return "красные сердца"},
+"itemRandom":function(d){return "случайный"},
+"itemAnna":function(d){return "крючок"},
+"itemElsa":function(d){return "искра"},
+"itemHiro":function(d){return "минироботы"},
+"itemBaymax":function(d){return "ракета"},
+"itemRapunzel":function(d){return "кастрюля"},
+"itemCherry":function(d){return "вишня"},
+"itemIce":function(d){return "лед"},
+"itemDuck":function(d){return "утка"},
 "makeProjectileDisappear":function(d){return "исчезнуть"},
 "makeProjectileBounce":function(d){return "отказ"},
 "makeProjectileBlueFireball":function(d){return "сделать синий огненный шар"},

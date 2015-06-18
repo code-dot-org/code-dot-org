@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "pjesmarrës"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Invazioni i Huaj!"},
 "backgroundBlack":function(d){return "e zezë"},
 "backgroundCave":function(d){return "shpellë"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Vazhdo"},
 "decrementPlayerScore":function(d){return "hiq pikën"},
 "defaultSayText":function(d){return "shtyp këtu"},
+"dropletBlock_changeScore_description":function(d){return "Shto ose hiq një pikë tek rezultati."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Vendos sfondin e imazhit"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Vendos gjëndjen e pjesmarrësit"},
+"dropletBlock_setSpritePosition_description":function(d){return "Lëviz menjëherë pjesmarrësin në vendin e caktuar."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Vendos shpejtësinë e pjesmarrësit"},
+"dropletBlock_setSprite_description":function(d){return "Vendos imazhin e pjesmarrësit"},
+"dropletBlock_throw_description":function(d){return "Hedh një raketë nga një pjesmarrës i caktuar."},
+"dropletBlock_vanish_description":function(d){return "Zhduk pjesmarrësin."},
 "emotion":function(d){return "humori"},
 "finalLevel":function(d){return "Urime! Ju keni perfunduar enigmen perfundimatare."},
 "for":function(d){return "për"},
 "hello":function(d){return "përshëndetje"},
 "helloWorld":function(d){return "Përshëndetje Botë!"},
 "incrementPlayerScore":function(d){return "rezultati"},
+"itemBlueFireball":function(d){return "top zjarri blu"},
+"itemPurpleFireball":function(d){return "top zjarri lejla"},
+"itemRedFireball":function(d){return "top zjarri i kuq"},
+"itemYellowHearts":function(d){return "zemrat e verdha"},
+"itemPurpleHearts":function(d){return "zemrat lejla"},
+"itemRedHearts":function(d){return "zemrat e kuqe"},
+"itemRandom":function(d){return "zakonshem"},
+"itemAnna":function(d){return "grep"},
+"itemElsa":function(d){return "shkëlqen"},
+"itemHiro":function(d){return "mikrobot"},
+"itemBaymax":function(d){return "raketë"},
+"itemRapunzel":function(d){return "tenxhere"},
+"itemCherry":function(d){return "qershi"},
+"itemIce":function(d){return "akull"},
+"itemDuck":function(d){return "rosë"},
 "makeProjectileDisappear":function(d){return "zhduket"},
 "makeProjectileBounce":function(d){return "kërce"},
 "makeProjectileBlueFireball":function(d){return "bëj topa zjarri blu"},

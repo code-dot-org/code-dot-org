@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "figur"},
+"addItems1":function(d){return "legg til 1 element av typen"},
+"addItems2":function(d){return "legg til 2 elementer av typen"},
+"addItems3":function(d){return "legg til 3 elementer av typen"},
+"addItems5":function(d){return "legg til 5 element av typen"},
+"addItems10":function(d){return "legg til 10 elementer av typen"},
+"addItemsRandom":function(d){return "legg til tilfeldig antall elementer av typen"},
+"addItemsTooltip":function(d){return "Legg elementene til i scenen."},
 "alienInvasion":function(d){return "Romveseninvasjon!"},
 "backgroundBlack":function(d){return "svart"},
 "backgroundCave":function(d){return "hule"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Fortsett"},
 "decrementPlayerScore":function(d){return "Fjern punkt"},
 "defaultSayText":function(d){return "Skriv her"},
+"dropletBlock_changeScore_description":function(d){return "Legge til eller fjerne et poeng fra poengsummen."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Angir bakgrunnsbilde"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Setter skuespillerens humør"},
+"dropletBlock_setSpritePosition_description":function(d){return "Flytter en skuespiller til den angitte plasseringen."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Angir farten til en skuespiller"},
+"dropletBlock_setSprite_description":function(d){return "Angir skuespiller bildet"},
+"dropletBlock_throw_description":function(d){return "Kaster et prosjektil fra angitte skuespiller."},
+"dropletBlock_vanish_description":function(d){return "Fjerner skuespilleren."},
 "emotion":function(d){return "humør"},
 "finalLevel":function(d){return "Gratulerer! Du har løst den siste oppgaven."},
 "for":function(d){return "for"},
 "hello":function(d){return "hallo"},
 "helloWorld":function(d){return "Hei, verden!"},
 "incrementPlayerScore":function(d){return "score poeng"},
+"itemBlueFireball":function(d){return "blå ildkule"},
+"itemPurpleFireball":function(d){return "lilla ildkule"},
+"itemRedFireball":function(d){return "rød ildkule"},
+"itemYellowHearts":function(d){return "gule hjerter"},
+"itemPurpleHearts":function(d){return "lilla hjerter"},
+"itemRedHearts":function(d){return "røde hjerter"},
+"itemRandom":function(d){return "tilfeldig"},
+"itemAnna":function(d){return "krok"},
+"itemElsa":function(d){return "gnistre"},
+"itemHiro":function(d){return "mikroboter"},
+"itemBaymax":function(d){return "rakett"},
+"itemRapunzel":function(d){return "kjele"},
+"itemCherry":function(d){return "kirsebær"},
+"itemIce":function(d){return "is"},
+"itemDuck":function(d){return "and"},
 "makeProjectileDisappear":function(d){return "forsvinne"},
 "makeProjectileBounce":function(d){return "sprett"},
 "makeProjectileBlueFireball":function(d){return "lag blå ildkule"},

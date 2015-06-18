@@ -393,6 +393,7 @@ en:
           Applab: crwdns35339:0crwdne35339:0
           The Artist: crwdns35340:0crwdne35340:0
           Play Lab: crwdns35341:0crwdne35341:0
+          Play Lab 2015: crwdns41850:0crwdne41850:0
         events:
           title: crwdns35342:0crwdne35342:0
           description: crwdns35343:0crwdne35343:0
@@ -492,6 +493,7 @@ en:
           "Assessment: Encoding Complex Information": crwdns36523:0crwdne36523:0
           Encoding B&W Images: crwdns36524:0crwdne36524:0
           Encoding Color Images: crwdns36525:0crwdne36525:0
+          Lossy Compression and File Formats: crwdns41851:0crwdne41851:0
         algebraPD:
           title: crwdns35393:0crwdne35393:0
           description: crwdns35394:0crwdne35394:0
@@ -645,6 +647,9 @@ en:
           Beyond Buttons Toward Apps: crwdns38395:0crwdne38395:0
           Improving the Clicker Game: crwdns38543:0crwdne38543:0
           Chatbot Challenge: crwdns38798:0crwdne38798:0
+          "Scene Design Part 1: Plan": crwdns39076:0crwdne39076:0
+          "Scene Design Part 2: Code": crwdns39077:0crwdne39077:0
+          "Scene Design Part 3: Reflect": crwdns39078:0crwdne39078:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -790,6 +795,23 @@ en:
           DNS Simulation: crwdns38687:0crwdne38687:0
           How HTTP Works: crwdns38688:0crwdne38688:0
           IP and DNS in the Real World: crwdns38689:0crwdne38689:0
+          The Internet: crwdns41458:0crwdne41458:0
+          Routers and Addresses as Numbers: crwdns41459:0crwdne41459:0
+          Algorithms Detour - Minimum Spanning Tree: crwdns41460:0crwdne41460:0
+          Algorithms Detour - Shortest Path: crwdns41461:0crwdne41461:0
+          Algorithms Detour - How Routers Learn: crwdns41462:0crwdne41462:0
+          DNS in the Real World: crwdns41463:0crwdne41463:0
+          HTTP and Abstraction: crwdns41464:0crwdne41464:0
+          Challenges of the Internet: crwdns41465:0crwdne41465:0
+          Tell Me a Secret - Encrypting Text: crwdns41466:0crwdne41466:0
+          Cracking the Code: crwdns41467:0crwdne41467:0
+          Encryption Algorithms: crwdns41468:0crwdne41468:0
+          Alice and Bob and Asymmetric Keys: crwdns41469:0crwdne41469:0
+          Algorithms Detour - Hard Problems TSP: crwdns41470:0crwdne41470:0
+          One Way Functions - Ice Cream Vans: crwdns41471:0crwdne41471:0
+          Public Key Crypto: crwdns41472:0crwdne41472:0
+          Security and Hacking in the Real World: crwdns41623:0crwdne41623:0
+          Packets and Making a Reliable Internet: crwdns41852:0crwdne41852:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
@@ -808,6 +830,7 @@ en:
           Big GAme - Collision Detection: crwdns38704:0crwdne38704:0
           Rocket-Height: crwdns38813:0crwdne38813:0
           Big Game - Collision Detection: crwdns38814:0crwdne38814:0
+          Free Play: crwdns41624:0crwdne41624:0
         allthethings:
           Jigsaw: crwdns38815:0crwdne38815:0
           Maze: crwdns38816:0crwdne38816:0
@@ -831,6 +854,7 @@ en:
           Odometer: crwdns38998:0crwdne38998:0
           Text Compression: crwdns38999:0crwdne38999:0
           Pixelation: crwdns39000:0crwdne39000:0
+          Multi2: crwdns41853:0crwdne41853:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -848,3 +872,71 @@ en:
           Next Steps: crwdns38843:0crwdne38843:0
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": crwdns38844:0crwdne38844:0
+        cspfacilitator:
+          title: crwdns41625:0crwdne41625:0
+          description: crwdns41626:0crwdne41626:0
+          Pixelation Widget: crwdns41627:0crwdne41627:0
+          Text Compression Widget: crwdns41628:0crwdne41628:0
+          Internet Simulator: crwdns41629:0crwdne41629:0
+          App Lab: crwdns41630:0crwdne41630:0
+          Broadcast Lesson: crwdns41631:0crwdne41631:0
+          Text Compression Lesson: crwdns41632:0crwdne41632:0
+          Welcome!: crwdns41633:0crwdne41633:0
+        CSPfac intro:
+          title: crwdns41634:0crwdne41634:0
+          description: crwdns41635:0crwdne41635:0
+          Welcome!: crwdns41636:0crwdne41636:0
+          Pixelation Widget: crwdns41637:0crwdne41637:0
+          Text Compression Widget: crwdns41638:0crwdne41638:0
+          Internet Simulator: crwdns41639:0crwdne41639:0
+          App Lab: crwdns41640:0crwdne41640:0
+          Broadcast Lesson: crwdns41641:0crwdne41641:0
+          Text Compression Lesson: crwdns41642:0crwdne41642:0
+        OnlinePD-K5:
+          title: crwdns41854:0crwdne41854:0
+          description: crwdns41855:0crwdne41855:0
+          Introduction to PD: crwdns41643:0crwdne41643:0
+          K-5 Courses: crwdns41644:0crwdne41644:0
+          Writing computer programs: crwdns41645:0crwdne41645:0
+          "Programming Concept: Loops": crwdns41646:0crwdne41646:0
+          Unplugged lessons: crwdns41647:0crwdne41647:0
+          "Programming Concept: Conditionals": crwdns41648:0crwdne41648:0
+          Computer Science Pedagogy: crwdns41649:0crwdne41649:0
+          "Programming Concept: Functions": crwdns41650:0crwdne41650:0
+          Teacher Dashboard: crwdns41651:0crwdne41651:0
+          "Programming Concept: Events": crwdns41652:0crwdne41652:0
+          Reflection: crwdns41653:0crwdne41653:0
+          Next Steps: crwdns41654:0crwdne41654:0
+          Getting Started: crwdns41655:0crwdne41655:0
+          Computer Science Fundamentals: crwdns41656:0crwdne41656:0
+          "Mastering the Basics: Sequencing": crwdns41657:0crwdne41657:0
+          "Mastering the Basics: Loops": crwdns41658:0crwdne41658:0
+          "Mastering the Basics: Conditionals": crwdns41659:0crwdne41659:0
+          "Mastering the Basics: Functions": crwdns41660:0crwdne41660:0
+          "Mastering the Basics: Events": crwdns41661:0crwdne41661:0
+          Best Practices for Teaching Computer Science: crwdns41662:0crwdne41662:0
+          Planning: crwdns41663:0crwdne41663:0
+          Mastering the Basics - Sequencing: crwdns41664:0crwdne41664:0
+        ECSPD2:
+          title: crwdns41856:0crwdne41856:0
+          description: crwdns41857:0crwdne41857:0
+          Welcome!: crwdns41858:0crwdne41858:0
+          Unit 1, Days 1-2: crwdns41859:0crwdne41859:0
+          Unit 1, Days 3-4: crwdns41860:0crwdne41860:0
+          Unit 1, Days 5-7: crwdns41861:0crwdne41861:0
+          Unit 1, Days 8-9: crwdns41862:0crwdne41862:0
+          Unit 1, Day 10: crwdns41863:0crwdne41863:0
+          Unit 1, Day 11-14: crwdns41864:0crwdne41864:0
+          Unit 1, Day 15-16: crwdns41865:0crwdne41865:0
+          Unit 1, Day 17-19: crwdns41866:0crwdne41866:0
+        equityPD:
+          title: crwdns41867:0crwdne41867:0
+          description: crwdns41868:0crwdne41868:0
+          Introduction to the Equity PD: crwdns41869:0crwdne41869:0
+          Equity Vs. Equality: crwdns41870:0crwdne41870:0
+          Code.org Equity PD: crwdns41871:0crwdne41871:0
+        hoc2015:
+          title: crwdns41872:0crwdne41872:0
+          description_short: crwdns41873:0crwdne41873:0
+          description: crwdns41874:0crwdne41874:0
+          Hour of Code: crwdns41875:0crwdne41875:0

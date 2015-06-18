@@ -8,9 +8,9 @@ class Ability
     if user.admin?
       can :manage, :all
 
-      # Only custom levels and match/multi are editable
+      # Only custom levels are editable
       cannot [:update, :destroy], Level do |level|
-        !(level.custom? || level.is_a?(DSLDefined))
+        !level.custom?
       end
     else
       can :read, :all
@@ -61,6 +61,7 @@ class Ability
       if user.facilitator?
         can :read, Workshop
         can :teachers, Workshop
+        can :read, District
         # Allow facilitator to manage Workshop/Attendance for
         # workshops in which they are a facilitator.
         can :manage, WorkshopAttendance do |attendance|

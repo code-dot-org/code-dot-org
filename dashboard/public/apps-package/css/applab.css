@@ -1,10 +1,78 @@
 @import url(colpick.css);
+#divApplab {
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 2px; }
+  #divApplab canvas {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    z-index: -1; }
+  #divApplab img {
+    opacity: 1; }
+  #divApplab label {
+    display: inline-block; }
+  #divApplab div {
+    overflow: hidden; }
+  #divApplab button {
+    padding: 7px 12px;
+    margin: 2px;
+    font-size: 14px; }
+  #divApplab input, #divApplab div, #divApplab button, #divApplab select {
+    box-sizing: border-box;
+    line-height: 1.2em; }
+
+#divApplab.appModern {
+  color: #333; }
+  #divApplab.appModern button {
+    border: 0;
+    border-radius: 0; }
+    #divApplab.appModern button:hover {
+      background-image: url("/blockly/media/applab/brighter.png");
+      box-shadow: none; }
+    #divApplab.appModern button:active {
+      background-image: url("/blockly/media/applab/darker.png");
+      border: 0 !important; }
+    #divApplab.appModern button:focus {
+      outline: 0; }
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true] {
+    border: 1px solid #999;
+    padding: 10px; }
+  #divApplab.appModern select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    padding: 0 30px 0 10px;
+    color: #fff;
+    background: url("/blockly/media/applab/dropdown.png") no-repeat center right; }
+    #divApplab.appModern select::-ms-expand {
+      display: none; }
+    #divApplab.appModern select:hover {
+      background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
+
 div#visualization {
   height: 400px;
   width: 400px; }
 
 div#visualization.with_padding {
   border: 1px solid #ddd; }
+
+div#visualizationResizeBar {
+  top: 30px; }
+
+#designToggleRow > div {
+  height: 30px; }
 
 /* Shrink the visualization area on small displays. */
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
@@ -25,7 +93,8 @@ div#visualization.with_padding {
     right: 400px; }
 
   div#visualizationResizeBar {
-    left: 400px; }
+    left: 400px;
+    line-height: 400px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 400px; }
@@ -54,7 +123,8 @@ div#visualization.with_padding {
     right: 350px; }
 
   div#visualizationResizeBar {
-    left: 350px; }
+    left: 350px;
+    line-height: 350px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 350px; }
@@ -83,7 +153,8 @@ div#visualization.with_padding {
     right: 300px; }
 
   div#visualizationResizeBar {
-    left: 300px; }
+    left: 300px;
+    line-height: 300px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 300px; }
@@ -112,7 +183,8 @@ div#visualization.with_padding {
     right: 250px; }
 
   div#visualizationResizeBar {
-    left: 250px; }
+    left: 250px;
+    line-height: 250px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 250px; }
@@ -141,7 +213,8 @@ div#visualization.with_padding {
     right: 200px; }
 
   div#visualizationResizeBar {
-    left: 200px; }
+    left: 200px;
+    line-height: 200px; }
 
   html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
@@ -151,26 +224,6 @@ div#visualization.with_padding {
     -ms-transform: scale(0.5);
     transform: scale(0.5); }
  }
-
-#divApplab {
-  overflow: hidden;
-  outline: none;
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-#divApplab canvas {
-  position: absolute;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-  z-index: -1; }
 
 #visualizationResizeBar {
   margin-left: 2px;
@@ -183,15 +236,6 @@ div#visualization.with_padding {
 #debug-buttons {
   display: inline;
   white-space: normal; }
-
-#divApplab img {
-  opacity: 1; }
-
-#divApplab label {
-  display: inline-block; }
-
-#divApplab div {
-  overflow: hidden; }
 
 #runButton, #resetButton {
   margin-right: 0;
@@ -417,12 +461,6 @@ button.arrow:focus {
   margin-bottom: 10px;
   font-size: 18px; }
 
-#designModeBox td {
-  vertical-align: top; }
-
-#design-manage-assets {
-  float: right; }
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px; }
@@ -436,28 +474,6 @@ button.arrow:focus {
 .assetRow:hover {
   background: #cfc9de; }
 
-#divApplab {
-  box-sizing: border-box;
-  padding: 2px; }
-
-#divApplab input {
-  box-sizing: border-box; }
-
-#divApplab button {
-  padding: 7px 12px;
-  margin: 2px;
-  font-size: 14px; }
-
-.ace_gutter-cell.ace_error {
-  background-image: url('/blockly/media/skins/applab/gutterError.png');
-  background-size: 16px 16px;
-  background-position: 2px 0px; }
-
-.ace_gutter-cell.ace_warning {
-  background-image: url('/blockly/media/skins/applab/gutterWarn.png');
-  background-size: 16px 16px;
-  background-position: 2px 0px; }
-
 .design-mode-hidden {
   visibility: hidden; }
   .divApplabDesignMode .design-mode-hidden {
@@ -466,3 +482,27 @@ button.arrow:focus {
 
 .divApplabDesignMode canvas {
   background-color: #eee; }
+
+.no-outline:focus {
+  outline: none; }
+
+.justify-contents {
+  text-align: justify;
+  line-height: 0; }
+  .justify-contents:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
+
+.hover-pointer:hover {
+  cursor: pointer; }
+
+.chooseAssetDropdownOption {
+  color: #0596CE;
+  text-decoration: underline; }
+
+.droplet-dropdown {
+  z-index: 500 !important; }
+
+*[contenteditable] {
+  -webkit-user-select: auto !important; }

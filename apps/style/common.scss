@@ -1,30 +1,8 @@
 @import "color";
+@import "font";
+@import "style-constants";
 
 $common_root: '/blockly/media/common_images/';
-$cyan: #0094ca;
-$charcoal: #5b6770;
-$orange: #ffa400;
-$purple: #7665a0;
-$green: #b9bf15;
-
-$purple-dark: #7665a0;
-$purple-light: #a69bc1;
-$purple-extra-light: #cfc9de;
-$light-gray: #e7e8ea;
-$orange-dark: #ffa400;
-$green-dark: #b9bf15;
-$yellow-dark: #ffb81d;
-$yellow-light: #ffdb74;
-$cyan-dark: #0094ca;
-$teal-dark: #00adbc;
-$teal-light: #59cad3;
-
-$gotham-regular: "Gotham 4r";
-$gotham-italics: "Gotham 4i";
-$gotham-bold: "Gotham 5r";
-$gotham-extra-bold: "Gotham 7r";
-$gotham-extra-bold-italics: "Gotham 7i";
-$code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 
 @mixin fill-container {
   height: 100%;
@@ -34,7 +12,22 @@ $code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Conso
   font-family: $gotham-regular, sans-serif;
   font-weight: normal;
 }
-$headers_height: 40px;
+
+@mixin no-transform {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+@mixin horizontal-flip {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
 
 body {
   @include font;
@@ -52,9 +45,9 @@ h2 {
   font-weight: normal;
 }
 a {
-  color: #0596CE;
+  color: $link_color;
   &:hover {
-    color: #0596CE;
+    color: $link_color;
     background: none;
   }
 }
@@ -108,12 +101,12 @@ div.droplet-palette-header-row {
 }
 
 div.droplet-palette-group-header:active {
-  color: #000;
+  color: $black;
 }
 
 div.droplet-palette-group-header-selected {
   font-weight: 400;
-  color: #000;
+  color: $black;
 }
 
 $droplet-light-green: #D3E965;
@@ -225,7 +218,7 @@ div.droplet-palette-group-header-selected.orange {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: $headers_height;
+  top: $workspace-headers-height;
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
@@ -259,10 +252,30 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-.ace_gutter-cell.ace_breakpoint {
+.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet-breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
+}
+
+.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet-error {
+  background-image: url('#{$common_root}/gutterError.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.droplet-gutter-line.droplet-error, .droplet-gutter-line.droplet-warning {
+  background-position: 2px 35%;
+}
+
+.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet-warning {
+  background-image: url('#{$common_root}/gutterWarn.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.ace_gutter-cell.ace_error, .ace_gutter-cell.ace_warning {
+  background-position: 2px 0px;
 }
 
 #visualizationResizeBar {
@@ -272,6 +285,10 @@ html[dir='rtl'] #codeWorkspace {
   width: 15px;
   left: 400px;
   cursor: ew-resize;
+  text-align: center;
+  color: $lighter_gray;
+  font-size: 24px;
+  line-height: 400px;
 }
 
 #visualization {
@@ -333,6 +350,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -368,6 +386,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -403,6 +422,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -438,6 +458,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -464,12 +485,12 @@ button, label.img-upload {
   border: 1px solid #ddd;
   font-size: large;
   background-color: #eee;
-  color: #000;
+  color: $black;
 }
 button.launch {
   border: 1px solid $orange;
   background-color: $orange;
-  color: #fff;
+  color: $white;
   font-size: large;
   min-width: 96px;
   margin-left: 0px;
@@ -526,7 +547,7 @@ button.blocklyLaunch {
 button.share {
   border: 1px solid #FFA000;
   background-color: #FFA000;
-  color: #fff;
+  color: $white;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -635,9 +656,9 @@ input[type="radio"] {
 }
 #dialog {
   visibility: hidden;
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
   position: absolute;
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
@@ -647,8 +668,8 @@ input[type="radio"] {
 #dialogBorder {
   visibility: hidden;
   position: absolute;
-  background-color: #fff;
-  color: #000;
+  background-color: $white;
+  color: $black;
   border-radius: 6px;
   box-shadow: 5px 5px 5px $shadow;
 }
@@ -658,7 +679,7 @@ input[type="radio"] {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: $black;
   opacity: 0.3;
   z-index: 1;
 }
@@ -694,7 +715,7 @@ input[type="radio"] {
   margin: 20px 0px 20px 0px;
   line-height: 28px;
   color: #7E5BA0;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 
 }
@@ -703,14 +724,14 @@ input[type="radio"] {
   margin-bottom: 5px;
 }
 #hint {
-  color: #fff;
+  color: $white;
   padding: 5px 1em;
   font-size: large;
 }
 
 /* Instructions. */
 #bubble {
-  color: black;
+  color: $black;
   margin-bottom: 10px;
   position: relative;
   cursor: pointer;
@@ -771,62 +792,133 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
-#headers {
-  height: $headers_height;
+.workspace-header {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: $workspace-headers-height;
+  color: white;
+  .workspace-header-clickable:hover {
+    cursor: pointer;
+    color: $yellow;
+  }
+  span {
+    line-height: $workspace-headers-height;
+  }
+  .fa {
+    font-size: 18px;
+  }
+}
+
+#design-headers {
+  height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .workspace-header {
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: hidden;
-    height: $headers_height;
-    span {
-      color: white;
-      line-height: $headers_height;
-    }
+}
+
+$workspace-header-button-border-width: 1px;
+$workspace-header-button-height: 22px;
+$workspace-header-button-margin: ($workspace-headers-height -
+    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
+    ) / 2;
+
+#headers {
+  height: $workspace-headers-height;
+  background-color: $purple;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  #show-toolbox-icon, #hide-toolbox-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    line-height: $workspace-headers-height;
+    color: $lighter_purple;
   }
+
+  #hide-toolbox-icon {
+    @include horizontal-flip;
+  }
+
   #toolbox-header {
     width: 270px;
     border-right: 1px solid gray;
     float: left;
+
+    &.toggleable {
+      cursor: pointer;
+      &:hover .fa {
+        color: $white;
+      }
+    }
   }
   #show-toolbox-header {
     border: 0;
     float: left;
     padding: 0 10px;
+    cursor: pointer;
+    &:hover .fa {
+      color: $white;
+    }
+
+    & > span {
+      margin: auto 18px;
+    }
   }
   #blockCounter, #blockUsed {
     display: inline-block;
   }
-  #clear-puzzle-header, #show-code-header {
+
+  .workspace-header-button {
     cursor: pointer;
     float: right;
-    border-left: 1px solid gray;
+    overflow: hidden;
+    background-color: $light_purple;
+    margin-top: $workspace-header-button-margin;
+    margin-bottom: $workspace-header-button-margin;
+    margin-right: $workspace-header-button-margin;
+    margin-left: 0;
+    border: $workspace-header-button-border-width groove $light_gray;
+    height: $workspace-header-button-height;
+    border-radius: 4px; // TODO: Make mixin
+    font-family: $gotham-bold;
     &:hover {
       background-color: $cyan;
     }
     span {
-      padding: 0 20px;
+      padding: 0 12px;
+      line-height: $workspace-header-button-height;
+    }
+    .fa {
+      line-height: $workspace-header-button-height;
+      padding-right: 8px;
+      font-size: 15px;
+    }
+    .fa-code {
+      font-weight: bold;
+    }
+    .blocks-glyph {
+      display: none;
+      height: 18px;
+      vertical-align: text-bottom;
+      padding-right: 8px;
     }
   }
   #clear-puzzle-header:hover {
-    background-color: #c00;
-  }
-  #hide-toolbox, #show-toolbox {
-    cursor: pointer;
-    &:hover {
-      color: $yellow-dark;
-    }
+    background-color: $red;
   }
   .block-counter-default {
     color: white;
   }
   .block-counter-overflow {
-    color: $yellow-dark;
+    color: $yellow;
   }
 }
 
@@ -834,6 +926,20 @@ $aniGifPreviewHeight: 60px;
   div {
     margin-right: 0;
   }
+
+  #show-toolbox-icon, #hide-toolbox-icon {
+    left: auto;
+    right: 8px;
+  }
+
+  #show-toolbox-icon {
+    @include horizontal-flip;
+  }
+
+  #hide-toolbox-icon {
+    @include no-transform;
+  }
+
   #toolbox-header {
     border-right: 0;
     border-left: 1px solid gray;
@@ -842,10 +948,20 @@ $aniGifPreviewHeight: 60px;
   #show-toolbox-header {
     float: right;
   }
-  #clear-puzzle-header, #show-code-header {
-    border-left: 0;
-    border-right: 1px solid gray;
+  .workspace-header-button {
+    margin-left: $workspace-header-button-margin;
+    margin-right: 0;
     float: left;
+
+    .fa {
+      padding-right: 0;
+      padding-left: 8px;
+    }
+    .blocks-glyph {
+      @include horizontal-flip;
+      padding-right: 0;
+      padding-left: 8px;
+    }
   }
 }
 
@@ -946,7 +1062,7 @@ $aniGifPreviewHeight: 60px;
     margin-bottom: 10px;
 
     a {
-      font-family: 'Gotham 7r', sans-serif;
+      font-family: $gotham-extra-bold;
       font-weight: normal;
       color: $purple;
       &:hover {
@@ -962,7 +1078,7 @@ $aniGifPreviewHeight: 60px;
 }
 
 .light-yellow-background {
-  background-color: #fff7df;
+  background-color: $lightest_yellow;
 }
 
 .white-background {
@@ -1202,10 +1318,10 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 }
 
 // Droplet block tooltips configuration
-$parameterColor: $yellow-light;
-$linkColor: #ffffff;
-$tooltipBackground: $cyan-dark;
-$text-color: #ffffff;
+$parameterColor: $light_yellow;
+$linkColor: $white;
+$tooltipBackground: $cyan;
+$text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
@@ -1214,19 +1330,23 @@ $tooltip-font: $gotham-regular;
 $function-name-font: $code-font;
 $examples-link-font: $gotham-extra-bold;
 
-$see-examples-thick-underline-color: $yellow-dark;
+$see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link {
+.tooltip-example-link, .tooltip-choose-link {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a {
+.tooltip-example-link > a, .tooltip-choose-link > a {
   &:hover, &:link, &:active, &:visited {
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
     font-family: $gotham-bold;
   }
+}
+
+.tooltip-choose-link {
+  float: left;
 }
 
 .function-name {
@@ -1237,7 +1357,7 @@ $see-examples-thick-underline-color: $yellow-dark;
 }
 
 .current-tooltip-parameter-name {
-  border-bottom: 3px solid $yellow-dark;
+  border-bottom: 3px solid $yellow;
 }
 
 // Tooltipster theme class

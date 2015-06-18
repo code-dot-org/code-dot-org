@@ -84,14 +84,20 @@ level 'U3L08 Assessment2'
 level 'U3L08 Assessment3'
 level 'U3L08 Free Response Wrap Up'
 
-stage 'Scene Design Part 1 - Plan'
-level 'U1L1 Student Lesson Introduction'
+stage 'Scene Design Part 1: Plan'
+level 'U3L09 Student Lesson Introduction'
+level 'U3L09 Free Response Getting Started'
+level 'U3L09 Free Response Wrap Up'
 
-stage 'Scene Design Part 2 - Code'
-level 'U1L1 Student Lesson Introduction'
+stage 'Scene Design Part 2: Code'
+level 'U3L10 Student Lesson Introduction'
+level 'U3L10 Free Response Getting Started'
+level 'U3L10 Free Response Wrap Up'
 
-stage 'Scene Design Part 3 - Reflect'
-level 'U1L1 Student Lesson Introduction'
+stage 'Scene Design Part 3: Reflect'
+level 'U3L11 Student Lesson Introduction'
+level 'U3L11 Free Response Getting Started'
+level 'U3L11 Free Response Reflection'
 
 stage 'Events Unplugged’
 level 'U3L12 - Student Introduction 1'

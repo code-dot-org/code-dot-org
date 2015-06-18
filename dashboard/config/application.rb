@@ -12,7 +12,6 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 
-require 'cdo/rack/upgrade_insecure_requests'
 require 'bootstrap-sass'
 require 'cdo/hash'
 
@@ -34,10 +33,8 @@ module Dashboard
       config.middleware.insert_after SharedResources, PegasusSites
     end
 
-    unless Rails.env.production?
-      config.middleware.use ::Rack::UpgradeInsecureRequests
-      config.middleware.use ::Rack::ContentLength
-    end
+    require 'cdo/rack/upgrade_insecure_requests'
+    config.middleware.use ::Rack::UpgradeInsecureRequests
 
     config.encoding = 'utf-8'
 
@@ -84,11 +81,9 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/css')
 
     config.assets.precompile += %w(
-      epiceditor/*.css
-      editor/markdown_editor.css
-      editor/markdown_editor.js
       editor/blockly_editor.css
       editor/blockly_editor.js
+      editor/embedded_markdown_editor.js
       levels/*
       react.js
       jquery.handsontable.full.css

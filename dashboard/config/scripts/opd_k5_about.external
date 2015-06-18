@@ -1,0 +1,40 @@
+name 'OPD-K5 About'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### GETTING STARTED: About the Course
+
+#### Course Overview
+
+This course is intended as an introduction to computer science fundamentals and the code.org Code Studio resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
+
+#### Learning Objectives 
+
+Through completing this online course, participants will:
+
+- Learn the basics of computer science 
+- Review best practices for teaching these basics to your students 
+- Access free curriculum and resources for teachers 
+- Plan for how you might get started teaching computer science 
+- Connect with a community of fellow educators who are making positive change in their classrooms through coding 
+
+#### Pre-requisites
+
+No previous experience with coding or computer science education is assumed. This is a beginner's course.
+<br/><br/>
+
+> **A Note About Audience:** This course focuses on code.org's free Code Studio learning platform, but the concepts you learn can be applied to any computer science course. If you wish to teach a more in-depth computer science curricula than what we offer in Code Studio (for example, one of our Middle or High school curricula), you can still benefit from this online course, although we do recommend you pursue more [in-depth or ongoing professional development opportunities](http://code.org/educate) in addition to completing this course.
+
+#### Course Duration
+Completing this online course should take between 1-3 hours, depending on your prior knowledge and how deep you want to dive into the code.org resources.
+
+#### Course Certification
+
+After completing this course, you'll have access to a digital certificate of completion.
+<br/><br/>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

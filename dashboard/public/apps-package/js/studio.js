@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({265:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({279:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":256,"./levels":263,"./skins":269,"./studio":270}],270:[function(require,module,exports){
+},{"../appMain":9,"./blocks":270,"./levels":277,"./skins":283,"./studio":284}],284:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -40,6 +40,7 @@ var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
+var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
@@ -49,6 +50,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
+var JSInterpreter = require('../JSInterpreter');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -121,6 +123,17 @@ Studio.BLOCK_Y_COORDINATE = 20;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
+var AUTO_HANDLER_MAP = {
+  whenRun: 'whenGameStarts',
+  whenDown: 'when-down',
+  whenUp: 'when-up',
+  whenLeft: 'when-left',
+  whenRight: 'when-right',
+  whenTouchItem: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-any_item',
+};
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -167,6 +180,9 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
+  Studio.slowJSExecutionFactor = level.slowJSExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJSExecutionFactor +
+                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -204,9 +220,11 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
+  Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
+
   // Height and width of the goal and obstacles.
-  Studio.MARKER_HEIGHT = 100;
-  Studio.MARKER_WIDTH = 100;
+  Studio.MARKER_HEIGHT = level.markerHeight || 100;
+  Studio.MARKER_WIDTH = level.markerWidth || 100;
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
@@ -263,6 +281,10 @@ var drawMap = function () {
       lastLabel: 300,
       increment: 100
     });
+  }
+
+  if (level.wallMapCollisions) {
+    Studio.drawMapTiles(svg);
   }
 
   if (Studio.spriteStart_) {
@@ -388,6 +410,10 @@ var drawMap = function () {
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) <= xVariance) && (Math.abs(y1 - y2) <= yVariance);
+}
+
+function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
+  return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
 
 /**
@@ -592,10 +618,35 @@ function callHandler (name, allowQueueExtension) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.eventQueue.push({'fn': handler.func});
+        Studio.JSInterpreter.queueEvent(handler.func);
       }
     }
   });
+}
+
+Studio.initAutoHandlers = function (map) {
+  for (var funcName in map) {
+    var func = Studio.JSInterpreter.findGlobalFunction(funcName);
+    if (func) {
+      registerEventHandler(Studio.eventHandlers, map[funcName], func);
+    }
+  }
+};
+
+/**
+ * Performs movement on a list of Projectiles or Items. Removes items from the
+ * list automatically when they move out of bounds
+ */
+function performItemOrProjectileMoves (list) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    list[i].moveToNextPosition();
+    if (list[i].outOfBounds()) {
+      list[i].removeElement();
+      list.splice(i, 1);
+    } else {
+      list[i].display();
+    }
+  }
 }
 
 /**
@@ -615,40 +666,19 @@ Studio.callApiCode = function (name, func) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  var animationOnlyFrame = false;
+
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
   }
 
-  if (Studio.interpreter) {
-    var doneUserCodeStep = false;
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
-         stepsThisTick++) {
-      var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  Studio.cumulativeLength,
-                                                  Studio.userCodeStartOffset,
-                                                  Studio.userCodeLength,
-                                                  studioApp.editor);
-      try {
-        Studio.interpreter.step();
-        doneUserCodeStep = (-1 !== userCodeRow) &&
-                            Studio.interpreter.stateStack[0] &&
-                            Studio.interpreter.stateStack[0].done;
-      }
-      catch(err) {
-        Studio.executionError = err;
-        Studio.onPuzzleComplete();
-        return;
-      }
-    }
-  } else {
-    if (Studio.tickCount === 1) {
-      callHandler('whenGameStarts');
-    }
-    Studio.executeQueue('whenGameStarts');
+  if (Studio.tickCount === 1) {
+    callHandler('whenGameStarts');
+  }
+  Studio.executeQueue('whenGameStarts');
+
+  if (Studio.JSInterpreter) {
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJSExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -658,81 +688,89 @@ Studio.onTick = function() {
     Studio.executeQueue('whenSpriteClicked-' + i);
   }
 
-  // Run key event handlers for any keys that are down:
-  for (var key in KeyCodes) {
-    if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] === "keydown") {
-      switch (KeyCodes[key]) {
-        case KeyCodes.LEFT:
+  if (!animationOnlyFrame) {
+    // Run key event handlers for any keys that are down:
+    for (var key in KeyCodes) {
+      if (Studio.keyState[KeyCodes[key]] &&
+          Studio.keyState[KeyCodes[key]] === "keydown") {
+        switch (KeyCodes[key]) {
+          case KeyCodes.LEFT:
+            callHandler('when-left');
+            break;
+          case KeyCodes.UP:
+            callHandler('when-up');
+            break;
+          case KeyCodes.RIGHT:
+            callHandler('when-right');
+            break;
+          case KeyCodes.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var btn in ArrowIds) {
+      if (Studio.btnState[ArrowIds[btn]] &&
+          Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+        switch (ArrowIds[btn]) {
+          case ArrowIds.LEFT:
+            callHandler('when-left');
+            break;
+          case ArrowIds.UP:
+            callHandler('when-up');
+            break;
+          case ArrowIds.RIGHT:
+            callHandler('when-right');
+            break;
+          case ArrowIds.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var gesture in Studio.gesturesObserved) {
+      switch (gesture) {
+        case 'left':
           callHandler('when-left');
           break;
-        case KeyCodes.UP:
+        case 'up':
           callHandler('when-up');
           break;
-        case KeyCodes.RIGHT:
+        case 'right':
           callHandler('when-right');
           break;
-        case KeyCodes.DOWN:
+        case 'down':
           callHandler('when-down');
           break;
       }
-    }
-  }
-
-  for (var btn in ArrowIds) {
-    if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
-      switch (ArrowIds[btn]) {
-        case ArrowIds.LEFT:
-          callHandler('when-left');
-          break;
-        case ArrowIds.UP:
-          callHandler('when-up');
-          break;
-        case ArrowIds.RIGHT:
-          callHandler('when-right');
-          break;
-        case ArrowIds.DOWN:
-          callHandler('when-down');
-          break;
+      if (0 === Studio.gesturesObserved[gesture]--) {
+        delete Studio.gesturesObserved[gesture];
       }
     }
-  }
 
-  for (var gesture in Studio.gesturesObserved) {
-    switch (gesture) {
-      case 'left':
-        callHandler('when-left');
-        break;
-      case 'up':
-        callHandler('when-up');
-        break;
-      case 'right':
-        callHandler('when-right');
-        break;
-      case 'down':
-        callHandler('when-down');
-        break;
-    }
-    if (0 === Studio.gesturesObserved[gesture]--) {
-      delete Studio.gesturesObserved[gesture];
-    }
+    Studio.executeQueue('when-left');
+    Studio.executeQueue('when-up');
+    Studio.executeQueue('when-right');
+    Studio.executeQueue('when-down');
   }
-
-  Studio.executeQueue('when-left');
-  Studio.executeQueue('when-up');
-  Studio.executeQueue('when-right');
-  Studio.executeQueue('when-down');
 
   checkForCollisions();
 
+  if (Studio.JSInterpreter && !animationOnlyFrame) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
+  }
+
   for (i = 0; i < Studio.spriteCount; i++) {
-    performQueuedMoves(i);
+    if (!animationOnlyFrame) {
+      performQueuedMoves(i);
+    }
 
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
@@ -749,51 +787,138 @@ Studio.onTick = function() {
     Studio.displaySprite(i, isWalking);
   }
 
-  for (i = 0; i < Studio.projectiles.length; i++) {
-    Studio.projectiles[i].moveToNextPosition();
-    if (Studio.projectiles[i].outOfBounds()) {
-      Studio.projectiles[i].removeElement();
-      Studio.projectiles.splice(i, 1);
-      // decrement i because we just removed an item from the array. We want to
-      // keep i as the same value for the next iteration through this loop
-      i--;
-    } else {
-      Studio.projectiles[i].display();
-    }
-  }
+  performItemOrProjectileMoves(Studio.projectiles);
+  performItemOrProjectileMoves(Studio.items);
 
   if (checkFinished()) {
     Studio.onPuzzleComplete();
   }
 };
 
+function spriteCollisionDistance  (i1, i2, yAxis) {
+  var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
+  var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
+  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+}
+
+function spriteCollidableCollisionDistance (iS, collidable, yAxis) {
+  var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
+  var dim2 = yAxis ? collidable.height : collidable.width;
+  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+}
+
+function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
+  var dim1 = yAxis ? collidable.height : collidable.width;
+  var dim2;
+  if (edgeName === 'left' || edgeName === 'right') {
+    dim2 = yAxis ? Studio.MAZE_HEIGHT : 0;
+  } else {
+    dim2 = yAxis ? 0 : Studio.MAZE_WIDTH;
+  }
+  return (dim1 + dim2) / 2;
+}
+
+/* Checks for collisions between an actor and a list of projectiles or items.
+ * Calls startCollision/endCollision and handleCollision for className, but not
+ * executeCollision, which is expected to be called afterwards by the caller.
+ */
+function handleActorCollisionsWithCollidableList (
+           spriteIndex, xCenter, yCenter, list, autoDisappear)
+{
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = list.length - 1; i >= 0; i--) {
+    var collidable = list[i];
+    var next = collidable.getNextPosition();
+    if (collisionTest(
+          xCenter,
+          next.x,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, false),
+          yCenter,
+          next.y,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, true))) {
+      if (collidable.startCollision(spriteIndex)) {
+        Studio.currentEventParams = { eventObject: collidable };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple collidables before executing the queue
+        // below
+
+        // NOTE: not using collideSpriteWith() because collision state is
+        // tracked on the collidable in this case
+        handleCollision(spriteIndex, collidable.className, true);
+        Studio.currentEventParams = null;
+
+        // Make the projectile/item disappear automatically if this parameter
+        // is set:
+        if (autoDisappear) {
+          collidable.removeElement();
+          list.splice(i, 1);
+        }
+      }
+    } else {
+      collidable.endCollision(spriteIndex);
+    }
+  }
+}
+
+/* Checks for collisions between a collidable and all of the edges.
+ * Calls startCollision and endCollision on the projectile. The caller
+ * should pass in a function to handle the case when a new collision is
+ * detected. executeCollision() is expected to be called later by the caller.
+ */
+function handleEdgeCollisions (collidable, xPos, yPos, onCollided) {
+  for (var i = 0; i < EdgeClassNames.length && level.edgeCollisions; i++) {
+    var edgeXCenter, edgeYCenter;
+    var edgeClass = EdgeClassNames[i];
+    switch (edgeClass) {
+      case 'top':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = 0;
+        break;
+      case 'left':
+        edgeXCenter = 0;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+      case 'bottom':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = Studio.MAZE_HEIGHT;
+        break;
+      case 'right':
+        edgeXCenter = Studio.MAZE_WIDTH;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+    }
+    if (collisionTest(
+          xPos,
+          edgeXCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, false),
+          yPos,
+          edgeYCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, true))) {
+      if (collidable.startCollision(edgeClass)) {
+        onCollided(edgeClass);
+      }
+    } else {
+      collidable.endCollision(edgeClass);
+    }
+  }
+}
+
+/* Create an edge collision handler callback for a specific spriteIndex
+ */
+function createActorEdgeCollisionHandler (spriteIndex) {
+  return function (edgeClass) {
+    handleCollision(spriteIndex, edgeClass);
+  };
+}
+
 /* Check for collisions (note that we use the positions they are about
  * to attain with queued moves - this allows the moves to be canceled before
  * the actual movements take place)
  */
 function checkForCollisions() {
-  var spriteCollisionDistance = function (i1, i2, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
-    var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
-    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-  };
-  var projectileCollisionDistance = function (iS, iP, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-    var dim2 = yAxis ?
-                  Studio.projectiles[iP].height :
-                  Studio.projectiles[iP].width;
-    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-  };
-  var edgeCollisionDistance = function (iS, edgeName, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-    var dim2;
-    if (edgeName === 'left' || edgeName === 'right') {
-      dim2 = yAxis ? Studio.MAZE_HEIGHT : 0;
-    } else {
-      dim2 = yAxis ? 0 : Studio.MAZE_WIDTH;
-    }
-    return (dim1 + dim2) / 2;
-  };
+
+  checkForItemCollisions();
 
   for (var i = 0; i < Studio.spriteCount; i++) {
     var sprite = Studio.sprite[i];
@@ -803,8 +928,10 @@ function checkForCollisions() {
     }
     var iHalfWidth = sprite.width / 2;
     var iHalfHeight = sprite.height / 2;
-    var iXCenter = getNextPosition(i, false, false) + iHalfWidth;
-    var iYCenter = getNextPosition(i, true, false) + iHalfHeight;
+    var iXPos = getNextPosition(i, false, false);
+    var iYPos = getNextPosition(i, true, false);
+    var iXCenter = iXPos + iHalfWidth;
+    var iYCenter = iYPos + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
       if (i == j || !Studio.sprite[j].visible) {
         continue;
@@ -826,75 +953,148 @@ function checkForCollisions() {
       }
       executeCollision(i, j);
     }
-    for (j = 0; j < Studio.projectiles.length; j++) {
-      var projectile = Studio.projectiles[j];
-      var next = projectile.getNextPosition();
-      if (collisionTest(iXCenter,
-                        next.x,
-                        projectileCollisionDistance(i, j, false),
-                        iYCenter,
-                        next.y,
-                        projectileCollisionDistance(i, j, true))) {
-        if (projectile.startCollision(i)) {
-          Studio.currentEventParams = { projectile: projectile };
-          // Allow cmdQueue extension (pass true) since this handler
-          // may be called for multiple projectiles before executing the queue
-          // below
 
-          // NOTE: not using collideSpriteWith() because collision state is
-          // tracked on the projectile in this case
-          handleCollision(i, projectile.className, true);
-          Studio.currentEventParams = null;
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.items,
+                                            level.removeItemsWhenActorCollides);
+
+    handleEdgeCollisions(
+        sprite,
+        iXCenter,
+        iYCenter,
+        createActorEdgeCollisionHandler(i));
+
+    if (level.wallMapCollisions) {
+      if (Studio.willSpriteTouchWall(sprite, iXPos, iYPos)) {
+        if (level.blockMovingIntoWalls) {
+          cancelQueuedMovements(i, false);
+          cancelQueuedMovements(i, true);
         }
+        Studio.collideSpriteWith(i, 'wall');
       } else {
-        projectile.endCollision(i);
+        sprite.endCollision('wall');
       }
     }
 
-    for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
-      var edgeXCenter, edgeYCenter;
-      var edgeClass = EdgeClassNames[j];
-      switch (edgeClass) {
-        case 'top':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = 0;
-          break;
-        case 'left':
-          edgeXCenter = 0;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-        case 'bottom':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = Studio.MAZE_HEIGHT;
-          break;
-        case 'right':
-          edgeXCenter = Studio.MAZE_WIDTH;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-      }
-      if (collisionTest(iXCenter,
-                        edgeXCenter,
-                        edgeCollisionDistance(i, edgeClass, false),
-                        iYCenter,
-                        edgeYCenter,
-                        edgeCollisionDistance(i, edgeClass, true))) {
-        Studio.collideSpriteWith(i, edgeClass);
-      } else {
-        sprite.endCollision(edgeClass);
-      }
-    }
-
-    // Don't execute projectile collision queue(s) until we've handled all edge
-    // collisions. Not sure this is strictly necessary, but it means the code is
-    // the same as it was before this change.
+    // Don't execute actor collision queue(s) until we've handled all
+    // wall, projectile, item, and edge collisions. Not sure this is strictly
+    // necessary, but it preserves behavior that student code may depend upon.
+    executeCollision(i, 'wall');
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
     for (j = 0; j < skin.ProjectileClassNames.length; j++) {
       executeCollision(i, skin.ProjectileClassNames[j]);
     }
+    for (j = 0; j < skin.ItemClassNames.length; j++) {
+      executeCollision(i, skin.ItemClassNames[j]);
+    }
   }
 }
+
+/* Create an edge collision handler callback for a specific item
+ */
+function createItemEdgeCollisionHandler (item) {
+  return function (edgeClass) {
+    if (level.blockMovingIntoWalls) {
+      // TODO: Find a real direction!!
+      item.bounce();
+    }
+    Studio.currentEventParams = { eventObject: item };
+    // Allow cmdQueue extension (pass true) since this handler
+    // may be called for multiple items before executing the queue
+    // below
+    handleItemCollision(item.className, edgeClass, true);
+    Studio.currentEventParams = null;
+  };
+}
+
+function checkForItemCollisions () {
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = Studio.items[i];
+    var next = item.getNextPosition();
+
+    if (level.wallMapCollisions) {
+      if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
+        if (level.blockMovingIntoWalls) {
+          // TODO: Find a real direction!!
+          item.bounce();
+        }
+        Studio.currentEventParams = { eventObject: item };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple items before executing the queue
+        // below
+        Studio.collideItemWith(item, 'wall', true);
+        Studio.currentEventParams = null;
+      } else {
+        item.endCollision('wall');
+      }
+    }
+
+    if (level.edgeCollisions) {
+      handleEdgeCollisions(
+          item,
+          next.x,
+          next.y,
+          createItemEdgeCollisionHandler(item));
+    }
+
+    // After collisions have been handled for these items, now execute the
+    // command queues for this item:
+    executeItemCollision(item.className, 'wall');
+    for (var j = 0; j < EdgeClassNames.length; j++) {
+      executeItemCollision(item.className, EdgeClassNames[j]);
+    }
+  }
+}
+
+/**
+ * Test to see if an actor sprite will be touching a wall given particular X/Y
+ * position coordinates (top-left)
+ */
+
+Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
+  var xCenter = xPos + sprite.width / 2;
+  var yCenter = yPos + sprite.height / 2;
+  return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
+};
+
+/**
+ * Test to see if a collidable will be touching a wall given particular X/Y
+ * position coordinates (center)
+ */
+
+Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
+  var colsOffset = Math.floor(xCenter) + 1;
+  var rowsOffset = Math.floor(yCenter) + 1;
+  var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
+  var iYGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
+  for (var col = Math.max(0, xGrid - colsOffset);
+       col < Math.min(Studio.COLS, xGrid + colsOffset);
+       col++) {
+    for (var row = Math.max(0, iYGrid - rowsOffset);
+         row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
+         row++) {
+      if (Studio.map[row][col] & SquareType.WALL) {
+        if (overlappingTest(xCenter,
+                            (col + 0.5) * Studio.SQUARE_SIZE,
+                            Studio.SQUARE_SIZE / 2 + collidable.width / 2,
+                            yCenter,
+                            (row + 0.5) * Studio.SQUARE_SIZE,
+                            Studio.SQUARE_SIZE / 2 + collidable.height / 2)) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+};
 
 Studio.onSvgDrag = function(e) {
   if (Studio.tickCount > 0) {
@@ -961,7 +1161,6 @@ Studio.onMouseUp = function(e) {
 Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
-  Studio.projectiles = [];
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
@@ -1013,6 +1212,8 @@ Studio.initReadonly = function(config) {
   skin = config.skin;
   level = config.level;
   loadLevel();
+
+  config.appMsg = studioMsg;
 
   Studio.initSprites();
 
@@ -1070,6 +1271,11 @@ Studio.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  Studio.projectiles = [];
+  Studio.items = [];
+  Studio.eventHandlers = [];
+  Studio.perExecutionTimeouts = [];
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1133,10 +1339,10 @@ Studio.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
-                             delegate(this,
-                                      Studio.onArrowButtonUp,
-                                      ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+                               delegate(this,
+                                        Studio.onArrowButtonUp,
+                                        ArrowIds[btn]));
       dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
                                  delegate(this,
                                           Studio.onArrowButtonDown,
@@ -1178,6 +1384,12 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+  config.unusedConfig = [];
+  for (var handlerName in AUTO_HANDLER_MAP) {
+    config.unusedConfig.push(handlerName);
+  }
+
+  config.appMsg = studioMsg;
 
   Studio.initSprites();
 
@@ -1193,7 +1405,7 @@ Studio.init = function(config) {
   //  are changed at runtime)
   if (config.skin.preloadAssets) {
     preloadActorImages();
-    preloadProjectileImages();
+    preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
 };
@@ -1213,9 +1425,12 @@ var preloadBackgroundImages = function() {
   }
 };
 
-var preloadProjectileImages = function() {
+var preloadProjectileAndItemImages = function() {
   for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
     preloadImage(skin[skin.ProjectileClassNames[i]]);
+  }
+  for (i = 0; i < skin.ItemClassNames.length; i++) {
+    preloadImage(skin[skin.ItemClassNames[i]]);
   }
 };
 
@@ -1226,27 +1441,34 @@ var preloadActorImages = function() {
 };
 
 /**
+ * Clean up a list of Items or Projectiles.
+ */
+function resetItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].removeElement();
+  }
+  // Set length because list = [] will not modify array passed in by reference
+  list.length = 0;
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
-  if (Studio.eventHandlers) {
-    // Check the first command in all of the cmdQueues and clear the timeout
-    // if there is a pending wait command
-    Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue[0];
+  // Check the first command in all of the cmdQueues and clear the timeout
+  // if there is a pending wait command
+  Studio.eventHandlers.forEach(function (handler) {
+    var cmd = handler.cmdQueue[0];
 
-      if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
-        // Note: not calling waitCallback() or setting complete = true
-        window.clearTimeout(cmd.opts.waitTimeout);
-      }
-    });
-  }
+    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+      // Note: not calling waitCallback() or setting complete = true
+      window.clearTimeout(cmd.opts.waitTimeout);
+    }
+  });
   Studio.eventHandlers = [];
-  if (Studio.perExecutionTimeouts) {
-    Studio.perExecutionTimeouts.forEach(function (timeout) {
-      clearInterval(timeout);
-    });
-  }
+  Studio.perExecutionTimeouts.forEach(function (timeout) {
+    clearInterval(timeout);
+  });
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1254,12 +1476,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  if (Studio.projectiles) {
-    for (i = 0; i < Studio.projectiles.length; i++) {
-      Studio.projectiles[i].removeElement();
-    }
-    Studio.projectiles = [];
-  }
+  // Reset the projectiles and items (they include animation timers)
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 };
 
 /**
@@ -1280,12 +1499,6 @@ Studio.reset = function(first) {
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
-
-  // Reset the dynamic sprites list
-  while (Studio.projectiles.length) {
-    var projectile = Studio.projectiles.pop();
-    projectile.removeElement();
   }
 
   // True if we should fail before execution, even if freeplay
@@ -1324,9 +1537,8 @@ Studio.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
   if (studioApp.editCode) {
-    Studio.eventQueue = [];
     Studio.executionError = null;
-    Studio.interpreter = null;
+    Studio.JSInterpreter = null;
   }
 
   // Move sprites into position.
@@ -1334,6 +1546,8 @@ Studio.reset = function(first) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
+      displayX: Studio.spriteStart_[i].x,
+      displayY: Studio.spriteStart_[i].y,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
@@ -1362,6 +1576,9 @@ Studio.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
+
+  // Create Items that are specified on the map:
+  Studio.createLevelItems(svg);
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
@@ -1538,6 +1755,7 @@ var registerHandlersWithMultipleSpriteParams =
                        String(j));
     }
     skin.ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ItemClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -1565,17 +1783,6 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * A miniature runtime in the interpreted world calls this function repeatedly
- * to check to see if it should invoke any callbacks from within the
- * interpreted world. If the eventQueue is not empty, we will return an object
- * that contains an interpreted callback function (stored in "fn") and,
- * optionally, callback arguments (stored in "arguments")
- */
-var nativeGetCallback = function () {
-  return Studio.eventQueue.shift();
-};
-
-/**
  * Looks for failures that should prevent execution.
  * @returns {boolean} True if we have a pre-execution failure
  */
@@ -1597,6 +1804,55 @@ Studio.checkForPreExecutionFailure = function () {
 
   return false;
 };
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
+};
+
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  // TODO: consider how to notify the user without a debug console output area
+  if (console.log) {
+    console.log(text);
+  }
+  if (lineNum !== undefined) {
+    // TODO: connect this up
+    // annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
+
+function handleExecutionError(err, lineNumber) {
+  if (!lineNumber && err instanceof SyntaxError) {
+    // syntax errors came before execution (during parsing), so we need
+    // to determine the proper line number by looking at the exception
+    lineNumber = err.loc.line;
+    // Now select this location in the editor, since we know we didn't hit
+    // this while executing (in which case, it would already have been selected)
+
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+  }
+  if (!lineNumber && Studio.JSInterpreter) {
+    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  Studio.executionError = err;
+
+  // Call onPuzzleComplete() if we're not on a freeplay level:
+  if (!level.freePlay) {
+    Studio.onPuzzleComplete();
+  }
+}
 
 /**
  * Execute the story
@@ -1645,35 +1901,15 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
-    Studio.userCodeStartOffset = codeWhenRun.length;
-    codeWhenRun += studioApp.editor.getValue();
-    Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
-    // Append our mini-runtime after the user's code. This will spin and process
-    // callback functions:
-    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = studioApp.editor.aceEditor.getSession();
-    Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
-
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, null, scope, {
-                                        StudioApp: studioApp,
-                                        Studio: api,
-                                        Globals: Studio.Globals } );
-
-
-      var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction({
-          interpreter: interpreter,
-          nativeFunc: nativeGetCallback,
-      });
-      interpreter.setProperty(scope,
-                              'getCallback',
-                              interpreter.createNativeFunction(wrapper));
-    };
-    Studio.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    var codeWhenRun = studioApp.editor.getValue();
+    Studio.JSInterpreter = new JSInterpreter({
+      code: codeWhenRun,
+      blocks: dropletConfig.blocks,
+      enableEvents: true,
+      studioApp: studioApp,
+      onExecutionError: handleExecutionError,
+    });
+    Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -1788,9 +2024,9 @@ frameDirTableWalking[Direction.SOUTHWEST]  = 7;
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
-// Number of ticks between the last time the sprite moved and when we reset them
-// to face south.
-var TICKS_BEFORE_FACE_SOUTH = 5;
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
@@ -1851,6 +2087,97 @@ function spriteTotalFrames (index) {
   return sprite.frameCounts.normal + sprite.frameCounts.animation +
     sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
+
+/* Return the frame count for items or projectiles
+*/
+function getFrameCount (className, exceptionList, defaultCount) {
+  if (/.gif$/.test(skin[className])) {
+    return 1;
+  } else if (exceptionList && exceptionList[className]) {
+    return exceptionList[className];
+  }
+  return defaultCount;
+}
+
+function cellId(prefix, row, col) {
+  return prefix + '_' + row + '_' + col;
+}
+
+Studio.drawWallTile = function (svg, row, col) {
+
+  // Placeholder implementation: just drawing boxes with X's in them for now:
+
+  var backgroundId = cellId('wallBackground', row, col);
+  var textId = cellId('wallLetter', row, col);
+
+  var group = document.createElementNS(SVG_NS, 'g');
+  var background = document.createElementNS(SVG_NS, 'rect');
+  background.setAttribute('id', backgroundId);
+  background.setAttribute('width', Studio.SQUARE_SIZE);
+  background.setAttribute('height', Studio.SQUARE_SIZE);
+  background.setAttribute('x', col * Studio.SQUARE_SIZE);
+  background.setAttribute('y', row * Studio.SQUARE_SIZE);
+  background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+  background.setAttribute('stroke', '#000000');
+  background.setAttribute('stroke-width', 1);
+  group.appendChild(background);
+
+  var text = document.createElementNS(SVG_NS, 'text');
+  text.setAttribute('id', textId);
+  text.setAttribute('class', 'wall-letter');
+  text.setAttribute('width', Studio.SQUARE_SIZE);
+  text.setAttribute('height', Studio.SQUARE_SIZE);
+  text.setAttribute('x', (col + 0.5) * Studio.SQUARE_SIZE);
+  text.setAttribute('y', (row + 1) * Studio.SQUARE_SIZE - 12);
+  text.setAttribute('font-size', 32);
+  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('font-family', 'Verdana');
+  text.textContent = 'X';
+  group.appendChild(text);
+  svg.appendChild(group);
+};
+
+Studio.createLevelItems = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      for (var index = 0; index < skin.ItemClassNames.length; index++) {
+        if (constants.squareHasItemClass(index, mapVal)) {
+          var className = skin.ItemClassNames[index];
+          // Create item:
+          var itemOptions = {
+            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            className: className,
+            dir: Direction.NONE,
+            image: skin[className],
+            loop: true,
+            x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
+          };
+
+          var item = new Item(itemOptions);
+
+          item.createElement(svg);
+          // Display immediately (we can't assume it will be updated in onTick
+          // right away since this is called after 'Reset' as well as 'Run'
+          item.display();
+          Studio.items.push(item);
+        }
+      }
+    }
+  }
+};
+
+Studio.drawMapTiles = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      if (mapVal & SquareType.WALL) {
+        Studio.drawWallTile(svg, row, col);
+      }
+    }
+  }
+};
 
 var updateSpeechBubblePath = function (element) {
   var height = +element.getAttribute('height');
@@ -1945,17 +2272,33 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y - yOffset);
+  if (level.gridAlignedMovement) {
+    if (sprite.x > sprite.displayX) {
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.x < sprite.displayX) {
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+    if (sprite.y > sprite.displayY) {
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.y < sprite.displayY) {
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+  } else {
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
+  }
 
-  spriteClipRect.setAttribute('x', sprite.x);
-  spriteClipRect.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+
+  spriteClipRect.setAttribute('x', sprite.displayX);
+  spriteClipRect.setAttribute('y', sprite.displayY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.x);
-  unusedSpriteClipRect.setAttribute('y', sprite.y);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2103,6 +2446,34 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
+    case 'moveEast':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.EAST,
+      });
+      break;
+    case 'moveWest':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.WEST,
+      });
+      break;
+    case 'moveNorth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.NORTH,
+      });
+      break;
+    case 'moveSouth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.SOUTH,
+      });
+      break;
     case 'moveDistance':
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
@@ -2142,12 +2513,88 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
+    case 'addItemsToScene':
+      studioApp.highlight(cmd.id);
+      Studio.addItemsToScene(cmd.opts);
+      break;
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
       break;
   }
   return true;
+};
+
+Studio.addItemsToScene = function (opts) {
+  var directions = [
+    Direction.NORTH,
+    Direction.EAST,
+    Direction.SOUTH,
+    Direction.WEST,
+    Direction.NORTHEAST,
+    Direction.SOUTHEAST,
+    Direction.SOUTHWEST,
+    Direction.NORTHWEST,
+  ];
+
+  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // otherwise, create randomly placed items travelling in a random direction
+
+  var generateRandomItemPosition = function () {
+    // TODO (cpirich): check for edge collisions? (currently avoided by placing
+    // the items within the coordinate space (x/y min of Studio.HALF_SQUARE,
+    // max of max - Studio.HALF_SQUARE)
+
+    var pos = {};
+    if (level.gridAlignedMovement) {
+      pos.x = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
+      pos.y = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
+    } else {
+      pos.x = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+      pos.y = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+    }
+    return pos;
+  };
+
+  for (var i = 0; i < opts.number; i++) {
+    var direction = level.gridAlignedMovement ? Direction.NONE :
+                      directions[Math.floor(Math.random() * directions.length)];
+    var pos = generateRandomItemPosition();
+    var itemOptions = {
+      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
+      className: opts.className,
+      dir: direction,
+      image: skin[opts.className],
+      loop: true,
+      x: pos.x,
+      y: pos.y,
+    };
+
+    var item = new Item(itemOptions);
+
+    if (level.blockMovingIntoWalls) {
+      // TODO (cpirich): just move within the map looking for open spaces instead
+      // of randomly retrying random numbers
+
+      var numTries = 0;
+      while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
+        var newPos = generateRandomItemPosition();
+        item.x = newPos.x;
+        item.y = newPos.y;
+        numTries++;
+        if (numTries > 100) {
+          break;
+        }
+      }
+    }
+
+    item.createElement(document.getElementById('svgStudio'));
+    Studio.items.push(item);
+  }
 };
 
 Studio.vanishActor = function (opts) {
@@ -2289,8 +2736,14 @@ Studio.setSprite = function (opts) {
   sprite.frameCounts = skin[spriteValue].frameCounts;
   sprite.timePerFrame = skin[spriteValue].timePerFrame;
   // Reset height and width:
-  sprite.height = sprite.size * skin.spriteHeight;
-  sprite.width = sprite.size * skin.spriteWidth;
+  if (level.gridAlignedMovement) {
+    // This mode only works properly with square sprites
+    sprite.height = sprite.width = Studio.SQUARE_SIZE;
+    sprite.size = sprite.width / skin.spriteWidth;
+  } else {
+    sprite.height = sprite.size * skin.spriteHeight;
+    sprite.width = sprite.size * skin.spriteWidth;
+  }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
   }
@@ -2567,18 +3020,8 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
-  var frames;
-
-  if (/.gif$/.test(skin[options.className])) {
-    frames = 1;
-  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
-    frames = skin.specialProjectileFrames[options.className];
-  } else {
-    frames = skin.projectileFrames;
-  }
-
   var projectileOptions = {
-    frames: frames,
+    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -2617,10 +3060,10 @@ var doMakeProjectile = function (projectile, action) {
 };
 
 Studio.makeProjectile = function (opts) {
-  // opts.projectile will be set when we've had a collision with a particular
+  // opts.eventObject will be set when we've had a collision with a particular
   // projectile, otherwise we operate all all of that class
-  if (opts.projectile) {
-    doMakeProjectile(opts.projectile, opts.action);
+  if (opts.eventObject) {
+    doMakeProjectile(opts.eventObject, opts.action);
   } else {
     // No "current" projectile, so apply action to all of them of this class
     for (var i = 0; i < Studio.projectiles.length; i++) {
@@ -2730,8 +3173,12 @@ function isProjectileClass(className) {
   return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
+function isItemClass(className) {
+  return skin.ItemClassNames.indexOf(className) !== -1;
+}
+
 /**
- * Call the handler for src colliding with target
+ * Call the handler for an actor (src) colliding with target
  */
 function handleCollision(src, target, allowQueueExtension) {
   var prefix = 'whenSpriteCollided-' + src + '-';
@@ -2745,11 +3192,39 @@ function handleCollision(src, target, allowQueueExtension) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
     callHandler(prefix + 'any_projectile', allowQueueExtension);
+  } else if (isItemClass(target)) {
+    callHandler(prefix + 'any_item', allowQueueExtension);
   }
 }
 
 /**
- * Execute the code for src colliding with target
+ * Call the handler for an item colliding with target
+ */
+function handleItemCollision(src, target, allowQueueExtension) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  callHandler(prefix + target, allowQueueExtension);
+
+  if (isEdgeClass(target)) {
+    callHandler(prefix + 'any_edge', allowQueueExtension);
+  }
+}
+
+/**
+ * Execute the code for an item colliding with target
+ */
+function executeItemCollision(src, target) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  Studio.executeQueue(prefix + target);
+
+  if (isEdgeClass(target)) {
+    Studio.executeQueue(prefix + 'any_edge');
+  }
+}
+
+/**
+ * Execute the code for an actor (src) colliding with target
  */
 function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
@@ -2764,14 +3239,30 @@ function executeCollision(src, target) {
     Studio.executeQueue(srcPrefix + 'any_edge');
   } else if (isProjectileClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_projectile');
+  } else if (isItemClass(target)) {
+    Studio.executeQueue(srcPrefix + 'any_item');
   }
 }
 
 /**
- * Looks to see if sprite is already colliding with target.  If it isn't, it
+ * Looks to see if the item is already colliding with target.  If it
+ * isn't, it starts the collision and calls the relevant code.
+ * @param {Collidable} Collidable colliding
+ * @param {string/number} target Class name of the target. String for classes,
+ *   index if colliding with another sprite.
+ * @param {boolean} allowQueueExtension Passed on to callHandler
+ */
+Studio.collideItemWith = function (item, target, allowQueueExtension) {
+  if (item.startCollision(target)) {
+    handleItemCollision(item.className, target, allowQueueExtension);
+  }
+};
+
+/**
+ * Looks to see if the sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
- * @param {number} spriteIndex Index of the sprite colliding
- * @param {string/number} target Class name of the target. String for edges,
+ * @param {Collidable} Collidable colliding
+ * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
  */
@@ -2794,8 +3285,8 @@ Studio.setSpritePosition = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({'spriteIndex': opts.spriteIndex,
                'dontResetCollisions': samePosition});
-  sprite.x = opts.x;
-  sprite.y = opts.y;
+  sprite.displayX = sprite.x = opts.x;
+  sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -2811,8 +3302,8 @@ Studio.setSpriteXY = function (opts) {
     'spriteIndex': opts.spriteIndex,
     'dontResetCollisions': samePosition
   });
-  sprite.x = x;
-  sprite.y = y;
+  sprite.displayX = sprite.x = x;
+  sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -2820,39 +3311,63 @@ Studio.setSpriteXY = function (opts) {
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
+  var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   switch (opts.dir) {
     case Direction.NORTH:
-      sprite.y -= sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y - distance)) {
+        break;
+      }
+      sprite.y -= distance;
       if (sprite.y < 0 && !level.allowSpritesOutsidePlayspace) {
         sprite.y = 0;
       }
       break;
     case Direction.EAST:
-      sprite.x += sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x + distance, sprite.y)) {
+        break;
+      }
+      sprite.x += distance;
       var rightBoundary = Studio.MAZE_WIDTH - sprite.width;
       if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.x = rightBoundary;
       }
       break;
     case Direction.SOUTH:
-      sprite.y += sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y + distance)) {
+        break;
+      }
+      sprite.y += distance;
       var bottomBoundary = Studio.MAZE_HEIGHT - sprite.height;
       if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.y = bottomBoundary;
       }
       break;
     case Direction.WEST:
-      sprite.x -= sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x - distance, sprite.y)) {
+        break;
+      }
+      sprite.x -= distance;
       if (sprite.x < 0 && !level.allowSpritesOutsidePlayspace) {
         sprite.x = 0;
       }
       break;
+  }
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    Studio.JSInterpreter.yield();
   }
 };
 
 Studio.moveDistance = function (opts) {
   if (!opts.started) {
     opts.started = true;
+    if (level.gridAlignedMovement) {
+      opts.distance =
+        Math.ceil(opts.distance / Studio.SQUARE_SIZE) * Studio.SQUARE_SIZE;
+    }
     opts.queuedDistance = opts.distance;
   }
 
@@ -3019,7 +3534,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":4,"../canvg/StackBlur.js":87,"../canvg/canvg.js":88,"../canvg/rgbcolor.js":89,"../canvg/svg_todataurl":90,"../codegen":92,"../constants":94,"../dom":95,"../dropletUtils":96,"../locale":137,"../skins":252,"../templates/page.html.ejs":278,"../utils":300,"../xml":301,"./api":254,"./bigGameLogic":255,"./blocks":256,"./collidable":257,"./constants":258,"./controls.html.ejs":259,"./dropletConfig":261,"./extraControlRows.html.ejs":262,"./locale":264,"./projectile":266,"./rocketHeightLogic":267,"./samBatLogic":268,"./visualization.html.ejs":271}],271:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../canvg/StackBlur.js":96,"../canvg/canvg.js":97,"../canvg/rgbcolor.js":98,"../canvg/svg_todataurl":99,"../codegen":101,"../constants":103,"../dom":104,"../dropletUtils":105,"../locale":146,"../skins":264,"../templates/page.html.ejs":292,"../utils":314,"../xml":315,"./Item":266,"./api":267,"./bigGameLogic":269,"./blocks":270,"./collidable":271,"./constants":272,"./controls.html.ejs":273,"./dropletConfig":275,"./extraControlRows.html.ejs":276,"./locale":278,"./projectile":280,"./rocketHeightLogic":281,"./samBatLogic":282,"./visualization.html.ejs":285}],285:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3039,7 +3554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":471}],268:[function(require,module,exports){
+},{"ejs":485}],282:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3164,7 +3679,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":92,"../constants":94,"./api":254,"./constants":258,"./customGameLogic":260}],267:[function(require,module,exports){
+},{"../codegen":101,"../constants":103,"./api":267,"./constants":272,"./customGameLogic":274}],281:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3227,7 +3742,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":92,"./api":254,"./constants":258,"./customGameLogic":260}],266:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272,"./customGameLogic":274}],280:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3243,6 +3758,10 @@ DIR_TO_ROTATION[Direction.EAST] = 0;
 DIR_TO_ROTATION[Direction.SOUTH] = 90;
 DIR_TO_ROTATION[Direction.WEST] = 180;
 DIR_TO_ROTATION[Direction.NORTH] = 270;
+DIR_TO_ROTATION[Direction.NORTHEAST] = 45;
+DIR_TO_ROTATION[Direction.SOUTHEAST] = 135;
+DIR_TO_ROTATION[Direction.SOUTHWEST] = 225;
+DIR_TO_ROTATION[Direction.NORTHWEST] = 315;
 
 // Origin of projectile relative to sprite, based on direction
 // (a scale factor to be multiplied by sprite width and height)
@@ -3264,6 +3783,22 @@ OFFSET_FROM_SPRITE[Direction.WEST] = {
   x: 0,
   y: 0.5
 };
+OFFSET_FROM_SPRITE[Direction.NORTHEAST] = {
+  x: 1,
+  y: 0
+};
+OFFSET_FROM_SPRITE[Direction.SOUTHEAST] = {
+  x: 1,
+  y: 1
+};
+OFFSET_FROM_SPRITE[Direction.SOUTHWEST] = {
+  x: 0,
+  y: 1
+};
+OFFSET_FROM_SPRITE[Direction.NORTHWEST] = {
+  x: 0,
+  y: 0
+};
 
 // Origin of projectile, based on direction
 // assumes projectile is always 50x50 in size
@@ -3284,6 +3819,22 @@ OFFSET_CENTER[Direction.SOUTH] = {
 OFFSET_CENTER[Direction.WEST] = {
   x: -25,
   y: 0
+};
+OFFSET_CENTER[Direction.NORTHEAST] = {
+  x: 25,
+  y: -25
+};
+OFFSET_CENTER[Direction.SOUTHEAST] = {
+  x: 25,
+  y: 25
+};
+OFFSET_CENTER[Direction.SOUTHWEST] = {
+  x: -25,
+  y: 25
+};
+OFFSET_CENTER[Direction.NORTHWEST] = {
+  x: -25,
+  y: -25
 };
 
 
@@ -3409,7 +3960,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":257,"./constants":258}],269:[function(require,module,exports){
+},{"./collidable":271,"./constants":272}],283:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3432,6 +3983,7 @@ function loadInfinity(skin, assetUrl) {
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+  skin.itemFrames = 10;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -3450,6 +4002,24 @@ function loadInfinity(skin, assetUrl) {
     'projectile_cherry': 13,
     'projectile_ice': 12,
     'projectile_duck': 12
+  };
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_hiro',
+    'item_anna',
+    'item_elsa',
+    'item_baymax',
+    'item_rapunzel',
+    'item_cherry',
+    'item_ice',
+    'item_duck'
+  ];
+
+  skin.specialItemFrames = {
+    'item_cherry': 13,
+    'item_ice': 12,
+    'item_duck': 12
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -3479,6 +4049,10 @@ function loadInfinity(skin, assetUrl) {
     return className === 'projectile_hiro';
   };
 
+  skin.preventItemLoop = function (className) {
+    return className === 'item_hiro';
+  };
+
   skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
   skin.projectile_anna = skin.assetUrl('projectile_anna.png');
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
@@ -3487,6 +4061,16 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
   skin.projectile_ice = skin.assetUrl('projectile_ice.png');
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
+
+  // TODO: Create actual item choices
+  skin.item_hiro = skin.assetUrl('projectile_hiro.png');
+  skin.item_anna = skin.assetUrl('projectile_anna.png');
+  skin.item_elsa = skin.assetUrl('projectile_elsa.png');
+  skin.item_baymax = skin.assetUrl('projectile_baymax.png');
+  skin.item_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.item_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.item_ice = skin.assetUrl('projectile_ice.png');
+  skin.item_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
     background: skin.assetUrl('background_leafy.jpg')
@@ -3547,11 +4131,24 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileIce(), '"projectile_ice"'],
     [msg.projectileDuck(), '"projectile_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.itemHiro(), '"item_hiro"'],
+    [msg.itemAnna(), '"item_anna"'],
+    [msg.itemElsa(), '"item_elsa"'],
+    [msg.itemBaymax(), '"item_baymax"'],
+    [msg.itemRapunzel(), '"item_rapunzel"'],
+    [msg.itemCherry(), '"item_cherry"'],
+    [msg.itemIce(), '"item_ice"'],
+    [msg.itemDuck(), '"item_duck"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
+  skin.itemFrames = 8;
 
   skin.explosion = skin.assetUrl('explosion.gif');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
@@ -3696,6 +4293,16 @@ function loadStudio(skin, assetUrl) {
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.itemBlueFireball(), '"item_blue_fireball"'],
+    [msg.itemPurpleFireball(), '"item_purple_fireball"'],
+    [msg.itemRedFireball(), '"item_red_fireball"'],
+    [msg.itemYellowHearts(), '"item_yellow_hearts"'],
+    [msg.itemPurpleHearts(), '"item_purple_hearts"'],
+    [msg.itemRedHearts(), '"item_red_hearts"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 
@@ -3712,6 +4319,15 @@ exports.load = function(assetUrl, id) {
     'red_hearts',
     'yellow_hearts',
   ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_blue_fireball',
+    'item_purple_fireball',
+    'item_red_fireball',
+    'item_purple_hearts',
+    'item_red_hearts',
+    'item_yellow_hearts',
+  ];
 
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
@@ -3720,6 +4336,14 @@ exports.load = function(assetUrl, id) {
   skin.blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
+
+  // TODO: proper item class names
+  skin.item_yellow_hearts = skin.assetUrl('yellow_hearts.gif');
+  skin.item_purple_hearts = skin.assetUrl('purple_hearts.gif');
+  skin.item_red_hearts = skin.assetUrl('red_hearts.gif');
+  skin.item_blue_fireball = skin.assetUrl('blue_fireball.png');
+  skin.item_purple_fireball = skin.assetUrl('purple_fireball.png');
+  skin.item_red_fireball = skin.assetUrl('red_fireball.png');
 
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');
@@ -3779,7 +4403,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":252,"./constants":258,"./locale":264}],263:[function(require,module,exports){
+},{"../skins":264,"./constants":272,"./locale":278}],277:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -5121,6 +5745,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
+                        blockOfType('studio_addItems') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -5225,6 +5850,16 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
+  'map': [
+    [0,16, 0, 0, 0,16, 0,32],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
@@ -5279,8 +5914,66 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
+levels.hoc2015_1 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4,16, 0,256,1, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};
 
-},{"../block_utils":62,"../utils":300,"./constants":258,"./locale":264}],262:[function(require,module,exports){
+levels.hoc2015_2 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 0, 0,256,4, 4],
+    [4, 4, 4, 0, 4, 0, 4, 4],
+    [4, 4, 4, 1,16,256,4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};
+
+
+},{"../block_utils":71,"../utils":314,"./constants":272,"./locale":278}],276:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5300,21 +5993,27 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":137,"ejs":471}],261:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],275:[function(require,module,exports){
 var msg = require('./locale');
+var api = require('./apiJavascript.js');
 
 module.exports.blocks = [
-  {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },
-  {'func': 'setBackground', 'category': 'Play Lab', 'params': ["'night'"] },
-  {'func': 'move', 'category': 'Play Lab', 'params': ["0", "1"] },
-  {'func': 'playSound', 'category': 'Play Lab', 'params': ["'slap'"] },
-  {'func': 'changeScore', 'category': 'Play Lab', 'params': ["1"] },
-  {'func': 'setSpritePosition', 'category': 'Play Lab', 'params': ["0", "7"] },
-  {'func': 'setSpriteSpeed', 'category': 'Play Lab', 'params': ["0", "8"] },
-  {'func': 'setSpriteEmotion', 'category': 'Play Lab', 'params': ["0", "1"] },
-  {'func': 'throwProjectile', 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
-  {'func': 'vanish', 'category': 'Play Lab', 'params': ["0"] },
-  {'func': 'onEvent', 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
+  {'func': 'setSprite', 'parent': api, 'category': 'Play Lab', 'params': ["0", "'cat'"] },
+  {'func': 'setBackground', 'parent': api, 'category': 'Play Lab', 'params': ["'night'"] },
+  {'func': 'move', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'moveEast', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveWest', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveNorth', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'moveSouth', 'parent': api, 'category': 'Play Lab', },
+  {'func': 'playSound', 'parent': api, 'category': 'Play Lab', 'params': ["'slap'"] },
+  {'func': 'changeScore', 'parent': api, 'category': 'Play Lab', 'params': ["1"] },
+  {'func': 'setSpritePosition', 'parent': api, 'category': 'Play Lab', 'params': ["0", "7"] },
+  {'func': 'setSpriteSpeed', 'parent': api, 'category': 'Play Lab', 'params': ["0", "8"] },
+  {'func': 'setSpriteEmotion', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'throwProjectile', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
+  {'func': 'vanish', 'parent': api, 'category': 'Play Lab', 'params': ["0"] },
+  {'func': 'addItemsToScene', 'parent': api, 'category': 'Play Lab', 'params': ["'blue_fireball'", "5"] },
+  {'func': 'onEvent', 'parent': api, 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
 ];
 
 module.exports.categories = {
@@ -5325,7 +6024,7 @@ module.exports.categories = {
 };
 
 
-},{"./locale":264}],259:[function(require,module,exports){
+},{"./apiJavascript.js":268,"./locale":278}],273:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5345,114 +6044,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":137,"ejs":471}],257:[function(require,module,exports){
-/**
- * Blockly App: Studio
- *
- * Copyright 2014 Code.org
- *
- */
-
-'use strict';
-
-var studioApp = require('../StudioApp').singleton;
-var Direction = require('./constants').Direction;
-
-//
-// Collidable constructor
-//
-// opts.image (URL)
-// opts.width (pixels)
-// opts.height (pixels)
-// opts.x
-// opts.y
-// opts.dir (direction)
-// opts.speed (speed)
-// opts.frames
-//
-
-var Collidable = function (opts) {
-  for (var prop in opts) {
-    this[prop] = opts[prop];
-  }
-  this.visible = this.visible || true;
-  this.flags = 0;
-  // hash table of other sprites we're currently colliding with
-  this.collidingWith_ = {};
-
-  // default num frames is 1
-  this.frames = this.frames || 1;
-};
-
-module.exports = Collidable;
-
-/**
- * Clear all current collisions
- */
-Collidable.prototype.clearCollisions = function () {
-  this.collidingWith_ = {};
-};
-
-/**
- * Mark that we're colliding with object represented by key
- * @param key A unique key representing the object we're colliding with
- * @returns {boolean} True if collision is started, false if we're already colliding
- */
-Collidable.prototype.startCollision = function (key) {
-  if (this.isCollidingWith(key)) {
-    return false;
-  }
-
-  this.collidingWith_[key] = true;
-  return true;
-};
-
-/**
- * Mark that we're no longer colliding with object represented by key
- * @param key A unique key representing the object we're querying
- */
-Collidable.prototype.endCollision = function (key) {
-  this.collidingWith_[key] = false;
-};
-
-/**
- * Are we colliding with the object represented by key?
- * @param key A unique key representing the object we're querying
- */
-Collidable.prototype.isCollidingWith = function (key) {
-  return this.collidingWith_[key] === true;
-};
-
-Collidable.prototype.bounce = function () {
-  switch (this.dir) {
-    case Direction.NORTH:
-      this.dir = Direction.SOUTH;
-      break;
-    case Direction.WEST:
-      this.dir = Direction.EAST;
-      break;
-    case Direction.SOUTH:
-      this.dir = Direction.NORTH;
-      break;
-    case Direction.EAST:
-      this.dir = Direction.WEST;
-      break;
-  }
-};
-
-/**
- * Assumes x/y are center coords (true for projectiles)
- * outOfBounds() returns true if the object is entirely "off screen"
- */
-Collidable.prototype.outOfBounds = function () {
-  return (this.x < -(this.width / 2)) ||
-         (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
-         (this.y < -(this.height / 2)) ||
-         (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
-};
-
-
-},{"../StudioApp":4,"./constants":258}],256:[function(require,module,exports){
+},{"../locale":146,"ejs":485}],270:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5876,6 +6468,53 @@ exports.install = function(blockly, blockInstallOptions) {
     var spriteParam = getSpriteIndex(this);
     return 'Studio.stop(\'block_id_' + this.id + '\', ' +
         spriteParam + ');\n';
+  };
+
+  blockly.Blocks.studio_addItems = {
+    // Block for adding items to a scene.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.NUMBER), 'NUMBER');
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addItemsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_addItems.NUMBER =
+      [[msg.addItems1(), '1'],
+       [msg.addItems2(), '2'],
+       [msg.addItems3(), '3'],
+       [msg.addItems5(), '5'],
+       [msg.addItems10(), '10'],
+       [msg.addItemsRandom(), 'random']];
+
+  generator.studio_addItems = function() {
+    // Generate JavaScript for adding items to a scene.
+    var allNumbers = this.NUMBER.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var numParam = this.getTitleValue('NUMBER');
+    if (numParam === 'random') {
+      numParam = 'Studio.random([' + allNumbers + '])';
+    }
+    var allValues = skin.itemChoices.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var valParam = this.getTitleValue('VALUE');
+    if (valParam === 'random') {
+      valParam = 'Studio.random([' + allValues + '])';
+    }
+
+    return 'Studio.addItemsToScene(\'block_id_' + this.id +
+        '\', ' +
+        valParam + ', ' +
+        (numParam || '1') + ');\n';
   };
 
   blockly.Blocks.studio_throw = {
@@ -7480,13 +8119,13 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":4,"../codegen":92,"../locale":137,"../sharedFunctionalBlocks":251,"../utils":300,"./constants":258,"./locale":264}],264:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":101,"../locale":146,"../sharedFunctionalBlocks":263,"../utils":314,"./constants":272,"./locale":278}],278:[function(require,module,exports){
 // locale for studio
 
 module.exports = window.blockly.studio_locale;
 
 
-},{}],255:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7720,7 +8359,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":92,"./api":254,"./constants":258,"./customGameLogic":260}],260:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272,"./customGameLogic":274}],274:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7790,24 +8429,142 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":92,"./api":254,"./constants":258}],254:[function(require,module,exports){
+},{"../codegen":101,"./api":267,"./constants":272}],268:[function(require,module,exports){
+// API definitions for functions exposed for JavaScript (droplet/ace) levels:
+
+exports.setBackground = function (value) {
+  Studio.queueCmd(null, 'setBackground', {'value': value});
+};
+
+exports.setSprite = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSprite', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+exports.setSpriteEmotion = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+exports.setSpriteSpeed = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpriteSpeed', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+/*
+exports.setSpriteSize = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpriteSize', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+*/
+
+exports.setSpritePosition = function (spriteIndex, value) {
+  Studio.queueCmd(null, 'setSpritePosition', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+/*
+exports.setSpriteXY = function (spriteIndex, xpos, ypos) {
+  Studio.queueCmd(null, 'setSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'x': xpos,
+    'y': ypos
+  });
+};
+*/
+
+exports.playSound = function(soundName) {
+  Studio.queueCmd(null, 'playSound', {'soundName': soundName});
+};
+
+exports.throwProjectile = function(spriteIndex, dir, className) {
+  Studio.queueCmd(null, 'throwProjectile', {
+    'spriteIndex': spriteIndex,
+    'dir': dir,
+    'className': className
+  });
+};
+
+/*
+exports.makeProjectile = function(className, action) {
+  Studio.queueCmd(null, 'makeProjectile', {
+    'className': className,
+    'action': action
+  });
+};
+*/
+
+exports.move = function(spriteIndex, dir) {
+  Studio.queueCmd(null, 'move', {
+    'spriteIndex': spriteIndex,
+    'dir': dir
+  });
+};
+
+exports.moveEast = function() {
+  Studio.queueCmd(null, 'moveEast');
+};
+
+exports.moveWest = function() {
+  Studio.queueCmd(null, 'moveWest');
+};
+
+exports.moveNorth = function() {
+  Studio.queueCmd(null, 'moveNorth');
+};
+
+exports.moveSouth = function() {
+  Studio.queueCmd(null, 'moveSouth');
+};
+
+exports.changeScore = function(value) {
+  Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
+exports.addItemsToScene = function(className, number) {
+  Studio.queueCmd(null, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
+};
+
+/*
+exports.setScoreText = function(text) {
+  Studio.queueCmd(null, 'setScoreText', {'text': text});
+};
+
+exports.showCoordinates = function() {
+  Studio.queueCmd(null, 'showCoordinates', {});
+};
+*/
+
+exports.vanish = function (spriteIndex) {
+  Studio.queueCmd(null, 'vanish', {spriteIndex: spriteIndex});
+};
+
+exports.onEvent = function (eventName, func) {
+  Studio.queueCmd(null, 'onEvent', {
+    'eventName': eventName,
+    'func': func
+  });
+};
+
+
+},{}],267:[function(require,module,exports){
 var constants = require('./constants');
 
-exports.SpriteSpeed = {
-  VERY_SLOW: 2,
-  SLOW: 3,
-  NORMAL: 5,
-  FAST: 8,
-  VERY_FAST: 12,
-};
-
-exports.SpriteSize = {
-  VERY_SMALL: 0.5,
-  SMALL: 0.75,
-  NORMAL: 1,
-  LARGE: 1.5,
-  VERY_LARGE: 2
-};
+exports.SpriteSpeed = constants.SpriteSpeed;
+exports.SpriteSize = constants.SpriteSize;
 
 var SPEECH_BUBBLE_TIME = 3;
 
@@ -7923,6 +8680,13 @@ exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
+exports.addItemsToScene = function(id, className, number) {
+  Studio.queueCmd(id, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
+};
+
 exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
@@ -7955,8 +8719,264 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":258}],258:[function(require,module,exports){
+},{"./constants":272}],266:[function(require,module,exports){
+var Collidable = require('./collidable');
+var Direction = require('./constants').Direction;
+var constants = require('./constants');
+
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// uniqueId that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * An Item is a type of Collidable.
+ * Note: x/y represent x/y of center in gridspace
+ */
+var Item = function (options) {
+  // call collidable constructor
+  Collidable.apply(this, arguments);
+
+  this.height = options.height || 50;
+  this.width = options.width || 50;
+  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
+
+  this.currentFrame_ = 0;
+  var self = this;
+  this.animator_ = window.setInterval(function () {
+    if (self.loop || self.currentFrame_ + 1 < self.frames) {
+      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    }
+  }, 50);
+};
+
+// inherit from Collidable
+Item.prototype = new Collidable();
+
+module.exports = Item;
+
+/**
+ * Test only function so that we can start our id count over.
+ */
+Item.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/**
+ * Create an image element with a clip path
+ */
+Item.prototype.createElement = function (parentElement) {
+  // create our clipping path/rect
+  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'item_clippath_' + (uniqueId++);
+  this.clipPath.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.width);
+  rect.setAttribute('height', this.height);
+  this.clipPath.appendChild(rect);
+
+  parentElement.appendChild(this.clipPath);
+
+  this.element = document.createElementNS(SVG_NS, 'image');
+  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    this.image);
+  this.element.setAttribute('height', this.height);
+  this.element.setAttribute('width', this.width * this.frames);
+  parentElement.appendChild(this.element);
+
+  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+};
+
+/**
+ * Remove our element/clipPath/animator
+ */
+Item.prototype.removeElement = function () {
+  if (this.element) {
+    this.element.parentNode.removeChild(this.element);
+    this.element = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath) {
+    this.clipPath.parentNode.removeChild(this.clipPath);
+    this.clipPath = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
+};
+
+/**
+ * Display our item at it's current location (currently not supporting rotation)
+ */
+Item.prototype.display = function () {
+  var topLeft = {
+    x: this.x - this.width / 2,
+    y: this.y - this.height / 2
+  };
+
+  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
+  this.element.setAttribute('y', topLeft.y);
+
+  var clipRect = this.clipPath.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
+};
+
+Item.prototype.getNextPosition = function () {
+  var unit = Direction.getUnitVector(this.dir);
+  return {
+    x: this.x + this.speed * unit.x,
+    y: this.y + this.speed * unit.y
+  };
+};
+
+Item.prototype.moveToNextPosition = function () {
+  var next = this.getNextPosition();
+  this.x = next.x;
+  this.y = next.y;
+};
+
+
+},{"./collidable":271,"./constants":272}],271:[function(require,module,exports){
+/**
+ * Blockly App: Studio
+ *
+ * Copyright 2014 Code.org
+ *
+ */
+
 'use strict';
+
+var studioApp = require('../StudioApp').singleton;
+var Direction = require('./constants').Direction;
+
+//
+// Collidable constructor
+//
+// opts.image (URL)
+// opts.width (pixels)
+// opts.height (pixels)
+// opts.x
+// opts.y
+// opts.dir (direction)
+// opts.speed (speed)
+// opts.frames
+//
+
+var Collidable = function (opts) {
+  for (var prop in opts) {
+    this[prop] = opts[prop];
+  }
+  this.visible = this.visible || true;
+  this.flags = 0;
+  // hash table of other sprites we're currently colliding with
+  this.collidingWith_ = {};
+
+  // default num frames is 1
+  this.frames = this.frames || 1;
+};
+
+module.exports = Collidable;
+
+/**
+ * Clear all current collisions
+ */
+Collidable.prototype.clearCollisions = function () {
+  this.collidingWith_ = {};
+};
+
+/**
+ * Mark that we're colliding with object represented by key
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ */
+Collidable.prototype.startCollision = function (key) {
+  if (this.isCollidingWith(key)) {
+    return false;
+  }
+
+  this.collidingWith_[key] = true;
+  return true;
+};
+
+/**
+ * Mark that we're no longer colliding with object represented by key
+ * @param key A unique key representing the object we're querying
+ */
+Collidable.prototype.endCollision = function (key) {
+  this.collidingWith_[key] = false;
+};
+
+/**
+ * Are we colliding with the object represented by key?
+ * @param key A unique key representing the object we're querying
+ */
+Collidable.prototype.isCollidingWith = function (key) {
+  return this.collidingWith_[key] === true;
+};
+
+Collidable.prototype.bounce = function () {
+  switch (this.dir) {
+    case Direction.NORTH:
+      this.dir = Direction.SOUTH;
+      break;
+    case Direction.WEST:
+      this.dir = Direction.EAST;
+      break;
+    case Direction.SOUTH:
+      this.dir = Direction.NORTH;
+      break;
+    case Direction.EAST:
+      this.dir = Direction.WEST;
+      break;
+    case Direction.NORTHEAST:
+      this.dir = Direction.SOUTHWEST;
+      break;
+    case Direction.SOUTHEAST:
+      this.dir = Direction.NORTHWEST;
+      break;
+    case Direction.SOUTHWEST:
+      this.dir = Direction.NORTHEAST;
+      break;
+    case Direction.NORTHWEST:
+      this.dir = Direction.SOUTHEAST;
+      break;
+  }
+};
+
+/**
+ * Assumes x/y are center coords (true for projectiles and items)
+ * outOfBounds() returns true if the object is entirely "off screen"
+ */
+Collidable.prototype.outOfBounds = function () {
+  return (this.x < -(this.width / 2)) ||
+         (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
+         (this.y < -(this.height / 2)) ||
+         (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
+};
+
+
+},{"../StudioApp":5,"./constants":272}],272:[function(require,module,exports){
+'use strict';
+
+exports.SpriteSpeed = {
+  VERY_SLOW: 2,
+  SLOW: 3,
+  NORMAL: 5,
+  FAST: 8,
+  VERY_FAST: 12,
+};
+
+exports.SpriteSize = {
+  VERY_SMALL: 0.5,
+  SMALL: 0.75,
+  NORMAL: 1,
+  LARGE: 1.5,
+  VERY_LARGE: 2
+};
 
 exports.Direction = {
   NONE: 0,
@@ -7973,14 +8993,18 @@ exports.Direction = {
 var Dir = exports.Direction;
 
 /**
- * Given a direction, returns the unit vector for it. Currently only supports
- * cardinal directions.
+ * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
+UNIT_VECTOR[Dir.NONE] =  { x: 0, y: 0};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
 UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
+UNIT_VECTOR[Dir.NORTHEAST] = { x: 1, y:-1};
+UNIT_VECTOR[Dir.SOUTHEAST] = { x: 1, y: 1};
+UNIT_VECTOR[Dir.SOUTHWEST] = { x:-1, y: 1};
+UNIT_VECTOR[Dir.NORTHWEST] = { x:-1, y:-1};
 exports.Direction.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
@@ -8121,11 +9145,39 @@ exports.DEFAULT_SPRITE_SIZE = 1;
  * @enum {number}
  */
 exports.SquareType = {
-  OPEN: 0,
+  OPEN:         0,
   SPRITEFINISH: 1,
-  SPRITESTART: 16
+  NOT_USED_2:   2,
+  WALL:         4,
+  NOT_USED_8:   8,
+  SPRITESTART:  16,
+  ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
+  ITEM_CLASS_1: 64,
+  ITEM_CLASS_2: 128,
+  ITEM_CLASS_3: 256,
+  ITEM_CLASS_4: 512,
+  ITEM_CLASS_5: 1024,
+  ITEM_CLASS_6: 2048,
+  ITEM_CLASS_7: 4096,
 };
 
+exports.SquareItemClassMask =
+  exports.SquareType.ITEM_CLASS_0 |
+  exports.SquareType.ITEM_CLASS_1 |
+  exports.SquareType.ITEM_CLASS_2 |
+  exports.SquareType.ITEM_CLASS_3 |
+  exports.SquareType.ITEM_CLASS_4 |
+  exports.SquareType.ITEM_CLASS_5 |
+  exports.SquareType.ITEM_CLASS_6 |
+  exports.SquareType.ITEM_CLASS_7;
+
+exports.SquareItemClassShift = 5;
+
+exports.squareHasItemClass = function (itemClassIndex, squareValue) {
+  var classesEnabled =
+    (squareValue & exports.SquareItemClassMask) >>> exports.SquareItemClassShift;
+  return Math.pow(2, itemClassIndex) & classesEnabled;
+};
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
@@ -8133,4 +9185,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[265]);
+},{}]},{},[279]);

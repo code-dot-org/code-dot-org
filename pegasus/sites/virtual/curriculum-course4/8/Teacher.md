@@ -42,7 +42,7 @@ We know that loops allow us to do things over and over again, but now we’re go
 
 ## Lesson Objectives 
 ### Students will:
-- Determine starting value, stopping value, and interval of for loop 
+- Determine starting value, stopping value, and interval of "for loop" 
 - Illustrate the counter values hit each time through a for loop during runtime
 
 [/together]
@@ -53,14 +53,14 @@ We know that loops allow us to do things over and over again, but now we’re go
 
 ## Materials, Resources and Prep
 ### For the Student
-- Dice (3 per pair)
+- Dice (3 per pair of students)
 - Pens & Pencils
-- [For Loop Fun Worksheet](Activity10-ForLoopFun.pdf)
+- [For Loop Fun Worksheet](Activity8-ForLoopFun.pdf)
 - [For Loop Fun Assessment](ForLoopAssessment.pdf)
 
 ### For the Teacher
 - This Teacher Lesson Guide
-- One [For Loop Fun Worksheet](Activity10-ForLoopFun.pdf) per group
+- Print one [For Loop Fun Worksheet](Activity8-ForLoopFun.pdf) per group
 - Print one [For Loop Fun Assessment](ForLoopAssessment.pdf) for each student
 
 [/together]
@@ -118,7 +118,7 @@ Here, you can jump right into a sample of the game
 [together]
 
 ## Activities: (20 min)
-### <a name="Activity1"></a> 4) [For Loop Fun](Activity10-ForLoopFun.pdf)
+### <a name="Activity1"></a> 4) [For Loop Fun](Activity8-ForLoopFun.pdf)
 
 Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a “for loop” comes in handy.   When you use a for loop, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.
 

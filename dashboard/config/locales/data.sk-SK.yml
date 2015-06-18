@@ -31,20 +31,20 @@
           desc: Upraviť kód (beta)
           MazeEC: Úroveň 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: odraziť
           Bounce: Úroveň 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: Užívateľom vytvorené puzzle
           Custom: Úroveň 1
         Flappy Levels:
           desc: Flappy Bird
           Flappy: Úroveň 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: Skladačka
           Jigsaw: Úroveň 1
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Bludisko
+          MazeStep: Fáza kroku
         edit-code:
           desc: Upraviť kód (beta)
           MazeEC: Úroveň 1
@@ -52,58 +52,58 @@
           ArtistEC: Úroveň 3
           StudioEC: Úroveň 4
         events:
-          desc: Bounce (beta)
+          desc: odraziť
           Bounce: Úroveň 1
           Studio: Úroveň 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: Užívateľom vytvorené puzzle
           Custom: Úroveň 1
         flappy:
           desc: Flappy Bird
           Flappy: Úroveň 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Skladačka
           Jigsaw: Úroveň 1
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Bludisko
+          MazeStep: Fáza kroku
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: Hláskovanie
           WordSearch: Úroveň 1
     game:
       name:
-        Unplug1: Introduction to Computer Science
-        Maze: The Maze
-        Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
+        Unplug1: Úvod do vedy o počítačoch (informatiky)
+        Maze: Bludisko
+        Multi: Viacnásobný výber
+        Unplug2: Aritmetické myslenie
+        Unplug3: Programovanie na milimetrovom papieri
         Artist: Umelec
         Unplug4: Algoritmy
         Artist2: Umelec 2
         Unplug5: Funkcie
         Farmer: Farmár
-        Unplug6: Conditionals
+        Unplug6: Podmienky
         Artist3: Umelec 3
-        Unplug7: Song Writing
+        Unplug7: Napísanie piesne
         Farmer2: Farmár 2
-        Unplug8: Abstraction
+        Unplug8: Abstrakcia
         Artist4: Umelec 4
-        Unplug9: Relay Programming
+        Unplug9: Štafetové programovanie
         Farmer3: Farmár 3
-        Unplug10: The Internet
+        Unplug10: Internet
         Artist5: Umelec 5
-        Unplug11: Wrap-up
-        MazeEC: The Maze
-        Bounce: Bounce
+        Unplug11: Zhrnutie
+        MazeEC: Bludisko
+        Bounce: Odraziť
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
+        Jigsaw: Skladačka
+        MazeStep: Krokový režim bludiska
+        Wordsearch: Osemsmerovka
+        Webapp: Laboratórium aplikácií
         ArtistEC: Umelec
-        TextMatch: Text Match
+        TextMatch: Priraďovačka textu
         StudioEC: Play Lab
-        Applab: App Lab
+        Applab: Laboratórium aplikácií
         NetSim: Internet Simulator
     trophy:
       name:
@@ -205,16 +205,16 @@
           need 2 more blocks.'
         turtle_4_8: Here's the solution to the previous puzzle. Can you add just 2
           more blocks to complete the drawing?
-        turtle_4_9: Here's the solution to the previous puzzle. How many degrees should
-          you turn to complete the drawing? (You probably need to guess a few times)
+        turtle_4_9: Tu je riešenie na predchádzajúce puzzle. O koľko stupňov sa musíte
+          obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
         turtle_4_10: Here's the solution to the previous puzzle. How many times should
           you repeat to complete the drawing?
         turtle_4_11: Try changing the numbers in the "turn" and "repeat" blocks to
           make different patterns. Or, experiment changing the rest of the code to
           draw anything you want.
-        maze_karel_1_1: Hi, I'm a farmer. I need your help to flatten the field on
-          my farm so it's ready for planting. Move me to the pile of dirt and use
-          the "remove" block to remove it.
+        maze_karel_1_1: Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na
+          mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu
+          hliny a použite blok "odstrániť" na jeho odstránenie.
         maze_karel_1_2: Next, move me to the hole and fill it with TWO shovelfuls
           of dirt, using the "fill" block.
         maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls
@@ -562,16 +562,16 @@
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
+        Unplug2: Aritmetické myslenie
+        Unplug3: Programovanie na milimetrovom papieri
         Unplug4: Algoritmy
         Unplug5: Funkcie
-        Unplug6: Conditionals
+        Unplug6: Podmienky
         Unplug7: Songwriting
-        Unplug8: Abstraction
+        Unplug8: Abstrakcia
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: Wrap-up
+        Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -598,10 +598,10 @@
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Conditionals
+        C2_graph_paper: Programovanie na milimetrovom papieri
+        C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
+        C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
@@ -615,9 +615,9 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: Odraziť
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Computational Thinking
+        C3_computational_thinking: Aritmetické myslenie
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
@@ -632,7 +632,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: Conditionals
+        C4_conditionals: Podmienky
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -656,6 +656,9 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations

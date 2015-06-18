@@ -1,0 +1,21 @@
+name 'OPD-K5 Assessment'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+### PLANNING > Assessing Student Progress
+
+Code Studio and the Teacher Dashboard include tools you can use for assessment throughout your teaching experience. When you click the "Student Accounts and Progress" tile, you'll see a list of all of the sections, or classes, you have created. Below is a video showing how to use this tile for assessment:
+<br><br>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/E9Psq6wBBQA" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+* * *
+
+Use the "Student Accounts and Progress" tile as you teach to assess, track and intervene with students in your classroom.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "بازیگر"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "حمله ی موجودات فضایی!"},
 "backgroundBlack":function(d){return "سیاه"},
 "backgroundCave":function(d){return "غار"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ادامه بده"},
 "decrementPlayerScore":function(d){return "حذف امتیاز"},
 "defaultSayText":function(d){return "ایجا تایپ کن"},
+"dropletBlock_changeScore_description":function(d){return "افزودن یا حذف یک امتیاز به امتیازات .\n"},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "تعیین تصویر پس‌زمینه"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "تعیین احساس بازیگر"},
+"dropletBlock_setSpritePosition_description":function(d){return "بلافاصله بازیگر را به موقعیت مشخص شده حرکت می‌دهد."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "تعیین سرعت یک بازیگر"},
+"dropletBlock_setSprite_description":function(d){return "تعیین تصویر بازیگر"},
+"dropletBlock_throw_description":function(d){return "یک موشک را از عملگر مشخصی پرتاب می کند."},
+"dropletBlock_vanish_description":function(d){return "ناپدید کردن بازیگر."},
 "emotion":function(d){return "حالت"},
 "finalLevel":function(d){return "تبریک! شما پازل نهایی را حل کردید."},
 "for":function(d){return "برای"},
 "hello":function(d){return "سلام"},
 "helloWorld":function(d){return "سلام دنیا!"},
 "incrementPlayerScore":function(d){return "نمره امتیاز"},
+"itemBlueFireball":function(d){return "توپ آتشین آبی"},
+"itemPurpleFireball":function(d){return "توپ آتشین بنفش"},
+"itemRedFireball":function(d){return "توپ آتشین قرمز"},
+"itemYellowHearts":function(d){return "قلب های زرذ"},
+"itemPurpleHearts":function(d){return "قلب های بنفش"},
+"itemRedHearts":function(d){return "قلب های قرمز"},
+"itemRandom":function(d){return "تصادفی"},
+"itemAnna":function(d){return "قلاب"},
+"itemElsa":function(d){return "درخشش"},
+"itemHiro":function(d){return "آدم آهنی کوچولو"},
+"itemBaymax":function(d){return "موشک"},
+"itemRapunzel":function(d){return "ماهی تابه"},
+"itemCherry":function(d){return "گیلاس"},
+"itemIce":function(d){return "یخ"},
+"itemDuck":function(d){return "اردک"},
 "makeProjectileDisappear":function(d){return "ناپدید می شود"},
 "makeProjectileBounce":function(d){return "پریدن"},
 "makeProjectileBlueFireball":function(d){return "توپ آتشین آبی بساز"},

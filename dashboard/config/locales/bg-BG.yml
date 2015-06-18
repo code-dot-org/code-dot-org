@@ -347,7 +347,9 @@
     panel:
       answer_viewer: Преглед на отговора
       student: Ученик
+      viewing_solution: Показване на решението
       try_it_yourself: Опитайте сами
+      section: Раздел
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -370,7 +372,10 @@
     classroom_activity: Ънплъгд дейност
   home:
     title: Студио по кодиране
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} РЕДА КОД, НАПИСАНИ ОТ УЧЕНИЦИТЕ'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Преглед на курсове 1, 2 и 3
     lesson_plans: Учебни планове
     signin_message: Вече сте регистриран? %{link}
@@ -448,6 +453,12 @@
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
   compatability:
+    https:
+      header: Моля, активирате HTTPS за Code.org.
+      message: За да увеличим сигурността, ние превключите на HTTPS  %{https_date}.
+        Вие няма да достъпите до Code.org след тази дата. <a href='%{it_requirements_url}'>
+        Щракнете тук</a>, за да научите как да активирате HTTPS за Code.org.
+      hide_this_warning: Скрий предупреждението
     working:
       header: Ние работим по поддръжката на вашия браузър.
       message: Code.org използва модерни уеб технологии. Това прави сайта по-бърз
@@ -507,14 +518,14 @@
         стъпки.
     flappy:
       title: Flappy код
-      body: Искате ли да напишете своя собствена игра по-малко от 10 минути? Опитайте
+      body: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте
         нашите Flappy код уроци!
     20hour:
       title: Въвеждащ курс
       body: Опитайте нашият 20-часов курс "Въведение в компютърните науки".
     hoc2014:
       try_new_tutorial: Опитайте нашия нов Час на кодирането (бета версия)
-      try_frozen: Рисувай с Анна и Елза, от Frozen
+      try_frozen: Художникът с Анна и Елза от Frozen
     gallery:
       title: Галерия
       body: Разгледай галерията с приложения и артистични изображения, създадени от

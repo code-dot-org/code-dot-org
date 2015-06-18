@@ -297,7 +297,9 @@ ru:
     panel:
       answer_viewer: Просмотр ответов
       student: Ученик
+      viewing_solution: Просмотр решения
       try_it_yourself: Попробуйте сами
+      section: Раздел
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
@@ -318,7 +320,9 @@ ru:
     classroom_activity: Урок без компьютера
   home:
     title: Студия кода
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: 'Уже зарегистрированы? %{link}'
@@ -385,6 +389,10 @@ ru:
     autoplay_option: Автозапуск видео
     download: Скачать видео
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Скрыть это предупреждение
     working:
       header: Мы работаем над поддержкой для Вашего браузера.
       message: "Code.org использует современные Web-технологии. Это делает сайт быстрее в использовании. Ваш браузер не поддерживает все необходимые функции, поэтому могут возникнуть проблемы при использовании этой части сайта. Пожалуйста, помогите нам, <a href='%{report_issue_url}'> сообщая любые проблемы, которые вы обнаружите</a>. Вы также можете <a href='%{supported_browsers_url}'> обновить ваш браузер до поддерживаемой версии</a>."

@@ -5,7 +5,7 @@
   activerecord:
     errors:
       messages:
-        blank: 需要
+        blank: 必填
     attributes:
       user:
         name: 显示名称
@@ -40,7 +40,7 @@
   of: 的
   more: 更多
   less: 更少
-  beta: 试用版
+  beta: 测试版
   try_hoc: 尝试一小时代码，请单击此处 >>
   try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
@@ -64,8 +64,8 @@
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 没收到解锁指令吗？
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} 学生身份已经在登录状态。'
+    teacher_count: '%{count}教师身份已经在登录状态。'
     overview_student: 注册一个帐户来记录你的进度. 您的电子邮件是主要用来让您登录和密码恢复. 欲了解更多信息，请参阅我们的 <a href="http://code.org/privacy">
       隐私政策</a>.
     overview_teacher: 通过注册一个帐号来在你的教室教计算机科学. <p/>你将能够添加你的学生，并跟踪其进度.
@@ -230,7 +230,7 @@
         artist: 绘画一些东西
     user:
       classroom: 教师主页
-      district_dashboard: District Dashboard
+      district_dashboard: 选区的仪表盘
       label: 你好%{username}
       stats: 我的进程
       settings: 我的账户
@@ -240,7 +240,7 @@
       signup: 登陆
       already_registered: 已经注册？
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name}的进度'
       progress: 您的进度
       lines: 代码总行数： %{lines}
       close: 关闭
@@ -309,13 +309,15 @@
     cant_remove_teacher_no_email: 因为您还没有注册的电子邮件地址，%{teacher_name}不能移为你的老师。
     student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: 答案查看器
       student: 学生
-      try_it_yourself: Try it yourself
+      viewing_solution: 查看解决方案
+      try_it_yourself: 自己试一试
+      section: 节点
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
     email_confirm_needed_required: 你的电子邮件地址尚未确认 %{email}：
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_wrong_email: （错误的电子邮件地址？）
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
     current_password_hint: （我们需要您的当前密码以确认您的更改）
@@ -332,8 +334,11 @@
     classroom_activity: 不用电脑的活动
   home:
     title: 代码工作室
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    all_courses: 1、 2 和 3 的课程概要
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} 这行代码由学生编写'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
+    all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
     signin_message: 已经注册了吗？%{link}
     student_reg_link: 学生 注册
@@ -366,7 +371,7 @@
     heading_apps: <h2>为乐趣</h2><h1>每个人</h1>
     heading_legacy: <h2>我们的一般课程</h2><h1>所有年龄</h1>
     your_gallery: 画廊
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: 试试在 Code Studio 参加一个课程
   gender:
     male: 男性
     female: 女性
@@ -399,6 +404,12 @@
     autoplay_option: 自动播放视频
     download: 下载视频
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: 隐藏此警告
     working:
       header: 我们在努力加入对你的浏览器的支持。
       message: Code.org利用现代网络技术. 这使得网站速度更快. 你的浏览器不支持所需的所有功能，使用该网站这一部分时，你可能会遇到问题. 请帮助我们通过<a
@@ -497,8 +508,7 @@
   contract_match:
     wrong_title: 不正确的答案
     badname: 你的合同中含有错误的名称。
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
+    badname_case: 函数的名称是区分大小写的。试着改变一下你的联系人名称。
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
@@ -506,8 +516,8 @@
       in the wrong order.
   text_match:
     placeholder: 在这里输入你的答案
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: 感谢
+    open_response_body: 感谢您的回复！
   dialog:
     ok: 确定
   time:
@@ -558,43 +568,39 @@
     completed_too_many_blocks: 完成，使用太多块
     completed_perfect: 完成了, 完美
     furthest_level_attempted: 尝试过最远的水平
-    assessment: assessment
+    assessment: 评价
   studio:
     courses_working_on: 您正在进行的课程
     completed_courses: 已完成的课程
     all_courses: 所有的课程
   project:
-    projects: Projects
+    projects: 项目
     create: 创建项目
     create_a_project: 创建一个新项目：
-    new: Create New
+    new: 新建
     rename: 重命名
     save: 保存​​
     delete: 刪除
-    exit: Return to Course
-    my_projects: My Projects
+    exit: 返回课程
+    my_projects: 我的项目
     share: 分享
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: 分享您的项目
+    share_copy_link: 复制链接：
+    close: 关闭
     more: 更多
     name: 姓名
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: 最后更新于
+    project_type: 项目类型
+    help_text: 单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 下面去制作一个新的Play Lab或者是艺术家项目<br/>您可以在任何时候回到您的项目工作。
+    need_help: 需要获得帮助以开始吗？
     really_delete: 要删除吗？
     delete_yes: 是
     delete_no: 不
-    saved: Saved
-    not_saved: Not saved
+    saved: 已保存
+    not_saved: 没有保存
     cancel: 取消
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
-    remix: Remix
+    delete_confirm_title: 您确认您要删除此项目吗？
+    delete_confirm_text: 您的项目将从我的项目列表中永久删除。任何人将不再能够通过您已共享的链接查看您的项目。
+    view_all: 查看我的项目
+    remix: 混合
     click_to_remix: Click 'Remix' to spin-off your own version!

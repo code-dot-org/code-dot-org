@@ -7,8 +7,8 @@ question 'Select two (2) of programming categories below that are the best fit f
 right ‘Remember things during play’
 right ‘Make decisions’
 right ‘Make calculations’
-wrong ‘track of time’
-right ‘store information permanently’
+wrong ‘Keep track of time’
+right ‘Store information permanently’
 
 markdown <<MARKDOWN
 ### Desired program behavior

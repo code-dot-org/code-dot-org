@@ -35,8 +35,7 @@
     "definition_collapse": "false",
     "timeout_failure_tick": "150",
     "timeout_after_when_run": "false"
-  },
-  "md5": "87d974014e4fefd29b577cacc8bc0611"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

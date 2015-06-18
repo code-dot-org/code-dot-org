@@ -4,6 +4,7 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var OptionsSelectRow = require('./OptionsSelectRow.jsx');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 
 var elementUtils = require('./elementUtils');
@@ -19,15 +20,12 @@ var DropdownProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <OptionsSelectRow
           desc={'options'}
           element={element}
@@ -52,6 +50,14 @@ var DropdownProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')} />
+        <ColorPickerPropertyRow
+          desc={'text color'}
+          initialValue={elementUtils.rgb2hex(element.style.color)}
+          handleChange={this.props.handleChange.bind(this, 'textColor')} />
+        <ColorPickerPropertyRow
+          desc={'background color'}
+          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <PropertyRow
           desc={'font size (px)'}
           isNumber={true}
@@ -64,13 +70,12 @@ var DropdownProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
 
     // TODO:
     // bold/italics/underline (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
   }
 });
 
@@ -82,6 +87,17 @@ module.exports = {
     element.style.width = '100px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
+    element.style.margin = '0';
+    element.style.color = '#fff';
+    element.style.backgroundColor = '#1abc9c';
+
+    var option1 = document.createElement('option');
+    option1.innerHTML = 'Option 1';
+    element.appendChild(option1);
+
+    var option2 = document.createElement('option');
+    option2.innerHTML = 'Option 2';
+    element.appendChild(option2);
 
     return element;
   }

@@ -443,6 +443,9 @@ lt:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'
@@ -473,7 +476,7 @@ lt:
         studio_say_text: Įvesk, ką tavo veikėjas turės pasakyti
         jigsaw_click: Nuspausk ant šio blokelio!
         move_elsa_forward: 'Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičių, esantį šalia laipsnių, galima pakeisti
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: Naudok kartojimo blokelį – į jį reikia įdėti kitus blokelius

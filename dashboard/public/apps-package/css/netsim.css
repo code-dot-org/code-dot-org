@@ -1,5 +1,8 @@
-#prompt-table {
+.hidden {
   display: none; }
+
+#netsim #prompt-table td {
+  border: none; }
 
 .clearfix {
   clear: both; }
@@ -10,6 +13,23 @@
   bottom: 0;
   left: 0;
   right: 0; }
+  #netsim #router-log-modal {
+    display: none;
+    width: 90%;
+    margin-left: -45%; }
+    #netsim #router-log-modal .modal-body {
+      max-height: 450px;
+      overflow-y: auto; }
+    #netsim #router-log-modal th {
+      cursor: pointer; }
+    #netsim #router-log-modal td {
+      font-family: monospace;
+      white-space: pre-wrap;
+      -moz-user-select: text;
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      -khtml-user-select: text;
+      user-select: text; }
   #netsim #netsim-disconnected {
     display: block;
     position: relative;
@@ -138,6 +158,11 @@
       fill: #a69bc1; }
     #netsim #netsim-visualization svg .router-node rect {
       stroke: #a69bc1; }
+    #netsim #netsim-visualization svg .auto-dns-node circle {
+      stroke: #ffdb74;
+      fill: #ffdb74; }
+    #netsim #netsim-visualization svg .auto-dns-node rect {
+      stroke: #ffdb74; }
     #netsim #netsim-visualization svg .viz-wire {
       stroke: #5b6770;
       stroke-width: 2;

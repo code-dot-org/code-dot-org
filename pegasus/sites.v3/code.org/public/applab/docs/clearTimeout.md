@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -47,7 +48,7 @@ ____________________________________________________
 
 [example]
 
-We can also use `clearTimeout` with this turtle example from the [setTimeout](http://staging.code.org/applab/docs1/setTimeout) page. Note how the turtle only moves once, instead of twice when the timeout is not cancelled.
+We can also use `clearTimeout` with this turtle example from the [setTimeout](http://staging.code.org/applab/docs/setTimeout) page. Note how the turtle only moves once, instead of twice when the timeout is not cancelled.
 <pre>
 show(); //Display the turtle
 moveForward(50); //Move the turtle 50 pixels
@@ -137,3 +138,5 @@ No return value.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -666,6 +666,9 @@
         csp_pixelation_bw: نرم افزار پیکسل کردن سیاه و سفید
         csp_U1L14_tipstricks: توصیه ها و ترفند های معلم واحد 1 درس 14
         csp_textcompression: نرم افزار فشرده سازی متن
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS در جبر - مقدمه
         alg_2_eval_block: CS در جبر - بلوک های ارزیابی
         alg_3_pemdas: CS در جبر - ترتیب عملیات
@@ -759,7 +762,7 @@
         place_counter_variable: Drag your counter variable inside this block
         function_editor_draw_square: This is your function definition. These blocks
           run everytime you use the "draw a square" block
-        change_here: Make your change here
+        change_here: تغییرات خود را اینجا انجام دهید
         write_draw_square_function: Drag blocks from the toolbox into here that draw
           a square
         write_draw_triangle_function: Drag blocks from the toolbox into here that

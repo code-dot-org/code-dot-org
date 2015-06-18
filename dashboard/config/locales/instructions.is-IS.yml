@@ -1,8 +1,6 @@
 "is":
   data:
     instructions:
-      2-3 _instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að
-        safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3 Artist 1 new_instruction: Hæ ég er listamaður. Þú getur skrifað kóða til
         að láta mig teikna næstum hvað sem er. Notaðu nokkra kubba til að láta mig
         teikna yfir gráu strikin í myndinni. (Hver lína er 100 díla löng.)
@@ -260,8 +258,8 @@
         úr blómunum á þessu túni.
       2-3 Bee Loops 13_instruction: 'Mat: Notaðu "endurtaka" kubbinn til að safna
         öllum blómasafanum.'
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? \n"
+      2-3 Bee Loops 1A_instruction: 'Hæ, ég er býfluga. Getur þú hjálpað mér að safna
+        blómasafanum úr þessum blómum? '
       2-3 Bee Loops 2_instruction: Notaðu lykkju til að safna blómasafanum og búa
         til hunangið.
       2-3 Bee Loops 2A_instruction: Er auðveldara að leysa þetta sama verkefni með
@@ -269,14 +267,12 @@
       2-3 Bee Loops 3_instruction: Safnaðu blómasafa úr hverju blómi og búðu til hunang
         í hverju búi.
       2-3 Bee Loops 3A_instruction: Getur þú notað lykkju til að safna öllum blómasafanum?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
+      2-3 Bee Loops 3B_instruction: Notaðu nú nýja endurtaka kubbinn til að safna
+        öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Loops 4_instruction: Notaðu svipaða lykkju og í síðustu þraut, en bættu
         við snúningi.
-      2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
+      2-3 Bee Loops 4A_instruction: Hvað gerist ef þú endurtekur þessa runu 3 sinnum
+        í lykkju? Ekki gleyma að búa til hunangið í lokin!
       2-3 Bee Loops 5_instruction: Notaðu lykkju til að fara niður tröppurnar og safna
         blómasafanum.
       2-3 Bee Loops 6_instruction: Notaðu lykkju til að safna blómasafa úr hverju
@@ -341,8 +337,9 @@
       2-3 Maze Loops 21_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops Assessment 1_instruction: 'Mat: Komdu mér til sólblómsins með
         aðeins 5 kubbum! '
-      2-3 Maze sq1 _instruction: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að
-        finna það!
+      2-3 Maze sq1_instruction: |
+        This pig is ruffling my feathers.  Help me find
+        him!
       2-3 Maze sq10_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 Maze sq10v2_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 maze sq11_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
@@ -369,6 +366,9 @@
       2-3 Maze sq8_instruction: Komdu mér til svínsins! (Hvar er nú þessi "endurtaka"
         kubbur?)
       2-3 Maze sq9_instruction: Notaðu lykkjur til að ná svínka með færri kubbum.
+      2-3_instruction: |
+        Purple flowers may have either 1 or 0 nectar. Be careful
+        not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Láttu fuglinn ná óþæga svíninu með því að færa hann áfram
       4-5 Artist 1_instruction: 'Hjálpaðu mér að ljúka teikningunni. (Hver lína er
         300 díla löng) '
@@ -661,61 +661,48 @@
         "ef-annars" kubb til að koma mér til sólblómsins með sem fæstum kubbum.
       4-5 Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa þríhyrninga.
         Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu snúningi.'
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
+      4-5 Nested Loops 10_instruction: Teiknaðu síðustu röðina af stjörnum á flaggið
+        með því að hafa gefnu kubbana í lykkju. Það eru 50 dílar á milli stjarna,
+        en þær eru sjálfar 30 dílar á breidd.
+      4-5 Nested Loops 11_instruction: Getur þú teiknað þessar 10 gangstéttarhellur
+        með faldaðri lykkju? Hver ferningur er 30 dílar.
       4-5 Nested Loops 12_instruction: Getur þú teiknað þessa 36 þríhyrninga með faldaðri
         lykkju?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
-        loop. This is called a nested loop.\r\n"
+      4-5 Nested Loops 2_instruction: 'Faldaðu nú þessa lykkju innan í annari lykkju
+        til að teikna 10 þríhyrninga. Þetta er kallað földuð lykkja. Vísbending: Saman
+        mynda þessir 10 þríhyrningar 360 gráðu snúning.'
+      4-5 Nested Loops 3_instruction: "Búðu til sólina með því að falda byrjunarkóðann
+        í annarri lykkju. Þetta er kallað földuð lykkja.\r"
       4-5 Nested Loops 5_instruction: Settu gefna kóðann í lykkju til að búa til vindmyllu.
       4-5 Nested Loops 6_instruction: Getur þú teiknað sexhyrning með því að setja
         þríhyrningskóðann í lykkju?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 7_instruction: 'Endurtaktu þetta 10 sinnum í lykkju. Hvað þarf
+        að snúa mikið í hverri umferð? (Vísbending: Hvað er 360 deilt með 10?)'
+      4-5 Nested Loops 8_instruction: 'Endurtaktu þetta 6 sinnum í lykkju. Hvað þarf
+        að snúa mikið í hverri umferð? (Vísbending: Hvað er 360 deilt með 6?)'''
       4-5 Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       4-5 Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að ljúka
         teikningunni.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 While Loops 1_instruction: Færðu mig að holunni og notaðu "fylla" kubbinn
+        til að fylla hana með tveimur skóflufyllum af mold.
+      4-5 While Loops 2_instruction: Færðu mig að moldarhaugnum og notaðu "fjarlægja"
+        kubbinn til að fjarlægja hann með 5 skóflustungum.
+      4-5 While Loops 3_instruction: 'Færðu mig að haugnum og fjarlægðu hann allan.
+        Farðu svo að holunni og fylltu hana. Vísbending: Notaðu sem fæsta kubba.'
+      4-5 While Loops 4_instruction: 'Vá, ég fann mjög djúpa holu! Ég veit ekki hve
+        mörg skóflufylli af mold þarf. Getur þú skrifað forrit sem fyllir hana sléttfulla?
+        Vísbending: Prófaðu að nota "meðan" lykkju í þetta sinn.'
+      4-5 While Loops 5_instruction: Vá, nú eru tvær djúpar holur! Getur þú skrifað
+        forrit sem sléttfyllir þær báðar?
+      4-5 While Loops 6_instruction: Vá, hér er stór haugur af mold. Getur þú skrifað
+        forrit til að fjarlægja hann alveg?
+      4-5 While Loops 7_instruction: Nú eru þrír haugar af mold! Getur þú skrifað
+        forrit til að fjarlægja þá alveg?
+      4-5 While Loops 8_instruction: 'Hér er mjög djúp hola og mjög stór moldarhaugur.
+        Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið? Vísbending:
+        Notaðu "meðan" lykkju fyrir bæði.'
+      4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar.
+        Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
       Artist - Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa
         þríhyrninga. Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu
         snúningi.'
@@ -811,11 +798,8 @@
         á milli miðjuhnita leikmanns (px, py) og miðjuhnita annarrar leikveru (cx,
         cy). Þú færð tilbúið fall fyrir lengd línu til að hjálpa þér.
       Big Game Collision 4_instruction: |
-        The 'distance' function returns the distance
-        between two sprites. Complete the 'collide?' function so that it returns
-        true if the distance between two points is less than 100 pixels apart. If
-        you're successful, your sprites will instantly collide - why do you think
-        that is?
+        Complete the collide? function so that it
+        returns true if the distance between two points is less than 100 pixels apart.
       Big Game Complete (copy 1)_instruction: Sýnishorn af verkefninu Stórleikur í
         Tölvunarfræði í algebru
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði
@@ -1128,9 +1112,6 @@
         notað teljarann til að stytta hliðarnar eftir því sem þeim fjölgar? Jú með
         því að deila með honum. Í stað þess að færa áfram um fasta stærð skulum við
         nú færa áfram um (100 / teljari) díla.
-      Course 4 Artist For Loops 14 _instruction: Ef þú snýrð aðeins meira eða minna
-        en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega
-        á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
       Course 4 Artist For Loops 14_instruction: Ef þú snýrð aðeins meira eða minna
         en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega
         á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
@@ -1291,8 +1272,8 @@
       Course 4 Bee 1_instruction: 'Býflugan veit ekki hvort þetta er blóm eða býflugnabú.
         Athugaðu fyrst hvort það er blóm eða bú, og safnaðu blómasafa aðeins ef það
         er blóm. '
-      Course 4 Bee 2_instruction: Athugaðu hlutina til að gá hvort þeir eru blóm -
-        ef svo er, áttu að safna blómasafa.
+      Course 4 Bee 2_instruction: Athugaðu hvern hlut. Ef hann er blóm, á að safna
+        blómasafa, annars ekki!
       Course 4 Bee 3_instruction: Þetta óþekkta er annað hvort blóm eða býflugnabú.
         Notaðu "ef-annars" kubbinn til að safna blómasafa ef það er blóm, annars búa
         til hunang (því þá er það bú).
@@ -1651,8 +1632,8 @@
         og skilar þeim skeyttum saman. Settu strenginn "Universe" í seinni stika fallsins.
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
-        use is an Image. This "star" function takes in a Number and two Strings,
-        and it evaluates to an Image. Use this function to make a solid red star with
+        use is an Image. This star function takes in a Number and two Strings, and
+        it evaluates to an Image. Use this function to make a solid red star with
         radius of 100.
       Eval Strings Images 2_instruction: 'Frjáls æfing: Hver matskubbur hefur litamerkingu,
         sem sýnir hvaða tegund gagna hann skilar og hvaða gagnategundir á að setja
@@ -1670,7 +1651,7 @@
       Eval Strings Images 6_instruction: Notaðu yfirlagnarfallið til að leggja gula
         stjörnu með 75 díla geisla yfir 150 díla langan bláan ferning.
       Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
+        The offset block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
         square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: Hér er önnur tegund af stjörnukubb, sem nefnist
@@ -1726,6 +1707,12 @@
       frozen square snowflake_instruction: Getur þú búið til snjókorn með því að nota
         "endurtaka" kubbinn til að búa til ferning 10 sinnum og "snúa" kubbinn til
         að snúa um 36 gráður eftir hvern ferning?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: Getur þú látið Elsu ("leikmann 2") ná Önnu með því
         að nota örvarlyklana?
       Infinity_finale_instruction: Búðu til hvað sem þú vilt og deildu því!
@@ -1910,10 +1897,10 @@
         til svínsins!'
       K-1 Maze Multi 14_instruction: Matsáfangi
       K-1 Maze Multi 15_instruction: Matsáfangi
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: "Þetta er próf!\r\nFærðu mig í eina
+        átt, svo í aðra, til að koma mér að svíninu"
+      K-1 Maze Sequence Assessment 2_instruction: "Þetta er próf!\r\nFarðu í eina
+        átt, svo í aðra, til að koma mér að svíninu."
       Luigi's Pizza 1_instruction: Velkomin á pítsustað Luigi! Pantaðu pítsu með því
         að skrifa heiti áleggs í fallið "verð" og það gefur þér verðið. Prófaðu að
         panta pepperóní (pepperoni) til að byrja með.
@@ -2013,9 +2000,8 @@
         við kótun gagna.'
       NetSim_Variant3_instruction: 'NetSim: Tilbrigði 3: Tengir hópa 2-6 nemenda við
         beini (router) og kannar notkun beinunar og DNS'
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
+      New Artist Project_instruction: Teiknaðu eitthvað flott! Kóðinn þinn er vistaður
+        sem verkefni, sem þú getur haldið áfram með hvenær sem er.
       NEW Course 4 Artist Functions 1_instruction: Getur þú teiknað ferning með lengdina
         100 með því að nota lykkju?
       NEW Course 4 Artist Functions 10_instruction: Smelltu á "breyta" til að vinna
@@ -2072,8 +2058,6 @@
         stikann "lengd" inn í skilgreiningu fallsins. '
       NEW Course 4 Artist Params 15_instruction: 'Frjáls æfing: Hér eru föllin sem
         þú hefur skrifað og nokkur í viðbót til að leika með. Teiknaðu eitthvað hrífandi!'
-      NEW Course 4 Artist Params 2 _instruction: Búðu til frá grunni fall sem teiknar
-        þríhyrning með 50 díla hliðar
       NEW Course 4 Artist Params 2_instruction: Búðu til frá grunni fall sem teiknar
         þríhyrning með 50 díla hliðar
       NEW Course 4 Artist Params 3_instruction: "Nú skulum við nota fallið til að
@@ -2160,6 +2144,10 @@
       Ninjacat Demo B_instruction: Við skulum byrja á að skoða einfaldan tölvuleik
         og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að
         færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann!
+        Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"
+      Ninjacat Demo No Animate_instruction: Við skulum byrja á að skoða einfaldan
+        tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana
+        til að færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann!
         Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"
       PDK5 Conditionals 1_instruction: Fjólublá blóm geta haft annað hvort 1 eða 0
         af blómasafa, en þú veist ekki hvort! Gættu þess að safna ekki blómasafa ef
@@ -2348,9 +2336,27 @@
       Text Compression Peter Piper_instruction: Þessu ljóði hefur verið þjappað með
         því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur
         þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
-      U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
+      U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
+        you to use Internet Simulator to relay a message. See the worksheet\nfor more
+        detailed instructions.  \n"
+      U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -2359,13 +2365,14 @@
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame
-        you just played in person, but this time using the Internet Simulator.\nJoin
-        a room to be connected to your group, and then follow the instructions\non
-        the worksheet handed out by your teacher.\r\n"
-      U2L3 NetSim Hub Mode_instruction: "With your group, invent a standard addressing\nscheme
-        for the \"Game of Messages\" game, and try it out using the Internet\nSimulator.
-        \n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship
+        moves. For setup, join a Room with your group, and add ships to\nyour paper
+        board for each opponent. When playing, all communication must be\ndone through
+        the tool, so no talking, but have fun!\r\n"
+      U2L3 NetSim Hub Mode_instruction: |
+        Use the Internet Simulator to test out your
+        group's binary communication protocol for battleship. How short can you make
+        the message and response?
       U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter
         with the others in your group. Important note: The router will only\nproperly
         route messages where the first 4 bits are the To: address and the\nsecond

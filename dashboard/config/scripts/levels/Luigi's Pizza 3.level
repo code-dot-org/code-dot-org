@@ -23,10 +23,11 @@
     "coordinate_grid_background": "false",
     "project_template_level_name": "Luigi's Pizza",
     "callout_json": "[]",
-    "instructions": "That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the \"else\" clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.",
-    "min_workspace_height": "2000"
-  },
-  "md5": "a613052fd4fa802c76d2133ae7d2ec19"
+    "instructions": "That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the else clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.",
+    "min_workspace_height": "2000",
+    "markdown_instructions": "That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the _else_ clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.",
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

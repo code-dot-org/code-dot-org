@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: Bludisko
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -48,7 +48,7 @@
           description_audience: Ages 4+ (pre-readers)
           description_short: Course 1 is designed for early readers.
         course2:
-          The Maze: The Maze
+          The Maze: Bludisko
           Suzi: Suzi
           The Artist: Umelec
           Artist Debugging: Artist Debugging
@@ -64,11 +64,11 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Programovanie na milimetrovom papieri
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Conditionals
+          Conditionals: Podmienky
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -90,7 +90,7 @@
           description_audience: Ages  6+ (reading required)
           description_short: Course 2 is designed for students who can read.
         course3:
-          The Maze: The Maze
+          The Maze: Bludisko
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: Umelec
           title: Course 3
@@ -106,7 +106,7 @@
           Bounce: skok
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
+          Computational Thinking: Aritmetické myslenie
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -147,7 +147,7 @@
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Programovanie na milimetrovom papieri
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
@@ -312,7 +312,7 @@
           Defining Functions: Defining Functions
           Design Recipe: Design Recipe
           Booleans: Booleans
-          Conditionals: Conditionals
+          Conditionals: Podmienky
           Free Play: Free Play
         algebra:
           title: Computer Science in Algebra
@@ -337,7 +337,7 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
+          'Eval: Conditionals': Podmienky
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
@@ -405,37 +405,38 @@
           description: Tento 20-hodinový kurz predstavuje základ informatiky a programovania.
             Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví
             študentov všetkých vekových kategórií.
-          Introduction to Computer Science: Introduction to Computer Science
-          The Maze: The Maze
-          Computational Thinking: Computational Thinking
-          Graph Paper Programming: Graph Paper Programming
+          Introduction to Computer Science: Úvod do vedy o počítačoch (informatiky)
+          The Maze: Bludisko
+          Computational Thinking: Aritmetické myslenie
+          Graph Paper Programming: Programovanie na milimetrovom papieri
           The Artist: Umelec
           Algorithms: Algoritmy
           The Artist 2: Umelec 2
           Functions: Funkcie
           The Farmer: Farmár
-          Conditionals: Conditionals
+          Conditionals: Podmienky
           The Artist 3: Umelec 3
-          Song Writing: Song Writing
+          Song Writing: Napísanie piesne
           The Farmer 2: Farmár 2
-          Abstraction: Abstraction
+          Abstraction: Abstrakcia
           The Artist 4: Umelec 4
-          Relay Programming: Relay Programming
+          Relay Programming: Štafetové programovanie
           The Farmer 3: Farmár 3
-          The Internet: The Internet
+          The Internet: Internet
           The Artist 5: Umelec 5
-          Wrap-up: Wrap-up
+          Wrap-up: Zhrnutie
         edit-code:
           title: Upraviť kód
           description: ''
-          The Maze: The Maze
+          The Maze: Bludisko
           Applab: Applab
           The Artist: Umelec
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Udalosti
           description: ''
-          Bounce: Bounce
+          Bounce: Odraziť
           Studio: Studio
           Calc: Calc
           Eval: Eval
@@ -445,9 +446,9 @@
             Flappy Code tutorial!
           Flappy Code: Flappy Code
         jigsaw:
-          title: Jigsaw
+          title: Skladačka
           description: ''
-          Jigsaw: Jigsaw
+          Jigsaw: Skladačka
         step:
           title: Krok
           description: ''
@@ -535,6 +536,7 @@
             Information'
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -702,6 +704,9 @@
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -843,7 +848,7 @@
           Testing: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: The Internet
+          description_short: Internet
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -862,6 +867,26 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -880,15 +905,16 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Free Play
         allthethings:
-          Jigsaw: Jigsaw
+          Jigsaw: Skladačka
           Maze: Maze
           Artist: Artist
           Bee: Bee
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: Bounce
+          Bounce: Odraziť
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -903,6 +929,7 @@
           Odometer: Odometer
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -920,3 +947,73 @@
           Next Steps: Next Steps
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: Laboratórium aplikácií
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: Laboratórium aplikácií
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Introduction to PD: Introduction to PD
+          K-5 Courses: K-5 Courses
+          Writing computer programs: Writing computer programs
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          'Programming Concept: Events': 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Next Steps
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Hodina kódovania

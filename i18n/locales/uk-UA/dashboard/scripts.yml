@@ -18,9 +18,9 @@ uk:
           Artists 2: Художники 2
           Spelling Bee: Грамотна Бджілка
           Spelling Bee not blockly: Грамотна Бджілка без блоків
-          "Bee 1: Intro": 'Бджола 1: вступ'
+          "Bee 1: Intro": 'Бджілка 1: вступ'
           "Maze 2: Loops": 'Лабіринт 2: цикли'
-          "Bee 2: Loops": 'Бджола 2: цикли'
+          "Bee 2: Loops": 'Бджілка 2: цикли'
           Multi & Match: Множинний вибір та відповідність
           K-1 Flappy: Kлас 1. Пурх
           Flappy non blockly: Пурх без блоків
@@ -34,11 +34,11 @@ uk:
           The Big Event: Велика подія
           Going Places Safely: Безпечне добирання
           description: "Курс 1 розроблений для того, щоб учні, котрі лише вчаться читати, могли створювати комп'ютерні програми, які навчать співпрацювати з іншими, розвивати навички розв'язування задач та наполегливість у пошуку рішень. До кінця цього курсу учні навчаться створювати власну гру або історію, якою зможуть поділитися з іншими. Рекомендується для 1 класу."
-          "Bee: Sequence": 'Бджола: послідовність'
+          "Bee: Sequence": 'Бджілка: послідовність'
           "Artist: Sequence": 'Художник: послідовність'
           "Artist: Shapes": 'Художник: фігури'
           "Maze: Loops": 'Лабіринт: цикли'
-          "Bee: Loops": 'Бджола: цикли'
+          "Bee: Loops": 'Бджілка: цикли'
           "Studio: Create a Story": 'Ігрова студія: Створення історії'
           "Artist: Loops": 'Художник: цикли'
           description_audience: Вік 4 + (не вміють читати)
@@ -51,14 +51,14 @@ uk:
           Bounce: Арканоід
           "Studio: Create a Story": 'Ігрова студія: Створення історії'
           Artist Loops: 'Художник - цикли'
-          Bee Conditionals: 'Бджола - умови'
+          Bee Conditionals: 'Бджілка - умови'
           Flappy: Пурх
           title: Курс 2
-          Bee Loops: 'Бджола: цикли'
+          Bee Loops: 'Бджілка: цикли'
           Artist Functions: 'Художник - функції'
           The Artist Debugging: 'Художник - відлагодження'
-          Bee Debugging: 'Бджола - відлагодження'
-          Bee Functions: 'Бджола - функції'
+          Bee Debugging: 'Бджілка - відлагодження'
+          Bee Functions: 'Бджілка - функції'
           Maze Loops: 'Лабіринт: цикли'
           Graph Paper Programming: Програмування по клітинках
           "Real-life Algorithms: Paper Planes": 'Життєві алгоритми: Паперові літачки'
@@ -73,10 +73,10 @@ uk:
           "Artist: Sequence": 'Художник: послідовність'
           "Maze: Loops": 'Лабіринт: цикли'
           "Artist: Loops": 'Художник: цикли'
-          "Bee: Loops": 'Бджола: цикли'
-          "Bee: Debugging": 'Бджола - відлагодження'
+          "Bee: Loops": 'Бджілка: цикли'
+          "Bee: Debugging": 'Бджілка - відлагодження'
           "Artist: Debugging": 'Художник: відлагодження'
-          "Bee: Conditionals": 'Бджола - умови'
+          "Bee: Conditionals": 'Бджілка - умови'
           "Artist: Sequence2": 'Художник: послідовність 2'
           "Maze: Sequence2": 'Лабіринт: послідовність 2'
           "Artist: Nested Loops": 'Художник - вкладені цикли'
@@ -91,7 +91,7 @@ uk:
           Artist For Loops: 'Художник - цикли For'
           Artist Nested Loops: 'Художник - вкладені цикли'
           Bee Conditionals: 'Бджола - умови'
-          Bee Nested Loops: 'Бджола - вкладені цикли'
+          Bee Nested Loops: 'Бджілка - вкладені цикли'
           Bee Debuggin: 'Бджола - відлагодження'
           Bee Debugging: 'Бджола - відлагодження'
           Bee Functions: 'Бджола - функції'
@@ -112,23 +112,23 @@ uk:
           Maze: Лабіринт
           Artist: Художник
           "Artist: Functions": 'Художник - функції'
-          "Bee: Functions": 'Бджола - функції'
+          "Bee: Functions": 'Бджілка - функції'
           "Bee: Conditionals": 'Бджола: умови'
           "Maze: Conditionals": 'Лабіринт - умови'
           "Artist: Nested Loops": 'Художник - вкладені цикли'
           "Farmer: While Loops": 'Фермерка - цикли "поки"'
-          "Bee: Nested Loops": 'Бджола - вкладені цикли'
+          "Bee: Nested Loops": 'Бджілка - вкладені цикли'
           "Bee: Debugging": 'Бджола: відлагодження'
           Maze2: Лабіринт 2
           Artist2: Художник 2
           "Artist: Functions2": 'Художник - функції'
-          "Bee: Functions2": 'Бджола - функції 2'
-          "Bee: Conditionals2": 'Бджола - умови 2'
+          "Bee: Functions2": 'Бджілка - функції 2'
+          "Bee: Conditionals2": 'Бджілка - умови 2'
           "Maze: Conditionals2": 'Лабіринт - умови 2'
           "Artist: Nested Loops2": 'Художник - вкладені цикли 2'
           "Farmer: While Loops2": 'Фермерка - цикли "поки" 2'
-          "Bee: Nested Loops2": 'Бджола - вкладені цикли 2'
-          "Bee: Debugging2": 'Бджола - відлагодження 2'
+          "Bee: Nested Loops2": 'Бджілка - вкладені цикли 2'
+          "Bee: Debugging2": 'Бджілка - відлагодження 2'
           "Artist: Patterns": 'Художник: візерунки'
           Songwriting: Написання пісень
           description_audience: Вік 8 + (після курсу 2)
@@ -211,29 +211,29 @@ uk:
           description_short: Учні, котрі приступають до Курсу 4, повинні попередньо пройти Курси 2 та 3.
           description: Курс 4 розроблено для учнів, котрі опанували Курси 2 та 3. Учні глибше розглянуть деякі розділи програмування, з якими ознайомились раніше, розроблятимуть гнучкіші рішення складніших задач. Протягом навчання учні створюватимуть інтерактивні ігри чи історії, якими зможуть поділитися з іншими. Рекомендується для 4-8 класу.
           "Artist: Variables": 'Художник: змінні'
-          "Bee: For Loops": 'Бджола - цикли з параметром'
+          "Bee: For Loops": 'Бджілка - цикли з параметром'
           title: Курс 4
           "Algorithms: Tangrams": 'Алгоритми: Танграми'
           Variables: Змінні
           "Play Lab: Variables": 'Ігрова лабораторія: змінні'
           "Play Lab: Functions with Parameters": 'Ігрова лабораторія: Функції з параметрами'
-          "Bee: Functions with Parameters": 'Бджола: Функції з параметрами'
+          "Bee: Functions with Parameters": 'Бджілка: Функції з параметрами'
           "Artist: For Loops": 'Художник - цикли з параметром'
           "Play Lab: For Loops": 'Ігрова лабораторія - цикли з параметром'
           "Artist: Functions": 'Художник - функції'
           "Artist: Functions with Paraqmeters": 'Художник - функції з параметрами'
           "Unplugged: Tangrams": 'Безмашинні вправи: танграм'
           Artist: Художник
-          Bee: Бджола
+          Bee: Бджілка
           "Unplugged: Envelope Variables": 'Безмашинні вправи: конвертні змінні'
           "Unplugged: Madlibs": 'Безмашинні вправи: пропуски'
           "Unplugged: For Loop Fun": 'Безмашинні вправи: ігри з циклами'
           "Unplugged: Songwriting with Parameters": 'Безмашинні вправи: написання пісень з параметрами'
           "Artist: Functions with Parameters": 'Художник: функції з параметрами'
           "Unplugged: Binary": 'Безмашинні вправи: двійкова система'
-          Bee Binary: 'Бджола: двійкова система'
+          Bee Binary: 'Бджілка: двійкова система'
           Farmer Binary: 'Фермер: двійкова система'
-          Maze and Bee: Лабіринт і бджола
+          Maze and Bee: Бджілка у лабіринті
           Artist Binary: 'Художник: двійкова система'
           description_audience: Вік 10 + (після курсу 3)
         Course4pre:
@@ -244,12 +244,12 @@ uk:
           "Maze: Sequence": 'Лабіринт: послідовність'
           "Artist: Sequence": 'Художник: послідовність'
           "Artist: Loops": 'Художник: цикли'
-          "Bee: Conditionals": 'Бджола - умови'
+          "Bee: Conditionals": 'Бджілка - умови'
           "Artist: Nested Loops": 'Художник - вкладені цикли'
           "Farmer: While Loops": 'Фермерка - цикли "поки"'
-          "Bee: Nested Loops": 'Бджола - вкладені цикли'
+          "Bee: Nested Loops": 'Бджілка - вкладені цикли'
           "Artist: Functions": 'Художник - функції'
-          "Bee: Debugging": 'Бджола - відлагодження'
+          "Bee: Debugging": 'Бджілка - відлагодження'
         usability:
           Intro: Вступ
           Variables and For Loops: Змінні та цикли
@@ -364,7 +364,7 @@ uk:
           description: Створити зображення з бітів та байтів.
           Pixelation: Пікселізаціі
         20-hour:
-          title: 20-Hour Intro Course
+          title: 20-годинний вступний курс
           description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
           Introduction to Computer Science: Вступ до інформатики
           The Maze: Лабіринт
@@ -393,6 +393,7 @@ uk:
           Applab: Applab
           The Artist: Художник
           Play Lab: Ігрова студія
+          Play Lab 2015: Play Lab 2015
         events:
           title: Події
           description: ""
@@ -454,12 +455,12 @@ uk:
           "Maze: Sequence": 'Лабіринт: послідовність'
           "Artist: Sequence": 'Художник: послідовність'
           "Artist: Loops": 'Художник: цикли'
-          "Bee: Conditionals": 'Бджола - умови'
+          "Bee: Conditionals": 'Бджілка - умови'
           "Artist: Nested Loops": 'Художник - вкладені цикли'
           "Farmer: While Loops": 'Фермерка - цикли "поки"'
-          "Bee: Nested Loops": 'Бджола - вкладені цикли'
+          "Bee: Nested Loops": 'Бджілка - вкладені цикли'
           "Artist: Functions": 'Художник - функції'
-          "Bee: Debugging": 'Бджола - відлагодження'
+          "Bee: Debugging": 'Бджілка - відлагодження'
         cspunit1:
           title: 'CSP Unit 1 - Digital Information'
           description_short: Explore how digital information is represented and transferred
@@ -492,6 +493,7 @@ uk:
           "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -645,6 +647,9 @@ uk:
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -795,6 +800,23 @@ uk:
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Інтернет
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -813,11 +835,12 @@ uk:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Вільна гра
         allthethings:
           Jigsaw: Пазли
           Maze: Лабіринт
           Artist: Художник
-          Bee: Бджола
+          Bee: Бджілка
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Пурх
@@ -829,13 +852,14 @@ uk:
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
-          AppLab: AppLab
+          AppLab: Програмна лабораторія
           Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          title: Все!
+          description: Всі типи рівнів для тестування інтерфейсу
+          Odometer: Одометр
           Text Compression: Text Compression
           Pixelation: Пікселізаціі
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -853,3 +877,71 @@ uk:
           Next Steps: Next Steps
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Інтернет симулятор
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Інтернет симулятор
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Introduction to PD: Знайомство з профессійним кодуванням
+          K-5 Courses: K-5 Courses
+          Writing computer programs: "Письмовій формі комп'ютерних програм"
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged уроки
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          "Programming Concept: Events": 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Next Steps
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Година Коду

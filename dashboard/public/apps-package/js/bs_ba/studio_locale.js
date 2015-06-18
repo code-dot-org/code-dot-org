@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "lik"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Napad vanzemaljaca!"},
 "backgroundBlack":function(d){return "crno"},
 "backgroundCave":function(d){return "pećina"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Nastavi"},
 "decrementPlayerScore":function(d){return "oduzmi bod"},
 "defaultSayText":function(d){return "piši ovdje"},
+"dropletBlock_changeScore_description":function(d){return "Dodaj ili oduzmi bod."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Postavlja pozadinsku sliku"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Postavlja raspoloženje lika"},
+"dropletBlock_setSpritePosition_description":function(d){return "Odmah premješta lik na zadanu poziciju."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Postavlja brzinu lika"},
+"dropletBlock_setSprite_description":function(d){return "Postavlja izgled lika"},
+"dropletBlock_throw_description":function(d){return "Odabrani lik baca projektil."},
+"dropletBlock_vanish_description":function(d){return "Učini da lik nestane."},
 "emotion":function(d){return "raspoloženje"},
 "finalLevel":function(d){return "Čestitamo ! Riješili ste posljednji zadatak."},
 "for":function(d){return "za"},
 "hello":function(d){return "zdravo"},
 "helloWorld":function(d){return "Zdravo, svijete!"},
 "incrementPlayerScore":function(d){return "osvoji bod"},
+"itemBlueFireball":function(d){return "plava vatrena kugla"},
+"itemPurpleFireball":function(d){return "ljubičasta vatrena kugla"},
+"itemRedFireball":function(d){return "crvena vatrena kugla"},
+"itemYellowHearts":function(d){return "žuta srca"},
+"itemPurpleHearts":function(d){return "ljubičasta srca"},
+"itemRedHearts":function(d){return "crvena srca"},
+"itemRandom":function(d){return "slučajno odabran"},
+"itemAnna":function(d){return "hook"},
+"itemElsa":function(d){return "sparkle"},
+"itemHiro":function(d){return "microbots"},
+"itemBaymax":function(d){return "rocket"},
+"itemRapunzel":function(d){return "saucepan"},
+"itemCherry":function(d){return "cherry"},
+"itemIce":function(d){return "ice"},
+"itemDuck":function(d){return "duck"},
 "makeProjectileDisappear":function(d){return "nestani"},
 "makeProjectileBounce":function(d){return "odskoči"},
 "makeProjectileBlueFireball":function(d){return "napravi plavu vatrenu kuglu"},

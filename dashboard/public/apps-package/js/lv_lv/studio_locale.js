@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "aktieris"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Citplanētiešu uzbrukums!"},
 "backgroundBlack":function(d){return "melns"},
 "backgroundCave":function(d){return "ala"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Turpināt"},
 "decrementPlayerScore":function(d){return "Noņemt punktu"},
 "defaultSayText":function(d){return "Raksti šeit"},
+"dropletBlock_changeScore_description":function(d){return "Pievienot vai noņemt punktu rezultātam."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Iestata fona attēlu"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "nosaka aktiera noskaņojumu"},
+"dropletBlock_setSpritePosition_description":function(d){return "Nekavējoties pārvieto aktieri uz norādīto atrašanās vietu."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Iestata aktiera ātrumu"},
+"dropletBlock_setSprite_description":function(d){return "Uzstādi aktiera attēlu"},
+"dropletBlock_throw_description":function(d){return "Norādītais aktieris izmet šāviņu."},
+"dropletBlock_vanish_description":function(d){return "Aktieris pazūd."},
 "emotion":function(d){return "noskaņojums"},
 "finalLevel":function(d){return "Apsveicu! Jūs esat atrisinājis pēdējo puzli."},
 "for":function(d){return "priekš"},
 "hello":function(d){return "labdien"},
 "helloWorld":function(d){return "Sveika, pasaule!"},
 "incrementPlayerScore":function(d){return "Gūt punktu"},
+"itemBlueFireball":function(d){return "zila ugunsbumba"},
+"itemPurpleFireball":function(d){return "violeta ugunsbumba"},
+"itemRedFireball":function(d){return "sarkana ugunsbumba"},
+"itemYellowHearts":function(d){return "dzeltenas sirdis"},
+"itemPurpleHearts":function(d){return "violetas sirdis"},
+"itemRedHearts":function(d){return "sarkanas sirdis"},
+"itemRandom":function(d){return "nejaušs"},
+"itemAnna":function(d){return "hook"},
+"itemElsa":function(d){return "sparkle"},
+"itemHiro":function(d){return "microbots"},
+"itemBaymax":function(d){return "rocket"},
+"itemRapunzel":function(d){return "saucepan"},
+"itemCherry":function(d){return "cherry"},
+"itemIce":function(d){return "ice"},
+"itemDuck":function(d){return "duck"},
 "makeProjectileDisappear":function(d){return "pazust"},
 "makeProjectileBounce":function(d){return "atlekt"},
 "makeProjectileBlueFireball":function(d){return "izveido zilu ugunsbumbu"},

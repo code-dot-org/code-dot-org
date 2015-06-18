@@ -13,6 +13,7 @@ fr-FR:
   petition_message: "Tous les élèves dans toutes les écoles devraient avoir la possibilité d'apprendre l'informatique"
   petition_sign_message: "Si tu es d'accord, indique ton nom. Rejoins les # autres participants."
   petition_sign_message_support: 'Si vous nous soutenez, signez votre nom.  Rejoignez #.'
+  petition_join_others: 'Rejoignez # autres'
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -109,7 +110,7 @@ fr-FR:
   hoc_leaderboards: "Les résultats de l'Heure de Code"
   students_and_lines: '%{students} élèves ont participé à Hour of Code et ont écrit %{lines} lignes de code.'
   start_hoc: "Commence dès maintenant l'Heure de Code"
-  contact_form_topic_press: Presse/médias (interview ou allocution)
+  contact_form_topic_press: Presse/médias (entretien ou discours)
   stats_nina: '« Chaque jour, nous avons obtenu les mêmes résultats &mdash; une mobilisation à 100 %. » — Nina Nichols Peery, enseignante'
   stats_student: "« Je savais que c'était une chance <b>unique</b>. » — Mariana Alzate, élève de CM2"
   stats_michael: "« Je n'ai <b>vraiment jamais</b> vu mes élèves aussi enthousiasmés d'apprendre. » — Michael Clark, enseignant"
@@ -158,6 +159,9 @@ fr-FR:
   homepage_hero_text_teacher2: |
     &ldquo;Tous mes élèves se sont sentis impliqués, investis et ont participé à ce programme.&rdquo;
     Adam, enseignant
+  homepage_hero_text_stat_loc: '#loc lignes de code écrit par les élèves'
+  homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code Studio"
+  homepage_hero_text_stat_served: 'Heure de Code: #served servis'
   homepage_slot_text_hoc: "L'Heure de Code"
   homepage_slot_text_frozen: La reine des neige, avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant
@@ -342,11 +346,18 @@ fr-FR:
   dashboard_students_print_page: Imprimer cette page
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Cliquez ici</a> pour voir notre politique de confidentialité, qui peut être partagée ou imprimée pour vos élèves.'
-  dashboard_curriculum_overview: Aperçu du cours pour élèves de primaire
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Visualiser toutes les leçons
   dashboard_course1: 'Cours 1 :'
   dashboard_course2: 'Cours 2 :'
   dashboard_course3: 'Cours 3 :'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Aperçu du cours pour élèves de primaire
+  dashboard_overview: Overview
   dashboard_sequence: Séquence
   dashboard_framework: Cadriciel
   dashboard_standards: Normes
@@ -357,6 +368,10 @@ fr-FR:
   dashboard_puzzle_solving: "Résolution d'énigmes :"
   dashboard_student_worksheet: "feuille d'activités élève"
   dashboard_teacher_worksheet: "feuille d'activités enseignant"
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: Classe
   dashboard_grade_other: Autre
   dashboard_login_word: Mot
@@ -384,6 +399,7 @@ fr-FR:
   dashboard_sections_password_account_creation: "Mot de passe créé par l'élève"
   dashboard_sections_login_type_explanation: 'Ce tableau détaille les différents types de connexion, <b>photo, mot ou courriel</b>, pour vous permettre de choisir celui qui vous conviendra dans une section.'
   dashboard_faq: Questions fréquentes
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: "L'Heure de Code est ici — du 8 au 14 décembre !"
   code_sign_up: "Enregistre-toi pour participer à la Semaine de l'Éducation de l'Informatique"
   learn_more: En savoir plus
@@ -802,3 +818,6 @@ fr-FR:
   processing_beyond_longdescription: "Processing est un langage de programmation, un environnement de développement et une communauté en ligne. Depuis 2001, Processing a promu la culture logicielle dans les arts visuels et la culture visuelle au sein de la technologie. Initialement créé comme un carnet de croquis électronique et pour enseigner les fondements de la programmation dans un contexte visuel, Processing est devenu un outil de développement pour les professionnels. Aujourd'hui, des dizaines de milliers d'étudiants, artistes, designers, chercheurs et amateurs utilisent Processing pour apprendre, concevoir et produire."
   alice_beyond_longdescription: "En utilisant un environnement de programmation innovant pour soutenir la création d'animations 3D, le projet Alice fournit outils et matériel pour enseigner et apprendre la pensée de traitement, la résolution de problèmes et la programmation informatique dans un éventail d'âges et de niveaux scolaires."
   sphero_beyond_longdescription: Que vous soyez un éducateur ou un parent, les leçons SPRK donnent aux enfants un cours accélé fun en programmation de robots tout en affûtant leurs compétences en mathématiques et sciences.
+  compatibility_https_header: "S'il vous plaît activer HTTPS pour Code.org."
+  compatibility_https_message: "Pour augmenter la sécurité, nous sommes passer à HTTPS sur %{https_date}. Vous ne serez pas en mesure d'accéder Code.org après cette date. <a href='%{it_requirements_url}'> cliquez ici</a> pour savoir comment activer HTTPS pour accéder a Code.org."
+  compatibility_https_hide_this_warning: Masquer cet avertissement

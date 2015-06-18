@@ -1339,6 +1339,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
+                        blockOfType('studio_addItems') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1443,6 +1444,16 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
+  'map': [
+    [0,16, 0, 0, 0,16, 0,32],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
   'codeFunctions': {
     // Play Lab
     "setSprite": null,
@@ -1496,3 +1507,61 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   },
   'startBlocks': "",
 });
+
+levels.hoc2015_1 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4,16, 0,256,1, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};
+
+levels.hoc2015_2 = {
+  'editCode': true,
+  'map': [
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 0, 0,256,4, 4],
+    [4, 4, 4, 0, 4, 0, 4, 4],
+    [4, 4, 4, 1,16,256,4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4],
+    [4, 4, 4, 4, 4, 4, 4, 4]
+  ],
+  'avatarList': [ 'baymax' ],
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'slowJSExecutionFactor': 10,
+  'markerHeight': 50,
+  'markerWidth': 50,
+  'codeFunctions': {
+    // Play Lab
+    "moveEast": {'category': '' },
+    "moveWest": {'category': '' },
+    "moveNorth": {'category': '' },
+    "moveSouth": {'category': '' },
+  },
+};

@@ -439,6 +439,9 @@ sv:
         csp_pixelation_bw: Svart och vit pixelerings widget
         csp_U1L14_tipstricks: 'Enhet 1 lektion 14 Lärare Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'
@@ -525,6 +528,6 @@ sv:
         name_function: Skriv namnet på din funktion här
         Infinity_move_right_runbutton: 'Lägg till flytta- blocket här'
         Infinity_move_directions_callout: 'Vilket block kommer att flytta Baymax  uppåt när du trycker på uppåt-pilen?'
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
         Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
         Infinity_repeat_callout: 'Placera flytta - block  här inne'

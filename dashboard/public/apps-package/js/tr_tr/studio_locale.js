@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "aktör"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Uzaylı istilası!"},
 "backgroundBlack":function(d){return "siyah"},
 "backgroundCave":function(d){return "Mağara"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Devam"},
 "decrementPlayerScore":function(d){return "Puanı sil"},
 "defaultSayText":function(d){return "buraya yazın"},
+"dropletBlock_changeScore_description":function(d){return "Skoru bir puan arttır veya azalt."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Arka plan resmini ayarlar"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Aktör ruh halini ayarla"},
+"dropletBlock_setSpritePosition_description":function(d){return "Anlık olarak aktörü belirtilen konuma taşır."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Bir aktörün hızını ayarlar"},
+"dropletBlock_setSprite_description":function(d){return "Aktör resmini ayarlar"},
+"dropletBlock_throw_description":function(d){return "Belirlenen aktör atılacak cismi fırlatır."},
+"dropletBlock_vanish_description":function(d){return "Aktör kaybolur."},
 "emotion":function(d){return "ruh hali"},
 "finalLevel":function(d){return "Tebrikler! Son bulmacayı da çözdünüz."},
 "for":function(d){return "için"},
 "hello":function(d){return "merhaba"},
 "helloWorld":function(d){return "Merhaba Dünya!"},
 "incrementPlayerScore":function(d){return "Skor puanı"},
+"itemBlueFireball":function(d){return "mavi ateş topu"},
+"itemPurpleFireball":function(d){return "mor ateş topu"},
+"itemRedFireball":function(d){return "kırmızı ateş topu"},
+"itemYellowHearts":function(d){return "sarı kalpler"},
+"itemPurpleHearts":function(d){return "mor kalpler"},
+"itemRedHearts":function(d){return "kırmızı kalpler"},
+"itemRandom":function(d){return "gelişigüzel"},
+"itemAnna":function(d){return "kanca"},
+"itemElsa":function(d){return "ışıltı"},
+"itemHiro":function(d){return "mikrobotlar"},
+"itemBaymax":function(d){return "roket"},
+"itemRapunzel":function(d){return "tencere"},
+"itemCherry":function(d){return "kiraz"},
+"itemIce":function(d){return "buz"},
+"itemDuck":function(d){return "ördek"},
 "makeProjectileDisappear":function(d){return "yok et"},
 "makeProjectileBounce":function(d){return "atla"},
 "makeProjectileBlueFireball":function(d){return "Mavi alev topu yap"},

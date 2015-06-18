@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the \"text\" function to write this \"Hello, world!\" in teal at size 40.",
+    "instructions": "Try using the text function to write this \"Hello, world!\" in teal at size 40.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,9 +22,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "coordinate_grid_background": "false"
-  },
-  "md5": "0b04c6ae271573f70b27c1fcec54cf28"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Try using the _text_ function to write this \"Hello, world!\" in teal at size 40."
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

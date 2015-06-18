@@ -691,6 +691,9 @@
         csp_pixelation_bw: 'Приспособление за черно- бяла пикселизация '
         csp_U1L14_tipstricks: Част 1 урок 14 съвети & трикове за учителя
         csp_textcompression: Приспособление за компресиране на текст
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS в алгебрата - Въведение
         alg_2_eval_block: CS в алгебрата - блокове за оценка
         alg_3_pemdas: CS в алгебрата - ред на операциите

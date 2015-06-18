@@ -64,8 +64,8 @@ pl:
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} uczniów już się zarejestrowało.'
+    teacher_count: '%{count} nauczycieli już się zarejestrowało.'
     overview_student: 'Zarejestruj się na konto, aby śledzić swoje postępy. Twój e-mail służy przede wszystkim do logowania i do odzyskiwania hasła. Aby uzyskać więcej informacji, zobacz naszą <a href="http://code.org/privacy"> Politykę prywatności</a>.'
     overview_teacher: 'Ucz informatyki w swojej klasie rejestrując się na konto. <p/> Będziesz mógł dodać swoich uczniów i śledzić ich postępy.'
     no_signup_message: 'Możesz <a target="_blank" href="http://learn.code.org"> przeglądać różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zapisać swoje wyniki.'
@@ -221,7 +221,7 @@ pl:
         artist: Narysuj coś
     user:
       classroom: Domowa strona nauczyciela
-      district_dashboard: District Dashboard
+      district_dashboard: Panel dzielnicy/okręgu
       label: 'Witaj %{username}'
       stats: Moje postępy
       settings: Moje konto
@@ -231,7 +231,7 @@ pl:
       signup: Zarejestruj się
       already_registered: Czy jesteś Już zarejestrowany?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: '%{name} w toku'
       progress: Twoje postępy
       lines: 'Łączna ilość linii kodu: %{lines}'
       close: ZAMKNIJ
@@ -300,19 +300,21 @@ pl:
     cant_remove_teacher_no_email: '%{teacher_name} nie może być usunięty jako Twój nauczyciel, ponieważ nie zarejestrowałeś adresu e-mail'
     student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Podgląd odpowiedzi
       student: Uczeń
-      try_it_yourself: Try it yourself
+      viewing_solution: Podgląd rozwiązania
+      try_it_yourself: Wypróbuj
+      section: Sekcja
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
-    email_confirm_wrong_email: (Zły adres email?)
+    email_confirm_wrong_email: (Zły adres e-mail?)
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
     new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
     current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)
     delete: Usuń swoje konto
-    delete_text: Klikając poniższy przycisk spowoduje usunięcie konta.
-    delete_text_teacher_note: 'Uwaga: usunięcie twojego konta nie spowoduje usunięcia kont twoich uczniów.'
+    delete_text: Kliknięcie na poniższym przycisku spowoduje usunięcie Twojego konta.
+    delete_text_teacher_note: 'Uwaga: usunięcie Twojego konta nie spowoduje usunięcia kont Twoich uczniów.'
     delete_confirm: Czy na pewno chcesz usunąć swoje konto?
   user_level:
     completed: Ukończono
@@ -323,7 +325,9 @@ pl:
     classroom_activity: Aktywność unplugged (bez komputera)
   home:
     title: Studio Code
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINIE KODU NAPISANEGO PRZEZ UCZNIÓW'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Streszczenie kursów 1, 2 i 3
     lesson_plans: Plany lekcji
     signin_message: 'Jesteś już zarejestrowany? %{link}'
@@ -357,7 +361,7 @@ pl:
     heading_apps: '<h2>Zabawy dla</h2><h1>Wszystkich</h1>'
     heading_legacy: '<h2>Nasz ogólny kurs dla</h2><h1>Wszystkich grup wiekowych</h1>'
     your_gallery: Galeria
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Wypróbuj kurs w Studio Kodowania
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -390,6 +394,10 @@ pl:
     autoplay_option: Odtwarzaj filmy automatycznie
     download: Pobierz wideo
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Ukryj to ostrzeżenie
     working:
       header: Pracujemy nad wsparciem dla Twojej przeglądarki.
       message: "Code.org wykorzystuje nowoczesną technologię sieciową. Dzięki temu można szybciej korzystać ze stron. Twoja przeglądarka nie obsługuje wszystkich wymaganych funkcji i mogą wystąpić problemy podczas korzystania z tej części witryny. Pomóż nam <a href='%{report_issue_url}'> zgłaszając problemy, na które się natknąłeś</a>. Możesz także<a href='%{supported_browsers_url}'> uaktualnić swoją przeglądarkę do obsługiwanej wersji</a>."
@@ -449,7 +457,7 @@ pl:
       title: Frosen
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!
@@ -483,12 +491,12 @@ pl:
     correct_body: To jest poprawna odpowiedź.
   contract_match:
     wrong_title: Błędna odpowiedź
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    badname: Twoja umowa/kontrakt ma złą nazwę.
+    badname_case: Nazwy funkcji uwzględniają wielkość liter. Spróbuj zmienić wielkość liter w nazwie Twojej umowy.
+    badrange: Twoja umowa/kontrakt ma zły zakres.
+    baddomainsize: Twoja umowa/kontrakt nie ma właściwej liczby elementów w domenie.
+    baddomainname: Jeden lub więcej elementów Twojej domeny ma złą nazwę.
+    baddomaintype: Jeden lub więcej elementów Twojej domeny ma zły typ lub są w niewłaściwej kolejności.
   text_match:
     placeholder: Wprowadź swoją odpowiedź tutaj
     open_response_title: Dzięki
@@ -506,7 +514,7 @@ pl:
           title: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
           description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
         Hour of Code:
-          title: Godzina kodu 2013
+          title: Godzina Kodowania 2013
           description: ""
         edit-code:
           title: Edytuj kod
@@ -541,31 +549,31 @@ pl:
     completed_too_many_blocks: zakończona, zbyt wiele bloków
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
-    assessment: oszacowanie
+    assessment: ewaluacja
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy
     all_courses: Wszystkie kursy
   project:
     projects: Projekty
-    create: Stwórz projekt
-    create_a_project: 'Stwórz nowy projekt:'
-    new: Stwórz nowy
+    create: Utwórz Projekt
+    create_a_project: 'Utwórz nowy projekt:'
+    new: Utwórz nowy
     rename: Zmień nazwę
     save: Zapisz
     delete: Usuń
-    exit: Powrót do kursu
-    my_projects: Moje projekty
+    exit: Powrót do Kursu
+    my_projects: Moje Projekty
     share: Udostępnij
     share_title: Udostępnij swój projekt
-    share_copy_link: 'Skopiuj odnośnik:'
+    share_copy_link: 'Skopiuj odnośnik/link:'
     close: Zamknij
     more: Więcej
     name: Imię/Nazwisko
     updated: Zaktualizowano
-    project_type: Typ projektu
-    help_text: 'Kliknij, <strong>Stwórz aplikację</strong> lub <strong>Narysuj coś</strong> aby stworzyć nowy projekt! <br/>Możesz wrócić i pracować nad swoimi projektami w dowolnym momencie.'
-    need_help: Potrzebujesz pomocy na start?
+    project_type: Typ Projektu
+    help_text: 'Kliknij, <strong>Utwórz aplikację</strong> lub <strong>Narysuj coś</strong> poniżej, aby utworzyć nowy projekt w Play Lab lub artysty! <br/>Możesz wrócić i pracować nad swoimi projektami w dowolnym momencie.'
+    need_help: Czy potrzebujesz pomocy, by rozpocząć?
     really_delete: Usunąć?
     delete_yes: Tak
     delete_no: Nie
@@ -573,7 +581,7 @@ pl:
     not_saved: Nie zapisane
     cancel: Anuluj
     delete_confirm_title: Czy na pewno chcesz usunąć ten projekt?
-    delete_confirm_text: Usunięcie projektu trwale wykasuje go z listy twoich projektów. Wszyscy, którym odnośnik został udostępniony nie będą mogli już więcej zobaczyć tego projektu.
-    view_all: Zobacz moje projekty
+    delete_confirm_text: Usunięcie projektu spowoduje trwałe usunięcie go z twojej listy Moje Projekty. Nikt, komu udostępniłeś link do tego projektu, nie będzie już mógł zobaczyć tego projektu.
+    view_all: Zobacz Moje Projekty
     remix: Remix
     click_to_remix: "Kliknij 'Remix', żeby utworzyć swoją wersję!"

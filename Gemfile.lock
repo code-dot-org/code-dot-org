@@ -263,11 +263,12 @@ GEM
     powerpack (0.1.0)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
-    rack (1.5.2)
+    rack (1.5.3)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
     rack-protection (1.5.3)
       rack
+    rack-ssl-enforcer (0.2.8)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.3)
@@ -463,6 +464,7 @@ DEPENDENCIES
   phantomjs (~> 1.9.7.1)
   quiet_assets
   rack-contrib (~> 1.1)
+  rack-ssl-enforcer
   rails (= 4.0.3)
   react-rails (~> 1.0)
   redcarpet (~> 3.1.1)
@@ -492,3 +494,6 @@ DEPENDENCIES
   unicorn (~> 4.8.2)
   user_agent_parser
   videojs_rails
+
+BUNDLED WITH
+   1.10.4

@@ -23,7 +23,7 @@ var bounce_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_lo
 s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "反彈球"},
-"bounceBallTooltip":function(d){return "從某一物體反彈的球。"},
+"bounceBallTooltip":function(d){return "讓球擊中某一物體而反彈。"},
 "continue":function(d){return "繼續"},
 "dirE":function(d){return "東"},
 "dirN":function(d){return "北"},
@@ -169,25 +169,25 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifPathAhead":function(d){return "如果前面有路"},
 "ifTooltip":function(d){return "如果在指定的方向有路的話，就執行某些指定動作。"},
 "ifelseTooltip":function(d){return "如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。"},
-"incrementOpponentScore":function(d){return "對手的得分點"},
-"incrementOpponentScoreTooltip":function(d){return "增加一個到目前對手的得分。"},
+"incrementOpponentScore":function(d){return "對手得分"},
+"incrementOpponentScoreTooltip":function(d){return "將對手的得分加一。"},
 "incrementPlayerScore":function(d){return "得分"},
 "incrementPlayerScoreTooltip":function(d){return "替玩家加一分"},
 "isWall":function(d){return "這是牆嗎"},
 "isWallTooltip":function(d){return "如果這裡有牆，則返回 ｢真｣ （true）"},
 "launchBall":function(d){return "重新發球"},
 "launchBallTooltip":function(d){return "發出一顆球開始遊戲"},
-"makeYourOwn":function(d){return "設計屬於你的反彈球遊戲"},
+"makeYourOwn":function(d){return "設計您自己的反彈球遊戲"},
 "moveDown":function(d){return "向下移動"},
-"moveDownTooltip":function(d){return "槳向下移動。"},
+"moveDownTooltip":function(d){return "球拍向下移動。"},
 "moveForward":function(d){return "向前移動"},
 "moveForwardTooltip":function(d){return "將我向前移動一格"},
 "moveLeft":function(d){return "向左移動"},
-"moveLeftTooltip":function(d){return "槳移到左邊。"},
+"moveLeftTooltip":function(d){return "球拍移到左邊。"},
 "moveRight":function(d){return "向右移動"},
-"moveRightTooltip":function(d){return "槳向右移動。"},
+"moveRightTooltip":function(d){return "球拍向右移動。"},
 "moveUp":function(d){return "向上移動"},
-"moveUpTooltip":function(d){return "槳向上移動。"},
+"moveUpTooltip":function(d){return "球拍向上移動。"},
 "nextLevel":function(d){return "恭喜！你已經完成這個關卡。"},
 "no":function(d){return "否"},
 "noPathAhead":function(d){return "路被堵住了"},
@@ -244,7 +244,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleSpeedFast":function(d){return "設定揮拍速度為快速"},
 "setPaddleSpeedVeryFast":function(d){return "設定揮拍速度為非常快"},
 "setPaddleSpeedTooltip":function(d){return "設定揮拍速度"},
-"shareBounceTwitter":function(d){return "來玩玩看我在@codeorg玩程的反彈球遊戲吧。"},
+"shareBounceTwitter":function(d){return "來玩玩看我在 @codeorg 完成的反彈球遊戲吧。"},
 "shareGame":function(d){return "分享您的遊戲"},
 "turnLeft":function(d){return "向左轉"},
 "turnRight":function(d){return "向右轉"},
@@ -260,13 +260,13 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenLeft":function(d){return "當按下＂左方向鍵＂"},
 "whenLeftTooltip":function(d){return "當按下＂左方向鍵＂，就會執行動作"},
 "whenPaddleCollided":function(d){return "當球拍擊中球"},
-"whenPaddleCollidedTooltip":function(d){return "當球撞到球拍時，執行以下的行動。"},
+"whenPaddleCollidedTooltip":function(d){return "當球拍擊中球時，執行以下的行動。"},
 "whenRight":function(d){return "當按下＂右方向鍵＂"},
 "whenRightTooltip":function(d){return "當按下＂右方向鍵＂，就會執行動作"},
 "whenUp":function(d){return "當＂上方向鍵＂"},
 "whenUpTooltip":function(d){return "當按下＂上方向鍵＂，就會執行動作"},
 "whenWallCollided":function(d){return "當球打在牆上"},
-"whenWallCollidedTooltip":function(d){return "當球撞到牆時，執行以下的行動。"},
+"whenWallCollidedTooltip":function(d){return "當球打在牆上時，執行以下的行動。"},
 "whileMsg":function(d){return "當"},
 "whileTooltip":function(d){return "重覆程式積木內的動作，直到完成為止。"},
 "yes":function(d){return "是"}};

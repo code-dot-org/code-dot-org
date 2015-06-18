@@ -65,6 +65,7 @@ def load_configuration()
     'pegasus_workers'             => 8,
     'poste_host'                  => 'localhost.code.org:3000',
     'poste_secret'                => 'not a real secret',
+    'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :staging, :test, :levelbuilder],
     'read_only'                   => false,
@@ -126,23 +127,23 @@ class CDOImpl < OpenStruct
     "#{rack_env}#{sep}#{domain}"
   end
 
-  def site_url(domain, path = '')
+  def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
-    if rack_env?(:development)
+    if rack_env?(:development) && !CDO.https_development
       port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
       host += ":#{port}"
     end
 
     path = '/' + path unless path.empty? || path[0] == '/'
-    return "//#{host}#{path}"
+    "#{scheme}//#{host}#{path}"
   end
 
-  def studio_url(path = '')
-    site_url('studio.code.org', path)
+  def studio_url(path = '', scheme = '')
+    site_url('studio.code.org', path, scheme)
   end
 
-  def code_org_url(path = '')
-    site_url('code.org', path)
+  def code_org_url(path = '', scheme = '')
+    site_url('code.org', path, scheme)
   end
 
   def dir(*dirs)

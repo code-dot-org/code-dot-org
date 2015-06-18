@@ -15,8 +15,7 @@
     "use_contract_editor": "false",
     "start_direction": "3",
     "step_mode": "0",
-    "ideal": "4",
-    "maze_data": null
+    "ideal": "4"
   }
 }]]></config>
   <blocks>

@@ -358,7 +358,9 @@
     panel:
       answer_viewer: Ver respuesta
       student: estudiante
-      try_it_yourself: Compruébalo tu mismo
+      viewing_solution: Visualizando la Solución
+      try_it_yourself: Inténtalo tu mismo
+      section: Sección
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -380,7 +382,10 @@
     classroom_activity: Actividad fuera de línea
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
     signin_message: ¿Ya estás registrado? %{link}
@@ -462,6 +467,12 @@
     autoplay_option: Reproducir videos automáticamente
     download: Descargar video
   compatability:
+    https:
+      header: Por favor habilitar HTTPS para Code.org.
+      message: Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}. Usted
+        no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'>
+        haga clic aquí</a> para aprender cómo activar HTTPS para Code.org.
+      hide_this_warning: Ocultar esta advertencia
     working:
       header: Estamos trabajando en dar soporte para tu navegador.
       message: Code.org utiliza moderna tecnología web. Esto permite que el sitio
@@ -537,8 +548,8 @@
       title: Frozen
     infinity:
       title: Laboratorio de Juego Infinity
-      body: Utilice el  laboratorio jugar para crear una historia o juego protagonizada
-        por personajes de Disney infinito.
+      body: Utilice el laboratorio de juegos para crear una historia o juego protagonizada
+        por personajes de Disney Infinity.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -661,7 +672,7 @@
     rename: Renombrar
     save: Guardar
     delete: Borrar
-    exit: Retornar al Curso
+    exit: Regresar al Curso
     my_projects: Mis Proyectos
     share: Compartir
     share_title: Compartir su Proyecto
@@ -674,17 +685,17 @@
     help_text: ¡Haz clic en <strong>Hacer una Aplicación</strong> o <strong>Dibujar
       Algo</strong> más abajo para hacer un nuevo proyecto de Artista o de Laboratorio
       de Juego! <br/>Puedes regresar y trabajar en tus proyectos en cualquier momento.
-    need_help: Requiere ayuda para empezar ?
+    need_help: Necesita ayuda para empezar ?
     really_delete: ¿Borrar?
     delete_yes: Sí
     delete_no: 'No'
     saved: Guardado
-    not_saved: No se guardo
+    not_saved: No guardado
     cancel: Cancelar
     delete_confirm_title: Esta seguro de querer eliminar este proyecto?
-    delete_confirm_text: Eliminado su proyecto hará que se retire permanentemente
-      de su lista de proyectos. Cualquiera que tenga un enlace compartido por usted
-      no podrá seguir viendo el proyecto.
+    delete_confirm_text: Eliminar su proyecto hará que se retire permanentemente de
+      su lista de proyectos. Cualquiera que tenga un enlace compartido por usted no
+      podrá seguir viendo el proyecto.
     view_all: Ver Mis Proyectos
     remix: Remezclar
     click_to_remix: ¡Haz clic en 'Remix' para obtener tu propia versión!

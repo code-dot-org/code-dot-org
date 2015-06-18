@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "personagem"},
+"addItems1":function(d){return "adicionar 1 item do tipo"},
+"addItems2":function(d){return "adicionar 2 itens do tipo"},
+"addItems3":function(d){return "adicionar 3 itens do tipo"},
+"addItems5":function(d){return "adicionar 5 itens do tipo"},
+"addItems10":function(d){return "adicionar 10 itens do tipo"},
+"addItemsRandom":function(d){return "adicionar itens aleatórios do tipo"},
+"addItemsTooltip":function(d){return "Adicionar itens ao cenário."},
 "alienInvasion":function(d){return "Invasão alienígena!"},
 "backgroundBlack":function(d){return "preto"},
 "backgroundCave":function(d){return "caverna"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuar"},
 "decrementPlayerScore":function(d){return "remova o ponto"},
 "defaultSayText":function(d){return "digite aqui"},
+"dropletBlock_changeScore_description":function(d){return "Adiciona ou remove um ponto."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Define a imagem de fundo"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Define o humor do personagem"},
+"dropletBlock_setSpritePosition_description":function(d){return "Move um personagem instantaneamente para o local especificado."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Define a velocidade de um personagem"},
+"dropletBlock_setSprite_description":function(d){return "Define a imagem do personagem"},
+"dropletBlock_throw_description":function(d){return "Lança um projétil com o personagem especificado."},
+"dropletBlock_vanish_description":function(d){return "Faz o personagem desaparecer."},
 "emotion":function(d){return "humor"},
 "finalLevel":function(d){return "Parabéns! Você resolveu o desafio final."},
 "for":function(d){return "para"},
 "hello":function(d){return "olá"},
 "helloWorld":function(d){return "Olá, mundo!"},
 "incrementPlayerScore":function(d){return "marque o ponto"},
+"itemBlueFireball":function(d){return "bola de fogo azul"},
+"itemPurpleFireball":function(d){return "bola de fogo roxa"},
+"itemRedFireball":function(d){return "bola de fogo vermelha"},
+"itemYellowHearts":function(d){return "corações amarelos"},
+"itemPurpleHearts":function(d){return "corações roxos"},
+"itemRedHearts":function(d){return "corações vermelhos"},
+"itemRandom":function(d){return "aleatório"},
+"itemAnna":function(d){return "gancho"},
+"itemElsa":function(d){return "centelha"},
+"itemHiro":function(d){return "microrrobôs"},
+"itemBaymax":function(d){return "foguete"},
+"itemRapunzel":function(d){return "panela"},
+"itemCherry":function(d){return "cereja"},
+"itemIce":function(d){return "gelo"},
+"itemDuck":function(d){return "pato"},
 "makeProjectileDisappear":function(d){return "desapareça"},
 "makeProjectileBounce":function(d){return "quique"},
 "makeProjectileBlueFireball":function(d){return "crie bola de fogo azul"},

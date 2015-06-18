@@ -1,24 +1,27 @@
 name 'U2L5 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'Packets and Making a Reliable Internet'
+
 css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 5 - Classroom Internet
+## Unit 2: Lesson 5 - Packets and Making a Reliable Internet
 
 # Background
 
-Background goes here
+You have now learned how to make sure a message gets to the right person over the internet. How can you ensure that the person receives the full message? Let's say you just bought a movie on Amazon. Halfway through downloading it, your internet stops working for five seconds. Do you end up with a movie with a piece missing? Usually, the answer is no. In this lesson, we will investigate how packets help ensure reliability over the internet.
 
 # Vocabulary
 
-Vocabulary goes here
+<strong>Packet</strong>: a fixed-size, formatted unit of data sent over the internet.
+
+<strong>Transmission Control Protocol (TCP)</strong>: a core protocol that provides reliable, ordered, and error-checked delivery of data over the Internet.
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Explain why protocols are necessary to overcome the underlying unreliability of the Internet
+* Develop a protocol for reliable communication on the Internet
+* Justify the need for acknowledgements and packet numbering in TCP
 
 # Resources
 

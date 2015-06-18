@@ -1,0 +1,57 @@
+name 'OPD-K5 CS Courses'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+
+### PLANNING > Code Studio Courses
+<br><br>
+One of the first tiles you'll want to explore on the Teacher Dashboard are found under the "Lesson Plans and Resources" tab. Here's where you'll find all of the free Code Studio curricula we provide to teachers all over the world, including:
+<ul>
+<li>[Course 1](http://studio.code.org/s/course1): approx 20 hours (Ages 4-6)</li>
+<li>[Course 2](http://studio.code.org/s/course2): approx 20 hours (Ages 6-18)</li>
+<li>[Course 3](http://studio.code.org/s/course3): approx 20 hours (Ages 8-18)</li>
+<li>[Course 4](http://studio.code.org/s/course4): approx 20 hours (Ages 10-18)</li>
+<li>[Intro to CS](http://studio.code.org/s/20-hour): approx 20 hours (Ages 10-18)</li>
+</ul>
+
+We also offer **complete middle and high school curriculum** for longer, more in-depth courses. However, these courses are not available in Code Studio at this time. **We'll cover these courses in the next level.** Finally, we also have a number of fun Code Studio student-facing **activities** that do not include curriculum resources for teachers. These include:
+<ul>
+<li>[Hour of Code](http://studio.code.org/s/hourofcode/reset)</li>
+<li>[Frozen](http://studio.code.org/s/frozen/reset)</li>
+<li>[Infinity Play Lab](http://studio.code.org/s/infinity/reset)</li>
+<li>[Flappy Code](http://studio.code.org/s/flappy/reset)</li>
+</ul>
+<br>
+#### About Courses 1-4
+
+We believe that every student should have the opportunity to learn computer science, and the reasons are far more varied than simply having a strong resume. Critical thinking, logic, persistence, and creativity help students excel at problem-solving in all subject areas, no matter what their age.
+<br><br>
+At Code.org, we recognize that this benefit begins early. That's why we have partnered with [Thinkersmith](http://thinkersmith.org/) and [Common Sense Media] (https://www.commonsensemedia.org/) to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.
+
+<br/><br/>
+>### Who are Courses 1-4 for?
+**Kids as young as four years-old!**
+Courses 1-4 are designed to meet the special learning needs of kids ages 4-18. Read below for more details on choosing the right course for your students.<br><br>
+**Teachers! (in-school, after-school, or home-school)**
+This curriculum has been developed for use by all educators. We assume no prior computer science knowledge and have provided clear, detailed lesson plans that can be customized to different situations. Learn with your students!
+
+<br/>
+#### Which Course is for me?
+Watch this video to understand our offerings of computer science courses for elementary school students.
+<br><br>
+
+<iframe width="640" height="390" src="https://www.youtube.com/embed/ryZ8_XW9d7A" frameborder="0" allowfullscreen></iframe>
+
+<br/><br/>
+#### About our accelerated Intro to CS course (all ages)
+
+In addition to Courses 1-4, Code.org offers [an accelerated all ages online course with a complimentary curriculum](http://studio.code.org/s/20-hour). This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18 who need to work at a faster pace or who have less time to learn computer science. Courses 2-4 offer a more complete experience, so we recommend you prioritize teaching those courses when possible.
+
+* * *
+
+Next we'll look at how you access these courses with students, before moving on to a review of other resources offered by Code.org that are not currently integrated with Code Studio.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

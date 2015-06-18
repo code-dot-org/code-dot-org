@@ -1,0 +1,21 @@
+name 'OPD-K5 Stage4Go'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+
+### LOOPS > Reflection
+<br><br>
+In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding conditionals or "if-statements".
+
+<br><br>
+>### Reflect
+How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our Professional Learning Community (PLC) forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)<br><br>
+<a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc">Discuss in the forums >></button></a><br>
+<br><br>
+
+After commenting in the forum, return here and click below to move on to Stage 5.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

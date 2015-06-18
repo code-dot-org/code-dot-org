@@ -8,7 +8,7 @@ nav: resources_nav
 
 ## Use this short blurb in newsletters
 ### Bring computer science to your school. Start with an Hour of Code 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the <a href="<%= hoc_uri('/') %>">Hour of Code</a> last year, you might know it made history. In one week, 15 million students tried computer science! The <a href="<%= hoc_uri('/') %>">Hour of Code</a> is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href="<%= hoc_uri('/') %>">Sign up</a> to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the <a href="<%= hoc_uri('/') %>">Hour of Code</a> last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The <a href="<%= hoc_uri('/') %>">Hour of Code</a> is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href="<%= hoc_uri('/') %>">Sign up</a> to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
 
 ## Infographic version:

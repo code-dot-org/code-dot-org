@@ -48,8 +48,7 @@
     "lock_chunk_size_control": "false",
     "default_bit_rate_bits_per_second": "5",
     "show_pulse_rate_slider": "false"
-  },
-  "md5": "fd73422fc914c269c1aa4240a1c4647e"
+  }
 }]]></config>
   <blocks/>
 </NetSim>

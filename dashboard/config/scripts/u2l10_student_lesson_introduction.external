@@ -1,29 +1,25 @@
 name 'U2L10 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'DNS in the Real World '
+
 css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 10 - DNS Simulation
+## Unit 2: Lesson 10 - DNS in the Real World
 
 # Background
 
-Background goes here
-
-# Vocabulary
-
-Vocabulary goes here
+DNS and IP address work in the real world because of the hierarchy and duplicity of DNS servers. The hierarchy of DNS/IP is analogous the system used by the postal service that includes country, state, city, zip, street, direction, number.
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Watch a video to learn how DNS servers support IP lookups.
+* Analyze DNS problems.
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Video: <a href="" target="_blank"> Coming Soon - The Internet: IP Addresses and DNS</a>
+* Activity:  <a href="https://docs.google.com/document/d/17DKfEZD6KZElQGCQDaAbig1ckA5ZSecIasVxJZWPOJ8" target="_blank">DNS in the Real World</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

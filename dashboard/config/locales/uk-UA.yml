@@ -347,7 +347,9 @@
     panel:
       answer_viewer: Перегляд відповідей
       student: учень
+      viewing_solution: Перегляд рішення
       try_it_yourself: Спробуйте самі
+      section: Група
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -370,7 +372,10 @@
     classroom_activity: Безмашинна вправа
   home:
     title: Студія коду
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} РЯДКІВ КОДУ, НАПИСАНА УЧНЯМИ'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Огляд курсів, 1, 2 і 3
     lesson_plans: Плани уроків
     signin_message: Вже зареєстровані? %{link}
@@ -449,6 +454,12 @@
     autoplay_option: Автовідтворення відео
     download: Завантажити відео
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Сховати попередження
     working:
       header: Ми працюємо над підтримкою для вашого браузера.
       message: Code.org використовує сучасні веб-технології, тому сайт працює швидко.

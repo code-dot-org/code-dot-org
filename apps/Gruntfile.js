@@ -95,7 +95,6 @@ config.clean = {
 
 var ace_suffix = DEV ? '' : '-min';
 var dotMinIfNotDev = DEV ? '' : '.min';
-var requirejs_dir = DEV ? 'full' : 'min';
 
 config.copy = {
   src: {
@@ -149,12 +148,6 @@ config.copy = {
         cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
         src: ['**/*.js'],
         dest: 'build/package/js/ace/'
-      },
-      {
-        expand: true,
-        cwd: 'lib/requirejs/' + requirejs_dir + '/',
-        src: ['require.js'],
-        dest: 'build/package/js/requirejs/'
       },
       {
         expand: true,
@@ -215,7 +208,7 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last', 'clone', 'isEqual', 'find']
+        'last', 'clone', 'isEqual', 'find', 'sortBy']
     }
   }
 };
@@ -488,4 +481,6 @@ module.exports = function(grunt) {
 
   process.env.mocha_grep = grunt.option('grep') || '';
   process.env.mocha_debug = grunt.option('debug') || '';
+  process.env.mocha_entry = grunt.option('entry') || '';
+  process.env.mocha_invert = grunt.option('invert') || '';
 };

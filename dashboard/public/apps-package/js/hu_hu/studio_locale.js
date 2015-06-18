@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "szereplő"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Földönkívüli invázió!"},
 "backgroundBlack":function(d){return "fekete"},
 "backgroundCave":function(d){return "barlang"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tovább"},
 "decrementPlayerScore":function(d){return "távolítsd el a pontot"},
 "defaultSayText":function(d){return "Ide írj"},
+"dropletBlock_changeScore_description":function(d){return "Adj hozzá vagy vegyél el egy pontot a pontszámból."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Add meg a háttér képet"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Szereplő hangulatának beállítása"},
+"dropletBlock_setSpritePosition_description":function(d){return "Egy szereplő azonnal átkerül a megadott helyre."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "A szereplő sebességének beállítása"},
+"dropletBlock_setSprite_description":function(d){return "A szereplő külsejének beállítása"},
+"dropletBlock_throw_description":function(d){return "Adott karakter dobja a lövedéket."},
+"dropletBlock_vanish_description":function(d){return "Eltünteti a szereplőt."},
 "emotion":function(d){return "hangulat"},
 "finalLevel":function(d){return "Gratulálok, megoldottad az utolsó feladatot."},
 "for":function(d){return "ciklus"},
 "hello":function(d){return "helló"},
 "helloWorld":function(d){return "Helló világ!"},
 "incrementPlayerScore":function(d){return "pontszám"},
+"itemBlueFireball":function(d){return "kék tűzgolyó"},
+"itemPurpleFireball":function(d){return "lila tűzgolyó"},
+"itemRedFireball":function(d){return "piros tűzgolyó"},
+"itemYellowHearts":function(d){return "sárga szívek"},
+"itemPurpleHearts":function(d){return "lila szívek"},
+"itemRedHearts":function(d){return "piros szívek"},
+"itemRandom":function(d){return "véletlen"},
+"itemAnna":function(d){return "horog"},
+"itemElsa":function(d){return "szikra"},
+"itemHiro":function(d){return "mikrobot"},
+"itemBaymax":function(d){return "rakéta"},
+"itemRapunzel":function(d){return "serpenyő"},
+"itemCherry":function(d){return "cseresznye"},
+"itemIce":function(d){return "jég"},
+"itemDuck":function(d){return "kacsa"},
 "makeProjectileDisappear":function(d){return "eltűnik"},
 "makeProjectileBounce":function(d){return "visszapattan"},
 "makeProjectileBlueFireball":function(d){return "legyen kék a tűzgolyó"},

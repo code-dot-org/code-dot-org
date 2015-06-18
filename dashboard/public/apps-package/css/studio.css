@@ -100,7 +100,7 @@ button.arrow:focus {
 .studio-score {
   text-anchor: middle;
   font-size: xx-large;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: "Gotham 7r", sans-serif;
   fill: white;
   stroke: black;
   stroke-width: 2;
@@ -109,7 +109,7 @@ button.arrow:focus {
 .studio-ts-title {
   text-anchor: middle;
   font-size: xx-large;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: "Gotham 7r", sans-serif;
   fill: white;
   stroke: black;
   stroke-width: 2;
@@ -118,7 +118,7 @@ button.arrow:focus {
 .studio-ts-text {
   text-anchor: middle;
   font-size: 20px;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: "Gotham 7r", sans-serif;
   fill: white;
   stroke: black;
   stroke-width: 1;
@@ -128,3 +128,7 @@ button.arrow:focus {
   stroke: white;
   stroke-width: 3;
   fill: none; }
+
+.wall-letter {
+  line-height: 120%;
+  cursor: default; }

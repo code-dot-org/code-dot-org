@@ -23,7 +23,7 @@ var flappy_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -183,10 +183,10 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundSwoosh":function(d){return "เล่นเสียงสูบ"},
 "playSoundWing":function(d){return "เล่นเสียงปีก"},
 "playSoundJet":function(d){return "เล่นเสียงเจ๊ต"},
-"playSoundCrash":function(d){return "play crash sound"},
-"playSoundJingle":function(d){return "play jingle sound"},
-"playSoundSplash":function(d){return "play splash sound"},
-"playSoundLaser":function(d){return "play laser sound"},
+"playSoundCrash":function(d){return "เล่นเสียงชน"},
+"playSoundJingle":function(d){return "เล่นเสียงกรุ๊งกริ๊ง"},
+"playSoundSplash":function(d){return "เล่นเสียงพ่นน้ำ"},
+"playSoundLaser":function(d){return "เล่นเสียงเลเซอร์"},
 "playSoundTooltip":function(d){return "เล่นเสียงที่ถูกเลือก."},
 "reinfFeedbackMsg":function(d){return "คุณสามารถกดปุ่ม \"เริ่มอีกครั้ง\" เพื่อกลับไปสู่เกมส์ของคุณ."},
 "scoreText":function(d){return "คะแนน: "+flappy_locale.v(d,"playerScore")},
@@ -257,23 +257,23 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundRandom":function(d){return "สุ่ม"},
 "soundBounce":function(d){return "กระเด้ง"},
 "soundCrunch":function(d){return "crunch"},
-"soundDie":function(d){return "sad"},
+"soundDie":function(d){return "เศร้า"},
 "soundHit":function(d){return "smash"},
 "soundPoint":function(d){return "point"},
 "soundSwoosh":function(d){return "swoosh"},
-"soundWing":function(d){return "wing"},
+"soundWing":function(d){return "ปิก"},
 "soundJet":function(d){return "jet"},
 "soundCrash":function(d){return "crash"},
 "soundJingle":function(d){return "jingle"},
 "soundSplash":function(d){return "splash"},
 "soundLaser":function(d){return "laser"},
 "speedRandom":function(d){return "set speed random"},
-"speedVerySlow":function(d){return "set speed very slow"},
-"speedSlow":function(d){return "set speed slow"},
-"speedNormal":function(d){return "set speed normal"},
-"speedFast":function(d){return "set speed fast"},
-"speedVeryFast":function(d){return "set speed very fast"},
-"whenClick":function(d){return "when click"},
+"speedVerySlow":function(d){return "ตั้งความเร็วช้ามาก"},
+"speedSlow":function(d){return "ตั้งความเร็วช้า"},
+"speedNormal":function(d){return "ตั้งความเร็วปานกลาง"},
+"speedFast":function(d){return "ตั้งความเร็วเร็ว"},
+"speedVeryFast":function(d){return "ตั้งความเร็วเร็วมาก"},
+"whenClick":function(d){return "เมื่อคลิก"},
 "whenClickTooltip":function(d){return "Execute the actions below when a click event occurs."},
 "whenCollideGround":function(d){return "when hit the ground"},
 "whenCollideGroundTooltip":function(d){return "Execute the actions below when Flappy hits the ground."},

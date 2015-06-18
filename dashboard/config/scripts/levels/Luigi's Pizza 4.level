@@ -23,10 +23,11 @@
     "coordinate_grid_background": "false",
     "project_template_level_name": "Luigi's Pizza",
     "callout_json": "[]",
-    "instructions": "Free Play: What can you do to make Luigi's cost function even better? Try one (or more) of the following:\r\n- Display an image of the chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount",
-    "min_workspace_height": "2000"
-  },
-  "md5": "a70213d19142b67d9234cd93eda69db7"
+    "instructions": "Free Play: What can you do to make Luigi's cost function even more useful?",
+    "min_workspace_height": "2000",
+    "disable_examples": "false",
+    "markdown_instructions": "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \r\n\r\n- Create a new function to display an image of the chosen pizza\r\n- Create a function that allows for ordering multiple pizzas\r\n- Create a function that allows you to add a coupon code for a 50% discount"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

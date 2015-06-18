@@ -24,7 +24,6 @@ var ObservableEvent = require('../ObservableEvent');
 var logger = NetSimLogger.getSingleton();
 var netsimConstants = require('./netsimConstants');
 var netsimGlobals = require('./netsimGlobals');
-var netsimNodeFactory = require('./netsimNodeFactory');
 
 var MessageGranularity = netsimConstants.MessageGranularity;
 
@@ -297,6 +296,9 @@ NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) 
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
+
+  logger.info(this.getDisplayName() + ": Connecting to " + router.getDisplayName());
+
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
@@ -416,17 +418,8 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
 NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   if (this.myWire) {
     this.myWire.synchronousDestroy();
-    this.myWire = null;
   }
-
-  var myRouter = this.getMyRouter();
-  if (myRouter) {
-    myRouter.stopSimulation();
-  }
-
-  this.myRemoteClient = null;
-  this.myRouterID_ = undefined;
-  this.remoteChange.notifyObservers(null, null);
+  this.cleanUpAfterDestroyingWire_();
 };
 
 /**
@@ -445,17 +438,28 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
       logger.info("Error while disconnecting: " + err.message);
     }
 
-    var myRouter = this.getMyRouter();
-    if (myRouter) {
-      myRouter.stopSimulation();
-    }
-
-    this.myWire = null;
-    this.myRemoteClient = null;
-    this.myRouterID_ = undefined;
-    this.remoteChange.notifyObservers(null, null);
+    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
+};
+
+/**
+ * Common cleanup behavior shared between the synchronous and asynchronous
+ * disconnect paths.
+ * @private
+ */
+NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+  var myRouter = this.getMyRouter();
+  if (myRouter) {
+    // We did manual heartbeat setup, we also need to do manual heartbeat
+    // cleanup when we disconnect from the router.
+    myRouter.heartbeat = null;
+  }
+
+  this.myWire = null;
+  this.myRemoteClient = null;
+  this.myRouterID_ = undefined;
+  this.remoteChange.notifyObservers(null, null);
 };
 
 /**
@@ -475,10 +479,24 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   // Who will be responsible for picking up/cleaning up this message?
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
+  var levelConfig = netsimGlobals.getLevelConfig();
+  var extraHops = levelConfig.minimumExtraHops;
+  if (levelConfig.minimumExtraHops !== levelConfig.maximumExtraHops) {
+    extraHops = netsimGlobals.randomIntInRange(
+        levelConfig.minimumExtraHops,
+        levelConfig.maximumExtraHops + 1);
+  }
 
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
-      payload,
+  NetSimMessage.send(
+      this.shard_,
+      {
+        fromNodeID: localNodeID,
+        toNodeID: remoteNodeID,
+        simulatedBy: simulatingNodeID,
+        payload: payload,
+        extraHopsRemaining: extraHops
+      },
       function (err) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
@@ -487,12 +505,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
           return;
         }
 
-        logger.info('Local node sent message');
+        logger.info(this.getDisplayName() + ': Sent message:' +
+            '\nfrom: ' + localNodeID +
+            '\nto  : ' + remoteNodeID +
+            '\nsim : ' + simulatingNodeID +
+            '\nhops: ' + extraHops);
+
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
         onComplete(null);
-      }
+      }.bind(this)
   );
 };
 
@@ -569,7 +592,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 
     if (!alreadySimulating) {
       var newRouter = new NetSimRouterNode(this.shard_, row);
-      newRouter.initializeSimulation(this.entityID, netsimNodeFactory);
+      newRouter.initializeSimulation(this.entityID);
       this.routers_.push(newRouter);
     }
   }, this);
@@ -669,6 +692,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
  * @private
  */
 NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
+  logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
     this.receivedLog_.log(message.payload);

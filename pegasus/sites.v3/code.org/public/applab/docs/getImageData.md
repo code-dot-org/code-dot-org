@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -71,7 +72,7 @@ setRed(imageData, 50, 50, 0); //Set the red value of pixel at x:50 y:50 in image
 putImageData(imageData, 0, 0); //Update the canvas with modified image data starting at x:0 y:0
 
 //Print red value at x:50 y:50 from imageData to the console again. We will see 0 in the console.
-console.log(getRed(imageData, 50, 50)); 
+console.log(getRed(imageData, 50, 50));
 </pre>
 
 [/example]
@@ -175,3 +176,5 @@ Returns an object representing the image data captured from the canvas in the co
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

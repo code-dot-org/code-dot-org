@@ -64,8 +64,8 @@ id:
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} Pelajar sudah terdaftar.'
+    teacher_count: '%{count} Guru sudah terdaftar.'
     overview_student: 'Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password. Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a> kami.'
     overview_teacher: 'Ajarkan ilmu kompter pada kelas anda dengan mendaftar untuk akun.<p/> Anda akan dapat menambahkan pelajar anda dan mendata kemajuan mereka.'
     no_signup_message: 'Anda dapat <a target="_blank" href="http://learn.code.org"> mencoba berbagai tahap dan berbagai teka-teki</a>, tetapi Anda akan perlu untuk masuk supaya kemajuan belajar Anda dapat dicatat.'
@@ -232,7 +232,7 @@ id:
       signup: Daftar
       already_registered: Apa Sudah Terdaftar?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: '%{name} kemajuan'
       progress: Kemajuan Anda
       lines: 'Jumlah baris kode: %{lines}'
       close: TUTUP
@@ -301,9 +301,11 @@ id:
     cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dihapus sebagai guru Anda karena Anda belum mendaftarkan e-mail'
     student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Menjawab Pembaca
       student: siswa
-      try_it_yourself: Try it yourself
+      viewing_solution: Melihat Solusi
+      try_it_yourself: Lakukan itu sendiri
+      section: Sesi
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
@@ -324,7 +326,9 @@ id:
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} GARIS KODE DITULIS OLEH PELAJAR'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: 'Sudah terdaftar? %{link}'
@@ -391,6 +395,10 @@ id:
     autoplay_option: Autoplay video
     download: Ungah Video
   compatability:
+    https:
+      header: Silakan aktifkan HTTPS untuk Code.org.
+      message: "Untuk meningkatkan keamanan, kita beralih ke HTTPS pada %{https_date}. Anda tidak akan dapat mengakses Code.org setelah tanggal ini. <a href='%{it_requirements_url}'> Klik di sini</a> untuk belajar bagaimana untuk mengaktifkan HTTPS untuk Code.org."
+      hide_this_warning: Sembunyikan peringatan
     working:
       header: Kami dalam tahap bekerja untuk menyediakan layanan didalam browser Anda.
       message: "Code.org menggunakan teknologi modern web. Hal ini membuat situs lebih cepat untuk digunakan. Browser Anda tidak mendukung semua fitur yang diperlukan, dan Anda mungkin mengalami masalah ketika menggunakan ini bagian dari situs. Harap membantu kami dengan <a href='%{report_issue_url}'> melaporkan masalah yang Anda temukan</a>. Anda juga dapat <a href='%{supported_browsers_url}'> meng-upgrade browser Anda ke versi yang didukung </a>."
@@ -492,8 +500,8 @@ id:
     baddomaintype: Satu atau lebih item domain Anda memiliki Tipe yang salah, atau dalam urutan yang salah.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Terima kasih
+    open_response_body: Terima kasih atas responmu!
   dialog:
     ok: Oke!
   time:

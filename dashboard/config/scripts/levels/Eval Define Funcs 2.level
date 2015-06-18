@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Let's look inside that \"green-triangle\" function to see how it works. Can you modify it so that the \"green-triangle\" function always draws outlined green triangles?",
+    "instructions": "Let's look inside that green-triangle function to see how it works. Can you modify it so that the green-triangle function always draws outlined green triangles?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,9 +24,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
-  },
-  "md5": "6026accc3c1eda636947909a4321f0bc"
+    "disable_examples": "false",
+    "markdown_instructions": "Let's look inside that _green-triangle_ function to see how it works. Can you modify it so that the _green-triangle_ function always draws outlined green triangles?"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

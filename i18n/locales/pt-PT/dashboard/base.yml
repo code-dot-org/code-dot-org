@@ -64,8 +64,8 @@ pt:
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} Os alunos já se inscreveram.'
+    teacher_count: '%{count} Os professores já se inscreveram.'
     overview_student: 'Cria uma conta para poderes ver o teu progresso. O teu e-mail será utilizado para iniciares sessão e para repores a palavra-passe (no caso de te esqueceres dela). Para mais informações, lê a nossa <a href="http://code.org/privacy">Política de privacidade</a>.'
     overview_teacher: 'Ensine ciência da computação na sua sala de aula por criar uma conta.<p/> Poderá adicionar os seus alunos e acompanhar os seus progressos.'
     no_signup_message: 'Podes <a target="_blank" href="http://learn.code.org">explorar várias etapas e desafios</a>, mas terás de criar uma conta para guardares o teu progresso.'
@@ -196,7 +196,7 @@ pt:
         not_earned_title: 'Dê uma aula, receba até $1,000 em créditos de <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (somente professores dos Estados Unidos da América)'
         not_earned: 'Para recompensar professores principiantes de informática, pode ganhar até 1,000$ US em <a href="http://DonorsChoose.org">DonorsChoose.org</a> crédito para lecionar o curso de introdução K-8 na sala de aula. Para se qualificar, terá de ter uma sala de aula de pelo menos 15 estudantes durante todo o curso de introdução K-8, com os 15 estudantes (ou mais) a completaram todos os tutoriais e atingirem todos os %{num_trophies} troféus. Se 7 ou mais dos estudantes que consigam todos os troféus forem do sexo feminino, a sua recompensa é de $1,000 US em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos. Caso contrário, a sua recompensa é de $750 US em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos só podem ser usados por professores de escolas públicas dos EUA.'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: 'Tu podes adicionar $250 adicionais em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>creditos (apenas professores Americanos)'
           earned: '7 ou mais dos alunos que colecionaram todos os %{num_trophies} troféus são do sexo feminino. Ganhou um prémio de bónus! (Apenas para professores dos EUA)'
           not_earned: 'Se pelo menos 7 dos seus alunos que conseguirem todos os %{num_trophies} troféus são do sexo feminino, a sua recompensa é de $250 US adicionais em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> créditos só podem ser usados por professores de escolas públicas dos EUA.'
   crud:
@@ -210,8 +210,8 @@ pt:
     confirm: Tens a certeza?
     created: '% {modelo} foi criado com êxito.'
     updated: '% {modelo} foi actualizado com sucesso.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: 'You do not have access to this %{model}.'
+    destroyed: '%{model} foi eliminado com êxito.'
+    access_denied: 'Tu não tens acesso a este %{model}.'
   nav:
     header:
       finished_hoc: Terminei a minha Hora de Código
@@ -221,7 +221,7 @@ pt:
         artist: Desenhar alguma coisa
     user:
       classroom: Página inicial do professor
-      district_dashboard: District Dashboard
+      district_dashboard: Pontuações do distrito
       label: 'Olá, %{username}'
       stats: O meu progresso
       settings: A minha conta
@@ -231,7 +231,7 @@ pt:
       signup: Criar conta
       already_registered: Já criaste uma conta?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'Progresso do %{name}'
       progress: O teu progresso
       lines: 'Total de linhas de código: % {linhas}'
       close: FECHAR
@@ -243,19 +243,19 @@ pt:
       prizes_link: Mais informação
   teacher:
     title:
-      one: 'Your teacher:'
+      one: 'O teu professor:'
       other: 'Os teus professores:'
-    remove: (remove teacher)
+    remove: (Remover professor)
     confirm:
       remove: Tens a certeza de que pretendes remover este professor?
     tools: Ferramentas do Professor
     followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      section: 'Secção:'
+      stages: 'nível(eis) a exibir:'
+      show_past: 'Mostrar atividade do estudante (%{bullet_html}) no passado:'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      perfect: Completo, perfeito
+      completed: Completo, mas foram usados demasiados blocos
       tried: Tried, but not completed
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
@@ -302,7 +302,9 @@ pt:
     panel:
       answer_viewer: Answer Viewer
       student: Aluno
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -323,7 +325,9 @@ pt:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Lesson plans
     signin_message: 'Já criaste uma conta? %{link}'
@@ -390,6 +394,10 @@ pt:
     autoplay_option: visualização automatica de vídeos
     download: Descarregar o vídeo
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Hide this warning
     working:
       header: Estamos a trabalhar no suporte ao teu browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."

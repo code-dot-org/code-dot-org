@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -41,7 +42,7 @@ ____________________________________________________
 
 [example]
 
-**Distance between two points.** In this example, we use coordinates to calculate the horizontal and vertical distance between two points. This example also uses [Math.round](/applab/docs1/mathRound) to display results.
+**Distance between two points.** In this example, we use coordinates to calculate the horizontal and vertical distance between two points. This example also uses [Math.round](/applab/docs/mathRound) to display results.
 
 <pre>
 show(); //Display the turtle
@@ -123,3 +124,5 @@ A number representing the absolute value of x, or NaN if x is not a number, or 0
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

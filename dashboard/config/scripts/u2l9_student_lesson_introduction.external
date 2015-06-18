@@ -1,6 +1,6 @@
 name 'U2L9 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'The Need for DNS'
+
 css 'unplugged'
 skip_dialog 'true'
 
@@ -9,21 +9,23 @@ markdown <<MARKDOWN
 
 # Background
 
-Background goes here
+It would be impossible for packets to be routed across the internet without IP addresses. The problem with this system is that, while computers are good at referring to other computers by numbers, humans are not. The Domain Name System (DNS) solves this problem so that we can identify a webpage by its name, even when the IP addresses change.
 
 # Vocabulary
 
-Vocabulary goes here
+<strong>DNS</strong>: an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses. 
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Try to determine addresses without the use of a lookup table.
+* Play DNS Bingo.
+* Discover how DNS translates human-readable locations on the Internet into a numeric IP address.
+
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1ast9GYpMTTtvdtUpr37ntOjcOvGhy8jynodPVF5-Lv8/edit?usp=sharing" target="_blank"> Names and Addresses </a>
+* Handout: <a href="https://docs.google.com/document/d/16AFJlOGhuzEqfwblFynKUT9VNbOuNeekXD8nWKCBbJ8/edit?usp=sharing" target="_blank"> IP address labels </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

@@ -12,6 +12,7 @@ az-AZ:
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı olmalıdır
   petition_sign_message: 'Razısınızsa, adınızı yazın. Daha # nəfərə qoşulun.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Digər # nəfərə qoşulun'
   name: Ad
   email: E-poçt
   zipcode: Ölkə və ya poçt indeksi
@@ -66,7 +67,7 @@ az-AZ:
   thanks_for_voting: Səs verdiyinizə görə sağ olun!
   share_on_facebook: '"Facebook"da bölüşün'
   share_on_twitter: '"Twitter"də bölüşün'
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: Kod Saatı bitəndən sonra
   get_started: Başlayın
   i_agree: Razıyam
   participant_select: '- Seçin -'
@@ -87,7 +88,7 @@ az-AZ:
   continue_learning_header: Bir saatdan daha çox öyrənməyə davam edin
   continue_learning_body: Variantlar çoxdur. Ya onlayn, ya yerli bir məktəbdə və yaxud da yay düşərgəsində öyrənə bilərsiniz.
   learn_next_level: Növbəti mərhələyə keçin
-  learn_online: Try other courses online
+  learn_online: Digər onlayn kursları sınaqdan keçirin
   learn_classes: Yerli siniflər tapın
   hoc_is_here: '#HourOfCode Kod Saatı gəldi - özünüz baxın! @codeorg'
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
@@ -123,7 +124,7 @@ az-AZ:
   studiobar_frozen_body: Anna və Elza ilə bir qış möcüzəsi yaradın
   studiobar_donate_title: İanə verin
   studiobar_donate_body: İanə etdiyiniz hər dollara bir uşaq dərs alır
-  studiobar_shop_title: Shop
+  studiobar_shop_title: Dükan
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
@@ -177,16 +178,19 @@ az-AZ:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Kod Saatı
   homepage_slot_text_frozen: Anna və Elza ilə Buzlu ürək
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Bütün dərsliklərimiz
   homepage_slot_text_course4: Kurs 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Dükan
   homepage_slot_text_flappy: Qanadlı Kod
   homepage_action_text_codevideo: Videoya baxın
   homepage_action_text_teachervideo: Videoya baxın
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Öyrənməyə başlayın
   homepage_action_text_signpetition: Petisiyaya qol çəkin
   homepage_signpetition_dropdown: 'Petisiyamıza qol çəkin &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
@@ -209,7 +213,7 @@ az-AZ:
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: İştriak edin
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
@@ -230,27 +234,27 @@ az-AZ:
   class_submission_in_school_daily_programming_course: Gündəlik proqramlaşdırma kursu
   class_submission_in_school_ap_computer_science: AP computer science
   class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes (math, science, etc)
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
+  class_submission_in_school_robotics_club: Robotika klubu
+  class_submission_in_school_programming_integrated_in_other_classes: Digər dərslərə (riyaziyyat, təbiət fənləri və s.) daxil edilmiş proqramlaşdırma kursları
+  class_submission_in_school_summer_school_cs_program: Yay məktəbi informatika proqramı
   class_submission_in_school_exploring_computer_science: Exploring Computer Science
   class_submission_in_school_other: Other in school
   class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
+  class_submission_out_of_school_summer_camp: Yay düşərgəsi
+  class_submission_out_of_school_afterschool_program: Məktəbdənkənar proqram
+  class_submission_out_of_school_all-day_workshop: Tam günlük məşğələ (1 həftəyə qədər)
+  class_submission_out_of_school_multi-week_workshop: Bir neçə həftəlik məşğələ
   class_submission_out_of_school_other: Other out of school
   class_submission_online: Online
   class_submission_online_programming_class: Online programming class
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
+  class_submission_level_preschool: Məktəbəqədər
   class_submission_level_elementary: İbtidai
   class_submission_level_middle_school: Middle school
   class_submission_level_high_school: High school
   class_submission_level_college: College
-  class_submission_level_vocational: Vocational
+  class_submission_level_vocational: Texbiki-peşə
   class_submission_languages_other: Digər dil(lər)
   volunteer_engineer_submission_commitment_uncertain: Qeyri-müəyyən
   volunteer_engineer_submission_commitment_now_and_then: Every now and then
@@ -275,7 +279,7 @@ az-AZ:
   dashboard_landing_news_title: K-5 Educator Resources (in English only)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links (in English only)
+  dashboard_landing_useful_links: Other useful links
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
   dashboard_landing_print_certificates: Print certificates for students who finish this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
@@ -361,11 +365,18 @@ az-AZ:
   dashboard_students_print_page: Print this page
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
+  dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-3
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Course 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_overview: Overview
   dashboard_sequence: Ardıcıllıq
   dashboard_framework: Framework
   dashboard_standards: Standards
@@ -376,6 +387,10 @@ az-AZ:
   dashboard_puzzle_solving: 'Puzzle-solving:'
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Digər
   dashboard_login_word: Word
@@ -403,6 +418,7 @@ az-AZ:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Frequently Asked Questions
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Kod Saatı artıq buradadır - 8-14 dekabr!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
@@ -526,7 +542,7 @@ az-AZ:
   scratch_platformtext: Ancaq masaüstü veb səyyahlar (planşetlər yox)
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
-  condcards_platformtext: Unuplugged
+  condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
   codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
   codecademy_platformtext: Müasir veb səyyahlar. iOS, Android proqramları
@@ -820,3 +836,6 @@ az-AZ:
   processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
   alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Bu xəbərdarlığı gizlət

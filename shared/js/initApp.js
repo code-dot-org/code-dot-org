@@ -61,17 +61,22 @@ var baseOptions = {
     }
   },
   showInstructionsWrapper: function(showInstructions) {
-    var hasInstructions = appOptions.level.instructions || appOptions.level.aniGifURL;
-    if (!hasInstructions || this.share || appOptions.level.skipInstructionsPopup) {
+    // Always skip all pre-level popups on share levels or when configured thus
+    if (this.share || appOptions.level.skipInstructionsPopup) {
       return;
     }
 
-    if (appOptions.autoplayVideo) {
+    var hasVideo = !!appOptions.autoplayVideo;
+    var hasInstructions = !!(appOptions.level.instructions || appOptions.level.aniGifURL);
+
+    if (hasVideo) {
       showVideoDialog(appOptions.autoplayVideo);
-      $('.video-modal').on('hidden.bs.modal', function () {
-        showInstructions();
-      });
-    } else {
+      if (hasInstructions) {
+        $('.video-modal').on('hidden.bs.modal', function () {
+          showInstructions();
+        });
+      }
+    } else if (hasInstructions) {
       showInstructions();
     }
   }
@@ -142,7 +147,6 @@ if (appOptions.droplet) {
   loadStyle('tooltipster/tooltipster.min');
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('marked/marked'))
-      .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))

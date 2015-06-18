@@ -296,7 +296,7 @@
         studio_c3_story_2: 你可以让狗说些什么，然后让猫说些什么吗？
         studio_c3_story_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
         studio_c3_story_4: 你可以写一个程序来将这只狗移动到那只猫处, 当狗到达时, 让猫对他说“你好”?
-        studio_c3_story_5: 你可以添加一个模块，使八达通快乐吗？
+        studio_c3_story_5: 你可以添加一个能使章鱼快乐的模块吗？
         studio_c3_story_6: 创建你自己的故事。当你完成后，单击Finish（完成），让朋友在他们手机上试试你的故事.
         studio_c3_game_1: 你可以写一个程序来使章鱼说“你好”, 当它被点击时？
         studio_c3_game_2: 你可以写一个程序，用上/下/左/右按键使这个企鹅走动去打的所有目标吗？
@@ -319,14 +319,14 @@
         studio_k1_1: 你可以让这个狗说"你好世界"吗？
         studio_k1_2: 你可以让狗说些什么，然后让猫说些什么吗？
         studio_k1_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
-        studio_k1_4: 把狗移动到貓那处, 當他到达时让猫说"你好".
-        studio_k1_5: 你可以添加一个模块，使八达通快乐吗？
-        studio_k1_6: 创建你自己的故事 ！左右移动猫和狗，让他们说东西。
+        studio_k1_4: 把狗移动到猫那处, 当他到达时让猫说"你好".
+        studio_k1_5: 你可以添加一个能使章鱼快乐的模块吗？
+        studio_k1_6: 创建你自己的故事 ！上下左右移动猫和狗，让他们说点什么。
         maze_wordsearch_k_1: 移动我拼写单词EAST
         maze_wordsearch_k_2: 移动我拼写单词SOUTH
         maze_wordsearch_k_3: 移动我拼写单词WEST
         maze_wordsearch_k_4: 移动我拼写单词NORTH
-        maze_wordsearch_k_6: 把我向東 然后向南移动来拼寫單詞JUMP
+        maze_wordsearch_k_6: 把我向懂移动，然后向南移动来拼写单词JUMP
         maze_wordsearch_k_9: 把我向这边 然后向另一边移动来拼寫單詞CODE
         maze_wordsearch_k_13: 把我向这边 然后向另一边移动来拼寫單詞DEBUG
         maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼寫單詞ABOVE
@@ -346,10 +346,10 @@
         loop_times: 重复次数块
         loop_until: 重复直到块
         if: 如果块
-        if_else: 如果/那么块
-        if_else_scrat: 如果/那么块
+        if_else: 如果/那么模块
+        if_else_scrat: 如果/那么模块
         function: 函数
-        loop_while: 当块
+        loop_while: while块
         loop_for: “计数”循环块
         parameters: 有参数的函数
         hoc_wrapup: 编程一小时总结
@@ -448,6 +448,9 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations

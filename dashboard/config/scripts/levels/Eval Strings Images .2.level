@@ -7,7 +7,7 @@
   "properties": {
     "skin": "eval",
     "use_contract_editor": "true",
-    "instructions": "The \"string-append\" function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of \"string-append.\"",
+    "instructions": "The string-append function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of string-append.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\""
-  },
-  "md5": "d6717a8be86097d06d4f9c3e0e64b62a"
+    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\"",
+    "markdown_instructions": "The _string-append_ function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of _string-append_.",
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

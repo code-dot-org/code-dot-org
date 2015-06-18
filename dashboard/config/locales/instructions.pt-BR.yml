@@ -1,8 +1,6 @@
 "pt":
   data:
     instructions:
-      2-3 _instruction: Flores roxas podem ter 1 ou 0 néctar. Tenha cuidado para não
-        coletar néctar de uma flor roxa se ela não tiver nenhum néctar.
       2-3 Artist 1 new_instruction: Oi, eu sou um artista. Você pode escrever códigos
         para me fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer
         desenhar sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de
@@ -34,8 +32,8 @@
         para desenhar a mesma casa usando apenas 3 blocos.
       2-3 Artist 6_instruction: 'Essa casa precisa de um telhado! Desenhe o triângulo.
         Dica: todos os 3 lados têm o mesmo comprimento.'
-      2-3 Artist 7_instruction: 'Termine de desenhar a metade direita da última janela.
-        Cada quadrado da janela tem 25 pixels. '
+      2-3 Artist 7_instruction: "Termine de desenhar a metade direita da última janela.\nCada
+        quadrado da janela tem 25 pixels. \n"
       2-3 Artist 8_instruction: |
         Complete os quartos para cada um dos animais dividindo
          o retângulo em 2 quadrados de mesmo tamanho. O retângulo tem 200 pixels de largura
@@ -452,9 +450,9 @@
       2-3 Maze Loops 21_instruction: Leve-me até o girassol!
       2-3 Maze Loops Assessment 1_instruction: "Avaliação: Leve-me até o girassol\nusando
         apenas 5 blocos! \n"
-      2-3 Maze sq1 _instruction: |
-        Esse porco está me incomodando. Ajude-me a
-        encontrá-lo!
+      2-3 Maze sq1_instruction: |
+        This pig is ruffling my feathers.  Help me find
+        him!
       2-3 Maze sq10_instruction: Leve-me até o porco! Que blocos foram repetidos?
       2-3 Maze sq10v2_instruction: Leve-me até o porco! Que blocos foram repetidos?
       2-3 maze sq11_instruction: Leve-me até o porco! Que blocos foram repetidos?
@@ -488,6 +486,9 @@
         Leve-me até o porco! (Onde está o bloco "repita vezes"
         quando eu preciso dele?)
       2-3 Maze sq9_instruction: Crie laços para chegar até o porco usando menos blocos.
+      2-3_instruction: |
+        Purple flowers may have either 1 or 0 nectar. Be careful
+        not to collect nectar from a purple flower if it doesn't have any.
       2-3level1_instruction: Ajude o pássaro a pegar o porco safado movendo-o para
         frente
       4-5 Artist 1_instruction: "Ajude-me a terminar de desenhar minha caixa. (Cada
@@ -1490,9 +1491,6 @@
         podemos usar a variável contador para deixar os lados menores conforme a forma tem
         mais lados? Ao invés de avançar por uma quantidade definida, avance (100 /
         contador) pixels.
-      Course 4 Artist For Loops 14 _instruction: |
-        Se você virar um pouco mais, ou um pouco menos, do que normalmente faria para uma forma, você cria um efeito legal. Tente
-        virar 89 graus para criar esse efeito de espiral quadrada.
       Course 4 Artist For Loops 14_instruction: |
         Se você virar um pouco mais, ou um pouco menos, do que normalmente faria para uma forma, você cria um efeito legal. Tente
         virar 89 graus para criar esse efeito de espiral quadrada.
@@ -1709,8 +1707,8 @@
         colmeia.\nPrimeiro verifique se isso é uma for ou uma colmeia, e então colete
         néctar\napenas se for uma flor. \n"
       Course 4 Bee 2_instruction: |
-        Verifique cada um dos objetos para ver se ele é uma flor
-        - se for, colete néctar.
+        Verifique cada objeto para ver se é uma flor. Se for,
+        colete o néctar... caso contrário, você pode ignorá-lo!
       Course 4 Bee 3_instruction: |
         O objeto desconhecido pode ser uma flor ou uma colmeia.
         Use o bloco se-senão para coletar néctar se ele for uma flor, senão produza mel
@@ -2191,8 +2189,8 @@
         ao segundo argumento de "acrescentar-string".
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
-        use is an Image. This "star" function takes in a Number and two Strings,
-        and it evaluates to an Image. Use this function to make a solid red star with
+        use is an Image. This star function takes in a Number and two Strings, and
+        it evaluates to an Image. Use this function to make a solid red star with
         radius of 100.
       Eval Strings Images 2_instruction: |
         Atividade livre: todos os blocos de cálculo estão identificados por cores
@@ -2295,6 +2293,12 @@
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -2745,9 +2749,6 @@
       NEW Course 4 Artist Params 15_instruction: |
         Atividade livre: aqui estão as funções
         que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
-      NEW Course 4 Artist Params 2 _instruction: |
-        Crie uma função "desenhe um triângulo
-        com lados de 50 pixels" desde o início
       NEW Course 4 Artist Params 2_instruction: |
         Crie uma função "desenhe um triângulo
         com lados de 50 pixels" desde o início
@@ -2769,9 +2770,9 @@
         cada triângulo é 25 pixels maior que o anterior. O primeiro triângulo tem 25
         pixels.
       NEW Course 4 Artist Params 8_instruction: |
-        Você pode desenhar cada um desses triângulos
-        com a nova função? O primeiro tem 25 pixels de comprimento, o segundo 50 e
-        o terceiro 75. Dica: comece clicando em "editar" no bloco da função.
+        O código da função deste triângulo
+        está corrompido. Você consegue editar a função para corrigi-lo e criar triângulos
+        de 25, 50 e 75 pixels de comprimento?
       NEW Course 4 Artist Params 9_instruction: |
         Clique em "editar" para preencher a definição
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
@@ -2861,6 +2862,11 @@
         do teclado\npara mover o ninja para a esquerda, para a direita e para pular
         - tente pegar o unicórnio e\ndesvie do dragão!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
+        Vamos começar explorando um jogo simples
+        e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
+        ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
+        achar que já descobriu como o jogo funciona, clique em "Concluir"
+      Ninjacat Demo No Animate_instruction: |
         Vamos começar explorando um jogo simples
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
@@ -3100,9 +3106,27 @@
         Esse poema foi comprimido com
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
         outro padrão comum para comprimir ainda mais o poema?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Envie uma mensagem configurando o estado do
+        fio como A ou B.
+      U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3111,13 +3135,14 @@
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame
-        you just played in person, but this time using the Internet Simulator.\nJoin
-        a room to be connected to your group, and then follow the instructions\non
-        the worksheet handed out by your teacher.\r\n"
-      U2L3 NetSim Hub Mode_instruction: "With your group, invent a standard addressing\nscheme
-        for the \"Game of Messages\" game, and try it out using the Internet\nSimulator.
-        \n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship
+        moves. For setup, join a Room with your group, and add ships to\nyour paper
+        board for each opponent. When playing, all communication must be\ndone through
+        the tool, so no talking, but have fun!\r\n"
+      U2L3 NetSim Hub Mode_instruction: |
+        Use the Internet Simulator to test out your
+        group's binary communication protocol for battleship. How short can you make
+        the message and response?
       U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter
         with the others in your group. Important note: The router will only\nproperly
         route messages where the first 4 bits are the To: address and the\nsecond
@@ -3348,12 +3373,12 @@
         to the result of the last level, you can copy your code from that level into
         here if you prefer.
       U3L19 - Clicker Game Freeplay Area_instruction: |
-        Use this App Lab area to improve
-        your clicker game.  You should start by copy/pasting the code from your old
-        game here.  We're showing a more full set of blocks in the toolbox - some
-        of the things you might not have used yet.  Feel free to explore then and
-        experiment if you want to.  Everything else you need should be shown.  Have
-        fun!
+        Use esta área de laboratório do aplicativo para melhorar
+        seu jogo no estilo clicker.  Você deve começar copiando/colando o código do seu jogo antigo
+        aqui. Estamos mostrando um conjunto mais completo de blocos na caixa de ferramentas -
+        você pode não ter usado algumas coisas ainda. Fique à vontade para explorar e
+        testar o que você quiser. Tudo o que você precisa deve ser mostrado.
+        Divirta-se!
       U3L19 - Debugging with consoleLog_instruction: |
         This example shows how you
         might insert console.log statements in your code to verify for yourself how

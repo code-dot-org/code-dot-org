@@ -71,7 +71,7 @@ function showVideoDialog(options) {
   var download = $('<a/>').append($('<img src="<%= asset_path 'download_button.png' %>"/>'))
       .addClass('download-video')
       .attr('href', options.download);
-  var nav = $('.ui-tabs-nav');
+  var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
   // Resize modal to fit constraining dimension.
@@ -148,7 +148,7 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
 }
 
 function onYouTubeBlocked(callback) {
-  onURLBlocked(youTubeAvailabilityEndpointURL(), callback);
+  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
 }
 
 function youTubeAvailabilityEndpointURL() {

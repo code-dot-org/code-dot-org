@@ -1,19 +1,46 @@
-var React = require('react');
+/* global $*/
 
+var React = require('react');
+var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
+
+var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
+
+var nextKey = 0;
 
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
     handleChange: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
-    onDone: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired
+  },
+
+  getInitialState: function() {
+    return {selectedTab: TabType.PROPERTIES};
+  },
+
+  /**
+   * Handle a click on a tab, such as 'properties' or 'events'.
+   * @param newTab {TabType} Tab to switch to.
+   */
+  handleTabClick: function(newTab) {
+    this.setState({selectedTab: newTab});
   },
 
   render: function() {
     if (!this.props.element) {
-      return <p>Click on an element to edit its properties.</p>;
+      return <p>{applabMsg.designWorkspaceDescription()}</p>;
+    }
+
+    // We want to have a unique key that doesn't change when the element id
+    // changes, and has no risk of collisions between elements. We add this to
+    // the backing element using jquery.data(), which keeps its own per-session
+    // store of data, without affecting the serialiazation
+    var key = $(this.props.element).data('key');
+    if (!key) {
+      key = nextKey++;
+      $(this.props.element).data('key', key);
     }
 
     var elementType = elementLibrary.getElementType(this.props.element);
@@ -25,27 +52,160 @@ var DesignProperties = module.exports = React.createClass({
       onDepthChange: this.props.onDepthChange
     });
 
-    // We provide a key to the outer div so that element foo and element bar are
-    // seen to be two completely different tables. Otherwise the defaultValues
-    // in inputs don't update correctly.
-    // TODO (brent) - right now if i create two elements with the same id, I
-    // can still run into the same problem, where I click on the other element
-    // and the table doesn't update
-    // TODO (brent) - it appears the wrong element sometimes gets deleted
+    var deleteButton;
+    var element = this.props.element;
+    // First screen is not deletable
+    var firstScreen = elementType === elementLibrary.ElementType.SCREEN &&
+        element.parentNode.firstChild === element;
+    if (!firstScreen) {
+      deleteButton = (<DeleteElementButton
+        shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
+        handleDelete={this.props.onDelete}/>);
+    }
+
+    var tabHeight = 35;
+    var borderColor = '#c6cacd';
+    var bgColor = '#e7e8ea';
+
+    // Diagram of how tabs outlines are drawn. 'x' represents solid border.
+    // '-' and '|' represent no border.
+    //
+    // x----------------------------------------------------------------------|
+    // x designWorkspaceTabs                                                  |
+    // x                                                                      |
+    // x  |xxxxxxxxxxxxxx  |xxxxxxxxxxxxxx  |xxxxxxxxxxxxxx  |-------------|  |
+    // x  | inactiveTab x  |  activeTab  x  | inactiveTab x  |  emptyTab   |  |
+    // x  |xxxxxxxxxxxxxx  |-------------x  |xxxxxxxxxxxxxx  |xxxxxxxxxxxxx|  |
+    // x                                                                      |
+    // x----------------------------------------------------------------------|
+    //
+    // x----------------------------------------------------------------------x
+    // x designWorkspaceBody                                                  x
+    // x                                                                      x
+    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    var baseTabStyle = {
+      borderColor: borderColor,
+      borderStyle: 'solid',
+      boxSizing: 'border-box',
+      height: tabHeight,
+      padding: '0 10px'
+    };
+
+    /** @constant {Object} */
+    var styles = {
+      activeTab: $.extend({}, baseTabStyle, {
+        backgroundColor: bgColor,
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 0,
+        borderLeftWidth: 0,
+        float: 'left'
+      }),
+      inactiveTab: $.extend({}, baseTabStyle, {
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        borderLeftWidth: 0,
+        float: 'left'
+      }),
+      // This tab should fill the remaining horizontal space.
+      emptyTab: $.extend({}, baseTabStyle, {
+        borderTopWidth: 0,
+        borderRightWidth: 0,
+        borderBottomWidth: 1,
+        borderLeftWidth: 0,
+        width: '100%'
+      }),
+      workspaceDescription: {
+        height: 28,
+        overflow: 'hidden'
+      },
+      workspaceTabs: {
+        borderColor: borderColor,
+        borderStyle: 'solid',
+        borderTopWidth: 0,
+        borderRightWidth: 0,
+        borderBottomWidth: 0,
+        borderLeftWidth: 1
+      },
+      tabLabel: {
+        lineHeight: tabHeight + 'px',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
+        userSelect: 'none'
+      },
+      workspaceBody: {
+        height: 'calc(100% - 83px)',
+        padding: '10px 10px 10px 0',
+        borderColor: borderColor,
+        borderStyle: 'solid',
+        borderTopWidth: 0,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        borderLeftWidth: 1,
+        backgroundColor: bgColor
+      },
+      activeBody: {
+        height: '100%',
+        overflowY: 'scroll'
+      },
+      inactiveBody: {
+        display: 'none',
+        height: '100%',
+        overflowY: 'scroll'
+      }
+    };
+
     return (
-      <div key={this.props.element.id}>
-        {propertiesElement}
-        <button
-          id="donePropertiesButton"
-          onClick={this.props.onDone}>
-          Done
-        </button>
-        <button
-          id="deletePropertiesButton"
-          onClick={this.props.onDelete}>
-          Delete
-        </button>
+      <div style={{height: '100%'}}>
+        <div id="designDescription" style={styles.workspaceDescription}>
+          <p>{applabMsg.designWorkspaceDescription()}</p>
+        </div>
+        <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
+          <div id="propertiesTab"
+              style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeTab : styles.inactiveTab}
+              className="hover-pointer"
+              onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}>
+            <span style={styles.tabLabel}>PROPERTIES</span>
+          </div>
+          <div id="eventsTab"
+              style={this.state.selectedTab === TabType.EVENTS ? styles.activeTab : styles.inactiveTab}
+              className="hover-pointer"
+              onClick={this.handleTabClick.bind(this, TabType.EVENTS)}>
+            <span style={styles.tabLabel}>EVENTS</span>
+          </div>
+          <div id="emptyTab" style={styles.emptyTab}>
+          </div>
+        </div>
+        <div id="designWorkspaceBody" style={styles.workspaceBody}>
+          <div id="propertiesBody"
+              style={this.state.selectedTab === TabType.PROPERTIES ? styles.activeBody : styles.inactiveBody}>
+            {/* We provide a key to the outer div so that element foo and element bar are
+               seen to be two completely different tables. Otherwise the defaultValues
+               in inputs don't update correctly. */}
+            <div key={key}>
+              {propertiesElement}
+              {deleteButton}
+            </div>
+          </div>
+          <div id="eventsBody"
+              style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}>
+            coming soon...
+          </div>
+        </div>
       </div>
     );
   }
 });
+
+/**
+ * @readonly
+ * @enum {string}
+ */
+var TabType = {
+  PROPERTIES: 'properties',
+  EVENTS: 'events'
+};
+DesignProperties.TabType = TabType;

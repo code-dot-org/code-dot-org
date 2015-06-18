@@ -300,7 +300,9 @@ fa-AF:
     panel:
       answer_viewer: بیننده پاسخ
       student: دانش آموز
+      viewing_solution: دیدن راه حل
       try_it_yourself: خودت امتحان کن
+      section: بخش
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
@@ -321,7 +323,9 @@ fa-AF:
     classroom_activity: فعالیت کلاسی
   home:
     title: کد استودیو
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} خط کد توسط دانش آموزان نوشته شده است'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: بررسی اجمالی دوره های 1 و 2 و 3
     lesson_plans: طرح درس
     signin_message: 'قبلا ثبت نام کرده‌اید؟ %{link}'
@@ -388,6 +392,10 @@ fa-AF:
     autoplay_option: پخش خودکار فیلم ها
     download: دانلود ویدیو
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: مخفی کردن هشدار
     working:
       header: ما در حال کار بر روی پشتیبانی از مرورگر شما هستیم.
       message: "Code.org از فناوری های نوین وب برای سریعتر ساختن سایت را برای استفاده  بکار می گیرد . مرورگر شما تمام ویژگی های مورد نیاز را پشتیبانی نمی کند، و شما ممکن است به مسایلی در موقع استفاده از این بخش از سایت برخورد کنید . لطفا ما را با <a href='%{report_issue_url}'> گزارش هر گونه مسائل پیش آمده </a> یاری دهید. شما همچنین می توانید <a href='%{supported_browsers_url}'> مرورگر خود را به آخرین نسخه ( که از این قابلیتها پشتیبانی کند ) ارتقا دهید</a>."

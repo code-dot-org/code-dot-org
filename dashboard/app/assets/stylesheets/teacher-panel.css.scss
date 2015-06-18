@@ -1,4 +1,5 @@
 @import "color";
+@import "font";
 
 .teacher-panel {
   position: fixed;
@@ -16,13 +17,11 @@
   border-right: none;
   border-radius: 10px 0 0 10px;
 
-// these make the show/hide handle go away?
-//  overflow-x: hidden;
-//  overflow-y: auto;
   z-index: 100;
 
   .hide-handle,
   .show-handle {
+    cursor: pointer;
     transition: right 0.5s;
     position: absolute;
     right: 200px;
@@ -50,17 +49,16 @@
   h3 {
     padding: 5px;
     font-size: 18px;
-    font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    font-family: $gotham-extra-bold; font-weight: normal;
     color: white;
     background: $cyan;
     margin: 0;
   }
 
-  .content {
-    h4 {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
-      text-align: center;
-    }
+  h4 {
+    font-family: $gotham-extra-bold; font-weight: normal;
+    text-align: center;
+    margin: 5px 0;
   }
 
   .students {
@@ -108,13 +106,22 @@
   }
 
   .level {
+    text-align: center;
     margin: 10px 0;
   }
 
   .section {
     padding: 0 5px;
-    table, tr {
-      border: 1px solid $light_cyan;
+
+    h4 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .section-students {
+    &, tr {
+      border: 1px solid $lighter_cyan;
       border-collapse: collapse;
     }
 
@@ -122,11 +129,6 @@
       padding: 2.5px;
     }
 
-    h4 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
     .section-student {
       background-color: $lightest_gray;
       opacity: 1;
@@ -144,12 +146,27 @@
         text-decoration: none;
       }
 
-      &:hover,
+      &:hover {
+        background-color: $lighter_cyan;
+        font-family: $gotham-extra-bold; font-weight: normal;
+        a { color: white; }
+      }
       &.active {
         background-color: $light_cyan;
-        font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+        font-family: $gotham-extra-bold; font-weight: normal;
         a { color: white; }
       }
     }
+  }
+  .scrollable-wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 5px;
+  }
+
+  select {
+    width: auto;
+    display: block;
+    margin: 5px auto;
   }
 }

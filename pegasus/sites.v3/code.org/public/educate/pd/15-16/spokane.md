@@ -24,9 +24,12 @@ Monday, July 20, 2015 - Friday, July 24, 2015
 Breakfast and lunch will be served. 
 
 ### Location
+Please note that the room number has been updated to 007. This will be Code.org's new home at Gonzaga University.
+<br />
+<br />
 Gonzaga University
 <br />
-PACCAR 107 
+PACCAR **007** 
 <br />
 502 E. Boone Avenue
 <br /> 

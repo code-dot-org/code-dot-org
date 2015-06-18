@@ -53,8 +53,8 @@
     sign_in_with: היכנס באמצעות %{provider}
     signed_in: נכנסת!
     signed_out: התנתקת מ<a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    sign_out_of: השתמשת ב- %{provider} להכנס. in. <a href="%{url}"> לחץ כאן</a> כדי
+      לצאת מ- %{provider}.
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
     google_oauth2: חשבון גוגל
@@ -342,7 +342,9 @@
     panel:
       answer_viewer: Answer Viewer
       student: תלמיד
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -365,7 +367,10 @@
     classroom_activity: פעילות לא מחוברת
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: כבר רשום?  %{link}
@@ -439,6 +444,12 @@
     autoplay_option: הפעלה אוטומטית של סרטונים
     download: הורד סרטון
   compatability:
+    https:
+      header: אנא אפשרו שימוש בHTTPS בCode.org.
+      message: כדי להגביר את בטיחות הגלישה, אנו עוברים לשימוש בHTTPS בתאריך  %{https_date}.
+        לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
+        כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org.
+      hide_this_warning: הסתר את האזהרה הזו
     working:
       header: אנחנו עובדים על תמיכה עבור הדפדפן שלך.
       message: Code.org uses modern web technology. This makes the site faster to

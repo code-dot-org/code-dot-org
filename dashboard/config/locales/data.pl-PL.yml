@@ -35,7 +35,7 @@
           desc: Bounce (beta)
           Bounce: Etap 1
         Builder Levels:
-          desc: Zagadki stworzone przez użytkowników (beta)
+          desc: Zagadki utworzone przez użytkowników (beta)
           Custom: Etap 1
         Flappy Levels:
           desc: Flappy Bird
@@ -318,9 +318,8 @@
           rozmiarach. (Wskazówka: kliknij gwiazdkę, aby dodać wejście do funkcji)'
         turtle_3_7: Dodaj wejście o nazwie długość do funkcji narysuj dom i zbuduj
           duży dom dla słonia (z krawędziami o długości 150 pikseli)
-        turtle_3_8: Tutaj są wszystkie bloki z poprzedniej łamigłówki. Zmodyfikuj
-          funkcję narysuj dom tak, aby rysowanie kończy się w prawym dolnym rogu.
-          Użyj tej zmodyfikowanej funkcji do narysowania trzech domów.
+        turtle_3_8: Modyfikuj "narysuj dom" tak, aby rysowanie kończyło się w prawym
+          dolnym rogu. Użyj tej zmodyfikowanej funkcji do narysowania trzech domów.
         turtle_3_9: Czy mógłbyś ponownie utworzyć funkcję narysuj dom bez niczyjej
           pomocy? Spróbuj, a następnie narysuj szereg domów.
         turtle_3_10: Dużo się już nauczyłeś! Teraz narysuj, co chcesz. Spróbuj narysować
@@ -615,25 +614,25 @@
         C1_bee_level_intro: Poziom pszczoły - wprowadzenie
         C1_artist_intro: Artysta - wprowadzenie
         C1_spelling_bee_intro: Pszczółka literuje wprowadzenie
-        C1_zuck_repeat_loop: Labirynt Pętle
+        C1_zuck_repeat_loop: 'Labirynt: Pętle'
         C1_bee_loops: 'Pszczółka: Pętle'
-        C1_maze_loops: Labirynt Pętle
+        C1_maze_loops: 'Labirynt: Pętle'
         C1_playlab_storytelling: Play Lab - Utwórz opowieść
         C1_planting_seed: Zasadzenie nasiona
         C1_building_foundation: Budowanie solidnych podstaw
-        C1_going_places_safely: Going Places Safely
+        C1_going_places_safely: Bezpiecznie dotrzeć na miejsce
         C2_maze_intro: Labirynt - wprowadzenie
         C2_artist_intro: Artysta - wprowadzenie
-        C2_zuck_repeat_loop: Labirynt Pętle
-        C2_artist_loops: Artysta Pętle
+        C2_zuck_repeat_loop: 'Labirynt: Pętle'
+        C2_artist_loops: 'Artysta: Pętle'
         C2_artist_debugging: 'Artysta: debugowanie'
         C2_bee_loops: 'Pszczółka: Pętle'
-        C2_bee_debugging: Pszczółka debugowanie
-        C2_bee_conditionals: Pszczółka Wyrażenia warunkowe
+        C2_bee_debugging: 'Pszczółka: Debugowanie'
+        C2_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
         C2_playlab_createstory: Play Lab - Utwórz opowieść
         C2_graph_paper: Programowanie na papierze milimetrowym
         C2_conditionals_with_cards: Warunkowe
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Binarne bransoletki
         C2_relay_programming: Programowanie przekaźnika
         C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
@@ -642,7 +641,7 @@
         C3_artist_intro: Artysta - wprowadzenie
         C3_artist_functions: Funkcje Artysty
         C3_bee_functions: Funkcje Pszczoły
-        C3_bee_conditionals: Pszczółka Wyrażenia warunkowe
+        C3_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
         C3_maze_conditionals: 'Labirynt: wyrażenia warunkowe'
         C3_artist_nested_loops: Zagnieżdżające się  pętle
         C3_farmer_while: Pętle Dopóki (While)
@@ -657,7 +656,7 @@
         C3_functional_suncatchers: Funkcjonalne Suncatchers
         C3_songwriting_with_parameters: Pisanie Piosenek z parametrami
         C4_intro: Wstęp
-        C4_bee_conditional: Pszczółka Wyrażenia warunkowe
+        C4_bee_conditional: 'Pszczółka: Wyrażenia warunkowe'
         C4_variables_artist: Zmienne - Artysta
         C4_variables_playlab: Zmienne - Play Lab
         C4_for_loops: Pętle dla (for)
@@ -682,30 +681,39 @@
         infinity_playlab_intro: Plac Zabaw - wprowadzenie
         infinity_playlab_events: Plac Zabaw - Event-y
         infinity_playlab_repeat_forever: Plac Zabaw - Powtarzaj Wiecznie (Pętla)
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_concept_rgb: Trochę o pikselach
+        csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
+        csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
+        csp_pixelation_color_3: Pokoloruj pikselowy gadżet - część 3
+        csp_pixelation_bw: Czarno-biały pikselowy gadżet
+        csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
+        csp_textcompression: Gadżet do kompresji tekstu
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: Informatyka w algebrze - wprowadzenie
+        alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
+        alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
+        alg_4_data_types: Informatyka w algebrze - typy danych
+        alg_5_contracts: Informatyka w algebrze - umowy
+        alg_6_variables: Informatyka w algebrze - zmienne
+        alg_7_function: Informatyka w algebrze - funkcje
+        alg_8_design_recipe: Informatyka w algebrze - przepis na projekt
+        alg_9_booleans: Informatyka w algebrze - wartości logiczne
+        alg_10_conditionals: Informatyka w algebrze - instrukcje warunkowe
+        alg_11_coordinate_plane: Informatyka w algebrze - płaszczyzna współrzędnych
+        alg_12_biggame_variables: Informatyka w Algebrze - zmienne Wielkiej Gry (Big
+          Game)
+        alg_13_biggame_animation: Informatyka w Algebrze - animacja Wielkiej Gry (Big
+          Game)
+        alg_14_biggame_booleans: Informatyka w Algebrze - wartości logiczne Wielkiej
+          Gry (Big Game)
+        alg_15_biggame_update_player: Informatyka w Algebrze - uaktualniony gracz
+          Wielkiej Gry (Big Game)
+        alg_16_biggame_collision_detection: Informatyka w Algebrze - wykrywanie kolizji
+          w Wielkiej Grze (Big Game)
+        alg_17_sambat_compound_booleans: Informatyka w Algebrze - złożone wartości
+          logiczne
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
@@ -739,8 +747,8 @@
         set_sides: Użyj tego bloku, aby ustawić "strony" do numeru potrzebnego do
           skompletowania puzzli.
         set_length: Użyj tego bloku, aby ustawić "długość" poprawnej wartości.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
+        which_equation: Które równanie skraca każdy bok kształtów z wiéksza iloscia
+          boków?
         get_nectar: Użyj nowego bloku "dostać nektar".
         actions_category: Przybornik ma nowy wygląd! Bloki "Akcje" są teraz tutaj.
         draw_square_hint: 'Wskazówka: Użyj pętli kwadratowej, którą wykonałeś w ostatnich
@@ -748,11 +756,11 @@
         edit_function: Kliknij tutaj, aby edytować swoją funkcję.
         create_function: Kliknij tutaj, aby otworzyć menu "Funkcje", następnie kliknij
           przycisk "Utwórz funkcję".
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
+        house_hint: Nie przejmuj się, jeśli obraz nie wygląda jeszcze jak dom. Naprawimy
+          go podczas następnej zagadki.
+        edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
+        edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
+          w którym Pszczoła skręci aby zdobyc nektar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Czy potrafisz poprawić tę funkcję tak, aby używała parametru
           "długość"?

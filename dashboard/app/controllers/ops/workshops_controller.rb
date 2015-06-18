@@ -1,6 +1,7 @@
 module Ops
   class WorkshopsController < OpsControllerBase
-    before_filter :convert_facilitators, :convert_cohorts, only: [:create, :update]
+    before_filter :convert_facilitators, :convert_cohorts, :convert_unexpected_teachers, only: [:create, :update]
+    after_filter :notify_ops, only: [:update]
 
     load_and_authorize_resource
 
@@ -44,6 +45,10 @@ module Ops
 
     # PATCH/PUT /ops/workshops/1
     def update
+      unexpected_teachers = params[:workshop][:unexpected_teachers]
+      if unexpected_teachers
+        @added_unexpected_teachers = unexpected_teachers - @workshop.unexpected_teachers
+      end
       @workshop.update!(params[:workshop])
       respond_with @workshop
     end
@@ -61,6 +66,7 @@ module Ops
       #This is necessary because rails turns empty arrays into nil
       if params[:workshop]
         params[:workshop][:facilitators] ||= [] if params[:workshop].has_key?(:facilitators)
+        params[:workshop][:unexpected_teachers] ||= [] if params[:workshop].has_key?(:unexpected_teachers)
       end
 
       params.require(:workshop).permit(
@@ -69,7 +75,8 @@ module Ops
         :location,
         :instructions,
         cohorts: [:id, :_destroy],
-        facilitators: [:ops_first_name, :ops_last_name, :email]
+        facilitators: [:ops_first_name, :ops_last_name, :email],
+        unexpected_teachers: [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
       )
     end
 
@@ -82,6 +89,24 @@ module Ops
         next if facilitator_params[:email].blank?
 
         User.find_or_create_facilitator(facilitator_params, current_user)
+      end
+    end
+
+    def convert_unexpected_teachers
+      return unless params[:workshop] && params[:workshop][:unexpected_teachers]
+      unexpected_teacher_param_list = params[:workshop].delete :unexpected_teachers
+      return unless unexpected_teacher_param_list
+
+      params[:workshop][:unexpected_teachers] = unexpected_teacher_param_list.map do |unexpected_teacher_params|
+        next if unexpected_teacher_params[:email].blank?
+
+        district_params = unexpected_teacher_params.delete :district
+        if district_params.is_a?(String)
+          unexpected_teacher_params[:district_id] = District.find_by!(name: district_params).id
+        elsif district_params.is_a?(Hash) && district_params[:id]
+          teacher_params[:district_id] = district_params[:id]
+        end
+        User.find_or_create_teacher(unexpected_teacher_params, current_user)
       end
     end
 
@@ -98,6 +123,12 @@ module Ops
           end
         end
       end
+    end
+
+    def notify_ops
+      return unless @added_unexpected_teachers.present?
+      return unless current_user.facilitator?
+      OpsMailer.unexpected_teacher_added(current_user, @added_unexpected_teachers, @workshop).deliver
     end
   end
 end

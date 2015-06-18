@@ -151,7 +151,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit3'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3'
   end
 
   def is_k1?
@@ -177,7 +177,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
   end
 
   def show_freeplay_links?
@@ -257,6 +257,8 @@ class Script < ActiveRecord::Base
           find_or_create_by!(Level.key_to_params(key))
         level = level.with_type(row.delete(:type) || 'Blockly') if level.type.nil?
         level.update(row)
+      elsif row[:video_key]
+        level.update(video_key: row[:video_key])
       end
 
       unless level

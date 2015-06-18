@@ -12,138 +12,145 @@
           description: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer
-            programs that will help them learn to collaborate with others, develop
-            problem-solving skills, and persist through difficult tasks. By the end
-            of this course, students create their very own custom game or story that
-            they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          'Maze: Sequence': 'Mê cung: trình tự'
+          'Maze: Debugging': 'Mê cung: Hiệu chỉnh'
+          'Artist 1: Intro': 'Nghệ sĩ 1: giới thiệu'
+          Artists 2: Nghệ sĩ 2
+          Spelling Bee: Ong tìm chữ
+          Spelling Bee not blockly: Ong tìm chữ không giới hạn
+          'Bee 1: Intro': 'Ong 1: Giới thiệu'
+          'Maze 2: Loops': 'Mê cung 2: Vòng lặp'
+          'Bee 2: Loops': 'Ong 2: Vòng lặp'
+          Multi & Match: Ghép nối
+          K-1 Flappy: K-1 vỗ cánh
+          Flappy non blockly: Vỗ cánh không giới hạn
+          title: Khóa học 1
+          Artist 2: Nghệ sĩ 2
+          Happy Maps: Bản đồ thú vị
+          Move it, Move it: Di chuyển liên tục
+          'Real-life Algorithms: Plant a Seed': 'Thuật toán đời sống: Trồng một hạt
+            giống'
+          Building a Foundation: Xây dựng nền tảng
+          Getting Loopy: Tạo vòng lặp
+          The Big Event: Sự kiện lớn
+          Going Places Safely: Đến nơi an toàn
+          description: Khóa học 1 được thiết kế để cho phép học viên tạo ra các chương
+            trình máy tính giúp họ  hợp tác với những người khác, phát triển kỹ năng
+            giải quyết vấn đề thông qua các nhiệm vụ khó khăn. Cuối khóa học này,
+            học viên tạo ra trò chơi hoặc cốt truyện mà họ muốn chia sẻ. Khuyến khích
+            cho các lớp K-1.
+          'Bee: Sequence': 'bee: trình tự'
+          'Artist: Sequence': |
+            Nghệ sĩ: trình tự
+          'Artist: Shapes': 'Nghệ sĩ: hình dạng'
+          'Maze: Loops': Vòng lặp mê cung
+          'Bee: Loops': 'Ong: vòng'
+          'Studio: Create a Story': 'phòng thí nghiệm trò chơi: Tạo ra một câu chuyện'
+          'Artist: Loops': 'Nghệ sĩ: vòng'
+          description_audience: Lứa tuổi 4 + (trước khi biết đọc)
+          description_short: Khóa học 1 được thiết kế cho trẻ mới biết đọc.
         course2:
           The Maze: mê cung
           Suzi: Suzi
           The Artist: nghệ sĩ
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Nghệ sĩ gỡ lỗi
           Bounce: Bật lại
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
-          Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          'Studio: Create a Story': 'phòng thí nghiệm trò chơi: Tạo ra một câu chuyện'
+          Artist Loops: Nghệ sĩ vòng
+          Bee Conditionals: 'Ong: Các điều kiện'
+          Flappy: Flappy bird
+          title: Khóa học 2
+          Bee Loops: Các vòng ong
+          Artist Functions: 'Nghệ sĩ: chức năng'
+          The Artist Debugging: Nghệ thuật gỡ lỗi
+          Bee Debugging: 'Ong: sửa lỗi'
+          Bee Functions: 'Ong: chức năng'
+          Maze Loops: Vòng lặp mê cung
           Graph Paper Programming: lập trình đồ thị trên giấy
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          'Real-life Algorithms: Paper Planes': 'Thuật toán trong đời sống: Máy bay
+            giấy'
+          Getting Loopy: Tạo vòng lặp
+          Relay programming: Chương trình chuyển tiếp
           Conditionals: Điều kiện
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no
-            prior programming experience. In this course students will create programs
-            to solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages  6+ (reading required)
-          description_short: Course 2 is designed for students who can read.
+          Binary Bracelets: Vòng đeo tay nhị phân
+          The Big Event: Sự kiện lớn
+          Your Digital Footprint: 'Dấu chân kỹ thuật số '
+          description: Khóa học 2 được thiết kế cho người biết đọc và không có kinh
+            nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương trình
+            để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia sẻ
+            những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
+          'Maze: Sequence': 'Mê cung: trình tự'
+          'Artist: Sequence': |
+            Nghệ sĩ: trình tự
+          'Maze: Loops': Vòng lặp mê cung
+          'Artist: Loops': 'Nghệ sĩ: vòng'
+          'Bee: Loops': 'Ong: vòng'
+          'Bee: Debugging': 'Ong: sửa lỗi'
+          'Artist: Debugging': 'Nghệ sĩ: gỡ lỗi'
+          'Bee: Conditionals': 'Ong: Các điều kiện'
+          'Artist: Sequence2': 'Nghệ sĩ: trình tự 2'
+          'Maze: Sequence2': 'Mê cung: trình tự 2'
+          'Artist: Nested Loops': 'Nghệ sĩ: các vòng lồng vào nhau'
+          description_audience: Lứa tuổi 6 + (yêu cầu biết đọc)
+          description_short: Khóa học 2 được thiết kế dành cho những sinh viên có
+            khả năng đọc.
         course3:
           The Maze: mê cung
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Studio: Create a Story': 'phòng thí nghiệm trò chơi: Tạo ra một câu chuyện'
           The Artist: nghệ sĩ
-          title: Course 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          title: Khóa học 3
+          Artist Functions: 'Nghệ sĩ: chức năng'
+          Artist For Loops: Các nghệ sĩ trong vòng lặp
+          Artist Nested Loops: Nghệ sĩ- các vòng lồng vào nhau
+          Bee Conditionals: 'Ong: Các điều kiện'
+          Bee Nested Loops: 'Ong: Các vòng lồng vào nhau'
+          Bee Debuggin: |
+            Ong: sửa lỗi
+          Bee Debugging: 'Ong: sửa lỗi'
+          Bee Functions: 'Ong: chức năng'
+          Artist Functions with Params: Chức năng nghệ sĩ với các chủ
           Bounce: Bật lại
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: Các điều kiện của mê cung
+          Artist Functions with Parameters: Chức năng và tham số
           Computational Thinking: suy nghĩ máy móc
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
-          Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Course 3 is designed for students who have taken Course 2.
-            Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': 'Play Lab: Create a Game'
+          Functional Suncatchers: Chức năng của tấm hứng ánh nắng
+          Songwriting Parameters: Tham số sáng tác
+          Dice Race: Vòng quay xúc sắc
+          Internet: Kết nối mạng
+          Crowdsourcing: Đa nguồn
+          Digital Citizenship: Dân kỹ thuật số
+          Farmer - While Loops: Nông dân - trong các vòng
+          description: Khóa học 3 được thiết kế cho những người đã học qua khóa 2.
+            Học viên sẽ nghiên cứu sâu hơn cách lập trình về chủ đề đã được giới thiệu
+            trong các khóa học trước đó với các giải pháp linh hoạt cho các vấn đề
+            phức tạp hơn. Cuối khóa học này, học viên tạo cách tương tác giữa cốt
+            truyện và trò chơi mà họ muốn chia sẻ với bất cứ ai. Khuyến khích cho
+            học sinh các lớp 4-5.
+          'Studio: Create a Game': 'Phòng trò chơi : Thiết kế trò chơi'
           Maze: Mê cung
-          Artist: Artist
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
-          'Artist: Patterns': 'Artist: Patterns'
+          Artist: Nghệ sĩ
+          'Artist: Functions': 'Nghệ sĩ: chức năng'
+          'Bee: Functions': 'Ong: chức năng'
+          'Bee: Conditionals': 'Ong: Các điều kiện'
+          'Maze: Conditionals': 'Mê cung: Các điều kiện 2'
+          'Artist: Nested Loops': 'Nghệ sĩ: các vòng lồng vào nhau'
+          'Farmer: While Loops': Nông dân - trong các vòng
+          'Bee: Nested Loops': 'Ong: Các vòng lồng'
+          'Bee: Debugging': 'Ong: sửa lỗi'
+          Maze2: Mê cung 2
+          Artist2: Nghệ sĩ 2
+          'Artist: Functions2': 'Nghệ sĩ: chức năng 2'
+          'Bee: Functions2': 'Ong: các chức năng 2'
+          'Bee: Conditionals2': 'Ong: Các điều kiện 2'
+          'Maze: Conditionals2': 'Mê cung: Các điều kiện 2'
+          'Artist: Nested Loops2': 'Nghệ sĩ: các vòng lồng vào nhau 2'
+          'Farmer: While Loops2': Nông dân - trong các vòng 2
+          'Bee: Nested Loops2': 'Ong: Các vòng lồng 2'
+          'Bee: Debugging2': 'Ong: sửa lỗi 2'
+          'Artist: Patterns': 'Nghệ sĩ: mẫu'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_short: Khóa học 3 là kháo học sau khóa học 2.
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
@@ -161,7 +168,7 @@
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Artist: Defining Functions'
           'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Nghệ sĩ: chức năng'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
           'Play Lab: Booleans': 'Play Lab: Booleans'
@@ -201,93 +208,102 @@
           'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
           'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Phòng trò chơi
+          description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng thí
+            nghiệm trò chơi!
+          Play Lab: Phòng trò chơi
+          description_short: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng
+            thí nghiệm trò chơi!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Nghệ sĩ
+          description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
+          Artist: Nghệ sĩ
+          description_short: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
         scrat:
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Mê cung: trình tự'
         hourofcode:
           Maze: Mê cung
           title: Giờ của mã
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Hãy thử những nền tảng của khoa học máy tính với các nhân vật
+            từ Angry Birds, Plants vs Zombies và Scrat từ Ice Age!
+          description_short: Thử các nền tảng của khoa học máy tính với các đặc tính
+            dãy kí tự vui nhộn!
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          title: Mã hóa cùng  Anna và Elsa
+          description: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá sự
+            kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn
+            trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có
+            thể chia sẻ với bạn bè của bạn!
+          Artist: Nghệ sĩ
           description_short: Let's use code to join Anna and Elsa as they explore
             the magic and beauty of ice.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Sinh viên tham gia khóa học 4 cần phải hoàn thành các
+            khóa học 2 và 3.
+          description: Khóa học 4 được thiết kế cho những người đã học qua khóa 2
+            và 3. Học viên sẽ nghiên cứu sâu hơn cách lập trình về chủ đề đã được
+            giới thiệu trong các khóa học trước đó với các giải pháp linh hoạt cho
+            các vấn đề phức tạp hơn. Cuối khóa học này, sinh viên tạo cách tương tác
+            giữa cốt truyện và trò chơi mà họ muốn chia sẻ với bất cứ ai. Khuyến khích
+            cho học sinh các lớp 4-5.
+          'Artist: Variables': 'Nghệ sĩ: biến'
+          'Bee: For Loops': 'Ong: Cho vòng'
+          title: Khóa học 4
+          'Algorithms: Tangrams': 'Thuật toán: Tangrams'
           Variables: Các biến
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          'Play Lab: Variables': 'Chơi thử nghiệm: Biến số'
+          'Play Lab: Functions with Parameters': 'Chơi thử nghiệm: Chức năng với tham
+            số'
+          'Bee: Functions with Parameters': 'Ong: Chức năng với tham số'
+          'Artist: For Loops': 'Nghệ sĩ: Trong vòng lặp'
+          'Play Lab: For Loops': 'Chơi thử nghiệm: Trong vòng lặp'
+          'Artist: Functions': 'Nghệ sĩ: chức năng'
+          'Artist: Functions with Paraqmeters': 'Nghệ sĩ: Chức năng với các tham số'
+          'Unplugged: Tangrams': 'Chưa hoạt động: Tangrams'
+          Artist: Nghệ sĩ
+          Bee: Ong
+          'Unplugged: Envelope Variables': 'Chưa hoạt động: biến số bên ngoài'
+          'Unplugged: Madlibs': 'Chưa hoạt động: Madlibs'
+          'Unplugged: For Loop Fun': 'Chưa hoạt động: Cho trò vui lặp lại'
+          'Unplugged: Songwriting with Parameters': 'Chưa hoạt động: Sáng tác với
+            tham số'
+          'Artist: Functions with Parameters': 'Nghệ sĩ: Chức năng với các tham số'
+          'Unplugged: Binary': 'Chưa hoạt động: nhị phân'
+          Bee Binary: Ong nhị phân
+          Farmer Binary: Nông dân nhị phân
+          Maze and Bee: Mê cung và ong
+          Artist Binary: Nghệ sĩ nhị phân
+          description_audience: Lứa tuổi 10 + (sau khóa học 3)
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          title: Khóa học 4 điều kiện tiên quyết
+          description_short: Một dựng lên các khái niệm ngắn cho những sinh viên đã
+            không thực hiện khóa học 2 và 3.
+          description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không
+            thực hiện khóa học 2 và 3.
+          Course 4 Prerequisite: Khóa học 4 điều kiện tiên quyết
+          'Maze: Sequence': 'Mê cung: trình tự'
+          'Artist: Sequence': |
+            Nghệ sĩ: trình tự
+          'Artist: Loops': 'Nghệ sĩ: vòng'
+          'Bee: Conditionals': 'Ong: Các điều kiện'
+          'Artist: Nested Loops': 'Nghệ sĩ: các vòng lồng vào nhau'
+          'Farmer: While Loops': Nông dân - trong các vòng
+          'Bee: Nested Loops': 'Ong: Các vòng lồng'
+          'Artist: Functions': 'Nghệ sĩ: chức năng'
+          'Bee: Debugging': 'Ong: sửa lỗi'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Intro: Giới thiệu
+          Variables and For Loops: Biến số cho vòng lặp
+          Functions and Functions with Parameters: Chức năng và chức năng với tham
+            số
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: Các biến
-          For Loops: For Loops
+          For Loops: Cho vòng lặp
           Binary: Binary
         potus:
           title: special
@@ -343,10 +359,12 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
         infinity:
-          title: Play Lab
-          description_short: Create a story or make a game with Play Lab!
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
+          title: Chơi thử nghiệm Disney Infinity
+          description_short: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
+            hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
+          description: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò
+            chơi với các nhân vật Disney Infinity nổi tiếng.
+          Play Lab: Phòng trò chơi
           Infinity: Vô cùng
         algebrademo:
           title: Algebra Demo
@@ -401,8 +419,7 @@
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25
-            giờ)
+          title: 20 giờ giới thiệu khóa học
           description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
             và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên
             nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
@@ -432,7 +449,8 @@
           The Maze: mê cung
           Applab: Applab
           The Artist: nghệ sĩ
-          Play Lab: Play Lab
+          Play Lab: Phòng trò chơi
+          Play Lab 2015: Play Lab 2015
         events:
           title: Các sự kiện
           description: ''
@@ -488,21 +506,22 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          title: Khóa học 4 điều kiện tiên quyết
+          description_short: Một dựng lên các khái niệm ngắn cho những sinh viên đã
+            không thực hiện khóa học 2 và 3.
+          description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không
+            thực hiện khóa học 2 và 3.
+          Course 4 Prerequisite: Khóa học 4 điều kiện tiên quyết
+          'Maze: Sequence': 'Mê cung: trình tự'
+          'Artist: Sequence': |
+            Nghệ sĩ: trình tự
+          'Artist: Loops': 'Nghệ sĩ: vòng'
+          'Bee: Conditionals': 'Ong: Các điều kiện'
+          'Artist: Nested Loops': 'Nghệ sĩ: các vòng lồng vào nhau'
+          'Farmer: While Loops': Nông dân - trong các vòng
+          'Bee: Nested Loops': 'Ong: Các vòng lồng'
+          'Artist: Functions': 'Nghệ sĩ: chức năng'
+          'Bee: Debugging': 'Ong: sửa lỗi'
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -536,6 +555,7 @@
             Information'
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -703,6 +723,9 @@
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -863,6 +886,26 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -881,14 +924,15 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Free Play
         allthethings:
           Jigsaw: Ghép hình
           Maze: Mê cung
-          Artist: Artist
-          Bee: Bee
+          Artist: Nghệ sĩ
+          Bee: Ong
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
+          Flappy: Flappy bird
           Bounce: Bật lại
           Multi: Multi
           Match: Match
@@ -899,11 +943,12 @@
           online pd?: online pd?
           AppLab: AppLab
           Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          title: Tất cả những điều này!
+          description: Tất cả các loại cấp bậc để người dùng thử nghiệm giao diện
+          Odometer: Công tơ mét
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -921,3 +966,73 @@
           Next Steps: Next Steps
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Introduction to PD: Introduction to PD
+          K-5 Courses: K-5 Courses
+          Writing computer programs: Writing computer programs
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          'Programming Concept: Events': 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Next Steps
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Giờ của mã

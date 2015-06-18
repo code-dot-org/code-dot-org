@@ -43,7 +43,7 @@ hu:
   beta: béta
   try_hoc: 'Próbáld ki a Kódolás Óráját, kattints ide >> '
   try_k8intro: Próbáld ki az általános iskolás Bevezető számítógép-tudományi tanfolyamot (15-25 óra)
-  k8intro: Bevezető számítógép-tudomány tanfolyam általános iskolásoknak (15-25 óra)
+  k8intro: 'K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)'
   already_started: 'Már elkezdted? Folytasd itt >>'
   demos: 'Admin: Minden demó'
   continue: Tovább
@@ -67,7 +67,7 @@ hu:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Regisztrálj, hogy nyomon tudd követni a haladásodat. Az e-mail címedet csak azonosításként használjuk, vagy ha esetleg elfelejtetted a jelszavadat. További információkért olvasd el az <a href="http://code.org/privacy"> Adatvédelmi Szabályainkat.</a>'
-    overview_teacher: 'A számítógép-tudomány tanításához hozz létre egy felhasználói fiókot. <p/> Felveheted diákjaidat hogy nyomon kövesd az előrehaladásukat.'
+    overview_teacher: 'Regisztrálj tanárként, hogy a tanteremben könnyebb legyen a tanítás. <p/> Minden diákod teljesítményét nyomon tudod követni.'
     no_signup_message: '<a target="_blank" href="http://learn.code.org">Böngészhetsz a különböző szakaszok és feladványok között</a>, de regisztrálnod kell, hogy elmenthesd, hogy hol tartasz.'
     teacher_educator_guide: Lásd a tanító segítségét
     teacher_pitch: Tanári fiók létrehozása a Code.org-on
@@ -298,7 +298,9 @@ hu:
     panel:
       answer_viewer: Answer Viewer
       student: Diák
+      viewing_solution: Viewing Solution
       try_it_yourself: Próbáld ki magad
+      section: Szakasz
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -319,7 +321,9 @@ hu:
     classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: 1., 2. és 3. tanfolyam áttekintése
     lesson_plans: Óravázlatok
     signin_message: 'Már regisztráltál? %{link}'
@@ -386,6 +390,10 @@ hu:
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Figyelmen kívül hagyom
     working:
       header: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen együtt tudjon működni.
       message: "A Code.org honlap modern webes technológiát használ. Emiatt gyorsabban lehet használni az oldalt. A te böngésződ nem támogatja az összes szükséges funkciót, ezért lehet, hogy néhány problémát érzékelhetsz. Segíts nekünk, <a href='%{report_issue_url}'> szólj, ha problémát találsz</a>, vagy <a href='%{supported_browsers_url}'>töltsd le a böngésződ legújabb változatát</a>."

@@ -5,7 +5,7 @@
   activerecord:
     errors:
       messages:
-        blank: 必需要的
+        blank: 必要的
     attributes:
       user:
         name: 顯示名稱
@@ -27,10 +27,10 @@
     code:
       label: 增加一位老師：
       placeholder: 單元代碼 (ABCDEF)
-    submit: 指定教師
+    submit: 新增教師
   add_hint_form:
     placeholder: 請在此處輸入您的提示
-    submit: 添加提示
+    submit: 新增提示
   appname: Code.org
   stage: 階段
   stage_number: 階段 %{number}
@@ -40,12 +40,12 @@
   of: 的
   more: 更多
   less: 更少
-  beta: 試用版
+  beta: 測試版
   try_hoc: 試試看一小時的程式設計課程，請按一下這裡 >>
-  try_k8intro: 或試試我們提供給 K-8 的電腦科學簡介課程 (15-25 小時)
-  k8intro: 'K 8 簡介電腦科學課程 （15-25 小時） '
+  try_k8intro: 或試試我們提供給幼兒到八年級 (K-8) 的資訊科學簡介課程 (15-25 小時)
+  k8intro: K-8 資訊科學介紹課程 （15-25 小時）
   already_started: 已經開始了嗎？從這裡繼續 >>
-  demos: 管理者：範例展示
+  demos: 管理者：所有範例展示
   continue: '繼續 '
   prize: 獎勵
   more_info: 更多的資訊
@@ -53,7 +53,7 @@
     sign_in_with: 以 %{provider}帳號登入
     signed_in: 登入!
     signed_out: 您已登出 <a href="%{url}"> Code.org</a>。
-    sign_out_of: 你正在使用 %{provider} 登入。 <a href="%{url}">按此登出 %{provider}。</a>
+    sign_out_of: 您正在使用 %{provider} 登入。 <a href="%{url}">按此登出 %{provider}。</a>
     already_signedup: 已經註冊了嗎？
     notyet_signedup: 還未註冊嗎？
     google_oauth2: Google帳戶
@@ -64,10 +64,9 @@
     need_confirmation: 沒有收到確認說明嗎？
     need_unlock: 沒有收到解鎖說明嗎？
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: 報名參加一個帳戶來跟蹤您的進度。您的電子郵件是主要用來讓您登錄和密碼恢復。更多的資訊，請參閱我們的 <a href="HTTP://code.org/privacy">
-      隱私政策</a>。
+    student_count: '%{count} 學生已經註冊。'
+    teacher_count: '%{count} 教師已經註冊。'
+    overview_student: 註冊一個帳戶可以保存您的進度。您的電子郵件是主要用來讓您登錄和重設密碼。請參閱我們的 <a href="HTTP://code.org/privacy">隱私政策</a>說明以取得更多詳情。
     overview_teacher: 通過註冊帳號開始在您的教室裡教資訊科學。 <p/>您將能夠將學生加入，並追蹤他們的學習進度。
     no_signup_message: 您可以從 <a target="_blank"href="HTTP://learn.code.org"> 瀏覽各個階段和關卡</a>，但您需要註冊一個帳號來保存您的進度。
     teacher_educator_guide: 請參閱教育者指南
@@ -279,11 +278,7 @@
       remove: 刪除學生
       confirm_remove: 你確定要刪除這個學生嗎？
       help_reassign: 要將你的學生分成不同班級，請選取要指派到新班級的學生
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
+      help_register: 與其花大量的時間一個人輸入所有學生的資料，不如請學生們各自註冊，可以更快建立您的班級。您的學生必須選擇使用者名稱和密碼，但我們不會要求他們提供電子信箱地址。如果學生忘記密碼，您也可以幫他們重新設置。
       register: 請學生自行註冊
       vist: 要求你的學生去參觀
       section_code: '並輸入他們的班級代碼:'
@@ -315,11 +310,13 @@
     panel:
       answer_viewer: Answer Viewer
       student: '學生 '
-      try_it_yourself: Try it yourself
+      viewing_solution: Viewing Solution
+      try_it_yourself: 自己試試
+      section: 班級
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 您的電子位址 %{email} 尚未被確認：
+    email_confirm_wrong_email: (錯誤的電子郵件位址？)
     email_resend_confirm: 重新發送確認指令
     new_password_hint: （如果你不想變更它就保留空白）
     current_password_hint: （我們需要您現在的密碼以確認您的更改）
@@ -336,7 +333,10 @@
     classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} 行程式碼由學生撰寫'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: 課程 1, 2, 及 3 導論
     lesson_plans: 課程計畫
     signin_message: 已經註冊了? %{link}
@@ -357,8 +357,7 @@
     local_school: 當地的學校
     online: 在線上
     see_details: 查看詳細資訊
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
-      $1,000 in classroom rewards.'
+    prize_info: 參加獎 (僅限美國公立學校教師)：至多$1,000元美金的獎金。
     tryfirst: 或者，你也可以先試試，之後再 註冊：
     trynow: 快來試試
     add_hint_help: 請協助我們添加小提示到Code.org 的教程
@@ -369,9 +368,9 @@
     heading_hoc2014: <h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>
     heading_elementary: <h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>
     heading_apps: <h2>樂趣</h2><h1>每個人</h1>
-    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
+    heading_legacy: <h2>我們的一般課程</h2>適合<h1>所有年齡</h1>
     your_gallery: 相片圖庫
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: 試試在 Code Studio 參加一個課程
   gender:
     male: 男性
     female: 女性
@@ -381,10 +380,9 @@
     teacher: 教師
   footer:
     help_from_html: 從Google, Microsoft, Facebook, and Twitter的工程師在幫忙創建本教程。
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 憤怒鳥&trade; & &copy; 2009年-2014 Rovio 娛樂有限公司版權所有。<br/>植物與僵屍&trade;
+      & &copy; 2014 EA美商藝電公司版權所有。
+    powered_by_aws: 由亞馬遜網路服務系統提供服務
     feedback: 提供回饋
     translate: 幫我們翻譯成您國家的語言
     support: 支援
@@ -406,6 +404,11 @@
     autoplay_option: 自動播放影片
     download: 下載影片
   compatability:
+    https:
+      header: 請對Code.org啟用HTTPS (加密傳輸協定)
+      message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a href='%{it_requirements_url}'>
+        按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
+      hide_this_warning: 隱藏此警告
     working:
       header: 我們正在設法支援您的瀏覽器。
       message: Code.org uses modern web technology. This makes the site faster to
@@ -521,14 +524,13 @@
     badname_case: Function names are case-sensitive. Try changing the case of your
       contract's name.
     badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomainsize: 您的契約裡的定義域沒有正確的項目數。
+    baddomainname: 有一個或多個您的定義域欄位的名稱錯誤。
+    baddomaintype: 有一個或多個您的定義域欄位的類型錯誤，或順序錯誤。
   text_match:
     placeholder: 在這裡輸入你的答案
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: 謝謝
+    open_response_body: 感謝您的回應！
   dialog:
     ok: 確定
   time:
@@ -572,11 +574,9 @@
       stronger privacy protections. To do this, we need existing users to enter their
       age here.<br/>As always, code.org will never rent, sell or share this information
       with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    sign_out: 如果您不願意提供您的年齡，您可以選擇<a href="%{url}">登出</a>。
+  zendesk_too_young_message: 對不起，過度年輕的使用者無法登入到我們支援的網站。您可以瀏覽無須登入的網頁 <a href="HTTP://support.code.org">
+    support.code.org</a> 或請您的父母或老師聯繫我們。
   progress:
     not_started: 未開始
     in_progress: 進行中
@@ -606,9 +606,7 @@
     name: 你的名字
     updated: 最後更新於
     project_type: 專案類型
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
+    help_text: 點擊下方的<strong>製作應用程式</strong> 或 <strong>繪製</strong> ，製作新的Play Lab或演出者專案！<br/>你也可以在任何時候回來繼續您的專案。
     need_help: 需要獲得説明以開始嗎？
     really_delete: 要刪除嗎？
     delete_yes: 是
@@ -619,5 +617,5 @@
     delete_confirm_title: 您確定要刪除此專案？
     delete_confirm_text: 刪除您當前的專案將會把它永久的從您的”我的專案清單“移除。您已共用的連結將不再使任何人能夠查看您的專案。
     view_all: 查看我的專案
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    remix: 混音
+    click_to_remix: 點擊「混音」，創造自己的版本！

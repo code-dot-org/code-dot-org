@@ -191,7 +191,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "chapter based routing" do
     assert_routing({method: "get", path: '/hoc/reset'},
-                   {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, reset: true})
+                   {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME})
 
     hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
     assert_routing({method: "get", path: '/hoc/1'},
@@ -233,23 +233,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal "/s/laurel/puzzle/next", script_puzzle_path(@custom_script, 'next')
   end
 
-  test "show next redirects to next level for custom scripts" do
-    get :show, script_id: 'laurel', chapter: 'next'
+  test "next redirects to next level for custom scripts" do
+    get :next, script_id: 'laurel'
     assert_redirected_to "/s/laurel/stage/#{@custom_s1_l1.stage.position}/puzzle/#{@custom_s1_l1.position}"
   end
 
-  test "show next redirects to first non-unplugged level for custom scripts" do
+  test "next redirects to first non-unplugged level for custom scripts" do
     custom_script = create(:script, :name => 'coolscript')
     unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', position: 1)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: unplugged_stage, position: 1)
     plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', position: 2)
     create(:script_level, script: custom_script, stage: plugged_stage, position: 1)
 
-    get :show, script_id: 'coolscript', chapter: 'next'
+    get :next, script_id: 'coolscript'
     assert_redirected_to "/s/coolscript/stage/2/puzzle/1"
   end
 
-  test "show next when logged in redirects to first non-unplugged non-finished level" do
+  test "next when logged in redirects to first non-unplugged non-finished level" do
     sign_in @student
 
     custom_script = create(:script, :name => 'coolscript')
@@ -261,11 +261,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 3)
     last_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 4)
 
-    get :show, script_id: 'coolscript', chapter: 'next'
+    get :next, script_id: 'coolscript'
     assert_redirected_to "/s/coolscript/stage/#{last_level.stage.position}/puzzle/#{last_level.position}"
   end
 
-  test "show next skips entire unplugged stage" do
+  test "next skips entire unplugged stage" do
     custom_script = create(:script, :name => 'coolscript')
     unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', position: 1)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: unplugged_stage, position: 1)
@@ -274,17 +274,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', position: 2)
     create(:script_level, script: custom_script, stage: plugged_stage, position: 1)
 
-    get :show, script_id: 'coolscript', chapter: 'next'
+    get :next, script_id: 'coolscript'
     assert_redirected_to "/s/coolscript/stage/2/puzzle/1"
   end
 
-  test "show next when only unplugged level goes back to home" do
+  test "next when only unplugged level goes back to home" do
     custom_script = create(:script, :name => 'coolscript')
     custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', position: 1)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 1)
 
     assert_raises RuntimeError do
-      get :show, script_id: 'coolscript', chapter: 'next'
+      get :next, script_id: 'coolscript'
     end
   end
 
@@ -350,7 +350,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for custom scripts" do
-    get :show, script_id: @custom_script.id, id: @custom_s2_l1
+    get :show, script_id: @custom_script.id, id: @custom_s2_l1.id
 
     assert_response 301 # moved permanently
     assert_redirected_to '/s/laurel/stage/2/puzzle/1'
@@ -359,7 +359,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show with the reset param should reset session when not logged in" do
     session[:progress] = {5 => 10}
 
-    get :show, script_id: Script::HOC_NAME, reset: true
+    get :reset, script_id: Script::HOC_NAME
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
@@ -369,7 +369,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show with the reset param should not reset session when logged in" do
     sign_in(create(:user))
-    get :show, script_id: Script::HOC_NAME, reset: true
+    get :reset, script_id: Script::HOC_NAME
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
@@ -379,13 +379,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "reset routing for custom scripts" do
     assert_routing({method: "get", path: "/s/laurel/reset"},
-                   {controller: "script_levels", action: "show", script_id: 'laurel', reset: true})
+                   {controller: "script_levels", action: "reset", script_id: 'laurel'})
   end
 
-  test "show reset resets for custom scripts" do
+  test "reset resets for custom scripts" do
     session[:progress] = {5 => 10}
 
-    get :show, script_id: 'laurel', reset: true
+    get :reset, script_id: 'laurel'
     assert_redirected_to "/s/laurel/stage/1/puzzle/1"
 
     assert !session[:progress]
@@ -473,7 +473,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   # end
 
   test 'next for non signed in user' do
-    get :show, script_id: Script::HOC_NAME, chapter: 'next'
+    get :next, script_id: Script::HOC_NAME
 
     assert_response :redirect
     assert_redirected_to '/hoc/1'
@@ -575,8 +575,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'shows expanded teacher panel when student is chosen' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
-
     sign_in @teacher
 
     last_attempt_data = 'test'
@@ -587,21 +585,48 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel'
     assert_select '.teacher-panel.hidden', 0
+
+    assert_equal @section, assigns(:section)
+    assert_equal @student, assigns(:user)
   end
 
-  test 'shows collapsed teacher panel when student not chosen' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
+  test 'shows expanded teacher panel when section is chosen but student is not' do
+    sign_in @teacher
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, section_id: @section.id
+
+    assert_select '.teacher-panel'
+    assert_select '.teacher-panel.hidden', 0
+
+    assert_equal @section, assigns(:section)
+    assert_equal nil, assigns(:user)
+  end
+
+  test 'shows collapsed teacher panel when student not chosen, chooses section when teacher has one section' do
+    sign_in @teacher
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
+
+    assert_select '.teacher-panel.hidden'
+
+    assert_equal @section, assigns(:section)
+    assert_equal nil, assigns(:user)
+  end
+
+  test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
+    create :section, user: @teacher
 
     sign_in @teacher
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
 
     assert_select '.teacher-panel.hidden'
+
+    assert_equal nil, assigns(:section)
+    assert_equal nil, assigns(:user)
   end
 
   test 'does not show teacher panel for pd scripts' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
-
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
@@ -610,6 +635,36 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: script, stage_id: 1, id: 1
 
     assert_select '.teacher-panel', 0
+  end
+
+  test 'teacher can view solution' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
+
+    assert_routing({method: "get", path: build_script_level_path(sl)},
+                   {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
+                   {},
+                   {solution: true})
+
+    sign_in @teacher
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
+
+    assert_response :success
+    assert assigns(:ideal_level_source)
+
+    assert_select '.teacher-panel' # showing teacher panel
+    assert_select '.teacher-panel.hidden', 0 # not hidden
+  end
+
+
+  test 'student cannot view solution' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
+
+    sign_in @student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
+
+    assert_response :forbidden
   end
 
 end

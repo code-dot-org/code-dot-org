@@ -1,6 +1,7 @@
 /* SECTION/STUDENT MANAGEMENT */
 
 @import 'color';
+@import 'font';
 
 h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
@@ -182,6 +183,13 @@ td.studentname {
     background-color: $level_not_tried;
   }
 
+  &:hover,
+  &:link,
+  &:visited {
+    color: transparent !important;
+    cursor: pointer;
+  }
+
 }
 
 .zoomed-out .dot {
@@ -193,7 +201,7 @@ td.studentname {
   color: $charcoal;
   width: 18px;
   height: 18px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;;
   cursor:default;
   text-align: center;
@@ -300,4 +308,25 @@ td.studentname {
 .signin_card dl dt {
 }
 .signin_card dl dd {
+}
+
+.teacher-announcements {
+  background-color: #e7e8ea; // lightest gray
+  color:white;
+  padding:20px;
+  border-radius:5px;
+  h1 {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .text {
+    float: left;
+    width: 79%;
+    color: #5b6770; // charcoal
+  }
+
+  .video {
+    float: left;
+    width: 19%;
+  }
 }

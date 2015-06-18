@@ -5,25 +5,24 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 12 - IP and DNS in the Real World
+## Unit 2: Lesson 12 - Global Impacts of the Internet
 
 # Background
 
-Background goes here
-
-# Vocabulary
-
-Vocabulary goes here
+The Internet and the technologies built on it have been immensely impactful on society. They have allowed people from across the world to communicate and collaborate at the speed of light. You've learned about the physical nature of networks: Internet Protocols, routing, packets, scaling, redundancy, reliability, DNS, and HTTP. Now you will get a chance to investigate how these technologies have connections to the social impacts of the internet: accessibility, net neutrality, commercial/government filtering, innovation, privacy, and digital access among other things. This lesson is essential practice for the Explore Performance Task later on in the school year.
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Pick and research a topic
+* Create a visual
+* Present a flash talk
+* Write a short essay
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1fIHFxCHrOzdM2hGdoJ48l2jU-6eRyMtjP_Na0l2u4eI/edit?usp=sharing" target="_blank"> Global Impacts Research </a>
+* Project and Rubrics: <a href="https://docs.google.com/document/d/1_oOR3HZIvmy7VptZuosUmCB8kCsOg8FtQVbAzgSe6KI/edit?usp=sharing" target="_blank"> Global Impacts of the Internet </a>
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

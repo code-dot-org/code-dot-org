@@ -6,6 +6,7 @@ module.exports = {
   skinId: "studio",
   levelFile: "levels",
   levelId: "k1_4",
+  timeout: 14000,
   tests: [
     {
       description: "Expected solution.",

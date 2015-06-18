@@ -29,6 +29,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
+ * @property {boolean} showLogBrowserButton - Whether the "Log Browser" is
+ *           available.  Adds a button to the lobby and one to the bottom
+ *           of the router tab.
+ *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
  *           Should use 'bits' for variant 1 (levels about the coordination
@@ -48,6 +52,15 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           room exists in isolation and will have no contact with other routers
  *           or rooms.  When true, it is possible for messages to travel between
  *           routers, connecting the whole shard.
+ *
+ * @property {number} minimumExtraHops - Fewest non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.  Number of hops can be lower if network
+ *           conditions don't allow it.
+ *
+ * @property {number} maximumExtraHops - Most non-destination routers an
+ *           inter-router message should try to visit before going to its
+ *           destination router.
  *
  * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
@@ -142,6 +155,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {number} defaultRouterMemory - How much data the router packet
  *           queue is able to hold before it starts dropping packets, in bits.
  *
+ * @property {number} defaultRandomDropChance - Odds that the router will drop
+ *           the packet for no reason while routing it.  Value in range
+ *           0 (no drops) to 1 (drop everything)
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -168,12 +185,15 @@ levels.custom = {
   canConnectToClients: false,
   canConnectToRouters: false,
   showAddRouterButton: false,
+  showLogBrowserButton: false,
 
   // Simulator-wide setup
   messageGranularity: MessageGranularity.BITS,
   automaticReceive: false,
   broadcastMode: false,
   connectedRouters: false,
+  minimumExtraHops: 0,
+  maximumExtraHops: 0,
 
   // Packet header specification
   addressFormat: '4',
@@ -214,6 +234,7 @@ levels.custom = {
   defaultRouterBandwidth: Infinity,
   showRouterMemoryControl: false,
   defaultRouterMemory: Infinity,
+  defaultRandomDropChance: 0,
 
   // DNS tab and its controls
   showDnsModeControl: false,

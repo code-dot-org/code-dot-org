@@ -303,7 +303,9 @@ ar:
     panel:
       answer_viewer: عارض الجواب
       student: طالب
+      viewing_solution: Viewing Solution
       try_it_yourself: جربها بنفسك
+      section: القسم
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوانك البريدي البريد الإلكتروني%{email}:'
@@ -324,7 +326,9 @@ ar:
     classroom_activity: نشاط موصول
   home:
     title: ستوديو كود
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} الأسطر من التعليمات البرمجية التي كتبها الطلاب'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: مراجعة للدروس 1,2, و 3
     lesson_plans: خطط الدرس
     signin_message: 'مسجل مسبقاً؟ %{link}'
@@ -391,6 +395,10 @@ ar:
     autoplay_option: تشغيل تلقائي لاشرطة الفيديو
     download: تحميل الفيديو
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: إخفاء هذا التحذير
     working:
       header: نحن نعمل على دعم متصفح الأنترنت الخاص بك.
       message: "Code.org تستخدم تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام. لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك إلى نسخة مدعومة</a>."
@@ -565,7 +573,7 @@ ar:
     name: الاسم
     updated: تحديث
     project_type: نوع المشروع
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    help_text: 'اضغط<strong> اصنع تطبيق</strong> أو <strong>ارسم شيئاً</strong> في الأسفل لتبدأ مشروع مختبر لعب أو رسام جديد<br/>بإمكانك العودة والعمل على مشروعك في أي وقت.'
     need_help: هل أنت بحاجة إلى المساعدة لتبدأ؟
     really_delete: حذف؟
     delete_yes: نعم

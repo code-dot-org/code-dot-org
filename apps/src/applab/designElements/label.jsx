@@ -19,15 +19,12 @@ var LabelProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           initialValue={$(element).text()}
@@ -35,11 +32,15 @@ var LabelProperties = React.createClass({
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
+          lockState={$(element).data('lock-width') || PropertyRow.LockState.UNLOCKED}
+          handleLockChange={this.props.handleChange.bind(this, 'lock-width')}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
+          lockState={$(element).data('lock-height') || PropertyRow.LockState.UNLOCKED}
+          handleLockChange={this.props.handleChange.bind(this, 'lock-height')}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
@@ -72,24 +73,23 @@ var LabelProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
 
     // TODO:
     // bold/italics/underline (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
   }
 });
 
 module.exports = {
   PropertyTable: LabelProperties,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('label');
-    element.style.margin = '10px 5px';
-    element.style.width = '100px';
-    element.style.height = '100px';
+    element.style.margin = '0px';
+    element.style.padding = '2px';
+    element.style.lineHeight = '1';
     element.style.fontSize = '14px';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
@@ -97,6 +97,46 @@ module.exports = {
     element.style.color = '#000000';
     element.style.backgroundColor = '';
 
+    this.resizeToFitText(element);
     return element;
+  },
+
+  resizeToFitText: function (element) {
+    var clone = $(element).clone().css({
+      position: 'absolute',
+      visibility: 'hidden',
+      width: 'auto',
+      height: 'auto'
+    }).appendTo($(document.body));
+
+    if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
+      element.style.width = clone.width() + 1 + 'px';
+    }
+    if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
+      element.style.height = clone.height() + 1 + 'px';
+    }
+
+    clone.remove();
+  },
+
+  /**
+   * @returns {boolean} True if it modified the backing element
+   */
+  onPropertyChange: function (element, name, value) {
+    switch (name) {
+      case 'text':
+      case 'fontSize':
+        this.resizeToFitText(element);
+        break;
+      case 'lock-width':
+        $(element).data('lock-width', value);
+        break;
+      case 'lock-height':
+        $(element).data('lock-height', value);
+        break;
+      default:
+        return false;
+    }
+    return true;
   }
 };

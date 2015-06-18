@@ -17,6 +17,7 @@
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
   petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: Ime
   email: Elektronska pošta
   zipcode: Poštna številka ali ime države
@@ -195,6 +196,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Ura za kodo
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -411,11 +415,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Kliknite tukaj</a> za dokument o zasebnosti, ki se lahko delite ali natisnite
     za svoje učence.
-  dashboard_curriculum_overview: Pregled učnega načrta za K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Poglej si vse učne načrte
   dashboard_course1: 'Tečaj 1:'
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Pregled učnega načrta za K-5
+  dashboard_overview: Overview
   dashboard_sequence: Zaporedje
   dashboard_framework: Ogrodje
   dashboard_standards: Standardi
@@ -426,6 +437,10 @@
   dashboard_puzzle_solving: 'Reševanje uganke:'
   dashboard_student_worksheet: delovni list učenca
   dashboard_teacher_worksheet: delovni list učitelja
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Drugi
   dashboard_login_word: Beseda
@@ -456,6 +471,7 @@
   dashboard_sections_login_type_explanation: Ta tabela pomaga razložiti, katero vrsto
     prijave <b>sliko, besedo, ali e-pošte</b>, boste želeli izbrati za razdelek.
   dashboard_faq: Pogosto zastavljena vprašanja
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Ura za kodo je tu - 8. do 14. december!
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   learn_more: Več o tem
@@ -1110,3 +1126,8 @@
   sphero_beyond_longdescription: Ne glede na to ali ste vzgojitelj ali starš, SPRK
     lekcije dajejo otrokom zabaven uvod v programiranje robotov in hkrati ostrijo
     njihove spretnosti v matematiki in znanosti.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Skrij to opozorilo

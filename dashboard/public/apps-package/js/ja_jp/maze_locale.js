@@ -23,7 +23,7 @@ var maze_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -190,9 +190,9 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "insufficientHoney":function(d){return "どうぐをただしくつかうことができたね！ でも、はちみつがたりないよ！"},
 "insufficientNectar":function(d){return "どうぐをただしくつかうことができたね！ でも、はなのみつがたりないよ！"},
 "make":function(d){return "つくる"},
-"moveBackward":function(d){return "うしろにすすむ"},
+"moveBackward":function(d){return "後ろに進む"},
 "moveEastTooltip":function(d){return "いっぽみぎにうごくよ。"},
-"moveForward":function(d){return "前方に移動します。"},
+"moveForward":function(d){return "前に進む"},
 "moveForwardTooltip":function(d){return "私を前方に 1スペース 移動させてください。"},
 "moveNorthTooltip":function(d){return "いっぽうえにうごくよ。"},
 "moveSouthTooltip":function(d){return "いっぽしたにうごくよ。"},
@@ -219,16 +219,16 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "removePile":function(d){return "つちをかたづける"},
 "removeStack":function(d){return maze_locale.v(d,"shovelfuls")+"かい つちをかたづける"},
 "removeSquare":function(d){return "正方形を削除します。"},
-"repeatCarefullyError":function(d){return "くりかえすどうぐのなかで、２かいすすむ、１かいほうこうをかえるといいね。そのあとに、もういっかい ほうこうをかえるといいよ。"},
+"repeatCarefullyError":function(d){return "この問題を解くには、２つの移動と１つの方向転換を\"繰り返し\"ブロックの中に配置しなくてはなりません。注意深く考えましょう。最後に余計な方向転換が行われてもかまいません。"},
 "repeatUntil":function(d){return "までを繰り返します"},
 "repeatUntilBlocked":function(d){return "前に道がある間"},
 "repeatUntilFinish":function(d){return "完了するまで繰り返し行います"},
 "step":function(d){return "ステップ"},
 "totalHoney":function(d){return "ぜんぶのはちみつ"},
 "totalNectar":function(d){return "ぜんぶのはなのみつ"},
-"turnLeft":function(d){return "左に曲がる"},
+"turnLeft":function(d){return "左に回転"},
 "turnRight":function(d){return "右に回転"},
-"turnTooltip":function(d){return "私を左もしくは右に90 度曲がらせてください。"},
+"turnTooltip":function(d){return "私を左もしくは右に90 度回転させてください。"},
 "uncheckedCloudError":function(d){return "くものなかにあるのは、もしかしたらはなですか？ はちのすですか？ どうぐをつかってしらべよう。"},
 "uncheckedPurpleError":function(d){return "むらさきのはなに、みつがあるかどうか。どうぐをつかってしらべてみよう。"},
 "whileMsg":function(d){return "以下の間"},

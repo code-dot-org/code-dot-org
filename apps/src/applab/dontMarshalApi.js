@@ -1,4 +1,3 @@
-var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
@@ -49,7 +48,7 @@ exports.removeItem = function (array, index) {
 exports.appendItem = function (array, item) {
   array.properties[array.length] = item;
   array.length++;
-  return Applab.interpreter.createPrimitive(array.length);
+  return window.Applab.JSInterpreter.createPrimitive(array.length);
 };
 
 // ImageData RGB helper functions
@@ -112,6 +111,6 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
     imageData.properties.data.properties[pixelOffset + 1] = g;
     imageData.properties.data.properties[pixelOffset + 2] = b;
     imageData.properties.data.properties[pixelOffset + 3] =
-      (typeof a === 'undefined') ? Applab.interpreter.createPrimitive(255) : a;
+      (typeof a === 'undefined') ? window.Applab.JSInterpreter.createPrimitive(255) : a;
   }
 };

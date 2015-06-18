@@ -23,7 +23,7 @@ var eval_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -156,30 +156,30 @@ s:function(d,k,p){eval_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).eval_locale = {
 "badColorStringError":function(d){return "You used an invalid color string: "+eval_locale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+eval_locale.v(d,"val")},
-"circleBlockTitle":function(d){return "cercle (radi, estil, color)"},
-"displayBlockTitle":function(d){return "avaluar"},
-"ellipseBlockTitle":function(d){return "el·lipse (amplada, alçada, estil, color)"},
-"extraTopBlocks":function(d){return "Alguns blocs estan lliures. Desitjes adjuntar-los al bloc \"avaluar\"?"},
+"circleBlockTitle":function(d){return "circle (radius, style, color)"},
+"displayBlockTitle":function(d){return "evaluate"},
+"ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
+"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
-"overlayBlockTitle":function(d){return "superposició (superior, inferior)"},
-"placeImageBlockTitle":function(d){return "lloc-imatge (x, y, imatge)"},
-"offsetBlockTitle":function(d){return "desplaçament (x, y, imatge)"},
-"rectangleBlockTitle":function(d){return "rectangle (amplada, alçada, estil, color)"},
-"reinfFeedbackMsg":function(d){return "Pots prémer el botó \"Torna-ho a intentar\" per editar el teu dibuix."},
-"rotateImageBlockTitle":function(d){return "rotar (graus, imatge)"},
-"scaleImageBlockTitle":function(d){return "escala (factor)"},
-"squareBlockTitle":function(d){return "quadrat (mida, estil, color)"},
-"starBlockTitle":function(d){return "estrella (radi, estil, color)"},
-"radialStarBlockTitle":function(d){return "estrella-radial (punts, interior, exterior, estil, color)"},
+"overlayBlockTitle":function(d){return "overlay (top, bottom)"},
+"placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
+"offsetBlockTitle":function(d){return "offset (x, y, image)"},
+"rectangleBlockTitle":function(d){return "rectangle (width, height, style, color)"},
+"reinfFeedbackMsg":function(d){return "You can press the \"Keep Playing\" button to edit your program."},
+"rotateImageBlockTitle":function(d){return "rotate (degrees, image)"},
+"scaleImageBlockTitle":function(d){return "scale (factor, image)"},
+"squareBlockTitle":function(d){return "square (size, style, color)"},
+"starBlockTitle":function(d){return "star (radius, style, color)"},
+"radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},
 "polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
-"stringAppendBlockTitle":function(d){return "afegir-caràcter(primer, segon)"},
-"stringLengthBlockTitle":function(d){return "llargada-cadena (cadena)"},
-"textBlockTitle":function(d){return "text (caràcter, mida, color)"},
-"triangleBlockTitle":function(d){return "Triangle (mida, estil, color)"},
-"underlayBlockTitle":function(d){return "subcapa (inferior, superior)"},
-"outline":function(d){return "contorn"},
-"solid":function(d){return "sòlid"},
-"string":function(d){return "seqüència"},
+"stringAppendBlockTitle":function(d){return "string-append (first, second)"},
+"stringLengthBlockTitle":function(d){return "string-length (string)"},
+"textBlockTitle":function(d){return "text (string, size, color)"},
+"triangleBlockTitle":function(d){return "triangle (size, style, color)"},
+"underlayBlockTitle":function(d){return "underlay (bottom, top)"},
+"outline":function(d){return "outline"},
+"solid":function(d){return "solid"},
+"string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
 "userCodeException":function(d){return "An error occurred while executing your code."},
 "wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

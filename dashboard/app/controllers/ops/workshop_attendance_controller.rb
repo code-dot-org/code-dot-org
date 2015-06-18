@@ -53,6 +53,72 @@ module Ops
       end
     end
 
+    # GET dashboardapi/attendance/download/:workshop_id
+    def attendance
+      @workshop = Workshop.includes(segments: :attendances).find(params.require(:workshop_id))
+
+      respond_with (@workshop.teachers) do |format|
+        format.csv do
+          #Specify filename
+          response.headers['Content-Disposition'] = 'attachment; filename="' + @workshop.name + '-Attendance.csv"'
+
+          # Generate csv column headers dynamically
+          header = ["User ID", "First Name", "Last Name", "E-mail", "District Name", "% Attended", "School Name"]
+          segment_number = 0
+          notes_headers = []
+          @workshop.segments.each do |segment|
+            header << ("#{segment.start.to_date}, #{segment.start.strftime('%H:%M')} #{segment.end.strftime('%H:%M')}")
+            notes_headers << ("Segment #{segment_number + 1} notes")
+            segment_number += 1
+          end
+          notes_headers.each do |note|
+            header << note
+          end
+          # header << ("% Attended")
+
+          # A 2d array. Each item is an array that represents a single row.
+          teacher_info = []
+
+          def format_teachers_for_csv(teachers, teacher_info)
+            teachers.each do |teacher|
+              number_attended = 0.0
+              teacher_info_buffer = [teacher.id, teacher.ops_first_name, teacher.ops_last_name, teacher.email, teacher.district.name]
+              teacher_segment_notes = []
+              teacher_segment_status = []
+              @workshop.segments.each do |segment|
+                segment_info = WorkshopAttendance.find_by(segment_id: segment.id, teacher_id: teacher.id)
+                if segment_info
+                  if segment_info.status == "present" || segment_info.status == "excused"
+                    number_attended += 1.0
+                  end
+                  teacher_segment_status << segment_info.status
+                  teacher_segment_notes << segment_info.notes
+                else
+                  # Blank entries so csv doesn't get misaligned
+                  teacher_segment_status << " "
+                  teacher_segment_notes << " "
+                end
+              end
+              teacher_info_buffer << (number_attended / @workshop.segments.length * 100).round
+              teacher_info_buffer << teacher.ops_school
+              teacher_segment_status.each do |status|
+                teacher_info_buffer << status
+              end
+              teacher_segment_notes.each do |note|
+                teacher_info_buffer << note
+              end
+              teacher_info << teacher_info_buffer
+            end
+          end
+
+          format_teachers_for_csv(@workshop.teachers, teacher_info)
+          format_teachers_for_csv(@workshop.unexpected_teachers, teacher_info)
+
+          render text: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher }}
+        end
+      end
+    end
+
     # Batched version of #create.
     # POST /ops/segments/1/attendance/batch
     def batch

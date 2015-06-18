@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "ηθοποιός"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Εισβολή εξωγήινων!"},
 "backgroundBlack":function(d){return "μαύρο"},
 "backgroundCave":function(d){return "σπηλιά"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Συνέχεια"},
 "decrementPlayerScore":function(d){return "αφαίρεσε πόντο"},
 "defaultSayText":function(d){return "γράψε εδώ"},
+"dropletBlock_changeScore_description":function(d){return "Πρόσθεσε ή αφαίρεσε έναν πόντο στη βαθμολογία."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Ορίζει την εικόνα στο φόντο"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Ορίζει τη διάθεση του ηθοποιού"},
+"dropletBlock_setSpritePosition_description":function(d){return "Μεταφέρει άμεσα έναν ηθοποιό στην καθορισμένη θέση."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Ορίζει την ταχύτητα του ηθοποιού"},
+"dropletBlock_setSprite_description":function(d){return "Ορίζει την εικόνα του ηθοποιού"},
+"dropletBlock_throw_description":function(d){return "Ρίχνει ένα βλήμα από τον καθορισμένο ηθοποιό."},
+"dropletBlock_vanish_description":function(d){return "Εξαφανίζει έναν ηθοποιό."},
 "emotion":function(d){return "διάθεση"},
 "finalLevel":function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."},
 "for":function(d){return "για"},
 "hello":function(d){return "γεια σου"},
 "helloWorld":function(d){return "Γεια σου Κόσμε!"},
 "incrementPlayerScore":function(d){return "σκόραρε πόντο"},
+"itemBlueFireball":function(d){return "μπλε μπάλα φωτιάς"},
+"itemPurpleFireball":function(d){return "μοβ μπάλα φωτιάς"},
+"itemRedFireball":function(d){return "κόκκινη μπάλα φωτιάς"},
+"itemYellowHearts":function(d){return "κίτρινες καρδιές"},
+"itemPurpleHearts":function(d){return "μοβ καρδιές"},
+"itemRedHearts":function(d){return "κόκκινες καρδιές"},
+"itemRandom":function(d){return "τυχαίο"},
+"itemAnna":function(d){return "άγκιστρο"},
+"itemElsa":function(d){return "λάμψη"},
+"itemHiro":function(d){return "ρομπότ"},
+"itemBaymax":function(d){return "ρουκέτα"},
+"itemRapunzel":function(d){return "κατσαρόλα"},
+"itemCherry":function(d){return "κεράσι"},
+"itemIce":function(d){return "πάγος"},
+"itemDuck":function(d){return "πάπια"},
 "makeProjectileDisappear":function(d){return "εξαφάνισε"},
 "makeProjectileBounce":function(d){return "αναπήδηση"},
 "makeProjectileBlueFireball":function(d){return "φτιάξε μπλε μπάλα φωτιάς"},

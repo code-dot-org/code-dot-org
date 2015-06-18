@@ -310,8 +310,8 @@ es:
           "Play Lab: Collision Detection (Big Game)": 'El gran juego - detección de colisiones'
         infinity:
           title: Disney Infinity Lab de juego
-          description_short: 'Utilice el  laboratorio jugar para crear una historia o juego protagonizada por personajes de Disney infinito.'
-          description: 'Utilice el  laboratorio jugar para crear una historia o juego protagonizada por personajes de Disney infinito.'
+          description_short: Utilice el laboratorio de juegos para crear una historia o juego protagonizada por personajes de Disney Infinity.
+          description: Utilice el laboratorio de juegos para crear una historia o juego protagonizada por personajes de Disney Infinity.
           Play Lab: Laboratorio de Juegos
           Infinity: Infinito
         algebrademo:
@@ -337,7 +337,7 @@ es:
           Ways to go beyond Courses 1, 2, and 3: Maneras de ir más allá de los cursos de 1, 2 y 3
           K-5 Courses: Cursos de K-5
           Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Personal Reflection: Reflexión personal
           Next Steps: Próximos pasos
           Computer Science Pedagogy: Pedagogía de la ciencia informática
@@ -364,7 +364,7 @@ es:
           description: Crear imágenes con bits y bytes.
           Pixelation: Pixelación
         20-hour:
-          title: Curso de 20 horas introducción
+          title: Curso Introductorio de 20 horas
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
           Introduction to Computer Science: Introducción al Arte de las Ciencias de la Computación
           The Maze: El laberinto
@@ -393,6 +393,7 @@ es:
           Applab: AppLab
           The Artist: El artista
           Play Lab: Laboratorio de Juegos
+          Play Lab 2015: Play Lab 2015
         events:
           title: Eventos
           description: ""
@@ -492,6 +493,7 @@ es:
           "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -531,7 +533,7 @@ es:
           Introduction to PD: Introducción al DP
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
         algPDmiami:
@@ -556,10 +558,10 @@ es:
         CSPPD:
           new stage: nueva etapa
           Introduction to PD: Introducción al DP
-          title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          What is CSP?: What is CSP?
-          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          title: Principios de la Ciencia de la Computación PD
+          description: Introducción en linea de CSP
+          What is CSP?: ¿Qué es CSP?
+          Exploring CSP Instructional Materials: Explorando Materiales Instructivos de CSP
           Impact of Computer Science: Impact of Computer Science
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -589,7 +591,7 @@ es:
           What to Expect: What to Expect
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
+          Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
           Dispositions and Classroom Culture: Dispositions and Classroom Culture
           Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
@@ -645,13 +647,16 @@ es:
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Evaluation Blocks: Bloques de evaluación
           The Big Game: The Big Game
           Strings and Images: Cadenas de texto e imágenes
@@ -701,7 +706,7 @@ es:
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
@@ -712,7 +717,7 @@ es:
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
         sciencePD-NexTech:
@@ -725,7 +730,7 @@ es:
           Introduction to Computational Science: Introduction to Computational Science
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
+          Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
           Dispositions and Classroom Culture: Dispositions and Classroom Culture
           Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
@@ -741,7 +746,7 @@ es:
           Introduction to Computational Science: Introduction to Computational Science
           Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
           Using Computer Models in Science: Using Computer Models in Science
-          Using Models in the Classroom: Using Models in the Classroom
+          Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
           Dispositions and Classroom Culture: Dispositions and Classroom Culture
           Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
@@ -795,6 +800,23 @@ es:
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -813,6 +835,7 @@ es:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Juego libre
         allthethings:
           Jigsaw: Rompecabezas
           Maze: Laberinto
@@ -830,18 +853,19 @@ es:
           applab: applab
           online pd?: online pd?
           AppLab: AppLab
-          Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          Online PD: PD en línea
+          title: ¡Todas las cosas!
+          description: Todos los tipos de niveles para las pruebas de UI
+          Odometer: Odómetro
           Text Compression: Compresión de texto
           Pixelation: Pixelación
+          Multi2: Multi2
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Pedagogía de la ciencia informática
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Tablero Maestro del Profesor
           Evaluation Blocks: Bloques de evaluación
           Strings and Images: Cadenas de texto e imágenes
           Writing Contracts: Contratos de redacción
@@ -853,3 +877,71 @@ es:
           Next Steps: Próximos pasos
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Definición de funciones'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratorio de App
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratorio de App
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Introduction to PD: Introducción al DP
+          K-5 Courses: Cursos de K-5
+          Writing computer programs: Programas informáticos de escritura
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Pedagogía de la ciencia informática
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          Teacher Dashboard: Tablero Maestro del Profesor
+          "Programming Concept: Events": 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Próximos pasos
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Hora del código

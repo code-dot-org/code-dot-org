@@ -7,9 +7,8 @@
       "skip_dialog": "true",
       "css": "unplugged"
     },
-    "title": "title",
-    "content1": "description here",
-    "markdown": "## Unit 2: Lesson 9 - The Need for DNS\n\n# Background\n\nBackground goes here\n\n# Vocabulary\n\nVocabulary goes here\n\n# Lesson\n\n* Lesson overview\n* Goes here\n\n# Resources\n\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+    "title": "The Need for DNS",
+    "markdown": "## Unit 2: Lesson 9 - The Need for DNS\n\n# Background\n\nIt would be impossible for packets to be routed across the internet without IP addresses. The problem with this system is that, while computers are good at referring to other computers by numbers, humans are not. The DNS solves this problem so that we can identify a webpage by its name, even when the IP addresses change.\n\n# Vocabulary\n\nDNS: an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses. \n\n# Lesson\n\n* Try to determine addresses without the use of a lookup table.\n* Play DNS Bingo.\n* Discover how DNS translates human-readable locations on the Internet into a numeric IP address.\n\n\n# Resources\n\nNone\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
   }
 }]]></config>
 </External>

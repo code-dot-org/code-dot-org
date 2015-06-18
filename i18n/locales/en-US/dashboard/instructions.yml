@@ -1,7 +1,6 @@
 en:
   data:
     instructions:
-      2-3 _instruction: crwdns33919:0crwdne33919:0
       2-3 Artist 1 new_instruction: crwdns33920:0crwdne33920:0
       2-3 Artist 11_instruction: crwdns33922:0crwdne33922:0
       2-3 Artist 12_instruction: crwdns33923:0crwdne33923:0
@@ -167,7 +166,7 @@ en:
       2-3 Maze Loops 20_instruction: crwdns30386:0crwdne30386:0
       2-3 Maze Loops 21_instruction: crwdns30387:0crwdne30387:0
       2-3 Maze Loops Assessment 1_instruction: crwdns34047:0crwdne34047:0
-      2-3 Maze sq1 _instruction: crwdns34048:0crwdne34048:0
+      2-3 Maze sq1_instruction: crwdns41671:0crwdne41671:0
       2-3 Maze sq10_instruction: crwdns34049:0crwdne34049:0
       2-3 Maze sq10v2_instruction: crwdns34050:0crwdne34050:0
       2-3 maze sq11_instruction: crwdns30390:0crwdne30390:0
@@ -184,6 +183,7 @@ en:
       2-3 Maze sq7_instruction: crwdns30401:0crwdne30401:0
       2-3 Maze sq8_instruction: crwdns34058:0crwdne34058:0
       2-3 Maze sq9_instruction: crwdns30403:0crwdne30403:0
+      2-3_instruction: crwdns41672:0crwdne41672:0
       2-3level1_instruction: crwdns30404:0crwdne30404:0
       4-5 Artist 1_instruction: crwdns34060:0crwdne34060:0
       4-5 Artist 10_instruction: crwdns34061:0crwdne34061:0
@@ -487,7 +487,6 @@ en:
       Course 4 Artist For Loops 11_instruction: crwdns34312:0crwdne34312:0
       Course 4 Artist For Loops 12_instruction: crwdns34313:0crwdne34313:0
       Course 4 Artist For Loops 13_instruction: crwdns34314:0crwdne34314:0
-      Course 4 Artist For Loops 14 _instruction: crwdns37645:0crwdne37645:0
       Course 4 Artist For Loops 14_instruction: crwdns34315:0crwdne34315:0
       Course 4 Artist For Loops 15_instruction: crwdns34316:0crwdne34316:0
       Course 4 Artist For Loops 2_instruction: crwdns34317:0crwdne34317:0
@@ -543,7 +542,7 @@ en:
       Course 4 Artist Vars 8_instruction: crwdns34367:0crwdne34367:0
       Course 4 Artist Vars 9_instruction: crwdns34368:0crwdne34368:0
       Course 4 Bee 1_instruction: crwdns34369:0crwdne34369:0
-      Course 4 Bee 2_instruction: crwdns34370:0crwdne34370:0
+      Course 4 Bee 2_instruction: crwdns39001:0crwdne39001:0
       Course 4 Bee 3_instruction: crwdns34371:0crwdne34371:0
       Course 4 Bee 4_instruction: crwdns34372:0crwdne34372:0
       Course 4 Bee For Loops 1_instruction: crwdns34373:0crwdne34373:0
@@ -696,6 +695,8 @@ en:
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
+      hoc2015_intro_instruction: crwdns41844:0crwdne41844:0
+      hoc2015_sandbox_instruction: crwdns41845:0crwdne41845:0
       Infinity_catch_instruction: crwdns35156:0crwdne35156:0
       Infinity_finale_instruction: crwdns34535:0crwdne34535:0
       Infinity_move_collide_instruction: crwdns35157:0crwdne35157:0
@@ -879,7 +880,6 @@ en:
       NEW Course 4 Artist Params 13_instruction: crwdns34611:0crwdne34611:0
       NEW Course 4 Artist Params 14_instruction: crwdns34612:0crwdne34612:0
       NEW Course 4 Artist Params 15_instruction: crwdns34613:0crwdne34613:0
-      NEW Course 4 Artist Params 2 _instruction: crwdns34614:0crwdne34614:0
       NEW Course 4 Artist Params 2_instruction: crwdns34615:0crwdne34615:0
       NEW Course 4 Artist Params 3_instruction: crwdns34616:0crwdne34616:0
       NEW Course 4 Artist Params 4_instruction: crwdns34617:0crwdne34617:0
@@ -915,6 +915,7 @@ en:
       New Play Lab Project_instruction: crwdns35010:0crwdne35010:0
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
+      Ninjacat Demo No Animate_instruction: crwdns39002:0crwdne39002:0
       PDK5 Conditionals 1_instruction: crwdns36454:0crwdne36454:0
       PDK5 Conditionals 2_instruction: crwdns37648:0crwdne37648:0
       PDK5 Events 1_instruction: crwdns36455:0crwdne36455:0
@@ -972,7 +973,12 @@ en:
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
       Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
+      U1L10 NetSim numbers with decimal_instruction: crwdns41846:0crwdne41846:0
+      U1L11 NetSim numbers with Ascii_instruction: crwdns41847:0crwdne41847:0
       U1L4 NetSim SendAB_instruction: crwdns38964:0crwdne38964:0
+      U1L8 NetSim numbers no decimal_instruction: crwdns41622:0crwdne41622:0
+      U1L8 NetSim numbers with decimal_instruction: crwdns41848:0crwdne41848:0
+      U2L04 - NetSim Routers with Addresses_instruction: crwdns41849:0crwdne41849:0
       U2L10 NetSim Automatic DNS_instruction: 'crwdns38742:0[hostname]crwdne38742:0'
       U2L10 NetSim Manual DNS_instruction: crwdns38743:0crwdne38743:0
       U2L2 NetSim Hub Mode_instruction: crwdns38744:0crwdne38744:0

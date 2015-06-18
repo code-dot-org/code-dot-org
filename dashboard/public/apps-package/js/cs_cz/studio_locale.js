@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "herec"},
+"addItems1":function(d){return "add 1 item of type"},
+"addItems2":function(d){return "add 2 items of type"},
+"addItems3":function(d){return "add 3 items of type"},
+"addItems5":function(d){return "add 5 items of type"},
+"addItems10":function(d){return "add 10 items of type"},
+"addItemsRandom":function(d){return "add random items of type"},
+"addItemsTooltip":function(d){return "Add items to the scene."},
 "alienInvasion":function(d){return "Mimozemská invaze!"},
 "backgroundBlack":function(d){return "černý"},
 "backgroundCave":function(d){return "jeskyně"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Pokračovat"},
 "decrementPlayerScore":function(d){return "Odebrat bod"},
 "defaultSayText":function(d){return "Piš zde"},
+"dropletBlock_changeScore_description":function(d){return "Přidat nebo odebrat bod ze skóre."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Nastavit obrázek pozadí"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Nastaví náladu herce"},
+"dropletBlock_setSpritePosition_description":function(d){return "Okamžitě přesune herce na zadané místo."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Nastaví rychlost herce"},
+"dropletBlock_setSprite_description":function(d){return "Nastaví obrázek herce"},
+"dropletBlock_throw_description":function(d){return "Hodí střelu od zadaného herce."},
+"dropletBlock_vanish_description":function(d){return "Herec zmizí."},
 "emotion":function(d){return "nálada"},
 "finalLevel":function(d){return "Dobrá práce! Vyřešil si poslední hádanku."},
 "for":function(d){return "pro"},
 "hello":function(d){return "ahoj"},
 "helloWorld":function(d){return "Ahoj světe!"},
 "incrementPlayerScore":function(d){return "Bod"},
+"itemBlueFireball":function(d){return "modrá ohnivá koule"},
+"itemPurpleFireball":function(d){return "fialová ohnivá koule"},
+"itemRedFireball":function(d){return "červená ohnivá koule"},
+"itemYellowHearts":function(d){return "žlutá srdce"},
+"itemPurpleHearts":function(d){return "fialová srdce"},
+"itemRedHearts":function(d){return "červená srdce"},
+"itemRandom":function(d){return "náhodně"},
+"itemAnna":function(d){return "hook"},
+"itemElsa":function(d){return "sparkle"},
+"itemHiro":function(d){return "microbots"},
+"itemBaymax":function(d){return "raketa"},
+"itemRapunzel":function(d){return "pánev"},
+"itemCherry":function(d){return "třešeň"},
+"itemIce":function(d){return "led"},
+"itemDuck":function(d){return "kachna"},
 "makeProjectileDisappear":function(d){return "zmizet"},
 "makeProjectileBounce":function(d){return "odrazit"},
 "makeProjectileBlueFireball":function(d){return "udělej modrou ohnivou kouli"},

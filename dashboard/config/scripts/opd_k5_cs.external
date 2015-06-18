@@ -1,0 +1,28 @@
+name 'OPD-K5 CS'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### GETTING STARTED > What is Code Studio?
+
+<br/><br/>
+You'll complete this free, self-paced course using the same learning platform you can use in your classroom with your students. It's called "[Code Studio](https://studio.code.org/)" and it's code.org's free platform for curriculum, resources and support in the movement to make computer science a part of every young person's education.
+<br/><br/>
+Let's start by learning a bit about what Code Studio is, and how it's worked for teachers and students around the globe. In the next level, we'll cover how to interact with the Code Studio learning platform, which you'll be using to complete this course.
+<br/><br/></br>
+
+<iframe width="640" height="390" src="https://youtubeeducation.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/q85v0y83rws4yd1/k5-affiliate-video-09032014.mp4?dl=0)**
+
+<br/><br/>
+What are your first impressions of Code Studio? 
+<br/>
+Share your thoughts on Twitter or other social media and be sure to tag @codeorg in your post.
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

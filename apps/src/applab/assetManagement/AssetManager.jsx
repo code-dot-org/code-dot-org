@@ -1,6 +1,7 @@
 var React = require('react');
 var AssetsApi = require('./clientApi');
 var AssetRow = require('./AssetRow.jsx');
+var assetListStore = require('./assetListStore');
 
 var errorMessages = {
   415: 'This type of file is not supported.',
@@ -39,13 +40,8 @@ module.exports = React.createClass({
    * @param xhr
    */
   onAssetListReceived: function (xhr) {
-    var assets = JSON.parse(xhr.responseText);
-    if (this.props.typeFilter) {
-      assets = assets.filter(function (asset) {
-        return asset.category === this.props.typeFilter;
-      }.bind(this));
-    }
-    this.setState({assets: assets});
+    assetListStore.reset(JSON.parse(xhr.responseText));
+    this.setState({assets: assetListStore.list(this.props.typeFilter)});
   },
 
   /**
@@ -84,9 +80,11 @@ module.exports = React.createClass({
 
     // TODO: Use Dave's client api when it's finished.
     AssetsApi.ajax('PUT', file.name, function (xhr) {
-      this.state.assets.push(JSON.parse(xhr.responseText));
-      this.setState({statusMessage: 'File "' + file.name +
-          '" successfully uploaded!'});
+      assetListStore.add(JSON.parse(xhr.responseText));
+      this.setState({
+        assets: assetListStore.list(this.props.typeFilter),
+        statusMessage: 'File "' + file.name + '" successfully uploaded!'
+      });
     }.bind(this), function (xhr) {
       this.setState({statusMessage: 'Error uploading file: ' +
           getErrorMessage(xhr.status)});
@@ -97,11 +95,9 @@ module.exports = React.createClass({
 
   deleteAssetRow: function (name) {
     this.setState({
-      assets: this.state.assets.filter(function (asset) {
-        return asset.filename !== name;
-      })
+      assets: assetListStore.remove(name),
+      statusMessage: 'File "' + name + '" successfully deleted!'
     });
-    this.setState({statusMessage: 'File "' + name + '" successfully deleted!'});
   },
 
   render: function () {
@@ -159,7 +155,7 @@ module.exports = React.createClass({
 
       assetList = (
         <div>
-          <div style={{maxHeight: '330px', overflow: 'scroll', margin: '1em 0'}}>
+          <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -173,7 +169,7 @@ module.exports = React.createClass({
 
     var title = this.props.assetChosen ?
         <p className="dialog-title">Choose Assets</p> :
-        <p className="dialog-title">Manage Asset</p>;
+        <p className="dialog-title">Manage Assets</p>;
 
     return (
       <div className="modal-content" style={{margin: 0}}>

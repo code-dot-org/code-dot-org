@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Let's use the Design Recipe to create a function called \"cube\" - this function should have a domain of Number, range of Number, and return the given number to the power of 3. Make sure to write two example cases! When you're done, use your new function to calculate 7 cubed.",
+    "instructions": "Let's use the Design Recipe to create a function called cube - this function should have a domain of Number, range of Number, and return the given number to the power of 3. Make sure to write two example cases! When you're done, use your new function to calculate 7 cubed.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"calc design recipe 1\",\r\n  \"callout_text\": \"Open the Functions drawer and click the \\\"Create a Function\\\" button\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "disable_examples": "false"
-  },
-  "md5": "0c7bafec16b0c66a9e626d8148f7d56f"
+    "disable_examples": "false",
+    "markdown_instructions": "Let's use the Design Recipe to create a function called _cube_ - this function should have a domain of Number, range of Number, and return the given number to the power of 3. Make sure to write two example cases! When you're done, use your new function to calculate 7 cubed."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

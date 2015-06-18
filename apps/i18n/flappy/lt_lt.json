@@ -120,7 +120,7 @@
   "speedVeryFast": "greitis = labai greitai",
   "whenClick": "kai spusteli",
   "whenClickTooltip": "Vykdyti pateiktas komandas, kai bus spustelta pele.",
-  "whenCollideGround": "kai nuktrenti ant žemės",
+  "whenCollideGround": "kai nukrenti ant žemės",
   "whenCollideGroundTooltip": "Vykdyti pateiktus veiksmus, kai Flappy pasieks žemę.",
   "whenCollideObstacle": "kai atsimuši į kliūtį",
   "whenCollideObstacleTooltip": "Vykdyti  pateiktus veiksmus, kai Flappy atsitrenks į kliūtį.",

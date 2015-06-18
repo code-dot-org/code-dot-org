@@ -77,9 +77,3 @@ function cache_bust_only() {
 }
 
 var CDOSounds = new Sounds();
-
-$(window).load(function () {
-  onURLBlocked('https://studio.code.org/test-image.png', function () {
-    trackEvent("HTTPS Test", "blocked");
-  });
-});

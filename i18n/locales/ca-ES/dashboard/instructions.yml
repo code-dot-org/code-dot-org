@@ -1,540 +1,229 @@
 ca:
   data:
     instructions:
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: |
-        Give the stop sign a border by making an octagon
-        with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
-        What is 360 divided by 8?) 
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: |
-        This house has a half-finished wall. Each side
-        is 100, but the half-finished wall is only 50. Complete the wall. 
+      2-3 Artist 1 new_instruction: Hola, sóc un artista. Pots escriure codi per fer-me dibuixar gairebé qualsevol cosa. Utilitza uns quants blocs per fer-me dibuixar sobre les línies grises de la imatge. (Cada línia fa 100 píxels de llarg)
+      2-3 Artist 11_instruction: "Fes una vora al senyal d'stop dibuixant un octàgon amb vuit costats, cadascun de 100 píxels de llarg. Quants graus hauries de girar? (Pista: quant és 360 dividit per 8?) "
+      2-3 Artist 12_instruction: |-
+        Fes que el bloc "repetir vegades" creï un cerca per tancar l'ull. Si cada moviment gira un grau a la dreta, quantes vegades cal repetir-ho per completar el cercle? 180? 360? 500?
+      2-3 Artist 2 new_instruction: 'Aquesta casa té una paret a mig acabar. Cada costat fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
-      2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3.4_instruction: "El bloc de salt mou l'artista sense que dibuixi. Dibuixa la línia de ratlles usant tant els blocs de saltar com els de dibuixar."
+      2-3 Artist 3_instruction: "Aquest barret fa 100 píxels d'alt. Dibuixa un barret que faci 70 píxels menys."
+      2-3 Artist 3new_instruction: "El barret vermell fa 100 píxels d'alt. Acaba de dibuixar el barret negre que és 70 píxels més curt. L'amplada del barret negre és de 50 píxels."
       2-3 Artist 4_instruction: Ajuda’m a construir la casa per a aquest gat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
+      2-3 Artist 5_instruction: 'Reescriu aquest codi amb un bloc "repeteix" per dibuixar la mateixa casa usant només tres blocs.'
+      2-3 Artist 6_instruction: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
+      2-3 Artist 7_instruction: 'Acaba de dibuixar la meitat dreta de la darrera finestra. Cada quadrat de la finestra fa 25 píxels. '
+      2-3 Artist 8_instruction: "Completa les habitacions de cada animal dividint el rectangle en dos quadrats iguals. El rectangle fa 200 píxels d'ample i 100 píxels d'alt."
       2-3 Artist 9_instruction: Acaba aquest estel
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "Let's put both elements inside a loop."
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Assessment 1_instruction: "Avaluació: Acaba de dibuixar la darrera dent, 25 píxels d'amplada i 25 píxels d'alçada."
+      2-3 Artist Debugging 1_instruction: Pots fer aquest barret amb una alçada màxima de 100?
+      2-3 Artist Debugging 10_instruction: 'Els botons de direcció del meu comandament són massa estrets. Pista: Fes-los 10 píxels més gruixuts'
+      2-3 Artist Debugging 11_instruction: |-
+        Ajuda'm a acabar el meu bonic floc de neu. Quantes vegades he de "repetir" per enllestir-lo?
+      2-3 Artist Debugging 12_instruction: "S'espera que afegeixi una onada de l'oceà en aquesta escena. Pots ajudar-me?"
+      2-3 Artist Debugging 2_instruction: 'El codi dels tres bigotis que veus és incorrecte. Pista: cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis.'
+      2-3 Artist Debugging 3_instruction: "El meu vaixell té un forat! Pots arreglar-lo canviant l'angle de la línia? Pista: el darrer angle està desviat 15 graus."
+      2-3 Artist Debugging 4_instruction: Quina imatge estem mirant de dibuixar? Acaba de connectar els punts usant les línies i angles adequats.
+      2-3 Artist Debugging 5_instruction: 'El codi de la cama i del peu que veus està malament. Pista: El peu és massa llarg, potser necessitem eliminar un pas (joc de paraules intencionat)'
+      2-3 Artist Debugging 6_instruction: Sembla que estic assegut en una cadira que li falta una pota. Edita els blocs per dibuixar la pota.
+      2-3 Artist Debugging 7_instruction: Sembla que la C al codi està dibuixada al revés. Pots fer que sembli una C?
+      2-3 Artist Debugging 8_instruction: El meu molinet de vent no està acabat. Quantes vegades he de repetir per acabar-lo?
+      2-3 Artist Debugging 9_instruction: "El codi d'aquesta tija és incorrecte. Pista: L'angle està desviat 60 graus"
+      2-3 Artist Debugging Assessment 1_instruction: 'Aquesta forma és massa petita. Pots fer-la més gran? Pista: ha de tenir 75 píxels més a cada costat.'
+      2-3 Artist Free Play_instruction: Joc lliure! Dibuixa el que vulguis.
+      2-3 Artist Functions 1_instruction: "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat."
+      2-3 Artist Functions 10_instruction: Aquí hi ha dues funcions, una per dibuixar un engranatge gran i una altra per dibuixar-ne un de petit. Usa-les per dibuixar a dins de la màquina!
+      2-3 Artist Functions 11.5_instruction: 'Aquí hi ha la mateixa funció "Dibuixa un hexàgon". Què passa si només gires 60 graus a cada bucle?'
+      2-3 Artist Functions 11_instruction: 'Hem reanomenat la funció "dibuixa un quadrat" com a "dibuixa un hexàgon", però només dibuixa quadrats! Pots modificar la funció "dibuixa un hexàgon" per dibuixar un hexàgon de 50 píxels per costat i dibuixar la imatge usant la funció?'
+      2-3 Artist Functions 12_instruction: 'Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció "dibuixa un flor" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  '
+      2-3 Artist Functions 13_instruction: |-
+        T'hem donat quatre funcions. Usa-les com vulguis dins d'un o més bucles per fer dibuixos que puguis compartir amb els teus amics. Prem "executa" per veure'n un exemple.
+      2-3 Artist Functions 2_instruction: 'Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat". Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats estan separats 75 píxels.'
+      2-3 Artist Functions 3_instruction: Edita la funció per dibuixar un quadrat amb un costat de 115 i dibuixar unes ulleres més grans. Els quadrats estan separats ara 45 píxels.
+      2-3 Artist Functions 4_instruction: 'Usa el bloc "repeteix" per dibuixar aquests tres quadrats.'
+      2-3 Artist Functions 7_instruction: 'Usa la funció "dibuixa una casa" per dibuixar dues cases usant dos paràmetres diferents. (Pista: la primera casa fa 100 píxels).'
+      2-3 Artist Functions 9_instruction: "Aquesta és la funció floc de neu. Experimenta amb ell per crear una escena d'hivern! Aquest és un nivell de joc lliure, aquí que no cal resoldre res. Gaudeix!"
+      2-3 Artist Loops 1_instruction: Pots fer un hexagon amb costats que tinguin 100 píxels de llarg per acabar la cèl.lula? Recorda que això vol dir que només cal que giris 60 graus!
+      2-3 Artist Loops 10_instruction: Què passa al disseny si reduïm a la meitat el darrer pas endavant?
+      2-3 Artist Loops 11_instruction: 'Ara posarem *un altre* bucle tot al voltant de la creació! No oblidis afegir un angle at final del bucle extern.'
+      2-3 Artist Loops 2_instruction: Ara usa un bloc de repetició per convertir la cèl.lula en una closca.
+      2-3 Artist Loops 4_instruction: Vols veure què passa quan repetim la forma una i altra vegada usant un bucle?
+      2-3 Artist Loops 5_instruction: Ara farem un petit canvi al bucle i veurem com canvia el nostre dibuix.
+      2-3 Artist Loops 6_instruction: Afegeix un moure i un altre gir dins el bucle i mira com canvia el teu disseny.
+      2-3 Artist Loops 7_instruction: "Podem usar bucles per a fer tota mena de polígons. Pots crear un rombe dins d'aquest hexagon?"
+      2-3 Artist Loops 8_instruction: "Posem els dos elements dins d'un bucle."
+      2-3 Artist Loops 9_instruction: "Farem un bucle amb els mateixos elements, però ara afegirem distància entre ells.\r Usa el mateix codi que abans, però afegeix un pas endavant al final del bucle extern."
+      2-3 Artist Loops New 1_instruction: "Dibuixarem el cap d'aquest robot! Pots fer un quadrat amb costats de 100 píxels?"
+      2-3 Artist Loops New 10_instruction: Ara connectem un grapat de Vs totes juntes, dibuixant-les amb un bucle.
+      2-3 Artist Loops New 11_instruction: "Aquesta vegada ho dibuixarem 24 vegades. Afegeix un gir a l'esquerra de 30 graus a aquest codi i posa-ho tot en un bloc de repetició."
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        Dibuixa un diamant amb costats de 100 píxels.
         
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
+      2-3 Artist Loops New 13_instruction: Ara dibuixa el diamant tres cops amb un bucle.
+      2-3 Artist Loops New 14_instruction: Ara dibuixa el diamant deu cops però gira 90 graus entre cada diamant.
+      2-3 Artist Loops New 15_instruction: Dibuixa alguna cosa divertida.
+      2-3 Artist Loops New 2_instruction: Aquest és part del codi que has usat per dibuixar el quadrat. Què passa si uses el bloc de repetició per executar aquest codi quatre cops?
+      2-3 Artist Loops New 9_instruction: Dibuixa una simple V on els dos costats fan 50 píxels per completar la fletxa.
+      2-3 Artist Match Hex Pic_instruction: "Unir: Ajuda a acabar l'hexagon."
       2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
       2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
       2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey. 
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
-      2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
+      2-3 Artist Nested Loops 1_instruction: "Prèviament has usat bucles per dibuixar formes, però sabies que pots posar un bucle dins d'un altre?\r Repeteix tres cops tot aquest bloc de codi per dibuixar el patró."
+      2-3 Artist Nested Loops 10_instruction: Repeteix aquest codi 12 cops per completar el patró.
+      2-3 Artist Nested Loops 11_instruction: Repeteix el codi quatre cops per completar el patró, gira 90 graus després de cada cercle.
+      2-3 Artist Nested Loops 12_instruction: Repeteix aquest codi 12 vegades per completar les corbes.
+      2-3 Artist Nested Loops 2_instruction: Ara repeteix el triangle sis cops. Després de cada triangle necessitaràs girar 60 graus abans de fer el següent.
+      2-3 Artist Nested Loops 3_instruction: "Hauràs de repetir el triangle 12 vegades per dibuixar aquest patró. Divideix el nombre de graus d'un cercle (360) entre el nombre de figures que dibuixes (12) per esbrinar quant has de girar després de cada figura."
+      2-3 Artist Nested Loops 4_instruction: 'Repeteix aquest diamant 12 cops per dibuixar una flor. Pista: 12 diamants és just el que has fet - quant has de girar després de cada figura?'
+      2-3 Artist Nested Loops 5_instruction: "Omple les finestres de l'edifici amb un bucle imbricat. Les finestres fa 20 píxels de llarg i estan separades 20 píxels."
+      2-3 Artist Nested Loops 6_instruction: "Aquest dinosaure té 8 punxes pujant per la seva cua; cada punxa fa 30 píxels de llarg. Repeteix el triangle 8 vegades però, després de cadascun, assegura't que et mous endavant."
+      2-3 Artist Nested Loops 7_instruction: "Repeteix aquest triangle deu vegades per dibuixar el sol. Et caldrà moure i girar després de cada triangle. Pots esbrinar quant has de girar dividint el nombre de graus d'un cercle entre el nombre de figures que el formen."
+      2-3 Artist Nested Loops 8_instruction: "Ara afegirem una mica d'herba al nostre dibuix. Les mates d'herba estan separades 50 píxels."
+      2-3 Artist Nested Loops 9_instruction: Acabarem el dibuix afegint una flor. Repeteix el diamant dotze vegades per dibuixar la teva flor.
+      2-3 Artist Nested Loops Free Play_instruction: Joc lliure, dibuixa alguna cosa xula usant bubles niuats.
+      2-3 Bee Conditionals 1_instruction: "Hola! Sóc una abella. Ajuda'm a obtenir el nèctar de la flor."
+      2-3 Bee Conditionals 10_instruction: "Les flors liles poden tenir 0 o 1 nèctar. Tingues cura de no recollir el nèctar d'una flor lila si no en té. \r\n"
+      2-3 Bee Conditionals 11_instruction: Recull el nèctar de les flors que en tenen.
+      2-3 Bee Conditionals 12_instruction: Usa un bucle per comprovar i recollir el nèctar de totes aquestes flors.
+      2-3 Bee Conditionals 13_instruction: 'Recull el nèctar i fes mel. Pista: què passa si utilitzes el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?'
+      2-3 Bee Conditionals 14_instruction: "Recull nèctar i fes mel. Vés amb compte de no recollir nèctar d'una flor lila si no en té."
+      2-3 Bee Conditionals 15_instruction: Recull el nèctar de les quatre flors.
+      2-3 Bee Conditionals 2_instruction: "Hola, sóc una abella! Ajuda'm a recollir tot el nèctar de les flors. Utilitza un bucle."
+      2-3 Bee Conditionals 3_instruction: "Ajuda'm a recollir tot el nèctar de les flors i fer mel. Usa un bucle."
+      2-3 Bee Conditionals 4_instruction: "Ajuda'm a recollir tot el nèctar de les flors i fer tota la mel."
+      2-3 Bee Conditionals 5_instruction: |-
+        Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc "si".
+      2-3 Bee Conditionals 6_instruction: 'Comprova aquesta flor amb un bloc "if" per veure si hi té nèctar.'
+      2-3 Bee Conditionals 7_instruction: Recull nèctar de cada flor si en té.
+      2-3 Bee Conditionals 8_instruction: En aquest camp hi ha flors liles i vermelles. Les flors vermelles tenen una quantitat de nèctar coneguda, però no se sap quant en tenen les flors liles. Recull tot el nèctar.
+      2-3 Bee Conditionals 9_instruction: Recull tot el nèctar de cada flor.
+      2-3 Bee Conditionals Assessment 1_instruction: "Avaluació: Recull tot el nèctar. Compte de no recollir nèctar d'una flor lila si no en té."
+      2-3 Bee Debugging 1_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 10_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 2_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 3_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 4_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 5_instruction: |-
+        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. Ara pots usar "executa" o "pas".
+      2-3 Bee Debugging 6_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. "
+      2-3 Bee Debugging 7_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 8_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging 9_instruction: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Debugging Assessment 1_instruction: "Avaluació: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
+      2-3 Bee Functions 1_instruction: 'Les funcions són blocs de codi que realitzen una tasca. Usa la funció "recull 2 nèctars" per recollir el nèctar de cada flor.'
+      2-3 Bee Functions 10_instruction: Les flors liles poden tenir 1 o 0 nèctar. Crea una funció que reculli nèctar només de les flors liles que en tenen.
+      2-3 Bee Functions 2_instruction: |-
+        Les funcions són blocs de codi que realitzen una tasca. Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar un bucle per reduir el nombre de blocs usats.
+      2-3 Bee Functions 3_instruction: Recull tot el nèctar de cada flor.
+      2-3 Bee Functions 4_instruction: |-
+        La funció "moure i obtenir nèctar" fa girar l'abella, recull nèctar i després retorna l'abella a on va començar. Utilitza la funció de recollir tot el nèctar.
+      2-3 Bee Functions 5_instruction: Ara hi ha més nèctar a les flors. Edita la funció donada de manera que reculli quatre nèctars i usa-la per recollir tot el nèctar de les flors.
+      2-3 Bee Functions 6_instruction: Ara usa la mateixa funció per recollir el nèctar de les tres flors.
+      2-3 Bee Functions 7_instruction: Les flors estan ara més lluny. Edita la funció donada i usa-la per recollir tot el nèctar de les flors.
+      2-3 Bee Functions 8_instruction: Crea la teva pròpia funció que reculli 7 nèctars, avanci i faci 7 mels. Usa la funció per recollir tot el nèctar a cada flor i faci la mel a cada rusc.
+      2-3 Bee Functions 9_instruction: "Crea la teva pròpia funció que baixa pel camí, recull nèctar, fa mel i després retorna l'abella a l'inici del camí."
+      2-3 Bee Functions Assessment 1_instruction: 'Avaluació: Usa la funció donada per recollir el nèctar de cada flor.'
+      2-3 Bee Functions Assessment 2_instruction: 'Avaluació: Crea una funció per fer tres mels cada vegada.'
+      2-3 Bee Loops 1_instruction: 'Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. '
+      2-3 Bee Loops 10_instruction: 'Pots usar un bloc "mentre" dins de dos altres bucles per recollir tot el nèctar?'
+      2-3 Bee Loops 11_instruction: 'Usa bucles "mentre" per recollir tot el nèctar de les flors en aquest camp.'
+      2-3 Bee Loops 12_instruction: 'Usa bucles "mentre" per recollir tot el nèctar de les flors en aquest camp.'
       2-3 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
         all of the nectar.
-      2-3 Bee Loops 1A_instruction: |
-        Hi, I'm a bee. Can you help me collect the
-        nectar from these flowers? 
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
-      2-3 Maze 1_instruction: |
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run". 
+      2-3 Bee Loops 1A_instruction: 'Hola, sóc una abella. Em pots ajudar a recollir el nèctar de les flors? '
+      2-3 Bee Loops 2_instruction: Usa un bucle per recollir el nèctar i fer mel.
+      2-3 Bee Loops 2A_instruction: Pots fer la mateixa tasca més fàcilment usant un bucle?
+      2-3 Bee Loops 3_instruction: Recull el nèctar de cada flor i fes mel a cada rusc.
+      2-3 Bee Loops 3A_instruction: Pots usar un bucle per recollir tot el nèctar?
+      2-3 Bee Loops 3B_instruction: Ara usa el nou bloc repeteix per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Loops 4_instruction: Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
+      2-3 Bee Loops 4A_instruction: "Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!"
+      2-3 Bee Loops 5_instruction: Usa un bucle per baixar les escales i recollir el nèctar.
+      2-3 Bee Loops 6_instruction: Usa un bucle per recollir el nèctar de cada flor i fer la mel a cada rusc.
+      2-3 Bee Loops 7_instruction: Posa tots aquests blocs en un bucle per recollir el nèctar de cada flor.
+      2-3 Bee Loops 8_instruction: |-
+        Aquestes flors liles tenen una quantitat indeterminada de nèctar. Usa el bucle "mentre nèctar" per recollir tot el nèctar. Aquest bucle s'executarà mentre la condició sigui certa, en aquest cas Nèctar > 0.
+      2-3 Bee Loops 9_instruction: 'El bucle "mentre" pot repetir la mateixa acció que la instrucció "si" en un buble. Afegeix un bucle "mentre" a aquest codi per realitzar la mateixa tasca.'
+      2-3 Bee Loops Assessment 1_instruction: "Avaluació - Usar un bucle mentre per recollir tot el nèctar d'aquesta flor."
+      2-3 Maze 1_instruction: 'Pots ajudar-me a atrapar el porc dolent? Apila un parell de blocs "avança" i prem "Executar". '
       2-3 Maze 10_instruction: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
-      2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: Get me to the pig using only two blocks.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
-      2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+      2-3 Maze 11_instruction: "Porta'm fins a la flor, tinc gana! Quantes vegades has de repetir un bloc?"
+      2-3 Maze 12 (copy 1)_instruction: 'Pots canviar la resposta anterior amb només dos blocs? (Pista: crea un bucle utilitzant un bloc "repeteix".)'
+      2-3 Maze 12 (copy 2)_instruction: 'Pots canviar la resposta anterior amb només dos blocs? (Pista: crea un bucle utilitzant un bloc "repeteix".)'
+      2-3 Maze 12 (old)_instruction: |-
+        Porta'm fins al porc, ara amb el bloc "repeteix"!
+      2-3 Maze 12_instruction: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
+      2-3 Maze 13 (old)_instruction: |-
+        Porta'm fins al porc, ara amb el bloc "repeteix fins"!
+      2-3 Maze 13_instruction: "Porta'm fins al porc usant només dos blocs."
+      2-3 Maze 14 (old)_instruction: |-
+        Porta'm fins al porc amb el bloc "repeteix fins"!
+      2-3 Maze 14_instruction: |-
+        Porta'm fins al gira-sol! (On és aquest bloc "repeteix" quan el necessito?)
+      2-3 Maze 15 (old)_instruction: |-
+        Porta'm fins al porc amb el bloc "repeteix fins"!
+      2-3 Maze 15_instruction: Utilitza dos bucles per arribar al porc utilitzant menys blocs.
+      2-3 Maze 16 (old)_instruction: |-
+        Porta'm fins al porc amb el bloc "repeteix fins"!
+      2-3 Maze 16 before_instruction: "Porta'm fins al porc."
+      2-3 Maze 16_instruction: "Porta'm al girasol. Repeteix la seqüència!"
+      2-3 Maze 2_instruction: "Aquest porc m'està tocant la pera. Ajuda'm a atrapar-lo!"
+      2-3 Maze 3_instruction: "Traça el camí i porta'm fins al porc babau. Evita el TNT o em volaran les plomes!"
       2-3 Maze 4_instruction: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
       2-3 Maze 5_instruction: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
-      2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze 6_instruction: "Mantingues la calma i ajuda'm a arribar al porc malvat. D'altra manera m'enfadaré!"
       2-3 Maze 7_instruction: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
-      2-3 Maze 8_instruction: Get me to the pig!
+      2-3 Maze 8_instruction: "Porta'm fins al porc!"
       2-3 Maze 9_instruction: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
-      2-3 Maze Loops 18_instruction: Get me to the sunflower!
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
-      2-3 Maze Loops Assessment 1_instruction: |
-        Assessment:  Get me to the sunflower
-        using only 5 blocks! 
-      2-3 Maze sq1 _instruction: |
+      2-3 Maze Loops 17_instruction: "Porta'm fins al girasol!"
+      2-3 Maze Loops 18_instruction: "Porta'm fins al girasol!"
+      2-3 Maze Loops 19_instruction: "Porta'm fins al girasol!"
+      2-3 Maze Loops 20_instruction: "Porta'm fins al girasol!"
+      2-3 Maze Loops 21_instruction: "Porta'm fins al girasol!"
+      2-3 Maze Loops Assessment 1_instruction: "Avaluació: Porta'm fins al girasol usant només 5 blocs! "
+      2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
-      2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
-      2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 Maze sq10_instruction: "Porta'm fins al porc! Quins blocs es repeteixen?"
+      2-3 Maze sq10v2_instruction: "Porta'm fins al porc! Quins blocs es repeteixen?"
+      2-3 maze sq11_instruction: "Porta'm fins al porc! Quins blocs es repeteixen?"
+      2-3 maze sq12_instruction: 'Substitueix la resposta anterior amb un bucle usant un bloc "repeteix"?'
+      2-3 maze sq13_instruction: 'Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol. Crea un bucle amb el bloc "repeteix fins".'
+      2-3 maze sq14_instruction: Pots arribar al gira-sol usant només quatre blocs?
+      2-3 maze sq15_instruction: Pots arribar al gira-sol usant només cinc blocs?
+      2-3 maze sq16_instruction: Sí, aquest és semblant, però una mica diferent. Pots fer-ho amb només cinc blocs?
+      2-3 Maze sq2_instruction: "Traça el camí i porta'm fins al porc babau. Evita el TNT o em volaran les plomes!"
       2-3 Maze sq3_instruction: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
-      2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is 300
-        pixels long) 
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
-      4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
-      4-5 Artist 5_instruction: What angle do you use?
-      4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
-      4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
+      2-3 Maze sq4_instruction: "Mantingues la calma i ajuda'm a arribar al porc malvat. D'altra manera m'enfadaré!"
+      2-3 Maze sq5_instruction: "Porta'm fins al porc! Quantes vegades has de repetir un bloc?"
+      2-3 Maze sq6_instruction: 'Pots canviar la resposta anterior amb només dos blocs? (Pista: Crea un bucle usar un bloc "repeteix".)'
+      2-3 Maze sq7_instruction: "Porta'm fins a l'intrús verd usant només tres blocs."
+      2-3 Maze sq8_instruction: |-
+        Porta'm fins al porc! (On està el bloc "repeteix" quan el necessito?)
+      2-3 Maze sq9_instruction: Crea bucles per arribar al porc usant menys blocs.
+      2-3_instruction: |
+        Purple flowers may have either 1 or 0 nectar. Be careful
+        not to collect nectar from a purple flower if it doesn't have any.
+      2-3level1_instruction: "Ajuda a l'ocell perquè atrapi el porc entremaliat movent-lo cap endavant"
+      4-5 Artist 1_instruction: "Ajuda'm a acabar de dibuixar la capsa. (Cada línia fa 300 píxels de llarg) "
+      4-5 Artist 10_instruction: 'Prem "Executa" per provar el codi. Després repeteix-lo les vegades que calgui per completar el dibuix. Els colors seran diferents cada cop.'
+      4-5 Artist 11_instruction: Acaba les línies verdes. Les línies fan 300 píxels de llarg i estan separades 15 píxels.
+      4-5 Artist 2_instruction: Pots repetir aquest codi per completar el quadrat?
+      4-5 Artist 3.5_instruction: |-
+        D'acord, mira de descobrir què passa si executes aquest codi (o prem "Executa" per provar-lo). A continuació repeteix-lo les vegades que calgui per acabar el dibuix. Els colors seran (probablement) diferents cada vegada.
+      4-5 Artist 3_instruction: Aquest parterre rectangular té un perímetre de 600. El costat llarg fa 200. Dibuixa el rectangle.
+      4-5 Artist 4_instruction: Quants graus fa un cercle? Repeteix els blocs per fer un cercle de colors.
+      4-5 Artist 5_instruction: Quin angle fas servir?
+      4-5 Artist 6_instruction: Aquest triangle equilàter té angles de 60, 60 i 60 graus. Cada costat és de 200 píxels. Completa el dibuix.
+      4-5 Artist 7_instruction: "Aquest triangle rectangle té angles de 30, 60 i 90 graus. La longitud de la part inclinada és el doble de l'altura de 100 píxels. Completa el dibuix."
+      4-5 Artist 8_instruction: "La línia del mig d'un camp de futbol és perpendicular a les bandes. Aquest camp té un perímetre de 800 píxels i fa 200 píxels de llarg. Quant fa d'ample? Dibuixa les línies de les vores i del mig del camp."
+      4-5 Artist 9_instruction: "Dibuixa l'altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg."
+      4-5 Artist Assessment 1_instruction: 'Avaluació: Usa un bucle per dibuixar el triangle equilàter. Cada costat és de 300 píxels.'
       4-5 Artist For Loops 1_instruction: |
         Put the numbers 1 through 10 into the
         width blocks and run the code.
@@ -583,9 +272,7 @@ ca:
       4-5 Artist For Loops 9_instruction: |
         These circles are size 5, 10, 15, 20,
         25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
+      4-5 Artist Free Draw 1_instruction: Dibuix lliure! Dibuixa el que et digui la inspiració.
       4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
@@ -812,43 +499,29 @@ ca:
       4-5 Bee Nested Loops Rows_instruction: |
         Gather nectar from the rows of flowers!
         Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
-      4-5 Maze 13_instruction: Get me to the pig!
+      4-5 Maze 1 (copy 1)_instruction: Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol.
+      4-5 Maze 1_instruction: Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol.
+      4-5 Maze 10_instruction: Pots arribar al gira-sol usant només quatre blocs?
+      4-5 Maze 11_instruction: Pots arribar al gira-sol usant només sis blocs?
+      4-5 Maze 12_instruction: Correcte, aquest és una mica diferent. Pots fer-ho amb només sis blocs?
+      4-5 Maze 13_instruction: "Porta'm fins al porc!"
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: 'Create a loop with the "repeat until" block.'
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
+      4-5 Maze 3 (copy 1)_instruction: haver... arribar... gira-sol.
+      4-5 Maze 3_instruction: haver... arribar... gira-sol.
+      4-5 Maze 4 (copy 1)_instruction: 'Prova amb el bloc "repetir" per usar menys blocs...'
+      4-5 Maze 4_instruction: 'Prova amb el bloc "repetir" per usar menys blocs...'
+      4-5 Maze 5 (copy 1)_instruction: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
+      4-5 Maze 5_instruction: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
+      4-5 Maze 6 (copy 1)_instruction: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
+      4-5 Maze 6_instruction: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
+      4-5 Maze 7_instruction: Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol.
+      4-5 Maze 8_instruction: 'Usa el bloc "repetir" per fer arribar el zombie al gira-sol. (Evita els dentetes!)'
+      4-5 Maze 9_instruction: 'crea un bucle amb el bloc "repeteix fins que".'
+      4-5 Maze Assessment 1_instruction: 'Avaluació: Arriba al gira-sol.'
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -995,15 +668,15 @@ ca:
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The 'update-target' function takes the
-        target's current x value, and returns an updated value. Complete the 'update-target'
+        The update-target function takes the target's
+        current x value, and returns an updated value. Complete the update-target
         function so that it adds to the x value each time it is called. The more you
         add to x, the faster the target will go.
       Big Game Animation 3_instruction: |
-        The 'update-danger' function should work
-        just like 'update-target', except that the danger should move from the right
-        side over towards the left. Complete the 'update-danger' function to make
-        the danger fly across the screen.
+        The update-danger function should work just
+        like update-target, except that the danger should move from the right side
+        over towards the left. Complete update-danger to make the danger fly across
+        the screen.
       Big Game Animation 4_instruction: |
         At this point your game your danger should
         run across the screen from right to left, and your target should run across
@@ -1017,11 +690,10 @@ ca:
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Booleans 2_instruction: |
-        Now that your onscreen? function is checking
-        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
-        section of the toolbox and complete the safe-left? function so that it returns
-        true if the sprite's x coordinate is greater than -50. If you're successful
-        you should see the Danger go off the left side and then return on right side.
+        Go to the Functions section of the toolbox
+        and complete the safe-left? function so that it returns true if the sprite's
+        x coordinate is greater than -50. If you're successful you should see the
+        Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
@@ -1029,11 +701,8 @@ ca:
         should see the Target go off the right side of the screen and return on the
         left.
       Big Game Booleans 4_instruction: |
-        We've provided a couple of empty functions
-        for safe-left? and safe-right? The first thing you need to do is complete
-        the onscreen? function so that it checks whether both safe-left? and safe-right?
-        are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen - why do you think that is?
+        Complete the onscreen? function so that it
+        checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
@@ -1060,17 +729,12 @@ ca:
         workbook. Edit the 'update-player' function so that if moves the player
         up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        Let's fix this distance function so our
-        collision detection works properly. Use the Distance Formula, so the distance
+        Use the Distance Formula, so the distance
         function returns the distance between the player's center coordinates (px,
-        py) and another sprite's center coordinates (cx, cy). We've provided a working
-        line-length function to help you out.
+        py) and another sprite's center coordinates (cx, cy).
       Big Game Collision 4_instruction: |
-        The 'distance' function returns the distance
-        between two sprites. Complete the 'collide?' function so that it returns
-        true if the distance between two points is less than 100 pixels apart. If
-        you're successful, your sprites will instantly collide - why do you think
-        that is?
+        Complete the collide? function so that it
+        returns true if the distance between two points is less than 100 pixels apart.
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1083,18 +747,14 @@ ca:
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!
-        Last time you worked on your game, you used booleans to make your Target and
-        Danger return to the screen once they've left. Click Run to see how your
-        game looks right now, and then we'll get to making your Player move up and
-        down.
+        We're getting really close to a finished game!Last
+        time you worked on your game, you used booleans to make your Target and Danger
+        return to the screen once they've left. Click Run to see how your game looks
+        right now, and then we'll get to making your Player move up and down.
       Big Game Player 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so the player moves up when
-        the up arrow is pressed, and moves down when the down arrow is pressed.
+        Edit the update-player function so the player
+        moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
+        40) when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1115,15 +775,15 @@ ca:
         variables and change them to something new.
       Big Game Vars 2_instruction: |
         The first step to making this game your own is
-        to give it a good Title. Click edit on the 'title' and 'subtitle' variables
-        and change them to something new.
+        to give it a good Title. Click edit on the title and subtitle variables and
+        change them to something new.
       Big Game Vars 3 (copy 1)_instruction: |
         Now let's set the background for your
         new game. Edit the 'bg' variable and select a new background Image from
         the dropdown.
       Big Game Vars 3_instruction: |
         Now let's set the background for your new game.
-        Edit the 'bg' variable and select a new background Image from the dropdown.
+        Edit the bg variable and select a new background Image from the dropdown.
       Big Game Vars 4 (copy 1)_instruction: |
         Awesome, now you can update the variables
         for your Player, Target, and Danger. Feel free to play with all of the variables
@@ -1233,15 +893,15 @@ ca:
         f(x) = x + 1. What would you expect this function to output if provided an
         input of 15?
       Calc Define Funcs 2_instruction: |
-        Write a function "f" that takes a parameter
-        "x" and returns x - 10. Test your function using f(15).
+        Write a function f that takes a parameter
+        x and returns x - 10. Test your function using f(15).
       Calc Define Funcs 3_instruction: |
         We don't have to call our function 'f'
         every time; create a function called 'times-ten' that should take a parameter
         'x' and return x * 10. Once you've created the function, run times-ten(50).
       Calc Define Funcs 4_instruction: |
-        Write a function called 'half' that takes
-        a number 'x' and returns half that number. Once you've written the function,
+        Write a function called half that takes a
+        number x and returns half that number. Once you've written the function,
         use it to calculate half(21)
       Calc Define Funcs 5 - multiply 1_instruction: |
         Oh no! We lost our multiply
@@ -1250,44 +910,44 @@ ca:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "cube" - this function should have a domain of Number, range
+        function called cube - this function should have a domain of Number, range
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `sales` which takes in
+        Write the function sales which takes in
         the number of cookies sold, and produces the amount of money customers spent
         to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
         Using the two functions we just wrote, write
-        the function `profit`, which takes in the number of cookies you sold, and
-        gives you back the total profit you make from selling your cookies, accounting
-        for the cost of baking them.
+        the function profit, which takes in the number of cookies you sold, and gives
+        you back the total profit you make from selling your cookies, accounting for
+        the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
       Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
-      Calc Rocket 1_instruction: "In the last puzzle you wrote a contract for the\nfunction \"rocket-height\" that states it has a range of Number, domain of\nNumber, and should return the height of the rocket traveling at 15 m/s after\na given number of seconds. Let's write an example case now for the height\nof the rocket at 3 seconds.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1_instruction: "In the last puzzle you wrote a contract for the\nfunction rocket-height that states it has a range of Number, domain of Number,\nand should return the height of the rocket traveling at 15 m/s after a given\nnumber of seconds. Let's write an example case now for the height of the\nrocket at 3 seconds.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 2_instruction: |
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years.
-        Can you write an expression that calculates "age" in days?
+        Here we've set the age variable to 17 years. Can
+        you write an expression that calculates age in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age". Set its value to your age and click run.
+        called age. Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        Here's a new variable called "age-in-months"
-        - use the variable "age" to set "age-in-months"
+        Here's a new variable called age-in-months - use
+        the variable age to set age-in-months.
       Calc Vars 2_instruction: |
-        Can you write an expression that calculates "age"
-        in months?
+        Can you write an expression that calculates age in
+        months?
       Calc Vars 3 (copy 1)_instruction: |
         Can you add to this code so that it calculates
         how many hours there are in "age" years?
@@ -1407,9 +1067,7 @@ ca:
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is
-        300 pixels long) 
+      Course 4 Artist 1_instruction: "Ajuda'm a acabar de dibuixar la capsa. (Cada línia fa 300 píxels de llarg) "
       Course 4 Artist 10_instruction: |
         It's Free Play time! Have fun and draw anything
         you would like. 
@@ -1423,9 +1081,7 @@ ca:
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
         the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
+      Course 4 Artist 5_instruction: "Dibuixa l'altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg."
       Course 4 Artist 6_instruction: |
         Complete the code to draw these triangles.
         Hint: 3 triangles in a 360 degree rotation.
@@ -1499,10 +1155,6 @@ ca:
         we use the counter variable to make the sides smaller as there are more of
         them? Instead of moving forward by a set amount, try moving forward (100 /
         counter) pixels.
-      Course 4 Artist For Loops 14 _instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
         less than you normally would for a shape, it creates a neat effect. Try turning
@@ -1727,8 +1379,8 @@ ca:
         Check first if it is a flower or a honeycomb, and then only gather nectar
         from it if it is a flower. 
       Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+        Check each object to see if it's a flower. If
+        it is, collect nectar...otherwise, you can ignore it!
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -1857,13 +1509,9 @@ ca:
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 4_instruction: 'Prova amb el bloc "repetir" per usar menys blocs...'
+      Course 4 Maze 5_instruction: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
+      Course 4 Maze 6_instruction: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -2006,15 +1654,15 @@ ca:
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
-        compare different values, returning either "true" or "false." Click "Run"
-        to see how this expression evaluates.
+        compare different values, returning either true or false. Click "Run" to
+        see how this expression evaluates.
       Eval Booleans 2_instruction: |
         Can you set the values so that this expression
-        evaluates as "true"?
+        evaluates as true?
       Eval Booleans 3_instruction: |
-        The "string-length" function returns the number
+        The string-length function returns the number
         of characters in a string (including spaces!) - make this code evaluate to
-        "true."
+        true.
       Eval Booleans 4_instruction: |
         Here's an Evaluation Block called AND - it returns
         true if both of its parameters are true, otherwise it returns false. Edit
@@ -2062,15 +1710,15 @@ ca:
         is true. Hint: The first condition to return "true" wins - make sure you
         put your conditions in the right order.
       Eval Cond 4_instruction: |
-        We can use the "string=?" function to make conditionals
-        that respond to text input. Here's a function called "green shape" that
-        takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "circle," "triangle,"
-        "square," or "rectangle."
+        We can use the string=? function to make conditionals
+        that respond to text input. Here's a function called green shape that takes
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
-        Here's a similar function "red shape" with an
-        additional parameter for size. Complete the conditionals so the correct image
-        is drawn for "circle," "triangle," and "star."
+        Here's a similar function red shape with an additional
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -2095,55 +1743,54 @@ ca:
         circle by a factor of 10 - how is the resulting image different than if you'd
         just made a circle of that size in the first place?
       Eval Contracts 4_instruction: |
-        The "scale" function returns an image that
-        is either larger or smaller than the input image. Try scaling this circle
-        by a factor of 10. How is the returned image different than if you'd just
-        made a circle of that size in the first place?
+        The scale function returns an image that is
+        either larger or smaller than the input image. Try scaling this circle by
+        a factor of 10. How is the returned image different than if you'd just made
+        a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
       Eval Contracts A_instruction: |
-        Use the "star" function to produce a solid
-        red star with a 60 pixel radius
+        Use the star function to produce a solid red
+        star with a 60 pixel radius
       Eval Contracts C_instruction: |
-        Check out the "rotate" function - can you
-        use it to rotate this 90 pixel green square by 45 degrees?
+        Check out the rotate function - can you use
+        it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the "text" function to write this
-        "Hello, world!" in teal at size 40.
+        Try using the text function to write this "Hello,
+        world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
         function block? The radius is 20. 
       Eval Define Funcs 1_instruction: |
-        Here's a new function called "green-triangle"
+        Here's a new function called green-triangle
         that takes a single Number for size and produces a green triangle. Use the
-        new function to create a 125 pixel green triangle
+        new function to create a 125 pixel green triangle.
       Eval Define Funcs 2_instruction: |
-        Let's look inside that "green-triangle"
-        function to see how it works. Can you modify it so that the "green-triangle"
-        function always draws outlined green triangles?
+        Let's look inside that green-triangle function
+        to see how it works. Can you modify it so that the green-triangle function
+        always draws outlined green triangles?
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
-        called "purple-circle" with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the "radius" block from the domain. 
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
-        Create a new function called "aqua-star"
-        that has a Domain of a single Number for radius and returns an aqua star of
-        the given radius. Run your new function with a radius of 75.
+        Create a new function called aqua-star that
+        has a Domain of a single Number for radius and returns an aqua star of the
+        given radius. Run your new function with a radius of 75.
       Eval Define Funcs 5_instruction: |
-        Let's use that "aqua-star" function to
-        make a row of different sized stars. From left to right, the stars should
-        have radiuses of 25, 50, and 75.
+        Let's use that aqua-star function to make
+        a row of different sized stars. From left to right, the stars should have
+        radiuses of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function definition (you will see two examples provided).
+        called square-circle with domain Number String and range Image. Click Edit
+        to write the function definition (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2162,27 +1809,27 @@ ca:
         the function definition - this time draw a solid red rectangle with a height
         of 75 pixels.
       Eval Design Recipe 3_instruction: |
-        The design recipe for "wide-rect" already
+        The design recipe for wide-rect already
         has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should produce a rectangle of given
+        the definition. The wide-rect function should produce a rectangle of given
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that has two domains. 1) a number of points and 2) a radius.
-        "starburst" returns a yellow radial star with given points, and an inner
-        radius that is half the outer radius.
+        starburst that has two domains. 1) a number of points and 2) a radius. starburst
+        returns a yellow radial star with given points, and an inner radius that is
+        half the outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
-        "striped-flag" that takes two colors and produces a flag that is 250 pixels
+        striped-flag that takes two colors and produces a flag that is 250 pixels
         wide, 150 pixels tall, with three even horizontal stripes of given colors,
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        "large-polygon" that should output a polygon of given sides and color that
-        takes up most of the window, regardless of the number of sides. To make sure
-        that the polygon doesn't get too large as you increase the number of sides,
-        side length should be inversely proportional to side number, with a length
-        of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2193,13 +1840,13 @@ ca:
         of letters, numbers, or other characters wrapped in quotation marks. Run the
         String "Hello, world!" and see what happens.
       Eval Strings Images .2_instruction: |
-        The "string-append" function takes two
-        Strings and returns a single combined String. Add a String "Universe" to
-        the second argument of "string-append."
+        The string-append function takes two Strings
+        and returns a single combined String. Add a String "Universe" to the second
+        argument of string-append.
       Eval Strings Images 1_instruction: |
         The third type of data we're going to
-        use is an Image. This "star" function takes in a Number and two Strings,
-        and it evaluates to an Image. Use this function to make a solid red star with
+        use is an Image. This star function takes in a Number and two Strings, and
+        it evaluates to an Image. Use this function to make a solid red star with
         radius of 100.
       Eval Strings Images 2_instruction: |
         Free Play: Every Evaluation Block is color-coded
@@ -2212,24 +1859,23 @@ ca:
         controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
-        Try using the "rectangle" block to draw
-        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
+        Try using the rectangle block to draw this
+        solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: |
         Try using this new Evaluation Block called
-        "overlay" to place a 100 pixel white triangle on top of a 200 pixel red
-        circle.
+        _overlay_ to place a 100 pixel white triangle on top of a 200 pixel red circle.
       Eval Strings Images 6_instruction: |
         Use the overlay function to place a 75
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
+        The offset block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
         square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
-        - it's called "radial-star" and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        - it's called radial-star and it allows you to draw stars with any number
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2302,6 +1948,12 @@ ca:
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |-
         Pots fer que l'Elsa ("actor 2") atrapi l'Anna utilitzant les fletxes del teclat?
       Infinity_finale_instruction: "Crea qualsevol cosa que t'agradi i comparteix-la!"
@@ -2479,18 +2131,18 @@ ca:
       K-1 Maze debug Assessment 1_instruction: |
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Get me to the pig!
+      K-1 Maze Loops 1_instruction: "Porta'm fins al porc!"
       K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
       K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 4_instruction: Get me to the pig!
+      K-1 Maze Loops 4_instruction: "Porta'm fins al porc!"
       K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 9_instruction: Get me to the pig!
+      K-1 Maze Loops 9_instruction: "Porta'm fins al porc!"
       K-1 Maze Loops Assessment 1_instruction: |
         Assessment -- Use loops to get me
         to the pig!
@@ -2503,8 +2155,8 @@ ca:
       K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig."
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
-        type the name of a topping into the "cost" function, and we'll return the
-        price of that pizza. Try ordering a pepperoni pizza to start.
+        type the name of a topping into the cost function, and we'll return the price
+        of that pizza. Try ordering a pepperoni pizza to start.
       Luigi's Pizza 2 (copy 1)_instruction: |
         Right now there are only four choices
         available at Luigi's pizza - let's fix that! Add a couple of new toppings
@@ -2513,8 +2165,8 @@ ca:
       Luigi's Pizza 2_instruction: |
         Right now there are only four choices available
         at Luigi's pizza - let's fix that! Add a couple of new toppings to the conditional
-        block in the "cost" function. Once you've added your toppings, test out
-        the function to make sure it works.
+        block in the cost function. Once you've added your toppings, test out the
+        function to make sure it works.
       Luigi's Pizza 3 (copy 1)_instruction: |
         That's better, everyone loves more
         variety in their pizza toppings! But you still can't please everyone, and
@@ -2525,10 +2177,12 @@ ca:
         That's better, everyone loves more variety in
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
-        to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer? Let's charge $10,000
+        to those people, could you update the else clause so that we charge them a
+        premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: |
+        Free Play: What can you do to make Luigi's cost
+        function even more useful?
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2557,18 +2211,18 @@ ca:
       MSM Defining Vars 2_instruction: |
         If we wanted to make fifty green triangles,
         it would be a pain to repeat that block of code 50 times. Let's create a
-        variable called "my-shape" and put the code for a 50 pixel solid green triangle
+        variable called my-shape and put the code for a 50 pixel solid green triangle
         inside.
       MSM Defining Vars 3 (copy 1)_instruction: |
         Take your "my-shape" variable
         and use it with this provided code to draw two identical green triangles.
       MSM Defining Vars 3_instruction: |
-        Take your "my-shape" variable and use it
-        with this provided code to draw two identical green triangles that are 50
-        pixels in size.
+        Take your my-shape variable and use it with
+        this provided code to draw two identical green triangles that are 50 pixels
+        in size.
       MSM Defining Vars 4_instruction: |
-        Edit your "my-shape" variable so that it
-        draws 75 pixel solid red stars.
+        Edit your my-shape variable so that it draws
+        75 pixel solid red stars.
       MSM Play Lab Butterfly 1_instruction: |
         Help Sam stay on the screen so that
         you can always see at least a little piece of him. Using the arrow keys, see
@@ -2705,9 +2359,6 @@ ca:
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
-      NEW Course 4 Artist Params 2 _instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
       NEW Course 4 Artist Params 2_instruction: |
         Create a “draw a triangle function
         with 50 pixels sides” from scratch
@@ -2728,9 +2379,9 @@ ca:
         each triangle is 25 pixels larger than the last.  The first triangle is 25
         pixels in size.
       NEW Course 4 Artist Params 8_instruction: |
-        Can you draw each of these triangles
-        with that new function? The first is 25 pixels long, the second is 50, and
-        the third is 75. Hint: start by clicking on "edit" on your function block.
+        The code for this triangle function
+        is broken. Can you edit the function to fix it, and then make triangles of
+        length 25, 50, and 75?
       NEW Course 4 Artist Params 9_instruction: |
         Click "edit" to fill in the function
         definition of "draw a square" and add a parameter. It should take a length
@@ -2826,6 +2477,11 @@ ca:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      Ninjacat Demo No Animate_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2844,11 +2500,7 @@ ca:
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: 'Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat". Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats estan separats 75 píxels.'
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -2950,27 +2602,27 @@ ca:
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
-        sure he doesn't go too far out of the yard. Here's a function called "safe-left?"
+        sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
         and return true if he's inside the left boundary of the yard (x > -25). If
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        on the left, now let's do the same thing on the right. Fill out the safe-right?
         function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block to program the function
-        "on-screen?" to check if Sam is safe-left? AND safe-right?
+        from going either direction? Try using the AND block to program the function
+        on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
-        an additional parameter 'y' to the 'onscreen?' function. Can you update
-        your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program by moving Sam as far as he can go in all four directions.
-        Click Finish when Sam is completely protected.
+        an additional parameter y to the onscreen? function. Can you update your program
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -3064,9 +2716,28 @@ ca:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
+      U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]
@@ -3075,11 +2746,11 @@ ca:
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L2 NetSim Hub Mode_instruction: "You'll now play the \"Game of Messages\"\ngame you just played in person, but this time using the Internet Simulator.\nJoin a room to be connected to your group, and then follow the instructions\non the worksheet handed out by your teacher.\r\n"
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
       U2L3 NetSim Hub Mode_instruction: |
-        With your group, invent a standard addressing
-        scheme for the "Game of Messages" game, and try it out using the Internet
-        Simulator. 
+        Use the Internet Simulator to test out your
+        group's binary communication protocol for battleship. How short can you make
+        the message and response?
       U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter with the others in your group. Important note: The router will only\nproperly route messages where the first 4 bits are the To: address and the\nsecond 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
       U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na router with the others in your group. The Internet Simulator now provides\na place for you to put the To and From addresses, so you don't have to type\nout the bits manually.\r\n\r\n"
       U2L7 NetSim Need for Packets_instruction: |

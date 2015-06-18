@@ -13,7 +13,14 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -54,13 +61,15 @@
     <toolbox_blocks>
       <xml>
         <category name="Number">
-          <block type="functional_plus"/>
-          <block type="functional_minus"/>
-          <block type="functional_times"/>
-          <block type="functional_dividedby"/>
-          <block type="functional_math_number"/>
-          <block type="functional_math_number_dropdown">
-            <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+          <block type="functional_plus" inline="false"/>
+          <block type="functional_minus" inline="false"/>
+          <block type="functional_times" inline="false"/>
+          <block type="functional_dividedby" inline="false"/>
+          <block type="functional_sqrt" inline="false"/>
+          <block type="functional_squared" inline="false"/>
+          <block type="functional_pow" inline="false"/>
+          <block type="functional_math_number">
+            <title name="NUM">0</title>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE"/>

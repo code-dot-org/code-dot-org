@@ -13,7 +13,7 @@
           = stage[:title]
         - if should_show_lesson_plan && stage[:lesson_plan_html_url]
           .stage-lesson-plan-link
-            = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url]
+            = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url], target: "_blank"
 
       .games
         - stage[:levels].each do |level|
@@ -30,8 +30,8 @@
               - if current_user.try(:admin?) # TODO remove when we ship this feature
                 - if current_user && current_user != user # viewing someone else's progress
                   - link += "?user_id=#{user.id}"
-                  - if @section
-                    - link += "&section_id=#{@section.id}"
+                - if @section
+                  - link += "&section_id=#{@section.id}"
               %a.level_link{href: link, class: status}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named

@@ -443,6 +443,9 @@ pt-BR:
         csp_pixelation_bw: Widget de pixelização em preto e branco
         csp_U1L14_tipstricks: 'Unidade 1 - Lição 14 - Dicas e truques de professores'
         csp_textcompression: Widget de compressão de texto
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'Ciência da computação em álgebra - introdução'
         alg_2_eval_block: 'Ciência da computação em álgebra - blocos de cálculo'
         alg_3_pemdas: 'Ciência da computação em álgebra - ordem de operações'

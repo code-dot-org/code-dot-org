@@ -40,7 +40,7 @@ cs:
           "Maze: Loops": 'Bludiště: cykly'
           "Bee: Loops": 'Bee: cykly'
           "Studio: Create a Story": 'Hravá laboratoř: Vytvoř příběh'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Umělec: Smyčky'
           description_audience: Stáří 4+ (před čtenáři)
           description_short: Kurz 1 je určen pro rané čtenáře.
         course2:
@@ -72,14 +72,14 @@ cs:
           "Maze: Sequence": 'Bludiště: sekvence'
           "Artist: Sequence": 'Umělec: sekvence'
           "Maze: Loops": 'Bludiště: cykly'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Umělec: Smyčky'
           "Bee: Loops": 'Bee: cykly'
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Umělec: Vnořené smyčky'
           description_audience: 'Ages  6+ (reading required)'
           description_short: Course 2 is designed for students who can read.
         course3:
@@ -110,26 +110,26 @@ cs:
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
           Maze: Bludiště
-          Artist: Artist
-          "Artist: Functions": 'Artist: Functions'
+          Artist: Umělec
+          "Artist: Functions": 'Malíř: Funkce'
           "Bee: Functions": 'Bee: Functions'
           "Bee: Conditionals": 'Bee: Conditionals'
           "Maze: Conditionals": 'Maze: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Umělec: Vnořené smyčky'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
           Maze2: Maze2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functions2'
+          Artist2: Umělec2
+          "Artist: Functions2": 'Umělec: Funkce2'
           "Bee: Functions2": 'Bee: Functions2'
           "Bee: Conditionals2": 'Bee: Conditionals2'
           "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
+          "Artist: Nested Loops2": 'Umělec: Vnořené smyčky2'
           "Farmer: While Loops2": 'Farmer: While Loops2'
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Artist: Patterns": 'Umělec: Vzorky'
           Songwriting: Skládání písniček
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
@@ -150,7 +150,7 @@ cs:
           The Design Recipe: The Design Recipe
           "Artist: Defining Functions": 'Artist: Defining Functions'
           "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
-          "Artist: Functions": 'Artist: Functions'
+          "Artist: Functions": 'Malíř: Funkce'
           "Play Lab: Animation": 'Play Lab: Animation'
           Booleans: Booleans
           "Play Lab: Booleans": 'Play Lab: Booleans'
@@ -188,9 +188,9 @@ cs:
           Play Lab: Play Lab
           description_short: Create a story or make a game with Play Lab!
         artist:
-          title: Artist
+          title: Umělec
           description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
+          Artist: Umělec
           description_short: Draw cool pictures and designs with the Artist!
         scrat:
           title: Scrat
@@ -205,7 +205,7 @@ cs:
         frozen:
           title: Code with Anna and Elsa
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: Artist
+          Artist: Umělec
           description_short: Připojme se pomocí kódu k Anně a Else, které zkoumají kouzlo a krásu ledu.
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
@@ -220,10 +220,10 @@ cs:
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
           "Artist: For Loops": 'Artist: For Loops'
           "Play Lab: For Loops": 'Play Lab: For Loops'
-          "Artist: Functions": 'Artist: Functions'
+          "Artist: Functions": 'Malíř: Funkce'
           "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
-          Artist: Artist
+          Artist: Umělec
           Bee: Bee
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
@@ -243,12 +243,12 @@ cs:
           Course 4 Prerequisite: Course 4 Prerequisite
           "Maze: Sequence": 'Bludiště: sekvence'
           "Artist: Sequence": 'Umělec: sekvence'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Umělec: Smyčky'
           "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Umělec: Vnořené smyčky'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
+          "Artist: Functions": 'Malíř: Funkce'
           "Bee: Debugging": 'Bee: Debugging'
         usability:
           Intro: Intro
@@ -372,11 +372,11 @@ cs:
           Graph Paper Programming: Programování Na Milimetrovém Papíru
           The Artist: Umělec
           Algorithms: Algoritmy
-          The Artist 2: Malíř 2
+          The Artist 2: Umělec 2
           Functions: Funkce
           The Farmer: Farmářka
           Conditionals: Podmínky
-          The Artist 3: Malíř 3
+          The Artist 3: Umělec 3
           Song Writing: Psaní Písně
           The Farmer 2: Farmářka 2
           Abstraction: Abstrakce
@@ -393,6 +393,7 @@ cs:
           Applab: Applab
           The Artist: Umělec
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Události
           description: ""
@@ -453,12 +454,12 @@ cs:
           Course 4 Prerequisite: Course 4 Prerequisite
           "Maze: Sequence": 'Bludiště: sekvence'
           "Artist: Sequence": 'Umělec: sekvence'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Umělec: Smyčky'
           "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Umělec: Vnořené smyčky'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
+          "Artist: Functions": 'Malíř: Funkce'
           "Bee: Debugging": 'Bee: Debugging'
         cspunit1:
           title: 'CSP Unit 1 - Digital Information'
@@ -492,6 +493,7 @@ cs:
           "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -645,6 +647,9 @@ cs:
           Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
           Improving the Clicker Game: Improving the Clicker Game
           Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -795,6 +800,23 @@ cs:
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -813,10 +835,11 @@ cs:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Free Play
         allthethings:
           Jigsaw: skládačka
           Maze: Bludiště
-          Artist: Artist
+          Artist: Umělec
           Bee: Bee
           PlayLab: PlayLab
           Farmer: Farmer
@@ -836,6 +859,7 @@ cs:
           Odometer: Odometer
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -853,3 +877,71 @@ cs:
           Next Steps: Next Steps
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Introduction to PD: Introduction to PD
+          K-5 Courses: K-5 Courses
+          Writing computer programs: Writing computer programs
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          Unplugged lessons: Unplugged lessons
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          Computer Science Pedagogy: Computer Science Pedagogy
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          Teacher Dashboard: Teacher Dashboard
+          "Programming Concept: Events": 'Programming Concept: Events'
+          Reflection: Reflection
+          Next Steps: Next Steps
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Hodina kódu

@@ -20,15 +20,12 @@ var TextInputProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'placeholder'}
           initialValue={element.getAttribute('placeholder') || ''}
@@ -73,7 +70,7 @@ var TextInputProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
   }
 });
 
@@ -82,7 +79,7 @@ module.exports = {
 
   create: function () {
     var element = document.createElement('input');
-    element.style.margin = '5px 2px';
+    element.style.margin = '0px';
     element.style.width = '236px';
     element.style.height = '30px';
     element.style.color = '#000000';

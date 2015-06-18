@@ -12,6 +12,7 @@ es-AR:
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender Informática
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a # otros.'
+  petition_join_others: 'Unete a # otros'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -152,9 +153,12 @@ es-AR:
   homepage_hero_text_teacher2: |
     &ldquo;Este programa tiene al 100% de mis estudiantes comprometidos, involucrados y participando.&ldquo;
     Adam, profesor
+  homepage_hero_text_stat_loc: '# lineas de código escritas por estudiantes'
+  homepage_hero_text_stat_students: '#student_count cuentas del estudiante en Code Studio'
+  homepage_hero_text_stat_served: 'La Hora del Codigo: #Served servidos'
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Tablero Maestro del Profesor
   homepage_slot_text_studio: Todos nuestros tutoriales
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Tienda
@@ -250,7 +254,7 @@ es-AR:
   dashboard_landing_news_title: Recursos de Educador K-5 (sólo en Inglés)
   dashboard_landing_new_beta: ¡Nuevo! Pruebe nuestros cursos beta para los alumnos de K-5.
   dashboard_landing_new_k5courses: ¡Nuevo! Pruebe nuestros cursos para los alumnos de K-5.
-  dashboard_landing_useful_links: Otros links útiles (sólo en Inglés)
+  dashboard_landing_useful_links: Otros enlaces útiles (sólo en Inglés)
   dashboard_landing_office_hours: ¡Pregunta en persona! Utiliza nuesta horas mensuales para consultas por vídeo.
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material en nuestro Blog del Educador
@@ -336,11 +340,18 @@ es-AR:
   dashboard_students_print_page: Imprimir esta página
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Haga clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse o imprimirse para sus alumnos.'
-  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Ver todos los planes de estudio
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_overview: Overview
   dashboard_sequence: Secuencia
   dashboard_framework: Marco de trabajo
   dashboard_standards: Estándares
@@ -351,6 +362,10 @@ es-AR:
   dashboard_puzzle_solving: 'Resolución de rompecabezas:'
   dashboard_student_worksheet: hoja de trabajo del estudiante
   dashboard_teacher_worksheet: hoja de trabajo del maestro
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -378,6 +393,7 @@ es-AR:
   dashboard_sections_password_account_creation: Contraseña de texto creada por el estudiante
   dashboard_sections_login_type_explanation: 'Esta tabla ayuda a explicar cuál de estos tipos de inicio de sesión, <b>imagen, palabra o correo electrónico</b>, querrá elegir para una sección.'
   dashboard_faq: Preguntas frecuentes
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -793,3 +809,6 @@ es-AR:
   processing_beyond_longdescription: Processing es un lenguaje de programación, un entorno de desarrollo y una comunidad online. Desde 2001 Processing ha promovido el aprendizaje de programación dentro de las artes visuales y la literatura visual dentro de la tecnología. Creado inicialmente para servir como medio de prototipado rápido de software y para enseñar conceptos fundamentales de programación en un entorno visual, Processing se transformó en una herramienta de desarrollo para profesionales. Hoy hay miles de estudiantes, artistas, diseñadores, investigadores y entusiastas que utilizan Processing para aprender, para prototipar y para producir.
   alice_beyond_longdescription: Usando un innovador entorno de programación que permite la creación de animaciones 3D, el proyecto Alice provee herramientas y materiales para aprender y enseñar pensamiento computacional, solución de problemas y programación de computadoras a un amplio espectro de edades y niveles escolares.
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK proveen a los niños un divertido curso intensivo de programación de robots, y permite mejorar habilidades en matemáticas y ciencias.
+  compatibility_https_header: Por favor habilitar HTTPS para Code.org.
+  compatibility_https_message: "Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}. Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'> haga clic aquí</a> para aprender cómo activar HTTPS para Code.org."
+  compatibility_https_hide_this_warning: Ocultar esta advertencia

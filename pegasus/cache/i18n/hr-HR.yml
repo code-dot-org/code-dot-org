@@ -16,7 +16,9 @@
   learn_now: Nauči sad
   petition_message: Svi učenici u svim školama trebaju imati priliku naučiti informatiku
   petition_sign_message: 'Ako se slažeš, upiši svoje ime. Pridruži se # ostalih.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Ako nas podržavaš, upiši svoje ime. Pridruži se
+    # ostalima.'
+  petition_join_others: 'Pridruži se # ostalima'
   name: Ime
   email: E-mail
   zipcode: Poštanski broj ili država
@@ -112,8 +114,9 @@
   learn_classes: Pronađi lokalne nastave
   hoc_is_here: '#HourOfCode je ovdje - pogledaj! @codeorg'
   just_did_hoc: 'Upravo sam završio #HourOfCode - pogledaj! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Zašto se informatika predaje u tako malom broju škola? Mi to možemo
+    popraviti. http://youtu.be/nKIu9yen5nc. Posjetite http://code.org/ da naučite
+    više.
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Prije sat vremena
   what_gender: Koji si spol?
@@ -129,10 +132,10 @@
     %{lines} linija koda.'
   start_hoc: Kreni s Hour of Code sada
   contact_form_topic_press: Tisak/mediji (intervju ili govor)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_nina: Svaki je dan donio jednak rezultat &mdash; 100% angažiranosti. Nina
+    Nchols Peery, učiteljica
+  stats_student: '"Znala sam da je ovo <b> neponovljiva </b> prilika." - Mariana Alzate,
+    peti razred'
   stats_michael: '"Ja <b>nikada prije </b> nisam vidio svoje učenike toliko uzbuđene
     učenjem." - Michael Clark, učitelj'
   studiobar_title: Istraži<a href='http://studio.code.org'>Code Studio</a>
@@ -150,41 +153,33 @@
   studiobar_donate_title: Doniraj
   studiobar_donate_body: Svaki dolar koji donirate omogućuje da jedno dijete uči
   studiobar_shop_title: Trgovina
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+  studiobar_shop_body: Razbijmo sterotipe. Nosite naš logo s ponosom.
+  homepage_hero_text_malala: |
+    &ldquo;Izazivam djevojke iz svih zemalja da nauče jedan Sat programiranja&rdquo;
+    Malala, dobitnica Nobelove nagrade za mir
+  homepage_hero_text_susan: '&ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti
+    svijet.&rdquo; Susan, generalna direktorica YouTubea'
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Nemoj se samo igrati na svome telefonu, programiraj ga.&rdquo;
+    Predsjednik SAD-a, Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Naša djeca &mdash; uključujući i naše djevojke &mdash;
+    trebaju priliku za naučiti računalne znanosti.&rdquo;
+    Sheryl, izvršni direktor Facebooka
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Računalne znanosti mogu otključati najbolje prilike na svijetu.&rdquo;
+    Satya, generalni direktor Microsofta
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Ako programirate, možete izabrati put u svome životu&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Ove vještine izmijenile su moju budućnost. Da ne spominjem, to je jednostavno zabava.&rdquo;
+    Luna, sedmi razred
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Nikada, nikada nisam vidio svoje učenike toliko uzbuđene zbog učenja.&rdquo;
+    Michael, učitelj
+  homepage_hero_text_student3: '&ldquo;Računarstvo je znanstveno područje za koje
+    ne možete znati da li ga volite dok ga ne probate&rdquo; Jackson, 6th grade'
   homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
     with programming.&rdquo; \nMaya, 2nd grade\n"
   homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
@@ -195,6 +190,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -202,21 +200,21 @@
   homepage_slot_text_course4: Tečaj 4
   homepage_slot_text_shop: Trgovina
   homepage_slot_text_flappy: Flappy kôd
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Pogledajte video
+  homepage_action_text_teachervideo: Pogledajte video
+  homepage_action_text_learn: Krenite s učenjem
+  homepage_action_text_signpetition: Potpišite peticiju
+  homepage_signpetition_dropdown: Slažem se &#x25BE;
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Doznaj više
   homepage_slot_text_title_hoc: Hour of Code
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Svatko može naučiti. Započnite danas
   homepage_slot_text_link_hoc: Isprobaj Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Učenici
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: Pregledajte naše priručnike
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
   homepage_slot_text_link_othercourses: Other online courses
@@ -226,11 +224,11 @@
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_blurb_advocates: Podržite naš rad
+  homepage_slot_text_link_stats: Pogledajte statistike
   homepage_slot_text_link_buy: Buy a T-shirt or hat
   homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
+  homepage_header_codestudio: Kode studio, kreacije studenata
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
   homepage_donors_donate: Doniraj
@@ -411,11 +409,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Klikni
     ovdje</a> za naš dokument o privatnosti koji možete podijeliti ili ispisati svojim
     učenicima.
-  dashboard_curriculum_overview: Pregled kurikuluma razredne nastave
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Pogledaj sve nastavne planove
   dashboard_course1: 'Tečaj 1:'
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Pregled kurikuluma razredne nastave
+  dashboard_overview: Overview
   dashboard_sequence: Slijed
   dashboard_framework: Okvir
   dashboard_standards: Standardi
@@ -426,6 +431,10 @@
   dashboard_puzzle_solving: 'Rješavanje zadatka:'
   dashboard_student_worksheet: učenički radni list
   dashboard_teacher_worksheet: učiteljski radni list
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: predškolski
   dashboard_grade_other: Ostalo
   dashboard_login_word: Riječ
@@ -456,6 +465,7 @@
   dashboard_sections_login_type_explanation: Ova tablica pomoći objašnjava koji od
     načina prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.
   dashboard_faq: Često postavljana pitanja
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. prosinca!
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike
   learn_more: Nauči više
@@ -1123,3 +1133,8 @@
   sphero_beyond_longdescription: Bilo da ste učitelj ili roditelj, SPRK lekcije daju
     djeci zabavan brzinski tečaj programiranja robota dok usput poboljšavaju matematičke
     i znanstvene vještine.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Sakrij ovo upozorenje

@@ -29,6 +29,10 @@
 <% }; -%>
 
 <div id="visualizationColumn">
+  <% if (data.hasDesignMode) { %>
+    <div id="designToggleRow"></div>
+  <% } %>
+
   <div id="visualization">
     <%- data.visualization %>
   </div>
@@ -36,10 +40,6 @@
   <div id="belowVisualization">
 
     <% gameButtons() %>
-
-    <% if (data.hasDesignMode) { %>
-      <div id="designToggleRow"></div>
-    <% } %>
 
     <div id="bubble" class="clearfix">
       <table id="prompt-table">
@@ -77,47 +77,46 @@
   </div>
 </div>
 
-<div id="visualizationResizeBar">
+<div id="visualizationResizeBar" class="fa fa-ellipsis-v">
 </div>
 
 <div id="codeWorkspace">
-  <div id="headers" dir="<%= data.localeDirection %>">
-    <div id="codeModeHeaders">
-      <div id="toolbox-header" class="workspace-header">
-        <span><%= data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() %></span>
-        <span id="hide-toolbox" style="display:none;">&nbsp;<%= msg.hideToolbox() %></span>
-      </div>
-      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox"><%= msg.showToolbox() %></span></div>
-      <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
-      <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
-      <div id="workspace-header" class="workspace-header">
-        <span id="workspace-header-span"><%= msg.workspaceHeaderShort()%> </span>
-        <div id="blockCounter">
-          <div id="blockUsed" class=<%= data.blockCounterClass %>>
-            <%= data.blockUsed %>
+  <div id="codeWorkspaceWrapper">
+    <div id="headers" dir="<%= data.localeDirection %>">
+      <div id="codeModeHeaders">
+        <div id="toolbox-header" class="workspace-header">
+          <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>
+          <span><%= data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() %></span>
+        </div>
+        <div id="show-toolbox-header" class="workspace-header" style="display:none;">
+          <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>
+          <span><%= msg.showToolbox() %></span>
+        </div>
+        <div id="show-code-header" class="workspace-header workspace-header-button"><span><img src="<%= assetUrl('media/applab/blocks_glyph.gif') %>" class="blocks-glyph" /><i class="fa fa-code"></i><%= msg.showCodeHeader() %></span></div>
+        <div id="clear-puzzle-header" class="workspace-header workspace-header-button"><span><i class="fa fa-undo"></i><%= msg.clearPuzzle() %></span></div>
+        <div id="workspace-header" class="workspace-header">
+          <span id="workspace-header-span"><%= msg.workspaceHeaderShort()%> </span>
+          <div id="blockCounter">
+            <div id="blockUsed" class=<%= data.blockCounterClass %>>
+              <%= data.blockUsed %>
+            </div>
+            <span>/</span>
+            <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
+            <span> <%= msg.blocks() %></span>
           </div>
-          <span>/</span>
-          <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
-          <span> <%= msg.blocks() %></span>
         </div>
       </div>
     </div>
-    <% if (data.hasDesignMode) { %>
-      <div id="designModeHeaders" style="display:none;">
-        <div id="design-header" class="workspace-header">
-          <span><%= msg.designModeHeader() %></span>
-        </div>
-      </div>
+    <% if (data.editCode) { %>
+      <div id="codeTextbox"></div>
+    <% } %>
+    <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
+    <%- data.extraControlRows %>
     <% } %>
   </div>
-  <% if (data.editCode) { %>
-    <div id="codeTextbox"></div>
-  <% } %>
   <% if (data.hasDesignMode) { %>
-    <%- data.designModeBox %>
-  <% } %>
-  <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
-  <%- data.extraControlRows %>
+    <div id="designWorkspace" style="display:none;">
+    </div>
   <% } %>
 </div>
 

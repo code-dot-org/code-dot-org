@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Here's a new variable called \"age-in-months\" - use the variable \"age\" to set \"age-in-months\"",
+    "instructions": "Here's a new variable called age-in-months - use the variable age to set age-in-months.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  },
-  "md5": "e1b21f4dcfa4f9b8fe6ad3c2cb0b02ee"
+    "disable_examples": "false",
+    "markdown_instructions": "Here's a new variable called _age-in-months_ - use the variable _age_ to set _age-in-months_."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

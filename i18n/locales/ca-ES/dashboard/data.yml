@@ -99,12 +99,12 @@ ca:
         Jigsaw: Puzzle
         MazeStep: 'Laberint: pas a pas'
         Wordsearch: Sopa de lletres
-        Webapp: App Lab
+        Webapp: "Laboratori d'aplicacions"
         ArtistEC: "L'artista"
         TextMatch: Relacionar text
         StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: "Laboratori d'aplicacions"
+        NetSim: "Simulador d'Internet"
     trophy:
       name:
         Bronze: Bronze
@@ -274,7 +274,7 @@ ca:
         flappy_7: |-
           A continuació, prova de canviar l'escena afegint un altre bloc al bloc "quan s'executa".
         flappy_8: "Pots configurar les imatges en qualsevol moment, i no només quan comença el joc. Intenta establir una escena a l'atzar, RANDOM, quan tinguin lloc altres esdeveniments, per exemple, quan superi un obstacle."
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: "Per embolicar-ho, quan es xoqui amb un obstable, en lloc d'acabar el joc prova de posar el marcador a zero."
         flappy_11: Crea el teu propi joc Flappy. Pots canviar tots els aspectes visuals i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics hi juguin amb els seus mòbils.
         flappy_k1_1: Juga a Flappy
         flappy_k1_2: 'Uneix un bloc al bloc "quan faci clic", i prem "Executa". Fes clic a o toca la pantalla per moure en Flappy fins la meta.'
@@ -362,7 +362,7 @@ ca:
         maze_wordsearch_k_15: 'Mou-me en una direcció i després en una altra per  lletrejar la paraula AMUNT'
         maze_wordsearch_k_16: 'Mou-me en una direcció i després en una altra per  lletrejar la paraula SOTA'
         maze_wordsearch_k_20: Això es una prova! Mou-me en una direcció i després en una altre per lletrejar la paraula HISTÒRIA
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: "Crea la teva aplicació usant els blocs de la caixa d'eines."
         turtle_ec_1_2: 'Ara, dibuixa un quadrat. Nota: utilitza el teu color preferit agafant-lo en el nou bloc "llapisdecolor".'
         turtle_ec_1_10: 'Ho has aconseguit! Ara dibuixa el que vulguis. Algunes idees divertides: una figura de pal, un floc de neu o un espira. Prova el nou bloc "ampladadellapis". Diverteix-te!'
         studio_ec_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics provin el teu joc als seus mòbils.
@@ -466,7 +466,7 @@ ca:
         playlab_intro: Introducció a Play Lab
         playlab_events: Esdeveniments de Play Lab
         playlab_repeat_forever: Repetir per sempre Play Lab
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        tutorial_puzzle_challenge: Desafiament del Puzzle Tutorial
         infinity_playlab_intro: 'Play Lab - introducció'
         infinity_playlab_events: 'Play Lab - esdeveniments'
         infinity_playlab_repeat_forever: 'Play Lab - repeteix per sempre'
@@ -477,6 +477,9 @@ ca:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'
@@ -571,6 +574,6 @@ ca:
         name_function: Escriu el nom de la teva funció aquí
         Infinity_move_right_runbutton: Afegeix un bloc de moviment aquí
         Infinity_move_directions_callout: Quin bloc farà que Baymax pugi quan es premi la fletxa amunt?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Usa les fletxes per dirigir
         Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
         Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins

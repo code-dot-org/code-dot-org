@@ -41,10 +41,8 @@
     "timeout_failure_tick": "500",
     "timeout_after_when_run": "false",
     "success_condition": "function () {\r\n   return Studio.playerScore >= 6;\r\n}",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "0ca2f4be6f61efdebe0fab63be9d37fb"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

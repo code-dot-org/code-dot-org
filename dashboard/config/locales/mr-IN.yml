@@ -300,7 +300,7 @@
       no_section: No assigned section
       trophies: Trophies
     students:
-      name: Name
+      name: नाव
       username: Username
       password: Password
       manage: Manage students
@@ -347,8 +347,10 @@
       for %{student_name}'
     panel:
       answer_viewer: Answer Viewer
-      student: Student
+      student: विध्यार्थी
+      viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -370,7 +372,10 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
@@ -418,7 +423,7 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Student
+    student: विध्यार्थी
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
@@ -448,6 +453,12 @@
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -649,7 +660,7 @@
     share_copy_link: 'Copy the link:'
     close: Close
     more: More
-    name: Name
+    name: नाव
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>

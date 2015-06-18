@@ -23,8 +23,11 @@ function httpServer(port, callback) {
     if (p !== -1) {
       url = url.substring(0, p);
     }
-    var filepath = __dirname + '/../../lib' + url;
+
+    // navigate from root
+    var filepath = __dirname + '/../../..' + url;
     if (!fs.existsSync(filepath)) {
+      console.log('404: ' + filepath);
       res.writeHead(404);
       res.end();
     } else {
@@ -50,14 +53,26 @@ exec(command, function (err, stdout, stderr) {
     './test/calc/*.js',
     './test/netsim/*.js'
   ];
+
+  if (process.env.mocha_entry) {
+    globs = [process.env.mocha_entry];
+    console.log('restricting to entries: ' + globs);
+  }
+
   mochify(globs.join(' '), {
     grep: process.env.mocha_grep,
     debug: process.env.mocha_debug,
+    invert: process.env.mocha_invert,
     reporter : 'spec',
     timeout: 10000,
     phantomjs: which('phantomjs'),
     transform: 'ejsify'
-  }).bundle().on('end', function () {
+  })
+ .on('error', function () {
+   process.exit(1);
+  })
+  .bundle()
+  .on('end', function () {
     libServer.close();
   });
 });

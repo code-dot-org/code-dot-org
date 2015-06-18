@@ -48,7 +48,7 @@ nl:
   demos: "Admin: alle demo's"
   continue: Doorgaan
   prize: prijs
-  more_info: Meer info
+  more_info: Meer informatie
   auth:
     sign_in_with: 'Meld je aan met %{provider}'
     signed_in: Ingelogd!
@@ -64,9 +64,9 @@ nl:
     need_confirmation: Geen bevestigingsinstructies ontvangen?
     need_unlock: Nog geen unlock instructies ontvangen?
   signup_form:
-    student_count: '%{count} studenten hebben al ondertekend.'
-    teacher_count: '%{count} leraren hebben al ondertekend.'
-    overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid </a>.'
+    student_count: '%{count} studenten hebben zich reeds aangemeld.'
+    teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
+    overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt voornamelijk gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid </a>.'
     overview_teacher: 'Geef les in Informatica in je klaslokaal, maak een gebruikersnaam aan. <p/> Je kunt je leerlingen toevoegen en hun voortgang zien.'
     no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
     teacher_educator_guide: Kijk in de lerarengids
@@ -80,7 +80,7 @@ nl:
     gender: Geslacht (optioneel)
     birthday: Verjaardag (optioneel)
     age: Leeftijd
-    user_type: Bent je leerling of leraar?
+    user_type: Bent u een leerling of een leraar?
     submit: Meld je aan
     teacher: Ben je een leraar?
     valid_username: Beschikbaar!
@@ -89,9 +89,9 @@ nl:
     valid_password: Geldig wachtwoord!
     invalid_password: Wachtwoord moet ten minste 6 tekens lang zijn
     mismatch_password: De twee wachtwoorden komen niet overeen
-    student_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor gebruikers onder de 13, worden e-mailadressen niet opgeslagen in een vorm die het mogelijk maakt om contact met hen op te nemen."
-    teacher_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>."
-    additional_information: We hebben nog meer informatie nodig om je te kunnen aanmelden.
+    student_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruikersvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor gebruikers onder de 13 jaar, worden e-mailadressen niet opgeslagen in een vorm die het mogelijk maakt om contact met hen op te nemen."
+    teacher_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruikersvoorwaarden</a>."
+    additional_information: We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie.
   signin_form:
     title: Heb je al een account? Log in
     login: Email of gebruikersnaam
@@ -302,7 +302,9 @@ nl:
     panel:
       answer_viewer: Antwoord Viewer
       student: Leerling
+      viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
+      section: Groep
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -323,7 +325,9 @@ nl:
     classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LIJNEN CODE DIE GESCHREVEN DOOR STUDENTEN'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: 'Al geregistreerd? %{link}'
@@ -390,6 +394,10 @@ nl:
     autoplay_option: "Video's automatisch afspelen"
     download: Video downloaden
   compatability:
+    https:
+      header: Schakel HTTPS in voor Code.org.
+      message: "Om de veiligheid te verhogen schakelen we op %{https_date} over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org."
+      hide_this_warning: Verberg deze waarschuwing
     working:
       header: We zijn bezig om ondersteuning voor je browser toe te voegen.
       message: |-

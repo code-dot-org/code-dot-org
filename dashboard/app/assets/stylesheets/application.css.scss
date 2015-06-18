@@ -27,9 +27,10 @@
  */
 
 @import "color";
+@import "font";
 @import "mixins";
 
-$baseFontFamily: 'Gotham 4r', sans-serif;
+$baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
@@ -49,13 +50,13 @@ body {
 }
 
 h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
   color: $purple;
 }
 
 h2 {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
@@ -70,24 +71,24 @@ th {
   border: 1px solid white;
   text-align: left;
   font-size: 120%;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
   padding: 5px;
 }
 
 strong {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
+  font-family: $gotham-italics;
   font-style: normal;
 }
 
 strong em,
 em strong {
-  font-family: 'Gotham 7i', sans-serif;
+  font-family: $gotham-extra-bold-italics;
 }
 
 .center {
@@ -196,10 +197,10 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
-  a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
-  a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
+  a:link {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
+  a:visited {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
+  a:hover {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
 }
 
@@ -226,10 +227,10 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
-  a:visited {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
-  a:hover {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
   select {
     width: auto;
     font-size:11px;
@@ -237,10 +238,10 @@ html, body {
     margin-bottom: 4px
     }
   .fineprint {
-    a:link {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:visited {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:hover {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:active {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
+    a:link {font-family: $gotham-bold; font-weight: normal;}
+    a:visited {font-family: $gotham-bold; font-weight: normal;}
+    a:hover {font-family: $gotham-bold; font-weight: normal;}
+    a:active {font-family: $gotham-bold; font-weight: normal;}
   }
   .dim {
     display: inline-block;
@@ -291,8 +292,31 @@ html, body {
   padding: 0px 25px 25px 25px;
 }
 
+$default-modal-width: 640px;
+
 .modal {
   a:hover {color:$red; background-color: white; }
+
+  &.auto-resize-scrollable {
+    background-color: $lightest_gray;
+    position: absolute;
+    top: 44px; // top of the dialog
+
+    // make dialog auto-center regardless of width
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    // margin-bottom is reused in JavaScript to determine
+    // how close to get to the bottom of the viewport.
+    margin-bottom: 25px;
+
+    z-index: 1050;
+  }
+
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
 }
 
 .modal-body {
@@ -300,8 +324,8 @@ html, body {
 }
 
 .dash_modal {
-  width: 640px;
-  margin-left: -320px;
+  width: $default-modal-width;
+  margin-left: -($default-modal-width / 2);
 }
 
 .dash_modal_body {
@@ -663,11 +687,6 @@ input.header_input {
   padding: 5px;
 }
 
-.modal-body {
-  height: 100%;
-  overflow: visible;
-}
-
 #codeApp {
   position: relative;
 
@@ -700,7 +719,7 @@ input.header_input {
 
   .help_title {
     color: $cyan;
-    font-family: 'Gotham 7r', sans-serif;
+    font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;
     display: inline-block;
@@ -838,7 +857,7 @@ input.header_input {
   font-size: 20px;
   line-height: 28px;
   color: $purple;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
@@ -912,6 +931,10 @@ a.download-video {
   @include warning-banner;
 }
 
+#warning-banner-https {
+  @include warning-banner;
+}
+
 #warning-banner-chrome {
   @include warning-banner;
   color: white;
@@ -922,7 +945,7 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-family: 'Gotham 4r', sans-serif; font-weight: normal; }
+  a:link { font-family: $gotham-regular; font-weight: normal; }
 }
 
 .fixed_width_cell {
@@ -933,19 +956,44 @@ a.download-video {
 }
 
 #landingpage {
+  .welcome {
+    background-color: $light_purple;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:white;
+  }
+
+  .welcomeleft {
+    text-align: right;
+  }
+
+  .welcomeright {
+    text-align: center;
+  }
+
   .lines_of_code_header {
     width: 100%;
-    color: $charcoal;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+    padding-top: 0px;
+    font-size: 24px;
+    line-height: 34px;
   }
 
   a.lines_of_code_link {
-    color: $charcoal;
+    color: white;
     text-decoration: none;
-    font-family: 'Gotham 5r', sans-serif;
+    font-family: $gotham-bold;
     font-weight: normal;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .row#continue {
@@ -954,7 +1002,7 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      font-family: $gotham-extra-bold; font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1061,7 +1109,7 @@ a.download-video {
       }
       a {
         color: $lightest_gray;
-        font-family: 'Gotham 4r', sans-serif; font-weight: normal;
+        font-family: $gotham-regular; font-weight: normal;
       }
       .white {
         color:white;
@@ -1082,10 +1130,10 @@ a.download-video {
   }
   .twolineheader {
     h2 {
-      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: $purple; font-size: 24px; margin-bottom: 0px; line-height: 30px;
+      font-family: $gotham-regular; font-weight: normal; color: $purple; font-size: 24px; margin-bottom: 0px; line-height: 30px;
     }
     h1 {
-      margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: 'Gotham 5r', sans-serif; font-weight: normal;
+      margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: $gotham-bold; font-weight: normal;
     }
   }
 
@@ -1130,7 +1178,7 @@ a.download-video {
   .smalltext {
     font-size:13px;
     padding-right:10px;
-    font-family: 'Gotham 4r', sans-serif;
+    font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
   }
@@ -1178,7 +1226,7 @@ a.download-video {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Gotham 5r', sans-serif;
+    font-family: $gotham-bold;
     font-weight: normal;
     display: block;
     float: left;
@@ -1222,7 +1270,7 @@ a.download-video {
     margin-bottom:10px;
     a {
       font-size:18px;
-      font-family: 'Gotham 4r', sans-serif;
+      font-family: $gotham-regular;
       font-weight: normal;
     }
   }
@@ -1371,7 +1419,7 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: 'Gotham 5r', sans-serif; font-weight: normal;
+          font-family: $gotham-bold; font-weight: normal;
         }
       }
     }
@@ -1528,7 +1576,7 @@ div.mini_gallery_activity {
   color: white;
   font-size: 13px;
   padding-right: 10px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-regular;
   font-weight: normal;
   padding: 10px;
 }
@@ -1689,7 +1737,7 @@ $modal-image-margin-gap: 10px;
     }
 
     .hint-header {
-      font-family: 'Gotham 7r', sans-serif;
+      font-family: $gotham-extra-bold;
       font-weight: normal;
     }
 
@@ -1708,7 +1756,7 @@ $modal-image-margin-gap: 10px;
 }
 
 .dialog-title {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 }
 
@@ -1753,6 +1801,36 @@ $modal-image-margin-gap: 10px;
   height: 100%;
   overflow: visible;
 }
+
+.modal-content.markdown-instructions-container {
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  float: left;
+  $padding-side: 22px;
+  padding: 0 $padding-side 15px;
+  background-color: white;
+  $outside-margin-side: 15px;
+  width: $default-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
+}
+
+.instructions-markdown {
+  padding-top: 19px;
+  p {
+    line-height: 25px;
+    font-size: initial;
+    color: initial;
+  }
+}
+
+.markdown-level-header-text {
+  margin-left: $modal-image-width + $modal-image-margin-gap;
+  font-weight: normal;
+  line-height: 27px;
+  font-size: 24px;
+  color: #7665a0;
+}
+
 #feedbackBlocks {
   margin-left: 50px;
   height: 100px;

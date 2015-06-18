@@ -23,7 +23,7 @@ var studio_locale = {lc:{"ar":function(n){
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -155,6 +155,13 @@ p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_lo
 s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "leikmaður"},
+"addItems1":function(d){return "bæta við 1 af gerð"},
+"addItems2":function(d){return "bæta við 2 af gerð"},
+"addItems3":function(d){return "bæta við 3 af gerð"},
+"addItems5":function(d){return "bæta við 5 af gerð"},
+"addItems10":function(d){return "bæta við 10 af gerð"},
+"addItemsRandom":function(d){return "bæta við einhverjum fjölda af gerð"},
+"addItemsTooltip":function(d){return "Bæta hlutum í sviðsmyndina."},
 "alienInvasion":function(d){return "Innrás úr geimnum!"},
 "backgroundBlack":function(d){return "svart"},
 "backgroundCave":function(d){return "hellir"},
@@ -182,12 +189,37 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Áfram"},
 "decrementPlayerScore":function(d){return "fjarlægja stig"},
 "defaultSayText":function(d){return "skrifa hér"},
+"dropletBlock_changeScore_description":function(d){return "Hækka eða lækka skorið um eitt stig."},
+"dropletBlock_penColour_description":function(d){return "Sets the color of the line drawn behind the turtle as it moves"},
+"dropletBlock_penColour_param0":function(d){return "color"},
+"dropletBlock_setBackground_description":function(d){return "Stillir bakgrunninn"},
+"dropletBlock_setSpriteEmotion_description":function(d){return "Stillir skap leikmanns"},
+"dropletBlock_setSpritePosition_description":function(d){return "Færir leikmann samstundis á hinn tiltekna stað."},
+"dropletBlock_setSpriteSpeed_description":function(d){return "Stillir hraða leikmanns"},
+"dropletBlock_setSprite_description":function(d){return "Stillir ímynd leikmanns"},
+"dropletBlock_throw_description":function(d){return "Sendir skot frá tiltekna leikmanninum."},
+"dropletBlock_vanish_description":function(d){return "Lætur leikmanninn hverfa."},
 "emotion":function(d){return "skap"},
 "finalLevel":function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."},
 "for":function(d){return "frá"},
 "hello":function(d){return "halló"},
 "helloWorld":function(d){return "Halló heimur!"},
 "incrementPlayerScore":function(d){return "skora stig"},
+"itemBlueFireball":function(d){return "bláan eldhnött"},
+"itemPurpleFireball":function(d){return "fjólubláan eldhnött"},
+"itemRedFireball":function(d){return "rauðan eldhnött"},
+"itemYellowHearts":function(d){return "gul hjörtu"},
+"itemPurpleHearts":function(d){return "fjólublá hjörtu"},
+"itemRedHearts":function(d){return "rauð hjörtu"},
+"itemRandom":function(d){return "af handahófi"},
+"itemAnna":function(d){return "krók"},
+"itemElsa":function(d){return "neista"},
+"itemHiro":function(d){return "míkróbóta"},
+"itemBaymax":function(d){return "eldflaug"},
+"itemRapunzel":function(d){return "skaftpott"},
+"itemCherry":function(d){return "kirsuber"},
+"itemIce":function(d){return "ís"},
+"itemDuck":function(d){return "önd"},
 "makeProjectileDisappear":function(d){return "hverfa"},
 "makeProjectileBounce":function(d){return "skoppa"},
 "makeProjectileBlueFireball":function(d){return "láta bláan eldhnött"},

@@ -1,42 +1,28 @@
 class ScriptLevelsController < ApplicationController
   check_authorization
-  before_filter :authenticate_user!, only: [:solution]
   include LevelsHelper
 
-  def solution
+  def reset
     authorize! :read, ScriptLevel
+    @script = Script.get_from_cache(params[:script_id])
 
-    if current_user.teacher? || current_user.admin?
-      @level = Level.find(params[:level_id])
-      @game = @level.game
-      level_view_options(start_blocks: @level.ideal_level_source.try(:data),
-                         share: true)
-      view_options(full_width: true)
-      @level_source_id = @level.ideal_level_source_id
-      @level_source = LevelSource.find(@level_source_id)
-      render 'level_sources/show'
-    else
-      flash[:alert] = I18n.t('reference_area.auth_error')
-      redirect_to root_path
-    end
+    # delete the session if the user is not signed in
+    # and start them at the beginning of the script.
+    # If the user is signed in, continue normally
+    reset_session unless current_user
+    redirect_to(build_script_level_path(@script.starting_level)) and return
+  end
+
+  def next
+    authorize! :read, ScriptLevel
+    @script = Script.get_from_cache(params[:script_id])
+
+    redirect_to(build_script_level_path(next_script_level)) and return
   end
 
   def show
     authorize! :read, ScriptLevel
-
     @script = Script.get_from_cache(params[:script_id])
-
-    if params[:reset]
-      # reset is a special mode which will delete the session if the user is not signed in
-      # and start them at the beginning of the script.
-      # If the user is signed in, continue normally
-      reset_session unless current_user
-      redirect_to(build_script_level_path(@script.starting_level)) and return
-    end
-
-    if params[:id] == ScriptLevel::NEXT || params[:chapter] == ScriptLevel::NEXT
-      redirect_to(build_script_level_path(next_script_level)) and return
-    end
 
     load_script_level
 
@@ -47,6 +33,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     load_user
+    load_section
 
     present_level
 
@@ -98,7 +85,15 @@ class ScriptLevelsController < ApplicationController
 
   def load_level_source
     return if @level.game.name == 'Jigsaw'
-    if @user && current_user && @user != current_user
+
+    if params[:solution] && @ideal_level_source = @level.ideal_level_source
+      authorize! :manage, :teacher
+      @last_attempt = @ideal_level_source.data
+      level_view_options(share: true)
+      view_options(readonly_workspace: true,
+                   callouts: [],
+                   full_width: true)
+    elsif @user && current_user && @user != current_user
       @last_attempt = @user.last_attempt(@level).try(:level_source).try(:data)
       view_options(readonly_workspace: true,
                    callouts: [])
@@ -113,21 +108,23 @@ class ScriptLevelsController < ApplicationController
 
     user = User.find(params[:user_id])
 
+    # TODO this should use cancan/authorize
     if user.student_of?(current_user)
       @user = user
       @user_level = @user.user_level_for(@script_level)
     end
-
-    load_section
   end
 
   def load_section
-    return if params[:section_id].blank?
+    if params[:section_id]
+      section = Section.find(params[:section_id])
 
-    section = Section.find(params[:section_id])
-
-    if section.user == current_user
-      @section = section
+      # TODO this should use cancan/authorize
+      if section.user == current_user
+        @section = section
+      end
+    elsif current_user.try(:sections) && current_user.sections.count == 1
+      @section = current_user.sections.first
     end
   end
 
@@ -139,7 +136,7 @@ class ScriptLevelsController < ApplicationController
 
     load_level_source
 
-    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
+    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
     view_options(
       full_width: true,
       no_footer: !@game.has_footer?

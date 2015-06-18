@@ -21,8 +21,7 @@
     "instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? Try adding a new parameter to your function called \"nectars\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "open_function_definition": "get 5 nectar",
-    "maze_data": null
+    "open_function_definition": "get 5 nectar"
   }
 }]]></config>
   <blocks>

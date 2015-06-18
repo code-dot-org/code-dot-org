@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Using the two functions we just wrote, write the function `profit`, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.",
+    "instructions": "Using the two functions we just wrote, write the function profit, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,9 +21,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
-  },
-  "md5": "f61ff03422ec8b5810450f938129beb1"
+    "disable_examples": "false",
+    "markdown_instructions": "Using the two functions we just wrote, write the function _profit_, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

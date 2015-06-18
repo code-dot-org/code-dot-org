@@ -274,7 +274,7 @@
       signup: Skráning
       already_registered: Þegar skráð/ur?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: Framvinda %{name}
       progress: Framvinda þín
       lines: 'Samtals línur af kóða: %{lines}'
       close: LOKA
@@ -351,9 +351,11 @@
     student_teacher_disassociated: '%{teacher_name} hefur verið fjarlægð(ur) sem kennari
       %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Skoða svör
       student: nemandi
-      try_it_yourself: Try it yourself
+      viewing_solution: Skoðun lausnar
+      try_it_yourself: Prófaðu þetta
+      section: Hópur
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -376,7 +378,10 @@
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Yfirlit yfir námskeið 1, 2 og 3
     lesson_plans: Námsáætlun
     signin_message: Þegar skráð(ur)? %{link}
@@ -455,6 +460,12 @@
     autoplay_option: Spila myndbönd sjálfvirkt
     download: Hala niður myndband
   compatability:
+    https:
+      header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
+      message: Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}.
+        Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu
+        hér</a> til að læra að virkja HTTPS fyrir Code.org.
+      hide_this_warning: Fela þessa aðvörun
     working:
       header: Við erum að vinna í stuðningi við vafrann sem þú notar.
       message: Code.org notar nútíma veftækni. Þetta gerir vefinn hraðvirkari. Vafrinn
