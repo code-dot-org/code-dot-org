@@ -7,9 +7,15 @@ nav: resources_nav
     <h1 class="col-sm-6">Resources</h1>
 </div>
 <% if @country == 'ie' %>
+
 ## Hosting an Hour of Code in Ireland? <a href="<%= hoc_uri('/resources/how-to-ireland') %>">See the how-to guide</a>
+
 <% else %>
+
+## 2015 resources coming soon!
+
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
+
 <% end %>
 
 <a id="handouts">
