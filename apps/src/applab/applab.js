@@ -621,6 +621,10 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+    var clearButton = document.getElementById('clear-console-header');
+    if (clearButton) {
+      dom.addClickTouchEvent(clearButton, clearDebugOutput);
+    }
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
@@ -835,14 +839,8 @@ Applab.reset = function(first) {
     if (pausedIcon) {
       pausedIcon.style.display = 'none';
     }
-    var debugOutput = document.getElementById('debug-output');
-    if (debugOutput) {
-      debugOutput.textContent = '';
-    }
-    var debugInput = document.getElementById('debug-input');
-    if (debugInput) {
-      debugInput.textContent = '';
-    }
+    clearDebugOutput();
+    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -850,6 +848,26 @@ Applab.reset = function(first) {
   Applab.executionError = null;
   Applab.JSInterpreter = null;
 };
+
+/**
+ * Empty the contents of the debug console scrollback area.
+ */
+function clearDebugOutput() {
+  var debugOutput = document.getElementById('debug-output');
+  if (debugOutput) {
+    debugOutput.textContent = '';
+  }
+}
+
+/**
+ * Empty the debug console input area.
+ */
+function clearDebugInput() {
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    debugInput.textContent = '';
+  }
+}
 
 // TODO(dave): remove once channel id is passed in appOptions.
 /**
