@@ -41,11 +41,8 @@
     font-size: 14px;
   }
 
-  select {
-    box-sizing: content-box;
-  }
-
   input, div, button, select {
+    box-sizing: border-box;
     line-height: 1.2em;
   }
 }
