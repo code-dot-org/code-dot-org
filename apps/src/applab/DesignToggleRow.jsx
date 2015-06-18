@@ -95,8 +95,7 @@ module.exports = React.createClass({
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
 
-
-    var showDataButtonStyle = $.extend({}, buttonStyle, buttonSecondary);
+    var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
 
     var iconStyle = {
       margin: '0 0.3em'
