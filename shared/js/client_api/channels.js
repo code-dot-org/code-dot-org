@@ -9,9 +9,9 @@ module.exports = {
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(null);
+      callback(error, null);
     });
   },
 
@@ -22,9 +22,9 @@ module.exports = {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(undefined);
+      callback(error, undefined);
     });
   },
 
@@ -34,9 +34,9 @@ module.exports = {
       type: "post",
       dataType: "json",
     }).done(function(data, text) {
-      callback(true);
+      callback(null, true);
     }).fail(function(request, status, error) {
-      callback(false);
+      callback(error, false);
     });
   },
 
@@ -46,9 +46,9 @@ module.exports = {
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(undefined);
+      callback(error, undefined);
     });
   },
 
@@ -59,9 +59,9 @@ module.exports = {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(false);
+      callback(error, false);
     });
   }
 };

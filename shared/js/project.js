@@ -136,19 +136,19 @@ module.exports = {
     this.current.level = this.appToProjectUrl();
 
     if (channelId && this.current.isOwner) {
-      channels.update(channelId, this.current, function (data) {
-        this.updateCurrentData_(data, false);
+      channels.update(channelId, this.current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
         callbackSafe(callback, data);
       }.bind(this));
     } else {
-      channels.create(this.current, function (data) {
-        this.updateCurrentData_(data, true);
+      channels.create(this.current, function (err, data) {
+        this.updateCurrentData_(err, data, true);
         callbackSafe(callback, data);
       }.bind(this));
     }
   },
-  updateCurrentData_: function (data, isNewChannel) {
-    if (!data) {
+  updateCurrentData_: function (err, data, isNewChannel) {
+    if (err) {
       $('.project_updated_at').text('Error saving project');  // TODO i18n
       return;
     }
@@ -203,7 +203,7 @@ module.exports = {
   delete: function(callback) {
     var channelId = this.current.id;
     if (channelId) {
-      channels.delete(channelId, function(data) {
+      channels.delete(channelId, function(err, data) {
         callbackSafe(callback, data);
       });
     } else {
@@ -226,13 +226,13 @@ module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(hashData.channelId, function (data) {
-          if (data) {
-            module.exports.current = data;
-            deferred.resolve();
-          } else {
+        channels.fetch(hashData.channelId, function (err, data) {
+          if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname;
+          } else {
+            module.exports.current = data;
+            deferred.resolve();
           }
         });
         return deferred;
@@ -243,13 +243,13 @@ module.exports = {
       // this is an embedded project
       module.exports.isEditing = true;
       deferred = new $.Deferred();
-      channels.fetch(appOptions.channel, function(data) {
-        if (data) {
+      channels.fetch(appOptions.channel, function(err, data) {
+        if (err) {
+          deferred.reject();
+        } else {
           module.exports.current = data;
           dashboard.header.showProjectLevelHeader();
           deferred.resolve();
-        } else {
-          deferred.reject();
         }
       });
       return deferred;
