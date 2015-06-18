@@ -393,6 +393,7 @@ pl:
           Applab: Applab
           The Artist: Artysta
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Zdarzenia
           description: ""
@@ -492,6 +493,7 @@ pl:
           "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -814,6 +816,7 @@ pl:
           One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -856,6 +859,7 @@ pl:
           Odometer: Licznik kilometrów
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -894,6 +898,8 @@ pl:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
           Introduction to PD: Introduction to PD
           K-5 Courses: K-5 Courses
           Writing computer programs: Writing computer programs
@@ -916,3 +922,26 @@ pl:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
           Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Godzina kodowania (Hour of Code)

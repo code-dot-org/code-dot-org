@@ -368,7 +368,10 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count}öğrenci tarafından yazılan kod satırları'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: 1, 2 ve 3 nolu derslerine genel bakış
     lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
@@ -447,6 +450,12 @@
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Bu uyarıyı gizle
     working:
       header: Tarayıcı desteği üzerinde çalışıyoruz.
       message: Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının

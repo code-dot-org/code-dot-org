@@ -107,7 +107,7 @@ da:
         text: Hej, jeg er Mark! Lad os lære om løkker. Ved hjælp af løkker kan du fortælle en computer at den skal gentage et sæt af handlinger, igen og igen, tusinder eller endda milliarder af gange.
       2:
         image: notes/hoc2_2.jpg
-        text: I denne gåde ønsker vi at få fuglen til at flytte fremad 5 skridt for at komme til grisen.
+        text: I denne opgave vil vi flytte fuglen 5 skridt fremad for at komme hen til grisen.
       3:
         image: notes/hoc2_3.jpg
         text: 'Vi kan bruge den nye "gentag" blok til at hjælpe os.'

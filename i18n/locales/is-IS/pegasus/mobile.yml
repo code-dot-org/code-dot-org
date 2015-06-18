@@ -12,7 +12,7 @@ is-IS:
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
   petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Vertu með # öðrum'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
@@ -170,9 +170,9 @@ is-IS:
   homepage_hero_text_teacher2: |
     &ldquo;Í þessu verkefni voru 100% nemenda minna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc línur af kóða skrifaðar af nemendum'
+  homepage_hero_text_stat_students: '#student_count nemendur skráðir í Kóðastúdíóið'
+  homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara
@@ -359,11 +359,18 @@ is-IS:
   dashboard_students_print_page: Prenta þessa síðu
   dashboard_students_url: Vefslóð
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Smelltu hér</a> til að sækja persónuverndarskjal okkar sem þú getur deilt eða prentað handa nemendum.'
-  dashboard_curriculum_overview: 'Yfirlit 5 - 10 ára (K-5) námsefnis'
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Sjá allar kennsluáætlanir
   dashboard_course1: 'Námskeið 1:'
   dashboard_course2: 'Námskeið 2:'
   dashboard_course3: 'Námskeið 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: 'Yfirlit 5 - 10 ára (K-5) námsefnis'
+  dashboard_overview: Overview
   dashboard_sequence: Runa
   dashboard_framework: Umgjörð
   dashboard_standards: Staðlar
@@ -374,6 +381,10 @@ is-IS:
   dashboard_puzzle_solving: 'Þrautalausnir:'
   dashboard_student_worksheet: vinnublað nemanda
   dashboard_teacher_worksheet: vinnublað kennara
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Annað
   dashboard_login_word: Orð
@@ -401,6 +412,7 @@ is-IS:
   dashboard_sections_password_account_creation: Textaaðgangsorð skráð af nemanda
   dashboard_sections_login_type_explanation: 'Þessi tafla á að hjálpa þér að velja hvernig aðgang þú vilt nota fyrir hóp: <b>mynd, orð eða netfang</b>.'
   dashboard_faq: Algengar spurningar
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Klukkustund kóðunar er komin - 8. - 14. desember!'
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Nánar
@@ -816,3 +828,6 @@ is-IS:
   processing_beyond_longdescription: Processing er forritunarmál, þróunarumhverfi og samfélag á netinu. Frá árinu 2001 hefur Processing stuðlað að hugbúnaðarlæsi innan myndlistargeirans og myndlistarlæsi innan tæknigeirans. Processing var upphaflega skapað sem teikniforrit og til að kenna undirstöðuatriði tölvuforritunar í myndrænu umhverfi, en er nú orðið að þróunarumhverfi fyrir atvinnumenn. Í dag er Processing notað af tugum þúsunda nema, listamanna, hönnuða, rannsóknaraðila og áhugamanna við lærdóm, mótun frumgerða og framleiðslu.
   alice_beyond_longdescription: Alice verkefnið notar frumlegt forritunarumhverfi til að styðja gerð hreyfimynda í þrívídd. Alice er með verkfæri og efnivið til að kenna og læra tölvunarmiðaða hugsun, verkefnalausnir og tölvuforritun og hentar fyrir breiðan aldurshóp.
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir þau um leið í raungreinum.
+  compatibility_https_header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
+  compatibility_https_message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
+  compatibility_https_hide_this_warning: Fela þessa aðvörun

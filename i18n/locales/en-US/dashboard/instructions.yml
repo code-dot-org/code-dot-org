@@ -695,6 +695,8 @@ en:
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
+      hoc2015_intro_instruction: crwdns41844:0crwdne41844:0
+      hoc2015_sandbox_instruction: crwdns41845:0crwdne41845:0
       Infinity_catch_instruction: crwdns35156:0crwdne35156:0
       Infinity_finale_instruction: crwdns34535:0crwdne34535:0
       Infinity_move_collide_instruction: crwdns35157:0crwdne35157:0
@@ -971,8 +973,12 @@ en:
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
       Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
+      U1L10 NetSim numbers with decimal_instruction: crwdns41846:0crwdne41846:0
+      U1L11 NetSim numbers with Ascii_instruction: crwdns41847:0crwdne41847:0
       U1L4 NetSim SendAB_instruction: crwdns38964:0crwdne38964:0
       U1L8 NetSim numbers no decimal_instruction: crwdns41622:0crwdne41622:0
+      U1L8 NetSim numbers with decimal_instruction: crwdns41848:0crwdne41848:0
+      U2L04 - NetSim Routers with Addresses_instruction: crwdns41849:0crwdne41849:0
       U2L10 NetSim Automatic DNS_instruction: 'crwdns38742:0[hostname]crwdne38742:0'
       U2L10 NetSim Manual DNS_instruction: crwdns38743:0crwdne38743:0
       U2L2 NetSim Hub Mode_instruction: crwdns38744:0crwdne38744:0

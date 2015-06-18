@@ -12,7 +12,7 @@ hu-HU:
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
   petition_sign_message_support: 'Ha támogatsz, írd alá. Csatlakozz egy # fős csapathoz.'
-  petition_join_others: 'Join # others'
+  petition_join_others: '# ember vár, hogy csatlakozz'
   name: Név
   email: Email
   zipcode: Irányítószám vagy ország
@@ -124,12 +124,11 @@ hu-HU:
   studiobar_frozen_body: Hozz létre egy téli csodaországot Annával és Elsával!
   studiobar_donate_title: Támogatás
   studiobar_donate_body: Egy gyermek tanulását támogatja minden egyes dollár adományozásával
-  studiobar_shop_title: Shop
+  studiobar_shop_title: Áruház
   studiobar_shop_body: Számoljunk le az előítéletekkel. Viseld büszkén a logónkat.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
+    &ldquo;Kihívom a lányokat a világ minden országában, hogy vegyenek részt a Kódolás óráján&rdquo; 
+    Malala, Nobel Békedíjas
   homepage_hero_text_susan: |
     &ldquo;Ha változtatni tudsz a technológián,
     a világot is meg tudod változtatni.&rdquo;
@@ -139,62 +138,54 @@ hu-HU:
     programozd is.&rdquo;
     Barack Obama, az USA elnöke
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;A gyermekeinknek &mdash; ideértve a lányokat is &mdash;
+    szükségük van a lehetőségre, hogy informatikát tanuljanak.&rdquo;
+    Sheryl, Facebook üzemeltetési igazgató
   homepage_hero_text_satya: |
     &ldquo;A számítástechnika a világ
     legjobb lehetőségeit nyitja meg.&rdquo;
     Satya, a Microsoft vezérigazgatója
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Ha kódolsz, akkor életed legjobb tanfolyamán vehetsz részt.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Ezek a képességek megváltoztatták a jövőmet. Arról nem is beszélve, hogy ez tisztán szórakozás.&rdquo;
+    Luna, 7. osztály
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Soha nem láttam a gyermekeimet ennyire izgatottnak amikor tanulásról volt szó.&rdquo;
+    Michael, tanár
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Az informatika egy olyan dolog, amiről nem tudod eldönteni, hogy szereted vagy nem, amíg ki nem próbálod.&rdquo;
+    Jackson, 6. osztály
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;A programozás segítségével bármit megvalósíthatsz, amit az elméd ki tud találni.&rdquo; 
+    Maya, 2. osztály
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Az informatika nem valaki más karrierje, hanem a tiéd. Itt és most.&rdquo; 
+    Geraldo, tanár
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;A kódolás beindítja a kreativitást, inspriációt és az innovációt &mdash; ezekre minden karrier esetén szükség van.&rdquo;
+    Floresa, tanár
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;Ez a program minden diákom érdeklődését felkeltette, így aktívak voltak és részt vettek a munkában.&rdquo;
+    Adam, tanár
+  homepage_hero_text_stat_loc: '#loc sor kód, amit a diákok írtak'
+  homepage_hero_text_stat_students: '#student_count diák hozzáférés a Code Studio rendszerben'
+  homepage_hero_text_stat_served: 'A Kódolás órája: #served megtartva'
   homepage_slot_text_hoc: A kódolás órája
   homepage_slot_text_frozen: Jégvarázs Annával és Elzával
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Az összes gyakorlatunk
   homepage_slot_text_course4: 4. tanfolyam
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Áruház
   homepage_slot_text_flappy: Flappy kód
   homepage_action_text_codevideo: Nézd meg a videót
   homepage_action_text_teachervideo: Nézd meg a videót
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: 'Írd alá a petíciót &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: A Code.org és a felsőoktatás összefog az informatika sokszínűségének javítása érdekében.
+  homepage_banner_text_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
@@ -210,10 +201,10 @@ hu-HU:
   homepage_slot_text_link_k5: Tanfolyamok alsó tagozatosoknak
   homepage_slot_text_link_fullcurriculum: Teljes tananyag megtekintése
   homepage_slot_text_link_pd: Szakmai fejlődés
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_title_advocates: Szószólók
   homepage_slot_text_blurb_advocates: Támogasd munkánkat
   homepage_slot_text_link_stats: Nézd meg a statisztikákat
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: Légy részese
   homepage_slot_text_link_donate: Adományozz
   homepage_header_codestudio: Kód stúdiós diákalkotások
   homepage_header_donors: A Code.org megköszöni a támogatásokat
@@ -339,7 +330,7 @@ hu-HU:
   dashboard_students_new_section: 'Az új szekció létrehozása sikerült! Most vedd fel a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok használatával.'
   dashboard_students_placeholder_name: Diák neve
   dashboard_students_name: Név
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Előmenetel
   dashboard_students_age: Kor
   dashboard_students_gender: Nem
   dashboard_students_male: Férfi
@@ -365,11 +356,18 @@ hu-HU:
   dashboard_students_print_page: Nyomtasd ki ezt az oldalt
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Kattints ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz velük.'
-  dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Az összes lecke áttekintése
   dashboard_course1: 'Első kurzus:'
   dashboard_course2: 'Második kurzus:'
   dashboard_course3: 'Harmadik kurzus:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
+  dashboard_overview: Overview
   dashboard_sequence: Sorozat
   dashboard_framework: Keretrendszer
   dashboard_standards: Sztenderdek
@@ -380,6 +378,10 @@ hu-HU:
   dashboard_puzzle_solving: 'Feladvány fejtés:'
   dashboard_student_worksheet: diák munkafüzet
   dashboard_teacher_worksheet: tanár munkalap
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Egyéb
   dashboard_login_word: Szó
@@ -407,6 +409,7 @@ hu-HU:
   dashboard_sections_password_account_creation: A diákok által létrehozott szöveges jelszó
   dashboard_sections_login_type_explanation: 'Ez a táblázat segít kiválasztani a szekciódnak megfelelőt a <b>kép, szó vagy e-mail</b> azonosítási típusok közül.'
   dashboard_faq: Gyakran ismételt kérdések
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében
   learn_more: Tudj meg többet
@@ -427,7 +430,7 @@ hu-HU:
   carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Hogyan tarthatsz Kódolás óráját
   more_resources_educators: További segédletek tanárok és oktatók részére
   participants: résztvevők
   teachers_notes: Tanári jegyzetek
@@ -822,3 +825,6 @@ hu-HU:
   processing_beyond_longdescription: 'A Processing egy programozási nyelv, fejlesztési környezet és online közösség. 2001 óta a Processing a szoftveres ismereteket promótálja a vizuális művészetek terén és a vizuális művészeteket a technológia szintjén.  Eredetileg egy szoftveres jegyzettömbnek szánták, illetve hogy programozás alapokat tanítsanak egy vizuális környezetben, de a Processing profik fejlesztői eszközévé fejlődött. Napjainkban diákok, művészek, tervezők, kutatók és hobbisták tízezrei használják a Processinget tanulásra, prototípusok készítésére és gyártásra.'
   alice_beyond_longdescription: 'Az Alice projekt megfelelő eszközöket és anyagot biztosít - egy innovatív programozási környezet használatával támogatva a 3D-s animációk létrehozását - a számítástechnikai gondolkodás tanításához és elsajátításához, a probléma megoldáshoz, és a számítógép programozáshoz, széles korcsoport és tudásszint tartományban.'
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai és tudományos képzettségük fejlesztése közben.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Figyelmen kívül hagyom
