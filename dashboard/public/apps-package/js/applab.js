@@ -1611,7 +1611,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab" tabindex="1">\n</div>\n'); })();
+ buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2563,12 +2563,13 @@ function makeDraggable (jqueryElements) {
   jqueryElements.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
-      alsoResize: elm,
       create: function () {
         // resizable sets z-index to 90, which we don't want
         $(this).children().css('z-index', '');
       },
       resize: function () {
+        elm.outerWidth(wrapper.width());
+        elm.outerHeight(wrapper.height());
         var element = elm[0];
         designMode.onPropertyChange(element, 'width', element.style.width);
         designMode.onPropertyChange(element, 'height', element.style.height);
@@ -6957,7 +6958,6 @@ module.exports = {
   create: function() {
     var element = document.createElement('div');
     element.setAttribute('contenteditable', true);
-    element.style.border = '1px solid black';
     element.style.width = '100px';
     element.style.height = '100px';
     element.style.fontSize = '14px';
@@ -7544,6 +7544,16 @@ module.exports = {
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
+    element.style.color = '#fff';
+    element.style.backgroundColor = '#1abc9c';
+
+    var option1 = document.createElement('option');
+    option1.innerHTML = 'Option 1';
+    element.appendChild(option1);
+
+    var option2 = document.createElement('option');
+    option2.innerHTML = 'Option 2';
+    element.appendChild(option2);
 
     return element;
   }
@@ -7857,8 +7867,8 @@ module.exports = {
     element.style.height = '40px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = '#000000';
-    element.style.backgroundColor = '#eeeeee';
+    element.style.color = '#fff';
+    element.style.backgroundColor = '#1abc9c';
 
     return element;
   }
