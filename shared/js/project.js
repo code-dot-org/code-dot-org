@@ -138,12 +138,12 @@ module.exports = {
     if (channelId && this.current.isOwner) {
       channels.update(channelId, this.current, function (err, data) {
         this.updateCurrentData_(err, data, false);
-        callbackSafe(callback, data);
+        executeCallback(callback, data);
       }.bind(this));
     } else {
       channels.create(this.current, function (err, data) {
         this.updateCurrentData_(err, data, true);
-        callbackSafe(callback, data);
+        executeCallback(callback, data);
       }.bind(this));
     }
   },
@@ -204,10 +204,10 @@ module.exports = {
     var channelId = this.current.id;
     if (channelId) {
       channels.delete(channelId, function(err, data) {
-        callbackSafe(callback, data);
+        executeCallback(callback, data);
       });
     } else {
-      callbackSafe(callback, false);
+      executeCallback(callback, false);
     }
   },
   /**
@@ -261,7 +261,7 @@ module.exports = {
  * Only execute the given argument if it is a function.
  * @param callback
  */
-function callbackSafe(callback, data) {
+function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
   }
