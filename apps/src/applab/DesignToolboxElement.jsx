@@ -50,6 +50,8 @@ module.exports = React.createClass({
       helper: 'clone',
       appendTo: '#codeApp',
       revert: 'invalid',
+      // Make sure the dragged element appears in front of #belowVisualization,
+      // which has z-index 1.
       zIndex: 2,
       start: this.props.handleDragStart
     });
