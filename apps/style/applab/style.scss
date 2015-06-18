@@ -290,6 +290,7 @@ img#turtleImage {
   height: 156px;
   left: 0;
   right: 0;
+  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
 }
 
 #debug-area-header {

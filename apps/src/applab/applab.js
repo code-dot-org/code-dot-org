@@ -700,16 +700,6 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
-  // Prevent the codeTextbox from being shrunk too small vertically
-  // (half for code, half for debug-area, minus half toolbar height + 1px border)
-  //
-  // (we would do this in CSS, but for precedence rules to work properly, if
-  //  we explicitly set bottom/height styles on the elements above, we need to
-  //  do the same for these styles as well)
-
-  codeTextbox.style.minHeight = 'calc(50% - 16px)';
-  debugArea.style.maxHeight = 'calc(50% - 16px)';
-
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
