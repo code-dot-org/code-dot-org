@@ -63,16 +63,16 @@ module.exports = {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
             // URL with /edit - set hideSource to false
-            this.setAppOptionsForShareMode(false);
+            this.setAppOptionsForShareMode_(false);
           }
         }
       } else if (this.current && this.current.levelSource) {
         appOptions.level.lastAttempt = this.current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
-        this.setAppOptionsForShareMode(true);
+        this.setAppOptionsForShareMode_(true);
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
+    } else if (appOptions.isLegacyShare && this.appToProjectUrl_()) {
       this.current = {
         name: 'Untitled Project'
       };
@@ -82,15 +82,15 @@ module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
-  setAppOptionsForShareMode: function (hideSource) {
+  setAppOptionsForShareMode_: function (hideSource) {
     appOptions.readonlyWorkspace = true;
     appOptions.callouts = [];
     appOptions.share = true;
     appOptions.hideSource = hideSource;
     // Important to call determineNoPadding() after setting hideSource value
-    appOptions.noPadding = this.determineNoPadding();
+    appOptions.noPadding = this.determineNoPadding_();
   },
-  determineNoPadding: function () {
+  determineNoPadding_: function () {
     switch (appOptions.app) {
       case 'applab':
       case 'flappy':
@@ -111,7 +111,7 @@ module.exports = {
       $('.project_updated_at').text("Not saved"); // TODO i18n
     }
   },
-  appToProjectUrl: function () {
+  appToProjectUrl_: function () {
     switch (appOptions.app) {
       case 'applab':
         return '/p/applab';
@@ -133,7 +133,7 @@ module.exports = {
     var channelId = this.current.id;
     this.current.levelSource = source;
     this.current.levelHtml = window.Applab && Applab.getHtml();
-    this.current.level = this.appToProjectUrl();
+    this.current.level = this.appToProjectUrl_();
 
     if (channelId && this.current.isOwner) {
       channels.update(channelId, this.current, function (err, data) {
