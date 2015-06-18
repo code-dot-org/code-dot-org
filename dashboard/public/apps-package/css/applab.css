@@ -449,18 +449,6 @@ button.arrow:focus {
   #share-cell.share-cell-none {
     display: none; }
 
-.new-design-element {
-  width: 120px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 18px; }
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px; }
@@ -506,3 +494,6 @@ button.arrow:focus {
 
 *[contenteditable] {
   -webkit-user-select: auto !important; }
+
+.new-design-element {
+  width: 72px; }
