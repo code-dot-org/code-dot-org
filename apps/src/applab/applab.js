@@ -588,7 +588,11 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 22, 130, slider);
+      var sliderXOffset = 10,
+          sliderYOffset = 22,
+          sliderWidth = 130;
+      Applab.speedSlider = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
+          slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
