@@ -15,8 +15,8 @@ function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
     }
   }
   var timeout = window.setTimeout(finish(failureCallback), timeoutMs);
-  img.addEventListener('error', finish(failureCallback));
-  img.addEventListener('load', finish(successCallback));
+  img.onerror = finish(failureCallback);
+  img.onload = finish(successCallback);
   img.src = url;
   // store a reference to the Image so it doesn't get collected
   window.testImages = window.testImages || [];
