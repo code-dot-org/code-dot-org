@@ -304,9 +304,15 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function updateDebugConsoleHistory(commandText) {
+function pushDebugConsoleHistory(commandText) {
   Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
   Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
+}
+
+function updateDebugConsoleHistory(commandText) {
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] = commandText;
+  }
 }
 
 function moveUpDebugConsoleHistory(currentInput) {
@@ -334,10 +340,10 @@ function moveDownDebugConsoleHistory(currentInput) {
 }
 
 function onDebugInputKeyDown(e) {
+  var input = e.target.textContent;
   if (e.keyCode === KeyCodes.ENTER) {
     e.preventDefault();
-    var input = e.target.textContent;
-    updateDebugConsoleHistory(input);
+    pushDebugConsoleHistory(input);
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.interpreter) {
@@ -373,10 +379,12 @@ function onDebugInputKeyDown(e) {
     }
   }
   if (e.keyCode === KeyCodes.UP) {
-    e.target.textContent = moveUpDebugConsoleHistory(e.target.textContent);
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveUpDebugConsoleHistory(input);
   }
   if (e.keyCode === KeyCodes.DOWN) {
-    e.target.textContent = moveDownDebugConsoleHistory(e.target.textContent);
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveDownDebugConsoleHistory(input);
   }
 }
 
