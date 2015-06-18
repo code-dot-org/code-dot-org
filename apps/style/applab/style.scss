@@ -293,12 +293,15 @@ img#turtleImage {
   height: $workspace-headers-height;
   left: 0;
   right: 0;
-  background-color: $light_purple;
+  background-color: $lighter_purple;
   text-align: center;
 
   & > span {
     line-height: $workspace-headers-height;
-    color: $white;
+  }
+
+  & > span, .workspace-header {
+    color: $dark_charcoal;
   }
 
   .workspace-header-button {
