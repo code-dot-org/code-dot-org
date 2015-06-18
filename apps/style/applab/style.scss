@@ -392,8 +392,8 @@ $debug-commands-column-width: 270px;
   float: left
 }
 .sliderTrack {
-  stroke: #aaa;
-  stroke-width: 6px;
+  stroke: $lightest_purple;
+  stroke-width: 4px;
   stroke-linecap: round;
 }
 .sliderKnob {
