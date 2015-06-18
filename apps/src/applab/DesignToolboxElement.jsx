@@ -23,6 +23,7 @@ module.exports = React.createClass({
         marginBottom: 5
       }
     };
+    
     return (
       <div style={styles.container}>
         <img src={this.props.imageUrl}
