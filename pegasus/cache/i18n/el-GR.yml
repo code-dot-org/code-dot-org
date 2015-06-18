@@ -19,7 +19,7 @@
   petition_sign_message: Είμαι
   petition_sign_message_support: 'Για να μας στηρίξετε, υπογράψτε με το όνομά σας.
     Συμμετέχετε στο #others.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'σύνδεσε # άλλα'
   name: Όνομα
   email: Ηλεκτρονικό ταχυδρομείο
   zipcode: Ταχυδρομικός κώδικας (για κατοίκους Η.Π.Α) ή χώρα
@@ -188,9 +188,9 @@
     Floresa, δάσκαλος'
   homepage_hero_text_teacher2: '&ldquo; Αυτό το πρόγραμμα, πήρε το 100% από τους μαθητές
     μου που ασχολούνται, συμμετέχουν. .&rdquo; Αδάμ, δάσκαλος'
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc γραμμές κώδικα γραμμένες από μαθητές'
+  homepage_hero_text_stat_students: '#student_count λογαριασμοί μαθητών στο Code Studio'
+  homepage_hero_text_stat_served: 'Η Ώρα του Κώδικα: #served εξυπηρετήθηκαν'
   homepage_slot_text_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
   homepage_slot_text_teacher: πίνακας Δασκάλου
@@ -420,11 +420,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Κλικ
     εδώ</a> για το έγγραφο δήλωσης απορρίτου, που μπορείτε να μοιράσετε ή να τυπώσετε
     για τους μαθητές σας.
-  dashboard_curriculum_overview: Επισκόπηση προγράμματος σπουδών K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Δείτε όλα τα πλάνα μαθημάτων
   dashboard_course1: 'Μάθημα 1:'
   dashboard_course2: 'Μάθημα 2:'
   dashboard_course3: 'Μάθημα 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Επισκόπηση προγράμματος σπουδών K-5
+  dashboard_overview: Overview
   dashboard_sequence: Ακολουθία
   dashboard_framework: Πλαίσιο
   dashboard_standards: Πρότυπα
@@ -435,6 +442,10 @@
   dashboard_puzzle_solving: 'Λύση-γρίφων:'
   dashboard_student_worksheet: φύλλο εργασίας μαθητή
   dashboard_teacher_worksheet: φύλλο εργασία; καθηγητή
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Άλλα
   dashboard_login_word: Λέξη
@@ -469,6 +480,7 @@
     ποιου τύπου σύνδεσης <b>εικόνα, λέξη, ή ηλεκτρονικό ταχυδρομείο</b> θα θελήσετε
     να επιλέξετε για κάποια ενότητα.
   dashboard_faq: Συχνές Ερωτήσεις
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής
@@ -1213,4 +1225,4 @@
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης

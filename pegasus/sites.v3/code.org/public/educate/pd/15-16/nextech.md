@@ -1,6 +1,5 @@
 ---
 title: Nextech PD
-nav: pd2_nav
 ---
 <a id="top"></a>
 
@@ -29,7 +28,7 @@ Friday: 8:30am - 1:30pm
 <br />
 Breakfast and lunch will be served. 
 
-[Please reach out to nextech](http://www.nextech.org) for more information about this workshop.
+[Please reach out to nextech](mailto:pd@nextech.org) for more information about this workshop.
 
 #### What do I bring to Phase 2?
 
@@ -53,8 +52,6 @@ More info coming soon!
 
 [**Back to the top**](#top)
 
-----------
-Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />

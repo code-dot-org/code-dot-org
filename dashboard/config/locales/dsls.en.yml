@@ -147,16 +147,33 @@ en:
         Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
         description here: description here
       ECSPD Online U1D10: {}
+      ECSPD Online U1D10 Forum:
+        Forum Pending: Forum Pending
+        Unit 1 Day 10 Forum: Unit 1 Day 10 Forum
       ECSPD Online U1D10 Resources: {}
       ECSPD Online U1D11-14:
         title: title
+      ECSPD Online U1D11-14 Forum: {}
+      ECSPD Online U1D11-14 Resources: {}
+      ECSPD Online U1D15-16: {}
+      ECSPD Online U1D15-16 Resources: {}
+      ECSPD Online U1D17-19: {}
+      ECSPD Online U1D17-19 Forum: {}
+      ECSPD Online U1D17-19 Resources: {}
       ECSPD Online U1D3-4:
         'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
       ECSPD Online U1D3-4 Resources:
         'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
       ECSPD Online U1D5-7: {}
+      ECSPD Online U1D5-7 Disclaimer: {}
+      ECSPD Online U1D5-7 Forum: {}
       ECSPD Online U1D5-7 Resources: {}
+      ECSPD Online U1D5-7 Resources 1: {}
+      ECSPD Online U1D5-7 Resources 2: {}
       ECSPD Online U1D8-9: {}
+      ECSPD Online U1D8-9 Forum:
+        Forum pending: Forum pending
+        Unit 1 Day 8-9 Forum: Unit 1 Day 8-9 Forum
       ECSPD Online U1D8-9 Resources: {}
       ECSPD Online Units:
         Units covered: Units covered
@@ -170,6 +187,7 @@ en:
         ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
         ECS PD Overview: ECS PD Overview
+      ECSPD U1Conclusion: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -189,6 +207,8 @@ en:
         ECSPD impact vid2: ECSPD impact vid2
       ECSPD meet facilitator:
         Meet your Facilitator!: Meet your Facilitator!
+      ECSPD online U1D3-4 Forum:
+        Unit 1 Day 3-4 Forum: Unit 1 Day 3-4 Forum
       ECSPD pause:
         ECSPD pause: ECSPD pause
       ECSPD postsurvey: {}
@@ -458,8 +478,8 @@ en:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Student Lesson Introduction:
+        Impact of Innovation: Impact of Innovation
         description here: description here
-        title: title
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
@@ -482,8 +502,8 @@ en:
         description here: description here
         title: title
       U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
-        title: title
       U1L17 Student Lesson Introduction:
         description here: description here
         title: title
@@ -697,6 +717,10 @@ en:
       broadcast lesson plan: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
+      equity in CS:
+        Equity in Computer Science: Equity in Computer Science
+      equity is more:
+        Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
       equity v equality:
         Equity Vs. Equality: Equity Vs. Equality
       facilitator test: {}
@@ -1034,6 +1058,43 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECSPD Online U1D10 Assessment 1:
+        Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions drawn from the data will be limited by the (relatively) small amount of data.
+        ? Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.
+        : Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.
+        ? Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.
+        : Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.
+        'Image: Advantages': 'Image: Advantages'
+        'Image: Disadvantages': 'Image: Disadvantages'
+        'List of objects: Advantages': 'List of objects: Advantages'
+        'List of objects: Disadvantages': 'List of objects: Disadvantages'
+        ? More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.
+        : More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.
+      ECSPD Online U1D3-4 Assessment 1:
+        Buying a Computer: Buying a Computer
+        CPU/Processor: CPU/Processor
+        GPU/Graphics Card/Video Card: GPU/Graphics Card/Video Card
+        Hard Drive/Disk Drive: Hard Drive/Disk Drive
+        Match the internal parts of a computer to their function. The previous level has links to sites that describe each part.: Match the internal parts of a computer to their function. The previous level has links to sites that describe each part.
+        Motherboard: Motherboard
+        Operating System: Operating System
+        RAM: RAM
+        The brain of the computer. This part executes commands. Its speed is measured in millions or billions of instructions per second: The brain of the computer. This part executes commands. Its speed is measured in millions or billions of instructions per second
+        The main circuit board of the computer. Most other hardware parts are installed on this component.: The main circuit board of the computer. Most other hardware parts are installed on this component.
+        ? The part that controls the display on the screen. People who play video games or do graphic/3D design often will buy a higher-end version
+        : The part that controls the display on the screen. People who play video games or do graphic/3D design often will buy a higher-end version
+        The part that stores programs, files, and long-term memory. Often, it can hold hundreds of GB of data.: The part that stores programs, files, and long-term memory. Often, it can hold hundreds of GB of data.
+        ? The short term memory of the computer. This is where data is stored while programs are running. Usually, it can hold between 2 and 32 GB of data
+        : The short term memory of the computer. This is where data is stored while programs are running. Usually, it can hold between 2 and 32 GB of data
+        The software that allows a user to interact with a computer. It is usually Windows, Mac, or Linux.: The software that allows a user to interact with a computer. It is usually Windows, Mac, or Linux.
+      ECSPD Online U1D5-7 Assessment 2:
+        Basic HTML. Little or no interaction between the user and website: Basic HTML. Little or no interaction between the user and website
+        Match each "version" of the web with its description as it is defined in the video on the previous level.: Match each "version" of the web with its description as it is defined in the video on the previous level.
+        Two-way flow of information. User and website interacting with each other: Two-way flow of information. User and website interacting with each other
+        Web 1.0: Web 1.0
+        Web 2.0: Web 2.0
+        Web 3.0/Social Media/Augmented Reality: Web 3.0/Social Media/Augmented Reality
+        Website facilitates interaction between users and the real world: Website facilitates interaction between users and the real world
       ECSPD phase matching:
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum
         Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
@@ -1774,6 +1835,22 @@ en:
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      ECSPD Online U1D10 Assessment 2:
+        Connecting several data sets allows a more accurate representation of the underlying information.: Connecting several data sets allows a more accurate representation of the underlying information.
+        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us
+        Different representations of data can help us draw more meaningful conclusions about it.: Different representations of data can help us draw more meaningful conclusions about it.
+        ? In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
+        : In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
+        Tell a Story with Data: Tell a Story with Data
+        The way data is represented can help us understand the data by telling a meaningful story.: The way data is represented can help us understand the data by telling a meaningful story.
+      ECSPD Online U1D5-7 Assessment 1:
+        A. It can cause two people with identical search queries to receive vastly different results: A. It can cause two people with identical search queries to receive vastly different results
+        B. It can cause you to have difficulty finding views or ideas that you do not agree with: B. It can cause you to have difficulty finding views or ideas that you do not agree with
+        C. Both A and B: C. Both A and B
+        D. None: D. None
+        ? In the previous level, you watched a TED talk on filter bubbles. According to Eli Pariser, which of the following explain how the filter bubble can affect search results?
+        : In the previous level, you watched a TED talk on filter bubbles. According to Eli Pariser, which of the following explain how the filter bubble can affect search results?
+        Searching: Searching
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
@@ -2246,20 +2323,69 @@ en:
         'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
         ? You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
         : You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?
+      U2L01 Assessment 1:
+        A loosely organized collection of citizens and engineers who communicate mostly by email.: A loosely organized collection of citizens and engineers who communicate mostly by email.
+        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
+        Political leaders and heads of state.: Political leaders and heads of state.
+        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        'The Internet is for Everyone: Assessment 1': 'The Internet is for Everyone: Assessment 1'
+        The worldwide leaders of the Tier 1 Internet service providers.: The worldwide leaders of the Tier 1 Internet service providers.
+        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
+      U2L01 Assessment 2:
+        Radio Frequency Controller: Radio Frequency Controller
+        ReFactored Code: ReFactored Code
+        Related Fundamental Content: Related Fundamental Content
+        Request For Comments: Request For Comments
+        Restricted Fiduciary Contract: Restricted Fiduciary Contract
+        'The Internet is for Everyone: Assessment 2': 'The Internet is for Everyone: Assessment 2'
+        What is an RFC?: What is an RFC?
+      U2L01 Assessment 3:
+        'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:': 'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:'
+        'The Internet is for Everyone: Assessment 3': 'The Internet is for Everyone: Assessment 3'
+        connect the latest devices to the internet.: connect the latest devices to the internet.
+        get the best price for my cell phone plan.: get the best price for my cell phone plan.
+        make informed choices about my privacy on the internet.: make informed choices about my privacy on the internet.
+        'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
+        speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
+      U2L02 Assessment 3:
+        'The Need For Addressing: Assessment 1': 'The Need For Addressing: Assessment 1'
+        'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
+        algorithm: algorithm
+        encoding: encoding
+        heuristic: heuristic
+        protocol: protocol
+      U2L02 Assessment 4:
+        Cell Number: Cell Number
+        From: From
+        'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
+        Time: Time
+        To: To
+        Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
       U2L04 Assessment1:
-        Information Processing: Information Processing
-        Internet Processing: Internet Processing
-        Internet Protocol: Internet Protocol
-        Interstate Protocol: Interstate Protocol
-        'Routers and Addresses: Question 1': 'Routers and Addresses: Question 1'
-        What does IP stand for?: What does IP stand for?
+        Everyone is on the same router.: Everyone is on the same router.
+        'In the Internet Simulator, your router knows to send your message to a different router because:': 'In the Internet Simulator, your router knows to send your message to a different router because:'
+        Messages are routed over different paths.: Messages are routed over different paths.
+        'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
+        The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
+        You set the "other router" bit in the message.: You set the "other router" bit in the message.
       U2L04 Assessment4:
-        IP addresses are based upon area codes because computers often use phone lines for transmission.: IP addresses are based upon area codes because computers often use phone lines for transmission.
-        IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.: IP addresses are based upon zip codes. All computers in a zip code start with the same numbers.
-        IP addresses are hierarchical; each city has an assigned set of numbers.: IP addresses are hierarchical; each city has an assigned set of numbers.
-        IP addresses are hierarchical; the first few fields identify the domain and subset.: IP addresses are hierarchical; the first few fields identify the domain and subset.
-        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
-        Why does the IP address of every device at a particular location start with the same numbers?: Why does the IP address of every device at a particular location start with the same numbers?
+        ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
+        : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
+        Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.: Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.
+        One mailman would be responsible for delivering a letter from sender to receiver.: One mailman would be responsible for delivering a letter from sender to receiver.
+        'Routers and Redundancy: Question 2': 'Routers and Redundancy: Question 2'
+        The mailman would sometimes take a different path to deliver each letter to your home.: The mailman would sometimes take a different path to deliver each letter to your home.
+        Your mail could not be delivered if a road your mailman was planning to take were under construction.: Your mail could not be delivered if a road your mailman was planning to take were under construction.
+      U2L04 Assessment5:
+        ? A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+        : A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+        A packet travelling between two computers on the Internet may be rerouted many times along the way.: A packet travelling between two computers on the Internet may be rerouted many times along the way.
+        Information travelling between two computers over the Internet will always take the same path.: Information travelling between two computers over the Internet will always take the same path.
+        'Routers and Redundancy: Question 3': 'Routers and Redundancy: Question 3'
+        There is one router which receives and redirects all the traffic of the Internet.: There is one router which receives and redirects all the traffic of the Internet.
+        Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
+        Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
       U2L05 Assessment 1:
         ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
         : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
@@ -2331,6 +2457,21 @@ en:
         The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
         They are not - humans are better as breaking Vigenere encryptions than computers.: They are not - humans are better as breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
+        'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol: Assessment 1'
+      U2L3 Assessment 3:
+        ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+        : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+        'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol: Assessment 2'
+        abstraction: abstraction
+        hierarchy: hierarchy
+        packet: packet
+        protocol: protocol
       U3L01 Assessment2:
         ? "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
         : "Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. \nWhich of these is the LEAST basic action in making a sandwich for lunch?"
@@ -2882,21 +3023,41 @@ en:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD Online U1D1-2 Assessment 1:
+        What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:
         'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is a Computer? Reflection'
       ECSPD Online U1D10 Reflection:
-        ? During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom?
-        : During your workshop, one of your facilitators modeled this activity on the first day. What did you learn during that session (from how the activity was structured and run to the material that was covered) that you can take back to your classroom?
         Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+        ? You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+        : You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+      ECSPD Online U1D11-14 Reflection:
+        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: How do you feel about the tools for this lesson? What challenges might they pose in your classroom?
+        Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
+      ECSPD Online U1D15-16 Reflection:
+        Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
+        ? What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
+        : What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
+      ECSPD Online U1D17-19 Reflection:
+        Reflections on Unit 1 Day 17-19: Reflections on Unit 1 Day 17-19
+        ? What about this lesson is exciting for you? What do you think will be exciting for your students? How does this lesson combine what was covered previously in the unit?
+        : What about this lesson is exciting for you? What do you think will be exciting for your students? How does this lesson combine what was covered previously in the unit?
       ECSPD Online U1D3-4 Reflection:
         Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
-        'What challenges do you think you and your students might have with the material covered in this lesson? ': 'What challenges do you think you and your students might have with the material covered in this lesson? '
+        ? 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
+        : 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
       ECSPD Online U1D5-7 Reflection:
         Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
-        'What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson? ': 'What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson? '
+        ? You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+        : You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+      ECSPD Online U1D8-9 Assessment:
+        Impact of Computers and Communication: Impact of Computers and Communication
+        ? List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
+        : List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
       ECSPD Online U1D8-9 Reflection:
         Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
         What challenges do you think you and your students might have with the material covered in this lesson?: What challenges do you think you and your students might have with the material covered in this lesson?
+      ECSPD Online U1Reflection: {}
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -3064,6 +3225,10 @@ en:
         'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
         'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+      U2L01 Assessment 4: {}
+      U2L02 Assessment 5:
+        Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?: Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?
+        'The Need For Addressing: Assessment 3': 'The Need For Addressing: Assessment 3'
       U2L02 Assessment1:
         'The Need for Addressing: Question 1': 'The Need for Addressing: Question 1'
       U2L02 Assessment2:
@@ -3073,9 +3238,9 @@ en:
       U2L02 Free Response Reflection:
         'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
       U2L04 Assessment2:
-        'Routers and Addresses: Question 2': 'Routers and Addresses: Question 2'
+        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
       U2L04 Assessment3:
-        'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
+        'Routers and Addresses: Question 5': 'Routers and Addresses: Question 5'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
       U2L05 Reflection 1:
@@ -3145,6 +3310,9 @@ en:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L20 Free Response Wrap Up:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L3 Assessment 4:
+        'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing Protocol: Assessment 3'
+        Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
       U2L3 Free Response Wrap Up:

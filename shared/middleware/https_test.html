@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+Redirecting to <a href='https://code.org'>HTTPS</a>..
+<script type="text/javascript" src="/shared/js/url_test/url_test.js"></script>
+<script type='text/javascript'>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + '; path=/; expires=' + expires.toUTCString();
+  }
+
+  var testImage = 'https://' + window.location.hostname + '/test-image.png';
+  testImageAccess(testImage,
+    function () {
+      setCookie('https_ok', '1', 60);
+      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    },
+    function () {
+      setCookie('https-blocked', '1', 1);
+      document.location.reload(true);
+    },
+    5000
+  );
+</script>
+</body>
+</html>

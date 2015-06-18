@@ -1,0 +1,15 @@
+name 'ECSPD Online U1D5-7 Resources 2'
+title ''
+css 'unplugged'
+markdown <<MARKDOWN
+## Web 2.0: Extended Resources
+
+Watch this video below about web 1.0, 2.0, and 3.0 and take note of how each version builds on the previous version. Think about ways you could encourage your students to imagine future possibilities of the internet.
+
+<iframe width="850" height="500" src="https://www.youtube.com/embed/iStkxcK6_vY" frameborder="0" allowfullscreen></iframe>
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

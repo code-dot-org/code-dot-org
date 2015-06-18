@@ -390,11 +390,18 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">คลิกที่นี่</a>สำหรับเอกสารส่วนตัวของเราที่สามารถใช้ร่วมกัน
     หรือพิมพ์สำหรับนักเรียนของคุณ
-  dashboard_curriculum_overview: ภาพรวมของหลักสูตรประถมศึกษา
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: ดูแผนการสอนทั้งหมด
   dashboard_course1: 'หลักสูตรที่ 1:'
   dashboard_course2: 'หลักสูตรที่ 2:'
   dashboard_course3: 'หลักสูตรที่ 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: ภาพรวมของหลักสูตรประถมศึกษา
+  dashboard_overview: Overview
   dashboard_sequence: ลำดับ
   dashboard_framework: ขอบข่าย
   dashboard_standards: มาตรฐาน
@@ -405,6 +412,10 @@
   dashboard_puzzle_solving: 'แก้ปริศนา:'
   dashboard_student_worksheet: งานนักเรียน
   dashboard_teacher_worksheet: งานคุณครู
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: อาชีพอื่น ๆ
   dashboard_login_word: คำ
@@ -433,6 +444,7 @@
   dashboard_sections_login_type_explanation: ตารางนี้ช่วยอธิบายชนิดเหล่านี้เข้าสู่ระบบ
     <b>รูปภาพ คำ หรืออีเมล์</b> ซึ่งคุณจะต้องเลือกใช้
   dashboard_faq: คำถามที่พบบ่อย
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: นี่คือ Hour of Code - 8-14 ธันวาคม!
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   learn_more: เรียนรู้เพิ่มเติม
