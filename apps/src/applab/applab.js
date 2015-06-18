@@ -633,21 +633,13 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
-    var viewDataButton = document.getElementById('viewDataButton');
-    if (viewDataButton) {
-      // Simulate a run button click, to load the channel id.
-      var viewDataClick = studioApp.runButtonClickWrapper.bind(
-          studioApp, Applab.onViewData);
-      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
-    }
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow();
+    designMode.configureDesignToggleRow(config.level.hideDesignMode);
 
-    // Start out in regular mode. Eventually likely want this to be a level setting
-    designMode.toggleDesignMode(false);
+    var startInDesignMode = !!config.level.designModeAtStart;
+    designMode.toggleDesignMode(startInDesignMode);
 
     designMode.configureDragAndDrop();
   }

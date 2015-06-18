@@ -1,6 +1,5 @@
 ---
 title: Nextech PD
-nav: pd2_nav
 ---
 <a id="top"></a>
 
