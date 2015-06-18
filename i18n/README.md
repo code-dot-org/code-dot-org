@@ -79,7 +79,7 @@ git push
 
 ### Apps
 1. Make changes in `apps/i18n/<app>/en_us.json`
-2. From home directory, run `cd i18n/code.org && ./sync-apps.sh`
+2. From apps directory, run `./sync-apps.sh`
 3. Commit all .json files in i18n/locales and apps/i18n
 
 ### Dashboard
@@ -94,6 +94,15 @@ git push
 * text_match.en.yml
 * unplugged.en.yml
 2. DO NOT directly modify `match.en.yml` or `multi.en.yml` Please make changes to the levels directly in levelbuilder.
+
+## Adding a new language
+1. Add target language to ALL projects on Crowdin-in
+2. Add the language's name and key to the following files:
+* i18n/code.org/lib/fix-crowdin-codes.rb
+* dashboard/config/locales.yml w/ debug: true until translation is complete
+* pegasus/sites.v3/code.org/views/target_languages.haml
+3. Run sync scripts to generate all language files
+
 
 ## Uncommon Issues
 

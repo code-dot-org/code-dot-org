@@ -1,0 +1,17 @@
+name 'ECSPD Online U1D3-4 Resources'
+description 'Unit 1 Day 3-4: Resources'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 1 Day 3-4 Resources
+
+<br/>
+
+Take a few minutes to study the different parts of the computer. This [link](http://www.carnegiecyberacademy.com/facultyPages/computer/computers.html) will take you to a site from Carnegie Mellon University that explains each internal component in detail. You may want to keep the site open, because in the next level, we will ask you some questions about the different components.
+
+![](https://images.code.org/3189ed5f577131839416b515a33bcc6d-image-1434474953267.gif)
+
+<i>Image from [Carnegie Mellon University](http://www.carnegiecyberacademy.com/facultyPages/computer/computers.html)</i>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

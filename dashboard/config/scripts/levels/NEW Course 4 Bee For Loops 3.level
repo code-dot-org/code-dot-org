@@ -10,7 +10,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,5,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
     "start_direction": "2",
@@ -23,6 +23,13 @@
     "use_contract_editor": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"run\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "video_key": "C4_for_loops",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
     "maze_data": null
   }
 }]]></config>

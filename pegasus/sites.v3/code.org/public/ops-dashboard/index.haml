@@ -339,6 +339,19 @@ title: "Ops Dashboard"
         return attendance;
       };
 
+      $scope.saveWorkshop = function (workshop) {
+        if (workshop.id) {
+          workshopsService.update({id: workshop.id}, {workshop: workshop}).$promise.then(
+            function(result_workshop) {
+              $scope.workshop.unexpected_teachers[$scope.workshop.unexpected_teachers.indexOf(workshop.unexpected_teacher)] = result_workshop.unexpected_teachers;
+              workshopsService.get({id: $routeParams.workshopid}).$promise.then(function (workshop) {
+                $scope.workshop = workshop;
+              });
+            }
+          ).catch($scope.genericError);
+        }
+      };
+
       $scope.save = function (attendance) {
         if (attendance.id) {
           attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance}, function (response) {

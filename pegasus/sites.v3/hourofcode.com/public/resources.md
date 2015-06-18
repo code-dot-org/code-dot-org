@@ -7,9 +7,15 @@ nav: resources_nav
     <h1 class="col-sm-6">Resources</h1>
 </div>
 <% if @country == 'ie' %>
+
 ## Hosting an Hour of Code in Ireland? <a href="<%= hoc_uri('/resources/how-to-ireland') %>">See the how-to guide</a>
+
 <% else %>
+
+## 2015 resources coming soon!
+
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
+
 <% end %>
 
 <a id="handouts">
@@ -83,28 +89,26 @@ nav: resources_nav
 <a id="email"></a>
 ## Ask your school, employer or friends to sign up:
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. More than 100 million students have tried an Hour of Code. 
 
-Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014. 
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, December 7-13, 2015. 
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 
-Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 ## Invite media to attend your event:
 
-**Subject line:** Local school joins mission to introduce 100m students to computer science
+**Subject line:** Local school joins mission to introduce students to computer science
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
 
-In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+More than 100 million students worldwide have tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-Now the Hour of Code movement is aiming for 100 million students.
-
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
 I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE]. 
 
@@ -126,7 +130,7 @@ Dear Parents,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 7-13). More than 100 million students worldwide already have tried an Hour of Code.
 
 Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
 
@@ -147,7 +151,7 @@ Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for *every* industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that. 
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
 I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
 

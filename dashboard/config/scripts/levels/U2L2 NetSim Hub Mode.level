@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "You'll now play the \"Game of Messages\" game you just played in person, but this time using the Internet Simulator. Join a room to be connected to your group, and then follow the instructions on the worksheet handed out by your teacher.\r\n",
+    "instructions": "Now use the Internet Simulator to send the battleship moves. For setup, join a Room with your group, and add ships to your paper board for each opponent. When playing, all communication must be done through the tool, so no talking, but have fun!\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -37,17 +37,20 @@
     "default_tab_index": "0",
     "show_pulse_rate_slider": "false",
     "show_metronome": "false",
-    "show_encoding_controls": "[\"binary\", \"hexadecimal\", \"decimal\", \"ascii\"]",
-    "default_enabled_encodings": "[\"binary\", \"ascii\"]",
-    "show_bit_rate_control": "true",
+    "show_encoding_controls": "[\"binary\", \"ascii\"]",
+    "default_enabled_encodings": "[\"ascii\"]",
+    "show_bit_rate_control": "false",
     "lock_bit_rate_control": "false",
-    "show_chunk_size_control": "true",
+    "show_chunk_size_control": "false",
     "lock_chunk_size_control": "false",
     "show_router_bandwidth_control": "false",
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
-    "broadcast_mode": "true"
+    "broadcast_mode": "true",
+    "connected_routers": "false",
+    "show_log_browser_button": "false",
+    "video_key": "csp_internetsimulator_3"
   }
 }]]></config>
   <blocks/>

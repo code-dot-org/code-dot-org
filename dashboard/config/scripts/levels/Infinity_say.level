@@ -34,10 +34,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "first_sprite_index": "0",
-    "protaganist_sprite_index": "0",
-    "maze_data": null
-  },
-  "md5": "5dbbd4eb34e5425b4cf6414978fe0bae"
+    "protaganist_sprite_index": "0"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

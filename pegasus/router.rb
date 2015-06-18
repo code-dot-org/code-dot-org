@@ -5,7 +5,7 @@ require 'sinatra/base'
 require 'sinatra/verbs'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
-require 'cdo/rack/deflater'
+require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
 require 'active_support'
@@ -60,7 +60,7 @@ class Documents < Sinatra::Base
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
-  use Rack::UpgradeInsecureRequests unless rack_env?(:production)
+  use Rack::UpgradeInsecureRequests
 
   configure do
     dir = pegasus_dir('sites.v3')
@@ -171,7 +171,7 @@ class Documents < Sinatra::Base
     end
 
     # Assume we are returning the same resolution as we're reading.
-    retina_in = retina_out = basename[-3..-1] == '@2x'
+    retina_in = retina_out = basename[-3..-1] == '_2x'
 
     path = resolve_image File.join(dirname, basename)
     unless path
@@ -180,7 +180,7 @@ class Documents < Sinatra::Base
         basename = basename[0...-3]
         retina_in = false
       else
-        basename += '@2x'
+        basename += '_2x'
         retina_in = true
       end
       path = resolve_image File.join(dirname, basename)
@@ -269,6 +269,12 @@ class Documents < Sinatra::Base
   after do
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
+
+    if params.has_key?('embedded') && @locals[:header]['embedded_layout']
+      @locals[:header]['layout'] = @locals[:header]['embedded_layout']
+      @locals[:header]['theme'] ||= 'none'
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+    end
 
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)

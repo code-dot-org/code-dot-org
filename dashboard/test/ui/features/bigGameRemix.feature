@@ -5,7 +5,7 @@ Feature: Big Game Remix
     Given I am on "http://learn.code.org/"
     And I am a student
     And I am on "http://learn.code.org/users/sign_in"
-    And I am on "http://learn.code.org/s/ui_tests/stage/4/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
     And I rotate to landscape
     And I close the dialog
     And element "#runButton" is visible

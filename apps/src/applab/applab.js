@@ -8,7 +8,6 @@
 /* global dashboard */
 
 'use strict';
-require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -31,12 +30,16 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 var designMode = require('./designMode');
-var turtle = require('./turtle');
+var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
-
-var vsprintf = require('./sprintf').vsprintf;
+var JSInterpreter = require('../JSInterpreter');
+var StepType = JSInterpreter.StepType;
+var elementLibrary = require('./designElements/library');
+var clientApi = require('./assetManagement/clientApi');
+var assetListStore = require('./assetManagement/assetListStore');
+var showAssetManager = require('./assetManagement/show.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -74,13 +77,6 @@ Applab.scale = {
 var twitterOptions = {
   text: applabMsg.shareApplabTwitter(),
   hashtag: "ApplabCode"
-};
-
-var StepType = {
-  RUN:  0,
-  IN:   1,
-  OVER: 2,
-  OUT:  3,
 };
 
 var MIN_DEBUG_AREA_HEIGHT = 70;
@@ -218,8 +214,9 @@ function adjustAppSizeStyles(container) {
           // NOTE: selectorText can appear in two different forms when styles and IDs
           // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
+          var maxChangedRules = 8;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < maxChangedRules; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive" ||
                 childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
@@ -248,7 +245,8 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
-                  Applab.appWidth * scale + "px;";
+                  Applab.appWidth * scale + "px; line-height: " +
+              Applab.appHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -286,6 +284,11 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
+  if (Applab.levelHtml === '') {
+    // On clear gives us a fresh start, including our default screen.
+    designMode.loadDefaultScreen();
+    designMode.serializeToLevelHtml();
+  }
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
@@ -346,8 +349,8 @@ function onDebugInputKeyDown(e) {
     pushDebugConsoleHistory(input);
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
-    if (Applab.interpreter) {
-      var currentScope = Applab.interpreter.getScope();
+    if (Applab.JSInterpreter) {
+      var currentScope = Applab.JSInterpreter.interpreter.getScope();
       var evalInterpreter = new window.Interpreter(input);
       // Set console scope to the current scope of the running program
 
@@ -365,7 +368,7 @@ function onDebugInputKeyDown(e) {
       ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
         'UNDEFINED'].forEach(
         function (prop) {
-          evalInterpreter[prop] = Applab.interpreter[prop];
+          evalInterpreter[prop] = Applab.JSInterpreter.interpreter[prop];
         });
       try {
         evalInterpreter.run();
@@ -388,40 +391,17 @@ function onDebugInputKeyDown(e) {
   }
 }
 
-function selectEditorRowCol(row, col) {
-  if (studioApp.editor.currentlyUsingBlocks) {
-    var style = {color: '#FFFF22'};
-    studioApp.editor.clearLineMarks();
-    studioApp.editor.markLine(row, style);
-  } else {
-    var selection = studioApp.editor.aceEditor.getSelection();
-    var range = selection.getRange();
-
-    range.start.row = row;
-    range.start.column = col;
-    range.end.row = row;
-    range.end.column = col + 1;
-
-    // setting with the backwards parameter set to true - this prevents horizontal
-    // scrolling to the right
-    selection.setSelectionRange(range, true);
-  }
-}
-
 function handleExecutionError(err, lineNumber) {
   if (!lineNumber && err instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line - Applab.userCodeLineOffset;
+    lineNumber = err.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    selectEditorRowCol(lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Applab.interpreter) {
-    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                    Applab.cumulativeLength,
-                                                    Applab.userCodeStartOffset,
-                                                    Applab.userCodeLength);
+  if (!lineNumber && Applab.JSInterpreter) {
+    lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
@@ -446,8 +426,8 @@ Applab.onTick = function() {
   Applab.tickCount++;
   queueOnTick();
 
-  if (Applab.interpreter) {
-    Applab.executeInterpreter();
+  if (Applab.JSInterpreter) {
+    Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
   } else {
     Applab.executeNativeJS();
   }
@@ -463,238 +443,6 @@ Applab.executeNativeJS = function () {
   }
 };
 
-function safeStepInterpreter() {
-  try {
-    Applab.interpreter.step();
-  } catch (err) {
-    return err;
-  }
-}
-
-Applab.executeInterpreter = function (runUntilCallbackReturn) {
-  Applab.runUntilCallbackReturn = runUntilCallbackReturn;
-  if (runUntilCallbackReturn) {
-    delete Applab.lastCallbackRetVal;
-  }
-  Applab.seenEmptyGetCallbackDuringExecution = false;
-  Applab.seenReturnFromCallbackDuringExecution = false;
-
-  var atInitialBreakpoint = Applab.paused &&
-                            Applab.nextStep === StepType.IN &&
-                            Applab.tickCount === 1;
-  var atMaxSpeed = getCurrentTickLength() === 0;
-
-  if (Applab.paused) {
-    switch (Applab.nextStep) {
-      case StepType.RUN:
-        // Bail out here if in a break state (paused), but make sure that we still
-        // have the next tick queued first, so we can resume after un-pausing):
-        return;
-      case StepType.OUT:
-        // If we haven't yet set stepOutToStackDepth, work backwards through the
-        // history of callExpressionSeenAtDepth until we find the one we want to
-        // step out to - and store that in stepOutToStackDepth:
-        if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
-          Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
-            if (Applab.callExpressionSeenAtDepth[i]) {
-              Applab.stepOutToStackDepth = i;
-              break;
-            }
-          }
-        }
-        break;
-    }
-  }
-
-  var doneUserLine = false;
-  var reachedBreak = false;
-  var unwindingAfterStep = false;
-  var inUserCode;
-  var userCodeRow;
-  var session = studioApp.editor.aceEditor.getSession();
-
-  // In each tick, we will step the interpreter multiple times in a tight
-  // loop as long as we are interpreting code that the user can't see
-  // (function aliases at the beginning, getCallback event loop at the end)
-  for (var stepsThisTick = 0;
-       (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
-       stepsThisTick++) {
-    // Re-check this because the speed may have changed...
-    atMaxSpeed = getCurrentTickLength() === 0;
-    // NOTE: when running with no source visible or at max speed, we
-    // call a simple function to just get the line number, otherwise we call a
-    // function that also selects the code:
-    var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
-            codegen.getUserCodeLine :
-            codegen.selectCurrentCode;
-
-    if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
-        Applab.seenEmptyGetCallbackDuringExecution ||
-        (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
-      // stop stepping the interpreter and wait until the next tick once we:
-      // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code and are are done unwinding
-      //     (while not running atMaxSpeed) OR
-      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
-      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
-      break;
-    }
-    userCodeRow = selectCodeFunc(Applab.interpreter,
-                                 Applab.cumulativeLength,
-                                 Applab.userCodeStartOffset,
-                                 Applab.userCodeLength,
-                                 studioApp.editor);
-    inUserCode = (-1 !== userCodeRow);
-    // Check to see if we've arrived at a new breakpoint:
-    //  (1) should be in user code
-    //  (2) should never happen while unwinding
-    //  (3) requires either
-    //   (a) atInitialBreakpoint OR
-    //   (b) isAceBreakpointRow() AND not still at the same line number where
-    //       we have already stopped from the last step/breakpoint
-    if (inUserCode && !unwindingAfterStep &&
-        (atInitialBreakpoint ||
-         (userCodeRow !== Applab.stoppedAtBreakpointRow &&
-          codegen.isAceBreakpointRow(session, userCodeRow)))) {
-      // Yes, arrived at a new breakpoint:
-      if (Applab.paused) {
-        // Overwrite the nextStep value. (If we hit a breakpoint during a step
-        // out or step over, this will cancel that step operation early)
-        Applab.nextStep = StepType.RUN;
-        Applab.updatePauseUIState();
-      } else {
-        Applab.onPauseContinueButton();
-      }
-      // Store some properties about where we stopped:
-      Applab.stoppedAtBreakpointRow = userCodeRow;
-      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-
-      // Mark reachedBreak to stop stepping, and start unwinding if needed:
-      reachedBreak = true;
-      unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-      continue;
-    }
-    // If we've moved past the place of the last breakpoint hit without being
-    // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-    if (inUserCode &&
-        userCodeRow !== Applab.stoppedAtBreakpointRow &&
-        Applab.interpreter.stateStack.length <= Applab.stoppedAtBreakpointStackDepth) {
-      delete Applab.stoppedAtBreakpointRow;
-      delete Applab.stoppedAtBreakpointStackDepth;
-    }
-    // If we're unwinding, continue to update the stoppedAtBreakpoint properties
-    // to ensure that we have the right properties stored when the unwind completes:
-    if (inUserCode && unwindingAfterStep) {
-      Applab.stoppedAtBreakpointRow = userCodeRow;
-      Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
-    }
-    var err = safeStepInterpreter();
-    if (!err) {
-      doneUserLine = doneUserLine ||
-        (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
-
-      var stackDepth = Applab.interpreter.stateStack.length;
-      // Remember the stack depths of call expressions (so we can implement 'step out')
-
-      // Truncate any history of call expressions seen deeper than our current stack position:
-      for (var depth = stackDepth + 1;
-            depth <= Applab.maxValidCallExpressionDepth;
-            depth++) {
-        Applab.callExpressionSeenAtDepth[depth] = false;
-      }
-      Applab.maxValidCallExpressionDepth = stackDepth;
-
-      if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-        // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[stackDepth] = true;
-      }
-
-      if (Applab.paused) {
-        // Store the first call expression stack depth seen while in this step operation:
-        if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
-          if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = stackDepth;
-          }
-        }
-        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
-        // though the the stateStack doesn't have "done" set, so that stepping in the
-        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
-        var nodeType = Applab.interpreter.stateStack[0].node.type;
-        doneUserLine = doneUserLine ||
-          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
-
-        // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-        if (!doneUserLine &&
-            inUserCode &&
-            Applab.nextStep === StepType.IN &&
-            stackDepth > Applab.firstCallStackDepthThisStep) {
-          reachedBreak = true;
-        }
-        // After the interpreter says a node is "done" (meaning it is time to stop), we will
-        // advance a little further to the start of the next statement. We achieve this by
-        // continuing to set unwindingAfterStep to true to keep the loop going:
-        if (doneUserLine || reachedBreak) {
-          var wasUnwinding = unwindingAfterStep;
-          // step() additional times if we know it to be safe to get us to the next statement:
-          unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Applab.interpreter);
-          if (wasUnwinding && !unwindingAfterStep) {
-            // done unwinding.. select code that is next to execute:
-            userCodeRow = selectCodeFunc(Applab.interpreter,
-                                         Applab.cumulativeLength,
-                                         Applab.userCodeStartOffset,
-                                         Applab.userCodeLength,
-                                         studioApp.editor);
-            inUserCode = (-1 !== userCodeRow);
-            if (!inUserCode) {
-              // not in user code, so keep unwinding after all...
-              unwindingAfterStep = true;
-            }
-          }
-        }
-
-        if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-          if (Applab.nextStep === StepType.OUT &&
-              stackDepth > Applab.stepOutToStackDepth) {
-            // trying to step out, but we didn't get out yet... continue on.
-          } else if (Applab.nextStep === StepType.OVER &&
-              typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              stackDepth > Applab.firstCallStackDepthThisStep) {
-            // trying to step over, and we're in deeper inside a function call... continue next onTick
-          } else {
-            // Our step operation is complete, reset nextStep to StepType.RUN to
-            // return to a normal 'break' state:
-            Applab.nextStep = StepType.RUN;
-            Applab.updatePauseUIState();
-            if (inUserCode) {
-              // Store some properties about where we stopped:
-              Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = stackDepth;
-            }
-            delete Applab.stepOutToStackDepth;
-            delete Applab.firstCallStackDepthThisStep;
-            document.getElementById('spinner').style.visibility = 'hidden';
-            break;
-          }
-        }
-      }
-    } else {
-      handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
-      return;
-    }
-  }
-  if (reachedBreak && atMaxSpeed) {
-    // If we were running atMaxSpeed and just reached a breakpoint, the
-    // code may not be selected in the editor, so do it now:
-    codegen.selectCurrentCode(Applab.interpreter,
-                              Applab.cumulativeLength,
-                              Applab.userCodeStartOffset,
-                              Applab.userCodeLength,
-                              studioApp.editor);
-  }
-};
-
 /**
  * Initialize Blockly and Applab for read-only (blocks feedback).
  * Called on iframe load for read-only.
@@ -704,6 +452,7 @@ Applab.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+  config.appMsg = applabMsg;
   loadLevel();
 
   // Applab.initMinimal();
@@ -718,6 +467,16 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  // Pre-populate asset list
+  if (window.dashboard && dashboard.project.current &&
+      dashboard.project.current.id) {
+    clientApi.ajax('GET', '', function (xhr) {
+      assetListStore.reset(JSON.parse(xhr.responseText));
+    }, function () {
+      // Unable to load asset list
+    });
+  }
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -755,7 +514,6 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designModeBox = require('./designModeBox.html.ejs')({});
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -771,8 +529,7 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: Applab.user.isAdmin,
-      designModeBox: designModeBox
+      hasDesignMode: Applab.user.isAdmin
     }
   });
 
@@ -800,6 +557,18 @@ Applab.init = function(config) {
     // Set up an event handler to create breakpoints when clicking in the
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
+
+    var toggleBreakpoint = function (row) {
+      var bps = aceEditor.session.getBreakpoints();
+      if (bps[row]) {
+        aceEditor.session.clearBreakpoint(row);
+        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
+      } else {
+        aceEditor.session.setBreakpoint(row);
+        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
+      }
+    };
+
     if (aceEditor) {
       aceEditor.on("guttermousedown", function(e) {
         var target = e.domEvent.target;
@@ -807,15 +576,14 @@ Applab.init = function(config) {
           return;
         }
         var row = e.getDocumentPosition().row;
-        var bps = e.editor.session.getBreakpoints();
-        if (bps[row]) {
-          e.editor.session.clearBreakpoint(row);
-        } else {
-          e.editor.session.setBreakpoint(row);
-        }
+        toggleBreakpoint(row);
         e.stop();
       });
     }
+
+    studioApp.editor.on('guttermousedown', function(e) {
+      toggleBreakpoint(e.line);
+    });
 
     if (studioApp.share) {
       // automatically run in share mode:
@@ -839,13 +607,15 @@ Applab.init = function(config) {
   config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
   config.nativeVizWidth = Applab.appWidth;
 
+  config.appMsg = applabMsg;
+
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
   config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = level.levelHtml || "";
+  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
 
   studioApp.init(config);
 
@@ -914,7 +684,11 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
-    var viewDataButton = document.getElementById('viewDataButton');
+
+    // This button and handler duplicate a button in DesignToggleRow.jsx
+    // and should be removed once that component is no longer hidden from
+    // regular users.
+    var viewDataButton = document.getElementById('temporaryViewDataButton');
     if (viewDataButton) {
       // Simulate a run button click, to load the channel id.
       var viewDataClick = studioApp.runButtonClickWrapper.bind(
@@ -923,19 +697,12 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
-    designMode.configureDesignToggleRow();
+    designMode.renderDesignWorkspace();
 
-    // Start out in regular mode. Eventually likely want this to be a level setting
-    designMode.toggleDesignMode(false);
+    designMode.configureDesignToggleRow(config.level.hideDesignMode);
 
-    var designModeClear = document.getElementById('designModeClear');
-    if (designModeClear) {
-      dom.addClickTouchEvent(designModeClear, designMode.onClear);
-    }
-    var designModeManageAssets = document.getElementById('design-manage-assets');
-    if (designModeManageAssets) {
-      dom.addClickTouchEvent(designModeManageAssets, designMode.showAssetManager);
-    }
+    var startInDesignMode = !!config.level.designModeAtStart;
+    designMode.toggleDesignMode(startInDesignMode);
 
     designMode.configureDragAndDrop();
   }
@@ -1063,7 +830,6 @@ Applab.reset = function(first) {
   apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
-
   while (divApplab.firstChild) {
     divApplab.removeChild(divApplab.firstChild);
   }
@@ -1073,14 +839,16 @@ Applab.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   if (level.showTurtleBeforeRun) {
-    turtle.turtleSetVisibility(true);
+    applabTurtle.turtleSetVisibility(true);
   }
 
-  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
-  designMode.parseFromLevelHtml(newDivApplab, allowDragging);
+  var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
+  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
+  designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
-    designMode.resetElementTray(allowDragging);
+    designMode.resetElementTray(isDesigning);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
@@ -1091,14 +859,6 @@ Applab.reset = function(first) {
   }
 
   if (level.editCode) {
-    Applab.paused = false;
-    Applab.nextStep = StepType.RUN;
-    delete Applab.stepOutToStackDepth;
-    delete Applab.firstCallStackDepthThisStep;
-    delete Applab.stoppedAtBreakpointRow;
-    delete Applab.stoppedAtBreakpointStackDepth;
-    Applab.maxValidCallExpressionDepth = 0;
-    Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
@@ -1129,9 +889,8 @@ Applab.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
-  Applab.eventQueue = [];
   Applab.executionError = null;
-  Applab.interpreter = null;
+  Applab.JSInterpreter = null;
 };
 
 // TODO(dave): remove once channel id is passed in appOptions.
@@ -1142,13 +901,27 @@ Applab.reset = function(first) {
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
+  $(window).trigger('run_button_pressed');
+  Applab.serializeAndSave(callback);
+};
+
+/**
+ * We also want to serialize in save in some other cases (i.e. entering code
+ * mode from design mode).
+ */
+Applab.serializeAndSave = function (callback) {
+  designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (window.dashboard && (!dashboard.project.isEditing ||
+  if (!window.dashboard || (!dashboard.project.isEditing ||
       (dashboard.project.current && dashboard.project.current.id))) {
-    $(window).trigger('run_button_pressed');
-    callback();
+    $(window).trigger('appModeChanged');
+    if (callback) {
+      callback();
+    }
   } else {
-    $(window).trigger('run_button_pressed', callback);
+    // Otherwise, makes sure we don't hit our callback until after we've created
+    // a channel
+    $(window).trigger('appModeChanged', callback);
   }
 };
 
@@ -1229,85 +1002,6 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * A miniature runtime in the interpreted world calls this function repeatedly
- * to check to see if it should invoke any callbacks from within the
- * interpreted world. If the eventQueue is not empty, we will return an object
- * that contains an interpreted callback function (stored in "fn") and,
- * optionally, callback arguments (stored in "arguments")
- */
-var nativeGetCallback = function () {
-  var retVal = Applab.eventQueue.shift();
-  if (typeof retVal === "undefined") {
-    Applab.seenEmptyGetCallbackDuringExecution = true;
-  }
-  return retVal;
-};
-
-var nativeSetCallbackRetVal = function (retVal) {
-  if (Applab.eventQueue.length === 0) {
-    // If nothing else is in the event queue, then store this return value
-    // away so it can be returned in the native event handler
-    Applab.seenReturnFromCallbackDuringExecution = true;
-    Applab.lastCallbackRetVal = retVal;
-  }
-  // Provide warnings to the user if this function has been called with a
-  // meaningful return value while we are no longer in the native event handler
-
-  // TODO (cpirich): Check to see if the DOM event object was modified
-  // (preventDefault(), stopPropagation(), returnValue) and provide a similar
-  // warning since these won't work as expected unless running atMaxSpeed
-  if (!Applab.runUntilCallbackReturn &&
-      typeof Applab.lastCallbackRetVal !== 'undefined') {
-    outputApplabConsole("Function passed to onEvent() has taken too long - the return value was ignored.");
-    if (getCurrentTickLength() !== 0) {
-      outputApplabConsole("  (try moving the speed slider to its maximum value)");
-    }
-  }
-};
-
-var consoleApi = {};
-
-consoleApi.log = function() {
-  var nativeArgs = [];
-  for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.interpreter,
-                                                       arguments[i]);
-  }
-  var output = '';
-  var firstArg = nativeArgs[0];
-  if (typeof firstArg === 'string' || firstArg instanceof String) {
-    output = vsprintf(firstArg, nativeArgs.slice(1));
-  } else {
-    for (i = 0; i < nativeArgs.length; i++) {
-      output += nativeArgs[i].toString();
-      if (i < nativeArgs.length - 1) {
-        output += '\n';
-      }
-    }
-  }
-  outputApplabConsole(output);
-};
-
-function populateNonMarshalledFunctions(interpreter, scope, parent) {
-  for (var i = 0; i < dropletConfig.blocks.length; i++) {
-    var block = dropletConfig.blocks[i];
-    if (block.dontMarshal) {
-      var func = parent[block.func];
-      // 4th param is false to indicate: don't marshal params
-      var wrapper = codegen.makeNativeMemberFunction({
-          interpreter: interpreter,
-          nativeFunc: func,
-          nativeParentObj: parent,
-          dontMarshal: true
-      });
-      interpreter.setProperty(scope,
-                              block.func,
-                              interpreter.createNativeFunction(wrapper));
-    }
-  }
-}
-
-/**
  * Execute the app
  */
 Applab.execute = function() {
@@ -1324,17 +1018,9 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
-    Applab.userCodeStartOffset = 0;
-    Applab.userCodeLineOffset = 0;
-    Applab.userCodeLength = codeWhenRun.length;
-    // Append our mini-runtime after the user's code. This will spin and process
-    // callback functions:
-    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
-                 'setCallbackRetVal(ret); }}';
+    // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
     annotationList.attachToSession(session);
-    Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1353,40 +1039,18 @@ Applab.execute = function() {
   if (codeWhenRun) {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
-      var initFunc = function(interpreter, scope) {
-        codegen.initJSInterpreter(interpreter,
-                                  dropletConfig.blocks,
-                                  scope,
-                                  { console: consoleApi });
-
-        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
-
-        // Only allow five levels of depth when marshalling the return value
-        // since we will occasionally return DOM Event objects which contain
-        // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction({
-            interpreter: interpreter,
-            nativeFunc: nativeGetCallback,
-            maxDepth: 5
-        });
-        interpreter.setProperty(scope,
-                                'getCallback',
-                                interpreter.createNativeFunction(wrapper));
-
-        wrapper = codegen.makeNativeMemberFunction({
-            interpreter: interpreter,
-            nativeFunc: nativeSetCallbackRetVal,
-        });
-        interpreter.setProperty(scope,
-                                'setCallbackRetVal',
-                                interpreter.createNativeFunction(wrapper));
-      };
-      try {
-        Applab.interpreter = new window.Interpreter(codeWhenRun, initFunc);
-      }
-      catch(err) {
-        handleExecutionError(err);
-      }
+      Applab.JSInterpreter = new JSInterpreter({
+          code: codeWhenRun,
+          blocks: dropletConfig.blocks,
+          enableEvents: true,
+          studioApp: studioApp,
+          shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+          maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+          onNextStepChanged: Applab.updatePauseUIState,
+          onPause: Applab.onPauseContinueButton,
+          onExecutionError: handleExecutionError,
+          onExecutionWarning: outputApplabConsole
+      });
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
@@ -1427,19 +1091,20 @@ Applab.execute = function() {
 Applab.onPauseContinueButton = function() {
   if (Applab.running) {
     // We have code and are either running or paused
-    if (Applab.paused && Applab.nextStep === StepType.RUN) {
-      Applab.paused = false;
+    if (Applab.JSInterpreter.paused &&
+        Applab.JSInterpreter.nextStep === StepType.RUN) {
+      Applab.JSInterpreter.paused = false;
     } else {
-      Applab.paused = true;
-      Applab.nextStep = StepType.RUN;
+      Applab.JSInterpreter.paused = true;
+      Applab.JSInterpreter.nextStep = StepType.RUN;
     }
     Applab.updatePauseUIState();
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    stepInButton.disabled = !Applab.paused;
-    stepOverButton.disabled = !Applab.paused;
-    stepOutButton.disabled = !Applab.paused;
+    stepInButton.disabled = !Applab.JSInterpreter.paused;
+    stepOverButton.disabled = !Applab.JSInterpreter.paused;
+    stepOutButton.disabled = !Applab.JSInterpreter.paused;
   }
 };
 
@@ -1449,7 +1114,8 @@ Applab.updatePauseUIState = function() {
   var spinner = document.getElementById('spinner');
 
   if (pauseButton && continueButton && spinner) {
-    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+    if (Applab.JSInterpreter.paused &&
+        Applab.JSInterpreter.nextStep === StepType.RUN) {
       pauseButton.style.display = "none";
       continueButton.style.display = "inline-block";
       spinner.style.visibility = 'hidden';
@@ -1463,8 +1129,8 @@ Applab.updatePauseUIState = function() {
 
 Applab.onStepOverButton = function() {
   if (Applab.running) {
-    Applab.paused = true;
-    Applab.nextStep = StepType.OVER;
+    Applab.JSInterpreter.paused = true;
+    Applab.JSInterpreter.nextStep = StepType.OVER;
     Applab.updatePauseUIState();
   }
 };
@@ -1474,15 +1140,15 @@ Applab.onStepInButton = function() {
     Applab.runButtonClick();
     Applab.onPauseContinueButton();
   }
-  Applab.paused = true;
-  Applab.nextStep = StepType.IN;
+  Applab.JSInterpreter.paused = true;
+  Applab.JSInterpreter.nextStep = StepType.IN;
   Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
-    Applab.paused = true;
-    Applab.nextStep = StepType.OUT;
+    Applab.JSInterpreter.paused = true;
+    Applab.JSInterpreter.nextStep = StepType.OUT;
     Applab.updatePauseUIState();
   }
 };
@@ -1492,7 +1158,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 
@@ -1503,6 +1169,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  Applab.serializeAndSave();
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1577,6 +1244,7 @@ Applab.callCmd = function (cmd) {
   }
   return retVal;
 };
+
 /*
 var onWaitComplete = function (opts) {
   if (!opts.complete) {
@@ -1638,34 +1306,33 @@ var checkFinished = function () {
   return false;
 };
 
-// TODO(dave): move this logic to dashboard.
-var getPegasusHost = function() {
-  switch (window.location.hostname) {
-    case 'studio.code.org':
-    case 'learn.code.org':
-      return 'code.org';
-    default:
-      var name = window.location.hostname.split('.')[0];
-      switch(name) {
-        case 'localhost':
-          return 'localhost.code.org:3000';
-        case 'development':
-        case 'staging':
-        case 'test':
-        case 'levelbuilder':
-          return name + '.code.org';
-        case 'staging-studio':
-          return 'staging.code.org';
-        case 'test-studio':
-          return 'test.code.org';
-        case 'levelbuilder-studio':
-          return 'levelbuilder.code.org';
-        default:
-          return null;
-      }
-  }
+Applab.isInDesignMode = function () {
+  return $('#designWorkspace').is(':visible');
 };
 
-Applab.isInDesignMode = function () {
-  return $('#designModeBox').is(':visible');
+function quote(str) {
+  return '"' + str + '"';
+}
+
+/**
+ * Returns a list of options (optionally filtered by type) for code-mode
+ * asset dropdowns.
+ */
+Applab.getAssetDropdown = function (typeFilter) {
+  var options = assetListStore.list(typeFilter).map(function (asset) {
+    return {
+      text: quote(clientApi.basePath(asset.filename)),
+      display: quote(asset.filename)
+    };
+  });
+  var handleChooseClick = function (callback) {
+    showAssetManager(function (filename) {
+      callback(quote(filename));
+    }, typeFilter);
+  };
+  options.push({
+    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
+    click: handleChooseClick
+  });
+  return options;
 };

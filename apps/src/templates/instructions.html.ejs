@@ -1,6 +1,8 @@
-<p class='dialog-title'><%= locals.puzzleTitle %></p>
+<% if (!locals.renderedMarkdown) { /** if md, rendered in header instead */ -%>
+  <p class='dialog-title'><%= locals.puzzleTitle %></p>
+<% } -%>
 <% if (locals.renderedMarkdown) { -%>
-  <%- locals.renderedMarkdown %>
+<div class='instructions-markdown'><%- locals.renderedMarkdown %></div>
 <% } else if (locals.instructions) { -%>
   <p><%= locals.instructions %></p>
 <% } -%>

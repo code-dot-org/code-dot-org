@@ -124,6 +124,9 @@ standardConfig.categories = {
     'rgb': COLOR_GREEN,
     'blocks': []
   },
+  // create blank category in case level builders want to move all blocks here
+  // (which will cause the palette header to disappear)
+  '' : { 'blocks': [] },
 };
 
 /**
@@ -361,7 +364,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
       comments: { color: COLOR_WHITE },
-      containers: { color: COLOR_LIGHT_GREEN },
+      containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
       assignments: { color: COLOR_PURPLE },

@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "The \"offset\" block lets you move an image relative to where it would normally be placed. Use this block to offset the square by 100 pixels on the y-axis.",
+    "instructions": "The offset block lets you move an image relative to where it would normally be placed. Use this block to offset the square by 100 pixels on the y-axis.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "true",
-    "disable_examples": "false"
-  },
-  "md5": "baeccea14ef72f7831531461b7c626e2"
+    "disable_examples": "false",
+    "markdown_instructions": "The _offset_ block lets you move an image relative to where it would normally be placed. Use this block to offset the square by 100 pixels on the y-axis."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

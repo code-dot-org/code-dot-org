@@ -1,5 +1,6 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
@@ -153,3 +154,5 @@ Returns a pseudorandom number in the range of 0 to max (inclusive). For example,
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

@@ -13,7 +13,13 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager() {
+function DropletTooltipManager(appMsg) {
+  /**
+   * App-specific strings (to override common msg)
+   * @type {Object.<String, Function>}
+   */
+  this.appMsg = appMsg || {};
+
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
@@ -63,12 +69,25 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
   dropletBlocks.forEach(function (dropletBlockDefinition) {
     this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(dropletBlockDefinition.func);
+      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
   }, this);
 };
 
 DropletTooltipManager.prototype.hasDocFor = function (functionName) {
   return this.blockTypeToTooltip.hasOwnProperty(functionName);
+};
+
+DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  $('.tooltipstered').tooltipster('hide');
+  var dialog = new window.Dialog({
+    body: $('<iframe>')
+      .addClass('markdown-instructions-container')
+      .width('100%')
+      .attr('src', this.getDropletTooltip(functionName).getFullDocumentationURL()),
+    autoResizeScrollableElement: '.markdown-instructions-container',
+    id: 'block-documentation-lightbox'
+  });
+  dialog.show();
 };
 
 /**

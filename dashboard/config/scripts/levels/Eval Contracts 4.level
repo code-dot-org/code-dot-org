@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "The \"scale\" function returns an image that is either larger or smaller than the input image. Try scaling this circle by a factor of 10. How is the returned image different than if you'd just made a circle of that size in the first place?",
+    "instructions": "The scale function returns an image that is either larger or smaller than the input image. Try scaling this circle by a factor of 10. How is the returned image different than if you'd just made a circle of that size in the first place?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,9 +21,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
-  },
-  "md5": "9cc9e27e8e0d4162426ffd554d6d2ee1"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "The _scale_ function returns an image that is either larger or smaller than the input image. Try scaling this circle by a factor of 10. How is the returned image different than if you'd just made a circle of that size in the first place?",
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

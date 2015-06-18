@@ -4,12 +4,15 @@
   "created_at": "2015-05-18T21:52:18.000Z",
   "properties": {
     "options": {
-      "skip_dialog": "true",
+      "skip_dialog": true,
       "css": "unplugged"
     },
-    "title": "title",
-    "content1": "description here",
-    "markdown": "## Unit 2: Lesson 3 - Invent an addressing protocol\n\n# Background\n\nBackground goes here\n\n# Vocabulary\n\nVocabulary goes here\n\n# Lesson\n\n* Lesson overview\n* Goes here\n\n# Resources\n\n* Activity Guide: <a href=\"\" target=\"_blank\">TBD</a>\n* Assessment:  <a href=\"\" target=\"_blank\">TBD 2</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+    "title": "Lesson 3 - Invent an addressing protocol",
+    "markdown": "## Unit 2: Lesson 3 - Invent an Addressing Protocol\n\n# Background\n\nA communication protocol is encoded in binary. The protocol must be efficient in the number of bits required and flexible enough to handle various situations. An addressing protocol typically includes the sender and recipient's identifying information and perhaps the size of the message and the date sent. IP addresses must be of a fixed length.\n\n# Vocabulary\n* protocol: NEED DEFINITIONS HERE\n* datagram:\n* packet:\n* Internet Protocol:   \n\n# Lesson\n\n* Invent an efficient and flexible addressing protocol for the BattleShip Internet Simulator.\n* Learn about the requirements of an internet addressing protocol.\n\n\n# Resources\n\n* Activity: <a href=\" https://docs.google.com/document/d/1HKgmnXaqSBpExpxorcMpIrUS-JU4tGp5lH4jjjVGGcs\" target=\"_blank\"> Rapid Reseach </a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </External>

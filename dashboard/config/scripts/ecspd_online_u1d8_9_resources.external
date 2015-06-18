@@ -1,0 +1,18 @@
+name 'ECSPD Online U1D8-9 Resources'
+title ''
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 1 Day 8-9: Additional Resources
+
+Below are three short articles that investigate some issues and ideas regarding internet communication that might be brought up by your students during the journaling and discussion sections of this lesson. As you read through them, think about techniques you could use to facilitate discussion in your class.
+
+* [False Rumor of Explosion at White House Causes Stocks to Briefly Plunge; AP Confirms Its Twitter Feed Was Hacked](http://www.cnbc.com/id/100646197)
+
+* [Don't Fear the Network: The Internet Is Changing the Way We Communicate for the Better](http://www.psmag.com/nature-and-technology/networks-changed-social-media-internet-communication-82554) 
+
+* [Can't Ask That? Some Job Interviewers Go To Social Media Instead](http://www.npr.org/sections/alltechconsidered/2014/04/11/301791749/cant-ask-that-some-job-interviewers-go-to-social-media-instead)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

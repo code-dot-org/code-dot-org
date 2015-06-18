@@ -7,7 +7,3 @@ wrong ' !='
 right '='
 wrong '>'
 right '||'
-
-markdown <<MARKDOWN
-
-MARKDOWN

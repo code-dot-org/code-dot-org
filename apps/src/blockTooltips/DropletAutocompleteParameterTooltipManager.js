@@ -2,6 +2,7 @@
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
+var dom = require('../dom');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -72,16 +73,34 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   if (!this.dropletTooltipManager.hasDocFor(functionName)) {
     return;
   }
-
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
 
   if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
     return;
   }
 
-  this.getCursorTooltip_().tooltipster('content',
-    this.getTooltipHTML(tooltipInfo, currentParameterIndex));
-  this.getCursorTooltip_().tooltipster('show');
+  var cursorTooltip = this.getCursorTooltip_();
+
+  cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
+  cursorTooltip.tooltipster('show');
+
+  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+  dom.addClickTouchEvent(seeExamplesLink, function (event) {
+    this.dropletTooltipManager.showDocFor(functionName);
+    event.stopPropagation();
+  }.bind(this));
+
+  var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
+  if (chooseAsset) {
+    var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
+    dom.addClickTouchEvent(chooseAssetLink, function(event) {
+      cursorTooltip.tooltipster('hide');
+      chooseAsset(function(filename) {
+        aceEditor.onTextInput('"' + filename + '"');
+      });
+      event.stopPropagation();
+    }.bind(this));
+  }
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
@@ -97,6 +116,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = functio
  */
 DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (tooltipInfo, currentParameterIndex) {
   return DropletFunctionTooltipMarkup({
+    funcName: tooltipInfo.functionName,
     functionName: tooltipInfo.functionName,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,

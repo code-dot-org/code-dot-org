@@ -1,0 +1,32 @@
+name 'U2L20 Student Lesson Introduction'
+title 'Security and Hacking in the Real World'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 2: Lesson 20 - Security and Hacking in the Real World
+
+# Background
+
+Security is a basic human need. Since the beginning of time, humans have been creating a variety of tools and processes to keep themselves, their families, communities, and possessions safe from natural elements and human enemies. We have entered a new age of inventing tools to keep us secure. The difference this time is that the threats are electronic. 
+
+# Lesson
+* Explore important Internet security issues.
+* Create a visual artifact to promote cybersecurity tips.
+* Write a report about how Internet technologies are exploited to create cyber threats on our society, the economy, and/or culture.
+
+
+# Resources
+* Video: NEED URL The Internet: How to Avoid Getting Hacked 
+* Video: NEED URL The Internet: Cybersecurity and Crime
+* Worksheet: <a href="https://docs.google.com/document/d/1bz5Efi83XKLGHpbRazIrRwHBgT9kT4K5IqUo1xPQSRU/edit?usp=sharing" target="_blank">How to Avoid Getting Hacked Video Worksheet
+</a>
+* Project: <a href="https://docs.google.com/document/d/1dRKb0r1C6ppj3j43j52cJCUTo4lneJveWnqsbmmT5sM/edit?usp=sharing" target="_blank">Security and Hacking in the Real World
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called \"age\". Set its value to your age and click run.",
+    "instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called age. Set its value to your age and click run.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "video_key": "alg_6_variables",
-    "disable_examples": "false"
-  },
-  "md5": "01cd6aa3c0ba34eaef2831ef282f98f5"
+    "disable_examples": "false",
+    "markdown_instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called _age_. Set its value to your age and click run."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

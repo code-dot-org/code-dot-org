@@ -18,6 +18,7 @@
     sains komputer
   petition_sign_message: 'Jika anda bersetuju, Daftar nama anda.  Sertai # lain-lain.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: Nama
   email: E-mel
   zipcode: Kod Zip atau negara
@@ -199,6 +200,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Satu Jam Kod
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -413,11 +417,18 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: View all lesson plans
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_overview: Overview
   dashboard_sequence: Urutan
   dashboard_framework: Rangka kerja
   dashboard_standards: Piawaian
@@ -428,6 +439,10 @@
   dashboard_puzzle_solving: 'Puzzle-solving:'
   dashboard_student_worksheet: lembaran kerja pelajar
   dashboard_teacher_worksheet: lembaran kerja guru
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Lain-lain
   dashboard_login_word: Perkataan
@@ -457,6 +472,7 @@
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
   dashboard_faq: Soalan yang kerap ditanya
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ketahui lebih lanjut
@@ -1109,3 +1125,8 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Hide this warning

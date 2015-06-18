@@ -1,0 +1,32 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-06-02T00:49:38.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What feature of DNS and IP allow the internet to scale?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Redundancy",
+        "correct": false
+      },
+      {
+        "text": "Hierarchy",
+        "correct": true
+      },
+      {
+        "text": "Multiple servers",
+        "correct": false
+      },
+      {
+        "text": "Government control",
+        "correct": false
+      }
+    ],
+    "title": "Assessment Question 1"
+  }
+}]]></config>
+</Multi>

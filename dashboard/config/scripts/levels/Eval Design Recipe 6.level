@@ -16,16 +16,17 @@
     "use_modal_function_editor": "false",
     "default_num_example_blocks": "2",
     "free_play": "false",
-    "instructions": "Using the Design Recipe, write a function \"large-polygon\" that should output a polygon of given sides and color that takes up most of the window, regardless of the number of sides. To make sure that the polygon doesn't get too large as you increase the number of sides, side length should be inversely proportional to side number, with a length of (800/sides).",
+    "instructions": "Using the Design Recipe, write a function large-polygon that should output a solid polygon of given sides and color that takes up most of the window, regardless of the number of sides. To make sure that the polygon doesn't get too large as you increase the number of sides, side length should be inversely proportional to side number, with a length of (800/sides).",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
-  },
-  "md5": "d128b01a60c04a36a010b7c3e54b68d7"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Using the Design Recipe, write a function _large-polygon_ that should output solid a polygon of given sides and color that takes up most of the window, regardless of the number of sides. To make sure that the polygon doesn't get too large as you increase the number of sides, side length should be inversely proportional to side number, with a length of **(800/sides)**.",
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -40,10 +40,10 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null,
-    "disable_examples": "false"
-  },
-  "md5": "9f198fc7652ee6e8751d17a1c524261f"
+    "disable_examples": "false",
+    "markdown_instructions": "You made it!\r\n\r\nAt this point your game should be fully functioning, take some time to enjoy your new game and make any final tweaks to it.\r\n\r\nWhen you're happy with the final product, click Finish and you'll have an opportunity to share a link to your game.\r\n\r\nGood work!",
+    "maze_data": null
+  }
 }]]></config>
   <blocks/>
 </Studio>

@@ -3,6 +3,8 @@ chai.config.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
 
+var $ = require('jquery');
+
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
@@ -116,19 +118,26 @@ exports.generateArtistAnswer = function (generatedCode) {
 };
 
 /**
- * Runs the given function at the provided tick count. For Studio only.
+ * Runs the given function at the provided tick count. For Studio.
  */
 exports.runOnStudioTick = function (tick, fn) {
-  if (!Studio) {
-    throw new Error('not supported outside of studio');
+  exports.runOnAppTick(Studio, tick, fn);
+};
+
+/**
+ * Generic function allowing us to hook into onTick. Only tested for Studio/Applab
+ */
+exports.runOnAppTick = function (app, tick, fn) {
+  if (!app) {
+    throw new Error('not supported outside of studio/applab');
   }
   var ran = false;
-  Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick && !ran) {
+  app.onTick = _.wrap(app.onTick, function (originalOnTick) {
+    if (app.tickCount === tick && !ran) {
       ran = true;
       fn();
     }
-    studioOnTick();
+    originalOnTick();
   });
 };
 
@@ -211,4 +220,33 @@ exports.assertOwnProperty = function (obj, propertyName) {
  */
 exports.debugMode = function () {
   return location.search.substring(1).split('&').indexOf('debug') !== -1;
+};
+
+/**
+ * jQuery.simulate was having issues in phantom, so I decided to roll my own
+ * drag simulation. May belong in a util file.
+ * @param {string} type ElementType to be dragged in
+ * @param {number} left Horizontal offset from top left of visualization to drop at
+ * @param {number} top Vertical offset from top left of visualization to drop at
+ */
+exports.dragToVisualization = function (type, left, top) {
+  // drag a new element in
+  var element = $("[data-element-type='" + type + "']");
+  var screenOffset = element.offset();
+  var mousedown = $.Event("mousedown", {
+    which: 1,
+    pageX: screenOffset.left,
+    pageY: screenOffset.top
+  });
+  var drag = $.Event("mousemove", {
+    pageX: $("#visualization").offset().left + left,
+    pageY: $("#visualization").offset().top + top
+  });
+  var mouseup = $.Event('mouseup', {
+    pageX: $("#visualization").offset().left + left,
+    pageY: $("#visualization").offset().top + top
+  });
+  element.trigger(mousedown);
+  $(document).trigger(drag);
+  $(document).trigger(mouseup);
 };

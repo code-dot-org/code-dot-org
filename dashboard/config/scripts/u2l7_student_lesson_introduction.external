@@ -5,25 +5,27 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 7 - The Need for Packets
+## Unit 2: Lesson 7 - Algorithms Detour - Shortest Path
 
 # Background
 
-Background goes here
+Do you know the quickest route from your home to the most common place you go? How closely related are protein A, which is found in blueberries, and protein B, which is known to prevent cancer? How are these two questions related? Both involve the shortest path problem and graph theory. Finding the shortest path can save you a lot of time and can help you find meaningful connections in information. Because computer scientists often work with large amounts of information, we care about finding the shortest path <i>efficiently</i>, no matter how much information we are working with. In this lesson, you will investigate the shortest path problem, as well as a famous shortest path algorithm. As you go, pay attention to the number of steps required for a computer to find an answer.
 
 # Vocabulary
 
-Vocabulary goes here
+* **Shortest Path:** the lowest weighted path between two nodes
+* **Efficiency:** a measure of the number of steps per input size needed to complete an algorithm
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Investigate and create an algorithm for the shortest path problem
+* Follow Dijsktra's algorithm for the SSSP
+* Analyze an algorithm for efficiency
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Intro Worksheet: <a href="https://docs.google.com/document/d/19CUlhBLjr7D9M5gh5cHWIJij5Yeopb9gh4JHRgV_fRk/edit">Intro to the shortest path problem</a>
+* Worksheet:  <a href="https://docs.google.com/document/d/15N7aHAoWG1_9VIcDHNZRygzFK0hle-EHlmHu0PZI8D4/edit#heading=h.dqtndjj0z9yh">Dijsktra's Shortest Path Algrothm</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

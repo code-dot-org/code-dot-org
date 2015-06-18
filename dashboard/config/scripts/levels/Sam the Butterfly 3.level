@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "In the last puzzle we kept Sam from leaving on the left, now let's do the same thing on the right. Fill out the \"safe-right?\" function to make sure Sam can't go past x = 425.",
+    "instructions": "In the last puzzle we kept Sam from leaving on the left, now let's do the same thing on the right. Fill out the safe-right? function to make sure Sam can't go past x = 425.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -44,10 +44,9 @@
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 3 1\",\r\n  \"callout_text\": \"Edit this function to keep Sam from going off the right side\",\r\n  \"element_id\": \"[block-id='2'] > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "maze_data": null,
-    "disable_examples": "false"
-  },
-  "md5": "b866f48822969e619192aaed75d09139"
+    "disable_examples": "false",
+    "markdown_instructions": "In the last puzzle we kept Sam from leaving on the left, now let's do the same thing on the right. Fill out the _safe-right?_ function to make sure Sam can't go past x = 425."
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -59,7 +58,7 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_definition" inline="false" uservisible="false">
+        <block type="functional_definition" inline="false" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="x" type="Number"/>
             <description>Given Sam's x coordinate, return true if his x is less than 425.</description>
@@ -67,36 +66,8 @@
           </mutation>
           <title name="NAME">safe-right?</title>
           <functional_input name="STACK">
-            <block type="functional_boolean" uservisible="false">
+            <block type="functional_boolean">
               <title name="VAL">true</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="safe-right?">
-                <arg name="x" type="Number"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">450</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="safe-right?">
-                <arg name="x" type="Number"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">50</title>
-                </block>
-              </functional_input>
             </block>
           </functional_input>
         </block>

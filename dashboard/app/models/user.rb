@@ -3,7 +3,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender survey2015_value survey2015_comment)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -407,15 +407,6 @@ SQL
 
   def last_attempt(level)
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
-  end
-
-  # returns a map from section to the users in that section
-  def students_by_section
-    class_map = Hash.new{ |h,k| h[k] = [] }
-    self.followers.includes([:section, :student_user]).each do |f|
-      class_map[f.section] << f.student_user
-    end
-    class_map
   end
 
   def average_student_trophies

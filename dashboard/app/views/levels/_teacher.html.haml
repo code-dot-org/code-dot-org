@@ -1,5 +1,6 @@
-- if current_user.try(:admin?) && @script_level # TODO: this should change to :teacher? when we want to ship this
-  .teacher-panel{class: @user ? '' : 'hidden'}
+- if current_user.try(:teacher?) && @script_level
+
+  .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
@@ -8,46 +9,69 @@
     %h3
       = t('teacher.panel.answer_viewer')
     .content
-      - if @user
-        .students
-          %h4= t('teacher.panel.student')
-          = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
-      - if @user_level
-        .user_level
-          .level
-            - status = activity_css_class(@user_level.best_result)
-            .level_link{class: status}
-              - if @level.unplugged?
-                %span.puzzle-named
-                  Unplugged
-              - elsif status == 'passed' || status == 'perfect'
-                = check_mark_html
-              - else
-                %span.puzzle-number
-                  = @script_level.position
-      .level
-        - if @level && @level.ideal_level_source_id && @script
-          = link_to script_level_solution_path(@script, @level) do
-            %button.btn.btn-info= t('reference_area.teacher')
-        = link_to build_script_level_path(@script_level) do
-          %button.btn.btn-info= t('teacher.panel.try_it_yourself')
+      .non-scrollable-wrapper
+        - if @user
+          .students
+            %h4= t('teacher.panel.student')
+            = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
+        - if @user_level
+          .user_level
+            .level
+              - status = activity_css_class(@user_level.best_result)
+              .level_link{class: status}
+                - if @level.unplugged?
+                  %span.puzzle-named
+                    Unplugged
+                - elsif status == 'passed' || status == 'perfect'
+                  = check_mark_html
+                - else
+                  %span.puzzle-number
+                    = @script_level.position
+        .level
+          - if @level && @level.ideal_level_source_id && @script
+            - if @ideal_level_source
+              %h4= t('teacher.panel.viewing_solution')
+            - else
+              = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})) do
+                %button.btn.btn-info= t('reference_area.teacher')
+          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
+            %button.btn.btn-info= t('teacher.panel.try_it_yourself')
+        - if @section
+          .section
+            %h4
+              = t('teacher.panel.section')
+              = link_to @section.name, teacher_dashboard_section_progress_url(@section)
+        - if current_user.sections.many?
+          = select_tag('sections', section_options, prompt: content_tag('i', t('teacher.panel.select_section')))
+          :javascript
+            $('select#sections').change(function(ev) {
+              window.location.href = ev.target.value;
+            });
       - if @section
-        .section
-          %h4
-            =t('teacher.panel.section')
-            =link_to @section.name, teacher_dashboard_section_progress_url(@section)
+        .scrollable-wrapper
           %table.section-students
             - @section.students.order(:name).each do |student|
-              - active = 'active' if student.id == @user.id
+              - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
                 - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
-                %td.level_link{class: status}
-                  - if @level.unplugged?
-                    %span.puzzle-named
-                      Unplugged
-                  - elsif status == 'passed' || status == 'perfect'
-                    = check_mark_html
-                  - else
-                    %span.puzzle-number
-                      = @script_level.position
+                %td
+                  .level_link{class: status}
+                    - if @level.unplugged?
+                      %span.puzzle-named
+                        Unplugged
+                    - elsif status == 'passed' || status == 'perfect'
+                      = check_mark_html
+                    - else
+                      %span.puzzle-number
+                        = @script_level.position
                 %td.name= link_to student.name, build_script_level_path(@script_level, user_id: student.id, section_id: @section.id)
+  :javascript
+    function resizeScrollable() {
+      var newHeight = $('.teacher-panel').innerHeight() -
+          $('.teacher-panel h3').outerHeight() -
+          15 - // magic..
+          $('.non-scrollable-wrapper').outerHeight();
+      $('.scrollable-wrapper').css('max-height', newHeight);
+    }
+    $(document).ready(resizeScrollable);
+    $(window).resize(debounce(resizeScrollable, 250));

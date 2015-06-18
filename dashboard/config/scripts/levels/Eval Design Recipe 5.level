@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Using the Design Recipe, write a function \"striped-flag\" that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
+    "instructions": "Using the Design Recipe, write a function striped-flag that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "min_workspace_height": "1500",
@@ -23,9 +23,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
-  },
-  "md5": "36683c2761e2abbea91404af65d98d91"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Using the Design Recipe, write a function _striped-flag_ that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -19,6 +19,7 @@
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
   petition_sign_message_support: 'Se você nos apoia, assine seu nome. Junte-se aos
     # outros.'
+  petition_join_others: 'Junte-se a # outros'
   name: Nome
   email: E-mail
   zipcode: CEP ou país
@@ -199,6 +200,9 @@
     &ldquo;Esse programa manteve 100% dos meus alunos
     engajados, envolvidos e participando.&rdquo;
     Adam, professor
+  homepage_hero_text_stat_loc: '#loc linhas de código escritas por alunos'
+  homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
+  homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -210,7 +214,7 @@
   homepage_action_text_teachervideo: Assista ao vídeo
   homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assine a petição
-  homepage_signpetition_dropdown: Assine nossa petição &#x25BE;
+  homepage_signpetition_dropdown: Assinar nossa petição &#x25BE;
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para
     aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
@@ -423,11 +427,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
     aqui</a> para ver nosso documento de privacidade. Ele pode ser compartilhado ou
     impresso para entregar a seus alunos.
-  dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Ver todos os planos de aula
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
+  dashboard_overview: Overview
   dashboard_sequence: Sequência
   dashboard_framework: Quadro
   dashboard_standards: Padrões
@@ -438,6 +449,10 @@
   dashboard_puzzle_solving: 'Quebra-cabeças:'
   dashboard_student_worksheet: planilha do estudante
   dashboard_teacher_worksheet: planilha do professor
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: Nível
   dashboard_grade_other: Outros
   dashboard_login_word: Palavra
@@ -468,6 +483,7 @@
     tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para
     uma seção.
   dashboard_faq: Tire suas dúvidas
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1178,3 +1194,8 @@
   sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
     às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
     melhoram habilidades de matemática e ciências.
+  compatibility_https_header: Habilite o HTTPS para Code.org.
+  compatibility_https_message: Para aumentar a segurança, vamos mudar para o HTTPS
+    em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique
+    aqui</a> para aprender a habilitar o HTTPS para a Code.org.
+  compatibility_https_hide_this_warning: Ocultar este aviso

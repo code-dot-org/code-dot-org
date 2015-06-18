@@ -1,0 +1,7 @@
+name 'U2L04 Assessment2'
+title 'Routers and Addresses: Question 4'
+
+
+markdown <<MARKDOWN
+Describe the relative benefits of routing over a broadcast style of communication. Is routed traffic more secure than broadcasting? Justify your answer.
+MARKDOWN

@@ -1,21 +1,26 @@
+import cookie;
+import header;
 <%
   def canonical_hostname(domain)
     return "console.#{domain}" if node.name == 'production-console'
-    return "daemon#.#{domain}" if node.name == 'production-daemon'
+    return "daemon.#{domain}" if node.name == 'production-daemon'
     return "#{node.name}.#{domain}" if ['hoc-levels'].include?(node.name)
     return domain if rack_env?(:production)
 
     # our HTTPS wildcard certificate only supports *.code.org
     # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
     sep = domain.include?('.code.org') ? '-' : '.'
+
+    # Handle some hard-coded exceptions
     {
       react: 'react',
       translate: 'crowdin',
       levelbuilder: 'levelbuilder-staging',
-      'levelbuilder-dev' => 'levelbuilder-development'
+      'levelbuilder-dev' => 'levelbuilder-development',
     }.each do |subdomain, node_name|
       return "#{subdomain}#{sep}#{domain}" if node.name == node_name
     end
+
     "#{node.chef_environment}#{sep}#{domain}"
   end
 
@@ -23,20 +28,19 @@
     env.to_s == node.chef_environment
   end
   
-  def session_cookie()
-    cookie = "_learn_session"
-    cookie += "_#{node.chef_environment}" unless rack_env?(:production)
-    cookie
+  def session_cookie
+    append_env '_learn_session'
   end
 
-  def deprecated_storage_cookie()
-    name = "storage"
-    name += "_#{node.chef_environment}" unless rack_env?(:production)
-    name
+  def deprecated_storage_cookie
+    append_env 'storage'
   end
 
-  def storage_id_cookie()
-    name = "storage_id"
+  def storage_id_cookie
+    append_env 'storage_id'
+  end
+
+  def append_env(name)
     name += "_#{node.chef_environment}" unless rack_env?(:production)
     name
   end
@@ -305,14 +309,10 @@ sub vcl_recv
     /* Normalize domain names to the short (non www.) form. */
     error 751 "http://" + regsub(req.http.host, "^www\.","") + req.url;
   }
-  else if(req.http.Host == "forums.code.org")
-  {
-    /* forums.code.org redirects to support */
-    error 751 "http://support.code.org/";
-  }
   <%
     # Alias the following domains to one of our primary ones.
     redirects = {
+      'forums.code.org'      => 'support.code.org',
       'aws.code.org'      => 'code.org',
       'blockly.com'       => 'studio.code.org',
       'learn.code.org'    => 'studio.code.org',
@@ -347,16 +347,36 @@ sub vcl_recv
   %>else if(req.http.Host == "<%= domain %>")
   {
     /* <%= domain %> redirects to <%= site %> */
-    error 751 "<%= rack_env?(:production) ? 'http' : 'https' %>://<%= site %>" + req.url;
+    error 751 "http://<%= site %>" + req.url;
   }
   <% end%>
-  <% unless rack_env?(:production) %>
-  else if(req.http.X-Forwarded-Proto !~ "(?i)https")
-  {
-  /* Redirect http to https */
-  error 751 "https://" + req.http.host + req.url;
+  if(req.http.Cookie) {
+    cookie.parse(req.http.Cookie);
   }
-  <% end %>
+  # Filter https-related cookies from incoming request
+  if (cookie.isset("https_ok")) {
+    cookie.delete("https_ok");
+    set req.http.X-Https-Ok = "1";
+  }
+  if (cookie.isset("https-blocked")) {
+    cookie.delete("https-blocked");
+    set req.http.X-Https-Blocked = "1";
+  }
+
+  # Redirect http to https if 'https_ok' cookie is set
+  if(req.http.X-Forwarded-Proto !~ "(?i)https") {
+    if(req.http.X-Https-Ok == "1") {
+      error 751 "https://" + req.http.host + req.url;
+    }
+
+    # Render https-test page if neither 'https_ok' nor 'https-blocked' cookies are set
+    if(req.http.X-Https-Ok != "1" && req.http.X-Https-Blocked != "1" &&
+       req.url !~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$" &&
+       (req.http.Host ~ "studio.code.org" && req.url ~ "/(p|s|hoc|k8intro|editcode|2014|flappy|jigsaw)/")
+      ) {
+      error 752;
+    }
+  }
 
   C{
       vcl_rewrite_accept_language(sp);
@@ -378,64 +398,6 @@ end
       req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
       req.http.host == "code-dot-org.cartoonnetworkarabic.com")
   {
-<% if false %>
-    if(req.http.Cookie ~ "language_=en" || !(req.http.Cookie ~ "language_"))
-    {
-      if(req.url == "/s/frozen")
-      {
-        error 751 "http://static.studio.code.org/";
-      }
-<%    { '/s/frozen/reset'=>'http://static.studio.code.org/',
-        '/s/frozen/stage/1/puzzle/1'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=1',
-        '/s/frozen/stage/1/puzzle/2'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=2',
-        '/s/frozen/stage/1/puzzle/3'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=3',
-        '/s/frozen/stage/1/puzzle/4'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=4',
-        '/s/frozen/stage/1/puzzle/5'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=5',
-        '/s/frozen/stage/1/puzzle/6'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=6',
-        '/s/frozen/stage/1/puzzle/7'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=7',
-        '/s/frozen/stage/1/puzzle/8'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=8',
-        '/s/frozen/stage/1/puzzle/9'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=9',
-        '/s/frozen/stage/1/puzzle/10'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=10',
-        '/s/frozen/stage/1/puzzle/11'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=11',
-        '/s/frozen/stage/1/puzzle/12'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=12',
-        '/s/frozen/stage/1/puzzle/13'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=13',
-        '/s/frozen/stage/1/puzzle/14'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=14',
-        '/s/frozen/stage/1/puzzle/15'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=15',
-        '/s/frozen/stage/1/puzzle/16'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=16',
-        '/s/frozen/stage/1/puzzle/17'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=17',
-        '/s/frozen/stage/1/puzzle/18'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=18',
-        '/s/frozen/stage/1/puzzle/19'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=19',
-        '/s/frozen/stage/1/puzzle/20'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=20',
-        '/hoc/reset'=>'http://static-hoc.studio.code.org/?s=hoc',
-        '/hoc/1'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=1',
-        '/hoc/2'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=2',
-        '/hoc/3'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=3',
-        '/hoc/4'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=4',
-        '/hoc/5'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=5',
-        '/hoc/6'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=6',
-        '/hoc/7'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=7',
-        '/hoc/8'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=8',
-        '/hoc/9'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=9',
-        '/hoc/10'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=10',
-        '/hoc/11'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=11',
-        '/hoc/12'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=12',
-        '/hoc/13'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=13',
-        '/hoc/14'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=14',
-        '/hoc/15'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=15',
-        '/hoc/16'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=16',
-        '/hoc/17'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=17',
-        '/hoc/18'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=18',
-        '/hoc/19'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=19',
-        '/hoc/20'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=20',
-      }.each_pair do |src, dest| %>
-      else if(req.url == "<%= src %>")
-      {
-        error 751 "<%= dest %>";
-      }
-<%    end %>
-    }
-<% end %>
-
     if (req.url ~ "^/v2/")
     {
       set req.backend = default;
@@ -482,19 +444,20 @@ end
   # "Accept-Encoding" headers, even though they mostly all support the same
   # compression mechanisms. By consolidating these compression headers into
   # a consistent format, we can reduce the size of the cache and get more hits.=
-  # @see: http:// varnish.projects.linpro.no/wiki/FAQ/Compression
+  # @see: https://www.varnish-cache.org/trac/wiki/FAQ/Compression
   if (req.http.Accept-Encoding) {
     if (req.http.Accept-Encoding ~ "gzip") {
       # If the browser supports it, we'll use gzip.
       set req.http.Accept-Encoding = "gzip";
     }
-    else if (req.http.Accept-Encoding ~ "deflate") {
+    else if (req.http.Accept-Encoding ~ "deflate" && req.http.user-agent !~ "MSIE") {
       # Next, try deflate if it is supported.
+      # (IE doesn't support deflate properly, so we don't want to send deflated content to IE.)
       set req.http.Accept-Encoding = "deflate";
     }
     else {
       # Unknown algorithm. Remove it and send unencoded.
-      unset req.http.Accept-Encoding;
+      remove req.http.Accept-Encoding;
     }
   }
 
@@ -508,32 +471,33 @@ end
   # we always set the NO_CACHE cookie after any POST request, disabling the
   # Varnish cache temporarily. The session cookie allows all authenticated users
   # to pass through as long as they're logged in.
-  #
-  # 1. Append a semi-colon to the front of the cookie string.
-  # 2. Remove all spaces that appear after semi-colons.
-  # 3. Match the cookies we want to keep, adding the space we removed
-  #    previously, back. (\1) is first matching group in the regsuball.
-  # 4. Remove all other cookies, identifying them by the fact that they have
-  #    no space after the preceding semi-colon.
-  # 5. Remove all spaces and semi-colons from the beginning and end of the
-  #    cookie string.
   if (req.http.Cookie) {
-    set req.http.Cookie = ";" + req.http.Cookie;
-    set req.http.Cookie = regsuball(req.http.Cookie, "; +", ";");
     if (req.url ~ "^/volunteers") {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(_fe_session|hour_of_code|NO_CACHE)=", "; \1=");
+      cookie.filter_except("_fe_session,hour_of_code,NO_CACHE");
     } else if (req.url ~ "^/auth") {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(cdo-private|hour_of_code|NO_CACHE)=", "; \1=");
-    } else if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" || req.http.host == "<%= canonical_hostname('studio.code.org') %>") {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(language_|<%= session_cookie %>|<%= deprecated_storage_cookie %>|<%= storage_id_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
-    } else if (req.url ~ "^/dashboardapi/" || req.url ~ "^/v2/" || req.url ~ "^/v3/" || req.url ~ "^/api/" || req.url == "/private" || req.url ~ "^/private/" || req.url ~ "^/create-company-profile"  || req.url ~ "^/edit-company-profile" || req.url ~ "^/teacher-dashboard" || req.url ~ "^/manage-professional-development-workshops" || req.url ~ "^/professional-development-workshop-surveys/" || req.url ~ "^/ops-dashboard" || req.url ~ "^/poste") {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(<%= session_cookie %>|<%= deprecated_storage_cookie %>|<%= storage_id_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
+      cookie.filter_except("cdo-private,hour_of_code,NO_CACHE");
+    } else if (
+        req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+        req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
+        req.url ~ "^/dashboardapi/" ||
+        req.url ~ "^/v2/" ||
+        req.url ~ "^/v3/" ||
+        req.url ~ "^/api/" ||
+        req.url == "/private" ||
+        req.url ~ "^/private/" ||
+        req.url ~ "^/create-company-profile" ||
+        req.url ~ "^/edit-company-profile" ||
+        req.url ~ "^/teacher-dashboard" ||
+        req.url ~ "^/manage-professional-development-workshops" ||
+        req.url ~ "^/professional-development-workshop-surveys/" ||
+        req.url ~ "^/ops-dashboard" ||
+        req.url ~ "^/poste"
+      ) {
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,hour_of_code,NO_CACHE");
     } else {
-      set req.http.Cookie = regsuball(req.http.Cookie, ";(NO_CACHE)=", "; \1=");
+      cookie.filter_except("NO_CACHE");
     }
-    set req.http.Cookie = regsuball(req.http.Cookie, ";[^ ][^;]*", "");
-    set req.http.Cookie = regsuball(req.http.Cookie, "^[; ]+|[; ]+$", "");
-
+    set req.http.Cookie = cookie.get_string();
     if (req.http.Cookie == "") {
       # If there are no remaining cookies, remove the cookie header. If there
       # aren't any cookie headers, Varnish's default behavior will be to cache
@@ -541,8 +505,8 @@ end
       unset req.http.Cookie;
     }
     else {
-      # If there is any cookies left (a session or NO_CACHE cookie), do not
-      # cache the page. Pass it on to Apache directly.
+      # If there are any cookies left (a session or NO_CACHE cookie), do not
+      # cache the page. Pass it on to the backend directly.
       return (pass);
     }
   }
@@ -581,9 +545,17 @@ end
   return (lookup);
 }
 
-# Code determining what to do when serving items from the Apache servers.
+# Handle the HTTP request coming from our backend
+# beresp == Back-end response from the web server.
 sub vcl_fetch {
-  if (req.url ~ "^/api/hour/begin/" || req.url ~ "^/api/hour/begin_" || req.url ~ "^/auth$" || req.url ~ "^/auth/") {
+
+  if (
+    req.url ~ "^/api/hour/begin/" ||
+    req.url ~ "^/api/hour/begin_" ||
+    req.url ~ "^/auth$" ||
+    req.url ~ "^/auth/" ||
+    req.url ~ "^/test-image.png"
+  ) {
     # allow this route to always set cookies.
   } else if (req.url ~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
     # Don't allow static files to set cookies.
@@ -605,13 +577,22 @@ sub vcl_fetch {
   #  return(restart);
   #}
 
-  # Allow items to be stale if needed.
+  # Keep all objects for 1h longer in the cache than their TTL specifies.
+  # So even if HTTP objects are expired (they've passed their TTL), we can still use them in case all backends go down.
+  # Remember: old content to show is better than no content at all (or an error page).
   set beresp.grace = 1h;
 }
 
-# Set a header to track a cache HIT/MISS.
 sub vcl_deliver {
+  # Add HTTP Strict Transport Security header and https_ok cookie to response
+  if (req.http.X-Forwarded-Proto ~ "(?i)https") {
+    set resp.http.Strict-Transport-Security = "max-age=2592000";
+    if(req.http.X-Https-Ok != "1") {
+      header.append(resp.http.Set-Cookie,"https_ok=1; Path=/; Expires=" + cookie.format_rfc1123(now, 60d) + "; HttpOnly");
+    }
+  }
 
+  # Set a header to track a cache HIT/MISS.
   if (obj.hits > 0) {
     set resp.http.X-Varnish-Cache = "HIT";
   }
@@ -620,6 +601,22 @@ sub vcl_deliver {
   }
 
   set resp.http.X-Varnish-Node = "<%= node.name %>";
+}
+
+sub vcl_hash {
+  hash_data(req.url);
+  if (req.http.host) {
+    hash_data(req.http.host);
+  } else {
+    hash_data(server.ip);
+  }
+
+  # Include scheme in hash. Once we always redirect to HTTPS, this can be removed
+  if (req.http.X-Forwarded-Proto) {
+    hash_data(req.http.X-Forwarded-Proto);
+  }
+
+  return (hash);
 }
 
 # In the event of an error, show friendlier messages.
@@ -636,6 +633,42 @@ sub vcl_error {
     return(deliver);
   }
 
+  if(obj.status == 752) {
+    set obj.http.Content-Type = "text/html; charset=utf-8";
+    synthetic {"
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+Redirecting to <a href='https://code.org'>HTTPS</a>..
+<script type="text/javascript" src="/shared/js/url_test/url_test.js"></script>
+<script type='text/javascript'>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + '; path=/; expires=' + expires.toUTCString();
+  }
+
+  var testImage = 'https://' + window.location.hostname + '/test-image.png';
+  testImageAccess(testImage,
+      function () {
+        setCookie('https_ok', '1', 60);
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+      },
+      function () {
+        setCookie('https-blocked', '1', 1);
+        document.location.reload(true);
+      },
+      5000
+  );
+</script>
+</body>
+</html>
+"};
+  return (deliver);
+  }
+
+  # All other error codes get this error page
   set obj.http.Content-Type = "text/html; charset=utf-8";
   set obj.http.Retry-After = "5";
   synthetic {"

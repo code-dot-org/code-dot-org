@@ -1,9 +1,11 @@
 name 'U1L4 Multiple Choice'
 title 'Multiple Choice: Coordination and Binary Messages'
 description ''
-question 'A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at ½ the bit rate you agreed upon. What message did you receive instead?'
 wrong 'ABAB'
 right 'AABB'
 wrong 'AAAA'
 wrong 'BBBB'
 wrong 'ABBB'
+markdown <<MARKDOWN
+A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at ½ the bit rate you agreed upon. What message did you receive instead?
+MARKDOWN

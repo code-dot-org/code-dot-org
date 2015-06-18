@@ -1,10 +1,11 @@
 ---
 title: App Lab Docs
+embedded_layout: simple_embedded
 ---
 
 [name]
 
-## turnLeft(angle)
+## turnRight(angle)
 
 [/name]
 
@@ -108,3 +109,5 @@ No return value. Outputs to the display only.
 Found a bug in the documentation? Let us know at documentation@code.org
 
 [/bug]
+
+<%= view :applab_docs_common %>

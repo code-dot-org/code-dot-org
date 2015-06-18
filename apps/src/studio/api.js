@@ -1,20 +1,7 @@
 var constants = require('./constants');
 
-exports.SpriteSpeed = {
-  VERY_SLOW: 2,
-  SLOW: 3,
-  NORMAL: 5,
-  FAST: 8,
-  VERY_FAST: 12,
-};
-
-exports.SpriteSize = {
-  VERY_SMALL: 0.5,
-  SMALL: 0.75,
-  NORMAL: 1,
-  LARGE: 1.5,
-  VERY_LARGE: 2
-};
+exports.SpriteSpeed = constants.SpriteSpeed;
+exports.SpriteSize = constants.SpriteSize;
 
 var SPEECH_BUBBLE_TIME = 3;
 
@@ -128,6 +115,13 @@ exports.moveDistance = function(id, spriteIndex, dir, distance) {
 
 exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
+};
+
+exports.addItemsToScene = function(id, className, number) {
+  Studio.queueCmd(id, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
 };
 
 exports.setScoreText = function(id, text) {

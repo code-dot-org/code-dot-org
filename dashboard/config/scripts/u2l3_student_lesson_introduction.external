@@ -1,29 +1,28 @@
 name 'U2L3 Student Lesson Introduction'
-title 'title'
-description 'description here'
+title 'Lesson 3 - Invent an addressing protocol'
 css 'unplugged'
-skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 3 - Invent an addressing protocol
+## Unit 2: Lesson 3 - Invent an Addressing Protocol
 
 # Background
 
-Background goes here
+What kinds of information do you need to send when you send a message over the internet? You would probably want to include some control information, such as sender and receiver addresses, along with the message itself. How long should this control information be and how long should the message be? More importantly, if a message and its control information are sent as a string of bits, how does the receiver know where the information ends and where the actual message begins? In computing, the control information and its message are called a "packet" and the rules that define where the control information ends and the message begins are part of a "protocol." For this lesson, you will implement an addressing protocol for the battleship game.
 
 # Vocabulary
-
-Vocabulary goes here
+* **Protocol:** A well-known set of rules and standards used to communicate between machines
+* **Packet:** A message of data that includes information to route the message from the source to the destination computer. Also known as a datagram 
+* **Internet Protocol:** The communication protocol that dictates of the specific format and structure of a packet in order for it to be routed properly on the internet   
 
 # Lesson
 
-* Lesson overview
-* Goes here
+* Learn about the requirements of an internet addressing protocol
+* Invent an efficient and flexible addressing protocol for the battleship
 
 # Resources
 
-* Activity Guide: <a href="" target="_blank">TBD</a>
-* Assessment:  <a href="" target="_blank">TBD 2</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing” target="_blank">IP/DNS video questions</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1sFmHWCY-jSKs40jvTnfkbjO61xZEZp_UyTolmGt_zjw/edit” target="_blank">Inventing a protocol for Battleship</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

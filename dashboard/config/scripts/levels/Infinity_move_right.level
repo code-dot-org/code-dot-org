@@ -36,10 +36,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_failure_tick": "100",
-    "video_key": "infinity_playlab_intro",
-    "maze_data": null
-  },
-  "md5": "fb99157ac76d8138bd2e6c00566d4ae5"
+    "video_key": "infinity_playlab_intro"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using this new Evaluation Block called \"overlay\" to place a 100 pixel white triangle on top of a 200 pixel red circle.",
+    "instructions": "Try using this new Evaluation Block called _overlay_ to place a 100 pixel white triangle on top of a 200 pixel red circle.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
-  },
-  "md5": "a4aed997e9b2b7ecc55513e59f4dc764"
+    "disable_examples": "false",
+    "markdown_instructions": "Try using this new Evaluation Block called _overlay_ to place a 100 pixel white triangle on top of a 200 pixel red circle."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

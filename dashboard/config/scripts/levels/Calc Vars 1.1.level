@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Here we've set the \"age\" variable to 17 years. Can you write an expression that calculates \"age\" in days?",
+    "instructions": "Here we've set the age variable to 17 years. Can you write an expression that calculates age in days?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,9 +21,10 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
-  },
-  "md5": "1d1267ee9337e6f28fb0f6ddb54485fa"
+    "definition_collapse": "false",
+    "markdown_instructions": "Here we've set the _age_ variable to 17 years. Can you write an expression that calculates _age_ in days?",
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <start_blocks>

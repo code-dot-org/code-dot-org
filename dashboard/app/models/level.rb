@@ -7,6 +7,8 @@ class Level < ActiveRecord::Base
   belongs_to :user
   has_many :level_sources
 
+  before_validation :strip_name
+
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
@@ -74,7 +76,8 @@ class Level < ActiveRecord::Base
     Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
 
-  # All levelbuilder levels will have a user_id, except for DSLDefined levels.
+  # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
+  # All custom levels will have a user_id, except for DSLDefined levels.
   def custom?
     user_id.present? || is_a?(DSLDefined)
   end
@@ -139,7 +142,7 @@ class Level < ActiveRecord::Base
   end
 
   def filter_level_attributes(level_hash)
-    %w(name id updated_at type ideal_level_source_id).each {|field| level_hash.delete field}
+    %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
     level_hash.reject!{|_, v| v.nil?}
     level_hash
   end
@@ -196,9 +199,13 @@ class Level < ActiveRecord::Base
     Level.find_by_key(project_template_level_name)
   end
 
+  def strip_name
+    self.name = name.to_s.strip unless name.nil?
+  end
+
   private
 
   def write_to_file?
-    custom? && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
   end
 end

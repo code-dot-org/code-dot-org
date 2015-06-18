@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Now let's set the background for your new game. Edit the 'bg' variable and select a new background Image from the dropdown.",
+    "instructions": "Now let's set the background for your new game. Edit the bg variable and select a new background Image from the dropdown.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -36,10 +36,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
-    "maze_data": null,
-    "disable_examples": "false"
-  },
-  "md5": "f326cd4c7aeaccdb08ede8d83a15c75e"
+    "disable_examples": "false",
+    "markdown_instructions": "Now let's set the background for your new game. Edit the _bg_ variable and select a new background Image from the dropdown.",
+    "maze_data": null
+  }
 }]]></config>
   <blocks/>
 </Studio>

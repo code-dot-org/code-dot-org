@@ -14,7 +14,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "instructions": "Take your \"my-shape\" variable and use it with this provided code to draw two identical green triangles that are 50 pixels in size.",
+    "instructions": "Take your my-shape variable and use it with this provided code to draw two identical green triangles that are 50 pixels in size.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -23,9 +23,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"MSM Defining Vars 3\",\r\n  \"callout_text\": \"Click here to find your variables\",\r\n  \"element_id\": \"[id=':4.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "disable_examples": "false"
-  },
-  "md5": "ae29c642fccfa6df19eea2e62a8f5e38"
+    "disable_examples": "false",
+    "markdown_instructions": "Take your _my-shape_ variable and use it with this provided code to draw two identical green triangles that are 50 pixels in size."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

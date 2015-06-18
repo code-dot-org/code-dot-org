@@ -15,6 +15,7 @@
   petition_message: 每個在學校的學生都應該有機會去學習電腦科學
   petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
   petition_sign_message_support: '如果你支持我們，請在這裡簽名。加入 # 已簽名的。'
+  petition_join_others: 參與其他活動
   name: 你的名字
   email: 電子郵件
   zipcode: 郵遞區號或國家
@@ -150,6 +151,9 @@
   homepage_hero_text_student5: '&ldquo;計算機科學，不是為他人的。它是為了現在在這裡的你。&rdquo;傑拉爾多，老師。'
   homepage_hero_text_teacher1: '&ldquo;編程啟發創意、 靈感和創新 &mdash; 它們都是在任何職業不可缺少的&rdquo;Floresa，老師'
   homepage_hero_text_teacher2: '&ldquo;這個課程得到 同學100%的投入、 參與和參加。&rdquo;亞當，老師'
+  homepage_hero_text_stat_loc: '#loc 行由學生撰寫的程式碼'
+  homepage_hero_text_stat_students: '#student_count 在程式碼工作室使用的學生帳號'
+  homepage_hero_text_stat_served: 一小時程式設計體驗:#served服務
   homepage_slot_text_hoc: 一小時的編程
   homepage_slot_text_frozen: 魔雪奇緣 安娜與艾莎
   homepage_slot_text_teacher: Teacher Dashboard
@@ -159,35 +163,34 @@
   homepage_slot_text_flappy: Flappy遊戲設計
   homepage_action_text_codevideo: 觀看影片
   homepage_action_text_teachervideo: 觀看影片
-  homepage_action_text_learn: 從今天開始學習
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_action_text_learn: 開始學習
+  homepage_action_text_signpetition: 意願書上簽名
+  homepage_signpetition_dropdown: 我同意 &#x25BE;
+  homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
+  homepage_banner_text_link: 瞭解更多資訊
   homepage_slot_text_title_hoc: 一小時的程式設計課程
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: 舉辦一個小時的程式設計活動。
+  homepage_slot_text_link_hocserved: '#服務。'
   homepage_slot_text_title_students: 學生
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: 瀏覽所有教案
+  homepage_slot_text_link_codestudio: 嘗試程式設計工作室
+  homepage_slot_text_link_local: 尋找地區性課程
+  homepage_slot_text_link_othercourses: 其他線上課程
+  homepage_slot_text_title_educators: 教育工作者
+  homepage_slot_text_blurb_educators: 教授您的學生。
+  homepage_slot_text_link_k5: K-5 年級課程
+  homepage_slot_text_link_fullcurriculum: 瞭昳所有的課程
+  homepage_slot_text_link_pd: 專業發展
+  homepage_slot_text_title_advocates: 宣導者
+  homepage_slot_text_blurb_advocates: 支援我們的工作
+  homepage_slot_text_link_stats: 瞭解統計資訊
+  homepage_slot_text_link_buy: 參與
+  homepage_slot_text_link_donate: 捐款
+  homepage_header_codestudio: 程式設計工作室學生的創作成品
+  homepage_header_donors: Code.org 感謝其支援者
+  homepage_donors_seall: 全部顯示
   homepage_donors_donate: 捐贈
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
@@ -339,11 +342,18 @@
   dashboard_students_url: 網址
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     按這裡</a> 是我們的隱私安全性文件，可以分享或列印給您的學生。
-  dashboard_curriculum_overview: 學前至五年級課程概述
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: 瀏覽所有教案
   dashboard_course1: 課程 1
   dashboard_course2: 課程 2：
   dashboard_course3: 課程 3：
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: 學前至五年級課程概述
+  dashboard_overview: Overview
   dashboard_sequence: '序列 '
   dashboard_framework: 主架構
   dashboard_standards: 標準
@@ -354,6 +364,10 @@
   dashboard_puzzle_solving: 解決謎題：
   dashboard_student_worksheet: 學生工作表
   dashboard_teacher_worksheet: 教師工作表
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: 學前
   dashboard_grade_other: 其他
   dashboard_login_word: 文字
@@ -381,6 +395,7 @@
   dashboard_sections_password_account_creation: 學生建立的文字密碼
   dashboard_sections_login_type_explanation: 本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。
   dashboard_faq: 常見問題集
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
@@ -412,7 +427,7 @@
   older_systems_subheading: 這些適用於較舊的 Web 瀏覽器。若要取用所有教案，請到 <a href="HTTP://browsehappy.com/"target="_blank">
     當代Web瀏覽器。</a>升級瀏覽器。
   mobile_devices: 用於行動裝置的自學教案
-  frozen_name: Code with Anna and Elsa
+  frozen_name: 與 Anna 和 Elsa 一起寫程式吧
   codeorg_name: 編寫您的第一個電腦程式
   codeintl_name: 編寫您的第一個電腦程式
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -576,11 +591,10 @@
     條件和基本演算法。在 34 種語言中可用。
   codeintl_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: 生物 el 美國勞軍聯合組織德聯合國"Vocabulario 機器人"predefinido，洛杉磯隊
+    descubrirán 科摩 guiarse de modo tal de llevar 卡波雷 específicas 罪 ser estas discutidas
+    previamente。埃斯特角城 segmento enseña 洛杉磯隊 la conexión 恩特雷 símbolos y acciones 歷史科摩拉
+    valiosa habilidad de depuración。
   khan_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
   khanes_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
   khanpt_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
@@ -850,3 +864,7 @@
   alice_beyond_longdescription: 愛麗絲計劃利用一種創新的程式設計環境支援3D 動畫創作 ，及提供跨年齡和年級的教學工具和教材來訓練學生的計算思維、
     解決問題技巧和電腦程式設計。
   sphero_beyond_longdescription: 無論你是一位教育家或父母， SPRK 給孩子一個有趣速成的機器人程式設計課程，並同時磨練孩子的數學和科學的技能。
+  compatibility_https_header: 請對Code.org啟用HTTPS (加密傳輸協定)
+  compatibility_https_message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a
+    href='%{it_requirements_url}'> 按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
+  compatibility_https_hide_this_warning: 隱藏此警告

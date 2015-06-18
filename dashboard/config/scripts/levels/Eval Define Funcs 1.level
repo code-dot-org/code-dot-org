@@ -6,7 +6,6 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Here's a new function called \"green-triangle\" that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +22,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
-  },
-  "md5": "ef066e07f19f282c8a02ee5411ca88ba"
+    "disable_examples": "false",
+    "markdown_instructions": "Here's a new function called _green-triangle_ that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle",
+    "instructions": "Here's a new function called green-triangle that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

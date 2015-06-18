@@ -1,5 +1,8 @@
 @import "color";
 @import "colpick.css";
+@import "style-constants";
+@import "skins/base.scss";
+@import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -12,6 +15,14 @@ div#visualization {
 
 div#visualization.with_padding {
   border: 1px solid #ddd;
+}
+
+div#visualizationResizeBar {
+  top: $workspace-headers-height;
+}
+
+#designToggleRow > div {
+  height: $workspace-headers-height;
 }
 
 /* Shrink the visualization area on small displays. */
@@ -37,6 +48,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -69,6 +81,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -101,6 +114,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -133,6 +147,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -165,6 +180,7 @@ div#visualization.with_padding {
   }
   div#visualizationResizeBar {
     left: $width;
+    line-height: $width;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -177,28 +193,6 @@ div#visualization.with_padding {
 }
 
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
-
-#divApplab {
-  overflow: hidden;
-  outline: none;
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#divApplab canvas {
-  position: absolute;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
 
 #visualizationResizeBar {
   margin-left: 2px;
@@ -213,18 +207,6 @@ div#visualization.with_padding {
 #debug-buttons {
   display: inline;
   white-space: normal;
-}
-
-#divApplab img {
-  opacity: 1.0;
-}
-
-#divApplab label {
-  display: inline-block;
-}
-
-#divApplab div {
-  overflow: hidden;
 }
 
 #runButton, #resetButton {
@@ -473,14 +455,6 @@ button.arrow:focus {
   font-size: 18px;
 }
 
-#designModeBox td {
-  vertical-align: top;
-}
-
-#design-manage-assets {
-  float: right;
-}
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
@@ -498,33 +472,6 @@ button.arrow:focus {
   background: $lighter_purple;
 }
 
-#divApplab {
-  box-sizing: border-box;
-  padding: 2px;
-}
-
-#divApplab input {
-  box-sizing: border-box;
-}
-
-#divApplab button {
-  padding: 7px 12px;
-  margin: 2px;
-  font-size: 14px;
-}
-
-.ace_gutter-cell.ace_error {
-  background-image: url('/blockly/media/skins/applab/gutterError.png');
-  background-size: 16px 16px;
-  background-position: 2px 0px;
-}
-
-.ace_gutter-cell.ace_warning {
-  background-image: url('/blockly/media/skins/applab/gutterWarn.png');
-  background-size: 16px 16px;
-  background-position: 2px 0px;
-}
-
 .design-mode-hidden {
   visibility: hidden;
 
@@ -536,4 +483,37 @@ button.arrow:focus {
 
 .divApplabDesignMode canvas {
   background-color: #eee;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+.justify-contents {
+  text-align: justify;
+  line-height: 0;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+.chooseAssetDropdownOption {
+  color: $link_color;
+  text-decoration: underline;
+}
+
+.droplet-dropdown {
+  z-index: 500 !important;
+}
+
+// We don't want -webkit-user-select: none for our contenteditable div, otherwise
+// we're unable to add text to the div in Safari.
+*[contenteditable] {
+  -webkit-user-select: auto !important;
 }

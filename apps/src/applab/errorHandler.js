@@ -1,4 +1,4 @@
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 
 var ErrorLevel = {
   WARNING: 'WARNING',
@@ -43,11 +43,8 @@ function outputError(warning, level, lineNum) {
 function handleError(opts, message) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onError && opts.interpreter === Applab.interpreter) {
-    Applab.eventQueue.push({
-      'fn': opts.onError,
-      'arguments': [message]
-    });
+  if (opts.onError && opts.JSInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(opts.onError, [message]);
   } else {
     outputApplabConsole(message);
   }

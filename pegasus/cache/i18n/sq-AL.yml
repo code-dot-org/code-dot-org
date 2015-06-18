@@ -18,6 +18,7 @@
   petition_sign_message: 'Nëse ju pranoni, nënshkruani emrin e juaj. Bashkangjitu
     me # të tjerë.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_join_others: 'Join # others'
   name: Emri
   email: Email
   zipcode: Kodi Postar ose Shteti
@@ -196,6 +197,9 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
+  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Ora e Kodimit
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -416,11 +420,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliko
     këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për
     studentët e tu.
-  dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Shiko të gjithë planet mësimore
   dashboard_course1: 'Kursi 1:'
   dashboard_course2: 'Kursi 2:'
   dashboard_course3: 'Kursi 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
+  dashboard_overview: Overview
   dashboard_sequence: Sekuencë
   dashboard_framework: Struktura
   dashboard_standards: Standartet
@@ -431,14 +442,18 @@
   dashboard_puzzle_solving: 'Zgjidhja-Puzzle-it:'
   dashboard_student_worksheet: puna studentit
   dashboard_teacher_worksheet: puna mësuesit
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Të tjera/ë
   dashboard_login_word: Fjalë
   dashboard_login_picture: Figurë
   dashboard_login_none: Email
   dashboard_new_password: fjalëkalim i ri
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: Pa nisur
+  dashboard_progress_in_progress: Në punë e sipër
   dashboard_progress_not_completed: e papërfunduar
   dashboard_progress_completed_too_many_blocks: e përfunduar, shumë blloqe
   dashboard_progress_completed_perfect: e përfunduar, perfekte
@@ -463,6 +478,7 @@
     nga këto tipe logini, <b>figura, fjalë ose email</b>, do të duash të zgjedhësh
     për një seksion.
   dashboard_faq: Pyetjet më të shpeshta
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë gjatë Javës së Edukimit CS
   learn_more: Mëso më Shumë
@@ -1141,3 +1157,8 @@
   sphero_beyond_longdescription: Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve
     një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë
     dhe shkencë.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: To increase security, we are switching to HTTPS on
+    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_hide_this_warning: Fshih këtë paralajmërim

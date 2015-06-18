@@ -29,8 +29,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
-    "disable_sharing": "false",
-    "maze_data": null
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

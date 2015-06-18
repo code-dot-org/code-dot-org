@@ -1,0 +1,37 @@
+name 'equity Intro'
+title 'Introduction to Equity PD'
+css 'k5pd'
+skip_dialog true
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Leading an Equity Session in PD >> Introduction
+<br/><br/>
+
+<table>
+
+<tr style="vertical-align: top;">
+<td width="410px"><img src="https://images.code.org/aba181ec72993d7640280d8da015c5ac-image-1434399746413.jpg" width="400px;" class="roundedPic lefted"/></td>
+<td><p>
+Equity can be a tricky thing to talk about, and if the host of the discussion is underprepared, the entire experience could end up feeling awkward, forced, or even patronizing.</p>
+
+<p>At Code.org, everything we do is created with a lens on equity.  From our online puzzles to our unplugged lessons and videos, we strive to provide a wonderful experience for every student in every classroom.
+</p>
+
+<p>We want to get everyone thinking about how to create an equitable environment with their lessons...even when providing professional development.</p></td> 
+</tr>
+</table>
+
+<br/>
+In this online PD, you will:
+<ul>
+<li>learn about the difference between equity and equality</li>
+<li>hear about how equity is about more than just race and gender</li>
+<li>learn to understand the importance of equity in computer science</li>
+<li>receive training on hosting a Code.org equity segment</li>
+</ul>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

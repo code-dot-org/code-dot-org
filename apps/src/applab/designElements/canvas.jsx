@@ -14,15 +14,12 @@ var CanvasProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
@@ -46,14 +43,7 @@ var CanvasProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
-
-    // TODO (brent):
-    // bold/italics/underline (p2)
-    // shape (p2)
-    // textAlignment (p2)
-    // enabled (p2)
-    // send back/forward
+      </div>);
   }
 });
 
@@ -61,8 +51,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '320px';
-    element.style.width = '480px';
+    element.style.height = '480px';
+    element.style.width = '320px';
 
     return element;
 

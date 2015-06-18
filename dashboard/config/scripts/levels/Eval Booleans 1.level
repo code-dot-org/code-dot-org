@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either \"true\" or \"false.\" Click \"Run\" to see how this expression evaluates.",
+    "instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click \"Run\" to see how this expression evaluates.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,9 +23,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "video_key": "alg_9_booleans",
-    "disable_examples": "false"
-  },
-  "md5": "ead26ddb4d2cb5078d6c06a2a49462c2"
+    "disable_examples": "false",
+    "markdown_instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either _true_ or _false_. Click \"Run\" to see how this expression evaluates."
+  }
 }]]></config>
   <blocks>
     <start_blocks>

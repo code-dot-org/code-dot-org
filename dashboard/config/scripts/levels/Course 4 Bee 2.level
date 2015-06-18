@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "Check each of the objects to see if it's a flower - if it is, collect nectar.",
+    "instructions": "Check each object to see if it's a flower. If it is, collect nectar...otherwise, you can ignore it!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,7 +16,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,0,0,0],[0,0,0,0,\"FC\",\"FC\",0,0],[0,0,0,0,\"FC\",0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-98,5,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "8",
+    "ideal": "12",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -27,10 +27,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
-  },
-  "md5": "0e0bde7721a7c16db745b38ff788e99c"
+    "disable_examples": "false"
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

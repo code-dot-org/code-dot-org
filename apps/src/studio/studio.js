@@ -20,6 +20,7 @@ var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
+var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
@@ -29,6 +30,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
+var JSInterpreter = require('../JSInterpreter');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -101,6 +103,17 @@ Studio.BLOCK_Y_COORDINATE = 20;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
+var AUTO_HANDLER_MAP = {
+  whenRun: 'whenGameStarts',
+  whenDown: 'when-down',
+  whenUp: 'when-up',
+  whenLeft: 'when-left',
+  whenRight: 'when-right',
+  whenTouchItem: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-any_item',
+};
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -147,6 +160,9 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
+  Studio.slowJSExecutionFactor = level.slowJSExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJSExecutionFactor +
+                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -184,9 +200,11 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
+  Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
+
   // Height and width of the goal and obstacles.
-  Studio.MARKER_HEIGHT = 100;
-  Studio.MARKER_WIDTH = 100;
+  Studio.MARKER_HEIGHT = level.markerHeight || 100;
+  Studio.MARKER_WIDTH = level.markerWidth || 100;
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
@@ -243,6 +261,10 @@ var drawMap = function () {
       lastLabel: 300,
       increment: 100
     });
+  }
+
+  if (level.wallMapCollisions) {
+    Studio.drawMapTiles(svg);
   }
 
   if (Studio.spriteStart_) {
@@ -368,6 +390,10 @@ var drawMap = function () {
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) <= xVariance) && (Math.abs(y1 - y2) <= yVariance);
+}
+
+function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
+  return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
 
 /**
@@ -572,10 +598,35 @@ function callHandler (name, allowQueueExtension) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.eventQueue.push({'fn': handler.func});
+        Studio.JSInterpreter.queueEvent(handler.func);
       }
     }
   });
+}
+
+Studio.initAutoHandlers = function (map) {
+  for (var funcName in map) {
+    var func = Studio.JSInterpreter.findGlobalFunction(funcName);
+    if (func) {
+      registerEventHandler(Studio.eventHandlers, map[funcName], func);
+    }
+  }
+};
+
+/**
+ * Performs movement on a list of Projectiles or Items. Removes items from the
+ * list automatically when they move out of bounds
+ */
+function performItemOrProjectileMoves (list) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    list[i].moveToNextPosition();
+    if (list[i].outOfBounds()) {
+      list[i].removeElement();
+      list.splice(i, 1);
+    } else {
+      list[i].display();
+    }
+  }
 }
 
 /**
@@ -595,40 +646,19 @@ Studio.callApiCode = function (name, func) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  var animationOnlyFrame = false;
+
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
   }
 
-  if (Studio.interpreter) {
-    var doneUserCodeStep = false;
-    // In each tick, we will step the interpreter multiple times in a tight
-    // loop as long as we are interpreting code that the user can't see
-    // (function aliases at the beginning, getCallback event loop at the end)
-    for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
-         stepsThisTick++) {
-      var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  Studio.cumulativeLength,
-                                                  Studio.userCodeStartOffset,
-                                                  Studio.userCodeLength,
-                                                  studioApp.editor);
-      try {
-        Studio.interpreter.step();
-        doneUserCodeStep = (-1 !== userCodeRow) &&
-                            Studio.interpreter.stateStack[0] &&
-                            Studio.interpreter.stateStack[0].done;
-      }
-      catch(err) {
-        Studio.executionError = err;
-        Studio.onPuzzleComplete();
-        return;
-      }
-    }
-  } else {
-    if (Studio.tickCount === 1) {
-      callHandler('whenGameStarts');
-    }
-    Studio.executeQueue('whenGameStarts');
+  if (Studio.tickCount === 1) {
+    callHandler('whenGameStarts');
+  }
+  Studio.executeQueue('whenGameStarts');
+
+  if (Studio.JSInterpreter) {
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJSExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -638,81 +668,89 @@ Studio.onTick = function() {
     Studio.executeQueue('whenSpriteClicked-' + i);
   }
 
-  // Run key event handlers for any keys that are down:
-  for (var key in KeyCodes) {
-    if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] === "keydown") {
-      switch (KeyCodes[key]) {
-        case KeyCodes.LEFT:
+  if (!animationOnlyFrame) {
+    // Run key event handlers for any keys that are down:
+    for (var key in KeyCodes) {
+      if (Studio.keyState[KeyCodes[key]] &&
+          Studio.keyState[KeyCodes[key]] === "keydown") {
+        switch (KeyCodes[key]) {
+          case KeyCodes.LEFT:
+            callHandler('when-left');
+            break;
+          case KeyCodes.UP:
+            callHandler('when-up');
+            break;
+          case KeyCodes.RIGHT:
+            callHandler('when-right');
+            break;
+          case KeyCodes.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var btn in ArrowIds) {
+      if (Studio.btnState[ArrowIds[btn]] &&
+          Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+        switch (ArrowIds[btn]) {
+          case ArrowIds.LEFT:
+            callHandler('when-left');
+            break;
+          case ArrowIds.UP:
+            callHandler('when-up');
+            break;
+          case ArrowIds.RIGHT:
+            callHandler('when-right');
+            break;
+          case ArrowIds.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var gesture in Studio.gesturesObserved) {
+      switch (gesture) {
+        case 'left':
           callHandler('when-left');
           break;
-        case KeyCodes.UP:
+        case 'up':
           callHandler('when-up');
           break;
-        case KeyCodes.RIGHT:
+        case 'right':
           callHandler('when-right');
           break;
-        case KeyCodes.DOWN:
+        case 'down':
           callHandler('when-down');
           break;
       }
-    }
-  }
-
-  for (var btn in ArrowIds) {
-    if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
-      switch (ArrowIds[btn]) {
-        case ArrowIds.LEFT:
-          callHandler('when-left');
-          break;
-        case ArrowIds.UP:
-          callHandler('when-up');
-          break;
-        case ArrowIds.RIGHT:
-          callHandler('when-right');
-          break;
-        case ArrowIds.DOWN:
-          callHandler('when-down');
-          break;
+      if (0 === Studio.gesturesObserved[gesture]--) {
+        delete Studio.gesturesObserved[gesture];
       }
     }
-  }
 
-  for (var gesture in Studio.gesturesObserved) {
-    switch (gesture) {
-      case 'left':
-        callHandler('when-left');
-        break;
-      case 'up':
-        callHandler('when-up');
-        break;
-      case 'right':
-        callHandler('when-right');
-        break;
-      case 'down':
-        callHandler('when-down');
-        break;
-    }
-    if (0 === Studio.gesturesObserved[gesture]--) {
-      delete Studio.gesturesObserved[gesture];
-    }
+    Studio.executeQueue('when-left');
+    Studio.executeQueue('when-up');
+    Studio.executeQueue('when-right');
+    Studio.executeQueue('when-down');
   }
-
-  Studio.executeQueue('when-left');
-  Studio.executeQueue('when-up');
-  Studio.executeQueue('when-right');
-  Studio.executeQueue('when-down');
 
   checkForCollisions();
 
+  if (Studio.JSInterpreter && !animationOnlyFrame) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
+  }
+
   for (i = 0; i < Studio.spriteCount; i++) {
-    performQueuedMoves(i);
+    if (!animationOnlyFrame) {
+      performQueuedMoves(i);
+    }
 
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
@@ -729,51 +767,138 @@ Studio.onTick = function() {
     Studio.displaySprite(i, isWalking);
   }
 
-  for (i = 0; i < Studio.projectiles.length; i++) {
-    Studio.projectiles[i].moveToNextPosition();
-    if (Studio.projectiles[i].outOfBounds()) {
-      Studio.projectiles[i].removeElement();
-      Studio.projectiles.splice(i, 1);
-      // decrement i because we just removed an item from the array. We want to
-      // keep i as the same value for the next iteration through this loop
-      i--;
-    } else {
-      Studio.projectiles[i].display();
-    }
-  }
+  performItemOrProjectileMoves(Studio.projectiles);
+  performItemOrProjectileMoves(Studio.items);
 
   if (checkFinished()) {
     Studio.onPuzzleComplete();
   }
 };
 
+function spriteCollisionDistance  (i1, i2, yAxis) {
+  var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
+  var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
+  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+}
+
+function spriteCollidableCollisionDistance (iS, collidable, yAxis) {
+  var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
+  var dim2 = yAxis ? collidable.height : collidable.width;
+  return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+}
+
+function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
+  var dim1 = yAxis ? collidable.height : collidable.width;
+  var dim2;
+  if (edgeName === 'left' || edgeName === 'right') {
+    dim2 = yAxis ? Studio.MAZE_HEIGHT : 0;
+  } else {
+    dim2 = yAxis ? 0 : Studio.MAZE_WIDTH;
+  }
+  return (dim1 + dim2) / 2;
+}
+
+/* Checks for collisions between an actor and a list of projectiles or items.
+ * Calls startCollision/endCollision and handleCollision for className, but not
+ * executeCollision, which is expected to be called afterwards by the caller.
+ */
+function handleActorCollisionsWithCollidableList (
+           spriteIndex, xCenter, yCenter, list, autoDisappear)
+{
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = list.length - 1; i >= 0; i--) {
+    var collidable = list[i];
+    var next = collidable.getNextPosition();
+    if (collisionTest(
+          xCenter,
+          next.x,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, false),
+          yCenter,
+          next.y,
+          spriteCollidableCollisionDistance(spriteIndex, collidable, true))) {
+      if (collidable.startCollision(spriteIndex)) {
+        Studio.currentEventParams = { eventObject: collidable };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple collidables before executing the queue
+        // below
+
+        // NOTE: not using collideSpriteWith() because collision state is
+        // tracked on the collidable in this case
+        handleCollision(spriteIndex, collidable.className, true);
+        Studio.currentEventParams = null;
+
+        // Make the projectile/item disappear automatically if this parameter
+        // is set:
+        if (autoDisappear) {
+          collidable.removeElement();
+          list.splice(i, 1);
+        }
+      }
+    } else {
+      collidable.endCollision(spriteIndex);
+    }
+  }
+}
+
+/* Checks for collisions between a collidable and all of the edges.
+ * Calls startCollision and endCollision on the projectile. The caller
+ * should pass in a function to handle the case when a new collision is
+ * detected. executeCollision() is expected to be called later by the caller.
+ */
+function handleEdgeCollisions (collidable, xPos, yPos, onCollided) {
+  for (var i = 0; i < EdgeClassNames.length && level.edgeCollisions; i++) {
+    var edgeXCenter, edgeYCenter;
+    var edgeClass = EdgeClassNames[i];
+    switch (edgeClass) {
+      case 'top':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = 0;
+        break;
+      case 'left':
+        edgeXCenter = 0;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+      case 'bottom':
+        edgeXCenter = Studio.MAZE_WIDTH / 2;
+        edgeYCenter = Studio.MAZE_HEIGHT;
+        break;
+      case 'right':
+        edgeXCenter = Studio.MAZE_WIDTH;
+        edgeYCenter = Studio.MAZE_HEIGHT / 2;
+        break;
+    }
+    if (collisionTest(
+          xPos,
+          edgeXCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, false),
+          yPos,
+          edgeYCenter,
+          edgeCollidableCollisionDistance(collidable, edgeClass, true))) {
+      if (collidable.startCollision(edgeClass)) {
+        onCollided(edgeClass);
+      }
+    } else {
+      collidable.endCollision(edgeClass);
+    }
+  }
+}
+
+/* Create an edge collision handler callback for a specific spriteIndex
+ */
+function createActorEdgeCollisionHandler (spriteIndex) {
+  return function (edgeClass) {
+    handleCollision(spriteIndex, edgeClass);
+  };
+}
+
 /* Check for collisions (note that we use the positions they are about
  * to attain with queued moves - this allows the moves to be canceled before
  * the actual movements take place)
  */
 function checkForCollisions() {
-  var spriteCollisionDistance = function (i1, i2, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
-    var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
-    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-  };
-  var projectileCollisionDistance = function (iS, iP, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-    var dim2 = yAxis ?
-                  Studio.projectiles[iP].height :
-                  Studio.projectiles[iP].width;
-    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
-  };
-  var edgeCollisionDistance = function (iS, edgeName, yAxis) {
-    var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-    var dim2;
-    if (edgeName === 'left' || edgeName === 'right') {
-      dim2 = yAxis ? Studio.MAZE_HEIGHT : 0;
-    } else {
-      dim2 = yAxis ? 0 : Studio.MAZE_WIDTH;
-    }
-    return (dim1 + dim2) / 2;
-  };
+
+  checkForItemCollisions();
 
   for (var i = 0; i < Studio.spriteCount; i++) {
     var sprite = Studio.sprite[i];
@@ -783,8 +908,10 @@ function checkForCollisions() {
     }
     var iHalfWidth = sprite.width / 2;
     var iHalfHeight = sprite.height / 2;
-    var iXCenter = getNextPosition(i, false, false) + iHalfWidth;
-    var iYCenter = getNextPosition(i, true, false) + iHalfHeight;
+    var iXPos = getNextPosition(i, false, false);
+    var iYPos = getNextPosition(i, true, false);
+    var iXCenter = iXPos + iHalfWidth;
+    var iYCenter = iYPos + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
       if (i == j || !Studio.sprite[j].visible) {
         continue;
@@ -806,75 +933,148 @@ function checkForCollisions() {
       }
       executeCollision(i, j);
     }
-    for (j = 0; j < Studio.projectiles.length; j++) {
-      var projectile = Studio.projectiles[j];
-      var next = projectile.getNextPosition();
-      if (collisionTest(iXCenter,
-                        next.x,
-                        projectileCollisionDistance(i, j, false),
-                        iYCenter,
-                        next.y,
-                        projectileCollisionDistance(i, j, true))) {
-        if (projectile.startCollision(i)) {
-          Studio.currentEventParams = { projectile: projectile };
-          // Allow cmdQueue extension (pass true) since this handler
-          // may be called for multiple projectiles before executing the queue
-          // below
 
-          // NOTE: not using collideSpriteWith() because collision state is
-          // tracked on the projectile in this case
-          handleCollision(i, projectile.className, true);
-          Studio.currentEventParams = null;
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.items,
+                                            level.removeItemsWhenActorCollides);
+
+    handleEdgeCollisions(
+        sprite,
+        iXCenter,
+        iYCenter,
+        createActorEdgeCollisionHandler(i));
+
+    if (level.wallMapCollisions) {
+      if (Studio.willSpriteTouchWall(sprite, iXPos, iYPos)) {
+        if (level.blockMovingIntoWalls) {
+          cancelQueuedMovements(i, false);
+          cancelQueuedMovements(i, true);
         }
+        Studio.collideSpriteWith(i, 'wall');
       } else {
-        projectile.endCollision(i);
+        sprite.endCollision('wall');
       }
     }
 
-    for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
-      var edgeXCenter, edgeYCenter;
-      var edgeClass = EdgeClassNames[j];
-      switch (edgeClass) {
-        case 'top':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = 0;
-          break;
-        case 'left':
-          edgeXCenter = 0;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-        case 'bottom':
-          edgeXCenter = Studio.MAZE_WIDTH / 2;
-          edgeYCenter = Studio.MAZE_HEIGHT;
-          break;
-        case 'right':
-          edgeXCenter = Studio.MAZE_WIDTH;
-          edgeYCenter = Studio.MAZE_HEIGHT / 2;
-          break;
-      }
-      if (collisionTest(iXCenter,
-                        edgeXCenter,
-                        edgeCollisionDistance(i, edgeClass, false),
-                        iYCenter,
-                        edgeYCenter,
-                        edgeCollisionDistance(i, edgeClass, true))) {
-        Studio.collideSpriteWith(i, edgeClass);
-      } else {
-        sprite.endCollision(edgeClass);
-      }
-    }
-
-    // Don't execute projectile collision queue(s) until we've handled all edge
-    // collisions. Not sure this is strictly necessary, but it means the code is
-    // the same as it was before this change.
+    // Don't execute actor collision queue(s) until we've handled all
+    // wall, projectile, item, and edge collisions. Not sure this is strictly
+    // necessary, but it preserves behavior that student code may depend upon.
+    executeCollision(i, 'wall');
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
     for (j = 0; j < skin.ProjectileClassNames.length; j++) {
       executeCollision(i, skin.ProjectileClassNames[j]);
     }
+    for (j = 0; j < skin.ItemClassNames.length; j++) {
+      executeCollision(i, skin.ItemClassNames[j]);
+    }
   }
 }
+
+/* Create an edge collision handler callback for a specific item
+ */
+function createItemEdgeCollisionHandler (item) {
+  return function (edgeClass) {
+    if (level.blockMovingIntoWalls) {
+      // TODO: Find a real direction!!
+      item.bounce();
+    }
+    Studio.currentEventParams = { eventObject: item };
+    // Allow cmdQueue extension (pass true) since this handler
+    // may be called for multiple items before executing the queue
+    // below
+    handleItemCollision(item.className, edgeClass, true);
+    Studio.currentEventParams = null;
+  };
+}
+
+function checkForItemCollisions () {
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = Studio.items[i];
+    var next = item.getNextPosition();
+
+    if (level.wallMapCollisions) {
+      if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
+        if (level.blockMovingIntoWalls) {
+          // TODO: Find a real direction!!
+          item.bounce();
+        }
+        Studio.currentEventParams = { eventObject: item };
+        // Allow cmdQueue extension (pass true) since this handler
+        // may be called for multiple items before executing the queue
+        // below
+        Studio.collideItemWith(item, 'wall', true);
+        Studio.currentEventParams = null;
+      } else {
+        item.endCollision('wall');
+      }
+    }
+
+    if (level.edgeCollisions) {
+      handleEdgeCollisions(
+          item,
+          next.x,
+          next.y,
+          createItemEdgeCollisionHandler(item));
+    }
+
+    // After collisions have been handled for these items, now execute the
+    // command queues for this item:
+    executeItemCollision(item.className, 'wall');
+    for (var j = 0; j < EdgeClassNames.length; j++) {
+      executeItemCollision(item.className, EdgeClassNames[j]);
+    }
+  }
+}
+
+/**
+ * Test to see if an actor sprite will be touching a wall given particular X/Y
+ * position coordinates (top-left)
+ */
+
+Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
+  var xCenter = xPos + sprite.width / 2;
+  var yCenter = yPos + sprite.height / 2;
+  return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
+};
+
+/**
+ * Test to see if a collidable will be touching a wall given particular X/Y
+ * position coordinates (center)
+ */
+
+Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
+  var colsOffset = Math.floor(xCenter) + 1;
+  var rowsOffset = Math.floor(yCenter) + 1;
+  var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
+  var iYGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
+  for (var col = Math.max(0, xGrid - colsOffset);
+       col < Math.min(Studio.COLS, xGrid + colsOffset);
+       col++) {
+    for (var row = Math.max(0, iYGrid - rowsOffset);
+         row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
+         row++) {
+      if (Studio.map[row][col] & SquareType.WALL) {
+        if (overlappingTest(xCenter,
+                            (col + 0.5) * Studio.SQUARE_SIZE,
+                            Studio.SQUARE_SIZE / 2 + collidable.width / 2,
+                            yCenter,
+                            (row + 0.5) * Studio.SQUARE_SIZE,
+                            Studio.SQUARE_SIZE / 2 + collidable.height / 2)) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+};
 
 Studio.onSvgDrag = function(e) {
   if (Studio.tickCount > 0) {
@@ -941,7 +1141,6 @@ Studio.onMouseUp = function(e) {
 Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
-  Studio.projectiles = [];
   Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
@@ -993,6 +1192,8 @@ Studio.initReadonly = function(config) {
   skin = config.skin;
   level = config.level;
   loadLevel();
+
+  config.appMsg = studioMsg;
 
   Studio.initSprites();
 
@@ -1050,6 +1251,11 @@ Studio.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  Studio.projectiles = [];
+  Studio.items = [];
+  Studio.eventHandlers = [];
+  Studio.perExecutionTimeouts = [];
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1113,10 +1319,10 @@ Studio.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
-                             delegate(this,
-                                      Studio.onArrowButtonUp,
-                                      ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+                               delegate(this,
+                                        Studio.onArrowButtonUp,
+                                        ArrowIds[btn]));
       dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
                                  delegate(this,
                                           Studio.onArrowButtonDown,
@@ -1158,6 +1364,12 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+  config.unusedConfig = [];
+  for (var handlerName in AUTO_HANDLER_MAP) {
+    config.unusedConfig.push(handlerName);
+  }
+
+  config.appMsg = studioMsg;
 
   Studio.initSprites();
 
@@ -1173,7 +1385,7 @@ Studio.init = function(config) {
   //  are changed at runtime)
   if (config.skin.preloadAssets) {
     preloadActorImages();
-    preloadProjectileImages();
+    preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
 };
@@ -1193,9 +1405,12 @@ var preloadBackgroundImages = function() {
   }
 };
 
-var preloadProjectileImages = function() {
+var preloadProjectileAndItemImages = function() {
   for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
     preloadImage(skin[skin.ProjectileClassNames[i]]);
+  }
+  for (i = 0; i < skin.ItemClassNames.length; i++) {
+    preloadImage(skin[skin.ItemClassNames[i]]);
   }
 };
 
@@ -1206,27 +1421,34 @@ var preloadActorImages = function() {
 };
 
 /**
+ * Clean up a list of Items or Projectiles.
+ */
+function resetItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].removeElement();
+  }
+  // Set length because list = [] will not modify array passed in by reference
+  list.length = 0;
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
-  if (Studio.eventHandlers) {
-    // Check the first command in all of the cmdQueues and clear the timeout
-    // if there is a pending wait command
-    Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue[0];
+  // Check the first command in all of the cmdQueues and clear the timeout
+  // if there is a pending wait command
+  Studio.eventHandlers.forEach(function (handler) {
+    var cmd = handler.cmdQueue[0];
 
-      if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
-        // Note: not calling waitCallback() or setting complete = true
-        window.clearTimeout(cmd.opts.waitTimeout);
-      }
-    });
-  }
+    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+      // Note: not calling waitCallback() or setting complete = true
+      window.clearTimeout(cmd.opts.waitTimeout);
+    }
+  });
   Studio.eventHandlers = [];
-  if (Studio.perExecutionTimeouts) {
-    Studio.perExecutionTimeouts.forEach(function (timeout) {
-      clearInterval(timeout);
-    });
-  }
+  Studio.perExecutionTimeouts.forEach(function (timeout) {
+    clearInterval(timeout);
+  });
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1234,12 +1456,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  if (Studio.projectiles) {
-    for (i = 0; i < Studio.projectiles.length; i++) {
-      Studio.projectiles[i].removeElement();
-    }
-    Studio.projectiles = [];
-  }
+  // Reset the projectiles and items (they include animation timers)
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 };
 
 /**
@@ -1260,12 +1479,6 @@ Studio.reset = function(first) {
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
-
-  // Reset the dynamic sprites list
-  while (Studio.projectiles.length) {
-    var projectile = Studio.projectiles.pop();
-    projectile.removeElement();
   }
 
   // True if we should fail before execution, even if freeplay
@@ -1304,9 +1517,8 @@ Studio.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
   if (studioApp.editCode) {
-    Studio.eventQueue = [];
     Studio.executionError = null;
-    Studio.interpreter = null;
+    Studio.JSInterpreter = null;
   }
 
   // Move sprites into position.
@@ -1314,6 +1526,8 @@ Studio.reset = function(first) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
+      displayX: Studio.spriteStart_[i].x,
+      displayY: Studio.spriteStart_[i].y,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
@@ -1342,6 +1556,9 @@ Studio.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
+
+  // Create Items that are specified on the map:
+  Studio.createLevelItems(svg);
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
@@ -1518,6 +1735,7 @@ var registerHandlersWithMultipleSpriteParams =
                        String(j));
     }
     skin.ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ItemClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -1545,17 +1763,6 @@ var defineProcedures = function (blockType) {
 };
 
 /**
- * A miniature runtime in the interpreted world calls this function repeatedly
- * to check to see if it should invoke any callbacks from within the
- * interpreted world. If the eventQueue is not empty, we will return an object
- * that contains an interpreted callback function (stored in "fn") and,
- * optionally, callback arguments (stored in "arguments")
- */
-var nativeGetCallback = function () {
-  return Studio.eventQueue.shift();
-};
-
-/**
  * Looks for failures that should prevent execution.
  * @returns {boolean} True if we have a pre-execution failure
  */
@@ -1577,6 +1784,55 @@ Studio.checkForPreExecutionFailure = function () {
 
   return false;
 };
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
+};
+
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  // TODO: consider how to notify the user without a debug console output area
+  if (console.log) {
+    console.log(text);
+  }
+  if (lineNum !== undefined) {
+    // TODO: connect this up
+    // annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
+
+function handleExecutionError(err, lineNumber) {
+  if (!lineNumber && err instanceof SyntaxError) {
+    // syntax errors came before execution (during parsing), so we need
+    // to determine the proper line number by looking at the exception
+    lineNumber = err.loc.line;
+    // Now select this location in the editor, since we know we didn't hit
+    // this while executing (in which case, it would already have been selected)
+
+    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+  }
+  if (!lineNumber && Studio.JSInterpreter) {
+    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  Studio.executionError = err;
+
+  // Call onPuzzleComplete() if we're not on a freeplay level:
+  if (!level.freePlay) {
+    Studio.onPuzzleComplete();
+  }
+}
 
 /**
  * Execute the story
@@ -1625,35 +1881,15 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
-    Studio.userCodeStartOffset = codeWhenRun.length;
-    codeWhenRun += studioApp.editor.getValue();
-    Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
-    // Append our mini-runtime after the user's code. This will spin and process
-    // callback functions:
-    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
-      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = studioApp.editor.aceEditor.getSession();
-    Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
-
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, null, scope, {
-                                        StudioApp: studioApp,
-                                        Studio: api,
-                                        Globals: Studio.Globals } );
-
-
-      var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction({
-          interpreter: interpreter,
-          nativeFunc: nativeGetCallback,
-      });
-      interpreter.setProperty(scope,
-                              'getCallback',
-                              interpreter.createNativeFunction(wrapper));
-    };
-    Studio.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    var codeWhenRun = studioApp.editor.getValue();
+    Studio.JSInterpreter = new JSInterpreter({
+      code: codeWhenRun,
+      blocks: dropletConfig.blocks,
+      enableEvents: true,
+      studioApp: studioApp,
+      onExecutionError: handleExecutionError,
+    });
+    Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -1768,9 +2004,9 @@ frameDirTableWalking[Direction.SOUTHWEST]  = 7;
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
-// Number of ticks between the last time the sprite moved and when we reset them
-// to face south.
-var TICKS_BEFORE_FACE_SOUTH = 5;
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
@@ -1831,6 +2067,97 @@ function spriteTotalFrames (index) {
   return sprite.frameCounts.normal + sprite.frameCounts.animation +
     sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
+
+/* Return the frame count for items or projectiles
+*/
+function getFrameCount (className, exceptionList, defaultCount) {
+  if (/.gif$/.test(skin[className])) {
+    return 1;
+  } else if (exceptionList && exceptionList[className]) {
+    return exceptionList[className];
+  }
+  return defaultCount;
+}
+
+function cellId(prefix, row, col) {
+  return prefix + '_' + row + '_' + col;
+}
+
+Studio.drawWallTile = function (svg, row, col) {
+
+  // Placeholder implementation: just drawing boxes with X's in them for now:
+
+  var backgroundId = cellId('wallBackground', row, col);
+  var textId = cellId('wallLetter', row, col);
+
+  var group = document.createElementNS(SVG_NS, 'g');
+  var background = document.createElementNS(SVG_NS, 'rect');
+  background.setAttribute('id', backgroundId);
+  background.setAttribute('width', Studio.SQUARE_SIZE);
+  background.setAttribute('height', Studio.SQUARE_SIZE);
+  background.setAttribute('x', col * Studio.SQUARE_SIZE);
+  background.setAttribute('y', row * Studio.SQUARE_SIZE);
+  background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+  background.setAttribute('stroke', '#000000');
+  background.setAttribute('stroke-width', 1);
+  group.appendChild(background);
+
+  var text = document.createElementNS(SVG_NS, 'text');
+  text.setAttribute('id', textId);
+  text.setAttribute('class', 'wall-letter');
+  text.setAttribute('width', Studio.SQUARE_SIZE);
+  text.setAttribute('height', Studio.SQUARE_SIZE);
+  text.setAttribute('x', (col + 0.5) * Studio.SQUARE_SIZE);
+  text.setAttribute('y', (row + 1) * Studio.SQUARE_SIZE - 12);
+  text.setAttribute('font-size', 32);
+  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('font-family', 'Verdana');
+  text.textContent = 'X';
+  group.appendChild(text);
+  svg.appendChild(group);
+};
+
+Studio.createLevelItems = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      for (var index = 0; index < skin.ItemClassNames.length; index++) {
+        if (constants.squareHasItemClass(index, mapVal)) {
+          var className = skin.ItemClassNames[index];
+          // Create item:
+          var itemOptions = {
+            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            className: className,
+            dir: Direction.NONE,
+            image: skin[className],
+            loop: true,
+            x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
+          };
+
+          var item = new Item(itemOptions);
+
+          item.createElement(svg);
+          // Display immediately (we can't assume it will be updated in onTick
+          // right away since this is called after 'Reset' as well as 'Run'
+          item.display();
+          Studio.items.push(item);
+        }
+      }
+    }
+  }
+};
+
+Studio.drawMapTiles = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      if (mapVal & SquareType.WALL) {
+        Studio.drawWallTile(svg, row, col);
+      }
+    }
+  }
+};
 
 var updateSpeechBubblePath = function (element) {
   var height = +element.getAttribute('height');
@@ -1925,17 +2252,33 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y - yOffset);
+  if (level.gridAlignedMovement) {
+    if (sprite.x > sprite.displayX) {
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.x < sprite.displayX) {
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+    if (sprite.y > sprite.displayY) {
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    } else if (sprite.y < sprite.displayY) {
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+    }
+  } else {
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
+  }
 
-  spriteClipRect.setAttribute('x', sprite.x);
-  spriteClipRect.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+
+  spriteClipRect.setAttribute('x', sprite.displayX);
+  spriteClipRect.setAttribute('y', sprite.displayY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.x);
-  unusedSpriteClipRect.setAttribute('y', sprite.y);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2083,6 +2426,34 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
+    case 'moveEast':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.EAST,
+      });
+      break;
+    case 'moveWest':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.WEST,
+      });
+      break;
+    case 'moveNorth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.NORTH,
+      });
+      break;
+    case 'moveSouth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.SOUTH,
+      });
+      break;
     case 'moveDistance':
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
@@ -2122,12 +2493,88 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
+    case 'addItemsToScene':
+      studioApp.highlight(cmd.id);
+      Studio.addItemsToScene(cmd.opts);
+      break;
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
       break;
   }
   return true;
+};
+
+Studio.addItemsToScene = function (opts) {
+  var directions = [
+    Direction.NORTH,
+    Direction.EAST,
+    Direction.SOUTH,
+    Direction.WEST,
+    Direction.NORTHEAST,
+    Direction.SOUTHEAST,
+    Direction.SOUTHWEST,
+    Direction.NORTHWEST,
+  ];
+
+  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // otherwise, create randomly placed items travelling in a random direction
+
+  var generateRandomItemPosition = function () {
+    // TODO (cpirich): check for edge collisions? (currently avoided by placing
+    // the items within the coordinate space (x/y min of Studio.HALF_SQUARE,
+    // max of max - Studio.HALF_SQUARE)
+
+    var pos = {};
+    if (level.gridAlignedMovement) {
+      pos.x = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
+      pos.y = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
+    } else {
+      pos.x = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+      pos.y = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+    }
+    return pos;
+  };
+
+  for (var i = 0; i < opts.number; i++) {
+    var direction = level.gridAlignedMovement ? Direction.NONE :
+                      directions[Math.floor(Math.random() * directions.length)];
+    var pos = generateRandomItemPosition();
+    var itemOptions = {
+      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
+      className: opts.className,
+      dir: direction,
+      image: skin[opts.className],
+      loop: true,
+      x: pos.x,
+      y: pos.y,
+    };
+
+    var item = new Item(itemOptions);
+
+    if (level.blockMovingIntoWalls) {
+      // TODO (cpirich): just move within the map looking for open spaces instead
+      // of randomly retrying random numbers
+
+      var numTries = 0;
+      while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
+        var newPos = generateRandomItemPosition();
+        item.x = newPos.x;
+        item.y = newPos.y;
+        numTries++;
+        if (numTries > 100) {
+          break;
+        }
+      }
+    }
+
+    item.createElement(document.getElementById('svgStudio'));
+    Studio.items.push(item);
+  }
 };
 
 Studio.vanishActor = function (opts) {
@@ -2269,8 +2716,14 @@ Studio.setSprite = function (opts) {
   sprite.frameCounts = skin[spriteValue].frameCounts;
   sprite.timePerFrame = skin[spriteValue].timePerFrame;
   // Reset height and width:
-  sprite.height = sprite.size * skin.spriteHeight;
-  sprite.width = sprite.size * skin.spriteWidth;
+  if (level.gridAlignedMovement) {
+    // This mode only works properly with square sprites
+    sprite.height = sprite.width = Studio.SQUARE_SIZE;
+    sprite.size = sprite.width / skin.spriteWidth;
+  } else {
+    sprite.height = sprite.size * skin.spriteHeight;
+    sprite.width = sprite.size * skin.spriteWidth;
+  }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
   }
@@ -2547,18 +3000,8 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
-  var frames;
-
-  if (/.gif$/.test(skin[options.className])) {
-    frames = 1;
-  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
-    frames = skin.specialProjectileFrames[options.className];
-  } else {
-    frames = skin.projectileFrames;
-  }
-
   var projectileOptions = {
-    frames: frames,
+    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -2597,10 +3040,10 @@ var doMakeProjectile = function (projectile, action) {
 };
 
 Studio.makeProjectile = function (opts) {
-  // opts.projectile will be set when we've had a collision with a particular
+  // opts.eventObject will be set when we've had a collision with a particular
   // projectile, otherwise we operate all all of that class
-  if (opts.projectile) {
-    doMakeProjectile(opts.projectile, opts.action);
+  if (opts.eventObject) {
+    doMakeProjectile(opts.eventObject, opts.action);
   } else {
     // No "current" projectile, so apply action to all of them of this class
     for (var i = 0; i < Studio.projectiles.length; i++) {
@@ -2710,8 +3153,12 @@ function isProjectileClass(className) {
   return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
+function isItemClass(className) {
+  return skin.ItemClassNames.indexOf(className) !== -1;
+}
+
 /**
- * Call the handler for src colliding with target
+ * Call the handler for an actor (src) colliding with target
  */
 function handleCollision(src, target, allowQueueExtension) {
   var prefix = 'whenSpriteCollided-' + src + '-';
@@ -2725,11 +3172,39 @@ function handleCollision(src, target, allowQueueExtension) {
     callHandler(prefix + 'any_edge', allowQueueExtension);
   } else if (isProjectileClass(target)) {
     callHandler(prefix + 'any_projectile', allowQueueExtension);
+  } else if (isItemClass(target)) {
+    callHandler(prefix + 'any_item', allowQueueExtension);
   }
 }
 
 /**
- * Execute the code for src colliding with target
+ * Call the handler for an item colliding with target
+ */
+function handleItemCollision(src, target, allowQueueExtension) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  callHandler(prefix + target, allowQueueExtension);
+
+  if (isEdgeClass(target)) {
+    callHandler(prefix + 'any_edge', allowQueueExtension);
+  }
+}
+
+/**
+ * Execute the code for an item colliding with target
+ */
+function executeItemCollision(src, target) {
+  var prefix = 'whenItemCollided-' + src + '-';
+
+  Studio.executeQueue(prefix + target);
+
+  if (isEdgeClass(target)) {
+    Studio.executeQueue(prefix + 'any_edge');
+  }
+}
+
+/**
+ * Execute the code for an actor (src) colliding with target
  */
 function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
@@ -2744,14 +3219,30 @@ function executeCollision(src, target) {
     Studio.executeQueue(srcPrefix + 'any_edge');
   } else if (isProjectileClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_projectile');
+  } else if (isItemClass(target)) {
+    Studio.executeQueue(srcPrefix + 'any_item');
   }
 }
 
 /**
- * Looks to see if sprite is already colliding with target.  If it isn't, it
+ * Looks to see if the item is already colliding with target.  If it
+ * isn't, it starts the collision and calls the relevant code.
+ * @param {Collidable} Collidable colliding
+ * @param {string/number} target Class name of the target. String for classes,
+ *   index if colliding with another sprite.
+ * @param {boolean} allowQueueExtension Passed on to callHandler
+ */
+Studio.collideItemWith = function (item, target, allowQueueExtension) {
+  if (item.startCollision(target)) {
+    handleItemCollision(item.className, target, allowQueueExtension);
+  }
+};
+
+/**
+ * Looks to see if the sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
- * @param {number} spriteIndex Index of the sprite colliding
- * @param {string/number} target Class name of the target. String for edges,
+ * @param {Collidable} Collidable colliding
+ * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
  */
@@ -2774,8 +3265,8 @@ Studio.setSpritePosition = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({'spriteIndex': opts.spriteIndex,
                'dontResetCollisions': samePosition});
-  sprite.x = opts.x;
-  sprite.y = opts.y;
+  sprite.displayX = sprite.x = opts.x;
+  sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -2791,8 +3282,8 @@ Studio.setSpriteXY = function (opts) {
     'spriteIndex': opts.spriteIndex,
     'dontResetCollisions': samePosition
   });
-  sprite.x = x;
-  sprite.y = y;
+  sprite.displayX = sprite.x = x;
+  sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -2800,39 +3291,63 @@ Studio.setSpriteXY = function (opts) {
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
+  var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   switch (opts.dir) {
     case Direction.NORTH:
-      sprite.y -= sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y - distance)) {
+        break;
+      }
+      sprite.y -= distance;
       if (sprite.y < 0 && !level.allowSpritesOutsidePlayspace) {
         sprite.y = 0;
       }
       break;
     case Direction.EAST:
-      sprite.x += sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x + distance, sprite.y)) {
+        break;
+      }
+      sprite.x += distance;
       var rightBoundary = Studio.MAZE_WIDTH - sprite.width;
       if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.x = rightBoundary;
       }
       break;
     case Direction.SOUTH:
-      sprite.y += sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y + distance)) {
+        break;
+      }
+      sprite.y += distance;
       var bottomBoundary = Studio.MAZE_HEIGHT - sprite.height;
       if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.y = bottomBoundary;
       }
       break;
     case Direction.WEST:
-      sprite.x -= sprite.speed;
+      if (level.blockMovingIntoWalls &&
+          Studio.willSpriteTouchWall(sprite, sprite.x - distance, sprite.y)) {
+        break;
+      }
+      sprite.x -= distance;
       if (sprite.x < 0 && !level.allowSpritesOutsidePlayspace) {
         sprite.x = 0;
       }
       break;
+  }
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    Studio.JSInterpreter.yield();
   }
 };
 
 Studio.moveDistance = function (opts) {
   if (!opts.started) {
     opts.started = true;
+    if (level.gridAlignedMovement) {
+      opts.distance =
+        Math.ceil(opts.distance / Studio.SQUARE_SIZE) * Studio.SQUARE_SIZE;
+    }
     opts.queuedDistance = opts.distance;
   }
 

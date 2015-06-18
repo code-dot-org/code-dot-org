@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "Anrop",
+  "ACTUAL": "Kall",
   "ADD": "Legg til",
   "ADD_COMMENT": "Legg til kommentar",
   "ADD_PARAMETER": "Legg til Parameter",
@@ -89,7 +89,7 @@
   "FUNCTIONAL_DESCRIPTION_LABEL": "Beskrivelse",
   "FUNCTIONAL_DOMAIN_LABEL": "Domene",
   "FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP": "Definer en funksjonell metode",
-  "FUNCTIONAL_RANGE_LABEL": "Utvalg",
+  "FUNCTIONAL_RANGE_LABEL": "Område",
   "FUNCTIONAL_VARIABLE_CREATE": "Lag en Variabel",
   "FUNCTIONAL_VARIABLE_HEADER": "Variabel",
   "FUNCTIONAL_VARIABLE_TYPE": "Type",

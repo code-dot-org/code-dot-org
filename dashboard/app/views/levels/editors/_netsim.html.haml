@@ -29,6 +29,13 @@
       %td
         Whether the "Add Router" (or "Add Room") button should be available
         to students.
+    %tr
+      %td= boolean_check_box f, :show_log_browser_button
+      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button'
+      %td
+        Whether the Log Browser (which exposes logs for all routers) will be
+        availble, both from the lobby and from the Router tab.
+
 
 %h3 Simulation Configuration
 .field
@@ -72,6 +79,19 @@
         for messages to travel between routers, connecting the whole shard.
         Messages with a toAddress not found in the local subnet will be sent
         toward the first matching node found elsewhere on the shard.
+.field
+  = f.label :minimum_extra_hops, 'Minimum extra hops'
+  %p
+    Fewest non-destination routers an inter-router message should try to visit
+    before going to its destination router.  Number of hops can be lower if
+    network conditions don't allow it.
+  = f.number_field :minimum_extra_hops
+.field
+  = f.label :maximum_extra_hops, 'Maximum extra hops'
+  %p
+    Most non-destination routers an inter-router message should try to visit
+    before going to its destination router.
+  = f.number_field :maximum_extra_hops
 
 %h3 Packet Headers
 .field
@@ -270,6 +290,15 @@
     two, so it's probably ideal to give a power of two here.
     Can also use "Infinity".
   = f.text_field :default_router_memory, placeholder: 'Memory in bits, e.g. "1024" or "Infinity".'
+.field
+  = f.label :default_random_drop_chance, 'Default random drop chance'
+  %p
+    Odds that a packet that would otherwise be successfully routed will instead
+    be dropped by the router for no reason, to simulate unreliable network
+    conditions.  Given as a value in the range (0-1) where 0 indicates 0% drop
+    rate (fully reliable) and 1 indicates 100% drop rate (routing will not work
+    at all!)
+  = f.number_field :default_random_drop_chance, :min => 0, :max => 1, :step => 0.01
 
 %h3 DNS Tab
 .field
