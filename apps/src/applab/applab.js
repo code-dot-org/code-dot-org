@@ -634,6 +634,18 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
 
+    // This button and handler duplicate a button in DesignToggleRow.jsx
+    // and should be removed once that component is no longer hidden from
+    // regular users.
+    var viewDataButton = document.getElementById('temporaryViewDataButton');
+    if (viewDataButton) {
+      // Simulate a run button click, to load the channel id.
+      var viewDataClick = studioApp.runButtonClickWrapper.bind(
+          studioApp, Applab.onViewData);
+      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
+    }
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow(config.level.hideDesignMode);
