@@ -329,6 +329,7 @@ $debug-commands-column-width: 270px;
 
 .debug-commands, .debug-console {
   display: block;
+  background-color: $white;
   border: 1px solid #ddd;
   position: absolute;
   top: $resize-bar-width + $workspace-headers-height;
@@ -338,7 +339,6 @@ $debug-commands-column-width: 270px;
 .debug-commands {
   left: 0;
   width: $debug-commands-column-width;
-  background-color: $white;
   text-align: center;
 }
 
@@ -352,14 +352,17 @@ $debug-commands-column-width: 270px;
   font-size: 12px;
 }
 
+$debug-console-left-padding: 3px;
+$debug-prompt-width: 15px;
+$debug-input-height: 16px;
+
 .debug-input-prompt {
   position: absolute;
   bottom: 0;
-  height: 16px;
+  height: $debug-input-height;
   display: block;
-  left: 0;
-  width: 15px;
-  background-color: white;
+  left: $debug-console-left-padding;
+  width: $debug-prompt-width;
 }
 
 .debug-input, .debug-output {
@@ -367,13 +370,13 @@ $debug-commands-column-width: 270px;
   border-width: 0px;
   padding: 0px;
   outline: none;
-  background-color: white;
 }
 
 .debug-output {
   top: 0;
-  bottom: 16px;
-  width: 100%;
+  bottom: $debug-input-height;
+  left: $debug-console-left-padding;
+  right: 0;
   overflow: auto;
   line-height: normal;
   cursor: text;
@@ -382,9 +385,9 @@ $debug-commands-column-width: 270px;
 
 .debug-input {
   bottom: 0;
-  max-height: 16px;
-  height: 16px;
-  left: 15px;
+  max-height: $debug-input-height;
+  height: $debug-input-height;
+  left: $debug-console-left-padding + $debug-prompt-width;
   right: 0;
   margin-top: -3px;
   -moz-user-select: text;
