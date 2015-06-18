@@ -538,10 +538,14 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configureDesignToggleRow = function (hidden) {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
+  }
+
+  if (hidden) {
+    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
