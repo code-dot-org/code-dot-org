@@ -35,13 +35,13 @@
     overflow: hidden;
   }
 
-  input {
-    box-sizing: border-box;
-  }
-
   button {
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px;
+  }
+
+  input, div, button, select {
+    line-height: 1.2em;
   }
 }
