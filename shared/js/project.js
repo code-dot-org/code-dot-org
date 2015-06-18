@@ -63,14 +63,14 @@ module.exports = {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
             // URL with /edit - set hideSource to false
-            this.setAppOptionsForShareMode_(false);
+            setAppOptionsForShareMode(false);
           }
         }
       } else if (this.current && this.current.levelSource) {
         appOptions.level.lastAttempt = this.current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
-        this.setAppOptionsForShareMode_(true);
+        setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl_()) {
       this.current = {
@@ -80,25 +80,6 @@ module.exports = {
     }
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
-    }
-  },
-  setAppOptionsForShareMode_: function (hideSource) {
-    appOptions.readonlyWorkspace = true;
-    appOptions.callouts = [];
-    appOptions.share = true;
-    appOptions.hideSource = hideSource;
-    // Important to call determineNoPadding() after setting hideSource value
-    appOptions.noPadding = this.determineNoPadding_();
-  },
-  determineNoPadding_: function () {
-    switch (appOptions.app) {
-      case 'applab':
-      case 'flappy':
-      case 'studio':
-      case 'bounce':
-        return appOptions.isMobile && appOptions.hideSource;
-      default:
-        return false;
     }
   },
   updateTimestamp: function () {
@@ -111,7 +92,7 @@ module.exports = {
       $('.project_updated_at').text("Not saved"); // TODO i18n
     }
   },
-  appToProjectUrl_: function () {
+  appToProjectUrl: function () {
     switch (appOptions.app) {
       case 'applab':
         return '/p/applab';
@@ -133,7 +114,7 @@ module.exports = {
     var channelId = this.current.id;
     this.current.levelSource = source;
     this.current.levelHtml = window.Applab && Applab.getHtml();
-    this.current.level = this.appToProjectUrl_();
+    this.current.level = this.appToProjectUrl();
 
     if (channelId && this.current.isOwner) {
       channels.update(channelId, this.current, function (err, data) {
@@ -285,4 +266,25 @@ function parseHash() {
     channelId: channelId,
     isEditingProject: isEditingProject
   };
+}
+
+function setAppOptionsForShareMode(hideSource) {
+  appOptions.readonlyWorkspace = true;
+  appOptions.callouts = [];
+  appOptions.share = true;
+  appOptions.hideSource = hideSource;
+  // Important to call determineNoPadding() after setting hideSource value
+  appOptions.noPadding = determineNoPadding();
+}
+
+function determineNoPadding() {
+  switch (appOptions.app) {
+    case 'applab':
+    case 'flappy':
+    case 'studio':
+    case 'bounce':
+      return appOptions.isMobile && appOptions.hideSource;
+    default:
+      return false;
+  }
 }
