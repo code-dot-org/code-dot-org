@@ -45,3 +45,14 @@
     outline: 0;
   }
 }
+
+#divApplab.appModern.divApplabDesignMode {
+
+  img {
+    background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat;
+  }
+
+  canvas {
+    background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat;
+  }
+}
