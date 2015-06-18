@@ -1,11 +1,14 @@
 /* global $ */
 
 var React = require('react');
+var DesignToolboxElement = require('./DesignToolboxElement.jsx');
 var applabMsg = require('./locale');
+
+var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
 module.exports = React.createClass({
   propTypes: {
-    handleDragStart: React.PropTypes.func,
+    handleDragStart: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
   },
 
@@ -24,34 +27,57 @@ module.exports = React.createClass({
     return (
       <div id="design-toolbox" style={toolboxStyle}>
         <p>{applabMsg.designToolboxDescription()}</p>
-        <div data-element-type="BUTTON" className="new-design-element">button</div>
-        <div data-element-type="LABEL" className="new-design-element">label</div>
-        <div data-element-type="TEXT_INPUT" className="new-design-element">input</div>
-        <div data-element-type="TEXT_AREA" className="new-design-element">text area</div>
-        <div data-element-type="CHECKBOX" className="new-design-element">checkbox</div>
-        <div data-element-type="RADIO_BUTTON" className="new-design-element">radio button</div>
-        <div data-element-type="DROPDOWN" className="new-design-element">dropdown</div>
-        <div data-element-type="IMAGE" className="new-design-element">image</div>
-        <div data-element-type="CANVAS" className="new-design-element">canvas</div>
-        <div data-element-type="SCREEN" className="new-design-element">screen</div>
+        <DesignToolboxElement
+            imageUrl={IMAGE_BASE_URL + 'button.png'}
+            desc={'Button'}
+            elementType={'BUTTON'}
+            handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'input.png'}
+          desc={'Text Input'}
+          elementType={'TEXT_INPUT'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'label.png'}
+          desc={'Plain Text'}
+          elementType={'LABEL'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'dropdown.png'}
+          desc={'Dropdown'}
+          elementType={'DROPDOWN'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'radio.png'}
+          desc={'Radio Button'}
+          elementType={'RADIO_BUTTON'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'checkbox.png'}
+          desc={'Checkbox'}
+          elementType={'CHECKBOX'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'image.png'}
+          desc={'Image'}
+          elementType={'IMAGE'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'canvas.png'}
+          desc={'Canvas'}
+          elementType={'CANVAS'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'screen.png'}
+          desc={'Screen'}
+          elementType={'SCREEN'}
+          handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'textarea.png'}
+          desc={'Text Area'}
+          elementType={'TEXT_AREA'}
+          handleDragStart={this.props.handleDragStart} />
       </div>
     );
-  },
-
-  componentDidMount: function () {
-    this.makeDraggable();
-  },
-  componentDidUpdate: function () {
-    this.makeDraggable();
-  },
-  makeDraggable: function () {
-    $(this.getDOMNode()).find(".new-design-element").draggable({
-      containment: "#codeApp",
-      helper: "clone",
-      appendTo: "#codeApp",
-      revert: 'invalid',
-      zIndex: 2,
-      start: this.props.handleDragStart
-    });
   }
 });

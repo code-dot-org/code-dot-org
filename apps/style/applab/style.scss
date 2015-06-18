@@ -442,19 +442,6 @@ button.arrow:focus {
   }
 }
 
-.new-design-element {
-  width: 120px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
@@ -516,4 +503,11 @@ button.arrow:focus {
 // we're unable to add text to the div in Safari.
 *[contenteditable] {
   -webkit-user-select: auto !important;
+}
+
+// TODO(dave): move these styles into DesignToolboxElement
+// once we are done experimenting with them.
+.new-design-element {
+  // 60% of 120px. Specify in px to preserve width when cloning/dragging.
+  width: 72px;
 }
