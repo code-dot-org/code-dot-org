@@ -948,10 +948,10 @@ Applab.init = function(config) {
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow();
+    designMode.configureDesignToggleRow(config.level.hideDesignMode);
 
-    // Start out in regular mode. Eventually likely want this to be a level setting
-    designMode.toggleDesignMode(false);
+    var startInDesignMode = !!config.level.designModeAtStart;
+    designMode.toggleDesignMode(startInDesignMode);
 
     designMode.configureDragAndDrop();
   }
@@ -2675,10 +2675,14 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configureDesignToggleRow = function (hidden) {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
+  }
+
+  if (hidden) {
+    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
