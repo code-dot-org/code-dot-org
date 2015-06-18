@@ -356,10 +356,12 @@
   dashboard_curriculum_k5_title: "K-5 Educator Resources"
   dashboard_curriculum_middle_title: "Middle School Educator Resources"
   dashboard_curriculum_high_title: "High School Educator Resources"
+  dashboard_lesson_plans: "Lesson Plans"
   dashboard_view_all_lesson_plans: "View all lesson plans"
   dashboard_course1: 'Course 1:'
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
+  dashboard_course4: 'Course 4 (beta): '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Overview"
@@ -528,7 +530,7 @@
   scratch_platformtext: "Desktop-only web browsers (not tablets)"
   lightbot_platformtext: "ALL browsers and iOS, Android, or Game Console"
   thinkersmith_platformtext: "Unplugged"
-  condcards_platformtext: "Unuplugged"
+  condcards_platformtext: "Unplugged"
   lightbotintl_platformtext: "iOS, Android (or web browser)"
   codehs_platformtext: "Modern browsers. (Follow-on course requires  $$)"
   codecademy_platformtext: "Modern web browsers. iOS, Android apps"
