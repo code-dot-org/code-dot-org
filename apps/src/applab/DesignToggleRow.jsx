@@ -2,6 +2,7 @@
 
 var React = require('react');
 var msg = require('../locale');
+var applabMsg = require('./locale');
 
 var NEW_SCREEN = 'New screen...';
 
@@ -16,6 +17,7 @@ module.exports = React.createClass({
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
+    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired
   },
@@ -54,6 +56,7 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var showDataButton;
     var selectDropdown;
     var dropdownStyle = {
       display: 'inline-block',
@@ -93,7 +96,24 @@ module.exports = React.createClass({
     };
 
 
-    if (this.state.mode === Mode.DESIGN) {
+    var showDataButtonStyle = $.extend({}, buttonStyle, buttonSecondary);
+
+    var iconStyle = {
+      margin: '0 0.3em'
+    };
+
+    if (this.state.mode === Mode.CODE) {
+      showDataButton = (
+        <button
+            id='viewDataButton'
+            style={showDataButtonStyle}
+            className='no-outline'
+            onClick={this.props.onViewDataButton}>
+          <i className='fa fa-database' style={iconStyle}></i>
+          {applabMsg.viewData()}
+        </button>
+      );
+    } else if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
         return <option key={item}>{item}</option>;
       });
@@ -131,6 +151,7 @@ module.exports = React.createClass({
         </button>
         {' ' /* Needed for "text-align: justify;" to work. */ }
         {selectDropdown}
+        {showDataButton}
       </div>
     );
   }
