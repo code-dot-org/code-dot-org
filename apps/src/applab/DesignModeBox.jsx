@@ -1,7 +1,7 @@
 /* global $ */
 
 var React = require('react');
-var DesignToolbox = require('./designToolbox.jsx');
+var DesignToolbox = require('./DesignToolbox.jsx');
 var DesignProperties = require('./designProperties.jsx');
 
 module.exports = React.createClass({
