@@ -1,13 +1,10 @@
 
 %h2= I18n.t('dashboard_curriculum_k5_title')
 %p
-  %a{href: "/curriculum/docs/k-5/overview"}
-    = I18n.t('dashboard_curriculum_overview')
-  |
-  %a{href: "/curriculum/docs/k-5/complete.pdf", target: "_blank"}
-    = I18n.t('dashboard_view_all_lesson_plans')
-%p
   = I18n.t('dashboard_course1')
+  %a{href: "/curriculum/course1"}
+    = I18n.t('dashboard_lesson_plans')
+  |
   %a{href: "/curriculum/course1/docs/overview"}
     = I18n.t('dashboard_sequence')
   |
@@ -19,6 +16,9 @@
 
 %p
   = I18n.t('dashboard_course2')
+  %a{href: "/curriculum/course2"}
+    = I18n.t('dashboard_lesson_plans')
+  |
   %a{href: "/curriculum/course2/docs/overview"}
     = I18n.t('dashboard_sequence')
   |
@@ -30,6 +30,9 @@
 
 %p
   = I18n.t('dashboard_course3')
+  %a{href: "/curriculum/course3"}
+    = I18n.t('dashboard_lesson_plans')
+  |
   %a{href: "/curriculum/course3/docs/overview"}
     = I18n.t('dashboard_sequence')
   |
@@ -40,28 +43,13 @@
     = I18n.t('dashboard_standards')
 
 %p
-  %a{href: "curriculum/docs/k-5/implementation"}
-    = I18n.t('dashboard_implementation_guide')
-  |
-  %a{href: "/curriculum/docs/k-5/glossary"}
-    = I18n.t('dashboard_glossary')
-  |
-  %a{href: "/curriculum/docs/k-5/ClassroomStrategies.pdf", target: "_blank"}
-    = I18n.t('dashboard_classroom_strategies')
+  = I18n.t('dashboard_course4')
+  %a{href: "/curriculum/course4"}
+    = I18n.t('dashboard_lesson_plans') 
+
 %p
-  = I18n.t('dashboard_debugging')
-  %a{href: "/curriculum/docs/k-5/DebuggingStudent.pdf", target: "_blank"}
-    = I18n.t('dashboard_student_worksheet')
-  |
-  %a{href: "/curriculum/docs/k-5/DebuggingTeacher.pdf", target: "_blank"}
-    = I18n.t('dashboard_teacher_worksheet')
-%p
-  = I18n.t('dashboard_puzzle_solving')
-  %a{href: "/curriculum/docs/k-5/PuzzleSolvingStudent.pdf", target: "_blank"}
-    = I18n.t('dashboard_student_worksheet')
-  |
-  %a{href: "/curriculum/docs/k-5/PuzzleSolvingTeacher.pdf", target: "_blank"}
-    = I18n.t('dashboard_teacher_worksheet')
+  %a{href: "/curriculum/docs/k-5/complete.pdf", target: "_blank"}
+    = I18n.t('dashboard_view_all_lesson_plans')
 
 %h2= I18n.t('dashboard_curriculum_middle_title')
 %p
