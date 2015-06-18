@@ -1,0 +1,48 @@
+// Base styles that apply to all apps
+
+#divApplab {
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 2px;
+
+  canvas {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  img {
+    opacity: 1.0;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  div {
+    overflow: hidden;
+  }
+
+  button {
+    padding: 7px 12px;
+    margin: 2px;
+    font-size: 14px;
+  }
+
+  input, div, button, select {
+    box-sizing: border-box;
+    line-height: 1.2em;
+  }
+}

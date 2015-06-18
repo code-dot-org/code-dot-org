@@ -1,6 +1,8 @@
 @import "color";
 @import "colpick.css";
 @import "style-constants";
+@import "skins/base.scss";
+@import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -235,18 +237,6 @@ $resize-bar-width: 13px;
 #debug-buttons {
   display: inline;
   white-space: normal;
-}
-
-#divApplab img {
-  opacity: 1.0;
-}
-
-#divApplab label {
-  display: inline-block;
-}
-
-#divApplab div {
-  overflow: hidden;
 }
 
 #runButton, #resetButton {
@@ -564,20 +554,6 @@ button.arrow:focus {
 
 .assetRow:hover {
   background: $lighter_purple;
-}
-
-#divApplab {
-  box-sizing: border-box;
-}
-
-#divApplab input {
-  box-sizing: border-box;
-}
-
-#divApplab button {
-  padding: 7px 12px;
-  margin: 2px;
-  font-size: 14px;
 }
 
 .design-mode-hidden {
