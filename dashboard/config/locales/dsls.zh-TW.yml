@@ -152,6 +152,39 @@
       Code Logo v3:
         Create images with bits and bytes.: 以 bits 與 bytes 創造圖像
         title: 標題
+      ECSPD Online U1D1-2:
+        Unit 1 Day 1-2: Unit 1 Day 1-2
+        description here: 在這裡描述一下
+      ECSPD Online U1D1-2 Forum:
+        U1D1-2 Forum: U1D1-2 Forum
+      ECSPD Online U1D1-2 Resources:
+        Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
+        description here: 在這裡描述一下
+      ECSPD Online U1D10: []
+      ECSPD Online U1D10 Forum:
+        Forum Pending: Forum Pending
+        Unit 1 Day 10 Forum: Unit 1 Day 10 Forum
+      ECSPD Online U1D10 Resources: []
+      ECSPD Online U1D11-14:
+        title: 標題
+      ECSPD Online U1D11-14 Resources: []
+      ECSPD Online U1D15-16: []
+      ECSPD Online U1D15-16 Resources: []
+      ECSPD Online U1D17-19: []
+      ECSPD Online U1D3-4:
+        'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
+      ECSPD Online U1D3-4 Resources:
+        'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
+      ECSPD Online U1D5-7: []
+      ECSPD Online U1D5-7 Resources: []
+      ECSPD Online U1D8-9: []
+      ECSPD Online U1D8-9 Resources: []
+      ECSPD Online Units:
+        Units covered: Units covered
+      ECSPD Online Welcome:
+        Welcome to ECS PD Online!: Welcome to ECS PD Online!
+      ECSPD Online intro:
+        Introduction: 介紹
       ECSPD PD Phases:
         ECSPD PD Phases: ECSPD PD Phases
       ECSPD PD details:
@@ -215,8 +248,10 @@
       OPD-K5 Keep Learning: []
       OPD-K5 Loops: []
       OPD-K5 Other Courses: []
+      OPD-K5 Outline: []
       OPD-K5 Pair: []
       OPD-K5 Participation: []
+      OPD-K5 PreSurvey: []
       OPD-K5 Problem Solving: []
       OPD-K5 Program: []
       OPD-K5 Puzzles: []
@@ -242,8 +277,10 @@
       OPD-K5 Using CS: []
       OPD-K5 Vocabulary: []
       OPD-K5 Welcome: []
+      OPD-K5 Welcome 2: []
       OPD-K5 What is CS: []
       OPD-K5 Why teach CS: []
+      OPD-K5 Younger Grades: []
       OPD-K5 Your Plan: []
       Odometer:
         Odometer: Odometer
@@ -445,8 +482,8 @@
           repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Student Lesson Introduction:
+        Impact of Innovation: Impact of Innovation
         description here: 在這裡描述一下
-        title: 標題
       U1L10 Student Lesson Introduction:
         description here: 在這裡描述一下
         title: 標題
@@ -470,6 +507,9 @@
         description here: 在這裡描述一下
         title: 標題
       U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
+        description here: 在這裡描述一下
+      U1L17 Student Lesson Introduction:
         description here: 在這裡描述一下
         title: 標題
       U1L2 Student Lesson Introduction:
@@ -508,8 +548,7 @@
       U2L10 Student Lesson Introduction:
         DNS in the Real World: 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
-        description here: 在這裡描述一下
-        title: 標題
+        HTTP and Abstraction: HTTP and Abstraction
       U2L12 Student Lesson Introduction:
         description here: 在這裡描述一下
         title: 標題
@@ -520,11 +559,10 @@
       U2L15 Student Lesson Introduction:
         Encryption Algorithms: Encryption Algorithms
       U2L16 Student Lesson Introduction:
-        description here: 在這裡描述一下
-        title: 標題
+        Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
       U2L17 Student Lesson Introduction:
+        Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
         description here: 在這裡描述一下
-        title: 標題
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
@@ -542,11 +580,10 @@
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
-        description here: 在這裡描述一下
-        title: 標題
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       U2L6 Student Lesson Introduction:
-        description here: 在這裡描述一下
-        title: 標題
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning
+          Tree
       U2L7 Student Lesson Introduction:
         description here: 在這裡描述一下
         title: 標題
@@ -697,6 +734,14 @@
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
       broadcast lesson plan: []
+      equity Intro:
+        Introduction to Equity PD: Introduction to Equity PD
+      equity in CS:
+        Equity in Computer Science: Equity in Computer Science
+      equity is more:
+        Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
+      equity v equality:
+        Equity Vs. Equality: Equity Vs. Equality
       facilitator test: []
       k5 what next 1: []
       sciPD Course Overview: []
@@ -834,6 +879,8 @@
       unique level name here:
         description here: 在這裡描述一下
         title: 標題
+      wn scratchjr 1:
+        Scratch Jr: Scratch Jr
     match:
       2-3 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -845,9 +892,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
-        Matching: Matching
+        Match the button combination to the dance moves.: 用按鍵組合完成跳舞動作
+        Matching: 配對
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
@@ -859,9 +905,8 @@
         <strong>O</strong>: <strong>N</strong>
         <strong>P</strong>: <strong>N</strong>
         <strong>Q</strong>: <strong>N</strong>
-        Matching: Matching
-        Use the key to match each code to its letter: Use the key to match each code
-          to its letter
+        Matching: 配對
+        Use the key to match each code to its letter: 用鑰匙來將代碼配對到字
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -870,7 +915,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program.: Match the grid to the program.
-        Matching: Matching
+        Matching: 配對
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
@@ -882,7 +927,7 @@
         Drag the blocks to match.: 拖曳方塊至符合位置。
         Instructions: 說明
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match: Maze Match
+        Maze Match: 迷宮比賽
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -891,7 +936,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program: Match the grid to the program
-        Matching: Matching
+        Matching: 配對
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
@@ -928,8 +973,8 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Bounce Matching
-        Match the events with the actions: Match the events with the actions
-        Matching: Matching
+        Match the events with the actions: 事件配合動作
+        Matching: 配對
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
@@ -938,8 +983,8 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
         Flappy Matching One: Flappy Matching One
-        Match the events with the actions: Match the events with the actions
-        Matching: Matching
+        Match the events with the actions: 事件配合動作
+        Matching: 配對
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
@@ -962,7 +1007,7 @@
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
           the steps in the Dice Race game to the order that they should appear in
           the algorithm.
-        Matching: Matching
+        Matching: 配對
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
@@ -976,10 +1021,10 @@
           6</h3>'
         '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side:
           2</h3>'
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
-          of these vehicles has been decomposed into smaller pieces. Match each vehicle
-          with its decomposed list.
-        Matching: Matching
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: |
+          每台車已經被分解成小部分
+          利用清單將車子組好
+        Matching: 配對
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
@@ -992,7 +1037,7 @@
         <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: Match
           each program to the word it makes, using the provided group of skills.
-        Matching: Matching
+        Matching: 配對
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
@@ -1004,7 +1049,7 @@
         Drag the blocks to match.: 拖曳方塊至符合位置。
         Instructions: 說明
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match: Maze Match
+        Maze Match: 迷宮比賽
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -1062,6 +1107,30 @@
           its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: 紅寶石
+      ECSPD Online U1D10 Assessment 1:
+        Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions
+          drawn from the data will be limited by the (relatively) small amount of
+          data.
+        0: '? Difficult for a computer to draw conclusions. Not easily converted to
+          a graph or data set. Difficult to compare empirically or quantitatively
+          with similar representations of data.'
+        1: ': Difficult for a computer to draw conclusions. Not easily converted to
+          a graph or data set. Difficult to compare empirically or quantitatively
+          with similar representations of data.'
+        2: '? Easily converted to a graph or data table. Can easily generate statistics
+          and draw simple conclusions. Can easily compare with similar representations
+          of data.'
+        3: ': Easily converted to a graph or data table. Can easily generate statistics
+          and draw simple conclusions. Can easily compare with similar representations
+          of data.'
+        'Image: Advantages': 'Image: Advantages'
+        'Image: Disadvantages': 'Image: Disadvantages'
+        'List of objects: Advantages': 'List of objects: Advantages'
+        'List of objects: Disadvantages': 'List of objects: Disadvantages'
+        4: '? More comprehensive set of data. Can be used to generate multiple different
+          data sets. Easy for a person to draw intuitive conclusions.'
+        5: ': More comprehensive set of data. Can be used to generate multiple different
+          data sets. Easy for a person to draw intuitive conclusions.'
       ECSPD phase matching:
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended
           in-person and online PD, focused on building pedagogical strategies and
@@ -1104,7 +1173,7 @@
         <br/><br/>below: <br/> <br/> 下面
         <br/><br/>next to: <br/> <br/> 旁邊
         Is the square next to, above, or below the ball?: 方塊在球的旁邊，上面或下面嗎？
-        Matching: Matching
+        Matching: 配對
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -1114,8 +1183,8 @@
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Match the shapes based on type.
-        Matching: Matching
+        Match the shapes based on type.: 利用類型來配對形狀
+        Matching: 配對
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -1125,8 +1194,8 @@
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        Match the shapes based on type.: Match the shapes based on type.
-        Matching: Matching
+        Match the shapes based on type.: 利用類型來配對形狀
+        Matching: 配對
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
@@ -1135,7 +1204,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
         Match the code to the stairs it draws.: Match the code to the stairs it draws.
-        Matching: Matching
+        Matching: 配對
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
@@ -1145,8 +1214,8 @@
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Match the blocks
-        Matching: Matching
+        Match the blocks: 配對方塊
+        Matching: 配對
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
@@ -1155,9 +1224,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
-        Matching: Matching
+        Match the button combination to the dance moves.: 用按鍵組合完成跳舞動作
+        Matching: 配對
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
@@ -1165,8 +1233,8 @@
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
-        Match the blocks: Match the blocks
-        Matching: Matching
+        Match the blocks: 配對方塊
+        Matching: 配對
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -1176,7 +1244,7 @@
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Match the Map to the arrow that gets the Flurb to the treasure: Match the
           Map to the arrow that gets the Flurb to the treasure
-        Matching: Matching
+        Matching: 配對
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -1189,8 +1257,8 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: 拖曳方塊至符合位置。
         Instructions: 說明
-        Match the puzzles and blocks: Match the puzzles and blocks
-        Matching: Matching
+        Match the puzzles and blocks: 謎題配對方塊
+        Matching: 配對
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -1198,9 +1266,8 @@
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match
-          the Map to the algorithm that gets the Flurb to the flowers.
-        Matching: Matching
+        Match the Map to the algorithm that gets the Flurb to the flowers.: 在地圖上利用演算法讓Flurb抵達到花
+        Matching: 配對
       Match circles to code:
         (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
         (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
@@ -1278,20 +1345,20 @@
           code
         Number: Number
         String: String
-        http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
-        http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
-        http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
+        https://studio.code.org/script_assets/pd/blue.png: https://studio.code.org/script_assets/pd/blue.png
+        https://studio.code.org/script_assets/pd/purple.png: https://studio.code.org/script_assets/pd/purple.png
+        https://studio.code.org/script_assets/pd/teal.png: https://studio.code.org/script_assets/pd/teal.png
       PDAlg block match:
         Block match: Block match
         Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match
           the expressions with the appropriate Circle of Evaluation or Evaluation
           Block
-        http://staging.studio.code.org/script_assets/pd/block1.png: http://staging.studio.code.org/script_assets/pd/block1.png
-        http://staging.studio.code.org/script_assets/pd/block2.png: http://staging.studio.code.org/script_assets/pd/block2.png
-        http://staging.studio.code.org/script_assets/pd/block3.png: http://staging.studio.code.org/script_assets/pd/block3.png
-        http://staging.studio.code.org/script_assets/pd/circle1.png: http://staging.studio.code.org/script_assets/pd/circle1.png
-        http://staging.studio.code.org/script_assets/pd/circle2.png: http://staging.studio.code.org/script_assets/pd/circle2.png
-        http://staging.studio.code.org/script_assets/pd/circle3.png: http://staging.studio.code.org/script_assets/pd/circle3.png
+        https://studio.code.org/script_assets/pd/block1.png: https://studio.code.org/script_assets/pd/block1.png
+        https://studio.code.org/script_assets/pd/block2.png: https://studio.code.org/script_assets/pd/block2.png
+        https://studio.code.org/script_assets/pd/block3.png: https://studio.code.org/script_assets/pd/block3.png
+        https://studio.code.org/script_assets/pd/circle1.png: https://studio.code.org/script_assets/pd/circle1.png
+        https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
+        https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
           Year Development: 2 days in-person and 10 hours online'
@@ -1344,6 +1411,25 @@
         Answer 1: Answer 1
         Question: '問題 '
         What is an unplugged activity?: What is an unplugged activity?
+      U1L16 - Matching File Compression Types:
+        BMP: BMP
+        Compressed Image - Lossless: Compressed Image - Lossless
+        Compressed Image - Lossless (256 color limit): Compressed Image - Lossless
+          (256 color limit)
+        Compressed Image - Lossy: Compressed Image - Lossy
+        Compressed Sound - Lossy: Compressed Sound - Lossy
+        Compressed Text - Lossless: Compressed Text - Lossless
+        GIF: GIF
+        JPEG: JPEG
+        MP3: MP3
+        Match the type of file with the description: Match the type of file with the
+          description
+        PNG: PNG
+        Uncompressed Image: Uncompressed Image
+        Uncompressed Sound: Uncompressed Sound
+        WAV: WAV
+        ZIP: ZIP
+        description here: 在這裡描述一下
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -1435,7 +1521,7 @@
         element text: element text
         elements: elements
         events: events
-        id: id
+        id: 身份
         mouseover: mouseover
         'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function()
           {...}):'
@@ -1524,7 +1610,7 @@
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: Matching
+        Matching: 配對
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
         Sydney: 雪梨
@@ -1535,21 +1621,6 @@
         Where is Brendan from?: Where is Brendan from?
         blue: 藍
         salt: 鹽
-      unique level name here:
-        A: A
-        B: B
-        C: C
-        Cycle: Cycle
-        D: D
-        E: 東
-        Edge: Edge
-        Graph: Graph
-        Graph Terminology: Graph Terminology
-        Look at diagram below and then match the proper term with what each label is pointing to.: Look
-          at diagram below and then match the proper term with what each label is
-          pointing to.
-        Node: Node
-        Weight: Weight
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
@@ -1601,8 +1672,7 @@
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: 要如何利用迴圈簡化序列
         Multiple Choice: 多選
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -1618,7 +1688,8 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: |
+          迷宮的多項選擇
         Which blocks work?: 哪些方塊有作用？
       2-3 Relay Programming Multi 1:
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
@@ -1626,15 +1697,13 @@
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Multiple Choice: 多選
-        Which program does not create this image?: Which program does not create this
-          image?
+        Which program does not create this image?: 哪個程式無法創建此圖
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: 多選
-        Which image-program combo does not contain mistakes?: Which image-program
-          combo does not contain mistakes?
+        Which image-program combo does not contain mistakes?: 哪一個圖片的程式不包含錯誤
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
@@ -1643,8 +1712,7 @@
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
-        Why won't this circle go all the way around?: Why won't this circle go all
-          the way around?
+        Why won't this circle go all the way around?: 為什麼圓形不會四處亂跑？
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
@@ -1652,8 +1720,7 @@
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
         Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
-        Pick the correct blocks to draw this image using the given functions: Pick
-          the correct blocks to draw this image using the given functions
+        Pick the correct blocks to draw this image using the given functions: 挑出正確的方塊並用給予的函數畫出此圖
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
@@ -1705,7 +1772,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
         Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
-        Which blocks collect all of the nectar?: Which blocks collect all of the nectar?
+        Which blocks collect all of the nectar?: 哪一個方塊搜集全部的花蜜
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
@@ -1719,11 +1786,10 @@
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
-        Brushing your teeth: Brushing your teeth
+        Brushing your teeth: 刷你的牙齒
         Multiple Choice: 多選
-        Shopping from a grocery list: Shopping from a grocery list
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
+        Shopping from a grocery list: 從購物清單購物
+        Which one of these items is hardest to describe an algorithm for?: 這些物品之中哪一個是最難來描述演算法的
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene is a _____ city.
         0: '? Here are three sentences. Which of the templates below correctly abstracts
@@ -1740,24 +1806,21 @@
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: 多選
-        Which of these pictures best represents crowdsourcing?: Which of these pictures
-          best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: 這些圖片哪些最能代表眾包?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
+        Brushing your hair: 梳理你的頭髮
+        Cleaning your room: 清掃你的房間
         Eating your dessert: Eating your dessert
         Multiple Choice: 多選
         Washing your face: Washing your face
-        Which one of these activities would be best for practicing crowdsourcing?: Which
-          one of these activities would be best for practicing crowdsourcing?
+        Which one of these activities would be best for practicing crowdsourcing?: 這些活動之中哪一個是群眾外包最佳的練習
       4-5 Digital Footprint Multi 1:
         Multiple Choice: 多選
-        Which piece of information listed below is okay to share on the internet?: Which
-          piece of information listed below is okay to share on the internet?
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: Your parent's credit card number
+        Which piece of information listed below is okay to share on the internet?: 下面列出的哪一條資訊在網路上分享是合適的
+        Your address: 您的位址
+        Your birthday: 你的生日
+        Your favorite food: 你最喜歡的食物
+        Your parent's credit card number: 你父母的信用卡卡號
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -1765,14 +1828,12 @@
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: 多選
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
-          you try to log on to code.org, which IP address is the DNS most likely to
-          take you to?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: 當您嘗試登錄到
+          code.org時，哪一個 IP 位址是 DNS 最有可能帶你去的?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
-          the DNS has sent you to the page at the IP address 100.42.50.110, which
-          website are you on?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: 如果
+          DNS 將你送至一個網頁（ IP 位址 100.42.50.110），那麼你在哪個網站?
         Multiple Choice: 多選
         code.org: code.org
         csisfun.com: csisfun.com
@@ -1807,9 +1868,8 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: 多選
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 下列程式<em>沒有</em>
+          產生和程式 1相同的序列?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -1818,8 +1878,7 @@
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        Which function creates a rectangle that can change its size?: Which function
-          creates a rectangle that can change its size?
+        Which function creates a rectangle that can change its size?: 哪個函式可以創造一個能變化大小的長方形
       4-5 artist loops multi 1:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
@@ -1828,24 +1887,22 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which blocks will create the design?: Which blocks will create the design?
+        Which blocks will create the design?: 哪個區塊將會創建設計
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick
-          the for loop that represents the following pattern:  5, 10, 15, 20, 25,
-          30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': '挑選出正確的
+          for 迴圈，表示以下模式: 5、 10、 15、 20、 25、 30、 35、 40、 45、 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
         Artist Multiple Choice: Artist Multiple Choice
-        Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw
-          a rectangle with a perimeter of 100?
+        Which blocks draw a rectangle with a perimeter of 100?: 哪個方塊能畫出周長100的長方形
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
@@ -1865,7 +1922,7 @@
         1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?'
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        Bee Conditionals Multiple Choice: 蜜蜂條件 多項選擇
         Choose the best blocks.: 選取最佳方塊。
       4-5 bee debug multi 1:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
@@ -1874,16 +1931,15 @@
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
-        Which version of the function will work?: Which version of the function will
-          work?
+        Bee Debug Multiple Choice: 蜜蜂除錯 多項選擇
+        Which version of the function will work?: 哪個版本的函式能夠運作
       4-5 bee loops multi 1:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
+        Bee Loops Multiple Choice: 蜜蜂迴圈 多項選擇
         Which blocks will solve the puzzle?: 哪些方塊可解決這一難題？
       4-5 farmer loops multi 1:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
@@ -1901,7 +1957,7 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: 迷宮條件 多項選擇
         Which blocks solve the puzzle?: 哪些方塊解決了這個難題？
       4-5 maze multi 1:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
@@ -1910,7 +1966,8 @@
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: |
+          迷宮的多項選擇
         Which blocks solve the puzzle?: 哪些方塊解決了這個難題？
       Baker test of multi can delete:
         2+3: 2+3
@@ -1947,6 +2004,26 @@
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      ECSPD Online U1D10 Assessment 2:
+        Connecting several data sets allows a more accurate representation of the underlying information.: Connecting
+          several data sets allows a more accurate representation of the underlying
+          information.
+        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data
+          mining is becoming so advanced it may one day be used to automatically generate
+          public policy decisions for us
+        Different representations of data can help us draw more meaningful conclusions about it.: Different
+          representations of data can help us draw more meaningful conclusions about
+          it.
+        0: '? In the previous video, David McCandless made several important points
+          about the representation and use of data. Which of the following was *not*
+          a main point of his?'
+        1: ': In the previous video, David McCandless made several important points
+          about the representation and use of data. Which of the following was *not*
+          a main point of his?'
+        Tell a Story with Data: Tell a Story with Data
+        The way data is represented can help us understand the data by telling a meaningful story.: The
+          way data is represented can help us understand the data by telling a meaningful
+          story.
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can
@@ -2029,8 +2106,7 @@
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
           500
         Multiple Choice: 多選
-        Which shape do these squares combine to make?: Which shape do these squares
-          combine to make?
+        Which shape do these squares combine to make?: 這些正方形將合成什麼圖形
       K-1 Artist Loops Multi 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
@@ -2070,8 +2146,7 @@
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: 要如何利用迴圈簡化序列
         Multiple Choice: 多選
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
@@ -2080,15 +2155,14 @@
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Multiple Choice: 多選
-        Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to
-          the treasure?
+        Which arrow gets the Flurb to the treasure?: 哪個箭頭將帶Flurb通往寶藏
       K-1 Keep it Private Multi 1:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: 多選
-        Which information should you <strong>not</strong> share online?: Which information
-          should you <strong>not</strong> share online?
+        Which information should you <strong>not</strong> share online?: 哪個資訊你 <strong>不應</strong>
+          分享至網路?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png,
           700
@@ -2131,24 +2205,21 @@
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
         Multiple Choice: 多選
-        Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb
-          to the flowers?
+        Which algorithm gets the Flurb to the flowers?: 哪個方式將帶Flurb通往花
       K-1 Plant a Seed Multi 1:
         /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
         Multiple Choice: 多選
-        Which step should go at the beginning of this algorithm?: Which step should
-          go at the beginning of this algorithm?
+        Which step should go at the beginning of this algorithm?: 演算法的第一步應該如何開始
       K-1 Plant a Seed Multi 2:
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
         Multiple Choice: 多選
-        Which step should fill in the blank for this algorithm?: Which step should
-          fill in the blank for this algorithm?
+        Which step should fill in the blank for this algorithm?: 哪一步應該要填入空格？
       K-1 Word Search Multi 1:
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
@@ -2172,24 +2243,23 @@
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE
-        Which word is spelled?: Which word is spelled?
+        Which word is spelled?: 哪個詞被拼出
       K-1 multi 4:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
-          of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        Which boy is the <large>helper</large>?: Which boy is the <large>helper</large>?
+        Driver and Helper: 司機與幫手
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 這些男孩中的一個是
+          <b>司機</b>。而另一個是 <b>幫手</b>。
+        Which boy is the <large>helper</large>?: 哪個男孩是 <large>幫手</large>?
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
-          of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        This time, which boy is the <large>driver</large>?: This time, which boy is
-          the <large>driver</large>?
+        Driver and Helper: 司機與幫手
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 這些男孩中的一個是
+          <b>司機</b>。而另一個是 <b>幫手</b>。
+        This time, which boy is the <large>driver</large>?: 這一次，哪個男孩是 <large>司機</large>?
       Math to Code 1:
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
@@ -2245,7 +2315,7 @@
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of
           these Evaluation Blocks will draw the image on the left?
-        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
       PDAlg Blocks Video:
         In which area of the screen do you click blocks together to write a program?: In
           which area of the screen do you click blocks together to write a program?
@@ -2423,6 +2493,15 @@
           * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
           * 7 + 3
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: 東
+        Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
+        Which one is the shortest path tree from the source node indicated?: Which
+          one is the shortest path tree from the source node indicated?
       U1L10 Assessment 1:
         2 bits: 2 bits
         3 bits: 3 bits
@@ -2490,14 +2569,6 @@
           most efficient method will require no more than what number of bits?'
         1: ': When sending a response to a question with four possible answers, the
           most efficient method will require no more than what number of bits?'
-      U1L4 Multiple Choice:
-        AAAA: AAAA
-        AABB: AABB
-        ABAB: ABAB
-        ABBB: ABBB
-        BBBB: BBBB
-        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination
-          and Binary Messages'
       U1L6 Assessment multiple choice:
         10: '10'
         12: '12'
@@ -2542,6 +2613,19 @@
         Why does the IP address of every device at a particular location start with the same numbers?: Why
           does the IP address of every device at a particular location start with
           the same numbers?
+      U2L05 Assessment 1:
+        'Packets: Assessment': 'Packets: Assessment'
+        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick
+          Two: Pick the two statements about packets and routing on the Internet which
+          are true.'
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP
+          depends on the infrastructure of the Internet to be reliable enough to ensure
+          no packets are lost in transmission
+        TCP ensures messages can be reliably transmitted across the Internet: TCP
+          ensures messages can be reliably transmitted across the Internet
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP
+          must account for the fact that packets may not arrive at a destination computer
+          in the intended order
       'U2L06 - MC: Which is an MST?':
         A: A
         B: B
@@ -2569,6 +2653,23 @@
           spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents
           a network
+      U2L08 Assessment 1:
+        11: '11'
+        5: '5'
+        6: '6'
+        8: '8'
+        9: '9'
+        12: '? Here is another router network. The table displays the current state
+          of the router table for router A. Take the role of a new router, Z, that
+          has just been connected to the network through router A. You have just compared
+          router tables with router A. Based on your current knowledge as router Z,
+          what is the cost of the most efficient way to send traffic to router E?'
+        13: ': Here is another router network. The table displays the current state
+          of the router table for router A. Take the role of a new router, Z, that
+          has just been connected to the network through router A. You have just compared
+          router tables with router A. Based on your current knowledge as router Z,
+          what is the cost of the most efficient way to send traffic to router E?'
+        Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It
           is inefficient to have everyone on the Internet maintain their own list
@@ -2621,6 +2722,26 @@
           are not - humans are better as breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why
           are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many users would an fixed-length IP address system using 6 bits support?: How
+          many users would an fixed-length IP address system using 6 bits support?
+        'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol:
+          Assessment 1'
+      U2L3 Assessment 3:
+        ? '? ''IP addresses contain information similar to addressing a letter where
+          you need include the state, zip code, street and number. This is called:'''
+        : 'IP addresses contain information similar to addressing a letter where you
+          need include the state, zip code, street and number. This is called:'
+        'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol:
+          Assessment 2'
+        abstraction: abstraction
+        hierarchy: hierarchy
+        packet: packet
+        protocol: protocol
       U3L01 Assessment2:
         Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the
           other, faces together
@@ -3133,12 +3254,6 @@
         Presidents: 總統
         This multiple choice is all about the presidents of the United States.: 這個多選題是有關於美國的總統。
         Who was the first president of the USA?: 美國第一任總統是誰？
-      unique level name here:
-        Question: '問題 '
-        description here: 在這裡描述一下
-        right answer: 正確的答案
-        title: 標題
-        wrong answer: 錯誤的答案
       valid contracts multi:
         Pick the best answer to the question.: 選擇問題的最佳答案。
         Valid Contracts: Valid Contracts
@@ -3195,18 +3310,34 @@
           Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
           or ((8 < x) and (x < 10)))
+        ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x)
+          && (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8
+          < x) AND (x < 10))
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
           ((8 < x) AND (x < 10))
+        ((1 < x) And (x < 5) Or (8 < x) And (x < 10)): ((1 < x) And (x < 5) Or (8
+          < x) And (x < 10))
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
           ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8
+          < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
           ((8 < x) and (x < 10))
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
         (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) &&
+          (x < 10)
+        (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x)
+          AND (x < 10)
+        (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x)
+          And (x < 10)
+        (1 < x) and (x < 5) or (8 < x) and (x < 10): (1 < x) and (x < 5) or (8 < x)
+          and (x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
           500
         Convert Blocks to Math: 將方塊轉換為數學
@@ -3294,6 +3425,51 @@
           PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD Online U1D1-2 Assessment 1:
+        What is a Computer?: What is a Computer?
+      ECSPD Online U1D1-2 Reflection:
+        'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is
+          a Computer? Reflection'
+      ECSPD Online U1D10 Reflection:
+        Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+        0: '? You have experienced the lesson both online and on the first day of
+          the in-person PD. Additionally, you have watched a TED talk about the representation
+          of data. What have you learned that you can take back to your classroom?
+          Use this space to record your ideas for this lesson. You will have a chance
+          to share your ideas and questions in a forum in the following level.'
+        1: ': You have experienced the lesson both online and on the first day of
+          the in-person PD. Additionally, you have watched a TED talk about the representation
+          of data. What have you learned that you can take back to your classroom?
+          Use this space to record your ideas for this lesson. You will have a chance
+          to share your ideas and questions in a forum in the following level.'
+      ECSPD Online U1D11-14 Reflection:
+        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: How
+          do you feel about the tools for this lesson? What challenges might they
+          pose in your classroom?
+        Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
+      ECSPD Online U1D15-16 Reflection:
+        Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
+        0: '? What can you take away from how you saw this lessons taught in PD? How
+          do you feel about the part of the lesson that was not taught in PD? How
+          do you plan to teach this lesson?'
+        1: ': What can you take away from how you saw this lessons taught in PD? How
+          do you feel about the part of the lesson that was not taught in PD? How
+          do you plan to teach this lesson?'
+      ECSPD Online U1D3-4 Reflection:
+        Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
+        What challenges do you think you and your students might have with the material covered in this lesson?: 'What
+          challenges do you think you and your students might have with the material
+          covered in this lesson? '
+      ECSPD Online U1D5-7 Reflection:
+        Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
+        What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson?: 'What
+          can you take away from how you saw this lessons taught in PD? How do you
+          plan to teach this lesson? '
+      ECSPD Online U1D8-9 Reflection:
+        Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
+        What challenges do you think you and your students might have with the material covered in this lesson?: What
+          challenges do you think you and your students might have with the material
+          covered in this lesson?
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -3380,6 +3556,7 @@
         Enter title here: 請輸入標題
       Trent Test Level:
         Enter title here: 請輸入標題
+      U1L1 - FR computer science word association: []
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
@@ -3504,6 +3681,15 @@
         'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L05 Reflection 1:
+        Enter your reflection here.: Enter your reflection here.
+        'Packets: Reflection': 'Packets: Reflection'
+      U2L08 Free Response 1:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 2:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 3:
+        'Router Table: Reflection': 'Router Table: Reflection'
       U2L09 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L09 Free Response Wrap Up:
@@ -3533,6 +3719,26 @@
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L17 Assessment 1:
+        Assessment Question 1: Assessment Question 1
+        Describe what it means for a problem to be "computationally hard.": Describe
+          what it means for a problem to be "computationally hard."
+      U2L17 Assessment 2:
+        Assessment Question 2: Assessment Question 2
+        How are computationally hard problems related to encryption?: How are computationally
+          hard problems related to encryption?
+      U2L17 Free Response Getting Started:
+        'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
+        0: '? List two problems that you think computers can not solve? What are the
+          characteristics of problems that are "hard" for computers?'
+        1: ': List two problems that you think computers can not solve? What are the
+          characteristics of problems that are "hard" for computers?'
+      U2L17 Free Response Wrap Up:
+        'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
+        0: '? If the TSP is unsolvable for finding an exact solution, how do you think
+          package delivery companies optimize their delivery routes?'
+        1: ': If the TSP is unsolvable for finding an exact solution, how do you think
+          package delivery companies optimize their delivery routes?'
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
       U2L18 Free Response Getting Started:
@@ -3549,6 +3755,12 @@
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L20 Free Response Wrap Up:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L3 Assessment 4:
+        'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing
+          Protocol: Assessment 3'
+        Why does it not make sense for users to be identified by their real names on the Internet?: Why
+          does it not make sense for users to be identified by their real names on
+          the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol:
           Getting Started'

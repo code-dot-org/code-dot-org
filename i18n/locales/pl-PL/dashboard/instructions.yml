@@ -351,9 +351,9 @@ pl:
       4-5 Nested Loops Assessment 1_instruction: Użyj zagnieżdżonej pętli, aby ukończyć projekt.
       4-5 While Loops 1_instruction: 'Doprowadź mnie do otworu i wypełnij go z dwoma szufelkami śmieci przy użyciu bloku "wypełnij" (fill).'
       4-5 While Loops 2_instruction: 'Doprowadź mnie do kupy śmieci i usuń je za pomocą 5 szufelek przy użyciu bloku "usuń" (remove).'
-      4-5 While Loops 3_instruction: 'Doprowadź mnie stosu i usunąć go, a następnie przejdź do otworu i wypełnij go całkowicie.  Wskazówka: Użyj możliwie jak najmniej bloków.'
-      4-5 While Loops 4_instruction: 'Wow, znalazłem naprawdę głęboki otwór! Nie wiem, ile szufelek śmieci potrzeba.  Czy potrafisz napisać program, który wypełni go do poziomu ziemi?  Wskazówka: Spróbuj użyć pętli "dopóki" (while).'
-      4-5 While Loops 5_instruction: Wow, teraz są dwa głębokie otwory! Czy potrafisz napisać program, który wypełnia je do poziomu ziemi?
+      4-5 While Loops 3_instruction: 'Doprowadź mnie do stosu i usuń go cały, a następnie przejdź do dziury i wypełnij ją całkowicie.  Wskazówka: Użyj możliwie jak najmniej bloków.'
+      4-5 While Loops 4_instruction: 'Wow, znalazłem naprawdę głęboką dziurę! Nie wiem, ile szufelek śmieci potrzeba.  Czy potrafisz napisać program, który wypełni ją do poziomu ziemi?  Wskazówka: Spróbuj użyć pętli "dopóki" (while).'
+      4-5 While Loops 5_instruction: Wow, teraz są dwie głębokie dziury! Czy potrafisz napisać program, który wypełnia je do poziomu ziemi?
       4-5 While Loops 6_instruction: Wow, tam jest duża kupa śmieci! Czy mógłbyś napisać program, który usuwa wszystko do poziomu ziemi?
       4-5 While Loops 7_instruction: Wow, teraz tam są trzy kupy śmieci! Czy mógłbyś napisać program, który usuwa każdą z nich aż do poziomu ziemi?
       4-5 While Loops 8_instruction: ' To naprawdę jest głęboki dół i duża kupa śmieci.  Ile trzeba usunąć szufli śmieci, aby wyrównać teren do poziomu ziemi?  Wskazówka: Użyj pętli "dopóki" (while).'
@@ -800,7 +800,7 @@ pl:
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Czy potrafisz doprowadzić mnie do świnki przy użyciu 5 bloków?
-      Course 4 2_instruction: Pszczółka chce nektaru. Pamiętaj, że nie wszystkie obiekty są kwiatami, upewniaj się więc, że nektar jest zbierany tylko kwiatów.
+      Course 4 2_instruction: Pszczółka chce nektaru. Pamiętaj, że nie wszystkie obiekty są kwiatami, upewniaj się więc, że nektar jest zbierany tylko z kwiatów.
       Course 4 Artist 1_instruction: 'Pomóż mi ukończyć rysowanie mojego pudełka. (Każda linia ma długość 300 pikseli) '
       Course 4 Artist 10_instruction: 'To czas na zabawę! Baw się rysując cokolwiek chcesz. '
       Course 4 Artist 2_instruction: Czy potrafisz powtórzyć ten kod, aby pomalować na szaro obszar poza kwadratem?
@@ -808,127 +808,44 @@ pl:
       Course 4 Artist 4_instruction: 'Ile stopni jest w okręgu?  Uzupełnij blok "powtórz" tą liczbą, by otrzymać koło kolorów.'
       Course 4 Artist 5_instruction: Narysuj drugą połowę tego wzoru tak, aby był symetryczny. Trójkąty są równoboczne i mają boki o długości 50 pikseli.
       Course 4 Artist 6_instruction: 'Uzupełnij kod, by narysować te trójkąty. Wskazówka: 3 trójkąty w rotacji 360 stopni.'
-      Course 4 Artist 7_instruction: 'Umieść tę pętlę wewnątrz innej pętli, narysować 10 trójkątów.  To się nazywa zagnieżdżoną pętlą.  Wskazówka: Tych 10 trójkąty wypełnia obrót o 360 stopni.  '
+      Course 4 Artist 7_instruction: 'Umieść tę pętlę wewnątrz innej pętli, aby narysować 10 trójkątów.  To się nazywa zagnieżdżoną pętlą.  Wskazówka: Tych 10 trójkąty wypełnia obrót o 360 stopni.  '
       Course 4 Artist 8_instruction: Narysuj to słońce powtarzając ten blok kodu 12 razy.
-      Course 4 Artist 9_instruction: 'Powtórz ten wzór 10 razy i bądź pewien, że  obracasz się między każdymi dwoma kształtami. Oto wskazówka, ile ma wynosić obrót: ile wynosi 360 podzielone przez 10?'
-      Course 4 Artist Binary 1_instruction: |
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to turn on the go from left
-        to right, top to bottom, filling in the squares when it sees a 1 and ignoring
-        it when it sees a 0. Run this code to see how the artist uses binary to draw
-        this pattern.
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
+      Course 4 Artist 9_instruction: 'Powtórz ten wzór 10 razy i bądź pewien, że  skręcasz się między każdymi dwoma kształtami. Oto wskazówka, ile ma wynosić skręt: ile wynosi 360 podzielone przez 10?'
+      Course 4 Artist Binary 1_instruction: Oto funkcja, która na podstawie binarnego łańcucha złożonego z jedynek i zer i kieruje artystę od lewej do prawej, od góry do dołu, wypełniającego kwadraty, gdy widzi 1 i ignorującego to, gdy widzi 0. Uruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch, by narysować ten wzór.
+      Course 4 Artist Binary 2_instruction: Które z tych binarnych łańcuchów możesz powtórzyć 8 razy, aby narysować ten obraz?
+      Course 4 Artist Binary 3_instruction: Czy potrafisz narysować ten wzór powtarzając binarny łańcuch złożony z trzech cyfr?
+      Course 4 Artist Binary 4_instruction: Każdy binarny łańcuch reprezentuje jeden wiersz tego obrazka. Czy potrafisz je zmienić tak, aby była rysowana uśmiechnięta buźka, a nie zmartwiona twarz?
       Course 4 Artist Binary 5_instruction: Który 6-cyfrowy binarny łańcuch, powtórzony 11 razy, narysuje ten obraz?
       Course 4 Artist Binary 6_instruction: Jaki jest najkrótszy łańcuch binarny, który możesz powtórzyć, by narysować ten obraz?
       Course 4 Artist Binary 7_instruction: Ukończ ten rysunek.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a higher
-        resolution canvas to draw on - 16 bits by 16 bits!
+      Course 4 Artist Binary Free Play 2_instruction: 'Dowolna zabawa: Tutaj jest płótno wyższej rozdzielczości do rysowania na nim - 16 bitów na 16 bitów!'
       Course 4 Artist Binary Free Play_instruction: 'Czas na zabawę: Narysuj cokolwiek tak jak z binary.'
-      Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For Loops 1_instruction: 'Narysuj ten trójkąt, który ma 50 pikseli. Wskazówka: Użyj bloku "powtarzaj" (repeat).'
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
-        and adds one side at a time until it draws a decagon (10 sides). Each side
-        should be 100 pixels long. Hint: 360 divided by the number of sides a shape
-        has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 12_instruction: |
-        That looked pretty cool, but now
-        I'd like to draw each shape next to the last one. This time each side is
-        20 pixels. Use a jump block to jump forward 40 pixels after each shape. 
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using For Loops. We've added a few generic variables for you
-        to use as well.
-      Course 4 Artist For Loops 2_instruction: |
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10. Take a look at
-        how I built the code then click on "Run" when you are ready to see it in
-        action. 
-      Course 4 Artist For Loops 3_instruction: |
-        The smallest triangle has 20 pixel
-        sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
-        than the last. Update the for loop to draw these triangles.
-      Course 4 Artist For Loops 4_instruction: |
-        Use a for loop to draw these squares.
-        They start at 50 pixels long, the largest is 300 pixels long, and each square
-        is 25 pixels larger than the last. I have given you almost all the code you
-        will need - you're missing one block, which one is it?
-      Course 4 Artist For Loops 5_instruction: |
-        Good job on the last puzzle! Let's
-        use that "counter" variable block again to draw this cool picture. 
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is a 20 pixels longer than the
-        last.
-      Course 4 Artist For Loops 8_instruction: |
-        The smallest line of this square
-        spiral is 10, the largest is 200, and each line is 10 pixels longer than the
-        last. Can you fill in the missing blocks to complete this awesome picture?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13_instruction: |
-        Check it out we have a new function
-        called "draw a line of squares". Feel free to take a look inside the function
-        block to see how we built it. Click on "Run" when your are ready for the
-        next puzzle.
-      Course 4 Artist Functions 14_instruction: |
-        You're doing great! Let's use
-        your new "Draw a line of squares" function to draw a Square shape. Remember
-        each square is 40 pixels in length.
-      Course 4 Artist Functions 15_instruction: |
-        Let's Step it up a little, can
-        you draw a star shape using the "draw a line of squares" function? Good
-        luck! Hint: you may have to turn 144 degrees
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist For  Functions 10_instruction: 'Idźmy dalej, czy potrafisz narysować gwiazdę za pomocą funkcji "Narysuj Rząd Kwadratów"? Powodzenia!'
+      Course 4 Artist For  Functions 11_instruction: 'Idźmy dalej, czy potrafisz narysować gwiazdę za pomocą funkcji "Narysuj Rząd Kwadratów"? Powodzenia!'
+      Course 4 Artist For Loops 1_instruction: 'Narysuj ten trójkąt, który ma boki długości 50 pikseli. Wskazówka: Użyj bloku "powtarzaj" (repeat).'
+      Course 4 Artist For Loops 10_instruction: Czas dowolnej zabawy! Ciesz się rysując cokolwiek chcesz za pomocą bloków, których nauczyłeś się używać
+      Course 4 Artist For Loops 11_instruction: 'Czy pamiętasz, kiedy użyliśmy zmiennej do kontroli liczby boków we wzorze? Ten wzór zaczyna się od trójkąta i dodawany jest jeden bok, aż zostaje narysowany dziesięciokąt foremny (z 10 bokami). Każdy bok powinien mieć 100 pikseli długości. Wskazówka: 360 podzielone przez liczbę boków w rysunku jest liczbą  stopni, o którą trzeba się skręcić.'
+      Course 4 Artist For Loops 12_instruction: 'To wygląda całkiem fajnie, ale teraz chciałbym narysować każdy kształt obok poprzedniego. Tym razem każdy bok ma długość 20 pikseli. Użyj bloku skoku by przejść do przodu 40 pikseli po każdym kształcie. '
+      Course 4 Artist For Loops 13_instruction: Hmmm, te kształty stają się coraz większe za każdym razem! Czy nie rozwiązaliśmy już tego problemu z użyciem zmiennych? Jak można użyć zmiennej będącej licznikiem, aby zmniejszać boki, gdy jest ich więcej? Zamiast posuwać się do przodu o ustaloną wielkość, spróbuj przesuwać się do przodu o (100/licznik) pikseli.
+      Course 4 Artist For Loops 14_instruction: Jeśli skręcisz trochę więcej lub trochę mniej, to otrzymasz zgrabny kształt. Spróbuj skręcić o 89 stopni, aby utworzyć tę skręcaną spiralę kwadratową.
+      Course 4 Artist For Loops 15_instruction: 'Dowalona zabawa: Spróbuj wykonać własne rysunki za pomocą pętli "dla" (for). Dodaliśmy kilka podstawowych zmiennych, byś mógł je użyć.'
+      Course 4 Artist For Loops 2_instruction: 'Umieściłem kod do rysowania trójkąta wewnątrz pętli, która liczy od 50 do 100 co 10. Zobacz, jak utworzyłem ten kod a następnie kliknij na "Uruchom", gdy jesteś gotowy, aby zobaczyć go w akcji. '
+      Course 4 Artist For Loops 3_instruction: 'Najmniejszy trójkąt ma boki o długości 20 pikseli, największy ma boki o długości 200 pikseli, i każdy trójkąt ma boki o 20 pikseli większe niż poprzedni trójkąt. Popraw pętlę "dla" (for), by rysować te trójkąty.'
+      Course 4 Artist For Loops 4_instruction: 'Użyj pętli "dla" (for), by narysować te kwadraty. Najmniejszy ma bok o długości 50 pikseli, największy ma bok o długości 300 pikseli, i każdy kwadrat ma bok o 25 pikseli dłuższy niż poprzedni kwadrat. Daję Ci niemal cały potrzebny kod - brakuje tylko jednego bloku, którego?'
+      Course 4 Artist For Loops 5_instruction: 'Dobrze wykonana ostatnia łamigłówka! Użyjmy ponownie tego bloku zmiennej "licznik", by narysować ten fajny obrazek. '
+      Course 4 Artist For Loops 6_instruction: 'Dobra zabawa! Spróbuj użyć pętli "dla", by narysować powiększający się wzór własnego pomysłu.'
+      Course 4 Artist For Loops 7_instruction: 'Co się stanie, jeśli usuniesz blok "powtórz 3" z tego algorytmu, pozostawiając bloki "idź" i "skręć" w pętli "dla"? W tym spiralnym trójkącie każdy bok jest o 20 pikseli dłuższy niż poprzedni.'
+      Course 4 Artist For Loops 8_instruction: 'Najkrótsza linia w te kwadratowej spirali ma długość 10 pikseli, najdłuższa - 200 pikseli, i każda linia jest o 10 pikseli dłuższa niż poprzednia. Czy mógłbyś uzupełnić brakujące bloki, by ukończyć ten niesamowity rysunek?'
+      Course 4 Artist For Loops 9_instruction: Czy potrafisz wykonać spiralę? Idź do przodu od 1 do 75 pikseli, zwiększając krok o 1 piksel.
+      Course 4 Artist Functions 1_instruction: Czy potrafisz za pomocą pętli narysować kwadrat, który ma bok o długości 100 pikseli?
+      Course 4 Artist Functions 10_instruction: Który blok musisz dodać, aby otrzymać trójkąt leżący na kwadracie?
+      Course 4 Artist Functions 11_instruction: 'Sprawdź ten kod, który rysuje kostkę (sześcian) - czy potrafisz zamienić go na funkcję o nazwie "rysuj sześcian"'
+      Course 4 Artist Functions 12_instruction: Powtórz w pętli funkcję kwadrat, by narysować linię
+      Course 4 Artist Functions 13_instruction: 'Sprawdź, mamy nową funkcję o nazwie "rysuj rząd kwadratów". Przyjrzyj się, jak ta funkcja została utworzona. Kliknij "Uruchom", gdy jesteś gotowy na następną łamigłówkę.'
+      Course 4 Artist Functions 14_instruction: 'Świetnie sobie radzisz! Użyj swojej nowej funkcji "rysuj rząd kwadratów", narysować kwadratowy kształt. Pamiętaj, że każdy kwadrat ma bok o długości 40 pikseli.'
+      Course 4 Artist Functions 15_instruction: 'Zróbmy krok dalej - czy potrafisz narysować kształt gwiazdy za pomocą funkcji "rysuj rząd kwadratów"? Powodzenia! Wskazówka: być może musisz skręcić o 144 stopnie'
+      Course 4 Artist Functions 2_instruction: 'Czy mógłbyś narysować 3 kwadraty oddalone od siebie o 20 pikseli? Wskazówka: bok każdego kwadratu ma 100 pikseli'
+      Course 4 Artist Functions 3_instruction: "Używając bloku funkcji \"rysuj kwadrat\", czy mógłbyś narysować ten obrazek? Wskazówka: kwadraty są oddalone od siebie o 120 pikseli.\r\n"
       Course 4 Artist Functions 4_instruction: |
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -936,16 +853,10 @@ pl:
         the Action and Loops blocks. Then click on the Save and Close in the upper
         right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
         luck!
-      Course 4 Artist Functions 5 OLD_instruction: |
-        Let's try to use our two functions
-        to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 7_instruction: |
-        Can you draw a line of squares using
-        a Square function? Each square is 40 pixel's in length.
+      Course 4 Artist Functions 5 OLD_instruction: 'Spróbujmy użyć naszych dwóch funkcji, by narysować dom - co trzeba ustalić w tym kod, aby prawidłowo narysować dom?'
+      Course 4 Artist Functions 5_instruction: "Używając bloku funkcji \"rysuj kwadrat\", czy mógłbyś narysować ten obrazek? Wskazówka: kwadraty są oddalone od siebie o 120 pikseli.\r\n"
+      Course 4 Artist Functions 6_instruction: Który blok musisz dodać, aby otrzymać trójkąt leżący na kwadracie?
+      Course 4 Artist Functions 7_instruction: Czy potrafisz narysować rząd kwadratów przy użyciu funkcji kwadrat? Każdy kwadrat ma bok o długości 40 pikseli.
       Course 4 Artist Functions 8_instruction: |
         Are you getting the hang of how to
         use function blocks? Let's modify this square so that it is 200 pixels in
@@ -956,9 +867,7 @@ pl:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Params 1_instruction: |
-        Let's edit a function that draws a
-        square with 50 pixel sides
+      Course 4 Artist Params 1_instruction: Napisz funkcję, która rysuje kwadrat o boku 50 pikseli
       Course 4 Artist Params 10_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
@@ -970,26 +879,18 @@ pl:
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 12_instruction: 'Użyj funkcji "wiatraczek", aby narysować każdy z tych kształtów. Bok każdego z obrazków ma długość 50.'
+      Course 4 Artist Params 13_instruction: 'Dobra zabawa: Masz tutaj funkcje, które napisałeś i inne, abyś mógł pobawić się nimi. Narysuj coś niesamowite!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: |
-        Awesome, can you draw each of these
-        triangles with that new function? The first is 25 pixels long, the second
-        is 50, and the third is 75. 
+      Course 4 Artist Params 3_instruction: 'Wspaniale, czy potrafisz narysować każdy z tych trójktów przy użyciu tejnowej funkcji? Pierwszy z nich ma długość 25 pikseli, drugi 50 pikseli, a trzeci 75 pikseli. '
       Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+        Chciałbyś dodać nową funkcję o nazwie kwadrat? 
+        Przy niej również możemy zastosować parametr długości tak jak w przypadku trójkąta. Tym razem narysuj 3 kwadraty o długości 25, 50 i 75 pikseli , oddalone od siebie o 100 pikseli.
       Course 4 Artist Params 5_instruction: |
         Use both of your new functions to draw
         this picture. To make this easier you use a loop with a "counter" parameter.
@@ -1005,8 +906,7 @@ pl:
         in the "???" The square and triangle are 100 pixels in size while the hexagon
         is 75 pixels in size. 
       Course 4 Artist Params 8_instruction: |
-        Can you figure out how to draw this
-        shape? Here's a hint create a new function with 6 sides called a hexagon.
+        Czy domyślasz się, jak narysować ten kształt? Oto podpowiedź: utwórz nową funkcja z 6 bokami, zwaną sześciokątem.
         
       Course 4 Artist Params 9_instruction: |
         Do you remember when we used the counter
@@ -1419,13 +1319,13 @@ pl:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1480,9 +1380,8 @@ pl:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1533,10 +1432,11 @@ pl:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1581,73 +1481,37 @@ pl:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
+      frozen circle function in circle_instruction: Teraz utwórzmy 20 nakładających się na siebie okręgów, skręcając o 18 stopni przy każdym okręgu.
+      frozen circle function with parameter_instruction: 'Tutaj jest blok "Utwórz okrąg", który rysuje okręgi o różnych rozmiarach. Czy możesz przy jego pomocy narysować mały okrąg o rozmiarze 5 i duży o rozmiarze 10?'
+      frozen circle function_instruction: 'Użyj nowego bloku "Narysuj okrąg" aby narysować 10 nakładających się na siebie okręgów. Nie zapomnij przejść do przodu między okręgami.'
+      frozen circle_instruction: Okrąg ma specjalny kształ. Czy domyślisz się, jaką liczbą należy zastąpić znak zapytania w bloku?
+      frozen cross rotate dense_instruction: 'Powtórzmy to 90 razy! Ile razy 90 zmieści się w 360? Podpowiedź: To naprawdę mała liczba.'
+      frozen cross rotate_instruction: Teraz spróbuj powtórzyć to 10 razy. O ile stopni obracasz się pomiędzy liniami?
+      frozen cross_instruction: 'Użyj bloku "Powtórz" aby narysować znak plus. Czy zauważyłeś, że Elsa może poruszać się do przodu i do tyłu?'
+      frozen diamond mini snowflake_instruction: 'Czy wiesz, że każdy płatek śniegu ma inny kształt? Stwórzmy nowy płatek przy użyciu bloku "Powtórz", żeby narysować równoległobok 4 razy, obracając się w prawo o 90 stopni między figurami.'
+      frozen diamond snowflake_instruction: "Teraz stwórzmy nowy płatek śniegu, używając bloku 'powtórz', żeby powtórzyć rysowanie równoległoboku 10 razy, obracając się między nimi w prawo o 36 stopni."
+      frozen diamond_instruction: 'Stwórzymy równoległobok. Jest on podobny do kwadratu, ale ma inne kąty: 60 i 120 stopni zamiast 90.'
+      frozen freeplay_instruction: Zostałeś oficjalnie mistrzem sztuki! Utwórz zimową krainę cudów.
       frozen line_instruction: Cześć! jestem Elsa z Arendelle. Proszę pomóż mi utworzyć pojedynczą linię.
       frozen perpendicular_instruction: 'Teraz sprawdźmy, czy potrafisz utworzyć dwie linie, które są pod kątem 90 stopni. Będziesz musiał użyć bloczku "obróć" razem z bloczkiem "przesuń o ".'
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
+      frozen snowflake branch_instruction: 'Spróbuj użyć bloku "Utwórz ramię płatka śniegu" aby narysować trzy ramiona, które będą wyglądać jak płatek śniegu.'
+      frozen snowflake full_instruction: Teraz powtórzymy to 8 razy aby utworzyć piękny płatek śniegu!
+      frozen snowflower_instruction: Skomplikowane wzory śnieżek mogą być utworzone przy użyciu bardzo prostych kształtów. Czy potrafisz zrobić wzór, powtarzając 5 okręgów o rozmiarze 5 oraz 5 okręgów o rozmiarze 10?
       frozen square iterative_instruction: Wygląda na to, że jesteśmy w połowie drogi by narysować kwadrat. Połącz 4 linie by powstał kwadrat.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen square loop 3x_instruction: Stwórzmy trzy kwadraty, zawracając po każdym kwadracie. Pamiętaj aby obrócić się o 120 stopni przed każdym nowym kwadratem.
+      frozen square loop_instruction: 'Cześć. Jestem Anna z Arendelle! Narysujmy kwadrat używając bloku "Powtórz", który zmniejszy nam liczbę potrzebnych bloków. Ile razy (???) blok "Powtórz" powinien zostać uruchomiony, żeby zapętlić bloki aby utworzyć kwadat?'
+      frozen square snowflake_instruction: 'Czy potrafisz narysować śnieżynkę używając bloku "Powtórz" aby utworzyć kwadrat 10 razy i bloku "Obróć" aby obrócić się o 36 stopni po każdym kwadracie?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2009,9 +1873,7 @@ pl:
         the "draw a line of squares" function? Hint: you may have to move forward
         60 pixels and  turn 144 degrees
       NEW Course 4 Artist Functions 14_instruction: 'Czas zabawy! '
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
+      NEW Course 4 Artist Functions 2_instruction: 'Czy mógłbyś narysować 3 kwadraty oddalone od siebie o 20 pikseli? Wskazówka: bok każdego kwadratu ma 100 pikseli'
       NEW Course 4 Artist Functions 3_instruction: |
         Here is a new type of Block.
         It is called a "Function block." Click "Run" to see what it can do. 
@@ -2320,9 +2182,9 @@ pl:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2359,9 +2221,7 @@ pl:
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: Oficjalnie stałeś się mistrzem artystą! Utwórz zimową krainę cudów.
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
@@ -2408,10 +2268,28 @@ pl:
       Text Compression Peter Piper_instruction: |
         Ten wiersz został skompresowany przez zastapienie dwóch pospolitych wyrazów, symbolem ze słownika. 
         Czy jesteś w stanie podać kolejny wzorzec do skompresowania wiersza?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: Folkeskolens Intro til Computer Videnskabs kurset
+          desc: Grundskole-intro til programmeringskurset
           Unplug1: Trin 1
           Maze: Fase 2
           Unplug2: Trin 3
@@ -445,18 +445,18 @@
         flappy_k1_9: Prøv at ændre afspilleren ved at knytte et "sæt spiller" blok
           til "når kører" blokken.
         jigsaw_1: Klik på blokken
-        jigsaw_2: Trække blokken til målet
-        jigsaw_3: Arrangere blokke til at danne billedet
-        jigsaw_4: Arrangere blokke til at danne billedet
-        jigsaw_5: Arrangere blokke til at danne billedet
-        jigsaw_6: Arrangere blokke til at danne billedet
-        jigsaw_7: Arrangere blokke til at danne billedet
-        jigsaw_8: Arrangere blokke til at danne billedet
-        jigsaw_9: Arrangere blokke til at danne billedet
-        jigsaw_10: Arrangere blokke til at danne billedet
-        jigsaw_11: Arranger blokkene for at danne billedet
-        jigsaw_12: Arrangere blokke til at danne billedet
-        jigsaw_13: Løs puslespillet!
+        jigsaw_2: Træk blokken til målet
+        jigsaw_3: Flyt blokkene så de danner billedet
+        jigsaw_4: Flyt blokkene så de danner billedet
+        jigsaw_5: Flyt blokkene så de danner billedet
+        jigsaw_6: Flyt blokkene så de danner billedet
+        jigsaw_7: Flyt blokkene så de danner billedet
+        jigsaw_8: Flyt blokkene så de danner billedet
+        jigsaw_9: Flyt blokkene så de danner billedet
+        jigsaw_10: Flyt blokkene så de danner billedet
+        jigsaw_11: Flyt blokkene så de danner billedet
+        jigsaw_12: Flyt blokkene så de danner billedet
+        jigsaw_13: Få styr på blokkene!
         mazestep_1: Labyrint trin beskrivelse her
         mazestep_2: Labyrint trin beskrivelse her
         mazestep_3: Labyrint trin beskrivelse her
@@ -542,18 +542,18 @@
         studio_k1_5: Kan du tilføje en blok for at gøre blæksprutten glad?
         studio_k1_6: Opret din egen historie! Flytte rundt en kat og hund, og få dem
           til at sige ting.
-        maze_wordsearch_k_1: Flytte mig for at stave ordet EAST
-        maze_wordsearch_k_2: Flytte mig for at stave ordet SOUTH
-        maze_wordsearch_k_3: Flytte mig for at stave ordet WEST
-        maze_wordsearch_k_4: Flytte mig for at stave ordet NORTH
-        maze_wordsearch_k_6: Bevæge mig mod øst og derefter syd for at stave ordet
+        maze_wordsearch_k_1: Flyt mig , så jeg staver ordet EAST
+        maze_wordsearch_k_2: Flyt mig så jeg staver ordet SOUTH
+        maze_wordsearch_k_3: Flyt mig for så jeg staver ordet WEST
+        maze_wordsearch_k_4: Flyt mig så jeg staver ordet NORTH
+        maze_wordsearch_k_6: Flyt mig først mod øst og derefter syd for at stave ordet
           JUMP
-        maze_wordsearch_k_9: Flytte mig en måde, så en anden til at stave ordet CODE
-        maze_wordsearch_k_13: Flytte mig en vej, så en anden til at stave ordet DEBUG
-        maze_wordsearch_k_15: Flytte mig en vej, så en anden til at stave ordet ABOVE
-        maze_wordsearch_k_16: Flytte mig en vej, så en anden til at stave ordet BELOW
-        maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til
-          at stave ordet STORY
+        maze_wordsearch_k_9: Flyt mig på en måde, så jeg staver til ordet CODE
+        maze_wordsearch_k_13: Flyt mig, så jeg staver til ordet DEBUG
+        maze_wordsearch_k_15: Flyt mig, så jeg staver til ordet ABOVE
+        maze_wordsearch_k_16: Flyt mig, så jeg staver til ordet BELOW
+        maze_wordsearch_k_20: Dette er en test! Flyt mig først i en retning, så en
+          anden, for at stave ordet STORY
         applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Nu skal du tegne en firkant. Bemærk: Brug din favorit farve,
           vælg den i den nye "penColor" blok.'
@@ -600,7 +600,7 @@
         C1_artist_intro: Kunstner Intro
         C1_spelling_bee_intro: Stave Bi Intro
         C1_zuck_repeat_loop: Labyrint sløjfer
-        C1_bee_loops: Bi sløjfer
+        C1_bee_loops: Bi Løkker
         C1_maze_loops: Labyrint sløjfer
         C1_playlab_storytelling: Spil Lab - Opret en historie
         C1_planting_seed: Plante et frø
@@ -611,7 +611,7 @@
         C2_zuck_repeat_loop: Labyrint sløjfer
         C2_artist_loops: Kunstner sløjfer
         C2_artist_debugging: Kunstner-fejlfinding
-        C2_bee_loops: Bi sløjfer
+        C2_bee_loops: Bi Løkker
         C2_bee_debugging: Bi fejlfinding
         C2_bee_conditionals: Bi betingelser
         C2_playlab_createstory: Spil Lab - Opret en historie
@@ -675,6 +675,7 @@
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations
@@ -725,7 +726,7 @@
         set_length: Brug denne blok til at angive "længden" til den rigtige værdi.
         which_equation: Hvilken ligning gør hver side kortere for figurer med flere
           sider?
-        get_nectar: Brug den nye "få nektar" blok.
+        get_nectar: Brug den nye "hent nektar" blok.
         actions_category: Værktøjskassen fik et nyt look! "Handlings" blokke kan nu
           bruges.
         draw_square_hint: 'Tip: Brug firkant loop som du lige har lavet i den sidste
@@ -736,8 +737,8 @@
         house_hint: Det er ok, hvis billedet ligner ikke et hus endnu. Vi vil ordne
           det i den næste opgave.
         edit_draw_square: Brug denne knap til at rediger funktionen og tilføje loopét.
-        edit_get_nectar: Brug denne knap til, at rediger funktionen og ændre den retning,
-          som Bee vil dreje for at få nektar.
+        edit_get_nectar: Brug denne knap til at redigere funktionen og ændre den retning,
+          som bien vil dreje for at hente nektar.
         logic_category: Åbn "Logik" undermenuen for at finde "if/else" blokken.
         length_parameter: Kan du opdatere denne funktion, så det bruger parameteren
           "længde"?

@@ -326,7 +326,7 @@ et:
       2-3 Maze 1_instruction: |
         Can you help me to catch the naughty pig? Stack a
         couple of "move forward" blocks together and press "Run". 
-      2-3 Maze 10_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 10_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze 11_instruction: 'Juhata mind lilleni, ma olen näljane! Mitu korda sa pead "korda" plokki kasutama?'
       2-3 Maze 12 (copy 1)_instruction: |
         Can you replace the previous answer with
@@ -355,12 +355,12 @@ et:
       2-3 Maze 16_instruction: Aita mind päevalilleni. Pane see jada tsüklisse!
       2-3 Maze 2_instruction: See siga ajab mul suled turri. Aita mul ta kätte saada!
       2-3 Maze 3_instruction: Jälgi rada ja juhata mind rumala seani. Väldi TNT-d või muidu suled lendavad!
-      2-3 Maze 4_instruction: Guide me to the green evilness! (Watch out for TNT)
-      2-3 Maze 5_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 4_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
+      2-3 Maze 5_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze 6_instruction: Ole rahulik ja aita mul paha siga üles leida. Muidu ma saan vihaseks!
-      2-3 Maze 7_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 7_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze 8_instruction: Aita mind seani!
-      2-3 Maze 9_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze 9_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       2-3 Maze Loops 17_instruction: Aita mind päevalilleni!
       2-3 Maze Loops 18_instruction: Aita mind päevalilleni!
@@ -384,7 +384,7 @@ et:
       2-3 maze sq15_instruction: Kas sa saad mind päevalilleni aidata ainult viite plokki kasutades?
       2-3 maze sq16_instruction: Okei, see on üsna sarnane aga natuke erinev. Kas sa suudad seda ainult viie plokiga teha?
       2-3 Maze sq2_instruction: Jälgi rada ja juhata mind rumala seani. Väldi TNT-d või muidu suled lendavad!
-      2-3 Maze sq3_instruction: Guide me to the green evilness! (Watch out for TNT)
+      2-3 Maze sq3_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze sq4_instruction: Ole rahulik ja aita mul paha siga üles leida. Muidu ma saan vihaseks!
       2-3 Maze sq5_instruction: Aita mind seani! Mitu korda sa pead plokki kordama?
       2-3 Maze sq6_instruction: |
@@ -1684,9 +1684,7 @@ et:
       Course 4 Bee Params 4_instruction: |
         Try using your new function to collect
         all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 5_instruction: |
-        Let's start from scratch - can you create
-        a new function called "get 5 nectar" with a direction parameter?
+      Course 4 Bee Params 5_instruction: 'Alustame algusest - kas sa saad luua uue funktsiooni nimega " saa 5 nektarit" millele annad suuna parameetri?'
       Course 4 Bee Params 6 (copy 1)_instruction: |
         Try using your new function to
         collect all of this nectar.
@@ -1944,13 +1942,13 @@ et:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -2005,9 +2003,8 @@ et:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -2058,10 +2055,11 @@ et:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2106,8 +2104,8 @@ et:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2131,6 +2129,12 @@ et:
       frozen square loop 3x_instruction: Loome kolm ruutu, peale igat ruutu peaks aga keerama. Keera peale igat ruutu 120 kraadi.
       frozen square loop_instruction: 'Tere, olen Anna! Teeme ruudu kasutades "Korda" blokki, sellega kasutame teisi blokke vähem. Kui palju kordi (???) peaks "Korda" blokki kasutama, et teha valmis ruut?'
       frozen square snowflake_instruction: 'Kas sa saad luua lumehelbe kasutades "Korda" blokki, et joonistada ruutu 10 korda ja "Keera" blokki", et keerata iga ruudu vahel 36 kraadi?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2163,15 +2167,11 @@ et:
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
-      K-1 Artist 1 Assessment 1_instruction: |
-        Draw a short line up and a long one
-        to the right!
-      K-1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both the
-        jump and draw blocks
+      K-1 Artist 1 Assessment 1_instruction: Joonista lühike joon üles ja lühike paremale!
+      K-1 artist 1 level 10_instruction: Joonista katkendjoon kasutades nii hüppa kui ka joonista plokke
       K-1 artist 1 level 9_instruction: Draw this using three lines
-      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
+      K-1 Artist Loops 1_instruction: Joonista see joon, liikudes itta 4 korda.
+      K-1 Artist Loops 2_instruction: Kas sa saad joonistada sama joone, kasutades loopi?
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
@@ -2216,7 +2216,7 @@ et:
       K-1 Artist2 Assessment1_instruction: |
         Assessment: Draw a square next to the
         other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
+      K-1 Artist2 Free Draw_instruction: Joonista midagi!
       K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
       K-1 Bee 1_instruction: |
         Move me to the flower, get the nectar, then move me
@@ -2242,9 +2242,9 @@ et:
       K-1 Bee 7_instruction: Get three nectar and then make two honey!
       K-1 Bee 8_instruction: Get two nectar and then make two honey!
       K-1 Bee 9_instruction: Get two nectar and then make two honey!
-      K-1 Bee Assessment 1_instruction: Get nectar to make honey!
-      K-1 Bee Assessment 2_instruction: Get nectar to make honey!
-      K-1 Bee Loops 1_instruction: Get the nectar to make honey!
+      K-1 Bee Assessment 1_instruction: Hangi nektarit, et mett teha!
+      K-1 Bee Assessment 2_instruction: Hangi nektarit, et mett teha!
+      K-1 Bee Loops 1_instruction: Saa nektarit mee tegemiseks!
       K-1 Bee Loops 10_instruction: Use loops to get the nectar, honey, and to move!
       K-1 Bee Loops 11_instruction: |
         Assessment: Use loops and get the nectar and
@@ -2550,9 +2550,7 @@ et:
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
-      NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
+      NEW Course 4 Artist Params 2_instruction: 'Loo "joonista kolmnurk mille külg on 50 pikslit" funktsioon'
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3 triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
@@ -2804,9 +2802,9 @@ et:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2823,9 +2821,7 @@ et:
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: 'Tammetõru! Tammetõru! Tammetõru! Kasuta "kui" plokki et saada mind sinna vähimate liigutustega.'
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
@@ -2834,15 +2830,11 @@ et:
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 18_instruction: '"If-else" plokid kontrollivad tingimusi ja siis teevad vastavalt asju. Et saada mind tõruni, kasuta seda uut plokki.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
+      scrat 19_instruction: Üks harjutus veel, kas sa saad esimese korraga õigesti?
       scrat 20_instruction: Kas saad lisada ainult 3 plokki et aidata mul lahendada veel raskem pusle? Kui sa seda õigesti teed, saan ma kõndida ükskõik millisel käänulisel rajal, vahet pole kui pikk see on. Kiirusta! Jää sulab!
       SpecialFrozenLevel_instruction: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       Standalone_Artist_1_instruction: |
@@ -2892,10 +2884,28 @@ et:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

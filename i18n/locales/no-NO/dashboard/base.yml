@@ -325,7 +325,9 @@
     classroom_activity: Frakoblet Aktivitet
   home:
     title: Kodestudio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Leksjonsplaner
     signin_message: 'Allerede registrert? %{link}'
@@ -392,6 +394,10 @@
     autoplay_option: Autovisning av videoer
     download: Last ned video
   compatability:
+    https:
+      header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
+      message: "For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS. <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer HTTPS for Code.org."
+      hide_this_warning: Skjul denne advarselen
     working:
       header: Vi arbeider med å lage støtte for din nettleser.
       message: "Code.org bruker moderne web-teknologi. Dette gjør nettstedet raskere å bruke. Nettleseren støtter ikke alle funksjonene som er nødvendige, og det kan oppstå problemer mens du bruker denne delen av nettstedet. Vennligst hjelp oss ved å <a href='%{report_issue_url}'> rapportere eventuelle problemer du finner</a>. Du kan også <a href='%{supported_browsers_url}'> oppgradere nettleseren til en versjon som støttes</a>."

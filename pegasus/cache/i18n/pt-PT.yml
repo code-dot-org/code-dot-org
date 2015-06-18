@@ -156,55 +156,56 @@
     programar
   studiobar_shop_title: Comprar
   studiobar_shop_body: Quebre os estereótipos. Use o nosso logótipo com orgulho.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: "&ldquo;Eu desafio as meninas do mundo todo a fazer a
+    Hora do Código&rdquo;  \nMalala, ganhadora do Prêmio Nobel da Paz\n"
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Se você pode mudar a tecnologia,
+    você pode mudar o mundo.&rdquo;
+    Susan, CEO do YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Em vez de simplesmente jogar em seu celular,
+    aprenda a programá-lo.&rdquo;
+    Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Nossos filhos &mdash; inclusive nossas meninas &mdash;
+    precisam ter a oportunidade de aprender ciência da computação.&rdquo;
+    Sheryl, COO do Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;A ciência da computação leva
+    às melhores oportunidades no mundo.&rdquo;
+    Satya, CEO da Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Se você programa, você pode escolher
+    o rumo da sua vida.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Essas habilidades mudaram meu futuro.
+    Sem contar que elas são muito divertidas.&rdquo;
+    Luna, aluna do 7º ano
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Eu nunca vi meus alunos tão
+    animados em aprender.&rdquo;
+    Michael, professor
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+    &ldquo;A ciência da computação é um campo que
+    não tem como você saber se gosta ou não antes de experimentar.&rdquo;
+    Jackson, aluno do 6º ano
+  homepage_hero_text_student4: "&ldquo;Você pode fazer o que quiser\ncom a programação.&rdquo;
+    \nMaya, 2º ano\n"
+  homepage_hero_text_student5: "&ldquo;A ciência da computação não é para\noutra pessoa.
+    É para você, aqui e agora.&rdquo; \nGeraldo, professor\n"
+  homepage_hero_text_teacher1: "&ldquo;A programação estimula a criatividade, inspiração
+    e inovação &mdash; \ne tudo isso é essencial em qualquer carreira.&rdquo;\nFloresa,
+    professora\n"
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;Esse programa manteve 100% dos meus alunos
+    engajados, envolvidos e participando.&rdquo;
+    Adam, professor
+  homepage_hero_text_stat_loc: '#loc linhas de código escritas por alunos'
+  homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
+  homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_slot_text_hoc: A Hora de Código
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Todos os nossos tutoriais
   homepage_slot_text_course4: Course 4
@@ -212,19 +213,19 @@
   homepage_slot_text_flappy: Flappy Bird
   homepage_action_text_codevideo: Vê o vídeo
   homepage_action_text_teachervideo: Vê o vídeo
-  homepage_action_text_learn: Começa a aprender hoje
+  homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assina a petição
   homepage_signpetition_dropdown: Assina a nossa petição &#x25BE;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: A Code.org e a College Board formam uma aliança para
+    aumentar a diversidade na ciência da computação.
+  homepage_banner_text_link: Saiba mais
   homepage_slot_text_title_hoc: Hora de Código
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Exprimenta a Hora de Código
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# já experimentaram'
   homepage_slot_text_title_students: Alunos
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
   homepage_slot_text_link_codestudio: Experimenta o Code Studio
   homepage_slot_text_link_local: Encontra uma turma à tua volta
   homepage_slot_text_link_othercourses: Outros cursos online
@@ -236,7 +237,7 @@
   homepage_slot_text_title_advocates: Advogados
   homepage_slot_text_blurb_advocates: Apoia o nosso trabalho
   homepage_slot_text_link_stats: Vê as estatísticas
-  homepage_slot_text_link_buy: Comprar uma t-shirt ou um boné
+  homepage_slot_text_link_buy: Participe
   homepage_slot_text_link_donate: Faz uma doação
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: Agradecemos a quem nos apoia
@@ -421,11 +422,18 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
     aqui</a> para partilhar ou imprimir o nosso documento de privacidade.
-  dashboard_curriculum_overview: Visão geral do currículo de K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Ver todos os planos de lições
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Visão geral do currículo de K-5
+  dashboard_overview: Overview
   dashboard_sequence: Seqüência
   dashboard_framework: Quadro
   dashboard_standards: Padrões
@@ -436,6 +444,10 @@
   dashboard_puzzle_solving: 'Resolução de problema:'
   dashboard_student_worksheet: planilha do estudante
   dashboard_teacher_worksheet: planilha do professor
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Outro
   dashboard_login_word: Palavra
@@ -466,6 +478,7 @@
   dashboard_sections_login_type_explanation: Esta abela explica os tipo de acesso,
     <b>imagem, palavra ou email</b>, você desejará escolher para uma sessão.
   dashboard_faq: Perguntas frequentes
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: A "Hora do Código" é aqui - 8 a 14 de Dezembro!
   code_sign_up: Acesse para participar durante a Semana da Educação em Ciências da
     Computação
@@ -1122,18 +1135,6 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click

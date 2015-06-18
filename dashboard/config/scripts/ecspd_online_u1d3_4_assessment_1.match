@@ -1,0 +1,19 @@
+name 'ECSPD Online U1D3-4 Assessment 1'
+title 'Buying a Computer'
+height '100'
+skip_sound true
+hide_submit true
+
+description 'Match the internal parts of a computer to their function. The previous level has links to sites that describe each part.'
+question 'Hard Drive/Disk Drive'
+answer 'The part that stores programs, files, and long-term memory. Often, it can hold hundreds of GB of data.'
+question 'CPU/Processor'
+answer 'The brain of the computer. This part executes commands. Its speed is measured in millions or billions of instructions per second'
+question 'RAM'
+answer 'The short term memory of the computer. This is where data is stored while programs are running. Usually, it can hold between 2 and 32 GB of data'
+question 'Motherboard'
+answer 'The main circuit board of the computer. Most other hardware parts are installed on this component.'
+question 'GPU/Graphics Card/Video Card'
+answer 'The part that controls the display on the screen. People who play video games or do graphic/3D design often will buy a higher-end version'
+question 'Operating System'
+answer 'The software that allows a user to interact with a computer. It is usually Windows, Mac, or Linux.'

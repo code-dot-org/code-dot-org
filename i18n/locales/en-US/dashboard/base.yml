@@ -318,7 +318,9 @@ en:
     classroom_activity: crwdns5090:0crwdne5090:0
   home:
     title: crwdns8814:0crwdne8814:0
+    description: crwdns41699:0crwdne41699:0
     lines_of_code: 'crwdns37546:0%{lines_count}crwdne37546:0'
+    lines_of_code_linebreak: 'crwdns41700:0%{lines_count}crwdnd41700:0%{students_count}crwdne41700:0'
     all_courses: crwdns19023:0crwdne19023:0
     lesson_plans: crwdns19024:0crwdne19024:0
     signin_message: 'crwdns4633:0%{link}crwdne4633:0'
@@ -385,6 +387,10 @@ en:
     autoplay_option: crwdns3091:0crwdne3091:0
     download: crwdns4163:0crwdne4163:0
   compatability:
+    https:
+      header: crwdns41701:0crwdne41701:0
+      message: 'crwdns41702:0%{https_date}crwdnd41702:0%{it_requirements_url}crwdne41702:0'
+      hide_this_warning: crwdns41703:0crwdne41703:0
     working:
       header: crwdns18133:0crwdne18133:0
       message: 'crwdns18134:0%{report_issue_url}crwdnd18134:0%{supported_browsers_url}crwdne18134:0'
