@@ -1,6 +1,7 @@
 // Modern skin for applab apps
 
 #divApplab.appModern {
+  color: #333;
 
   button {
     border: 0;
@@ -12,10 +13,16 @@
     }
     &:active {
       background-image: url("/blockly/media/applab/darker.png");
+      border: 0 !important; // Override common.scss which has !important
     }
     &:focus {
       outline: 0;
     }
+  }
+
+  input[type=text], input:not([type]), div[contenteditable=true] {
+    border: 1px solid #999;
+    padding: 10px;
   }
 
   select {
