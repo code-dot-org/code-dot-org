@@ -48,7 +48,13 @@
 
 #divApplab.appModern.divApplabDesignMode {
 
-  img {
+  img[src=''], canvas {
+    border: 5px solid #fff;
+    outline: 1px solid #bdc3c7;
+    outline-offset: -1px;
+  }
+
+  img[src=''] {
     background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat;
   }
 
