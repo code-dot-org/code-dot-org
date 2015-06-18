@@ -1,0 +1,13 @@
+name 'ECSPD Online U1D5-7 Assessment 2'
+title 'Web 2.0'
+skip_sound true
+hide_submit true
+height '70'
+
+description 'Match each "version" of the web with its description as it is defined in the video on the previous level.'
+question 'Web 1.0'
+answer 'Basic HTML. Little or no interaction between the user and website'
+question 'Web 2.0'
+answer 'Two-way flow of information. User and website interacting with each other'
+question 'Web 3.0/Social Media/Augmented Reality'
+answer 'Website facilitates interaction between users and the real world'

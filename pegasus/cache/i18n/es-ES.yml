@@ -19,7 +19,7 @@
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
     otros.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Unete a # otros'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -192,9 +192,10 @@
   homepage_hero_text_teacher2: |
     &ldquo;Este programa tiene al 100% de mis estudiantes comprometidos, involucrados y participando.&ldquo;
     Adam, profesor
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '# lineas de código escritas por estudiantes'
+  homepage_hero_text_stat_students: '#student_count cuentas del estudiante en Code
+    Studio'
+  homepage_hero_text_stat_served: 'La Hora del Codigo: #Served servidos'
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Tablero Maestro del Profesor
@@ -420,11 +421,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haga
     clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
     o imprimirse para sus alumnos.
-  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Ver todos los planes de estudio
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_overview: Overview
   dashboard_sequence: Secuencia
   dashboard_framework: Marco de trabajo
   dashboard_standards: Estándares
@@ -435,6 +443,10 @@
   dashboard_puzzle_solving: 'Resolución de rompecabezas:'
   dashboard_student_worksheet: hoja de trabajo del estudiante
   dashboard_teacher_worksheet: hoja de trabajo del maestro
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -469,6 +481,7 @@
     tipos de inicio de sesión, <b>imagen, palabra o correo electrónico</b>, querrá
     elegir para una sección.
   dashboard_faq: Preguntas frecuentes
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -1163,20 +1176,8 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_header: Por favor habilitar HTTPS para Code.org.
+  compatibility_https_message: Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}.
+    Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'>
+    haga clic aquí</a> para aprender cómo activar HTTPS para Code.org.
+  compatibility_https_hide_this_warning: Ocultar esta advertencia
