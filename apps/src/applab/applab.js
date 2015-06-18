@@ -73,7 +73,7 @@ var twitterOptions = {
   hashtag: "ApplabCode"
 };
 
-var MIN_DEBUG_AREA_HEIGHT = 70;
+var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -703,8 +703,8 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   //  we explicitly set bottom/height styles on the elements above, we need to
   //  do the same for these styles as well)
 
-  codeTextbox.style.minHeight = 'calc(50% - 21px)';
-  debugArea.style.maxHeight = 'calc(50% - 21px)';
+  codeTextbox.style.minHeight = 'calc(50% - 16px)';
+  debugArea.style.maxHeight = 'calc(50% - 16px)';
 
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
