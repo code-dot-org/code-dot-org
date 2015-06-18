@@ -325,7 +325,9 @@ is:
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Yfirlit yfir námskeið 1, 2 og 3
     lesson_plans: Námsáætlun
     signin_message: 'Þegar skráð(ur)? %{link}'
@@ -392,6 +394,10 @@ is:
     autoplay_option: Spila myndbönd sjálfvirkt
     download: Hala niður myndband
   compatability:
+    https:
+      header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
+      message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
+      hide_this_warning: Fela þessa aðvörun
     working:
       header: Við erum að vinna í stuðningi við vafrann sem þú notar.
       message: "Code.org notar nútíma veftækni. Þetta gerir vefinn hraðvirkari. Vafrinn þinn ræður ekki við alla tækni sem er notuð og því geta komið upp vandamál þegar þú notar þennan hluta vefsins. Vinsamlegast hjálpaðu okkur með því að  <a href='%{report_issue_url}'>tilkynna vandamál sem upp koma</a>. Þú getur líka <a href='%{supported_browsers_url}'>uppfært vafrann þinn í studda útgáfu</a>."

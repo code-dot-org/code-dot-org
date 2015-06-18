@@ -352,6 +352,7 @@ StudioApp.prototype.init = function(config) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
+      unusedConfig: config.unusedConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
@@ -1333,7 +1334,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(options.dropletConfig, this.editor);
+  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
@@ -1529,9 +1530,28 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
-    msg.showBlocksHeader();
-  showCodeHeader.firstChild.textContent = newButtonTitle;
+  var contentSpan = showCodeHeader.firstChild;
+  var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bfa\b/.test(node.className);
+  });
+  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bblocks-glyph\b/.test(node.className);
+  });
+
+  // Change glyph
+  if (usingBlocks) {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'inline-block';
+      imgBlocksGlyph.style.display = 'none';
+    }
+    contentSpan.lastChild.textContent = msg.showTextHeader();
+  } else {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'none';
+      imgBlocksGlyph.style.display = 'inline-block';
+    }
+    contentSpan.lastChild.textContent = msg.showBlocksHeader();
+  }
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {

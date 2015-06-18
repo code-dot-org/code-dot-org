@@ -751,6 +751,12 @@ is:
       frozen square loop 3x_instruction: Búum til þrjá ferninga með snúningi eftir hvern. Gættu þess að snúa um 120 gráður á milli ferninga.
       frozen square loop_instruction: 'Hæ, ég er Anna frá Arendelle! Búum til ferning með "endurtaka" kubbnum, sem notar færri kubba. Hve oft (???) ætti "endurtaka" kubburinn að endurtaka innihald sitt til að búa til ferning?'
       frozen square snowflake_instruction: 'Getur þú búið til snjókorn með því að nota "endurtaka" kubbinn til að búa til ferning 10 sinnum og "snúa" kubbinn til að snúa um 36 gráður eftir hvern ferning?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: 'Getur þú látið Elsu ("leikmann 2") ná Önnu með því að nota örvarlyklana?'
       Infinity_finale_instruction: Búðu til hvað sem þú vilt og deildu því!
       Infinity_move_collide_instruction: 'Hiro er "leikmaður 1". Færðu hann til hægri að Baymax og spilaðu hljóð þegar þeir snertast.'
@@ -1059,10 +1065,28 @@ is:
       Standalone_Artist_9_instruction: Teiknaðu nú þína eigin hugmynd! Hér er meira segja tómt fall sem þú getur látið gera hvað sem þú vilt!
       Standalone_Artist_v2_instruction: 'Velkominn til listamannsins! Byrjum á að búa til einfaldan ferning með "snúa hægri" og "færa áfram" kubbunum. Hver hlið á að vera 100 díla löng.'
       Text Compression Peter Piper_instruction: Þessu ljóði hefur verið þjappað með því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

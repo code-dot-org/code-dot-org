@@ -64,8 +64,8 @@ de:
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} Schüler haben sich bereits angemeldet.'
+    teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
     overview_student: 'Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a> anschauen.'
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Aufgaben</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
@@ -201,7 +201,7 @@ de:
         bonus:
           not_earned_title: 'Sie können noch zusätzliche $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Krediten (nur U.S. Lehrer) verdienen'
           earned: '7 oder mehr der Schüler die alle %{num_trophies} Trophäen gesammelt haben sind Mädchen. Sie haben einen Sonderpreis gewonnen! (nur US-Lehrer)'
-          not_earned: 'Wenn mindestens 7 Ihrer Schüler, die alle %{num_trophies} Trophäen gesammelt haben Mädchen sind, bekommen Sie als Extra-Belohnung $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits können nur von Lehrern in öffentlichen US Schulen eingelöst werden.'
+          not_earned: 'Wenn mindestens 7 Ihrer Schüler, die alle %{num_trophies} Trophäen gesammelt haben, Mädchen sind, bekommen Sie als Extra-Belohnung $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits können nur von Lehrern in öffentlichen US Schulen eingelöst werden.'
   crud:
     new_model: 'Neu %{model}'
     show: Anzeigen
@@ -220,11 +220,11 @@ de:
       finished_hoc: Ich habe meine Programmierstunde beendet.
       sign_in_to_save: Melde dich an um deinen Fortschritt zu speichern
       free_play:
-        playlab: Eine App machen
+        playlab: Eine App erstellen
         artist: Zeichne etwas
     user:
       classroom: Lehrer-Homepage
-      district_dashboard: District Dashboard
+      district_dashboard: Dashboard
       label: 'Hallo %{username}'
       stats: Mein Fortschritt
       settings: Mein Account
@@ -234,7 +234,7 @@ de:
       signup: Registrieren
       already_registered: Bereits registriert?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: "%{name}'s Fortschritt"
       progress: Ihre Fortschritte
       lines: 'Gesamte Codezeilen: %{lines}'
       close: schließen
@@ -303,9 +303,9 @@ de:
     cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt werden, da du keine E-Mail-Adresse registriert hast'
     student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name} entfernt'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Antwortenansicht
       student: Schüler
-      viewing_solution: Viewing Solution
+      viewing_solution: Lösung anzeigen
       try_it_yourself: Versuche es selbst
       section: Abschnitt
   user:
@@ -328,7 +328,9 @@ de:
     classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} Codezeilen von den Studenten erstellt'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: 'Schon registriert? %{link}'
@@ -395,6 +397,10 @@ de:
     autoplay_option: Autoplay Videos
     download: lade Video herunter
   compatability:
+    https:
+      header: Bitte schalte HTTPS für Code.org ein.
+      message: "Um die Sicherheit zu erhöhen, wechseln wir am %{https_date} auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'> Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert."
+      hide_this_warning: Diese Warnung ausblenden
     working:
       header: Wir arbeiten an der Unterstützung für Ihren Browser.
       message: "Code.org benutzt aktuellste Web-Technologie. Dies hat die Folge, dass diese Seite schneller lädt. Dein Browser unterstützt leider nicht alle Funtkionen, dies könnte zu Fehlern führen. Bitte hilf uns, indem du <a href='%{report_issue_url}'>Fehler meldest</a>. Du kannst auch deine <a href='%{supported_browsers_url}'>Webbrowser zu einer unterstützten Version updaten</a>."
@@ -489,7 +495,7 @@ de:
   contract_match:
     wrong_title: Falsche Antwort
     badname: Dein Vertrag hat den falschen Namen.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badname_case: Funktionsnamen verwenden Groß-/Kleinschreibung. Achte auf die Schreibweise!
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
@@ -546,7 +552,7 @@ de:
     completed_too_many_blocks: abgeschlossen, zu viele Blöcke
     completed_perfect: Abgeschlossen, perfekt
     furthest_level_attempted: Höchste Ebene versucht
-    assessment: assessment
+    assessment: Bewertung
   studio:
     courses_working_on: Kurse, an denen du arbeitest
     completed_courses: Abgeschlossene Kurse
@@ -569,7 +575,7 @@ de:
     name: Name
     updated: Aktualisiert
     project_type: Projekttyp
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    help_text: 'Klicke unten auf <strong>Eine App erstellen</strong> oder <strong>Etwas zeichnen</strong> um ein neues App- oder Künstlerprojekt zu machen! <br/> Du kannst immer wieder zurückkommen und an Deinen Projekten arbeiten.'
     need_help: Brauchen sie Hilfe bei den ersten Schritten?
     really_delete: Löschen?
     delete_yes: Ja

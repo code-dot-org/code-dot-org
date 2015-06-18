@@ -538,10 +538,14 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configureDesignToggleRow = function (hidden) {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
+  }
+
+  if (hidden) {
+    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
@@ -576,12 +580,18 @@ designMode.changeScreen = function (screenId) {
     var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
+    // View Data must simulate a run button click, to load the channel id.
+    var viewDataClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onViewData);
+    var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+
     React.render(
       React.createElement(DesignToggleRow, {
         initialScreen: screenId,
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
+        onViewDataButton: throttledViewDataClick,
         onScreenChange: designMode.changeScreen,
         onScreenCreate: designMode.createScreen
       }),

@@ -64,8 +64,8 @@ ro:
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} studenţi s-au înregistrat deja.'
+    teacher_count: '%{count} profesori s-au înregistrat deja.'
     overview_student: 'Creaţi-vă un cont pentru a vă putea urmări progresul. Email-ul este utilizat în principal pentru a vă permite să vă conectaţi şi pentru recuperarea parolei. Pentru informaţii suplimentare, consultaţi <a href="http://code.org/privacy"> Politica de confidenţialitate</a>.'
     overview_teacher: 'Predați informatica în clasa dvs. prin crearea unui cont. <p/> Veţi putea să adăugaţi eleviii dumneavoastră şi să urmăriţi progresul lor.'
     no_signup_message: 'Poţi <a target="_blank" href="http://learn.code.org"> parcurge diverse stadii şi puzzle-uri</a>, dar va trebui să te înregistrezi pentru a-ți salva progresul.'
@@ -231,7 +231,7 @@ ro:
       signup: Inregistrează-te
       already_registered: Eşti deja înregistrat?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'Progresul lui %{name}'
       progress: Progresul tău
       lines: 'Total linii de cod: %{lines}'
       close: ÎNCHIDE
@@ -300,10 +300,10 @@ ro:
     cant_remove_teacher_no_email: '%{teacher_name} nu poate fi eliminat ca profesor al tău pentru că nu ai înregistrat o adresă de e-mail'
     student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor pentru %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Indicator răspuns
       student: elev
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Indicator soluție
+      try_it_yourself: Încearcă-l și tu
       section: Secţiune
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
@@ -325,7 +325,9 @@ ro:
     classroom_activity: Activitate Unplugged
   home:
     title: Studio de Cod
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINII DE COD SCRISE DE ELEVI'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Prezentare generală a cursurilor 1, 2 și 3
     lesson_plans: Planuri de lecție
     signin_message: 'Deja înregistrat? %{link}'
@@ -359,7 +361,7 @@ ro:
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Încercaţi un curs la Studio-ul Code
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -392,6 +394,10 @@ ro:
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
   compatability:
+    https:
+      header: Te rugăm să activezi HTTPS pentru Code.org.
+      message: "Pentru a spori securitatea, vom trece la HTTPS pe %{https_date}. Nu vei mai putea accesa Code.org după această dată. <a href='%{it_requirements_url}'> click aici</a> pentru a afla cum să activezi HTTPS pentru Code.org."
+      hide_this_warning: Ascunde această avertizare
     working:
       header: Momentan efectuăm lucrări de susținere a browser-ului tău.
       message: "Code.org folosește tehnologii web moderne. Acest lucru face site-ul mai rapid de utilizat. Browserul pe care îl folosiți nu suportă toate caracteristicile necesare şi este posibil să întâmpinați probleme în timp ce utilizaţi această parte a site-ului. Vă rugăm să ne ajute prin <a href='%{report_issue_url}'> raportarea problemelor întâlnite</a>. Puteţi, de asemenea, <a href='%{supported_browsers_url}'> să faceți upgrade pentru browser la o versiune acceptată</a>."
@@ -450,7 +456,7 @@ ro:
     frozen:
       title: Frozen
     infinity:
-      title: Infinity Play Lab
+      title: Laborator de joc Infinity
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
@@ -485,7 +491,7 @@ ro:
     correct_body: Acela este răspunsul corect.
   contract_match:
     wrong_title: Răspuns incorect
-    badname: Your contract has the wrong name.
+    badname: Contractul tău are numele greşit.
     badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
@@ -493,8 +499,8 @@ ro:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Completați răspunsul aici
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Mulţumesc
+    open_response_body: Mulţumim pentru răspunsul dumneavoastră!
   dialog:
     ok: OK
   time:
@@ -538,44 +544,44 @@ ro:
     sign_out: 'Dacă nu doreşti să îţi scrii vârsta, poţi <a href="%{url}">să ieşi</a>.'
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii tineri nu ai voie să intre pe site-ul nostru de sprijin. Te poţi uita prin <a href="http://support.code.org">support.code.org</a> fără să te loghezi, sau poţi cere ajutorul unui părinte sau profesor.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: Neînceput
+    in_progress: în progrès
     completed_too_many_blocks: finalizat, prea multe blocuri
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
-    assessment: assessment
+    assessment: evaluare
   studio:
     courses_working_on: Cursurile la care lucrați
     completed_courses: Curs terminat
     all_courses: Toate cursurile
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Proiecte
+    create: Creează proiectul
+    create_a_project: 'Creează un proiect nou:'
+    new: Creează unul nou
+    rename: Redenumește
     save: Salvează
     delete: Șterge
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Revenire la curs
+    my_projects: Proiectele mele
     share: Distribuie
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Ditribuie proiectul tău
+    share_copy_link: 'Copiază link-ul:'
+    close: Închide
     more: Mai mult
     name: Nume
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: Actualizat
+    project_type: Tip de proiect
+    help_text: 'Fă clic <strong>Creează o aplicație</strong>sau<strong>Desenează ceva</strong>dedesubt pentru a realiza un nou laborator de joc sau proiect artistic<br/>Poți reveni și lucra la proiectele tale oricând.'
+    need_help: Ai nevoie de ajutor să începi?
     really_delete: Șterge?
     delete_yes: Da
     delete_no: Nu
-    saved: Saved
-    not_saved: Not saved
+    saved: Salvat
+    not_saved: Nesalvat
     cancel: Anulează
-    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_title: Sigur ștergeți aceast proiect?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    view_all: Vizualizează proiectele mele
     remix: Remix
     click_to_remix: "Click 'Remix' to spin-off your own version!"

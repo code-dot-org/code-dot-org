@@ -215,7 +215,7 @@
   homepage_signpetition_dropdown: Потпишите нашу петицију &#x25BE;
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Сазнајте више
   homepage_slot_text_title_hoc: Час кода
   homepage_slot_text_blurb_hoc: Свако може научити. Почните данас
   homepage_slot_text_link_hoc: Испробај "Hour of Code"
@@ -418,11 +418,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
     овде</a>да би добили наш документ о приватности који можете да поделите или одштампате
     са вашим ученицима.
-  dashboard_curriculum_overview: Преглед наставног плана за вртић
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Видите план свих лекција
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Преглед наставног плана за вртић
+  dashboard_overview: Overview
   dashboard_sequence: Низ Акција
   dashboard_framework: Оквир
   dashboard_standards: Стандарди
@@ -433,6 +440,10 @@
   dashboard_puzzle_solving: 'Решавање проблема:'
   dashboard_student_worksheet: радна листови за ученике
   dashboard_teacher_worksheet: радни листови за учитеље
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: Вртић
   dashboard_grade_other: Други
   dashboard_login_word: Реч
@@ -463,6 +474,7 @@
   dashboard_sections_login_type_explanation: Ово вам објашњава који од ових брста
     пријављивања, <b>слику, реч или имејл адресу</b> , би сте изабрали за групу.
   dashboard_faq: Често постављана питања
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Сат Програмирања је стигао: 8-14 Децембра!'
   code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској
     науци
@@ -534,7 +546,7 @@
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
+  projguts_name: Лист, камен, маказе
   hourofcode_name: Placeholder for new code.org/hoc
   playlab_name: Play Lab
   codeorg_gradelevel: Ages 4-104
@@ -636,22 +648,22 @@
   lightbotintl_shortdescription: Игрица која вас учи принципима програмирања
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro
     to programming!
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
+  codecademy_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
   codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this
     epic programming game!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
+  codemonkey_shortdescription: Ученици програмирају мајмуна да ухвати банане.
+  codeavengers_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
   processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
-  groklearning_shortdescription: Teach "Eliza" the chatbot to fool your friends into
-    thinking she's human!
+  robomind_shortdescription: Напиши програм за виртуелног робота
+  groklearning_shortdescription: Научи чет-бота Елизу тако да твоји пријатељи помисле
+    да је она човек!
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
     language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
     programming.
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
-  robomindnl_shortdescription: Write code for a virtual robot
+  robomindnl_shortdescription: Напиши програм за виртуелног робота
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to
@@ -920,7 +932,7 @@
     4-8
   scratch_beyond_shortdescription: Create interactive games, stories, and animations.
   lightbot_beyond_shortdescription: Игрица која вас учи принципима програмирања
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
+  codecademy_beyond_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
   scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Learn visual programming on an iPad
@@ -928,7 +940,7 @@
     friends to try!
   groklearning_beyond_shortdescription: Basic intro to python programming
   hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
+  robomind_beyond_shortdescription: Напиши програм за виртуелног робота
   makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Make your own app! (Android-only)
   touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet

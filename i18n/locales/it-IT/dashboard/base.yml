@@ -327,7 +327,9 @@ it:
     classroom_activity: 'Attività "Senza Rete"'
   home:
     title: Officina del Codice
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: 'Già iscritto? %{link}'
@@ -394,6 +396,10 @@ it:
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
   compatability:
+    https:
+      header: Serve abilitare il protocollo HTTPS per Code.org.
+      message: "Per aumentare la sicurezza, noi stiamo passando a HTTPS su %{https_date}. Non sarete in grado di accedere Code.org dopo questa data. <a href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare HTTPS per accedere a Code.org."
+      hide_this_warning: Nascondi questo avviso
     working:
       header: Stiamo lavorando per supportare il tuo browser.
       message: "Code.org utilizza una moderna tecnologia web. Questo rende il sito più veloce da utilizzare. Il tuo browser non supporta tutte le funzionalità necessarie, e si potrebbero riscontrare problemi durante l'utilizzo di questa parte del sito. Per favore aiutateci segnalando <a href='%{report_issue_url}'> eventuali problemi che riscontrate</a>. È inoltre possibile <a href='%{supported_browsers_url}'> aggiornare il browser a una versione supportata</a>."
@@ -453,7 +459,7 @@ it:
       title: Frozen
     infinity:
       title: "Il Laboratorio dell'Infinito"
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Utilizzare il laboratorio Play Lab per creare una storia o un gioco con protagonisti i personaggi di Disney Infinity.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: "Gli studenti l'hanno creato scrivendo del codice!"
@@ -568,7 +574,7 @@ it:
     name: Nome
     updated: Aggiornato
     project_type: Tipo di progetto
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    help_text: "Fare clic su <strong>Crea una App</strong> o <strong>Disegnaqualcosa</strong> qui sotto per creare un nuovo progetto Play Lab o Artista! <br/> E' possibile tornare a lavorare sui vostri progetti in qualsiasi momento."
     need_help: Hai bisogno di aiuto per iniziare?
     really_delete: Elimina?
     delete_yes: Sì
@@ -576,8 +582,8 @@ it:
     saved: Salvato
     not_saved: Non salvato
     cancel: Annulla
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    delete_confirm_title: Sei sicuro di voler rimuovere questo progetto?
+    delete_confirm_text: "L'eliminazione del progetto lo rimuoverà in modo permanente dal tuo elenco progetti. Se avete condiviso il link con altri questi non saranno non più in grado di visualizzare il progetto."
     view_all: Mostra i miei progetti
     remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: "Fare clic su 'Remix' per ottenere una tua versione derivata!"

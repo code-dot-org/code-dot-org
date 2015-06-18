@@ -365,11 +365,18 @@ sq-AL:
   dashboard_students_print_page: Printo këtë faqe
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Kliko këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për studentët e tu.'
-  dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Shiko të gjithë planet mësimore
   dashboard_course1: 'Kursi 1:'
   dashboard_course2: 'Kursi 2:'
   dashboard_course3: 'Kursi 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
+  dashboard_overview: Overview
   dashboard_sequence: Sekuencë
   dashboard_framework: Struktura
   dashboard_standards: Standartet
@@ -380,6 +387,10 @@ sq-AL:
   dashboard_puzzle_solving: 'Zgjidhja-Puzzle-it:'
   dashboard_student_worksheet: puna studentit
   dashboard_teacher_worksheet: puna mësuesit
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Të tjera/ë
   dashboard_login_word: Fjalë
@@ -407,6 +418,7 @@ sq-AL:
   dashboard_sections_password_account_creation: Password tekst i krijuar nga studentët
   dashboard_sections_login_type_explanation: 'Kjo tabele ndihmon në shpjeigmin se cili nga këto tipe logini, <b>figura, fjalë ose email</b>, do të duash të zgjedhësh për një seksion.'
   dashboard_faq: Pyetjet më të shpeshta
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Ora e Kodimit është këtu - Dhjetor 8-14!'
   code_sign_up: Rregjistrohu për të marrë pjesë gjatë Javës së Edukimit CS
   learn_more: Mëso më Shumë
@@ -823,3 +835,6 @@ sq-AL:
   processing_beyond_longdescription: Proçesimi është një gjuhë programimi, mjedis zhvillimi dhe komunitet online. Që nga 2001, Proçesimi ka promovuar software e shkrimit brenda arteve vizule dhe shklrimit vizual brenda teknologjisë. Fillimisht u krijua për të shërbyer si një software sketchbook dhe për të mësuar themelet e programimit kompjuterik brenda një konteksti vizual, Procesimi evoloi në pajisje zhvillimi për profesionistët. Sot, ka dhejtra e mijëra studentë, artistë, dizenjuesë, kërkues që përdorin Proçesimin për të mësuar dhe prodhuar.
   alice_beyond_longdescription: Duke përdorur një mjedis programimi inovativ që suporton krijimet e animimeve 3D, Projetki Alice siguron mjete dhe materiale për të mësuar dhe shpjeguar mendimin kompjuterik, zgjidhjen e problemeve, dhe programimin kompjuterik ndërmjet një spektrumi moshash dhe nivelesh.
   sphero_beyond_longdescription: Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë dhe shkencë.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Fshih këtë paralajmërim

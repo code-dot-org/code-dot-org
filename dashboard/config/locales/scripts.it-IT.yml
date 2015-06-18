@@ -355,9 +355,11 @@
           'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento delle
             Collisioni (Big Game)'
         infinity:
-          title: Laboratorio
-          description_short: Crea una storia o inventa un gioco col Laboratorio!
-          description: Crea una storia o inventa un gioco col Laboratorio!
+          title: Laboratorio giochi Disney Infinity
+          description_short: Utilizzare il laboratorio Play Lab per creare una storia
+            o un gioco con protagonisti i personaggi di Disney Infinity.
+          description: Utilizzare il laboratorio Play Lab per creare una storia o
+            un gioco con protagonisti i personaggi di Disney Infinity.
           Play Lab: Laboratorio
           Infinity: Infinito
         algebrademo:
@@ -412,8 +414,7 @@
           description: Crea immagini utilizzando bit e byte.
           Pixelation: Conversione di pixel
         20-hour:
-          title: Corso introduttivo di informatica per scuole elementari e medie inferiori
-            (in 20 lezioni)
+          title: Corso introduttivo di 20 ore
           description: Questo corso in 20 lezioni introduce i concetti fondamentali
             dell'informatica e della programmazione. Il corso è progettato per l'uso
             nelle scuole elementari e medie inferiori, ma è divertente per imparare
@@ -445,6 +446,7 @@
           Applab: Applab
           The Artist: L'artista
           Play Lab: Laboratorio
+          Play Lab 2015: Play Lab 2015
         events:
           title: Eventi
           description: ''
@@ -548,6 +550,7 @@
             Information'
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -898,6 +901,7 @@
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -933,13 +937,15 @@
           Netsim: Netsim
           applab: applab
           online pd?: online pd?
-          AppLab: AppLab
+          AppLab: Laboratorio App
           Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          title: Tutte le cose!
+          description: Tutte le tipologie di livello per il test dell'interfaccia
+            utente
+          Odometer: Contachilometri
           Text Compression: Text Compression
           Pixelation: Conversione di pixel
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -978,6 +984,9 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         OnlinePD-K5:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
           Introduction to PD: Introduzione a PD
           K-5 Courses: K-5 Courses
           Writing computer programs: Scrivere programmi per il computer
@@ -1001,3 +1010,26 @@
             Computer Science
           Planning: Planning
           Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: L'Ora del Codice

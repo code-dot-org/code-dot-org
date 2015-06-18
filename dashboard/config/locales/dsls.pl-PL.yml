@@ -152,6 +152,39 @@
       Code Logo v3:
         Create images with bits and bytes.: Create images with bits and bytes.
         title: tytuł
+      ECSPD Online U1D1-2:
+        Unit 1 Day 1-2: Unit 1 Day 1-2
+        description here: description here
+      ECSPD Online U1D1-2 Forum:
+        U1D1-2 Forum: U1D1-2 Forum
+      ECSPD Online U1D1-2 Resources:
+        Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
+        description here: description here
+      ECSPD Online U1D10: []
+      ECSPD Online U1D10 Forum:
+        Forum Pending: Forum Pending
+        Unit 1 Day 10 Forum: Unit 1 Day 10 Forum
+      ECSPD Online U1D10 Resources: []
+      ECSPD Online U1D11-14:
+        title: tytuł
+      ECSPD Online U1D11-14 Resources: []
+      ECSPD Online U1D15-16: []
+      ECSPD Online U1D15-16 Resources: []
+      ECSPD Online U1D17-19: []
+      ECSPD Online U1D3-4:
+        'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
+      ECSPD Online U1D3-4 Resources:
+        'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
+      ECSPD Online U1D5-7: []
+      ECSPD Online U1D5-7 Resources: []
+      ECSPD Online U1D8-9: []
+      ECSPD Online U1D8-9 Resources: []
+      ECSPD Online Units:
+        Units covered: Units covered
+      ECSPD Online Welcome:
+        Welcome to ECS PD Online!: Welcome to ECS PD Online!
+      ECSPD Online intro:
+        Introduction: Wstęp
       ECSPD PD Phases:
         ECSPD PD Phases: ECSPD PD Phases
       ECSPD PD details:
@@ -215,8 +248,10 @@
       OPD-K5 Keep Learning: []
       OPD-K5 Loops: []
       OPD-K5 Other Courses: []
+      OPD-K5 Outline: []
       OPD-K5 Pair: []
       OPD-K5 Participation: []
+      OPD-K5 PreSurvey: []
       OPD-K5 Problem Solving: []
       OPD-K5 Program: []
       OPD-K5 Puzzles: []
@@ -242,8 +277,10 @@
       OPD-K5 Using CS: []
       OPD-K5 Vocabulary: []
       OPD-K5 Welcome: []
+      OPD-K5 Welcome 2: []
       OPD-K5 What is CS: []
       OPD-K5 Why teach CS: []
+      OPD-K5 Younger Grades: []
       OPD-K5 Your Plan: []
       Odometer:
         Odometer: Licznik kilometrów
@@ -459,8 +496,8 @@
           repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Student Lesson Introduction:
+        Impact of Innovation: Impact of Innovation
         description here: description here
-        title: tytuł
       U1L10 Student Lesson Introduction:
         description here: description here
         title: tytuł
@@ -484,6 +521,9 @@
         description here: description here
         title: tytuł
       U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
+        description here: description here
+      U1L17 Student Lesson Introduction:
         description here: description here
         title: tytuł
       U1L2 Student Lesson Introduction:
@@ -522,8 +562,7 @@
       U2L10 Student Lesson Introduction:
         DNS in the Real World: 'DNS in the Real World '
       U2L11 Student Lesson Introduction:
-        description here: description here
-        title: tytuł
+        HTTP and Abstraction: HTTP and Abstraction
       U2L12 Student Lesson Introduction:
         description here: description here
         title: tytuł
@@ -534,11 +573,10 @@
       U2L15 Student Lesson Introduction:
         Encryption Algorithms: Encryption Algorithms
       U2L16 Student Lesson Introduction:
-        description here: description here
-        title: tytuł
+        Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
       U2L17 Student Lesson Introduction:
+        Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems TSP
         description here: description here
-        title: tytuł
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
@@ -556,11 +594,10 @@
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
       U2L5 Student Lesson Introduction:
-        description here: description here
-        title: tytuł
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       U2L6 Student Lesson Introduction:
-        description here: description here
-        title: tytuł
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning
+          Tree
       U2L7 Student Lesson Introduction:
         description here: description here
         title: tytuł
@@ -711,6 +748,14 @@
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
       broadcast lesson plan: []
+      equity Intro:
+        Introduction to Equity PD: Introduction to Equity PD
+      equity in CS:
+        Equity in Computer Science: Equity in Computer Science
+      equity is more:
+        Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
+      equity v equality:
+        Equity Vs. Equality: Equity Vs. Equality
       facilitator test: []
       k5 what next 1: []
       sciPD Course Overview: []
@@ -848,6 +893,8 @@
       unique level name here:
         description here: description here
         title: tytuł
+      wn scratchjr 1:
+        Scratch Jr: Scratch Jr
     match:
       2-3 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -1077,6 +1124,30 @@
           its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECSPD Online U1D10 Assessment 1:
+        Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions
+          drawn from the data will be limited by the (relatively) small amount of
+          data.
+        0: '? Difficult for a computer to draw conclusions. Not easily converted to
+          a graph or data set. Difficult to compare empirically or quantitatively
+          with similar representations of data.'
+        1: ': Difficult for a computer to draw conclusions. Not easily converted to
+          a graph or data set. Difficult to compare empirically or quantitatively
+          with similar representations of data.'
+        2: '? Easily converted to a graph or data table. Can easily generate statistics
+          and draw simple conclusions. Can easily compare with similar representations
+          of data.'
+        3: ': Easily converted to a graph or data table. Can easily generate statistics
+          and draw simple conclusions. Can easily compare with similar representations
+          of data.'
+        'Image: Advantages': 'Image: Advantages'
+        'Image: Disadvantages': 'Image: Disadvantages'
+        'List of objects: Advantages': 'List of objects: Advantages'
+        'List of objects: Disadvantages': 'List of objects: Disadvantages'
+        4: '? More comprehensive set of data. Can be used to generate multiple different
+          data sets. Easy for a person to draw intuitive conclusions.'
+        5: ': More comprehensive set of data. Can be used to generate multiple different
+          data sets. Easy for a person to draw intuitive conclusions.'
       ECSPD phase matching:
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended
           in-person and online PD, focused on building pedagogical strategies and
@@ -1190,8 +1261,8 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the
-          Map to the arrow that gets the Flurb to the treasure
+        Match the Map to the arrow that gets the Flurb to the treasure: Wybierz strzałkę,
+          która pomoże Flurbowi dotrzeć do skarbu
         Matching: Dopasowanie
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -1214,8 +1285,8 @@
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match
-          the Map to the algorithm that gets the Flurb to the flowers.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Wybierz
+          właściwy algorytm, który doprowadzi Flurba do kwiatków.
         Matching: Dopasowanie
       Match circles to code:
         (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
@@ -1294,20 +1365,20 @@
           code
         Number: Number
         String: String
-        http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
-        http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
-        http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
+        https://studio.code.org/script_assets/pd/blue.png: https://studio.code.org/script_assets/pd/blue.png
+        https://studio.code.org/script_assets/pd/purple.png: https://studio.code.org/script_assets/pd/purple.png
+        https://studio.code.org/script_assets/pd/teal.png: https://studio.code.org/script_assets/pd/teal.png
       PDAlg block match:
         Block match: Block match
         Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match
           the expressions with the appropriate Circle of Evaluation or Evaluation
           Block
-        http://staging.studio.code.org/script_assets/pd/block1.png: http://staging.studio.code.org/script_assets/pd/block1.png
-        http://staging.studio.code.org/script_assets/pd/block2.png: http://staging.studio.code.org/script_assets/pd/block2.png
-        http://staging.studio.code.org/script_assets/pd/block3.png: http://staging.studio.code.org/script_assets/pd/block3.png
-        http://staging.studio.code.org/script_assets/pd/circle1.png: http://staging.studio.code.org/script_assets/pd/circle1.png
-        http://staging.studio.code.org/script_assets/pd/circle2.png: http://staging.studio.code.org/script_assets/pd/circle2.png
-        http://staging.studio.code.org/script_assets/pd/circle3.png: http://staging.studio.code.org/script_assets/pd/circle3.png
+        https://studio.code.org/script_assets/pd/block1.png: https://studio.code.org/script_assets/pd/block1.png
+        https://studio.code.org/script_assets/pd/block2.png: https://studio.code.org/script_assets/pd/block2.png
+        https://studio.code.org/script_assets/pd/block3.png: https://studio.code.org/script_assets/pd/block3.png
+        https://studio.code.org/script_assets/pd/circle1.png: https://studio.code.org/script_assets/pd/circle1.png
+        https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
+        https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
           Year Development: 2 days in-person and 10 hours online'
@@ -1360,6 +1431,25 @@
         Answer 1: Answer 1
         Question: Question
         What is an unplugged activity?: What is an unplugged activity?
+      U1L16 - Matching File Compression Types:
+        BMP: BMP
+        Compressed Image - Lossless: Compressed Image - Lossless
+        Compressed Image - Lossless (256 color limit): Compressed Image - Lossless
+          (256 color limit)
+        Compressed Image - Lossy: Compressed Image - Lossy
+        Compressed Sound - Lossy: Compressed Sound - Lossy
+        Compressed Text - Lossless: Compressed Text - Lossless
+        GIF: GIF
+        JPEG: JPEG
+        MP3: MP3
+        Match the type of file with the description: Match the type of file with the
+          description
+        PNG: PNG
+        Uncompressed Image: Uncompressed Image
+        Uncompressed Sound: Uncompressed Sound
+        WAV: WAV
+        ZIP: ZIP
+        description here: description here
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -1551,36 +1641,21 @@
         Where is Brendan from?: Skąd jest Brendan?
         blue: niebieski
         salt: sól
-      unique level name here:
-        A: A
-        B: B
-        C: C
-        Cycle: Cycle
-        D: D
-        E: E
-        Edge: Edge
-        Graph: Graph
-        Graph Terminology: Graph Terminology
-        Look at diagram below and then match the proper term with what each label is pointing to.: Look
-          at diagram below and then match the proper term with what each label is
-          pointing to.
-        Node: Node
-        Weight: Weight
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image
-          provided.
-        Multiple Choice: Multiple Choice
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
-          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
-          right of the parallelogram
+        Choose an algorithm for the image provided.: Wybierz algorytm pasujący do
+          obrazka.
+        Multiple Choice: Test wyboru
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Zacznij
+          od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść trójkąt na
+          prawo od równoległoboku
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Rozpocznij
           od kwadratu <br/> umieść trójkąt powyżej kwadratu <br/> umieścić trójkąt
           poniżej kwadratu
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
-          right of the triangle
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Zacznij
+          od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok na
+          prawo od trójkąta
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
         : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
@@ -1590,28 +1665,29 @@
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
-        Multiple Choice: Multiple Choice
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
-          with a triangle<br/>Put a square below the triangle<br/>Put another triangle
-          below the square
-        Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em>
-          follow this algorithm?
+        Multiple Choice: Test wyboru
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Zacznij
+          od trójkąta<br/>Umieść kwadrat pod trójkątem <br/>Umieść kolejny trójkąt
+          pod kwadratem
+        Which image does <em>not</em> follow this algorithm?: Który z obrazków pasuje
+          <em>lub nie</em> do podanego algorytmu?
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Multiple Choice: Multiple Choice
-        Which program makes this image?: Which program makes this image?
+        Multiple Choice: Test wyboru
+        Which program makes this image?: Za pomocą którego programu został stworzony
+          ten obrazek?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
-        Multiple Choice: Multiple Choice
+        According to the rules of the game, which set of cards is scored correctly?: Który
+          zestaw kart został ułożony zgodnie z zasadami gry?
+        Multiple Choice: Test wyboru
       2-3 Getting Loopy Multi 1:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
@@ -1620,14 +1696,15 @@
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: Jak możesz uprościć ciąg
           działań z pomocą pętli?
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Multiple Choice: Multiple Choice
-        Which program makes this image?: Which program makes this image?
+        Multiple Choice: Test wyboru
+        Which program makes this image?: Za pomocą którego programu został stworzony
+          ten obrazek?
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
@@ -1642,16 +1719,16 @@
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
-        Multiple Choice: Multiple Choice
-        Which program does not create this image?: Which program does not create this
-          image?
+        Multiple Choice: Test wyboru
+        Which program does not create this image?: Za pomocą którego programu nie
+          można stworzyć tego obrazka?
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
-        Multiple Choice: Multiple Choice
-        Which image-program combo does not contain mistakes?: Which image-program
-          combo does not contain mistakes?
+        Multiple Choice: Test wyboru
+        Which image-program combo does not contain mistakes?: Które połączenie obrazka
+          i sekwencji strzałek nie zawiera błędu?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
@@ -1659,7 +1736,8 @@
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        Artist Debugging Multiple Choice One: Artysta Debugowanie Test wielokrotnego
+          wyboru 1
         Why won't this circle go all the way around?: Dlaczego w ten sposób nie powstanie
           cały okrąg?
       2-3 artist functions multi 1:
@@ -1668,9 +1746,10 @@
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
-        Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
-        Pick the correct blocks to draw this image using the given functions: Pick
-          the correct blocks to draw this image using the given functions
+        Artist Functions Multiple Choice One: Artysta Funkcje Test wielokrotnego wyboru
+          1
+        Pick the correct blocks to draw this image using the given functions: Wybierz
+          odpowiednie bloki, aby narysować ten obrazek przy użyciu dostępnych funkcji
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
@@ -1678,8 +1757,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Artist Loops Multiple Choice: Artysta Pętle Test wielokrotnego wyboru
+        Which shape is made by this loop?: Który kształt jest tworzony przez tę pętlę?
       2-3 artist loops multi 2:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500
@@ -1687,8 +1766,9 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which shape is made by this program?: Which shape is made by this program?
+        Artist Loops Multiple Choice: Artysta Pętle Test wielokrotnego wyboru
+        Which shape is made by this program?: Który kształt można stworzyć za pomocą
+          tego programu?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
@@ -1724,7 +1804,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
+        Bee Loops Multiple Choice One: Pszczółka Pętle Test wyboru 1
         Which blocks collect all of the nectar?: Którymi blokami zbierzesz cały nektar?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
@@ -1737,63 +1817,64 @@
         Maze Multiple Choice One: Labirynt Test wyboru 1
         Which blocks work?: Które bloki zadziałają?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
-        Brushing your teeth: Brushing your teeth
-        Multiple Choice: Multiple Choice
-        Shopping from a grocery list: Shopping from a grocery list
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
+        Baking cookies: Pieczenie ciasteczek
+        Banana: Banan
+        Brushing your teeth: Szczotkowanie zębów
+        Multiple Choice: Test wyboru
+        Shopping from a grocery list: Zakupy spożywcze z listą
+        Which one of these items is hardest to describe an algorithm for?: Dla którego
+          z tych elementów najtrudniej jest napisać algorytm?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene jest  _____ miastem.
         0: '? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
-        Multiple Choice: Multiple Choice
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        1: ': Oto trzy zdania. Który z poniższych szablonów pasuje do wszystkich trzech
+          zdań?'
+        Multiple Choice: Test wyboru
+        Seattle _____ a _____ _____.: Seattle _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+          jest dużym miastem.<br/>Eugene jest średniej wielkości miastem<br/>Hillview
+          jest małym miastem.
+        _____ is _____ a _____.: _____ jest _____ _____.
+        _____ is a _____ city.: _____ jest  _____ miastem.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
-        Multiple Choice: Multiple Choice
-        Which of these pictures best represents crowdsourcing?: Which of these pictures
-          best represents crowdsourcing?
+        Multiple Choice: Test wyboru
+        Which of these pictures best represents crowdsourcing?: Który z tych obrazków
+          przedstawia w najlepszy sposób crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Multiple Choice: Multiple Choice
-        Washing your face: Washing your face
-        Which one of these activities would be best for practicing crowdsourcing?: Which
-          one of these activities would be best for practicing crowdsourcing?
+        Brushing your hair: Szczotkowanie włosów
+        Cleaning your room: Sprztanie pokoju
+        Eating your dessert: Jedzenie deseru
+        Multiple Choice: Test wyboru
+        Washing your face: Mycie twarzy
+        Which one of these activities would be best for practicing crowdsourcing?: Która
+          tych czynności jest najlepszym przykładem crowdsourcing?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Multiple Choice
-        Which piece of information listed below is okay to share on the internet?: Which
-          piece of information listed below is okay to share on the internet?
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: Your parent's credit card number
+        Multiple Choice: Test wyboru
+        Which piece of information listed below is okay to share on the internet?: Które
+          z poniższych informacji możesz udostępnić w internecie?
+        Your address: Twój adres
+        Your birthday: Data twoich urodzin
+        Your favorite food: Twoja ulubiona potrawa
+        Your parent's credit card number: Numer karty kredytowej twojego rodzica
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: Multiple Choice
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
-          you try to log on to code.org, which IP address is the DNS most likely to
-          take you to?
+        Multiple Choice: Test wyboru
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Gdy
+          logujesz się na stronę code.org, najprawdopodobniej na który adres IP przeniesie
+          cię DNS?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
-          the DNS has sent you to the page at the IP address 100.42.50.110, which
-          website are you on?
-        Multiple Choice: Multiple Choice
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jeśli
+          DNS zabrał cię na stronę o adresie IP 100.42.50.110, to jak nazywa się strona
+          na której się znalazłeś?
+        Multiple Choice: Test wyboru
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -1803,20 +1884,21 @@
         0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
           <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        1: ': Muszka jest w maślance, <br/> Uciekaj, muszko, uciekaj, <br/> Muszka
+          jest w maślance, <br/> Uciekaj, muszko, uciekaj, <br/> Muszka jest w maślance,
+          <br/> Uciekaj, muszko, uciekaj, <br/> Przeskocz do mojej Lou, moja kochana.'
+        Lou, Lou, skip to my Lou,: Lou Lou, przeskocz do mojej Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
-          to my Lou, <br/>Skip to my Lou, my darlin.
+          Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/>
+          Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou, moja kochana.
         2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
           buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        Multiple Choice: Multiple Choice
+        3: ': Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej
+          Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou,
+          moja kochana. <br/> <br/> <p>Muszka jest w maślance, <br/> Uciekaj, muszko,
+          uciekaj,'
+        Multiple Choice: Test wyboru
         4: '? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?'
         5: ': What is the largest chunk of this song that you can define as the chorus
@@ -1826,7 +1908,7 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
           of the programs below <em>does not</em> make the exact same sequence as
           Program 1?
@@ -1837,9 +1919,9 @@
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        Which function creates a rectangle that can change its size?: Which function
-          creates a rectangle that can change its size?
+        Artist Functions Multiple Choice: Artysta Funkcje Wielokrotny Wybór
+        Which function creates a rectangle that can change its size?: Aby prostokąt
+          mógł zmienić swój rozmiar, której funkcji użyjesz?
       4-5 artist loops multi 1:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
@@ -1847,14 +1929,15 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which blocks will create the design?: Which blocks will create the design?
+        Artist Loops Multiple Choice: Artysta Pętle Test wielokrotnego wyboru
+        Which blocks will create the design?: Za pomocą których klocków stworzysz
+          projekt?
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Artysta Funkcje Wielokrotny Wybór
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick
           the for loop that represents the following pattern:  5, 10, 15, 20, 25,
           30, 35, 40, 45, 50'
@@ -1863,7 +1946,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
-        Artist Multiple Choice: Artist Multiple Choice
+        Artist Multiple Choice: Artysta Wielokrotny Wybór
         Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw
           a rectangle with a perimeter of 100?
       4-5 artist multi 2:
@@ -1871,8 +1954,8 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
-        Artist Multiple Choice: Artist Multiple Choice
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Artist Multiple Choice: Artysta Wielokrotny Wybór
+        Which drawing is symmetric?: Który z rysunków jest symetryczny?
       4-5 bee conditionals multi 1:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
@@ -1904,7 +1987,8 @@
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Bee Loops Multiple Choice: Bee Loops Multiple Choice
-        Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
+        Which blocks will solve the puzzle?: Za pomocą których klocków rozwiążesz
+          łamigłówkę?
       4-5 farmer loops multi 1:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
@@ -1967,6 +2051,26 @@
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      ECSPD Online U1D10 Assessment 2:
+        Connecting several data sets allows a more accurate representation of the underlying information.: Connecting
+          several data sets allows a more accurate representation of the underlying
+          information.
+        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data
+          mining is becoming so advanced it may one day be used to automatically generate
+          public policy decisions for us
+        Different representations of data can help us draw more meaningful conclusions about it.: Different
+          representations of data can help us draw more meaningful conclusions about
+          it.
+        0: '? In the previous video, David McCandless made several important points
+          about the representation and use of data. Which of the following was *not*
+          a main point of his?'
+        1: ': In the previous video, David McCandless made several important points
+          about the representation and use of data. Which of the following was *not*
+          a main point of his?'
+        Tell a Story with Data: Tell a Story with Data
+        The way data is represented can help us understand the data by telling a meaningful story.: The
+          way data is represented can help us understand the data by telling a meaningful
+          story.
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: Growth Mindset in the Classroom
         How can we use praise to encourage Growth Mindset in our students?: How can
@@ -2031,7 +2135,7 @@
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
           500
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which blocks solve this puzzle?: Którymi blokami rozwiążesz zadanie?
       K-1 Artist 1 Multi 2:
         /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
@@ -2039,7 +2143,7 @@
         /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png,
           500
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which blocks draw the square?: Które bloki utworzą kwadrat?
       K-1 Artist 2 Multi 1:
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
@@ -2048,7 +2152,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
           500
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which shape do these squares combine to make?: Which shape do these squares
           combine to make?
       K-1 Artist Loops Multi 1:
@@ -2058,7 +2162,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which blocks create this picture?: Which blocks create this picture?
       K-1 Bee 1 Multi 1:
         /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
@@ -2067,7 +2171,7 @@
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         How many nectars is this?: Ile razem nektaru to daje?
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
       K-1 Bee 1 Multi 2:
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
@@ -2075,13 +2179,13 @@
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         How many nectars is this?: Ile razem nektaru to daje?
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
       K-1 Digital Footprint Multi 1:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
           animal has the digital footprint that leaves him or her the <strong>most
           unsafe</strong>?
@@ -2092,21 +2196,21 @@
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: Jak możesz uprościć ciąg
           działań z pomocą pętli?
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
         /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which arrow gets the Flurb to the treasure?: Która strzałka doprowadzi Flurba
           do skarbu?
       K-1 Keep it Private Multi 1:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which information should you <strong>not</strong> share online?: Jakimi informacjami
           <strong>nie</strong> powinieneś dzielić się w sieci?
       K-1 Maze Debugging Multi 1:
@@ -2116,7 +2220,7 @@
         /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
         /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which choice should be the final block?: Który blok powinien być na końcu?
       K-1 Maze Loops Multi 1:
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png,
@@ -2124,7 +2228,7 @@
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which repeat block is the same?: Which repeat block is the same?
       K-1 Maze Loops Multi 2:
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png,
@@ -2132,7 +2236,7 @@
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Pick the correct repeat block.: Wybierz właściwy blok powtarzania.
       K-1 Maze Multiple Choice 2:
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png,
@@ -2149,7 +2253,7 @@
         /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which algorithm gets the Flurb to the flowers?: Który algorytm doprowadzi
           Flurba do kwiatów?
       K-1 Plant a Seed Multi 1:
@@ -2157,7 +2261,7 @@
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which step should go at the beginning of this algorithm?: Który krok powinien
           być na początku tego algorytmu?
       K-1 Plant a Seed Multi 2:
@@ -2165,7 +2269,7 @@
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which step should fill in the blank for this algorithm?: Który krok powinien
           uzupełnić lukę w algorytmie?
       K-1 Word Search Multi 1:
@@ -2174,7 +2278,7 @@
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png,
           450
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which blocks spell "MOVE"?: Które bloki utworzą słowo "MOVE"?
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
@@ -2182,15 +2286,15 @@
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png,
           450
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         Which blocks spell "JUMP"?: Które bloki utworzą słowo "JUMP"?
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
           700
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Test wyboru
         SET: SET
-        SOUTH: SOUTH
-        SQUARE: SQUARE
+        SOUTH: POŁUDNIE
+        SQUARE: KWADRAT
         Which word is spelled?: Które ze słów zostanie utworzone?
       K-1 multi 4:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
@@ -2264,7 +2368,7 @@
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of
           these Evaluation Blocks will draw the image on the left?
-        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
       PDAlg Blocks Video:
         In which area of the screen do you click blocks together to write a program?: In
           which area of the screen do you click blocks together to write a program?
@@ -2442,6 +2546,15 @@
           * 7 + 10
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
           * 7 + 3
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+        Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
+        Which one is the shortest path tree from the source node indicated?: Which
+          one is the shortest path tree from the source node indicated?
       U1L10 Assessment 1:
         2 bits: 2 bits
         3 bits: 3 bits
@@ -2509,14 +2622,6 @@
           most efficient method will require no more than what number of bits?'
         1: ': When sending a response to a question with four possible answers, the
           most efficient method will require no more than what number of bits?'
-      U1L4 Multiple Choice:
-        AAAA: AAAA
-        AABB: AABB
-        ABAB: ABAB
-        ABBB: ABBB
-        BBBB: BBBB
-        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination
-          and Binary Messages'
       U1L6 Assessment multiple choice:
         10: '10'
         12: '12'
@@ -2561,6 +2666,19 @@
         Why does the IP address of every device at a particular location start with the same numbers?: Why
           does the IP address of every device at a particular location start with
           the same numbers?
+      U2L05 Assessment 1:
+        'Packets: Assessment': 'Packets: Assessment'
+        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick
+          Two: Pick the two statements about packets and routing on the Internet which
+          are true.'
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP
+          depends on the infrastructure of the Internet to be reliable enough to ensure
+          no packets are lost in transmission
+        TCP ensures messages can be reliably transmitted across the Internet: TCP
+          ensures messages can be reliably transmitted across the Internet
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP
+          must account for the fact that packets may not arrive at a destination computer
+          in the intended order
       'U2L06 - MC: Which is an MST?':
         A: A
         B: B
@@ -2588,6 +2706,23 @@
           spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents
           a network
+      U2L08 Assessment 1:
+        11: '11'
+        5: '5'
+        6: '6'
+        8: '8'
+        9: '9'
+        12: '? Here is another router network. The table displays the current state
+          of the router table for router A. Take the role of a new router, Z, that
+          has just been connected to the network through router A. You have just compared
+          router tables with router A. Based on your current knowledge as router Z,
+          what is the cost of the most efficient way to send traffic to router E?'
+        13: ': Here is another router network. The table displays the current state
+          of the router table for router A. Take the role of a new router, Z, that
+          has just been connected to the network through router A. You have just compared
+          router tables with router A. Based on your current knowledge as router Z,
+          what is the cost of the most efficient way to send traffic to router E?'
+        Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It
           is inefficient to have everyone on the Internet maintain their own list
@@ -2640,6 +2775,26 @@
           are not - humans are better as breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why
           are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many users would an fixed-length IP address system using 6 bits support?: How
+          many users would an fixed-length IP address system using 6 bits support?
+        'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol:
+          Assessment 1'
+      U2L3 Assessment 3:
+        ? '? ''IP addresses contain information similar to addressing a letter where
+          you need include the state, zip code, street and number. This is called:'''
+        : 'IP addresses contain information similar to addressing a letter where you
+          need include the state, zip code, street and number. This is called:'
+        'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol:
+          Assessment 2'
+        abstraction: abstraction
+        hierarchy: hierarchy
+        packet: packet
+        protocol: protocol
       U3L01 Assessment2:
         Fit 1 slice on top of the other, faces together: Fit 1 slice on top of the
           other, faces together
@@ -3153,12 +3308,6 @@
         This multiple choice is all about the presidents of the United States.: Ten
           wielokrotny wybór dotyczy prezydentów Stanów Zjednoczonych.
         Who was the first president of the USA?: Kto był pierwszym prezydentem USA?
-      unique level name here:
-        Question: Question
-        description here: description here
-        right answer: right answer
-        title: tytuł
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Wybierz najlepszą odpowiedź na pytanie.
         Valid Contracts: Prawidłowe umowy
@@ -3218,18 +3367,34 @@
           Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
           or ((8 < x) and (x < 10)))
+        ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x)
+          && (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8
+          < x) AND (x < 10))
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) I (x < 5)) LUB ((8
           < x) I (x < 10))
+        ((1 < x) And (x < 5) Or (8 < x) And (x < 10)): ((1 < x) And (x < 5) Or (8
+          < x) And (x < 10))
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
           ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8
+          < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) i (x < 5)) lub ((8
           < x) i (x < 10))
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
         (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) &&
+          (x < 10)
+        (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x)
+          AND (x < 10)
+        (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x)
+          And (x < 10)
+        (1 < x) and (x < 5) or (8 < x) and (x < 10): (1 < x) and (x < 5) or (8 < x)
+          and (x < 10)
         /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
           500
         Convert Blocks to Math: Zamień bloki na matematykę
@@ -3325,6 +3490,51 @@
           PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD Online U1D1-2 Assessment 1:
+        What is a Computer?: What is a Computer?
+      ECSPD Online U1D1-2 Reflection:
+        'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is
+          a Computer? Reflection'
+      ECSPD Online U1D10 Reflection:
+        Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+        0: '? You have experienced the lesson both online and on the first day of
+          the in-person PD. Additionally, you have watched a TED talk about the representation
+          of data. What have you learned that you can take back to your classroom?
+          Use this space to record your ideas for this lesson. You will have a chance
+          to share your ideas and questions in a forum in the following level.'
+        1: ': You have experienced the lesson both online and on the first day of
+          the in-person PD. Additionally, you have watched a TED talk about the representation
+          of data. What have you learned that you can take back to your classroom?
+          Use this space to record your ideas for this lesson. You will have a chance
+          to share your ideas and questions in a forum in the following level.'
+      ECSPD Online U1D11-14 Reflection:
+        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: How
+          do you feel about the tools for this lesson? What challenges might they
+          pose in your classroom?
+        Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
+      ECSPD Online U1D15-16 Reflection:
+        Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
+        0: '? What can you take away from how you saw this lessons taught in PD? How
+          do you feel about the part of the lesson that was not taught in PD? How
+          do you plan to teach this lesson?'
+        1: ': What can you take away from how you saw this lessons taught in PD? How
+          do you feel about the part of the lesson that was not taught in PD? How
+          do you plan to teach this lesson?'
+      ECSPD Online U1D3-4 Reflection:
+        Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
+        What challenges do you think you and your students might have with the material covered in this lesson?: 'What
+          challenges do you think you and your students might have with the material
+          covered in this lesson? '
+      ECSPD Online U1D5-7 Reflection:
+        Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
+        What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson?: 'What
+          can you take away from how you saw this lessons taught in PD? How do you
+          plan to teach this lesson? '
+      ECSPD Online U1D8-9 Reflection:
+        Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
+        What challenges do you think you and your students might have with the material covered in this lesson?: What
+          challenges do you think you and your students might have with the material
+          covered in this lesson?
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
@@ -3427,6 +3637,7 @@
         Enter title here: Wpisz tytuł
       Trent Test Level:
         Enter title here: Wpisz tytuł
+      U1L1 - FR computer science word association: []
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
@@ -3551,6 +3762,15 @@
         'Routers and Addresses: Question 3': 'Routers and Addresses: Question 3'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
+      U2L05 Reflection 1:
+        Enter your reflection here.: Enter your reflection here.
+        'Packets: Reflection': 'Packets: Reflection'
+      U2L08 Free Response 1:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 2:
+        'Router Table: Reflection': 'Router Table: Reflection'
+      U2L08 Free Response 3:
+        'Router Table: Reflection': 'Router Table: Reflection'
       U2L09 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L09 Free Response Wrap Up:
@@ -3580,6 +3800,26 @@
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L17 Assessment 1:
+        Assessment Question 1: Assessment Question 1
+        Describe what it means for a problem to be "computationally hard.": Describe
+          what it means for a problem to be "computationally hard."
+      U2L17 Assessment 2:
+        Assessment Question 2: Assessment Question 2
+        How are computationally hard problems related to encryption?: How are computationally
+          hard problems related to encryption?
+      U2L17 Free Response Getting Started:
+        'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
+        0: '? List two problems that you think computers can not solve? What are the
+          characteristics of problems that are "hard" for computers?'
+        1: ': List two problems that you think computers can not solve? What are the
+          characteristics of problems that are "hard" for computers?'
+      U2L17 Free Response Wrap Up:
+        'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
+        0: '? If the TSP is unsolvable for finding an exact solution, how do you think
+          package delivery companies optimize their delivery routes?'
+        1: ': If the TSP is unsolvable for finding an exact solution, how do you think
+          package delivery companies optimize their delivery routes?'
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
       U2L18 Free Response Getting Started:
@@ -3596,6 +3836,12 @@
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L20 Free Response Wrap Up:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L3 Assessment 4:
+        'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing
+          Protocol: Assessment 3'
+        Why does it not make sense for users to be identified by their real names on the Internet?: Why
+          does it not make sense for users to be identified by their real names on
+          the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol:
           Getting Started'

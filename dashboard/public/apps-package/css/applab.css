@@ -472,6 +472,9 @@ button.arrow:focus {
     width: 100%;
     display: inline-block; }
 
+.hover-pointer:hover {
+  cursor: pointer; }
+
 .chooseAssetDropdownOption {
   color: #0596CE;
   text-decoration: underline; }

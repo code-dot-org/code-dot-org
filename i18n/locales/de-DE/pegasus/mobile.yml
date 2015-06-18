@@ -12,7 +12,7 @@ de-DE:
   petition_message: Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik zu lernen
   petition_sign_message: 'Wenn Sie der gleichen Meinung sind, unterschreiben Sie.  # Anderen anschließen.'
   petition_sign_message_support: 'Wenn du uns unterstützen möchtest, unterzeichne mit deinem Namen. Schließe dich den # anderen Supportern an.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Tritt # anderen bei'
   name: Name
   email: E-Mail
   zipcode: Postleitzahl oder Land
@@ -143,36 +143,30 @@ de-DE:
     &ldquo;Wenn du programmierst, kannst du den Weg deines Lebens wählen.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Diese Fähigkeiten haben meine Zukunft verändert. Selbstverständlich ist es auch ein riesen Spass.&rdquo;
+    Luna, 7. Klasse
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Ich habe meine Schüler noch nie so begeistert lernen gesehen.&rdquo;
+    Michael, Lehrer
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Man kann vorher nicht wissen ob man Informatik mag oder nicht, man muss es ausprobieren.&rdquo;
+    Jackson, 6. Klasse
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Du kannst alles machen, was du dir ausdenken kannst, in der Programmierung.&rdquo; 
+    Maya, 2. Klasse
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Informatik ist nicht für irgendjemanden. Es ist für dich, hier und jetzt.&rdquo; 
+    Geraldo, Lehrer
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Coding versprüht Kreativität, Inspiration und Innovation &mdash; 
+    alles was man in jeder Karriere braucht.&rdquo;
+    Floresa, Lehrer
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;Dieses Projekt hat 100% meiner Schüler gefesselt, einbezogen und teilhaben lassen.&rdquo;
+    Adam, Lehrer
+  homepage_hero_text_stat_loc: '#loc geschriebene Zeilen, von Schülern'
+  homepage_hero_text_stat_students: '#student_count Schüler-Accounts bei Code Studio'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served genutzt'
   homepage_slot_text_hoc: 'Die "Hour of Code"'
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -182,11 +176,11 @@ de-DE:
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Sieh dir das Video an
   homepage_action_text_teachervideo: Sieh dir das Video an
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: Fang an zu lernen
   homepage_action_text_signpetition: Unterzeichne die Petition
   homepage_signpetition_dropdown: 'Unterzeichne unsere Petition &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: Code.org und das Schulgremium haben eine Allianz geschlossen, um die Vielfalt in der Informatik zu verbessern.
+  homepage_banner_text_link: Erfahre mehr
   homepage_slot_text_title_hoc: Programmierstunde
   homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: 'Probiere "The Hour of Code" aus'
@@ -205,7 +199,7 @@ de-DE:
   homepage_slot_text_title_advocates: Befürworter
   homepage_slot_text_blurb_advocates: Unterstütze unsere Arbeit
   homepage_slot_text_link_stats: Sehe die Statistik
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: Beteilige Dich
   homepage_slot_text_link_donate: Spende
   homepage_header_codestudio: Kreationen der Schüler im Code Studio
   homepage_header_donors: Code.org dankt seinen Unterstützern
@@ -357,11 +351,18 @@ de-DE:
   dashboard_students_print_page: Diese Seite drucken
   dashboard_students_url: URL
   dashboard_privacy_document_link: 'Klicken sie <a href="/privacy/student-privacy", target="_blank">hier</a> für Informationen zum Schutz der persönlichen Daten, um es auszudrucken oder mit Ihren Schülern zu teilen.'
-  dashboard_curriculum_overview: K-5 Lehrplan-Übersicht
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Alle Lehrpläne anzeigen
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 Lehrplan-Übersicht
+  dashboard_overview: Overview
   dashboard_sequence: Sequenz
   dashboard_framework: Rahmen
   dashboard_standards: Standards
@@ -372,6 +373,10 @@ de-DE:
   dashboard_puzzle_solving: 'Lösen von Aufgaben:'
   dashboard_student_worksheet: Schüler Arbeitsblatt
   dashboard_teacher_worksheet: Lehrer Arbeitsblatt
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: Kindergarten
   dashboard_grade_other: Andere
   dashboard_login_word: Wort
@@ -399,6 +404,7 @@ de-DE:
   dashboard_sections_password_account_creation: Vom Schüler erstelltes Passwort
   dashboard_sections_login_type_explanation: 'Diese Tabelle hilft dir bei der Wahl der Zugangsform zu einem Bereich <b>Bild, Wort oder e-Mail</b>.'
   dashboard_faq: Häufig gestellte Fragen
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: '"The Hour of Code" ist da - 8. Dezember, 2014!'
   code_sign_up: Anmelden, um an der CS Lernwoche teilzunehmen
   learn_more: Erfahre mehr
@@ -819,3 +825,6 @@ de-DE:
   processing_beyond_longdescription: '"Processing" ist eine Programmiersprache, eine Entwicklungsumgebung und eine Online-Community. Seit 2001 vermittelt "Processing" Softwarekenntnisse mittels einem sehr stark visuellen Ansatz. Ausgehend von einem Software-Skizzenbuch hat sich "Processing" per heute in ein professionelles Entwicklungstool weiterentwickelt. Heute nutzen zehntausende Studenten, Schüler, Künstler, Forscher, Designer und Enthusiasten das "Processing"-Tool zum Lernen, für Prototypenerstellung und für die Entwicklung.'
   alice_beyond_longdescription: 'Das "Alice"-Projekt stellt Dir Werkzeuge und Materialien für die Lehre und das Erlernen und Programmieren von 3-dimensionalen Animationen zur Verfügung. Schüler aller Alterklassen erwerben dabei spielerisch Problemlösungskomptenzen und Programmierkenntnisse.'
   sphero_beyond_longdescription: 'Für Lehrkräfte und Eltern: "SPRK"-Lektionen erlauben es den Kindern, einen Schnellkurs im Programmieren von Robotern zu absolvieren und dabei ihre Mathematik- und Naturwissenschafts-Kenntnisse zu erweitern.'
+  compatibility_https_header: Bitte schalte HTTPS für Code.org ein.
+  compatibility_https_message: "Um die Sicherheit zu erhöhen, wechseln wir am %{https_date} auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'> Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert."
+  compatibility_https_hide_this_warning: Diese Warnung ausblenden

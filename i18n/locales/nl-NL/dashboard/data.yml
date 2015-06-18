@@ -447,6 +447,7 @@ nl:
         csp_textcompression: Tekst compressie widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in de Algebra - Inleiding'
         alg_2_eval_block: 'CS in de Algebra - evaluatie blokken'
         alg_3_pemdas: 'CS in de Algebra - volgorde van bewerkingen'

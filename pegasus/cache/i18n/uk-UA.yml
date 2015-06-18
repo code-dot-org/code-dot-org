@@ -18,7 +18,7 @@
     # інших.'
   petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
     Приєднайтесь до # інших.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Приєднатися до # інших'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -200,9 +200,10 @@
     &ldquo;Ця програма спонукала 100% моїх учнів
     до активної участі та залучення.&rdquo;
     Адам, вчитель
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc линий кода, які написані учнями'
+  homepage_hero_text_stat_students: '#student_count облікові записи учнів на Code
+    Studio'
+  homepage_hero_text_stat_served: 'Година код: #served надана'
   homepage_slot_text_hoc: Година Коду
   homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
   homepage_slot_text_teacher: Teacher Dashboard
@@ -419,11 +420,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Клацніть
     тут</a> щоб переглянути угоду конфіденційності, яку можна роздрукувати та обговорити
     з учнями.
-  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Переглянути всі конспекти уроків
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_overview: Overview
   dashboard_sequence: Послідовність
   dashboard_framework: Програма
   dashboard_standards: Стандарти
@@ -434,6 +442,10 @@
   dashboard_puzzle_solving: 'Розв''язання задач:'
   dashboard_student_worksheet: інструкція для учня
   dashboard_teacher_worksheet: інструкція для вчителя
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: Kлас
   dashboard_grade_other: Інше
   dashboard_login_word: Слово
@@ -465,6 +477,7 @@
     логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати для
     групи.
   dashboard_faq: Запитання й відповіді
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Година коду вже тут - 8-14 грудня!
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Дізнатися більше
@@ -1129,4 +1142,4 @@
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: Сховати попередження

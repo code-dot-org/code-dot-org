@@ -21,7 +21,7 @@
     altri #.'
   petition_sign_message_support: 'Per sostenerci, aggiungi il tuo nome. Unisciti #
     altri.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Unisciti a # altri'
   name: Nome
   email: Indirizzo di posta elettronica
   zipcode: CAP o Città
@@ -202,9 +202,10 @@
   homepage_hero_text_teacher2: |
     &ldquo;Questo programma ha visto il 100% dei miei studenti coinvolti e partecipi.&rdquo;
     Adam, insegnante
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc linee di codice scritte dagli studenti'
+  homepage_hero_text_stat_students: '#student_count account degli studenti in Code
+    Studio'
+  homepage_hero_text_stat_served: 'L''ora di codice: #served servita'
   homepage_slot_text_hoc: L'Ora del Codice
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -429,11 +430,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clicca
     qui</a> per il nostro documento sulla privacy che puoi stampare e distribuire
     ai tuoi studenti.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
+  dashboard_view_all_lesson_plans: Mostra i Piani di Lavoro di tutte le lezioni
   dashboard_course1: 'Corso 1:'
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_overview: Overview
   dashboard_sequence: Sequenza
   dashboard_framework: Framework
   dashboard_standards: Livelli di riferimento
@@ -444,6 +452,10 @@
   dashboard_puzzle_solving: 'Puzzle-solving:'
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: livello
   dashboard_grade_other: Altro
   dashboard_login_word: Parola
@@ -475,6 +487,7 @@
   dashboard_sections_login_type_explanation: Questa tabella aiuta a spiegare quale
     tipo di accesso, <b>immagine, parola o e-mail</b>, scegliere per una classe.
   dashboard_faq: FAQ - Domande e risposte
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1190,8 +1203,9 @@
     permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare
     a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze
     e matematica.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_header: Serve abilitare il protocollo HTTPS per Code.org.
+  compatibility_https_message: Per aumentare la sicurezza, noi stiamo passando a HTTPS
+    su %{https_date}. Non sarete in grado di accedere Code.org dopo questa data. <a
+    href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare
+    HTTPS per accedere a Code.org.
+  compatibility_https_hide_this_warning: Nascondi questo avviso

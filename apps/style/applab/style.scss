@@ -545,6 +545,10 @@ button.arrow:focus {
   }
 }
 
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
 .chooseAssetDropdownOption {
   color: $link_color;
   text-decoration: underline;

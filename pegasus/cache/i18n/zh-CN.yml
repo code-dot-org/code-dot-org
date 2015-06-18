@@ -134,7 +134,7 @@
   studiobar_donate_body: 你捐的每一美元让一个孩子学会
   studiobar_shop_title: 商店
   studiobar_shop_body: 突破束缚，展现我们自己的骄傲。
-  homepage_hero_text_malala: '&ldquo;我在每一个国家都向女孩子们发起学习一个小时编程的挑战&rdquo;诺贝尔和平奖得主马拉拉说'
+  homepage_hero_text_malala: '&ldquo;我向每个国家的女孩子都发起学习“一小时编程”的挑战&rdquo;诺贝尔和平奖得主马拉拉说'
   homepage_hero_text_susan: '&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官'
   homepage_hero_text_fistbump: '&ldquo;别总在电话上玩，要去编程。&rdquo;奥巴马总统'
   homepage_hero_text_sheryl: '&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
@@ -175,7 +175,7 @@
   homepage_slot_text_flappy: 飞扬的代码
   homepage_action_text_codevideo: 观看视频
   homepage_action_text_teachervideo: 观看视频
-  homepage_action_text_learn: 立即开始学习
+  homepage_action_text_learn: 开始学习
   homepage_action_text_signpetition: 在请愿书上签名
   homepage_signpetition_dropdown: 签署我们请愿 &#x25BE;
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
@@ -199,7 +199,7 @@
   homepage_slot_text_title_advocates: 倡导
   homepage_slot_text_blurb_advocates: 支持我们的工作
   homepage_slot_text_link_stats: 请看统计信息
-  homepage_slot_text_link_buy: 买一件 t 恤衫或帽子
+  homepage_slot_text_link_buy: 加入进来
   homepage_slot_text_link_donate: 捐一笔钱
   homepage_header_codestudio: 编程工作室 学生作品
   homepage_header_donors: Code.org 感谢各位支持者
@@ -354,11 +354,18 @@
   dashboard_students_print_page: 打印此页面
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">点击这里</a>以获取我们的隐私文件，您可以跟您的学生共享此文件或打印分发给他们的。
-  dashboard_curriculum_overview: K-5课程概述
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: 查看所有课程计划
   dashboard_course1: '课程 1:'
   dashboard_course2: 课程 2：
   dashboard_course3: 课程 3：
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: K-5课程概述
+  dashboard_overview: Overview
   dashboard_sequence: 序列
   dashboard_framework: 框架
   dashboard_standards: 标准
@@ -369,6 +376,10 @@
   dashboard_puzzle_solving: 解决谜题：
   dashboard_student_worksheet: 学生工作表
   dashboard_teacher_worksheet: 教师工作表
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: 幼儿园
   dashboard_grade_other: 其他
   dashboard_login_word: 词
@@ -396,6 +407,7 @@
   dashboard_sections_password_account_creation: 学生创建的文本密码
   dashboard_sections_login_type_explanation: 此表可以帮助解释您想要为学习小组选择那种登录类型，<b>图片，词语或电子邮件</b>。
   dashboard_faq: 常见的问题
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在CS教育周期间参加
   learn_more: 学习更多内容
@@ -859,4 +871,4 @@
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: 隐藏此警告

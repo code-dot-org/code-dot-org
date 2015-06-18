@@ -11,8 +11,8 @@ da:
         name: Brugernavn
         email: E-mail
         username: brugernavn
-        password: adgangskode
-        password_confirmation: Adgangskode bekræftelse
+        password: Adgangskode
+        password_confirmation: Bekræft adgangskode
         current_password: Nuværende adgangskode
         locale: Sprog
         age: Alder
@@ -61,16 +61,16 @@ da:
     facebook: Facebook
     windowslive: Microsoft-konto
     forgot_password: Glemt din adgangskode?
-    need_confirmation: Har ikke modtaget bekræftelses instruktioner?
+    need_confirmation: Har du ikke modtaget bekræftelsesinstruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
     student_count: '%{count} elever har allerede tilmeldt sig.'
     teacher_count: '%{count} lærere har allerede tilmeldt sig.'
     overview_student: 'Tilmeld dig en konto for at spore dine fremskridt. Din email bruges primært til at tillade log ind og til gendannelse af din adgangskode. For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.'
-    overview_teacher: 'Undervis i programmering i din klasse ved at oprette en konto. <p/> Så kan du tilføje dine elever og følge deres fremdrift.'
+    overview_teacher: 'Undervis i programmering i din klasse ved at oprette en konto. <p/> Så kan du tilføje dine elever og følge deres fremskridt.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">gennemse de forskellige trin og øvelser</a>, men du bliver nødt til at tilmelde dig for at gemme dine fremskridt.'
     teacher_educator_guide: Se lærerens guide
-    teacher_pitch: Lærer-tilmelding til Code.org
+    teacher_pitch: Lærertilmelding til Code.org
     teacher_title: Lærer-tilmelding
     student_pitch: Elev tilmelding til Code.org
     student_title: Tilmelding for elever
@@ -90,7 +90,7 @@ da:
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
     student_terms: "Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>. Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For brugere under 13, er e-mail-adresser ikke gemt i en form, der tillader os at kontakte dem."
-    teacher_terms: "Jeg accepterer at være tilsluttet Code.org <a href='http://code.org/tos'> Servicevilkår</a>."
+    teacher_terms: "Jeg accepterer <a href='http://code.org/tos'> Servicevilkårene</a> for code.org."
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig.
   signin_form:
     title: Har du allerede en konto? Log på
@@ -220,7 +220,7 @@ da:
         playlab: Lav en App
         artist: Tegn noget
     user:
-      classroom: Lærerens Startside
+      classroom: Lærerens startside
       district_dashboard: Særskilt betjeningspanel
       label: 'Hej %{username}'
       stats: Mine fremskridt
@@ -301,7 +301,7 @@ da:
     student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for %{student_name}'
     panel:
       answer_viewer: Svar Viser
-      student: studerende
+      student: Elev
       viewing_solution: Viewing Solution
       try_it_yourself: Prøv selv
       section: Afsnit
@@ -309,7 +309,7 @@ da:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
     email_confirm_wrong_email: (Forkert e-mail?)
-    email_resend_confirm: Gensend bekræftelses instruktioner
+    email_resend_confirm: Gensend bekræftelsesmail
     new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
     current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)
     delete: Slet din konto
@@ -325,13 +325,15 @@ da:
     classroom_activity: Unplugged aktivitet
   home:
     title: Kode Værktøj
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINJER KODE SKREVET AF ELEVER'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: 'Allerede registreret? %{link}'
     student_reg_link: Tilmelding for elever
     teacher_reg_link: Tilmelding for lærere
-    signin_directions: 'Brug en konto til at følge op på fremdriften. <br/> Lærere, spor hele din klasse.'
+    signin_directions: 'Brug en konto til at følge dine fremskridt. <br/> Lærere, følg med i hvordan det går hele din klasse.'
     teacher_dashboard: Se fremskridts oversigt
     teacher_student_count_one: 'Du har %{count} elever.'
     teacher_student_count: 'Du har %{count} elever.'
@@ -392,6 +394,10 @@ da:
     autoplay_option: Automatisk afspil videoer
     download: Hent Video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Skjul denne advarsel
     working:
       header: Vi arbejder på at understøtte din browser.
       message: "Code.org bruger moderne web-teknologi. Dette gør stedet hurtigere at bruge. Din browser understøtter ikke alle de funktioner, der kræves, og du kan opleve problemer med denne del af webstedet. Please hjælp os ved at <a href='%{report_issue_url}'> rapportere eventuelle problemer, du finder</a>. Du kan også <a href='%{supported_browsers_url}'> opgradere din browser til en understøttet version</a>."
@@ -455,8 +461,8 @@ da:
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
-    picture_count: 'I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at se hvert program i aktion.'
-    activity_count: 'I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b> apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder og skærmklip at se hvert program i aktion.'
+    picture_count: 'I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at prøve programmerne.'
+    activity_count: 'I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b> apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder og skærmklip for at prøve programmerne.'
     want_to_make_your_own: Vil du lave dit eget?
     more: 'Mere &rarr;'
     caption_by_name_age: 'af %{name}, alder %{age}'

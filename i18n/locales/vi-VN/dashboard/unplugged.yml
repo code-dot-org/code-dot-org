@@ -3,7 +3,7 @@ vi:
     unplugged:
       Unplug1:
         title: Giới thiệu về khoa học máy tính
-        desc: Bài học này sẽ giới thiệu cho các bạn khái niệm về Khoa Học Máy tính và giải thích công việc của nhà khoa học máy tính là gì. Đó là một cơ hội cho học sinh sinh viên xem xét về vai trò của một nhà khoa học máy tính. Cuối mỗi hoạt động, mỗi học sinh cần ghi nhớ những gì các em đã được học. Bạn có thể bỏ qua dạy trẻ những từ mới liên quan đến bài sau, nhưng diễn đạt chúng theo cách sinh động và thú vị sẽ có hiệu quả hơn là việc chờ những cơ hội phía trước.
+        desc: Bài học này sẽ giới thiệu cho các bạn khái niệm về Khoa Học Máy Tính và giải thích công việc của nhà khoa học máy tính là gì. Đó là một cơ hội cho học sinh-sinh viên xem xét về vai trò của một nhà khoa học máy tính. Cuối mỗi hoạt động, mỗi học sinh cần ghi nhớ những gì các em đã được học. Bạn có thể bỏ qua dạy trẻ những từ mới liên quan đến bài sau, nhưng diễn đạt chúng theo cách sinh động và thú vị sẽ có hiệu quả hơn là việc chờ những cơ hội phía trước.
         pdfs:
           - unplug1
         video: Unplug1
@@ -21,7 +21,7 @@ vi:
         video: Unplug3
       Unplug4:
         title: các bước lập trình
-        desc: Bài này bao gồm thuật toán. Sử dụng hình ảnh tangram và giấy vẽ sơ đồ, bài tập đầu tiên sẽ thể hiện mức độ quan trọng của việc tạo ra những hướng dẫn rõ ràng nhất có thể, Sau đó, lớp sẽ khám phá ra nhiều cách để gấp tờ giấy thành hình chữ nhật, chú ý một vài cách có thể cần nhiều hoặc ít nếp gấp hơn những cái khác.
+        desc: Bài này bao gồm những thuật toán. Sử dụng hình ảnh tangram và giấy vẽ sơ đồ, bài tập đầu tiên sẽ chỉ ra mức độ quan trọng của việc tạo ra mỗi hướng dẫn sao cho rõ ràng nhất có thể. Sau đó, lớp sẽ khám phá ra nhiều cách để gấp tờ giấy thành hình chữ nhật, chú ý một vài cách có thể cần nhiều hoặc ít nếp gấp hơn những cái khác.
         pdfs:
           - unplug4
         video: Unplug4
@@ -63,7 +63,7 @@ vi:
         video: Unplug10
       Unplug11:
         title: Tổng hợp
-        desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học sống lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước tiếp theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có hứng thú với khoa học máy tính.
+        desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học tái hiện lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước tiếp theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có hứng thú với khoa học máy tính.
         pdfs:
           - unplug11
         video: Unplug11
@@ -77,7 +77,7 @@ vi:
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Thuật toán đời sống: Trồng một hạt giống'
-        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh lớn của khoa học máy tính và làm thế nào thuật toán đóng một vai trò thiết yếu.
+        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai trò thiết yếu.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Xây dựng nền tảng
@@ -105,10 +105,10 @@ vi:
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: lập trình đồ thị trên giấy
-        desc: Sinh viên viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử dụng tập hợp các lệnh đã được định nghĩa sẵn để trực tiếp tái hiện một bản vẽ.
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ huy các bạn cùng lớp tái hiện một bản vẽ.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Thuật toán đời sống: Máy bay giấy'
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
         desc: 'Bài học này chỉ  ra cách chúng ta sử dụng thuật toán trong cuộc sống hàng ngày của, cụ thể cách tạo máy bay giấy. Đồng thời tập trung vào hình ảnh lớn hơn của khoa học máy tính và làm thế nào thuật toán đóng một phần quan trọng.'
         video: C2_paper_airplanes
       BinaryBracelets:
@@ -116,7 +116,7 @@ vi:
         desc: Học sinh tạo ra vòng xuyến bằng số 0-9 đại diện cho chữ cái đầu của tên của họ. Học sinh được học nhiều cách đại diện và lưu trữ dữ liệu.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Dấu chân kỹ thuật số của bạn
+        title: 'Dấu chân kỹ thuật số '
         desc: 'Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.'
         video: C2_digital_footprint
       ComputationalThinking:
@@ -124,7 +124,7 @@ vi:
         desc: 'Học sinh sử dụng các bước suy nghĩ tính toán (phân tích, tạo mô hình, trừu tượng, thuật toán) để tìm ra làm thế nào để chơi một trò chơi  không có hướng dẫn.'
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Chức năng Suncatchers
+        title: Chức năng của tấm hứng ánh nắng
         desc: Học sinh tạo ra một thuật toán với biến và chức năng (phần của mã mà bạn dùng đi dùng lại) để tạo ra miếng chắn nắng bằng cách sử dụng chuỗi và hạt.
         video: C3_functional_suncatchers
       SongwritingParameters:
@@ -140,29 +140,27 @@ vi:
         desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các bưu thiếp .
         video: C3_internet
       Crowdsourcing:
-        title: |
-          Crowdsourcing
-          
+        title: Đa nguồn
         desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu quả hơn hơn cố làm nó một mình.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Dân kỹ thuật số
-        desc: Sinh viên khám phá sự khác biệt giữa thông tin cá nhân và thông tin riêng tư, để phân biệt những gì là an toàn và không an toàn để chia sẻ trực tuyến.
+        desc: Sinh viên khám phá sự khác biệt giữa thông tin cá nhân và thông tin riêng tư, để phân biệt những gì là an toàn và không an toàn khi chia sẻ trực tuyến.
       TangramAlgorithms:
         title: Thuật toán Tangram
         desc: Bài học này cho chúng ta thấy một điều quan trọng về thuật toán. Nếu bạn giữ một thuật toán đơn giản có rất nhiều cách để sử dụng nó. Nếu bạn muốn chắc chắn rằng tất cả mọi người có cùng kết quả, thuật toán của bạn cần viết rất chi tiết.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: 'Biến phong bì '
-        desc: 'Biến tự do cho phép dùng rất nhiều trong khoa học máy tính.  Bài học này sẽ giúp để giải thích biến là gì và làm thế nào chúng tôi có thể sử dụng chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc kết hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.'
+        title: 'Các biến phong bì '
+        desc: 'Biến cho phép dùng tự do trong rất nhiều trong khoa học máy tính.  Bài học này sẽ giúp để giải thích biến là gì và làm thế nào chúng tôi có thể sử dụng chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc kết hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.'
         video: C4_unplugged_variables
       MadGlibs:
         title: sự say mê dịu dàng
         desc: 'Hiểu một cách trừu tượng là một trong những kỹ năng quan trọng nhất của một nhà khoa học máy tính.  Hoạt động này cho phép học sinh phân tích câu chuyện theo nhiều hướng để có thể trừu tượng hóa. Những câu chuyện trừu tượng sẽ thành mẫu chuyện mới vui vẻ và điên khùng.'
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Cho vòng lặp vui
-        desc: Chúng tôi biết rằng vòng cho phép chúng tôi làm đ làm lại, nhưng bây giờ chúng ta sẽ tìm hiểu làm thế nào để sử dụng vòng với cấu trúc phụ được xây dựng ngay bên trong.
+        title: Cho vòng lặp vui vẻ
+        desc: Chúng tôi biết rằng vòng cho phép chúng tôi làm đi làm lại, nhưng bây giờ chúng ta sẽ tìm hiểu làm thế nào để sử dụng vòng với cấu trúc phụ được xây dựng ngay bên trong.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Songwriting With Parameters

@@ -4,24 +4,28 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 17 - Assessment: Encoding Complex Information
+## Unit 1: Lesson 17 - Practice PT: Encode a Complex Thing
 # Background
 
 
-Real-world, complex information that you encounter everyday can be encoded with the correct protocol. This activity is an individual project that will provide practice for the AP Principles Performance Task.
+Throughout this unit you have learned a sequence of increasingly complex encodings of information, with higher level encodings like images and formatted text making use of lower level encodings like binary numbers, ASCII characters, and even lower still the bits themselves. When creating a binary encoding scheme, we do not always have to consider the actual bits. When we say a pixel is composed of three numbers, it is not actually important that those numbers are encoded in bits, just that there exists some way to represent numbers. This practice of temporarily ignoring details which are unnecessary for the problem at hand is referred to as abstraction, and is the source of the complex computational systems we use everyday. Making use of this tool it is possible to encode practically any object, system, event, or idea. For this project you will be designing your own encoding and responding to associated reflection questions. This project serves both as a review of the material covered in the first unit, and as a practice AP Performance Task in antiticpation of the two you will complete later this year.
+
+# Vocabulary
+
+* Abstraction: removing unnecessary details to focus on the essential characteristics. To break problems up into separate parts which can then be solved separately and recombined to form a complete solution. To focus on and use something based only on what it does and without concern for how that functionality is accomplished.
 
 # Lesson
 
 * Select a personally meaningful, complex real-world “thing” or information to encode.
 * Design a protocol for encoding it into bits.
 * Consult with a peer to check you thinking.
-* Create a visual representation of your idea.  
+* Create a visual representation of your idea.
+* Complete a project description and respond to reflection questions.
 
 
 # Resources
 
-* Activity Guide: <a href="https://docs.google.com/document/d/1YnEyXcUz8N-goWSXMZRIhpZ2ogI29-YDY--RcO3erFc/edit?usp=sharing"target="_blank">Unit 1 Assessment</a>
-* Rubric <a href="https://docs.google.com/document/d/1pbywKpevOUoA6INGTd3dKKkQxCgPSoRPiUannk2C714/edit?usp=sharing"target="_blank">Assessment Rubric</a>
+* Activity Guide and Rubric: <a href="https://docs.google.com/document/d/1IPDnC6tKN7yRzog9t7weKISnjXvykTQe3QEpu43uM7c/edit?usp=sharing"target="_blank">Unit 1 Assessment</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

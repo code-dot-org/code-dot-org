@@ -8,29 +8,67 @@
 - play_button ||= 'center' # 'center' or 'caption'
 
 :scss
-  .play-button-caption .play {
-    display: none;
-  }
-  .play-button-caption .thumbnail-wrapper .video_caption_link {
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    color: white;
-    background-color: black;
-    line-height: 50px;
-    width: 100%;
-    opacity: 0.7;
-    padding-left: 50px;
-    background-image: url(/shared/images/play-button.png);
-    background-size: 40px 40px;
-    background-repeat: no-repeat;
-    background-position: 5px 5px;
+  .videothumbnail {
+    cursor: pointer;
+    width: #{width};
+    .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden;
+      .thumbnail-image {
+        width: 100%;
+      }
+    }
   }
 
-.videothumbnail{:onclick => "return showVideo_#{id}()", :style => "cursor:pointer; width: #{width}", class: "play-button-#{play_button}"}
-  %div.thumbnail-wrapper{:style => "position:relative; overflow:hidden;"}
-    %img.thumbnail-image{:src => image, style: 'width: 100%'}
-    %img.play{:src => "/shared/images/play-button.png", :style => "position:absolute; top:30%; left:40%", :width => "20%"}
+  .play-button-center {
+    img.play {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      width: 20%;
+    }
+  }
+
+  .play-button-caption {
+    img.play {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      width: 40px;
+      height: 40px;
+      z-index: 100;
+    }
+
+    .thumbnail-wrapper .video_caption_link::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 50px;
+      background-color: black;
+      line-height: 50px;
+      width: 100%;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    .thumbnail-wrapper .video_caption_link {
+      position: absolute;
+      bottom: 0;
+      height: 50px;
+      color: white;
+      background-color: transparent;
+      line-height: 50px;
+      width: 100%;
+      padding-left: 50px;
+      z-index: 10;
+    }
+  }
+
+.videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
+  %div.thumbnail-wrapper
+    %img.thumbnail-image{:src => image}
+    %img.play{:src => "/shared/images/play-button.png"}
     .video_caption_link= caption
 
 = view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path

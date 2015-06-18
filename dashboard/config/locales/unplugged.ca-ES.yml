@@ -194,9 +194,9 @@
         video: C2_empremta_digital
       ComputationalThinking:
         title: Pensament computacional
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Els alumnes usen les passes del pensament computacional (descomposar,
+          relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un
+          joc que no duu instruccions.
         video: C3_pensament_computacional
       FunctionalSuncatchers:
         title: Functional Suncatchers

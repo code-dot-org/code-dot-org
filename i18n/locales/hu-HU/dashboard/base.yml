@@ -321,7 +321,9 @@ hu:
     classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: 1., 2. és 3. tanfolyam áttekintése
     lesson_plans: Óravázlatok
     signin_message: 'Már regisztráltál? %{link}'
@@ -388,6 +390,10 @@ hu:
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Figyelmen kívül hagyom
     working:
       header: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen együtt tudjon működni.
       message: "A Code.org honlap modern webes technológiát használ. Emiatt gyorsabban lehet használni az oldalt. A te böngésződ nem támogatja az összes szükséges funkciót, ezért lehet, hogy néhány problémát érzékelhetsz. Segíts nekünk, <a href='%{report_issue_url}'> szólj, ha problémát találsz</a>, vagy <a href='%{supported_browsers_url}'>töltsd le a böngésződ legújabb változatát</a>."
