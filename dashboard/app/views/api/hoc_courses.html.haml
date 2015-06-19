@@ -1,0 +1,14 @@
+.row
+  = render partial: 'shared/course_tall_block', locals: { id: 'hourofcode' }
+  %div{style: 'clear: both;'}
+  = render partial: 'shared/course_tall_block', locals: { id: 'frozen' }
+  %div{style: 'clear: both;'}
+  = render partial: 'shared/course_tall_block', locals: { id: 'infinity' }
+  %div{style: 'clear: both;'}
+  = render partial: 'shared/course_tall_block', locals: { id: 'flappy' }
+  %div{style: 'clear: both;'}
+%br/
+.row
+  = render partial: 'shared/course_wide_block', locals: { id: 'playlab' }
+  = render partial: 'shared/course_wide_block', locals: { id: 'artist' }
+%br/
