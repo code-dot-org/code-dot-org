@@ -45,7 +45,7 @@ theme: none
 
 %div
   %div{style: "float:left; width:100%"}
-    %h1{style: "margin-bottom:10px"}= I18n.t('dashboard_landing_title')
+    %h1{style: "margin-bottom:20px"}= I18n.t('dashboard_landing_title')
 
 
 %div.tile
@@ -72,9 +72,8 @@ theme: none
       %button.btn.btn-info= I18n.t('dashboard_landing_view_progress', biggest_section: '{{biggestSection.name}}')
 
   .courses
-    %h1{style: 'margin-bottom: 0px'}= I18n.t('dashboard_landing_available_title')
-    %br/
     .coursesheader
+      %h1{style: 'margin-bottom: 0px'}= I18n.t('dashboard_landing_available_title')
       %h2= I18n.t('dashboard_hoc_courses')
       = I18n.t('dashboard_hoc_courses_desc')
     %br/  
