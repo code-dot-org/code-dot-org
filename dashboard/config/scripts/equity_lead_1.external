@@ -1,0 +1,11 @@
+name 'equity lead 1'
+css 'unplugged'
+skip_dialog true
+
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Leading a Discussion on Equity in PD >> Part 1
+
+MARKDOWN
