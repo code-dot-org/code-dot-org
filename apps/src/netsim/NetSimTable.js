@@ -98,7 +98,7 @@ NetSimTable.prototype.readAllCached = function () {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.read = function (id, callback) {
-  this.remoteTable_.read(id, function (err, data) {
+  this.clientApi_.fetch(id, function (err, data) {
     if (err === null) {
       this.updateCacheRow_(id, data);
     }
@@ -111,7 +111,7 @@ NetSimTable.prototype.read = function (id, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.create = function (value, callback) {
-  this.remoteTable_.create(value, function (err, data) {
+  this.clientApi_.create(value, function (err, data) {
     if (err === null) {
       this.addRowToCache_(data);
     }
@@ -125,7 +125,7 @@ NetSimTable.prototype.create = function (value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.remoteTable_.update(id, value, function (err, success) {
+  this.clientApi_.update(id, value, function (err, success) {
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
@@ -138,7 +138,7 @@ NetSimTable.prototype.update = function (id, value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.remoteTable_.delete(id, function (err, success) {
+  this.clientApi_.delete(id, function (err, success) {
     if (err === null) {
       this.removeRowFromCache_(id);
     }

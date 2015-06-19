@@ -35,6 +35,9 @@ exports.overrideClientApi = function (netsimTable) {
   netsimTable.clientApi_ = {
     all: function (callback) {
       return storageTable.readAll(callback);
+    },
+    fetch: function (id, callback) {
+      return storageTable.read(id, callback);
     }
   };
 
