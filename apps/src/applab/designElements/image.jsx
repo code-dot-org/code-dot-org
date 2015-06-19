@@ -75,8 +75,8 @@ module.exports = {
   PropertyTable: ImageProperties,
   create: function () {
     var element = document.createElement('img');
-    element.style.height = '50px';
-    element.style.width = '50px';
+    element.style.height = '100px';
+    element.style.width = '100px';
     element.setAttribute('src', '');
 
     return element;
