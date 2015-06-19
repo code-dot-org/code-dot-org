@@ -171,20 +171,20 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet-breakpoint {
+.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white; }
 
-.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet-error {
+.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
   background-image: url('/blockly/media/common_images//gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat; }
 
-.droplet-gutter-line.droplet-error, .droplet-gutter-line.droplet-warning {
+.droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
   background-position: 2px 35%; }
 
-.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet-warning {
+.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
   background-image: url('/blockly/media/common_images//gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat; }
