@@ -3,5 +3,11 @@ css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 1 Day 17-19 Extended Resources
 
-Resources pending
+Watch this short intro to the Turing Test. Over the next few levels, you will have the opportunity to plan how you will introduce the test to your class.
+
+<iframe width="850" height="500" src="https://www.youtube.com/embed/sXx-PpEBR7k" frameborder="0" allowfullscreen></iframe>
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

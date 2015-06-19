@@ -7,13 +7,13 @@ skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
 
-### Equity Vs. Equality
+### Necessary Background >> Equity Vs. Equality
 
 <br/><br/>
 
 <img src="https://images.code.org/65e3f6c43804bda6f3aae0e5165239fd-image-1434407603270.jpg" class="righted roundedPic" width="400px"/>The first time that someone hears the word "equity" in the context of education, it might seem odd.  People are used to using "equity" in relationship to the value of their house, or ownership of a company. Many people associate the word "equity" with sharing in something valuable.  But in context of this PD, it is so much more complex. 
 
-Often used alongside (or incorrectly used interchangably with) the word "equality," equity is, at the heart, a method of being fair.
+Often used alongside (or incorrectly used interchangably with) the word "equality," equity is, at its core, a method of being fair.
 
 <br/>
 #### What is Fair?
@@ -43,7 +43,14 @@ While equality is important in many situations, there are times when you can pro
 
 One great analogy is that of a bike race. At first glance, it might seem that since everyone is supposed to finish in the same place, it is only fair to have them all begin at the same place. What is not so obvious, is that the person on the inside corner has a steep advantage over the person on the outside corner. Indeed, the closer you get to the inside of the track, the shorter the distance is around each loop. 
 
-To make the race fair for everyone, the starting markers are staggered.  The further a racer is from the center, the further ahead their starting line will be. This is the idea behind equity.  Sometimes, in order to offer fair opportunities, you have to offer **more** to those who have disadvantages in situation.
+To make the race fair for everyone, the starting markers are staggered.  The further a racer is from the center, the further ahead their starting line will be. This is the idea behind equity.  Sometimes, in order to offer fair opportunities, you have to offer **more** to those who have disadvantages in a situation.
+
+<br/>
+
+#### Diversity
+
+At the heart of the equity/equality issue in computer science is the need and desire for diversity in this subject.  We belive that a diverse environment (working with people that have varied backgrounds and life experiences) contributes to a better end product, whether that product is literal or metaphorical.
+
 
 <br/>
 

@@ -12,22 +12,14 @@ function updateGutter() {
   if (!aceSession) {
     return;
   }
-  aceSession.setAnnotations(annotations);
 
   if (dropletEditor) {
-    // TODO: connect to missing hover event to show text
-    // TODO: differentiate between error and warning (type is always warning)
-
-    // Reset all decorations:
-    dropletEditor.gutterDecorations = {};
-    dropletEditor.redrawMain();
-
-    // Add each annotation as a gutter decoration:
-    for (var i = 0; i < annotations.length; i++) {
-      dropletEditor.addGutterDecoration(
-          annotations[i].row,
-          'droplet-' + annotations[i].type);
-    }
+    // Droplet will call aceSession.setAnnotations() under the hood
+    // for us
+    dropletEditor.setAnnotations(annotations);
+  }
+  else {
+    aceSession.setAnnotations(annotations);
   }
 }
 
@@ -43,7 +35,7 @@ module.exports = {
     aceSession = null;
     dropletEditor = null;
   },
-  
+
   attachToSession: function (session, editor) {
     if (aceSession && session !== aceSession) {
       throw new Error('Already attached to ace session');
