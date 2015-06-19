@@ -87,7 +87,7 @@ module.exports = {
   create: function() {
     var element = document.createElement('div');
     element.setAttribute('contenteditable', true);
-    element.style.width = '100px';
+    element.style.width = '200px';
     element.style.height = '100px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';

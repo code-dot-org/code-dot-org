@@ -84,7 +84,7 @@ module.exports = {
 
   create: function() {
     var element = document.createElement('select');
-    element.style.width = '100px';
+    element.style.width = '200px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
