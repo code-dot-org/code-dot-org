@@ -44,10 +44,6 @@ VARNISH_THREAD_POOL_ADD_DELAY=2
 VARNISH_THREAD_TIMEOUT=120
 
 # Cache file location
-#VARNISH_STORAGE_FILE=/var/lib/varnish/$INSTANCE/varnish_storage.bin
-#VARNISH_STORAGE_SIZE=10G
-#VARNISH_STORAGE_FILE=/mnt/varnish.cache
-#VARNISH_STORAGE="file,${VARNISH_STORAGE_FILE},${VARNISH_STORAGE_SIZE}"
 VARNISH_STORAGE="<%= node['cdo-varnish']['storage'] %>"
 
 # File containing administration secret
@@ -55,6 +51,10 @@ VARNISH_SECRET_FILE=/etc/varnish/secret
 
 # Default TTL used when the backend does not specify one
 VARNISH_TTL=120
+
+# Idle timeout for persistent sessions. If a HTTP request has not been received in this many seconds, the session is closed.
+# (Default: 5)
+VARNISH_SESSION_TIMEOUT=15
 
 # DAEMON_OPTS is used by the init script.  If you add or remove options, make
 # sure you update this section, too.
@@ -65,4 +65,5 @@ DAEMON_OPTS="-a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
              -w ${VARNISH_MIN_THREADS},${VARNISH_MAX_THREADS},${VARNISH_THREAD_TIMEOUT} \
              -S ${VARNISH_SECRET_FILE} \
              -p thread_pool_add_delay=${VARNISH_THREAD_POOL_ADD_DELAY} \
+             -p sess_timeout=${VARNISH_SESSION_TIMEOUT} \
              -s ${VARNISH_STORAGE}"
