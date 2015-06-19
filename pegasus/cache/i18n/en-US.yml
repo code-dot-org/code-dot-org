@@ -1,4 +1,4 @@
-"en-US":
+en-US:
   hello: "Hello world"
   select_language: "Please select your language"
   computer_science: "Computer Science"
@@ -278,6 +278,8 @@
   dashboard_landing_view_progress: "View Progress for %{biggest_section}"
   dashboard_landing_available_title: "Available courses"
   dashboard_landing_available_courses: "Here are the courses currently available for you and your students."
+  dashboard_landing_more_tutorials: "Want to see even more tutorials?"
+  dashboard_landing_more_tutorials_desc: "There are more tutorials <a href=\"/learn/beyond\">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!"
   dashboard_hoc_courses: "The Hour of Code for All Ages"
   dashboard_hoc_courses_desc: "Try any of these shorter 1 hour tutorials with your students!"
   dashboard_k5_courses: "20-Hour Courses for K-5"
