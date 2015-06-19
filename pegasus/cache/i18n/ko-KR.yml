@@ -973,6 +973,10 @@
     이후로는 Code.org에  들어올 수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a>
     를 클릭하여 알아볼 수 있습니다.
   compatibility_https_hide_this_warning: 경고창 숨기기
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
+    by our partners.</a> Learn to program with robots, make web pages, make your own
+    app, or explore other languages like C++, Ruby, or Python!
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!

@@ -868,6 +868,10 @@
   compatibility_https_message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a
     href='%{it_requirements_url}'> 按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
   compatibility_https_hide_this_warning: 隱藏此警告
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
+    by our partners.</a> Learn to program with robots, make web pages, make your own
+    app, or explore other languages like C++, Ruby, or Python!
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!

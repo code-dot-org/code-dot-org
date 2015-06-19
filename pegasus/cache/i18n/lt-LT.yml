@@ -1123,6 +1123,10 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Slėpti šį įspėjimą
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
+    by our partners.</a> Learn to program with robots, make web pages, make your own
+    app, or explore other languages like C++, Ruby, or Python!
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
