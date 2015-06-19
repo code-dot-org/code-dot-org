@@ -40,6 +40,7 @@ var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
+var debugAreaController = require('./debugArea');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -660,7 +661,7 @@ Applab.init = function(config) {
   if (level.editCode) {
     var debugCommandsHeader = document.getElementById('debug-commands-header');
     if (debugCommandsHeader) {
-      dom.addClickTouchEvent(debugCommandsHeader, Applab.toggleDebugArea);
+      dom.addClickTouchEvent(debugCommandsHeader, debugAreaController.slideToggle);
     }
 
     var clearButton = document.getElementById('clear-console-header');
@@ -738,8 +739,8 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
-  if (!isDebugAreaOpen) {
-    Applab.snapDebugAreaOpen();
+  if (debugAreaController.isShut()) {
+    debugAreaController.snapOpen();
   }
 
   // Fire resize so blockly and droplet handle this type of resize properly:
@@ -1354,90 +1355,4 @@ Applab.getAssetDropdown = function (typeFilter) {
     click: handleChooseClick
   });
   return options;
-};
-
-var isDebugAreaOpen = true;
-var openHeight = 100;
-Applab.toggleDebugArea = function () {
-
-
-  if (isDebugAreaOpen) {
-    Applab.hideDebugArea();
-  } else {
-    Applab.showDebugArea();
-  }
-
-};
-
-Applab.hideDebugArea = function () {
-  isDebugAreaOpen = false;
-
-  var codeTextbox = $('#codeTextbox');
-  var debugArea = $('#debug-area');
-  var icon = debugArea.find('#show-hide-debug-icon');
-  openHeight = debugArea.height();
-
-  // We will leave the header and resize bar visible, so together they
-  // constitute our height when closed.
-  var closedHeight = debugArea.find('#debug-area-header').height() +
-      debugArea.find('#debugResizeBar').height();
-  debugArea.animate({
-    height: closedHeight
-  },{
-    complete: function () {
-      debugArea.find('#debug-commands').hide();
-      debugArea.find('#debug-console').hide();
-      icon.removeClass('fa-chevron-circle-down');
-      icon.addClass('fa-chevron-circle-up');
-    }
-  });
-
-  // Animate the bottom of the workspace at the same time
-  codeTextbox.animate({
-    bottom: closedHeight
-  },{
-    step: utils.fireResizeEvent
-  });
-};
-
-Applab.showDebugArea = function () {
-  isDebugAreaOpen = true;
-
-  $('#debug-commands').show();
-  $('#debug-console').show();
-
-  var codeTextbox = $('#codeTextbox');
-  var debugArea = $('#debug-area');
-  var icon = debugArea.find('#show-hide-debug-icon');
-  debugArea.animate({
-    height: openHeight
-  },{
-    complete: function () {
-      icon.removeClass('fa-chevron-circle-up');
-      icon.addClass('fa-chevron-circle-down');
-    }
-  });
-
-  // Animate the bottom of the workspace at the same time
-  codeTextbox.animate({
-    bottom: openHeight
-  },{
-    step: utils.fireResizeEvent
-  });
-};
-
-Applab.snapDebugAreaOpen = function () {
-  isDebugAreaOpen = true;
-
-  $('#debug-commands').show();
-  $('#debug-console').show();
-
-  var codeTextbox = $('#codeTextbox');
-  var debugArea = $('#debug-area');
-  var icon = debugArea.find('#show-hide-debug-icon');
-
-  icon.removeClass('fa-chevron-circle-up');
-  icon.addClass('fa-chevron-circle-down');
-
-  utils.fireResizeEvent();
 };
