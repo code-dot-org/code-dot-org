@@ -9,7 +9,6 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global window */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
