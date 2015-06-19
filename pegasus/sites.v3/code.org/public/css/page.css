@@ -56,7 +56,7 @@
 }
 
 .wideheading h3 {
-  margin: 10px 10px 5px 10px;
+  margin: 10px 10px 0px 10px;
   color: #5b6770;
   white-space: nowrap;
   overflow: hidden;
@@ -74,4 +74,9 @@
   font-family: "Gotham 4r", sans-serif;
   font-weight:normal;
   color: #5b6770;
+}
+
+.miniblock h4 {
+  margin: 5px 0 5px 10px;
+  float: left;
 }

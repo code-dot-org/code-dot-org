@@ -16,14 +16,15 @@
       .span1.imgspan{style: 'margin-left: 0px;'}
         %img{style: 'padding-left: 42px; padding-top: 20px;', src: '//studio.code.org/blockly/media/skins/flappy/small_static_avatar.png'}
 
--elsif id == '20hour'
-  .span6.miniblock{style: 'height: 110px;'}
+-elsif id == '20-hour'
+  .span6.miniblock{style: 'height: 120px;'}
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .span4.wideheading
-        %h3= t('upsell.20hour.title')
-        .smallwidetext= t('upsell.20hour.body')
+        %h3= t('upsell.20-hour.title')
+        %h4= data_t_suffix('script.name', id, 'description_audience')
+        .smallwidetext= t('upsell.20-hour.body')
       .span2.imgspan
-        %img{style: 'height: 110px;', src: '//code.org/images/fit-520/code20hr.jpg'}
+        %img{style: 'height: 100px; margin-top: 10px', src: '//code.org/images/fit-520/code20hr.jpg'}
 
 - elsif id == 'artist' || id == 'playlab'
 

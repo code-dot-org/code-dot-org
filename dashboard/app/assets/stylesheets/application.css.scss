@@ -1023,7 +1023,7 @@ a.download-video {
   }
 
   .wideheading h3 {
-    margin: 10px 0 0 0;
+    margin: 0;
     color: $charcoal;
     white-space: nowrap;
     overflow: hidden;
@@ -1041,6 +1041,15 @@ a.download-video {
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
+  }
+
+  .miniblock h4 {
+    margin: 0 0 5px 0;
+    font-family: $gotham-bold;
+    float: left;
+    color: $charcoal;
+    font-size: 14px;
+    line-height: 1.2em;
   }
 
   #welcome h2 {
