@@ -578,7 +578,8 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    var designModeClick = Applab.onDesignModeButton;
+    var designModeClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onDesignModeButton);
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
 
     // View Data must simulate a run button click, to load the channel id.
