@@ -14,6 +14,8 @@
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
 
+var clientApi = require('@cdo/shared/clientApi');
+
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
  * updates from the server.
@@ -29,6 +31,10 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * @constructor
  */
 var NetSimTable = module.exports = function (storageTable) {
+   // TODO (brent) clean this up
+  var url = storageTable.apiBaseUrl_;
+  this.clientApi_ = clientApi.create(url);
+
   /**
    * Actual API to the remote shared table.
    * @type {SharedTableApi}
@@ -72,7 +78,7 @@ var NetSimTable = module.exports = function (storageTable) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.readAll = function (callback) {
-  this.remoteTable_.readAll(function (err, data) {
+  this.clientApi_.all(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
@@ -146,7 +152,24 @@ NetSimTable.prototype.delete = function (id, callback) {
  * @param id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
-  this.remoteTable_.synchronousDelete(id);
+   // TODO (brent) clean this up
+  var url = this.clientApi_.api_base_url;
+
+  // Client API doesn't support synchronous calls, so we manually make our API
+  // call here
+  $.ajax({
+    url: url + '/' + id,
+    type: 'delete',
+    async: false,
+    error: function (jqXHR, textStatus, errorThrown) {
+      error = new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+      // Nothing we can really do with the error, as we're in the process of
+      // navigating away. Throw so that high incidence rates will show up in
+      // new relic.
+      throw error;
+    }
+  });
+
   this.removeRowFromCache_(id);
 };
 

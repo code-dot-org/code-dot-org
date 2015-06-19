@@ -25,6 +25,22 @@ exports.assertTableSize = function (shard, tableName, size) {
       " rows.");
 };
 
+// TODO (brent) - to start with, this is just going to call right back into our
+// remoteTable (i.e. apps version of clientApi). Eventually we will want that to
+// change
+exports.overrideClientApi = function (netsimTable) {
+  var storageTable = netsimTable.remoteTable_;
+
+  // send client api calls through our fake storage table for nwo
+  netsimTable.clientApi_ = {
+    all: function (callback) {
+      return storageTable.readAll(callback);
+    }
+  };
+
+  return netsimTable;
+};
+
 /**
  * Storage table API placeholder for testing, always hits callbacks immediately
  * so tests can be written imperatively.
@@ -136,21 +152,22 @@ exports.fakeShard = function () {
   var messageTable_ = exports.fakeStorageTable();
   var logTable_ = exports.fakeStorageTable();
   var heartbeatTable_ = exports.fakeStorageTable();
+
   return {
     remoteNodeTable: nodeTable_,
-    nodeTable: new NetSimTable(nodeTable_),
+    nodeTable: exports.overrideClientApi(new NetSimTable(nodeTable_)),
 
     remoteWireTable: wireTable_,
-    wireTable: new NetSimTable(wireTable_),
+    wireTable: exports.overrideClientApi(new NetSimTable(wireTable_)),
 
     remoteMessageTable: messageTable_,
-    messageTable: new NetSimTable(messageTable_),
+    messageTable: exports.overrideClientApi(new NetSimTable(messageTable_)),
 
     remoteLogTable: logTable_,
-    logTable: new NetSimTable(logTable_),
+    logTable: exports.overrideClientApi(new NetSimTable(logTable_)),
 
     remoteHeartbeatTable: heartbeatTable_,
-    heartbeatTable: new NetSimTable(heartbeatTable_)
+    heartbeatTable: exports.overrideClientApi(new NetSimTable(heartbeatTable_))
   };
 };
 

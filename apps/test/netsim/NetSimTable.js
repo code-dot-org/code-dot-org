@@ -11,7 +11,7 @@ describe("NetSimTable", function () {
 
   beforeEach(function () {
     apiTable = fakeStorageTable();
-    netsimTable = new NetSimTable(apiTable);
+    netsimTable = netsimTestUtils.overrideClientApi(new NetSimTable(apiTable));
     callback = function () {};
     notified = false;
     netsimTable.tableChange.register(function () {
