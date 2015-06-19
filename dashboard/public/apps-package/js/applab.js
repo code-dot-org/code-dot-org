@@ -9401,7 +9401,7 @@ module.exports = React.createClass({displayName: "exports",
             handleDragStart: this.props.handleDragStart}), 
         React.createElement(DesignToolboxElement, {
             imageUrl: IMAGE_BASE_URL + 'label.png', 
-            desc: 'Plain Text', 
+            desc: 'Label', 
             elementType: 'LABEL', 
             handleDragStart: this.props.handleDragStart}), 
         React.createElement(DesignToolboxElement, {
