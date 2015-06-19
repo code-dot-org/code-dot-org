@@ -17,6 +17,21 @@ var ObservableEvent = require('../ObservableEvent');
 var clientApi = require('@cdo/shared/clientApi');
 
 /**
+ * App key, unique to netsim, used for connecting with the storage API.
+ * @type {string}
+ * @readonly
+ */
+// TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
+var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
+// Ugly null-guards so we can load this file in tests.
+if (window &&
+    window.location &&
+    window.location.hostname &&
+    window.location.hostname.substr(0, 9) === 'localhost') {
+  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
+}
+
+/**
  * Maximum time (in milliseconds) that tables should wait between full cache
  * updates from the server.
  * @type {number}
@@ -30,18 +45,20 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * @param {!SharedTableApi} storageTable - The remote storage table to wrap.
  * @constructor
  */
-var NetSimTable = module.exports = function (storageTable) {
-   // TODO (brent) clean this up
-  var url = storageTable.apiBaseUrl_;
-  this.clientApi_ = clientApi.create(url);
+var NetSimTable = module.exports = function (tableName) {
+  /**
+   * Base URL we hit to make our API calls
+   * @type {string}
+   * @private
+   */
+  this.remoteUrl_ = '/v3/shared-tables/' + CHANNEL_PUBLIC_KEY + '/' + tableName;
 
   /**
-   * Actual API to the remote shared table.
+   * API object for making remote calls
    * @type {SharedTableApi}
    * @private
    */
-  this.remoteTable_ = storageTable;
-
+  this.clientApi_ = clientApi.create(this.remoteUrl_);
 
   /**
    * Event that fires when full table updates indicate a change,
@@ -152,13 +169,10 @@ NetSimTable.prototype.delete = function (id, callback) {
  * @param id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
-   // TODO (brent) clean this up
-  var url = this.clientApi_.api_base_url;
-
   // Client API doesn't support synchronous calls, so we manually make our API
   // call here
   $.ajax({
-    url: url + '/' + id,
+    url: this.remoteUrl_ + '/' + id,
     type: 'delete',
     async: false,
     error: function (jqXHR, textStatus, errorThrown) {
