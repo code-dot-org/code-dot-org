@@ -117,6 +117,8 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
   });
 
   var visibleTestButton = this.getVisibleButton_();
+
+  newY += 14; // (visibleTestButton.offsetHeight - this.resultText.offsetHeight) / 2;
   this.resultText.style.top = newY + 'px';
   var exampleButtonRight = exampleButtonX + visibleTestButton.offsetWidth;
   this.resultText.style.left = commonMargin + exampleButtonRight + 'px';
