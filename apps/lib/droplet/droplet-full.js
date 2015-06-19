@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-06-15
+ * Date: 2015-06-17
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -52753,7 +52753,7 @@ exports.createANTLRParser = function(name, config, root) {
 
 
 },{"../antlr/CLexer":1,"../antlr/CParser":3,"../antlr/JavaLexer":4,"../antlr/JavaParser":6,"../antlr/jvmBasicLexer":7,"../antlr/jvmBasicParser":9,"./helper.coffee":81,"./model.coffee":88,"./parser.coffee":90,"./treewalk.coffee":91,"antlr4":50}],79:[function(require,module,exports){
-var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
+var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TYPE_FROM_SEVERITY, TYPE_SEVERITY, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getMostSevereAnnotationType, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
   hasProp = {}.hasOwnProperty,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -53061,6 +53061,7 @@ exports.Editor = Editor = (function() {
       fn1(eventName, elements);
     }
     this.tree = new model.Segment();
+    this.tree.isRoot = true;
     this.tree.start.insert(this.cursor);
     this.resizeBlockMode();
     this.redrawMain();
@@ -53759,7 +53760,7 @@ hook('mousemove', 1, function(point, event, state) {
               w: 0,
               h: 0,
               acceptLevel: acceptLevel,
-              _ice_node: head.container
+              _droplet_node: head.container
             });
           }
         }
@@ -53832,8 +53833,8 @@ hook('mousemove', 0, function(point, event, state) {
             distance = mainPoint.from(point);
             distance.y *= 2;
             distance = distance.magnitude();
-            if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._ice_node).highlightArea != null)) {
-              best = point._ice_node;
+            if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
+              best = point._droplet_node;
               return min = distance;
             }
           }
@@ -55560,7 +55561,7 @@ Editor.prototype.copyAceEditor = function() {
   return this.setValue_raw(this.getAceValue());
 };
 
-hook('populate', 0, function() {
+hook('populate', 1, function() {
   var acemode;
   this.aceElement = document.createElement('div');
   this.aceElement.className = 'droplet-ace';
@@ -55754,6 +55755,9 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       div.style.width = this.gutter.offsetWidth + "px";
       translatingElements.push(div);
       div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
+      if (this.annotations[line] != null) {
+        div.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
+      }
       div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
       this.dropletElement.appendChild(div);
       fn2(div, line);
@@ -55908,6 +55912,9 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
           div.style.left = 0;
           div.style.top = (_this.aceEditor.session.documentToScreenRow(line, 0) * lineHeight - aceScrollTop) + "px";
           div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
+          if (_this.annotations[line] != null) {
+            div.className += ' droplet_' + getMostSevereAnnotationType(_this.annotations[line]);
+          }
           div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
           translatingElements.push(div);
           _this.dropletElement.appendChild(div);
@@ -56094,18 +56101,25 @@ hook('redraw_palette', 0, function() {
 });
 
 hook('populate', 0, function() {
+  var metrics;
   this.fontSize = 15;
   this.fontFamily = 'Courier New';
-  return this.fontAscent = helper.fontMetrics(this.fontFamily, this.fontSize).prettytop;
+  metrics = helper.fontMetrics(this.fontFamily, this.fontSize);
+  this.fontAscent = metrics.prettytop;
+  return this.fontDescent = metrics.descent;
 });
 
 Editor.prototype.setFontSize_raw = function(fontSize) {
+  var metrics;
   if (this.fontSize !== fontSize) {
     this.fontSize = fontSize;
     this.paletteHeader.style.fontSize = fontSize + "px";
     this.gutter.style.fontSize = fontSize + "px";
+    this.tooltipElement.style.fontSize = fontSize + "px";
     this.view.opts.textHeight = this.dragView.opts.textHeight = helper.getFontHeight(this.fontFamily, this.fontSize);
-    this.fontAscent = helper.fontMetrics(this.fontFamily, this.fontSize).prettytop;
+    metrics = helper.fontMetrics(this.fontFamily, this.fontSize);
+    this.fontAscent = metrics.prettytop;
+    this.fontDescent = metrics.descent;
     this.view.clearCache();
     this.dragView.clearCache();
     this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
@@ -56122,6 +56136,7 @@ Editor.prototype.setFontFamily = function(fontFamily) {
   this.view.clearCache();
   this.dragView.clearCache();
   this.gutter.style.fontFamily = fontFamily;
+  this.tooltipElement.style.fontFamily = fontFamily;
   this.redrawMain();
   return this.rebuildPalette();
 };
@@ -56684,53 +56699,30 @@ hook('populate', 0, function() {
   this.gutter.appendChild(this.lineNumberWrapper);
   this.gutterVersion = -1;
   this.lineNumberTags = {};
-  return this.dropletElement.appendChild(this.gutter);
+  this.mainScroller.appendChild(this.gutter);
+  this.annotations = {};
+  this.breakpoints = {};
+  this.tooltipElement = document.createElement('div');
+  this.tooltipElement.className = 'droplet-tooltip';
+  this.dropletElement.appendChild(this.tooltipElement);
+  return this.aceEditor.on('guttermousedown', (function(_this) {
+    return function(e) {
+      var row, target;
+      target = e.domEvent.target;
+      if (target.className.indexOf('ace_gutter-cell') === -1) {
+        return;
+      }
+      row = e.getDocumentPosition().row;
+      e.stop();
+      return _this.fireEvent('guttermousedown', [
+        {
+          line: row,
+          event: e.domEvent
+        }
+      ]);
+    };
+  })(this));
 });
-
-Editor.prototype.addGutterDecoration = function(row, className) {
-  var decorations;
-  if (!this.gutterDecorations[row]) {
-    this.gutterDecorations[row] = [];
-  }
-  decorations = this.gutterDecorations[row];
-  if (indexOf.call(decorations, className) >= 0) {
-    return;
-  }
-  decorations.push(className);
-  return this.redrawMain();
-};
-
-Editor.prototype.removeGutterDecoration = function(row, className) {
-  var decorations;
-  this.redrawMain();
-  if (!this.gutterDecorations[row]) {
-    return;
-  }
-  decorations = this.gutterDecorations[row];
-  if (indexOf.call(decorations, className) < 0) {
-    return;
-  }
-  decorations.splice(decorations.indexOf(className), 1);
-  if (decorations.length === 0) {
-    this.gutterDecorations[row] = null;
-  }
-  return this.redrawMain();
-};
-
-Editor.prototype.hasGutterDecoration = function(row, className) {
-  if (!this.gutterDecorations[row]) {
-    return false;
-  }
-  return indexOf.call(this.gutterDecorations[row], className) >= 0;
-};
-
-Editor.prototype.toggleGutterDecoration = function(row, className) {
-  if (this.hasGutterDecoration(row, className)) {
-    return this.removeGutterDecoration(row, className);
-  } else {
-    return this.addGutterDecoration(row, className);
-  }
-};
 
 hook('mousedown', 11, function(point, event, state) {
   var clickedLine, mainPoint, treeView;
@@ -56749,14 +56741,50 @@ hook('mousedown', 11, function(point, event, state) {
   return true;
 });
 
+Editor.prototype.setBreakpoint = function(row) {
+  this.aceEditor.session.setBreakpoint(row);
+  this.breakpoints[row] = true;
+  return this.redrawGutter(false);
+};
+
+Editor.prototype.clearBreakpoint = function(row) {
+  this.aceEditor.session.clearBreakpoint(row);
+  this.breakpoints[row] = false;
+  return this.redrawGutter(false);
+};
+
+Editor.prototype.clearBreakpoints = function(row) {
+  this.aceEditor.session.clearBreakpoints();
+  this.breakpoints = {};
+  return this.redrawGutter(false);
+};
+
+Editor.prototype.getBreakpoints = function(row) {
+  return this.aceEditor.session.getBreakpoints();
+};
+
+Editor.prototype.setAnnotations = function(annotations) {
+  var base, el, i, j, len, name;
+  this.aceEditor.session.setAnnotations(annotations);
+  this.annotations = {};
+  for (i = j = 0, len = annotations.length; j < len; i = ++j) {
+    el = annotations[i];
+    if ((base = this.annotations)[name = el.row] == null) {
+      base[name] = [];
+    }
+    this.annotations[el.row].push(el);
+  }
+  return this.redrawGutter(false);
+};
+
 Editor.prototype.resizeGutter = function() {
-  var ref1, ref2;
+  var ref1, ref2, ref3;
   this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
-  return this.gutter.style.height = (Math.max(this.dropletElement.offsetHeight, (ref1 = (ref2 = this.view.getViewNodeFor(this.tree).totalBounds) != null ? ref2.height : void 0) != null ? ref1 : 0)) + "px";
+  return this.gutter.style.height = (Math.max(this.dropletElement.offsetHeight, ((ref1 = (ref2 = this.view.getViewNodeFor(this.tree).totalBounds) != null ? typeof ref2.bottom === "function" ? ref2.bottom() : void 0 : void 0) != null ? ref1 : 0) + ((ref3 = this.options.extraBottomHeight) != null ? ref3 : this.fontSize))) + "px";
 };
 
 Editor.prototype.addLineNumberForLine = function(line) {
-  var lineDiv, treeView;
+  var lineDiv, title, treeView;
   treeView = this.view.getViewNodeFor(this.tree);
   if (line in this.lineNumberTags) {
     lineDiv = this.lineNumberTags[line];
@@ -56766,14 +56794,52 @@ Editor.prototype.addLineNumberForLine = function(line) {
     this.lineNumberTags[line] = lineDiv;
   }
   lineDiv.className = 'droplet-gutter-line';
-  if (this.gutterDecorations[line]) {
-    lineDiv.className += ' ' + this.gutterDecorations[line].join(' ');
+  if (this.annotations[line] != null) {
+    lineDiv.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
+    title = this.annotations[line].map(function(x) {
+      return x.text;
+    }).join('\n');
+    lineDiv.addEventListener('mouseover', (function(_this) {
+      return function() {
+        _this.tooltipElement.innerText = _this.tooltipElement.textContent = title;
+        return _this.tooltipElement.style.display = 'block';
+      };
+    })(this));
+    lineDiv.addEventListener('mousemove', (function(_this) {
+      return function(event) {
+        _this.tooltipElement.style.left = event.pageX;
+        return _this.tooltipElement.style.top = event.pageY;
+      };
+    })(this));
+    lineDiv.addEventListener('mouseout', (function(_this) {
+      return function() {
+        return _this.tooltipElement.style.display = 'none';
+      };
+    })(this));
   }
-  lineDiv.style.top = (treeView.bounds[line].y - this.scrollOffsets.main.y) + "px";
+  if (this.breakpoints[line]) {
+    lineDiv.className += ' droplet_breakpoint';
+  }
+  lineDiv.style.top = treeView.bounds[line].y + "px";
   lineDiv.style.paddingTop = (treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent) + "px";
+  lineDiv.style.paddingBottom = "" + (treeView.distanceToBase[line].below - this.fontDescent);
   lineDiv.style.height = treeView.bounds[line].height + 'px';
   lineDiv.style.fontSize = this.fontSize + 'px';
   return this.lineNumberWrapper.appendChild(lineDiv);
+};
+
+TYPE_SEVERITY = {
+  'error': 2,
+  'warning': 1,
+  'info': 0
+};
+
+TYPE_FROM_SEVERITY = ['info', 'warning', 'error'];
+
+getMostSevereAnnotationType = function(arr) {
+  return TYPE_FROM_SEVERITY[Math.max.apply(this, arr.map(function(x) {
+    return TYPE_SEVERITY[x.type];
+  }))];
 };
 
 Editor.prototype.findLineNumberAtCoordinate = function(coord) {
@@ -56803,7 +56869,14 @@ Editor.prototype.findLineNumberAtCoordinate = function(coord) {
 };
 
 hook('redraw_main', 0, function(changedBox) {
+  return this.redrawGutter(changedBox);
+});
+
+Editor.prototype.redrawGutter = function(changedBox) {
   var bottom, j, line, ref1, ref2, ref3, tag, top, treeView;
+  if (changedBox == null) {
+    changedBox = true;
+  }
   treeView = this.view.getViewNodeFor(this.tree);
   top = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y);
   bottom = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y + this.mainCanvas.height);
@@ -56819,9 +56892,9 @@ hook('redraw_main', 0, function(changedBox) {
     }
   }
   if (changedBox) {
-    return this.gutter.style.height = (Math.max(this.mainScroller.offsetHeight, treeView.totalBounds.height)) + "px";
+    return this.resizeGutter();
   }
-});
+};
 
 Editor.prototype.setPaletteWidth = function(width) {
   this.paletteWrapper.style.width = width + 'px';

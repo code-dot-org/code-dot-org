@@ -49,6 +49,12 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
+//Debug console history
+Applab.debugConsoleHistory = {
+  'history': [],
+  'currentHistoryIndex': 0
+};
+
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
@@ -73,7 +79,7 @@ var twitterOptions = {
   hashtag: "ApplabCode"
 };
 
-var MIN_DEBUG_AREA_HEIGHT = 70;
+var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -301,9 +307,46 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
+function pushDebugConsoleHistory(commandText) {
+  Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
+  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
+}
+
+function updateDebugConsoleHistory(commandText) {
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] = commandText;
+  }
+}
+
+function moveUpDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex > 0) {
+    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
+function moveDownDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex < Applab.debugConsoleHistory.history.length) {
+    Applab.debugConsoleHistory.currentHistoryIndex += 1;
+  }
+  if (Applab.debugConsoleHistory.currentHistoryIndex == Applab.debugConsoleHistory.history.length &&
+      currentInput == Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1]) {
+    return '';
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
 function onDebugInputKeyDown(e) {
-  if (e.keyCode == KeyCodes.ENTER) {
-    var input = e.target.textContent;
+  var input = e.target.textContent;
+  if (e.keyCode === KeyCodes.ENTER) {
+    e.preventDefault();
+    pushDebugConsoleHistory(input);
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.JSInterpreter) {
@@ -337,6 +380,14 @@ function onDebugInputKeyDown(e) {
     } else {
       outputApplabConsole('< (not running)');
     }
+  }
+  if (e.keyCode === KeyCodes.UP) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveUpDebugConsoleHistory(input);
+  }
+  if (e.keyCode === KeyCodes.DOWN) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveDownDebugConsoleHistory(input);
   }
 }
 
@@ -507,31 +558,13 @@ Applab.init = function(config) {
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
 
-    var toggleBreakpoint = function (row) {
-      var bps = aceEditor.session.getBreakpoints();
-      if (bps[row]) {
-        aceEditor.session.clearBreakpoint(row);
-        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
-      } else {
-        aceEditor.session.setBreakpoint(row);
-        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
-      }
-    };
-
-    if (aceEditor) {
-      aceEditor.on("guttermousedown", function(e) {
-        var target = e.domEvent.target;
-        if (target.className.indexOf("ace_gutter-cell") == -1) {
-          return;
-        }
-        var row = e.getDocumentPosition().row;
-        toggleBreakpoint(row);
-        e.stop();
-      });
-    }
-
     studioApp.editor.on('guttermousedown', function(e) {
-      toggleBreakpoint(e.line);
+      var bps = studioApp.editor.getBreakpoints();
+      if (bps[e.line]) {
+        studioApp.editor.clearBreakpoint(e.line);
+      } else {
+        studioApp.editor.setBreakpoint(e.line);
+      }
     });
 
     if (studioApp.share) {
@@ -588,7 +621,11 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 27, 130, slider);
+      var sliderXOffset = 10,
+          sliderYOffset = 22,
+          sliderWidth = 130;
+      Applab.speedSlider = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
+          slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -621,6 +658,10 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+    var clearButton = document.getElementById('clear-console-header');
+    if (clearButton) {
+      dom.addClickTouchEvent(clearButton, clearDebugOutput);
+    }
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
@@ -692,16 +733,6 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
-  // Prevent the codeTextbox from being shrunk too small vertically
-  // (half for code, half for debug-area, minus half toolbar height + 1px border)
-  //
-  // (we would do this in CSS, but for precedence rules to work properly, if
-  //  we explicitly set bottom/height styles on the elements above, we need to
-  //  do the same for these styles as well)
-
-  codeTextbox.style.minHeight = 'calc(50% - 21px)';
-  debugArea.style.maxHeight = 'calc(50% - 21px)';
-
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
@@ -726,9 +757,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   Applab.tickCount = 0;
 
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
   if (spinner) {
-    spinner.style.visibility = 'hidden';
+    spinner.style.display = 'none';
+  }
+
+  var pausedIcon = document.getElementById('paused-icon');
+  if (pausedIcon) {
+    pausedIcon.style.display = 'none';
   }
 
   var pauseButton = document.getElementById('pauseButton');
@@ -822,18 +858,16 @@ Applab.reset = function(first) {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
     }
-    var debugOutput = document.getElementById('debug-output');
-    if (debugOutput) {
-      debugOutput.textContent = '';
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
-    var debugInput = document.getElementById('debug-input');
-    if (debugInput) {
-      debugInput.textContent = '';
-    }
+    clearDebugOutput();
+    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -841,6 +875,26 @@ Applab.reset = function(first) {
   Applab.executionError = null;
   Applab.JSInterpreter = null;
 };
+
+/**
+ * Empty the contents of the debug console scrollback area.
+ */
+function clearDebugOutput() {
+  var debugOutput = document.getElementById('debug-output');
+  if (debugOutput) {
+    debugOutput.textContent = '';
+  }
+}
+
+/**
+ * Empty the debug console input area.
+ */
+function clearDebugInput() {
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    debugInput.textContent = '';
+  }
+}
 
 // TODO(dave): remove once channel id is passed in appOptions.
 /**
@@ -851,14 +905,14 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   $(window).trigger('run_button_pressed');
-  Applab.serializeAndSave(callback, true);
+  Applab.serializeAndSave(callback);
 };
 
 /**
  * We also want to serialize in save in some other cases (i.e. entering code
  * mode from design mode).
  */
-Applab.serializeAndSave = function (callback, runButtonClick) {
+Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
   if (!window.dashboard || (!dashboard.project.isEditing ||
@@ -969,7 +1023,7 @@ Applab.execute = function() {
     codeWhenRun = studioApp.editor.getValue();
     // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session);
+    annotationList.attachToSession(session, studioApp.editor);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1022,9 +1076,13 @@ Applab.execute = function() {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+    }
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
   }
 
@@ -1060,18 +1118,21 @@ Applab.onPauseContinueButton = function() {
 Applab.updatePauseUIState = function() {
   var pauseButton = document.getElementById('pauseButton');
   var continueButton = document.getElementById('continueButton');
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
+  var pausedIcon = document.getElementById('paused-icon');
 
-  if (pauseButton && continueButton && spinner) {
+  if (pauseButton && continueButton && spinner && pausedIcon) {
     if (Applab.JSInterpreter.paused &&
         Applab.JSInterpreter.nextStep === StepType.RUN) {
       pauseButton.style.display = "none";
       continueButton.style.display = "inline-block";
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
+      pausedIcon.style.display = 'inline-block';
     } else {
       pauseButton.style.display = "inline-block";
       continueButton.style.display = "none";
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+      pausedIcon.style.display = 'none';
     }
   }
 };

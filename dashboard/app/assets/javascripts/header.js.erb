@@ -161,7 +161,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
 };
 
 function shareProject() {
-  dashboard.project.save(function () {
+  dashboard.project.save(dashboard.getEditorSource(), function () {
     var origin = location.protocol + '//' + location.host;
     var shareUrl = origin + dashboard.project.appToProjectUrl() + '#' + dashboard.project.current.id;
     var encodedShareUrl = encodeURIComponent(shareUrl);
@@ -376,7 +376,7 @@ dashboard.header.showProjectHeader = function () {
     e.preventDefault(); // Don't change the hash.
     // Save the project if one exists (i.e. isn't just the default one) then navigate.
     if (dashboard.project.current.id) {
-      dashboard.project.save(function () {
+      dashboard.project.save(dashboard.getEditorSource(), function () {
         location.href = location.pathname;
       });
     } else {

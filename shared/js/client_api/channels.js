@@ -9,9 +9,10 @@ module.exports = {
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(null);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
     });
   },
 
@@ -22,9 +23,10 @@ module.exports = {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -34,9 +36,10 @@ module.exports = {
       type: "post",
       dataType: "json",
     }).done(function(data, text) {
-      callback(true);
+      callback(null, true);
     }).fail(function(request, status, error) {
-      callback(false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   },
 
@@ -46,9 +49,10 @@ module.exports = {
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -59,9 +63,10 @@ module.exports = {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   }
 };
