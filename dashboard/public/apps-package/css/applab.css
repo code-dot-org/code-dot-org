@@ -225,11 +225,37 @@ div#visualizationResizeBar {
     transform: scale(0.5); }
  }
 
+#divApplab {
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#divApplab canvas {
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  z-index: -1; }
+
 #visualizationResizeBar {
   margin-left: 2px;
   width: 13px; }
 
 #debugResizeBar {
+  width: 100%;
+  height: 13px;
+  line-height: 13px;
+  color: #c6cacd;
+  font-size: 24px;
+  text-align: center;
   cursor: ns-resize;
   white-space: nowrap; }
 
@@ -246,21 +272,24 @@ img#turtleImage {
   height: 24px; }
 
 .debugger_button {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
+  border: 1px solid #0094ca;
+  background-color: #0094ca;
   color: #fff;
   margin-left: 0px;
   margin-right: 3px;
   padding: 3px 6px;
-  font-size: 14px; }
+  font-size: 14px;
+  min-width: 120px; }
 
-#pauseButton, #continueButton {
-  min-width: 110px; }
+#continueButton {
+  border-color: #ffa400;
+  background-color: #ffa400; }
 
 .debugger_button:focus {
   outline-style: none; }
 
 .debugger_button > img {
+  float: left;
   opacity: 1; }
 
 #debug-area {
@@ -268,18 +297,50 @@ img#turtleImage {
   bottom: 0;
   height: 156px;
   left: 0;
-  right: 0; }
+  right: 0;
+  max-height: calc(50% - 16px) !important; }
 
-#spinner {
-  margin-left: -5px; }
+#debug-area-header {
+  position: absolute;
+  top: 13px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  background-color: #cfc9de;
+  text-align: center; }
+  #debug-area-header > span {
+    line-height: 30px; }
+  #debug-area-header > span, #debug-area-header .workspace-header {
+    color: #4d575f; }
+  #debug-area-header .workspace-header-button {
+    background-color: #ebe8f1;
+    color: #5b6770; }
+    #debug-area-header .workspace-header-button:hover {
+      background-color: #0094ca;
+      color: white; }
 
-.debug-console {
+#debug-commands-header {
+  width: 270px;
+  float: left;
+  border-right: 1px solid gray; }
+  #debug-commands-header .fa {
+    margin: 0 0.25em; }
+
+.debug-commands, .debug-console {
   display: block;
+  background-color: white;
   border: 1px solid #ddd;
   position: absolute;
-  top: 38px;
-  bottom: 0;
+  top: 43px;
+  bottom: 0; }
+
+.debug-commands {
   left: 0;
+  width: 270px;
+  text-align: center; }
+
+.debug-console {
+  left: 270px;
   right: 0; }
 
 .debug-console * {
@@ -291,21 +352,20 @@ img#turtleImage {
   bottom: 0;
   height: 16px;
   display: block;
-  left: 0;
-  width: 15px;
-  background-color: white; }
+  left: 3px;
+  width: 15px; }
 
 .debug-input, .debug-output {
   position: absolute;
   border-width: 0px;
   padding: 0px;
-  outline: none;
-  background-color: white; }
+  outline: none; }
 
 .debug-output {
   top: 0;
   bottom: 16px;
-  width: 100%;
+  left: 3px;
+  right: 0;
   overflow: auto;
   line-height: normal;
   cursor: text;
@@ -315,7 +375,7 @@ img#turtleImage {
   bottom: 0;
   max-height: 16px;
   height: 16px;
-  left: 15px;
+  left: 18px;
   right: 0;
   margin-top: -3px;
   -moz-user-select: text;
@@ -323,6 +383,7 @@ img#turtleImage {
   -ms-user-select: text; }
 
 #slider-cell {
+  float: left;
   cursor: default; }
 
 /* Slider. */
@@ -330,8 +391,8 @@ img#turtleImage {
   float: left; }
 
 .sliderTrack {
-  stroke: #aaa;
-  stroke-width: 6px;
+  stroke: #ebe8f1;
+  stroke-width: 4px;
   stroke-linecap: round; }
 
 .sliderKnob {
