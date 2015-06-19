@@ -244,8 +244,6 @@ Blockly.Css.CONTENT = [
   '.contract-type-hint {',
   '  color: #898989;',
   '  font-size: 11px;',
-  //'  display: block;',
-  //'  margin-top: -5px;',
   '}',
   '.exampleAreaDiv {',
   '  pointer-events: none;',
