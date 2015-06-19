@@ -35,7 +35,7 @@ goog.require('goog.array');
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
 /** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN; // px
-/** @const */ var HEADER_HEIGHT = 50; //px
+/** @const */ var HEADER_HEIGHT = 30; //px
 
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
@@ -146,6 +146,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn,
     {
       sectionNumber: 1,
+      headerHeight: HEADER_HEIGHT,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         // goog.ui.showElement toggles between "hidden" and "hidden" due to
         // inherited properties, so set display directly instead
@@ -201,6 +202,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 2,
+      headerHeight: HEADER_HEIGHT,
       headerText: "Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (currentY) {
         var maxWidth = +this.exampleBlocks.reduce(function (previousMax, block) {
@@ -308,6 +310,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 3,
+      headerHeight: HEADER_HEIGHT,
       headerText: "Definition", /** TODO(bjordan) i18n */
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.flyout_.setVisibility(!isNowCollapsed);
@@ -596,16 +599,18 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.innerHTML =
           '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
         + '<div><input id="functionNameText" type="text"></div>'
-        + '<div id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
-        + '<div class="contract-type-hint" id="domain-hint">(the domain is the type of input)</div>'
+        + '<div><span id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</span> <span class="contract-type-hint"  id="domain-hint">(the domain is the type of input)</span>' + '</div>'
         + '<div id="domain-area" style="margin: 0;">'
         + '</div>'
         + '<div class="clear" style="margin: 0;"></div>'
-        + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + '</button>'
+        + '<button id="paramAddButton" class="btn">' + 'Add Domain' + '</button>'
         + '<div class="clear" style="margin: 0;"></div>'
         + '<div id="range-area" style="margin: 0;">'
-          + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
-          + '<div class="contract-type-hint clear" id="range-hint" style="margin-left: 11px; ">(the range is the type of output)</div>'
+          + '<div>'
+            +'<span id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</span>'
+            +' '
+            +'<span class="contract-type-hint" id="range-hint">(the range is the type of output)</span>'
+          + '</div>'
           + '<span id="outputTypeDropdown"></span>'
         + '</div>'
         + '<div id="description-area" style="margin: 0px;">'
@@ -822,12 +827,15 @@ Blockly.ContractEditor.prototype.outputTypeChanged_ = function (newType) {
 
 Blockly.ContractEditor.prototype.updateFrameColorForType_ = function (newType) {
   var newColorHSV = Blockly.FunctionalTypeColors[newType];
-  this.setFrameColor_(newColorHSV);
+  var newColorHex = goog.color.hsvToHex(newColorHSV[0], newColorHSV[1], newColorHSV[2] * 255)
+  this.setFrameColor_(newColorHex);
+  this.allSections_.forEach(function (sectionView, sectionName) {
+    sectionView.setHeaderColor(newColorHex);
+  }, this);
 };
 
-Blockly.ContractEditor.prototype.setFrameColor_ = function (hsvColor) {
-  this.frameBase_.style.fill =
-    goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
+Blockly.ContractEditor.prototype.setFrameColor_ = function (newColorHex) {
+  this.frameBase_.style.fill = newColorHex;
 };
 
 Blockly.ContractEditor.prototype.getOutputTypeDropdownElement_ = function () {

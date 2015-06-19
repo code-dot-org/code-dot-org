@@ -23,7 +23,7 @@ Blockly.XButton = function (options) {
 Blockly.XButton.prototype.render = function (parent) {
   var buttonElement = goog.dom.createDom('button');
   buttonElement.className = "btn";
-  buttonElement.innerHTML = "x";
+  buttonElement.innerHTML = "Remove";
   buttonElement.style.marginRight = "-10px"; // specific to contract editor
 
   parent.appendChild(buttonElement);

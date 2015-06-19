@@ -35,6 +35,10 @@ Blockly.SvgHeader = function (parent, opt_options) {
   }
 };
 
+Blockly.SvgHeader.prototype.setColor = function (colorHex) {
+  this.grayRectangleElement_.setAttribute('fill', colorHex);
+};
+
 /**
  * @param yOffset {Number}
  * @param width {Number}
