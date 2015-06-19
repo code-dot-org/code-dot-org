@@ -79,7 +79,7 @@ var twitterOptions = {
   hashtag: "ApplabCode"
 };
 
-var MIN_DEBUG_AREA_HEIGHT = 70;
+var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -621,7 +621,11 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 27, 130, slider);
+      var sliderXOffset = 10,
+          sliderYOffset = 22,
+          sliderWidth = 130;
+      Applab.speedSlider = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
+          slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -654,6 +658,10 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+    var clearButton = document.getElementById('clear-console-header');
+    if (clearButton) {
+      dom.addClickTouchEvent(clearButton, clearDebugOutput);
+    }
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
@@ -725,16 +733,6 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
-  // Prevent the codeTextbox from being shrunk too small vertically
-  // (half for code, half for debug-area, minus half toolbar height + 1px border)
-  //
-  // (we would do this in CSS, but for precedence rules to work properly, if
-  //  we explicitly set bottom/height styles on the elements above, we need to
-  //  do the same for these styles as well)
-
-  codeTextbox.style.minHeight = 'calc(50% - 21px)';
-  debugArea.style.maxHeight = 'calc(50% - 21px)';
-
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
@@ -759,9 +757,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   Applab.tickCount = 0;
 
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
   if (spinner) {
-    spinner.style.visibility = 'hidden';
+    spinner.style.display = 'none';
+  }
+
+  var pausedIcon = document.getElementById('paused-icon');
+  if (pausedIcon) {
+    pausedIcon.style.display = 'none';
   }
 
   var pauseButton = document.getElementById('pauseButton');
@@ -855,18 +858,16 @@ Applab.reset = function(first) {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
     }
-    var debugOutput = document.getElementById('debug-output');
-    if (debugOutput) {
-      debugOutput.textContent = '';
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
-    var debugInput = document.getElementById('debug-input');
-    if (debugInput) {
-      debugInput.textContent = '';
-    }
+    clearDebugOutput();
+    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -874,6 +875,26 @@ Applab.reset = function(first) {
   Applab.executionError = null;
   Applab.JSInterpreter = null;
 };
+
+/**
+ * Empty the contents of the debug console scrollback area.
+ */
+function clearDebugOutput() {
+  var debugOutput = document.getElementById('debug-output');
+  if (debugOutput) {
+    debugOutput.textContent = '';
+  }
+}
+
+/**
+ * Empty the debug console input area.
+ */
+function clearDebugInput() {
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    debugInput.textContent = '';
+  }
+}
 
 // TODO(dave): remove once channel id is passed in appOptions.
 /**
@@ -1055,9 +1076,13 @@ Applab.execute = function() {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+    }
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
   }
 
@@ -1093,18 +1118,21 @@ Applab.onPauseContinueButton = function() {
 Applab.updatePauseUIState = function() {
   var pauseButton = document.getElementById('pauseButton');
   var continueButton = document.getElementById('continueButton');
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
+  var pausedIcon = document.getElementById('paused-icon');
 
-  if (pauseButton && continueButton && spinner) {
+  if (pauseButton && continueButton && spinner && pausedIcon) {
     if (Applab.JSInterpreter.paused &&
         Applab.JSInterpreter.nextStep === StepType.RUN) {
       pauseButton.style.display = "none";
       continueButton.style.display = "inline-block";
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
+      pausedIcon.style.display = 'inline-block';
     } else {
       pauseButton.style.display = "inline-block";
       continueButton.style.display = "none";
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+      pausedIcon.style.display = 'none';
     }
   }
 };
