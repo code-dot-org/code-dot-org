@@ -13,7 +13,7 @@ nl-NL:
   petition_message: Elke leerling in elke school moet de kans krijgen om informatica te leren
   petition_sign_message: 'Ga je akkoord, onderteken dan met je naam. Sluit je aan bij # anderen.'
   petition_sign_message_support: 'Voeg je naam toe aan de lijst, als je ons steunt. Net als # anderen.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Doe mee met # anderen'
   name: naam
   email: E-mail
   zipcode: Postcode of land
@@ -164,9 +164,9 @@ nl-NL:
     &ldquo;100% van mijn leerlingen raakte door dit
     programma geëngageerd en betrokken en deed actief mee.&rdquo;
     Adam, leraar
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc lijnen code geschreven door studenten'
+  homepage_hero_text_stat_students: '#student_count studenten accounts op Code Studio'
+  homepage_hero_text_stat_served: 'Uur van Code: #served geserveerd'
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten
@@ -353,11 +353,18 @@ nl-NL:
   dashboard_students_print_page: Print deze pagina
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Klik hier</a> voor onze privacy document dat kan worden gedeeld of afgedrukt voor uw studenten.'
-  dashboard_curriculum_overview: Basisschool Curriculum overzicht
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Bekijk alle lesplannen
   dashboard_course1: 'Cursus 1:'
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Basisschool Curriculum overzicht
+  dashboard_overview: Overview
   dashboard_sequence: Rij
   dashboard_framework: Framework
   dashboard_standards: Normen
@@ -368,6 +375,10 @@ nl-NL:
   dashboard_puzzle_solving: 'Puzzel-oplossend:'
   dashboard_student_worksheet: leerlingen werkblad
   dashboard_teacher_worksheet: leraren werkblad
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Anders
   dashboard_login_word: Woord
@@ -395,6 +406,7 @@ nl-NL:
   dashboard_sections_password_account_creation: Student-gemaakte wachtwoord
   dashboard_sections_login_type_explanation: 'Deze tabel helpt  met het verklaren welke log-in typen, <b>foto, woord, of e-mail</b> u zou willen kiezen voor uw groep.'
   dashboard_faq: Veelgestelde Vragen
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Leer meer
@@ -815,3 +827,6 @@ nl-NL:
   processing_beyond_longdescription: Processing is een programmeertaal, ontwikkelomgeving en online gemeenschap. Sinds 2001 heeft Processing software ontwikkeling binnen de beeldende kunst en visuele ontwikkeling binnen technologie gepromoot. In eerste instantie gemaakt om te dienen als een software schetsboek en om fundamentele computer programmeer concepteb te leren binnen een visuele context, Processing is uitgegroeid tot een instrument voor ontwikkeling voor professionals. Vandaag de dag zijn er tienduizenden studenten, kunstenaars, ontwerpers, onderzoekers en hobbyisten die gebruik maken van Processing voor leren, het maken van prototypes en productie.
   alice_beyond_longdescription: Door gebruik te maken van een innovatieve programmeeromgeving die het maken van 3D animaties ondersteunt, geeft het Alice Project materialen en tools voor het lesgeven en leren van logisch denken zoals computers, oplossen van problemen en programmeren voor een breed spectrum aan leeftijden en leerjaren.
   sphero_beyond_longdescription: Of u nu een leerkracht of een ouder bent, SPRK lessen geven kinderen een leuke spoedcursus in het programmeren van robots, terwijl vaardigheden in wiskunde en wetenschap aangescherpt worden.
+  compatibility_https_header: Schakel HTTPS in voor Code.org.
+  compatibility_https_message: "Om de veiligheid te verhogen schakelen we op %{https_date} over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org."
+  compatibility_https_hide_this_warning: Verberg deze waarschuwing

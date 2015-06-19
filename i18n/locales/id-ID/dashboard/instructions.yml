@@ -3,147 +3,111 @@ id:
     instructions:
       2-3 Artist 1 new_instruction: Hi, saya seorang seniman. Anda dapat menuliskan kode agar membuat saya dapat menggambar apa saja. Gunakan beberapa blok agar membuat saya menggambar diatas garis abu-abu pada foto (setiap baris panjangnya adalah 100 pixels)
       2-3 Artist 11_instruction: 'Beri tanda stop pada batasan dengan membuat sebuah persegi delapan dengan 8 sisi, masing-masing dengan anjang 100 pixles. Seberapa banyak derajat yang seharusnya anda belok? (Petunjuk:360 dibagi dengan 8 sama dengan?) '
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
+      2-3 Artist 12_instruction: 'Atur block "waktu pengulangan" supaya menciptakan "lingkaran" untuk menyelesaikan the eyeball. Jika setiap pergerakannya ke kanan dengan satu derajat, berapa kali Anda harus mengulangi untuk menyelesaikan lingkaran? 180? 360? 500?'
       2-3 Artist 2 new_instruction: 'Rumah ini memiliki dinding yang setengah jadi. Setiap sisi adalah 100, tapi dinding setengah jadi hanya 50. Lengkapi dinding tersebut. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
       2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
+        blok lompatan memindahkan artis tanpa menggambarkan.
+        Gambarkan garis putus-putus dengan menggunakan kedua lompatan dan gambarkan blok.
       2-3 Artist 3_instruction: Topi ini tingginya 100 piksel. Buatlah topi yang tingginya 70 piksel atau kurang.
       2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+        Si Topi merah memiliki tinggi 100 piksel. selesaikan menggambar
+        topi hitam yang 70 piksel lebih pendek. dengan Lebar topi hitam adalah 50 piksel.
       2-3 Artist 4_instruction: Bantu saya menyelesaikan rumah untuk kucing ini.
       2-3 Artist 5_instruction: 'Ganti kode ini dengan blok "Ulangi kali" untuk menggambar rumah yang sama hanya dengan 3 blok.'
       2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
+        Rumah ini membutuhkan atap! gambarkan segitiga. petunjuk:
+        semua tiga sisi yang sama panjang.
       2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square window pane is 25 pixels wide. 
+        Selesaikan menggambar bagian kanan jendela terakhir. 
+        Setiap kaca jendela persegi memiliki lebar 25 piksel. 
       2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
+        Lengkapi kamar untuk masing-masing hewan dengan memisahkan
+        persegi panjang menjadi 2 kotak sama besar. Lebar persegi panjang adalah 200 pixel
+        dan 100 piksel tinggi.
       2-3 Artist 9_instruction: Selesaikan layang-layang ini
       2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
+        Penilaian: Selesaikan menggambar gigi terakhir,
+        25 piksel lebar dan 25 piksel tinggi.
       2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
+        Dapatkah Anda membuat topi ini dengan panjang atas
+        100?
       2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
+        Arah pad pada game controller saya
+        terlalu sempit. Petunjuk: Buatlah lebih luas dengan 10 piksel
       2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
+        Bantu saya menyelesaikan salju yang indah Ku.
+        Berapa kali saya harus "mengulang" untuk menyelesaikannya?
       2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
+        Aku harus menambahkan gelombang laut untuk
+        adegan ini. Bisakah kamu membantuku?
       2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
+        Kode untuk tiga kumis yang Anda
+        lihat adalah salah. Petunjuk: setiap kumis adalah 75 piksel panjang. Perbaiki kode ini untuk menggambar kumis.
       2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
+        Perahu saya memiliki lubang! Dapatkah Anda memperbaikinya dengan
+        mengubah sudut garis? Petunjuk: sudut terakhir adalah turun dari 15 derajat.
       2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
+        Apa gambar yang kita mencoba untuk
+        gambar? Selesaikan menghubungkan titik-titik dengan menggunakan jalur dan sudut yang tepat.
+      2-3 Artist Debugging 5_instruction: 'Kode untuk kaki dan telapak kaki yang Anda lihat salah. Petunjuk: Kaki ini terlalu panjang, kita mungkin perlu menghapus satu langkah (maksudnya pun)'
       2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
+        Sepertinya aku duduk di kursi yang
+        kehilangan kaki. Edit blok untuk menarik kaki.
       2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
+        Tampaknya C dalam kode ditarik mundur.
+        Dapatkah Anda membuatnya terlihat seperti C?
+      2-3 Artist Debugging 8_instruction: Pinwheel saya belum selesai. Berapa kali saya harus mengulangi untuk menyelesaikannya?
       2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
+        Kode untuk induk ini tidak benar. petunjuk:
+        Sudut dimatikan oleh 60 derajat
       2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
+        Bentuk ini terlalu kecil. bisa
+        Anda membuatnya lebih besar? Petunjuk: itu harus 75 pixel lebih panjang di setiap sisi.
       2-3 Artist Free Play_instruction: Permainan bebas! Gambarlah apa pun yang Anda suka.
       2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
+        Hello. Saya artis zombie. Saya suka menggambar!
+        Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
+        25 piksel lebih pendek dari panjang persegi.
       2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
+        Berikut dua fungsi, satu untuk menggambar
+        gigi besar dan satu untuk menggambar gigi kecil. Gunakan mereka menggambar bagian dalam mesin!
       2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
+        Berikut fungsi "Menggambar segi enam"  yang sama
+        . Apa yang terjadi jika Anda hanya mengubah 60 derajat setiap kali putaran Anda?
+      2-3 Artist Functions 11_instruction: 'Kita telah mengganti nama fungsi "menggambar persegi" menjadi "menggambar segienam", tetapi ia masih hanya menggambar persegi! Dapat Anda memodifikasi/mengubah fungsi "menggambar segienam" untuk menggambar segi enam dengan sisi 50 piksel, dan digambar dengan menggunakan fungsi?'
+      2-3 Artist Functions 12_instruction: 'Fungsi yang sangat besar untuk menggambar hal yang rumit berulang kali. Dapatkah Anda menggunakan fungsi "menggambar bunga" untuk mengisi seluruh kotak perkebunan (Petunjuk: semua tanaman dipisahkan dengan panjang 100 piksel )  '
       2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
+        Kami menyediakan Anda dengan empat fungsi. Gunakan dengan cara apapun yang Anda suka dalam satu atau lebih putaran untuk membuat gambar yang
+        Anda dapat berbagi dengan teman-teman Anda. Tekan Run untuk melihat contoh.
       2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
+        Fungsi membiarkan Anda mendefinisikan blok baru! Kami sudah
+        memindahkan blok untuk menggambar persegi menjadi fungsi yang disebut "menggambar persegi".
+        Dapatkah Anda gunakan fungsi "menggambar persegi" untuk membuat kacamata? kotak terpisah 75 piksel.
+      2-3 Artist Functions 3_instruction: Mengedit fungsi menjadi Gambar sebuah persegi dengan panjang sisi 115 dan gambarkan gelas besar. Kotak yang sekarang terpisah 45 piksel.
+      2-3 Artist Functions 4_instruction: 'Gunakan blok "Ulangi"/"repeat" untuk menggambar 3 kotak ini.'
+      2-3 Artist Functions 7_instruction: 'Gunakan fungsi "gambar sebuah rumah" untuk menggambar dua buah rumah menggunakan dua parameter yang berbeda. (Petunjuk: rumah pertama berukuran 100 piksel).'
+      2-3 Artist Functions 9_instruction: Di sini adalah fungsi kepingan salju/snowflake. Bereksperimenlah dengannya untuk menciptakan adegan musim dingin! Ini adalah tingkat bermain gratis, jadi tidak ada teka-teki untuk dipecahkan. Selamat bersenang-senang!
+      2-3 Artist Loops 1_instruction: Anda bisa membuat hexagon/segienam dengan panjang sisi 100 piksel untuk menyelesaikan sel/cell? Ingat, itu berarti bahwa Anda hanya perlu mengubahnya menjadi 60 derajat!
       2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
+        Apa yang terjadi pada rancangan ketika kita membuat Langkah terakhir ke depan kita
+        setengah lebih lama?
+      2-3 Artist Loops 11_instruction: 'Sekarang mari kita letakan putaran/pengulangan *another*/*lain*  di sekitar Seluruh ciptaan kita! Jangan lupa untuk menambahkan sudut pada akhir bagian luar putaran/pengulangan .'
       2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
+        Sekarang menggunakan blok ulangi untuk membuat sel
+        cangkang.
       2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
+        Ingin melihat apa yang terjadi ketika kita mengulangi
+        bentuk ituberulang-ulang menggunakan loop?
       2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
+        Sekarang mari kita membuat perubahan kecil untuk putaran/pengulangan
+        dan lihat bagaimana gambar kita menjadi berbeda .
       2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
+        Tambahkan satu gerakan lagi dan yang lain berbalik di dalam
+        pengulangan dan melihat bagaimana desain Anda berubah.
+      2-3 Artist Loops 7_instruction: 'Kita dapat menggunakan loop untuk membuat semua jenis poligon.  Anda dapat membuat belah ketupat dalam hexagon ini?'
       2-3 Artist Loops 8_instruction: Mari kita menempatkan kedua elemen ke dalam putaran.
       2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
       2-3 Artist Loops New 1_instruction: |
@@ -162,7 +126,7 @@ id:
       2-3 Artist Loops New 14_instruction: |
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+      2-3 Artist Loops New 15_instruction: Gambar sesuatu yang menyenangkan.
       2-3 Artist Loops New 2_instruction: |
         Here's some of the code you used to draw
         that square. What happens if you use the repeat block to run this code 4 times?
@@ -2035,13 +1999,13 @@ id:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -2096,9 +2060,8 @@ id:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -2149,10 +2112,11 @@ id:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2197,8 +2161,8 @@ id:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2271,6 +2235,12 @@ id:
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2832,10 +2802,9 @@ id:
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
       PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+        Fungsi membiarkan Anda mendefinisikan blok baru! Kami sudah
+        memindahkan blok untuk menggambar persegi menjadi fungsi yang disebut "menggambar persegi".
+        Dapatkah Anda gunakan fungsi "menggambar persegi" untuk membuat kacamata? kotak terpisah 75 piksel.
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -2955,9 +2924,9 @@ id:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -3051,10 +3020,28 @@ id:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

@@ -80,7 +80,7 @@ module.exports = {
   create: function () {
     var element = document.createElement('input');
     element.style.margin = '0px';
-    element.style.width = '236px';
+    element.style.width = '200px';
     element.style.height = '30px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';

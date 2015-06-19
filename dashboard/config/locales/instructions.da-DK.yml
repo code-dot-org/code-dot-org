@@ -63,7 +63,7 @@
       2-3 Artist Debugging Assessment 1_instruction: |
         This shape is too small. Can
         you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
+      2-3 Artist Free Play_instruction: Fri leg! Tegn lige hvad du har lyst til.
       2-3 Artist Functions 1_instruction: |
         Hello. Me zombie artist. Me love drawing!
         Help me draw the square glasses.  Hint:  the bridge between the glasses is
@@ -203,19 +203,16 @@
       2-3 Artist Nested Loops 9_instruction: |
         We'll finish this picture by adding
         a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
-        Be careful not to collect nectar from a purple flower if it doesn't\nhave
-        any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
+      2-3 Artist Nested Loops Free Play_instruction: Fri leg, tegn noget sejt hvor
+        du bruger flere løkker indeni hinanden.
+      2-3 Bee Conditionals 1_instruction: Hej! Jeg er en bi. Hjælp mig med at hente
+        nektar fra blomsten.
+      2-3 Bee Conditionals 10_instruction: "Lilla blomster kan have enten 1 eller
+        0 portioner nektar. Pas på du ikke prøver at hente nektar fra en lilla blomst,
+        hvis den ikke har noget.\r\n"
+      2-3 Bee Conditionals 11_instruction: Hent nektar når blomsterne har noget.
+      2-3 Bee Conditionals 12_instruction: Brug en løkke til at tjekke for og hente
+        nektar fra alle blomsterne.
       2-3 Bee Conditionals 13_instruction: |
         Collect nectar and make honey. Hint:
         what happens if you use the "if nectar" conditional on a red flower? Can
@@ -344,15 +341,13 @@
         all of the nectar.
       2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
         from these flowers? \n"
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
+      2-3 Bee Loops 2_instruction: Brug en løkke (gentag-blok) til at hente nektaren
+        og lave honning.
       2-3 Bee Loops 2A_instruction: |
         Can you do the same task more easily with a
         loop?
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
+      2-3 Bee Loops 3_instruction: Hent nektar fra alle blomsterne og lav honning
+        på bistaderne.
       2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
       2-3 Bee Loops 3B_instruction: |
         Now use the new repeat block to collect all
@@ -424,7 +419,7 @@
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
       2-3 Maze 7_instruction: Før mig til det grønne ondskab! (Men pas på TNT)
-      2-3 Maze 8_instruction: Get me to the pig!
+      2-3 Maze 8_instruction: Få mig hen til grisen!
       2-3 Maze 9_instruction: Før mig til det grønne ondskab! (Men pas på TNT)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
@@ -682,9 +677,7 @@
         Now repeat that code 3 times to draw the
         whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
         to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
+      4-5 Artist Patterns Free Play_instruction: Fri leg - prøv at lave dit eget mønster!
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -791,7 +784,7 @@
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: Get me to the pig!
+      4-5 Maze 13_instruction: Få mig hen til grisen!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
@@ -1938,10 +1931,10 @@
         What for loop would make me speak
         19, 27, 35, 43, 51?
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
-        to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
-        to get me to the pig."
+      Course1MazeAssessment1_instruction: "En lille test!\r\nFlyt mig først i een
+        retning, og så en anden, for at komme hen til grisen"
+      Course1MazeAssessment2_instruction: "En lille test!\r\nFlyt mig først i een
+        retning, og så en anden, for at komme hen til grisen."
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
         compare different values, returning either true or false. Click "Run" to
@@ -2002,13 +1995,13 @@
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin
         the name of a food and produces a String that says how you feel about that\nfood.
         For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic
@@ -2072,11 +2065,11 @@
         Let's look inside that green-triangle function
         to see how it works. Can you modify it so that the green-triangle function
         always draws outlined green triangles?
-      Eval Define Funcs 3_instruction: "Here's the start of another new function\ncalled
-        purple-circle with a domain of one Number (the radius) and a range\nof Image.
-        The body of the function is broken though, it always draws a circle\nof 50
-        pixel radius instead of using the radius parameter. Replace the current\nNumber
-        with the radius block from the domain. \n"
+      Eval Define Funcs 3_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -2127,10 +2120,11 @@
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2175,8 +2169,8 @@
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2204,8 +2198,7 @@
       frozen diamond_instruction: 'Lad os lave et parallelogram. Det er ligesom en
         firkant, men med andre vinkler: 60 og 120 graders vinkler i stedet for 90
         graders vinkler.'
-      frozen freeplay_instruction: Du er nu blevet en stor kunstner! Lav et Vinter
-        drømmeland.
+      frozen freeplay_instruction: Du er nu officielt en stor kunstner! Lav et vinterdrømmeland.
       frozen line_instruction: Hej jeg hedder Elsa af Arendelle. Hjælp mig med at
         lave en linje.
       frozen perpendicular_instruction: Nu lad os se om vi kan lave to linjer der
@@ -2234,6 +2227,12 @@
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: Kan du få Elsa ("figur 2") til at indhente Anna
         ved hjælp af piletasterne?
       Infinity_finale_instruction: Lav noget du kan lide og del det!
@@ -2271,13 +2270,12 @@
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
         castle?
-      K-1 Artist Loops 5_instruction: What can you loop 4 times to draw these stairs?
-      K-1 Artist Loops 6_instruction: |
-        This one needs two loops: one to go up the
-        stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
-      K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
+      K-1 Artist Loops 5_instruction: Hvad skal du gentage 4 gange for at tegne trappen?
+      K-1 Artist Loops 6_instruction: 'Her er der brug for to løkker: en op af trappen,
+        og en når du skal ned igen.'
+      K-1 Artist Loops 7_instruction: Kan du gøre mønsteret færdigt med to loops?
+      K-1 Artist Loops 8_instruction: Denne trappe har bredere trin.
+      K-1 Artist Loops 9_instruction: 'Opgave: Brug en løkke til at tegne trappen'
       K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
       K-1 Artist1 1_instruction: Draw the foot of the man with one line
       K-1 Artist1 10_instruction: |
@@ -2381,10 +2379,10 @@
       K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze Assessment 1_instruction: Assessment -- Get me to the pig!
+      K-1 Maze Assessment 1_instruction: Opgave -- Få mig hen til grisen!
       K-1 Maze Assessment 12_instruction: Assessment Level
       K-1 Maze Assessment 13_instruction: Assessment Level
-      K-1 Maze Assessment 2_instruction: Assessment -- Get me to the pig!
+      K-1 Maze Assessment 2_instruction: Opgave -- Få mig hen til grisen!
       K-1 maze debug 1_instruction: Change the code to get me to the pig!
       K-1 maze debug 10_instruction: |
         Debug this level by rearranging and adding
@@ -2415,33 +2413,30 @@
       K-1 maze debug 9_instruction: |
         Debug this level by rearranging and adding blocks
         to get me to the pig!
-      K-1 Maze debug Assessment 1_instruction: |
-        Assessment -- Debug this level by
-        rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Get me to the pig!
-      K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
-      K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 4_instruction: Get me to the pig!
-      K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 9_instruction: Get me to the pig!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
+      K-1 Maze debug Assessment 1_instruction: Opgave -- Find fejlen i koden ved at
+        flytte på og tilføje blokke, så jeg kommer hen til grisen!
+      K-1 Maze Loops 1_instruction: Få mig hen til grisen!
+      K-1 Maze Loops 10_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 11_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 12_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 2_instruction: Brug gentag-blokken for at få mig hen til grisen!
+      K-1 Maze Loops 3_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 4_instruction: Få mig hen til grisen!
+      K-1 Maze Loops 5_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 6_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 7_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 8_instruction: Få mig hen til grisen! Brug gentag-blokken.
+      K-1 Maze Loops 9_instruction: Få mig hen til grisen!
+      K-1 Maze Loops Assessment 1_instruction: Opgave -- Brug løkker (gentag-blokke)
+        for at få mig hen til grisen!
+      K-1 Maze Loops Assessment 2_instruction: Opgave -- Brug løkker for at få mig
+        hen til grisen!
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: "En lille test!\r\nFlyt i en retning,\nså
+        en anden, for at komme hen til grisen"
+      K-1 Maze Sequence Assessment 2_instruction: "En lille test!\r\nFlyt i en retning,\nså
+        en anden, for at komme hen til grisen."
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -2902,9 +2897,9 @@
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2994,10 +2989,27 @@
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
-      U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
+      U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
+        you to use Internet Simulator to relay a message. See the worksheet\nfor more
+        detailed instructions.  \n"
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

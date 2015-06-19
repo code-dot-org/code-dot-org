@@ -302,7 +302,7 @@ nl:
     panel:
       answer_viewer: Antwoord Viewer
       student: Leerling
-      viewing_solution: Viewing Solution
+      viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
       section: Groep
   user:
@@ -325,7 +325,9 @@ nl:
     classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LIJNEN CODE DIE GESCHREVEN DOOR STUDENTEN'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: 'Al geregistreerd? %{link}'
@@ -392,6 +394,10 @@ nl:
     autoplay_option: "Video's automatisch afspelen"
     download: Video downloaden
   compatability:
+    https:
+      header: Schakel HTTPS in voor Code.org.
+      message: "Om de veiligheid te verhogen schakelen we op %{https_date} over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org."
+      hide_this_warning: Verberg deze waarschuwing
     working:
       header: We zijn bezig om ondersteuning voor je browser toe te voegen.
       message: |-

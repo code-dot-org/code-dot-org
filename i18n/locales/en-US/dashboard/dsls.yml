@@ -134,6 +134,39 @@ en:
       Code Logo v3:
         Create images with bits and bytes.: crwdns39196:0crwdne39196:0
         title: crwdns39197:0crwdne39197:0
+      ECSPD Online U1D1-2:
+        Unit 1 Day 1-2: crwdns41704:0crwdne41704:0
+        description here: crwdns41705:0crwdne41705:0
+      ECSPD Online U1D1-2 Forum:
+        U1D1-2 Forum: crwdns41706:0crwdne41706:0
+      ECSPD Online U1D1-2 Resources:
+        Unit 1 Day 1-2 Resources: crwdns41707:0crwdne41707:0
+        description here: crwdns41708:0crwdne41708:0
+      ECSPD Online U1D10: [ ]
+      ECSPD Online U1D10 Forum:
+        Forum Pending: crwdns41709:0crwdne41709:0
+        Unit 1 Day 10 Forum: crwdns41710:0crwdne41710:0
+      ECSPD Online U1D10 Resources: [ ]
+      ECSPD Online U1D11-14:
+        title: crwdns41711:0crwdne41711:0
+      ECSPD Online U1D11-14 Resources: [ ]
+      ECSPD Online U1D15-16: [ ]
+      ECSPD Online U1D15-16 Resources: [ ]
+      ECSPD Online U1D17-19: [ ]
+      ECSPD Online U1D3-4:
+        "Unit 1 Day 3-4: Purchasing a Computer": crwdns41712:0crwdne41712:0
+      ECSPD Online U1D3-4 Resources:
+        "Unit 1 Day 3-4: Resources": crwdns41713:0crwdne41713:0
+      ECSPD Online U1D5-7: [ ]
+      ECSPD Online U1D5-7 Resources: [ ]
+      ECSPD Online U1D8-9: [ ]
+      ECSPD Online U1D8-9 Resources: [ ]
+      ECSPD Online Units:
+        Units covered: crwdns41714:0crwdne41714:0
+      ECSPD Online Welcome:
+        Welcome to ECS PD Online!: crwdns41715:0crwdne41715:0
+      ECSPD Online intro:
+        Introduction: crwdns41716:0crwdne41716:0
       ECSPD PD Phases:
         ECSPD PD Phases: crwdns39198:0crwdne39198:0
       ECSPD PD details:
@@ -197,8 +230,10 @@ en:
       OPD-K5 Keep Learning: [ ]
       OPD-K5 Loops: [ ]
       OPD-K5 Other Courses: [ ]
+      OPD-K5 Outline: [ ]
       OPD-K5 Pair: [ ]
       OPD-K5 Participation: [ ]
+      OPD-K5 PreSurvey: [ ]
       OPD-K5 Problem Solving: [ ]
       OPD-K5 Program: [ ]
       OPD-K5 Puzzles: [ ]
@@ -224,8 +259,10 @@ en:
       OPD-K5 Using CS: [ ]
       OPD-K5 Vocabulary: [ ]
       OPD-K5 Welcome: [ ]
+      OPD-K5 Welcome 2: [ ]
       OPD-K5 What is CS: [ ]
       OPD-K5 Why teach CS: [ ]
+      OPD-K5 Younger Grades: [ ]
       OPD-K5 Your Plan: [ ]
       Odometer:
         Odometer: crwdns39224:0crwdne39224:0
@@ -424,8 +461,8 @@ en:
         Compress text by identifying repeated patterns.: crwdns39335:0crwdne39335:0
         Text Compression Peter Piper: crwdns39336:0crwdne39336:0
       U1L1 Student Lesson Introduction:
+        Impact of Innovation: crwdns41717:0crwdne41717:0
         description here: crwdns39337:0crwdne39337:0
-        title: crwdns39338:0crwdne39338:0
       U1L10 Student Lesson Introduction:
         description here: crwdns39339:0crwdne39339:0
         title: crwdns39340:0crwdne39340:0
@@ -448,8 +485,11 @@ en:
         description here: crwdns39351:0crwdne39351:0
         title: crwdns39352:0crwdne39352:0
       U1L16 Student Lesson Introduction:
+        Lossy Compression and File Formats: crwdns41718:0crwdne41718:0
         description here: crwdns39353:0crwdne39353:0
-        title: crwdns39354:0crwdne39354:0
+      U1L17 Student Lesson Introduction:
+        description here: crwdns41719:0crwdne41719:0
+        title: crwdns41720:0crwdne41720:0
       U1L2 Student Lesson Introduction:
         description here: crwdns39355:0crwdne39355:0
         title: crwdns39356:0crwdne39356:0
@@ -486,8 +526,7 @@ en:
       U2L10 Student Lesson Introduction:
         DNS in the Real World : crwdns39377:0crwdne39377:0
       U2L11 Student Lesson Introduction:
-        description here: crwdns39378:0crwdne39378:0
-        title: crwdns39379:0crwdne39379:0
+        HTTP and Abstraction: crwdns41721:0crwdne41721:0
       U2L12 Student Lesson Introduction:
         description here: crwdns39380:0crwdne39380:0
         title: crwdns39381:0crwdne39381:0
@@ -498,11 +537,10 @@ en:
       U2L15 Student Lesson Introduction:
         Encryption Algorithms: crwdns41512:0crwdne41512:0
       U2L16 Student Lesson Introduction:
-        description here: crwdns39854:0crwdne39854:0
-        title: crwdns39855:0crwdne39855:0
+        Alice and Bob and Asymmetric Keys: crwdns41722:0crwdne41722:0
       U2L17 Student Lesson Introduction:
+        Algorithms Detour - Hard Problems TSP: crwdns41723:0crwdne41723:0
         description here: crwdns39856:0crwdne39856:0
-        title: crwdns39857:0crwdne39857:0
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: crwdns41513:0crwdne41513:0
       U2L19 Student Lesson Introduction:
@@ -519,11 +557,9 @@ en:
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: crwdns39384:0crwdne39384:0
       U2L5 Student Lesson Introduction:
-        description here: crwdns39385:0crwdne39385:0
-        title: crwdns39386:0crwdne39386:0
+        Packets and Making a Reliable Internet: crwdns41724:0crwdne41724:0
       U2L6 Student Lesson Introduction:
-        description here: crwdns39387:0crwdne39387:0
-        title: crwdns39388:0crwdne39388:0
+        Algorithm detour - Minimum Spanning Tree: crwdns41725:0crwdne41725:0
       U2L7 Student Lesson Introduction:
         description here: crwdns39389:0crwdne39389:0
         title: crwdns39390:0crwdne39390:0
@@ -662,6 +698,14 @@ en:
         kevin systrom pixel video: crwdns39468:0crwdne39468:0
         pixel video: crwdns39469:0crwdne39469:0
       broadcast lesson plan: [ ]
+      equity Intro:
+        Introduction to Equity PD: crwdns41726:0crwdne41726:0
+      equity in CS:
+        Equity in Computer Science: crwdns41727:0crwdne41727:0
+      equity is more:
+        Equity Is More Than Race and Gender: crwdns41728:0crwdne41728:0
+      equity v equality:
+        Equity Vs. Equality: crwdns41729:0crwdne41729:0
       facilitator test: [ ]
       k5 what next 1: [ ]
       sciPD Course Overview: [ ]
@@ -795,6 +839,8 @@ en:
       unique level name here:
         description here: crwdns39532:0crwdne39532:0
         title: crwdns39533:0crwdne39533:0
+      wn scratchjr 1:
+        Scratch Jr: crwdns41730:0crwdne41730:0
     match:
       2-3 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: crwdns39864:0crwdne39864:0
@@ -995,6 +1041,18 @@ en:
         Match each character with its correct coordinate!: crwdns40042:0crwdne40042:0
         Ninjacat: crwdns40043:0crwdne40043:0
         Ruby: crwdns40044:0crwdne40044:0
+      ECSPD Online U1D10 Assessment 1:
+        Conclusions drawn from the data will be limited by the (relatively) small amount of data.: crwdns41731:0crwdne41731:0
+        0: crwdns41732:0crwdne41732:0
+        1: crwdns41733:0crwdne41733:0
+        2: crwdns41734:0crwdne41734:0
+        3: crwdns41735:0crwdne41735:0
+        "Image: Advantages": crwdns41736:0crwdne41736:0
+        "Image: Disadvantages": crwdns41737:0crwdne41737:0
+        "List of objects: Advantages": crwdns41738:0crwdne41738:0
+        "List of objects: Disadvantages": crwdns41739:0crwdne41739:0
+        4: crwdns41740:0crwdne41740:0
+        5: crwdns41741:0crwdne41741:0
       ECSPD phase matching:
         Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: crwdns40045:0crwdne40045:0
         Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: crwdns40046:0crwdne40046:0
@@ -1182,18 +1240,18 @@ en:
         Match each data type with its color code: crwdns40211:0crwdne40211:0
         Number: crwdns40212:0crwdne40212:0
         String: crwdns40213:0crwdne40213:0
-        "http://staging.studio.code.org/script_assets/pd/blue.png": crwdns40214:0crwdne40214:0
-        "http://staging.studio.code.org/script_assets/pd/purple.png": crwdns40215:0crwdne40215:0
-        "http://staging.studio.code.org/script_assets/pd/teal.png": crwdns40216:0crwdne40216:0
+        "https://studio.code.org/script_assets/pd/blue.png": crwdns41742:0crwdne41742:0
+        "https://studio.code.org/script_assets/pd/purple.png": crwdns41743:0crwdne41743:0
+        "https://studio.code.org/script_assets/pd/teal.png": crwdns41744:0crwdne41744:0
       PDAlg block match:
         Block match: crwdns40217:0crwdne40217:0
         Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: crwdns40218:0crwdne40218:0
-        "http://staging.studio.code.org/script_assets/pd/block1.png": crwdns40219:0crwdne40219:0
-        "http://staging.studio.code.org/script_assets/pd/block2.png": crwdns40220:0crwdne40220:0
-        "http://staging.studio.code.org/script_assets/pd/block3.png": crwdns40221:0crwdne40221:0
-        "http://staging.studio.code.org/script_assets/pd/circle1.png": crwdns40222:0crwdne40222:0
-        "http://staging.studio.code.org/script_assets/pd/circle2.png": crwdns40223:0crwdne40223:0
-        "http://staging.studio.code.org/script_assets/pd/circle3.png": crwdns40224:0crwdne40224:0
+        "https://studio.code.org/script_assets/pd/block1.png": crwdns41745:0crwdne41745:0
+        "https://studio.code.org/script_assets/pd/block2.png": crwdns41746:0crwdne41746:0
+        "https://studio.code.org/script_assets/pd/block3.png": crwdns41747:0crwdne41747:0
+        "https://studio.code.org/script_assets/pd/circle1.png": crwdns41748:0crwdne41748:0
+        "https://studio.code.org/script_assets/pd/circle2.png": crwdns41749:0crwdne41749:0
+        "https://studio.code.org/script_assets/pd/circle3.png": crwdns41750:0crwdne41750:0
       PDAlg commitment match:
         "Academic Year Development: 2 days in-person and 10 hours online": crwdns40225:0crwdne40225:0
         "Blended Summer Study: 3 days in-person and 8 hours online": crwdns40226:0crwdne40226:0
@@ -1229,6 +1287,23 @@ en:
         Answer 1: crwdns40253:0crwdne40253:0
         Question: crwdns40254:0crwdne40254:0
         What is an unplugged activity?: crwdns40255:0crwdne40255:0
+      U1L16 - Matching File Compression Types:
+        BMP: crwdns41751:0crwdne41751:0
+        Compressed Image - Lossless: crwdns41752:0crwdne41752:0
+        Compressed Image - Lossless (256 color limit): crwdns41753:0crwdne41753:0
+        Compressed Image - Lossy: crwdns41754:0crwdne41754:0
+        Compressed Sound - Lossy: crwdns41755:0crwdne41755:0
+        Compressed Text - Lossless: crwdns41756:0crwdne41756:0
+        GIF: crwdns41757:0crwdne41757:0
+        JPEG: crwdns41758:0crwdne41758:0
+        MP3: crwdns41759:0crwdne41759:0
+        Match the type of file with the description: crwdns41760:0crwdne41760:0
+        PNG: crwdns41761:0crwdne41761:0
+        Uncompressed Image: crwdns41762:0crwdne41762:0
+        Uncompressed Sound: crwdns41763:0crwdne41763:0
+        WAV: crwdns41764:0crwdne41764:0
+        ZIP: crwdns41765:0crwdne41765:0
+        description here: crwdns41766:0crwdne41766:0
       U1L5 Matching Assessment:
         Alternating Frequencies: crwdns40256:0crwdne40256:0
         Beam of Light: crwdns40257:0crwdne40257:0
@@ -1389,19 +1464,6 @@ en:
         Where is Brendan from?: crwdns40373:0crwdne40373:0
         blue: crwdns40374:0crwdne40374:0
         salt: crwdns40375:0crwdne40375:0
-      unique level name here:
-        A: crwdns41551:0crwdne41551:0
-        B: crwdns41552:0crwdne41552:0
-        C: crwdns41553:0crwdne41553:0
-        Cycle: crwdns41554:0crwdne41554:0
-        D: crwdns41555:0crwdne41555:0
-        E: crwdns41556:0crwdne41556:0
-        Edge: crwdns41557:0crwdne41557:0
-        Graph: crwdns41558:0crwdne41558:0
-        Graph Terminology: crwdns41559:0crwdne41559:0
-        Look at diagram below and then match the proper term with what each label is pointing to.: crwdns41560:0crwdne41560:0
-        Node: crwdns41561:0crwdne41561:0
-        Weight: crwdns41562:0crwdne41562:0
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: crwdns40376:0crwdne40376:0
@@ -1728,6 +1790,14 @@ en:
         The unicorn's x value increases: crwdns41485:0crwdne41485:0
         The unicorn's y value changes: crwdns41486:0crwdne41486:0
         Video game Coordinates: crwdns41487:0crwdne41487:0
+      ECSPD Online U1D10 Assessment 2:
+        Connecting several data sets allows a more accurate representation of the underlying information.: crwdns41767:0crwdne41767:0
+        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: crwdns41768:0crwdne41768:0
+        Different representations of data can help us draw more meaningful conclusions about it.: crwdns41769:0crwdne41769:0
+        0: crwdns41770:0crwdne41770:0
+        1: crwdns41771:0crwdne41771:0
+        Tell a Story with Data: crwdns41772:0crwdne41772:0
+        The way data is represented can help us understand the data by telling a meaningful story.: crwdns41773:0crwdne41773:0
       ECSPD growth mindset in the classroom:
         Growth Mindset in the Classroom: crwdns40674:0crwdne40674:0
         How can we use praise to encourage Growth Mindset in our students?: crwdns40675:0crwdne40675:0
@@ -1974,7 +2044,7 @@ en:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: crwdns40881:0crwdne40881:0
         Strings and Images Multiple Choice: crwdns40882:0crwdne40882:0
         Which of these Evaluation Blocks will draw the image on the left?: crwdns40883:0crwdne40883:0
-        "http://staging.studio.code.org/script_assets/msm/green-rect.png": crwdns40884:0crwdne40884:0
+        "https://studio.code.org/script_assets/msm/green-rect.png": crwdns41774:0crwdne41774:0
       PDAlg Blocks Video:
         In which area of the screen do you click blocks together to write a program?: crwdns40885:0crwdne40885:0
         Intro to Evaluation Blocks: crwdns40886:0crwdne40886:0
@@ -2114,6 +2184,14 @@ en:
         rocket-height(seconds) = seconds * 10 - 3: crwdns40995:0crwdne40995:0
         rocket-height(seconds) = seconds * 7 + 10: crwdns40996:0crwdne40996:0
         rocket-height(seconds) = seconds * 7 + 3: crwdns40997:0crwdne40997:0
+      U1L07 Assessment 1:
+        A: crwdns41775:0crwdne41775:0
+        B: crwdns41776:0crwdne41776:0
+        C: crwdns41777:0crwdne41777:0
+        D: crwdns41778:0crwdne41778:0
+        E: crwdns41779:0crwdne41779:0
+        Single Source Shortest Path Assessment: crwdns41780:0crwdne41780:0
+        Which one is the shortest path tree from the source node indicated?: crwdns41781:0crwdne41781:0
       U1L10 Assessment 1:
         2 bits: crwdns41003:0crwdne41003:0
         3 bits: crwdns41004:0crwdne41004:0
@@ -2163,13 +2241,6 @@ en:
         "Multiple Choice: Sending Complex Messages": crwdns41043:0crwdne41043:0
         0: crwdns41044:0crwdne41044:0
         1: crwdns41045:0crwdne41045:0
-      U1L4 Multiple Choice:
-        AAAA: crwdns41488:0crwdne41488:0
-        AABB: crwdns41489:0crwdne41489:0
-        ABAB: crwdns41490:0crwdne41490:0
-        ABBB: crwdns41491:0crwdne41491:0
-        BBBB: crwdns41492:0crwdne41492:0
-        "Multiple Choice: Coordination and Binary Messages": crwdns41493:0crwdne41493:0
       U1L6 Assessment multiple choice:
         10: crwdns41047:0crwdne41047:0
         12: crwdns41048:0crwdne41048:0
@@ -2200,6 +2271,12 @@ en:
         IP addresses are hierarchical; the first few fields identify the domain and subset.: crwdns41070:0crwdne41070:0
         "Routers and Addresses: Question 4": crwdns41071:0crwdne41071:0
         Why does the IP address of every device at a particular location start with the same numbers?: crwdns41072:0crwdne41072:0
+      U2L05 Assessment 1:
+        "Packets: Assessment": crwdns41900:0crwdne41900:0
+        "Pick Two: Pick the two statements about packets and routing on the Internet which are true.": crwdns41901:0crwdne41901:0
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: crwdns41902:0crwdne41902:0
+        TCP ensures messages can be reliably transmitted across the Internet: crwdns41903:0crwdne41903:0
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: crwdns41904:0crwdne41904:0
       "U2L06 - MC: Which is an MST?":
         A: crwdns41566:0crwdne41566:0
         B: crwdns41567:0crwdne41567:0
@@ -2216,6 +2293,15 @@ en:
         The shortest path from a particular point in the graph to another point in the graph: crwdns41577:0crwdne41577:0
         What does a minimum spanning tree tell you about a graph?: crwdns41578:0crwdne41578:0
         Whether or not the graph represents a network: crwdns41579:0crwdne41579:0
+      U2L08 Assessment 1:
+        11: crwdns41783:0crwdne41783:0
+        5: crwdns41784:0crwdne41784:0
+        6: crwdns41785:0crwdne41785:0
+        8: crwdns41786:0crwdne41786:0
+        9: crwdns41787:0crwdne41787:0
+        12: crwdns41788:0crwdne41788:0
+        13: crwdns41789:0crwdne41789:0
+        Router Table Assessment: crwdns41790:0crwdne41790:0
       U2L09 Assessment1:
         It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: crwdns41494:0crwdne41494:0
         "The Need for DNS: Question 1": crwdns41495:0crwdne41495:0
@@ -2250,6 +2336,20 @@ en:
         The Vigenere was originally designed by a computer.: crwdns41589:0crwdne41589:0
         They are not - humans are better as breaking Vigenere encryptions than computers.: crwdns41590:0crwdne41590:0
         Why are computers better than humans at breaking encryptions such as the Vigenere?: crwdns41591:0crwdne41591:0
+      U2L3 Assessment 2:
+        12 users: crwdns41791:0crwdne41791:0
+        32 users: crwdns41792:0crwdne41792:0
+        6 users: crwdns41793:0crwdne41793:0
+        64 users: crwdns41794:0crwdne41794:0
+        How many users would an fixed-length IP address system using 6 bits support?: crwdns41795:0crwdne41795:0
+        "Invent an Addressing Protocol: Assessment 1": crwdns41796:0crwdne41796:0
+      U2L3 Assessment 3:
+        "? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'": crwdns41797:0crwdne41797:0
+        "Invent an Addressing Protocol: Assessment 2": crwdns41798:0crwdne41798:0
+        abstraction: crwdns41799:0crwdne41799:0
+        hierarchy: crwdns41800:0crwdne41800:0
+        packet: crwdns41801:0crwdne41801:0
+        protocol: crwdns41802:0crwdne41802:0
       U3L01 Assessment2:
         Fit 1 slice on top of the other, faces together: crwdns41499:0crwdne41499:0
         Place slices of bread face side up: crwdns41500:0crwdne41500:0
@@ -2647,12 +2747,6 @@ en:
         Presidents: crwdns41443:0crwdne41443:0
         This multiple choice is all about the presidents of the United States.: crwdns41444:0crwdne41444:0
         Who was the first president of the USA?: crwdns41445:0crwdne41445:0
-      unique level name here:
-        Question: crwdns41446:0crwdne41446:0
-        description here: crwdns41447:0crwdne41447:0
-        right answer: crwdns41448:0crwdne41448:0
-        title: crwdns41449:0crwdne41449:0
-        wrong answer: crwdns41450:0crwdne41450:0
       valid contracts multi:
         Pick the best answer to the question.: crwdns41451:0crwdne41451:0
         Valid Contracts: crwdns41452:0crwdne41452:0
@@ -2699,14 +2793,22 @@ en:
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): crwdns39564:0crwdne39564:0
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): crwdns39565:0crwdne39565:0
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): crwdns39566:0crwdne39566:0
+        ((1 < x) && (x < 5) || (8 < x) && (x < 10)): crwdns41803:0crwdne41803:0
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): crwdns39567:0crwdne39567:0
+        ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): crwdns41804:0crwdne41804:0
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): crwdns39568:0crwdne39568:0
+        ((1 < x) And (x < 5) Or (8 < x) And (x < 10)): crwdns41805:0crwdne41805:0
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): crwdns39569:0crwdne39569:0
+        ((1 < x) and (x < 5) or (8 < x) and (x < 10)): crwdns41806:0crwdne41806:0
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): crwdns39570:0crwdne39570:0
         (1 < x < 5) OR (8 < x < 10): crwdns39571:0crwdne39571:0
         (1 < x < 5) Or (8 < x < 10): crwdns39572:0crwdne39572:0
         (1 < x < 5) or (8 < x < 10): crwdns39573:0crwdne39573:0
         (1 < x < 5) || (8 < x < 10): crwdns39574:0crwdne39574:0
+        (1 < x) && (x < 5) || (8 < x) && (x < 10): crwdns41807:0crwdne41807:0
+        (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): crwdns41808:0crwdne41808:0
+        (1 < x) And (x < 5) Or (8 < x) And (x < 10): crwdns41809:0crwdne41809:0
+        (1 < x) and (x < 5) or (8 < x) and (x < 10): crwdns41810:0crwdne41810:0
         /script_assets/msm/unit6/blockstomath4.png, 500: crwdns39575:0crwdne39575:0
         Convert Blocks to Math: crwdns39576:0crwdne39576:0
         Type out the arithmetic expression that matches this code: crwdns39577:0crwdne39577:0
@@ -2783,6 +2885,30 @@ en:
         Relationship between Curriculum and PD: crwdns39634:0crwdne39634:0
       CSPPD strategies:
         Classroom Strategies Journal: crwdns39635:0crwdne39635:0
+      ECSPD Online U1D1-2 Assessment 1:
+        What is a Computer?: crwdns41811:0crwdne41811:0
+      ECSPD Online U1D1-2 Reflection:
+        "Unit 1 Day 1-2: What is a Computer? Reflection": crwdns41812:0crwdne41812:0
+      ECSPD Online U1D10 Reflection:
+        Reflection on Unit 1 Day 10: crwdns41813:0crwdne41813:0
+        0: crwdns41814:0crwdne41814:0
+        1: crwdns41815:0crwdne41815:0
+      ECSPD Online U1D11-14 Reflection:
+        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: crwdns41816:0crwdne41816:0
+        Reflection on Unit 1 Day 11-14: crwdns41817:0crwdne41817:0
+      ECSPD Online U1D15-16 Reflection:
+        Reflection on Unit 1 Day 15-16: crwdns41818:0crwdne41818:0
+        0: crwdns41819:0crwdne41819:0
+        1: crwdns41820:0crwdne41820:0
+      ECSPD Online U1D3-4 Reflection:
+        Reflections on Unit 1 Day 3-4: crwdns41821:0crwdne41821:0
+        What challenges do you think you and your students might have with the material covered in this lesson? : crwdns41822:0crwdne41822:0
+      ECSPD Online U1D5-7 Reflection:
+        Reflections on Unit 1, Day 5-7: crwdns41823:0crwdne41823:0
+        What can you take away from how you saw this lessons taught in PD? How do you plan to teach this lesson? : crwdns41824:0crwdne41824:0
+      ECSPD Online U1D8-9 Reflection:
+        Reflections on Unit 1 Day 8-9: crwdns41825:0crwdne41825:0
+        What challenges do you think you and your students might have with the material covered in this lesson?: crwdns41826:0crwdne41826:0
       ECSPD PD goals:
         Documenting Your PD Goals: crwdns39636:0crwdne39636:0
       ECSPD course goals:
@@ -2859,6 +2985,7 @@ en:
         Enter title here: crwdns39683:0crwdne39683:0
       Trent Test Level:
         Enter title here: crwdns39684:0crwdne39684:0
+      U1L1 - FR computer science word association: [ ]
       U1L10 Assessment Free Response:
         "Assessment: Encoding Text": crwdns39685:0crwdne39685:0
       U1L10 Journal Free Response:
@@ -2958,6 +3085,15 @@ en:
         "Routers and Addresses: Question 3": crwdns39746:0crwdne39746:0
       U2L04 Free Response Wrap Up:
         "Routers and Addresses: Wrap Up": crwdns39747:0crwdne39747:0
+      U2L05 Reflection 1:
+        Enter your reflection here.: crwdns41827:0crwdne41827:0
+        "Packets: Reflection": crwdns41828:0crwdne41828:0
+      U2L08 Free Response 1:
+        "Router Table: Reflection": crwdns41829:0crwdne41829:0
+      U2L08 Free Response 2:
+        "Router Table: Reflection": crwdns41830:0crwdne41830:0
+      U2L08 Free Response 3:
+        "Router Table: Reflection": crwdns41831:0crwdne41831:0
       U2L09 Assessment2:
         "Assessment: Question 2": crwdns39748:0crwdne39748:0
       U2L09 Free Response Wrap Up:
@@ -2986,6 +3122,20 @@ en:
         "Security and Hacking: Getting Started": crwdns41612:0crwdne41612:0
       U2L15 Free Response Wrap Up:
         "Encryption Algorithms: Wrap Up": crwdns41613:0crwdne41613:0
+      U2L17 Assessment 1:
+        Assessment Question 1: crwdns41832:0crwdne41832:0
+        Describe what it means for a problem to be "computationally hard.": crwdns41833:0crwdne41833:0
+      U2L17 Assessment 2:
+        Assessment Question 2: crwdns41834:0crwdne41834:0
+        How are computationally hard problems related to encryption?: crwdns41835:0crwdne41835:0
+      U2L17 Free Response Getting Started:
+        "Hard Problems: Getting Started": crwdns41836:0crwdne41836:0
+        0: crwdns41837:0crwdne41837:0
+        1: crwdns41838:0crwdne41838:0
+      U2L17 Free Response Wrap Up:
+        "Hard Problems: Wrap Up": crwdns41839:0crwdne41839:0
+        0: crwdns41840:0crwdne41840:0
+        1: crwdns41841:0crwdne41841:0
       U2L18 Assessment:
         "Assessment: Question": crwdns41614:0crwdne41614:0
       U2L18 Free Response Getting Started:
@@ -3002,6 +3152,9 @@ en:
         "Security and Hacking: Getting Started": crwdns41620:0crwdne41620:0
       U2L20 Free Response Wrap Up:
         "Security and Hacking: Wrap Up": crwdns41621:0crwdne41621:0
+      U2L3 Assessment 4:
+        "Inventing an Addressing Protocol: Assessment 3": crwdns41842:0crwdne41842:0
+        Why does it not make sense for users to be identified by their real names on the Internet?: crwdns41843:0crwdne41843:0
       U2L3 Free Response Getting Started:
         "Invent an Addressing Protocol: Getting Started": crwdns39753:0crwdne39753:0
       U2L3 Free Response Wrap Up:

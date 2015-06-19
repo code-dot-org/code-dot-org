@@ -1250,13 +1250,13 @@ es-AR:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1311,9 +1311,8 @@ es-AR:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1364,10 +1363,11 @@ es-AR:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1412,8 +1412,8 @@ es-AR:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -1437,6 +1437,12 @@ es-AR:
       frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
       frozen square loop_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" para formar un cuadrado?'
       frozen square snowflake_instruction: '¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados entre cada cuadrado?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: '¿Puedes hacer que Elsa ("actor2") alcance a Anna utilizando las teclas de flecha?'
       Infinity_finale_instruction: ¡Crea cualquier osa que desees compartir!
       Infinity_move_collide_instruction: 'Hiro es el "actor 1".  Muevelo cerca de Baymax y reproduce un sonido cuando se toquen.'
@@ -1771,18 +1777,14 @@ es-AR:
       NEW Course 4 Bee For Loops 8_instruction: "Si tu bucle está contando, el incremento se agrega a la variable contador en cada ciclo. ¿Cuál debe ser el incremento para recoger 3, 6, 9 de néctar? \r\n"
       NEW Course 4 Bee For Loops 9_instruction: Si tu ciclo es regresivo, se resta el incremento de la variable contador en cada bucle. Lo que debería ser un incremento a recoger néctar 9, luego 6 y 3 ?
       NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de Juego Gratis! Diviértete con todos los bloques en tu caja de herramientas. '
-      NEW Course 4 Play Lab Params 5 5_instruction: |
-        Fill in actor parameter inputs
-        with numbers (1, 2, and 3) to make these actors patrol. 
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
+      NEW Course 4 Play Lab Params 5 5_instruction: 'Introducir entradas de parámetro de actor con los números (1, 2 y 3) para hacer de estos actores patrulla. '
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"Que piensas que este código realizara? Presiona "Ejecutar" para ver que ocurre."'
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
-        It's Free Play
-        time, have fun with all the blocks in your tool box. 
+        Es hora de Jugar libremente, 
+        diviértete con todos los bloques de tu caja de herramientas.
       New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+        Crea tu propia historia o juego! Tu código
+        es guardado como un proyecto al cual tu puedes acceder en cualquier momento.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -1932,9 +1934,9 @@ es-AR:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -1962,55 +1964,40 @@ es-AR:
       scrat 19_instruction: 'Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en tu primer intento?'
       scrat 20_instruction: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!
       SpecialFrozenLevel_instruction: ¡Te has convertido oficialmente en un artista maestro! Crea un paraíso invernal.
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
-      Standalone_Artist_5.5_instruction: |
-        Notice how we simplified the diamond code
-        by turning it into a loop. You can loop that whole sequence 12 times to draw
-        the flower. Hint: You'll need to turn 30 degrees after your diamond loop
-        so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
-      Standalone_Artist_6_instruction: |
-        Loop this hexagon code 6 times to create
-        the design. How many degrees will you need to turn each time? Hint: divide
-        the number of degrees in a circle by the number of times you are looping.
-      Standalone_Artist_7_instruction: |
-        A function is another programming tool to
-        help you avoid repeating yourself. This function draws a flower, so you can
-        use it any time you want to draw a flower. Use this and the new jump block
-        to draw these flowers. Hint: The flowers are 150 pixels apart
-      Standalone_Artist_8_instruction: |
-        Here's a function called "Draw a shape"
-        that we've programmed to draw hexagons. Run the code to see what it does
-        and then experiment with the function to see what happens. Can you make it
-        draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_1_instruction: ¡ Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo.
+      Standalone_Artist_2_instruction: Dibuja este diamante con 120 y 60 grados de ángulo y lados largos de 150 píxeles.
+      Standalone_Artist_3_instruction: ¿Puede dibujar este hexágono con lados de 100 píxeles y vueltas de 60 grados?
+      Standalone_Artist_4_instruction: Ahora tienes un nuevo bloque para poder jugar, el bucle. Este repetirá un conjunto de comandos. ¿Qué sucede si realizar un bucle de estos comandos 6 veces?
+      Standalone_Artist_5.5_instruction: 'Nota que simplificamos el código del diamante convirtiéndolo en una repetición. Puedes repetir toda la secuencia 12 veces para dibujar la flor. Pista: Necesitas girar 30 grados después de dibujar el diamante, para que no sigas dibujando sobre el mismo diamante.'
+      Standalone_Artist_5_instruction: '¿Cuántas veces necesitas repetir  este diamante para dibujar la flor?'
+      Standalone_Artist_6_instruction: 'Repite este código de hexagono 6 veces para crear el diseño. ¿Cuantos grados necesitarás girar cada vez? Pista: Divide el numero de grados en un circulo por el numero de veces que estás repitiendo.'
+      Standalone_Artist_7_instruction: 'Una función es otra herramienta de programación que te ayuda a evitar repetir código. Esta función dibuja una flor, para que la puedes utilizar en cualquier momento para dibujar una flor. Utiliza esto y el nuevo bloque de salto para dibujar estas flores. Pista: Hay 150 pixeles de espacio entre cada flor'
+      Standalone_Artist_8_instruction: 'Aquí hay una función llamada "Dibuja una figura" que hemos programado para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de cuadrados, triángulos u octágonos?'
+      Standalone_Artist_9_instruction: ¡Ahora sigue adelante y haz la imagen que tu quieras! ¡Tu puedes incluso obtener una función vacía con la que puedes hacer lo que quieras!
+      Standalone_Artist_v2_instruction: ¡ Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo.
       Text Compression Peter Piper_instruction: Este poema se ha comprimido mediante la sustitución de dos frases comunes con símbolos en el diccionario. ¿Puedes identificar otro patrón común para comprimir aún más el poema?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

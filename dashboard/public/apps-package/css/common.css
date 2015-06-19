@@ -145,7 +145,8 @@ div.droplet-palette-group-header-selected.orange {
   top: 30px;
   bottom: 0px;
   font-size: 14px;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: calc(50% - 16px) !important; }
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
@@ -171,20 +172,20 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet-breakpoint {
+.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white; }
 
-.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet-error {
+.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
   background-image: url('/blockly/media/common_images//gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat; }
 
-.droplet-gutter-line.droplet-error, .droplet-gutter-line.droplet-warning {
+.droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
   background-position: 2px 35%; }
 
-.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet-warning {
+.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
   background-image: url('/blockly/media/common_images//gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat; }
@@ -667,6 +668,36 @@ input[type="radio"] {
   .workspace-header .fa {
     font-size: 18px; }
 
+.workspace-header-button {
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+  background-color: #a69bc1;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-left: 0;
+  border: 1px groove #949ca2;
+  height: 22px;
+  border-radius: 4px;
+  font-family: "Gotham 5r", sans-serif; }
+  .workspace-header-button:hover {
+    background-color: #0094ca; }
+  .workspace-header-button span {
+    padding: 0 12px;
+    line-height: 22px; }
+  .workspace-header-button .fa {
+    line-height: 22px;
+    padding-right: 8px;
+    font-size: 15px; }
+  .workspace-header-button .fa-code {
+    font-weight: bold; }
+  .workspace-header-button .blocks-glyph {
+    display: none;
+    height: 18px;
+    vertical-align: text-bottom;
+    padding-right: 8px; }
+
 #design-headers {
   height: 30px;
   background-color: #7665a0;
@@ -715,35 +746,6 @@ input[type="radio"] {
       margin: auto 18px; }
   #headers #blockCounter, #headers #blockUsed {
     display: inline-block; }
-  #headers .workspace-header-button {
-    cursor: pointer;
-    float: right;
-    overflow: hidden;
-    background-color: #a69bc1;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-right: 3px;
-    margin-left: 0;
-    border: 1px groove #949ca2;
-    height: 22px;
-    border-radius: 4px;
-    font-family: "Gotham 5r", sans-serif; }
-    #headers .workspace-header-button:hover {
-      background-color: #0094ca; }
-    #headers .workspace-header-button span {
-      padding: 0 12px;
-      line-height: 22px; }
-    #headers .workspace-header-button .fa {
-      line-height: 22px;
-      padding-right: 8px;
-      font-size: 15px; }
-    #headers .workspace-header-button .fa-code {
-      font-weight: bold; }
-    #headers .workspace-header-button .blocks-glyph {
-      display: none;
-      height: 18px;
-      vertical-align: text-bottom;
-      padding-right: 8px; }
   #headers #clear-puzzle-header:hover {
     background-color: #c00; }
   #headers .block-counter-default {

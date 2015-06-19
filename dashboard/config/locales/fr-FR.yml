@@ -362,7 +362,7 @@
     panel:
       answer_viewer: Visualisation des réponses
       student: Elève
-      viewing_solution: Viewing Solution
+      viewing_solution: Regarde la Solution
       try_it_yourself: Essayez-le vous-même
       section: Section
   user:
@@ -388,7 +388,10 @@
     classroom_activity: Activité manuelle
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LIGNES DE CODE ÉCRIT PAR DES ÉTUDIANTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Présentation des cours 1, 2 et 3
     lesson_plans: Plans des cours
     signin_message: Déjà inscrit ? %{link}
@@ -468,6 +471,12 @@
     autoplay_option: Lire les vidéos automatiquement
     download: Télécharger la vidéo
   compatability:
+    https:
+      header: S'il vous plaît activer HTTPS pour Code.org.
+      message: Pour augmenter la sécurité, nous sommes passer à HTTPS sur %{https_date}.
+        Vous ne serez pas en mesure d'accéder Code.org après cette date. <a href='%{it_requirements_url}'>
+        cliquez ici</a> pour savoir comment activer HTTPS pour accéder a Code.org.
+      hide_this_warning: Masquer cet avertissement
     working:
       header: Les travaux de prise en charge de votre navigateur sont en cours.
       message: Code.org utilise des technologies web modernes. Cela rend le site plus

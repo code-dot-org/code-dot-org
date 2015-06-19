@@ -369,7 +369,10 @@
     classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} RRESHTA KODIMI TË SHKRUARA NGA NXËNËSIT'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Pamja e përgjithshme e Kurseve 1,2 dhe 3
     lesson_plans: Planet e mësimeve
     signin_message: Je i rregjistruar? %{link}
@@ -449,6 +452,12 @@
     autoplay_option: Videot Autoplay
     download: Shkarko Video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Fshih këtë paralajmërim
     working:
       header: Ne po punojmë në suportin e browserit tuaj.
       message: Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë

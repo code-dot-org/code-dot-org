@@ -876,9 +876,9 @@ bs:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: 'Evo slična funkcija "crveni oblik" sa dodatnim parametrom za veličinu. Dovrši uvjete tako da je ispravan oblik nacrtan pri pozivu sa "krug", "trokut" i "zvijezda".'
       Eval Cond 6_instruction: "Napiši funkciju pod nazvimo gastro-kritičar koja uzima ime hrane kao ulazni argument i vraća niz karaktera koji kažu šta ti misliš o toj hrani. Na primjer, (gastro-kritičar \"pizza\") bi mogao reći \"ukusno\", ali (gastro-kritičar \"pokvarena jaja\") bi rekao da je to \"užasno\"! Izaberi dvije vrste hrane za kritiku, ali možeš uraditi i više ako želiš! Ne zaboravi da dodaš \"inače\" izraz!\r\nJedan primjer - i dio definicije - smo već odradili za tebe!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
@@ -963,8 +963,8 @@ bs:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -988,6 +988,12 @@ bs:
       frozen square loop 3x_instruction: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
       frozen square loop_instruction: 'Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? '
       frozen square snowflake_instruction: 'Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -1449,9 +1455,9 @@ bs:
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
+        by moving Sam as far as he can go in all four directions. Click Finish when
+        Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -1536,10 +1542,28 @@ bs:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        NetSim: Variant 3: Connects
+        groups of 2-6 students with a router, and explores issues in routing and DNS
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the simulator a
         DNS service is provided for you. Send a message in the form GET [hostname]

@@ -164,11 +164,10 @@ sk:
         turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
         turtle_4_7: "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
         turtle_4_8: "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        turtle_4_9: "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
+        turtle_4_9: Tu je riešenie na predchádzajúce puzzle. O koľko stupňov sa musíte obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
         turtle_4_10: "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
         turtle_4_11: 'Try changing the numbers in the "turn" and "repeat" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want.'
-        maze_karel_1_1: |-
-          Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the "remove" block to remove it.
+        maze_karel_1_1: 'Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu hliny a použite blok "odstrániť" na jeho odstránenie.'
         maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
         maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
         maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
@@ -462,6 +461,7 @@ sk:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'

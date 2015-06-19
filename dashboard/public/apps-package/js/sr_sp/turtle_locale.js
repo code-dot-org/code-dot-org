@@ -226,7 +226,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareDrawing":function(d){return "Подели свој цртеж:"},
 "showMe":function(d){return "Покажи"},
 "showTurtle":function(d){return "покажи уметника"},
-"sizeParameter":function(d){return "size"},
+"sizeParameter":function(d){return "dimenzija"},
 "step":function(d){return "step"},
 "tooFewColours":function(d){return "Морате користити барем %1 другачију боје за ову слагалицу. Ви сте користили само %2."},
 "turnLeft":function(d){return "скрени лево за"},
