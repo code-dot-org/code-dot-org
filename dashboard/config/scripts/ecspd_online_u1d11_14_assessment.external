@@ -1,0 +1,17 @@
+name 'ECSPD Online U1D11-14 Assessment'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Visualizing Data
+
+We will now be following the student activity for this lesson. Choose one of the culturally situated design tools from this lesson, follow the tutorial, and create a design (links below). When you are finished, edit it with Photoshop if possible. Upload your image to the forum at the end of this stage. As you go, take note of any challenges your students may face. Think about how you will relate this lesson back to the topics your students have been learning in computer science.
+
+* [Virtual Bead Loom](http://csdt.rpi.edu/na/loom/index.html)
+
+* [Pacific Northwest Basket Weaver](http://csdt.rpi.edu/na/pnwb/weavework.html)
+
+* [Navajo Rug Weaver](http://csdt.rpi.edu/na/rugweaver/index.html)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
