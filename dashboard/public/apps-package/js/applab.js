@@ -1001,10 +1001,9 @@ Applab.init = function(config) {
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow(config.level.hideDesignMode);
+    designMode.configureDesignToggleRow();
 
-    var startInDesignMode = !!config.level.designModeAtStart;
-    designMode.toggleDesignMode(startInDesignMode);
+    designMode.toggleDesignMode(Applab.startInDesignMode());
 
     designMode.configureDragAndDrop();
   }
@@ -1627,6 +1626,15 @@ var checkFinished = function () {
 
   return false;
 };
+
+Applab.startInDesignMode = function () {
+  return !!level.designModeAtStart;
+};
+
+Applab.hideDesignModeToggle = function () {
+  return !!level.hideDesignMode;
+};
+
 
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
@@ -2750,14 +2758,10 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function (hidden) {
+designMode.configureDesignToggleRow = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
-  }
-
-  if (hidden) {
-    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
@@ -2799,6 +2803,8 @@ designMode.changeScreen = function (screenId) {
 
     React.render(
       React.createElement(DesignToggleRow, {
+        hideToggle: Applab.hideDesignModeToggle(),
+        startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
@@ -6227,6 +6233,8 @@ var Mode = {
 
 module.exports = React.createClass({displayName: "exports",
   propTypes: {
+    hideToggle: React.PropTypes.bool.isRequired,
+    startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
@@ -6238,7 +6246,8 @@ module.exports = React.createClass({displayName: "exports",
 
   getInitialState: function () {
     return {
-      mode: Mode.CODE
+      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE,
+      activeScreen: null
     };
   },
 
@@ -6308,6 +6317,9 @@ module.exports = React.createClass({displayName: "exports",
       color: '#949ca2',
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
+    var hidden = {
+      visibility: 'hidden'
+    };
 
     var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
 
@@ -6345,11 +6357,12 @@ module.exports = React.createClass({displayName: "exports",
     }
 
     return (
-      React.createElement("div", {className: "justify-contents"}, 
+      React.createElement("div", {className: this.props.hideToggle ? 'rightalign-contents' : 'justify-contents'}, 
         React.createElement("button", {
             id: "codeModeButton", 
             style: $.extend({}, codeButtonStyle,
-                this.state.mode === Mode.CODE ? active : inactive), 
+                this.state.mode === Mode.CODE ? active : inactive,
+                this.props.hideToggle ? hidden : null), 
             className: "no-outline", 
             onClick: this.handleSetMode.bind(this, Mode.CODE)}, 
           msg.codeMode()
@@ -6357,7 +6370,8 @@ module.exports = React.createClass({displayName: "exports",
         React.createElement("button", {
             id: "designModeButton", 
             style: $.extend({}, designButtonStyle,
-                this.state.mode === Mode.DESIGN ? active : inactive), 
+                this.state.mode === Mode.DESIGN ? active : inactive,
+                this.props.hideToggle ? hidden : null), 
             className: "no-outline", 
             onClick: this.handleSetMode.bind(this, Mode.DESIGN)}, 
           msg.designMode()

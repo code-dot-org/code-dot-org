@@ -539,14 +539,10 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function (hidden) {
+designMode.configureDesignToggleRow = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
-  }
-
-  if (hidden) {
-    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
@@ -588,6 +584,8 @@ designMode.changeScreen = function (screenId) {
 
     React.render(
       React.createElement(DesignToggleRow, {
+        hideToggle: Applab.hideDesignModeToggle(),
+        startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
