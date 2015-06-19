@@ -13,22 +13,42 @@
 
 var utils = require('../utils');
 
-/**
- * @type {boolean}
- */
+var debugArea = module.exports;
+
+/** @type {jQuery} */
+var rootDiv_ = null;
+
+/** @type {jQuery} */
+var codeTextbox_ = null;
+
+/** @type {boolean} */
 var isOpen_ = true;
 
-/**
- * @type {number}
- * @private
- */
+/** @type {number} */
 var lastOpenHeight_ = 100;
 
-exports.isOpen = function () {
+/**
+ * Configures this debug area controller to operate on the given elements.
+ * @param {HTMLDivElement} debugAreaRoot
+ * @param {HTMLDivElement} codeTextboxRoot
+ */
+debugArea.init = function (debugAreaRoot, codeTextboxRoot) {
+  if (!debugAreaRoot || !codeTextboxRoot) {
+    return;
+  }
+
+  rootDiv_ = $(debugAreaRoot);
+  codeTextbox_ = $(codeTextboxRoot);
+  lastOpenHeight_ = rootDiv_.height;
+};
+
+/** @returns {boolean} */
+debugArea.isOpen = function () {
   return isOpen_;
 };
 
-exports.isShut = function () {
+/** @returns {boolean} */
+debugArea.isShut = function () {
   return !isOpen_;
 };
 
@@ -36,48 +56,46 @@ exports.isShut = function () {
  * Open/close the debug area to the reverse of its current state, using no
  * animation.
  */
-exports.snapToggle = function () {
+debugArea.snapToggle = function () {
   if (isOpen_) {
-    exports.snapShut();
+    debugArea.snapShut();
   } else {
-    exports.snapOpen();
+    debugArea.snapOpen();
   }
 };
 
-exports.snapOpen = function () {
+debugArea.snapOpen = function () {
   isOpen_ = true;
   setContentsVisible(true);
   setIconPointingDown(true);
-  utils.fireResizeEvent();
+  setHeight(lastOpenHeight_);
 };
 
-exports.snapShut = function () {
+debugArea.snapShut = function () {
   isOpen_ = false;
-  lastOpenHeight_ = $('#debug-area').height();
+  lastOpenHeight_ = rootDiv_.height();
   setContentsVisible(false);
   setIconPointingDown(false);
-  utils.fireResizeEvent();
+  setHeight(getHeightWhenClosed());
 };
 
 /**
  * Open/close the debug area to the reverse of its current state, using a
  * slide animation.
  */
-exports.slideToggle = function () {
+debugArea.slideToggle = function () {
   if (isOpen_) {
-    exports.slideShut();
+    debugArea.slideShut();
   } else {
-    exports.slideOpen();
+    debugArea.slideOpen();
   }
 };
 
-exports.slideOpen = function () {
+debugArea.slideOpen = function () {
   isOpen_ = true;
   setContentsVisible(true);
 
-
-  var debugArea = $('#debug-area');
-  debugArea.animate({
+  rootDiv_.animate({
     height: lastOpenHeight_
   },{
     complete: setIconPointingDown.bind(this, true)
@@ -92,17 +110,14 @@ exports.slideOpen = function () {
   });
 };
 
-exports.slideShut = function () {
+debugArea.slideShut = function () {
   isOpen_ = false;
-  lastOpenHeight_ = $('#debug-area').height();
-
-  var debugArea = $('#debug-area');
+  lastOpenHeight_ = rootDiv_.height();
 
   // We will leave the header and resize bar visible, so together they
   // constitute our height when closed.
-  var closedHeight = debugArea.find('#debug-area-header').height() +
-      debugArea.find('#debugResizeBar').height();
-  debugArea.animate({
+  var closedHeight = getHeightWhenClosed();
+  rootDiv_.animate({
     height: closedHeight
   },{
     complete: function () {
@@ -112,8 +127,7 @@ exports.slideShut = function () {
   });
 
   // Animate the bottom of the workspace at the same time
-  var codeTextbox = $('#codeTextbox');
-  codeTextbox.animate({
+  codeTextbox_.animate({
     bottom: closedHeight
   },{
     step: utils.fireResizeEvent
@@ -121,13 +135,23 @@ exports.slideShut = function () {
 };
 
 function setContentsVisible(isVisible) {
-  $('#debug-commands').toggle(isVisible);
-  $('#debug-console').toggle(isVisible);
+  rootDiv_.find('#debug-commands').toggle(isVisible);
+  rootDiv_.find('#debug-console').toggle(isVisible);
 }
 
 function setIconPointingDown(isPointingDown) {
-  var debugArea = $('#debug-area');
-  var icon = debugArea.find('#show-hide-debug-icon');
+  var icon = rootDiv_.find('#show-hide-debug-icon');
   icon.toggleClass('fa-chevron-circle-up', !isPointingDown);
   icon.toggleClass('fa-chevron-circle-down', isPointingDown);
+}
+
+function setHeight(newHeightInPixels) {
+  rootDiv_.height(newHeightInPixels);
+  codeTextbox_.css('bottom', newHeightInPixels);
+  utils.fireResizeEvent();
+}
+
+function getHeightWhenClosed() {
+  return rootDiv_.find('#debug-area-header').height() +
+      rootDiv_.find('#debugResizeBar').height();
 }
