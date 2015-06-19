@@ -157,6 +157,11 @@ Eval.init = function(config) {
 
         Eval.clearCanvasWithID("test-call");
         Eval.clearCanvasWithID("test-result");
+        Eval.clearCanvasWithID('user');
+        document.getElementById('answer').style.display = "none";
+        document.getElementById('test-call').style.opacity = 0.5;
+        document.getElementById('test-result').style.opacity = 0.5;
+        // TODO(bjordan): re-show on reset
 
         var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
         var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
