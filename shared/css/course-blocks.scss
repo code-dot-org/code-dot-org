@@ -58,27 +58,20 @@
 
 .miniblock {
   background-color:$lightest_gray;
-  height:100px;
+  height: 100px;
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px 0px 10px 0px;
   }
-  h3 {
-    margin: 0;
-    color: $charcoal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 24px;
-    font-family: $gotham-bold;
-  }
   h4 {
     margin-left: 10px;
+    float: left;
   }
   .smalltext {
-    font-size:13px;
-    padding-right:10px;
+    font-size: 13px;
+    line-height: 17px;
+    padding-right: 10px;
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
@@ -92,6 +85,7 @@
   .imgspan {
     margin-left: 0px;
     text-align: right;
+    float: right;
   }
   .audience {
     position: absolute;
@@ -130,6 +124,7 @@
   }
 
   h3 {
+    margin: 10px 10px 0 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -137,8 +132,8 @@
     font-weight: normal;
     display: block;
     float: left;
+    font-size: 24px;
     width: 200px;
-    margin-left: 10px;
   }
 
   .beta
