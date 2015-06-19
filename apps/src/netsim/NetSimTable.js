@@ -9,6 +9,7 @@
  maxparams: 3,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
@@ -176,11 +177,10 @@ NetSimTable.prototype.synchronousDelete = function (id) {
     type: 'delete',
     async: false,
     error: function (jqXHR, textStatus, errorThrown) {
-      error = new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
-      throw error;
+      throw new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
     }
   });
 

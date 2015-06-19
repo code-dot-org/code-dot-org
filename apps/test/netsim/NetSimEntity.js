@@ -53,7 +53,6 @@ describe("NetSimEntity", function () {
     });
 
     it ("creates and returns an entity fo the correct type", function () {
-      debugger;
       assertTableSize(testShard, 'nodeTable', 0);
 
       var entity;
