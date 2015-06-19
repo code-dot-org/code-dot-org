@@ -272,6 +272,7 @@ Blockly.Css.CONTENT = [
   '}',
   '.example-result-text {',
   '  position: absolute;',
+  '  font-size: 16px;',
   '}',
   '.color-square-icon {',
   '  float: left;',

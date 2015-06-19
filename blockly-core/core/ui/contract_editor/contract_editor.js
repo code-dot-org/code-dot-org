@@ -229,6 +229,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
         var newY = currentY;
 
+        var verticalMidlineY = newY;
+        verticalMidline.setAttribute('transform', 'translate(' + verticalMidlineOffset + ',' + newY + ')');
+
         if (exampleSectionVisible) {
           newY += blockSplitMargin;
 
@@ -236,7 +239,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
           callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
 
           resultText.style.top = newY + 'px';
-          resultText.style.left = verticalMidlineOffset + 'px';
+          resultText.style.left = verticalMidlineOffset + EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
 
           newY += callText.offsetHeight;
 
@@ -244,11 +247,6 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
           topHorizontalLine.setAttribute('transform', 'translate(' + 0 + ',' + newY + ')');
           topHorizontalLine.setAttribute('width', this.getFullWidth());
-
-          var verticalMidlineY = newY;
-          verticalMidline.setAttribute('transform', 'translate(' + verticalMidlineOffset + ',' + newY + ')');
-
-          verticalMidline.setAttribute('height', newY - verticalMidlineY);
 
           var i = 0;
           for (; i < this.exampleBlocks.length; i++) {
@@ -283,6 +281,8 @@ Blockly.ContractEditor.prototype.create_ = function() {
         topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
         callText.style.display = exampleSectionVisible ? 'block' : 'none';
         resultText.style.display = exampleSectionVisible ? 'block' : 'none';
+
+        verticalMidline.setAttribute('height', newY - verticalMidlineY);
 
         newY += blockSplitMargin;
 
