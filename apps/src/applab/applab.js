@@ -507,31 +507,13 @@ Applab.init = function(config) {
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
 
-    var toggleBreakpoint = function (row) {
-      var bps = aceEditor.session.getBreakpoints();
-      if (bps[row]) {
-        aceEditor.session.clearBreakpoint(row);
-        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
-      } else {
-        aceEditor.session.setBreakpoint(row);
-        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
-      }
-    };
-
-    if (aceEditor) {
-      aceEditor.on("guttermousedown", function(e) {
-        var target = e.domEvent.target;
-        if (target.className.indexOf("ace_gutter-cell") == -1) {
-          return;
-        }
-        var row = e.getDocumentPosition().row;
-        toggleBreakpoint(row);
-        e.stop();
-      });
-    }
-
     studioApp.editor.on('guttermousedown', function(e) {
-      toggleBreakpoint(e.line);
+      var bps = studioApp.editor.getBreakpoints();
+      if (bps[e.line]) {
+        studioApp.editor.clearBreakpoint(e.line);
+      } else {
+        studioApp.editor.setBreakpoint(e.line);
+      }
     });
 
     if (studioApp.share) {
@@ -969,7 +951,7 @@ Applab.execute = function() {
     codeWhenRun = studioApp.editor.getValue();
     // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session);
+    annotationList.attachToSession(session, studioApp.editor);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
