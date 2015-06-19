@@ -153,11 +153,16 @@ en:
       ECSPD Online U1D10 Resources: {}
       ECSPD Online U1D11-14:
         title: title
+      ECSPD Online U1D11-14 Assessment: {}
       ECSPD Online U1D11-14 Forum: {}
       ECSPD Online U1D11-14 Resources: {}
       ECSPD Online U1D15-16: {}
+      ECSPD Online U1D15-16 Forum:
+        description here: description here
+        title: title
       ECSPD Online U1D15-16 Resources: {}
       ECSPD Online U1D17-19: {}
+      ECSPD Online U1D17-19 Disclaimer: {}
       ECSPD Online U1D17-19 Forum: {}
       ECSPD Online U1D17-19 Resources: {}
       ECSPD Online U1D3-4:
@@ -573,6 +578,9 @@ en:
         'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
+      U2L5 Packets and Reliability - Video:
+        'The Internet: Packets, Routers, and Reliability - Video': 'The Internet: Packets, Routers, and Reliability - Video'
+        description here: description here
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       U2L6 Student Lesson Introduction:
@@ -721,6 +729,7 @@ en:
         Equity in Computer Science: Equity in Computer Science
       equity is more:
         Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
+      equity lead 1: {}
       equity v equality:
         Equity Vs. Equality: Equity Vs. Equality
       facilitator test: {}
@@ -1070,6 +1079,15 @@ en:
         'List of objects: Disadvantages': 'List of objects: Disadvantages'
         ? More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.
         : More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.
+      ECSPD Online U1D17-19 Assessment 2:
+        Artificial Intelligence: Artificial Intelligence
+        Machine Learning: Machine Learning
+        The ability of a computer to perform tasks normally require human intelligence: The ability of a computer to perform tasks normally require human intelligence
+        The ability of a computer to perform tasks that normally require human intelligence: The ability of a computer to perform tasks that normally require human intelligence
+        The ability of a computer to recognize patterns and make predictions based on data: The ability of a computer to recognize patterns and make predictions based on data
+        Turing Test: Turing Test
+        What is Intelligence?: What is Intelligence?
+        Whether a computer can respond to questions in a manner similar enough to humans to be indistinguishable from a human: Whether a computer can respond to questions in a manner similar enough to humans to be indistinguishable from a human
       ECSPD Online U1D3-4 Assessment 1:
         Buying a Computer: Buying a Computer
         CPU/Processor: CPU/Processor
@@ -1370,6 +1388,7 @@ en:
         Weight: Weight
       U2L14 Assessment:
         Assessment: Assessment
+        'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
         Random substitution cipher: Random substitution cipher
         another term for encrypted message: another term for encrypted message
@@ -1382,10 +1401,25 @@ en:
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
         heuristic: heuristic
         process to discover an decryption algorithm: process to discover an decryption algorithm
+        random substitution cipher: random substitution cipher
         technique used to find an approximate solution: technique used to find an approximate solution
         the distribution of letters in a language: the distribution of letters in a language
         use an algorithm to decode a message: use an algorithm to decode a message
         use an algorithm to encode a message: use an algorithm to encode a message
+      U2L14 Assessment4:
+        AMKZMB UMAAIOM APPPP: AMKZMB UMAAIOM APPPP
+        'Assessment: Question 5': 'Assessment: Question 5'
+        Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
+        GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
+        ? |-
+          Given the original plaintext: "SECRET MESSAGE SHHHH"
+          Match the encryption method to the output:
+        : |-
+          Given the original plaintext: "SECRET MESSAGE SHHHH"
+          Match the encryption method to the output:
+        Random Substitution Cipher: Random Substitution Cipher
+        TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
+        Vigenere Cipher: Vigenere Cipher
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
@@ -2387,6 +2421,8 @@ en:
         Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
         Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
       U2L05 Assessment 1:
+        'Packets and Making a Reliable Internet: Assessment': 'Packets and Making a Reliable Internet: Assessment'
+        'Packets and Making a Reliable Internet: Question 1': 'Packets and Making a Reliable Internet: Question 1'
         ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
         : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
         'Packets: Assessment': 'Packets: Assessment'
@@ -2394,6 +2430,13 @@ en:
         TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
         TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
         TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP must account for the fact that packets may not arrive at a destination computer in the intended order
+      U2L05 Assessment 2:
+        A message sent across the Internet can always be contained in a single packet: A message sent across the Internet can always be contained in a single packet
+        'Packets and Making a Reliable Internet: Question 2': 'Packets and Making a Reliable Internet: Question 2'
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets are routed on different paths from sender to receiver.: Packets are routed on different paths from sender to receiver.
+        The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
+        Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
       'U2L06 - MC: Which is an MST?':
         ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
@@ -2412,6 +2455,33 @@ en:
         The shortest path from a particular point in the graph to another point in the graph: The shortest path from a particular point in the graph to another point in the graph
         What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents a network
+      U2L07 Assessment2:
+        ? '     Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.'
+        : '     Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.'
+        A minimum spanning tree contains the shortest path between \n the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between \n the starting vertex and every other reachable vertex in the graph.
+        A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
+        ? |-
+          Both minimum spanning tree algorithm you learned and the
+          shortest path algorithm you learned used a "greedy" approach,
+          choosing the smallest edge first or vertex with the smallest distance value first.
+        : |-
+          Both minimum spanning tree algorithm you learned and the
+          shortest path algorithm you learned used a "greedy" approach,
+          choosing the smallest edge first or vertex with the smallest distance value first.
+        ? Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.
+        : Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.
+        Question 2: Question 2
+        The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
+        The shortest path algorithm you learned visits each vertex and edge once.: The shortest path algorithm you learned visits each vertex and edge once.
+        'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:': 'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:'
+        description here: description here
+      U2L07 Assessment3:
+        Question 3: Question 3
+        The algorithm is correct.: The algorithm is correct.
+        The algorithm is efficient.: The algorithm is efficient.
+        The algorithm is understandable.: The algorithm is understandable.
+        The algorithm short: The algorithm short
+        Which of the following is NOT something we are concerned with when we write an algorithm?: Which of the following is NOT something we are concerned with when we write an algorithm?
       U2L08 Assessment 1:
         '11': '11'
         '5': '5'
@@ -2443,6 +2513,40 @@ en:
         Redundancy: Redundancy
         Spoofing: Spoofing
         What is a disadvantage of the open standard of addressing used by the internet? Pick 2: What is a disadvantage of the open standard of addressing used by the internet? Pick 2
+      U2L11 Assessment 1:
+        'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
+        HTTP is considered to be a high level protocol because: HTTP is considered to be a high level protocol because
+        HTTP messages can be either a requests or responses: HTTP messages can be either a requests or responses
+        HTTP requests are encoded using higher frequency radio waves: HTTP requests are encoded using higher frequency radio waves
+        HTTP requests are given higher priority for fast delivery when being routed on the Internet: HTTP requests are given higher priority for fast delivery when being routed on the Internet
+        HTTP requests make use of abstractions provided by lower level protocols: HTTP requests make use of abstractions provided by lower level protocols
+      U2L11 Assessment 2:
+        An HTTP request is sent from a client to request access to data stored on a server: An HTTP request is sent from a client to request access to data stored on a server
+        An HTTP response code is only used when a server could not fulfill a request: An HTTP response code is only used when a server could not fulfill a request
+        'Choose Two: Choose the two true statements about HTTP.': 'Choose Two: Choose the two true statements about HTTP.'
+        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
+        'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
+        HTTP requests and responses have identical formats: HTTP requests and responses have identical formats
+      U2L13 Assessment3:
+        A secret word only know by Caesar.: A secret word only know by Caesar.
+        'Assessment: Question 2': 'Assessment: Question 2'
+        The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
+        The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
+        The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
+        What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
+      U2L13 Assessment4:
+        '26': '26'
+        26 x 25: 26 x 25
+        26 x 25 x 24 x***x 3 x 2 x 1: 26 x 25 x 24 x***x 3 x 2 x 1
+        26^26: 26^26
+        'Assessment: Question 3': 'Assessment: Question 3'
+        The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L14 Assessment3:
+        'Assessment: Question 4': 'Assessment: Question 4'
+        The Vigenere Cipher is like using multiple Caesar ciphers?: The Vigenere Cipher is like using multiple Caesar ciphers?
+        True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
+        'false': 'false'
+        'true': 'true'
       U2L15 Assessment1:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
         'Assessment: Question 1': 'Assessment: Question 1'
@@ -2457,6 +2561,14 @@ en:
         The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
         They are not - humans are better as breaking Vigenere encryptions than computers.: They are not - humans are better as breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
+      U2L15 Assessment4:
+        8 random characters that include numbers and punctuation: 8 random characters that include numbers and punctuation
+        A 150 character password that is all the same character.: A 150 character password that is all the same character.
+        A 16 character password that is all letters of the alphabet: A 16 character password that is all letters of the alphabet
+        A 32 character password that is all letters of the alphabet: A 32 character password that is all letters of the alphabet
+        A word from the dictionary: A word from the dictionary
+        'Assessment: Question 4': 'Assessment: Question 4'
+        'Which makes for a password that is harder to crack:': 'Which makes for a password that is harder to crack:'
       U2L3 Assessment 2:
         12 users: 12 users
         32 users: 32 users
@@ -2464,10 +2576,12 @@ en:
         64 users: 64 users
         How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
         'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol: Assessment 1'
+        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
         : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
         'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol: Assessment 2'
+        'Invent an Addressing Protocol: Question 2': 'Invent an Addressing Protocol: Question 2'
         abstraction: abstraction
         hierarchy: hierarchy
         packet: packet
@@ -3038,8 +3152,17 @@ en:
         Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
         ? What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
         : What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
+        ? You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+        : You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+      ECSPD Online U1D17-19 Assessment:
+        How are you planning to set up your classroom to best facilitate the Turing Test Activity?: How are you planning to set up your classroom to best facilitate the Turing Test Activity?
+        ? Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
+        : Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
+        What is Intelligence?: What is Intelligence?
       ECSPD Online U1D17-19 Reflection:
         Reflections on Unit 1 Day 17-19: Reflections on Unit 1 Day 17-19
+        ? This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+        : This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         ? What about this lesson is exciting for you? What do you think will be exciting for your students? How does this lesson combine what was covered previously in the unit?
         : What about this lesson is exciting for you? What do you think will be exciting for your students? How does this lesson combine what was covered previously in the unit?
       ECSPD Online U1D3-4 Reflection:
@@ -3239,13 +3362,19 @@ en:
         'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
       U2L04 Assessment2:
         'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
+        'Routers and Redundancy: Question 4': 'Routers and Redundancy: Question 4'
       U2L04 Assessment3:
         'Routers and Addresses: Question 5': 'Routers and Addresses: Question 5'
+        'Routers and Redundancy: Question 5': 'Routers and Redundancy: Question 5'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
       U2L05 Reflection 1:
         Enter your reflection here.: Enter your reflection here.
         'Packets: Reflection': 'Packets: Reflection'
+      U2L07 Assessment4:
+        Question 4: Question 4
+      U2L07 Assessment5:
+        Question 5: Question 5
       U2L08 Free Response 1:
         'Router Table: Reflection': 'Router Table: Reflection'
       U2L08 Free Response 2:
@@ -3262,6 +3391,8 @@ en:
         'DNS in the Real World: Getting Started': 'DNS in the Real World: Getting Started'
       U2L10 Free Response Wrap Up:
         'DNS in the Real World: Wrap Up': 'DNS in the Real World: Wrap Up'
+      U2L11 Free Response:
+        'HTTP and Abstraction on the Internet: Free Response': 'HTTP and Abstraction on the Internet: Free Response'
       U2L13 Assessment1:
         'Assessment: Question 1': 'Assessment: Question 1'
       U2L13 Assessment2:
@@ -3270,9 +3401,14 @@ en:
         'Tell Me a Secret: Getting Started': 'Tell Me a Secret: Getting Started'
       U2L13 Free Response Wrap Up:
         'Tell Me a Secret: Wrap Up': 'Tell Me a Secret: Wrap Up'
+      U2L14 Assessment2:
+        'Assessment: Question 3': 'Assessment: Question 3'
+        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a \"better\" encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a \"better\" encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
       U2L14 Free Response Getting Started:
         'Cracking the Code: Getting Started': 'Cracking the Code: Getting Started'
       U2L14 Free Response Wrap Up:
+        'Assessment: Question 2': 'Assessment: Question 2'
         'Cracking the Code: Wrap Up': 'Cracking the Code: Wrap Up'
       U2L15 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
@@ -3312,6 +3448,7 @@ en:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
       U2L3 Assessment 4:
         'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing Protocol: Assessment 3'
+        'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
         Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
       U2L3 Free Response Getting Started:
         'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
