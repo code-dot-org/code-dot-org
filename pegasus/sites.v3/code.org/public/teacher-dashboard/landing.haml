@@ -72,10 +72,14 @@ theme: none
       %button.btn.btn-info= I18n.t('dashboard_landing_view_progress', biggest_section: '{{biggestSection.name}}')
 
   .courses
-    %h2= I18n.t('dashboard_landing_available_title')
-    %p= I18n.t('dashboard_landing_available_courses')
+    %h1{style: 'margin-bottom: 0px'}= I18n.t('dashboard_landing_available_title')
     %br/
-    %div{"ng-include"=>"", src: "'/dashboardapi/courses/'"}
+    %h2= I18n.t('dashboard_hoc_courses')
+    = I18n.t('dashboard_hoc_courses_desc')
+    %div{"ng-include"=>"", src: "'/dashboardapi/hoc_courses/'"}
+    %h2= I18n.t('dashboard_k5_courses')
+    = I18n.t('dashboard_k5_courses_desc')
+    %div{"ng-include"=>"", src: "'/dashboardapi/k5_courses/'"}
   -#.debug
     %h2 DEBUG
     %pre
