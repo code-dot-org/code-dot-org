@@ -152,8 +152,21 @@ Eval.init = function(config) {
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
 
     if (Blockly.contractEditor) {
-      Blockly.contractEditor.registerTestHandler(function () {
-        return "Eval test result!";
+      Blockly.contractEditor.registerTestHandler(function (exampleBlock) {
+        Blockly.mainBlockSpace.getTopBlocks();
+
+        Eval.clearCanvasWithID("test-call");
+        Eval.clearCanvasWithID("test-result");
+
+        var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+        var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+        var actualDrawer = getDrawableFromBlock(actualBlock);
+        var expectedDrawer = getDrawableFromBlock(expectedBlock);
+
+        actualDrawer.draw(document.getElementById("test-call"));
+        expectedDrawer.draw(document.getElementById("test-result"));
+
+        return canvasesMatch('test-call', 'test-result') ? "Matches definition." : "Does not match definition";
       });
     }
   };
@@ -171,16 +184,18 @@ Eval.runButtonClick = function() {
   Eval.execute();
 };
 
+Eval.clearCanvasWithID = function (canvasID) {
+  var user = document.getElementById(canvasID);
+  while (user.firstChild) {
+    user.removeChild(user.firstChild);
+  }
+};
 /**
  * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Eval.resetButtonClick = function () {
-  var user = document.getElementById('user');
-  while (user.firstChild) {
-    user.removeChild(user.firstChild);
-  }
-
+  Eval.clearCanvasWithID('user');
   Eval.feedbackImage = null;
   Eval.encodedFeedbackImage = null;
 };
@@ -228,6 +243,17 @@ function evalCode (code) {
 function getDrawableFromBlockspace() {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
   var result = evalCode(code);
+  return result;
+}
+
+function getDrawableFromBlock(block) {
+  var definitionCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
+  var blockCode = Blockly.Generator.blocksToCode('JavaScript', [block]);
+  var lines = blockCode.split('\n');
+  var lastLine = lines.slice(-1)[0];
+  var lastLineWithDisplay = "Eval.display(" + lastLine + ");";
+  var blockCodeDisplayed = lines.slice(0, -1).join('\n') + lastLineWithDisplay;
+  var result = evalCode(definitionCode + '; ' + blockCodeDisplayed);
   return result;
 }
 
@@ -364,7 +390,7 @@ Eval.execute = function() {
       Eval.message = evalMsg.wrongBooleanError();
     } else {
       // We got an EvalImage back, compare it to our target
-      Eval.result = evaluateAnswer();
+      Eval.result = canvasesMatch('user', 'answer');
       Eval.testResults = studioApp.getTestResults(Eval.result);
 
       if (level.freePlay) {
@@ -431,13 +457,19 @@ function imageDataForSvg(elementId) {
   return ctx.getImageData(0, 0, Eval.CANVAS_WIDTH, Eval.CANVAS_HEIGHT);
 }
 
-function evaluateAnswer() {
+/**
+ * Compares the contents of two SVG elements by id
+ * @param {string} canvasA ID of canvas
+ * @param {string} canvasB ID of canvas
+ * @returns {boolean}
+ */
+function canvasesMatch(canvasA, canvasB) {
   // Compare the solution and user canvas
-  var userImageData = imageDataForSvg('user');
-  var solutionImageData = imageDataForSvg('answer');
+  var imageDataA = imageDataForSvg(canvasA);
+  var imageDataB = imageDataForSvg(canvasB);
 
-  for (var i = 0; i < userImageData.data.length; i++) {
-    if (0 !== Math.abs(userImageData.data[i] - solutionImageData.data[i])) {
+  for (var i = 0; i < imageDataA.data.length; i++) {
+    if (0 !== Math.abs(imageDataA.data[i] - imageDataB.data[i])) {
       return false;
     }
   }
