@@ -1171,6 +1171,10 @@
     auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'>
     Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert.
   compatibility_https_hide_this_warning: Diese Warnung ausblenden
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
+    by our partners.</a> Learn to program with robots, make web pages, make your own
+    app, or explore other languages like C++, Ruby, or Python!
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
