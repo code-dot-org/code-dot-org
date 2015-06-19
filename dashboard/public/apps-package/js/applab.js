@@ -361,6 +361,12 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
+//Debug console history
+Applab.debugConsoleHistory = {
+  'history': [],
+  'currentHistoryIndex': 0
+};
+
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
@@ -613,9 +619,46 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
+function pushDebugConsoleHistory(commandText) {
+  Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
+  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
+}
+
+function updateDebugConsoleHistory(commandText) {
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] = commandText;
+  }
+}
+
+function moveUpDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex > 0) {
+    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
+function moveDownDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex < Applab.debugConsoleHistory.history.length) {
+    Applab.debugConsoleHistory.currentHistoryIndex += 1;
+  }
+  if (Applab.debugConsoleHistory.currentHistoryIndex == Applab.debugConsoleHistory.history.length &&
+      currentInput == Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1]) {
+    return '';
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
 function onDebugInputKeyDown(e) {
-  if (e.keyCode == KeyCodes.ENTER) {
-    var input = e.target.textContent;
+  var input = e.target.textContent;
+  if (e.keyCode === KeyCodes.ENTER) {
+    e.preventDefault();
+    pushDebugConsoleHistory(input);
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.JSInterpreter) {
@@ -649,6 +692,14 @@ function onDebugInputKeyDown(e) {
     } else {
       outputApplabConsole('< (not running)');
     }
+  }
+  if (e.keyCode === KeyCodes.UP) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveUpDebugConsoleHistory(input);
+  }
+  if (e.keyCode === KeyCodes.DOWN) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveDownDebugConsoleHistory(input);
   }
 }
 
@@ -819,31 +870,13 @@ Applab.init = function(config) {
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
 
-    var toggleBreakpoint = function (row) {
-      var bps = aceEditor.session.getBreakpoints();
-      if (bps[row]) {
-        aceEditor.session.clearBreakpoint(row);
-        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
-      } else {
-        aceEditor.session.setBreakpoint(row);
-        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
-      }
-    };
-
-    if (aceEditor) {
-      aceEditor.on("guttermousedown", function(e) {
-        var target = e.domEvent.target;
-        if (target.className.indexOf("ace_gutter-cell") == -1) {
-          return;
-        }
-        var row = e.getDocumentPosition().row;
-        toggleBreakpoint(row);
-        e.stop();
-      });
-    }
-
     studioApp.editor.on('guttermousedown', function(e) {
-      toggleBreakpoint(e.line);
+      var bps = studioApp.editor.getBreakpoints();
+      if (bps[e.line]) {
+        studioApp.editor.clearBreakpoint(e.line);
+      } else {
+        studioApp.editor.setBreakpoint(e.line);
+      }
     });
 
     if (studioApp.share) {
@@ -1281,7 +1314,7 @@ Applab.execute = function() {
     codeWhenRun = studioApp.editor.getValue();
     // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session);
+    annotationList.attachToSession(session, studioApp.editor);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)

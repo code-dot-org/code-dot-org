@@ -23,7 +23,7 @@ As explained in our [privacy policy](/privacy), when students solve coding puzzl
 We're interested in exploring ways to share just the machine-level data (with no student identifying information) to allow 3rd party researchers to help us improve our service, without any risk of impact on student privacy.
 
 ## If you want to help
-We'd love to do a lot more in this space, and we're limited by our own staff's ability to support third parties. We're looking to hire a [data scientist / quantitative data analyst](/about/jobs#data-scientist) to help us perform our own analysis and also to support academic efforts using the same data. Please help refer candidates!
+We'd love to do a lot more in this space, and we're limited by our own staff's ability to support third parties. We're looking to hire a [data engineer](/about/jobs#data-engineer) to help us perform our own analysis and also to support academic efforts using the same data. Please help refer candidates!
 
 In the meantime, we've done one experiment with researchers at Stanford University as explained below.
 

@@ -49,6 +49,12 @@ var TestResults = studioApp.TestResults;
  */
 var Applab = module.exports;
 
+//Debug console history
+Applab.debugConsoleHistory = {
+  'history': [],
+  'currentHistoryIndex': 0
+};
+
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
@@ -301,9 +307,46 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
+function pushDebugConsoleHistory(commandText) {
+  Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
+  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
+}
+
+function updateDebugConsoleHistory(commandText) {
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] = commandText;
+  }
+}
+
+function moveUpDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex > 0) {
+    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
+function moveDownDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex < Applab.debugConsoleHistory.history.length) {
+    Applab.debugConsoleHistory.currentHistoryIndex += 1;
+  }
+  if (Applab.debugConsoleHistory.currentHistoryIndex == Applab.debugConsoleHistory.history.length &&
+      currentInput == Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1]) {
+    return '';
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
 function onDebugInputKeyDown(e) {
-  if (e.keyCode == KeyCodes.ENTER) {
-    var input = e.target.textContent;
+  var input = e.target.textContent;
+  if (e.keyCode === KeyCodes.ENTER) {
+    e.preventDefault();
+    pushDebugConsoleHistory(input);
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.JSInterpreter) {
@@ -337,6 +380,14 @@ function onDebugInputKeyDown(e) {
     } else {
       outputApplabConsole('< (not running)');
     }
+  }
+  if (e.keyCode === KeyCodes.UP) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveUpDebugConsoleHistory(input);
+  }
+  if (e.keyCode === KeyCodes.DOWN) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveDownDebugConsoleHistory(input);
   }
 }
 
