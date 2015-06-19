@@ -1,6 +1,8 @@
 @import "color";
 @import "colpick.css";
 @import "style-constants";
+@import "skins/base.scss";
+@import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
@@ -214,12 +216,20 @@ div#visualizationResizeBar {
   z-index: -1;
 }
 
+$resize-bar-width: 13px;
+
 #visualizationResizeBar {
   margin-left: 2px;
-  width: 13px;
+  width: $resize-bar-width;
 }
 
 #debugResizeBar {
+  width: 100%;
+  height: $resize-bar-width;
+  line-height: $resize-bar-width;
+  color: $lighter_gray;
+  font-size: 24px;
+  text-align: center;
   cursor: ns-resize;
   white-space: nowrap;
 }
@@ -227,18 +237,6 @@ div#visualizationResizeBar {
 #debug-buttons {
   display: inline;
   white-space: normal;
-}
-
-#divApplab img {
-  opacity: 1.0;
-}
-
-#divApplab label {
-  display: inline-block;
-}
-
-#divApplab div {
-  overflow: hidden;
 }
 
 #runButton, #resetButton {
@@ -252,24 +250,27 @@ img#turtleImage {
 }
 
 .debugger_button {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
+  border: 1px solid $cyan;
+  background-color: $cyan;
   color: #fff;
   margin-left: 0px;
   margin-right: 3px;
   padding: 3px 6px;
   font-size: 14px;
+  min-width: 120px;
 }
 
-#pauseButton, #continueButton {
-  min-width: 110px;
+#continueButton {
+  border-color: $orange;
+  background-color: $orange;
 }
 
 .debugger_button:focus {
   outline-style: none;
 }
 
-.debugger_button>img {
+.debugger_button > img {
+  float: left;
   opacity: 1;
 }
 
@@ -279,19 +280,66 @@ img#turtleImage {
   height: 156px;
   left: 0;
   right: 0;
+  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
 }
 
-#spinner {
-  margin-left: -5px;
+#debug-area-header {
+  position: absolute;
+  top: $resize-bar-width;
+  height: $workspace-headers-height;
+  left: 0;
+  right: 0;
+  background-color: $lighter_purple;
+  text-align: center;
+
+  & > span {
+    line-height: $workspace-headers-height;
+  }
+
+  & > span, .workspace-header {
+    color: $dark_charcoal;
+  }
+
+  .workspace-header-button {
+    background-color: $lightest_purple;
+    color: $charcoal;
+
+    &:hover {
+      background-color: $cyan;
+      color: $white;
+    }
+  }
+}
+
+$debug-commands-column-width: 270px;
+
+#debug-commands-header {
+  width: $debug-commands-column-width;
+  float: left;
+  border-right: 1px solid gray;
+
+  .fa {
+    margin: 0 0.25em;
+  }
+}
+
+.debug-commands, .debug-console {
+  display: block;
+  background-color: $white;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: $resize-bar-width + $workspace-headers-height;
+  bottom: 0;
+}
+
+.debug-commands {
+  left: 0;
+  width: $debug-commands-column-width;
+  text-align: center;
 }
 
 .debug-console {
-  display: block;
-  border: 1px solid #ddd;
-  position: absolute;
-  top: 38px;
-  bottom: 0;
-  left: 0;
+  left: $debug-commands-column-width;
   right: 0;
 }
 
@@ -300,14 +348,17 @@ img#turtleImage {
   font-size: 12px;
 }
 
+$debug-console-left-padding: 3px;
+$debug-prompt-width: 15px;
+$debug-input-height: 16px;
+
 .debug-input-prompt {
   position: absolute;
   bottom: 0;
-  height: 16px;
+  height: $debug-input-height;
   display: block;
-  left: 0;
-  width: 15px;
-  background-color: white;
+  left: $debug-console-left-padding;
+  width: $debug-prompt-width;
 }
 
 .debug-input, .debug-output {
@@ -315,13 +366,13 @@ img#turtleImage {
   border-width: 0px;
   padding: 0px;
   outline: none;
-  background-color: white;
 }
 
 .debug-output {
   top: 0;
-  bottom: 16px;
-  width: 100%;
+  bottom: $debug-input-height;
+  left: $debug-console-left-padding;
+  right: 0;
   overflow: auto;
   line-height: normal;
   cursor: text;
@@ -330,9 +381,9 @@ img#turtleImage {
 
 .debug-input {
   bottom: 0;
-  max-height: 16px;
-  height: 16px;
-  left: 15px;
+  max-height: $debug-input-height;
+  height: $debug-input-height;
+  left: $debug-console-left-padding + $debug-prompt-width;
   right: 0;
   margin-top: -3px;
   -moz-user-select: text;
@@ -341,6 +392,7 @@ img#turtleImage {
 }
 
 #slider-cell {
+  float: left;
   cursor: default;
 }
 
@@ -349,8 +401,8 @@ img#turtleImage {
   float: left
 }
 .sliderTrack {
-  stroke: #aaa;
-  stroke-width: 6px;
+  stroke: $lightest_purple;
+  stroke-width: 4px;
   stroke-linecap: round;
 }
 .sliderKnob {
@@ -474,19 +526,6 @@ button.arrow:focus {
   }
 }
 
-.new-design-element {
-  width: 120px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
@@ -502,33 +541,6 @@ button.arrow:focus {
 
 .assetRow:hover {
   background: $lighter_purple;
-}
-
-#divApplab {
-  box-sizing: border-box;
-}
-
-#divApplab input {
-  box-sizing: border-box;
-}
-
-#divApplab button {
-  padding: 7px 12px;
-  margin: 2px;
-  font-size: 14px;
-}
-
-.design-mode-hidden {
-  visibility: hidden;
-
-  .divApplabDesignMode & {
-    visibility: visible;
-    opacity: 0.3;
-  }
-}
-
-.divApplabDesignMode canvas {
-  background-color: #eee;
 }
 
 .no-outline:focus {
@@ -562,4 +574,11 @@ button.arrow:focus {
 // we're unable to add text to the div in Safari.
 *[contenteditable] {
   -webkit-user-select: auto !important;
+}
+
+// TODO(dave): move these styles into DesignToolboxElement
+// once we are done experimenting with them.
+.new-design-element {
+  // 60% of 120px. Specify in px to preserve width when cloning/dragging.
+  width: 72px;
 }

@@ -13,9 +13,9 @@ There are situations in which cracking a code is ethical and important.  Charact
 
 # Vocabulary
 
-character frequency analysis: a system of decrypting letter substitution encryptions that is based  upon the likely occurrence of various letters in a message. The distribution of letters is roughly the same for almost all samples of a language. In English, ETAOIN SHRDLU are the most commonly used letters.
+* **Character frequency analysis**: a system of decrypting letter substitution encryptions that is based  upon the likely occurrence of various letters in a message. The distribution of letters is roughly the same for almost all samples of a language. In English, ETAOIN SHRDLU are the most commonly used letters.
 
-heuristic:  technique used to find an approximate solution when typical methods fail to find an exact solution.
+* **Heuristic**:  technique used to find an approximate solution when typical methods fail to find an exact solution.
 
 # Lesson
 
@@ -25,8 +25,17 @@ heuristic:  technique used to find an approximate solution when typical methods 
 
 # Resources
 
-* Resource: <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html#intro" target="_blank">Crypto Corner</a>
+* [Activity Guide - Cracking Random Substitution](https://docs.google.com/document/d/12oIFv1zbJZgA8FeEr9KkyjYgnTNXm-AYyNMDtYebAf0/edit)
 
+* [Activity Guide - The Vigenere Cipher](https://docs.google.com/document/d/1dfbHwojluP5NNaOqcrZPnECRP5-3sRPHN_Mwm_MQKo8/edit#heading=h.8d9n45i3q3kh)
+
+* [Blown to Bits Ch. 5 pp.169](http://www.google.com/url?q=http%3A%2F%2Fwww.bitsbook.com%2Fwp-content%2Fuploads%2F2008%2F12%2Fchapter5.pdf&sa=D&sntz=1&usg=AFQjCNFlwUTQTxeZ_TyR1brGDslVNaFMCg)
+
+* [Frequency Analysis Widget](http://www.google.com/url?q=http%3A%2F%2Fcspdashboard-c9-bfranke.c9.io%2Fcrypto%2F&sa=D&sntz=1&usg=AFQjCNEL5oMpHR95hgWq4IKNqFiOwar3Gw)
+
+* [Vigenere Cipher Widget](http://www.google.com/url?q=http%3A%2F%2Fcspdashboard-c9-bfranke.c9.io%2FUnit2%2FvigenereCipher.html&sa=D&sntz=1&usg=AFQjCNFwGxRWifCDQVuLqjfqBVTiDD0yQw)
+
+* Resource: <a href="http://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html#intro" target="_blank">Crypto Corner</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

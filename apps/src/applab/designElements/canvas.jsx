@@ -51,8 +51,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '480px';
-    element.style.width = '320px';
+    element.style.height = '100px';
+    element.style.width = '100px';
 
     return element;
 

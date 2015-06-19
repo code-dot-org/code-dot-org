@@ -4,28 +4,26 @@ skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
-### PLANNING > Using Code Studio with Students
+### PLANNING > Preparing for a Code Studio lesson
 
-Let's take a look at how Code Studio works for your students, if they're completing Course 1-4 or our accelerated course.
+Let's take a look at how Code Studio works for you and your students in a classroom setting.
 
-#### Course Overview Pages
-The display of Code.org's student courses is similar to the one for this online PD course. Here's an example of Course 1's overview page, as it appears when you are logged into a "Teacher" account.
-<br>
-<img src="https://images.code.org/937460d242248af59318bc16d914e4a5-image-1434410876549.png">
-<br>
-<br>
-Each course has an overview page. Each row, or **stage,** in a course, is a lesson. Some stages are unplugged lessons, which are lessons that you will lead for your classrooms without the use of computers. We covered unplugged lessons in Stage 8.
+#### Step 1: Create a "section" or class
+This brief video demonstrates how to set up your first computer science class in Code Studio.
 <br><br>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/_smelV_KISE" frameborder="0" allowfullscreen></iframe>
+<br><br>
+**[Can't see the video? Click here.](https://www.dropbox.com/s/0sgaypn18fyjt4y/Setting%20up%20a%20class_1.mp4?dl=0)**
 
-The **online stages** are the rows with many numbered circles on them. Each circle represents a puzzle where a student has to write a computer program to complete the goal of the puzzle. In these lessons, students can work at their own pace to complete all the puzzles in a stage, in order. There are tutorial videos and hints along the way that will help them complete these challenges.
-
-#### Course Lesson Plans
-Each lesson comes with a **lesson plan** that is available when you click "View lesson plan" under the name of each lesson. On the Teacher Dashboard, you will also have access to the "unplugged activities" as well as the student-facing online activities.
-
->**Note:** You can only access lesson plans when you are logged in with a teacher account. These teacher-facing lesson plans and videos are different from the videos that are presented to students while they go through the Code Studio courses. These videos and plans are intended for your use in planning, and not for sharing with students.
+#### Step 2: Plan your instruction
+This brief video demonstrates how to use Code Studio to plan and prepare a computer science lesson in your classroom.
+<br><br>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/ksklPa45Mcs" frameborder="0" allowfullscreen></iframe>
+<br><br>
+**[Can't see the video? Click here.](https://www.dropbox.com/s/u1ve9r7mjy66de0/Getting%20ready%20to%20teach%20the%20class.mp4?dl=0)**
 
 * * * 
-Now we'll look at other curriculum resources to which you have access.
+Now we'll look at how you use Code Studio during and after class.
 <br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

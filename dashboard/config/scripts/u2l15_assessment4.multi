@@ -1,0 +1,10 @@
+name 'U2L15 Assessment4'
+title 'Assessment: Question 4'
+
+question 'Which makes for a password that is harder to crack:'
+wrong 'A word from the dictionary'
+wrong '8 random characters that include numbers and punctuation'
+wrong 'A 16 character password that is all letters of the alphabet'
+wrong 'A 32 character password that is all letters of the alphabet'
+right 'A 150 character password that is all the same character.'
+

@@ -1,0 +1,6 @@
+name 'U2L11 Free Response'
+title 'HTTP and Abstraction on the Internet: Free Response'
+content1 ''
+markdown <<MARKDOWN
+The definition of HTTP makes use of the ASCII character set without reference to how these characters are encoded. Explain why this is an example of abstraction.
+MARKDOWN
