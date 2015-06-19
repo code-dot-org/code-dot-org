@@ -17,13 +17,13 @@
         %img{style: 'padding-left: 42px; padding-top: 20px;', src: '//studio.code.org/blockly/media/skins/flappy/small_static_avatar.png'}
 
 -elsif id == '20hour'
-  .span6.miniblock{style: 'height: 120px;'}
+  .span6.miniblock{style: 'height: 110px;'}
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
-      .span4.heading
+      .span4.wideheading
         %h3= t('upsell.20hour.title')
-        .smalltext= t('upsell.20hour.body')
+        .smallwidetext= t('upsell.20hour.body')
       .span2.imgspan
-        %img{style: 'height: 120px;', src: '//code.org/images/fit-520/code20hr.jpg'}
+        %img{style: 'height: 110px;', src: '//code.org/images/fit-520/code20hr.jpg'}
 
 - elsif id == 'artist' || id == 'playlab'
 
@@ -33,9 +33,9 @@
 
   .span6.miniblock{style: 'float: left;'}
     =link_to url do
-      .span4.heading
+      .span4.wideheading
         %h3= title
-        .smalltext= body
+        .smallwidetext= body
       .span2.imgspan
         %img{style: 'height: 100px;', src: CDO.code_org_url("/shared/images/courses/fill-240x200/logo_tall_#{id}.jpg")}
 

@@ -1011,6 +1011,38 @@ a.download-video {
     }
   }
 
+  .tallheading h3 {
+    margin: 0 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+  }
+
+  .wideheading h3 {
+    margin: 10px 0 0 0;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+  }
+
+  .smallwidetext {
+    font-size: 13px;
+    line-height: 17px;
+    padding-right: 10px;
+    margin-left: 0;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+
   #welcome h2 {
     font-size: 18px;
   }
