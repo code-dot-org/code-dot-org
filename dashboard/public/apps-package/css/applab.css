@@ -29,9 +29,17 @@
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div, #divApplab button, #divApplab select {
+  #divApplab input, #divApplab div, #divApplab button, #divApplab select, #divApplab img, #divApplab canvas {
     box-sizing: border-box;
     line-height: 1.2em; }
+  #divApplab .design-mode-hidden {
+    visibility: hidden; }
+
+#divApplab.divApplabDesignMode canvas {
+  background-color: #eee; }
+#divApplab.divApplabDesignMode .design-mode-hidden {
+  visibility: visible;
+  opacity: 0.3; }
 
 #divApplab.appModern {
   color: #333; }
@@ -44,14 +52,13 @@
     #divApplab.appModern button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-    #divApplab.appModern button:focus {
-      outline: 0; }
   #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true] {
     border: 1px solid #999;
     padding: 10px; }
   #divApplab.appModern select {
     -webkit-appearance: none;
     -moz-appearance: none;
+    border: 0;
     border-radius: 0;
     padding: 0 30px 0 10px;
     color: #fff;
@@ -60,6 +67,17 @@
       display: none; }
     #divApplab.appModern select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true] {
+    outline: 0; }
+
+#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas {
+  border: 5px solid #fff;
+  outline: 1px solid #bdc3c7;
+  outline-offset: -1px; }
+#divApplab.appModern.divApplabDesignMode img[src=''] {
+  background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
+#divApplab.appModern.divApplabDesignMode canvas {
+  background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat; }
 
 div#visualization {
   height: 400px;
@@ -522,15 +540,6 @@ button.arrow:focus {
 
 .assetRow:hover {
   background: #cfc9de; }
-
-.design-mode-hidden {
-  visibility: hidden; }
-  .divApplabDesignMode .design-mode-hidden {
-    visibility: visible;
-    opacity: 0.3; }
-
-.divApplabDesignMode canvas {
-  background-color: #eee; }
 
 .no-outline:focus {
   outline: none; }

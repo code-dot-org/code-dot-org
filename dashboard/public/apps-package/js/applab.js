@@ -6977,7 +6977,7 @@ module.exports = {
   create: function() {
     var element = document.createElement('div');
     element.setAttribute('contenteditable', true);
-    element.style.width = '100px';
+    element.style.width = '200px';
     element.style.height = '100px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';
@@ -7082,7 +7082,7 @@ module.exports = {
   create: function () {
     var element = document.createElement('input');
     element.style.margin = '0px';
-    element.style.width = '236px';
+    element.style.width = '200px';
     element.style.height = '30px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';
@@ -7463,8 +7463,8 @@ module.exports = {
   PropertyTable: ImageProperties,
   create: function () {
     var element = document.createElement('img');
-    element.style.height = '50px';
-    element.style.width = '50px';
+    element.style.height = '100px';
+    element.style.width = '100px';
     element.setAttribute('src', '');
 
     return element;
@@ -7559,7 +7559,7 @@ module.exports = {
 
   create: function() {
     var element = document.createElement('select');
-    element.style.width = '100px';
+    element.style.width = '200px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
@@ -7777,8 +7777,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '480px';
-    element.style.width = '320px';
+    element.style.height = '100px';
+    element.style.width = '100px';
 
     return element;
 
