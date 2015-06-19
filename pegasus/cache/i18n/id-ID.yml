@@ -20,7 +20,7 @@
     # orang lain.'
   petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabung
     dengan # orang lainnya.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Bergabunglah dengan # orang lainnya'
   name: Nama
   email: Email
   zipcode: poskode atau negara
@@ -201,12 +201,12 @@
   homepage_hero_text_teacher2: |
     &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
     Adam, guru
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc baris kode ditulis oleh para pelajar'
+  homepage_hero_text_stat_students: '#student_count akun pelajar pada kode Studio'
+  homepage_hero_text_stat_served: 'Hour of Code: #served disediakan'
   homepage_slot_text_hoc: Jam kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Dashboard untuk Guru
   homepage_slot_text_studio: Semua panduan kami
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Belanja
@@ -216,8 +216,8 @@
   homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
   homepage_signpetition_dropdown: Tandatangani petisi kami &#x25BE;
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve
-    diversity in computer science.
+  homepage_banner_text_main: Code.org dan College Board membentuk aliansi untuk meningkatkan
+    keberagaman dalam ilmu komputer.
   homepage_banner_text_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
@@ -428,11 +428,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Klik di sini</a> untuk dokumen privasikami yang dapat dibagikan atau dicetak untuk
     siswa.
-  dashboard_curriculum_overview: Tinjauan Kurikulum K-5
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Lihat semua rencana pelajaran
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Tinjauan Kurikulum K-5
+  dashboard_overview: Overview
   dashboard_sequence: Urutan (Sequence)
   dashboard_framework: Kerangka kerja
   dashboard_standards: Standar
@@ -443,6 +450,10 @@
   dashboard_puzzle_solving: 'Memecahkan teka-teki:'
   dashboard_student_worksheet: lembar kerja siswa
   dashboard_teacher_worksheet: lembar kerja guru
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Lain
   dashboard_login_word: Kata
@@ -476,6 +487,7 @@
     login manakah, <b>gambar, kata, atau surat elektronik</b>, yang akan Anda pilih
     untuk satu bagian.
   dashboard_faq: Pertanyaan yang Sering Diajukan
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -544,7 +556,7 @@
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor satu jam kode
   blockly_name: Blockly
-  thinkersmith2_name: Binary Baubles
+  thinkersmith2_name: Baubles biner
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Batu, kertas, gunting
   hourofcode_name: Pengganti untuk code.org/hoc yang baru
@@ -631,7 +643,7 @@
   playlab_platformtext: Browser modern, smartphone, tablet
   codeorg_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
   codeintl_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
+  thinkersmithspanish_shortdescription: Tutorial untuk murid tanpa komputer
   khan_shortdescription: Belajar menggambar menggunakan JavaScript
   khanes_shortdescription: Belajar menggambar menggunakan JavaScript
   khanpt_shortdescription: Belajar menggambar menggunakan JavaScript
@@ -861,7 +873,7 @@
   lynda_beyond_name: Pemrograman kursus online
   edx_beyond_name: Harvard kelas CS50
   coursera_beyond_name: Stanford kelas CS 101
-  udacity_beyond_name: CS 101
+  udacity_beyond_name: Ilmu Komputer Dasar 101
   teachingtree_beyond_name: Kursus universitas online
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
@@ -1182,20 +1194,48 @@
   sphero_beyond_longdescription: Apakah Anda seorang pendidik atau orangtua, pelajaran
     SPRK memberikan anak-anak kursus singkat yang menyenangkan dalam memprogram robot
     ketika mengasah keterampilan mereka dalam matematika dan sains.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_overview: Overview
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_header: Silakan aktifkan HTTPS untuk Code.org.
+  compatibility_https_message: Untuk meningkatkan keamanan, kita beralih ke HTTPS
+    pada %{https_date}. Anda tidak akan dapat mengakses Code.org setelah tanggal ini.
+    <a href='%{it_requirements_url}'> Klik di sini</a> untuk belajar bagaimana untuk
+    mengaktifkan HTTPS untuk Code.org.
+  compatibility_https_hide_this_warning: Sembunyikan peringatan
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
+    by our partners.</a> Learn to program with robots, make web pages, make your own
+    app, or explore other languages like C++, Ruby, or Python!
+  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
+    students!
+  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
+    tutorials with "unplugged" activities that require no computer at all. Each course
+    consists of about 20 lessons that may be implemented as one unit or over the course
+    of a semester. Even kindergarten-aged pre-readers can participate. To help you
+    get started, we offer high quality professional development workshops around the
+    U.S. free of charge. <a href="/professional-development-workshops">Find one near
+    you!</a>
+  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
+    and programming within the context of middle school math and science - as a tool
+    to teach math and science concepts. To register for professional development workshops,
+    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses_desc: Our high school program helps school districts offer
+    full-year computer science classes by preparing existing teaching staff to offer
+    this new field. To register for professional development workshops, apply for
+    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
+    curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
+    an introduction to computer science concepts within the context of modeling and
+    simulation.
+  dashboard_course_ecs: Exploring Computer Science
+  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
+    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
+    Computing and Data Analysis, and Robotics.'
+  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
+    course that explores the foundational ideas of computing.

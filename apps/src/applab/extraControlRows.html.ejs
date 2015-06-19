@@ -2,8 +2,16 @@
 <% var applabMsg = require('./locale') %>
 
 <div id="debug-area">
-  <% if (debugButtons) { %>
-  <div id="debugResizeBar">
+  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
+  <div id="debug-area-header">
+    <span>Debug Console</span>
+    <% if (debugButtons) { %>
+    <div id="debug-commands-header" class="workspace-header">
+      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>
+      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
+      <span>Debug Commands</span>
+    </div>
+    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
     <div id="slider-cell">
       <svg id="applab-slider"
            xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +19,7 @@
            xmlns:xlink="http://www.w3.org/1999/xlink"
            version="1.1"
            width="150"
-           height="38">
+           height="28">
           <!-- Slow icon. -->
           <clipPath id="slowClipPath">
             <rect width=26 height=12 x=5 y=6 />
@@ -26,8 +34,11 @@
               clip-path="url(#fastClipPath)" />
       </svg>
     </div>
-    <img id="spinner" style="visibility: hidden;" src="<%= assetUrl('media/applab/spinner-big.gif') %>" height=16 width=16>
+    <% } %>
+  </div>
 
+  <% if (debugButtons) { %>
+  <div id="debug-commands" class="debug-commands">
     <div id="debug-buttons">
       <button id="pauseButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
@@ -37,10 +48,6 @@
         <img src="<%= assetUrl('media/1x1.gif') %>" class="continue-btn icon21">
         <%= applabMsg.continue() %>
       </button>
-      <button id="stepInButton" class="debugger_button">
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="step-in-btn icon21">
-        <%= applabMsg.stepIn() %>
-      </button>
       <button id="stepOverButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-over-btn icon21">
         <%= applabMsg.stepOver() %>
@@ -49,10 +56,18 @@
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-out-btn icon21">
         <%= applabMsg.stepOut() %>
       </button>
+      <button id="stepInButton" class="debugger_button">
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="step-in-btn icon21">
+        <%= applabMsg.stepIn() %>
+      </button>
+      <% /* This button duplicates the one in DesignRowToggle.jsx and should be
+            removed when that component is made visible to regular users. */ %>
+      <button id="temporaryViewDataButton" class="debugger_button">
+        <%= applabMsg.viewData() %>
+      </button>
     </div>
   </div>
   <% } %>
-
   <% if (debugConsole) { %>
   <div id="debug-console" class="debug-console">
     <div id="debug-output" class="debug-output"></div>
