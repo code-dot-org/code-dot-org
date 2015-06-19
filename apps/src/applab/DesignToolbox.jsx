@@ -39,7 +39,7 @@ module.exports = React.createClass({
             handleDragStart={this.props.handleDragStart} />
         <DesignToolboxElement
             imageUrl={IMAGE_BASE_URL + 'label.png'}
-            desc={'Plain Text'}
+            desc={'Label'}
             elementType={'LABEL'}
             handleDragStart={this.props.handleDragStart} />
         <DesignToolboxElement
