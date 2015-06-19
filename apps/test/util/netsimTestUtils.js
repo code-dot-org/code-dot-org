@@ -25,19 +25,33 @@ exports.assertTableSize = function (shard, tableName, size) {
       " rows.");
 };
 
-// TODO (brent) - to start with, this is just going to call right back into our
-// remoteTable (i.e. apps version of clientApi). Eventually we will want that to
-// change
+/**
+ * Replace our clientApi with a mock that hits a fakeStorageTable instead of
+ * accessing the server API.
+ */
 exports.overrideClientApi = function (netsimTable) {
-  var storageTable = netsimTable.remoteTable_;
+  var table = fakeStorageTable();
 
-  // send client api calls through our fake storage table for nwo
+  // send client api calls through our fake storage table
   netsimTable.clientApi_ = {
+    remoteTable: table,
     all: function (callback) {
-      return storageTable.readAll(callback);
+      return table.readAll(callback);
     },
     fetch: function (id, callback) {
-      return storageTable.read(id, callback);
+      return table.read(id, callback);
+    },
+    create: function (value, callback) {
+      return table.create(value, callback);
+    },
+    update: function (id, value, callback) {
+      return table.update(id, value, callback);
+    },
+    delete: function (id, callback) {
+      return table.delete(id, callback);
+    },
+    log: function () {
+      return table.log();
     }
   };
 
@@ -49,7 +63,7 @@ exports.overrideClientApi = function (netsimTable) {
  * so tests can be written imperatively.
  * @returns {Object}
  */
-exports.fakeStorageTable = function () {
+var fakeStorageTable = function () {
   var log_ = '';
   var rowIndex_ = 1;
   var tableData_ = [];
@@ -150,27 +164,12 @@ exports.fakeStorageTable = function () {
  * Fake set of storage tables for use in tests.
  */
 exports.fakeShard = function () {
-  var nodeTable_ = exports.fakeStorageTable();
-  var wireTable_ = exports.fakeStorageTable();
-  var messageTable_ = exports.fakeStorageTable();
-  var logTable_ = exports.fakeStorageTable();
-  var heartbeatTable_ = exports.fakeStorageTable();
-
   return {
-    remoteNodeTable: nodeTable_,
-    nodeTable: exports.overrideClientApi(new NetSimTable(nodeTable_)),
-
-    remoteWireTable: wireTable_,
-    wireTable: exports.overrideClientApi(new NetSimTable(wireTable_)),
-
-    remoteMessageTable: messageTable_,
-    messageTable: exports.overrideClientApi(new NetSimTable(messageTable_)),
-
-    remoteLogTable: logTable_,
-    logTable: exports.overrideClientApi(new NetSimTable(logTable_)),
-
-    remoteHeartbeatTable: heartbeatTable_,
-    heartbeatTable: exports.overrideClientApi(new NetSimTable(heartbeatTable_))
+    nodeTable: exports.overrideClientApi(new NetSimTable('node')),
+    wireTable: exports.overrideClientApi(new NetSimTable('wire')),
+    messageTable: exports.overrideClientApi(new NetSimTable('message')),
+    logTable: exports.overrideClientApi(new NetSimTable('log')),
+    heartbeatTable: exports.overrideClientApi(new NetSimTable('heartbeat')),
   };
 };
 
