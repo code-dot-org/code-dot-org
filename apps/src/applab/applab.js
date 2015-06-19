@@ -618,6 +618,10 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
+  debugAreaController.init(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
+
   if (level.editCode) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
@@ -736,12 +740,12 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
 
-  codeTextbox.style.bottom = newDbgHeight + 'px';
-  debugArea.style.height = newDbgHeight + 'px';
-
   if (debugAreaController.isShut()) {
     debugAreaController.snapOpen();
   }
+  
+  codeTextbox.style.bottom = newDbgHeight + 'px';
+  debugArea.style.height = newDbgHeight + 'px';
 
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
