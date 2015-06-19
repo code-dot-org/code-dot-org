@@ -685,7 +685,7 @@ Blockly.FunctionEditor.prototype.createParameterEditor_ = function() {
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText');
+      'blocklyToolboxDiv paramToolbox blocklyText flyoutColorGray');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
