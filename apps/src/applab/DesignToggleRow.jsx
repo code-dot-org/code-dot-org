@@ -13,6 +13,8 @@ var Mode = {
 
 module.exports = React.createClass({
   propTypes: {
+    hideToggle: React.PropTypes.bool.isRequired,
+    startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
@@ -24,7 +26,8 @@ module.exports = React.createClass({
 
   getInitialState: function () {
     return {
-      mode: Mode.CODE
+      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE,
+      activeScreen: null
     };
   },
 
@@ -94,6 +97,9 @@ module.exports = React.createClass({
       color: '#949ca2',
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
+    var hidden = {
+      visibility: 'hidden'
+    };
 
     var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
 
@@ -131,11 +137,12 @@ module.exports = React.createClass({
     }
 
     return (
-      <div className="justify-contents">
+      <div className={this.props.hideToggle ? 'rightalign-contents' : 'justify-contents'}>
         <button
             id='codeModeButton'
             style={$.extend({}, codeButtonStyle,
-                this.state.mode === Mode.CODE ? active : inactive)}
+                this.state.mode === Mode.CODE ? active : inactive,
+                this.props.hideToggle ? hidden : null)}
             className='no-outline'
             onClick={this.handleSetMode.bind(this, Mode.CODE)}>
           {msg.codeMode()}
@@ -143,7 +150,8 @@ module.exports = React.createClass({
         <button
             id='designModeButton'
             style={$.extend({}, designButtonStyle,
-                this.state.mode === Mode.DESIGN ? active : inactive)}
+                this.state.mode === Mode.DESIGN ? active : inactive,
+                this.props.hideToggle ? hidden : null)}
             className='no-outline'
             onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
           {msg.designMode()}

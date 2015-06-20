@@ -84,10 +84,20 @@ module.exports = {
 
   create: function() {
     var element = document.createElement('select');
-    element.style.width = '100px';
+    element.style.width = '200px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
+    element.style.color = '#fff';
+    element.style.backgroundColor = '#1abc9c';
+
+    var option1 = document.createElement('option');
+    option1.innerHTML = 'Option 1';
+    element.appendChild(option1);
+
+    var option2 = document.createElement('option');
+    option2.innerHTML = 'Option 2';
+    element.appendChild(option2);
 
     return element;
   }

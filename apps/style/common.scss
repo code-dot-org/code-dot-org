@@ -222,6 +222,7 @@ div.droplet-palette-group-header-selected.orange {
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
+  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
 }
 
 #codeTextbox.pin_bottom {
@@ -252,23 +253,23 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet-breakpoint {
+.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
 }
 
-.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet-error {
+.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
   background-image: url('#{$common_root}/gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
 
-.droplet-gutter-line.droplet-error, .droplet-gutter-line.droplet-warning {
+.droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
   background-position: 2px 35%;
 }
 
-.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet-warning {
+.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
   background-image: url('#{$common_root}/gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -810,6 +811,47 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+$workspace-header-button-border-width: 1px;
+$workspace-header-button-height: 22px;
+$workspace-header-button-margin: ($workspace-headers-height -
+    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
+    ) / 2;
+.workspace-header-button {
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+  background-color: $light_purple;
+  margin-top: $workspace-header-button-margin;
+  margin-bottom: $workspace-header-button-margin;
+  margin-right: $workspace-header-button-margin;
+  margin-left: 0;
+  border: $workspace-header-button-border-width groove $light_gray;
+  height: $workspace-header-button-height;
+  border-radius: 4px; // TODO: Make mixin
+  font-family: $gotham-bold;
+  &:hover {
+    background-color: $cyan;
+  }
+  span {
+    padding: 0 12px;
+    line-height: $workspace-header-button-height;
+  }
+  .fa {
+    line-height: $workspace-header-button-height;
+    padding-right: 8px;
+    font-size: 15px;
+  }
+  .fa-code {
+    font-weight: bold;
+  }
+  .blocks-glyph {
+    display: none;
+    height: 18px;
+    vertical-align: text-bottom;
+    padding-right: 8px;
+  }
+}
+
 #design-headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -819,12 +861,6 @@ $aniGifPreviewHeight: 60px;
   -ms-user-select: none;
   user-select: none;
 }
-
-$workspace-header-button-border-width: 1px;
-$workspace-header-button-height: 22px;
-$workspace-header-button-margin: ($workspace-headers-height -
-    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
-    ) / 2;
 
 #headers {
   height: $workspace-headers-height;
@@ -876,41 +912,6 @@ $workspace-header-button-margin: ($workspace-headers-height -
     display: inline-block;
   }
 
-  .workspace-header-button {
-    cursor: pointer;
-    float: right;
-    overflow: hidden;
-    background-color: $light_purple;
-    margin-top: $workspace-header-button-margin;
-    margin-bottom: $workspace-header-button-margin;
-    margin-right: $workspace-header-button-margin;
-    margin-left: 0;
-    border: $workspace-header-button-border-width groove $light_gray;
-    height: $workspace-header-button-height;
-    border-radius: 4px; // TODO: Make mixin
-    font-family: $gotham-bold;
-    &:hover {
-      background-color: $cyan;
-    }
-    span {
-      padding: 0 12px;
-      line-height: $workspace-header-button-height;
-    }
-    .fa {
-      line-height: $workspace-header-button-height;
-      padding-right: 8px;
-      font-size: 15px;
-    }
-    .fa-code {
-      font-weight: bold;
-    }
-    .blocks-glyph {
-      display: none;
-      height: 18px;
-      vertical-align: text-bottom;
-      padding-right: 8px;
-    }
-  }
   #clear-puzzle-header:hover {
     background-color: $red;
   }

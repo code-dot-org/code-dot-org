@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 # Background
 
-The traveling salesman problem is a classic “computationally hard” computer science problem that has many applications in the real world. Whether it is a mailperson delivering letters to everyone in a neighborhood or you picking up all of your friends for a party, the task is to find the shortest – most optimal – route possible. It’s harder than it sounds! In fact, there is no perfect algorithm for all instances of the proble. And as the problem grows, a brute force strategy requires an unreasonable amount of time to solve. 
+The traveling salesman problem is a classic “computationally hard” computer science problem that has many applications in the real world. Whether it is a mailperson delivering letters to everyone in a neighborhood or you picking up all of your friends for a party, the task is to find the shortest – most optimal – route possible. It’s harder than it sounds! In fact, there is no perfect algorithm for all instances of the problem. And as the problem grows, a brute force strategy requires an unreasonable amount of time to solve. 
 
 # Vocabulary
 

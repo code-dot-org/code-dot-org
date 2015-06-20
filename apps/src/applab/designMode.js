@@ -413,12 +413,13 @@ function makeDraggable (jqueryElements) {
   jqueryElements.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
-      alsoResize: elm,
       create: function () {
         // resizable sets z-index to 90, which we don't want
         $(this).children().css('z-index', '');
       },
       resize: function () {
+        elm.outerWidth(wrapper.width());
+        elm.outerHeight(wrapper.height());
         var element = elm[0];
         designMode.onPropertyChange(element, 'width', element.style.width);
         designMode.onPropertyChange(element, 'height', element.style.height);
@@ -538,14 +539,10 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function (hidden) {
+designMode.configureDesignToggleRow = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
-  }
-
-  if (hidden) {
-    designToggleRow.style.display = 'none';
   }
 
   var firstScreen = $('.screen').first().attr('id');
@@ -587,6 +584,8 @@ designMode.changeScreen = function (screenId) {
 
     React.render(
       React.createElement(DesignToggleRow, {
+        hideToggle: Applab.hideDesignModeToggle(),
+        startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
