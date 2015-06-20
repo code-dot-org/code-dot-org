@@ -64,10 +64,6 @@
     box-sizing: border-box;
     padding: 10px 0px 10px 0px;
   }
-  h4 {
-    margin-left: 10px;
-    float: left;
-  }
   .smalltext {
     font-size: 13px;
     line-height: 17px;
@@ -124,7 +120,7 @@
   }
 
   h3 {
-    margin: 10px 10px 0 10px;
+    margin: 5px 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -173,6 +169,13 @@
   box-sizing: content-box;
   max-width: 100%;
   height: auto;
+}
+
+.largeblock img {
+  box-sizing: content-box;
+  height: auto;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .miniblock-tall-audiencerow {
