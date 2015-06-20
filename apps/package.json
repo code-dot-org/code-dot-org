@@ -60,7 +60,7 @@
     "mkdirp": "^0.5.0",
     "mochify": "^2.8.1",
     "moment": "^2.10.3",
-    "node-sass": "~2.0.0-beta",
+    "node-sass": "1.2.2",
     "npm-which": "^2.0.0",
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "react": "^0.13.2",

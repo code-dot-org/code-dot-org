@@ -41,7 +41,7 @@ Wheatley Building
 <br />
 Boston, MA 02125 
 
-For directions and parking information, please visit[https://www.umb.edu/the_university/getting_here/directions](https://www.umb.edu/the_university/getting_here/directions). If driving, we suggest the Bayside Parking Lot behind the Doubletree for $6 parking per day.
+For directions and parking information, please [click here](https://www.umb.edu/the_university/getting_here/directions). If driving, we suggest the Bayside Parking Lot behind the Doubletree for $6 parking per day.
 
 
 #### What do I bring to Phase 4 PD? ####
