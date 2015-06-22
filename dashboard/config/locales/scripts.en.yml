@@ -43,7 +43,7 @@ en:
           'Bee: Loops': 'Bee: Loops'
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
+          description_audience: Ages 4-6
           description_short: Course 1 is designed for early readers.
         course2:
           The Maze: The Maze
@@ -82,7 +82,7 @@ en:
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages  6+ (reading required)
+          description_audience: Ages 6-18
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: The Maze
@@ -133,7 +133,7 @@ en:
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Ages 8-18
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
@@ -237,7 +237,7 @@ en:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Ages 10-18
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -366,8 +366,9 @@ en:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          title: Accelerated Intro to CS Course
+          description_audience: Ages 10-18
+          description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
           Introduction to Computer Science: Introduction to Computer Science
           The Maze: The Maze
           Computational Thinking: Computational Thinking

@@ -169,7 +169,6 @@ en:
         'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
       ECSPD Online U1D3-4 Resources:
         Buying a Computer: Buying a Computer
-        'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
       ECSPD Online U1D5-7: {}
       ECSPD Online U1D5-7 Disclaimer: {}
       ECSPD Online U1D5-7 Forum: {}
@@ -180,7 +179,6 @@ en:
       ECSPD Online U1D8-9 Forum:
         'Forum for Unit 1 Day 8-9: Impact of Computers and Communication': 'Forum for Unit 1 Day 8-9: Impact of Computers and Communication'
         Forum pending: Forum pending
-        Unit 1 Day 8-9 Forum: Unit 1 Day 8-9 Forum
       ECSPD Online U1D8-9 Resources: {}
       ECSPD Online Units:
         Units covered: Units covered
@@ -289,6 +287,7 @@ en:
       OPD-K5 Why teach CS: {}
       OPD-K5 Younger Grades: {}
       OPD-K5 Your Plan: {}
+      OPD-Stage3Start: {}
       Odometer:
         Odometer: Odometer
       OnlinePDK5 Intro: {}
@@ -1873,7 +1872,6 @@ en:
         Different representations of data can help us draw more meaningful conclusions about it.: Different representations of data can help us draw more meaningful conclusions about it.
         ? In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
         : In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
-        Tell a Story with Data: Tell a Story with Data
         Telling a Story with Data: Telling a Story with Data
         The way data is represented can help us understand the data by telling a meaningful story.: The way data is represented can help us understand the data by telling a meaningful story.
       ECSPD Online U1D5-7 Assessment 1:
@@ -2504,7 +2502,6 @@ en:
         Redundancy: Redundancy
         Spoofing: Spoofing
         What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
-        What is a disadvantage of the open standard of addressing used by the internet? Pick 2: What is a disadvantage of the open standard of addressing used by the internet? Pick 2
       U2L11 Assessment 1:
         'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
         HTTP is considered to be a high level protocol because: HTTP is considered to be a high level protocol because
@@ -2884,9 +2881,8 @@ en:
         Multiple Choice - Interactions In Agent-based Models: Multiple Choice - Interactions In Agent-based Models
         What types of interactions can occur in agent-based models?: What types of interactions can occur in agent-based models?
         agents interact with both their environment and other agents: agents interact with both their environment and other agents
-        agents interact with other agents only: agents interact with other agents only
-        agents interact with their environment only: agents interact with their environment only
-        all of the above: all of the above
+        agents interact with other agents: agents interact with other agents
+        agents interact with their environment: agents interact with their environment
       sciPD agent based 2:
         Multiple Choice - Agent-based Models: Multiple Choice - Agent-based Models
         What type of systems are agent-based models suitable for modeling?: What type of systems are agent-based models suitable for modeling?
@@ -3130,17 +3126,13 @@ en:
         What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:
         'Reflections on Unit 1 Day 1-2: What is a Computer?': 'Reflections on Unit 1 Day 1-2: What is a Computer?'
-        'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is a Computer? Reflection'
       ECSPD Online U1D10 Reflection:
-        Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
         'Reflection on Unit 1 Day 10: Telling a Story with Data': 'Reflection on Unit 1 Day 10: Telling a Story with Data'
         ? You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1D11-14 Reflection:
-        Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
         'Reflection on Unit 1 Day 11-14: Data, Modeling, and Design': 'Reflection on Unit 1 Day 11-14: Data, Modeling, and Design'
       ECSPD Online U1D15-16 Reflection:
-        Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
         'Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions': 'Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions'
         ? You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
@@ -3149,18 +3141,15 @@ en:
         : Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
         What is Intelligence?: What is Intelligence?
       ECSPD Online U1D17-19 Reflection:
-        Reflections on Unit 1 Day 17-19: Reflections on Unit 1 Day 17-19
         'Reflections on Unit 1 Day 17-19: What is Intelligence?': 'Reflections on Unit 1 Day 17-19: What is Intelligence?'
         ? This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1D3-4 Reflection:
-        Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
         'Reflections on Unit 1 Day 3-4: Buying a Computer': 'Reflections on Unit 1 Day 3-4: Buying a Computer'
         ? 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
         : 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
       ECSPD Online U1D5-7 Reflection:
         'Reflections on Unit 1 Day 5-7: Searching and Web 2.0': 'Reflections on Unit 1 Day 5-7: Searching and Web 2.0'
-        Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
         ? You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1D8-9 Assessment:
@@ -3168,9 +3157,7 @@ en:
         ? List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
         : List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
       ECSPD Online U1D8-9 Reflection:
-        Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
         'Reflections on Unit 1 Day 8-9: Impact of Computers and Communication': 'Reflections on Unit 1 Day 8-9: Impact of Computers and Communication'
-        What challenges do you think you and your students might have with the material covered in this lesson?: What challenges do you think you and your students might have with the material covered in this lesson?
         ? You have experienced part of this lesson online and have read a few articles regarding the impact of computers and the internet on communication. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced part of this lesson online and have read a few articles regarding the impact of computers and the internet on communication. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1Reflection: {}
