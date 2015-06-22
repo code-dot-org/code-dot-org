@@ -56,90 +56,42 @@
 .span11 {  width: 860px;  }
 .span12 {  width: 940px;  }
 
-.miniblock {
+.courseblock-tall {
   background-color:$lightest_gray;
-  height: 100px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
+  
   }
-  .smalltext {
-    font-size: 13px;
-    line-height: 17px;
-    padding-right: 10px;
-    font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
-  }
-  .whitetext {
-    color:$lightest_gray;
-  }
-  .greytext {
-    color:$charcoal;
-  }
+
   .imgspan {
-    margin-left: 0px;
-    text-align: right;
-    float: right;
-  }
-  .audience {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
-    background-color: $charcoal;
-  }
-}
-
-.miniblock-short {
-  height:150px;
-  h3 {
-    margin-bottom:10px;
-    white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-  }
-}
-
-.miniblock-tall {
-  height:232px;
-
-  .heading {
-    -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	  padding: 0px;
-  }
-
-  .heading .whitetext {
-  	color: white;
+    margin: 0 0 5px 0;
+    text-align: left;
+    float: left;
   }
 
   h3 {
-    margin: 5px 10px 0 10px;
-    text-overflow: ellipsis;
+    margin: 0 0 0 10px;
+    color: $charcoal;
     white-space: nowrap;
     overflow: hidden;
-    font-family: $gotham-bold;
-    font-weight: normal;
-    display: block;
-    float: left;
+    text-overflow: ellipsis;
+    text-align: left;
     font-size: 24px;
-    width: 200px;
+    font-family: $gotham-bold;
   }
 
   .beta
   {
-    .heading {
-      padding-right: 0px;
-    }
-
     h3 {
       width: 140px;
+      padding-right: 0px;
+      float: left;
     }
 
     .betatext {
@@ -158,30 +110,33 @@
       width: 60px;
     }
   }
+
+  .smalltext {
+    font-size: 13px;
+    line-height: 17px;
+    padding-right: 10px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+
+  .whitetext {
+    color: white;
+  }
+
+  .audience {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: $charcoal;
+  }
 }
 
-.miniblock div {
-  box-sizing: content-box;
-  float:left;
-}
 
-.miniblock img {
-  box-sizing: content-box;
-  max-width: 100%;
-  height: auto;
-}
-
-.largeblock img {
-  box-sizing: content-box;
-  height: auto;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.miniblock-tall-audiencerow {
-  height:258px;
-}
-
-.miniblock + .miniblock {
+.courseblock-tall + .courseblock-tall {
   margin-left: 20px;
 }
