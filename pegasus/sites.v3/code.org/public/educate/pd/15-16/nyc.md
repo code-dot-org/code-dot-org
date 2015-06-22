@@ -179,7 +179,7 @@ NY, NY 10036
 Both group 1 & 2 will be hosted on the following dates: 
 <br />
 <br />
-Monday, August 10, 2015 - Wednesday, August 12, 2015
+Tursday, August 13, 2015 - Friday, August 14, 2015
 <br />
 8:00am - 4:00pm
 <br />
