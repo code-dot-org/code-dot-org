@@ -108,6 +108,7 @@ Blockly.ContractEditorSectionView.prototype.toggleCollapse = function () {
  */
 Blockly.ContractEditorSectionView.prototype.setCollapsed = function (isCollapsed) {
   this.collapsed_ = isCollapsed;
+  this.header_.showSeparator(isCollapsed);
   if (this.onCollapseCallback_) {
     this.onCollapseCallback_(this.collapsed_);
   }
