@@ -40,10 +40,10 @@
   - block_class = 'courseblock-tall'
 
 .span3.courseblock-tall{class: block_class}
-  =link_to url, {style:'text-decoration: none;'} do
+  =link_to url do
 
     .imgspan
-      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120', style: 'width: 100%; height: 120px')
+      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120px')
     .clear
     - if Script.beta? id
       .beta
@@ -57,7 +57,7 @@
           %h3
             = title
     .clear
-    .smalltext{style: 'padding-left: 10px; padding-right: 10px; padding-top: 0px;'}= body
+    .smalltext= body
     - if audience
       .clear
       .smalltext.whitetext.audience= audience
