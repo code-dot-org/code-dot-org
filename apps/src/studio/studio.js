@@ -1170,7 +1170,7 @@ Studio.init = function(config) {
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
 
       if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandler(Studio.runTest);
+        Blockly.contractEditor.registerTestHandlers(Studio.runTest, function () {});
       }
     }
 
@@ -1403,19 +1403,28 @@ Studio.reset = function(first) {
   Studio.levelRestarted = true;
 };
 
+/**
+ * Runs test of a given example
+ * @param exampleBlock
+ * @returns {string} string to display after example execution
+ */
 Studio.runTest = function (exampleBlock) {
-  var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
-  var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
-  if (exampleCode) {
-    var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
-      StudioApp: studioApp,
-      Studio: api,
-      Globals: Studio.Globals
-    });
-    return resultBoolean ? "Matches definition." : "Does not match definition.";
+  try {
+    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
+    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
+    if (exampleCode) {
+      var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+        StudioApp: studioApp,
+        Studio: api,
+        Globals: Studio.Globals
+      });
+      return resultBoolean ? "Matches definition." : "Does not match definition.";
+    } else {
+      return "No example code.";
+    }
+  } catch (error) {
+    return "Execution error: " + error.message;
   }
-
-  return "Evaluation failed";
 };
 
 /**
