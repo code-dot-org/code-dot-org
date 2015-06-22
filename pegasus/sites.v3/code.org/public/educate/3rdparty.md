@@ -23,7 +23,7 @@ nav: educate_nav
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
-| [Bootstrap](http://www.bootstrapworld.org/) | Computer science activities for algebra, FREE | 3-day workshops for schools and districts, $15/teacher/hour |
+| [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | 20-lesson CS in Algebra and CS in Science modules for math and science classes, FREE  | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
@@ -41,7 +41,7 @@ nav: educate_nav
 |--------------|------------|---------------|--------------------------|------|
 | [Amplify](https://mooc.amplify.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
-| [Bootstrap](http://www.bootstrapworld.org/) | Computer science activities for algebra. FREE | 3-day workshops for schools and districts, $15/teacher/hour |
+| [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
@@ -58,7 +58,7 @@ nav: educate_nav
 ## More resources &mdash; for classrooms, afterschool clubs or learning online 
 
 ### [Khan Academy](http://khanacademy.org/cs/programming)
-Online curriculum that teaches JavaScript programming in a visual environment.
+Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
 
 ### [Kodu](http://www.kodugamelab.com/)
 Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming. 

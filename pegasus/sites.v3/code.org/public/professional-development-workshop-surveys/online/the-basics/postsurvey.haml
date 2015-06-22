@@ -1,0 +1,433 @@
+---
+title: "K-5 Online Professional Development Workshop Post Survey"
+nav: blank
+rightbar: blank
+---
+-authentication_required!
+
+:ruby
+  us_states =
+  %w{
+    Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana
+    Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska
+    Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio Oklahoma Oregon Pennsylvania Rhode\ Island
+    South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming Washington,\ D.C.
+    }
+    canadian_provinces =
+    %w{
+      Alberta British\ Columbia Manitoba New\ Brunswick Newfoundland Nova\ Scotia Ontario Prince\ Edward\ Island Quebec
+      Saskatchewan Territory:\ Northwest\ Territories Territory:\ Nunavut Territory:\ Yukon
+      }
+    australian_states =
+    %w{
+        Australian\ Capital\ Territory New\ South\ Wales Northern\ Territory Queensland South\ Australia Tasmania Victoria Western\ Australia
+      }
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+%form#k5-professional-development-survey-form{role: "form"}
+  %h1
+    Teaching Kids to Code: The Basics
+    %br
+    Online Course Survey
+
+  #error-message{style: 'display: none'}
+
+  .main-section
+    %h2 About your overall experience
+    %p Please answer to what extent you agree or disagree with the following statements.
+    =view(:k5_professional_development_survey_select_satisfaction, name: "experience_useful_i", label: "The information presented in the professional development was useful.")
+    =view(:k5_professional_development_survey_select_satisfaction, name: "experience_time_i", label: "This professional development was a very good use of my time.")
+    =view(:k5_professional_development_survey_select_satisfaction, name: "experience_level_i", label: "The professional development session was suitable for my level of experience with teaching computer science.")
+
+  .main-section
+    .form-group{style:"margin-top: 45px"}
+      %label.control-label{for: "k5-knowledge"}
+        On a 1-10 scale, which of the following best describes your current level of knowledge related to computer science?
+        %span.form-required-field *
+      %div
+        %select#k5-knowledge.form-control{name: "knowledge_i", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "1"} 1 = no knowledge
+          %option{value: "2"} 2
+          %option{value: "3"} 3
+          %option{value: "4"} 4
+          %option{value: "5"} 5 = neutral
+          %option{value: "6"} 6
+          %option{value: "7"} 7
+          %option{value: "8"} 8
+          %option{value: "9"} 9
+          %option{value: "10"} 10 = very knowledgeable
+    .form-group
+      %label.control-label{for: "k5-cscareers"}
+        On a 1-10 scale, which of the following best describes your current level of awareness of careers that use computer science?
+        %span.form-required-field *
+      %div
+        %select#k5-cscareers.form-control{name: "cscareers_i", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "1"} 1 = unaware
+          %option{value: "2"} 2
+          %option{value: "3"} 3
+          %option{value: "4"} 4
+          %option{value: "5"} 5 = neutral
+          %option{value: "6"} 6
+          %option{value: "7"} 7
+          %option{value: "8"} 8
+          %option{value: "9"} 9
+          %option{value: "10"} 10 = very aware
+    .form-group
+      %label.control-label{for: "k5-confidence"}
+        On a 1-10 scale, how much confidence do you have in your ability to teach computer science effectively?
+        %span.form-required-field *
+      %div
+        %select#k5-confidence.form-control{name: "confidence_i", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "1"} 1 = very little confidence
+          %option{value: "2"} 2
+          %option{value: "3"} 3
+          %option{value: "4"} 4
+          %option{value: "5"} 5 = neutral
+          %option{value: "6"} 6
+          %option{value: "7"} 7
+          %option{value: "8"} 8
+          %option{value: "9"} 9
+          %option{value: "10"} 10 = very confident
+    .form-group
+      %label.control-label{for: "k5-necessity"}
+        On a 1-10 scale, how necessary is it for high school students to learn computer science?
+        %span.form-required-field *
+      %div
+        %select#k5-necessity.form-control{name: "necessity_i", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "1"} 1 = very unnecessary
+          %option{value: "2"} 2
+          %option{value: "3"} 3
+          %option{value: "4"} 4
+          %option{value: "5"} 5 = neutral
+          %option{value: "6"} 6
+          %option{value: "7"} 7
+          %option{value: "8"} 8
+          %option{value: "9"} 9
+          %option{value: "10"} 10 = very necessary
+    .form-group
+      %label.control-label{for: "k5-satisfaction"}
+        Overall, rate your satisfaction about the workshop.
+        %span.form-required-field *
+      %div
+        %select#k5-satisfaction.form-control{name: "satisfaction_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "extremely satisfied (would recommend to others)"} Extremely Satisfied (Would Recommend to Others)
+          %option{value: "moderately satisfied"} Moderately Satisfied
+          %option{value: "moderately dissatisfied"} Moderately Dissatisfied
+          %option{value: "dissatisfied (would not recommend to others)"} Dissatisfied (Would Not Recommend To Others)
+    .form-group
+      %label.control-label{for: "k5-improve_pd"}
+        What would you like to tell Code.org about your experience with the online courses? Please include anything that would help improve the K-5 Online Professional Development.
+      %div
+        %textarea#improve_pd.form-control{name: "improve_pd_s", rows: "8", type: "text"}
+
+  .main-section
+    %h2 About yourself
+    %h3
+      Where do you live and/or work?
+    .form-group
+      %input{style:'display:none', name:'email_s', value:"#{dashboard_user[:email]}"}
+      %input{style:'display:none', name:'name_s', value:"#{dashboard_user[:name]}"}
+      %label.control-label{for: "k5-teacher-country"}
+        Country
+        %span.form-required-field *
+      %div
+        %select#k5-teacher-country.form-control{name: "teacher_country_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "United States"} United States
+          %option{value: "Canada"} Canada
+          %option{value: "United Kingdom / Ireland"} United Kingdom / Ireland
+          %option{value: "Australia"} Australia
+          %option{value: "New Zealand"} New Zealand
+          %option{value: "other"} Other
+    .form-group#state-selection
+      %label.control-label{for: "k5-teacher-state"}
+        State/Providence
+        %span.form-required-field *
+      %div
+        %select#k5-teacher-state.form-control{name: "teacher_state_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          - us_states.each do |state|
+            %option{value:"#{state}"}
+              #{state}
+          - canadian_provinces.each do |province|
+            %option{value:"#{province}"}
+              #{province}
+          - australian_states.each do |state|
+            %option{value:"#{state}"}
+              #{state}
+    .form-group
+      %label.control-label{for: "k5-teacher-city"}
+        City
+        %span.form-required-field *
+      %div
+        %input#k5-teacher-city.form-control{name: "teacher_city_s", type: "text"}
+    .form-group{style:"margin-top: 45px"}
+      %label.control-label{for: "k5-teacher-type"}
+        Are you a...
+        %span.form-required-field *
+      %div
+        %select#k5-teacher-type.form-control{name: "teacher_type_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "in-service teacher, currently teaching"} In-service Teacher, Currently Teaching
+          %option{value: "pre-service teacher, also working in a classroom under a master-teacher"} Pre-service Teacher, Also Working In A Classroom Under A Master-teacher
+          %option{value: "pre-service teacher, not in a classroom"} Pre-service Teacher, Not In A Classroom
+          %option{value: "instructional assistant"} Instructional Assistant
+          %option{value: "out-of-school educator"} Out-of-school Educator
+          %option{value: "administrator"} Administrator
+          %option{value: "other"} Other
+      %div{id: 'k5-teacher-type-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-teacher-type-other"}<
+          %em{style: 'font-weight: normal;'} Other type of teacher
+          %span.form-required-field *
+        %div
+          %input#k5-teacher-type-other.form-control{name: "teacher_type_other_s", placeholder: "Other", type: "text"}
+    .form-group
+      %label.control-label{for: "k5-school"}
+        What is the name of your school?
+      %div
+        %input#k5-school.form-control{name: "school_s", type: "text"}
+    .form-group
+      %label.control-label{for: "k5-teacher-years"}
+        Including this year, how many years have you been a teacher?
+        %span.form-required-field *
+      %div
+        %select#k5-teacher-years.form-control{name: "teacher_years_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "0-2"} 0-2
+          %option{value: "3-5"} 3-5
+          %option{value: "6-10"} 6-10
+          %option{value: "11-15"} 11-15
+          %option{value: "16-20"} 16-20
+          %option{value: "21-25"} 21-25
+          %option{value: "26+"} 26+
+    .form-group
+      %label.control-label{for: "k5-teacher-grades"}
+        What grade(s) do you teach? Select all that apply.
+      %div
+        %select#k5-teacher-grades.form-control{name: "teacher_grades_ss[]", type: "select", multiple: true}
+          %option{selected: "selected", value: ""} -- Select all that apply--
+          %option{value: "pre-kindergarten"} Pre-kindergarten
+          %option{value: "kindergarten"} Kindergarten
+          %option{value: "1st"} 1st
+          %option{value: "2nd"} 2nd
+          %option{value: "3rd"} 3rd
+          %option{value: "4th"} 4th
+          %option{value: "5th"} 5th
+          %option{value: "6th"} 6th
+          %option{value: "7th"} 7th
+          %option{value: "8th"} 8th
+          %option{value: "9th"} 9th
+          %option{value: "10th"} 10th
+          %option{value: "11th"} 11th
+          %option{value: "12th"} 12th
+    .form-group
+      %label.control-label{for: "k5-teacher-describe"}
+        Which best describes you?
+        %span.form-required-field *
+      %div
+        %select#k5-teacher-describe.form-control{name: "teacher_describe_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "elementary classroom teacher"} Elementary Classroom Teacher
+          %option{value: "math teacher"} Math Teacher
+          %option{value: "science teacher"} Science Teacher
+          %option{value: "computer or technology teacher"} Computer or Technology Teacher
+          %option{value: "librarian"} Librarian
+          %option{value: "stem specialist"} STEM Specialist
+          %option{value: "other"} Other
+      %div{id: 'k5-teacher-describe-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-teacher-describe-other"}<
+          %em{style: 'font-weight: normal;'} Other type of teacher
+          %span.form-required-field *
+        %div
+          %input#k5-teacher-describe-other.form-control{name: "teacher_describe_other_s", placeholder: "Other", type: "text"}
+    .form-group
+      %label.control-label{for: "k5-teaching-cs"}
+        Have you ever taught computer science before?
+        %span.form-required-field *
+      %div
+        %select#k5-teaching-cs.form-control{name: "teaching_cs_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "yes"} Yes
+          %option{value: "no"} No
+
+  .main-section
+    %h2 What's Next?
+    .form-group
+      %label.control-label{for: "k5-course-offering"}
+        Will you be offering the course to your students?
+        %span.form-required-field *
+      %div
+        %select#k5-course-offering.form-control{name: "course_offering_s", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "yes"} Yes
+          %option{value: "no"} No
+          %option{value: "maybe"} Maybe
+    .form-group
+      %label.control-label{for: "k5-number-teaching"}
+        About how many students do you think you’ll teach the Code.org courses to this school year?
+        %span.form-required-field *
+      %div
+        %input#k5-number-teaching.form-control{name: "number_teaching_i", type: "number", placeholder:"Enter a whole number"}
+    .form-group
+      %label.control-label{for: "k5-attend-in-person-pd"}
+        On a 1-10 scale, how likely would you be to attend a face-to-face Code.org PD session if one were offered in your region?
+        %span.form-required-field *
+      %div
+        %select#k5-attend-in-person-pd.form-control{name: "attend_in_person_pd_i", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "1"} 1 = very unnecessary
+          %option{value: "2"} 2
+          %option{value: "3"} 3
+          %option{value: "4"} 4
+          %option{value: "5"} 5 = neutral
+          %option{value: "6"} 6
+          %option{value: "7"} 7
+          %option{value: "8"} 8
+          %option{value: "9"} 9
+          %option{value: "10"} 10 = very necessary
+    .form-group
+      %label.control-label{for: "k5-attend-another-online-pd"}
+        On a 1-10 scale, how likely are you to take another online professional development course with Code.org?
+        %span.form-required-field *
+      %div
+        %select#k5-attend-another-online-pd.form-control{name: "attend_another_online_pd_i", type: "select"}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "1"} 1 = very unlikely
+          %option{value: "2"} 2
+          %option{value: "3"} 3
+          %option{value: "4"} 4
+          %option{value: "5"} 5 = neutral
+          %option{value: "6"} 6
+          %option{value: "7"} 7
+          %option{value: "8"} 8
+          %option{value: "9"} 9
+          %option{value: "10"} 10 = very likely
+
+  .main-section
+    .form-group.submit-btn
+      %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+#thanks{:style=>"display: none;"}
+  %h1 Thank you for completing the post-survey!
+  %p We hope you enjoyed the course.
+  %p
+    You will now be redirected to our
+    %a{href:"/educate/professional-development"}
+      professional development home page
+    , where you can find additional opportunities to continue your learning.
+
+:javascript
+  $(document).ready(function() {
+    $('#k5-professional-development-survey-form').find("select").selectize({
+      plugins: ['fast_click']
+    });
+
+    $('#k5-professional-development-survey-form').submit(function(event) {
+      k5ProfessionalDevelopmentSurveyFormSubmit(event);
+    });
+
+    $('#k5-teacher-country').change(function() {
+      if ($(this).val() == "United States" || $(this).val() == "Canada" || $(this).val() == "Australia") {
+        $('#states').attr("required", true)
+        $('#state-selection').slideDown();
+      } else {
+        $('#k5-teacher-type-other').val('').removeAttr("required");
+        $('#state-selection').hide();
+      }
+    }).triggerHandler('change');
+
+    $('#k5-teacher-type').change(function() {
+      if ($(this).val().toString() == "other"){
+        $('#k5-teacher-type-other').attr("required", true)
+        $('#k5-teacher-type-other-wrapper').show();
+      } else {
+        $('#k5-teacher-type-other').val('').removeAttr("required");
+        $('#k5-teacher-type-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+
+    $('#k5-teacher-describe').change(function() {
+      if ($(this).val().toString() == "other"){
+        $('#k5-teacher-describe-other').attr("required", true)
+        $('#k5-teacher-describe-other-wrapper').show();
+      } else {
+        $('#k5-teacher-describe-other').val('').removeAttr("required");
+        $('#k5-teacher-describe-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+
+    $('#k5-undergrad-degree').change(function() {
+      if ($(this).val().toString() == "other"){
+        $('#k5-undergrad-degree-other').attr("required", true)
+        $('#k5-undergrad-degree-other-wrapper').show();
+      } else {
+        $('#k5-undergrad-degree-other').val('').removeAttr("required");
+        $('#k5-undergrad-degree-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+
+    $('#k5-send-materials-flag').change(function() {
+      if($(this).is(':checked')) {
+        $('#k5-send-materials-wrapper').slideDown();
+      } else {
+        $('#k5-send-materials-wrapper').slideUp();
+      }
+    }).triggerHandler('change');
+  });
+
+  function processResponse(data)
+  {
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    $('#k5-professional-development-survey-form').hide();
+    $('#thanks').show(0, function () {
+        setTimeout(function () {window.location = "/educate/professional-development"}, 6000);
+    });
+  }
+
+  function processError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#k5-' + errors[i];
+      error_id = error_id.replace(/_[sbi]s?$/, '');
+      error_id = error_id.replace(new RegExp('_', 'g'), '-');
+
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function k5ProfessionalDevelopmentSurveyFormSubmit(event)
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/forms/K5OnlineProfessionalDevelopmentPostSurvey",
+      type: "post",
+      dataType: "json",
+      data: $('#k5-professional-development-survey-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    event.preventDefault();
+  }

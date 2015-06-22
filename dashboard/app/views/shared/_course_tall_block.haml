@@ -40,7 +40,7 @@
 - else
   - block_class = 'miniblock-tall'
 
-.span3.miniblock{class: block_class, style: 'overflow: hidden; position: relative;'}
+.span3.miniblock{class: block_class, style: 'overflow: hidden; position: relative; float: left;'}
   =link_to url, {style:'text-decoration: none;'} do
 
     .imgspan
@@ -50,14 +50,14 @@
 
     - if Script.beta? id
       .beta
-        .heading
+        .tallheading
           %h3
             = title
-          .betatext
-            = t('beta')
+        .betatext
+          = t('beta')
     - else
       .normal
-        .heading
+        .tallheading
           %h3
             = title
 
