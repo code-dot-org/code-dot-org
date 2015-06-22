@@ -289,6 +289,7 @@ en:
       OPD-K5 Why teach CS: {}
       OPD-K5 Younger Grades: {}
       OPD-K5 Your Plan: {}
+      OPD-Stage3Start: {}
       Odometer:
         Odometer: Odometer
       OnlinePDK5 Intro: {}
@@ -2884,7 +2885,9 @@ en:
         Multiple Choice - Interactions In Agent-based Models: Multiple Choice - Interactions In Agent-based Models
         What types of interactions can occur in agent-based models?: What types of interactions can occur in agent-based models?
         agents interact with both their environment and other agents: agents interact with both their environment and other agents
+        agents interact with other agents: agents interact with other agents
         agents interact with other agents only: agents interact with other agents only
+        agents interact with their environment: agents interact with their environment
         agents interact with their environment only: agents interact with their environment only
         all of the above: all of the above
       sciPD agent based 2:
