@@ -10,8 +10,8 @@ rightbar: blank
   %w{
     Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana
     Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska
-    Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio Oklahoma Oregon Pennsylvania Rhode\ Island
-    South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming Washington,\ D.C.
+    Nevada New\ Hampshire New\ Jersey New\ Mexico New\ York North\ Carolina North\ Dakota Ohio Oklahoma Oregon Pennsylvania Rhode\ Island
+    South\ Carolina South\ Dakota Tennessee Texas Utah Vermont Virginia Washington West\ Virginia Wisconsin Wyoming Washington,\ D.C.
     }
     canadian_provinces =
     %w{
@@ -115,7 +115,7 @@ rightbar: blank
           %option{value: "10"} 10 = very necessary
     .form-group
       %label.control-label{for: "k5-satisfaction"}
-        Overall, rate your satisfaction about the workshop.
+        Overall, rate your satisfaction with the course.
         %span.form-required-field *
       %div
         %select#k5-satisfaction.form-control{name: "satisfaction_s", type: "select"}
@@ -141,7 +141,7 @@ rightbar: blank
         Country
         %span.form-required-field *
       %div
-        %select#k5-teacher-country.form-control{name: "teacher_country_s", type: "select"}
+        %select#k5-teacher-country.form-control{name: "teacher_country_s", type: "select", selectize:false}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "United States"} United States
           %option{value: "Canada"} Canada
@@ -154,7 +154,7 @@ rightbar: blank
         State/Providence
         %span.form-required-field *
       %div
-        %select#k5-teacher-state.form-control{name: "teacher_state_s", type: "select"}
+        %select#k5-teacher-state{name: "teacher_state_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           - us_states.each do |state|
             %option{value:"#{state}"}
@@ -264,7 +264,7 @@ rightbar: blank
     %h2 What's Next?
     .form-group
       %label.control-label{for: "k5-course-offering"}
-        Will you be offering the course to your students?
+        Will you be offering any Code.org courses to your students??
         %span.form-required-field *
       %div
         %select#k5-course-offering.form-control{name: "course_offering_s", type: "select"}
