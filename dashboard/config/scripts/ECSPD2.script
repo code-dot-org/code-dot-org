@@ -5,6 +5,7 @@ pd 'true'
 
 stage 'Welcome!'
 level 'ECSPD Online Welcome'
+level 'PDECS Tour'
 level 'ECSPD Online intro'
 level 'ECSPD course goals'
 level 'ECSPD strategies'
