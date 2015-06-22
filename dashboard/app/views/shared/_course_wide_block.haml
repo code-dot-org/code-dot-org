@@ -16,8 +16,18 @@
       .span1.imgspan{style: 'margin-left: 0px;'}
         %img{style: 'padding-left: 42px; padding-top: 20px;', src: '//studio.code.org/blockly/media/skins/flappy/small_static_avatar.png'}
 
--elsif id == '20-hour'
+-elsif id == '20-hour-short'
   .span6.miniblock{style: 'height: 120px;'}
+    =link_to script_url(Script::TWENTY_HOUR_NAME) do
+      .span4.wideheading
+        %h3= t('upsell.20-hour.title')
+        %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
+        .smallwidetext= t('upsell.20-hour.body_short')
+      .span2.imgspan
+        %img{style: 'height: 100px; margin-top: 10px', src: '//code.org/images/fit-520/code20hr.jpg'}   
+
+-elsif id == '20-hour'
+  .span6.miniblock{style: 'height: 175px;'}
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .span4.wideheading
         %h3= t('upsell.20-hour.title')
