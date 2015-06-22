@@ -43,7 +43,7 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
- * @param {!SharedTableApi} storageTable - The remote storage table to wrap.
+ * @param {!string} tableName - The name of the remote storage table to wrap.
  * @constructor
  */
 var NetSimTable = module.exports = function (tableName) {
