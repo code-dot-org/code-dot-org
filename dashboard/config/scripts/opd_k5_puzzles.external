@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
     td{
       width: 300px;
-      padding: 0 10px 0 0;
+      padding: 0 50px 0 0;
     }
 
     .stackedimg {
@@ -24,12 +24,8 @@ markdown <<MARKDOWN
 
 ### LOOKING AHEAD > All About Puzzles
 
-Whenever you interact with Code Studio (including throughout the remaining stages in this course), you'll be challenged with a series of puzzles that need to be solved. In order to solve the puzzles, you'll have to write programs using different characters to complete different goals. We'll practice with our first puzzle in Stage 3. But before we get there, here's an overview of the different kinds of the puzzles you and your students will encounter in Code Studio:
+In the stages that follow, you're going to be using Code Studio to learn the basics of computer science. Throughout Code Stduio, you'll be challenged with a series of puzzles that need to be solved. In order to solve the puzzles, you'll have to write programs using different characters to complete different goals. We'll practice with our first puzzle in Stage 3. But before we get there, here's an overview of the different kinds of the puzzles you and your students will encounter in Code Studio:
 <br/><br/>
-
-### Puzzles
-
-Code Studio will prompt you with a challenge, and you'll need to write code to accomplish your goal, whether it's completing a maze, drawing a shape or gathering honey from flowers. You'll meet different characters along the way.
 
 <br/><br/>
 #### Sample Maze Puzzles
