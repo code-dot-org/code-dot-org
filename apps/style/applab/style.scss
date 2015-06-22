@@ -557,6 +557,17 @@ button.arrow:focus {
   }
 }
 
+.rightalign-contents {
+  text-align: right;
+  line-height: 0;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+
 .hover-pointer:hover {
   cursor: pointer;
 }
