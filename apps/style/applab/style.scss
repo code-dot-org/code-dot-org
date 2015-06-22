@@ -589,7 +589,6 @@ button.arrow:focus {
 
 // TODO(dave): move these styles into DesignToolboxElement
 // once we are done experimenting with them.
-.new-design-element {
-  // 60% of 120px. Specify in px to preserve width when cloning/dragging.
-  width: 72px;
+.design-element-image {
+  width: 72px; // 60% of 120px, which is the original image width.
 }
