@@ -100,7 +100,7 @@ class LevelSourcesController < ApplicationController
     else
       @level_source = LevelSource.where(hidden: false).find(params[:id])
     end
-    @level_source.try(:replace_old_when_run_blocks)
+    @level_source.replace_old_when_run_blocks
     @level = @level_source.level
     @game = @level.game
     @phone_share_url = send_to_phone_url
