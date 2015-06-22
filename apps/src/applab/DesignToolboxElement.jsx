@@ -12,12 +12,15 @@ module.exports = React.createClass({
 
   render: function() {
     var styles = {
-      container: {
+      outerContainer: {
         // The icon images are 120px wide and depend on this width for scaling.
         width: 120,
         display: 'inline-block',
         textAlign: 'center',
         paddingBottom: 15
+      },
+      innerContainer: {
+        textAlign: 'center'
       },
       image: {
         marginBottom: 5
@@ -25,13 +28,16 @@ module.exports = React.createClass({
     };
 
     return (
-      <div style={styles.container}>
-        <img src={this.props.imageUrl}
-            data-element-type={this.props.elementType}
-            className='new-design-element'
-            style={styles.image}>
-        </img>
-        <div >{this.props.desc}</div>
+      <div style={styles.outerContainer}>
+        <div style={styles.innerContainer}
+          data-element-type={this.props.elementType}
+          className='new-design-element'>
+          <img src={this.props.imageUrl}
+              className='design-element-image'
+              style={styles.image}>
+          </img>
+          <div >{this.props.desc}</div>
+        </div>
       </div>
     );
   },

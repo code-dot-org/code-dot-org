@@ -155,6 +155,10 @@ GEM
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
+    haml_lint (0.14.1)
+      haml (~> 4.0)
+      rubocop (>= 0.25.0)
+      sysexits (~> 1.1)
     hashie (3.3.1)
     heroku_rails_deflate (1.0.3)
       actionpack (>= 3.2.13)
@@ -372,6 +376,7 @@ GEM
       sprockets (~> 2.8)
     stringex (2.5.2)
     syck (1.0.1)
+    sysexits (1.2.0)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.7)
       ref
@@ -437,6 +442,7 @@ DEPENDENCIES
   google_drive (~> 1.0.0)
   haml
   haml-rails
+  haml_lint
   heroku_rails_deflate
   highline (~> 1.6.21)
   honeybadger (~> 1.11.2)
