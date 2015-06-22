@@ -1,10 +1,13 @@
 name 'ECSPD Online U1D8-9 Forum'
-title 'Unit 1 Day 8-9 Forum'
+title 'Forum for Unit 1 Day 8-9: Impact of Computers and Communication'
 description 'Forum pending'
 
 markdown <<MARKDOWN
-## Unit 1 Day 8-9 Forum
+## Forum for Unit 1 Day 8-9: Impact of Computers and Communication
 
 Forum pending
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN
