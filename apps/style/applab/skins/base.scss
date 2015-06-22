@@ -12,8 +12,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  box-sizing: border-box;
-  padding: 2px;
 
   canvas {
     position: absolute;
@@ -41,9 +39,10 @@
     font-size: 14px;
   }
 
-  input, div, button, select, img, canvas {
+  input, div[contenteditable=true], button, select, img, canvas, label {
     box-sizing: border-box;
     line-height: 1.2em;
+    margin: 5px;
   }
 
   .design-mode-hidden {
