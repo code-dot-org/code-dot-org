@@ -424,7 +424,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should render title for puzzle in default script' do
     get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
-    assert_equal 'Code.org - 20-Hour Intro Course: The Maze #4',
+    assert_equal 'Code.org - Accelerated Intro to CS Course: The Maze #4',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
