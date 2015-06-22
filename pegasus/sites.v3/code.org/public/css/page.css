@@ -44,6 +44,7 @@
 /* End of custom styling for included user_stats. */
 
 
+/* Custom styling for course miniblocks */
 .tallheading h3 {
   margin: 10px 10px 5px 10px;
   color: #5b6770;
@@ -80,3 +81,4 @@
   margin: 5px 0 5px 10px;
   float: left;
 }
+/* End custom styling for course miniblocks */
