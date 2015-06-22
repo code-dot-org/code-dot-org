@@ -163,7 +163,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
 function shareProject() {
   dashboard.project.save(dashboard.getEditorSource(), function () {
     var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.appToProjectUrl() + '#' + dashboard.project.current.id;
+    var shareUrl = origin + dashboard.project.appToProjectUrl() + '#' + dashboard.project.getCurrentId();
     var encodedShareUrl = encodeURIComponent(shareUrl);
     var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
     + '<div id="project-share" class="modal-content">'
@@ -226,7 +226,7 @@ function shareProject() {
           var phone = $("#project-share #phone");
           var params = jQuery.param({
             type: location.pathname.match(/^\/p\/(\w+)/)[1],
-            channel_id: dashboard.project.current.id,
+            channel_id: dashboard.getCurrentId(),
             phone: phone.val()
           });
           $(submitButton).val("Sending..");
@@ -252,9 +252,9 @@ function shareProject() {
 }
 
 function remixProject() {
-  var newName = "Remix: " + (dashboard.project.current.name || appOptions.level.projectTemplateLevelName || "My Project");
+  var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
   dashboard.project.copy(newName, function () {
-    $('.project_name').text(dashboard.project.current.name);
+    $('.project_name').text(dashboard.project.getCurrentName());
   });
 }
 
@@ -264,7 +264,7 @@ dashboard.header = {};
 // Minimal project header for legacy /c/ share pages.
 dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
-      .append($('<div class="project_name header_text">').text(dashboard.project.current.name))
+      .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()))
       .append($('<div class="project_updated_at header_text">').text("<%= I18n.t('project.click_to_remix') %>"));
 
   $('.project_info')
@@ -284,14 +284,14 @@ dashboard.header.showProjectLevelHeader = function () {
 
 dashboard.header.showProjectHeader = function () {
   function projectNameShow() {
-    $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.current.name));
+    $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()));
     dashboard.project.updateTimestamp();
     $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'));
   }
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
-    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.project.current.name));
+    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.project.getCurrentName()));
     $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text('<%= I18n.t('project.save') %>'));
   }
 
@@ -375,7 +375,7 @@ dashboard.header.showProjectHeader = function () {
   $('.project_new').click(function (e) {
     e.preventDefault(); // Don't change the hash.
     // Save the project if one exists (i.e. isn't just the default one) then navigate.
-    if (dashboard.project.current.id) {
+    if (dashboard.project.getCurrentId()) {
       dashboard.project.save(dashboard.getEditorSource(), function () {
         location.href = location.pathname;
       });

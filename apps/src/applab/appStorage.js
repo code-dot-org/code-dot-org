@@ -15,7 +15,7 @@ AppStorage.tempChannelId =
 
 AppStorage.getChannelId = function() {
   // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
+  var id = dashbaord && dashboard.project.getCurrentId();
   return id || AppStorage.tempChannelId;
 };
 
@@ -141,7 +141,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
-  
+
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
