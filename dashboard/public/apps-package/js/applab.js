@@ -1490,6 +1490,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  utils.fireResizeEvent();
   Applab.serializeAndSave();
 };
 
