@@ -14,10 +14,24 @@ var events = {
   hashchange: 'hashchange'
 };
 
+/**
+ * @typedef {Object} ProjectInstance
+ * @property {string} id
+ * @property {string} name
+ * @property {string} levelHtml
+ * @property {string} levelSource
+ * hidden // unclear when this ever gets set
+ * @property {boolean} isOwner Populated by our update/create callback.
+ * @property {string} updatedAt String representation of a Date. Populated by
+ *   out update/create callback
+ */
 var current;
 
 module.exports = {
-  // TODO - what to do when !current
+  /**
+   * @returns {string} id of the current project, or undefined if we don't have
+   *   a current project.
+   */
   getCurrentId: function () {
     if (!current) {
       return;
@@ -25,6 +39,10 @@ module.exports = {
     return current.id;
   },
 
+  /**
+   * @returns {string} name of the current project, or undefined if we don't have
+   *   a current project
+   */
   getCurrentName: function () {
     if (!current) {
       return;
@@ -131,7 +149,6 @@ module.exports = {
     var channelId = current.id;
     current.levelSource = source;
     current.levelHtml = window.Applab && Applab.getHtml();
-    current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
       channels.update(channelId, current, function (err, data) {
@@ -153,7 +170,7 @@ module.exports = {
 
     current = data;
     if (isNewChannel) {
-      location.href = current.level + '#' + current.id + '/edit';
+      location.href = this.appToProjectUrl() + '#' + current.id + '/edit';
     }
     this.updateTimestamp();
   },
