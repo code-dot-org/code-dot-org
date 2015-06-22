@@ -6,7 +6,29 @@ markdown <<MARKDOWN
 
 ### CONDITIONALS > Reflection
 
-In this stage, we explored how conditionals help programmers add logic to their code. In the next stage, we'll look at how functions can help you take your coding to the next level.
+In this stage, we explored how conditionals help programmers add logic to their code. In the next stage, we'll look at how functions can help you take your coding to the next level. **Take a moment now to review how conditionals are introduced in the code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+
+#### Unplugged Lesson Plans
+
+**1. Review "Conditionals with Cards" Lesson Plan:** [Course 2](https://code.org/curriculum/course2/12/Teacher)
+<br><br>
+
+**2. Watch the student video: Conditionals with Cards**
+<iframe width="640" height="390" src="https://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe>
+<br><br>
+[Can't see the video? Click here](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
+<br><br>
+
+**3. Watch the teacher video: How to facilitate "Conditionals with Cards"**
+<iframe width="640" height="390" src="https://www.youtube.com/embed/IcEL5ibSvTs" frameborder="0" allowfullscreen></iframe>
+<br><br>
+
+#### Code Studio Activities
+Explore Course 2 conditionals stages:
+
+- [Stage 12](https://studio.code.org/s/course2/stage/12/puzzle/1)
+- [Stage 13](https://studio.code.org/s/course2/stage/13/puzzle/1)
+
 
 <br><br>
 >### Reflect

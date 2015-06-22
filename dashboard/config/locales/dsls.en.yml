@@ -168,6 +168,7 @@ en:
       ECSPD Online U1D3-4:
         'Unit 1 Day 3-4: Purchasing a Computer': 'Unit 1 Day 3-4: Purchasing a Computer'
       ECSPD Online U1D3-4 Resources:
+        Buying a Computer: Buying a Computer
         'Unit 1 Day 3-4: Resources': 'Unit 1 Day 3-4: Resources'
       ECSPD Online U1D5-7: {}
       ECSPD Online U1D5-7 Disclaimer: {}
@@ -177,6 +178,7 @@ en:
       ECSPD Online U1D5-7 Resources 2: {}
       ECSPD Online U1D8-9: {}
       ECSPD Online U1D8-9 Forum:
+        'Forum for Unit 1 Day 8-9: Impact of Computers and Communication': 'Forum for Unit 1 Day 8-9: Impact of Computers and Communication'
         Forum pending: Forum pending
         Unit 1 Day 8-9 Forum: Unit 1 Day 8-9 Forum
       ECSPD Online U1D8-9 Resources: {}
@@ -283,6 +285,7 @@ en:
       OPD-K5 Welcome: {}
       OPD-K5 Welcome 2: {}
       OPD-K5 What is CS: {}
+      OPD-K5 What is Mastery: {}
       OPD-K5 Why teach CS: {}
       OPD-K5 Younger Grades: {}
       OPD-K5 Your Plan: {}
@@ -1082,7 +1085,6 @@ en:
       ECSPD Online U1D17-19 Assessment 2:
         Artificial Intelligence: Artificial Intelligence
         Machine Learning: Machine Learning
-        The ability of a computer to perform tasks normally require human intelligence: The ability of a computer to perform tasks normally require human intelligence
         The ability of a computer to perform tasks that normally require human intelligence: The ability of a computer to perform tasks that normally require human intelligence
         The ability of a computer to recognize patterns and make predictions based on data: The ability of a computer to recognize patterns and make predictions based on data
         Turing Test: Turing Test
@@ -1387,20 +1389,16 @@ en:
         Node: Node
         Weight: Weight
       U2L14 Assessment:
-        Assessment: Assessment
         'Assessment: Question 1': 'Assessment: Question 1'
         Caesar cipher: Caesar cipher
-        Random substitution cipher: Random substitution cipher
         another term for encrypted message: another term for encrypted message
         character frequency: character frequency
         cipher: cipher
-        crack: crack
         decrypt: decrypt
         encrypt: encrypt
         encryption based upon the alphabetical order of letters: encryption based upon the alphabetical order of letters
         encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
         heuristic: heuristic
-        process to discover an decryption algorithm: process to discover an decryption algorithm
         random substitution cipher: random substitution cipher
         technique used to find an approximate solution: technique used to find an approximate solution
         the distribution of letters in a language: the distribution of letters in a language
@@ -1876,6 +1874,7 @@ en:
         ? In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
         : In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
         Tell a Story with Data: Tell a Story with Data
+        Telling a Story with Data: Telling a Story with Data
         The way data is represented can help us understand the data by telling a meaningful story.: The way data is represented can help us understand the data by telling a meaningful story.
       ECSPD Online U1D5-7 Assessment 1:
         A. It can cause two people with identical search queries to receive vastly different results: A. It can cause two people with identical search queries to receive vastly different results
@@ -2421,11 +2420,9 @@ en:
         Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
         Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
       U2L05 Assessment 1:
-        'Packets and Making a Reliable Internet: Assessment': 'Packets and Making a Reliable Internet: Assessment'
         'Packets and Making a Reliable Internet: Question 1': 'Packets and Making a Reliable Internet: Question 1'
         ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
         : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
-        'Packets: Assessment': 'Packets: Assessment'
         'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
         TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
         TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
@@ -2456,9 +2453,6 @@ en:
         What does a minimum spanning tree tell you about a graph?: What does a minimum spanning tree tell you about a graph?
         Whether or not the graph represents a network: Whether or not the graph represents a network
       U2L07 Assessment2:
-        ? '     Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.'
-        : '     Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.'
-        A minimum spanning tree contains the shortest path between \n the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between \n the starting vertex and every other reachable vertex in the graph.
         A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
         ? |-
           Both minimum spanning tree algorithm you learned and the
@@ -2468,13 +2462,10 @@ en:
           Both minimum spanning tree algorithm you learned and the
           shortest path algorithm you learned used a "greedy" approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
-        ? Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.
-        : Both minimum spanning tree algorithm you learned and the shortest path algorithm you learned used a "greedy" approach, choosing the smallest edge first or vertex with the smallest distance value first.
         Question 2: Question 2
         The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
         The shortest path algorithm you learned visits each vertex and edge once.: The shortest path algorithm you learned visits each vertex and edge once.
         'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:': 'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:'
-        description here: description here
       U2L07 Assessment3:
         Question 3: Question 3
         The algorithm is correct.: The algorithm is correct.
@@ -2512,6 +2503,7 @@ en:
         Hierarchy: Hierarchy
         Redundancy: Redundancy
         Spoofing: Spoofing
+        What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
         What is a disadvantage of the open standard of addressing used by the internet? Pick 2: What is a disadvantage of the open standard of addressing used by the internet? Pick 2
       U2L11 Assessment 1:
         'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
@@ -2543,7 +2535,6 @@ en:
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
       U2L14 Assessment3:
         'Assessment: Question 4': 'Assessment: Question 4'
-        The Vigenere Cipher is like using multiple Caesar ciphers?: The Vigenere Cipher is like using multiple Caesar ciphers?
         True or false? The Vigenere Cipher is like using multiple Caesar ciphers.: True or false? The Vigenere Cipher is like using multiple Caesar ciphers.
         'false': 'false'
         'true': 'true'
@@ -2575,12 +2566,10 @@ en:
         6 users: 6 users
         64 users: 64 users
         How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
-        'Invent an Addressing Protocol: Assessment 1': 'Invent an Addressing Protocol: Assessment 1'
         'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
         : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
-        'Invent an Addressing Protocol: Assessment 2': 'Invent an Addressing Protocol: Assessment 2'
         'Invent an Addressing Protocol: Question 2': 'Invent an Addressing Protocol: Question 2'
         abstraction: abstraction
         hierarchy: hierarchy
@@ -3140,36 +3129,37 @@ en:
       ECSPD Online U1D1-2 Assessment 1:
         What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:
+        'Reflections on Unit 1 Day 1-2: What is a Computer?': 'Reflections on Unit 1 Day 1-2: What is a Computer?'
         'Unit 1 Day 1-2: What is a Computer? Reflection': 'Unit 1 Day 1-2: What is a Computer? Reflection'
       ECSPD Online U1D10 Reflection:
         Reflection on Unit 1 Day 10: Reflection on Unit 1 Day 10
+        'Reflection on Unit 1 Day 10: Telling a Story with Data': 'Reflection on Unit 1 Day 10: Telling a Story with Data'
         ? You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1D11-14 Reflection:
-        How do you feel about the tools for this lesson? What challenges might they pose in your classroom?: How do you feel about the tools for this lesson? What challenges might they pose in your classroom?
         Reflection on Unit 1 Day 11-14: Reflection on Unit 1 Day 11-14
+        'Reflection on Unit 1 Day 11-14: Data, Modeling, and Design': 'Reflection on Unit 1 Day 11-14: Data, Modeling, and Design'
       ECSPD Online U1D15-16 Reflection:
         Reflection on Unit 1 Day 15-16: Reflection on Unit 1 Day 15-16
-        ? What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
-        : What can you take away from how you saw this lessons taught in PD? How do you feel about the part of the lesson that was not taught in PD? How do you plan to teach this lesson?
+        'Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions': 'Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions'
         ? You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1D17-19 Assessment:
-        How are you planning to set up your classroom to best facilitate the Turing Test Activity?: How are you planning to set up your classroom to best facilitate the Turing Test Activity?
         ? Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
         : Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
         What is Intelligence?: What is Intelligence?
       ECSPD Online U1D17-19 Reflection:
         Reflections on Unit 1 Day 17-19: Reflections on Unit 1 Day 17-19
+        'Reflections on Unit 1 Day 17-19: What is Intelligence?': 'Reflections on Unit 1 Day 17-19: What is Intelligence?'
         ? This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-        ? What about this lesson is exciting for you? What do you think will be exciting for your students? How does this lesson combine what was covered previously in the unit?
-        : What about this lesson is exciting for you? What do you think will be exciting for your students? How does this lesson combine what was covered previously in the unit?
       ECSPD Online U1D3-4 Reflection:
         Reflections on Unit 1 Day 3-4: Reflections on Unit 1 Day 3-4
+        'Reflections on Unit 1 Day 3-4: Buying a Computer': 'Reflections on Unit 1 Day 3-4: Buying a Computer'
         ? 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
         : 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
       ECSPD Online U1D5-7 Reflection:
+        'Reflections on Unit 1 Day 5-7: Searching and Web 2.0': 'Reflections on Unit 1 Day 5-7: Searching and Web 2.0'
         Reflections on Unit 1, Day 5-7: Reflections on Unit 1, Day 5-7
         ? You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
         : You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
@@ -3179,7 +3169,10 @@ en:
         : List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
       ECSPD Online U1D8-9 Reflection:
         Reflections on Unit 1 Day 8-9: Reflections on Unit 1 Day 8-9
+        'Reflections on Unit 1 Day 8-9: Impact of Computers and Communication': 'Reflections on Unit 1 Day 8-9: Impact of Computers and Communication'
         What challenges do you think you and your students might have with the material covered in this lesson?: What challenges do you think you and your students might have with the material covered in this lesson?
+        ? You have experienced part of this lesson online and have read a few articles regarding the impact of computers and the internet on communication. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
+        : You have experienced part of this lesson online and have read a few articles regarding the impact of computers and the internet on communication. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
       ECSPD Online U1Reflection: {}
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
@@ -3361,10 +3354,8 @@ en:
       U2L02 Free Response Reflection:
         'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
       U2L04 Assessment2:
-        'Routers and Addresses: Question 4': 'Routers and Addresses: Question 4'
         'Routers and Redundancy: Question 4': 'Routers and Redundancy: Question 4'
       U2L04 Assessment3:
-        'Routers and Addresses: Question 5': 'Routers and Addresses: Question 5'
         'Routers and Redundancy: Question 5': 'Routers and Redundancy: Question 5'
       U2L04 Free Response Wrap Up:
         'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
@@ -3409,7 +3400,6 @@ en:
         'Cracking the Code: Getting Started': 'Cracking the Code: Getting Started'
       U2L14 Free Response Wrap Up:
         'Assessment: Question 2': 'Assessment: Question 2'
-        'Cracking the Code: Wrap Up': 'Cracking the Code: Wrap Up'
       U2L15 Assessment2:
         'Assessment: Question 2': 'Assessment: Question 2'
       U2L15 Free Response Getting Started:
@@ -3447,7 +3437,6 @@ en:
       U2L20 Free Response Wrap Up:
         'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
       U2L3 Assessment 4:
-        'Inventing an Addressing Protocol: Assessment 3': 'Inventing an Addressing Protocol: Assessment 3'
         'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
         Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
       U2L3 Free Response Getting Started:
