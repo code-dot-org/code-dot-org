@@ -20,6 +20,7 @@ def create_database(uri)
 end
 
 task :lint do
+  RakeUtils.system 'haml-lint dashboard pegasus'
   RakeUtils.system 'rubocop'
 end
 
