@@ -1,0 +1,17 @@
+name 'OPD-Stage3Start'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### LOOKING AHEAD > Stage Overview
+
+<img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+
+By completing this brief stage, you will:
+
+- Prepare to "master the basics" of computer science by reviewing what's next in the course
+<br/><br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
