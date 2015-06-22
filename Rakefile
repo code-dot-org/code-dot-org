@@ -19,10 +19,18 @@ def create_database(uri)
   system command.join(' ')
 end
 
-task :lint do
-  RakeUtils.system 'haml-lint dashboard pegasus'
-  RakeUtils.system 'rubocop'
+namespace :lint do
+  task :ruby do
+    RakeUtils.system 'rubocop'
+  end
+
+  task :haml do
+    RakeUtils.system 'haml-lint dashboard pegasus'
+  end
+
+  task all: [:ruby, :haml]
 end
+task lint: ['lint:all']
 
 ##################################################################################################
 ##
