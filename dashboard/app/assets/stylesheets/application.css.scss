@@ -24,6 +24,7 @@
  * Shared
  *= require user-menu
  *= require user-progress
+ *= require user-hero
  */
 
 @import "color";
@@ -961,14 +962,21 @@ a.download-video {
     border-radius: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color:white;
+    color: white;
+    overflow: hidden;
   }
 
   .welcomeleft {
-    text-align: right;
+    float: left;
+    text-align: center;
+    width: 190px;
+    img {
+    padding-left: 50px;
+    }
   }
 
   .welcomeright {
+    float: left;
     text-align: center;
   }
 
@@ -1160,15 +1168,13 @@ a.download-video {
 }
 
 .miniblock {
-  background-color:$lightest_gray;
-  height:100px;
-  .heading {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
-  }
+  height:100%;
+  border-radius:5px;
+  background-color:white;
+
   h3 {
     margin: 0;
+    margin-top:10px;
     color: $charcoal;
     white-space: nowrap;
     overflow: hidden;
@@ -1180,42 +1186,87 @@ a.download-video {
     padding-right:10px;
     font-family: $gotham-regular;
     font-weight:normal;
-    color:$charcoal;
   }
   .whitetext {
-    color:$lightest_gray;
+    color:white;
+  }
+  a.whitelink {
+    &:hover, &:link, &:active, &:visited {
+      color:white;
+    }
   }
   .greytext {
     color:$charcoal;
   }
+  .descriptiontext {
+    height: 80px;
+    overflow: hidden;
+    border-left: solid 1px $lighter_gray;
+    border-right: solid 1px $lighter_gray;
+  }
   .imgspan {
     margin-left: 0px;
     text-align: right;
+    float: right;
   }
-  .audience {
-    position: absolute;
-    bottom: 0px;
+  .bottombar {
     width: 100%;
-    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 4px;
     padding-bottom:4px;
-    background-color: $charcoal;
+  }
+  .audience {
+    background-color: $light_gray;
+  }
+  .continue {
+    background-color: $yellow;
+  }
+  .trynow {
+    background-color: $green;
+  }
+  .printcertificate {
+    background-color: $blue;
   }
 }
-
 .miniblock-short {
   height:150px;
   h3 {
     margin-bottom:10px;
   }
 }
+.miniblock-noaction {
+  border-bottom: solid 1px $lighter_gray;
+}
+
+.miniblock-wide {
+  box-sizing: border-box;
+  border: solid 1px #bbb;
+  overflow:hidden;
+  h3 {
+    margin: 0px;
+  }
+  .heading {
+    width: 280px;
+  }
+  .bottombar {
+    padding-left: 20px;
+  }
+}
 
 .miniblock-tall {
-  height:232px;
+  height: 100%;
+  box-sizing: border-box;
 
   .heading {
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
+    overflow:hidden;
+    border-left: solid 1px $lighter_gray;
+    border-right: solid 1px $lighter_gray;
+
     padding-left: 10px;
     padding-right:10px;
     padding-top: 0px;
@@ -1240,7 +1291,7 @@ a.download-video {
     }
 
     h3 {
-      width: 140px;
+      width: 135px;
     }
 
     .betatext {
@@ -1257,12 +1308,11 @@ a.download-video {
       height: 35px;
       line-height: 40px;
       width: 60px;
+      margin-top: 10px;
+      border-radius: 4px;
+      margin-right: 2px;
     }
   }
-}
-
-.miniblock-tall-audiencerow {
-  height:258px;
 }
 
 #signin {
