@@ -469,7 +469,8 @@ en:
       body: 'Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!'
     20-hour:
       title: 'Accelerated Course'
-      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4.'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
+      body_short: 'Learn basic computer science in an accelerated version of courses 2-4.'
     hoc2014:
       try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
       try_frozen: 'Artist with Anna and Elsa, from Frozen'
