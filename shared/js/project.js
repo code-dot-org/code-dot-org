@@ -234,7 +234,7 @@ module.exports = {
       var hashData = parseHash();
       if (hashData.channelId) {
         if (hashData.isEditingProject) {
-          module.exports.isEditing = true;
+          this.isEditing = true;
         } else {
           $('#betainfo').hide();
         }
@@ -246,23 +246,23 @@ module.exports = {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname;
           } else {
-            module.exports.current = data;
+            current = data;
             deferred.resolve();
           }
         });
         return deferred;
       } else {
-        module.exports.isEditing = true;
+        this.isEditing = true;
       }
     } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
       // this is an embedded project
-      module.exports.isEditing = true;
+      this.isEditing = true;
       deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
         } else {
-          module.exports.current = data;
+          current = data;
           dashboard.header.showProjectLevelHeader();
           deferred.resolve();
         }
