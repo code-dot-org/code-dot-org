@@ -9,10 +9,28 @@
  maxparams: 3,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
+
+var clientApi = require('@cdo/shared/clientApi');
+
+/**
+ * App key, unique to netsim, used for connecting with the storage API.
+ * @type {string}
+ * @readonly
+ */
+// TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
+var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
+// Ugly null-guards so we can load this file in tests.
+if (window &&
+    window.location &&
+    window.location.hostname &&
+    window.location.hostname.substr(0, 9) === 'localhost') {
+  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
+}
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -25,17 +43,23 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
- * @param {!SharedTableApi} storageTable - The remote storage table to wrap.
+ * @param {!string} tableName - The name of the remote storage table to wrap.
  * @constructor
  */
-var NetSimTable = module.exports = function (storageTable) {
+var NetSimTable = module.exports = function (tableName) {
   /**
-   * Actual API to the remote shared table.
+   * Base URL we hit to make our API calls
+   * @type {string}
+   * @private
+   */
+  this.remoteUrl_ = '/v3/shared-tables/' + CHANNEL_PUBLIC_KEY + '/' + tableName;
+
+  /**
+   * API object for making remote calls
    * @type {SharedTableApi}
    * @private
    */
-  this.remoteTable_ = storageTable;
-
+  this.clientApi_ = clientApi.create(this.remoteUrl_);
 
   /**
    * Event that fires when full table updates indicate a change,
@@ -72,7 +96,7 @@ var NetSimTable = module.exports = function (storageTable) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.readAll = function (callback) {
-  this.remoteTable_.readAll(function (err, data) {
+  this.clientApi_.all(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
@@ -92,7 +116,7 @@ NetSimTable.prototype.readAllCached = function () {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.read = function (id, callback) {
-  this.remoteTable_.read(id, function (err, data) {
+  this.clientApi_.fetch(id, function (err, data) {
     if (err === null) {
       this.updateCacheRow_(id, data);
     }
@@ -105,7 +129,7 @@ NetSimTable.prototype.read = function (id, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.create = function (value, callback) {
-  this.remoteTable_.create(value, function (err, data) {
+  this.clientApi_.create(value, function (err, data) {
     if (err === null) {
       this.addRowToCache_(data);
     }
@@ -119,7 +143,7 @@ NetSimTable.prototype.create = function (value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.remoteTable_.update(id, value, function (err, success) {
+  this.clientApi_.update(id, value, function (err, success) {
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
@@ -132,7 +156,7 @@ NetSimTable.prototype.update = function (id, value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.remoteTable_.delete(id, function (err, success) {
+  this.clientApi_.delete(id, function (err, success) {
     if (err === null) {
       this.removeRowFromCache_(id);
     }
@@ -146,7 +170,20 @@ NetSimTable.prototype.delete = function (id, callback) {
  * @param id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
-  this.remoteTable_.synchronousDelete(id);
+  // Client API doesn't support synchronous calls, so we manually make our API
+  // call here
+  $.ajax({
+    url: this.remoteUrl_ + '/' + id,
+    type: 'delete',
+    async: false,
+    error: function (jqXHR, textStatus, errorThrown) {
+      // Nothing we can really do with the error, as we're in the process of
+      // navigating away. Throw so that high incidence rates will show up in
+      // new relic.
+      throw new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+    }
+  });
+
   this.removeRowFromCache_(id);
 };
 

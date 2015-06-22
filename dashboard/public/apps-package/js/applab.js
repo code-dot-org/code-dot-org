@@ -37,7 +37,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266}],58:[function(require,module,exports){
+},{"../skins":265}],58:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -309,7 +309,7 @@ levels.full_sandbox =  {
 };
 
 
-},{"../block_utils":73,"../utils":316,"./locale":59}],19:[function(require,module,exports){
+},{"../block_utils":73,"../utils":315,"./locale":59}],19:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1490,6 +1490,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  utils.fireResizeEvent();
   Applab.serializeAndSave();
 };
 
@@ -1668,7 +1669,7 @@ Applab.getAssetDropdown = function (typeFilter) {
 };
 
 
-},{"../JSInterpreter":1,"../StudioApp":5,"../acemode/annotationList":6,"../codegen":103,"../constants":105,"../dom":106,"../dropletUtils":107,"../locale":148,"../skins":266,"../slider":267,"../templates/page.html.ejs":294,"../timeoutList":300,"../utils":316,"../xml":317,"./api":16,"./apiBlockly":17,"./appStorage":18,"./applabTurtle":20,"./assetManagement/assetListStore":23,"./assetManagement/clientApi":24,"./assetManagement/show.js":25,"./blocks":26,"./commands":28,"./controls.html.ejs":30,"./designElements/library":45,"./designMode":51,"./dontMarshalApi":53,"./dropletConfig":54,"./errorHandler":55,"./extraControlRows.html.ejs":56,"./locale":59,"./visualization.html.ejs":64}],64:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../acemode/annotationList":6,"../codegen":102,"../constants":104,"../dom":105,"../dropletUtils":106,"../locale":147,"../skins":265,"../slider":266,"../templates/page.html.ejs":293,"../timeoutList":299,"../utils":315,"../xml":316,"./api":16,"./apiBlockly":17,"./appStorage":18,"./applabTurtle":20,"./assetManagement/assetListStore":23,"./assetManagement/clientApi":24,"./assetManagement/show.js":25,"./blocks":26,"./commands":28,"./controls.html.ejs":30,"./designElements/library":45,"./designMode":51,"./dontMarshalApi":53,"./dropletConfig":54,"./errorHandler":55,"./extraControlRows.html.ejs":56,"./locale":59,"./visualization.html.ejs":64}],64:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1709,7 +1710,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":148,"./locale":59,"ejs":487}],54:[function(require,module,exports){
+},{"../locale":147,"./locale":59,"ejs":487}],54:[function(require,module,exports){
 /* globals $ */
 
 var api = require('./api');
@@ -1905,7 +1906,7 @@ consoleApi.log = function() {
 };
 
 
-},{"../codegen":103,"./errorHandler":55,"./sprintf":63}],63:[function(require,module,exports){
+},{"../codegen":102,"./errorHandler":55,"./sprintf":63}],63:[function(require,module,exports){
 /*jshint asi:true */
 /*jshint -W064 */
 
@@ -2642,7 +2643,9 @@ function makeDraggable (jqueryElements) {
         var element = elm[0];
         designMode.onPropertyChange(element, 'width', element.style.width);
         designMode.onPropertyChange(element, 'height', element.style.height);
-      }
+      },
+      grid: [GRID_SIZE, GRID_SIZE],
+      containment: 'parent'
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -2884,7 +2887,7 @@ designMode.addScreenIfNecessary = function(html) {
 };
 
 
-},{"../StudioApp":5,"../utils":316,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
+},{"../StudioApp":5,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2905,7 +2908,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":148,"ejs":487}],26:[function(require,module,exports){
+},{"../locale":147,"ejs":487}],26:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2979,7 +2982,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
 }
 
 
-},{"../codegen":103,"../locale":148,"../utils":316,"./locale":59}],20:[function(require,module,exports){
+},{"../codegen":102,"../locale":147,"../utils":315,"./locale":59}],20:[function(require,module,exports){
 var studioApp = require('../StudioApp').singleton;
 var applabCommands = require('./commands');
 
@@ -4406,7 +4409,7 @@ applabCommands.getUserId = function (opts) {
 };
 
 
-},{"../StudioApp":5,"../codegen":103,"../timeoutList":300,"./appStorage":18,"./applabTurtle":20,"./errorHandler":55,"./keyEvent":57,"./rgbcolor.js":61}],61:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":102,"../timeoutList":299,"./appStorage":18,"./applabTurtle":20,"./errorHandler":55,"./keyEvent":57,"./rgbcolor.js":61}],61:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -6392,7 +6395,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"../locale":148,"./locale":59,"react":646}],11:[function(require,module,exports){
+},{"../locale":147,"./locale":59,"react":646}],11:[function(require,module,exports){
 var React = require('react');
 var applabMsg = require('./locale');
 var msg = require('../locale');
@@ -6467,7 +6470,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{"../locale":148,"./locale":59,"react":646}],10:[function(require,module,exports){
+},{"../locale":147,"./locale":59,"react":646}],10:[function(require,module,exports){
 /* global $ */
 
 var React = require('react');
@@ -6908,7 +6911,7 @@ module.exports = {
 };
 
 
-},{"../../utils":316,"./button.jsx":38,"./canvas.jsx":39,"./checkbox.jsx":40,"./dropdown.jsx":41,"./image.jsx":43,"./label.jsx":44,"./radioButton.jsx":46,"./screen.jsx":48,"./textInput.jsx":49,"./textarea.jsx":50}],50:[function(require,module,exports){
+},{"../../utils":315,"./button.jsx":38,"./canvas.jsx":39,"./checkbox.jsx":40,"./dropdown.jsx":41,"./image.jsx":43,"./label.jsx":44,"./radioButton.jsx":46,"./screen.jsx":48,"./textInput.jsx":49,"./textarea.jsx":50}],50:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -7160,7 +7163,6 @@ module.exports = {
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
-    element.style.padding = '2px';
 
     return element;
   }

@@ -70,7 +70,7 @@ describe("NetSimHeartbeat", function () {
     myNodeID = 1;
 
     // Make original heartbeat (remotely)
-    testShard.remoteHeartbeatTable.create({
+    testShard.heartbeatTable.create({
       nodeID: myNodeID,
       time: 42
     }, function () {});
@@ -82,9 +82,10 @@ describe("NetSimHeartbeat", function () {
     assertEqual(originalHeartbeat.time_, 42);
 
     originalHeartbeat.time_ = 84;
-    testShard.remoteHeartbeatTable.log('');
+    testShard.heartbeatTable.clientApi_.remoteTable.log('');
     originalHeartbeat.update();
-    assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
+    assertEqual("update",
+      testShard.heartbeatTable.clientApi_.remoteTable.log().slice(0, 6));
 
     var remoteRow;
     testShard.heartbeatTable.readAll(function (err, rows) {
@@ -104,20 +105,23 @@ describe("NetSimHeartbeat", function () {
       originalHeartbeat = h;
     });
     assert(originalHeartbeat, "Created a heartbeat");
-    assertEqual("readAllcreate", testShard.remoteHeartbeatTable.log().slice(0, 13));
+    assertEqual("readAllcreate",
+      testShard.heartbeatTable.clientApi_.remoteTable.log().slice(0, 13));
 
     // Tick immediately does nothing
-    testShard.remoteHeartbeatTable.log('');
+    testShard.heartbeatTable.clientApi_.remoteTable.log('');
     originalHeartbeat.time_ = Date.now() - 1000; // Not enough!
     originalHeartbeat.tick();
-    assertEqual("", testShard.remoteHeartbeatTable.log().slice(0, 13));
+    assertEqual("",
+      testShard.heartbeatTable.clientApi_.remoteTable.log().slice(0, 13));
 
     // Tick after 6 seconds updates retrieved time
     var sixSecondsAgo = Date.now() - 6001;
     originalHeartbeat.time_ = sixSecondsAgo;
-    testShard.remoteHeartbeatTable.log('');
+    testShard.heartbeatTable.clientApi_.remoteTable.log('');
     originalHeartbeat.tick();
-    assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
+    assertEqual("update",
+      testShard.heartbeatTable.clientApi_.remoteTable.log().slice(0, 6));
     assertWithinRange(Date.now(), originalHeartbeat.time_, 10);
   });
 
@@ -135,9 +139,10 @@ describe("NetSimHeartbeat", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
 
     // Destory heartbeat
-    testShard.remoteHeartbeatTable.log('');
+    testShard.heartbeatTable.clientApi_.remoteTable.log('');
     heartbeat.destroy();
-    assert("destroy", testShard.remoteHeartbeatTable.log().slice(0, 7));
+    assert("destroy",
+      testShard.heartbeatTable.clientApi_.remoteTable.log().slice(0, 7));
 
     // Check that table is empty
     assertTableSize(testShard, 'heartbeatTable', 0);

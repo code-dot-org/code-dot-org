@@ -41,7 +41,7 @@
   padding: 0 5px;
 }
 
-/* MINIBLOCKS */
+/* COURSEBLOCKS */
 
 .span1 {  width: 60px;  }
 .span2 {  width: 140px;  }
@@ -56,90 +56,46 @@
 .span11 {  width: 860px;  }
 .span12 {  width: 940px;  }
 
-.miniblock {
+.courseblock-tall {
   background-color:$lightest_gray;
-  height: 100px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
   }
-  .smalltext {
-    font-size: 13px;
-    line-height: 17px;
-    padding-right: 10px;
-    font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
+
+  a:hover {
+    text-decoration: none;
   }
-  .whitetext {
-    color:$lightest_gray;
-  }
-  .greytext {
-    color:$charcoal;
-  }
+
   .imgspan {
-    margin-left: 0px;
-    text-align: right;
-    float: right;
-  }
-  .audience {
-    position: absolute;
-    bottom: 0px;
+    margin: 0 0 5px 0;
+    text-align: left;
+    float: left;
     width: 100%;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
-    background-color: $charcoal;
-  }
-}
-
-.miniblock-short {
-  height:150px;
-  h3 {
-    margin-bottom:10px;
-    white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-  }
-}
-
-.miniblock-tall {
-  height:232px;
-
-  .heading {
-    -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	  padding: 0px;
-  }
-
-  .heading .whitetext {
-  	color: white;
   }
 
   h3 {
-    margin: 5px 10px 0 10px;
-    text-overflow: ellipsis;
+    margin: 0 0 0 10px;
+    color: $charcoal;
     white-space: nowrap;
     overflow: hidden;
-    font-family: $gotham-bold;
-    font-weight: normal;
-    display: block;
-    float: left;
+    text-overflow: ellipsis;
+    text-align: left;
     font-size: 24px;
-    width: 200px;
+    font-family: $gotham-bold;
   }
 
   .beta
   {
-    .heading {
-      padding-right: 0px;
-    }
-
     h3 {
       width: 140px;
+      padding-right: 0px;
+      float: left;
     }
 
     .betatext {
@@ -158,30 +114,156 @@
       width: 60px;
     }
   }
+
+  .smalltext {
+    font-size: 13px;
+    line-height: 17px;
+    padding: 0 10px 0 10px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+
+  .whitetext {
+    color: white;
+  }
+
+  .audience {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: $charcoal;
+  }
 }
 
-.miniblock div {
-  box-sizing: content-box;
-  float:left;
+.courseblock-wide-small {
+  background-color:$lightest_gray;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    box-sizing: content-box;
+    max-width: 100%;
+    height: 110px;
+    float: right;
+  }
+
+  .imgspan {
+    margin-left: 0;
+    float: right;
+    text-align: right;
+  }
+
+  h3 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+    float: left;
+  }
+
+  h4 {
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-family: $gotham-bold;
+    float: left;
+  }
+
+  .smalltext {
+    margin-left: 10px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+  }
 }
 
-.miniblock img {
-  box-sizing: content-box;
-  max-width: 100%;
-  height: auto;
+.courseblock-wide-large {
+  background-color:$lightest_gray;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    box-sizing: content-box;
+    max-width: 100%;
+    height: 100px;
+    width: auto;
+  }
+
+  .imgspan {
+    margin-top: 20px;
+    float: right;
+  }
+
+  h3 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+  }
+
+  h4 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-family: $gotham-bold;
+  }
+
+  .smalltext {
+    margin: 10px 0 0 10px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
 }
 
-.largeblock img {
-  box-sizing: content-box;
-  height: auto;
-  width: 100%;
-  margin-bottom: 10px;
+.courseblock-tall + .courseblock-tall {
+  margin-left: 20px;
 }
 
-.miniblock-tall-audiencerow {
-  height:258px;
+.courseblock-wide-small + .courseblock-wide-small {
+  margin-left: 20px;
 }
 
-.miniblock + .miniblock {
+.courseblock-wide-large + .courseblock-wide-large {
   margin-left: 20px;
 }
