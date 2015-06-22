@@ -121,6 +121,12 @@ Blockly.ContractEditor = function(configuration) {
   this.testHandler_ = function (block) {
     return "Block ID is " + block.id;
   }
+
+  /**
+   * @returns {string}
+   * @private
+   */
+  this.testResetHandler_ = function () { };
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -263,8 +269,8 @@ Blockly.ContractEditor.prototype.create_ = function() {
                 this.contractSectionView_.setCollapsed(true);
                 return this.testHandler_(block);
               }.bind(this), function () {
-                // TODO(bjordan): call a resetHandler that can e.g. reset visualizations
-              });
+                this.testResetHandler_();
+              }.bind(this));
               this.exampleViews_.push(newExampleView);
             }
             newY = this.exampleViews_[i].placeExampleAndGetNewY(block, newY, maxWidth,
@@ -479,8 +485,9 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   }, this);
 };
 
-Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
+Blockly.ContractEditor.prototype.registerTestHandlers = function(testHandler, testResetHandler) {
   this.testHandler_ = testHandler;
+  this.testResetHandler_ = testResetHandler;
 };
 
 Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {

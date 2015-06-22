@@ -2,6 +2,8 @@
 
 goog.provide('Blockly.ExampleView');
 
+/** @const */ var NO_RESULT_TEXT = "Test result: not ran yet.";
+
 /**
  * Handles laying out an example block with a test button
  * @constructor
@@ -33,7 +35,7 @@ Blockly.ExampleView = function (dom, svg, onExampleRun, onExampleReset) {
   goog.dom.append(this.domParent_, this.resetExampleButton);
   this.refreshButtons();
   this.resultText = goog.dom.createDom('div', 'example-result-text');
-  this.resultText.innerHTML = "Result: not ran yet";
+  this.resultText.innerHTML = NO_RESULT_TEXT;
   goog.dom.append(this.domParent_, this.resultText);
 };
 
@@ -58,6 +60,7 @@ Blockly.ExampleView.prototype.testExample_ = function () {
 
 Blockly.ExampleView.prototype.resetExample_ = function () {
   this.onExampleReset_();
+  this.resultText.innerHTML = NO_RESULT_TEXT;
   this.testRunning_ = false;
   this.refreshButtons();
 };

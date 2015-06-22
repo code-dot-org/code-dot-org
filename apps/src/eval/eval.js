@@ -152,26 +152,32 @@ Eval.init = function(config) {
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
 
     if (Blockly.contractEditor) {
-      Blockly.contractEditor.registerTestHandler(function (exampleBlock) {
-        Blockly.mainBlockSpace.getTopBlocks();
-
+      Blockly.contractEditor.registerTestHandlers(function (exampleBlock) {
         Eval.clearCanvasWithID("test-call");
         Eval.clearCanvasWithID("test-result");
         Eval.clearCanvasWithID('user');
-        document.getElementById('answer').style.display = "none";
+        document.getElementById('answer').style.display = 'none';
         document.getElementById('test-call').style.opacity = 0.5;
         document.getElementById('test-result').style.opacity = 0.5;
-        // TODO(bjordan): re-show on reset
+        document.getElementById('test-call').style.display = 'block';
+        document.getElementById('test-result').style.display = 'block';
 
-        var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-        var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
-        var actualDrawer = getDrawableFromBlock(actualBlock);
-        var expectedDrawer = getDrawableFromBlock(expectedBlock);
+        try {
+          var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+          var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+          var actualDrawer = getDrawableFromBlock(actualBlock);
+          var expectedDrawer = getDrawableFromBlock(expectedBlock);
 
-        actualDrawer.draw(document.getElementById("test-call"));
-        expectedDrawer.draw(document.getElementById("test-result"));
-
-        return canvasesMatch('test-call', 'test-result') ? "Matches definition." : "Does not match definition";
+          actualDrawer.draw(document.getElementById("test-call"));
+          expectedDrawer.draw(document.getElementById("test-result"));
+          return canvasesMatch('test-call', 'test-result') ? "Matches definition." : "Does not match definition";
+        } catch (error) {
+          return "Execution error: " + error.message;
+        }
+      }, function () {
+        document.getElementById('answer').style.display = 'block';
+        document.getElementById('test-call').style.display = 'none';
+        document.getElementById('test-result').style.display = 'none';
       });
     }
   };
