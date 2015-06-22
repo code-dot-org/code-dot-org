@@ -913,7 +913,7 @@ studioApp.runButtonClickWrapper = function (callback) {
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || !window.dashboard.project.isEditing ||
+  if (!window.dashboard || !window.dashboard.project.isEditing() ||
       window.dashboard.project.getCurrentId()) {
     $(window).trigger('appModeChanged');
     if (callback) {

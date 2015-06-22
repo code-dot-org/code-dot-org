@@ -26,6 +26,7 @@ var events = {
  *   out update/create callback
  */
 var current;
+var isEditing = false;
 
 module.exports = {
   /**
@@ -50,6 +51,13 @@ module.exports = {
     return current.name;
   },
 
+  /**
+   * @returns {boolean} true if we're editing
+   */
+  isEditing: function () {
+    return isEditing;
+  },
+
   init: function () {
     if (appOptions.level.isProjectLevel || current) {
 
@@ -57,7 +65,7 @@ module.exports = {
         var hashData = parseHash();
         if ((current &&
             hashData.channelId !== current.id) ||
-            hashData.isEditingProject !== this.isEditing) {
+            hashData.isEditingProject !== isEditing) {
           location.reload();
         }
       }.bind(this));
@@ -66,7 +74,7 @@ module.exports = {
         appOptions.level.levelHtml = current.levelHtml;
       }
 
-      if (this.isEditing) {
+      if (isEditing) {
         if (current) {
           if (current.levelSource) {
             appOptions.level.lastAttempt = current.levelSource;
@@ -234,7 +242,7 @@ module.exports = {
       var hashData = parseHash();
       if (hashData.channelId) {
         if (hashData.isEditingProject) {
-          this.isEditing = true;
+          isEditing = true;
         } else {
           $('#betainfo').hide();
         }
@@ -252,11 +260,11 @@ module.exports = {
         });
         return deferred;
       } else {
-        this.isEditing = true;
+        isEditing = true;
       }
     } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
       // this is an embedded project
-      this.isEditing = true;
+      isEditing = true;
       deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
