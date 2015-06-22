@@ -1,9 +1,7 @@
 skip_frontmatter: true
 
+# Linters which don't succeed on the current codebase are disabled.
 linters:
-  AltText:
-    enabled: false
-
   ClassAttributeWithStaticValue:
     enabled: false
 
@@ -16,9 +14,6 @@ linters:
   ConsecutiveSilentScripts:
     enabled: false
 
-  EmptyScript:
-    enabled: false
-
   HtmlAttributes:
     enabled: false
 
@@ -29,15 +24,6 @@ linters:
     enabled: false
 
   LineLength:
-    enabled: false
-
-  MultilinePipe:
-    enabled: false
-
-  MultilineScript:
-    enabled: false
-
-  ObjectReferenceAttributes:
     enabled: false
 
   RuboCop:
