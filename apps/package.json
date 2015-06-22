@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
+    "@cdo/shared": "file:../shared/js",
     "browserify": "^8.1.1",
     "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",

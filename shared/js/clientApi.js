@@ -1,6 +1,6 @@
 /* global $ */
 
-module.exports = {
+var base = {
   api_base_url: "/v3/channels",
 
   all: function(callback) {
@@ -67,6 +67,14 @@ module.exports = {
     }).fail(function(request, status, error) {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
+    });
+  }
+};
+
+module.exports = {
+  create: function (url) {
+    return $.extend({}, base, {
+      api_base_url: url,
     });
   }
 };
