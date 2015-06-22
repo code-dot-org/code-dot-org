@@ -1,0 +1,65 @@
+skip_frontmatter: true
+
+linters:
+  AltText:
+    enabled: false
+
+  ClassAttributeWithStaticValue:
+    enabled: false
+
+  ClassesBeforeIds:
+    enabled: false
+
+  ConsecutiveComments:
+    enabled: false
+
+  ConsecutiveSilentScripts:
+    enabled: false
+
+  EmptyScript:
+    enabled: false
+
+  HtmlAttributes:
+    enabled: false
+
+  ImplicitDiv:
+    enabled: false
+
+  LeadingCommentSpace:
+    enabled: false
+
+  LineLength:
+    enabled: false
+
+  MultilinePipe:
+    enabled: false
+
+  MultilineScript:
+    enabled: false
+
+  ObjectReferenceAttributes:
+    enabled: false
+
+  RuboCop:
+    enabled: false
+
+  RubyComments:
+    enabled: false
+
+  SpaceBeforeScript:
+    enabled: false
+
+  SpaceInsideHashAttributes:
+    enabled: false
+
+  TagName:
+    enabled: false
+
+  TrailingWhitespace:
+    enabled: false
+
+  UnnecessaryInterpolation:
+    enabled: false
+
+  UnnecessaryStringOutput:
+    enabled: false
