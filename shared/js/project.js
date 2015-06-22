@@ -72,7 +72,7 @@ module.exports = {
         // URL without /edit - set hideSource to true
         setAppOptionsForShareMode(true);
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl_()) {
+    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       this.current = {
         name: 'Untitled Project'
       };
