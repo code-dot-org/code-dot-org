@@ -28,10 +28,10 @@
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
         .smalltext= t('upsell.20-hour.body')
-    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 -elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
   - url = script_reset_url(id)
+  - audience = data_t_suffix('script.name', id, 'description_audience')
   .courseblock-span6.courseblock-wide-small
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
@@ -39,7 +39,11 @@
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         .smalltext= t('upsell.20-hour.body_short')
-    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+      - if current_user
+        .audiencebar.smalltext.audience= audience
+      - else
+        .bottombar.smalltext.audience= audience
+      = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 - elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
 
@@ -68,5 +72,5 @@
             &nbsp;
             %span.betatext
               =t('beta')
-        %h4= data_t_suffix('script.name', id, 'description_audience')
+        %h4= data_t_suffix('script.name', '20-hour', 'description_audience')  
         .smalltext= data_t_suffix('script.name', id, 'description')
