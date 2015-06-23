@@ -183,7 +183,7 @@ html[dir='rtl'] #codeWorkspace {
   background-repeat: no-repeat; }
 
 .droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
-  background-position: 2px 35%; }
+  background-position: 2px center; }
 
 .ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
   background-image: url('/blockly/media/common_images//gutterWarn.png');

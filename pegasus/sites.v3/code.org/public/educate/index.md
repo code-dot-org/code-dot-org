@@ -29,11 +29,18 @@ To introduce your students to our popular introductory courses, attend one of ou
 [<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a workshop</button>](/professional-development-workshops)
 
 
+### Online, Self-Paced Courses
+
+Learn to code and how to teach computer science basics to your students with our free, self-paced online courses.
+
+[<button class="teacher-button">Learn more</button>](/professional-development-online)
+
 ### Middle and high school teachers
 
 Our [workshops](/educate/professional-development) for teachers in grades 6-12 are only available as part of a [district-wide partnership](/districts).
 
 [<button class="teacher-button">Learn more</button>](/educate/professional-development)
+
 
 <br/>
 

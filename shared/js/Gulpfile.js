@@ -20,8 +20,7 @@ var BUILD_TARGET = './build/package/js';
 gulp.task('lint', function () {
   // TODO (brent) - should we share jshint config between different packages
   return gulp.src([
-      '*.js',
-      'client_api/*.js'
+      '*.js'
     ])
     .pipe(jshint({
       curly: true,

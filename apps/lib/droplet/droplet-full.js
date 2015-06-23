@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-06-17
+ * Date: 2015-06-22
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -36200,7 +36200,6 @@ Lexer.prototype.notifyListeners = function(e) {
 	var stop = this._input.index;
 	var text = this._input.getText(start, stop);
 	var msg = "token recognition error at: '" + this.getErrorDisplay(text) + "'";
-  msg += e.stack;
 	var listener = this.getErrorListenerDispatch();
 	listener.syntaxError(this, null, this._tokenStartLine,
 			this._tokenStartColumn, msg, e);
@@ -46453,7 +46452,7 @@ exports.dfa = require('./dfa/index');
 exports.tree = require('./tree/index');
 exports.error = require('./error/index');
 exports.Token = require('./Token').Token;
-exports.CommonToken = require('./Token').CommonToken;
+exports.CommonToken = require('./Token').Token;
 exports.InputStream = require('./InputStream').InputStream;
 exports.FileStream = require('./FileStream').FileStream;
 exports.CommonTokenStream = require('./CommonTokenStream').CommonTokenStream;
@@ -48408,14 +48407,14 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 },{}],58:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
-  var e, m,
-      eLen = nBytes * 8 - mLen - 1,
-      eMax = (1 << eLen) - 1,
-      eBias = eMax >> 1,
-      nBits = -7,
-      i = isLE ? (nBytes - 1) : 0,
-      d = isLE ? -1 : 1,
-      s = buffer[offset + i]
+  var e, m
+  var eLen = nBytes * 8 - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var nBits = -7
+  var i = isLE ? (nBytes - 1) : 0
+  var d = isLE ? -1 : 1
+  var s = buffer[offset + i]
 
   i += d
 
@@ -48441,14 +48440,14 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 }
 
 exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
-  var e, m, c,
-      eLen = nBytes * 8 - mLen - 1,
-      eMax = (1 << eLen) - 1,
-      eBias = eMax >> 1,
-      rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0),
-      i = isLE ? 0 : (nBytes - 1),
-      d = isLE ? 1 : -1,
-      s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+  var e, m, c
+  var eLen = nBytes * 8 - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  var i = isLE ? 0 : (nBytes - 1)
+  var d = isLE ? 1 : -1
+  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
 
   value = Math.abs(value)
 
@@ -52753,7 +52752,7 @@ exports.createANTLRParser = function(name, config, root) {
 
 
 },{"../antlr/CLexer":1,"../antlr/CParser":3,"../antlr/JavaLexer":4,"../antlr/JavaParser":6,"../antlr/jvmBasicLexer":7,"../antlr/jvmBasicParser":9,"./helper.coffee":81,"./model.coffee":88,"./parser.coffee":90,"./treewalk.coffee":91,"antlr4":50}],79:[function(require,module,exports){
-var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TYPE_FROM_SEVERITY, TYPE_SEVERITY, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getMostSevereAnnotationType, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
+var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DROPDOWN_SCROLLBAR_PADDING, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, QUAD, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TYPE_FROM_SEVERITY, TYPE_SEVERITY, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, draw, editorBindings, escapeString, extend_, getAtChar, getMostSevereAnnotationType, getOffsetLeft, getOffsetTop, helper, hook, isOSX, isValidCursorPosition, j, key, last_, len, model, modes, parseBlock, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, view,
   hasProp = {}.hasOwnProperty,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -52793,6 +52792,8 @@ CURSOR_HEIGHT_DECREASE = 2;
 CURSOR_UNFOCUSED_OPACITY = 0.5;
 
 DEBUG_FLAG = false;
+
+DROPDOWN_SCROLLBAR_PADDING = 17;
 
 ANY_DROP = helper.ANY_DROP;
 
@@ -52921,7 +52922,7 @@ hook = function(event, priority, fn) {
 
 exports.Editor = Editor = (function() {
   function Editor(wrapperElement, options) {
-    var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4, useBlockMode;
+    var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4, ref5, useBlockMode;
     this.wrapperElement = wrapperElement;
     this.options = options;
     this.readOnly = false;
@@ -52984,13 +52985,17 @@ exports.Editor = Editor = (function() {
     this.view = new view.View(extend_(this.standardViewSettings, {
       respectEphemeral: true
     }));
+    this.paletteView = new view.View(extend_(this.standardViewSettings, {
+      showDropdowns: (ref3 = this.options.showDropdownInPalette) != null ? ref3 : false,
+      respectEphemeral: true
+    }));
     this.dragView = new view.View(extend_(this.standardViewSettings, {
       respectEphemeral: false
     }));
     boundListeners = [];
-    ref3 = editorBindings.populate;
-    for (j = 0, len = ref3.length; j < len; j++) {
-      binding = ref3[j];
+    ref4 = editorBindings.populate;
+    for (j = 0, len = ref4.length; j < len; j++) {
+      binding = ref4[j];
       binding.call(this);
     }
     window.addEventListener('resize', (function(_this) {
@@ -53000,15 +53005,15 @@ exports.Editor = Editor = (function() {
     })(this));
     dispatchMouseEvent = (function(_this) {
       return function(event) {
-        var handler, k, len1, ref4, state, trackPoint;
+        var handler, k, len1, ref5, state, trackPoint;
         if (event.type !== 'mousemove' && event.which !== 1) {
           return;
         }
         trackPoint = new _this.draw.Point(event.clientX, event.clientY);
         state = {};
-        ref4 = editorBindings[event.type];
-        for (k = 0, len1 = ref4.length; k < len1; k++) {
-          handler = ref4[k];
+        ref5 = editorBindings[event.type];
+        for (k = 0, len1 = ref5.length; k < len1; k++) {
+          handler = ref5[k];
           handler.call(_this, trackPoint, event, state);
         }
         if (event.type === 'mousedown') {
@@ -53022,18 +53027,18 @@ exports.Editor = Editor = (function() {
     })(this);
     dispatchKeyEvent = (function(_this) {
       return function(event) {
-        var handler, k, len1, ref4, results, state;
+        var handler, k, len1, ref5, results, state;
         state = {};
-        ref4 = editorBindings[event.type];
+        ref5 = editorBindings[event.type];
         results = [];
-        for (k = 0, len1 = ref4.length; k < len1; k++) {
-          handler = ref4[k];
+        for (k = 0, len1 = ref5.length; k < len1; k++) {
+          handler = ref5[k];
           results.push(handler.call(_this, event, state));
         }
         return results;
       };
     })(this);
-    ref4 = {
+    ref5 = {
       keydown: [this.dropletElement, this.paletteElement],
       keyup: [this.dropletElement, this.paletteElement],
       mousedown: [this.dropletElement, this.paletteElement, this.dragCover],
@@ -53056,8 +53061,8 @@ exports.Editor = Editor = (function() {
         return results;
       };
     })(this);
-    for (eventName in ref4) {
-      elements = ref4[eventName];
+    for (eventName in ref5) {
+      elements = ref5[eventName];
       fn1(eventName, elements);
     }
     this.tree = new model.Segment();
@@ -53317,7 +53322,7 @@ Editor.prototype.redrawPalette = function() {
   ref1 = this.currentPaletteBlocks;
   for (j = 0, len = ref1.length; j < len; j++) {
     entry = ref1[j];
-    paletteBlockView = this.view.getViewNodeFor(entry.block);
+    paletteBlockView = this.paletteView.getViewNodeFor(entry.block);
     paletteBlockView.layout(PALETTE_LEFT_MARGIN, lastBottomEdge);
     paletteBlockView.draw(this.paletteCtx, boundingRect);
     lastBottomEdge = paletteBlockView.getBounds().bottom() + PALETTE_MARGIN;
@@ -53405,22 +53410,25 @@ Editor.prototype.trackerPointIsInAce = function(point) {
   return this.trackerPointIsInElement(point, this.aceElement);
 };
 
-Editor.prototype.hitTest = function(point, block) {
+Editor.prototype.hitTest = function(point, block, view) {
   var head, seek;
+  if (view == null) {
+    view = this.view;
+  }
   if (this.readOnly) {
     return null;
   }
   head = block.start;
   seek = block.end;
   while (head !== seek) {
-    if (head.type === 'blockStart' && this.view.getViewNodeFor(head.container).path.contains(point)) {
+    if (head.type === 'blockStart' && view.getViewNodeFor(head.container).path.contains(point)) {
       seek = head.container.end;
     }
     head = head.next;
   }
   if (head !== block.end) {
     return head.container;
-  } else if (block.type === 'block' && this.view.getViewNodeFor(block).path.contains(point)) {
+  } else if (block.type === 'block' && view.getViewNodeFor(block).path.contains(point)) {
     return block;
   } else {
     return null;
@@ -53703,7 +53711,7 @@ hook('mousemove', 1, function(point, event, state) {
   if (!state.capturedPickup && (this.clickedBlock != null) && point.from(this.clickedPoint).magnitude() > MIN_DRAG_DISTANCE) {
     this.draggingBlock = this.clickedBlock;
     if (this.clickedBlockPaletteEntry) {
-      this.draggingOffset = this.view.getViewNodeFor(this.draggingBlock).bounds[0].upperLeftCorner().from(this.trackerPointToPalette(this.clickedPoint));
+      this.draggingOffset = this.paletteView.getViewNodeFor(this.draggingBlock).bounds[0].upperLeftCorner().from(this.trackerPointToPalette(this.clickedPoint));
       expansion = this.clickedBlockPaletteEntry.expansion;
       if ('function' === typeof expansion) {
         expansion = expansion();
@@ -53821,25 +53829,29 @@ hook('mousemove', 0, function(point, event, state) {
       this.view.getViewNodeFor(this.tree).highlightArea.draw(this.highlightCtx);
       this.lastHighlight = this.tree;
     } else {
-      testPoints = this.dropPointQuadTree.retrieve({
-        x: mainPoint.x - MAX_DROP_DISTANCE,
-        y: mainPoint.y - MAX_DROP_DISTANCE,
-        w: MAX_DROP_DISTANCE * 2,
-        h: MAX_DROP_DISTANCE * 2
-      }, (function(_this) {
-        return function(point) {
-          var distance;
-          if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
-            distance = mainPoint.from(point);
-            distance.y *= 2;
-            distance = distance.magnitude();
-            if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
-              best = point._droplet_node;
-              return min = distance;
+      if (this.hitTest(mainPoint, this.draggingBlock)) {
+        best = null;
+      } else {
+        testPoints = this.dropPointQuadTree.retrieve({
+          x: mainPoint.x - MAX_DROP_DISTANCE,
+          y: mainPoint.y - MAX_DROP_DISTANCE,
+          w: MAX_DROP_DISTANCE * 2,
+          h: MAX_DROP_DISTANCE * 2
+        }, (function(_this) {
+          return function(point) {
+            var distance;
+            if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
+              distance = mainPoint.from(point);
+              distance.y *= 2;
+              distance = distance.magnitude();
+              if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
+                best = point._droplet_node;
+                return min = distance;
+              }
             }
-          }
-        };
-      })(this));
+          };
+        })(this));
+      }
       if (best !== this.lastHighlight) {
         this.clearHighlightCanvas();
         if (best != null) {
@@ -53880,7 +53892,7 @@ hook('mouseup', 1, function(point, event, state) {
         prefix = '';
         indentation = currentIndentation;
         suffix = '';
-        if (currentIndentation.length === line.length) {
+        if (currentIndentation.length === line.length || currentIndentation.length === pos.column) {
           suffix = '\n' + indentation;
         } else if (pos.column === line.length) {
           prefix = '\n';
@@ -53928,7 +53940,7 @@ hook('mouseup', 1, function(point, event, state) {
         this.reparseRawReplace(this.draggingBlock.parent.parent);
       } else {
         head = this.draggingBlock.start;
-        while (!(head.type === 'socketStart' && head.container.isDroppable() || head === this.draggingBlock.end)) {
+        while (!(head.type === 'socketStart' && head.container.editable() || head === this.draggingBlock.end)) {
           head = head.next;
         }
         if (head.type === 'socketStart') {
@@ -54249,7 +54261,7 @@ hook('mousedown', 6, function(point, event, state) {
     ref3 = this.currentPaletteBlocks;
     for (j = 0, len = ref3.length; j < len; j++) {
       entry = ref3[j];
-      hitTestResult = this.hitTest(palettePoint, entry.block);
+      hitTestResult = this.hitTest(palettePoint, entry.block, this.paletteView);
       if (hitTestResult != null) {
         this.setTextInputFocus(null);
         this.clickedBlock = entry.block;
@@ -54296,15 +54308,14 @@ hook('rebuild_palette', 1, function() {
       hoverDiv.addEventListener('mousemove', function(event) {
         var palettePoint;
         palettePoint = _this.trackerPointToPalette(new _this.draw.Point(event.clientX, event.clientY));
-        if (_this.mainViewOrChildrenContains(block, palettePoint)) {
-          if (block !== _this.currentHighlightedPaletteBlock) {
-            _this.clearPaletteHighlightCanvas();
-            _this.paletteHighlightPath = _this.getHighlightPath(block, {
-              color: '#FF0'
-            });
-            _this.paletteHighlightPath.draw(_this.paletteHighlightCtx);
-            return _this.currentHighlightedPaletteBlock = block;
-          }
+        if (_this.viewOrChildrenContains(block, palettePoint, _this.paletteView)) {
+          console.log('highlighting');
+          _this.clearPaletteHighlightCanvas();
+          _this.paletteHighlightPath = _this.getHighlightPath(block, {
+            color: '#FF0'
+          }, _this.paletteView);
+          _this.paletteHighlightPath.draw(_this.paletteHighlightCtx);
+          return _this.currentHighlightedPaletteBlock = block;
         } else if (block === _this.currentHighlightedPaletteBlock) {
           _this.currentHighlightedPaletteBlock = null;
           return _this.clearPaletteHighlightCanvas();
@@ -54325,7 +54336,7 @@ hook('rebuild_palette', 1, function() {
     hoverDiv = document.createElement('div');
     hoverDiv.className = 'droplet-hover-div';
     hoverDiv.title = (ref2 = data.title) != null ? ref2 : block.stringify(this.mode);
-    bounds = this.view.getViewNodeFor(block).totalBounds;
+    bounds = this.paletteView.getViewNodeFor(block).totalBounds;
     hoverDiv.style.top = bounds.y + "px";
     hoverDiv.style.left = bounds.x + "px";
     hoverDiv.style.width = (Math.min(bounds.width, Infinity)) + "px";
@@ -54431,7 +54442,10 @@ hook('populate', 1, function() {
         _this.highlightFlashShow();
         if (_this.textFocus != null) {
           _this.populateSocket(_this.textFocus, _this.hiddenInput.value);
-          return _this.redrawTextInput();
+          _this.redrawTextInput();
+          if (_this.dropdownVisible) {
+            return _this.formatDropdown();
+          }
         }
       };
     })(this)));
@@ -54643,10 +54657,10 @@ Editor.prototype.populateSocket = function(socket, string) {
 };
 
 Editor.prototype.hitTestTextInput = function(point, block) {
-  var head, ref1;
+  var head;
   head = block.start;
   while (head != null) {
-    if (head.type === 'socketStart' && ((ref1 = head.next.type) === 'text' || ref1 === 'socketEnd') && this.view.getViewNodeFor(head.container).path.contains(point)) {
+    if (head.type === 'socketStart' && head.container.isDroppable() && this.view.getViewNodeFor(head.container).path.contains(point)) {
       return head.container;
     }
     head = head.next;
@@ -54700,10 +54714,12 @@ hook('mousedown', 2, function(point, event, state) {
   }
   if (hitTestResult != null) {
     if (hitTestResult !== this.textFocus) {
-      this.setTextInputFocus(hitTestResult);
-      this.redrawMain();
-      if (hitTestResult.hasDropdown() && mainPoint.x - this.view.getViewNodeFor(hitTestResult).bounds[0].x < helper.DROPDOWN_ARROW_WIDTH) {
-        this.showDropdown();
+      if (hitTestResult.editable()) {
+        this.setTextInputFocus(hitTestResult);
+        this.redrawMain();
+      }
+      if (hitTestResult.hasDropdown() && ((!hitTestResult.editable()) || mainPoint.x - this.view.getViewNodeFor(hitTestResult).bounds[0].x < helper.DROPDOWN_ARROW_WIDTH)) {
+        this.showDropdown(hitTestResult);
       }
       this.textInputSelecting = false;
     } else {
@@ -54722,56 +54738,84 @@ hook('mousedown', 2, function(point, event, state) {
 hook('populate', 0, function() {
   this.dropdownElement = document.createElement('div');
   this.dropdownElement.className = 'droplet-dropdown';
-  return this.wrapperElement.appendChild(this.dropdownElement);
+  this.wrapperElement.appendChild(this.dropdownElement);
+  this.dropdownElement.innerHTML = '';
+  this.dropdownElement.style.display = 'inline-block';
+  return this.dropdownVisible = false;
 });
 
-Editor.prototype.showDropdown = function() {
-  var el, fn1, i, j, len, location, ref1, textFocus;
-  if (this.textFocus.hasDropdown()) {
-    this.dropdownElement.innerHTML = '';
-    this.dropdownElement.style.display = 'inline-block';
-    textFocus = this.textFocus;
-    ref1 = this.textFocus.dropdown();
-    fn1 = (function(_this) {
-      return function(el) {
-        var div, setText;
-        div = document.createElement('div');
-        div.innerHTML = el.display;
-        div.className = 'droplet-dropdown-item';
-        div.style.fontFamily = _this.fontFamily;
-        div.style.fontSize = _this.fontSize;
-        div.style.paddingLeft = helper.DROPDOWN_ARROW_WIDTH;
-        setText = function(text) {
-          if (_this.dropdownElement.style.display === 'none') {
-            return;
-          }
-          _this.populateSocket(_this.textFocus, text);
-          _this.hiddenInput.value = text;
-          _this.redrawMain();
-          return _this.hideDropdown();
-        };
-        div.addEventListener('mouseup', function() {
-          if (el.click) {
-            return el.click(setText);
-          } else {
-            return setText(el.text);
-          }
-        });
-        return _this.dropdownElement.appendChild(div);
-      };
-    })(this);
-    for (i = j = 0, len = ref1.length; j < len; i = ++j) {
-      el = ref1[i];
-      fn1(el);
-    }
-    location = this.view.getViewNodeFor(this.textFocus).bounds[0];
-    this.dropdownElement.style.top = location.y + this.fontSize - this.scrollOffsets.main.y + 'px';
-    this.dropdownElement.style.left = location.x - this.scrollOffsets.main.x + this.dropletElement.offsetLeft + this.mainCanvas.offsetLeft + 'px';
-    return this.dropdownElement.style.minWidth = location.width + 'px';
+Editor.prototype.formatDropdown = function(socket) {
+  if (socket == null) {
+    socket = this.textFocus;
   }
+  this.dropdownElement.style.fontFamily = this.fontFamily;
+  this.dropdownElement.style.fontSize = this.fontSize;
+  return this.dropdownElement.style.minWidth = this.view.getViewNodeFor(socket).bounds[0].width;
+};
+
+Editor.prototype.showDropdown = function(socket) {
+  var dropdownItems, el, fn1, i, j, len, ref1;
+  if (socket == null) {
+    socket = this.textFocus;
+  }
+  this.dropdownVisible = true;
+  dropdownItems = [];
+  this.dropdownElement.innerHTML = '';
+  this.dropdownElement.style.display = 'inline-block';
+  this.formatDropdown(socket);
+  ref1 = socket.dropdown.generate();
+  fn1 = (function(_this) {
+    return function(el) {
+      var div, setText;
+      div = document.createElement('div');
+      div.innerHTML = el.display;
+      div.className = 'droplet-dropdown-item';
+      dropdownItems.push(div);
+      div.style.paddingLeft = helper.DROPDOWN_ARROW_WIDTH;
+      setText = function(text) {
+        if (_this.dropdownElement.style.display === 'none') {
+          return;
+        }
+        _this.populateSocket(socket, text);
+        _this.hiddenInput.value = text;
+        _this.redrawMain();
+        return _this.hideDropdown();
+      };
+      div.addEventListener('mouseup', function() {
+        if (el.click) {
+          return el.click(setText);
+        } else {
+          return setText(el.text);
+        }
+      });
+      return _this.dropdownElement.appendChild(div);
+    };
+  })(this);
+  for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+    el = ref1[i];
+    fn1(el);
+  }
+  this.dropdownElement.style.top = '-9999px';
+  this.dropdownElement.style.left = '-9999px';
+  return setTimeout(((function(_this) {
+    return function() {
+      var k, len1, location;
+      if (_this.dropdownElement.offsetHeight < _this.dropdownElement.scrollHeight) {
+        for (k = 0, len1 = dropdownItems.length; k < len1; k++) {
+          el = dropdownItems[k];
+          el.style.paddingRight = DROPDOWN_SCROLLBAR_PADDING;
+        }
+      }
+      location = _this.view.getViewNodeFor(socket).bounds[0];
+      _this.dropdownElement.style.top = location.y + _this.fontSize - _this.scrollOffsets.main.y + 'px';
+      _this.dropdownElement.style.left = location.x - _this.scrollOffsets.main.x + _this.dropletElement.offsetLeft + _this.mainCanvas.offsetLeft + 'px';
+      return _this.dropdownElement.style.minWidth = location.width + 'px';
+    };
+  })(this)), 0);
 };
 
 Editor.prototype.hideDropdown = function() {
+  this.dropdownVisible = false;
   return this.dropdownElement.style.display = 'none';
 };
 
@@ -54783,11 +54827,13 @@ hook('dblclick', 0, function(point, event, state) {
   mainPoint = this.trackerPointToMain(point);
   hitTestResult = this.hitTestTextInput(mainPoint, this.tree);
   if (hitTestResult !== this.textFocus) {
-    this.setTextInputFocus(null);
-    this.redrawMain();
-    hitTestResult = this.hitTestTextInput(mainPoint, this.tree);
+    if (hitTestResult.editable()) {
+      this.setTextInputFocus(null);
+      this.redrawMain();
+      hitTestResult = this.hitTestTextInput(mainPoint, this.tree);
+    }
   }
-  if (hitTestResult != null) {
+  if ((hitTestResult != null) && hitTestResult.editable()) {
     this.setTextInputFocus(hitTestResult);
     this.redrawMain();
     setTimeout(((function(_this) {
@@ -55228,7 +55274,7 @@ Editor.prototype.moveCursorHorizontally = function(direction) {
         break;
       }
     }
-    if (head.type === 'socketStart' && (head.next.type === 'text' || head.next === head.container.end)) {
+    if (head.type === 'socketStart' && head.container.editable()) {
       if (this.textFocus != null) {
         chars = this.getCharactersTo(head.container.start);
         this.setTextInputFocus(null);
@@ -55340,7 +55386,7 @@ Editor.prototype.getSocketAtChar = function(chars) {
   var charsCounted, head;
   head = this.tree.start;
   charsCounted = 0;
-  while (!(charsCounted >= chars && head.type === 'socketStart' && (head.next.type === 'text' || head.next === head.container.end))) {
+  while (!(charsCounted >= chars && head.type === 'socketStart' && head.container.isDroppable())) {
     if (head.type === 'text') {
       charsCounted += head.value.length;
     }
@@ -55360,7 +55406,7 @@ hook('keydown', 0, function(event, state) {
     } else {
       head = this.cursor;
     }
-    while (!((head == null) || head.type === 'socketEnd' && (head.container.start.next.type === 'text' || head.container.start.next === head.container.end))) {
+    while (!((head == null) || head.type === 'socketEnd' && head.container.editable())) {
       head = head.prev;
     }
     if (head != null) {
@@ -55381,7 +55427,7 @@ hook('keydown', 0, function(event, state) {
     } else {
       head = this.cursor;
     }
-    while (!((head == null) || head.type === 'socketStart' && (head.container.start.next.type === 'text' || head.container.start.next === head.container.end))) {
+    while (!((head == null) || head.type === 'socketStart' && head.container.editable())) {
       head = head.next;
     }
     if (head != null) {
@@ -55754,7 +55800,7 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       div.style.font = this.fontSize + 'px ' + this.fontFamily;
       div.style.width = this.gutter.offsetWidth + "px";
       translatingElements.push(div);
-      div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
+      div.className = 'droplet-transitioning-element droplet-transitioning-gutter droplet-gutter-line';
       if (this.annotations[line] != null) {
         div.className += ' droplet_' + getMostSevereAnnotationType(this.annotations[line]);
       }
@@ -55911,7 +55957,7 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
           div.style.width = _this.aceEditor.renderer.$gutter.offsetWidth + "px";
           div.style.left = 0;
           div.style.top = (_this.aceEditor.session.documentToScreenRow(line, 0) * lineHeight - aceScrollTop) + "px";
-          div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
+          div.className = 'droplet-transitioning-element droplet-transitioning-gutter droplet-gutter-line';
           if (_this.annotations[line] != null) {
             div.className += ' droplet_' + getMostSevereAnnotationType(_this.annotations[line]);
           }
@@ -56095,7 +56141,7 @@ hook('redraw_palette', 0, function() {
   ref1 = this.currentPaletteBlocks;
   for (j = 0, len = ref1.length; j < len; j++) {
     entry = ref1[j];
-    bounds.unite(this.view.getViewNodeFor(entry.block).getBounds());
+    bounds.unite(this.paletteView.getViewNodeFor(entry.block).getBounds());
   }
   return this.paletteScrollerStuffing.style.height = (bounds.bottom()) + "px";
 });
@@ -56153,9 +56199,12 @@ hook('populate', 0, function() {
   return this.extraMarks = {};
 });
 
-Editor.prototype.getHighlightPath = function(model, style) {
+Editor.prototype.getHighlightPath = function(model, style, view) {
   var path;
-  path = this.view.getViewNodeFor(model).path.clone();
+  if (view == null) {
+    view = this.view;
+  }
+  path = view.getViewNodeFor(model).path.clone();
   path.style.fillColor = null;
   path.style.strokeColor = style.color;
   path.style.lineWidth = 3;
@@ -56664,16 +56713,19 @@ hook('populate', 0, function() {
   })(this)), 0);
 });
 
-Editor.prototype.mainViewOrChildrenContains = function(model, point) {
+Editor.prototype.viewOrChildrenContains = function(model, point, view) {
   var childObj, j, len, modelView, ref1;
-  modelView = this.view.getViewNodeFor(model);
+  if (view == null) {
+    view = this.view;
+  }
+  modelView = view.getViewNodeFor(model);
   if (modelView.path.contains(point)) {
     return true;
   }
   ref1 = modelView.children;
   for (j = 0, len = ref1.length; j < len; j++) {
     childObj = ref1[j];
-    if (this.mainViewOrChildrenContains(childObj.child, point)) {
+    if (this.viewOrChildrenContains(childObj.child, point, view)) {
       return true;
     }
   }
@@ -56685,7 +56737,7 @@ hook('mouseup', 0.5, function(point, event) {
   if (this.draggingBlock != null) {
     trackPoint = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     renderPoint = this.trackerPointToMain(trackPoint);
-    if (this.inTree(this.draggingBlock) && this.mainViewOrChildrenContains(this.draggingBlock, renderPoint)) {
+    if (this.inTree(this.draggingBlock) && this.viewOrChildrenContains(this.draggingBlock, renderPoint)) {
       this.draggingBlock.ephemeral = false;
       return this.endDrag();
     }
@@ -56807,8 +56859,8 @@ Editor.prototype.addLineNumberForLine = function(line) {
     })(this));
     lineDiv.addEventListener('mousemove', (function(_this) {
       return function(event) {
-        _this.tooltipElement.style.left = event.pageX;
-        return _this.tooltipElement.style.top = event.pageY;
+        _this.tooltipElement.style.left = event.pageX + 'px';
+        return _this.tooltipElement.style.top = event.pageY + 'px';
       };
     })(this));
     lineDiv.addEventListener('mouseout', (function(_this) {
@@ -59044,7 +59096,7 @@ module.exports = parser.wrapParser(antlrHelper.createANTLRParser('Java', config)
 
 
 },{"../antlr.coffee":78,"../parser.coffee":90}],85:[function(require,module,exports){
-var CATEGORIES, CLASS_EXCEPTIONS, DEFAULT_INDENT_DEPTH, JavaScriptParser, KNOWN_FUNCTIONS, LOGICAL_OPERATORS, NEVER_PAREN, NODE_CATEGORIES, OPERATOR_PRECEDENCES, STATEMENT_NODE_TYPES, acorn, helper, model, parser,
+var CATEGORIES, CLASS_EXCEPTIONS, DEFAULT_INDENT_DEPTH, JavaScriptParser, KNOWN_FUNCTIONS, LOGICAL_OPERATORS, NEVER_PAREN, NODE_CATEGORIES, OPERATOR_PRECEDENCES, STATEMENT_NODE_TYPES, acorn, helper, isStandardForLoop, model, parser,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -59617,14 +59669,18 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'ForStatement':
         this.jsBlock(node, depth, bounds);
-        if (node.init != null) {
-          this.jsSocketAndMark(indentDepth, node.init, depth + 1, NEVER_PAREN, null, ['for-statement-init']);
-        }
-        if (node.test != null) {
-          this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
-        }
-        if (node.update != null) {
-          this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
+        if (this.opts.categories.loops.beginner && isStandardForLoop(node)) {
+          this.jsSocketAndMark(indentDepth, node.test.right);
+        } else {
+          if (node.init != null) {
+            this.jsSocketAndMark(indentDepth, node.init, depth + 1, NEVER_PAREN, null, ['for-statement-init']);
+          }
+          if (node.test != null) {
+            this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
+          }
+          if (node.update != null) {
+            this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
+          }
         }
         return this.mark(indentDepth, node.body, depth + 1);
       case 'BlockStatement':
@@ -59874,6 +59930,21 @@ JavaScriptParser.drop = function(block, context, pred) {
     }
   }
   return helper.DISCOURAGE;
+};
+
+isStandardForLoop = function(node) {
+  var variableName;
+  if (!((node.init != null) && (node.test != null) && (node.update != null))) {
+    return false;
+  }
+  if (node.init.type === 'VariableDeclaration') {
+    variableName = node.init.declarations[0].id.name;
+  } else if (node.init.type === 'AssignmentExpression' && node.operator === '=' && node.left.type === 'Identifier') {
+    variableName = node.left.name;
+  } else {
+    return false;
+  }
+  return node.test.type === 'BinaryExpression' && node.test.operator === '<' && node.test.left.type === 'Identifier' && node.test.left.name === variableName && node.update.type === 'UpdateExpression' && node.update.operator === '++' && node.update.argument.type === 'Identifier' && node.update.argument.name === variableName;
 };
 
 JavaScriptParser.empty = "__";
@@ -60919,6 +60990,10 @@ exports.Socket = Socket = (function(superClass) {
     return (this.dropdown != null) && this.isDroppable();
   };
 
+  Socket.prototype.editable = function() {
+    return (!((this.dropdown != null) && this.dropdown.dropdownOnly)) && this.isDroppable();
+  };
+
   Socket.prototype.isDroppable = function() {
     return this.start.next === this.end || this.start.next.type === 'text';
   };
@@ -61284,11 +61359,21 @@ exports.Parser = Parser = (function() {
       ref1 = val.dropdown;
       fn = (function(_this) {
         return function(options) {
-          return _this.opts.functions[key].dropdown[index] = function() {
-            if (typeof options === 'function') {
-              return options().map(convertFunction);
-            } else {
-              return options.map(convertFunction);
+          var dropdownOnly;
+          dropdownOnly = false;
+          if (options.dropdownOnly != null) {
+            dropdownOnly = options.dropdownOnly;
+            options = options.options;
+          }
+          return _this.opts.functions[key].dropdown[index] = {
+            dropdownOnly: dropdownOnly,
+            options: options,
+            generate: function() {
+              if (typeof options === 'function') {
+                return options().map(convertFunction);
+              } else {
+                return options.map(convertFunction);
+              }
             }
           };
         };
@@ -62043,6 +62128,7 @@ DROPDOWN_ARROW_HEIGHT = 8;
 DROP_TRIANGLE_COLOR = '#555';
 
 DEFAULT_OPTIONS = {
+  showDropdowns: true,
   padding: 5,
   indentWidth: 10,
   indentTongueHeight: 10,
@@ -63363,7 +63449,7 @@ exports.View = View = (function() {
       for (j = 0, len1 = ref.length; j < len1; j++) {
         dimension = ref[j];
         dimension.width = Math.max(dimension.width, this.view.opts.minSocketWidth);
-        if (this.model.hasDropdown()) {
+        if (this.model.hasDropdown() && this.view.opts.showDropdowns) {
           dimension.width += helper.DROPDOWN_ARROW_WIDTH;
         }
       }
@@ -63371,7 +63457,7 @@ exports.View = View = (function() {
     };
 
     SocketViewNode.prototype.computeBoundingBoxX = function(left, line) {
-      return SocketViewNode.__super__.computeBoundingBoxX.call(this, left, line, this.model.hasDropdown() ? helper.DROPDOWN_ARROW_WIDTH : 0);
+      return SocketViewNode.__super__.computeBoundingBoxX.call(this, left, line, (this.model.hasDropdown() && this.view.opts.showDropdowns ? helper.DROPDOWN_ARROW_WIDTH : 0));
     };
 
     SocketViewNode.prototype.computeGlue = function() {
@@ -63405,7 +63491,7 @@ exports.View = View = (function() {
 
     SocketViewNode.prototype.drawSelf = function(ctx) {
       SocketViewNode.__super__.drawSelf.apply(this, arguments);
-      if (this.model.hasDropdown()) {
+      if (this.model.hasDropdown() && this.view.opts.showDropdowns) {
         ctx.beginPath();
         ctx.fillStyle = DROP_TRIANGLE_COLOR;
         ctx.moveTo(this.bounds[0].x + helper.DROPDOWN_ARROW_PADDING, this.bounds[0].y + (this.bounds[0].height - DROPDOWN_ARROW_HEIGHT) / 2);

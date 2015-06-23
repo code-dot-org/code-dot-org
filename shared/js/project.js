@@ -4,7 +4,7 @@
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
-var channels = require('./client_api/channels');
+var channels = require('./clientApi').create('/v3/channels');
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
