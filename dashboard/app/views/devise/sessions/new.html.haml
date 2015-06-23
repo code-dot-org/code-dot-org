@@ -30,7 +30,7 @@
     
     %h3= t('signin.try_heading')
     .tryfirst
-      = render partial: 'shared/course_wide_block', locals: { id: "hoc" }
+      = render partial: 'shared/course_wide_block', locals: { id: Script::HOC_NAME, showState: false }
     %div{style: "clear:both"}
     %br/
 
