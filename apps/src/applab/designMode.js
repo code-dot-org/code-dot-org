@@ -476,7 +476,12 @@ function makeDraggable (jqueryElements) {
 
     // Chrome/Safari both have issues where they don't properly render the
     // wrapper if the inner element is a div. This is a hack that causes a
-    // rerender to happen.
+    // rerender to happen in chrome
+    var currHeight = wrapper.parent().height();
+    wrapper.parent().height(currHeight + 1);
+    wrapper.parent().height(currHeight);
+
+    // And a hack for Safari
     if (this.tagName === 'DIV') {
       setTimeout(function () {
         wrapper.hide().show(0);
