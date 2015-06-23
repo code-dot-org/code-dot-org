@@ -109,11 +109,13 @@ module.exports = {
       height: 'auto'
     }).appendTo($(document.body));
 
+    var padding = parseInt(element.style.padding, 10);
+
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() + 1 + 'px';
+      element.style.width = clone.width() + 1 + 2 * padding + 'px';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-      element.style.height = clone.height() + 1 + 'px';
+      element.style.height = clone.height() + 1 + 2 * padding + 'px';
     }
 
     clone.remove();
