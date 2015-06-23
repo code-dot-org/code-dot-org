@@ -33,7 +33,7 @@ To introduce your students to our popular introductory courses, attend one of ou
 
 Learn to code and how to teach computer science basics to your students with our free, self-paced online courses.
 
-[<button class="teacher-button">Learn more</button>](/professional-development-online)
+[<button class="teacher-button">Learn more</button>](/educate/professional-development-online)
 
 ### Middle and high school teachers
 
