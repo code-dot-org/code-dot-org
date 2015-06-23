@@ -1,6 +1,10 @@
 var fs = require('fs');
 var WebPage = require('webpage');
 
+var defaultStyle = "\033[39m";
+var green = "\033[32m";
+var red = "\033[31m";
+
 /**
  * Wait until the test condition is true or a timeout occurs. Useful for waiting
  * on a server response or for a ui change (fadeIn, etc.) to occur.
@@ -44,7 +48,7 @@ var path = 'file://' + fs.absolute('blockly_test.html');
 console.log("Loading blockly-core test page with phantomjs");
 page.open(path, function (status) {
     if (status !== 'success') {
-      console.log("PhantomJS failed to load test page");
+      console.log(red + "PhantomJS failed to load test page" + defaultStyle);
       phantom.exit(1);
       return;
     }
@@ -53,13 +57,19 @@ page.open(path, function (status) {
       // Wait until we either see a success or failure message
       return /\[(?:PASSED|FAILED)\]/.test(page.plainText);
     }, function () {
+
+      // Color-code output
+      console.log(page.plainText
+          .replace(/PASSED/g, green + '$&' + defaultStyle, 'g')
+          .replace(/FAILED/g, red + '$&' + defaultStyle, 'g'));
+
       if (/\[FAILED\]/.test(page.plainText)) {
-        console.log(page.plainText);
-        console.log("Blockly-Core tests failed");
+        console.log(red + "Blockly-Core tests failed" + defaultStyle);
         phantom.exit(1);
         return;
       }
-      console.log("Blockly-Core tests passed");
+
+      console.log(green + "Blockly-Core tests passed" + defaultStyle);
       phantom.exit(0);
     });
 });
