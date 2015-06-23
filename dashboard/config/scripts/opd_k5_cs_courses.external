@@ -4,38 +4,15 @@ skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
-### PLANNING > Code Studio Courses
+### PLANNING > Choosing a CS Course
 <br><br>
 One of the first tiles you'll want to explore on the Teacher Dashboard are found under the "Lesson Plans and Resources" tab. Here's where you'll find all of the free Code Studio curricula we provide to teachers all over the world, including:
 <ul>
 <li>[Course 1](http://studio.code.org/s/course1): approx 20 hours (Ages 4-6)</li>
 <li>[Course 2](http://studio.code.org/s/course2): approx 20 hours (Ages 6-18)</li>
 <li>[Course 3](http://studio.code.org/s/course3): approx 20 hours (Ages 8-18)</li>
-<li>[Course 4](http://studio.code.org/s/course4): approx 20 hours (Ages 10-18)</li>
-<li>[Intro to CS](http://studio.code.org/s/20-hour): approx 20 hours (Ages 10-18)</li>
+<li>[Course 4 - BETA](http://studio.code.org/s/course4): approx 20 hours (Ages 10-18)</li>
 </ul>
-
-We also offer **complete middle and high school curriculum** for longer, more in-depth courses. However, these courses are not available in Code Studio at this time. **We'll cover these courses in the next level.** Finally, we also have a number of fun Code Studio student-facing **activities** that do not include curriculum resources for teachers. These include:
-<ul>
-<li>[Hour of Code](http://studio.code.org/s/hourofcode/reset)</li>
-<li>[Frozen](http://studio.code.org/s/frozen/reset)</li>
-<li>[Infinity Play Lab](http://studio.code.org/s/infinity/reset)</li>
-<li>[Flappy Code](http://studio.code.org/s/flappy/reset)</li>
-</ul>
-<br>
-#### About Courses 1-4
-
-We believe that every student should have the opportunity to learn computer science, and the reasons are far more varied than simply having a strong resume. Critical thinking, logic, persistence, and creativity help students excel at problem-solving in all subject areas, no matter what their age.
-<br><br>
-At Code.org, we recognize that this benefit begins early. That's why we have partnered with [Thinkersmith](http://thinkersmith.org/) and [Common Sense Media] (https://www.commonsensemedia.org/) to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.
-
-<br/><br/>
->### Who are Courses 1-4 for?
-**Kids as young as four years-old!**
-Courses 1-4 are designed to meet the special learning needs of kids ages 4-18. Read below for more details on choosing the right course for your students.<br><br>
-**Teachers! (in-school, after-school, or home-school)**
-This curriculum has been developed for use by all educators. We assume no prior computer science knowledge and have provided clear, detailed lesson plans that can be customized to different situations. Learn with your students!
-
 <br/>
 #### Which Course is for me?
 Watch this video to understand our offerings of computer science courses for elementary school students.
@@ -44,14 +21,57 @@ Watch this video to understand our offerings of computer science courses for ele
 <iframe width="640" height="390" src="https://www.youtube.com/embed/ryZ8_XW9d7A" frameborder="0" allowfullscreen></iframe>
 
 <br/><br/>
-#### About our accelerated Intro to CS course (all ages)
+
+#### About our Middle and High School Courses
+
+Code.org also offers semester- and year-long middle and high school curriculum, although this curriculum is not linked to Code Studio at this time. You can access the curriculum through the links below:
+
+**Middle school (Grades 6-8)**
+
+- [CS in Algebra](http://code.org/curriculum/algebra/): Learn how computer programmers use algebra and geometry to develop video games
+- [CS in Science](http://code.org/curriculum/science/): Explore and develop complex scientific models through agent-based programming
+
+**High school (Grades 9-12)**
+
+- [Exploring Computer Science](http://www.exploringcs.org/): A high school course designed to broaden participation in computer science
+- [Computer Science Principles (future AP)](http://code.org/educate/csp): A course teaching a wide range of computer science topics, including programming in JavaScript
+
+More in-depth professional development on these curricula are available through our district partnerships program. If you're interested in becoming a district partner, please [visit this page for more information](http://code.org/educate/districts).
+
+#### About Other Code Studio Activities
+
+While the activities below do not have accompanying lesson plans or curricula for teachers, they can make great self-paced learning activities for students of all ages. They're also great resources for you as you continue learning to code:
+
+- [Hour of Code](http://studio.code.org/s/hourofcode/reset)
+- [Frozen](http://studio.code.org/s/frozen/reset)
+- [Infinity Play Lab](http://studio.code.org/s/infinity/reset)
+- [Flappy Code](http://studio.code.org/s/flappy/reset)
+
+#### Other Curriculum Resources
+
+Do our resources above not meet your needs? No problem! Through partnerships with other organizations, code.org is pleased to recommend other curriculum resources for teachers. [Check out the full list](http://code.org/educate/3rdparty) and find something that works for you.
+
+
+#### About our accelerated Intro to CS course (10-18+)
 
 In addition to Courses 1-4, Code.org offers [an accelerated all ages online course with a complimentary curriculum](http://studio.code.org/s/20-hour). This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18 who need to work at a faster pace or who have less time to learn computer science. Courses 2-4 offer a more complete experience, so we recommend you prioritize teaching those courses when possible.
 
-* * *
+* * * 
 
-Next we'll look at how you access these courses with students, before moving on to a review of other resources offered by Code.org that are not currently integrated with Code Studio.
-<br><br>
+>### Explore: 
+Take some time now to explore the course you are most interested in teaching first. Take note of interesting lesson plan ideas, unplugged activities, puzzles, etc. You'll refer to these notes at the end of this stage:
+<ul>
+<li>[Course 1](http://studio.code.org/s/course1): approx 20 hours (Ages 4-6)</li>
+<li>[Course 2](http://studio.code.org/s/course2): approx 20 hours (Ages 6-18)</li>
+<li>[Course 3](http://studio.code.org/s/course3): approx 20 hours (Ages 8-18)</li>
+<li>[Course 4](http://studio.code.org/s/course4): approx 20 hours (Ages 10-18)</li>
+<li>[Intro to CS](http://studio.code.org/s/20-hour): approx 20 hours (Ages 10-18)</li>
+<li>[CS in Algebra](http://code.org/curriculum/algebra/) (Middle School, grades 6-8)</li>
+<li>[CS in Science](http://code.org/curriculum/science/) (Middle School, grades 6-8)</li>
+<li>[Exploring Computer Science](http://www.exploringcs.org/) (High School, grades 9-12)</li>
+<li>[computer science Principles (](http://code.org/educate/csp)High School, grades 9-12)</li>
+<li>[Other resources](http://code.org/educate/3rdparty) (ages vary)</li>
+</ul>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266}],79:[function(require,module,exports){
+},{"../skins":265}],79:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -1964,7 +1964,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":103,"../constants":105,"../dom":106,"../dropletUtils":107,"../hammer":139,"../locale":148,"../skins":266,"../templates/page.html.ejs":294,"../timeoutList":300,"../utils":316,"./api":75,"./controls.html.ejs":78,"./locale":80,"./tiles":83,"./visualization.html.ejs":84}],84:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":102,"../constants":104,"../dom":105,"../dropletUtils":106,"../hammer":138,"../locale":147,"../skins":265,"../templates/page.html.ejs":293,"../timeoutList":299,"../utils":315,"./api":75,"./controls.html.ejs":78,"./locale":80,"./tiles":83,"./visualization.html.ejs":84}],84:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2007,7 +2007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":148,"./locale":80,"ejs":487}],76:[function(require,module,exports){
+},{"../locale":147,"./locale":80,"ejs":487}],76:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2503,7 +2503,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../codegen":103,"./locale":80}],80:[function(require,module,exports){
+},{"../codegen":102,"./locale":80}],80:[function(require,module,exports){
 // locale for bounce
 
 module.exports = window.blockly.bounce_locale;

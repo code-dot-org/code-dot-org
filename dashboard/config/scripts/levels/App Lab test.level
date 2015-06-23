@@ -131,7 +131,12 @@
     "app_width": "320",
     "app_height": "480",
     "disable_examples": "false",
-    "start_blocks": "var x = 10;\r\nx = x + 10;"
+    "start_blocks": "var x = 10;\r\nx = x + 10;",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true"
   }
 }]]></config>
   <blocks/>

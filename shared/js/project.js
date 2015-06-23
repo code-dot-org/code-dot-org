@@ -4,7 +4,7 @@
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
-var channels = require('./client_api/channels');
+var channels = require('./clientApi').create('/v3/channels');
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -72,7 +72,7 @@ module.exports = {
         // URL without /edit - set hideSource to true
         setAppOptionsForShareMode(true);
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl_()) {
+    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       this.current = {
         name: 'Untitled Project'
       };

@@ -15,7 +15,7 @@ answer 'More comprehensive set of data. Can be used to generate multiple differe
 question 'Image: Disadvantages'
 answer 'Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.'
 markdown <<MARKDOWN
-## Tell a Story with Data
+## Telling a Story with Data
 
 Below are two ways of representing the same data (taken from the ECS book, page 46). Take a look at the image below as well as and the list of objects in the room. Think about the advantages and disadvantages of each method of representing data. What more would you want to learn from the person in the picture? When you have examined both representations, match each method of representing data with its advantages and disadvantages.
 

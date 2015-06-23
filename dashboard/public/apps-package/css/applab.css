@@ -10,9 +10,7 @@
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  padding: 2px; }
+  user-select: none; }
   #divApplab canvas {
     position: absolute;
     overflow: hidden;
@@ -29,9 +27,10 @@
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div, #divApplab button, #divApplab select, #divApplab img, #divApplab canvas {
+  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab canvas, #divApplab label {
     box-sizing: border-box;
-    line-height: 1.2em; }
+    line-height: 1.2em;
+    margin: 5px; }
   #divApplab .design-mode-hidden {
     visibility: hidden; }
 
@@ -552,6 +551,14 @@ button.arrow:focus {
     width: 100%;
     display: inline-block; }
 
+.rightalign-contents {
+  text-align: right;
+  line-height: 0; }
+  .rightalign-contents:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
+
 .hover-pointer:hover {
   cursor: pointer; }
 
@@ -565,5 +572,5 @@ button.arrow:focus {
 *[contenteditable] {
   -webkit-user-select: auto !important; }
 
-.new-design-element {
+.design-element-image {
   width: 72px; }

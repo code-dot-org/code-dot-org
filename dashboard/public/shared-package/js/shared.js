@@ -93,7 +93,7 @@ function wrapExistingClipPaths() {
 },{}],2:[function(require,module,exports){
 /* global $ */
 
-module.exports = {
+var base = {
   api_base_url: "/v3/channels",
 
   all: function(callback) {
@@ -164,6 +164,14 @@ module.exports = {
   }
 };
 
+module.exports = {
+  create: function (url) {
+    return $.extend({}, base, {
+      api_base_url: url,
+    });
+  }
+};
+
 },{}],3:[function(require,module,exports){
 /* global dashboard, appOptions, $, trackEvent, Applab */
 
@@ -171,7 +179,7 @@ module.exports = {
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
-var channels = require('./client_api/channels');
+var channels = require('./clientApi').create('/v3/channels');
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -239,7 +247,7 @@ module.exports = {
         // URL without /edit - set hideSource to true
         setAppOptionsForShareMode(true);
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl_()) {
+    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       this.current = {
         name: 'Untitled Project'
       };
@@ -456,7 +464,7 @@ function determineNoPadding() {
   }
 }
 
-},{"./client_api/channels":2}],4:[function(require,module,exports){
+},{"./clientApi":2}],4:[function(require,module,exports){
 /* global ga */
 
 var userTimings = {};

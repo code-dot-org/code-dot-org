@@ -1,4 +1,5 @@
 name 'ECSPD Online U1Reflection'
+skip_sound 'true'
 
 markdown <<MARKDOWN
 ## Telling the story of Unit 1

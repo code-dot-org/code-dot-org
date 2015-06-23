@@ -1,0 +1,387 @@
+@import 'color';
+@import 'font';
+
+/* HEADERS */
+
+.twolineheader {
+    h2 {
+      font-family: $gotham-regular;
+      font-weight: normal; 
+      color: $purple; 
+      font-size: 24px; 
+      margin-bottom: 0px; 
+      line-height: 30px;
+    }
+    h1 {
+      margin-top: 0px;
+      line-height: 30px; 
+      font-size: 30px;   
+      font-family: $gotham-bold; 
+      font-weight: normal;
+    }
+} 
+
+.coursesheader {
+  h1 + h2 {
+    margin-top: 10px;
+  }
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+
+#landingpage h3 img.logo,
+.course_progress h3 img.logo {
+  height: 40px;
+}
+
+.betatext {
+  color: $realyellow;
+  background-color: $charcoal;
+  padding: 0 5px;
+}
+
+/* COURSEBLOCKS */
+
+.courseblock-span1 {  width: 60px;  }
+.courseblock-span2 {  width: 140px;  }
+.courseblock-span3 {  width: 220px;  }
+.courseblock-span4 {  width: 300px;  }
+.courseblock-span5 {  width: 380px;  }
+.courseblock-span6 {  width: 460px;  }
+.courseblock-span7 {  width: 540px;  }
+.courseblock-span8 {  width: 620px;  }
+.courseblock-span9 {  width: 700px;  }
+.courseblock-span10 {  width: 780px;  }
+.courseblock-span11 {  width: 860px;  }
+.courseblock-span12 {  width: 940px;  }
+
+.courseblock-tall {
+  background-color:$lightest_gray;
+  height: 250px;
+  
+  /*background-color: white;
+  height: 100%;
+  border-radius:5px;*/
+
+  overflow: hidden;
+  position: relative;
+  float: left;
+
+  .heading {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .imgspan {
+    margin: 0 0 5px 0;
+    text-align: left;
+    float: left;
+    /*float: right;*/
+    width: 100%;
+  }
+
+  h3 {
+    margin: 0 0 0 10px;
+    /*margin-top:10px;*/
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+  }
+
+  .beta
+  {
+    h3 {
+      width: 140px;
+      padding-right: 0px;
+      float: left;
+    }
+
+    .betatext {
+      text-align: center;
+      display: block;
+      float: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: $light_gray;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 24px;
+      height: 35px;
+      line-height: 40px;
+      width: 60px;
+    }
+  }
+
+  .smalltext {
+    font-size: 13px;
+    line-height: 17px;
+    padding: 0 10px 0 10px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+
+  .descriptiontext {
+    height: 80px;
+    overflow: hidden;
+    border-left: solid 1px $lighter_gray;
+    border-right: solid 1px $lighter_gray;
+  }
+
+  .whitetext {
+    color: white;
+  }
+
+  a.whitelink {
+    &:hover, &:link, &:active, &:visited {
+      color:white;
+    }
+  }
+
+  .audience {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: $charcoal;
+  }
+
+  /*.audience {
+    background-color: $light_gray;
+  }*/
+
+  .bottombar {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+  }
+
+  .continue {
+    background-color: $yellow;
+  }
+  .trynow {
+    background-color: $green;
+  }
+  .printcertificate {
+    background-color: $blue;
+  }
+}
+
+.courseblock-wide-small {
+  background-color:$lightest_gray;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    box-sizing: content-box;
+    max-width: 100%;
+    height: 110px;
+    float: right;
+  }
+
+  .imgspan {
+    margin-left: 0;
+    float: right;
+    text-align: right;
+  }
+
+  h3 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+    float: left;
+  }
+
+  h4 {
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-family: $gotham-bold;
+    float: left;
+  }
+
+  .smalltext {
+    margin-left: 10px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+  }
+}
+
+.courseblock-wide-large {
+  background-color:$lightest_gray;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    box-sizing: content-box;
+    max-width: 100%;
+    height: 100px;
+    width: auto;
+  }
+
+  .imgspan {
+    margin-top: 20px;
+    float: right;
+  }
+
+  h3 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+  }
+
+  h4 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-family: $gotham-bold;
+  }
+
+  .smalltext {
+    margin: 10px 0 0 10px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+}
+
+.courseblock-tall + .courseblock-tall {
+  margin-left: 20px;
+}
+
+.courseblock-wide-small + .courseblock-wide-small {
+  margin-left: 20px;
+}
+
+.courseblock-wide-large + .courseblock-wide-large {
+  margin-left: 20px;
+}
+
+.miniblock-noaction {
+  border-bottom: solid 1px $lighter_gray;
+}
+
+.miniblock-wide {
+  box-sizing: border-box;
+  border: solid 1px #bbb;
+  overflow:hidden;
+  h3 {
+    margin: 0px;
+  }
+  .heading {
+    width: 280px;
+  }
+  .bottombar {
+    padding-left: 20px;
+  }
+}
+
+.miniblock-tall {
+  height: 100%;
+  box-sizing: border-box;
+
+  .heading {
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
+    overflow:hidden;
+    border-left: solid 1px $lighter_gray;
+    border-right: solid 1px $lighter_gray;
+
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: $gotham-bold;
+    font-weight: normal;
+    display: block;
+    float: left;
+    width: 200px;
+  }
+
+  .beta
+  {
+    .heading {
+      padding-right: 0px;
+    }
+
+    h3 {
+      width: 135px;
+    }
+
+    .betatext {
+      text-align: center;
+      display: block;
+      float: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: $light_gray;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 24px;
+      height: 35px;
+      line-height: 40px;
+      width: 60px;
+      margin-top: 10px;
+      border-radius: 4px;
+      margin-right: 2px;
+    }
+  }
+}

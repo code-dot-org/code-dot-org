@@ -4,7 +4,6 @@ height '100'
 skip_sound true
 hide_submit true
 
-description 'Match the internal parts of a computer to their function. The previous level has links to sites that describe each part.'
 question 'Hard Drive/Disk Drive'
 answer 'The part that stores programs, files, and long-term memory. Often, it can hold hundreds of GB of data.'
 question 'CPU/Processor'
@@ -17,3 +16,10 @@ question 'GPU/Graphics Card/Video Card'
 answer 'The part that controls the display on the screen. People who play video games or do graphic/3D design often will buy a higher-end version'
 question 'Operating System'
 answer 'The software that allows a user to interact with a computer. It is usually Windows, Mac, or Linux.'
+
+markdown <<MARKDOWN
+Here is a sample assessment that can accompany the website on the previous level. Use the information on that website to answer the following sample assessment and click Submit to continue.
+
+
+> Question: Match the internal parts of a computer to their function.
+MARKDOWN

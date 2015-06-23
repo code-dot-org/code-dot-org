@@ -12,7 +12,7 @@ window.calcMain = function(options) {
 };
 
 
-},{"../appMain":9,"../skins":266,"./blocks":85,"./calc":86,"./levels":93}],86:[function(require,module,exports){
+},{"../appMain":9,"../skins":265,"./blocks":85,"./calc":86,"./levels":93}],86:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1113,7 +1113,7 @@ Calc.__testonly__ = {
 /* end-test-block */
 
 
-},{"../StudioApp":5,"../block_utils":73,"../dom":106,"../locale":148,"../skins":266,"../templates/page.html.ejs":294,"../timeoutList":300,"../utils":316,"./controls.html.ejs":87,"./equation":88,"./equationSet":89,"./expressionNode":90,"./inputIterator":91,"./js-numbers/js-numbers.js":92,"./levels":93,"./locale":94,"./token":96,"./visualization.html.ejs":97,"lodash":490}],490:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":73,"../dom":105,"../locale":147,"../skins":265,"../templates/page.html.ejs":293,"../timeoutList":299,"../utils":315,"./controls.html.ejs":87,"./equation":88,"./equationSet":89,"./expressionNode":90,"./inputIterator":91,"./js-numbers/js-numbers.js":92,"./levels":93,"./locale":94,"./token":96,"./visualization.html.ejs":97,"lodash":490}],490:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -8424,7 +8424,7 @@ EquationSet.__testonly__ = {
 /* end-test-block */
 
 
-},{"../utils":316,"./equation":88,"./expressionNode":90,"./js-numbers/js-numbers":92}],90:[function(require,module,exports){
+},{"../utils":315,"./equation":88,"./expressionNode":90,"./js-numbers/js-numbers":92}],90:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -9038,7 +9038,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
 };
 
 
-},{"../utils":316,"./js-numbers/js-numbers":92,"./token":96}],96:[function(require,module,exports){
+},{"../utils":315,"./js-numbers/js-numbers":92,"./token":96}],96:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -13553,7 +13553,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":148,"./locale":94,"ejs":487}],85:[function(require,module,exports){
+},{"../locale":147,"./locale":94,"ejs":487}],85:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -13616,7 +13616,7 @@ function installCompute(blockly, generator, gensym) {
 }
 
 
-},{"../locale":148,"../sharedFunctionalBlocks":265,"./locale":94}],94:[function(require,module,exports){
+},{"../locale":147,"../sharedFunctionalBlocks":264,"./locale":94}],94:[function(require,module,exports){
 // locale for calc
 
 module.exports = window.blockly.calc_locale;

@@ -9,26 +9,9 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global window */
 'use strict';
 
-var SharedTableApi = require('../clientApi').SharedTableApi;
 var NetSimTable = require('./NetSimTable');
-
-/**
- * App key, unique to netsim, used for connecting with the storage API.
- * @type {string}
- * @readonly
- */
-// TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
-// Ugly null-guards so we can load this file in tests.
-if (window &&
-    window.location &&
-    window.location.hostname &&
-    window.location.hostname.substr(0, 9) === 'localhost') {
-  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
-}
 
 /**
  * A shard is an isolated, complete simulation state shared by a subset of
@@ -45,26 +28,21 @@ var NetSimShard = module.exports = function (shardID) {
   this.id = shardID;
 
   /** @type {NetSimTable} */
-  this.nodeTable = new NetSimTable(
-      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_n'));
+  this.nodeTable = new NetSimTable(shardID + '_n');
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(
-      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_w'));
+  this.wireTable = new NetSimTable(shardID + '_w');
 
   /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(
-      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_m'));
+  this.messageTable = new NetSimTable(shardID + '_m');
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
-  this.logTable = new NetSimTable(
-      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_l'));
+  this.logTable = new NetSimTable(shardID + '_l');
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
-  this.heartbeatTable = new NetSimTable(
-      new SharedTableApi(CHANNEL_PUBLIC_KEY, shardID + '_h'));
+  this.heartbeatTable = new NetSimTable(shardID + '_h');
 };
 
 /**

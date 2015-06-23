@@ -1,11 +1,16 @@
 name 'ECSPD Online U1D10 Forum'
 title 'Unit 1 Day 10 Forum'
 description 'Forum Pending'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 1 Day 10 Forum
+## Forum for Unit 1 Day 10: Telling a Story with Data
 
-Forum pending.
+Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
+
+### <strong>[Unit 1 Day 10 Forum >>](https://forum.code.org/t/unit-1-day-10-telling-a-story-with-data/746/1)</strong>
+
+</br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

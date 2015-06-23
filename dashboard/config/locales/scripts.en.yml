@@ -43,7 +43,7 @@ en:
           'Bee: Loops': 'Bee: Loops'
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
+          description_audience: Ages 4-6
           description_short: Course 1 is designed for early readers.
         course2:
           The Maze: The Maze
@@ -82,7 +82,7 @@ en:
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages  6+ (reading required)
+          description_audience: Ages 6-18
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: The Maze
@@ -133,7 +133,7 @@ en:
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Ages 8-18
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
@@ -237,7 +237,7 @@ en:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Ages 10-18
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -366,8 +366,9 @@ en:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          title: Accelerated Intro to CS Course
+          description_audience: Ages 10-18
+          description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
           Introduction to Computer Science: Introduction to Computer Science
           The Maze: The Maze
           Computational Thinking: Computational Thinking
@@ -820,6 +821,7 @@ en:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -878,6 +880,7 @@ en:
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
@@ -944,8 +947,39 @@ en:
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Hour of Code
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          'Eval: Conditionals': 'Eval: Conditionals'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
