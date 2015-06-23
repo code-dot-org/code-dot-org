@@ -240,11 +240,24 @@ SQL
 
     page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
 
-    @data_array = output_data.map do |key, value|
+    data_array = output_data.map do |key, value|
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
-    @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    headers = [
+      "Puzzle",
+      "Total\nAttempts",
+      "Total Successful\nAttempts",
+      "Avg. Success\nRate",
+      "Avg. #attempts\nper Completion",
+      "Unique\nAttempts",
+      "Unique Successful\nAttempts",
+      "Perceived Dropout",
+      "Avg. Unique\nSuccess Rate",
+      "Avg. Time\non Page"
+    ]
+    render locals: {headers: headers, data: data_array}
   end
 
   def monthly_metrics
