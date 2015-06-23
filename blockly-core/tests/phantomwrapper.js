@@ -1,3 +1,6 @@
+var fs = require('fs');
+var WebPage = require('webpage');
+
 /**
  * Wait until the test condition is true or a timeout occurs. Useful for waiting
  * on a server response or for a ui change (fadeIn, etc.) to occur.
@@ -36,8 +39,7 @@ function waitFor(testFx, onReady, timeOutMillis) {
 };
 
 // This is a thin wrapper around using phantomjs to load and run the blockly core tests
-var fs = require('fs');
-var page = require('webpage').create();
+var page = WebPage.create();
 var path = 'file://' + fs.absolute('blockly_test.html');
 console.log("Loading blockly-core test page with phantomjs");
 page.open(path, function (status) {
