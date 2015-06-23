@@ -1,9 +1,9 @@
 var fs = require('fs');
 var WebPage = require('webpage');
 
-var defaultStyle = "\033[39m";
-var green = "\033[32m";
-var red = "\033[31m";
+var DEFAULT_STYLE = "\033[39m";
+var GREEN = "\033[32m";
+var RED = "\033[31m";
 
 /**
  * Wait until the test condition is true or a timeout occurs. Useful for waiting
@@ -48,7 +48,7 @@ var path = 'file://' + fs.absolute('blockly_test.html');
 console.log("Loading blockly-core test page with phantomjs");
 page.open(path, function (status) {
     if (status !== 'success') {
-      console.log(red + "PhantomJS failed to load test page" + defaultStyle);
+      console.log(RED + "PhantomJS failed to load test page" + DEFAULT_STYLE);
       phantom.exit(1);
       return;
     }
@@ -60,16 +60,16 @@ page.open(path, function (status) {
 
       // Color-code output
       console.log(page.plainText
-          .replace(/PASSED/g, green + '$&' + defaultStyle, 'g')
-          .replace(/FAILED/g, red + '$&' + defaultStyle, 'g'));
+          .replace(/PASSED/g, GREEN + '$&' + DEFAULT_STYLE)
+          .replace(/FAILED/g, RED + '$&' + DEFAULT_STYLE));
 
       if (/\[FAILED\]/.test(page.plainText)) {
-        console.log(red + "Blockly-Core tests failed" + defaultStyle);
+        console.log(RED + "Blockly-Core tests failed" + DEFAULT_STYLE);
         phantom.exit(1);
         return;
       }
 
-      console.log(green + "Blockly-Core tests passed" + defaultStyle);
+      console.log(GREEN + "Blockly-Core tests passed" + DEFAULT_STYLE);
       phantom.exit(0);
     });
 });
