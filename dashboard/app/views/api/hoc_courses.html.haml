@@ -1,10 +1,10 @@
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_tall_block', locals: { id: 'hourofcode' }
-  = render partial: 'shared/course_tall_block', locals: { id: 'frozen' }
-  = render partial: 'shared/course_tall_block', locals: { id: 'infinity' }
-  = render partial: 'shared/course_tall_block', locals: { id: 'flappy' }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: true }
 %br/
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_wide_block', locals: { id: 'playlab' }
-  = render partial: 'shared/course_wide_block', locals: { id: 'artist' }
+  = render partial: 'shared/course_wide_block', locals: { id: Script::PLAYLAB_NAME, showState: true }
+  = render partial: 'shared/course_wide_block', locals: { id: Script::ARTIST_NAME, showState: true }
 %br/

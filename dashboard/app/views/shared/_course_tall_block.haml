@@ -42,7 +42,7 @@
   - block_class = 'courseblock-tall'
 
 - if ! (current_user && showState)
-  - block_class << ' miniblock-noaction'
+  - block_class << ' courseblock-noaction'
 
 .courseblock-span3.courseblock-tall{class: block_class}
   =link_to url do
@@ -56,14 +56,13 @@
         .betatext
           = t('beta')
     - else
-      .normal
-        .heading
-          %h3
-            = title
+      .heading
+        %h3
+          = title
     .clear
     .smalltext= body
     - if audience
       .clear
       .bottombar.smalltext.whitetext.audience= audience
-
-    = render partial: 'shared/miniblock_course_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+    .clear
+    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }

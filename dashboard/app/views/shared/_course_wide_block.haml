@@ -28,7 +28,7 @@
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
         .smalltext= t('upsell.20-hour.body')
-    = render partial: 'shared/miniblock_course_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 -elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
   - url = script_reset_url(id)
@@ -39,7 +39,7 @@
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         .smalltext= t('upsell.20-hour.body_short')
-    = render partial: 'shared/miniblock_course_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 - elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
 
@@ -54,7 +54,7 @@
       .courseblock-span4.heading
         %h3= title
         .smalltext= body
-    = render partial: 'shared/miniblock_course_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 -elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::ALGEBRA_NAME].include? id
   .courseblock-span6.courseblock-wide-large
@@ -68,4 +68,5 @@
             &nbsp;
             %span.betatext
               =t('beta')
+        %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description')
