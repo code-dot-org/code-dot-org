@@ -19,6 +19,7 @@ These workshops will be facilitated by experienced computer science educators in
 ---
 ## Online, Self-Paced Courses for Teachers
 Want to teach computer science but aren’t sure where to start? With our free, self-paced online courses, we’ve made it easy for anyone to get started teaching computer science.  Whether you teach in a public school or a private school, in a formal classroom or an informal after-school or summer school setting, this course will help you:
+
 - Learn the basics of computer science
 - Review best practices for teaching these basics to your students
 - Access free curriculum and resources for teachers
