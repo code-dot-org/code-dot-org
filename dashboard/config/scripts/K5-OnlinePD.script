@@ -1,4 +1,5 @@
 pd 'true'
+login_required 'true' 
 
 stage 'Getting Started'
 level 'OPD-K5 Welcome'

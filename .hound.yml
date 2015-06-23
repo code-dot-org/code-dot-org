@@ -8,4 +8,4 @@ scss:
   enabled: false
 
 haml:
-  config_file: .haml-lint.yml
+  enabled: false
