@@ -17,6 +17,18 @@ These workshops will be facilitated by experienced computer science educators in
 [<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a workshop (for K-5 teachers)</button>](/professional-development-workshops)
 
 ---
+## Online, Self-Paced Courses for Teachers
+Want to teach computer science but aren’t sure where to start? With our free, self-paced online courses, we’ve made it easy for anyone to get started teaching computer science.  Whether you teach in a public school or a private school, in a formal classroom or an informal after-school or summer school setting, this course will help you:
+
+- Learn the basics of computer science
+- Review best practices for teaching these basics to your students
+- Access free curriculum and resources for teachers
+- Plan for how you might get started teaching computer science
+- Connect with a community of fellow educators who are making positive change in their classrooms through coding
+
+[<button>Learn more</button>](/professional-development-online)
+
+---
 ## Professional development for middle school math or science teachers
 
 Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional development programs for this curriculum are only available in the context of a full school district partnership with Code.org.
