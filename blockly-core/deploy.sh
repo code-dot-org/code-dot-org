@@ -42,4 +42,7 @@ else
   sed -i.bak -e "s/var Blockly={Blocks:{}};//g" build-output/blocks_compressed.js
   rm build-output/blocks_compressed.js.bak
   echo "Done building build-output/blockly_compressed.js, build-output/javascript_compressed.js and build-output/blocks_compressed.js"
+
+  # Run blockly-core tests with every release build
+  ./test.sh
 fi
