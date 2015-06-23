@@ -457,7 +457,7 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: false,
-    submitButton: !level.isProjectLevel
+    submitButton: true
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -932,6 +932,10 @@ var displayFeedback = function() {
   }
 };
 
+Applab.onSubmitComplete = function(response) {
+  window.location.href = response.redirect;
+};
+
 /**
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
@@ -1213,7 +1217,7 @@ Applab.onPuzzleComplete = function(submit) {
       testResult: Applab.testResults,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
-      onComplete: Applab.onReportComplete
+      onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };
 
