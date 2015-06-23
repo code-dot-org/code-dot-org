@@ -174,9 +174,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
   if (this.steps_){
     this.steps_.tick(clock);
     if (this.steps_.isFinished()){
+      this.steps_ = undefined;
       this.releaseCleaningLock(function () {
-        this.steps_ = undefined;
-      }.bind(this));
+      });
     }
   }
 };

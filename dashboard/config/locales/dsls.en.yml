@@ -146,6 +146,9 @@ en:
       ECSPD Online U1D1-2 Resources:
         Unit 1 Day 1-2 Resources: Unit 1 Day 1-2 Resources
         description here: description here
+      ECSPD Online U1D1-2 Resources 2:
+        Additional Resources: Additional Resources
+      ECSPD Online U1D1-2 Strategies: {}
       ECSPD Online U1D10: {}
       ECSPD Online U1D10 Forum:
         Forum Pending: Forum Pending
@@ -180,6 +183,7 @@ en:
         'Forum for Unit 1 Day 8-9: Impact of Computers and Communication': 'Forum for Unit 1 Day 8-9: Impact of Computers and Communication'
         Forum pending: Forum pending
       ECSPD Online U1D8-9 Resources: {}
+      ECSPD Online U1D8-9 Resources 2: {}
       ECSPD Online Units:
         Units covered: Units covered
       ECSPD Online Welcome:
@@ -293,9 +297,13 @@ en:
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Culture: {}
       PDAlg Curriculum Overview:
         Curriculum Overview: Curriculum Overview
         Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+      PDAlg Dashboard 1: {}
+      PDAlg Dashboard 2: {}
+      PDAlg Dashboard 3: {}
       PDAlg Details:
         CS in Algebra PD Details: CS in Algebra PD Details
       PDAlg End of P1:
@@ -310,10 +318,12 @@ en:
         CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
       PDAlg Scope:
         Scope and Sequence: Scope and Sequence
+      PDAlg Strategy Reflection: {}
       PDAlg Teacher Dashboard:
         Course Progress: Course Progress
       PDAlg Teacher Introduction:
         Introduce yourself: Introduce yourself
+      PDAlg Teacher Plan: {}
       PDAlg big game:
         Introduction to the Big Game: Introduction to the Big Game
       PDAlg bootstrap:
@@ -1094,7 +1104,6 @@ en:
         CPU/Processor: CPU/Processor
         GPU/Graphics Card/Video Card: GPU/Graphics Card/Video Card
         Hard Drive/Disk Drive: Hard Drive/Disk Drive
-        Match the internal parts of a computer to their function. The previous level has links to sites that describe each part.: Match the internal parts of a computer to their function. The previous level has links to sites that describe each part.
         Motherboard: Motherboard
         Operating System: Operating System
         RAM: RAM
@@ -1106,6 +1115,14 @@ en:
         ? The short term memory of the computer. This is where data is stored while programs are running. Usually, it can hold between 2 and 32 GB of data
         : The short term memory of the computer. This is where data is stored while programs are running. Usually, it can hold between 2 and 32 GB of data
         The software that allows a user to interact with a computer. It is usually Windows, Mac, or Linux.: The software that allows a user to interact with a computer. It is usually Windows, Mac, or Linux.
+      ECSPD Online U1D3-4 Resources 2:
+        'Additional Resources: Buying a Computer': 'Additional Resources: Buying a Computer'
+        Alienware, a brand of computer used for gaming: Alienware, a brand of computer used for gaming
+        Chromebook, a laptop created for the basic user - easy to set up, stores all data online: Chromebook, a laptop created for the basic user - easy to set up, stores all data online
+        Computer for a photographer (needs to store a large number of pictures): Computer for a photographer (needs to store a large number of pictures)
+        Good wifi card, small hard drive, long battery life: Good wifi card, small hard drive, long battery life
+        High performance computer - good GPU, lots of ram, fast processor (CPU): High performance computer - good GPU, lots of ram, fast processor (CPU)
+        Large hard drive, good GPU: Large hard drive, good GPU
       ECSPD Online U1D5-7 Assessment 2:
         Basic HTML. Little or no interaction between the user and website: Basic HTML. Little or no interaction between the user and website
         Match each "version" of the web with its description as it is defined in the video on the previous level.: Match each "version" of the web with its description as it is defined in the video on the previous level.
@@ -1866,6 +1883,14 @@ en:
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      ECSPD Online U1D1-2 Assessment 2:
+        A and B: A and B
+        A, B, C, F, and G: A, B, C, F, and G
+        A, B, and C: A, B, and C
+        All of the Above: All of the Above
+        'Suggested Assessment: What is a Computer?': 'Suggested Assessment: What is a Computer?'
+        ? Your students will likely realize that desktops, laptops, and cellphones are computers. They might not realize all the different types of computers around them. This quiz can be used as a tool to facilitate discussion. Answer the question and click "Submit" to move on.
+        : Your students will likely realize that desktops, laptops, and cellphones are computers. They might not realize all the different types of computers around them. This quiz can be used as a tool to facilitate discussion. Answer the question and click "Submit" to move on.
       ECSPD Online U1D10 Assessment 2:
         Connecting several data sets allows a more accurate representation of the underlying information.: Connecting several data sets allows a more accurate representation of the underlying information.
         Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us
