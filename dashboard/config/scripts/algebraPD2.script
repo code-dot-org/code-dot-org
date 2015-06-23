@@ -1,4 +1,4 @@
-title 'Computer Science in Algebra PD'
+title 'Computer Science in Algebra PD Phase 2'
 description "Teach Functional Programming through Algebra"
 login_required 'true'
 pd 'true'
@@ -17,12 +17,6 @@ level 'OPD-K5 Pair'
 level 'PDK5 Pair programming match'
 level 'OPD-K5 Problem Solving'
 level 'PDAlg Strategy Reflection'
-
-stage 'Teacher Dashboard'
-level 'PDK5 Teacher Dashboard 1'
-level 'PDK5 Teacher Dashboard 2'
-level 'PDAlg Teacher Dashboard'
-
 stage 'Evaluation Blocks'
 level 'PDAlg Blocks Video'
 #level 'Calc Circles of Eval .1'
@@ -157,6 +151,12 @@ level 'Eval Cond 7'
 level 'Eval Cond 8'
 #level 'Big Game Player 1'
 #level 'Big Game Player 2'
+
+stage 'Teacher Dashboard'
+level 'PDAlg Dashboard 1'
+level 'PDAlg Dashboard 2'
+level 'PDAlg Dashboard 3'
+level 'PDAlg Teacher Plan'
 
 stage 'Next Steps'
 level 'PDAlg end of P3'
