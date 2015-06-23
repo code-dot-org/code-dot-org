@@ -37,12 +37,11 @@
 
 - if %w(course1 course2 course3 course4).include?(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
-  - block_class = 'courseblock-tall courseblock-tall-audiencerow'
-- else
-  - block_class = 'courseblock-tall'
+  
+- block_class = 'courseblock-tall'
 
 - if ! (current_user && showState)
-  - block_class << ' courseblock-noaction'
+  - block_class << 'courseblock-noaction'
 
 .courseblock-span3.courseblock-tall{class: block_class}
   =link_to url do
@@ -61,8 +60,10 @@
           = title
     .clear
     .smalltext= body
-    - if audience
-      .clear
-      .bottombar.smalltext.whitetext.audience= audience
     .clear
+    - if audience && current_user
+      .audiencebar.smalltext.audience= audience
+    - elsif audience && !current_user
+      .bottombar.smalltext.audience= audience
+
     = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
