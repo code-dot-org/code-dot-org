@@ -95,7 +95,7 @@ end
 
 def company_count(company)
   company_count = 0;
-  DB[:forms].where(kind:'HocSignup2014').each do |i|
+  DB[:forms].where(kind:'HocSignup2015').each do |i|
     data = JSON.parse(i[:data])
     if data['hoc_company_s'] == company
       company_count += 1
