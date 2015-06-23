@@ -26,7 +26,7 @@ Want to teach computer science but aren’t sure where to start? With our free, 
 - Plan for how you might get started teaching computer science
 - Connect with a community of fellow educators who are making positive change in their classrooms through coding
 
-[<button>Learn more</button>](/professional-development-online)
+[<button>Learn more</button>](/educate/professional-development-online)
 
 ---
 ## Professional development for middle school math or science teachers
