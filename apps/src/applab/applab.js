@@ -689,10 +689,9 @@ Applab.init = function(config) {
 
     designMode.renderDesignWorkspace();
 
-    designMode.configureDesignToggleRow(config.level.hideDesignMode);
+    designMode.configureDesignToggleRow();
 
-    var startInDesignMode = !!config.level.designModeAtStart;
-    designMode.toggleDesignMode(startInDesignMode);
+    designMode.toggleDesignMode(Applab.startInDesignMode());
 
     designMode.configureDragAndDrop();
   }
@@ -1179,6 +1178,7 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
+  utils.fireResizeEvent();
   Applab.serializeAndSave();
 };
 
@@ -1315,6 +1315,15 @@ var checkFinished = function () {
 
   return false;
 };
+
+Applab.startInDesignMode = function () {
+  return !!level.designModeAtStart;
+};
+
+Applab.hideDesignModeToggle = function () {
+  return !!level.hideDesignMode;
+};
+
 
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');

@@ -3,15 +3,38 @@ title 'title'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 1 Day 11-14: Visualizing Data
+## Unit 1 Day 11-14: Data, Modeling, and Design
 
-You can check out the lesson for Unit 1, day 11-14 on page 52 of your curriculum book, or by following this [link](http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=52). Note that this activity was not planned or taught during PD. 
+Pull out your curriculum book, and look at the lesson for Unit 1, day 11-14 on page 52.
 
-Read over the lesson and flip back to the previous lesson (picture/wordcloud/list data activity). Pay close attention to any resources and tools that are mentioned.
+[Access a digital copy of the lesson >>](http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=52)
 
-Make a note of whatever questions you have and challenge you may face in teaching this lesson. On the following levels you have space to post to the forum about this lesson and you'll also have a chance to reflect on how you plan to tackle this lesson.
+#### Key Concepts
 
-While reviewing the lesson, try out the tools yourself!
+1. Describe how computers can be used for modeling, data modeling, and design
+
+2. Experience computer modeling using a simple design tool 
+
+#### Common Difficulties
+
+We have gotten a lot of feedback - for this lesson, many students had trouble relating the lesson back to CS concepts and remaining engaged. This PD section has been written to provide additional support for teachers in these areas.
+
+#### PD Outline
+
+<i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
+
+Due to the difficulties mentioned above, the PD for this lesson dives deeper into the concepts and provides extended discussion topics for your class.
+
+* Experience Student Activity
+
+* Extended Resources - Relating design tools to CS concepts
+
+* Forum
+
+>**Note:** This activity was not planned or taught during PD.
+
+Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

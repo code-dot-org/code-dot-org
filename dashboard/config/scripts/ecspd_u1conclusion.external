@@ -1,9 +1,15 @@
 name 'ECSPD U1Conclusion'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Congratulations-- You've Finished! 
+## Congratulations - You've Finished! 
 
-This marks the end of your Blended Summer Study, which means before you know it, it will be time to teach the course! Don't forget that you can throw out questions to others teaching the course through the forum, which is always online at http://forum.code.org/c/plc/ecs.
+This marks the end of your Blended Summer Study. That means before you know it, it will be time to teach the course! Don't forget that you can throw out questions to others teaching the course through the forum, which is always online at https://forum.code.org/c/plc/ecs. Now that you've completed the first phase of PD please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! (If you are having trouble viewing the form, click this [link](https://docs.google.com/a/code.org/forms/d/1TrlxbieB9CeZbvTXSodv5l2utxunnfYdWYiYzNd07gk/viewform) to access the form directly.)
 
-(Survey Pending)
+
+<iframe src="https://docs.google.com/forms/d/1TrlxbieB9CeZbvTXSodv5l2utxunnfYdWYiYzNd07gk/viewform?embedded=true" width="800" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

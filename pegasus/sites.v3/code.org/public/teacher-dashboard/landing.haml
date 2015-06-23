@@ -45,7 +45,7 @@ theme: none
 
 %div
   %div{style: "float:left; width:100%"}
-    %h1{style: "margin-bottom:10px"}= I18n.t('dashboard_landing_title')
+    %h1{style: "margin-bottom:20px"}= I18n.t('dashboard_landing_title')
 
 
 %div.tile
@@ -72,10 +72,65 @@ theme: none
       %button.btn.btn-info= I18n.t('dashboard_landing_view_progress', biggest_section: '{{biggestSection.name}}')
 
   .courses
-    %h2= I18n.t('dashboard_landing_available_title')
-    %p= I18n.t('dashboard_landing_available_courses')
+    .coursesheader
+      %h1{style: 'margin-bottom: 0px'}= I18n.t('dashboard_landing_available_title')
+      %h2= I18n.t('dashboard_hoc_courses')
+      = I18n.t('dashboard_hoc_courses_desc')
+    %br/  
+    %div{"ng-include"=>"", src: "'/dashboardapi/hoc_courses/'"}
+    .coursesheader
+      %h2= I18n.t('dashboard_k5_courses')
+      = I18n.t('dashboard_k5_courses_desc')
     %br/
-    %div{"ng-include"=>"", src: "'/dashboardapi/courses/'"}
+    %div{"ng-include"=>"", src: "'/dashboardapi/k5_courses/'"}
+    .coursesheader
+      %h2= I18n.t('dashboard_middle_courses')
+      = I18n.t('dashboard_middle_courses_desc')
+    %br/
+    .col50
+      %h3= I18n.t('dashboard_course_csina')
+      .largeblock
+        %img{src: CDO.shared_image_url("courses/logo_algebra.png")}
+      = I18n.t('dashboard_course_csina_desc')
+      %p
+      %a{:href=>'/curriculum/algebra'}
+        %button= I18n.t('learn_more')
+    .col50
+      %h3= I18n.t('dashboard_course_csins')
+      .largeblock
+        %img{src: CDO.shared_image_url("courses/logo_science.png")}
+      = I18n.t('dashboard_course_csins_desc')
+      %p
+      %a{:href=>'/curriculum/science'}
+        %button= I18n.t('learn_more')
+    .clear
+    %br/  
+    .coursesheader
+      %h2= I18n.t('dashboard_high_courses')
+      = I18n.t('dashboard_high_courses_desc')
+    .col50
+      %h3= I18n.t('dashboard_course_ecs')
+      .largeblock
+        %img{src: CDO.shared_image_url("courses/logo_ecs.png")}
+      = I18n.t('dashboard_course_ecs_desc')
+      %p
+      %a{:href=>'http://www.exploringcs.org'}
+        %button= I18n.t('learn_more')
+    .col50
+      %h3= I18n.t('dashboard_course_csp') 
+      .largeblock
+        %img{src: CDO.shared_image_url("courses/logo_csp.png")}
+      = I18n.t('dashboard_course_csp_desc')
+      %p
+      %a{:href=>'/educate/csp'}
+        %button= I18n.t('learn_more')
+    .clear
+    %br/
+    %hr
+    %h4= I18n.t('dashboard_landing_more_tutorials')
+    = I18n.t('dashboard_landing_more_tutorials_desc')
+    %br/
+
   -#.debug
     %h2 DEBUG
     %pre
@@ -86,6 +141,12 @@ theme: none
     margin-right: 26px;
     display: inline-block;
     width: 31.2%;
+  }
+  .col50 {
+    width: 40%;
+    float: left;
+    margin: 0px 45px;
+    text-align: center;
   }
   .title {
     height: 64px;
