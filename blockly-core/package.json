@@ -1,7 +1,7 @@
 {
-  "name": "@cdo/blockly-core-tests",
+  "name": "@cdo/blockly-core",
   "version": "0.0.1",
-  "description": "Blockly-Core test suite",
+  "description": "blockly-core testrunner dependencies",
   "engines": {
     "node": "~0.10.18"
   },
