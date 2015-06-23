@@ -9,7 +9,7 @@ Code.org offers an elementary school curriculum that allows even the youngest st
 
 For teachers in the United States, Code.org offers high quality, 1-day professional development workshops free of charge to in-service teachers to prepare to offer our curriculum in elementary school classrooms. 
 
-[<button>Learn more</button>](/k5) &nbsp;&nbsp;[Find a professional development workshop (for US teachers, grades K-5)](/professional-development-workshops)
+[<button>Learn more</button>](/k5)
 
 # Middle School #
 

@@ -91,7 +91,7 @@ nav: resources_nav
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code. 
 
-Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, December 7-13, 2015. 
 
@@ -106,7 +106,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
 
-More than 100 million students worldwide have tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.  
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
@@ -132,7 +132,7 @@ We live in a world surrounded by technology. And we know that whatever field our
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
-Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 

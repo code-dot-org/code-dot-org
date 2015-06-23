@@ -423,7 +423,9 @@ function makeDraggable (jqueryElements) {
         var element = elm[0];
         designMode.onPropertyChange(element, 'width', element.style.width);
         designMode.onPropertyChange(element, 'height', element.style.height);
-      }
+      },
+      grid: [GRID_SIZE, GRID_SIZE],
+      containment: 'parent'
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
