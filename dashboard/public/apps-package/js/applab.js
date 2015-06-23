@@ -9489,12 +9489,15 @@ module.exports = React.createClass({displayName: "exports",
 
   render: function() {
     var styles = {
-      container: {
+      outerContainer: {
         // The icon images are 120px wide and depend on this width for scaling.
         width: 120,
         display: 'inline-block',
         textAlign: 'center',
         paddingBottom: 15
+      },
+      innerContainer: {
+        textAlign: 'center'
       },
       image: {
         marginBottom: 5
@@ -9502,13 +9505,16 @@ module.exports = React.createClass({displayName: "exports",
     };
 
     return (
-      React.createElement("div", {style: styles.container}, 
-        React.createElement("img", {src: this.props.imageUrl, 
-            "data-element-type": this.props.elementType, 
-            className: "new-design-element", 
-            style: styles.image}
-        ), 
-        React.createElement("div", null, this.props.desc)
+      React.createElement("div", {style: styles.outerContainer}, 
+        React.createElement("div", {style: styles.innerContainer, 
+          "data-element-type": this.props.elementType, 
+          className: "new-design-element"}, 
+          React.createElement("img", {src: this.props.imageUrl, 
+              className: "design-element-image", 
+              style: styles.image}
+          ), 
+          React.createElement("div", null, this.props.desc)
+        )
       )
     );
   },
@@ -9534,6 +9540,7 @@ module.exports = React.createClass({displayName: "exports",
     });
   }
 });
+
 
 },{"react":646}],646:[function(require,module,exports){
 module.exports = require('./lib/React');
