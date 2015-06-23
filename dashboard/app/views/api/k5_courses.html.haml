@@ -1,11 +1,11 @@
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_wide_block', locals: { id: 'course1' }
-  = render partial: 'shared/course_wide_block', locals: { id: 'course2' }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE1_NAME, showState: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE2_NAME, showState: true }
   .clear
   %br/
-  = render partial: 'shared/course_wide_block', locals: { id: 'course3' }
-  = render partial: 'shared/course_wide_block', locals: { id: 'course4' }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE3_NAME, showState: true }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::COURSE4_NAME, showState: true }
 %br/
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_wide_block', locals: { id: "20-hour", view: "large" }
+  = render partial: 'shared/course_wide_block', locals: { id: Script::TWENTY_HOUR_NAME, showState: true, view: "large" }
 %br/

@@ -37,7 +37,8 @@
 
 .betatext {
   color: $realyellow;
-  background-color: $charcoal;
+  background-color: $light_gray;
+  border-radius: 5px;
   padding: 0 5px;
 }
 
@@ -57,46 +58,63 @@
 .courseblock-span12 {  width: 940px;  }
 
 .courseblock-tall {
-  background-color:$lightest_gray;
-  height: 250px;
-  
-  /*background-color: white;
-  height: 100%;
-  border-radius:5px;*/
-
+  background-color: white;
+  height: 265px;
+  border: solid 1px #bbb;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
   float: left;
+  box-sizing: border-box;
 
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    overflow:hidden;
+    padding: 0 10px
+  }
+
+  a {
+      &:hover, &:link, &:active, &:visited {
+        text-decoration: none;
+      }
+    }
+
+  a.whitelink {
+    &:hover, &:link, &:active, &:visited {
+      color:white;
+    }
   }
 
   .imgspan {
     margin: 0 0 5px 0;
     text-align: left;
     float: left;
-    /*float: right;*/
     width: 100%;
   }
 
   h3 {
-    margin: 0 0 0 10px;
-    /*margin-top:10px;*/
+    margin: 5px 0;
     color: $charcoal;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-    font-size: 24px;
     font-family: $gotham-bold;
+    font-weight: normal;
+    display: block;
+    float: left;
+    font-size: 24px;
+    width: 200px;
   }
 
   .beta
   {
+    .heading {
+      padding-right: 0px;
+    }
+
     h3 {
-      width: 140px;
+      width: 135px;
       padding-right: 0px;
       float: left;
     }
@@ -115,33 +133,21 @@
       height: 35px;
       line-height: 40px;
       width: 60px;
+      border-radius: 4px;
     }
   }
 
   .smalltext {
     font-size: 13px;
     line-height: 17px;
-    padding: 0 10px 0 10px;
+    margin-left: 10px;
     font-family: $gotham-regular;
     font-weight:normal;
     color:$charcoal;
   }
 
-  .descriptiontext {
-    height: 80px;
-    overflow: hidden;
-    border-left: solid 1px $lighter_gray;
-    border-right: solid 1px $lighter_gray;
-  }
-
   .whitetext {
     color: white;
-  }
-
-  a.whitelink {
-    &:hover, &:link, &:active, &:visited {
-      color:white;
-    }
   }
 
   .audience {
@@ -152,38 +158,44 @@
     padding-right: 10px;
     padding-top: 4px;
     padding-bottom:4px;
-    background-color: $charcoal;
-  }
-
-  /*.audience {
     background-color: $light_gray;
-  }*/
+  }
 
   .bottombar {
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
+    padding: 4px 10px;
+    margin: 14px 0 0 0;
+    float: left;
+    text-align: left;
   }
 
   .continue {
     background-color: $yellow;
+    color: white;
   }
   .trynow {
     background-color: $green;
+    color: white;
   }
   .printcertificate {
-    background-color: $blue;
+    background-color: $cyan;
+    color: white;
   }
 }
 
 .courseblock-wide-small {
-  background-color:$lightest_gray;
-  height: 110px;
+  background-color: white;
+  height: 100%;
   overflow: hidden;
   position: relative;
   float: left;
+  box-sizing: border-box;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+
+  .heading {
+    width: 280px;
+  }
 
   a {
     text-decoration: none;
@@ -235,14 +247,38 @@
     color:$charcoal;
     float: left;
   }
+
+  .bottombar {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    margin: 0;
+  }
+
+  .continue {
+    background-color: $yellow;
+    color: white;
+  }
+  .trynow {
+    background-color: $green;
+    color: white;
+  }
+  .printcertificate {
+    background-color: $cyan;
+    color: white;
+  }
 }
 
 .courseblock-wide-large {
-  background-color:$lightest_gray;
+  background-color: white;
   height: 250px;
   overflow: hidden;
   position: relative;
   float: left;
+  border: solid 1px #bbb;
+  border-radius:5px;
 
   a:hover {
     text-decoration: none;
@@ -306,82 +342,6 @@
   margin-left: 20px;
 }
 
-.miniblock-noaction {
+.courseblock-noaction {
   border-bottom: solid 1px $lighter_gray;
-}
-
-.miniblock-wide {
-  box-sizing: border-box;
-  border: solid 1px #bbb;
-  overflow:hidden;
-  h3 {
-    margin: 0px;
-  }
-  .heading {
-    width: 280px;
-  }
-  .bottombar {
-    padding-left: 20px;
-  }
-}
-
-.miniblock-tall {
-  height: 100%;
-  box-sizing: border-box;
-
-  .heading {
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
-    overflow:hidden;
-    border-left: solid 1px $lighter_gray;
-    border-right: solid 1px $lighter_gray;
-
-    padding-left: 10px;
-    padding-right:10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  h3 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: $gotham-bold;
-    font-weight: normal;
-    display: block;
-    float: left;
-    width: 200px;
-  }
-
-  .beta
-  {
-    .heading {
-      padding-right: 0px;
-    }
-
-    h3 {
-      width: 135px;
-    }
-
-    .betatext {
-      text-align: center;
-      display: block;
-      float: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: $light_gray;
-      padding-left: 5px;
-      padding-right: 5px;
-      font-size: 24px;
-      height: 35px;
-      line-height: 40px;
-      width: 60px;
-      margin-top: 10px;
-      border-radius: 4px;
-      margin-right: 2px;
-    }
-  }
 }
