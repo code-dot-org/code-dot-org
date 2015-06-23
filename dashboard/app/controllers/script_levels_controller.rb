@@ -88,19 +88,22 @@ class ScriptLevelsController < ApplicationController
 
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       authorize! :manage, :teacher
-      @last_attempt = @ideal_level_source.data
+      level_source = @ideal_level_source
       level_view_options(share: true)
       view_options(readonly_workspace: true,
                    callouts: [],
                    full_width: true)
     elsif @user && current_user && @user != current_user
-      @last_attempt = @user.last_attempt(@level).try(:level_source).try(:data)
+      level_source = @user.last_attempt(@level).try(:level_source)
       view_options(readonly_workspace: true,
                    callouts: [])
     elsif current_user
       # Set start blocks to the user's previous attempt at this puzzle.
-      @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
+      level_source = current_user.last_attempt(@level).try(:level_source)
     end
+
+    level_source.try(:replace_old_when_run_blocks)
+    @last_attempt = level_source.try(:data)
   end
 
   def load_user

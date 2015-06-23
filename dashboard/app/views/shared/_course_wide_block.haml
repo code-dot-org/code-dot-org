@@ -1,40 +1,39 @@
 -if id == 'hoc'
-  .span6.miniblock
+  .span6.courseblock-wide-small
     =link_to hoc_reset_url do
+      .span2.imgspan
+        %img{src: '//code.org/images/fit-520/codehoc3.jpg'}
       .span4.heading
         %h3= t('upsell.hoc.title')
         .smalltext= t('upsell.hoc.body')
-      .span2.imgspan{style: 'margin-left: 0px;'}
-        %img{style: 'height: 100px;', src: '//code.org/images/fit-520/codehoc3.jpg'}
 
 -elsif id == 'flappy'
-  .span6.miniblock
+  .span6.courseblock-wide-small
     =link_to script_reset_url(Script::FLAPPY_NAME) do
+      .span2.imgspan
+        %img{src: '//studio.code.org/blockly/media/skins/flappy/small_static_avatar.png'}
       .span4.heading
         %h3= t('upsell.flappy.title')
         .smalltext= t('upsell.flappy.body')
-      .span1.imgspan{style: 'margin-left: 0px;'}
-        %img{style: 'padding-left: 42px; padding-top: 20px;', src: '//studio.code.org/blockly/media/skins/flappy/small_static_avatar.png'}
 
--elsif id == '20-hour-short'
-  .span6.miniblock{style: 'height: 120px;'}
+-elsif id == '20-hour' && view == 'large'
+  .span6.courseblock-wide-large
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
-      .span4.wideheading
+      .span2.imgspan
+        %img{src: '//code.org/images/fit-520/code20hr.jpg'}   
+      .span4.heading
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
-        .smallwidetext= t('upsell.20-hour.body_short')
-      .span2.imgspan
-        %img{style: 'height: 100px; margin-top: 10px', src: '//code.org/images/fit-520/code20hr.jpg'}   
+        .smalltext= t('upsell.20-hour.body')
 
--elsif id == '20-hour'
-  .span6.miniblock{style: 'height: 175px;'}
+-elsif id == '20-hour' && view == 'small'
+  .span6.courseblock-wide-small
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
-      .span4.wideheading
-        %h3= t('upsell.20-hour.title')
-        %h4= data_t_suffix('script.name', id, 'description_audience')
-        .smallwidetext= t('upsell.20-hour.body')
       .span2.imgspan
-        %img{style: 'height: 100px; margin-top: 10px', src: '//code.org/images/fit-520/code20hr.jpg'}
+        %img{src: '//code.org/images/fit-520/code20hr.jpg'}   
+      .span4.heading
+        %h3= t('upsell.20-hour.title')
+        .smalltext= t('upsell.20-hour.body_short')
 
 - elsif id == 'artist' || id == 'playlab'
 
@@ -42,28 +41,25 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-  .span6.miniblock{style: 'float: left;'}
+  .span6.courseblock-wide-small
     =link_to url do
-      .span4.wideheading
-        %h3= title
-        .smallwidetext= body
       .span2.imgspan
-        %img{style: 'height: 100px;', src: CDO.code_org_url("/shared/images/courses/fill-240x200/logo_tall_#{id}.jpg")}
+        %img{src: CDO.code_org_url("/shared/images/courses/fill-240x200/logo_tall_#{id}.jpg")}
+      .span4.heading
+        %h3= title
+        .smalltext= body
 
 -elsif id == 'course1' || id == 'course2' || id == 'course3' || id == 'course4' || id == 'algebra'
-  .span6.miniblock.miniblock-tall{style: 'height: 245px; float: left;'}
+  .span6.courseblock-wide-large
     =link_to script_url(id) do
-      .span4.heading{style: 'margin-top: 10px;'}
+      .span2.imgspan
+        = image_tag(CDO.shared_image_url("courses/logo_#{id}.jpg"))
+      .span4.heading
         %h3
           = data_t_suffix('script.name', id, 'title')
           - if Script.beta? id
             &nbsp;
             %span.betatext
               =t('beta')
-        %br/
-        %br/
         %h4= data_t_suffix('script.name', id, 'description_audience')     
-        .smalltext{style: 'margin-left: 10px;'}= data_t_suffix('script.name', id, 'description')
-      .span2.imgspan
-        %br/
-        = image_tag(CDO.shared_image_url("courses/logo_#{id}.jpg"), height: 100)
+        .smalltext= data_t_suffix('script.name', id, 'description')
