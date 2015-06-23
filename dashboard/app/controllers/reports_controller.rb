@@ -264,7 +264,7 @@ SQL
     authorize! :read, :reports
     script = Script.find_by(name: params[:script] || 'K5PD').cached
     # Get all users with any activity in the script
-    users = User.where(id: UserScript.where(script_id: script.id).pluck(:user_id).uniq)
+    users = User.joins('left join user_scripts on user_scripts.user_id = users.id').where(user_scripts: {script_id: script})
 
     headers = nil
     data = users.map do |user|
