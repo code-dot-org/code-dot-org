@@ -130,6 +130,11 @@ body {
 
 /* styling for the embedded dashboard components... */
 
+#user_hero #contents {
+  margin-top: 20px;
+  padding-left:5px;
+  padding-right:5px;
+}
 #user_hero #welcome {
   left: 0px;
   color: white;
@@ -146,6 +151,7 @@ body {
 #user_hero button {
   border: none;
 }
+
 #user_hero button.teacher {
   background-color: rgb(0, 148, 202);
 }
@@ -155,7 +161,7 @@ body {
 }
 
 #user_hero #welcome.teacher {
-  background-color: rgb(0, 148, 202);
+  background-color: #0094ca;
 }
 
 #user_hero #welcome.student {
@@ -169,8 +175,13 @@ body {
   border-bottom-right-radius: 5px;
 }
 
+#user_hero #body #student {
+  padding-left: 5px;
+}
+
 #user_hero #body.teacher {
-  background-color: #d9eff7;
+  background-color: #59b9dc;
+  color: white;
 }
 
 #user_hero #body.student {
@@ -200,6 +211,10 @@ body {
 #user_hero #student_count {
   width: 175px;
   display: inline-block;
+}
+
+#user_hero #teacherarea {
+  padding: 5px;
 }
 
 #sign_in_or_user .button-signin {
