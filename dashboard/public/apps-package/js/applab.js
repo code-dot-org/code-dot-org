@@ -781,8 +781,7 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.current &&
-      dashboard.project.current.id) {
+  if (window.dashboard && dashboard.project.getCurrentId()) {
     clientApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
@@ -1226,8 +1225,8 @@ studioApp.runButtonClickWrapper = function (callback) {
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || (!dashboard.project.isEditing ||
-      (dashboard.project.current && dashboard.project.current.id))) {
+  if (!window.dashboard || !window.dashboard.project.isEditing() ||
+      window.dashboard.project.getCurrentId()) {
     $(window).trigger('appModeChanged');
     if (callback) {
       callback();
@@ -4874,7 +4873,7 @@ AppStorage.tempChannelId =
 
 AppStorage.getChannelId = function() {
   // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
+  var id = dashboard && dashboard.project.getCurrentId();
   return id || AppStorage.tempChannelId;
 };
 
@@ -5000,7 +4999,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
-  
+
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
@@ -8621,7 +8620,7 @@ module.exports = React.createClass({displayName: "exports",
 
 module.exports = {
   basePath: function (path) {
-    return '/v3/assets/' + dashboard.project.current.id + (path ? '/' + path : '');
+    return '/v3/assets/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
   },
   ajax: function (method, file, success, error, data) {
     var xhr = new XMLHttpRequest();
