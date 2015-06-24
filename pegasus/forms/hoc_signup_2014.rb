@@ -32,7 +32,7 @@ class HocSignup2014
     query = '*:*'
 
     fq = []
-    fq.push("kind_s:HocSignup2014")
+    fq.push("kind_s:#{self.name}")
     {
       q:query,
       fq:fq,
