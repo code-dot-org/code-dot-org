@@ -1,10 +1,10 @@
 'en':
   site_name: 'HOUR of CODE'
   language: 'English'
-  front_title: 'Join the largest learning event in history, Dec 8-14, 2015'
+  front_title: 'Join the largest learning event in history, Dec 7-13, 2015'
   coming_soon: 'Coming Soon'
 
-  front_header_banner: 'Join the largest learning event in history, Dec 8-14, 2015'
+  front_header_banner: 'Join the largest learning event in history, Dec 7-13, 2015'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_watch_video: 'Watch the new video'
@@ -49,7 +49,7 @@
   prizes_nav_faq: "FAQ"
 
   whats_next_header: "What's Next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
 
@@ -66,7 +66,7 @@
   front_join_us_button: 'Join us'
   front_what_is_hoc: 'What is the Hour of Code?'
   front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
-  front_join_us_header_uk: 'Any time during December 8-14 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!'
+  front_join_us_header_uk: 'Any time during December 7-13 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!'
   front_join_us_teacher: 'Are you a teacher?'
   front_join_us_inspire: 'Inspire students with'
   front_join_us_inspire_link: 'an Hour of Code in the classroom.'
@@ -85,7 +85,7 @@
   front_join_us_host: "Host it"
   front_join_us_support: "Support it"
 
-  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_header: 'Organize an Hour of Code event during Dec 7 - 13, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
   signup_organization_name_label: 'School or organization name'
@@ -153,7 +153,7 @@
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
   hoc_faq_last_year: "Try the tutorials"
   hoc_faq_when_is_hoc_q: 'When is the Hour of Code?'
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: 'Why computer science?'
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
@@ -185,7 +185,7 @@
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
 
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2015."
-  hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
+  hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 7-13, 2015. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path."
   hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
