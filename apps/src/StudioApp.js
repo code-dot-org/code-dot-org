@@ -359,6 +359,7 @@ StudioApp.prototype.init = function(config) {
       afterInject: config.afterInject,
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
+      beginnerMode: config.level.beginnerMode,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
@@ -1324,7 +1325,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     options.codeFunctions, options.dropletConfig);
   this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
     mode: 'javascript',
-    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
+    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
     enablePaletteAtStart: !options.readOnly,

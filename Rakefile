@@ -58,6 +58,8 @@ namespace :build do
 
   task :blockly_core do
     Dir.chdir(blockly_core_dir) do
+      RakeUtils.npm_install
+
       HipChat.log 'Building <b>blockly-core</b> debug...'
       RakeUtils.system './deploy.sh', 'debug'
 
