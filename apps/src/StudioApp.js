@@ -1629,7 +1629,7 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
     topParent = topParent.getParent();
   }
 
-  if (topParent.type === topLevelType) {
+  if (unfilled.type === topLevelType) {
     return msg.emptyTopLevelBlock({topLevelBlockName: unfilled.getTitleValue()});
   }
 
