@@ -1127,7 +1127,6 @@ en:
         Large hard drive, good GPU: Large hard drive, good GPU
       ECSPD Online U1D5-7 Assessment 2:
         Basic HTML. Little or no interaction between the user and website: Basic HTML. Little or no interaction between the user and website
-        Match each "version" of the web with its description as it is defined in the video on the previous level.: Match each "version" of the web with its description as it is defined in the video on the previous level.
         Two-way flow of information. User and website interacting with each other: Two-way flow of information. User and website interacting with each other
         Web 1.0: Web 1.0
         Web 2.0: Web 2.0
@@ -1908,22 +1907,11 @@ en:
         : Your students will likely realize that desktops, laptops, and cellphones are computers. They might not realize all the different types of computers around them. This quiz can be used as a tool to facilitate discussion. Answer the question and click "Submit" to move on.
       ECSPD Online U1D10 Assessment 2:
         Connecting several data sets allows a more accurate representation of the underlying information.: Connecting several data sets allows a more accurate representation of the underlying information.
-        ? "Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions \n<br/>for us"
-        : "Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions \n<br/>for us"
         ? "Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions \n<br/>for us."
         : "Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions \n<br/>for us."
-        Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us: Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions for us
         Different representations of data can help us draw more meaningful conclusions about it.: Different representations of data can help us draw more meaningful conclusions about it.
         ? "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to \n<br/> continue. \n<br/>\n<br/><strong>Question</strong>: In the previous video, David McCandless made several important points about the representation\n<br/>and use of data. Which of the following was *not* a main point of his?"
         : "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to \n<br/> continue. \n<br/>\n<br/><strong>Question</strong>: In the previous video, David McCandless made several important points about the representation\n<br/>and use of data. Which of the following was *not* a main point of his?"
-        ? "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to \n<br/> continue. \n<br/>\n<br/>Question: In the previous video, David McCandless made several important points about the representation\n<br/>and use of data. Which of the following was *not* a main point of his?"
-        : "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to \n<br/> continue. \n<br/>\n<br/>Question: In the previous video, David McCandless made several important points about the representation\n<br/>and use of data. Which of the following was *not* a main point of his?"
-        ? "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to continue. \n\nQuestion: In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?"
-        : "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to continue. \n\nQuestion: In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?"
-        ? "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to continue. \n<br/>\nQuestion: In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?"
-        : "Here is a short video quiz you could use with your students. Answer the question and click \"Submit\" to continue. \n<br/>\nQuestion: In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?"
-        ? In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
-        : In the previous video, David McCandless made several important points about the representation and use of data. Which of the following was *not* a main point of his?
         Telling a Story with Data: Telling a Story with Data
         The way data is represented can help us understand the data by telling a meaningful story.: The way data is represented can help us understand the data by telling a meaningful story.
       ECSPD Online U1D5-7 Assessment 1:
@@ -2193,12 +2181,8 @@ en:
         Range: Range
         ? The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?
         : The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?
-        description here: description here
-        title: title
       PDAlg DR Multi 2:
-        For a given number of dollars, how many treats can you afford?: For a given number of dollars, how many treats can you afford?
         For a given number of dollars, return the number of treats.: For a given number of dollars, return the number of treats.
-        Given a number of dollars, how many 50 cent treats can you purchase?: Given a number of dollars, how many 50 cent treats can you purchase?
         Given a number of dollars, produce the number of 50 cent treats you could purchase: Given a number of dollars, produce the number of 50 cent treats you could purchase
         How many times does 50 go into dollars?: How many times does 50 go into dollars?
         How many treats can you buy with your dollars?: How many treats can you buy with your dollars?
@@ -3254,7 +3238,6 @@ en:
         Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
         In my classroom, I want to...: In my classroom, I want to...
       PDAlg DR Text 1:
-        Design Recipe Debugging: Design Recipe Debugging
         Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
