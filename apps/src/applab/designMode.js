@@ -128,6 +128,12 @@ designMode.onPropertyChange = function(element, name, value) {
       element.parentNode.style.top = value + 'px';
       break;
     case 'width':
+      element.setAttribute('width', value + 'px');
+      break;
+    case 'height':
+      element.setAttribute('height', value + 'px');
+      break;
+    case 'style-width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
 
@@ -136,7 +142,7 @@ designMode.onPropertyChange = function(element, name, value) {
           element.style.height;
       }
       break;
-    case 'height':
+    case 'style-height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
 
