@@ -35,14 +35,14 @@ var LabelProperties = React.createClass({
           lockState={$(element).data('lock-width') || PropertyRow.LockState.UNLOCKED}
           handleLockChange={this.props.handleChange.bind(this, 'lock-width')}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           lockState={$(element).data('lock-height') || PropertyRow.LockState.UNLOCKED}
           handleLockChange={this.props.handleChange.bind(this, 'lock-height')}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
